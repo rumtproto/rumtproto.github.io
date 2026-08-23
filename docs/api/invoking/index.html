@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вызов методов — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li class="active"><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="вызов-методов" tabindex="-1">Вызов методов</h1>
+<p>Оригинальное русскоязычное описание правил вызова методов схемы. Первоисточник: <a href="https://core.telegram.org/api/invoking">core.telegram.org/api/invoking</a>.</p>
+<p>Метод схемы — это RPC-запрос: клиент сериализует конструктор метода и отправляет его как тело зашифрованного сообщения (<a href="/mtproto/description/">формат</a>); сервер отвечает результатом через <a href="https://core.telegram.org/constructor/rpc_result/"><code>rpc_result</code></a> или ошибкой <a href="https://core.telegram.org/constructor/rpc_error/"><code>rpc_error</code></a>.</p>
+<h2 id="слои-(layers)" tabindex="-1">Слои (layers)</h2>
+<p>Схема версионируется слоями: каждый клиент сообщает серверу, какую версию схемы он понимает.</p>
+<ul>
+<li>Первый запрос авторизованной сессии оборачивается в цепочку: <a href="/method/invokeWithLayer/"><code>invokeWithLayer</code></a> (номер актуального слоя) → <a href="/method/initConnection/"><code>initConnection</code></a> (параметры приложения и устройства) → сам запрос.</li>
+<li>Пока клиент не сообщил слой, сервер отвечает схемой минимальной совместимости.</li>
+<li>История изменений схемы по слоям — на странице <a href="/api/layers/">Слои схемы</a>.</li>
+</ul>
+<h2 id="повторные-вызовы-и-идемпотентность" tabindex="-1">Повторные вызовы и идемпотентность</h2>
+<ul>
+<li>Методы с побочными эффектами (отправка сообщений, платежи и т.п.) принимают <code>random_id</code> — повторный вызов с тем же <code>random_id</code> не создаёт дубликат.</li>
+<li>Повторно отправлять сам запрос на уровне протокола допустимо (с тем же <code>message_id</code>), если он точно не был доставлен; см. <a href="/mtproto/service_messages_about_messages/">сообщения о сообщениях</a>.</li>
+</ul>
+<h2 id="ограничения-и-ошибки" tabindex="-1">Ограничения и ошибки</h2>
+<ul>
+<li><strong>Флуд-контроль</strong>: ошибка <code>FLOOD_WAIT_N</code> — повторить не раньше чем через <code>N</code> секунд. Поведение по типовым кодам — в <a href="/api/errors/">ошибках</a>.</li>
+<li><strong>Таймауты</strong>: если ответ не приходит разумное время, запросите состояние (<a href="https://core.telegram.org/constructor/msg_resend_req/"><code>msg_resend_req</code></a>), а не дублируйте запрос с новым идентификатором.</li>
+<li><strong>Отмена</strong>: <a href="https://core.telegram.org/constructor/rpc_drop_answer/"><code>rpc_drop_answer</code></a> позволяет отказаться от ожидания ответа (например, для «долгих» запросов при уходе в фон).</li>
+</ul>
+<h2 id="полезные-обёртки" tabindex="-1">Полезные обёртки</h2>
+<ul>
+<li><a href="/method/invokeWithoutUpdates/"><code>invokeWithoutUpdates</code></a> — не присылать обновления, порождённые этим запросом.</li>
+<li><a href="/method/invokeWithMessagesRange/"><code>invokeWithMessagesRange</code></a> / <a href="/method/invokeWithTakeout/"><code>invokeWithTakeout</code></a> — вызовы в контексте диапазона сообщений / выгрузки данных.</li>
+<li><a href="/method/invokeAfterMsg/"><code>invokeAfterMsg</code></a> — просить сервер выполнить запрос после указанного (упорядочивание).</li>
+</ul>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/api/invoking" rel="noopener">https://core.telegram.org/api/invoking</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

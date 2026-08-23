@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PrivacyRule (тип) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="privacyrule" tabindex="-1">PrivacyRule</h1>
+<p><em>Тип из схемы TL.</em></p>
+<blockquote>
+<p>Privacy <strong>rules</strong> together with <a href="https://core.telegram.org/api/privacy#privacy-keys">privacy keys</a> indicate <em>what</em> can or can't someone do and are specified by a <a href="/type/PrivacyRule/">PrivacyRule</a> constructor, and its input counterpart <a href="/type/InputPrivacyRule/">InputPrivacyRule</a>.
+See the <a href="https://core.telegram.org/api/privacy">privacy documentation »</a> for more info.</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>privacyValueAllowContacts#fffe1bac = PrivacyRule;
+privacyValueAllowAll#65427b82 = PrivacyRule;
+privacyValueAllowUsers#b8905fb2 users:Vector&lt;long&gt; = PrivacyRule;
+privacyValueDisallowContacts#f888fa1a = PrivacyRule;
+privacyValueDisallowAll#8b73e763 = PrivacyRule;
+privacyValueDisallowUsers#e4621141 users:Vector&lt;long&gt; = PrivacyRule;
+privacyValueAllowChatParticipants#6b134e8e chats:Vector&lt;long&gt; = PrivacyRule;
+privacyValueDisallowChatParticipants#41c87565 chats:Vector&lt;long&gt; = PrivacyRule;
+privacyValueAllowCloseFriends#f7e8d89b = PrivacyRule;
+privacyValueAllowPremium#ece9814b = PrivacyRule;
+privacyValueAllowBots#21461b5d = PrivacyRule;
+privacyValueDisallowBots#f6a5f82f = PrivacyRule;
+</code></pre>
+<h2 id="конструкторы" tabindex="-1">Конструкторы</h2>
+<table>
+<thead>
+<tr>
+<th>Constructor</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/constructor/privacyValueAllowContacts/">privacyValueAllowContacts</a></td>
+<td>Allow all contacts</td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueAllowAll/">privacyValueAllowAll</a></td>
+<td>Allow all users</td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueAllowUsers/">privacyValueAllowUsers</a></td>
+<td>Allow only certain users</td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueDisallowContacts/">privacyValueDisallowContacts</a></td>
+<td>Disallow only contacts</td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueDisallowAll/">privacyValueDisallowAll</a></td>
+<td>Disallow all users</td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueDisallowUsers/">privacyValueDisallowUsers</a></td>
+<td>Disallow only certain users</td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueAllowChatParticipants/">privacyValueAllowChatParticipants</a></td>
+<td>Allow all participants of certain chats</td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueDisallowChatParticipants/">privacyValueDisallowChatParticipants</a></td>
+<td>Disallow only participants of certain chats</td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueAllowCloseFriends/">privacyValueAllowCloseFriends</a></td>
+<td>Allow only <a href="https://core.telegram.org/api/privacy">close friends »</a></td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueAllowPremium/">privacyValueAllowPremium</a></td>
+<td>Allow only users with a <a href="https://core.telegram.org/api/premium">Premium subscription »</a>, currently only usable for <a href="/constructor/inputPrivacyKeyChatInvite/">inputPrivacyKeyChatInvite</a>.</td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueAllowBots/">privacyValueAllowBots</a></td>
+<td>Allow bots and mini apps</td>
+</tr>
+<tr>
+<td><a href="/constructor/privacyValueDisallowBots/">privacyValueDisallowBots</a></td>
+<td>Disallow bots and mini apps</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="privacy-settings" tabindex="-1"><a href="https://core.telegram.org/api/privacy">Privacy settings</a></h4>
+<p>Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.</p>
+<h4 id="privacyrule-1" tabindex="-1"><a href="/type/PrivacyRule/">PrivacyRule</a></h4>
+<p>Privacy <strong>rules</strong> together with <a href="https://core.telegram.org/api/privacy#privacy-keys">privacy keys</a> indicate <em>what</em> can or can't someone do and are specified by a <a href="/type/PrivacyRule/">PrivacyRule</a> constructor, and its input counterpart <a href="/type/InputPrivacyRule/">InputPrivacyRule</a>.</p>
+<p>See the <a href="https://core.telegram.org/api/privacy">privacy documentation »</a> for more info.</p>
+<h4 id="inputprivacyrule" tabindex="-1"><a href="/type/InputPrivacyRule/">InputPrivacyRule</a></h4>
+<p>Privacy <strong>rules</strong> indicate <em>who</em> can or can't do something and are specified by a <a href="/type/PrivacyRule/">PrivacyRule</a>, and its input counterpart <a href="/type/InputPrivacyRule/">InputPrivacyRule</a>.</p>
+<p>See the <a href="https://core.telegram.org/api/privacy">privacy documentation »</a> for more info.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/type/PrivacyRule" rel="noopener">https://core.telegram.org/type/PrivacyRule</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

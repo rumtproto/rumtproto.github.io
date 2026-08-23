@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>auth.SentCode (тип) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="auth.sentcode" tabindex="-1">auth.SentCode</h1>
+<p><em>Тип из схемы TL.</em></p>
+<blockquote>
+<p>Contains info on a confirmation code message sent via SMS, phone call or Telegram.</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>auth.sentCode#5e002502 flags:# type:auth.SentCodeType phone_code_hash:string next_type:flags.1?auth.CodeType timeout:flags.2?int = auth.SentCode;
+auth.sentCodeSuccess#2390fe44 authorization:auth.Authorization = auth.SentCode;
+auth.sentCodePaymentRequired#e0955a3c store_product:string phone_code_hash:string support_email_address:string support_email_subject:string currency:string amount:long = auth.SentCode;
+
+---functions---
+
+auth.sendCode#a677244f phone_number:string api_id:int api_hash:string settings:CodeSettings = auth.SentCode;
+auth.resendCode#cae47523 flags:# phone_number:string phone_code_hash:string reason:flags.0?string = auth.SentCode;
+auth.resetLoginEmail#7e960193 phone_number:string phone_code_hash:string = auth.SentCode;
+auth.checkPaidAuth#56e59f9c phone_number:string phone_code_hash:string form_id:long = auth.SentCode;
+
+account.sendChangePhoneCode#82574ae5 phone_number:string settings:CodeSettings = auth.SentCode;
+account.sendConfirmPhoneCode#1b3faa88 hash:string settings:CodeSettings = auth.SentCode;
+account.sendVerifyPhoneCode#a5a356f9 phone_number:string settings:CodeSettings = auth.SentCode;
+</code></pre>
+<h2 id="конструкторы" tabindex="-1">Конструкторы</h2>
+<table>
+<thead>
+<tr>
+<th>Constructor</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/constructor/auth.sentCode/">auth.sentCode</a></td>
+<td>Contains info about a sent verification code.</td>
+</tr>
+<tr>
+<td><a href="/constructor/auth.sentCodeSuccess/">auth.sentCodeSuccess</a></td>
+<td>The user successfully authorized using <a href="https://core.telegram.org/api/auth/#future-auth-tokens">future auth tokens</a></td>
+</tr>
+<tr>
+<td><a href="/constructor/auth.sentCodePaymentRequired/">auth.sentCodePaymentRequired</a></td>
+<td>Official apps may receive this constructor, indicating that due to the high cost of SMS verification codes for the user's country/provider, the user must purchase a <a href="https://core.telegram.org/api/premium">Telegram Premium</a> subscription in order to proceed with the login/signup, see <a href="https://core.telegram.org/api/auth/#paid-auth">here »</a> for more info.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="методы" tabindex="-1">Методы</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/method/auth.sendCode/">auth.sendCode</a></td>
+<td>Send the verification code for login</td>
+</tr>
+<tr>
+<td><a href="/method/auth.resendCode/">auth.resendCode</a></td>
+<td>Resend the login code via another medium, the phone code type is determined by the return value of the previous auth.sendCode/auth.resendCode: see <a href="/api/auth/">login</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/auth.resetLoginEmail/">auth.resetLoginEmail</a></td>
+<td>Reset the <a href="https://core.telegram.org/api/auth#email-verification">login email »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/auth.checkPaidAuth/">auth.checkPaidAuth</a></td>
+<td>Checks the status of a <a href="https://core.telegram.org/api/auth/#paid-auth">login payment</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/account.sendChangePhoneCode/">account.sendChangePhoneCode</a></td>
+<td>Verify a new phone number to associate to the current account</td>
+</tr>
+<tr>
+<td><a href="/method/account.sendConfirmPhoneCode/">account.sendConfirmPhoneCode</a></td>
+<td>Send confirmation code to cancel account deletion, for more info <a href="https://core.telegram.org/api/account-deletion">click here »</a></td>
+</tr>
+<tr>
+<td><a href="/method/account.sendVerifyPhoneCode/">account.sendVerifyPhoneCode</a></td>
+<td>Send the verification phone code for telegram <a href="https://core.telegram.org/passport">passport</a>.</td>
+</tr>
+</tbody>
+</table>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/type/auth.SentCode" rel="noopener">https://core.telegram.org/type/auth.SentCode</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

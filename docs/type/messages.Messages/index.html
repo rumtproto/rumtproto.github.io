@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>messages.Messages (тип) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="messages.messages" tabindex="-1">messages.Messages</h1>
+<p><em>Тип из схемы TL.</em></p>
+<blockquote>
+<p>Object contains information on list of messages with auxiliary data.</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>messages.messages#1d73e7ea messages:Vector&lt;Message&gt; topics:Vector&lt;ForumTopic&gt; chats:Vector&lt;Chat&gt; users:Vector&lt;User&gt; = messages.Messages;
+messages.messagesSlice#5f206716 flags:# inexact:flags.1?true count:int next_rate:flags.0?int offset_id_offset:flags.2?int search_flood:flags.3?SearchPostsFlood messages:Vector&lt;Message&gt; topics:Vector&lt;ForumTopic&gt; chats:Vector&lt;Chat&gt; users:Vector&lt;User&gt; = messages.Messages;
+messages.channelMessages#c776ba4e flags:# inexact:flags.1?true pts:int count:int offset_id_offset:flags.2?int messages:Vector&lt;Message&gt; topics:Vector&lt;ForumTopic&gt; chats:Vector&lt;Chat&gt; users:Vector&lt;User&gt; = messages.Messages;
+messages.messagesNotModified#74535f21 count:int = messages.Messages;
+
+---functions---
+
+messages.getMessages#63c66506 id:Vector&lt;InputMessage&gt; = messages.Messages;
+messages.getHistory#4423e6c5 peer:InputPeer offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int hash:long = messages.Messages;
+messages.search#29ee847a flags:# peer:InputPeer q:string from_id:flags.0?InputPeer saved_peer_id:flags.2?InputPeer saved_reaction:flags.3?Vector&lt;Reaction&gt; top_msg_id:flags.1?int filter:MessagesFilter min_date:int max_date:int offset_id:int add_offset:int limit:int max_id:int min_id:int hash:long = messages.Messages;
+messages.searchGlobal#4bc6589a flags:# broadcasts_only:flags.1?true groups_only:flags.2?true users_only:flags.3?true folder_id:flags.0?int q:string filter:MessagesFilter min_date:int max_date:int offset_rate:int offset_peer:InputPeer offset_id:int limit:int = messages.Messages;
+messages.getUnreadMentions#f107e790 flags:# peer:InputPeer top_msg_id:flags.0?int offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+messages.getRecentLocations#702a40e0 peer:InputPeer limit:int hash:long = messages.Messages;
+messages.getScheduledHistory#f516760b peer:InputPeer hash:long = messages.Messages;
+messages.getScheduledMessages#bdbb0464 peer:InputPeer id:Vector&lt;int&gt; = messages.Messages;
+messages.getReplies#22ddd30c peer:InputPeer msg_id:int offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int hash:long = messages.Messages;
+messages.getUnreadReactions#bd7f90ac flags:# peer:InputPeer top_msg_id:flags.0?int saved_peer_id:flags.1?InputPeer offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+messages.searchSentMedia#107e31a0 q:string filter:MessagesFilter limit:int = messages.Messages;
+messages.getSavedHistory#998ab009 flags:# parent_peer:flags.0?InputPeer peer:InputPeer offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int hash:long = messages.Messages;
+messages.getQuickReplyMessages#94a495c3 flags:# shortcut_id:int id:flags.0?Vector&lt;int&gt; hash:long = messages.Messages;
+
+channels.getMessages#ad8c9a23 channel:InputChannel id:Vector&lt;InputMessage&gt; = messages.Messages;
+channels.searchPosts#f2c4f24d flags:# hashtag:flags.0?string query:flags.1?string offset_rate:int offset_peer:InputPeer offset_id:int limit:int allow_paid_stars:flags.2?long = messages.Messages;
+</code></pre>
+<h2 id="конструкторы" tabindex="-1">Конструкторы</h2>
+<table>
+<thead>
+<tr>
+<th>Constructor</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/constructor/messages.messages/">messages.messages</a></td>
+<td>Full list of messages with auxiliary data.</td>
+</tr>
+<tr>
+<td><a href="/constructor/messages.messagesSlice/">messages.messagesSlice</a></td>
+<td>Incomplete list of messages and auxiliary data.</td>
+</tr>
+<tr>
+<td><a href="/constructor/messages.channelMessages/">messages.channelMessages</a></td>
+<td>Channel messages</td>
+</tr>
+<tr>
+<td><a href="/constructor/messages.messagesNotModified/">messages.messagesNotModified</a></td>
+<td>No new messages matching the query were found</td>
+</tr>
+</tbody>
+</table>
+<h2 id="методы" tabindex="-1">Методы</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/method/messages.getMessages/">messages.getMessages</a></td>
+<td>Returns the list of messages by their IDs.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getHistory/">messages.getHistory</a></td>
+<td>Returns the message history in a peer. Results are ordered by date (descending).</td>
+</tr>
+<tr>
+<td><a href="/method/messages.search/">messages.search</a></td>
+<td>Search for messages.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.searchGlobal/">messages.searchGlobal</a></td>
+<td>Search for messages and peers globally</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getUnreadMentions/">messages.getUnreadMentions</a></td>
+<td>Get unread messages where we were mentioned</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getRecentLocations/">messages.getRecentLocations</a></td>
+<td>Get all recent <a href="https://core.telegram.org/api/live-location">live locations</a> sent to a specific chat: returns up to 1 location message (<a href="/constructor/messageMediaGeoLive/">messageMediaGeoLive</a>) per chat participant.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getScheduledHistory/">messages.getScheduledHistory</a></td>
+<td>Get scheduled messages</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getScheduledMessages/">messages.getScheduledMessages</a></td>
+<td>Get scheduled messages</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getReplies/">messages.getReplies</a></td>
+<td>Get messages in a reply thread</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getUnreadReactions/">messages.getUnreadReactions</a></td>
+<td>Get unread reactions to messages you sent</td>
+</tr>
+<tr>
+<td><a href="/method/messages.searchSentMedia/">messages.searchSentMedia</a></td>
+<td>View and search recently sent media. This method does not support pagination.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getSavedHistory/">messages.getSavedHistory</a></td>
+<td>Fetch <a href="https://core.telegram.org/api/saved-messages">saved messages »</a> forwarded from a specific peer, or fetch messages from a <a href="https://core.telegram.org/api/monoforum">monoforum topic »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getQuickReplyMessages/">messages.getQuickReplyMessages</a></td>
+<td>Fetch (a subset or all) messages in a <a href="https://core.telegram.org/api/business#quick-reply-shortcuts">quick reply shortcut »</a>.</td>
+</tr>
+<tr>
+<td><a href="https://core.telegram.org/method/messages.getUnreadPollVotes">messages.getUnreadPollVotes</a></td>
+<td>Get messages containing polls with <a href="https://core.telegram.org/api/poll#unread-poll-votes">unread votes »</a></td>
+</tr>
+<tr>
+<td><a href="https://core.telegram.org/method/messages.getPersonalChannelHistory">messages.getPersonalChannelHistory</a></td>
+<td>Fetch the message history of a user's <a href="https://core.telegram.org/api/profile#personal-channel">personal channel »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.getMessages/">channels.getMessages</a></td>
+<td>Get <a href="https://core.telegram.org/api/channel">channel/supergroup</a> messages</td>
+</tr>
+<tr>
+<td><a href="/method/channels.searchPosts/">channels.searchPosts</a></td>
+<td>Globally search for posts from public <a href="https://core.telegram.org/api/channel">channels »</a> (including those we aren't a member of) containing either a specific hashtag, or a full text query. Exactly one of query and hashtag must be set.</td>
+</tr>
+</tbody>
+</table>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/type/messages.Messages" rel="noopener">https://core.telegram.org/type/messages.Messages</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

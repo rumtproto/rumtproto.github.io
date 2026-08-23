@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>messageActionStarGift (конструктор) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="messageactionstargift" tabindex="-1">messageActionStarGift</h1>
+<p><em>Конструктор из схемы TL.</em></p>
+<blockquote>
+<p>You received a <a href="https://core.telegram.org/api/gifts">gift, see here »</a> for more info.</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>messageActionStarGift#ea2c31d3 flags:# name_hidden:flags.0?true saved:flags.2?true converted:flags.3?true upgraded:flags.5?true refunded:flags.9?true can_upgrade:flags.10?true prepaid_upgrade:flags.13?true upgrade_separate:flags.16?true auction_acquired:flags.17?true gift:StarGift message:flags.1?TextWithEntities convert_stars:flags.4?long upgrade_msg_id:flags.5?int upgrade_stars:flags.8?long from_id:flags.11?Peer peer:flags.12?Peer saved_id:flags.12?long prepaid_upgrade_hash:flags.14?string gift_msg_id:flags.15?int to_id:flags.18?Peer gift_num:flags.19?int = MessageAction;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>name_hidden</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td>
+<td>If set, the name of the sender of the gift will be hidden if the destination user decides to display the gift on their profile</td>
+</tr>
+<tr>
+<td>saved</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true/">true</a></td>
+<td>Whether this gift was added to the destination user's profile (may be toggled using <a href="/method/payments.saveStarGift/">payments.saveStarGift</a> and fetched using <a href="/method/payments.getSavedStarGifts/">payments.getSavedStarGifts</a>)</td>
+</tr>
+<tr>
+<td>converted</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true/">true</a></td>
+<td>Whether this gift was converted to <a href="https://core.telegram.org/api/stars">Telegram Stars</a> and cannot be displayed on the profile anymore.</td>
+</tr>
+<tr>
+<td>upgraded</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true/">true</a></td>
+<td>This gift was upgraded to a <a href="https://core.telegram.org/api/gifts#collectible-gifts">collectible gift »</a>.</td>
+</tr>
+<tr>
+<td>refunded</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/constructor/true/">true</a></td>
+<td>This gift is not available anymore because a request to refund the payment related to this gift was made, and the money was returned.</td>
+</tr>
+<tr>
+<td>can_upgrade</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true/">true</a></td>
+<td>If set, this gift can be <a href="https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift">upgraded to a collectible gift</a>; can only be set for the receiver of a gift.</td>
+</tr>
+<tr>
+<td>prepaid_upgrade</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true/">true</a></td>
+<td>The sender has already pre-paid for the upgrade of this gift to a collectible gift.</td>
+</tr>
+<tr>
+<td>upgrade_separate</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true/">true</a></td>
+<td>This service message is the notification of a <a href="https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade">separate pre-payment for the upgrade of a gift we own</a>.</td>
+</tr>
+<tr>
+<td>auction_acquired</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/constructor/true/">true</a></td>
+<td>If set, this gift was acquired in a <a href="https://core.telegram.org/api/auctions">collectible gifts auction »</a>.</td>
+</tr>
+<tr>
+<td>gift</td>
+<td><a href="/type/StarGift/">StarGift</a></td>
+<td>Info about the gift</td>
+</tr>
+<tr>
+<td>message</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/TextWithEntities/">TextWithEntities</a></td>
+<td>Additional message from the sender of the gift</td>
+</tr>
+<tr>
+<td>convert_stars</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/long/">long</a></td>
+<td>The receiver of this gift may convert it to this many Telegram Stars, instead of displaying it on their profile page. convert_stars will be equal to stars only if the gift was bought using recently bought Telegram Stars, otherwise it will be less than stars.</td>
+</tr>
+<tr>
+<td>upgrade_msg_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/int/">int</a></td>
+<td>If set, this gift was <a href="https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift">upgraded to a collectible gift</a>, and the corresponding <a href="/constructor/messageActionStarGiftUnique/">messageActionStarGiftUnique</a> is available at the specified message ID.</td>
+</tr>
+<tr>
+<td>upgrade_stars</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/long/">long</a></td>
+<td>The number of Telegram Stars the user can pay to <a href="https://core.telegram.org/api/gifts#collectible-gifts">convert the gift into a collectible gift »</a>.</td>
+</tr>
+<tr>
+<td>from_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/Peer/">Peer</a></td>
+<td>Sender of the gift (unset for anonymous gifts).</td>
+</tr>
+<tr>
+<td>peer</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/Peer/">Peer</a></td>
+<td>Receiver of the gift.</td>
+</tr>
+<tr>
+<td>saved_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/long/">long</a></td>
+<td>For channel gifts, ID to use in <a href="/constructor/inputSavedStarGiftChat/">inputSavedStarGiftChat</a> constructors.</td>
+</tr>
+<tr>
+<td>prepaid_upgrade_hash</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/string/">string</a></td>
+<td><a href="https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade">Hash to prepay for a gift upgrade separately »</a>.</td>
+</tr>
+<tr>
+<td>gift_msg_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/int/">int</a></td>
+<td>For <a href="https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade">separate upgrades</a>, the identifier of the message with the gift whose upgrade was prepaid (only valid for the receiver of the service message).</td>
+</tr>
+<tr>
+<td>to_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/Peer/">Peer</a></td>
+<td>For gifts acquired in an <a href="https://core.telegram.org/api/auctions">auction »</a> (i.e. when auction_acquired is set), the peer the gift was assigned to; only present if the target peer is different from the bidder, in which case it will only be present to the messageActionStarGift sent to the bidder, not to the messageActionStarGift sent to the target peer.</td>
+</tr>
+<tr>
+<td>gift_num</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/type/int/">int</a></td>
+<td>For gifts acquired in an <a href="https://core.telegram.org/api/auctions">auction »</a>, the collectible number of the won <a href="https://core.telegram.org/api/gifts#collectible-gifts">collectible gift »</a>; this field is disjoint from auction_acquired because only auction collectibles won before this field was introduced in the API will not have this flag set.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="тип" tabindex="-1">Тип</h2>
+<p><a href="/type/MessageAction/">MessageAction</a></p>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="payments.savestargift" tabindex="-1"><a href="/method/payments.saveStarGift/">payments.saveStarGift</a></h4>
+<p>Display or remove a <a href="https://core.telegram.org/api/gifts#hosted-collectible-gifts">received or hosted gift »</a> from our profile.</p>
+<h4 id="payments.getsavedstargifts" tabindex="-1"><a href="/method/payments.getSavedStarGifts/">payments.getSavedStarGifts</a></h4>
+<p>Fetch the full list of <a href="https://core.telegram.org/api/gifts#list-all-received-gifts">gifts »</a> owned, received or <a href="https://core.telegram.org/api/gifts#hosted-collectible-gifts">hosted »</a> by a peer.</p>
+<p>Note that unlike what the name suggests, the method can be used to fetch both &quot;saved&quot; and &quot;unsaved&quot; gifts (aka gifts both pinned and not pinned) to the profile, depending on the passed flags.</p>
+<h4 id="telegram-stars" tabindex="-1"><a href="https://core.telegram.org/api/stars">Telegram Stars</a></h4>
+<p>Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.</p>
+<h4 id="telegram-gifts" tabindex="-1"><a href="https://core.telegram.org/api/gifts">Telegram Gifts</a></h4>
+<p>Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.</p>
+<h4 id="collectible-gift-auctions" tabindex="-1"><a href="https://core.telegram.org/api/auctions">Collectible gift auctions</a></h4>
+<p>New collectible gift releases are distributed through Stars auctions held over several rounds.</p>
+<h4 id="messageactionstargiftunique" tabindex="-1"><a href="/constructor/messageActionStarGiftUnique/">messageActionStarGiftUnique</a></h4>
+<p>A <a href="https://core.telegram.org/api/gifts">gift »</a> was upgraded to a <a href="https://core.telegram.org/api/gifts#collectible-gifts">collectible gift »</a>.</p>
+<h4 id="inputsavedstargiftchat" tabindex="-1"><a href="/constructor/inputSavedStarGiftChat/">inputSavedStarGiftChat</a></h4>
+<p>A gift received by a channel we own.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/constructor/messageActionStarGift" rel="noopener">https://core.telegram.org/constructor/messageActionStarGift</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

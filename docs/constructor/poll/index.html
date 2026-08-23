@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>poll (конструктор) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="poll" tabindex="-1">poll</h1>
+<p><em>Конструктор из схемы TL.</em></p>
+<blockquote>
+<p>Poll</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>poll#58747131 id:long flags:# closed:flags.0?true public_voters:flags.1?true multiple_choice:flags.2?true quiz:flags.3?true question:TextWithEntities answers:Vector&lt;PollAnswer&gt; close_period:flags.4?int close_date:flags.5?int = Poll;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td><a href="/type/long/">long</a></td>
+<td>ID of the poll</td>
+</tr>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>closed</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td>
+<td>Whether the poll is closed and doesn't accept any more answers</td>
+</tr>
+<tr>
+<td>public_voters</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td>
+<td>Whether cast votes are publicly visible to all users (non-anonymous poll)</td>
+</tr>
+<tr>
+<td>multiple_choice</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true/">true</a></td>
+<td>Whether multiple options can be chosen as answer</td>
+</tr>
+<tr>
+<td>quiz</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true/">true</a></td>
+<td>Whether this is a quiz (with wrong and correct answers, results shown in the return type). When creating a poll, the correct answers are specified in <a href="/constructor/inputMediaPoll/">inputMediaPoll</a>.correct_answers.</td>
+</tr>
+<tr>
+<td>open_answers</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true/">true</a></td>
+<td>Whether users can add new answer options after the poll is created, see <a href="https://core.telegram.org/api/poll#open-answer-polls">open-answer polls »</a></td>
+</tr>
+<tr>
+<td>revoting_disabled</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true/">true</a></td>
+<td>If set, users cannot change their vote after casting it</td>
+</tr>
+<tr>
+<td>shuffle_answers</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true/">true</a></td>
+<td>Whether answer options are displayed in a randomized order to each user</td>
+</tr>
+<tr>
+<td>hide_results_until_close</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/constructor/true/">true</a></td>
+<td>Whether vote results are hidden from all participants until the poll is closed</td>
+</tr>
+<tr>
+<td>creator</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true/">true</a></td>
+<td>Whether the current user created this poll</td>
+</tr>
+<tr>
+<td>subscribers_only</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true/">true</a></td>
+<td>Whether only subscribers can vote: a user may vote only if they are currently a member of the channel/supergroup and joined it at least 24 hours before the poll was posted, see <a href="https://core.telegram.org/api/poll#subscriber-only-polls">subscriber-only polls »</a>.</td>
+</tr>
+<tr>
+<td>question</td>
+<td><a href="/type/TextWithEntities/">TextWithEntities</a></td>
+<td>The question of the poll (only <a href="https://core.telegram.org/api/premium">Premium</a> users can use <a href="https://core.telegram.org/api/custom-emoji">custom emoji entities</a> here).</td>
+</tr>
+<tr>
+<td>answers</td>
+<td><a href="https://core.telegram.org/type/Vector%20t">Vector</a>&lt;<a href="/type/PollAnswer/">PollAnswer</a>&gt;</td>
+<td>The possible answers (2-<a href="https://core.telegram.org/api/config#poll-answers-max">poll_answers_max</a>), vote using <a href="/method/messages.sendVote/">messages.sendVote</a>.</td>
+</tr>
+<tr>
+<td>close_period</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int/">int</a></td>
+<td>Amount of time in seconds the poll will be active after creation, up to <a href="https://core.telegram.org/api/config#poll-close-period-max">poll_close_period_max »</a> seconds. Can't be used together with close_date.</td>
+</tr>
+<tr>
+<td>close_date</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/int/">int</a></td>
+<td>Point in time (Unix timestamp) when the poll will be automatically closed. Up to <a href="https://core.telegram.org/api/config#poll-close-period-max">poll_close_period_max »</a> seconds in the future; can't be used together with close_period.</td>
+</tr>
+<tr>
+<td>countries_iso2</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="https://core.telegram.org/type/Vector%20t">Vector</a>&lt;<a href="/type/string/">string</a>&gt;</td>
+<td>If set, only users from the specified ISO 3166-1 alpha-2 country codes may vote, see <a href="https://core.telegram.org/api/poll#country-restricted-polls">country-restricted polls »</a>; a user may vote only if the <a href="https://core.telegram.org/api/config#phone-country-iso2">phone_country_iso2 »</a> configuration parameter is contained in this list.</td>
+</tr>
+<tr>
+<td>hash</td>
+<td><a href="/type/long/">long</a></td>
+<td>Hash for use with <a href="/method/messages.getPollResults/">messages.getPollResults</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="тип" tabindex="-1">Тип</h2>
+<p><a href="/type/Poll/">Poll</a></p>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="inputmediapoll" tabindex="-1"><a href="/constructor/inputMediaPoll/">inputMediaPoll</a></h4>
+<p>A poll</p>
+<h4 id="polls-and-quizzes" tabindex="-1"><a href="https://core.telegram.org/api/poll">Polls and quizzes</a></h4>
+<p>Telegram allows sending polls and quizzes, that can be voted on by thousands, if not millions of users in chats and channels.</p>
+<h4 id="telegram-premium" tabindex="-1"><a href="https://core.telegram.org/api/premium">Telegram Premium</a></h4>
+<p>Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.</p>
+<h4 id="custom-emojis" tabindex="-1"><a href="https://core.telegram.org/api/custom-emoji">Custom emojis</a></h4>
+<p>Telegram allows including animated and static custom emojis inside of messages.</p>
+<h4 id="client-configuration" tabindex="-1"><a href="https://core.telegram.org/api/config">Client configuration</a></h4>
+<p>The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.</p>
+<h4 id="messages.sendvote" tabindex="-1"><a href="/method/messages.sendVote/">messages.sendVote</a></h4>
+<p>Vote in a <a href="/constructor/poll/">poll</a></p>
+<p>Starting from layer 159, the vote will be sent from the peer specified using <a href="/method/messages.saveDefaultSendAs/">messages.saveDefaultSendAs</a>.</p>
+<p>Before voting, clients should check that the user is actually allowed to vote: voting is not possible if the poll is closed, if it is <a href="https://core.telegram.org/api/poll#subscriber-only-polls">subscriber-only »</a> and the user is not an eligible subscriber, or if it is <a href="https://core.telegram.org/api/poll#country-restricted-polls">country-restricted »</a> and the user's <a href="https://core.telegram.org/api/config#phone-country-iso2"><code>phone_country_iso2</code> »</a> is not in the poll's allowed country list. See <a href="https://core.telegram.org/api/poll#vote-restrictions">vote restrictions »</a> for the full list of conditions.</p>
+<h4 id="messages.getpollresults" tabindex="-1"><a href="/method/messages.getPollResults/">messages.getPollResults</a></h4>
+<p>Get poll results</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/constructor/poll" rel="noopener">https://core.telegram.org/constructor/poll</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

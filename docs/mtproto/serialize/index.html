@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сериализация данных (язык TL) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li class="active"><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="сериализация-данных-(язык-tl)" tabindex="-1">Сериализация данных (язык TL)</h1>
+<p>Оригинальное русскоязычное изложение правил, по которым значения типов <a href="/mtproto/TL/">TL</a> превращаются в байты и обратно. Первоисточник: <a href="https://core.telegram.org/mtproto/serialize">core.telegram.org/mtproto/serialize</a>.</p>
+<p>Все целые числа передаются в <strong>малоэндийном</strong> (little-endian) порядке байтов.</p>
+<h2 id="базовые-типы" tabindex="-1">Базовые типы</h2>
+<table>
+<thead>
+<tr>
+<th>Тип</th>
+<th>Размер</th>
+<th>Пояснение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>4 байта</td>
+<td>целое со знаком</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>8 байт</td>
+<td>целое со знаком</td>
+</tr>
+<tr>
+<td><code>int128</code> / <code>int256</code></td>
+<td>16 / 32 байта</td>
+<td>«сырые» числа фиксированной длины (используются, например, для <code>nonce</code>)</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>8 байт</td>
+<td>IEEE 754, little-endian</td>
+</tr>
+<tr>
+<td><code>string</code> / <code>bytes</code></td>
+<td>см. ниже</td>
+<td>строка/массив байтов с длиной</td>
+</tr>
+<tr>
+<td><code>!X</code> (function)</td>
+<td>—</td>
+<td>тип «функция как параметр»; сериализуется как сериализованный вызов соответствующей функции</td>
+</tr>
+</tbody>
+</table>
+<h3 id="строки-и-байтовые-массивы" tabindex="-1">Строки и байтовые массивы</h3>
+<p>Длина кодируется компактно:</p>
+<ul>
+<li>если длина <code>l &lt; 254</code>, сначала пишется один байт <code>l</code>, затем данные, затем от 0 до 3 нулевых байтов выравнивания до кратности 4;</li>
+<li>если <code>l &gt;= 254</code>, пишется байт <code>254</code>, затем 3 байта длины (малоэндийные), затем данные и выравнивание до кратности 4.</li>
+</ul>
+<p>Итого полная запись всегда кратна 4 байтам.</p>
+<h3 id="векторы" tabindex="-1">Векторы</h3>
+<p><code>Vector t</code> сериализуется так: конструктор <a href="/constructor/vector/"><code>vector</code></a> (<code>#1cb5c415</code>), затем <code>int</code> с количеством элементов, затем элементы подряд.</p>
+<h2 id="комбинаторы-(конструкторы-типов)" tabindex="-1">Комбинаторы (конструкторы типов)</h2>
+<p>Каждый конструктор схемы начинается с 4-байтного идентификатора (<code>constructor ID</code>), например:</p>
+<pre><code>boolFalse#bc799737 = Bool;
+boolTrue#997275b5 = Bool;
+</code></pre>
+<p>Сериализация значения типа — это идентификатор конструктора, за которым в порядке объявления следуют сериализованные поля.</p>
+<h3 id="поля" tabindex="-1">Поля</h3>
+<ul>
+<li>Обычное поле <code>name:Type</code> — сериализованное значение типа.</li>
+<li><strong>Поля с флагами</strong> (условные) записываются как <code>flags.N?Type</code>: в конструкторе есть служебное поле <code>flags:#</code> (битовая маска); поле <code>N</code> присутствует в потоке тогда и только тогда, когда установлен бит <code>N</code>. Например, в <a href="/constructor/message/"><code>message</code></a> десятки опциональных полей управляются одним словом <code>flags</code>.</li>
+<li>Поле <code>flags2:#</code> и т.п. — дополнительные слова маски, когда битов не хватает.</li>
+<li>Тип <code>#</code> — это 32-битное беззнаковое целое (используется для масок и «сырых» идентификаторов).</li>
+<li>Тип <code>true</code> не занимает места в потоке: наличие значения кодируется самим битом флага.</li>
+</ul>
+<h2 id="полиморфизм-и-зависимые-типы" tabindex="-1">Полиморфизм и зависимые типы</h2>
+<ul>
+<li>Если поле имеет абстрактный тип (например, <a href="/type/Peer/"><code>Peer</code></a>), на его месте сериализуется один из конструкторов этого типа вместе со своим идентификатором.</li>
+<li>Некоторые конструкторы отличаются только значениями полей при одинаковой структуре; формальное описание возможностей языка — в оригинальных статьях о <a href="https://core.telegram.org/mtproto/TL-polymorph">полиморфизме</a> и <a href="https://core.telegram.org/mtproto/TL-dependent">зависимых типах</a>.</li>
+</ul>
+<h2 id="методы-(запросы)" tabindex="-1">Методы (запросы)</h2>
+<p>Запрос сериализуется точно так же: идентификатор метода + поля. Ответ — значение соответствующего типа схемы. Ошибки — конструктор <a href="https://core.telegram.org/constructor/rpc_error/"><code>rpc_error</code></a>.</p>
+<h2 id="практические-следствия" tabindex="-1">Практические следствия</h2>
+<ul>
+<li>Парсер клиента должен корректно переживать поля и флаги, появившиеся в новых слоях схемы: неизвестные части следует пропускать, опираясь на объявленную структуру конструктора, а не аварийно завершаться.</li>
+<li>При генерации кода из схемы удобно использовать машиночитаемые версии: <a href="/schema/json/">схема в JSON</a>.</li>
+</ul>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/mtproto/serialize" rel="noopener">https://core.telegram.org/mtproto/serialize</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

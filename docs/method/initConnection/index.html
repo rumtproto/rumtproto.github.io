@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>initConnection (метод) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="initconnection" tabindex="-1">initConnection</h1>
+<p><em>Метод из схемы TL.</em></p>
+<blockquote>
+<p>Initialize connection</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>---functions---
+initConnection#c1cd5ea9 {X:Type} flags:# api_id:int device_model:string system_version:string app_version:string system_lang_code:string lang_pack:string lang_code:string proxy:flags.0?InputClientProxy params:flags.1?JSONValue query:!X = X;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>api_id</td>
+<td><a href="/type/int/">int</a></td>
+<td>Application identifier (see. <a href="https://core.telegram.org/myapp">App configuration</a>)</td>
+</tr>
+<tr>
+<td>device_model</td>
+<td><a href="/type/string/">string</a></td>
+<td>Device model</td>
+</tr>
+<tr>
+<td>system_version</td>
+<td><a href="/type/string/">string</a></td>
+<td>Operation system version</td>
+</tr>
+<tr>
+<td>app_version</td>
+<td><a href="/type/string/">string</a></td>
+<td>Application version</td>
+</tr>
+<tr>
+<td>system_lang_code</td>
+<td><a href="/type/string/">string</a></td>
+<td>Code for the language used on the device's OS, ISO 639-1 standard</td>
+</tr>
+<tr>
+<td>lang_pack</td>
+<td><a href="/type/string/">string</a></td>
+<td>Platform identifier (i.e. android, tdesktop, etc).</td>
+</tr>
+<tr>
+<td>lang_code</td>
+<td><a href="/type/string/">string</a></td>
+<td>Either an ISO 639-1 language code or a language pack name obtained from a <a href="https://core.telegram.org/api/links#language-pack-links">language pack link</a>.</td>
+</tr>
+<tr>
+<td>proxy</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputClientProxy/">InputClientProxy</a></td>
+<td>Info about an MTProto proxy</td>
+</tr>
+<tr>
+<td>params</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/JSONValue/">JSONValue</a></td>
+<td>Additional initConnection parameters. For now, only the tz_offset field is supported, for specifying the timezone offset in seconds.</td>
+</tr>
+<tr>
+<td>query</td>
+<td>!X</td>
+<td>The query itself</td>
+</tr>
+</tbody>
+</table>
+<h2 id="результат" tabindex="-1">Результат</h2>
+<p>Returns the type returned by the invoked method.</p>
+<h2 id="both-users-and-bots-can-use-this-method" tabindex="-1">Both users and bots can use this method</h2>
+<h2 id="this-method-can-be-invoked-over-an-unauthenticated-connection-»" tabindex="-1">This method can be invoked over an unauthenticated connection »</h2>
+<h2 id="possible-errors" tabindex="-1">Possible errors</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>CONNECTION_LAYER_INVALID</td>
+<td>Layer invalid.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="deep-links" tabindex="-1"><a href="https://core.telegram.org/api/links">Deep links</a></h4>
+<p>Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/method/initConnection" rel="noopener">https://core.telegram.org/method/initConnection</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

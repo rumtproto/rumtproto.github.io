@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>messages.getUnreadReactions (метод) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="messages.getunreadreactions" tabindex="-1">messages.getUnreadReactions</h1>
+<p><em>Метод из схемы TL.</em></p>
+<blockquote>
+<p>Get unread reactions to messages you sent</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>messages.messages#1d73e7ea messages:Vector&lt;Message&gt; topics:Vector&lt;ForumTopic&gt; chats:Vector&lt;Chat&gt; users:Vector&lt;User&gt; = messages.Messages;
+messages.messagesSlice#5f206716 flags:# inexact:flags.1?true count:int next_rate:flags.0?int offset_id_offset:flags.2?int search_flood:flags.3?SearchPostsFlood messages:Vector&lt;Message&gt; topics:Vector&lt;ForumTopic&gt; chats:Vector&lt;Chat&gt; users:Vector&lt;User&gt; = messages.Messages;
+messages.channelMessages#c776ba4e flags:# inexact:flags.1?true pts:int count:int offset_id_offset:flags.2?int messages:Vector&lt;Message&gt; topics:Vector&lt;ForumTopic&gt; chats:Vector&lt;Chat&gt; users:Vector&lt;User&gt; = messages.Messages;
+messages.messagesNotModified#74535f21 count:int = messages.Messages;
+---functions---
+messages.getUnreadReactions#bd7f90ac flags:# peer:InputPeer top_msg_id:flags.0?int saved_peer_id:flags.1?InputPeer offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>peer</td>
+<td><a href="/type/InputPeer/">InputPeer</a></td>
+<td>Peer</td>
+</tr>
+<tr>
+<td>top_msg_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int/">int</a></td>
+<td>If set, considers only reactions to messages within the specified <a href="https://core.telegram.org/api/forum#forum-topics">forum topic</a></td>
+</tr>
+<tr>
+<td>saved_peer_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/InputPeer/">InputPeer</a></td>
+<td>If set, must be equal to the ID of a <a href="https://core.telegram.org/api/monoforum">monoforum topic</a>: will affect that topic in the monoforum passed in peer.</td>
+</tr>
+<tr>
+<td>offset_id</td>
+<td><a href="/type/int/">int</a></td>
+<td><a href="https://core.telegram.org/api/offsets">Offsets for pagination, for more info click here</a></td>
+</tr>
+<tr>
+<td>add_offset</td>
+<td><a href="/type/int/">int</a></td>
+<td><a href="https://core.telegram.org/api/offsets">Offsets for pagination, for more info click here</a></td>
+</tr>
+<tr>
+<td>limit</td>
+<td><a href="/type/int/">int</a></td>
+<td>Maximum number of results to return, <a href="https://core.telegram.org/api/offsets">see pagination</a></td>
+</tr>
+<tr>
+<td>max_id</td>
+<td><a href="/type/int/">int</a></td>
+<td>Only return reactions for messages up until this message ID</td>
+</tr>
+<tr>
+<td>min_id</td>
+<td><a href="/type/int/">int</a></td>
+<td>Only return reactions for messages starting from this message ID</td>
+</tr>
+</tbody>
+</table>
+<h2 id="результат" tabindex="-1">Результат</h2>
+<p><a href="/type/messages.Messages/">messages.Messages</a></p>
+<h2 id="only-users-can-use-this-method" tabindex="-1">Only users can use this method</h2>
+<h2 id="possible-errors" tabindex="-1">Possible errors</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>PEER_ID_INVALID</td>
+<td>The provided peer id is invalid.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="forum-topics" tabindex="-1"><a href="https://core.telegram.org/api/forum">Forum topics</a></h4>
+<p>Telegram allows creating forums with multiple distinct topics.</p>
+<h4 id="direct-messages-to-channels" tabindex="-1"><a href="https://core.telegram.org/api/monoforum">Direct messages to channels</a></h4>
+<p>Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.</p>
+<h4 id="pagination-in-the-api" tabindex="-1"><a href="https://core.telegram.org/api/offsets">Pagination in the API</a></h4>
+<p>How to fetch results from large lists of objects.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/method/messages.getUnreadReactions" rel="noopener">https://core.telegram.org/method/messages.getUnreadReactions</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

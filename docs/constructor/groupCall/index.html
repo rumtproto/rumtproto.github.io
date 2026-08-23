@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>groupCall (конструктор) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="groupcall" tabindex="-1">groupCall</h1>
+<p><em>Конструктор из схемы TL.</em></p>
+<blockquote>
+<p>Describes a <a href="https://core.telegram.org/api/group-calls">group call</a>.
+If the <code>min</code> flag is set, this is a partial (<code>min</code>) constructor: only a subset of its fields contains up-to-date information, and it must be merged into a previously cached non-<code>min</code> constructor as described below. If no full (non-<code>min</code>) constructor for this call was cached previously, the <code>min</code> constructor must be discarded.
+When <code>min</code> is set, the following mandatory fields may be used: <code>id</code>, <code>access_hash</code>, <code>participants_count</code> and <code>version</code>. In addition, <strong>only</strong> the following conditional fields may be used if present, subject to the usual <code>version</code> check:</p>
+<ul>
+<li><code>conference</code></li>
+<li><code>rtmp_stream</code></li>
+<li><code>listeners_hidden</code></li>
+<li><code>title</code></li>
+<li><code>messages_enabled</code></li>
+<li><code>record_start_date</code> and <code>record_video_active</code></li>
+<li><code>schedule_date</code></li>
+<li><code>send_paid_messages_stars</code>
+When <code>min</code> is set, the following fields <strong>must be ignored</strong>, keeping the values from the previously cached non-<code>min</code> constructor:</li>
+<li><code>join_muted</code></li>
+<li><code>can_change_join_muted</code></li>
+<li><code>schedule_start_subscribed</code></li>
+<li><code>can_start_video</code></li>
+<li><code>creator</code></li>
+<li><code>can_change_messages_enabled</code></li>
+<li><code>unmuted_video_count</code></li>
+<li><code>unmuted_video_limit</code></li>
+<li><code>stream_dc_id</code></li>
+<li><code>invite_link</code></li>
+<li><code>default_send_as</code>
+The <code>join_date_asc</code> flag is set only when the call is created and never changes afterwards, so it too is not applied from a <code>min</code> constructor.</li>
+</ul>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>groupCall#efb2b617 flags:# join_muted:flags.1?true can_change_join_muted:flags.2?true join_date_asc:flags.6?true schedule_start_subscribed:flags.8?true can_start_video:flags.9?true record_video_active:flags.11?true rtmp_stream:flags.12?true listeners_hidden:flags.13?true conference:flags.14?true creator:flags.15?true messages_enabled:flags.17?true can_change_messages_enabled:flags.18?true min:flags.19?true id:long access_hash:long participants_count:int title:flags.3?string stream_dc_id:flags.4?int record_start_date:flags.5?int schedule_date:flags.7?int unmuted_video_count:flags.10?int unmuted_video_limit:int version:int invite_link:flags.16?string send_paid_messages_stars:flags.20?long default_send_as:flags.21?Peer = GroupCall;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>join_muted</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td>
+<td>Whether the user should be muted upon joining the call. Must be ignored if the min flag is set.</td>
+</tr>
+<tr>
+<td>can_change_join_muted</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true/">true</a></td>
+<td>Whether the current user can change the value of the join_muted flag using <a href="/method/phone.toggleGroupCallSettings/">phone.toggleGroupCallSettings</a>. Must be ignored if the min flag is set.</td>
+</tr>
+<tr>
+<td>join_date_asc</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true/">true</a></td>
+<td>Specifies the ordering to use when locally sorting by date and displaying in the UI group call participants. Set only when the call is created and never changed afterwards, so it is not applied from a min constructor.</td>
+</tr>
+<tr>
+<td>schedule_start_subscribed</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true/">true</a></td>
+<td>Whether we subscribed to the scheduled call. Must be ignored if the min flag is set.</td>
+</tr>
+<tr>
+<td>can_start_video</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/constructor/true/">true</a></td>
+<td>Whether you can start streaming video into the call. Must be ignored if the min flag is set.</td>
+</tr>
+<tr>
+<td>record_video_active</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true/">true</a></td>
+<td>Whether the group call is currently being recorded</td>
+</tr>
+<tr>
+<td>rtmp_stream</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true/">true</a></td>
+<td>Whether this call uses <a href="https://core.telegram.org/api/group-calls#stream-mode">RTMP livestream mode »</a></td>
+</tr>
+<tr>
+<td>listeners_hidden</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true/">true</a></td>
+<td>Whether the listeners list is hidden and cannot be fetched using <a href="/method/phone.getGroupParticipants/">phone.getGroupParticipants</a>. The phone.groupParticipants.count and groupCall.participants_count counters will still include listeners.</td>
+</tr>
+<tr>
+<td>conference</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true/">true</a></td>
+<td>Whether this is an E2E conference call.</td>
+</tr>
+<tr>
+<td>creator</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/constructor/true/">true</a></td>
+<td>Whether the current user created this group call. Must be ignored if the min flag is set.</td>
+</tr>
+<tr>
+<td>messages_enabled</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/constructor/true/">true</a></td>
+<td>Whether the <a href="https://core.telegram.org/api/group-calls#in-call-messages">in-call message overlay »</a> is enabled</td>
+</tr>
+<tr>
+<td>can_change_messages_enabled</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/constructor/true/">true</a></td>
+<td>Whether the current user may enable or disable the <a href="https://core.telegram.org/api/group-calls#in-call-messages">in-call message overlay »</a>. Must be ignored if the min flag is set.</td>
+</tr>
+<tr>
+<td>min</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/constructor/true/">true</a></td>
+<td>Whether this is a partial constructor that must be merged into a previously cached non-min constructor, following the rules described above.</td>
+</tr>
+<tr>
+<td>id</td>
+<td><a href="/type/long/">long</a></td>
+<td>Group call ID</td>
+</tr>
+<tr>
+<td>access_hash</td>
+<td><a href="/type/long/">long</a></td>
+<td>Group call access hash</td>
+</tr>
+<tr>
+<td>participants_count</td>
+<td><a href="/type/int/">int</a></td>
+<td>Participant count</td>
+</tr>
+<tr>
+<td>title</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string/">string</a></td>
+<td>Group call title</td>
+</tr>
+<tr>
+<td>stream_dc_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int/">int</a></td>
+<td>Media DC ID to use for <a href="https://core.telegram.org/api/group-calls#downloading-media-chunks">RTMP stream requests »</a>. Must be ignored if the min flag is set.</td>
+</tr>
+<tr>
+<td>record_start_date</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/int/">int</a></td>
+<td>When was the recording started</td>
+</tr>
+<tr>
+<td>schedule_date</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/int/">int</a></td>
+<td>When is the call scheduled to start</td>
+</tr>
+<tr>
+<td>unmuted_video_count</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/int/">int</a></td>
+<td>Number of people currently streaming video into the call. Must be ignored if the min flag is set.</td>
+</tr>
+<tr>
+<td>unmuted_video_limit</td>
+<td><a href="/type/int/">int</a></td>
+<td>Maximum number of people allowed to stream video into the call. Must be ignored if the min flag is set.</td>
+</tr>
+<tr>
+<td>version</td>
+<td><a href="/type/int/">int</a></td>
+<td>Revision used to apply <a href="https://core.telegram.org/api/group-calls#applying-group-call-updates">group call updates »</a></td>
+</tr>
+<tr>
+<td>invite_link</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/type/string/">string</a></td>
+<td>Invitation link for a <a href="https://core.telegram.org/api/group-calls#conference-calls">conference call »</a>. Must be ignored if the min flag is set.</td>
+</tr>
+<tr>
+<td>send_paid_messages_stars</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/type/long/">long</a></td>
+<td>Minimum Stars donation required from users other than the live story owner to send a <a href="https://core.telegram.org/api/group-calls#paid-live-story-comments">paid comment »</a>; 0 or no value allows free comments</td>
+</tr>
+<tr>
+<td>default_send_as</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/type/Peer/">Peer</a></td>
+<td>Default peer displayed as the author of <a href="https://core.telegram.org/api/group-calls#in-call-messages">live story comments and reactions »</a>. Must be ignored if the min flag is set.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="тип" tabindex="-1">Тип</h2>
+<p><a href="/type/GroupCall/">GroupCall</a></p>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="phone.togglegroupcallsettings" tabindex="-1"><a href="/method/phone.toggleGroupCallSettings/">phone.toggleGroupCallSettings</a></h4>
+<p>Change group call settings. Each setting supports different group call types, see <a href="https://core.telegram.org/api/group-calls#managing-an-active-group-call">here »</a> for more info.</p>
+<h4 id="group-calls" tabindex="-1"><a href="https://core.telegram.org/api/group-calls">Group calls</a></h4>
+<p>How to start, join and manage group calls and video chats.</p>
+<h4 id="phone.getgroupparticipants" tabindex="-1"><a href="/method/phone.getGroupParticipants/">phone.getGroupParticipants</a></h4>
+<p>Get <a href="https://core.telegram.org/api/group-calls#getting-info-about-a-group-call">group call</a> participants.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/constructor/groupCall" rel="noopener">https://core.telegram.org/constructor/groupCall</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

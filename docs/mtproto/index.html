@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MTProto — обзор протокола — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li class="active"><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="mtproto-—-обзор-протокола" tabindex="-1">MTProto — обзор протокола</h1>
+<p>MTProto — собственный криптографический протокол обмена сообщениями, разработанный для Telegram. Он описывает, как клиент обменивается данными с серверами Telegram: как устанавливается шифрование, как сериализуются и упаковываются сообщения, как они передаются по сети и как подтверждаются.</p>
+<blockquote>
+<p>Эта страница — оригинальное русскоязычное изложение устройства протокола, подготовленное для офлайн-справочника. Английский первоисточник: <a href="https://core.telegram.org/mtproto">core.telegram.org/mtproto</a>. Названия всех сущностей протокола сохранены без перевода; при первом упоминании даётся пояснение.</p>
+</blockquote>
+<h2 id="из-чего-состоит-протокол" tabindex="-1">Из чего состоит протокол</h2>
+<p>Протокол логически делится на три части:</p>
+<ol>
+<li>
+<p><strong>Компонент высокого уровня (RPC query language)</strong> — язык запросов/ответов. На этом уровне клиент вызывает методы API (например, отправить сообщение) и получает результаты. Формально это язык <a href="/mtproto/TL/">TL</a> — формальный язык описания типов и функций, принятый в Telegram: каждый запрос и ответ описывается типизированными конструкторами из <a href="/schema/">схемы</a>. Справочник всех методов — <a href="/method/">здесь</a>, конструкторов — <a href="/constructor/">здесь</a>.</p>
+</li>
+<li>
+<p><strong>Криптографический (авторизационный) слой</strong> — отвечает за установку общего секрета между клиентом и сервером и шифрование каждого сообщения. Ключевые понятия:</p>
+<ul>
+<li><code>auth_key</code> (авторизационный ключ) — долговременный общий ключ длиной 2048 бит, который клиент и сервер совместно вырабатывают обменом Диффи–Хеллмана и затем используют для шифрования всей переписки. Как он создаётся — см. <a href="/mtproto/auth_key/">Создание авторизационного ключа</a>.</li>
+<li><code>server_salt</code> (соль сервера) — периодически меняющееся значение, участвующее в шифровании и защищающее от ряда атак.</li>
+<li><code>session</code> (сессия) — логическое соединение клиента с сервером в рамках одного ключа <code>auth_key</code>; у сессии есть <code>session_id</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Транспортный компонент</strong> — как байты зашифрованных сообщений переносятся по сети: TCP, HTTP, WebSocket и их варианты. См. <a href="/mtproto/transports/">Транспорты</a> и <a href="/mtproto/mtproto-transports/">MTProto-транспорты</a>.</p>
+</li>
+</ol>
+<h2 id="общий-принцип-обмена" tabindex="-1">Общий принцип обмена</h2>
+<ul>
+<li>Клиент и сервер обмениваются <strong>сообщениями</strong> (не «пакетами запрос-ответ» в привычном смысле): каждое сообщение сериализуется, шифруется и передаётся в транспортном контейнере.</li>
+<li>Сообщение либо требует ответа, либо нет. Подтверждения доставки (<code>ack</code>) передаются отдельными служебными сообщениями — см. <a href="/mtproto/service_messages/">Сервисные сообщения</a> и <a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a>.</li>
+<li>Идентификатор сообщения <code>message_id</code> жёстко привязан ко времени: по нему стороны синхронизируют часы и отсеивают повторы. См. <a href="/mtproto/description/">Подробное описание</a>.</li>
+<li>Несколько сообщений могут упаковываться в один <strong>контейнер</strong> (<code>msg_container</code>), чтобы уменьшить число транспортных передач.</li>
+</ul>
+<h2 id="схемы-и-версии" tabindex="-1">Схемы и версии</h2>
+<ul>
+<li>Текущая версия — <strong>MTProto 2.0</strong> (используется с 2017 года). Версия 1.0 (<a href="/mtproto_v1/">описание v1</a>) устарела и не рекомендуется к реализации.</li>
+<li>Для обмена используется несколько «слоёв» схемы:
+<ul>
+<li>основная схема API — <a href="/schema/">справочник схемы</a>;</li>
+<li>схема слоя протокола — <a href="/schema/mtproto/">схема MTProto</a>;</li>
+<li>схема секретных чатов (сквозное шифрование между пользователями) — <a href="/schema/end-to-end/">схема end-to-end</a>.</li>
+</ul>
+</li>
+<li>Машиночитаемые версии схем в формате JSON: <a href="/schema/json/">API</a>, <a href="/schema/mtproto-json/">MTProto</a>, <a href="/schema/end-to-end-json/">end-to-end</a>.</li>
+</ul>
+<h2 id="безопасность" tabindex="-1">Безопасность</h2>
+<p>Клиент обязан выполнять ряд проверок при генерации ключа и расшифровке сообщений — их перечень собран в <a href="/mtproto/security_guidelines/">Рекомендациях по безопасности</a>. Сквозное шифрование секретных чатов устроено отдельно и описано в <a href="/api/end-to-end/">Секретных чатах</a>; там же — механизм <a href="/api/pfs/">Perfect Forward Secrecy</a>.</p>
+<h2 id="связанные-разделы" tabindex="-1">Связанные разделы</h2>
+<ul>
+<li><a href="/mtproto/description/">Подробное описание протокола</a></li>
+<li><a href="/mtproto/auth_key/">Создание авторизационного ключа</a> и <a href="/mtproto/samples-auth_key/">разбор числового примера</a></li>
+<li><a href="/mtproto/serialize/">Сериализация данных</a></li>
+<li><a href="/mtproto/TL/">Язык TL</a></li>
+<li><a href="/mtproto/service_messages/">Сервисные сообщения</a>, <a href="/mtproto/service_messages_about_messages/">сообщения о сообщениях</a></li>
+<li><a href="/mtproto/transports/">Транспорты</a>, <a href="/mtproto/mtproto-transports/">MTProto-транспорты</a></li>
+<li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности</a></li>
+<li><a href="/api/">Telegram API</a> — уровень выше протокола</li>
+</ul>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/mtproto" rel="noopener">https://core.telegram.org/mtproto</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

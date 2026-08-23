@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChannelAdminLogEventAction (тип) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="channeladminlogeventaction" tabindex="-1">ChannelAdminLogEventAction</h1>
+<p><em>Тип из схемы TL.</em></p>
+<blockquote>
+<p>Channel admin log event</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>channelAdminLogEventActionChangeTitle#e6dfb825 prev_value:string new_value:string = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeAbout#55188a2e prev_value:string new_value:string = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeUsername#6a4afc38 prev_value:string new_value:string = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangePhoto#434bd2af prev_photo:Photo new_photo:Photo = ChannelAdminLogEventAction;
+channelAdminLogEventActionToggleInvites#1b7907ae new_value:Bool = ChannelAdminLogEventAction;
+channelAdminLogEventActionToggleSignatures#26ae0971 new_value:Bool = ChannelAdminLogEventAction;
+channelAdminLogEventActionUpdatePinned#e9e82c18 message:Message = ChannelAdminLogEventAction;
+channelAdminLogEventActionEditMessage#709b2405 prev_message:Message new_message:Message = ChannelAdminLogEventAction;
+channelAdminLogEventActionDeleteMessage#42e047bb message:Message = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantJoin#183040d3 = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantLeave#f89777f2 = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantInvite#e31c34d8 participant:ChannelParticipant = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantToggleBan#e6d83d7e prev_participant:ChannelParticipant new_participant:ChannelParticipant = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantToggleAdmin#d5676710 prev_participant:ChannelParticipant new_participant:ChannelParticipant = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeStickerSet#b1c3caa7 prev_stickerset:InputStickerSet new_stickerset:InputStickerSet = ChannelAdminLogEventAction;
+channelAdminLogEventActionTogglePreHistoryHidden#5f5c95f1 new_value:Bool = ChannelAdminLogEventAction;
+channelAdminLogEventActionDefaultBannedRights#2df5fc0a prev_banned_rights:ChatBannedRights new_banned_rights:ChatBannedRights = ChannelAdminLogEventAction;
+channelAdminLogEventActionStopPoll#8f079643 message:Message = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeLinkedChat#50c7ac8 prev_value:long new_value:long = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeLocation#e6b76ae prev_value:ChannelLocation new_value:ChannelLocation = ChannelAdminLogEventAction;
+channelAdminLogEventActionToggleSlowMode#53909779 prev_value:int new_value:int = ChannelAdminLogEventAction;
+channelAdminLogEventActionStartGroupCall#23209745 call:InputGroupCall = ChannelAdminLogEventAction;
+channelAdminLogEventActionDiscardGroupCall#db9f9140 call:InputGroupCall = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantMute#f92424d2 participant:GroupCallParticipant = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantUnmute#e64429c0 participant:GroupCallParticipant = ChannelAdminLogEventAction;
+channelAdminLogEventActionToggleGroupCallSetting#56d6a247 join_muted:Bool = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantJoinByInvite#fe9fc158 flags:# via_chatlist:flags.0?true invite:ExportedChatInvite = ChannelAdminLogEventAction;
+channelAdminLogEventActionExportedInviteDelete#5a50fca4 invite:ExportedChatInvite = ChannelAdminLogEventAction;
+channelAdminLogEventActionExportedInviteRevoke#410a134e invite:ExportedChatInvite = ChannelAdminLogEventAction;
+channelAdminLogEventActionExportedInviteEdit#e90ebb59 prev_invite:ExportedChatInvite new_invite:ExportedChatInvite = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantVolume#3e7f6847 participant:GroupCallParticipant = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeHistoryTTL#6e941a38 prev_value:int new_value:int = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantJoinByRequest#afb6144a invite:ExportedChatInvite approved_by:long = ChannelAdminLogEventAction;
+channelAdminLogEventActionToggleNoForwards#cb2ac766 new_value:Bool = ChannelAdminLogEventAction;
+channelAdminLogEventActionSendMessage#278f2868 message:Message = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeAvailableReactions#be4e0ef8 prev_value:ChatReactions new_value:ChatReactions = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeUsernames#f04fb3a9 prev_value:Vector&lt;string&gt; new_value:Vector&lt;string&gt; = ChannelAdminLogEventAction;
+channelAdminLogEventActionToggleForum#2cc6383 new_value:Bool = ChannelAdminLogEventAction;
+channelAdminLogEventActionCreateTopic#58707d28 topic:ForumTopic = ChannelAdminLogEventAction;
+channelAdminLogEventActionEditTopic#f06fe208 prev_topic:ForumTopic new_topic:ForumTopic = ChannelAdminLogEventAction;
+channelAdminLogEventActionDeleteTopic#ae168909 topic:ForumTopic = ChannelAdminLogEventAction;
+channelAdminLogEventActionPinTopic#5d8d353b flags:# prev_topic:flags.0?ForumTopic new_topic:flags.1?ForumTopic = ChannelAdminLogEventAction;
+channelAdminLogEventActionToggleAntiSpam#64f36dfc new_value:Bool = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangePeerColor#5796e780 prev_value:PeerColor new_value:PeerColor = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeProfilePeerColor#5e477b25 prev_value:PeerColor new_value:PeerColor = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeWallpaper#31bb5d52 prev_value:WallPaper new_value:WallPaper = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeEmojiStatus#3ea9feb1 prev_value:EmojiStatus new_value:EmojiStatus = ChannelAdminLogEventAction;
+channelAdminLogEventActionChangeEmojiStickerSet#46d840ab prev_stickerset:InputStickerSet new_stickerset:InputStickerSet = ChannelAdminLogEventAction;
+channelAdminLogEventActionToggleSignatureProfiles#60a79c79 new_value:Bool = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantSubExtend#64642db3 prev_participant:ChannelParticipant new_participant:ChannelParticipant = ChannelAdminLogEventAction;
+channelAdminLogEventActionToggleAutotranslation#c517f77e new_value:Bool = ChannelAdminLogEventAction;
+channelAdminLogEventActionParticipantEditRank#5806b4ec user_id:long prev_rank:string new_rank:string = ChannelAdminLogEventAction;
+</code></pre>
+<h2 id="конструкторы" tabindex="-1">Конструкторы</h2>
+<table>
+<thead>
+<tr>
+<th>Constructor</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeTitle/">channelAdminLogEventActionChangeTitle</a></td>
+<td>Channel/supergroup title was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeAbout/">channelAdminLogEventActionChangeAbout</a></td>
+<td>The description was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeUsername/">channelAdminLogEventActionChangeUsername</a></td>
+<td>Channel/supergroup username was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangePhoto/">channelAdminLogEventActionChangePhoto</a></td>
+<td>The channel/supergroup's picture was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionToggleInvites/">channelAdminLogEventActionToggleInvites</a></td>
+<td>Invites were enabled/disabled</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionToggleSignatures/">channelAdminLogEventActionToggleSignatures</a></td>
+<td>Channel signatures were enabled/disabled</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionUpdatePinned/">channelAdminLogEventActionUpdatePinned</a></td>
+<td>A message was pinned</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionEditMessage/">channelAdminLogEventActionEditMessage</a></td>
+<td>A message was edited</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionDeleteMessage/">channelAdminLogEventActionDeleteMessage</a></td>
+<td>A message was deleted</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantJoin/">channelAdminLogEventActionParticipantJoin</a></td>
+<td>A user has joined the group (in the case of big groups, info of the user that has joined isn't shown)</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantLeave/">channelAdminLogEventActionParticipantLeave</a></td>
+<td>A user left the channel/supergroup (in the case of big groups, info of the user that has joined isn't shown)</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantInvite/">channelAdminLogEventActionParticipantInvite</a></td>
+<td>A user was invited to the group</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantToggleBan/">channelAdminLogEventActionParticipantToggleBan</a></td>
+<td>The banned <a href="https://core.telegram.org/api/rights">rights</a> of a user were changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantToggleAdmin/">channelAdminLogEventActionParticipantToggleAdmin</a></td>
+<td>The admin <a href="https://core.telegram.org/api/rights">rights</a> of a user were changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeStickerSet/">channelAdminLogEventActionChangeStickerSet</a></td>
+<td>The supergroup's stickerset was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionTogglePreHistoryHidden/">channelAdminLogEventActionTogglePreHistoryHidden</a></td>
+<td>The hidden prehistory setting was <a href="/method/channels.togglePreHistoryHidden/">changed</a></td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionDefaultBannedRights/">channelAdminLogEventActionDefaultBannedRights</a></td>
+<td>The default banned rights were modified</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionStopPoll/">channelAdminLogEventActionStopPoll</a></td>
+<td>A poll was stopped</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeLinkedChat/">channelAdminLogEventActionChangeLinkedChat</a></td>
+<td>The linked chat was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeLocation/">channelAdminLogEventActionChangeLocation</a></td>
+<td>The geogroup location was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionToggleSlowMode/">channelAdminLogEventActionToggleSlowMode</a></td>
+<td><a href="/method/channels.toggleSlowMode/">Slow mode setting for supergroups was changed</a></td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionStartGroupCall/">channelAdminLogEventActionStartGroupCall</a></td>
+<td>A group call was started</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionDiscardGroupCall/">channelAdminLogEventActionDiscardGroupCall</a></td>
+<td>A group call was terminated</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantMute/">channelAdminLogEventActionParticipantMute</a></td>
+<td>A group call participant was muted</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantUnmute/">channelAdminLogEventActionParticipantUnmute</a></td>
+<td>A group call participant was unmuted</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionToggleGroupCallSetting/">channelAdminLogEventActionToggleGroupCallSetting</a></td>
+<td>Group call settings were changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantJoinByInvite/">channelAdminLogEventActionParticipantJoinByInvite</a></td>
+<td>A user joined the <a href="https://core.telegram.org/api/channel">supergroup/channel</a> using a specific invite link</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionExportedInviteDelete/">channelAdminLogEventActionExportedInviteDelete</a></td>
+<td>A chat invite was deleted</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionExportedInviteRevoke/">channelAdminLogEventActionExportedInviteRevoke</a></td>
+<td>A specific invite link was revoked</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionExportedInviteEdit/">channelAdminLogEventActionExportedInviteEdit</a></td>
+<td>A chat invite was edited</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantVolume/">channelAdminLogEventActionParticipantVolume</a></td>
+<td>channelAdminLogEvent.user_id has set the volume of participant.peer to participant.volume</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeHistoryTTL/">channelAdminLogEventActionChangeHistoryTTL</a></td>
+<td>The Time-To-Live of messages in this chat was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantJoinByRequest/">channelAdminLogEventActionParticipantJoinByRequest</a></td>
+<td>A new member was accepted to the chat by an admin</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionToggleNoForwards/">channelAdminLogEventActionToggleNoForwards</a></td>
+<td>Forwards were enabled or disabled</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionSendMessage/">channelAdminLogEventActionSendMessage</a></td>
+<td>A message was posted in a channel</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeAvailableReactions/">channelAdminLogEventActionChangeAvailableReactions</a></td>
+<td>The set of allowed <a href="https://core.telegram.org/api/reactions">message reactions »</a> for this channel has changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeUsernames/">channelAdminLogEventActionChangeUsernames</a></td>
+<td>The list of usernames associated with the channel was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionToggleForum/">channelAdminLogEventActionToggleForum</a></td>
+<td><a href="https://core.telegram.org/api/forum">Forum</a> functionality was enabled or disabled.</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionCreateTopic/">channelAdminLogEventActionCreateTopic</a></td>
+<td>A <a href="https://core.telegram.org/api/forum#forum-topics">forum topic</a> was created</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionEditTopic/">channelAdminLogEventActionEditTopic</a></td>
+<td>A <a href="https://core.telegram.org/api/forum#forum-topics">forum topic</a> was edited</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionDeleteTopic/">channelAdminLogEventActionDeleteTopic</a></td>
+<td>A <a href="https://core.telegram.org/api/forum#forum-topics">forum topic</a> was deleted</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionPinTopic/">channelAdminLogEventActionPinTopic</a></td>
+<td>A <a href="https://core.telegram.org/api/forum#forum-topics">forum topic</a> was pinned or unpinned</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionToggleAntiSpam/">channelAdminLogEventActionToggleAntiSpam</a></td>
+<td><a href="https://core.telegram.org/api/antispam">Native antispam</a> functionality was enabled or disabled.</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangePeerColor/">channelAdminLogEventActionChangePeerColor</a></td>
+<td>The <a href="https://core.telegram.org/api/colors">message accent color</a> was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeProfilePeerColor/">channelAdminLogEventActionChangeProfilePeerColor</a></td>
+<td>The <a href="https://core.telegram.org/api/colors">profile accent color</a> was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeWallpaper/">channelAdminLogEventActionChangeWallpaper</a></td>
+<td>The <a href="https://core.telegram.org/api/wallpapers">wallpaper</a> was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeEmojiStatus/">channelAdminLogEventActionChangeEmojiStatus</a></td>
+<td>The <a href="https://core.telegram.org/api/emoji-status">emoji status</a> was changed</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionChangeEmojiStickerSet/">channelAdminLogEventActionChangeEmojiStickerSet</a></td>
+<td>The supergroup's <a href="https://core.telegram.org/api/boost#setting-a-custom-emoji-stickerset-for-supergroups">custom emoji stickerset</a> was changed.</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionToggleSignatureProfiles/">channelAdminLogEventActionToggleSignatureProfiles</a></td>
+<td>Channel signature profiles were enabled/disabled.</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantSubExtend/">channelAdminLogEventActionParticipantSubExtend</a></td>
+<td>A paid subscriber has extended their <a href="https://core.telegram.org/api/stars#star-subscriptions">Telegram Star subscription »</a>.</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionToggleAutotranslation/">channelAdminLogEventActionToggleAutotranslation</a></td>
+<td><a href="https://core.telegram.org/api/translation#autotranslation-for-channels">Channel autotranslation was toggled »</a>.</td>
+</tr>
+<tr>
+<td><a href="/constructor/channelAdminLogEventActionParticipantEditRank/">channelAdminLogEventActionParticipantEditRank</a></td>
+<td>A participant's <a href="https://core.telegram.org/api/rank">tag »</a> was changed.</td>
+</tr>
+</tbody>
+</table>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/type/ChannelAdminLogEventAction" rel="noopener">https://core.telegram.org/type/ChannelAdminLogEventAction</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

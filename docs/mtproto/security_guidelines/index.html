@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Рекомендации по безопасности клиентских реализаций — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li class="active"><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="рекомендации-по-безопасности-клиентских-реализаций" tabindex="-1">Рекомендации по безопасности клиентских реализаций</h1>
+<p>Оригинальное русскоязычное изложение обязательных проверок, которые должна выполнять клиентская реализация MTProto. Первоисточник: <a href="https://core.telegram.org/mtproto/security_guidelines">core.telegram.org/mtproto/security_guidelines</a>.</p>
+<p>Нарушение любой из этих проверок открывает возможность атак на пользователя (подмена ключа, расшифровка, повторы), поэтому они обязательны, а не рекомендательны.</p>
+<h2 id="при-генерации-auth_key-(обмен-диффи–хеллмана)" tabindex="-1">При генерации <code>auth_key</code> (обмен Диффи–Хеллмана)</h2>
+<ol>
+<li><strong>Проверка соответствия <code>nonce</code>/<code>server_nonce</code>.</strong> В каждом ответе сервера (<code>resPQ</code>, <code>server_DH_params_ok</code>, <code>dh_gen_*</code>) значения <code>nonce</code> и <code>server_nonce</code> должны совпадать с теми, что клиент видел ранее. Несовпадение означает подмену сессии — обмен нужно прервать.</li>
+<li><strong>Факторизация <code>pq</code>.</strong> Клиент обязан проверить, что <code>p * q == pq</code> и что <code>p</code>, <code>q</code> — простые.</li>
+<li><strong>Проверка <code>dh_prime</code>.</strong> <code>dh_prime</code> должно быть «безопасным» простым: простыми должны быть и <code>dh_prime</code>, и <code>(dh_prime − 1) / 2</code>. Допустимо кэшировать уже проверенные значения. Без этой проверки возможна атака с малыми подгруппами.</li>
+<li><strong>Проверка <code>g</code>.</strong> Допустимые значения генератора: 2, 3, 4, 5, 6, 7.</li>
+<li><strong>Проверка диапазона <code>g_a</code> и <code>g_b</code>.</strong> Должно выполняться <code>1 &lt; g_a &lt; dh_prime − 1</code> (для ответа сервера) и аналогично для <code>g_b</code> (эту проверку выполняет сервер). Дополнительно рекомендуется более строгая граница <code>2 &lt; g_a &lt; dh_prime − 2</code> — она защищает от атак на малых подгруппах.</li>
+<li><strong>Случайность.</strong> <code>nonce</code>, <code>new_nonce</code>, <code>b</code> генерируются криптографически стойким генератором; <code>b</code> — не менее 2048 бит энтропии. Переиспользовать их нельзя.</li>
+<li><strong>Проверка хеша в <code>dh_gen_ok</code>.</strong> <code>new_nonce_hash1</code> обязан совпадать с вычисленным клиентом значением.</li>
+<li><strong>Время сервера.</strong> <code>server_time</code> из <code>server_DH_inner_data</code> используется для первичной синхронизации; разумно отклонять заведомо неправдоподобные значения.</li>
+</ol>
+<h2 id="при-приёме-зашифрованных-сообщений" tabindex="-1">При приёме зашифрованных сообщений</h2>
+<ol start="9">
+<li><strong><code>auth_key_id</code> обязан быть известен</strong> и соответствовать ключу, которым клиент собирается пользоваться.</li>
+<li><strong>Проверка <code>msg_key</code>.</strong> После расшифровки клиент обязан пересчитать <code>msg_key</code> из открытого текста и сравнить с полученным. Несовпадение — сообщение отбрасывается (это защита от подмены и от неверного ключа).</li>
+<li><strong>Проверка <code>server_salt</code>.</strong> В сообщениях сервера соль должна совпадать с текущей (или одной из допустимых недавних).</li>
+<li><strong>Проверка <code>session_id</code>.</strong> В ответах сервера, адресованных данной сессии, <code>session_id</code> обязан совпадать с <code>session_id</code> клиента.</li>
+<li><strong>Проверка <code>message_id</code>.</strong>
+<ul>
+<li>Идентификатор обязан быть кратен 4 и монотонно расти.</li>
+<li>Повторно принятые идентификаторы отбрасываются (защита от replay-атак): клиент хранит окно недавно использованных <code>message_id</code>.</li>
+<li>Идентификаторы, отстающие от текущего времени сервера более чем на разумный порог (например, несколько минут) или опережающие его слишком сильно, отклоняются.</li>
+</ul>
+</li>
+<li><strong>Проверка <code>seq_no</code> и <code>message_length</code>.</strong> Длина тела кратна 4 и не выходит за пределы расшифрованного блока; <code>seq_no</code> согласуется с ожидаемой последовательностью (содержательные сообщения — нечётные).</li>
+<li><strong>Отсеивание повторов контейнеров.</strong> Повторно полученный контейнер (или контейнер с уже обработанными вложенными сообщениями) не должен приводить к повторному применению эффектов.</li>
+</ol>
+<h2 id="при-отправке" tabindex="-1">При отправке</h2>
+<ol start="16">
+<li><strong>Не переиспользовать <code>message_id</code></strong> для разных сообщений; при повторной отправке недоставленного сообщения используется тот же идентификатор, но только если оно гарантированно не было доставлено.</li>
+<li><strong>Не отправлять ничего до успешного завершения обмена ключом</strong> и до первичной синхронизации времени.</li>
+</ol>
+<h2 id="прочее" tabindex="-1">Прочее</h2>
+<ol start="18">
+<li><strong>Хранение ключей.</strong> <code>auth_key</code> — эквивалент пароля: хранится только в защищённой памяти/хранилище устройства; при выходе из аккаунта уничтожается.</li>
+<li><strong>Временные ключи.</strong> Для чувствительных сценариев рекомендуется связка постоянного и временного ключей через <a href="/method/auth.bindTempAuthKey/"><code>auth.bindTempAuthKey</code></a> — временный ключ хранится в менее защищённой памяти и имеет срок жизни.</li>
+<li><strong>Секретные чаты.</strong> Сквозное шифрование секретных чатов имеет собственные проверки (ключи, <code>key_fingerprint</code>, повторное согласование при смене ключей) — см. <a href="/api/end-to-end/">Секретные чаты</a> и <a href="/api/pfs/">Perfect Forward Secrecy</a>.</li>
+</ol>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/mtproto/security_guidelines" rel="noopener">https://core.telegram.org/mtproto/security_guidelines</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>messages.forwardMessages (метод) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="messages.forwardmessages" tabindex="-1">messages.forwardMessages</h1>
+<p><em>Метод из схемы TL.</em></p>
+<blockquote>
+<p>Forwards messages by their IDs.</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>updatesTooLong#e317af7e = Updates;
+updateShortMessage#313bc7f8 flags:# out:flags.1?true mentioned:flags.4?true media_unread:flags.5?true silent:flags.13?true id:int user_id:long message:string pts:int pts_count:int date:int fwd_from:flags.2?MessageFwdHeader via_bot_id:flags.11?long reply_to:flags.3?MessageReplyHeader entities:flags.7?Vector&lt;MessageEntity&gt; ttl_period:flags.25?int = Updates;
+updateShortChatMessage#4d6deea5 flags:# out:flags.1?true mentioned:flags.4?true media_unread:flags.5?true silent:flags.13?true id:int from_id:long chat_id:long message:string pts:int pts_count:int date:int fwd_from:flags.2?MessageFwdHeader via_bot_id:flags.11?long reply_to:flags.3?MessageReplyHeader entities:flags.7?Vector&lt;MessageEntity&gt; ttl_period:flags.25?int = Updates;
+updateShort#78d4dec1 update:Update date:int = Updates;
+updatesCombined#725b04c3 updates:Vector&lt;Update&gt; users:Vector&lt;User&gt; chats:Vector&lt;Chat&gt; date:int seq_start:int seq:int = Updates;
+updates#74ae4240 updates:Vector&lt;Update&gt; users:Vector&lt;User&gt; chats:Vector&lt;Chat&gt; date:int seq:int = Updates;
+updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_count:int date:int media:flags.9?MessageMedia entities:flags.7?Vector&lt;MessageEntity&gt; ttl_period:flags.25?int = Updates;
+---functions---
+messages.forwardMessages#13704a7c flags:# silent:flags.5?true background:flags.6?true with_my_score:flags.8?true drop_author:flags.11?true drop_media_captions:flags.12?true noforwards:flags.14?true allow_paid_floodskip:flags.19?true from_peer:InputPeer id:Vector&lt;int&gt; random_id:Vector&lt;long&gt; to_peer:InputPeer top_msg_id:flags.9?int reply_to:flags.22?InputReplyTo schedule_date:flags.10?int schedule_repeat_period:flags.24?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut effect:flags.18?long video_timestamp:flags.20?int allow_paid_stars:flags.21?long suggested_post:flags.23?SuggestedPost = Updates;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>silent</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true/">true</a></td>
+<td>Whether to send messages silently (no notification will be triggered on the destination clients)</td>
+</tr>
+<tr>
+<td>background</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true/">true</a></td>
+<td>Whether to send the message in background</td>
+</tr>
+<tr>
+<td>with_my_score</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true/">true</a></td>
+<td>When forwarding games, whether to include your score in the game</td>
+</tr>
+<tr>
+<td>drop_author</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true/">true</a></td>
+<td>Whether to forward messages without quoting the original author</td>
+</tr>
+<tr>
+<td>drop_media_captions</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true/">true</a></td>
+<td>Whether to strip captions from media</td>
+</tr>
+<tr>
+<td>noforwards</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true/">true</a></td>
+<td>Only for bots, disallows further re-forwarding and saving of the messages, even if the destination chat doesn't have <a href="https://telegram.org/blog/content-protection-delete-by-date-and-more">content protection</a> enabled</td>
+</tr>
+<tr>
+<td>allow_paid_floodskip</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/constructor/true/">true</a></td>
+<td>Bots only: if set, allows sending up to 1000 messages per second, ignoring <a href="https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once">broadcasting limits</a> for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance.</td>
+</tr>
+<tr>
+<td>from_peer</td>
+<td><a href="/type/InputPeer/">InputPeer</a></td>
+<td>Source of messages</td>
+</tr>
+<tr>
+<td>id</td>
+<td><a href="https://core.telegram.org/type/Vector%20t">Vector</a>&lt;<a href="/type/int/">int</a>&gt;</td>
+<td>IDs of messages</td>
+</tr>
+<tr>
+<td>random_id</td>
+<td><a href="https://core.telegram.org/type/Vector%20t">Vector</a>&lt;<a href="/type/long/">long</a>&gt;</td>
+<td>Random ID to prevent resending of messages. See <a href="https://core.telegram.org/api/updates/#updatemessageid-updates">here »</a> for more info on random ID deduplication and updateMessageID mapping.</td>
+</tr>
+<tr>
+<td>to_peer</td>
+<td><a href="/type/InputPeer/">InputPeer</a></td>
+<td>Destination peer</td>
+</tr>
+<tr>
+<td>top_msg_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/int/">int</a></td>
+<td>Destination <a href="https://core.telegram.org/api/forum#forum-topics">forum topic</a></td>
+</tr>
+<tr>
+<td>reply_to</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/type/InputReplyTo/">InputReplyTo</a></td>
+<td>Can only contain an <a href="/constructor/inputReplyToMonoForum/">inputReplyToMonoForum</a>, to forward messages to a <a href="https://core.telegram.org/api/monoforum">monoforum topic</a> (mutually exclusive with top_msg_id).</td>
+</tr>
+<tr>
+<td>schedule_date</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/int/">int</a></td>
+<td>Scheduled message date for scheduled messages</td>
+</tr>
+<tr>
+<td>schedule_repeat_period</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/type/int/">int</a></td>
+<td>Once sent, this message will be automatically re-scheduled to be re-sent again this many seconds in the future, see <a href="https://core.telegram.org/api/scheduled-messages#repeating-scheduled-messages">here »</a> for more info on repeating scheduled messages.</td>
+</tr>
+<tr>
+<td>send_as</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/InputPeer/">InputPeer</a></td>
+<td>Forward the messages as the specified peer</td>
+</tr>
+<tr>
+<td>quick_reply_shortcut</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/InputQuickReplyShortcut/">InputQuickReplyShortcut</a></td>
+<td>Add the messages to the specified <a href="https://core.telegram.org/api/business#quick-reply-shortcuts">quick reply shortcut »</a>, instead.</td>
+</tr>
+<tr>
+<td>effect</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/long/">long</a></td>
+<td>Specifies a <a href="https://core.telegram.org/api/effects">message effect »</a> to use for the message.</td>
+</tr>
+<tr>
+<td>video_timestamp</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/type/int/">int</a></td>
+<td>Start playing the video at the specified timestamp (seconds).</td>
+</tr>
+<tr>
+<td>allow_paid_stars</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/type/long/">long</a></td>
+<td>For <a href="https://core.telegram.org/api/paid-messages">paid messages »</a>, specifies the amount of <a href="https://core.telegram.org/api/stars">Telegram Stars</a> the user has agreed to pay in order to send the message.</td>
+</tr>
+<tr>
+<td>suggested_post</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/type/SuggestedPost/">SuggestedPost</a></td>
+<td>Used to <a href="https://core.telegram.org/api/suggested-posts">suggest a post to a channel, see here »</a> for more info on the full flow.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="результат" tabindex="-1">Результат</h2>
+<p><a href="/type/Updates/">Updates</a></p>
+<h2 id="both-users-and-bots-can-use-this-method" tabindex="-1">Both users and bots can use this method</h2>
+<h2 id="possible-errors" tabindex="-1">Possible errors</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>406</td>
+<td>ALLOW_PAYMENT_REQUIRED</td>
+<td>This peer only accepts <a href="https://core.telegram.org/api/paid-messages">paid messages »</a>: this error is only emitted for older layers without paid messages support, so the client must be updated in order to use paid messages. .</td>
+</tr>
+<tr>
+<td>403</td>
+<td>ALLOW_PAYMENT_REQUIRED_%d</td>
+<td>This peer charges %d <a href="https://core.telegram.org/api/stars">Telegram Stars</a> per message, but the allow_paid_stars was not set or its value is smaller than %d.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>BROADCAST_PUBLIC_VOTERS_FORBIDDEN</td>
+<td>You can't forward polls with public voters.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>CHANNEL_INVALID</td>
+<td>The provided channel is invalid.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>CHANNEL_PRIVATE</td>
+<td>You haven't joined this channel/supergroup.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_ADMIN_REQUIRED</td>
+<td>You must be an admin in this chat to do this.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>CHAT_FORWARDS_RESTRICTED</td>
+<td>You can't forward messages from a protected chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_GUEST_SEND_FORBIDDEN</td>
+<td>You join the discussion group before commenting, see <a href="https://core.telegram.org/api/discussion#requiring-users-to-join-the-group">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>CHAT_ID_INVALID</td>
+<td>The provided chat id is invalid.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>CHAT_RESTRICTED</td>
+<td>You can't send messages in this chat, you were restricted.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_AUDIOS_FORBIDDEN</td>
+<td>You can't send audio messages in this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_DOCS_FORBIDDEN</td>
+<td>You can't send documents in this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_GAME_FORBIDDEN</td>
+<td>You can't send a game to this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_GIFS_FORBIDDEN</td>
+<td>You can't send gifs in this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_INLINE_FORBIDDEN</td>
+<td>You can't send inline messages in this group.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_MEDIA_FORBIDDEN</td>
+<td>You can't send media in this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_PHOTOS_FORBIDDEN</td>
+<td>You can't send photos in this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_PLAIN_FORBIDDEN</td>
+<td>You can't send non-media (text) messages in this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_POLL_FORBIDDEN</td>
+<td>You can't send polls in this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_STICKERS_FORBIDDEN</td>
+<td>You can't send stickers in this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_VIDEOS_FORBIDDEN</td>
+<td>You can't send videos in this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_VOICES_FORBIDDEN</td>
+<td>You can't send voice recordings in this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_SEND_WEBPAGE_FORBIDDEN</td>
+<td>You can't send webpage previews to this chat.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>CHAT_WRITE_FORBIDDEN</td>
+<td>You can't write in this chat.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>GROUPED_MEDIA_INVALID</td>
+<td>Invalid grouped media.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>INPUT_USER_DEACTIVATED</td>
+<td>The specified user was deleted.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>MEDIA_EMPTY</td>
+<td>The provided media object is invalid.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>MEDIA_FILE_INVALID</td>
+<td>The specified media file is invalid.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>MESSAGE_IDS_EMPTY</td>
+<td>No message ids were provided.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>MESSAGE_ID_INVALID</td>
+<td>The provided message id is invalid.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>MSG_ID_INVALID</td>
+<td>Invalid message ID provided.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>PAYMENT_UNSUPPORTED</td>
+<td>A detailed description of the error will be received separately as described <a href="https://core.telegram.org/api/errors/#406-not-acceptable">here »</a>.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>PEER_ID_INVALID</td>
+<td>The provided peer id is invalid.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>PREMIUM_ACCOUNT_REQUIRED</td>
+<td>A premium account is required to execute this action.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>PRIVACY_PREMIUM_REQUIRED</td>
+<td>You need a <a href="https://core.telegram.org/api/premium">Telegram Premium subscription</a> to send a message to this user.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>QUICK_REPLIES_BOT_NOT_ALLOWED</td>
+<td><a href="https://core.telegram.org/api/business#quick-reply-shortcuts">Quick replies</a> cannot be used by bots.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>QUICK_REPLIES_TOO_MUCH</td>
+<td>A maximum of <a href="https://core.telegram.org/api/config#quick-replies-limit">appConfig.quick_replies_limit</a> shortcuts may be created, the limit was reached.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>QUIZ_ANSWER_MISSING</td>
+<td>You can forward a quiz while hiding the original author only after choosing an option in the quiz.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>RANDOM_ID_DUPLICATE</td>
+<td>You provided a random ID that was already used.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>RANDOM_ID_INVALID</td>
+<td>A provided random ID is invalid.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>REPLY_MESSAGES_TOO_MUCH</td>
+<td>Each shortcut can contain a maximum of <a href="https://core.telegram.org/api/config#quick-reply-messages-limit">appConfig.quick_reply_messages_limit</a> messages, the limit was reached.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>REPLY_TO_MONOFORUM_PEER_INVALID</td>
+<td>The specified inputReplyToMonoForum.monoforum_peer_id is invalid.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>SCHEDULE_BOT_NOT_ALLOWED</td>
+<td>Bots cannot schedule messages.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>SCHEDULE_DATE_TOO_LATE</td>
+<td>You can't schedule a message this far in the future.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>SCHEDULE_TOO_MUCH</td>
+<td>There are too many scheduled messages.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>SEND_AS_PEER_INVALID</td>
+<td>You can't send messages as the specified peer.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>SLOWMODE_MULTI_MSGS_DISABLED</td>
+<td>Slowmode is enabled, you cannot forward multiple messages to this group.</td>
+</tr>
+<tr>
+<td>420</td>
+<td>SLOWMODE_WAIT_%d</td>
+<td>Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>SUGGESTED_POST_PEER_INVALID</td>
+<td>You cannot send suggested posts to non-<a href="https://core.telegram.org/api/monoforum">monoforum</a> peers.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>TOPIC_CLOSED</td>
+<td>This topic was closed, you can't send messages to it anymore.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>TOPIC_DELETED</td>
+<td>The specified topic was deleted.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>USER_BANNED_IN_CHANNEL</td>
+<td>You're banned from sending messages in supergroups/channels.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>USER_BOT_TO_BOT_DISABLED</td>
+<td>Bot-to-bot messaging is disabled because one of the two bots hasn't enabled the Bot to Bot setting in @BotFather.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>USER_IS_BLOCKED</td>
+<td>You were blocked by this user.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>USER_IS_BOT</td>
+<td>Bots can't send messages to other bots.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>VOICE_MESSAGES_FORBIDDEN</td>
+<td>This user's privacy settings forbid you from sending voice messages.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>YOU_BLOCKED_USER</td>
+<td>You blocked this user.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="bots-faq" tabindex="-1"><a href="https://core.telegram.org/bots/faq">Bots FAQ</a></h4>
+<h4 id="working-with-updates" tabindex="-1"><a href="/api/updates/">Working with Updates</a></h4>
+<p>How to subscribe to updates and handle them properly.</p>
+<h4 id="forum-topics" tabindex="-1"><a href="https://core.telegram.org/api/forum">Forum topics</a></h4>
+<p>Telegram allows creating forums with multiple distinct topics.</p>
+<h4 id="inputreplytomonoforum" tabindex="-1"><a href="/constructor/inputReplyToMonoForum/">inputReplyToMonoForum</a></h4>
+<p>Used to send messages to a <a href="https://core.telegram.org/api/monoforum">monoforum topic</a>.</p>
+<h4 id="direct-messages-to-channels" tabindex="-1"><a href="https://core.telegram.org/api/monoforum">Direct messages to channels</a></h4>
+<p>Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.</p>
+<h4 id="scheduled-messages" tabindex="-1"><a href="https://core.telegram.org/api/scheduled-messages">Scheduled messages</a></h4>
+<p>Telegram allows scheduling messages</p>
+<h4 id="telegram-business" tabindex="-1"><a href="https://core.telegram.org/api/business">Telegram Business</a></h4>
+<p>Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.</p>
+<h4 id="animated-message-effects" tabindex="-1"><a href="https://core.telegram.org/api/effects">Animated message effects</a></h4>
+<p>Telegram allows adding spectacular animated effects to messages you send.</p>
+<h4 id="paid-messages" tabindex="-1"><a href="https://core.telegram.org/api/paid-messages">Paid messages</a></h4>
+<p>Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.</p>
+<h4 id="telegram-stars" tabindex="-1"><a href="https://core.telegram.org/api/stars">Telegram Stars</a></h4>
+<p>Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.</p>
+<h4 id="suggested-posts" tabindex="-1"><a href="https://core.telegram.org/api/suggested-posts">Suggested posts</a></h4>
+<p>Telegram offers a powerful monetization feature to channel administrators: suggested posts.</p>
+<h4 id="discussion-groups" tabindex="-1"><a href="https://core.telegram.org/api/discussion">Discussion groups</a></h4>
+<p>Groups can be associated to a channel as a discussion group, to allow users to discuss about posts.</p>
+<h4 id="error-handling" tabindex="-1"><a href="/api/errors/">Error handling</a></h4>
+<p>How to handle API return errors correctly.</p>
+<h4 id="telegram-premium" tabindex="-1"><a href="https://core.telegram.org/api/premium">Telegram Premium</a></h4>
+<p>Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.</p>
+<h4 id="client-configuration" tabindex="-1"><a href="https://core.telegram.org/api/config">Client configuration</a></h4>
+<p>The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/method/messages.forwardMessages" rel="noopener">https://core.telegram.org/method/messages.forwardMessages</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>
