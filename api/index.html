@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telegram API — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li class="active"><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="telegram-api" tabindex="-1">Telegram API</h1>
+<p>Оригинальный русскоязычный обзор уровня «приложение» — надстройки над <a href="/mtproto/">протоколом MTProto</a>. Первоисточник со всеми подразделами: <a href="https://core.telegram.org/api">core.telegram.org/api</a>.</p>
+<p>Протокол отвечает на вопрос «как байты доходят до сервера и шифруются»; уровень API отвечает на вопрос «какие методы вызвать и как обрабатывать события». Все методы и типы — в <a href="/schema/">схеме</a>; ниже — ключевые темы для реализации клиента.</p>
+<h2 id="базовый-сценарий-клиента" tabindex="-1">Базовый сценарий клиента</h2>
+<ol>
+<li><strong>Получить <code>api_id</code>/<code>api_hash</code></strong> — идентификаторы приложения (выдаются на <a href="https://my.telegram.org">my.telegram.org</a>).</li>
+<li><strong>Создать <code>auth_key</code></strong> — см. <a href="/mtproto/auth_key/">Создание авторизационного ключа</a>.</li>
+<li><strong>Авторизовать пользователя или бота</strong> — обмен кодом и паролем описан в разделе <a href="/api/auth/">Авторизация</a>.</li>
+<li><strong>Инициализация соединения</strong> — <a href="/method/initConnection/"><code>initConnection</code></a> поверх первого запроса: сообщает о приложении, устройстве, языке; в ответ сервер присылает конфигурацию (<a href="/method/help.getConfig/"><code>help.getConfig</code></a>).</li>
+<li><strong>Синхронизация времени и солей</strong>, далее — обычный обмен запросами и обновлениями.</li>
+</ol>
+<h2 id="основные-темы" tabindex="-1">Основные темы</h2>
+<h3 id="авторизация" tabindex="-1">Авторизация</h3>
+<p>Обмен кодом из СМС, двухфакторный пароль, выход и завершение сессий: <a href="/method/auth.sendCode/"><code>auth.sendCode</code></a>, <a href="/method/auth.signIn/"><code>auth.signIn</code></a>, <a href="/method/auth.signUp/"><code>auth.signUp</code></a>, <a href="/method/auth.checkPassword/"><code>auth.checkPassword</code></a> и др. Подробности — в разделе <a href="/api/auth/">Авторизация</a>.</p>
+<h3 id="обновления-(события)" tabindex="-1">Обновления (события)</h3>
+<p>Сервер присылает <a href="/type/Update/">обновления</a> — новые сообщения, изменения чатов, статусы и т.д. Клиент обязан уметь: запрашивать разницу (<code>updates.getDifference</code>), обрабатывать пропуски (<code>pts</code>, <code>qts</code>, <code>date</code>), применять обновления в правильном порядке. Обзор — в разделе <a href="/api/updates/">Получение обновлений</a>.</p>
+<h3 id="файлы" tabindex="-1">Файлы</h3>
+<p>Загрузка и скачивание файлов с поддержкой докачки и параллельных частей: <a href="/method/upload.saveFilePart/"><code>upload.saveFilePart</code></a>, <a href="/method/upload.getFile/"><code>upload.getFile</code></a>, локации файлов (<a href="/type/InputFileLocation/"><code>InputFileLocation</code></a>) и <code>file references</code>. Обзор — в разделе <a href="/api/files/">Работа с файлами</a>.</p>
+<h3 id="как-вызывать-методы" tabindex="-1">Как вызывать методы</h3>
+<p>Правила уровня <code>layer</code>, повторные вызовы, флуд-контроль, ошибки: <a href="/api/invoking/">вызов методов</a> и <a href="/api/errors/">ошибки</a>.</p>
+<h3 id="сквозное-шифрование" tabindex="-1">Сквозное шифрование</h3>
+<ul>
+<li><a href="/api/end-to-end/">Секретные чаты</a> — переписка, которую не может прочитать сервер.</li>
+<li><a href="/api/pfs/">Perfect Forward Secrecy</a> — сменяемые ключи секретных чатов.</li>
+</ul>
+<h3 id="прочие-разделы-оригинала" tabindex="-1">Прочие разделы оригинала</h3>
+<p>Полный список тем (боты, платежи, каналы, стикеры, истории, веб-приложения и десятки других) — на странице <a href="https://core.telegram.org/api">оригинала</a>: этот сайт сосредоточен на протоколе и базовых темах, а тематические статьи даются ссылками на английский оригинал, поскольку это развивающаяся документация функций приложения.</p>
+<h2 id="полезные-справочники-этого-сайта" tabindex="-1">Полезные справочники этого сайта</h2>
+<ul>
+<li><a href="/method/">Методы</a> и <a href="/methods/">методы по категориям</a></li>
+<li><a href="/constructor/">Конструкторы</a>, <a href="/type/">типы</a></li>
+<li><a href="/api/layers/">Слои схемы</a> — журнал изменений схемы по версиям.</li>
+</ul>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/api" rel="noopener">https://core.telegram.org/api</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

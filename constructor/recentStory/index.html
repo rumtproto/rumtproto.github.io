@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>recentStory (конструктор) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="recentstory" tabindex="-1">recentStory</h1>
+<p><em>Конструктор из схемы TL.</em></p>
+<blockquote>
+<p>Summary of a peer's <a href="https://core.telegram.org/api/stories#recent-story-summaries">active stories »</a>, embedded in <a href="/constructor/user/">user</a>.<code>stories_max_id</code> and <a href="/constructor/channel/">channel</a>.<code>stories_max_id</code> and returned by <a href="/method/stories.getPeerMaxIDs/">stories.getPeerMaxIDs</a>.</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>recentStory#711d692d flags:# live:flags.0?true max_id:flags.1?int = RecentStory;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>live</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td>
+<td>Whether the peer is currently broadcasting a <a href="https://core.telegram.org/api/stories#live-stories">live story »</a>.</td>
+</tr>
+<tr>
+<td>max_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int/">int</a></td>
+<td>If live is set, ID of the peer's active <a href="https://core.telegram.org/api/stories#live-stories">live story »</a>; otherwise, ID of the peer's maximum active story.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="тип" tabindex="-1">Тип</h2>
+<p><a href="/type/RecentStory/">RecentStory</a></p>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="telegram-stories" tabindex="-1"><a href="https://core.telegram.org/api/stories">Telegram Stories</a></h4>
+<p>Telegram users and channels can easily post and view stories through the API.</p>
+<h4 id="user" tabindex="-1"><a href="/constructor/user/">user</a></h4>
+<p>Indicates info about a certain user.</p>
+<p>Unless specified otherwise, when updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).</p>
+<p>See <a href="https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106">here »</a> for an implementation of the logic to use when updating the <a href="https://core.telegram.org/api/peers">local user peer database</a>.</p>
+<h4 id="channel" tabindex="-1"><a href="/constructor/channel/">channel</a></h4>
+<p>Channel/supergroup info</p>
+<p>When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).</p>
+<p>The only exception to the above rule is when the <code>min</code> flag is set, in which case <strong>only</strong> the following fields must be applied over any locally stored version:</p>
+<ul>
+<li><code>title</code></li>
+<li><code>megagroup</code></li>
+<li><code>color</code></li>
+<li><code>photo</code></li>
+<li><code>username</code></li>
+<li><code>usernames</code></li>
+<li><code>has_geo</code></li>
+<li><code>noforwards</code></li>
+<li><code>emoji_status</code></li>
+<li><code>has_link</code></li>
+<li><code>slow_mode_enabled</code></li>
+<li><code>scam</code></li>
+<li><code>fake</code></li>
+<li><code>gigagroup</code></li>
+<li><code>forum</code></li>
+<li><code>level</code></li>
+<li><code>restricted</code></li>
+<li><code>restriction_reason</code></li>
+<li><code>join_to_send</code></li>
+<li><code>join_request</code></li>
+<li><code>is_verified</code></li>
+<li><code>default_banned_rights</code></li>
+<li><code>signature_profiles</code></li>
+<li><code>autotranslation</code></li>
+<li><code>broadcast_messages_allowed</code></li>
+<li><code>monoforum</code></li>
+<li><code>forum_tabs</code></li>
+<li><code>linked_monoforum_id</code></li>
+<li><code>send_paid_messages_stars</code></li>
+<li><code>bot_verification_icon</code></li>
+</ul>
+<p>See <a href="https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176">here »</a> for an implementation of the logic to use when updating the <a href="https://core.telegram.org/api/peers">local channel peer database</a>.</p>
+<h4 id="stories.getpeermaxids" tabindex="-1"><a href="/method/stories.getPeerMaxIDs/">stories.getPeerMaxIDs</a></h4>
+<p>Get compact <a href="https://core.telegram.org/api/stories#recent-story-summaries">active story summaries »</a> for a set of peers.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/constructor/recentStory" rel="noopener">https://core.telegram.org/constructor/recentStory</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

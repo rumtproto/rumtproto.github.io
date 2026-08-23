@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>upload.reuploadCdnFile (метод) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="upload.reuploadcdnfile" tabindex="-1">upload.reuploadCdnFile</h1>
+<p><em>Метод из схемы TL.</em></p>
+<blockquote>
+<p>Request a reupload of a certain file to a <a href="https://core.telegram.org/cdn">CDN DC</a>.</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>---functions---
+upload.reuploadCdnFile#9b2754a8 file_token:bytes request_token:bytes = Vector&lt;FileHash&gt;;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file_token</td>
+<td><a href="/type/bytes/">bytes</a></td>
+<td>File token</td>
+</tr>
+<tr>
+<td>request_token</td>
+<td><a href="/type/bytes/">bytes</a></td>
+<td>Request token</td>
+</tr>
+</tbody>
+</table>
+<h2 id="результат" tabindex="-1">Результат</h2>
+<p><a href="https://core.telegram.org/type/Vector%20t">Vector</a>&lt;<a href="/type/FileHash/">FileHash</a>&gt;</p>
+<h2 id="both-users-and-bots-can-use-this-method" tabindex="-1">Both users and bots can use this method</h2>
+<h2 id="possible-errors" tabindex="-1">Possible errors</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>CDN_METHOD_INVALID</td>
+<td>You can't call this method in a CDN DC.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>CDN_UPLOAD_TIMEOUT</td>
+<td>A server-side timeout occurred while reuploading the file to the CDN DC.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>FILE_TOKEN_INVALID</td>
+<td>The master DC did not accept the file_token (e.g., the token has expired). Continue downloading the file from the master DC using upload.getFile.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>LOCATION_INVALID</td>
+<td>The provided location is invalid.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>REQUEST_TOKEN_INVALID</td>
+<td>The master DC did not accept the request_token from the CDN DC. Continue downloading the file from the master DC using upload.getFile.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>RSA_DECRYPT_FAILED</td>
+<td>Internal RSA decryption failed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="encrypted-cdns-for-speed-and-security" tabindex="-1"><a href="https://core.telegram.org/cdn">Encrypted CDNs for Speed and Security</a></h4>
+<p>How client apps download popular public files from secondary CDN data centers.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/method/upload.reuploadCdnFile" rel="noopener">https://core.telegram.org/method/upload.reuploadCdnFile</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

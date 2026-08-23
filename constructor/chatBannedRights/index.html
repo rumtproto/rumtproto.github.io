@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>chatBannedRights (конструктор) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="chatbannedrights" tabindex="-1">chatBannedRights</h1>
+<p><em>Конструктор из схемы TL.</em></p>
+<blockquote>
+<p>Represents the rights of a normal user in a <a href="https://core.telegram.org/api/channel">supergroup/channel/chat</a>. In this case, the flags are inverted: if set, a flag <strong>does not allow</strong> a user to do X.</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>chatBannedRights#9f120418 flags:# view_messages:flags.0?true send_messages:flags.1?true send_media:flags.2?true send_stickers:flags.3?true send_gifs:flags.4?true send_games:flags.5?true send_inline:flags.6?true embed_links:flags.7?true send_polls:flags.8?true change_info:flags.10?true invite_users:flags.15?true pin_messages:flags.17?true manage_topics:flags.18?true send_photos:flags.19?true send_videos:flags.20?true send_roundvideos:flags.21?true send_audios:flags.22?true send_voices:flags.23?true send_docs:flags.24?true send_plain:flags.25?true edit_rank:flags.26?true until_date:int = ChatBannedRights;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>view_messages</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to view messages in a <a href="https://core.telegram.org/api/channel">supergroup/channel/chat</a></td>
+</tr>
+<tr>
+<td>send_messages</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send messages in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a></td>
+</tr>
+<tr>
+<td>send_media</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send any media in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a></td>
+</tr>
+<tr>
+<td>send_stickers</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send stickers in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a></td>
+</tr>
+<tr>
+<td>send_gifs</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send gifs in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a></td>
+</tr>
+<tr>
+<td>send_games</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send games in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a></td>
+</tr>
+<tr>
+<td>send_inline</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to use inline bots in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a>.</td>
+</tr>
+<tr>
+<td>embed_links</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to embed links in the messages of a <a href="https://core.telegram.org/api/channel">supergroup/chat</a></td>
+</tr>
+<tr>
+<td>send_polls</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send polls in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a></td>
+</tr>
+<tr>
+<td>change_info</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to change the description of a <a href="https://core.telegram.org/api/channel">supergroup/chat</a></td>
+</tr>
+<tr>
+<td>invite_users</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to invite users in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a></td>
+</tr>
+<tr>
+<td>pin_messages</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to pin messages in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a></td>
+</tr>
+<tr>
+<td>manage_topics</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to create, delete or modify <a href="https://core.telegram.org/api/forum#forum-topics">forum topics »</a>.</td>
+</tr>
+<tr>
+<td>send_photos</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send photos in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a>.</td>
+</tr>
+<tr>
+<td>send_videos</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send videos in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a>.</td>
+</tr>
+<tr>
+<td>send_roundvideos</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send round videos in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a>.</td>
+</tr>
+<tr>
+<td>send_audios</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send audio files in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a>.</td>
+</tr>
+<tr>
+<td>send_voices</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send voice messages in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a>.</td>
+</tr>
+<tr>
+<td>send_docs</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send documents in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a>.</td>
+</tr>
+<tr>
+<td>send_plain</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to send text messages in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a>.</td>
+</tr>
+<tr>
+<td>edit_rank</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.26?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to edit their own custom <a href="https://core.telegram.org/api/rank">tag (rank) »</a> in a <a href="https://core.telegram.org/api/channel">supergroup/chat</a>.</td>
+</tr>
+<tr>
+<td>send_reactions</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.27?<a href="/constructor/true/">true</a></td>
+<td>If set, does not allow a user to react to messages in a chat.</td>
+</tr>
+<tr>
+<td>until_date</td>
+<td><a href="/type/int/">int</a></td>
+<td>Validity of said permissions (it is considered forever any value less then 30 seconds or more then 366 days).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="тип" tabindex="-1">Тип</h2>
+<p><a href="/type/ChatBannedRights/">ChatBannedRights</a></p>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="channels,-supergroups,-gigagroups-and-basic-groups" tabindex="-1"><a href="https://core.telegram.org/api/channel">Channels, supergroups, gigagroups and basic groups</a></h4>
+<p>How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.</p>
+<h4 id="forum-topics" tabindex="-1"><a href="https://core.telegram.org/api/forum">Forum topics</a></h4>
+<p>Telegram allows creating forums with multiple distinct topics.</p>
+<h4 id="group-participant-tags" tabindex="-1"><a href="https://core.telegram.org/api/rank">Group participant tags</a></h4>
+<p>Members in group chats (both basic groups and supergroups) can add a tag next to their name — to show their role at work, what they study in school, and more.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/constructor/chatBannedRights" rel="noopener">https://core.telegram.org/constructor/chatBannedRights</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>botInfo (конструктор) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="botinfo" tabindex="-1">botInfo</h1>
+<p><em>Конструктор из схемы TL.</em></p>
+<blockquote>
+<p>Info about bots (available bot commands, etc)</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>botInfo#4d8a0299 flags:# has_preview_medias:flags.6?true user_id:flags.0?long description:flags.1?string description_photo:flags.4?Photo description_document:flags.5?Document commands:flags.2?Vector&lt;BotCommand&gt; menu_button:flags.3?BotMenuButton privacy_policy_url:flags.7?string app_settings:flags.8?BotAppSettings verifier_settings:flags.9?BotVerifierSettings = BotInfo;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>has_preview_medias</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true/">true</a></td>
+<td>If set, the bot has some <a href="https://core.telegram.org/api/bots/webapps#main-mini-app-previews">preview medias for the configured Main Mini App, see here »</a> for more info on Main Mini App preview medias.</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long/">long</a></td>
+<td>ID of the bot</td>
+</tr>
+<tr>
+<td>description</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string/">string</a></td>
+<td>Description of the bot</td>
+</tr>
+<tr>
+<td>description_photo</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/Photo/">Photo</a></td>
+<td>Description photo</td>
+</tr>
+<tr>
+<td>description_document</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/Document/">Document</a></td>
+<td>Description animation in MPEG4 format</td>
+</tr>
+<tr>
+<td>commands</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="https://core.telegram.org/type/Vector%20t">Vector</a>&lt;<a href="/type/BotCommand/">BotCommand</a>&gt;</td>
+<td>Bot commands that can be used in the chat</td>
+</tr>
+<tr>
+<td>menu_button</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/BotMenuButton/">BotMenuButton</a></td>
+<td>Indicates the action to execute when pressing the in-UI menu button for bots</td>
+</tr>
+<tr>
+<td>privacy_policy_url</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/string/">string</a></td>
+<td>The HTTP link to the privacy policy of the bot. If not set, then the /privacy command must be used, if supported by the bot (i.e. if it's present in the commands vector). If it isn't supported, then <a href="https://telegram.org/privacy-tpa">https://telegram.org/privacy-tpa</a> must be opened, instead.</td>
+</tr>
+<tr>
+<td>app_settings</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/BotAppSettings/">BotAppSettings</a></td>
+<td><a href="https://core.telegram.org/api/bots/webapps">Mini app »</a> settings</td>
+</tr>
+<tr>
+<td>verifier_settings</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/BotVerifierSettings/">BotVerifierSettings</a></td>
+<td>This bot can <a href="https://core.telegram.org/api/bots/verification">verify peers</a>: this field contains more info about the verification the bot can assign to peers.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="тип" tabindex="-1">Тип</h2>
+<p><a href="/type/BotInfo/">BotInfo</a></p>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="mini-apps-on-telegram" tabindex="-1"><a href="https://core.telegram.org/api/bots/webapps">Mini Apps on Telegram</a></h4>
+<p>Bots can offer users interactive HTML5 web apps to completely replace any website.</p>
+<h4 id="third-party-verification" tabindex="-1"><a href="https://core.telegram.org/api/bots/verification">Third-party verification</a></h4>
+<p>To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and reduce misinformation.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/constructor/botInfo" rel="noopener">https://core.telegram.org/constructor/botInfo</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

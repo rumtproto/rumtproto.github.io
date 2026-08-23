@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>channel (конструктор) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="channel" tabindex="-1">channel</h1>
+<p><em>Конструктор из схемы TL.</em></p>
+<blockquote>
+<p>Channel/supergroup info
+When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+The only exception to the above rule is when the <code>min</code> flag is set, in which case <strong>only</strong> the following fields must be applied over any locally stored version:</p>
+<ul>
+<li><code>title</code></li>
+<li><code>megagroup</code></li>
+<li><code>color</code></li>
+<li><code>photo</code></li>
+<li><code>username</code></li>
+<li><code>usernames</code></li>
+<li><code>has_geo</code></li>
+<li><code>noforwards</code></li>
+<li><code>emoji_status</code></li>
+<li><code>has_link</code></li>
+<li><code>slow_mode_enabled</code></li>
+<li><code>scam</code></li>
+<li><code>fake</code></li>
+<li><code>gigagroup</code></li>
+<li><code>forum</code></li>
+<li><code>level</code></li>
+<li><code>restricted</code></li>
+<li><code>restriction_reason</code></li>
+<li><code>join_to_send</code></li>
+<li><code>join_request</code></li>
+<li><code>is_verified</code></li>
+<li><code>default_banned_rights</code></li>
+<li><code>signature_profiles</code></li>
+<li><code>autotranslation</code></li>
+<li><code>broadcast_messages_allowed</code></li>
+<li><code>monoforum</code></li>
+<li><code>forum_tabs</code></li>
+<li><code>linked_monoforum_id</code></li>
+<li><code>send_paid_messages_stars</code></li>
+<li><code>bot_verification_icon</code>
+See <a href="https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176">here »</a> for an implementation of the logic to use when updating the <a href="https://core.telegram.org/api/peers">local channel peer database</a>.</li>
+</ul>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>channel#1c32b11c flags:# creator:flags.0?true left:flags.2?true broadcast:flags.5?true verified:flags.7?true megagroup:flags.8?true restricted:flags.9?true signatures:flags.11?true min:flags.12?true scam:flags.19?true has_link:flags.20?true has_geo:flags.21?true slowmode_enabled:flags.22?true call_active:flags.23?true call_not_empty:flags.24?true fake:flags.25?true gigagroup:flags.26?true noforwards:flags.27?true join_to_send:flags.28?true join_request:flags.29?true forum:flags.30?true flags2:# stories_hidden:flags2.1?true stories_hidden_min:flags2.2?true stories_unavailable:flags2.3?true signature_profiles:flags2.12?true autotranslation:flags2.15?true broadcast_messages_allowed:flags2.16?true monoforum:flags2.17?true forum_tabs:flags2.19?true id:long access_hash:flags.13?long title:string username:flags.6?string photo:ChatPhoto date:int restriction_reason:flags.9?Vector&lt;RestrictionReason&gt; admin_rights:flags.14?ChatAdminRights banned_rights:flags.15?ChatBannedRights default_banned_rights:flags.18?ChatBannedRights participants_count:flags.17?int usernames:flags2.0?Vector&lt;Username&gt; stories_max_id:flags2.4?RecentStory color:flags2.7?PeerColor profile_color:flags2.8?PeerColor emoji_status:flags2.9?EmojiStatus level:flags2.10?int subscription_until_date:flags2.11?int bot_verification_icon:flags2.13?long send_paid_messages_stars:flags2.14?long linked_monoforum_id:flags2.18?long = Chat;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>creator</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td>
+<td>Whether the current user is the creator of this channel</td>
+</tr>
+<tr>
+<td>left</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true/">true</a></td>
+<td>Whether the current user has left or is not a member of this channel</td>
+</tr>
+<tr>
+<td>broadcast</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true/">true</a></td>
+<td>Is this a channel?</td>
+</tr>
+<tr>
+<td>verified</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true/">true</a></td>
+<td>Is this channel verified by telegram?</td>
+</tr>
+<tr>
+<td>megagroup</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true/">true</a></td>
+<td>Is this a supergroup? Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>restricted</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/constructor/true/">true</a></td>
+<td>Whether viewing/writing in this channel for a reason (see restriction_reason)</td>
+</tr>
+<tr>
+<td>signatures</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true/">true</a></td>
+<td>Whether signatures are enabled (channels)</td>
+</tr>
+<tr>
+<td>min</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true/">true</a></td>
+<td>See <a href="https://core.telegram.org/api/min">min</a></td>
+</tr>
+<tr>
+<td>scam</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/constructor/true/">true</a></td>
+<td>This channel/supergroup is probably a scam Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>has_link</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/constructor/true/">true</a></td>
+<td>Whether this channel has a linked <a href="https://core.telegram.org/api/discussion">discussion group »</a> (or this supergroup is a channel's discussion group). The actual ID of the linked channel/supergroup is contained in <a href="/constructor/channelFull/">channelFull</a>.linked_chat_id. Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>has_geo</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/constructor/true/">true</a></td>
+<td>Whether this chanel has a geoposition</td>
+</tr>
+<tr>
+<td>slowmode_enabled</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/constructor/true/">true</a></td>
+<td>Whether slow mode is enabled for groups to prevent flood in chat. Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>call_active</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/constructor/true/">true</a></td>
+<td>Whether a group call or livestream is currently active</td>
+</tr>
+<tr>
+<td>call_not_empty</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/constructor/true/">true</a></td>
+<td>Whether there's anyone in the group call or livestream</td>
+</tr>
+<tr>
+<td>fake</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/constructor/true/">true</a></td>
+<td>If set, this <a href="https://core.telegram.org/api/channel">supergroup/channel</a> was reported by many users as a fake or scam: be careful when interacting with it. Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>gigagroup</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.26?<a href="/constructor/true/">true</a></td>
+<td>Whether this <a href="https://core.telegram.org/api/channel">supergroup</a> is a gigagroup Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>noforwards</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.27?<a href="/constructor/true/">true</a></td>
+<td>Whether this channel or group is <a href="https://telegram.org/blog/content-protection-delete-by-date-and-more">protected</a>, thus does not allow forwarding messages from it</td>
+</tr>
+<tr>
+<td>join_to_send</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.28?<a href="/constructor/true/">true</a></td>
+<td>Whether a user needs to join the supergroup before they can send messages: can be false only for <a href="https://core.telegram.org/api/discussion">discussion groups »</a>, toggle using <a href="/method/channels.toggleJoinToSend/">channels.toggleJoinToSend</a> Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>join_request</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.29?<a href="/constructor/true/">true</a></td>
+<td>Whether a user's join request will have to be <a href="https://core.telegram.org/api/invites#join-requests">approved by administrators</a>, toggle using <a href="/method/channels.toggleJoinRequest/">channels.toggleJoinToSend</a> Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>forum</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.30?<a href="/constructor/true/">true</a></td>
+<td>Whether this supergroup is a <a href="https://core.telegram.org/api/forum">forum</a>. Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>flags2</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>stories_hidden</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.1?<a href="/constructor/true/">true</a></td>
+<td>Whether we have <a href="https://core.telegram.org/api/stories#hiding-stories-of-other-users">hidden all stories posted by this channel »</a>.</td>
+</tr>
+<tr>
+<td>stories_hidden_min</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.2?<a href="/constructor/true/">true</a></td>
+<td>If set, indicates that the stories_hidden flag was not populated, and its value must cannot be relied on; use the previously cached value, or re-fetch the constructor using <a href="/method/channels.getChannels/">channels.getChannels</a> to obtain the latest value of the stories_hidden flag.</td>
+</tr>
+<tr>
+<td>stories_unavailable</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.3?<a href="/constructor/true/">true</a></td>
+<td>No stories from the channel are visible.</td>
+</tr>
+<tr>
+<td>signature_profiles</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.12?<a href="/constructor/true/">true</a></td>
+<td>If set, messages sent by admins to this channel will link to the admin's profile (just like with groups).</td>
+</tr>
+<tr>
+<td>autotranslation</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.15?<a href="/constructor/true/">true</a></td>
+<td>If set, <a href="https://core.telegram.org/api/translation#autotranslation-for-channels">autotranslation</a> was enabled for all users by the admin of the channel, as specified <a href="https://core.telegram.org/api/translation#autotranslation-for-channels">here »</a>.</td>
+</tr>
+<tr>
+<td>broadcast_messages_allowed</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.16?<a href="/constructor/true/">true</a></td>
+<td>If set, this channel has an associated <a href="https://core.telegram.org/api/monoforum">monoforum »</a>, and its ID is specified in the linked_monoforum_id flag.</td>
+</tr>
+<tr>
+<td>monoforum</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.17?<a href="/constructor/true/">true</a></td>
+<td>If set, this is a <a href="https://core.telegram.org/api/monoforum">monoforum »</a>, and the ID of the associated channel is specified in the linked_monoforum_id.</td>
+</tr>
+<tr>
+<td>forum_tabs</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.19?<a href="/constructor/true/">true</a></td>
+<td><a href="https://core.telegram.org/api/forum#tabbed-or-list-based-forum-ui">If set, enables the tabbed forum UI »</a>.</td>
+</tr>
+<tr>
+<td>id</td>
+<td><a href="/type/long/">long</a></td>
+<td>ID of the channel, see <a href="https://core.telegram.org/api/peers#peer-id">here »</a> for more info and the available ID range.</td>
+</tr>
+<tr>
+<td>access_hash</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/long/">long</a></td>
+<td>Access hash, see <a href="https://core.telegram.org/api/peers#access-hash">here »</a> for more info</td>
+</tr>
+<tr>
+<td>title</td>
+<td><a href="/type/string/">string</a></td>
+<td>Title</td>
+</tr>
+<tr>
+<td>username</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/string/">string</a></td>
+<td>Main active username.</td>
+</tr>
+<tr>
+<td>photo</td>
+<td><a href="/type/ChatPhoto/">ChatPhoto</a></td>
+<td>Profile photo</td>
+</tr>
+<tr>
+<td>date</td>
+<td><a href="/type/int/">int</a></td>
+<td>Date when the user joined the supergroup/channel, or if the user isn't a member, its creation date</td>
+</tr>
+<tr>
+<td>restriction_reason</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="https://core.telegram.org/type/Vector%20t">Vector</a>&lt;<a href="/type/RestrictionReason/">RestrictionReason</a>&gt;</td>
+<td>Contains the reason why access to this channel must be restricted. Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>admin_rights</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/ChatAdminRights/">ChatAdminRights</a></td>
+<td>Admin rights of the user in this channel (see <a href="https://core.telegram.org/api/rights">rights</a>)</td>
+</tr>
+<tr>
+<td>banned_rights</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/ChatBannedRights/">ChatBannedRights</a></td>
+<td>Banned rights of the user in this channel (see <a href="https://core.telegram.org/api/rights">rights</a>)</td>
+</tr>
+<tr>
+<td>default_banned_rights</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/ChatBannedRights/">ChatBannedRights</a></td>
+<td>Default chat rights (see <a href="https://core.telegram.org/api/rights">rights</a>)</td>
+</tr>
+<tr>
+<td>participants_count</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/int/">int</a></td>
+<td>Participant count</td>
+</tr>
+<tr>
+<td>usernames</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.0?<a href="https://core.telegram.org/type/Vector%20t">Vector</a>&lt;<a href="/type/Username/">Username</a>&gt;</td>
+<td>Additional usernames</td>
+</tr>
+<tr>
+<td>stories_max_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.4?<a href="/type/RecentStory/">RecentStory</a></td>
+<td>Summary of the channel or supergroup's <a href="https://core.telegram.org/api/stories#recent-story-summaries">active stories »</a>.</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.7?<a href="/type/PeerColor/">PeerColor</a></td>
+<td>The channel's <a href="https://core.telegram.org/api/colors">accent color</a>.</td>
+</tr>
+<tr>
+<td>profile_color</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.8?<a href="/type/PeerColor/">PeerColor</a></td>
+<td>The channel's <a href="https://core.telegram.org/api/colors">profile color</a>.</td>
+</tr>
+<tr>
+<td>emoji_status</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.9?<a href="/type/EmojiStatus/">EmojiStatus</a></td>
+<td><a href="https://core.telegram.org/api/emoji-status">Emoji status</a></td>
+</tr>
+<tr>
+<td>level</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.10?<a href="/type/int/">int</a></td>
+<td><a href="https://core.telegram.org/api/boost">Boost level</a>. Changes to this flag should invalidate the local <a href="/constructor/channelFull/">channelFull</a> cache for this channel/supergroup ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
+</tr>
+<tr>
+<td>subscription_until_date</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.11?<a href="/type/int/">int</a></td>
+<td>Expiration date of the <a href="https://core.telegram.org/api/stars#star-subscriptions">Telegram Star subscription »</a> the current user has bought to gain access to this channel.</td>
+</tr>
+<tr>
+<td>bot_verification_icon</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.13?<a href="/type/long/">long</a></td>
+<td>Describes a <a href="https://core.telegram.org/api/bots/verification">bot verification icon »</a>.</td>
+</tr>
+<tr>
+<td>send_paid_messages_stars</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.14?<a href="/type/long/">long</a></td>
+<td>If set, this supergroup or <a href="https://core.telegram.org/api/monoforum">monoforum</a> has enabled <a href="https://core.telegram.org/api/paid-messages">paid messages »</a>, we might need to pay the specified amount of <a href="https://core.telegram.org/api/stars">Stars</a> to send messages to it, depending on the configured exceptions: check <a href="/constructor/channelFull/">channelFull</a>.send_paid_messages_stars to see if the currently logged in user actually has to pay or not, see <a href="https://core.telegram.org/api/paid-messages">here »</a> for the full flow (only set for the monoforum, not the associated channel).</td>
+</tr>
+<tr>
+<td>linked_monoforum_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.18?<a href="/type/long/">long</a></td>
+<td>For channels with associated <a href="https://core.telegram.org/api/monoforum">monoforums</a>, the <a href="https://core.telegram.org/api/monoforum">monoforum</a> ID. For <a href="https://core.telegram.org/api/monoforum">Monoforums</a>, the ID of the associated channel.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="тип" tabindex="-1">Тип</h2>
+<p><a href="/type/Chat/">Chat</a></p>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="channelfull" tabindex="-1"><a href="/constructor/channelFull/">channelFull</a></h4>
+<p>Full info about a <a href="https://core.telegram.org/api/channel#channels">channel</a>, <a href="https://core.telegram.org/api/channel#supergroups">supergroup</a> or <a href="https://core.telegram.org/api/channel#gigagroups">gigagroup</a>.</p>
+<p>When updating the <a href="https://core.telegram.org/api/peers">local peer database »</a>, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).</p>
+<h4 id="peer-database" tabindex="-1"><a href="https://core.telegram.org/api/peers">Peer database</a></h4>
+<p>Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.</p>
+<h4 id="min-constructors" tabindex="-1"><a href="https://core.telegram.org/api/min">Min constructors</a></h4>
+<p>In some situations user and channel constructors have reduced set of fields present (although id is always there) and min flag set.</p>
+<h4 id="discussion-groups" tabindex="-1"><a href="https://core.telegram.org/api/discussion">Discussion groups</a></h4>
+<p>Groups can be associated to a channel as a discussion group, to allow users to discuss about posts.</p>
+<h4 id="channels,-supergroups,-gigagroups-and-basic-groups" tabindex="-1"><a href="https://core.telegram.org/api/channel">Channels, supergroups, gigagroups and basic groups</a></h4>
+<p>How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.</p>
+<h4 id="channels.togglejointosend" tabindex="-1"><a href="/method/channels.toggleJoinToSend/">channels.toggleJoinToSend</a></h4>
+<p>Set whether all users <a href="https://core.telegram.org/api/discussion#requiring-users-to-join-the-group">should join a discussion group in order to comment on a post »</a></p>
+<h4 id="invite-links" tabindex="-1"><a href="https://core.telegram.org/api/invites">Invite links</a></h4>
+<p>Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.</p>
+<h4 id="channels.togglejoinrequest" tabindex="-1"><a href="/method/channels.toggleJoinRequest/">channels.toggleJoinRequest</a></h4>
+<p>Set whether all users should <a href="https://core.telegram.org/api/invites#join-requests">request admin approval to join the group »</a>.</p>
+<h4 id="forum-topics" tabindex="-1"><a href="https://core.telegram.org/api/forum">Forum topics</a></h4>
+<p>Telegram allows creating forums with multiple distinct topics.</p>
+<h4 id="telegram-stories" tabindex="-1"><a href="https://core.telegram.org/api/stories">Telegram Stories</a></h4>
+<p>Telegram users and channels can easily post and view stories through the API.</p>
+<h4 id="channels.getchannels" tabindex="-1"><a href="/method/channels.getChannels/">channels.getChannels</a></h4>
+<p>Get info about <a href="https://core.telegram.org/api/channel">channels/supergroups</a></p>
+<h4 id="message-translation" tabindex="-1"><a href="https://core.telegram.org/api/translation">Message translation</a></h4>
+<p>Telegram allows translating chat messages: Telegram Premium users may even enable real-time chat translation.</p>
+<h4 id="direct-messages-to-channels" tabindex="-1"><a href="https://core.telegram.org/api/monoforum">Direct messages to channels</a></h4>
+<p>Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.</p>
+<h4 id="admin,-banned,-default-rights" tabindex="-1"><a href="https://core.telegram.org/api/rights">Admin, banned, default rights</a></h4>
+<p>How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.</p>
+<h4 id="accent-colors" tabindex="-1"><a href="https://core.telegram.org/api/colors">Accent colors</a></h4>
+<p>Telegram users and channels can change the accent color and background pattern of their profile page and their messages!</p>
+<h4 id="emoji-status" tabindex="-1"><a href="https://core.telegram.org/api/emoji-status">Emoji status</a></h4>
+<p>Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.</p>
+<h4 id="channel-and-supergroup-boosts" tabindex="-1"><a href="https://core.telegram.org/api/boost">Channel and supergroup boosts</a></h4>
+<p>Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.</p>
+<h4 id="telegram-stars" tabindex="-1"><a href="https://core.telegram.org/api/stars">Telegram Stars</a></h4>
+<p>Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.</p>
+<h4 id="third-party-verification" tabindex="-1"><a href="https://core.telegram.org/api/bots/verification">Third-party verification</a></h4>
+<p>To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and reduce misinformation.</p>
+<h4 id="paid-messages" tabindex="-1"><a href="https://core.telegram.org/api/paid-messages">Paid messages</a></h4>
+<p>Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/constructor/channel" rel="noopener">https://core.telegram.org/constructor/channel</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

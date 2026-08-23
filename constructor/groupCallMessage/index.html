@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>groupCallMessage (конструктор) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="groupcallmessage" tabindex="-1">groupCallMessage</h1>
+<p><em>Конструктор из схемы TL.</em></p>
+<blockquote>
+<p>Represents an <a href="https://core.telegram.org/api/group-calls#in-call-messages">in-call message »</a>, emoji reaction, paid live story comment or standalone paid live story donation.</p>
+<h4 id="end-to-end-schema" tabindex="-1"><a href="/schema/end-to-end/">End-to-end schema</a></h4>
+<pre><code>===216===
+groupCallMessage#907ce88e random_id:long message:TextWithEntities = GroupCallMessage;
+</code></pre>
+<h4 id="api-schema" tabindex="-1">API schema</h4>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>groupCallMessage#1a8afc7e flags:# from_admin:flags.1?true id:int from_id:Peer date:int message:TextWithEntities paid_message_stars:flags.0?long = GroupCallMessage;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>from_admin</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td>
+<td>Whether the message was sent by a group call admin</td>
+</tr>
+<tr>
+<td>id</td>
+<td><a href="/type/int/">int</a></td>
+<td>Message ID</td>
+</tr>
+<tr>
+<td>from_id</td>
+<td><a href="/type/Peer/">Peer</a></td>
+<td>Displayed message author</td>
+</tr>
+<tr>
+<td>date</td>
+<td><a href="/type/int/">int</a></td>
+<td>Message date</td>
+</tr>
+<tr>
+<td>message</td>
+<td><a href="/type/TextWithEntities/">TextWithEntities</a></td>
+<td>Message text or emoji reaction; empty for standalone paid live story donations. Must be at most <a href="https://core.telegram.org/api/config#group-call-message-length-limit">group_call_message_length_limit »</a> UTF-8 characters long. For paid chats, use <a href="https://core.telegram.org/api/config#stars-groupcall-message-limits">stars_groupcall_message_limits »</a> to source limits according to the passed value of paid_message_stars, instead.</td>
+</tr>
+<tr>
+<td>paid_message_stars</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long/">long</a></td>
+<td>Number of Telegram Stars donated with the message or standalone donation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="тип" tabindex="-1">Тип</h2>
+<p><a href="/type/GroupCallMessage/">GroupCallMessage</a></p>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="client-configuration" tabindex="-1"><a href="https://core.telegram.org/api/config">Client configuration</a></h4>
+<p>The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.</p>
+<h4 id="group-calls" tabindex="-1"><a href="https://core.telegram.org/api/group-calls">Group calls</a></h4>
+<p>How to start, join and manage group calls and video chats.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/constructor/groupCallMessage" rel="noopener">https://core.telegram.org/constructor/groupCallMessage</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

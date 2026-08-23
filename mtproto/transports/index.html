@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Транспорты — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li class="active"><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="транспорты" tabindex="-1">Транспорты</h1>
+<p>Оригинальное русскоязычное описание транспортных вариантов, которыми клиент может доставлять зашифрованные сообщения MTProto до сервера. Первоисточник: <a href="https://core.telegram.org/mtproto/transports">core.telegram.org/mtproto/transports</a>.</p>
+<p>Важно: транспорт переносит уже зашифрованные сообщения, поэтому выбор транспорта не влияет на криптографию. Различаются только схемы кадрирования — то, как поток байтов делится на отдельные сообщения.</p>
+<h2 id="tcp" tabindex="-1">TCP</h2>
+<p>Основной транспорт. По соединению идёт последовательность кадров; заголовок кадра зависит от одного из трёх режимов:</p>
+<h3 id="abridged-(сокращённый)" tabindex="-1"><code>abridged</code> (сокращённый)</h3>
+<ul>
+<li>Инициализация: первым байтом клиент отправляет <code>0xef</code>.</li>
+<li>Кадр: 1 байт <code>len</code> — длина данных в 4-байтовых словах; если длина не помещается в один байт (≥ 0x7f слов), пишется байт <code>0x7f</code>, а затем ещё 3 байта длины (малоэндийные). После заголовка следуют сами данные.</li>
+</ul>
+<h3 id="intermediate-(промежуточный)" tabindex="-1"><code>intermediate</code> (промежуточный)</h3>
+<ul>
+<li>Инициализация: 4 байта <code>0xeeeeeeee</code>.</li>
+<li>Кадр: 4 байта длины в байтах (малоэндийные) + данные. Заголовок не экономит байты, зато формат проще разбирать.</li>
+</ul>
+<h3 id="padded-intermediate-(промежуточный-с-дополнением)" tabindex="-1"><code>padded intermediate</code> (промежуточный с дополнением)</h3>
+<ul>
+<li>Инициализация: 4 байта <code>0xdddddddd</code>.</li>
+<li>Как <code>intermediate</code>, но указанная длина кадра может превышать размер полезной нагрузки — избыток заполняется случайными байтами. Это затрудняет анализ трафика по размерам пакетов.</li>
+</ul>
+<p>Все три формата поддерживают <strong>быстрые подтверждения</strong> (quick ack): если в заголовке длины установлен старший бит (<code>0x80000000</code>), сервер может немедленно ответить 4-байтовым кодом подтверждения, не дожидаясь полного ответа на сообщение.</p>
+<h2 id="websocket" tabindex="-1">WebSocket</h2>
+<h3 id="прямой-websocket" tabindex="-1">Прямой WebSocket</h3>
+<ul>
+<li>Используется тот же формат кадра, что и в <code>padded intermediate</code> (4 байта длины + данные + случайное дополнение), но кадры передаются внутри сообщений WebSocket; инициализационная последовательность отправляется первым сообщением.</li>
+</ul>
+<h3 id="websocket-поверх-https" tabindex="-1">WebSocket поверх HTTPS</h3>
+<p>Тот же транспорт, но туннелированный через HTTPS-соединение — для сетей, где разрешён только веб-трафик.</p>
+<h2 id="http-/-https" tabindex="-1">HTTP / HTTPS</h2>
+<p>Сообщения передаются как тело HTTP-запросов:</p>
+<ul>
+<li>Клиент отправляет <code>POST</code>-запросы на адреса дата-центров; сервер возвращает накопленные сообщения в теле ответа.</li>
+<li>Для «долго ожидания» используется <a href="https://core.telegram.org/constructor/http_wait/"><code>http_wait</code></a>: клиент просит сервер не завершать ответ, пока не появятся сообщения или не истечёт таймаут.</li>
+<li>Сегодня это запасной вариант; основные — TCP с обфускацией (см. ниже) и WebSocket.</li>
+</ul>
+<h2 id="обфускация-транспортных-заголовков" tabindex="-1">Обфускация транспортных заголовков</h2>
+<p>Чтобы характерные инициализационные байты (<code>0xef</code>, <code>0xeeeeeeee</code> и т.п.) не были видны наблюдателю, применяется обфускация:</p>
+<ul>
+<li>Клиент генерирует 64 случайных байта с ограничениями: они не должны начинаться с сигнатур, по которым распознаются другие протоколы (например, «HEAD», «POST», «GET »), и не должны быть нулевыми.</li>
+<li>В эти байты вписывается сигнатура выбранного формата; из них же выводятся ключ и вектор инициализации потокового шифра.</li>
+<li>Первый передаваемый блок и весь дальнейший поток шифруются этим шифром, поэтому со стороны соединение выглядит как случайные данные.</li>
+<li>Детальный алгоритм — в статье <a href="/mtproto/mtproto-transports/">MTProto-транспорты</a>.</li>
+</ul>
+<h2 id="что-выбрать-при-реализации" tabindex="-1">Что выбрать при реализации</h2>
+<ul>
+<li>По умолчанию — <strong>TCP <code>padded intermediate</code> с обфускацией</strong>: лучший баланс надёжности и устойчивости к блокировкам.</li>
+<li>При недоступности TCP — WebSocket поверх HTTPS.</li>
+<li>Реализации можно сверять с открытым кодом: например, <a href="https://github.com/tdlib/td/blob/master/td/mtproto/TcpTransport.cpp">транспорт в TDLib</a> и <a href="https://github.com/danog/MadelineProto/tree/v8/src/Stream/MTProtoTransport">MadelineProto</a>.</li>
+</ul>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/mtproto/transports" rel="noopener">https://core.telegram.org/mtproto/transports</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

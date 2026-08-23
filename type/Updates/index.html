@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Updates (тип) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="updates" tabindex="-1">Updates</h1>
+<p><em>Тип из схемы TL.</em></p>
+<blockquote>
+<p>Object which is perceived by the client without a call on its part when an event occurs.</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>updatesTooLong#e317af7e = Updates;
+updateShortMessage#313bc7f8 flags:# out:flags.1?true mentioned:flags.4?true media_unread:flags.5?true silent:flags.13?true id:int user_id:long message:string pts:int pts_count:int date:int fwd_from:flags.2?MessageFwdHeader via_bot_id:flags.11?long reply_to:flags.3?MessageReplyHeader entities:flags.7?Vector&lt;MessageEntity&gt; ttl_period:flags.25?int = Updates;
+updateShortChatMessage#4d6deea5 flags:# out:flags.1?true mentioned:flags.4?true media_unread:flags.5?true silent:flags.13?true id:int from_id:long chat_id:long message:string pts:int pts_count:int date:int fwd_from:flags.2?MessageFwdHeader via_bot_id:flags.11?long reply_to:flags.3?MessageReplyHeader entities:flags.7?Vector&lt;MessageEntity&gt; ttl_period:flags.25?int = Updates;
+updateShort#78d4dec1 update:Update date:int = Updates;
+updatesCombined#725b04c3 updates:Vector&lt;Update&gt; users:Vector&lt;User&gt; chats:Vector&lt;Chat&gt; date:int seq_start:int seq:int = Updates;
+updates#74ae4240 updates:Vector&lt;Update&gt; users:Vector&lt;User&gt; chats:Vector&lt;Chat&gt; date:int seq:int = Updates;
+updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_count:int date:int media:flags.9?MessageMedia entities:flags.7?Vector&lt;MessageEntity&gt; ttl_period:flags.25?int = Updates;
+
+---functions---
+
+contacts.deleteContacts#96a0e00 id:Vector&lt;InputUser&gt; = Updates;
+contacts.addContact#d9ba2e54 flags:# add_phone_privacy_exception:flags.0?true id:InputUser first_name:string last_name:string phone:string note:flags.1?TextWithEntities = Updates;
+contacts.acceptContact#f831a20f id:InputUser = Updates;
+contacts.getLocated#d348bc44 flags:# background:flags.1?true geo_point:InputGeoPoint self_expires:flags.0?int = Updates;
+contacts.blockFromReplies#29a8962c flags:# delete_message:flags.0?true delete_history:flags.1?true report_spam:flags.2?true msg_id:int = Updates;
+
+messages.sendMessage#545cd15a flags:# no_webpage:flags.1?true silent:flags.5?true background:flags.6?true clear_draft:flags.7?true noforwards:flags.14?true update_stickersets_order:flags.15?true invert_media:flags.16?true allow_paid_floodskip:flags.19?true peer:InputPeer reply_to:flags.0?InputReplyTo message:string random_id:long reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector&lt;MessageEntity&gt; schedule_date:flags.10?int schedule_repeat_period:flags.24?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut effect:flags.18?long allow_paid_stars:flags.21?long suggested_post:flags.22?SuggestedPost = Updates;
+messages.sendMedia#330e77f flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true noforwards:flags.14?true update_stickersets_order:flags.15?true invert_media:flags.16?true allow_paid_floodskip:flags.19?true peer:InputPeer reply_to:flags.0?InputReplyTo media:InputMedia message:string random_id:long reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector&lt;MessageEntity&gt; schedule_date:flags.10?int schedule_repeat_period:flags.24?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut effect:flags.18?long allow_paid_stars:flags.21?long suggested_post:flags.22?SuggestedPost = Updates;
+messages.forwardMessages#13704a7c flags:# silent:flags.5?true background:flags.6?true with_my_score:flags.8?true drop_author:flags.11?true drop_media_captions:flags.12?true noforwards:flags.14?true allow_paid_floodskip:flags.19?true from_peer:InputPeer id:Vector&lt;int&gt; random_id:Vector&lt;long&gt; to_peer:InputPeer top_msg_id:flags.9?int reply_to:flags.22?InputReplyTo schedule_date:flags.10?int schedule_repeat_period:flags.24?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut effect:flags.18?long video_timestamp:flags.20?int allow_paid_stars:flags.21?long suggested_post:flags.23?SuggestedPost = Updates;
+messages.editChatTitle#73783ffd chat_id:long title:string = Updates;
+messages.editChatPhoto#35ddd674 chat_id:long photo:InputChatPhoto = Updates;
+messages.deleteChatUser#a2185cab flags:# revoke_history:flags.0?true chat_id:long user_id:InputUser = Updates;
+messages.importChatInvite#6c50051c hash:string = Updates;
+messages.startBot#e6df7378 bot:InputUser peer:InputPeer random_id:long start_param:string = Updates;
+messages.migrateChat#a2875319 chat_id:long = Updates;
+messages.sendInlineBotResult#c0cf7646 flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true hide_via:flags.11?true peer:InputPeer reply_to:flags.0?InputReplyTo random_id:long query_id:long id:string schedule_date:flags.10?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut allow_paid_stars:flags.21?long = Updates;
+messages.editMessage#51e842e1 flags:# no_webpage:flags.1?true invert_media:flags.16?true peer:InputPeer id:int message:flags.11?string media:flags.14?InputMedia reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector&lt;MessageEntity&gt; schedule_date:flags.15?int schedule_repeat_period:flags.18?int quick_reply_shortcut_id:flags.17?int = Updates;
+messages.getAllDrafts#6a3f8d65 = Updates;
+messages.setGameScore#8ef8ecc0 flags:# edit_message:flags.0?true force:flags.1?true peer:InputPeer id:int user_id:InputUser score:int = Updates;
+messages.sendScreenshotNotification#a1405817 peer:InputPeer reply_to:InputReplyTo random_id:long = Updates;
+messages.sendMultiMedia#1bf89d74 flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true noforwards:flags.14?true update_stickersets_order:flags.15?true invert_media:flags.16?true allow_paid_floodskip:flags.19?true peer:InputPeer reply_to:flags.0?InputReplyTo multi_media:Vector&lt;InputSingleMedia&gt; schedule_date:flags.10?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut effect:flags.18?long allow_paid_stars:flags.21?long = Updates;
+messages.updatePinnedMessage#d2aaf7ec flags:# silent:flags.0?true unpin:flags.1?true pm_oneside:flags.2?true peer:InputPeer id:int = Updates;
+messages.sendVote#10ea6184 peer:InputPeer msg_id:int options:Vector&lt;bytes&gt; = Updates;
+messages.getPollResults#73bb643b peer:InputPeer msg_id:int = Updates;
+messages.editChatDefaultBannedRights#a5866b41 peer:InputPeer banned_rights:ChatBannedRights = Updates;
+messages.sendScheduledMessages#bd38850a peer:InputPeer id:Vector&lt;int&gt; = Updates;
+messages.deleteScheduledMessages#59ae2b16 peer:InputPeer id:Vector&lt;int&gt; = Updates;
+messages.setHistoryTTL#b80e5fe4 peer:InputPeer period:int = Updates;
+messages.setChatTheme#81202c9 peer:InputPeer theme:InputChatTheme = Updates;
+messages.hideChatJoinRequest#7fe7e815 flags:# approved:flags.0?true peer:InputPeer user_id:InputUser = Updates;
+messages.hideAllChatJoinRequests#e085f4ea flags:# approved:flags.0?true peer:InputPeer link:flags.1?string = Updates;
+messages.toggleNoForwards#b2081a35 flags:# peer:InputPeer enabled:Bool request_msg_id:flags.0?int = Updates;
+messages.sendReaction#d30d78d4 flags:# big:flags.1?true add_to_recent:flags.2?true peer:InputPeer msg_id:int reaction:flags.0?Vector&lt;Reaction&gt; = Updates;
+messages.getMessagesReactions#8bba90e6 peer:InputPeer id:Vector&lt;int&gt; = Updates;
+messages.setChatAvailableReactions#864b2581 flags:# peer:InputPeer available_reactions:ChatReactions reactions_limit:flags.0?int paid_enabled:flags.1?Bool = Updates;
+messages.sendWebViewData#dc0242c8 bot:InputUser random_id:long button_text:string data:string = Updates;
+messages.getExtendedMedia#84f80814 peer:InputPeer id:Vector&lt;int&gt; = Updates;
+messages.sendBotRequestedPeer#91b2d060 peer:InputPeer msg_id:int button_id:int requested_peers:Vector&lt;InputPeer&gt; = Updates;
+messages.setChatWallPaper#8ffacae1 flags:# for_both:flags.3?true revert:flags.4?true peer:InputPeer wallpaper:flags.0?InputWallPaper settings:flags.2?WallPaperSettings id:flags.1?int = Updates;
+messages.sendQuickReplyMessages#6c750de1 peer:InputPeer shortcut_id:int id:Vector&lt;int&gt; random_id:Vector&lt;long&gt; = Updates;
+messages.deleteQuickReplyMessages#e105e910 shortcut_id:int id:Vector&lt;int&gt; = Updates;
+messages.editFactCheck#589ee75 peer:InputPeer msg_id:int text:TextWithEntities = Updates;
+messages.deleteFactCheck#d1da940c peer:InputPeer msg_id:int = Updates;
+messages.sendPaidReaction#58bbcb50 flags:# peer:InputPeer msg_id:int count:int random_id:long private:flags.0?PaidReactionPrivacy = Updates;
+messages.getPaidReactionPrivacy#472455aa = Updates;
+messages.toggleTodoCompleted#d3e03124 peer:InputPeer msg_id:int completed:Vector&lt;int&gt; incompleted:Vector&lt;int&gt; = Updates;
+messages.appendTodoList#21a61057 peer:InputPeer msg_id:int list:Vector&lt;TodoItem&gt; = Updates;
+messages.toggleSuggestedPostApproval#8107455c flags:# reject:flags.1?true peer:InputPeer msg_id:int schedule_date:flags.0?int reject_comment:flags.2?string = Updates;
+messages.editForumTopic#cecc1134 flags:# peer:InputPeer topic_id:int title:flags.0?string icon_emoji_id:flags.1?long closed:flags.2?Bool hidden:flags.3?Bool = Updates;
+messages.updatePinnedForumTopic#175df251 peer:InputPeer topic_id:int pinned:Bool = Updates;
+messages.reorderPinnedForumTopics#e7841f0 flags:# force:flags.0?true peer:InputPeer order:Vector&lt;int&gt; = Updates;
+messages.createForumTopic#2f98c3d5 flags:# title_missing:flags.4?true peer:InputPeer title:string icon_color:flags.0?int icon_emoji_id:flags.3?long random_id:long send_as:flags.2?InputPeer = Updates;
+messages.editChatCreator#f743b857 peer:InputPeer user_id:InputUser password:InputCheckPasswordSRP = Updates;
+messages.editChatParticipantRank#a00f32b0 peer:InputPeer participant:InputPeer rank:string = Updates;
+
+channels.createChannel#91006707 flags:# broadcast:flags.0?true megagroup:flags.1?true for_import:flags.3?true forum:flags.5?true title:string about:string geo_point:flags.2?InputGeoPoint address:flags.2?string ttl_period:flags.4?int = Updates;
+channels.editAdmin#9a98ad68 flags:# channel:InputChannel user_id:InputUser admin_rights:ChatAdminRights rank:flags.0?string = Updates;
+channels.editTitle#566decd0 channel:InputChannel title:string = Updates;
+channels.editPhoto#f12e57c9 channel:InputChannel photo:InputChatPhoto = Updates;
+channels.joinChannel#24b524c5 channel:InputChannel = Updates;
+channels.leaveChannel#f836aa95 channel:InputChannel = Updates;
+channels.deleteChannel#c0111fe3 channel:InputChannel = Updates;
+channels.toggleSignatures#418d549c flags:# signatures_enabled:flags.0?true profiles_enabled:flags.1?true channel:InputChannel = Updates;
+channels.editBanned#96e6cd81 channel:InputChannel participant:InputPeer banned_rights:ChatBannedRights = Updates;
+channels.deleteHistory#9baa9647 flags:# for_everyone:flags.0?true channel:InputChannel max_id:int = Updates;
+channels.togglePreHistoryHidden#eabbb94c channel:InputChannel enabled:Bool = Updates;
+channels.toggleSlowMode#edd49ef0 channel:InputChannel seconds:int = Updates;
+channels.convertToGigagroup#b290c69 channel:InputChannel = Updates;
+channels.toggleJoinToSend#e4cb9580 channel:InputChannel enabled:Bool = Updates;
+channels.toggleJoinRequest#4c2985b6 channel:InputChannel enabled:Bool = Updates;
+channels.toggleForum#3ff75734 channel:InputChannel enabled:Bool tabs:Bool = Updates;
+channels.toggleAntiSpam#68f3e4eb channel:InputChannel enabled:Bool = Updates;
+channels.toggleParticipantsHidden#6a6e7854 channel:InputChannel enabled:Bool = Updates;
+channels.updateColor#d8aa3671 flags:# for_profile:flags.1?true channel:InputChannel color:flags.2?int background_emoji_id:flags.0?long = Updates;
+channels.toggleViewForumAsMessages#9738bb15 channel:InputChannel enabled:Bool = Updates;
+channels.updateEmojiStatus#f0d3e6a8 channel:InputChannel emoji_status:EmojiStatus = Updates;
+channels.setBoostsToUnblockRestrictions#ad399cee channel:InputChannel boosts:int = Updates;
+channels.restrictSponsoredMessages#9ae91519 channel:InputChannel restricted:Bool = Updates;
+channels.updatePaidMessagesPrice#4b12327b flags:# broadcast_messages_allowed:flags.0?true channel:InputChannel send_paid_messages_stars:long = Updates;
+channels.toggleAutotranslation#167fc0a1 channel:InputChannel enabled:Bool = Updates;
+
+phone.discardCall#b2cbc1c0 flags:# video:flags.0?true peer:InputPhoneCall duration:int reason:PhoneCallDiscardReason connection_id:long = Updates;
+phone.setCallRating#59ead627 flags:# user_initiative:flags.0?true peer:InputPhoneCall rating:int comment:string = Updates;
+phone.createGroupCall#48cdc6d8 flags:# rtmp_stream:flags.2?true peer:InputPeer random_id:int title:flags.0?string schedule_date:flags.1?int = Updates;
+phone.joinGroupCall#8fb53057 flags:# muted:flags.0?true video_stopped:flags.2?true call:InputGroupCall join_as:InputPeer invite_hash:flags.1?string public_key:flags.3?int256 block:flags.3?bytes params:DataJSON = Updates;
+phone.leaveGroupCall#500377f9 call:InputGroupCall source:int = Updates;
+phone.inviteToGroupCall#7b393160 call:InputGroupCall users:Vector&lt;InputUser&gt; = Updates;
+phone.discardGroupCall#7a777135 call:InputGroupCall = Updates;
+phone.toggleGroupCallSettings#974392f2 flags:# reset_invite_hash:flags.1?true call:InputGroupCall join_muted:flags.0?Bool messages_enabled:flags.2?Bool send_paid_messages_stars:flags.3?long = Updates;
+phone.toggleGroupCallRecord#f128c708 flags:# start:flags.0?true video:flags.2?true call:InputGroupCall title:flags.1?string video_portrait:flags.2?Bool = Updates;
+phone.editGroupCallParticipant#a5273abf flags:# call:InputGroupCall participant:InputPeer muted:flags.0?Bool volume:flags.1?int raise_hand:flags.2?Bool video_stopped:flags.3?Bool video_paused:flags.4?Bool presentation_paused:flags.5?Bool = Updates;
+phone.editGroupCallTitle#1ca6ac0a call:InputGroupCall title:string = Updates;
+phone.toggleGroupCallStartSubscription#219c34e6 call:InputGroupCall subscribed:Bool = Updates;
+phone.startScheduledGroupCall#5680e342 call:InputGroupCall = Updates;
+phone.joinGroupCallPresentation#cbea6bc4 call:InputGroupCall params:DataJSON = Updates;
+phone.leaveGroupCallPresentation#1c50d144 call:InputGroupCall = Updates;
+phone.createConferenceCall#7d0444bb flags:# muted:flags.0?true video_stopped:flags.2?true join:flags.3?true random_id:int public_key:flags.3?int256 block:flags.3?bytes params:flags.3?DataJSON = Updates;
+phone.deleteConferenceCallParticipants#8ca60525 flags:# only_left:flags.0?true kick:flags.1?true call:InputGroupCall ids:Vector&lt;long&gt; block:bytes = Updates;
+phone.sendConferenceCallBroadcast#c6701900 call:InputGroupCall block:bytes = Updates;
+phone.inviteConferenceCallParticipant#bcf22685 flags:# video:flags.0?true call:InputGroupCall user_id:InputUser = Updates;
+phone.declineConferenceCallInvite#3c479971 msg_id:int = Updates;
+phone.getGroupCallChainBlocks#ee9f88a6 call:InputGroupCall sub_chain_id:int offset:int limit:int = Updates;
+phone.sendGroupCallMessage#b1d11410 flags:# call:InputGroupCall random_id:long message:TextWithEntities allow_paid_stars:flags.0?long send_as:flags.1?InputPeer = Updates;
+phone.deleteGroupCallMessages#f64f54f7 flags:# report_spam:flags.0?true call:InputGroupCall messages:Vector&lt;int&gt; = Updates;
+phone.deleteGroupCallParticipantMessages#1dbfeca0 flags:# report_spam:flags.0?true call:InputGroupCall participant:InputPeer = Updates;
+
+account.getNotifyExceptions#53577479 flags:# compare_sound:flags.1?true compare_stories:flags.2?true peer:flags.0?InputNotifyPeer = Updates;
+account.updateConnectedBot#66a08c7e flags:# deleted:flags.1?true rights:flags.0?BusinessBotRights bot:InputUser recipients:InputBusinessBotRecipients = Updates;
+account.getBotBusinessConnection#76a86270 connection_id:string = Updates;
+
+folders.editPeerFolders#6847d0ab folder_peers:Vector&lt;InputFolderPeer&gt; = Updates;
+
+payments.assignAppStoreTransaction#80ed747d receipt:bytes purpose:InputStorePaymentPurpose = Updates;
+payments.assignPlayMarketTransaction#dffd50d3 receipt:DataJSON purpose:InputStorePaymentPurpose = Updates;
+payments.applyGiftCode#f6e26854 slug:string = Updates;
+payments.launchPrepaidGiveaway#5ff58f20 peer:InputPeer giveaway_id:long purpose:InputStorePaymentPurpose = Updates;
+payments.refundStarsCharge#25ae8f4a user_id:InputUser charge_id:string = Updates;
+payments.upgradeStarGift#aed6e4f5 flags:# keep_original_details:flags.0?true stargift:InputSavedStarGift = Updates;
+payments.transferStarGift#7f18176a stargift:InputSavedStarGift to_id:InputPeer = Updates;
+payments.updateStarGiftPrice#edbe6ccb stargift:InputSavedStarGift resell_amount:StarsAmount = Updates;
+payments.resolveStarGiftOffer#e9ce781c flags:# decline:flags.0?true offer_msg_id:int = Updates;
+payments.sendStarGiftOffer#8fb86b41 flags:# peer:InputPeer slug:string price:StarsAmount duration:int random_id:long allow_paid_stars:flags.0?long = Updates;
+payments.craftStarGift#b0f9684f stargift:Vector&lt;InputSavedStarGift&gt; = Updates;
+
+chatlists.joinChatlistInvite#a6b1e39a slug:string peers:Vector&lt;InputPeer&gt; = Updates;
+chatlists.joinChatlistUpdates#e089f8f5 chatlist:InputChatlist peers:Vector&lt;InputPeer&gt; = Updates;
+chatlists.leaveChatlist#74fae13a chatlist:InputChatlist peers:Vector&lt;InputPeer&gt; = Updates;
+
+stories.sendStory#737fc2ec flags:# pinned:flags.2?true noforwards:flags.4?true fwd_modified:flags.7?true peer:InputPeer media:InputMedia media_areas:flags.5?Vector&lt;MediaArea&gt; caption:flags.0?string entities:flags.1?Vector&lt;MessageEntity&gt; privacy_rules:Vector&lt;InputPrivacyRule&gt; random_id:long period:flags.3?int fwd_from_id:flags.6?InputPeer fwd_from_story:flags.6?int albums:flags.8?Vector&lt;int&gt; = Updates;
+stories.editStory#b583ba46 flags:# peer:InputPeer id:int media:flags.0?InputMedia media_areas:flags.3?Vector&lt;MediaArea&gt; caption:flags.1?string entities:flags.1?Vector&lt;MessageEntity&gt; privacy_rules:flags.2?Vector&lt;InputPrivacyRule&gt; = Updates;
+stories.activateStealthMode#57bbd166 flags:# past:flags.0?true future:flags.1?true = Updates;
+stories.sendReaction#7fd736b2 flags:# add_to_recent:flags.0?true peer:InputPeer story_id:int reaction:Reaction = Updates;
+stories.getAllReadPeerStories#9b5ae7f9 = Updates;
+stories.startLive#d069ccde flags:# pinned:flags.2?true noforwards:flags.4?true rtmp_stream:flags.5?true peer:InputPeer caption:flags.0?string entities:flags.1?Vector&lt;MessageEntity&gt; privacy_rules:Vector&lt;InputPrivacyRule&gt; random_id:long messages_enabled:flags.6?Bool send_paid_messages_stars:flags.7?long = Updates;
+
+bots.allowSendMessage#f132e3ef bot:InputUser = Updates;
+
+users.suggestBirthday#fc533372 id:InputUser birthday:Birthday = Updates;
+</code></pre>
+<h2 id="конструкторы" tabindex="-1">Конструкторы</h2>
+<table>
+<thead>
+<tr>
+<th>Constructor</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/constructor/updatesTooLong/">updatesTooLong</a></td>
+<td>The number of queued updates in the common message box is too large to be delivered passively through the socket, invoke <a href="/method/updates.getDifference/">updates.getDifference</a> to fetch the difference as specified in the <a href="/api/updates/">documentation »</a>. Does not necessarily indicate the <a href="https://core.telegram.org/api/updates/#recovering-gaps-for-very-old-messages">message box size limit was reached</a>, it simply indicates that the number of queued updates in a message box is too large to be delivered passively through the socket.</td>
+</tr>
+<tr>
+<td><a href="/constructor/updateShortMessage/">updateShortMessage</a></td>
+<td>Info about a message sent to (received from) another user</td>
+</tr>
+<tr>
+<td><a href="/constructor/updateShortChatMessage/">updateShortChatMessage</a></td>
+<td>Shortened constructor containing info on one new incoming text message from a chat</td>
+</tr>
+<tr>
+<td><a href="/constructor/updateShort/">updateShort</a></td>
+<td>Shortened constructor containing info on one update not requiring auxiliary data</td>
+</tr>
+<tr>
+<td><a href="/constructor/updatesCombined/">updatesCombined</a></td>
+<td>Constructor for a group of updates.</td>
+</tr>
+<tr>
+<td><a href="/constructor/updates/">updates</a></td>
+<td>Full constructor of updates</td>
+</tr>
+<tr>
+<td><a href="/constructor/updateShortSentMessage/">updateShortSentMessage</a></td>
+<td>Shortened constructor containing info on one outgoing message to a contact (the destination chat has to be extracted from the method call that returned this object).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="методы" tabindex="-1">Методы</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="/method/account.getNotifyExceptions/">account.getNotifyExceptions</a></td>
+<td>Returns list of chats with non-default notification settings</td>
+</tr>
+<tr>
+<td><a href="/method/account.updateConnectedBot/">account.updateConnectedBot</a></td>
+<td>Connect a <a href="https://core.telegram.org/api/bots/connected-business-bots">business bot »</a> to the current account, or to change the current connection settings.</td>
+</tr>
+<tr>
+<td><a href="/method/account.getBotBusinessConnection/">account.getBotBusinessConnection</a></td>
+<td>Bots may invoke this method to re-fetch the <a href="/constructor/updateBotBusinessConnect/">updateBotBusinessConnect</a> constructor associated with a specific <a href="https://core.telegram.org/api/bots/connected-business-bots">business connection_id, see here »</a> for more info on connected business bots. This is needed for example for freshly logged in bots that are receiving some <a href="/constructor/updateBotNewBusinessMessage/">updateBotNewBusinessMessage</a>, etc. updates because some users have already connected to the bot before it could login. In this case, the bot is receiving messages from the business connection, but it hasn't cached the associated <a href="/constructor/updateBotBusinessConnect/">updateBotBusinessConnect</a> with info about the connection (can it reply to messages? etc.) yet, and cannot receive the old ones because they were sent when the bot wasn't logged into the session yet. This method can be used to fetch info about a not-yet-cached business connection, and should not be invoked if the info is already cached or to fetch changes, as eventual changes will automatically be sent as new <a href="/constructor/updateBotBusinessConnect/">updateBotBusinessConnect</a> updates to the bot using the usual <a href="/api/updates/">update delivery methods »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/users.suggestBirthday/">users.suggestBirthday</a></td>
+<td>Suggest a birthday to another user, see <a href="https://core.telegram.org/api/profile#birthday">here »</a> for more info on birthdays in the API.</td>
+</tr>
+<tr>
+<td><a href="/method/contacts.deleteContacts/">contacts.deleteContacts</a></td>
+<td>Deletes several contacts from the list.</td>
+</tr>
+<tr>
+<td><a href="/method/contacts.addContact/">contacts.addContact</a></td>
+<td>Add an existing telegram user as contact. Use <a href="/method/contacts.importContacts/">contacts.importContacts</a> to add contacts by phone number, without knowing their Telegram ID.</td>
+</tr>
+<tr>
+<td><a href="/method/contacts.acceptContact/">contacts.acceptContact</a></td>
+<td>If the <a href="https://core.telegram.org/api/action-bar#add-contact">add contact action bar is active</a>, add that user as contact</td>
+</tr>
+<tr>
+<td><a href="/method/contacts.getLocated/">contacts.getLocated</a></td>
+<td>Get users and geochats near you, see <a href="https://core.telegram.org/api/nearby">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/contacts.blockFromReplies/">contacts.blockFromReplies</a></td>
+<td>Stop getting notifications about <a href="https://core.telegram.org/api/discussion">discussion replies</a> of a certain user in @replies</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendMessage/">messages.sendMessage</a></td>
+<td>Sends a message to a chat</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendMedia/">messages.sendMedia</a></td>
+<td>Send a media</td>
+</tr>
+<tr>
+<td><a href="/method/messages.forwardMessages/">messages.forwardMessages</a></td>
+<td>Forwards messages by their IDs.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.editChatTitle/">messages.editChatTitle</a></td>
+<td>Changes chat name and sends a service message on it.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.editChatPhoto/">messages.editChatPhoto</a></td>
+<td>Changes chat photo and sends a service message on it</td>
+</tr>
+<tr>
+<td><a href="/method/messages.deleteChatUser/">messages.deleteChatUser</a></td>
+<td>Deletes a user from a chat and sends a service message on it.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.importChatInvite/">messages.importChatInvite</a></td>
+<td>Import a chat invite and join a private chat/supergroup/channel</td>
+</tr>
+<tr>
+<td><a href="/method/messages.startBot/">messages.startBot</a></td>
+<td>Start a conversation with a bot using a <a href="https://core.telegram.org/api/links#bot-links">deep linking parameter</a></td>
+</tr>
+<tr>
+<td><a href="/method/messages.migrateChat/">messages.migrateChat</a></td>
+<td>Turn a <a href="https://core.telegram.org/api/channel#migration">basic group into a supergroup</a></td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendInlineBotResult/">messages.sendInlineBotResult</a></td>
+<td>Send a result obtained using <a href="/method/messages.getInlineBotResults/">messages.getInlineBotResults</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.editMessage/">messages.editMessage</a></td>
+<td>Edit message</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getAllDrafts/">messages.getAllDrafts</a></td>
+<td>Return all message <a href="https://core.telegram.org/api/drafts">drafts</a>. Returns all the latest <a href="/constructor/updateDraftMessage/">updateDraftMessage</a> updates related to all chats with drafts.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.setGameScore/">messages.setGameScore</a></td>
+<td>Use this method to set the score of the specified user in a game sent as a normal message (bots only).</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendScreenshotNotification/">messages.sendScreenshotNotification</a></td>
+<td>Notify the other user in a private chat that a screenshot of the chat was taken</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendMultiMedia/">messages.sendMultiMedia</a></td>
+<td>Send an <a href="https://core.telegram.org/api/files/#albums-grouped-media">album or grouped media</a></td>
+</tr>
+<tr>
+<td><a href="/method/messages.updatePinnedMessage/">messages.updatePinnedMessage</a></td>
+<td>Pin a message</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendVote/">messages.sendVote</a></td>
+<td>Vote in a <a href="/constructor/poll/">poll</a> Starting from layer 159, the vote will be sent from the peer specified using <a href="/method/messages.saveDefaultSendAs/">messages.saveDefaultSendAs</a>. Before voting, clients should check that the user is actually allowed to vote: voting is not possible if the poll is closed, if it is <a href="https://core.telegram.org/api/poll#subscriber-only-polls">subscriber-only »</a> and the user is not an eligible subscriber, or if it is <a href="https://core.telegram.org/api/poll#country-restricted-polls">country-restricted »</a> and the user's <a href="https://core.telegram.org/api/config#phone-country-iso2">phone_country_iso2 »</a> is not in the poll's allowed country list. See <a href="https://core.telegram.org/api/poll#vote-restrictions">vote restrictions »</a> for the full list of conditions.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getPollResults/">messages.getPollResults</a></td>
+<td>Get poll results</td>
+</tr>
+<tr>
+<td><a href="/method/messages.editChatDefaultBannedRights/">messages.editChatDefaultBannedRights</a></td>
+<td>Edit the default banned rights of a <a href="https://core.telegram.org/api/channel">channel/supergroup/group</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendScheduledMessages/">messages.sendScheduledMessages</a></td>
+<td>Send scheduled messages right away</td>
+</tr>
+<tr>
+<td><a href="/method/messages.deleteScheduledMessages/">messages.deleteScheduledMessages</a></td>
+<td>Delete scheduled messages</td>
+</tr>
+<tr>
+<td><a href="/method/messages.setHistoryTTL/">messages.setHistoryTTL</a></td>
+<td>Set maximum Time-To-Live of all messages in the specified chat</td>
+</tr>
+<tr>
+<td><a href="/method/messages.setChatTheme/">messages.setChatTheme</a></td>
+<td>Change the chat theme of a certain chat, see <a href="https://core.telegram.org/api/themes#chat-themes">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.hideChatJoinRequest/">messages.hideChatJoinRequest</a></td>
+<td>Dismiss or approve a chat <a href="https://core.telegram.org/api/invites#join-requests">join request</a> related to a specific chat or channel.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.hideAllChatJoinRequests/">messages.hideAllChatJoinRequests</a></td>
+<td>Dismiss or approve all <a href="https://core.telegram.org/api/invites#join-requests">join requests</a> related to a specific chat or channel.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.toggleNoForwards/">messages.toggleNoForwards</a></td>
+<td>Enable or disable <a href="https://core.telegram.org/api/content-protection">content protection</a> on a channel, group or private chat.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendReaction/">messages.sendReaction</a></td>
+<td>React to message. Starting from layer 159, the reaction will be sent from the peer specified using <a href="/method/messages.saveDefaultSendAs/">messages.saveDefaultSendAs</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getMessagesReactions/">messages.getMessagesReactions</a></td>
+<td>Get <a href="https://core.telegram.org/api/reactions">message reactions »</a></td>
+</tr>
+<tr>
+<td><a href="/method/messages.setChatAvailableReactions/">messages.setChatAvailableReactions</a></td>
+<td>Change the set of <a href="https://core.telegram.org/api/reactions">message reactions »</a> that can be used in a certain group, supergroup or channel</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendWebViewData/">messages.sendWebViewData</a></td>
+<td>Used by the user to relay data from an opened <a href="https://core.telegram.org/api/bots/webapps">reply keyboard bot mini app</a> to the bot that owns it.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getExtendedMedia/">messages.getExtendedMedia</a></td>
+<td>Fetch updated information about <a href="https://core.telegram.org/api/paid-media">paid media, see here »</a> for the full flow. This method will return an array of <a href="/constructor/updateMessageExtendedMedia/">updateMessageExtendedMedia</a> updates, only for messages containing already bought paid media. No information will be returned for messages containing not yet bought paid media.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendBotRequestedPeer/">messages.sendBotRequestedPeer</a></td>
+<td>Send one or more chosen peers, as requested by a <a href="/constructor/keyboardButtonRequestPeer/">keyboardButtonRequestPeer</a> button.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.setChatWallPaper/">messages.setChatWallPaper</a></td>
+<td>Set a custom <a href="https://core.telegram.org/api/wallpapers">wallpaper »</a> in a specific private chat with another user.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendQuickReplyMessages/">messages.sendQuickReplyMessages</a></td>
+<td>Send a <a href="https://core.telegram.org/api/business#quick-reply-shortcuts">quick reply shortcut »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.deleteQuickReplyMessages/">messages.deleteQuickReplyMessages</a></td>
+<td>Delete one or more messages from a <a href="https://core.telegram.org/api/business#quick-reply-shortcuts">quick reply shortcut</a>. This will also emit an <a href="/constructor/updateDeleteQuickReplyMessages/">updateDeleteQuickReplyMessages</a> update.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.editFactCheck/">messages.editFactCheck</a></td>
+<td>Edit/create a <a href="https://core.telegram.org/api/factcheck">fact-check</a> on a message. Can only be used by independent fact-checkers as specified by the <a href="https://core.telegram.org/api/config#can-edit-factcheck">appConfig.can_edit_factcheck</a> configuration flag.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.deleteFactCheck/">messages.deleteFactCheck</a></td>
+<td>Delete a <a href="https://core.telegram.org/api/factcheck">fact-check</a> from a message. Can only be used by independent fact-checkers as specified by the <a href="https://core.telegram.org/api/config#can-edit-factcheck">appConfig.can_edit_factcheck</a> configuration flag.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.sendPaidReaction/">messages.sendPaidReaction</a></td>
+<td>Sends one or more <a href="https://core.telegram.org/api/reactions#paid-reactions">paid Telegram Star reactions »</a>, transferring <a href="https://core.telegram.org/api/stars">Telegram Stars »</a> to a channel's balance.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.getPaidReactionPrivacy/">messages.getPaidReactionPrivacy</a></td>
+<td>Fetches an <a href="/constructor/updatePaidReactionPrivacy/">updatePaidReactionPrivacy</a> update with the current <a href="https://core.telegram.org/api/reactions#paid-reactions">default paid reaction privacy, see here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.toggleTodoCompleted/">messages.toggleTodoCompleted</a></td>
+<td>Mark one or more items of a <a href="https://core.telegram.org/api/todo">todo list »</a> as completed or not completed.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.appendTodoList/">messages.appendTodoList</a></td>
+<td>Appends one or more items to a <a href="https://core.telegram.org/api/todo">todo list »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.toggleSuggestedPostApproval/">messages.toggleSuggestedPostApproval</a></td>
+<td>Approve or reject a <a href="https://core.telegram.org/api/suggested-posts">suggested post »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.editForumTopic/">messages.editForumTopic</a></td>
+<td>Edit <a href="https://core.telegram.org/api/forum">forum topic</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.updatePinnedForumTopic/">messages.updatePinnedForumTopic</a></td>
+<td>Pin or unpin <a href="https://core.telegram.org/api/forum">forum topics</a></td>
+</tr>
+<tr>
+<td><a href="/method/messages.reorderPinnedForumTopics/">messages.reorderPinnedForumTopics</a></td>
+<td>Reorder pinned forum topics</td>
+</tr>
+<tr>
+<td><a href="/method/messages.createForumTopic/">messages.createForumTopic</a></td>
+<td>Create a <a href="https://core.telegram.org/api/forum">forum topic</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.editChatCreator/">messages.editChatCreator</a></td>
+<td>Transfer the ownership of a basic group, supergroup or channel to another user, see <a href="https://core.telegram.org/api/channel#transferring-ownership-of-a-group-channel">here »</a> for the full flow.</td>
+</tr>
+<tr>
+<td><a href="/method/messages.editChatParticipantRank/">messages.editChatParticipantRank</a></td>
+<td>Edit a group participant's <a href="https://core.telegram.org/api/rank">tag »</a>.</td>
+</tr>
+<tr>
+<td><a href="https://core.telegram.org/method/messages.addPollAnswer">messages.addPollAnswer</a></td>
+<td>Add an answer option to an <a href="https://core.telegram.org/api/poll#open-answer-polls">open-answer poll »</a></td>
+</tr>
+<tr>
+<td><a href="https://core.telegram.org/method/messages.deletePollAnswer">messages.deletePollAnswer</a></td>
+<td>Remove an answer option from an <a href="https://core.telegram.org/api/poll#open-answer-polls">open-answer poll »</a></td>
+</tr>
+<tr>
+<td><a href="https://core.telegram.org/method/messages.deleteParticipantReaction">messages.deleteParticipantReaction</a></td>
+<td>As an admin, remove all of a specific participant's <a href="https://core.telegram.org/api/reactions">reactions</a> from a single message.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.createChannel/">channels.createChannel</a></td>
+<td>Create a <a href="https://core.telegram.org/api/channel">supergroup/channel</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.editAdmin/">channels.editAdmin</a></td>
+<td>Modify the admin rights of a user in a <a href="https://core.telegram.org/api/channel">supergroup/channel</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.editTitle/">channels.editTitle</a></td>
+<td>Edit the name of a <a href="https://core.telegram.org/api/channel">channel/supergroup</a></td>
+</tr>
+<tr>
+<td><a href="/method/channels.editPhoto/">channels.editPhoto</a></td>
+<td>Change the photo of a <a href="https://core.telegram.org/api/channel">channel/supergroup</a></td>
+</tr>
+<tr>
+<td><a href="/method/channels.joinChannel/">channels.joinChannel</a></td>
+<td>Join a channel/supergroup</td>
+</tr>
+<tr>
+<td><a href="/method/channels.leaveChannel/">channels.leaveChannel</a></td>
+<td>Leave a <a href="https://core.telegram.org/api/channel">channel/supergroup</a></td>
+</tr>
+<tr>
+<td><a href="/method/channels.deleteChannel/">channels.deleteChannel</a></td>
+<td>Delete a <a href="https://core.telegram.org/api/channel">channel/supergroup</a></td>
+</tr>
+<tr>
+<td><a href="/method/channels.toggleSignatures/">channels.toggleSignatures</a></td>
+<td>Enable/disable message signatures in channels</td>
+</tr>
+<tr>
+<td><a href="/method/channels.editBanned/">channels.editBanned</a></td>
+<td>Ban/unban/kick a user in a <a href="https://core.telegram.org/api/channel">supergroup/channel</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.deleteHistory/">channels.deleteHistory</a></td>
+<td>Delete the history of a <a href="https://core.telegram.org/api/channel">supergroup</a></td>
+</tr>
+<tr>
+<td><a href="/method/channels.togglePreHistoryHidden/">channels.togglePreHistoryHidden</a></td>
+<td>Hide/unhide message history for new channel/supergroup users</td>
+</tr>
+<tr>
+<td><a href="/method/channels.toggleSlowMode/">channels.toggleSlowMode</a></td>
+<td>Toggle supergroup slow mode: if enabled, users will only be able to send one message every seconds seconds</td>
+</tr>
+<tr>
+<td><a href="/method/channels.convertToGigagroup/">channels.convertToGigagroup</a></td>
+<td>Convert a <a href="https://core.telegram.org/api/channel">supergroup</a> to a <a href="https://core.telegram.org/api/channel">gigagroup</a>, when requested by <a href="https://core.telegram.org/api/config#channel-suggestions">channel suggestions</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.toggleJoinToSend/">channels.toggleJoinToSend</a></td>
+<td>Set whether all users <a href="https://core.telegram.org/api/discussion#requiring-users-to-join-the-group">should join a discussion group in order to comment on a post »</a></td>
+</tr>
+<tr>
+<td><a href="/method/channels.toggleJoinRequest/">channels.toggleJoinRequest</a></td>
+<td>Set whether all users should <a href="https://core.telegram.org/api/invites#join-requests">request admin approval to join the group »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.toggleForum/">channels.toggleForum</a></td>
+<td>Enable or disable <a href="https://core.telegram.org/api/forum">forum functionality</a> in a supergroup.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.toggleAntiSpam/">channels.toggleAntiSpam</a></td>
+<td>Enable or disable the <a href="https://core.telegram.org/api/antispam">native antispam system</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.toggleParticipantsHidden/">channels.toggleParticipantsHidden</a></td>
+<td>Hide or display the participants list in a <a href="https://core.telegram.org/api/channel">supergroup</a>. The supergroup must have at least hidden_members_group_size_min participants in order to use this method, as specified by the <a href="https://core.telegram.org/api/config#client-configuration">client configuration parameters »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.updateColor/">channels.updateColor</a></td>
+<td>Update the <a href="https://core.telegram.org/api/colors">accent color and background custom emoji »</a> of a channel.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.toggleViewForumAsMessages/">channels.toggleViewForumAsMessages</a></td>
+<td>Users may also choose to display messages from all topics of a <a href="https://core.telegram.org/api/forum">forum</a> as if they were sent to a normal group, using a &quot;View as messages&quot; setting in the local client: this setting only affects the current account, and is synced to other logged in sessions using this method. Invoking this method will update the value of the view_forum_as_messages flag of <a href="/constructor/channelFull/">channelFull</a> or <a href="/constructor/dialog/">dialog</a> and emit an <a href="/constructor/updateChannelViewForumAsMessages/">updateChannelViewForumAsMessages</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.updateEmojiStatus/">channels.updateEmojiStatus</a></td>
+<td>Set an <a href="https://core.telegram.org/api/emoji-status">emoji status</a> for a channel or supergroup.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.setBoostsToUnblockRestrictions/">channels.setBoostsToUnblockRestrictions</a></td>
+<td>Admins with <a href="/constructor/chatAdminRights/">ban_users admin rights »</a> may allow users that apply a certain number of <a href="https://core.telegram.org/api/boost">booosts »</a> to the group to bypass <a href="/method/channels.toggleSlowMode/">slow mode »</a> and <a href="https://core.telegram.org/api/rights#default-rights">other »</a> supergroup restrictions, see <a href="https://core.telegram.org/api/boost#bypass-slowmode-and-chat-restrictions">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.restrictSponsoredMessages/">channels.restrictSponsoredMessages</a></td>
+<td>Disable ads on the specified channel, for all users. Available only after reaching at least the <a href="https://core.telegram.org/api/boost">boost level »</a> specified in the <a href="https://core.telegram.org/api/config#channel-restrict-sponsored-level-min">channel_restrict_sponsored_level_min »</a> config parameter.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.updatePaidMessagesPrice/">channels.updatePaidMessagesPrice</a></td>
+<td>Enable or disable <a href="https://core.telegram.org/api/paid-messages">paid messages »</a> in this <a href="https://core.telegram.org/api/channel">supergroup</a> or <a href="https://core.telegram.org/api/monoforum">monoforum</a>. Also used to <a href="https://core.telegram.org/api/monoforum">enable or disable monoforums aka direct messages in a channel</a>. Note that passing the ID of the monoforum itself to channel will return a CHANNEL_MONOFORUM_UNSUPPORTED error: pass the ID of the associated channel to edit the settings of the associated monoforum, instead.</td>
+</tr>
+<tr>
+<td><a href="/method/channels.toggleAutotranslation/">channels.toggleAutotranslation</a></td>
+<td>Toggle autotranslation in a channel, for all users: see <a href="https://core.telegram.org/api/translation#autotranslation-for-channels">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/bots.allowSendMessage/">bots.allowSendMessage</a></td>
+<td>Allow the specified bot to send us messages</td>
+</tr>
+<tr>
+<td><a href="/method/payments.assignAppStoreTransaction/">payments.assignAppStoreTransaction</a></td>
+<td>Informs server about a purchase made through the App Store: for official applications only.</td>
+</tr>
+<tr>
+<td><a href="/method/payments.assignPlayMarketTransaction/">payments.assignPlayMarketTransaction</a></td>
+<td>Informs server about a purchase made through the Play Store: for official applications only.</td>
+</tr>
+<tr>
+<td><a href="/method/payments.applyGiftCode/">payments.applyGiftCode</a></td>
+<td>Apply a <a href="https://core.telegram.org/api/giveaways">Telegram Premium giftcode »</a></td>
+</tr>
+<tr>
+<td><a href="/method/payments.launchPrepaidGiveaway/">payments.launchPrepaidGiveaway</a></td>
+<td>Launch a <a href="https://core.telegram.org/api/giveaways">prepaid giveaway »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/payments.refundStarsCharge/">payments.refundStarsCharge</a></td>
+<td>Refund a <a href="https://core.telegram.org/api/stars">Telegram Stars</a> transaction, see <a href="https://core.telegram.org/api/payments#6-refunds">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/payments.upgradeStarGift/">payments.upgradeStarGift</a></td>
+<td>Upgrade a <a href="https://core.telegram.org/api/gifts">gift</a> to a <a href="https://core.telegram.org/api/gifts#collectible-gifts">collectible gift</a>: can only be used if the upgrade was already paid by the gift sender; see <a href="https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift">here »</a> for more info on the full flow (including the different flow to use in case the upgrade was not paid by the gift sender).</td>
+</tr>
+<tr>
+<td><a href="/method/payments.transferStarGift/">payments.transferStarGift</a></td>
+<td>Transfer a <a href="https://core.telegram.org/api/gifts#collectible-gifts">collectible gift</a> to another user or channel: can only be used if transfer is free (i.e. <a href="/constructor/messageActionStarGiftUnique/">messageActionStarGiftUnique</a>.transfer_stars is not set); see <a href="https://core.telegram.org/api/gifts#transferring-collectible-gifts">here »</a> for more info on the full flow (including the different flow to use in case the transfer isn't free).</td>
+</tr>
+<tr>
+<td><a href="/method/payments.updateStarGiftPrice/">payments.updateStarGiftPrice</a></td>
+<td>A <a href="https://core.telegram.org/api/gifts#collectible-gifts">collectible gift we own »</a> can be put up for sale on the <a href="https://telegram.org/blog/gift-marketplace-and-more">gift marketplace »</a> with this method, see <a href="https://core.telegram.org/api/gifts#reselling-collectible-gifts">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/payments.resolveStarGiftOffer/">payments.resolveStarGiftOffer</a></td>
+<td>Accept or decline a previously received <a href="https://core.telegram.org/api/gifts#collectible-gift-purchase-offers">collectible gift purchase offer »</a>, see <a href="https://core.telegram.org/api/gifts#collectible-gift-purchase-offers">here »</a> for the full flow.</td>
+</tr>
+<tr>
+<td><a href="/method/payments.sendStarGiftOffer/">payments.sendStarGiftOffer</a></td>
+<td>Send an offer to purchase a <a href="https://core.telegram.org/api/gifts#collectible-gift-purchase-offers">collectible gift »</a>, see <a href="https://core.telegram.org/api/gifts#collectible-gift-purchase-offers">here »</a> for the full flow.</td>
+</tr>
+<tr>
+<td><a href="/method/payments.craftStarGift/">payments.craftStarGift</a></td>
+<td>Craft a new <a href="https://core.telegram.org/api/gifts#collectible-gifts">collectible gift »</a> by combining 1 to 4 owned collectible gifts of the same base gift type. The passed gifts must all have the same <a href="/constructor/starGiftUnique/">starGiftUnique</a>.gift_id, must be usable for crafting, and must not be blocked by a future can_craft_at timestamp. The first passed gift must not be <a href="https://core.telegram.org/api/gifts#hosted-collectible-gifts">located on the TON blockchain</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.discardCall/">phone.discardCall</a></td>
+<td>Refuse or end running call, see <a href="https://core.telegram.org/api/calls#one-to-one-calls">here »</a> for more info on the full flow.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.setCallRating/">phone.setCallRating</a></td>
+<td>Rate a call, returns info about the rating message sent to the official VoIP bot, see <a href="https://core.telegram.org/api/calls#call-rating">here »</a> for more info on the full flow.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.createGroupCall/">phone.createGroupCall</a></td>
+<td>Create a video chat or livestream, see <a href="https://core.telegram.org/api/group-calls#video-chats-livestreams">here »</a> for the full flow.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.joinGroupCall/">phone.joinGroupCall</a></td>
+<td>Join any <a href="https://core.telegram.org/api/group-calls#group-call-types">group call type »</a>. Conference calls additionally require the <a href="https://core.telegram.org/api/end-to-end/group-calls#joining-a-call">E2E joining flow »</a>. The params field must contain a join payload generated by the local tgcalls group-call engine. It contains a random non-zero audio ssrc, ICE ufrag and pwd, DTLS fingerprints, and, when publishing video, ssrc-groups. For example, a join payload without published video has the following shape: json<br>{<br> &quot;ssrc&quot;: 123456789,<br> &quot;ufrag&quot;: &quot;...&quot;,<br> &quot;pwd&quot;: &quot;...&quot;,<br> &quot;fingerprints&quot;: [{<br> &quot;hash&quot;: &quot;sha-256&quot;,<br> &quot;fingerprint&quot;: &quot;...&quot;,<br> &quot;setup&quot;: &quot;passive&quot;<br> }]<br>}<br> When joining an RTMP-mode call, generate the payload without published video source groups.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.leaveGroupCall/">phone.leaveGroupCall</a></td>
+<td>Leave a group call without ending it for other participants. This method can be used with all group call types, see <a href="https://core.telegram.org/api/group-calls#managing-an-active-group-call">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.inviteToGroupCall/">phone.inviteToGroupCall</a></td>
+<td>Invite a set of users to a <a href="https://core.telegram.org/api/group-calls#video-chats-livestreams">video chat/livestream »</a>; cannot be used for <a href="https://core.telegram.org/api/group-calls#live-stories">live stories »</a> or <a href="https://core.telegram.org/api/group-calls#conference-calls">conference calls »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.discardGroupCall/">phone.discardGroupCall</a></td>
+<td>Terminate a group call, ending the room for all participants. This method can be used with all group call types, see <a href="https://core.telegram.org/api/group-calls#managing-an-active-group-call">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.toggleGroupCallSettings/">phone.toggleGroupCallSettings</a></td>
+<td>Change group call settings. Each setting supports different group call types, see <a href="https://core.telegram.org/api/group-calls#managing-an-active-group-call">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.toggleGroupCallRecord/">phone.toggleGroupCallRecord</a></td>
+<td>Start or stop recording a video chat/livestream, see <a href="https://core.telegram.org/api/group-calls#video-chats-livestreams">here »</a> for more info. The recorded audio and video streams will be automatically sent to Saved Messages (the chat with ourselves).</td>
+</tr>
+<tr>
+<td><a href="/method/phone.editGroupCallParticipant/">phone.editGroupCallParticipant</a></td>
+<td>Edit information about a participant of a non-RTMP video chat/livestream or conference. The raise_hand field is only supported in video chats/livestreams, see <a href="https://core.telegram.org/api/group-calls#managing-an-active-group-call">here »</a> for more info. Note: <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.N?<a href="/type/Bool/">Bool</a> parameters can have three possible values: - If the <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL flag</a> is not set, the previous value will not be changed. - If the <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL flag</a> is set and contains a <a href="/constructor/boolTrue/">boolTrue</a>, the previous value will be overwritten to true. - If the <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL flag</a> is set and contains a <a href="/constructor/boolFalse/">boolFalse</a>, the previous value will be overwritten to false.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.editGroupCallTitle/">phone.editGroupCallTitle</a></td>
+<td>Edit the title of a video chat or livestream. This method cannot be used with live stories or conferences, see <a href="https://core.telegram.org/api/group-calls#video-chats-livestreams">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.toggleGroupCallStartSubscription/">phone.toggleGroupCallStartSubscription</a></td>
+<td>Subscribe or unsubscribe to a scheduled <a href="https://core.telegram.org/api/group-calls#video-chats-livestreams">group call</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.startScheduledGroupCall/">phone.startScheduledGroupCall</a></td>
+<td>Start a scheduled <a href="https://core.telegram.org/api/group-calls#video-chats-livestreams">group call</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.joinGroupCallPresentation/">phone.joinGroupCallPresentation</a></td>
+<td>Start screen sharing in a non-RTMP video chat/livestream or conference. Presentations are not supported in live stories or RTMP-mode video chats/livestreams, see <a href="https://core.telegram.org/api/group-calls#presentations">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.leaveGroupCallPresentation/">phone.leaveGroupCallPresentation</a></td>
+<td>Stop screen sharing in a non-RTMP video chat/livestream or conference. Presentations are not supported in live stories or RTMP-mode video chats/livestreams, see <a href="https://core.telegram.org/api/group-calls#presentations">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.createConferenceCall/">phone.createConferenceCall</a></td>
+<td>Create and optionally join a new <a href="https://core.telegram.org/api/group-calls#conference-calls">conference call »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.deleteConferenceCallParticipants/">phone.deleteConferenceCallParticipants</a></td>
+<td>Remove participants from a <a href="https://core.telegram.org/api/end-to-end/group-calls#removing-a-participant">conference call »</a>. Exactly one of the only_left and kick flags must be set.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.sendConferenceCallBroadcast/">phone.sendConferenceCallBroadcast</a></td>
+<td>Submit a verification message to conference call subchain 1, see <a href="https://core.telegram.org/api/end-to-end/group-calls#subchains">subchains »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.inviteConferenceCallParticipant/">phone.inviteConferenceCallParticipant</a></td>
+<td>Invite a user to a <a href="https://core.telegram.org/api/group-calls#conference-calls">conference call</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.declineConferenceCallInvite/">phone.declineConferenceCallInvite</a></td>
+<td>Decline a <a href="https://core.telegram.org/api/group-calls#conference-calls">conference call</a> invite.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.getGroupCallChainBlocks/">phone.getGroupCallChainBlocks</a></td>
+<td>Fetch blocks from a conference call <a href="https://core.telegram.org/api/end-to-end/group-calls#subchains">subchain »</a>; handle the returned <a href="/constructor/updateGroupCallChainBlocks/">updateGroupCallChainBlocks</a> as <a href="https://core.telegram.org/api/end-to-end/group-calls#handling-updates">specified here »</a>. If the number of blocks returned by any call to this method is equal to limit, this method must be re-invoked immediately after processing the returned <a href="/constructor/updateGroupCallChainBlocks/">updateGroupCallChainBlocks</a>, with the newly committed offset (usually equal to the returned next_offset).</td>
+</tr>
+<tr>
+<td><a href="/method/phone.sendGroupCallMessage/">phone.sendGroupCallMessage</a></td>
+<td>Send an in-call message to all participants of a video chat/livestream or live story, including in RTMP mode, see <a href="https://core.telegram.org/api/group-calls#in-call-messages">here »</a> for more info. The send_as field can only be populated for live stories, where it optionally selects the displayed author. If omitted, the server automatically selects the appropriate author. Do not populate it for video chats/livestreams. Video chats/livestreams and live stories support <a href="https://core.telegram.org/api/group-calls#in-call-reactions">animated emoji reactions »</a>, encoded as messages containing only a standard available reaction emoji or a single custom emoji entity. For a paid live story comment, pass the user-confirmed donation amount in allow_paid_stars. For commenters other than the live story owner, this amount must be at least the current <a href="/constructor/groupCall/">groupCall</a>.send_paid_messages_stars minimum. A higher amount may be donated to highlight the comment. The live story owner may comment without populating allow_paid_stars. To send a standalone paid live story donation, pass a positive allow_paid_stars value and an empty message, see <a href="https://core.telegram.org/api/group-calls#paid-live-story-donations">here »</a> for the full flow.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.deleteGroupCallMessages/">phone.deleteGroupCallMessages</a></td>
+<td>Delete specific messages from the <a href="https://core.telegram.org/api/group-calls#in-call-messages">in-call message overlay »</a> of a video chat/livestream or live story, including in RTMP mode. Non-admin participants may delete messages they sent; admins may delete any message.</td>
+</tr>
+<tr>
+<td><a href="/method/phone.deleteGroupCallParticipantMessages/">phone.deleteGroupCallParticipantMessages</a></td>
+<td>As an admin, delete all messages from a specific participant in the <a href="https://core.telegram.org/api/group-calls#in-call-messages">in-call message overlay »</a> of a video chat/livestream or live story, including in RTMP mode.</td>
+</tr>
+<tr>
+<td><a href="/method/folders.editPeerFolders/">folders.editPeerFolders</a></td>
+<td>Edit peers in <a href="https://core.telegram.org/api/folders#peer-folders">peer folder</a></td>
+</tr>
+<tr>
+<td><a href="/method/chatlists.joinChatlistInvite/">chatlists.joinChatlistInvite</a></td>
+<td>Import a <a href="https://core.telegram.org/api/links#chat-folder-links">chat folder deep link »</a>, joining some or all the chats in the folder.</td>
+</tr>
+<tr>
+<td><a href="/method/chatlists.joinChatlistUpdates/">chatlists.joinChatlistUpdates</a></td>
+<td>Join channels and supergroups recently added to a <a href="https://core.telegram.org/api/links#chat-folder-links">chat folder deep link »</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/chatlists.leaveChatlist/">chatlists.leaveChatlist</a></td>
+<td>Delete a folder imported using a <a href="https://core.telegram.org/api/links#chat-folder-links">chat folder deep link »</a></td>
+</tr>
+<tr>
+<td><a href="/method/stories.sendStory/">stories.sendStory</a></td>
+<td>Uploads a <a href="https://core.telegram.org/api/stories">Telegram Story</a>. May also be used in a <a href="https://core.telegram.org/api/bots/connected-business-bots">business connection</a>, not by wrapping the query in <a href="/method/invokeWithBusinessConnection/">invokeWithBusinessConnection »</a>, but rather by specifying the ID of a controlled business user in peer.</td>
+</tr>
+<tr>
+<td><a href="/method/stories.editStory/">stories.editStory</a></td>
+<td>Edit an uploaded <a href="https://core.telegram.org/api/stories">story</a> May also be used in a <a href="https://core.telegram.org/api/bots/connected-business-bots">business connection</a>, not by wrapping the query in <a href="/method/invokeWithBusinessConnection/">invokeWithBusinessConnection »</a>, but rather by specifying the ID of a controlled business user in peer: in this context, the method can only be used to edit stories posted by the same business bot on behalf of the user with <a href="/method/stories.sendStory/">stories.sendStory</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/stories.activateStealthMode/">stories.activateStealthMode</a></td>
+<td>Activates <a href="https://core.telegram.org/api/stories#stealth-mode">stories stealth mode</a>, see <a href="https://core.telegram.org/api/stories#stealth-mode">here »</a> for more info. Will return an <a href="/constructor/updateStoriesStealthMode/">updateStoriesStealthMode</a>.</td>
+</tr>
+<tr>
+<td><a href="/method/stories.sendReaction/">stories.sendReaction</a></td>
+<td>React to a story.</td>
+</tr>
+<tr>
+<td><a href="/method/stories.getAllReadPeerStories/">stories.getAllReadPeerStories</a></td>
+<td>Obtain the latest read story ID for all peers when first logging in, returned as a list of <a href="/constructor/updateReadStories/">updateReadStories</a> updates, see <a href="https://core.telegram.org/api/stories#watching-stories">here »</a> for more info.</td>
+</tr>
+<tr>
+<td><a href="/method/stories.startLive/">stories.startLive</a></td>
+<td>Start a live story, optionally using RTMP livestream mode, see <a href="https://core.telegram.org/api/group-calls#live-stories">here »</a> for the full flow.</td>
+</tr>
+</tbody>
+</table>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/type/Updates" rel="noopener">https://core.telegram.org/type/Updates</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>chatAdminRights (конструктор) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="chatadminrights" tabindex="-1">chatAdminRights</h1>
+<p><em>Конструктор из схемы TL.</em></p>
+<blockquote>
+<p>Represents the rights of an admin in a <a href="https://core.telegram.org/api/channel">channel/supergroup</a>.</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>chatAdminRights#5fb224d5 flags:# change_info:flags.0?true post_messages:flags.1?true edit_messages:flags.2?true delete_messages:flags.3?true ban_users:flags.4?true invite_users:flags.5?true pin_messages:flags.7?true add_admins:flags.9?true anonymous:flags.10?true manage_call:flags.11?true other:flags.12?true manage_topics:flags.13?true post_stories:flags.14?true edit_stories:flags.15?true delete_stories:flags.16?true manage_direct_messages:flags.17?true manage_ranks:flags.18?true = ChatAdminRights;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>change_info</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to modify the description of the <a href="https://core.telegram.org/api/channel">channel/supergroup</a></td>
+</tr>
+<tr>
+<td>post_messages</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to post messages in the <a href="https://core.telegram.org/api/channel">channel</a></td>
+</tr>
+<tr>
+<td>edit_messages</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to also edit messages from other admins in the <a href="https://core.telegram.org/api/channel">channel</a></td>
+</tr>
+<tr>
+<td>delete_messages</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to also delete messages from other admins in the <a href="https://core.telegram.org/api/channel">channel</a></td>
+</tr>
+<tr>
+<td>ban_users</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to ban users from the <a href="https://core.telegram.org/api/channel">channel/supergroup</a></td>
+</tr>
+<tr>
+<td>invite_users</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to invite users in the <a href="https://core.telegram.org/api/channel">channel/supergroup</a></td>
+</tr>
+<tr>
+<td>pin_messages</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to pin messages in the <a href="https://core.telegram.org/api/channel">channel/supergroup</a></td>
+</tr>
+<tr>
+<td>add_admins</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to add other admins with the same (or more limited) permissions in the <a href="https://core.telegram.org/api/channel">channel/supergroup</a></td>
+</tr>
+<tr>
+<td>anonymous</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true/">true</a></td>
+<td>Whether this admin is anonymous</td>
+</tr>
+<tr>
+<td>manage_call</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to create and administer <a href="https://core.telegram.org/api/group-calls#video-chats-livestreams">video chats/livestreams »</a></td>
+</tr>
+<tr>
+<td>other</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true/">true</a></td>
+<td>Set this flag if none of the other flags are set, but you still want the user to be an admin: if this or any of the other flags are set, the admin can get the chat <a href="https://core.telegram.org/api/recent-actions">admin log</a>, get <a href="https://core.telegram.org/api/stats">chat statistics</a>, get <a href="https://core.telegram.org/api/stats">message statistics in channels</a>, get channel members, see anonymous administrators in supergroups and ignore slow mode.</td>
+</tr>
+<tr>
+<td>manage_topics</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to create, delete or modify <a href="https://core.telegram.org/api/forum#forum-topics">forum topics »</a>.</td>
+</tr>
+<tr>
+<td>post_stories</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to post <a href="https://core.telegram.org/api/stories">stories</a> as the <a href="https://core.telegram.org/api/channel">channel</a>.</td>
+</tr>
+<tr>
+<td>edit_stories</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to edit <a href="https://core.telegram.org/api/stories">stories</a> posted by the other admins of the <a href="https://core.telegram.org/api/channel">channel</a>.</td>
+</tr>
+<tr>
+<td>delete_stories</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to delete <a href="https://core.telegram.org/api/stories">stories</a> posted by the other admins of the <a href="https://core.telegram.org/api/channel">channel</a>.</td>
+</tr>
+<tr>
+<td>manage_direct_messages</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to manage the <a href="https://core.telegram.org/api/monoforum">direct messages monoforum »</a> and <a href="https://core.telegram.org/api/suggested-posts">decline suggested posts »</a>.</td>
+</tr>
+<tr>
+<td>manage_ranks</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/constructor/true/">true</a></td>
+<td>If set, allows the admin to modify the <a href="https://core.telegram.org/api/rank">member tag »</a> of any user.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="тип" tabindex="-1">Тип</h2>
+<p><a href="/type/ChatAdminRights/">ChatAdminRights</a></p>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="channels,-supergroups,-gigagroups-and-basic-groups" tabindex="-1"><a href="https://core.telegram.org/api/channel">Channels, supergroups, gigagroups and basic groups</a></h4>
+<p>How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.</p>
+<h4 id="group-calls" tabindex="-1"><a href="https://core.telegram.org/api/group-calls">Group calls</a></h4>
+<p>How to start, join and manage group calls and video chats.</p>
+<h4 id="admin-log" tabindex="-1"><a href="https://core.telegram.org/api/recent-actions">Admin log</a></h4>
+<p>Both supergroups and channels offer a so-called admin log, a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.</p>
+<h4 id="channel-statistics" tabindex="-1"><a href="https://core.telegram.org/api/stats">Channel statistics</a></h4>
+<p>Telegram offers detailed channel statistics for channels and supergroups.</p>
+<h4 id="forum-topics" tabindex="-1"><a href="https://core.telegram.org/api/forum">Forum topics</a></h4>
+<p>Telegram allows creating forums with multiple distinct topics.</p>
+<h4 id="telegram-stories" tabindex="-1"><a href="https://core.telegram.org/api/stories">Telegram Stories</a></h4>
+<p>Telegram users and channels can easily post and view stories through the API.</p>
+<h4 id="direct-messages-to-channels" tabindex="-1"><a href="https://core.telegram.org/api/monoforum">Direct messages to channels</a></h4>
+<p>Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.</p>
+<h4 id="suggested-posts" tabindex="-1"><a href="https://core.telegram.org/api/suggested-posts">Suggested posts</a></h4>
+<p>Telegram offers a powerful monetization feature to channel administrators: suggested posts.</p>
+<h4 id="group-participant-tags" tabindex="-1"><a href="https://core.telegram.org/api/rank">Group participant tags</a></h4>
+<p>Members in group chats (both basic groups and supergroups) can add a tag next to their name — to show their role at work, what they study in school, and more.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/constructor/chatAdminRights" rel="noopener">https://core.telegram.org/constructor/chatAdminRights</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

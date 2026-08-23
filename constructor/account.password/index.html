@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>account.password (конструктор) — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="account.password" tabindex="-1">account.password</h1>
+<p><em>Конструктор из схемы TL.</em></p>
+<blockquote>
+<p>Configuration for two-factor authorization</p>
+</blockquote>
+<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
+<pre><code>account.password#957b50fb flags:# has_recovery:flags.0?true has_secure_values:flags.1?true has_password:flags.2?true current_algo:flags.2?PasswordKdfAlgo srp_B:flags.2?bytes srp_id:flags.2?long hint:flags.3?string email_unconfirmed_pattern:flags.4?string new_algo:PasswordKdfAlgo new_secure_algo:SecurePasswordKdfAlgo secure_random:bytes pending_reset_date:flags.5?int login_email_pattern:flags.6?string = account.Password;
+</code></pre>
+<h2 id="параметры" tabindex="-1">Параметры</h2>
+<table>
+<thead>
+<tr>
+<th>Имя</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>flags</td>
+<td><a href="https://core.telegram.org/type/%23">#</a></td>
+<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
+</tr>
+<tr>
+<td>has_recovery</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td>
+<td>Whether the user has a recovery method configured</td>
+</tr>
+<tr>
+<td>has_secure_values</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td>
+<td>Whether telegram <a href="https://core.telegram.org/passport">passport</a> is enabled</td>
+</tr>
+<tr>
+<td>has_password</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true/">true</a></td>
+<td>Whether the user has a password</td>
+</tr>
+<tr>
+<td>current_algo</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/PasswordKdfAlgo/">PasswordKdfAlgo</a></td>
+<td>The <a href="/api/srp/">KDF algorithm for SRP two-factor authentication</a> of the current password</td>
+</tr>
+<tr>
+<td>srp_B</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/bytes/">bytes</a></td>
+<td>Srp B param for <a href="/api/srp/">SRP authorization</a></td>
+</tr>
+<tr>
+<td>srp_id</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/long/">long</a></td>
+<td>Srp ID param for <a href="/api/srp/">SRP authorization</a></td>
+</tr>
+<tr>
+<td>hint</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string/">string</a></td>
+<td>Text hint for the password</td>
+</tr>
+<tr>
+<td>email_unconfirmed_pattern</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string/">string</a></td>
+<td>A <a href="https://core.telegram.org/api/srp/#email-verification">password recovery email</a> with the specified <a href="https://core.telegram.org/api/pattern">pattern</a> is still awaiting verification</td>
+</tr>
+<tr>
+<td>new_algo</td>
+<td><a href="/type/PasswordKdfAlgo/">PasswordKdfAlgo</a></td>
+<td>The <a href="/api/srp/">KDF algorithm for SRP two-factor authentication</a> to use when creating new passwords</td>
+</tr>
+<tr>
+<td>new_secure_algo</td>
+<td><a href="/type/SecurePasswordKdfAlgo/">SecurePasswordKdfAlgo</a></td>
+<td>The KDF algorithm for telegram <a href="https://core.telegram.org/passport">passport</a></td>
+</tr>
+<tr>
+<td>secure_random</td>
+<td><a href="/type/bytes/">bytes</a></td>
+<td>Secure random string</td>
+</tr>
+<tr>
+<td>pending_reset_date</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/int/">int</a></td>
+<td>The 2FA password will be automatically removed at this date, unless the user cancels the operation</td>
+</tr>
+<tr>
+<td>login_email_pattern</td>
+<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/string/">string</a></td>
+<td>A verified login email with the specified <a href="https://core.telegram.org/api/pattern">pattern</a> is configured</td>
+</tr>
+</tbody>
+</table>
+<h2 id="тип" tabindex="-1">Тип</h2>
+<p><a href="/type/account.Password/">account.Password</a></p>
+<h2 id="related-pages" tabindex="-1">Related pages</h2>
+<h4 id="telegram-passport-manual" tabindex="-1"><a href="https://core.telegram.org/passport">Telegram Passport Manual</a></h4>
+<p>Telegram Passport, a unified authorization method for services that require personal identification.</p>
+<h4 id="two-factor-authentication" tabindex="-1"><a href="/api/srp/">Two-factor authentication</a></h4>
+<p>How to login to a user's account if they have enabled 2FA, how to change password.</p>
+<h4 id="pattern-matching" tabindex="-1"><a href="https://core.telegram.org/api/pattern">Pattern matching</a></h4>
+<p>Some methods require the client to verify if the data obtained from an external source matches a certain pattern.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/constructor/account.password" rel="noopener">https://core.telegram.org/constructor/account.password</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

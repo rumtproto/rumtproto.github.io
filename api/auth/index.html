@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Авторизация пользователя — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li class="active"><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="авторизация-пользователя" tabindex="-1">Авторизация пользователя</h1>
+<p>Оригинальное русскоязычное описание обмена, которым клиент подтверждает личность пользователя. Первоисточник: <a href="https://core.telegram.org/api/auth">core.telegram.org/api/auth</a>.</p>
+<p>Предполагается, что соединение уже установлено: <code>auth_key</code> создан (<a href="/mtproto/auth_key/">как</a>), время синхронизировано.</p>
+<h2 id="общая-схема-(«код-из-смс»)" tabindex="-1">Общая схема («код из СМС»)</h2>
+<ol>
+<li>
+<p><strong>Отправка номера.</strong> Клиент вызывает <a href="/method/auth.sendCode/"><code>auth.sendCode</code></a> с номером телефона, <code>api_id</code> и <code>api_hash</code>. Сервер отвечает <a href="/type/auth.SentCode/"><code>auth.sentCode</code></a> с <code>phone_code_hash</code> и способом доставки кода (СМС, звонок, сообщение в Telegram, email — зависит от аккаунта).</p>
+</li>
+<li>
+<p><strong>Ввод кода.</strong> Клиент вызывает <a href="/method/auth.signIn/"><code>auth.signIn</code></a> с номером, <code>phone_code_hash</code> и кодом. Если аккаунт существует и защищён облачным паролем (2FA), сервер вернёт ошибку <code>SESSION_PASSWORD_NEEDED</code> — см. шаг 3. Если аккаунта нет — <code>PHONE_NUMBER_UNOCCUPIED</code>, и для регистрации нужен <a href="/method/auth.signUp/"><code>auth.signUp</code></a>.</p>
+</li>
+<li>
+<p><strong>Облачный пароль (2FA).</strong> Пароль не передаётся в открытом виде: клиент и сервер выполняют обмен по протоколу <a href="/api/srp/"><code>SRP</code></a> (Secure Remote Password) с параметрами из <a href="/method/account.getPassword/"><code>account.getPassword</code></a>, и клиент вызывает <a href="/method/auth.checkPassword/"><code>auth.checkPassword</code></a> с доказательством знания пароля.</p>
+</li>
+<li>
+<p><strong>Результат.</strong> Успех — <a href="/constructor/auth.authorization/"><code>auth.authorization</code></a> с объектом <a href="/type/User/"><code>User</code></a> и флагами (например, требуется ли установить облачный пароль). С этого момента сессия авторизована.</p>
+</li>
+</ol>
+<h2 id="важные-детали" tabindex="-1">Важные детали</h2>
+<ul>
+<li><strong><code>api_id</code>/<code>api_hash</code></strong> идентифицируют приложение, а не пользователя; их получают на <a href="https://my.telegram.org">my.telegram.org</a>.</li>
+<li><strong>Первый запрос</strong> сессии рекомендуется оборачивать в <a href="/method/initConnection/"><code>initConnection</code></a>, чтобы сервер знал устройство и язык клиента.</li>
+<li><strong>Повторный вход на новом устройстве</strong> может потребовать подтверждения с уже авторизованного устройства (<code>auth.exportLoginToken</code> / QR-вход — см. <a href="https://core.telegram.org/api/qr-login/">оригинал</a>).</li>
+<li><strong>Флуд-контроль.</strong> Ошибка <code>FLOOD_WAIT_N</code> означает «повторить через N секунд»; клиент обязан выдерживать такие паузы.</li>
+<li><strong>Выход</strong> — <a href="/method/auth.logOut/"><code>auth.logOut</code></a>; уничтожение ключа — <a href="https://core.telegram.org/constructor/destroy_auth_key/"><code>destroy_auth_key</code></a>.</li>
+</ul>
+<h2 id="боты" tabindex="-1">Боты</h2>
+<p>Авторизация ботов выполняется отдельным методом <a href="/method/auth.importBotAuthorization/"><code>auth.importBotAuthorization</code></a> с токеном бота — без СМС. О ботах на уровне MTProto — в <a href="https://core.telegram.org/api/bots/">оригинальном разделе о ботах</a>.</p>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/api/auth" rel="noopener">https://core.telegram.org/api/auth</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

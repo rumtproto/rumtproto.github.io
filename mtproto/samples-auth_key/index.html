@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Пример создания авторизационного ключа — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li class="active"><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="пример-создания-авторизационного-ключа" tabindex="-1">Пример создания авторизационного ключа</h1>
+<p>Оригинальное русскоязычное пояснение к числовому примеру обмена ключами. Первоисточник с полными числовыми трассировками: <a href="https://core.telegram.org/mtproto/samples-auth_key">core.telegram.org/mtproto/samples-auth_key</a>.</p>
+<p>В оригинальной статье приведён реальный дамп обмена: конкретные <code>nonce</code>, <code>pq</code>, параметры Диффи–Хеллмана и итоговый <code>auth_key</code>. Ниже — пошаговое пояснение, что именно происходит на каждом шаге и что стоит проверить при реализации; числа смотрите в первоисточнике.</p>
+<h2 id="шаг-за-шагом" tabindex="-1">Шаг за шагом</h2>
+<h3 id="1.-req_pq_multi-→-respq" tabindex="-1">1. <code>req_pq_multi</code> → <code>resPQ</code></h3>
+<p>Клиент генерирует случайный <code>nonce</code> (16 байт) и отправляет его. В ответ сервер присылает:</p>
+<ul>
+<li>тот же <code>nonce</code> (проверить совпадение);</li>
+<li><code>server_nonce</code> (32 байта) — свежая случайность сервера;</li>
+<li><code>pq</code> — 8 байт, произведение двух простых чисел;</li>
+<li>список отпечатков RSA-ключей.</li>
+</ul>
+<p>Что делать: убедиться, что <code>nonce</code> совпал; запомнить <code>server_nonce</code>; разложить <code>pq</code>.</p>
+<h3 id="2.-факторизация-pq" tabindex="-1">2. Факторизация <code>pq</code></h3>
+<p><code>pq</code> — 64-битное число, поэтому раскладывается быстро: перебором делителей или алгоритмом Полларда. Нужно получить простые <code>p &lt; q</code> и проверить <code>p * q == pq</code>.</p>
+<h3 id="3.-p_q_inner_data_dc-+-rsa" tabindex="-1">3. <code>p_q_inner_data_dc</code> + RSA</h3>
+<p>Клиент добавляет <code>new_nonce</code> (32 байта криптослучайности) и номер дата-центра, сериализует <a href="https://core.telegram.org/constructor/p_q_inner_data_dc/"><code>p_q_inner_data_dc</code></a>, дополняет блок по схеме <code>RSA_PAD</code> до 256 байт (случайными байтами) и шифрует публичным RSA-ключом сервера с выбранным отпечатком. Результат (256 байт) передаётся в <a href="https://core.telegram.org/constructor/req_DH_params/"><code>req_DH_params</code></a>.</p>
+<p>Что делать при реализации: сериализация должна точно совпадать со схемой; длина блока после дополнения — ровно 256 байт.</p>
+<h3 id="4.-server_dh_params_ok-→-server_dh_inner_data" tabindex="-1">4. <code>server_DH_params_ok</code> → <code>server_DH_inner_data</code></h3>
+<p>Ответ сервера содержит зашифрованный симметрическим шифром блок. Ключ и IV выводятся из <code>SHA1</code> от конкатенаций <code>new_nonce</code> и <code>server_nonce</code> (формулы — в <a href="/mtproto/auth_key/">описании обмена</a>).</p>
+<p>Внутри: <code>g</code>, <code>dh_prime</code> (256 байт), <code>g_a</code> (256 байт), <code>server_time</code>.</p>
+<p>Обязательные проверки:</p>
+<ul>
+<li>хеш блока сходится;</li>
+<li><code>nonce</code>/<code>server_nonce</code> совпадают;</li>
+<li><code>dh_prime</code> — безопасное простое (проверяется один раз, дальше можно кэшировать);</li>
+<li><code>g</code> — одно из значений 2, 3, 4, 5, 6, 7 и <code>1 &lt; g_a &lt; dh_prime − 1</code>.</li>
+</ul>
+<h3 id="5.-client_dh_inner_data-→-set_client_dh_params" tabindex="-1">5. <code>client_DH_inner_data</code> → <code>set_client_DH_params</code></h3>
+<p>Клиент генерирует случайное <code>b</code> (256 байт), вычисляет <code>g_b = g^b mod dh_prime</code> и отправляет зашифрованный блок с <code>retry_id = 0</code>.</p>
+<h3 id="6.-dh_gen_ok" tabindex="-1">6. <code>dh_gen_ok</code></h3>
+<p>Сервер подтверждает успешную генерацию. Клиент проверяет <code>new_nonce_hash1</code> и вычисляет итоговый ключ:</p>
+<pre><code>auth_key = g_a^b mod dh_prime      (2048 бит, при необходимости с ведущими нулями)
+auth_key_id = последние 8 байт SHA1(auth_key)
+auth_key_aux_hash = первые 8 байт SHA1(auth_key)
+</code></pre>
+<h2 id="на-что-обращать-внимание-при-отладке" tabindex="-1">На что обращать внимание при отладке</h2>
+<ul>
+<li>Несовпадение <code>msg_key</code> при первом зашифрованном сообщении почти всегда означает ошибку в дополнении <code>auth_key</code> до 256 байт или в порядке аргументов <code>SHA1</code>/<code>SHA256</code> при выводе ключей.</li>
+<li>При сериализации большие числа записываются в малоэндийном порядке байтов; перепутанный порядок байтов — самая частая ошибка.</li>
+<li>После успешного обмена первым зашифрованным запросом обычно вызывают <a href="/method/help.getConfig/"><code>help.getConfig</code></a>: если ответ пришёл и расшифровался — связка ключей работает.</li>
+</ul>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/mtproto/samples-auth_key" rel="noopener">https://core.telegram.org/mtproto/samples-auth_key</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

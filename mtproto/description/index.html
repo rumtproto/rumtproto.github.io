@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Подробное описание MTProto — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Протокол MTProto</div>
+        <ul>
+          
+            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
+          
+            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
+          
+            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
+          
+            <li class="active"><a href="/mtproto/description/">Подробное описание MTProto</a></li>
+          
+            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
+          
+            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
+          
+            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
+          
+            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
+          
+            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
+          
+            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
+          
+            <li><a href="/mtproto/TL/">Язык TL</a></li>
+          
+            <li><a href="/mtproto/transports/">Транспорты</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Telegram API</div>
+        <ul>
+          
+            <li><a href="/api/">Telegram API</a></li>
+          
+            <li><a href="/api/auth/">Авторизация пользователя</a></li>
+          
+            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
+          
+            <li><a href="/api/errors/">Ошибки</a></li>
+          
+            <li><a href="/api/files/">Работа с файлами</a></li>
+          
+            <li><a href="/api/invoking/">Вызов методов</a></li>
+          
+            <li><a href="/api/layers/">Слои схемы</a></li>
+          
+            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
+          
+            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
+          
+            <li><a href="/api/updates/">Получение обновлений</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Схема TL</div>
+        <ul>
+          
+            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
+          
+            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
+          
+            <li><a href="/methods/">Методы по категориям</a></li>
+          
+            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
+          
+            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
+          
+            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
+          
+            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Другое</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+            <li><a href="/techfaq/">Технический FAQ</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Справочник схемы</div>
+        <ul>
+          
+            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
+          
+            <li><a href="/method/">Методы (справочник)</a></li>
+          
+            <li><a href="/type/">Типы (справочник)</a></li>
+          
+        </ul>
+      </div>
+    
+      <div class="nav-group">
+        <div class="nav-group-title">Приложение</div>
+        <ul>
+          
+            <li><a href="/glossary/">Глоссарий терминов</a></li>
+          
+        </ul>
+      </div>
+    
+  </aside>
+  <main class="content">
+    <article>
+      <h1 id="подробное-описание-mtproto" tabindex="-1">Подробное описание MTProto</h1>
+<p>Оригинальное русскоязычное изложение формата зашифрованных сообщений и правил обмена. Английский первоисточник: <a href="https://core.telegram.org/mtproto/description">core.telegram.org/mtproto/description</a>. Термины сохранены без перевода, пояснения даны в скобках и в <a href="/glossary/">глоссарии</a>.</p>
+<h2 id="общая-структура-зашифрованного-сообщения" tabindex="-1">Общая структура зашифрованного сообщения</h2>
+<p>Каждое сообщение, передаваемое после генерации ключа, имеет вид:</p>
+<pre><code>auth_key_id (64 бита) | msg_key (128 бит) | зашифрованные данные
+</code></pre>
+<ul>
+<li><code>auth_key_id</code> (идентификатор авторизационного ключа) — 8 байт: нижние 64 бита от <code>SHA1(auth_key)</code>. По нему сервер определяет, какой ключ использовать (у клиента может быть несколько ключей — например, по одному на дата-центр).</li>
+<li><code>msg_key</code> (ключ сообщения) — 128 бит; вычисляется из содержимого сообщения и <code>auth_key</code> и служит основой для ключа и вектора инициализации AES.</li>
+<li>Зашифрованные данные — сериализованный открытый текст, зашифрованный <code>AES-256-IGE</code> (IGE, Infinite Garble Extension — режим сцепления блоков, в котором искажение одного блока затрагивает все последующие).</li>
+</ul>
+<h3 id="открытый-текст" tabindex="-1">Открытый текст</h3>
+<p>Внутри шифра находится:</p>
+<pre><code>server_salt (64 бита) | session_id (64 бита) | message_id (64 бита) |
+seq_no (32 бита) | message_length (32 бита) | тело сообщения
+</code></pre>
+<ul>
+<li><code>server_salt</code> (соль сервера) — 64 бита, периодически меняется сервером; клиент обязан использовать актуальное значение.</li>
+<li><code>session_id</code> (идентификатор сессии) — выбирается клиентом при старте сессии; в рамках одной сессии постоянен.</li>
+<li><code>message_id</code> — см. ниже.</li>
+<li><code>seq_no</code> (sequence number, порядковый номер) — см. ниже.</li>
+<li><code>message_length</code> — длина тела в байтах (кратна 4).</li>
+<li>Тело — сериализованный конструктор <a href="/schema/">схемы</a> (запрос, ответ или служебное сообщение).</li>
+</ul>
+<h2 id="идентификатор-сообщения-(message_id)" tabindex="-1">Идентификатор сообщения (message_id)</h2>
+<p><code>message_id</code> — 64-битное число, жёстко привязанное к часам отправителя:</p>
+<ul>
+<li>старшие 32 бита — Unix-время отправки;</li>
+<li>младшие 32 бита — счётчик сообщений, значения которого кратны 4; с каждой новой секундой отсчёт начинается заново.</li>
+<li>Идентификаторы должны монотонно возрастать; повторное использование идентификатора запрещено.</li>
+<li>Получатель использует <code>message_id</code>, чтобы отсеивать повторы (запоминая недавние идентификаторы), и для грубой оценки времени.</li>
+<li>Сервер отклоняет сообщения с идентификаторами, которые сильно отстают от текущего серверного времени или заметно опережают его, — поэтому клиенту необходима <a href="#%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F-%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%B8">синхронизация времени</a>.</li>
+</ul>
+<h2 id="порядковый-номер-(seq_no)" tabindex="-1">Порядковый номер (seq_no)</h2>
+<p><code>seq_no</code> связан с делением сообщений на две категории:</p>
+<ul>
+<li><strong>Связанные с содержимым</strong> (content-related) — запросы и уведомления, требующие подтверждения: они увеличивают внутренний счётчик <code>N</code> на единицу; в сообщение записывается значение <code>2*N + 1</code> (нечётное).</li>
+<li><strong>Не связанные с содержимым</strong> — подтверждения (<code>msgs_ack</code>), пинги и т.п.: в них записывается <code>2*N</code> (чётное), счётчик не увеличивается.</li>
+</ul>
+<p>Таким образом, по <code>seq_no</code> видно, сколько содержательных сообщений было отправлено в сессии до данного, и это используется в служебных сообщениях о состоянии сообщений.</p>
+<h2 id="контейнеры" tabindex="-1">Контейнеры</h2>
+<p>Чтобы снизить число передач, несколько сообщений упаковываются в контейнер:</p>
+<ul>
+<li>Конструктор <a href="https://core.telegram.org/constructor/msg_container/"><code>msg_container</code></a> содержит список вложенных сообщений; у каждого — свои <code>message_id</code>, <code>seq_no</code> и длина. Сам контейнер содержательным сообщением не считается.</li>
+<li>Контейнер передаётся и расшифровывается как одно сообщение, но получатель обрабатывает и подтверждает вложенные сообщения по отдельности, по их собственным <code>message_id</code>.</li>
+<li>Недоставленный контейнер можно отправить повторно целиком. Если же доставлены были не все вложенные сообщения, недостающие запрашивают или пересылают отдельно (см. <a href="/mtproto/service_messages_about_messages/">сообщения о сообщениях</a>).</li>
+<li>Ограничения: не более 1024 сообщений в одном контейнере; суммарный размер ограничен (порядка 1 МБ); вкладывать контейнер в контейнер нельзя.</li>
+</ul>
+<h2 id="подтверждения-(ack)" tabindex="-1">Подтверждения (ack)</h2>
+<ul>
+<li>Доставленный запрос/уведомление получатель подтверждает сообщением <a href="https://core.telegram.org/constructor/msgs_ack/"><code>msgs_ack</code></a> — список идентификаторов сообщений. Подтверждение не требует ответа.</li>
+<li>Если отправитель долго не получает ни ответа, ни подтверждения, он может:
+<ol>
+<li>повторно отправить сообщение с тем же <code>message_id</code> (если оно ещё не было доставлено);</li>
+<li>запросить состояние сообщения служебным сообщением <a href="https://core.telegram.org/constructor/msg_resend_req/"><code>msg_resend_req</code></a>;</li>
+<li>в крайнем случае пересоздать сессию.</li>
+</ol>
+</li>
+</ul>
+<h2 id="сжатие-ответов" tabindex="-1">Сжатие ответов</h2>
+<p>Большие ответы сервер может сжимать <code>gzip</code>: вместо полезного тела возвращается конструктор <a href="https://core.telegram.org/constructor/gzip_packed/"><code>gzip_packed</code></a>, внутри которого — сериализованный ответ, сжатый алгоритмом gzip. Клиент обязан прозрачно распаковывать такие ответы.</p>
+<h2 id="синхронизация-времени" tabindex="-1">Синхронизация времени</h2>
+<p>Клиент и сервер имеют собственные часы; чтобы <code>message_id</code> были корректными, клиент должен знать смещение относительно серверного времени:</p>
+<ul>
+<li>Клиент отправляет <a href="https://core.telegram.org/constructor/ping/"><code>ping</code></a> (для HTTP-транспорта — <a href="https://core.telegram.org/constructor/http_wait/"><code>http_wait</code></a>) и по <code>message_id</code> ответа и времени его получения вычисляет поправку <code>time_offset = время_сервера − время_клиента</code> и оценку времени оборота (RTT).</li>
+<li>Смещение рекомендуется измерять регулярно и хранить вместе с «последним известным временем сервера».</li>
+</ul>
+<h2 id="дуплексность-и-независимость-сторон" tabindex="-1">Дуплексность и независимость сторон</h2>
+<ul>
+<li>Протокол симметричен: и клиент, и сервер могут отправлять сообщения в любой момент. Серверные <strong>уведомления</strong> (например, <a href="https://core.telegram.org/constructor/updatesTooLong/"><code>updatesTooLong</code></a>) приходят без запроса.</li>
+<li>Соединение может быть разорвано и создано заново; состояние сессии (<code>session_id</code>, счётчики) клиент хранит сам.</li>
+<li>Одна сессия = одна последовательность <code>seq_no</code>; при пересоздании сессии выбирается новый <code>session_id</code>.</li>
+</ul>
+<h2 id="ошибки" tabindex="-1">Ошибки</h2>
+<p>Ошибки уровня RPC возвращаются конструктором <a href="https://core.telegram.org/constructor/rpc_error/"><code>rpc_error</code></a> с кодом и строковым идентификатором ошибки; справочник типовых ошибок описан в разделе <a href="/api/errors/">ошибок API</a> оригинальной документации. Ошибки транспорта (например, переполнение очереди) возвращаются служебными сообщениями о состоянии.</p>
+<h2 id="что-читать-дальше" tabindex="-1">Что читать дальше</h2>
+<ul>
+<li><a href="/mtproto/auth_key/">Создание авторизационного ключа</a> — как появляется <code>auth_key</code>.</li>
+<li><a href="/mtproto/service_messages/">Сервисные сообщения</a> — полный перечень служебных конструкторов.</li>
+<li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a> — состояние, повторная отправка, подтверждение.</li>
+<li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности</a> — обязательные проверки.</li>
+</ul>
+
+      <div class="source-note">
+        Оригинал: <a href="https://core.telegram.org/mtproto/description" rel="noopener">https://core.telegram.org/mtproto/description</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>
