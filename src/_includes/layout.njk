@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }} — MTProto по-русски</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
+    <nav class="top-nav">
+      <a href="/mtproto/">MTProto</a>
+      <a href="/api/">API</a>
+      <a href="/schema/">Схема</a>
+      <a href="/glossary/">Глоссарий</a>
+    </nav>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar">
+    {% for group in nav.sections %}
+      <div class="nav-group">
+        <div class="nav-group-title">{{ group.title }}</div>
+        <ul>
+          {% for item in group.items %}
+            <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </aside>
+  <main class="content">
+    <article>
+      {{ content | safe }}
+      <div class="source-note">
+        Оригинал: <a href="{{ original }}" rel="noopener">{{ original }}</a>{% if translated %} · перевод выполнен автоматически-вручную для офлайн-чтения{% endif %}
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
+  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
+</footer>
+</body>
+</html>

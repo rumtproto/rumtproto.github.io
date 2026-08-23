@@ -1,0 +1,236 @@
+{
+ "sections": [
+  {
+   "title": "Протокол MTProto",
+   "items": [
+    {
+     "url": "/mtproto/",
+     "title": "MTProto — обзор протокола",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto.md"
+    },
+    {
+     "url": "/mtproto_v1/",
+     "title": "MTProto версии 1.0 (устаревшая)",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto_v1.md"
+    },
+    {
+     "url": "/mtproto/auth_key/",
+     "title": "Создание авторизационного ключа (auth_key)",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto/auth_key.md"
+    },
+    {
+     "url": "/mtproto/description/",
+     "title": "Подробное описание MTProto",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto/description.md"
+    },
+    {
+     "url": "/mtproto/mtproto-transports/",
+     "title": "MTProto-транспорты: форматы кадров и обфускация",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto/mtproto-transports.md"
+    },
+    {
+     "url": "/mtproto/samples-auth_key/",
+     "title": "Пример создания авторизационного ключа",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto/samples-auth_key.md"
+    },
+    {
+     "url": "/mtproto/security_guidelines/",
+     "title": "Рекомендации по безопасности клиентских реализаций",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto/security_guidelines.md"
+    },
+    {
+     "url": "/mtproto/serialize/",
+     "title": "Сериализация данных (язык TL)",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto/serialize.md"
+    },
+    {
+     "url": "/mtproto/service_messages_about_messages/",
+     "title": "Сообщения о сообщениях",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto/service_messages_about_messages.md"
+    },
+    {
+     "url": "/mtproto/service_messages/",
+     "title": "Сервисные сообщения",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto/service_messages.md"
+    },
+    {
+     "url": "/mtproto/TL/",
+     "title": "Язык TL",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto/TL.md"
+    },
+    {
+     "url": "/mtproto/transports/",
+     "title": "Транспорты",
+     "section": "mtproto",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto/transports.md"
+    }
+   ]
+  },
+  {
+   "title": "Telegram API",
+   "items": [
+    {
+     "url": "/api/",
+     "title": "Telegram API",
+     "section": "api",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/api.md"
+    },
+    {
+     "url": "/api/auth/",
+     "title": "Авторизация пользователя",
+     "section": "api",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/api/auth.md"
+    },
+    {
+     "url": "/api/end-to-end/",
+     "title": "Секретные чаты (сквозное шифрование)",
+     "section": "api",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/api/end-to-end.md"
+    },
+    {
+     "url": "/api/errors/",
+     "title": "Ошибки",
+     "section": "api",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/api/errors.md"
+    },
+    {
+     "url": "/api/files/",
+     "title": "Работа с файлами",
+     "section": "api",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/api/files.md"
+    },
+    {
+     "url": "/api/invoking/",
+     "title": "Вызов методов",
+     "section": "api",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/api/invoking.md"
+    },
+    {
+     "url": "/api/layers/",
+     "title": "Слои схемы",
+     "section": "api",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/api/layers.md"
+    },
+    {
+     "url": "/api/pfs/",
+     "title": "Perfect Forward Secrecy (PFS)",
+     "section": "api",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/api/pfs.md"
+    },
+    {
+     "url": "/api/srp/",
+     "title": "SRP: проверка облачного пароля (2FA)",
+     "section": "api",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/api/srp.md"
+    },
+    {
+     "url": "/api/updates/",
+     "title": "Получение обновлений",
+     "section": "api",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/api/updates.md"
+    }
+   ]
+  },
+  {
+   "title": "Схема TL",
+   "items": [
+    {
+     "url": "/end-to-end-json/",
+     "title": "Схема секретных чатов (end-to-end) в формате JSON",
+     "section": "schema",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/end-to-end-json.md"
+    },
+    {
+     "url": "/json/",
+     "title": "Схема TL в формате JSON (API)",
+     "section": "schema",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/json.md"
+    },
+    {
+     "url": "/methods/",
+     "title": "Методы по категориям",
+     "section": "schema",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/methods.md"
+    },
+    {
+     "url": "/mtproto-json/",
+     "title": "Схема MTProto в формате JSON",
+     "section": "schema",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/mtproto-json.md"
+    },
+    {
+     "url": "/schema/",
+     "title": "Схема TL (TL-schema)",
+     "section": "schema",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/schema.md"
+    },
+    {
+     "url": "/schema/end-to-end/",
+     "title": "Схема слоя секретных чатов (end-to-end)",
+     "section": "schema",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/schema/end-to-end.md"
+    },
+    {
+     "url": "/schema/mtproto/",
+     "title": "Схема слоя MTProto",
+     "section": "schema",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/schema/mtproto.md"
+    }
+   ]
+  },
+  {
+   "title": "Другое",
+   "items": [
+    {
+     "url": "/glossary/",
+     "title": "Глоссарий терминов",
+     "section": "other",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/glossary.md"
+    },
+    {
+     "url": "/techfaq/",
+     "title": "Технический FAQ",
+     "section": "other",
+     "file": "/workspaces/project/Rust/hobby/telectron-rs/mtproto_docs/src/techfaq.md"
+    }
+   ]
+  },
+  {
+   "title": "Справочник схемы",
+   "items": [
+    {
+     "url": "/constructor/",
+     "title": "Конструкторы (справочник)"
+    },
+    {
+     "url": "/method/",
+     "title": "Методы (справочник)"
+    },
+    {
+     "url": "/type/",
+     "title": "Типы (справочник)"
+    }
+   ]
+  },
+  {
+   "title": "Приложение",
+   "items": [
+    {
+     "url": "/glossary/",
+     "title": "Глоссарий терминов"
+    }
+   ]
+  }
+ ]
+}

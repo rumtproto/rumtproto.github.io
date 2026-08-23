@@ -1,0 +1,21 @@
+{
+  "name": "mtproto-docs-ru",
+  "version": "1.0.0",
+  "description": "Russian translation of core.telegram.org/mtproto docs, built with Eleventy",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "markdown-it-anchor": "^9.2.1",
+    "turndown": "^7.2.4"
+  },
+  "private": true
+}

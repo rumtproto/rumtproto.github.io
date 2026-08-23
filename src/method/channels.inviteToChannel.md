@@ -1,0 +1,65 @@
+---
+title: "channels.inviteToChannel (метод)"
+original: "https://core.telegram.org/method/channels.inviteToChannel"
+section: ref
+kind: method
+layout: layout.njk
+---
+
+# channels.inviteToChannel
+
+*Метод из схемы TL.*
+
+> Invite users to a channel/supergroup
+
+## Определение TL
+
+```
+messages.invitedUsers#7f5defa6 updates:Updates missing_invitees:Vector<MissingInvitee> = messages.InvitedUsers;
+---functions---
+channels.inviteToChannel#c9e33d54 channel:InputChannel users:Vector<InputUser> = messages.InvitedUsers;
+```
+
+## Параметры
+
+| Имя | Тип | Описание |
+|---|---|---|
+| channel | [InputChannel](/type/InputChannel/) | Channel/supergroup |
+| users | [Vector](https://core.telegram.org/type/Vector%20t)<[InputUser](/type/InputUser/)> | Users to invite |
+
+## Результат
+
+[messages.InvitedUsers](/type/messages.InvitedUsers/)
+
+## Only users can use this method
+
+## Possible errors
+
+| Code | Тип | Описание |
+|---|---|---|
+| 400 | BOTS_TOO_MUCH | There are too many bots in this chat/channel. |
+| 400 | BOT_GROUPS_BLOCKED | This bot can't be added to groups. |
+| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+| 400 | CHANNEL_MONOFORUM_UNSUPPORTED | [Monoforums](https://core.telegram.org/api/channel#monoforums) do not support this feature. |
+| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
+| 403 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
+| 400 | CHAT_INVALID | Invalid chat. |
+| 400 | CHAT_MEMBER_ADD_FAILED | Could not add participants. |
+| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
+| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
+| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+| 400 | USERS_TOO_MUCH | The maximum number of users has been exceeded (to create a chat, for example). |
+| 400 | USER_BANNED_IN_CHANNEL | You're banned from sending messages in supergroups/channels. |
+| 400 | USER_BLOCKED | User blocked. |
+| 400 | USER_BOT | Bots can only be admins in channels. |
+| 403 | USER_CHANNELS_TOO_MUCH | One of the users you tried to add is already in too many channels/supergroups. |
+| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+| 400 | USER_KICKED | This user was kicked from this supergroup/channel. |
+| 403 | USER_NOT_MUTUAL_CONTACT | The provided user is not a mutual contact. |
+| 403 | USER_PRIVACY_RESTRICTED | The user's privacy settings do not allow you to do this. |
+
+## Related pages
+
+#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+
+How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
