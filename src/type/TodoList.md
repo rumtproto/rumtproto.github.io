@@ -1,31 +1,26 @@
 ---
-title: "TodoList (тип)"
+title: "TodoList"
 original: "https://core.telegram.org/type/TodoList"
 section: ref
 kind: type
+description: "Представляет список задач »."
 layout: layout.njk
 ---
 
 # TodoList
 
-*Тип из схемы TL.*
-
-> Represents a [todo list »](https://core.telegram.org/api/todo).
-
-## Определение TL
+Представляет [список задач »](/api/todo/).
 
 ```
 todoList#49b92a26 flags:# others_can_append:flags.0?true others_can_complete:flags.1?true title:TextWithEntities list:Vector<TodoItem> = TodoList;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [todoList](/constructor/todoList/) | Represents a [todo list »](https://core.telegram.org/api/todo). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/todoList">todoList</a></td><td>Представляет <a href="/api/todo">список задач »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Checklists and to-do lists](https://core.telegram.org/api/todo)
+#### [Чек-листы и списки задач](/api/todo/)
 
-Premium users can now create collaborative checklists in any chat to track tasks and coordinate teams — or manage shopping and to-do lists.
+Пользователи Premium теперь могут создавать совместные чек-листы в любом чате, чтобы отслеживать задачи и координировать команды — или вести списки покупок и дел.

@@ -1,18 +1,15 @@
 ---
-title: "messages.readDiscussion (метод)"
+title: "messages.readDiscussion"
 original: "https://core.telegram.org/method/messages.readDiscussion"
 section: ref
 kind: method
+description: "Отметить ветку как прочитанную"
 layout: layout.njk
 ---
 
 # messages.readDiscussion
 
-*Метод из схемы TL.*
-
-> Mark a [thread](https://core.telegram.org/api/threads) as read
-
-## Определение TL
+Отметить [ветку](/api/threads/) как прочитанную
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,30 +18,22 @@ boolTrue#997275b5 = Bool;
 messages.readDiscussion#f731a9f4 peer:InputPeer msg_id:int read_max_id:int = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Group ID |
-| msg_id | [int](/type/int/) | ID of message that started the thread |
-| read_max_id | [int](/type/int/) | ID up to which thread messages were read |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Идентификатор группы</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения, с которого началась ветка обсуждения</td></tr><tr><td><strong>read_max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор, до которого сообщения в обсуждении были прочитаны</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Message threads](https://core.telegram.org/api/threads)
+#### [Треды сообщений](/api/threads/)
 
-Telegram allows commenting on a channel post or on a generic supergroup message, thanks to message threads.
+Благодаря веткам обсуждения Telegram позволяет комментировать пост канала или обычное сообщение супергруппы.

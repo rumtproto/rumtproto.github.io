@@ -1,18 +1,15 @@
 ---
-title: "payments.StarGiftWithdrawalUrl (тип)"
+title: "payments.StarGiftWithdrawalUrl"
 original: "https://core.telegram.org/type/payments.StarGiftWithdrawalUrl"
 section: ref
 kind: type
+description: "URL, по которому можно импортировать экспортированный NFT на Fragment."
 layout: layout.njk
 ---
 
 # payments.StarGiftWithdrawalUrl
 
-*Тип из схемы TL.*
-
-> A URL that can be used to import the exported NFT on Fragment.
-
-## Определение TL
+URL, по которому можно импортировать экспортированный NFT на Fragment.
 
 ```
 payments.starGiftWithdrawalUrl#84aa3a9c url:string = payments.StarGiftWithdrawalUrl;
@@ -22,14 +19,10 @@ payments.starGiftWithdrawalUrl#84aa3a9c url:string = payments.StarGiftWithdrawal
 payments.getStarGiftWithdrawalUrl#d06e93a8 stargift:InputSavedStarGift password:InputCheckPasswordSRP = payments.StarGiftWithdrawalUrl;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.starGiftWithdrawalUrl](/constructor/payments.starGiftWithdrawalUrl/) | A URL that can be used to import the exported NFT on Fragment. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starGiftWithdrawalUrl">payments.starGiftWithdrawalUrl</a></td><td>URL, по которому можно импортировать экспортированный NFT на Fragment.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getStarGiftWithdrawalUrl](/method/payments.getStarGiftWithdrawalUrl/) | Convert a [collectible gift »](https://core.telegram.org/api/gifts) to an NFT on the TON blockchain. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarGiftWithdrawalUrl">payments.getStarGiftWithdrawalUrl</a></td><td>Преобразовать <a href="/api/gifts">коллекционный подарок »</a> в NFT в блокчейне TON.</td></tr></tbody></table>

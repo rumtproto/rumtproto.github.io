@@ -1,18 +1,15 @@
 ---
-title: "account.getAccountTTL (метод)"
+title: "account.getAccountTTL"
 original: "https://core.telegram.org/method/account.getAccountTTL"
 section: ref
 kind: method
+description: "Получить срок жизни аккаунта в днях"
 layout: layout.njk
 ---
 
 # account.getAccountTTL
 
-*Метод из схемы TL.*
-
-> Get days to live of account
-
-## Определение TL
+Получить срок жизни аккаунта в днях
 
 ```
 accountDaysTTL#b8d0afdf days:int = AccountDaysTTL;
@@ -20,12 +17,12 @@ accountDaysTTL#b8d0afdf days:int = AccountDaysTTL;
 account.getAccountTTL#8fc711d = AccountDaysTTL;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [AccountDaysTTL](/type/AccountDaysTTL/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

@@ -1,18 +1,15 @@
 ---
-title: "account.updateProfile (метод)"
+title: "account.updateProfile"
 original: "https://core.telegram.org/method/account.updateProfile"
 section: ref
 kind: method
+description: "Обновляет профиль пользователя."
 layout: layout.njk
 ---
 
 # account.updateProfile
 
-*Метод из схемы TL.*
-
-> Updates user profile.
-
-## Определение TL
+Обновляет профиль пользователя.
 
 ```
 userEmpty#d3bc4b7a id:long = User;
@@ -21,33 +18,24 @@ user#31774388 flags:# self:flags.10?true contact:flags.11?true mutual_contact:fl
 account.updateProfile#78515775 flags:# first_name:flags.0?string last_name:flags.1?string about:flags.2?string = User;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| first_name | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | New user first name |
-| last_name | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | New user last name |
-| about | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | New bio |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>first_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Новое имя пользователя</td></tr><tr><td><strong>last_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Новая фамилия пользователя</td></tr><tr><td><strong>about</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Новое описание профиля</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [User](/type/User/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over a business connection »
+### Этот метод можно вызывать через [бизнес-подключение »](/api/bots/connected-business-bots/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | ABOUT_TOO_LONG | About string too long. |
-| 400 | BUSINESS_CONNECTION_INVALID | The connection_id passed to the wrapping [invokeWithBusinessConnection](https://core.telegram.org/api/business) call is invalid. |
-| 400 | FIRSTNAME_INVALID | The first name is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>ABOUT_TOO_LONG</td><td>Строка «о себе» слишком длинная.</td></tr><tr><td>400</td><td>BUSINESS_CONNECTION_INVALID</td><td>Значение <code>connection_id</code>, переданное в объемлющем вызове <a href="/api/business">invokeWithBusinessConnection</a>, недействительно.</td></tr><tr><td>400</td><td>FIRSTNAME_INVALID</td><td>Имя недействительно.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

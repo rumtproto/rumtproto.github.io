@@ -1,32 +1,24 @@
 ---
-title: "reactionCount (конструктор)"
+title: "reactionCount"
 original: "https://core.telegram.org/constructor/reactionCount"
 section: ref
 kind: constructor
+description: "Реакции"
 layout: layout.njk
 ---
 
 # reactionCount
 
-*Конструктор из схемы TL.*
-
-> Reactions
-
-## Определение TL
+Реакции
 
 ```
 reactionCount#a3d1cb80 flags:# chosen_order:flags.0?int reaction:Reaction count:int = ReactionCount;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| chosen_order | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | If set, indicates that the current user also sent this reaction. The integer value indicates when was the reaction added: the bigger the value, the newer the reaction. |
-| reaction | [Reaction](/type/Reaction/) | The reaction. |
-| count | [int](/type/int/) | Number of users that reacted with this emoji. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>chosen_order</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Если установлено, указывает, что текущий пользователь также поставил эту реакцию.<br>Целое значение указывает, когда была добавлена реакция: чем больше значение, тем новее реакция.</td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/type/Reaction">Reaction</a></td><td>Реакция.</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество пользователей, отреагировавших этим эмодзи.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ReactionCount](/type/ReactionCount/)

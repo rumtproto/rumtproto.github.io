@@ -1,31 +1,26 @@
 ---
-title: "AvailableEffect (тип)"
+title: "AvailableEffect"
 original: "https://core.telegram.org/type/AvailableEffect"
 section: ref
 kind: type
+description: "Описывает эффект сообщения »."
 layout: layout.njk
 ---
 
 # AvailableEffect
 
-*Тип из схемы TL.*
-
-> Describes a [message effect »](https://core.telegram.org/api/effects).
-
-## Определение TL
+Описывает [эффект сообщения »](/api/effects/).
 
 ```
 availableEffect#93c3e27e flags:# premium_required:flags.2?true id:long emoticon:string static_icon_id:flags.0?long effect_sticker_id:long effect_animation_id:flags.1?long = AvailableEffect;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [availableEffect](/constructor/availableEffect/) | Represents a [message effect »](https://core.telegram.org/api/effects). All long IDs except for id are [document](/constructor/document/).ids from the containing [messages.availableEffects](/constructor/messages.availableEffects/) constructor. See [here »](https://core.telegram.org/api/effects) for more info on how to use following fields. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/availableEffect">availableEffect</a></td><td>Представляет <a href="/api/effects">эффект сообщения »</a>.<br><br>Все идентификаторы типа <code>long</code>, кроме <code>id</code>, — это значения <a href="/constructor/document">document</a>.<code>id</code> из содержащего их конструктора <a href="/constructor/messages.availableEffects">messages.availableEffects</a>.<br><br>Подробнее о том, как использовать перечисленные ниже поля, см. <a href="/api/effects">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Animated message effects](https://core.telegram.org/api/effects)
+#### [Анимированные эффекты для сообщений](/api/effects/)
 
-Telegram allows adding spectacular animated effects to messages you send.
+Telegram позволяет добавлять к отправляемым сообщениям зрелищные анимированные эффекты.

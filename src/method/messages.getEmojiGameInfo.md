@@ -1,18 +1,15 @@
 ---
-title: "messages.getEmojiGameInfo (метод)"
+title: "messages.getEmojiGameInfo"
 original: "https://core.telegram.org/method/messages.getEmojiGameInfo"
 section: ref
 kind: method
+description: "Получить информацию об игре в кости."
 layout: layout.njk
 ---
 
 # messages.getEmojiGameInfo
 
-*Метод из схемы TL.*
-
-> Fetch dice game information.
-
-## Определение TL
+Получить информацию об игре в кости.
 
 ```
 messages.emojiGameUnavailable#59e65335 = messages.EmojiGameInfo;
@@ -21,12 +18,12 @@ messages.emojiGameDiceInfo#44e56023 flags:# game_hash:string prev_stake:long cur
 messages.getEmojiGameInfo#fb7e8ca7 = messages.EmojiGameInfo;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [messages.EmojiGameInfo](/type/messages.EmojiGameInfo/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

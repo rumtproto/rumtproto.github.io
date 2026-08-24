@@ -1,18 +1,15 @@
 ---
-title: "storage.FileType (тип)"
+title: "storage.FileType"
 original: "https://core.telegram.org/type/storage.FileType"
 section: ref
 kind: type
+description: "Объект описывает тип файла."
 layout: layout.njk
 ---
 
 # storage.FileType
 
-*Тип из схемы TL.*
-
-> Object describes the file type.
-
-## Определение TL
+Объект описывает тип файла.
 
 ```
 storage.fileUnknown#aa963b05 = storage.FileType;
@@ -27,17 +24,6 @@ storage.fileMp4#b3cea0e4 = storage.FileType;
 storage.fileWebp#1081464c = storage.FileType;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [storage.fileUnknown](/constructor/storage.fileUnknown/) | Unknown type. |
-| [storage.filePartial](/constructor/storage.filePartial/) | Part of a bigger file. |
-| [storage.fileJpeg](/constructor/storage.fileJpeg/) | JPEG image. MIME type: image/jpeg. |
-| [storage.fileGif](/constructor/storage.fileGif/) | GIF image. MIME type: image/gif. |
-| [storage.filePng](/constructor/storage.filePng/) | PNG image. MIME type: image/png. |
-| [storage.filePdf](/constructor/storage.filePdf/) | PDF document image. MIME type: application/pdf. |
-| [storage.fileMp3](/constructor/storage.fileMp3/) | Mp3 audio. MIME type: audio/mpeg. |
-| [storage.fileMov](/constructor/storage.fileMov/) | Quicktime video. MIME type: video/quicktime. |
-| [storage.fileMp4](/constructor/storage.fileMp4/) | MPEG-4 video. MIME type: video/mp4. |
-| [storage.fileWebp](/constructor/storage.fileWebp/) | WEBP image. MIME type: image/webp. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/storage.fileUnknown">storage.fileUnknown</a></td><td>Неизвестный тип.</td></tr><tr><td><a href="/constructor/storage.filePartial">storage.filePartial</a></td><td>Часть более крупного файла.</td></tr><tr><td><a href="/constructor/storage.fileJpeg">storage.fileJpeg</a></td><td>Изображение JPEG. MIME-тип: <code>image/jpeg</code>.</td></tr><tr><td><a href="/constructor/storage.fileGif">storage.fileGif</a></td><td>Изображение GIF. MIME-тип: <code>image/gif</code>.</td></tr><tr><td><a href="/constructor/storage.filePng">storage.filePng</a></td><td>Изображение PNG. MIME-тип: <code>image/png</code>.</td></tr><tr><td><a href="/constructor/storage.filePdf">storage.filePdf</a></td><td>Изображение документа PDF. MIME-тип: <code>application/pdf</code>.</td></tr><tr><td><a href="/constructor/storage.fileMp3">storage.fileMp3</a></td><td>Аудио в формате Mp3. MIME-тип: <code>audio/mpeg</code>.</td></tr><tr><td><a href="/constructor/storage.fileMov">storage.fileMov</a></td><td>Видео Quicktime. MIME-тип: <code>video/quicktime</code>.</td></tr><tr><td><a href="/constructor/storage.fileMp4">storage.fileMp4</a></td><td>Видео в формате MPEG-4. MIME-тип: <code>video/mp4</code>.</td></tr><tr><td><a href="/constructor/storage.fileWebp">storage.fileWebp</a></td><td>Изображение WEBP. MIME-тип: <code>image/webp</code>.</td></tr></tbody></table>

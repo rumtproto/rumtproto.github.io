@@ -1,33 +1,30 @@
 ---
-title: "requirementToContactPremium (конструктор)"
+title: "requirementToContactPremium"
 original: "https://core.telegram.org/constructor/requirementToContactPremium"
 section: ref
 kind: constructor
+description: "Этот пользователь требует приобрести подписку Premium, чтобы связаться с ним."
 layout: layout.njk
 ---
 
 # requirementToContactPremium
 
-*Конструктор из схемы TL.*
-
-> This user requires us to buy a [Premium](https://core.telegram.org/api/premium) subscription in order to contact them.
-
-## Определение TL
+Этот пользователь требует приобрести подписку [Premium](/api/premium/), чтобы связаться с ним.
 
 ```
 requirementToContactPremium#e581e4e9 = RequirementToContact;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [RequirementToContact](/type/RequirementToContact/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.

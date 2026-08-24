@@ -1,38 +1,30 @@
 ---
-title: "updateBotStopped (конструктор)"
+title: "updateBotStopped"
 original: "https://core.telegram.org/constructor/updateBotStopped"
 section: ref
 kind: constructor
+description: "Бот был остановлен или запущен заново."
 layout: layout.njk
 ---
 
 # updateBotStopped
 
-*Конструктор из схемы TL.*
-
-> A bot was stopped or re-started.
-
-## Определение TL
+Бот был остановлен или запущен заново.
 
 ```
 updateBotStopped#c4870a49 user_id:long date:int stopped:Bool qts:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [long](/type/long/) | The user ID |
-| date | [int](/type/int/) | When did this action occur |
-| stopped | [Bool](/type/Bool/) | Whether the bot was stopped or started |
-| qts | [int](/type/int/) | New qts value, see [updates »](/api/updates/) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда произошло это действие</td></tr><tr><td><strong>stopped</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Был ли бот остановлен или запущен</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] Новое значение <strong>qts</strong>, подробнее см. <a href="/api/updates">обновления »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

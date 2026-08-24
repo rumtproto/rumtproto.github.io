@@ -1,18 +1,15 @@
 ---
-title: "Payments.SuggestedStarRefBots (тип)"
+title: "payments.SuggestedStarRefBots"
 original: "https://core.telegram.org/type/payments.SuggestedStarRefBots"
 section: ref
 kind: type
+description: "Список предлагаемых Mini Apps с доступными партнёрскими программами"
 layout: layout.njk
 ---
 
 # Payments.SuggestedStarRefBots
 
-*Тип из схемы TL.*
-
-> A list of suggested [mini apps](https://core.telegram.org/api/bots/webapps) with available [affiliate programs](https://core.telegram.org/api/bots/referrals)
-
-## Определение TL
+Список предлагаемых [Mini Apps](/api/bots/webapps/) с доступными [партнёрскими программами](/api/bots/referrals/)
 
 ```
 payments.suggestedStarRefBots#b4d5d859 flags:# count:int suggested_bots:Vector<StarRefProgram> users:Vector<User> next_offset:flags.0?string = payments.SuggestedStarRefBots;
@@ -22,24 +19,20 @@ payments.suggestedStarRefBots#b4d5d859 flags:# count:int suggested_bots:Vector<S
 payments.getSuggestedStarRefBots#d6b48f7 flags:# order_by_revenue:flags.0?true order_by_date:flags.1?true peer:InputPeer offset:string limit:int = payments.SuggestedStarRefBots;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.suggestedStarRefBots](/constructor/payments.suggestedStarRefBots/) | A list of suggested [mini apps](https://core.telegram.org/api/bots/webapps) with available [affiliate programs](https://core.telegram.org/api/bots/referrals) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.suggestedStarRefBots">payments.suggestedStarRefBots</a></td><td>Список предлагаемых <a href="/api/bots/webapps">mini apps</a> с доступными <a href="/api/bots/referrals">партнёрскими программами</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getSuggestedStarRefBots](/method/payments.getSuggestedStarRefBots/) | Obtain a list of suggested [mini apps](https://core.telegram.org/api/bots/webapps) with available [affiliate programs](https://core.telegram.org/api/bots/referrals) order_by_revenue and order_by_date are mutually exclusive: if neither is set, results are sorted by profitability. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getSuggestedStarRefBots">payments.getSuggestedStarRefBots</a></td><td>Получить список рекомендуемых <a href="/api/bots/webapps">mini apps</a> с доступными <a href="/api/bots/referrals">партнёрскими программами</a><br><br><code>order_by_revenue</code> и <code>order_by_date</code> взаимоисключающие: если не задан ни один из них, результаты сортируются по прибыльности.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
-#### [Affiliate programs](https://core.telegram.org/api/bots/referrals)
+#### [Партнёрские программы](/api/bots/referrals/)
 
-Developers can open affiliate programs for their mini app – allowing content creators, other mini app developers and any Telegram user to promote it and earn commissions on purchases made by people they referred.
+[@term:Mini App] Разработчики могут открывать партнёрские программы для своих mini app — это позволяет авторам контента, другим разработчикам mini app и любому пользователю Telegram продвигать приложение и получать комиссию с покупок, совершённых приведёнными ими людьми.

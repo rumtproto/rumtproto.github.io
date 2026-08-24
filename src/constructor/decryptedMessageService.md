@@ -1,18 +1,15 @@
 ---
-title: "decryptedMessageService (конструктор)"
+title: "decryptedMessageService"
 original: "https://core.telegram.org/constructor/decryptedMessageService"
 section: ref
 kind: constructor
+description: "Содержимое зашифрованного сервисного сообщения."
 layout: layout.njk
 ---
 
 # decryptedMessageService
 
-*Конструктор из схемы TL.*
-
-> Contents of an encrypted service message.
-
-## Определение TL
+Содержимое зашифрованного сервисного сообщения.
 
 ```
 ===8===
@@ -22,20 +19,16 @@ decryptedMessageService#aa48327d random_id:long random_bytes:bytes action:Decryp
 decryptedMessageService#73164160 random_id:long action:DecryptedMessageAction = DecryptedMessage;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| random_id | [long](/type/long/) | Random message ID, assigned by the message author. Must be equal to the ID passed to the sending method. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| random_bytes | [bytes](/type/bytes/) | Random bytes, removed in Layer 17. |
-| action | [DecryptedMessageAction](/type/DecryptedMessageAction/) | Action relevant to the service message |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:random_id] Случайный идентификатор сообщения, назначенный автором сообщения.<br>Должен совпадать с идентификатором, переданным методу отправки. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>random_bytes</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Случайные байты, удалено в слое 17.</td></tr><tr><td><strong>action</strong></td><td style="text-align: center;"><a href="/type/DecryptedMessageAction">DecryptedMessageAction</a></td><td>Действие, относящееся к сервисному сообщению</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DecryptedMessage](/type/DecryptedMessage/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

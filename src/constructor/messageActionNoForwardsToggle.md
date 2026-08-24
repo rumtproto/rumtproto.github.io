@@ -1,36 +1,30 @@
 ---
-title: "messageActionNoForwardsToggle (конструктор)"
+title: "messageActionNoForwardsToggle"
 original: "https://core.telegram.org/constructor/messageActionNoForwardsToggle"
 section: ref
 kind: constructor
+description: "Отправляется только в личных чатах при включении или отключении защиты контента »."
 layout: layout.njk
 ---
 
 # messageActionNoForwardsToggle
 
-*Конструктор из схемы TL.*
-
-> Emitted only in private chats when enabling or disabling [content protection »](https://core.telegram.org/api/content-protection#for-users).
-
-## Определение TL
+Отправляется только в личных чатах при включении или отключении [защиты контента »](/api/content-protection/#for-users).
 
 ```
 messageActionNoForwardsToggle#bf7d6572 prev_value:Bool new_value:Bool = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| prev_value | [Bool](/type/Bool/) | Previous protection status (if true, the chat was protected). May be equal to new_value when replying to requests, see [here »](https://core.telegram.org/api/content-protection#for-users) for more info on the full flow. |
-| new_value | [Bool](/type/Bool/) | New protection status. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>prev_value</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Предыдущее состояние защиты (если true, чат был защищён). При ответе на запросы может совпадать с <code>new_value</code>; подробнее обо всём процессе см. <a href="/api/content-protection#for-users">здесь »</a>.</td></tr><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Новый статус защиты.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Content protection](https://core.telegram.org/api/content-protection)
+#### [Защита контента](/api/content-protection/)
 
-Users and bots who want to keep their messages private, as well as Group and Channel owners who want to keep their content members-only can enable content protection, which prevents screenshots, copying, disables message forwards and limits the ability to save media from posts.
+Пользователи и боты, желающие сохранить приватность своих сообщений, а также владельцы групп и каналов, желающие оставить свой контент доступным только участникам, могут включить защиту контента: она препятствует созданию снимков экрана и копированию, отключает пересылку сообщений и ограничивает возможность сохранять медиа из публикаций.

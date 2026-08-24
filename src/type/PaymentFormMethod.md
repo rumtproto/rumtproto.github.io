@@ -1,25 +1,20 @@
 ---
-title: "PaymentFormMethod (тип)"
+title: "PaymentFormMethod"
 original: "https://core.telegram.org/type/PaymentFormMethod"
 section: ref
 kind: type
+description: "Представляет способ оплаты"
 layout: layout.njk
 ---
 
 # PaymentFormMethod
 
-*Тип из схемы TL.*
-
-> Represents a payment method
-
-## Определение TL
+Представляет способ оплаты
 
 ```
 paymentFormMethod#88f8f21b url:string title:string = PaymentFormMethod;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [paymentFormMethod](/constructor/paymentFormMethod/) | Represents an additional payment method |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/paymentFormMethod">paymentFormMethod</a></td><td>Представляет дополнительный способ оплаты</td></tr></tbody></table>

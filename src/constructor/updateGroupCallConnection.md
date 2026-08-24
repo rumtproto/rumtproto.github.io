@@ -1,53 +1,53 @@
 ---
-title: "updateGroupCallConnection (конструктор)"
+title: "updateGroupCallConnection"
 original: "https://core.telegram.org/constructor/updateGroupCallConnection"
 section: ref
 kind: constructor
+description: "Параметры подключения, возвращаемые после присоединения к групповому звонку, см. презентации » и режим трансляции »."
 layout: layout.njk
 ---
 
 # updateGroupCallConnection
 
-*Конструктор из схемы TL.*
+Параметры подключения, возвращаемые после присоединения к групповому звонку, см. [презентации »](/api/group-calls/#presentations) и [режим трансляции »](/api/group-calls/#stream-mode).
 
-> Connection parameters returned after joining a group call, see [presentations »](https://core.telegram.org/api/group-calls#presentations) and [stream mode »](https://core.telegram.org/api/group-calls#stream-mode).
-> If `presentation` is set, the parameters belong to the separate [presentation connection](https://core.telegram.org/api/group-calls#presentations); otherwise they belong to the main connection.
-> For a normal WebRTC connection, pass `params` to the local tgcalls group-call engine as its join response payload.
-> For [stream-mode calls](https://core.telegram.org/api/group-calls#detecting-stream-mode), where the client plays the call by [downloading media chunks »](https://core.telegram.org/api/group-calls#downloading-media-chunks) instead of using WebRTC, `params` instead has one of the following shapes:
-> ```
-> {
->   "stream": true
-> }
-> ```
-> for a call that entered [stream mode](https://core.telegram.org/api/group-calls#stream-mode), or
-> ```
-> {
->   "stream": true,
->   "rtmp": true
-> }
-> ```
-> for an [RTMP-mode call](https://core.telegram.org/api/group-calls#creating-and-publishing-an-rtmp-livestream).
+Если задан флаг `presentation`, параметры относятся к отдельному [соединению для демонстрации](/api/group-calls/#presentations); иначе они относятся к основному соединению.
 
-## Определение TL
+Для обычного соединения WebRTC передайте `params` локальному движку групповых звонков tgcalls в качестве полезной нагрузки ответа на присоединение.
+
+Для [звонков в режиме трансляции](/api/group-calls/#detecting-stream-mode), где клиент воспроизводит звонок, [загружая фрагменты медиа »](/api/group-calls/#downloading-media-chunks), а не через WebRTC, поле `params` вместо этого имеет один из следующих видов:
+
+```
+{
+  "stream": true
+}
+```
+
+для звонка, перешедшего в [режим трансляции](/api/group-calls/#stream-mode), либо
+
+```
+{
+  "stream": true,
+  "rtmp": true
+}
+```
+
+для [звонка в режиме RTMP](/api/group-calls/#creating-and-publishing-an-rtmp-livestream).
 
 ```
 updateGroupCallConnection#b783982 flags:# presentation:flags.0?true params:DataJSON = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| presentation | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether these parameters belong to the separate presentation connection instead of the main connection |
-| params | [DataJSON](/type/DataJSON/) | RTC join response parameters or broadcast-stream metadata, as described above |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>presentation</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Относятся ли эти параметры к отдельному соединению презентации, а не к основному соединению</td></tr><tr><td><strong>params</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Параметры ответа на подключение по RTC или метаданные широковещательного потока, как описано выше</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

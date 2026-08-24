@@ -1,40 +1,34 @@
 ---
-title: "messages.emojiGroups (конструктор)"
+title: "messages.emojiGroups"
 original: "https://core.telegram.org/constructor/messages.emojiGroups"
 section: ref
 kind: constructor
+description: "Представляет список категорий эмодзи."
 layout: layout.njk
 ---
 
 # messages.emojiGroups
 
-*Конструктор из схемы TL.*
-
-> Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories).
-
-## Определение TL
+Представляет список [категорий эмодзи](/api/emoji-categories/).
 
 ```
 messages.emojiGroups#881fb94b hash:int groups:Vector<EmojiGroup> = messages.EmojiGroups;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| groups | [Vector](https://core.telegram.org/type/Vector%20t)<[EmojiGroup](/type/EmojiGroup/)> | A list of [emoji categories](https://core.telegram.org/api/emoji-categories). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>groups</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/EmojiGroup">EmojiGroup</a>&gt;</td><td>Список <a href="/api/emoji-categories">категорий эмодзи</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.EmojiGroups](/type/messages.EmojiGroups/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Emoji categories](https://core.telegram.org/api/emoji-categories)
+#### [Категории эмодзи](/api/emoji-categories/)
 
-Sticker, custom emoji and GIF selection UIs should offer a list of categories to quickly filter results by a (list of) emojis, or by some other criteria.
+Интерфейсы выбора стикеров, пользовательских эмодзи и GIF должны предлагать список категорий для быстрой фильтрации результатов по эмодзи (или набору эмодзи) либо по иным критериям.

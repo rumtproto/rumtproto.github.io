@@ -1,18 +1,15 @@
 ---
-title: "Help.PeerColors (тип)"
+title: "help.PeerColors"
 original: "https://core.telegram.org/type/help.PeerColors"
 section: ref
 kind: type
+description: "Содержит информацию о нескольких цветовых палитрах »."
 layout: layout.njk
 ---
 
 # Help.PeerColors
 
-*Тип из схемы TL.*
-
-> Contains info about multiple [color palettes »](https://core.telegram.org/api/colors).
-
-## Определение TL
+Содержит информацию о нескольких [цветовых палитрах »](/api/colors/).
 
 ```
 help.peerColorsNotModified#2ba1f5ce = help.PeerColors;
@@ -24,22 +21,16 @@ help.getPeerColors#da80f42f hash:int = help.PeerColors;
 help.getPeerProfileColors#abcfa9fd hash:int = help.PeerColors;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [help.peerColorsNotModified](/constructor/help.peerColorsNotModified/) | The list of color palettes has not changed. |
-| [help.peerColors](/constructor/help.peerColors/) | Contains info about multiple [color palettes »](https://core.telegram.org/api/colors). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/help.peerColorsNotModified">help.peerColorsNotModified</a></td><td>Список цветовых палитр не изменился.</td></tr><tr><td><a href="/constructor/help.peerColors">help.peerColors</a></td><td>Содержит информацию о нескольких <a href="/api/colors">цветовых палитрах »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [help.getPeerColors](/method/help.getPeerColors/) | Get the set of [accent color palettes »](https://core.telegram.org/api/colors) that can be used for message accents. |
-| [help.getPeerProfileColors](/method/help.getPeerProfileColors/) | Get the set of [accent color palettes »](https://core.telegram.org/api/colors) that can be used in profile page backgrounds. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/help.getPeerColors">help.getPeerColors</a></td><td>Получить набор <a href="/api/colors">палитр акцентных цветов »</a>, которые можно использовать для акцентов в сообщениях.</td></tr><tr><td><a href="/method/help.getPeerProfileColors">help.getPeerProfileColors</a></td><td>Получить набор <a href="/api/colors">палитр акцентных цветов »</a>, которые можно использовать для фона страницы профиля.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!

@@ -1,46 +1,38 @@
 ---
-title: "updateChatParticipantRank (конструктор)"
+title: "updateChatParticipantRank"
 original: "https://core.telegram.org/constructor/updateChatParticipantRank"
 section: ref
 kind: constructor
+description: "Изменился тег » участника обычной группы »."
 layout: layout.njk
 ---
 
 # updateChatParticipantRank
 
-*Конструктор из схемы TL.*
-
-> The [tag »](https://core.telegram.org/api/rank) of a participant of a [basic group »](https://core.telegram.org/api/channel#basic-groups) has changed.
-
-## Определение TL
+Изменился [тег »](/api/rank/) участника [обычной группы »](/api/channel/#basic-groups).
 
 ```
 updateChatParticipantRank#bd8367b9 chat_id:long user_id:long rank:string version:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chat_id | [long](/type/long/) | Basic group ID. |
-| user_id | [long](/type/long/) | User ID. |
-| rank | [string](/type/string/) | The new tag. |
-| version | [int](/type/int/) | Used similarly to pts values to deduplicate/update outdated chat information as specified [here »](https://core.telegram.org/api/peers#basic-group-updates). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор обычной группы.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя.</td></tr><tr><td><strong>rank</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Новое звание.</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] Используется аналогично значениям <code>pts</code> для устранения дубликатов и обновления устаревшей информации о чате, как описано <a href="/api/peers#basic-group-updates">здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Peer database](https://core.telegram.org/api/peers)
+#### [База данных пиров](/api/peers/)
 
-Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.
+Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.
 
-#### [Group participant tags](https://core.telegram.org/api/rank)
+#### [Звание](/api/rank/)
 
-Members in group chats (both basic groups and supergroups) can add a tag next to their name — to show their role at work, what they study in school, and more.
+Участники групповых чатов (как обычных групп, так и супергрупп) могут добавить рядом со своим именем тег — чтобы указать свою роль на работе, что они изучают в учебном заведении и прочее.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

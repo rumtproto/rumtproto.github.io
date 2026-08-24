@@ -1,27 +1,24 @@
 ---
-title: "inputMessagesFilterContacts (конструктор)"
+title: "inputMessagesFilterContacts"
 original: "https://core.telegram.org/constructor/inputMessagesFilterContacts"
 section: ref
 kind: constructor
+description: "Возвращать только сообщения с контактами"
 layout: layout.njk
 ---
 
 # inputMessagesFilterContacts
 
-*Конструктор из схемы TL.*
-
-> Return only messages containing contacts
-
-## Определение TL
+Возвращать только сообщения с контактами
 
 ```
 inputMessagesFilterContacts#e062db83 = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)

@@ -1,30 +1,24 @@
 ---
-title: "langPackString (конструктор)"
+title: "langPackString"
 original: "https://core.telegram.org/constructor/langPackString"
 section: ref
 kind: constructor
+description: "Переведённая строка локализации"
 layout: layout.njk
 ---
 
 # langPackString
 
-*Конструктор из схемы TL.*
-
-> Translated localization string
-
-## Определение TL
+Переведённая строка локализации
 
 ```
 langPackString#cad181f6 key:string value:string = LangPackString;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| key | [string](/type/string/) | Language key |
-| value | [string](/type/string/) | Value |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Ключ языка</td></tr><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Значение</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [LangPackString](/type/LangPackString/)

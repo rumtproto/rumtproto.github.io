@@ -1,18 +1,15 @@
 ---
-title: "InputPeer (тип)"
+title: "InputPeer"
 original: "https://core.telegram.org/type/InputPeer"
 section: ref
 kind: type
+description: "Пир"
 layout: layout.njk
 ---
 
 # InputPeer
 
-*Тип из схемы TL.*
-
-> Peer
-
-## Определение TL
+Пир
 
 ```
 inputPeerEmpty#7f3b18ea = InputPeer;
@@ -24,14 +21,6 @@ inputPeerUserFromMessage#a87b0a1c peer:InputPeer msg_id:int user_id:long = Input
 inputPeerChannelFromMessage#bd2a0840 peer:InputPeer msg_id:int channel_id:long = InputPeer;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputPeerEmpty](/constructor/inputPeerEmpty/) | An empty constructor, no user or chat is defined. |
-| [inputPeerSelf](/constructor/inputPeerSelf/) | Defines the current user. |
-| [inputPeerChat](/constructor/inputPeerChat/) | Defines a chat for further interaction. |
-| [inputPeerUser](/constructor/inputPeerUser/) | Defines a user for further interaction. |
-| [inputPeerChannel](/constructor/inputPeerChannel/) | Defines a channel for further interaction. |
-| [inputPeerUserFromMessage](/constructor/inputPeerUserFromMessage/) | Defines a [min](https://core.telegram.org/api/min) user that was seen in a certain message of a certain chat. |
-| [inputPeerChannelFromMessage](/constructor/inputPeerChannelFromMessage/) | Defines a [min](https://core.telegram.org/api/min) channel that was seen in a certain message of a certain chat. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputPeerEmpty">inputPeerEmpty</a></td><td>Пустой конструктор, не задан ни пользователь, ни чат.</td></tr><tr><td><a href="/constructor/inputPeerSelf">inputPeerSelf</a></td><td>Определяет текущего пользователя.</td></tr><tr><td><a href="/constructor/inputPeerChat">inputPeerChat</a></td><td>Определяет чат для дальнейшего взаимодействия.</td></tr><tr><td><a href="/constructor/inputPeerUser">inputPeerUser</a></td><td>Определяет пользователя для дальнейшего взаимодействия.</td></tr><tr><td><a href="/constructor/inputPeerChannel">inputPeerChannel</a></td><td>Определяет канал для дальнейшего взаимодействия.</td></tr><tr><td><a href="/constructor/inputPeerUserFromMessage">inputPeerUserFromMessage</a></td><td>Определяет <a href="/api/min">min</a>-пользователя, который встретился в определённом сообщении определённого чата.</td></tr><tr><td><a href="/constructor/inputPeerChannelFromMessage">inputPeerChannelFromMessage</a></td><td>Определяет <a href="/api/min">min</a>-канал, который встретился в определённом сообщении определённого чата.</td></tr></tbody></table>

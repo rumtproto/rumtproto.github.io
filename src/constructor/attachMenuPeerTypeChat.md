@@ -1,33 +1,30 @@
 ---
-title: "attachMenuPeerTypeChat (конструктор)"
+title: "attachMenuPeerTypeChat"
 original: "https://core.telegram.org/constructor/attachMenuPeerTypeChat"
 section: ref
 kind: constructor
+description: "Пункт меню вложений бота доступен в группах и супергруппах"
 layout: layout.njk
 ---
 
 # attachMenuPeerTypeChat
 
-*Конструктор из схемы TL.*
-
-> The bot attachment menu entry is available in [groups and supergroups](https://core.telegram.org/api/channel)
-
-## Определение TL
+Пункт меню вложений бота доступен в [группах и супергруппах](/api/channel/)
 
 ```
 attachMenuPeerTypeChat#509113f = AttachMenuPeerType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [AttachMenuPeerType](/type/AttachMenuPeerType/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

@@ -1,39 +1,30 @@
 ---
-title: "updateBotMessageReactions (конструктор)"
+title: "updateBotMessageReactions"
 original: "https://core.telegram.org/constructor/updateBotMessageReactions"
 section: ref
 kind: constructor
+description: "Только для ботов: изменилось число реакций на сообщении с анонимными реакциями."
 layout: layout.njk
 ---
 
 # updateBotMessageReactions
 
-*Конструктор из схемы TL.*
-
-> Bots only: the number of reactions on a message with anonymous reactions has changed.
-
-## Определение TL
+Только для ботов: изменилось число реакций на сообщении с анонимными реакциями.
 
 ```
 updateBotMessageReactions#9cb7759 peer:Peer msg_id:int date:int reactions:Vector<ReactionCount> qts:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | Peer of the reacted-to message. |
-| msg_id | [int](/type/int/) | ID of the reacted-to message. |
-| date | [int](/type/int/) | Date of the change. |
-| reactions | [Vector](https://core.telegram.org/type/Vector%20t)<[ReactionCount](/type/ReactionCount/)> | New reaction counters. |
-| qts | [int](/type/int/) | [QTS](/api/updates/) event sequence identifier |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир сообщения, на которое поставлена реакция.</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения, на которое поставлена реакция.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата изменения.</td></tr><tr><td><strong>reactions</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ReactionCount">ReactionCount</a>&gt;</td><td>Новые счётчики реакций.</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] Идентификатор последовательности событий <a href="/api/updates">QTS</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

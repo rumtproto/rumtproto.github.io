@@ -1,18 +1,15 @@
 ---
-title: "help.CountriesList (тип)"
+title: "help.CountriesList"
 original: "https://core.telegram.org/type/help.CountriesList"
 section: ref
 kind: type
+description: "Название, код ISO, локализованное название и телефонные коды/шаблоны всех доступных стран"
 layout: layout.njk
 ---
 
 # help.CountriesList
 
-*Тип из схемы TL.*
-
-> Name, ISO code, localized name and phone codes/patterns of all available countries
-
-## Определение TL
+Название, код ISO, локализованное название и телефонные коды/шаблоны всех доступных стран
 
 ```
 help.countriesListNotModified#93cc1f32 = help.CountriesList;
@@ -23,15 +20,10 @@ help.countriesList#87d0759e countries:Vector<help.Country> hash:int = help.Count
 help.getCountriesList#735787a8 lang_code:string hash:int = help.CountriesList;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [help.countriesListNotModified](/constructor/help.countriesListNotModified/) | The country list has not changed |
-| [help.countriesList](/constructor/help.countriesList/) | Name, ISO code, localized name and phone codes/patterns of all available countries |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/help.countriesListNotModified">help.countriesListNotModified</a></td><td>Список стран не изменился</td></tr><tr><td><a href="/constructor/help.countriesList">help.countriesList</a></td><td>Название, код ISO, локализованное название и телефонные коды/шаблоны всех доступных стран</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [help.getCountriesList](/method/help.getCountriesList/) | Get name, ISO code, localized name and phone codes/patterns of all available countries |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/help.getCountriesList">help.getCountriesList</a></td><td>Получить название, код ISO, локализованное название и телефонные коды/шаблоны всех доступных стран</td></tr></tbody></table>

@@ -1,18 +1,15 @@
 ---
-title: "messages.getMessagesViews (метод)"
+title: "messages.getMessagesViews"
 original: "https://core.telegram.org/method/messages.getMessagesViews"
 section: ref
 kind: method
+description: "Получить и увеличить счётчик просмотров сообщения, отправленного или пересланного из канала"
 layout: layout.njk
 ---
 
 # messages.getMessagesViews
 
-*Метод из схемы TL.*
-
-> Get and increase the view counter of a message sent or forwarded from a [channel](https://core.telegram.org/api/channel)
-
-## Определение TL
+Получить и увеличить счётчик просмотров сообщения, отправленного или пересланного из [канала](/api/channel/)
 
 ```
 messages.messageViews#b6c4f543 views:Vector<MessageViews> chats:Vector<Chat> users:Vector<User> = messages.MessageViews;
@@ -20,33 +17,22 @@ messages.messageViews#b6c4f543 views:Vector<MessageViews> chats:Vector<Chat> use
 messages.getMessagesViews#5784d3e1 peer:InputPeer id:Vector<int> increment:Bool = messages.MessageViews;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer where the message was found |
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | ID of message |
-| increment | [Bool](/type/Bool/) | Whether to mark the message as viewed and increment the view counter |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в котором было найдено сообщение</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификатор сообщения</td></tr><tr><td><strong>increment</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Отмечать ли сообщение как просмотренное и увеличивать счётчик просмотров</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.MessageViews](/type/messages.MessageViews/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

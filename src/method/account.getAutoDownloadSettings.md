@@ -1,18 +1,15 @@
 ---
-title: "account.getAutoDownloadSettings (метод)"
+title: "account.getAutoDownloadSettings"
 original: "https://core.telegram.org/method/account.getAutoDownloadSettings"
 section: ref
 kind: method
+description: "Получить настройки автозагрузки медиафайлов"
 layout: layout.njk
 ---
 
 # account.getAutoDownloadSettings
 
-*Метод из схемы TL.*
-
-> Get media autodownload settings
-
-## Определение TL
+Получить настройки автозагрузки медиафайлов
 
 ```
 account.autoDownloadSettings#63cacf26 low:AutoDownloadSettings medium:AutoDownloadSettings high:AutoDownloadSettings = account.AutoDownloadSettings;
@@ -20,12 +17,12 @@ account.autoDownloadSettings#63cacf26 low:AutoDownloadSettings medium:AutoDownlo
 account.getAutoDownloadSettings#56da0b3f = account.AutoDownloadSettings;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [account.AutoDownloadSettings](/type/account.AutoDownloadSettings/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

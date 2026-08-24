@@ -1,36 +1,30 @@
 ---
-title: "channelAdminLogEventActionEditTopic (конструктор)"
+title: "channelAdminLogEventActionEditTopic"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionEditTopic"
 section: ref
 kind: constructor
+description: "Тема форума была изменена"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionEditTopic
 
-*Конструктор из схемы TL.*
-
-> A [forum topic](https://core.telegram.org/api/forum#forum-topics) was edited
-
-## Определение TL
+[Тема форума](/api/forum/#forum-topics) была изменена
 
 ```
 channelAdminLogEventActionEditTopic#f06fe208 prev_topic:ForumTopic new_topic:ForumTopic = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| prev_topic | [ForumTopic](/type/ForumTopic/) | Previous topic information |
-| new_topic | [ForumTopic](/type/ForumTopic/) | New topic information |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>prev_topic</strong></td><td style="text-align: center;"><a href="/type/ForumTopic">ForumTopic</a></td><td>Сведения о предыдущей теме</td></tr><tr><td><strong>new_topic</strong></td><td style="text-align: center;"><a href="/type/ForumTopic">ForumTopic</a></td><td>Новые сведения о теме</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

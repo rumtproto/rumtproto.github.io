@@ -1,18 +1,15 @@
 ---
-title: "channels.getChannelRecommendations (метод)"
+title: "channels.getChannelRecommendations"
 original: "https://core.telegram.org/method/channels.getChannelRecommendations"
 section: ref
 kind: method
+description: "Получить список публичных каналов схожей тематики, отобранных по сходству их **аудитории подписчиков**."
 layout: layout.njk
 ---
 
 # channels.getChannelRecommendations
 
-*Метод из схемы TL.*
-
-> Obtain a list of similarly themed public channels, selected based on similarities in their **subscriber bases**.
-
-## Определение TL
+Получить список публичных каналов схожей тематики, отобранных по сходству их **аудитории подписчиков**.
 
 ```
 messages.chats#64ff9fd5 chats:Vector<Chat> = messages.Chats;
@@ -21,23 +18,16 @@ messages.chatsSlice#9cd81144 count:int chats:Vector<Chat> = messages.Chats;
 channels.getChannelRecommendations#25a71742 flags:# channel:flags.0?InputChannel = messages.Chats;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| channel | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputChannel](/type/InputChannel/) | The method will return channels related to the passed channel. If not set, the method will returns channels related to channels the user has joined. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputChannel">InputChannel</a></td><td>Метод вернёт каналы, связанные с переданным каналом <code>channel</code>. Если не задано, метод вернёт каналы, связанные с каналами, на которые подписан пользователь.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Chats](/type/messages.Chats/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr></tbody></table>

@@ -1,18 +1,15 @@
 ---
-title: "Help.SupportName (тип)"
+title: "help.SupportName"
 original: "https://core.telegram.org/type/help.SupportName"
 section: ref
 kind: type
+description: "Получить локализованное имя пользователя службы поддержки"
 layout: layout.njk
 ---
 
 # Help.SupportName
 
-*Тип из схемы TL.*
-
-> Get localized name for support user
-
-## Определение TL
+Получить локализованное имя пользователя службы поддержки
 
 ```
 help.supportName#8c05f1c9 name:string = help.SupportName;
@@ -22,14 +19,10 @@ help.supportName#8c05f1c9 name:string = help.SupportName;
 help.getSupportName#d360e72c = help.SupportName;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [help.supportName](/constructor/help.supportName/) | Localized name for telegram support |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/help.supportName">help.supportName</a></td><td>Локализованное название службы поддержки Telegram</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [help.getSupportName](/method/help.getSupportName/) | Get localized name of the telegram support user |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/help.getSupportName">help.getSupportName</a></td><td>Получить локализованное имя пользователя службы поддержки Telegram</td></tr></tbody></table>

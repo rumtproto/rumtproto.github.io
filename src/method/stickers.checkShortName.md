@@ -1,18 +1,15 @@
 ---
-title: "stickers.checkShortName (метод)"
+title: "stickers.checkShortName"
 original: "https://core.telegram.org/method/stickers.checkShortName"
 section: ref
 kind: method
+description: "Проверить, свободно ли указанное короткое имя"
 layout: layout.njk
 ---
 
 # stickers.checkShortName
 
-*Метод из схемы TL.*
-
-> Check whether the given short name is available
-
-## Определение TL
+Проверить, свободно ли указанное короткое имя
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,21 +18,16 @@ boolTrue#997275b5 = Bool;
 stickers.checkShortName#284b3639 short_name:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| short_name | [string](/type/string/) | Short name |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>short_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:short_name] Краткое имя</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | SHORT_NAME_INVALID | The specified short name is invalid. |
-| 400 | SHORT_NAME_OCCUPIED | The specified short name is already in use. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>SHORT_NAME_INVALID</td><td>Указанное краткое имя недействительно.</td></tr><tr><td>400</td><td>SHORT_NAME_OCCUPIED</td><td>Указанное краткое имя уже используется.</td></tr></tbody></table>

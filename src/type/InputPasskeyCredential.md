@@ -1,33 +1,27 @@
 ---
-title: "InputPasskeyCredential (тип)"
+title: "InputPasskeyCredential"
 original: "https://core.telegram.org/type/InputPasskeyCredential"
 section: ref
 kind: type
+description: "Учётные данные, используемые для регистрации ключа доступа » или для входа с его помощью."
 layout: layout.njk
 ---
 
 # InputPasskeyCredential
 
-*Тип из схемы TL.*
-
-> Credential used to register a [passkey »](https://core.telegram.org/api/passkeys) or to log in with one.
-
-## Определение TL
+Учётные данные, используемые для регистрации [ключа доступа »](/api/passkeys/) или для входа с его помощью.
 
 ```
 inputPasskeyCredentialPublicKey#3c27b78f id:string raw_id:string response:InputPasskeyResponse = InputPasskeyCredential;
 inputPasskeyCredentialFirebasePNV#5b1ccb28 pnv_token:string = InputPasskeyCredential;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputPasskeyCredentialPublicKey](/constructor/inputPasskeyCredentialPublicKey/) | Public-key passkey credential used both for registration and for login, see [creating a passkey »](https://core.telegram.org/api/passkeys#creating-a-passkey) and [logging in with a passkey »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for the full flows. |
-| [inputPasskeyCredentialFirebasePNV](/constructor/inputPasskeyCredentialFirebasePNV/) | Alternative [passkey](https://core.telegram.org/api/passkeys) credential that proves ownership of the account's phone number through a Firebase Phone Number Verification (PNV) token, used on official apps where a full WebAuthn [public-key passkey](/constructor/inputPasskeyCredentialPublicKey/) cannot be created, in a way similar to [Firebase SMS authentication »](/api/auth/). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputPasskeyCredentialPublicKey">inputPasskeyCredentialPublicKey</a></td><td>Учётные данные ключа доступа с открытым ключом, используемые как для регистрации, так и для входа; полное описание процессов см. в разделах <a href="/api/passkeys#creating-a-passkey">создание ключа доступа »</a> и <a href="/api/passkeys#logging-in-with-a-passkey">вход с помощью ключа доступа »</a>.</td></tr><tr><td><a href="/constructor/inputPasskeyCredentialFirebasePNV">inputPasskeyCredentialFirebasePNV</a></td><td>Альтернативные учётные данные <a href="/api/passkeys">ключа доступа</a>, подтверждающие владение номером телефона аккаунта с помощью токена Firebase Phone Number Verification (PNV); используются в официальных приложениях, где невозможно создать полноценный <a href="/constructor/inputPasskeyCredentialPublicKey">ключ доступа с открытым ключом</a> по стандарту WebAuthn, аналогично <a href="/api/auth">аутентификации по SMS через Firebase »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

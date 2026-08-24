@@ -1,18 +1,15 @@
 ---
-title: "contacts.deleteByPhones (метод)"
+title: "contacts.deleteByPhones"
 original: "https://core.telegram.org/method/contacts.deleteByPhones"
 section: ref
 kind: method
+description: "Удалить контакты по номеру телефона"
 layout: layout.njk
 ---
 
 # contacts.deleteByPhones
 
-*Метод из схемы TL.*
-
-> Delete contacts by phone number
-
-## Определение TL
+Удалить контакты по номеру телефона
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,14 +18,12 @@ boolTrue#997275b5 = Bool;
 contacts.deleteByPhones#1013fd9e phones:Vector<string> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phones | [Vector](https://core.telegram.org/type/Vector%20t)<[string](/type/string/)> | Phone numbers |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phones</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/string">string</a>&gt;</td><td>Номера телефонов</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

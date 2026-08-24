@@ -1,44 +1,38 @@
 ---
-title: "userStatusLastMonth (конструктор)"
+title: "userStatusLastMonth"
 original: "https://core.telegram.org/constructor/userStatusLastMonth"
 section: ref
 kind: constructor
+description: "Статус в сети: последний раз в сети в прошлом месяце"
 layout: layout.njk
 ---
 
 # userStatusLastMonth
 
-*Конструктор из схемы TL.*
-
-> Online status: last seen last month
-
-## Определение TL
+Статус в сети: последний раз в сети в прошлом месяце
 
 ```
 userStatusLastMonth#65899777 flags:# by_me:flags.0?true = UserStatus;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| by_me | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, the exact user status of this user is actually available to us, but to view it we must first purchase a [Premium](https://core.telegram.org/api/premium) subscription, or allow this user to see our exact last online status. See [here »](/constructor/privacyKeyStatusTimestamp/) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>by_me</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, точный статус этого пользователя на самом деле нам доступен, но чтобы его увидеть, нужно сначала приобрести подписку <a href="/api/premium">Premium</a> либо разрешить этому пользователю видеть <em>наше</em> точное время последнего посещения. Подробнее <a href="/constructor/privacyKeyStatusTimestamp">см. здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [UserStatus](/type/UserStatus/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
 #### [privacyKeyStatusTimestamp](/constructor/privacyKeyStatusTimestamp/)
 
-Whether we can see the last online timestamp of this user.
+Можем ли мы видеть время последнего пребывания этого пользователя в сети.
 
-Note that if _we_ decide to hide our exact last online timestamp to someone (i.e., users A, B, C, or all users) **and** we do not have a [Premium](https://core.telegram.org/api/premium) subscription, we won't be able to see the exact last online timestamp of those users (A, B, C, or all users), even if those users _do_ share it with us.
+Учтите: если _мы_ решили скрыть от кого-либо точное время последнего пребывания в сети (то есть от пользователей A, B, C или от всех пользователей) **и** у нас нет подписки [Premium](/api/premium/), мы не сможем видеть точное время последнего пребывания в сети этих пользователей (A, B, C или всех пользователей), даже если они _действительно_ показывают его нам.
 
-If those users _do_ share their exact online status with us, but we can't see it due to the reason mentioned above, the `by_me` flag of [userStatusRecently](/constructor/userStatusRecently/), [userStatusLastWeek](/constructor/userStatusLastWeek/), [userStatusLastMonth](/constructor/userStatusLastMonth/) will be set.
+Если эти пользователи _всё же_ показывают нам точное время последнего пребывания в сети, но мы не видим его по указанной выше причине, будет установлен флаг `by_me` в конструкторах [userStatusRecently](/constructor/userStatusRecently/), [userStatusLastWeek](/constructor/userStatusLastWeek/), [userStatusLastMonth](/constructor/userStatusLastMonth/).

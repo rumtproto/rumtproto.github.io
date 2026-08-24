@@ -1,18 +1,15 @@
 ---
-title: "upload.saveFilePart (метод)"
+title: "upload.saveFilePart"
 original: "https://core.telegram.org/method/upload.saveFilePart"
 section: ref
 kind: method
+description: "Сохраняет часть файла для дальнейшей передачи в один из методов."
 layout: layout.njk
 ---
 
 # upload.saveFilePart
 
-*Метод из схемы TL.*
-
-> Saves a part of file for further sending to one of the methods.
-
-## Определение TL
+Сохраняет часть файла для дальнейшей передачи в один из методов.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,24 +18,16 @@ boolTrue#997275b5 = Bool;
 upload.saveFilePart#b304a621 file_id:long file_part:int bytes:bytes = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| file_id | [long](/type/long/) | Random file identifier created by the client |
-| file_part | [int](/type/int/) | Numerical order of a part |
-| bytes | [bytes](/type/bytes/) | Binary data, content of a part |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>file_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Случайный идентификатор файла, созданный клиентом</td></tr><tr><td><strong>file_part</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Порядковый номер части</td></tr><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Двоичные данные, содержимое части</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | FILE_PART_EMPTY | The provided file part is empty. |
-| 400 | FILE_PART_INVALID | The file part number is invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>FILE_PART_EMPTY</td><td>Указанная часть файла пуста.</td></tr><tr><td>400</td><td>FILE_PART_INVALID</td><td>Недействительный номер части файла.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr></tbody></table>

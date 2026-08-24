@@ -1,40 +1,24 @@
 ---
-title: "langPackLanguage (конструктор)"
+title: "langPackLanguage"
 original: "https://core.telegram.org/constructor/langPackLanguage"
 section: ref
 kind: constructor
+description: "Определяет пакет локализации"
 layout: layout.njk
 ---
 
 # langPackLanguage
 
-*Конструктор из схемы TL.*
-
-> Identifies a localization pack
-
-## Определение TL
+Определяет пакет локализации
 
 ```
 langPackLanguage#eeca5ce3 flags:# official:flags.0?true rtl:flags.2?true beta:flags.3?true name:string native_name:string lang_code:string base_lang_code:flags.1?string plural_code:string strings_count:int translated_count:int translations_url:string = LangPackLanguage;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| official | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the language pack is official |
-| rtl | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Is this a localization pack for an RTL language |
-| beta | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Is this a beta localization pack? |
-| name | [string](/type/string/) | Language name |
-| native_name | [string](/type/string/) | Language name in the language itself |
-| lang_code | [string](/type/string/) | Language code (pack identifier) |
-| base_lang_code | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Identifier of a base language pack; may be empty. If a string is missed in the language pack, then it should be fetched from base language pack. Unsupported in custom language packs |
-| plural_code | [string](/type/string/) | A language code to be used to apply plural forms. See [https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html](https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html) for more info |
-| strings_count | [int](/type/int/) | Total number of non-deleted strings from the language pack |
-| translated_count | [int](/type/int/) | Total number of translated strings from the language pack |
-| translations_url | [string](/type/string/) | Link to language translation interface; empty for custom local language packs |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>official</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Является ли языковой пакет официальным</td></tr><tr><td><strong>rtl</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Является ли это пакетом локализации для языка с письмом справа налево</td></tr><tr><td><strong>beta</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Является ли этот пакет локализации бета-версией?</td></tr><tr><td><strong>name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название языка</td></tr><tr><td><strong>native_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название языка на самом этом языке</td></tr><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код языка (идентификатор пакета)</td></tr><tr><td><strong>base_lang_code</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Идентификатор базового языкового пакета; может быть пустым. Если строка отсутствует в языковом пакете, её следует получить из базового языкового пакета. Не поддерживается в пользовательских языковых пакетах</td></tr><tr><td><strong>plural_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код языка, который следует использовать для применения форм множественного числа. Подробнее см. <a href="https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html">https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html</a></td></tr><tr><td><strong>strings_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число неудалённых строк языкового пакета</td></tr><tr><td><strong>translated_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число переведённых строк языкового пакета</td></tr><tr><td><strong>translations_url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Ссылка на интерфейс перевода языка; пуста для пользовательских локальных языковых пакетов</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [LangPackLanguage](/type/LangPackLanguage/)

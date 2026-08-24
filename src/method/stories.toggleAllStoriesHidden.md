@@ -1,18 +1,15 @@
 ---
-title: "stories.toggleAllStoriesHidden (метод)"
+title: "stories.toggleAllStoriesHidden"
 original: "https://core.telegram.org/method/stories.toggleAllStoriesHidden"
 section: ref
 kind: method
+description: "Скрыть активные истории указанного пира, чтобы они не отображались на панели действий на главном экране."
 layout: layout.njk
 ---
 
 # stories.toggleAllStoriesHidden
 
-*Метод из схемы TL.*
-
-> Hide the active stories of a specific peer, preventing them from being displayed on the action bar on the homescreen.
-
-## Определение TL
+Скрыть активные истории указанного пира, чтобы они не отображались на панели действий на главном экране.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,14 +18,12 @@ boolTrue#997275b5 = Bool;
 stories.toggleAllStoriesHidden#7c2557c4 hidden:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hidden | [Bool](/type/Bool/) | Whether to hide or unhide all active stories of the peer |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hidden</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Скрыть или показать все активные истории пира</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

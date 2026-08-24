@@ -1,18 +1,15 @@
 ---
-title: "InputChatTheme (тип)"
+title: "InputChatTheme"
 original: "https://core.telegram.org/type/InputChatTheme"
 section: ref
 kind: type
+description: "Задаёт тему оформления чата »."
 layout: layout.njk
 ---
 
 # InputChatTheme
 
-*Тип из схемы TL.*
-
-> Specifies a [chat theme »](https://core.telegram.org/api/themes#chat-themes).
-
-## Определение TL
+Задаёт [тему оформления чата »](/api/themes/#chat-themes).
 
 ```
 inputChatThemeEmpty#83268483 = InputChatTheme;
@@ -20,16 +17,12 @@ inputChatTheme#c93de95c emoticon:string = InputChatTheme;
 inputChatThemeUniqueGift#87e5dfe4 slug:string = InputChatTheme;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputChatThemeEmpty](/constructor/inputChatThemeEmpty/) | Remove any currently configured theme. |
-| [inputChatTheme](/constructor/inputChatTheme/) | Set an emoji-based chat theme, returned by [account.getChatThemes](/method/account.getChatThemes/). |
-| [inputChatThemeUniqueGift](/constructor/inputChatThemeUniqueGift/) | Set a theme based on an owned or [hosted collectible gift »](https://core.telegram.org/api/gifts#hosted-collectible-gifts), returned by [account.getUniqueGiftChatThemes](/method/account.getUniqueGiftChatThemes/). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputChatThemeEmpty">inputChatThemeEmpty</a></td><td>Удалить любую заданную в данный момент тему оформления.</td></tr><tr><td><a href="/constructor/inputChatTheme">inputChatTheme</a></td><td>Установить тему оформления чата на основе эмодзи, возвращаемую методом <a href="/method/account.getChatThemes">account.getChatThemes</a>.</td></tr><tr><td><a href="/constructor/inputChatThemeUniqueGift">inputChatThemeUniqueGift</a></td><td>Установить тему оформления на основе принадлежащего вам или <a href="/api/gifts#hosted-collectible-gifts">размещённого коллекционного подарка »</a>, возвращаемого методом <a href="/method/account.getUniqueGiftChatThemes">account.getUniqueGiftChatThemes</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram themes](https://core.telegram.org/api/themes)
+#### [Темы оформления Telegram](/api/themes/)
 
-Telegram apps support generating, sharing and synchronizing app themes.
+Приложения Telegram умеют создавать, отправлять и синхронизировать темы оформления.

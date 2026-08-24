@@ -1,18 +1,15 @@
 ---
-title: "stats.getStoryStats (метод)"
+title: "stats.getStoryStats"
 original: "https://core.telegram.org/method/stats.getStoryStats"
 section: ref
 kind: method
+description: "Получить статистику по определённой истории."
 layout: layout.njk
 ---
 
 # stats.getStoryStats
 
-*Метод из схемы TL.*
-
-> Get [statistics](https://core.telegram.org/api/stats) for a certain [story](https://core.telegram.org/api/stories).
-
-## Определение TL
+Получить [статистику](/api/stats/) по определённой [истории](/api/stories/).
 
 ```
 stats.storyStats#50cd067c views_graph:StatsGraph reactions_by_emotion_graph:StatsGraph = stats.StoryStats;
@@ -20,35 +17,26 @@ stats.storyStats#50cd067c views_graph:StatsGraph reactions_by_emotion_graph:Stat
 stats.getStoryStats#374fef40 flags:# dark:flags.0?true peer:InputPeer id:int = stats.StoryStats;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| dark | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to enable the dark theme for graph colors |
-| peer | [InputPeer](/type/InputPeer/) | The peer that posted the story |
-| id | [int](/type/int/) | Story ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>dark</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Использовать ли тёмную тему для цветов графика</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, опубликовавший историю</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор истории</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [stats.StoryStats](/type/stats.StoryStats/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | STORIES_NEVER_CREATED | This peer hasn't ever posted any stories. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>STORIES_NEVER_CREATED</td><td>Этот пир ни разу не публиковал историй.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channel statistics](https://core.telegram.org/api/stats)
+#### [Статистика каналов](/api/stats/)
 
-Telegram offers detailed channel statistics for channels and supergroups.
+Telegram предоставляет подробную статистику для каналов и супергрупп.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

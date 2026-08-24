@@ -1,18 +1,15 @@
 ---
-title: "messages.report (метод)"
+title: "messages.report"
 original: "https://core.telegram.org/method/messages.report"
 section: ref
 kind: method
+description: "Пожаловаться на сообщение в чате за нарушение условий использования Telegram"
 layout: layout.njk
 ---
 
 # messages.report
 
-*Метод из схемы TL.*
-
-> Report a message in a chat for violation of telegram's Terms of Service
-
-## Определение TL
+Пожаловаться на сообщение в чате за нарушение условий использования Telegram
 
 ```
 reportResultChooseOption#f0e4e0b6 title:string options:Vector<MessageReportOption> = ReportResult;
@@ -22,27 +19,16 @@ reportResultReported#8db33c4b = ReportResult;
 messages.report#fc78af9b peer:InputPeer id:Vector<int> option:bytes message:string = ReportResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer |
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | IDs of messages to report |
-| option | [bytes](/type/bytes/) | Menu option, intially empty |
-| message | [string](/type/string/) | Comment for report moderation |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы сообщений, на которые подаётся жалоба</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Пункт меню, изначально пустой</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Комментарий для модерации жалобы</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [ReportResult](/type/ReportResult/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | MESSAGE_REQUIRED | A non-empty list of IDs must be passed to id. |
-| 400 | OPTION_INVALID | Invalid option selected. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>MESSAGE_REQUIRED</td><td>В <code>id</code> должен быть передан непустой список идентификаторов.</td></tr><tr><td>400</td><td>OPTION_INVALID</td><td>Выбран недопустимый вариант.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>

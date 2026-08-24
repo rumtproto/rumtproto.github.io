@@ -1,39 +1,30 @@
 ---
-title: "updates.state (конструктор)"
+title: "updates.state"
 original: "https://core.telegram.org/constructor/updates.state"
 section: ref
 kind: constructor
+description: "Состояние обновлений."
 layout: layout.njk
 ---
 
 # updates.state
 
-*Конструктор из схемы TL.*
-
-> Updates state.
-
-## Определение TL
+Состояние обновлений.
 
 ```
 updates.state#a56c2a3e pts:int qts:int date:int seq:int unread_count:int = updates.State;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| pts | [int](/type/int/) | Number of events occurred in a text box |
-| qts | [int](/type/int/) | Position in a sequence of updates in secret chats. For further details refer to article [secret chats](/api/end-to-end/) |
-| date | [int](/type/int/) | Date of condition |
-| seq | [int](/type/int/) | Number of sent updates |
-| unread_count | [int](/type/int/) | Number of unread messages |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] Количество событий, произошедших в текстовом поле</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] Позиция в последовательности обновлений в секретных чатах. Подробнее см. в статье о <a href="/api/end-to-end">секретных чатах</a></td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата состояния</td></tr><tr><td><strong>seq</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество отправленных обновлений</td></tr><tr><td><strong>unread_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество непрочитанных сообщений</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [updates.State](/type/updates.State/)
 
-## Related pages
+### Связанные страницы
 
-#### [End-to-End Encryption, Secret Chats](/api/end-to-end/)
+#### [Сквозное шифрование, секретные чаты](/api/end-to-end/)
 
-New feature for end-to-end-encrypted messaging.
+Новая возможность для обмена сообщениями со сквозным шифрованием.

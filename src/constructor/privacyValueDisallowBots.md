@@ -1,27 +1,24 @@
 ---
-title: "privacyValueDisallowBots (конструктор)"
+title: "privacyValueDisallowBots"
 original: "https://core.telegram.org/constructor/privacyValueDisallowBots"
 section: ref
 kind: constructor
+description: "Запретить ботам и мини-приложениям"
 layout: layout.njk
 ---
 
 # privacyValueDisallowBots
 
-*Конструктор из схемы TL.*
-
-> Disallow bots and mini apps
-
-## Определение TL
+Запретить ботам и мини-приложениям
 
 ```
 privacyValueDisallowBots#f6a5f82f = PrivacyRule;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyRule](/type/PrivacyRule/)

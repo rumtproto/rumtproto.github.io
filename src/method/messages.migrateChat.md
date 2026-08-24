@@ -1,18 +1,15 @@
 ---
-title: "messages.migrateChat (метод)"
+title: "messages.migrateChat"
 original: "https://core.telegram.org/method/messages.migrateChat"
 section: ref
 kind: method
+description: "Превратить обычную группу в супергруппу"
 layout: layout.njk
 ---
 
 # messages.migrateChat
 
-*Метод из схемы TL.*
-
-> Turn a [basic group into a supergroup](https://core.telegram.org/api/channel#migration)
-
-## Определение TL
+Превратить [обычную группу в супергруппу](/api/channel/#migration)
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,30 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.migrateChat#a2875319 chat_id:long = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chat_id | [long](/type/long/) | [Basic group](https://core.telegram.org/api/channel#basic-groups) to migrate |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/channel#basic-groups">Обычная группа</a>, которую нужно перенести</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNELS_TOO_MUCH | You have joined too many channels/supergroups. |
-| 403 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 500 | CHAT_INVALID | Invalid chat. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNELS_TOO_MUCH</td><td>Вы состоите в слишком большом числе каналов и супергрупп.</td></tr><tr><td>403</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>500</td><td>CHAT_INVALID</td><td>Недействительный чат.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

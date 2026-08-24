@@ -1,18 +1,15 @@
 ---
-title: "messages.AffectedFoundMessages (тип)"
+title: "messages.AffectedFoundMessages"
 original: "https://core.telegram.org/type/messages.AffectedFoundMessages"
 section: ref
 kind: type
+description: "Найденные сообщения, затронутые изменениями"
 layout: layout.njk
 ---
 
 # messages.AffectedFoundMessages
 
-*Тип из схемы TL.*
-
-> Messages found and affected by changes
-
-## Определение TL
+Найденные сообщения, затронутые изменениями
 
 ```
 messages.affectedFoundMessages#ef8d3e6c pts:int pts_count:int offset:int messages:Vector<int> = messages.AffectedFoundMessages;
@@ -22,14 +19,10 @@ messages.affectedFoundMessages#ef8d3e6c pts:int pts_count:int offset:int message
 messages.deletePhoneCallHistory#f9cbe409 flags:# revoke:flags.0?true = messages.AffectedFoundMessages;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.affectedFoundMessages](/constructor/messages.affectedFoundMessages/) | Messages found and affected by changes |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.affectedFoundMessages">messages.affectedFoundMessages</a></td><td>Найденные сообщения, затронутые изменениями</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.deletePhoneCallHistory](/method/messages.deletePhoneCallHistory/) | Delete the entire phone call history. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.deletePhoneCallHistory">messages.deletePhoneCallHistory</a></td><td>Удалить всю историю звонков.</td></tr></tbody></table>

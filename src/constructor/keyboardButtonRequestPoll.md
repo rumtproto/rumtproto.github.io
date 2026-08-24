@@ -1,48 +1,42 @@
 ---
-title: "keyboardButtonRequestPoll (конструктор)"
+title: "keyboardButtonRequestPoll"
 original: "https://core.telegram.org/constructor/keyboardButtonRequestPoll"
 section: ref
 kind: constructor
+description: "Кнопка для запроса опроса у пользователя"
 layout: layout.njk
 ---
 
 # keyboardButtonRequestPoll
 
-*Конструктор из схемы TL.*
+Кнопка для запроса опроса у пользователя
 
-> Button to request a poll from the user
-> Available only in private chats, in [reply keyboards](/constructor/replyKeyboardMarkup/).
-> When pressed, clients prompt the user to create and send a [poll](https://core.telegram.org/api/poll), replying to the message that attached the [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/). If `quiz` is set, the prompt must create a quiz poll.
+Доступно только в личных чатах, в [клавиатурах ответа](/constructor/replyKeyboardMarkup/).
 
-## Определение TL
+При нажатии клиенты предлагают пользователю создать и отправить [опрос](/api/poll/), отвечая на сообщение, к которому был приложен [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/). Если установлено `quiz`, диалог должен создавать викторину.
 
 ```
 keyboardButtonRequestPoll#7a11d782 flags:# style:flags.10?KeyboardButtonStyle quiz:flags.0?Bool text:string = KeyboardButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| style | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[KeyboardButtonStyle](/type/KeyboardButtonStyle/) | Button style, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info on button styles. |
-| quiz | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Bool](/type/Bool/) | If set, only quiz polls can be sent |
-| text | [string](/type/string/) | Button text |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>style</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/KeyboardButtonStyle">KeyboardButtonStyle</a></td><td>Стиль кнопки; подробнее о стилях кнопок см. <a href="/api/bots/buttons#button-styles">здесь »</a>.</td></tr><tr><td><strong>quiz</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Bool">Bool</a></td><td>Если установлено, можно отправлять только викторины</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст кнопки</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [KeyboardButton](/type/KeyboardButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.
 
 #### [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/)
 
-Represents a reply keyboard
+Представляет клавиатуру ответа
 
-#### [Polls and quizzes](https://core.telegram.org/api/poll)
+#### [Опросы и викторины](/api/poll/)
 
-Telegram allows sending polls and quizzes, that can be voted on by thousands, if not millions of users in chats and channels.
+Telegram позволяет отправлять опросы и викторины, в которых могут проголосовать тысячи, если не миллионы пользователей в чатах и каналах.

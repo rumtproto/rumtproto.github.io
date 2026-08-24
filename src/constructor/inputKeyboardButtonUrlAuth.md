@@ -1,58 +1,48 @@
 ---
-title: "inputKeyboardButtonUrlAuth (конструктор)"
+title: "inputKeyboardButtonUrlAuth"
 original: "https://core.telegram.org/constructor/inputKeyboardButtonUrlAuth"
 section: ref
 kind: constructor
+description: "Кнопка для запроса авторизации пользователя по URL через Seamless Telegram Login."
 layout: layout.njk
 ---
 
 # inputKeyboardButtonUrlAuth
 
-*Конструктор из схемы TL.*
+Кнопка для запроса [авторизации](/method/messages.acceptUrlAuth/) пользователя по URL через [Seamless Telegram Login](https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots).
 
-> Button to request a user to [authorize](/method/messages.acceptUrlAuth/) via URL using [Seamless Telegram Login](https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots).
-> Use this constructor to send a [keyboardButtonUrlAuth](/constructor/keyboardButtonUrlAuth/) button in an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards).
-
-## Определение TL
+Используйте этот конструктор, чтобы отправить кнопку [keyboardButtonUrlAuth](/constructor/keyboardButtonUrlAuth/) в [инлайн-клавиатуре](https://core.telegram.org/bots/features#inline-keyboards).
 
 ```
 inputKeyboardButtonUrlAuth#68013e72 flags:# request_write_access:flags.0?true style:flags.10?KeyboardButtonStyle text:string fwd_text:flags.1?string url:string bot:InputUser = KeyboardButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| request_write_access | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Set this flag to request the permission for your bot to send messages to the user. |
-| style | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[KeyboardButtonStyle](/type/KeyboardButtonStyle/) | Button style, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info on button styles. |
-| text | [string](/type/string/) | Button text |
-| fwd_text | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | New text of the button in forwarded messages. |
-| url | [string](/type/string/) | An HTTP URL to be opened with user authorization data added to the query string when the button is pressed. If the user refuses to provide authorization data, the original URL without information about the user will be opened. The data added is the same as described in [Receiving authorization data](https://core.telegram.org/widgets/login#receiving-authorization-data). NOTE: You must always check the hash of the received data to verify the authentication and the integrity of the data as described in [Checking authorization](https://core.telegram.org/widgets/login#checking-authorization). |
-| bot | [InputUser](/type/InputUser/) | Username of a bot, which will be used for user authorization. See [Setting up a bot](https://core.telegram.org/widgets/login#setting-up-a-bot) for more details. If not specified, the current bot's username will be assumed. The url's domain must be the same as the domain linked with the bot. See [Linking your domain to the bot](https://core.telegram.org/widgets/login#linking-your-domain-to-the-bot) for more details. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>request_write_access</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Установите этот флаг, чтобы запросить для вашего бота разрешение отправлять пользователю сообщения.</td></tr><tr><td><strong>style</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/KeyboardButtonStyle">KeyboardButtonStyle</a></td><td>Стиль кнопки; подробнее о стилях кнопок см. <a href="/api/bots/buttons#button-styles">здесь »</a>.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст кнопки</td></tr><tr><td><strong>fwd_text</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Новый текст кнопки в пересылаемых сообщениях.</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>HTTP-ссылка, которая будет открыта при нажатии кнопки с добавлением данных авторизации пользователя в строку запроса. Если пользователь откажется предоставить данные авторизации, будет открыта исходная ссылка без сведений о пользователе. Добавляемые данные те же, что описаны в разделе <a href="/widgets/login#receiving-authorization-data">Получение данных авторизации</a>.<br>ПРИМЕЧАНИЕ: необходимо всегда проверять хеш полученных данных, чтобы убедиться в подлинности и целостности данных, как описано в разделе <a href="/widgets/login#checking-authorization">Проверка авторизации</a>.</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Имя пользователя бота, который будет использован для авторизации пользователя. Подробнее см. <a href="/widgets/login#setting-up-a-bot">Настройка бота</a>. Если не указано, подразумевается имя пользователя текущего бота. Домен в URL должен совпадать с доменом, привязанным к боту. Подробнее см. <a href="/widgets/login#linking-your-domain-to-the-bot">Привязка домена к боту</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [KeyboardButton](/type/KeyboardButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.
 
-#### [Telegram Login Widget](https://core.telegram.org/widgets/login)
+#### [Виджет входа через Telegram](https://core.telegram.org/widgets/login)
 
 #### [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/)
 
-Use this to accept a Seamless Telegram Login authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
+Используйте этот метод, чтобы подтвердить запрос авторизации Seamless Telegram Login; подробнее [см. здесь »](/api/url-authorization/)
 
 #### [keyboardButtonUrlAuth](/constructor/keyboardButtonUrlAuth/)
 
-Button to request a user to authorize via URL using [Seamless Telegram Login](https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots). When the user clicks on such a button, [messages.requestUrlAuth](/method/messages.requestUrlAuth/) should be called, providing the `button_id` and the ID of the container message. The returned [urlAuthResultRequest](/constructor/urlAuthResultRequest/) object will contain more details about the authorization request (`request_write_access` if the bot would like to send messages to the user along with the username of the bot which will be used for user authorization). Finally, the user can choose to call [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/) to get a [urlAuthResultAccepted](/constructor/urlAuthResultAccepted/) with the URL to open instead of the `url` of this constructor, or a [urlAuthResultDefault](/constructor/urlAuthResultDefault/), in which case the `url` of this constructor must be opened, instead. If the user refuses the authorization request but still wants to open the link, the `url` of this constructor must be used.
+Кнопка для запроса авторизации пользователя по URL через [Seamless Telegram Login](https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots). Когда пользователь нажимает такую кнопку, следует вызвать [messages.requestUrlAuth](/method/messages.requestUrlAuth/), передав `button_id` и идентификатор сообщения-контейнера. Возвращённый объект [urlAuthResultRequest](/constructor/urlAuthResultRequest/) будет содержать более подробные сведения о запросе авторизации (`request_write_access`, если бот хочет отправлять пользователю сообщения, а также имя пользователя бота, который будет использован для авторизации). Наконец, пользователь может вызвать [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/) и получить [urlAuthResultAccepted](/constructor/urlAuthResultAccepted/) с URL, который следует открыть вместо поля `url` этого конструктора, либо [urlAuthResultDefault](/constructor/urlAuthResultDefault/) — в этом случае необходимо открыть именно `url` этого конструктора. Если пользователь отклоняет запрос авторизации, но всё же хочет открыть ссылку, необходимо использовать `url` этого конструктора.
 
-Available only in [inline keyboards](/constructor/replyInlineMarkup/).
+Доступно только в [инлайн-клавиатурах](/constructor/replyInlineMarkup/).
 
-#### [Telegram Bot Features](https://core.telegram.org/bots/features)
+#### [Возможности ботов Telegram](https://core.telegram.org/bots/features)
 
-This page describes individual bot elements in greater detail. For a general overview of bots, read the introduction to bots first.
+На этой странице подробно описаны отдельные элементы ботов. Если нужен общий обзор ботов, сначала прочитайте введение.

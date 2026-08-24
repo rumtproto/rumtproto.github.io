@@ -1,31 +1,24 @@
 ---
-title: "messages.webPage (конструктор)"
+title: "messages.webPage"
 original: "https://core.telegram.org/constructor/messages.webPage"
 section: ref
 kind: constructor
+description: "Представляет веб-страницу Instant View."
 layout: layout.njk
 ---
 
 # messages.webPage
 
-*Конструктор из схемы TL.*
-
-> Represents an Instant View webpage.
-
-## Определение TL
+Представляет веб-страницу Instant View.
 
 ```
 messages.webPage#fd5e12bd webpage:WebPage chats:Vector<Chat> users:Vector<User> = messages.WebPage;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| webpage | [WebPage](/type/WebPage/) | The instant view webpage. |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Chats mentioned in the webpage. |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users mentioned in the webpage. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>webpage</strong></td><td style="text-align: center;"><a href="/type/WebPage">WebPage</a></td><td>Веб-страница Instant View.</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Чаты, упомянутые на веб-странице.</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи, упомянутые на веб-странице.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.WebPage](/type/messages.WebPage/)

@@ -1,36 +1,30 @@
 ---
-title: "channels.sponsoredMessageReportResultChooseOption (конструктор)"
+title: "channels.sponsoredMessageReportResultChooseOption"
 original: "https://core.telegram.org/constructor/channels.sponsoredMessageReportResultChooseOption"
 section: ref
 kind: constructor
+description: "Пользователь должен выбрать вариант жалобы из локализованных вариантов, доступных в options, после чего необходимо повторно вызвать messages.reportSponsoredMessage, передав поле…"
 layout: layout.njk
 ---
 
 # channels.sponsoredMessageReportResultChooseOption
 
-*Конструктор из схемы TL.*
-
-> The user must choose a report option from the localized options available in `options`, and after selection, [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/) must be invoked again, passing the option's `option` field to the `option` param of the method.
-
-## Определение TL
+Пользователь должен выбрать вариант жалобы из локализованных вариантов, доступных в `options`, после чего необходимо повторно вызвать [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/), передав поле `option` выбранного варианта в параметр `option` метода.
 
 ```
 channels.sponsoredMessageReportResultChooseOption#846f9e42 title:string options:Vector<SponsoredMessageReportOption> = channels.SponsoredMessageReportResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| title | [string](/type/string/) | Title of the option selection popup. |
-| options | [Vector](https://core.telegram.org/type/Vector%20t)<[SponsoredMessageReportOption](/type/SponsoredMessageReportOption/)> | Localized list of options. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Заголовок всплывающего окна выбора варианта.</td></tr><tr><td><strong>options</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SponsoredMessageReportOption">SponsoredMessageReportOption</a>&gt;</td><td>Локализованный список вариантов.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [channels.SponsoredMessageReportResult](/type/channels.SponsoredMessageReportResult/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/)
 
-Report a [sponsored message »](https://core.telegram.org/api/sponsored-messages), see [here »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages) for more info on the full flow.
+Пожаловаться на [рекламное сообщение »](/api/sponsored-messages/); подробнее обо всём процессе см. [здесь »](/api/sponsored-messages/#reporting-sponsored-messages).

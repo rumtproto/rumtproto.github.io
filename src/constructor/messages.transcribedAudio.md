@@ -1,52 +1,42 @@
 ---
-title: "messages.transcribedAudio (конструктор)"
+title: "messages.transcribedAudio"
 original: "https://core.telegram.org/constructor/messages.transcribedAudio"
 section: ref
 kind: constructor
+description: "Расшифрованный текст голосового сообщения »"
 layout: layout.njk
 ---
 
 # messages.transcribedAudio
 
-*Конструктор из схемы TL.*
-
-> [Transcribed text from a voice message »](https://core.telegram.org/api/transcribe)
-
-## Определение TL
+[Расшифрованный текст голосового сообщения »](/api/transcribe/)
 
 ```
 messages.transcribedAudio#cfb9d957 flags:# pending:flags.0?true transcription_id:long text:string trial_remains_num:flags.1?int trial_remains_until_date:flags.1?int = messages.TranscribedAudio;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| pending | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the transcription is partial because audio transcription is still in progress, if set the user may receive further [updateTranscribedAudio](/constructor/updateTranscribedAudio/) updates with the updated transcription. |
-| transcription_id | [long](/type/long/) | Transcription ID |
-| text | [string](/type/string/) | Transcripted text |
-| trial_remains_num | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | For non-[Premium](https://core.telegram.org/api/premium) users, this flag will be set, indicating the remaining transcriptions in the free trial period. |
-| trial_remains_until_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | For non-[Premium](https://core.telegram.org/api/premium) users, this flag will be set, indicating the date when the trial_remains_num counter will be reset to the maximum value of [transcribe_audio_trial_weekly_number](https://core.telegram.org/api/config#transcribe-audio-trial-weekly-number). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>pending</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Является ли расшифровка частичной из-за того, что расшифровка аудио ещё выполняется; если установлено, пользователь может получить дальнейшие обновления <a href="/constructor/updateTranscribedAudio">updateTranscribedAudio</a> с обновлённой расшифровкой.</td></tr><tr><td><strong>transcription_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор расшифровки</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Расшифрованный текст</td></tr><tr><td><strong>trial_remains_num</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Для пользователей без <a href="/api/premium">Premium</a> этот флаг будет установлен и указывать число оставшихся расшифровок в пробном периоде.</td></tr><tr><td><strong>trial_remains_until_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Для пользователей без <a href="/api/premium">Premium</a> этот флаг будет установлен и указывать дату, когда счётчик <code>trial_remains_num</code> будет сброшен до максимального значения <a href="/api/config#transcribe-audio-trial-weekly-number">transcribe_audio_trial_weekly_number</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.TranscribedAudio](/type/messages.TranscribedAudio/)
 
-## Related pages
+### Связанные страницы
 
 #### [updateTranscribedAudio](/constructor/updateTranscribedAudio/)
 
-A pending [voice message transcription »](https://core.telegram.org/api/transcribe) initiated with [messages.transcribeAudio](/method/messages.transcribeAudio/) was updated.
+Обновилась ожидающая [расшифровка голосового сообщения »](/api/transcribe/), запущенная методом [messages.transcribeAudio](/method/messages.transcribeAudio/).
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Voice message transcription](https://core.telegram.org/api/transcribe)
+#### [Расшифровка голосовых сообщений](/api/transcribe/)
 
-How to transcribe voice messages.
+Как расшифровывать голосовые сообщения.

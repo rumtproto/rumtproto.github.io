@@ -1,18 +1,15 @@
 ---
-title: "messages.getEmojiStickers (метод)"
+title: "messages.getEmojiStickers"
 original: "https://core.telegram.org/method/messages.getEmojiStickers"
 section: ref
 kind: method
+description: "Получает список установленных на данный момент наборов стикеров с пользовательскими эмодзи."
 layout: layout.njk
 ---
 
 # messages.getEmojiStickers
 
-*Метод из схемы TL.*
-
-> Gets the list of currently installed [custom emoji stickersets](https://core.telegram.org/api/custom-emoji).
-
-## Определение TL
+Получает список установленных на данный момент [наборов стикеров с пользовательскими эмодзи](/api/custom-emoji/).
 
 ```
 messages.allStickersNotModified#e86602c3 = messages.AllStickers;
@@ -21,24 +18,22 @@ messages.allStickers#cdbbcebb hash:long sets:Vector<StickerSet> = messages.AllSt
 messages.getEmojiStickers#fbfca18f hash:long = messages.AllStickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.AllStickers](/type/messages.AllStickers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.

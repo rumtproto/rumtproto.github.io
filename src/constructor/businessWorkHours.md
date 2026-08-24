@@ -1,67 +1,59 @@
 ---
-title: "businessWorkHours (конструктор)"
+title: "businessWorkHours"
 original: "https://core.telegram.org/constructor/businessWorkHours"
 section: ref
 kind: constructor
+description: "Задаёт часы работы Telegram Business."
 layout: layout.njk
 ---
 
 # businessWorkHours
 
-*Конструктор из схемы TL.*
-
-> Specifies a set of [Telegram Business opening hours](https://core.telegram.org/api/business#opening-hours).
-
-## Определение TL
+Задаёт [часы работы Telegram Business](/api/business/#opening-hours).
 
 ```
 businessWorkHours#8c92b098 flags:# open_now:flags.0?true timezone_id:string weekly_open:Vector<BusinessWeeklyOpen> = BusinessWorkHours;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| open_now | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Ignored if set while invoking [account.updateBusinessWorkHours](/method/account.updateBusinessWorkHours/), only returned by the server in [userFull](/constructor/userFull/).business_work_hours, indicating whether the business is currently open according to the current time and the values in weekly_open and timezone. |
-| timezone_id | [string](/type/string/) | An ID of one of the timezones returned by [help.getTimezonesList](/method/help.getTimezonesList/). The timezone ID is contained [timezone](/constructor/timezone/).id, a human-readable, localized name of the timezone is available in [timezone](/constructor/timezone/).name and the [timezone](/constructor/timezone/).utc_offset field contains the UTC offset in seconds, which may be displayed in hh:mm format by the client together with the human-readable name (i.e. $name UTC -01:00). |
-| weekly_open | [Vector](https://core.telegram.org/type/Vector%20t)<[BusinessWeeklyOpen](/type/BusinessWeeklyOpen/)> | A list of time intervals (max 28) represented by [businessWeeklyOpen »](/constructor/businessWeeklyOpen/), indicating the opening hours of their business. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>open_now</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Игнорируется при передаче в <a href="/method/account.updateBusinessWorkHours">account.updateBusinessWorkHours</a>; возвращается сервером только в <a href="/constructor/userFull">userFull</a>.<code>business_work_hours</code> и указывает, открыта ли организация в данный момент согласно текущему времени и значениям <code>weekly_open</code> и <code>timezone</code>.</td></tr><tr><td><strong>timezone_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор одного из часовых поясов, возвращаемых методом <a href="/method/help.getTimezonesList">help.getTimezonesList</a>.<br>Идентификатор часового пояса содержится в поле <a href="/constructor/timezone">timezone</a>.<code>id</code>, понятное человеку локализованное название часового пояса доступно в <a href="/constructor/timezone">timezone</a>.<code>name</code>, а поле <a href="/constructor/timezone">timezone</a>.<code>utc_offset</code> содержит смещение от UTC в секундах, которое клиент может отображать в формате чч:мм вместе с понятным человеку названием (то есть <code>$name UTC -01:00</code>).</td></tr><tr><td><strong>weekly_open</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/BusinessWeeklyOpen">BusinessWeeklyOpen</a>&gt;</td><td>Список интервалов времени (не более 28), представленных конструктором <a href="/constructor/businessWeeklyOpen">businessWeeklyOpen »</a> и задающих часы работы компании.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BusinessWorkHours](/type/BusinessWorkHours/)
 
-## Related pages
+### Связанные страницы
 
 #### [account.updateBusinessWorkHours](/method/account.updateBusinessWorkHours/)
 
-Specify a set of [Telegram Business opening hours](https://core.telegram.org/api/business#opening-hours).  
-This info will be contained in [userFull](/constructor/userFull/).`business_work_hours`.
+Задать [часы работы Telegram Business](/api/business/#opening-hours).  
+Эти сведения будут содержаться в поле [userFull](/constructor/userFull/).`business_work_hours`.
 
-To remove all opening hours, invoke the method without setting the `business_work_hours` field.
+Чтобы удалить все часы работы, вызовите метод, не задавая поле `business_work_hours`.
 
-Note that the opening hours specified by the user must be appropriately validated and transformed before invoking the method, as specified [here »](https://core.telegram.org/api/business#opening-hours).
+Обратите внимание, что указанные пользователем часы работы необходимо соответствующим образом проверить и преобразовать перед вызовом метода, как описано [здесь »](/api/business/#opening-hours).
 
 #### [userFull](/constructor/userFull/)
 
-Extended user info
+Расширенные сведения о пользователе
 
-When updating the [local peer database »](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров »](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).
 
 #### [help.getTimezonesList](/method/help.getTimezonesList/)
 
-Returns timezone information that may be used elsewhere in the API, such as to set [Telegram Business opening hours »](https://core.telegram.org/api/business#opening-hours).
+Возвращает сведения о часовых поясах, которые могут использоваться в других частях API — например, для указания [часов работы Telegram Business »](/api/business/#opening-hours).
 
 #### [timezone](/constructor/timezone/)
 
-Timezone information.
+Сведения о часовом поясе.
 
 #### [businessWeeklyOpen](/constructor/businessWeeklyOpen/)
 
-A time interval, indicating the opening hours of a business.
+Интервал времени, задающий часы работы компании.
 
-Note that opening hours specified by the user must be appropriately validated and transformed before uploading them to the server, as specified [here »](https://core.telegram.org/api/business#opening-hours).
+Обратите внимание, что указанные пользователем часы работы необходимо соответствующим образом проверить и преобразовать перед их отправкой на сервер, как описано [здесь »](/api/business/#opening-hours).
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

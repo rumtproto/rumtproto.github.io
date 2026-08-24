@@ -1,29 +1,24 @@
 ---
-title: "pageBlockCover (конструктор)"
+title: "pageBlockCover"
 original: "https://core.telegram.org/constructor/pageBlockCover"
 section: ref
 kind: constructor
+description: "Обложка страницы"
 layout: layout.njk
 ---
 
 # pageBlockCover
 
-*Конструктор из схемы TL.*
-
-> A page cover
-
-## Определение TL
+Обложка страницы
 
 ```
 pageBlockCover#39f23300 cover:PageBlock = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| cover | [PageBlock](/type/PageBlock/) | Cover |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>cover</strong></td><td style="text-align: center;"><a href="/type/PageBlock">PageBlock</a></td><td>Обложка</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

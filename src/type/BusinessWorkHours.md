@@ -1,31 +1,26 @@
 ---
-title: "BusinessWorkHours (тип)"
+title: "BusinessWorkHours"
 original: "https://core.telegram.org/type/BusinessWorkHours"
 section: ref
 kind: type
+description: "Задаёт часы работы Telegram Business."
 layout: layout.njk
 ---
 
 # BusinessWorkHours
 
-*Тип из схемы TL.*
-
-> Specifies a set of [Telegram Business opening hours](https://core.telegram.org/api/business#opening-hours).
-
-## Определение TL
+Задаёт [часы работы Telegram Business](/api/business/#opening-hours).
 
 ```
 businessWorkHours#8c92b098 flags:# open_now:flags.0?true timezone_id:string weekly_open:Vector<BusinessWeeklyOpen> = BusinessWorkHours;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [businessWorkHours](/constructor/businessWorkHours/) | Specifies a set of [Telegram Business opening hours](https://core.telegram.org/api/business#opening-hours). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/businessWorkHours">businessWorkHours</a></td><td>Задаёт <a href="/api/business#opening-hours">часы работы Telegram Business</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

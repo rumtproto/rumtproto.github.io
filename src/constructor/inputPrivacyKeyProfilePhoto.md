@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyKeyProfilePhoto (конструктор)"
+title: "inputPrivacyKeyProfilePhoto"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyProfilePhoto"
 section: ref
 kind: constructor
+description: "Смогут ли другие видеть вашу фотографию профиля"
 layout: layout.njk
 ---
 
 # inputPrivacyKeyProfilePhoto
 
-*Конструктор из схемы TL.*
-
-> Whether people will be able to see your profile picture
-
-## Определение TL
+Смогут ли другие видеть вашу фотографию профиля
 
 ```
 inputPrivacyKeyProfilePhoto#5719bacc = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)

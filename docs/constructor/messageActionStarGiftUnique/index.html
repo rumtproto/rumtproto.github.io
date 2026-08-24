@@ -1,282 +1,59 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>messageActionStarGiftUnique (конструктор) — MTProto по-русски</title>
-<link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
-    <nav class="top-nav">
-      <a href="/mtproto/">MTProto</a>
-      <a href="/api/">API</a>
-      <a href="/schema/">Схема</a>
-      <a href="/glossary/">Глоссарий</a>
-    </nav>
-  </div>
-</header>
-<div class="layout">
-  <aside class="sidebar">
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Протокол MTProto</div>
-        <ul>
-          
-            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
-          
-            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
-          
-            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
-          
-            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
-          
-            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
-          
-            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
-          
-            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
-          
-            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
-          
-            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
-          
-            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
-          
-            <li><a href="/mtproto/TL/">Язык TL</a></li>
-          
-            <li><a href="/mtproto/transports/">Транспорты</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Telegram API</div>
-        <ul>
-          
-            <li><a href="/api/">Telegram API</a></li>
-          
-            <li><a href="/api/auth/">Авторизация пользователя</a></li>
-          
-            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
-          
-            <li><a href="/api/errors/">Ошибки</a></li>
-          
-            <li><a href="/api/files/">Работа с файлами</a></li>
-          
-            <li><a href="/api/invoking/">Вызов методов</a></li>
-          
-            <li><a href="/api/layers/">Слои схемы</a></li>
-          
-            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
-          
-            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
-          
-            <li><a href="/api/updates/">Получение обновлений</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Схема TL</div>
-        <ul>
-          
-            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
-          
-            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
-          
-            <li><a href="/methods/">Методы по категориям</a></li>
-          
-            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
-          
-            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
-          
-            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
-          
-            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Другое</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-            <li><a href="/techfaq/">Технический FAQ</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Справочник схемы</div>
-        <ul>
-          
-            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
-          
-            <li><a href="/method/">Методы (справочник)</a></li>
-          
-            <li><a href="/type/">Типы (справочник)</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Приложение</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-        </ul>
-      </div>
-    
-  </aside>
-  <main class="content">
-    <article>
-      <h1 id="messageactionstargiftunique" tabindex="-1">messageActionStarGiftUnique</h1>
-<p><em>Конструктор из схемы TL.</em></p>
-<blockquote>
-<p>A <a href="https://core.telegram.org/api/gifts">gift »</a> was upgraded to a <a href="https://core.telegram.org/api/gifts#collectible-gifts">collectible gift »</a>.</p>
-</blockquote>
-<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
-<pre><code>messageActionStarGiftUnique#e6c31522 flags:# upgrade:flags.0?true transferred:flags.1?true saved:flags.2?true refunded:flags.5?true prepaid_upgrade:flags.11?true assigned:flags.13?true from_offer:flags.14?true craft:flags.16?true gift:StarGift can_export_at:flags.3?int transfer_stars:flags.4?long from_id:flags.6?Peer peer:flags.7?Peer saved_id:flags.7?long resale_amount:flags.8?StarsAmount can_transfer_at:flags.9?int can_resell_at:flags.10?int drop_original_details_stars:flags.12?long can_craft_at:flags.15?int = MessageAction;
-</code></pre>
-<h2 id="параметры" tabindex="-1">Параметры</h2>
-<table>
-<thead>
-<tr>
-<th>Имя</th>
-<th>Тип</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>flags</td>
-<td><a href="https://core.telegram.org/type/%23">#</a></td>
-<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
-</tr>
-<tr>
-<td>upgrade</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td>
-<td>If set, this collectible was <a href="https://core.telegram.org/api/gifts#collectible-gifts">upgraded »</a> to a collectible gift from a previously received or sent (depending on the out flag of the containing <a href="/constructor/messageService/">messageService</a>) non-collectible gift.</td>
-</tr>
-<tr>
-<td>transferred</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td>
-<td>If set, this collectible was transferred (either to the current user or by the current user to the other user in the private chat, depending on the out flag of the containing <a href="/constructor/messageService/">messageService</a>).</td>
-</tr>
-<tr>
-<td>saved</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true/">true</a></td>
-<td>If set, this gift is visible on the user or channel's profile page; can only be set for the receiver of a gift.</td>
-</tr>
-<tr>
-<td>refunded</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true/">true</a></td>
-<td>This gift was upgraded to a <a href="https://core.telegram.org/api/gifts#collectible-gifts">collectible gift »</a> and then re-downgraded to a regular gift because a request to refund the payment related to the upgrade was made, and the money was returned.</td>
-</tr>
-<tr>
-<td>prepaid_upgrade</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true/">true</a></td>
-<td>The sender has pre-paid for the upgrade of this gift to a collectible gift.</td>
-</tr>
-<tr>
-<td>assigned</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true/">true</a></td>
-<td>This collectible gift was <a href="https://core.telegram.org/api/gifts#hosted-collectible-gifts">linked from the TON blockchain to a Telegram profile »</a>.</td>
-</tr>
-<tr>
-<td>from_offer</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true/">true</a></td>
-<td>This collectible gift was transferred after a <a href="https://core.telegram.org/api/gifts#collectible-gift-purchase-offers">purchase offer »</a> was accepted.</td>
-</tr>
-<tr>
-<td>craft</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true/">true</a></td>
-<td>This collectible gift was obtained by <a href="https://core.telegram.org/api/gifts#crafting-collectible-gifts">crafting »</a>.</td>
-</tr>
-<tr>
-<td>gift</td>
-<td><a href="/type/StarGift/">StarGift</a></td>
-<td>The collectible gift.</td>
-</tr>
-<tr>
-<td>can_export_at</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/int/">int</a></td>
-<td>If set, indicates that the current gift can't be <a href="https://core.telegram.org/api/gifts#withdraw-a-collectible-gift-to-the-ton-blockchain">exported to the TON blockchain »</a> yet: the owner will be able to export it at the specified unixtime.</td>
-</tr>
-<tr>
-<td>transfer_stars</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/long/">long</a></td>
-<td>If set, indicates that the gift can be <a href="https://core.telegram.org/api/gifts#transferring-collectible-gifts">transferred »</a> to another user by paying the specified amount of stars.</td>
-</tr>
-<tr>
-<td>from_id</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/Peer/">Peer</a></td>
-<td>Sender of the gift (unset for anonymous gifts).</td>
-</tr>
-<tr>
-<td>peer</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/Peer/">Peer</a></td>
-<td>Receiver of the gift.</td>
-</tr>
-<tr>
-<td>saved_id</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/long/">long</a></td>
-<td>For channel gifts, ID to use in <a href="/constructor/inputSavedStarGiftChat/">inputSavedStarGiftChat</a> constructors.</td>
-</tr>
-<tr>
-<td>resale_amount</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/StarsAmount/">StarsAmount</a></td>
-<td>Resale price of the gift.</td>
-</tr>
-<tr>
-<td>can_transfer_at</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/int/">int</a></td>
-<td>If set, indicates that the current gift can't be <a href="https://core.telegram.org/api/gifts#transferring-collectible-gifts">transferred »</a> yet: the owner will be able to transfer it at the specified unixtime.</td>
-</tr>
-<tr>
-<td>can_resell_at</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/int/">int</a></td>
-<td>If set, indicates that the current gift can't be <a href="https://core.telegram.org/api/gifts#reselling-collectible-gifts">resold »</a> yet: the owner will be able to put it up for sale at the specified unixtime.</td>
-</tr>
-<tr>
-<td>drop_original_details_stars</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/long/">long</a></td>
-<td>If set, the <a href="/constructor/starGiftAttributeOriginalDetails/">starGiftAttributeOriginalDetails</a> attribute of this gift may be removed by paying the specified amount of stars, see <a href="https://core.telegram.org/api/gifts#dropping-the-original-details-of-an-upgraded-gift">here »</a> for the full flow.</td>
-</tr>
-<tr>
-<td>can_craft_at</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/int/">int</a></td>
-<td>If set, this gift can be used for <a href="https://core.telegram.org/api/gifts#crafting-collectible-gifts">crafting »</a> only starting from the specified unixtime.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="тип" tabindex="-1">Тип</h2>
-<p><a href="/type/MessageAction/">MessageAction</a></p>
-<h2 id="related-pages" tabindex="-1">Related pages</h2>
-<h4 id="telegram-gifts" tabindex="-1"><a href="https://core.telegram.org/api/gifts">Telegram Gifts</a></h4>
-<p>Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.</p>
-<h4 id="messageservice" tabindex="-1"><a href="/constructor/messageService/">messageService</a></h4>
-<p>Indicates a service message</p>
-<h4 id="inputsavedstargiftchat" tabindex="-1"><a href="/constructor/inputSavedStarGiftChat/">inputSavedStarGiftChat</a></h4>
-<p>A gift received by a channel we own.</p>
-<h4 id="stargiftattributeoriginaldetails" tabindex="-1"><a href="/constructor/starGiftAttributeOriginalDetails/">starGiftAttributeOriginalDetails</a></h4>
-<p>Info about the sender, receiver and message attached to the original <a href="https://core.telegram.org/api/gifts">gift »</a>, before it was upgraded to a <a href="https://core.telegram.org/api/gifts#collectible-gifts">collectible gift »</a>.</p>
-
-      <div class="source-note">
-        Оригинал: <a href="https://core.telegram.org/constructor/messageActionStarGiftUnique" rel="noopener">https://core.telegram.org/constructor/messageActionStarGiftUnique</a>
-      </div>
-    </article>
-  </main>
-</div>
-<footer class="site-footer">
-  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
-  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
-</footer>
-</body>
-</html>
+<!doctype html> <html lang="ru"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script> <title>messageActionStarGiftUnique — MTProto по-русски</title> <meta name="description" content="Подарок » был улучшен до коллекционного подарка »."> <meta property="og:title" content="messageActionStarGiftUnique"> <meta property="og:description" content="Подарок » был улучшен до коллекционного подарка »."> <meta property="og:type" content="article"> <meta property="og:site_name" content="MTProto по-русски"> <meta property="og:locale" content="ru_RU"> <meta property="og:url" content="https://rumtproto.github.io/constructor/messageActionStarGiftUnique/"> <meta property="og:image" content="https://rumtproto.github.io/apple-touch-icon.png"> <meta name="twitter:card" content="summary"> <link rel="canonical" href="https://rumtproto.github.io/constructor/messageActionStarGiftUnique/"> <link rel="alternate" hreflang="en" href="https://mirrortproto.github.io/constructor/messageActionStarGiftUnique/"> <link rel="alternate" hreflang="ru" href="https://rumtproto.github.io/constructor/messageActionStarGiftUnique/"> <link rel="manifest" href="/manifest.webmanifest"> <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)"> <link rel="icon" href="/favicon.svg" type="image/svg+xml"> <link rel="icon" href="/icon-64.png" type="image/png" sizes="64x64"> <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <link rel="stylesheet" href="/css/style.css"> <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Схема","item":"https://rumtproto.github.io/schema/"},{"@type":"ListItem","position":2,"name":"Конструкторы","item":"https://rumtproto.github.io/constructor/"}]}
+</script> </head> <body data-pagefind-filter="Раздел:Схема"> <a class="skip-link" href="#content">К содержанию</a> <header class="site-header"> <div class="header-inner"> <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a> <nav class="top-nav" aria-label="Разделы"> <a href="/api/" >API</a> <a href="/mtproto/" >MTProto</a> <a href="/schema/" class="active" aria-current="section">Схема</a> <a href="/techfaq/" >FAQ</a> </nav> <form class="site-search" action="/search/" method="get" role="search"> <span class="search-field"> <input type="search" name="q" placeholder="Поиск" aria-label="Поиск (нажмите / для фокуса)"> <kbd class="search-kbd" aria-hidden="true">/</kbd> </span> </form> <a class="search-button" href="/search/" aria-label="Поиск"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg> </a> <a class="source-link" href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener"> <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="source-link-text">Исходный код</span> </a> <div class="theme-switch" role="group" aria-label="Цветовая тема"> <div class="theme-seg"> <button type="button" data-mode="auto" aria-pressed="false" title="Системная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="light" aria-pressed="false" title="Светлая тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="dark" aria-pressed="false" title="Тёмная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> <button class="theme-toggle" type="button" data-mode="auto" title="Цветовая тема: auto"> <svg class="icon-auto" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-light" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-dark" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> </div> </header> <div class="layout"> <aside class="sidebar" aria-label="Страницы раздела"> <div class="nav-group"> <div class="nav-group-title">Схема</div> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </div> </aside> <main class="content" id="content"> <nav class="crumbs" aria-label="Хлебные крошки"> <a href="/schema/">Схема</a> <span class="crumb-sep">›</span> <a href="/constructor/">Конструкторы</a> <span class="crumb-sep">›</span> <span class="crumb-current">messageActionStarGiftUnique</span> </nav> <div class="mobile-nav" role="navigation" aria-label="Страницы раздела"> <details class="mobile-nav-group"> <summary>Схема</summary> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </details> </div> <article> <h1 id="messageactionstargiftunique" tabindex="-1">messageActionStarGiftUnique <a class="header-anchor" href="#messageactionstargiftunique" aria-hidden="true">#</a></h1> <p id="p-1"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/messageActionStarGiftUnique/#p-1" rel="noopener" title="Перевод абзаца 1" data-tip="Перевод: абзац 1 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> <a href="/api/gifts/">Подарок »</a> был улучшен до <a href="/api/gifts/#collectible-gifts">коллекционного подарка »</a>.<a class="p-anchor" href="#p-1" aria-label="Ссылка на этот абзац">¶</a></p> <pre><code>messageActionStarGiftUnique#e6c31522 flags:# upgrade:flags.0?true transferred:flags.1?true saved:flags.2?true refunded:flags.5?true prepaid_upgrade:flags.11?true assigned:flags.13?true from_offer:flags.14?true craft:flags.16?true gift:StarGift can_export_at:flags.3?int transfer_stars:flags.4?long from_id:flags.6?Peer peer:flags.7?Peer saved_id:flags.7?long resale_amount:flags.8?StarsAmount can_transfer_at:flags.9?int can_resell_at:flags.10?int drop_original_details_stars:flags.12?long can_craft_at:flags.15?int = MessageAction;
+</code></pre> <span class="heading-alias" id="параметры"></span><h3 id="parameters" tabindex="-1">Параметры <a class="header-anchor" href="#parameters" aria-hidden="true">#</a></h3> <table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td><span class="para-labels"><span class="para-label para-term" tabindex="0" role="note" title="Термин: flags" data-tip="Термин: flags — битовое поле: каждый бит отмечает наличие соответствующего необязательного параметра конструктора"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h10v13l-5-3.5-5 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span></span> Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>upgrade</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, этот коллекционный предмет был <a href="/api/gifts#collectible-gifts">улучшен »</a> до коллекционного подарка из ранее полученного или отправленного (в зависимости от флага <code>out</code> содержащего его <a href="/constructor/messageService">messageService</a>) обычного подарка.</td></tr><tr><td><strong>transferred</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, этот коллекционный предмет был передан (либо текущему пользователю, либо текущим пользователем другому пользователю в личном чате — в зависимости от флага <code>out</code> содержащего его <a href="/constructor/messageService">messageService</a>).</td></tr><tr><td><strong>saved</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Если установлено, этот подарок виден на странице профиля пользователя или канала; может быть установлено только для получателя подарка.</td></tr><tr><td><strong>refunded</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Этот подарок был улучшен до <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>, а затем понижен обратно до обычного подарка, поскольку был запрошен возврат платежа за улучшение и деньги были возвращены.</td></tr><tr><td><strong>prepaid_upgrade</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true">true</a></td><td>Отправитель заранее оплатил улучшение этого подарка до коллекционного.</td></tr><tr><td><strong>assigned</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true">true</a></td><td>Этот коллекционный подарок был <a href="/api/gifts#hosted-collectible-gifts">привязан к профилю Telegram из блокчейна TON »</a>.</td></tr><tr><td><strong>from_offer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true">true</a></td><td>Этот коллекционный подарок был передан после того, как <a href="/api/gifts#collectible-gift-purchase-offers">предложение о покупке »</a> было принято.</td></tr><tr><td><strong>craft</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true">true</a></td><td>Этот коллекционный подарок получен с помощью <a href="/api/gifts#crafting-collectible-gifts">крафта »</a>.</td></tr><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/type/StarGift">StarGift</a></td><td>Коллекционный подарок.</td></tr><tr><td><strong>can_export_at</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/int">int</a></td><td>Если установлено, указывает, что текущий подарок пока нельзя <a href="/api/gifts#withdraw-a-collectible-gift-to-the-ton-blockchain">вывести в блокчейн TON »</a>: владелец сможет вывести его в указанное время (unixtime).</td></tr><tr><td><strong>transfer_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/long">long</a></td><td>Если установлено, указывает, что подарок можно <a href="/api/gifts#transferring-collectible-gifts">передать »</a> другому пользователю, заплатив указанное количество звёзд.</td></tr><tr><td><strong>from_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/Peer">Peer</a></td><td>Отправитель подарка (не задан для анонимных подарков).</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/Peer">Peer</a></td><td><span class="para-labels"><span class="para-label para-term" tabindex="0" role="note" title="Термин: peer" data-tip="Термин: peer — пир: собеседник в широком смысле — пользователь, обычная группа, супергруппа или канал"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h10v13l-5-3.5-5 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span></span> Получатель подарка.</td></tr><tr><td><strong>saved_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/long">long</a></td><td>Для подарков каналам — идентификатор, который следует использовать в конструкторах <a href="/constructor/inputSavedStarGiftChat">inputSavedStarGiftChat</a>.</td></tr><tr><td><strong>resale_amount</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/StarsAmount">StarsAmount</a></td><td>Цена перепродажи подарка.</td></tr><tr><td><strong>can_transfer_at</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/int">int</a></td><td>Если установлено, указывает, что текущий подарок пока нельзя <a href="/api/gifts#transferring-collectible-gifts">передать »</a>: владелец сможет передать его в указанное время (unixtime).</td></tr><tr><td><strong>can_resell_at</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/int">int</a></td><td>Если установлено, указывает, что текущий подарок пока нельзя <a href="/api/gifts#reselling-collectible-gifts">перепродать »</a>: владелец сможет выставить его на продажу в указанное время (unixtime).</td></tr><tr><td><strong>drop_original_details_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/long">long</a></td><td>Если установлено, атрибут <a href="/constructor/starGiftAttributeOriginalDetails">starGiftAttributeOriginalDetails</a> этого подарка можно удалить, заплатив указанное количество звёзд; полное описание процесса см. <a href="/api/gifts#dropping-the-original-details-of-an-upgraded-gift">здесь »</a>.</td></tr><tr><td><strong>can_craft_at</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/int">int</a></td><td>Если установлено, этот подарок можно использовать для <a href="/api/gifts#crafting-collectible-gifts">создания »</a> только начиная с указанного времени (unixtime).</td></tr></tbody></table> <span class="heading-alias" id="тип"></span><h3 id="type" tabindex="-1">Тип <a class="header-anchor" href="#type" aria-hidden="true">#</a></h3> <p id="p-2"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/messageActionStarGiftUnique/#p-2" rel="noopener" title="Перевод абзаца 2" data-tip="Перевод: абзац 2 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> <a href="/type/MessageAction/">MessageAction</a><a class="p-anchor" href="#p-2" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="связанные-страницы"></span><h3 id="related-pages" tabindex="-1">Связанные страницы <a class="header-anchor" href="#related-pages" aria-hidden="true">#</a></h3> <span class="heading-alias" id="подарки-telegram"></span><h4 id="telegram-gifts" tabindex="-1"><a href="/api/gifts/">Подарки Telegram</a> <a class="header-anchor" href="#telegram-gifts" aria-hidden="true">#</a></h4> <p id="p-3"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/messageActionStarGiftUnique/#p-3" rel="noopener" title="Перевод абзаца 3" data-tip="Перевод: абзац 3 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.<a class="p-anchor" href="#p-3" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="messageservice" tabindex="-1"><a href="/constructor/messageService/">messageService</a> <a class="header-anchor" href="#messageservice" aria-hidden="true">#</a></h4> <p id="p-4"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/messageActionStarGiftUnique/#p-4" rel="noopener" title="Перевод абзаца 4" data-tip="Перевод: абзац 4 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Обозначает сервисное сообщение<a class="p-anchor" href="#p-4" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="inputsavedstargiftchat" tabindex="-1"><a href="/constructor/inputSavedStarGiftChat/">inputSavedStarGiftChat</a> <a class="header-anchor" href="#inputsavedstargiftchat" aria-hidden="true">#</a></h4> <p id="p-5"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/messageActionStarGiftUnique/#p-5" rel="noopener" title="Перевод абзаца 5" data-tip="Перевод: абзац 5 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Подарок, полученный каналом, которым мы владеем.<a class="p-anchor" href="#p-5" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="stargiftattributeoriginaldetails" tabindex="-1"><a href="/constructor/starGiftAttributeOriginalDetails/">starGiftAttributeOriginalDetails</a> <a class="header-anchor" href="#stargiftattributeoriginaldetails" aria-hidden="true">#</a></h4> <p id="p-6"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/messageActionStarGiftUnique/#p-6" rel="noopener" title="Перевод абзаца 6" data-tip="Перевод: абзац 6 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Сведения об отправителе, получателе и сообщении, приложенных к исходному <a href="/api/gifts/">подарку »</a>, до того как он был превращён в <a href="/api/gifts/#collectible-gifts">коллекционный подарок »</a>.<a class="p-anchor" href="#p-6" aria-label="Ссылка на этот абзац">¶</a></p> <div class="source-note"> Оригинал: <a href="https://core.telegram.org/constructor/messageActionStarGiftUnique" rel="noopener">https://core.telegram.org/constructor/messageActionStarGiftUnique</a> · Английская версия: <a href="https://mirrortproto.github.io/constructor/messageActionStarGiftUnique/" rel="noopener">mirrortproto.github.io</a> </div> </article> </main> </div> <footer class="site-footer"> Неофициальный русскоязычный перевод документации <a href="https://core.telegram.org/mtproto" rel="noopener">core.telegram.org</a>. Снимок контента: 2026-08-23. Исходники сайта — <a href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener">rumtproto/rumtproto.github.io</a>. </footer> <script src="/pagefind/pagefind-ui.js"></script> <script>
+  (function () {
+    var btn = document.querySelector('.theme-toggle');
+    var seg = Array.prototype.slice.call(document.querySelectorAll('.theme-seg button'));
+    if (!btn && !seg.length) return;
+    var order = ['auto', 'light', 'dark'];
+    function current() { try { return localStorage.getItem('theme') || 'auto'; } catch (e) { return 'auto'; } }
+    function set(mode) {
+      try { mode === 'auto' ? localStorage.removeItem('theme') : localStorage.setItem('theme', mode); } catch (e) {}
+      apply(mode);
+    }
+    function apply(mode) {
+      if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', mode);
+      if (btn) {
+        btn.dataset.mode = mode;
+        btn.title = 'Цветовая тема: ' + mode;
+        btn.setAttribute('aria-label', 'Цветовая тема: ' + mode + '. Нажмите для переключения.');
+      }
+      seg.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.mode === mode)); });
+      var dark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+        if ((m.media || '').indexOf('dark') !== -1) m.content = dark ? '#0d1117' : '#ffffff';
+      });
+    }
+    seg.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.mode); }); });
+    if (btn) btn.addEventListener('click', function () { set(order[(order.indexOf(current()) + 1) % order.length]); });
+    apply(current());
+  })();
+  (function () {
+    document.addEventListener('keydown', function (e) {
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (e.key === '/' && !/^(input|textarea|select)$/i.test(tag)) {
+        var q = document.querySelector('.site-search input') || document.querySelector('.pagefind-ui__search-input');
+        if (q) { e.preventDefault(); q.focus(); }
+      }
+    });
+  })();
+  (function () {
+    /* скрыть плейсхолдер после реальной загрузки медиа */
+    document.querySelectorAll('.img-box').forEach(function (box) {
+      var im = box.querySelector('img') || box.querySelector('video');
+      if (!im) return;
+      var ok = function () { box.classList.add('img-ok'); };
+      if (im.complete && im.naturalWidth > 0) ok();
+      else im.addEventListener('load', ok);
+    });
+  })();
+</script> </body> </html> 

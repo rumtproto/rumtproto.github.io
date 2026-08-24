@@ -1,36 +1,30 @@
 ---
-title: "channelAdminLogEventActionChangePeerColor (конструктор)"
+title: "channelAdminLogEventActionChangePeerColor"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionChangePeerColor"
 section: ref
 kind: constructor
+description: "Изменился акцентный цвет сообщений"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionChangePeerColor
 
-*Конструктор из схемы TL.*
-
-> The [message accent color](https://core.telegram.org/api/colors) was changed
-
-## Определение TL
+Изменился [акцентный цвет сообщений](/api/colors/)
 
 ```
 channelAdminLogEventActionChangePeerColor#5796e780 prev_value:PeerColor new_value:PeerColor = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| prev_value | [PeerColor](/type/PeerColor/) | Previous accent palette |
-| new_value | [PeerColor](/type/PeerColor/) | New accent palette |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>prev_value</strong></td><td style="text-align: center;"><a href="/type/PeerColor">PeerColor</a></td><td>Предыдущая акцентная палитра</td></tr><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/PeerColor">PeerColor</a></td><td>Новая акцентная палитра</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!

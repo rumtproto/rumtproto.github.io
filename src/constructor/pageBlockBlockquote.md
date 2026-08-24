@@ -1,30 +1,24 @@
 ---
-title: "pageBlockBlockquote (конструктор)"
+title: "pageBlockBlockquote"
 original: "https://core.telegram.org/constructor/pageBlockBlockquote"
 section: ref
 kind: constructor
+description: "Цитата (эквивалент HTML-тега )"
 layout: layout.njk
 ---
 
 # pageBlockBlockquote
 
-*Конструктор из схемы TL.*
-
-> Quote (equivalent to the HTML `<blockquote>`)
-
-## Определение TL
+Цитата (эквивалент HTML-тега `<blockquote>`)
 
 ```
 pageBlockBlockquote#263d7c26 text:RichText caption:RichText = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [RichText](/type/RichText/) | Quote contents |
-| caption | [RichText](/type/RichText/) | Caption |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Содержимое цитаты</td></tr><tr><td><strong>caption</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Подпись</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

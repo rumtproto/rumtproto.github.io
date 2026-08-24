@@ -1,18 +1,15 @@
 ---
-title: "messages.getReplies (метод)"
+title: "messages.getReplies"
 original: "https://core.telegram.org/method/messages.getReplies"
 section: ref
 kind: method
+description: "Получить сообщения из ветки обсуждения"
 layout: layout.njk
 ---
 
 # messages.getReplies
 
-*Метод из схемы TL.*
-
-> Get messages in a reply thread
-
-## Определение TL
+Получить сообщения из ветки обсуждения
 
 ```
 messages.messages#1d73e7ea messages:Vector<Message> topics:Vector<ForumTopic> chats:Vector<Chat> users:Vector<User> = messages.Messages;
@@ -23,38 +20,22 @@ messages.messagesNotModified#74535f21 count:int = messages.Messages;
 messages.getReplies#22ddd30c peer:InputPeer msg_id:int offset_id:int offset_date:int add_offset:int limit:int max_id:int min_id:int hash:long = messages.Messages;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer |
-| msg_id | [int](/type/int/) | Message ID |
-| offset_id | [int](/type/int/) | [Offsets for pagination, for more info click here](https://core.telegram.org/api/offsets) |
-| offset_date | [int](/type/int/) | [Offsets for pagination, for more info click here](https://core.telegram.org/api/offsets) |
-| add_offset | [int](/type/int/) | [Offsets for pagination, for more info click here](https://core.telegram.org/api/offsets) |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
-| max_id | [int](/type/int/) | If a positive value was transferred, the method will return only messages with ID smaller than max_id |
-| min_id | [int](/type/int/) | If a positive value was transferred, the method will return only messages with ID bigger than min_id |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения</td></tr><tr><td><strong>offset_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets">Смещения для постраничной выборки, подробнее см. здесь</a></td></tr><tr><td><strong>offset_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets">Смещения для постраничной выборки, подробнее см. здесь</a></td></tr><tr><td><strong>add_offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets">Смещения для постраничной выборки, подробнее см. здесь</a></td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Если передано положительное значение, метод вернёт только сообщения с идентификаторами меньше max_id</td></tr><tr><td><strong>min_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Если передано положительное значение, метод вернёт только сообщения с идентификаторами больше min_id</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Messages](/type/messages.Messages/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | TOPIC_ID_INVALID | The specified topic ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>TOPIC_ID_INVALID</td><td>Указанный идентификатор темы форума недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

@@ -1,34 +1,24 @@
 ---
-title: "inputMediaVenue (конструктор)"
+title: "inputMediaVenue"
 original: "https://core.telegram.org/constructor/inputMediaVenue"
 section: ref
 kind: constructor
+description: "Может использоваться для отправки геопозиции заведения."
 layout: layout.njk
 ---
 
 # inputMediaVenue
 
-*Конструктор из схемы TL.*
-
-> Can be used to send a venue geolocation.
-
-## Определение TL
+Может использоваться для отправки геопозиции заведения.
 
 ```
 inputMediaVenue#c13d1c11 geo_point:InputGeoPoint title:string address:string provider:string venue_id:string venue_type:string = InputMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| geo_point | [InputGeoPoint](/type/InputGeoPoint/) | Geolocation |
-| title | [string](/type/string/) | Venue name |
-| address | [string](/type/string/) | Physical address of the venue |
-| provider | [string](/type/string/) | Venue provider: currently only "foursquare" and "gplaces" (Google Places) need to be supported |
-| venue_id | [string](/type/string/) | Venue ID in the provider's database |
-| venue_type | [string](/type/string/) | Venue type in the provider's database |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>geo_point</strong></td><td style="text-align: center;"><a href="/type/InputGeoPoint">InputGeoPoint</a></td><td>Геопозиция</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название заведения</td></tr><tr><td><strong>address</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Физический адрес заведения</td></tr><tr><td><strong>provider</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Поставщик данных о заведениях: в настоящее время требуется поддержка только "foursquare" и "gplaces" (Google Places)</td></tr><tr><td><strong>venue_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор заведения в базе данных поставщика</td></tr><tr><td><strong>venue_type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Тип заведения в базе данных поставщика</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputMedia](/type/InputMedia/)

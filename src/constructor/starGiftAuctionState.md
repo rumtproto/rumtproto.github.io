@@ -1,76 +1,60 @@
 ---
-title: "starGiftAuctionState (конструктор)"
+title: "starGiftAuctionState"
 original: "https://core.telegram.org/constructor/starGiftAuctionState"
 section: ref
 kind: constructor
+description: "Представляет активный или ожидающий аукцион »."
 layout: layout.njk
 ---
 
 # starGiftAuctionState
 
-*Конструктор из схемы TL.*
-
-> Represents an active or pending [auction »](https://core.telegram.org/api/auctions).
-
-## Определение TL
+Представляет активный или ожидающий [аукцион »](/api/auctions/).
 
 ```
 starGiftAuctionState#771a4e66 version:int start_date:int end_date:int min_bid_amount:long bid_levels:Vector<AuctionBidLevel> top_bidders:Vector<long> next_round_at:int last_gift_num:int gifts_left:int current_round:int total_rounds:int rounds:Vector<StarGiftAuctionRound> = StarGiftAuctionState;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| version | [int](/type/int/) | Only apply incoming [starGiftAuctionState](/constructor/starGiftAuctionState/) constructors if the received version is bigger than the locally cached version. |
-| start_date | [int](/type/int/) | UNIX timestamp indicating when the auction will start (or when it started, if it's in the past). |
-| end_date | [int](/type/int/) | UNIX timestamp indicating when the auction will end |
-| min_bid_amount | [long](/type/long/) | Minumum allowed bid amount in [Telegram Stars](https://core.telegram.org/api/stars): only applicable if the user hasn't made a bid yet, otherwise must be overridden to the value of [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/).min_bid_amount (which will be set if and only if the user already made a bid to this auction). |
-| bid_levels | [Vector](https://core.telegram.org/type/Vector%20t)<[AuctionBidLevel](/type/AuctionBidLevel/)> | Contains a sparse list of bids starting from the top bids, a more detailed description is available in [the docs](https://core.telegram.org/api/auctions). |
-| top_bidders | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | User IDs of the top 3 bidders (the [user](/constructor/user/) constructors will be returned as [min](https://core.telegram.org/api/min) constructors in the containing object). |
-| next_round_at | [int](/type/int/) | UNIX timestamp indicating when the current auction round will end, distributing [starGift](/constructor/starGift/).gifts_per_round gifts to the top [starGift](/constructor/starGift/).gifts_per_round bidders. |
-| last_gift_num | [int](/type/int/) | The number of gifts that were distributed in the previous round (also used to compute the approximated index of the gift that the current user will receive, last_gift_num + approx_pos, see [here »](https://core.telegram.org/api/auctions) for more info). |
-| gifts_left | [int](/type/int/) | The remaining number of gifts that are yet to be distributed. |
-| current_round | [int](/type/int/) | The current round number (starting from 1). |
-| total_rounds | [int](/type/int/) | The total number of rounds in this auction. |
-| rounds | [Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftAuctionRound](/type/StarGiftAuctionRound/)> | Detailed round information. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Применяйте входящие конструкторы <a href="/constructor/starGiftAuctionState">starGiftAuctionState</a> только если полученное значение <code>version</code> больше локально сохранённого <code>version</code>.</td></tr><tr><td><strong>start_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Метка времени UNIX, указывающая, когда начнётся аукцион (или когда он начался, если это время уже прошло).</td></tr><tr><td><strong>end_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Метка времени UNIX, указывающая, когда завершится аукцион</td></tr><tr><td><strong>min_bid_amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Минимальная допустимая сумма ставки в <a href="/api/stars">Telegram Stars</a>: применимо, только если пользователь ещё не сделал ставку, иначе должно быть заменено значением <a href="/constructor/starGiftAuctionUserState">starGiftAuctionUserState</a>.<code>min_bid_amount</code> (которое устанавливается тогда и только тогда, когда пользователь уже сделал ставку на этом аукционе).</td></tr><tr><td><strong>bid_levels</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/AuctionBidLevel">AuctionBidLevel</a>&gt;</td><td>Содержит разреженный список ставок, начиная с наибольших; более подробное описание доступно в <a href="/api/auctions">документации</a>.</td></tr><tr><td><strong>top_bidders</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Идентификаторы пользователей из числа трёх лидирующих участников торгов (конструкторы <a href="/constructor/user">user</a> будут возвращены в содержащем объекте как <a href="/api/min">min</a>-конструкторы).</td></tr><tr><td><strong>next_round_at</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Метка времени UNIX, указывающая, когда завершится текущий раунд аукциона, по итогам которого <a href="/constructor/starGift">starGift</a>.<code>gifts_per_round</code> подарков будут распределены между <a href="/constructor/starGift">starGift</a>.<code>gifts_per_round</code> лучшими участниками торгов.</td></tr><tr><td><strong>last_gift_num</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество подарков, розданных в предыдущем раунде (также используется для вычисления приблизительного номера подарка, который получит текущий пользователь, — <code>last_gift_num + approx_pos</code>; подробнее см. <a href="/api/auctions">здесь »</a>).</td></tr><tr><td><strong>gifts_left</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Оставшееся число подарков, которые ещё предстоит раздать.</td></tr><tr><td><strong>current_round</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Номер текущего раунда (начиная с 1).</td></tr><tr><td><strong>total_rounds</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число раундов в этом аукционе.</td></tr><tr><td><strong>rounds</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftAuctionRound">StarGiftAuctionRound</a>&gt;</td><td>Подробные сведения о раунде.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftAuctionState](/type/StarGiftAuctionState/)
 
-## Related pages
+### Связанные страницы
 
 #### [starGiftAuctionState](/constructor/starGiftAuctionState/)
 
-Represents an active or pending [auction »](https://core.telegram.org/api/auctions).
+Представляет активный или ожидающий [аукцион »](/api/auctions/).
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
 #### [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/)
 
-Contains information about the current user's state in an [auction »](https://core.telegram.org/api/auctions).
+Содержит информацию о состоянии текущего пользователя в [аукционе »](/api/auctions/).
 
-The `bid_amount`, `bid_date`, `bid_peer` and `min_bid_amount` flags of [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) will all be set if the user placed a bid in the auction.
+Флаги `bid_amount`, `bid_date`, `bid_peer` и `min_bid_amount` конструктора [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) будут установлены все сразу, если пользователь сделал ставку на аукционе.
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.
 
 #### [user](/constructor/user/)
 
-Indicates info about a certain user.
+Содержит сведения об определённом пользователе.
 
-Unless specified otherwise, when updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+Если не указано иное, при обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-See [here »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) for an implementation of the logic to use when updating the [local user peer database](https://core.telegram.org/api/peers).
+См. [здесь »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) реализацию логики, которую следует применять при обновлении [локальной базы пиров-пользователей](/api/peers/).
 
-#### [Min constructors](https://core.telegram.org/api/min)
+#### [Конструкторы min](/api/min/)
 
-In some situations user and channel constructors have reduced set of fields present (although id is always there) and min flag set.
+В некоторых случаях в конструкторах пользователя и канала присутствует сокращённый набор полей (хотя id есть всегда) и установлен флаг min.
 
 #### [starGift](/constructor/starGift/)
 
-Represents a [star gift, see here »](https://core.telegram.org/api/gifts) for more info.
+Представляет [звёздный подарок, подробнее см. здесь »](/api/gifts/).

@@ -1,31 +1,26 @@
 ---
-title: "InputBusinessChatLink (тип)"
+title: "InputBusinessChatLink"
 original: "https://core.telegram.org/type/InputBusinessChatLink"
 section: ref
 kind: type
+description: "Содержит информацию о глубокой ссылке на бизнес-чат », которую предстоит создать текущей учётной записи."
 layout: layout.njk
 ---
 
 # InputBusinessChatLink
 
-*Тип из схемы TL.*
-
-> Contains info about a [business chat deep link »](https://core.telegram.org/api/business#business-chat-links) to be created by the current account.
-
-## Определение TL
+Содержит информацию о [глубокой ссылке на бизнес-чат »](/api/business/#business-chat-links), которую предстоит создать текущей учётной записи.
 
 ```
 inputBusinessChatLink#11679fa7 flags:# message:string entities:flags.0?Vector<MessageEntity> title:flags.1?string = InputBusinessChatLink;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputBusinessChatLink](/constructor/inputBusinessChatLink/) | Contains info about a [business chat deep link »](https://core.telegram.org/api/business#business-chat-links) to be created by the current account. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputBusinessChatLink">inputBusinessChatLink</a></td><td>Содержит информацию о <a href="/api/business#business-chat-links">глубокой ссылке на бизнес-чат »</a>, которую предстоит создать текущей учётной записи.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

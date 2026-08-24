@@ -1,33 +1,27 @@
 ---
-title: "invokeWithReCaptcha (метод)"
+title: "invokeWithReCaptcha"
 original: "https://core.telegram.org/method/invokeWithReCaptcha"
 section: ref
 kind: method
+description: "Только для официальных клиентов: повторно выполнить вызов метода, потребовавший проверки reCAPTCHA через RECAPTCHA_CHECK_%s__%s, где первая подстановка — это action, а вторая —…"
 layout: layout.njk
 ---
 
 # invokeWithReCaptcha
 
-*Метод из схемы TL.*
-
-> Official clients only: re-execute a method call that required reCAPTCHA verification via a `RECAPTCHA_CHECK_%s__%s`, where the first placeholder is the `action`, and the second one is the reCAPTCHA key ID.
-
-## Определение TL
+Только для официальных клиентов: повторно выполнить вызов метода, потребовавший проверки reCAPTCHA через `RECAPTCHA_CHECK_%s__%s`, где первая подстановка — это `action`, а вторая — идентификатор ключа reCAPTCHA.
 
 ```
 ---functions---
 invokeWithReCaptcha#adbb0f94 {X:Type} token:string query:!X = X;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| token | [string](/type/string/) | reCAPTCHA token received after verification. |
-| query | !X | The original method call. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Токен reCAPTCHA, полученный после проверки.</td></tr><tr><td><strong>query</strong></td><td style="text-align: center;">!X</td><td>Исходный вызов метода.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
-Returns the type returned by the invoked method.
+Возвращает тип, возвращаемый вызванным методом.
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам

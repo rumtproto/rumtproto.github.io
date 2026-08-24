@@ -1,18 +1,15 @@
 ---
-title: "InputGroupCall (тип)"
+title: "InputGroupCall"
 original: "https://core.telegram.org/type/InputGroupCall"
 section: ref
 kind: type
+description: "Обозначает групповой звонок"
 layout: layout.njk
 ---
 
 # InputGroupCall
 
-*Тип из схемы TL.*
-
-> Indicates a group call
-
-## Определение TL
+Обозначает групповой звонок
 
 ```
 inputGroupCall#d8aa840f id:long access_hash:long = InputGroupCall;
@@ -20,10 +17,6 @@ inputGroupCallSlug#fe06823f slug:string = InputGroupCall;
 inputGroupCallInviteMessage#8c10603f msg_id:int = InputGroupCall;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputGroupCall](/constructor/inputGroupCall/) | Points to a specific [group call](https://core.telegram.org/api/group-calls). |
-| [inputGroupCallSlug](/constructor/inputGroupCallSlug/) | Identify a [conference call »](https://core.telegram.org/api/group-calls#conference-calls) using the slug from its invitation link. This constructor can only be used for conference calls. It cannot be used for video chats/livestreams, live stories or any other group call type. |
-| [inputGroupCallInviteMessage](/constructor/inputGroupCallInviteMessage/) | Identifies a [conference call »](https://core.telegram.org/api/group-calls#conference-calls) using its [messageActionConferenceCall](/constructor/messageActionConferenceCall/) invitation service message. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputGroupCall">inputGroupCall</a></td><td>Указывает на конкретный <a href="/api/group-calls">групповой звонок</a>.</td></tr><tr><td><a href="/constructor/inputGroupCallSlug">inputGroupCallSlug</a></td><td>Определяет <a href="/api/group-calls#conference-calls">конференц-звонок »</a> по слагу из его пригласительной ссылки.<br><br>Этот конструктор можно использовать только для конференц-звонков. Он не подходит для видеочатов и трансляций, прямых историй и любых других типов групповых звонков.</td></tr><tr><td><a href="/constructor/inputGroupCallInviteMessage">inputGroupCallInviteMessage</a></td><td>Определяет <a href="/api/group-calls#conference-calls">конференц-звонок »</a> по его пригласительному сервисному сообщению <a href="/constructor/messageActionConferenceCall">messageActionConferenceCall</a>.</td></tr></tbody></table>

@@ -1,31 +1,26 @@
 ---
-title: "FactCheck (тип)"
+title: "FactCheck"
 original: "https://core.telegram.org/type/FactCheck"
 section: ref
 kind: type
+description: "Представляет проверку фактов », выполненную независимым фактчекером."
 layout: layout.njk
 ---
 
 # FactCheck
 
-*Тип из схемы TL.*
-
-> Represents a [fact-check »](https://core.telegram.org/api/factcheck) created by an independent fact-checker.
-
-## Определение TL
+Представляет [проверку фактов »](/api/factcheck/), выполненную независимым фактчекером.
 
 ```
 factCheck#b89bfccf flags:# need_check:flags.0?true country:flags.1?string text:flags.1?TextWithEntities hash:long = FactCheck;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [factCheck](/constructor/factCheck/) | Represents a [fact-check »](https://core.telegram.org/api/factcheck) created by an independent fact-checker. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/factCheck">factCheck</a></td><td>Представляет <a href="/api/factcheck">проверку фактов »</a>, выполненную независимым фактчекером.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Fact checks](https://core.telegram.org/api/factcheck)
+#### [Проверки фактов](/api/factcheck/)
 
-Telegram clients support displaying fact-checks added to messages by independent fact-checkers.
+Клиенты Telegram поддерживают отображение проверок фактов, добавленных к сообщениям независимыми фактчекерами.

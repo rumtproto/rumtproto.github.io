@@ -1,19 +1,16 @@
 ---
-title: "messages.getAllDrafts (метод)"
+title: "messages.getAllDrafts"
 original: "https://core.telegram.org/method/messages.getAllDrafts"
 section: ref
 kind: method
+description: "Вернуть все черновики сообщений."
 layout: layout.njk
 ---
 
 # messages.getAllDrafts
 
-*Метод из схемы TL.*
-
-> Return all message [drafts](https://core.telegram.org/api/drafts).  
-> Returns all the latest [updateDraftMessage](/constructor/updateDraftMessage/) updates related to all chats with drafts.
-
-## Определение TL
+Вернуть все [черновики](/api/drafts/) сообщений.  
+Возвращает все последние обновления [updateDraftMessage](/constructor/updateDraftMessage/), относящиеся ко всем чатам с черновиками.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -27,22 +24,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.getAllDrafts#6a3f8d65 = Updates;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Message drafts](https://core.telegram.org/api/drafts)
+#### [Черновики сообщений](/api/drafts/)
 
-How to handle message drafts
+Как работать с черновиками сообщений
 
 #### [updateDraftMessage](/constructor/updateDraftMessage/)
 
-Notifies a change of a message [draft](https://core.telegram.org/api/drafts).
+Сообщает об изменении [черновика](/api/drafts/) сообщения.

@@ -1,18 +1,15 @@
 ---
-title: "help.acceptTermsOfService (метод)"
+title: "help.acceptTermsOfService"
 original: "https://core.telegram.org/method/help.acceptTermsOfService"
 section: ref
 kind: method
+description: "Принять новые условия обслуживания"
 layout: layout.njk
 ---
 
 # help.acceptTermsOfService
 
-*Метод из схемы TL.*
-
-> Accept the new terms of service
-
-## Определение TL
+Принять новые условия обслуживания
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,20 +18,16 @@ boolTrue#997275b5 = Bool;
 help.acceptTermsOfService#ee72f79a id:DataJSON = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [DataJSON](/type/DataJSON/) | ID of terms of service |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Идентификатор условий использования</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | DATA_JSON_INVALID | The provided JSON data is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>DATA_JSON_INVALID</td><td>Указанные данные JSON недействительны.</td></tr></tbody></table>

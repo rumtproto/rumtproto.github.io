@@ -1,27 +1,24 @@
 ---
-title: "botCommandScopeUsers (конструктор)"
+title: "botCommandScopeUsers"
 original: "https://core.telegram.org/constructor/botCommandScopeUsers"
 section: ref
 kind: constructor
+description: "Указанные команды бота будут действовать только во всех личных чатах с пользователями."
 layout: layout.njk
 ---
 
 # botCommandScopeUsers
 
-*Конструктор из схемы TL.*
-
-> The specified bot commands will only be valid in all private chats with users.
-
-## Определение TL
+Указанные команды бота будут действовать только во всех личных чатах с пользователями.
 
 ```
 botCommandScopeUsers#3c4f04d8 = BotCommandScope;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [BotCommandScope](/type/BotCommandScope/)

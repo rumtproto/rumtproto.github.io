@@ -1,27 +1,24 @@
 ---
-title: "help.userInfoEmpty (конструктор)"
+title: "help.userInfoEmpty"
 original: "https://core.telegram.org/constructor/help.userInfoEmpty"
 section: ref
 kind: constructor
+description: "Для внутреннего использования"
 layout: layout.njk
 ---
 
 # help.userInfoEmpty
 
-*Конструктор из схемы TL.*
-
-> Internal use
-
-## Определение TL
+Для внутреннего использования
 
 ```
 help.userInfoEmpty#f3ae2eed = help.UserInfo;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [help.UserInfo](/type/help.UserInfo/)

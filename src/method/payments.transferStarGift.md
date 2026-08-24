@@ -1,18 +1,15 @@
 ---
-title: "payments.transferStarGift (метод)"
+title: "payments.transferStarGift"
 original: "https://core.telegram.org/method/payments.transferStarGift"
 section: ref
 kind: method
+description: "Передать коллекционный подарок другому пользователю или каналу: можно использовать, только если передача бесплатна (то есть поле messageActionStarGiftUnique.transfer_stars не…"
 layout: layout.njk
 ---
 
 # payments.transferStarGift
 
-*Метод из схемы TL.*
-
-> Transfer a [collectible gift](https://core.telegram.org/api/gifts#collectible-gifts) to another user or channel: can only be used if transfer is free (i.e. [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/).`transfer_stars` is not set); see [here »](https://core.telegram.org/api/gifts#transferring-collectible-gifts) for more info on the full flow (including the different flow to use in case the transfer isn't free).
-
-## Определение TL
+Передать [коллекционный подарок](/api/gifts/#collectible-gifts) другому пользователю или каналу: можно использовать, только если передача бесплатна (то есть поле [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/).`transfer_stars` не установлено); подробнее обо всём процессе (включая другой порядок действий на случай, когда передача платная) см. [здесь »](/api/gifts/#transferring-collectible-gifts).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,47 +23,32 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 payments.transferStarGift#7f18176a stargift:InputSavedStarGift to_id:InputPeer = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| stargift | [InputSavedStarGift](/type/InputSavedStarGift/) | The gift to transfer. |
-| to_id | [InputPeer](/type/InputPeer/) | Destination peer. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>Подарок для передачи.</td></tr><tr><td><strong>to_id</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Пир назначения.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over a business connection »
+### Этот метод можно вызывать через [бизнес-подключение »](/api/bots/connected-business-bots/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BUSINESS_CONNECTION_INVALID | The connection_id passed to the wrapping [invokeWithBusinessConnection](https://core.telegram.org/api/business) call is invalid. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | PAYMENT_REQUIRED | Payment is required for this action, see [here »](https://core.telegram.org/api/gifts) for more info. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | SAVED_ID_EMPTY | The passed inputSavedStarGiftChat.saved_id is empty. |
-| 400 | STARGIFT_NOT_FOUND | The specified gift was not found. |
-| 400 | STARGIFT_NOT_OWNER | You're not the owner of the gift you trying to transfer. |
-| 400 | STARGIFT_NOT_UNIQUE | You can't transfer a non-collectible gift. |
-| 400 | STARGIFT_OWNER_INVALID | You cannot transfer or sell a gift owned by another user. |
-| 400 | STARGIFT_PEER_INVALID | The specified inputSavedStarGiftChat.peer is invalid. |
-| 400 | STARGIFT_TRANSFER_TOO_EARLY_%d | You cannot transfer this gift yet, wait %d seconds. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BUSINESS_CONNECTION_INVALID</td><td>Значение <code>connection_id</code>, переданное в объемлющем вызове <a href="/api/business">invokeWithBusinessConnection</a>, недействительно.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>PAYMENT_REQUIRED</td><td>Для этого действия требуется оплата, подробнее см. <a href="/api/gifts">здесь&nbsp;»</a>.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>SAVED_ID_EMPTY</td><td>Переданное значение inputSavedStarGiftChat.saved_id пусто.</td></tr><tr><td>400</td><td>STARGIFT_NOT_FOUND</td><td>Указанный подарок не найден.</td></tr><tr><td>400</td><td>STARGIFT_NOT_OWNER</td><td>Вы не владелец подарка, который пытаетесь передать.</td></tr><tr><td>400</td><td>STARGIFT_NOT_UNIQUE</td><td>Нельзя передать неколлекционный подарок.</td></tr><tr><td>400</td><td>STARGIFT_OWNER_INVALID</td><td>Нельзя передать или продать подарок, принадлежащий другому пользователю.</td></tr><tr><td>400</td><td>STARGIFT_PEER_INVALID</td><td>Указанное значение inputSavedStarGiftChat.peer недействительно.</td></tr><tr><td>400</td><td>STARGIFT_TRANSFER_TOO_EARLY_%d</td><td>Этот подарок пока нельзя передать, подождите %d секунд.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/)
 
-A [gift »](https://core.telegram.org/api/gifts) was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+[Подарок »](/api/gifts/) был улучшен до [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

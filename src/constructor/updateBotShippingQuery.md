@@ -1,32 +1,24 @@
 ---
-title: "updateBotShippingQuery (конструктор)"
+title: "updateBotShippingQuery"
 original: "https://core.telegram.org/constructor/updateBotShippingQuery"
 section: ref
 kind: constructor
+description: "Этот объект содержит информацию о входящем запросе доставки."
 layout: layout.njk
 ---
 
 # updateBotShippingQuery
 
-*Конструктор из схемы TL.*
-
-> This object contains information about an incoming shipping query.
-
-## Определение TL
+Этот объект содержит информацию о входящем запросе доставки.
 
 ```
 updateBotShippingQuery#b5aefd7d query_id:long user_id:long payload:bytes shipping_address:PostAddress = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| query_id | [long](/type/long/) | Unique query identifier |
-| user_id | [long](/type/long/) | User who sent the query |
-| payload | [bytes](/type/bytes/) | Bot specified invoice payload |
-| shipping_address | [PostAddress](/type/PostAddress/) | User specified shipping address |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>query_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Уникальный идентификатор запроса</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Пользователь, отправивший запрос</td></tr><tr><td><strong>payload</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Полезная нагрузка счёта, заданная ботом</td></tr><tr><td><strong>shipping_address</strong></td><td style="text-align: center;"><a href="/type/PostAddress">PostAddress</a></td><td>Указанный пользователем адрес доставки</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

@@ -1,18 +1,15 @@
 ---
-title: "payments.updateStarGiftPrice (метод)"
+title: "payments.updateStarGiftPrice"
 original: "https://core.telegram.org/method/payments.updateStarGiftPrice"
 section: ref
 kind: method
+description: "Принадлежащий нам коллекционный подарок » можно выставить на продажу на торговой площадке подарков » с помощью этого метода; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # payments.updateStarGiftPrice
 
-*Метод из схемы TL.*
-
-> A [collectible gift we own »](https://core.telegram.org/api/gifts#collectible-gifts) can be put up for sale on the [gift marketplace »](https://telegram.org/blog/gift-marketplace-and-more) with this method, see [here »](https://core.telegram.org/api/gifts#reselling-collectible-gifts) for more info.
-
-## Определение TL
+[Принадлежащий нам коллекционный подарок »](/api/gifts/#collectible-gifts) можно выставить на продажу на [торговой площадке подарков »](https://telegram.org/blog/gift-marketplace-and-more) с помощью этого метода; подробнее [см. здесь »](/api/gifts/#reselling-collectible-gifts).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,28 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 payments.updateStarGiftPrice#edbe6ccb stargift:InputSavedStarGift resell_amount:StarsAmount = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| stargift | [InputSavedStarGift](/type/InputSavedStarGift/) | The gift to resell. |
-| resell_amount | [StarsAmount](/type/StarsAmount/) | Resale price of the gift. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>Подарок для перепродажи.</td></tr><tr><td><strong>resell_amount</strong></td><td style="text-align: center;"><a href="/type/StarsAmount">StarsAmount</a></td><td>Цена перепродажи подарка.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | SAVED_ID_EMPTY | The passed inputSavedStarGiftChat.saved_id is empty. |
-| 400 | STARGIFT_NOT_FOUND | The specified gift was not found. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>SAVED_ID_EMPTY</td><td>Переданное значение inputSavedStarGiftChat.saved_id пусто.</td></tr><tr><td>400</td><td>STARGIFT_NOT_FOUND</td><td>Указанный подарок не найден.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

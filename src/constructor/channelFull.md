@@ -1,231 +1,160 @@
 ---
-title: "channelFull (конструктор)"
+title: "channelFull"
 original: "https://core.telegram.org/constructor/channelFull"
 section: ref
 kind: constructor
+description: "Полная информация о канале, супергруппе или гигагруппе."
 layout: layout.njk
 ---
 
 # channelFull
 
-*Конструктор из схемы TL.*
+Полная информация о [канале](/api/channel/#channels), [супергруппе](/api/channel/#supergroups) или [гигагруппе](/api/channel/#gigagroups).
 
-> Full info about a [channel](https://core.telegram.org/api/channel#channels), [supergroup](https://core.telegram.org/api/channel#supergroups) or [gigagroup](https://core.telegram.org/api/channel#gigagroups).
-> When updating the [local peer database »](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
-
-## Определение TL
+При обновлении [локальной базы пиров »](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).
 
 ```
 channelFull#e4e0b29d flags:# can_view_participants:flags.3?true can_set_username:flags.6?true can_set_stickers:flags.7?true hidden_prehistory:flags.10?true can_set_location:flags.16?true has_scheduled:flags.19?true can_view_stats:flags.20?true blocked:flags.22?true flags2:# can_delete_channel:flags2.0?true antispam:flags2.1?true participants_hidden:flags2.2?true translations_disabled:flags2.3?true stories_pinned_available:flags2.5?true view_forum_as_messages:flags2.6?true restricted_sponsored:flags2.11?true can_view_revenue:flags2.12?true paid_media_allowed:flags2.14?true can_view_stars_revenue:flags2.15?true paid_reactions_available:flags2.16?true stargifts_available:flags2.19?true paid_messages_available:flags2.20?true id:long about:string participants_count:flags.0?int admins_count:flags.1?int kicked_count:flags.2?int banned_count:flags.2?int online_count:flags.13?int read_inbox_max_id:int read_outbox_max_id:int unread_count:int chat_photo:Photo notify_settings:PeerNotifySettings exported_invite:flags.23?ExportedChatInvite bot_info:Vector<BotInfo> migrated_from_chat_id:flags.4?long migrated_from_max_id:flags.4?int pinned_msg_id:flags.5?int stickerset:flags.8?StickerSet available_min_id:flags.9?int folder_id:flags.11?int linked_chat_id:flags.14?long location:flags.15?ChannelLocation slowmode_seconds:flags.17?int slowmode_next_send_date:flags.18?int stats_dc:flags.12?int pts:int call:flags.21?InputGroupCall ttl_period:flags.24?int pending_suggestions:flags.25?Vector<string> groupcall_default_join_as:flags.26?Peer theme_emoticon:flags.27?string requests_pending:flags.28?int recent_requesters:flags.28?Vector<long> default_send_as:flags.29?Peer available_reactions:flags.30?ChatReactions reactions_limit:flags2.13?int stories:flags2.4?PeerStories wallpaper:flags2.7?WallPaper boosts_applied:flags2.8?int boosts_unrestrict:flags2.9?int emojiset:flags2.10?StickerSet bot_verification:flags2.17?BotVerification stargifts_count:flags2.18?int send_paid_messages_stars:flags2.21?long main_tab:flags2.22?ProfileTab = ChatFull;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| can_view_participants | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Can we view the participant list? |
-| can_set_username | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | Can we set the channel's username? |
-| can_set_stickers | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | Can we [associate](/method/channels.setStickers/) a stickerpack to the supergroup? |
-| hidden_prehistory | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[true](/constructor/true/) | Is the history before we joined hidden to us? |
-| can_set_location | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).16?[true](/constructor/true/) | Can we set the geolocation of this group (for geogroups) |
-| has_scheduled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).19?[true](/constructor/true/) | Whether scheduled messages are available |
-| can_view_stats | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).20?[true](/constructor/true/) | Can the user view [channel/supergroup statistics](https://core.telegram.org/api/stats) |
-| blocked | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).22?[true](/constructor/true/) | Whether any anonymous admin of this supergroup was blocked: if set, you won't receive messages from [anonymous group admins »](https://core.telegram.org/api/rights#anonymous-admins) in [discussion replies via @replies](https://core.telegram.org/api/discussion) |
-| flags2 | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| can_delete_channel | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Can we delete this channel? |
-| antispam | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether [native antispam](https://core.telegram.org/api/antispam) functionality is enabled in this supergroup. |
-| participants_hidden | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether the participant list is hidden. |
-| translations_disabled | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether the [real-time chat translation popup](https://core.telegram.org/api/translation) should be hidden. |
-| stories_pinned_available | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether this user has some [pinned stories](https://core.telegram.org/api/stories#pinned-or-archived-stories). |
-| view_forum_as_messages | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | Users may also choose to display messages from all topics of a [forum](https://core.telegram.org/api/forum) as if they were sent to a normal group, using a "View as messages" setting in the local client. This setting only affects the current account, and is synced to other logged in sessions using the [channels.toggleViewForumAsMessages](/method/channels.toggleViewForumAsMessages/) method; invoking this method will update the value of this flag. |
-| restricted_sponsored | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[true](/constructor/true/) | Whether ads on this channel were [disabled as specified here »](https://core.telegram.org/api/boost#disable-ads-on-the-channel) (this flag is only visible to the owner of the channel). |
-| can_view_revenue | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[true](/constructor/true/) | If set, this user can view [ad revenue statistics »](https://core.telegram.org/api/revenue#revenue-statistics) for this channel. |
-| paid_media_allowed | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[true](/constructor/true/) | Whether the current user can send or forward [paid media »](https://core.telegram.org/api/paid-media) to this channel. |
-| can_view_stars_revenue | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[true](/constructor/true/) | If set, this user can view [Telegram Star revenue statistics »](https://core.telegram.org/api/stars#revenue-statistics) for this channel. |
-| paid_reactions_available | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).16?[true](/constructor/true/) | If set, users may send [paid Telegram Star reactions »](https://core.telegram.org/api/reactions#paid-reactions) to messages of this channel. |
-| stargifts_available | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).19?[true](/constructor/true/) | If set, users may send [Gifts »](https://core.telegram.org/api/gifts) to this channel. |
-| paid_messages_available | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).20?[true](/constructor/true/) | If set, admins may [enable enable paid messages »](https://core.telegram.org/api/paid-messages) in this supergroup. |
-| id | [long](/type/long/) | ID of the channel |
-| about | [string](/type/string/) | Info about the channel |
-| participants_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Number of participants of the channel |
-| admins_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | Number of channel admins |
-| kicked_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Number of users [kicked](https://core.telegram.org/api/rights) from the channel |
-| banned_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Number of users [banned](https://core.telegram.org/api/rights) from the channel |
-| online_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[int](/type/int/) | Number of users currently online |
-| read_inbox_max_id | [int](/type/int/) | Position up to which all incoming messages are read. |
-| read_outbox_max_id | [int](/type/int/) | Position up to which all outgoing messages are read. |
-| unread_count | [int](/type/int/) | Count of unread messages |
-| chat_photo | [Photo](/type/Photo/) | Channel picture |
-| notify_settings | [PeerNotifySettings](/type/PeerNotifySettings/) | Notification settings |
-| exported_invite | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).23?[ExportedChatInvite](/type/ExportedChatInvite/) | Invite link |
-| bot_info | [Vector](https://core.telegram.org/type/Vector%20t)<[BotInfo](/type/BotInfo/)> | Info about bots in the channel/supergroup |
-| migrated_from_chat_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[long](/type/long/) | The chat ID from which this group was [migrated](https://core.telegram.org/api/channel) |
-| migrated_from_max_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[int](/type/int/) | The message ID in the original chat at which this group was [migrated](https://core.telegram.org/api/channel) |
-| pinned_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[int](/type/int/) | Message ID of the last [pinned message](https://core.telegram.org/api/pin) |
-| stickerset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[StickerSet](/type/StickerSet/) | Associated stickerset |
-| available_min_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[int](/type/int/) | Identifier of a maximum unavailable message in a channel due to hidden history. |
-| folder_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[int](/type/int/) | [Peer folder ID, for more info click here](https://core.telegram.org/api/folders#peer-folders) |
-| linked_chat_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[long](/type/long/) | ID of the linked [discussion chat](https://core.telegram.org/api/discussion) for channels (and vice versa, the ID of the linked channel for discussion chats). |
-| location | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[ChannelLocation](/type/ChannelLocation/) | Location of the geogroup |
-| slowmode_seconds | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[int](/type/int/) | If specified, users in supergroups will only be able to send one message every slowmode_seconds seconds |
-| slowmode_next_send_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[int](/type/int/) | Indicates when the user will be allowed to send another message in the supergroup (unixtime) |
-| stats_dc | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[int](/type/int/) | If set, specifies the DC to use for fetching channel statistics |
-| pts | [int](/type/int/) | Latest [PTS](/api/updates/) for this channel |
-| call | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).21?[InputGroupCall](/type/InputGroupCall/) | Active or scheduled [video chat/livestream »](https://core.telegram.org/api/group-calls#video-chats-livestreams) associated with this supergroup/channel |
-| ttl_period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).24?[int](/type/int/) | Time-To-Live of messages in this channel or supergroup |
-| pending_suggestions | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).25?[Vector](https://core.telegram.org/type/Vector%20t)<[string](/type/string/)> | A list of [suggested actions](https://core.telegram.org/api/config#suggestions) for the supergroup admin, [see here for more info »](https://core.telegram.org/api/config#suggestions). |
-| groupcall_default_join_as | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).26?[Peer](/type/Peer/) | Explicitly saved default peer used to join this supergroup/channel's [video chat/livestream »](https://core.telegram.org/api/group-calls#video-chats-livestreams); if absent, the current user is used |
-| theme_emoticon | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).27?[string](/type/string/) | Emoji representing a specific chat theme |
-| requests_pending | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).28?[int](/type/int/) | Pending [join requests »](https://core.telegram.org/api/invites#join-requests) |
-| recent_requesters | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).28?[Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | IDs of users who requested to join recently |
-| default_send_as | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).29?[Peer](/type/Peer/) | Default peer used for sending messages to this channel |
-| available_reactions | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).30?[ChatReactions](/type/ChatReactions/) | Allowed [message reactions »](https://core.telegram.org/api/reactions) |
-| reactions_limit | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[int](/type/int/) | This flag may be used to impose a custom limit of unique reactions (i.e. a customizable version of [appConfig.reactions_uniq_max](https://core.telegram.org/api/config#reactions-uniq-max)). |
-| stories | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[PeerStories](/type/PeerStories/) | Channel [stories](https://core.telegram.org/api/stories) |
-| wallpaper | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[WallPaper](/type/WallPaper/) | [Wallpaper](https://core.telegram.org/api/wallpapers) |
-| boosts_applied | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[int](/type/int/) | The number of [boosts](https://core.telegram.org/api/boost) the current user has applied to the current supergroup. |
-| boosts_unrestrict | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[int](/type/int/) | The number of [boosts](https://core.telegram.org/api/boost) this supergroup requires to bypass slowmode and other restrictions, see [here »](https://core.telegram.org/api/boost#bypass-slowmode-and-chat-restrictions) for more info. |
-| emojiset | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[StickerSet](/type/StickerSet/) | [Custom emoji stickerset](https://core.telegram.org/api/custom-emoji) associated to the current supergroup, set using [channels.setEmojiStickers](/method/channels.setEmojiStickers/) after reaching the appropriate boost level, see [here »](https://core.telegram.org/api/boost#setting-a-custom-emoji-stickerset-for-supergroups) for more info. |
-| bot_verification | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[BotVerification](/type/BotVerification/) | [Bot verification icon](https://core.telegram.org/api/bots/verification) |
-| stargifts_count | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[int](/type/int/) | Admins with [chatAdminRights](/constructor/chatAdminRights/).post_messages rights will see the total number of received gifts, everyone else will see the number of gifts added to the channel's profile. |
-| send_paid_messages_stars | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).21?[long](/type/long/) | If set and bigger than 0, this supergroup, [monoforum](https://core.telegram.org/api/monoforum) or the monoforum associated to this channel has enabled [paid messages »](https://core.telegram.org/api/paid-messages) and we must pay the specified amount of [Stars](https://core.telegram.org/api/stars) to send messages to it, see [here »](https://core.telegram.org/api/paid-messages) for the full flow. This flag will be set both for the monoforum and for [channelFull](/constructor/channelFull/) of the associated channel). If set and equal to 0, the monoforum requires payment in general but we were exempted from paying. |
-| main_tab | [flags2](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).22?[ProfileTab](/type/ProfileTab/) | The main tab for the channel's profile, see [here »](https://core.telegram.org/api/profile#tabs) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>can_view_participants</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Можем ли мы просматривать список участников?</td></tr><tr><td><strong>can_set_username</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Можем ли мы задать имя пользователя канала?</td></tr><tr><td><strong>can_set_stickers</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Можем ли мы <a href="/method/channels.setStickers">привязать</a> набор стикеров к супергруппе?</td></tr><tr><td><strong>hidden_prehistory</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true">true</a></td><td>Скрыта ли от нас история, предшествующая нашему вступлению?</td></tr><tr><td><strong>can_set_location</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true">true</a></td><td>Можем ли мы задать геопозицию этой группы (для геогрупп)</td></tr><tr><td><strong>has_scheduled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/constructor/true">true</a></td><td>Доступны ли отложенные сообщения</td></tr><tr><td><strong>can_view_stats</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/constructor/true">true</a></td><td>Может ли пользователь просматривать <a href="/api/stats">статистику канала/супергруппы</a></td></tr><tr><td><strong>blocked</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/constructor/true">true</a></td><td>Заблокированы ли анонимные администраторы этой супергруппы: если установлено, вы не будете получать сообщения от <a href="/api/rights#anonymous-admins">анонимных администраторов групп »</a> в <a href="/api/discussion">комментариях к обсуждениям через @replies</a></td></tr><tr><td><strong>flags2</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>can_delete_channel</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.0?<a href="/constructor/true">true</a></td><td>Можем ли мы удалить этот канал?</td></tr><tr><td><strong>antispam</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.1?<a href="/constructor/true">true</a></td><td>Включена ли в этой супергруппе <a href="/api/antispam">встроенная защита от спама</a>.</td></tr><tr><td><strong>participants_hidden</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.2?<a href="/constructor/true">true</a></td><td>Скрыт ли список участников.</td></tr><tr><td><strong>translations_disabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.3?<a href="/constructor/true">true</a></td><td>Следует ли скрыть <a href="/api/translation">всплывающее окно перевода чата в реальном времени</a>.</td></tr><tr><td><strong>stories_pinned_available</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.5?<a href="/constructor/true">true</a></td><td>Есть ли у этого пользователя <a href="/api/stories#pinned-or-archived-stories">закреплённые истории</a>.</td></tr><tr><td><strong>view_forum_as_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.6?<a href="/constructor/true">true</a></td><td>Пользователи также могут выбрать отображение сообщений из всех тем <a href="/api/forum">форума</a> так, как если бы они были отправлены в обычную группу, с помощью настройки «Показывать как сообщения» в локальном клиенте.<br>Эта настройка влияет только на текущий аккаунт и синхронизируется с другими активными сессиями методом <a href="/method/channels.toggleViewForumAsMessages">channels.toggleViewForumAsMessages</a>; вызов этого метода изменит значение данного флага.</td></tr><tr><td><strong>restricted_sponsored</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.11?<a href="/constructor/true">true</a></td><td>Была ли реклама в этом канале <a href="/api/boost#disable-ads-on-the-channel">отключена так, как описано здесь »</a> (этот флаг виден только владельцу канала).</td></tr><tr><td><strong>can_view_revenue</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.12?<a href="/constructor/true">true</a></td><td>Если установлено, этот пользователь может просматривать <a href="/api/revenue#revenue-statistics">статистику доходов от рекламы »</a> для этого канала.</td></tr><tr><td><strong>paid_media_allowed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.14?<a href="/constructor/true">true</a></td><td>Может ли текущий пользователь отправлять или пересылать <a href="/api/paid-media">платное медиа »</a> в этот канал.</td></tr><tr><td><strong>can_view_stars_revenue</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.15?<a href="/constructor/true">true</a></td><td>Если установлено, этот пользователь может просматривать <a href="/api/stars#revenue-statistics">статистику доходов в Telegram Stars »</a> для этого канала.</td></tr><tr><td><strong>paid_reactions_available</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.16?<a href="/constructor/true">true</a></td><td>Если установлено, пользователи могут отправлять <a href="/api/reactions#paid-reactions">платные реакции за Telegram Stars »</a> на сообщения этого канала.</td></tr><tr><td><strong>stargifts_available</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.19?<a href="/constructor/true">true</a></td><td>Если установлено, пользователи могут отправлять этому каналу <a href="/api/gifts">подарки »</a>.</td></tr><tr><td><strong>paid_messages_available</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.20?<a href="/constructor/true">true</a></td><td>Если установлено, администраторы могут включать в этой супергруппе <a href="/api/paid-messages">платные сообщения »</a>.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор канала</td></tr><tr><td><strong>about</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Информация о канале</td></tr><tr><td><strong>participants_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Количество участников канала</td></tr><tr><td><strong>admins_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Количество администраторов канала</td></tr><tr><td><strong>kicked_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Количество пользователей, <a href="/api/rights">удалённых</a> из канала</td></tr><tr><td><strong>banned_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Количество пользователей, <a href="/api/rights">заблокированных</a> в канале</td></tr><tr><td><strong>online_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/int">int</a></td><td>Количество пользователей, находящихся в сети</td></tr><tr><td><strong>read_inbox_max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Позиция, до которой прочитаны все входящие сообщения.</td></tr><tr><td><strong>read_outbox_max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Позиция, до которой прочитаны все исходящие сообщения.</td></tr><tr><td><strong>unread_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество непрочитанных сообщений</td></tr><tr><td><strong>chat_photo</strong></td><td style="text-align: center;"><a href="/type/Photo">Photo</a></td><td>Изображение канала</td></tr><tr><td><strong>notify_settings</strong></td><td style="text-align: center;"><a href="/type/PeerNotifySettings">PeerNotifySettings</a></td><td>Настройки уведомлений</td></tr><tr><td><strong>exported_invite</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/type/ExportedChatInvite">ExportedChatInvite</a></td><td>Пригласительная ссылка</td></tr><tr><td><strong>bot_info</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/BotInfo">BotInfo</a>&gt;</td><td>Информация о ботах в канале или супергруппе</td></tr><tr><td><strong>migrated_from_chat_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/long">long</a></td><td>Идентификатор чата, из которого была <a href="/api/channel">выполнена миграция</a> этой группы</td></tr><tr><td><strong>migrated_from_max_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int">int</a></td><td>Идентификатор сообщения в исходном чате, на котором эта группа была <a href="/api/channel">перенесена</a></td></tr><tr><td><strong>pinned_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/int">int</a></td><td>Идентификатор последнего <a href="/api/pin">закреплённого сообщения</a></td></tr><tr><td><strong>stickerset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/StickerSet">StickerSet</a></td><td>Привязанный набор стикеров</td></tr><tr><td><strong>available_min_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/int">int</a></td><td>Наибольший идентификатор сообщения в канале, недоступного из-за скрытой истории.</td></tr><tr><td><strong>folder_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/int">int</a></td><td><a href="/api/folders#peer-folders">Идентификатор папки пира, подробнее см. здесь</a></td></tr><tr><td><strong>linked_chat_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/long">long</a></td><td>Идентификатор связанного <a href="/api/discussion">чата обсуждения</a> для каналов (и наоборот, идентификатор связанного канала для чатов обсуждения).</td></tr><tr><td><strong>location</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/ChannelLocation">ChannelLocation</a></td><td>Местоположение геогруппы</td></tr><tr><td><strong>slowmode_seconds</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/int">int</a></td><td>Если указано, пользователи в супергруппах смогут отправлять только одно сообщение каждые <code>slowmode_seconds</code> секунд</td></tr><tr><td><strong>slowmode_next_send_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/int">int</a></td><td>Указывает, когда пользователю будет разрешено отправить следующее сообщение в супергруппе (unixtime)</td></tr><tr><td><strong>stats_dc</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/int">int</a></td><td>Если установлено, указывает DC, который следует использовать для получения статистики канала</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] Последнее значение <a href="/api/updates">PTS</a> для этого канала</td></tr><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/type/InputGroupCall">InputGroupCall</a></td><td>Активный или запланированный <a href="/api/group-calls#video-chats-livestreams">видеочат/трансляция »</a>, связанный с этой супергруппой/каналом</td></tr><tr><td><strong>ttl_period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/type/int">int</a></td><td>Время жизни сообщений в этом канале или супергруппе</td></tr><tr><td><strong>pending_suggestions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/string">string</a>&gt;</td><td>Список <a href="/api/config#suggestions">предлагаемых действий</a> для администратора супергруппы, <a href="/api/config#suggestions">подробнее см. здесь »</a>.</td></tr><tr><td><strong>groupcall_default_join_as</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.26?<a href="/type/Peer">Peer</a></td><td>Явно сохранённый пир по умолчанию, от имени которого выполняется вход в <a href="/api/group-calls#video-chats-livestreams">видеочат или трансляцию »</a> этой супергруппы либо канала; если не задан, используется текущий пользователь</td></tr><tr><td><strong>theme_emoticon</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.27?<a href="/type/string">string</a></td><td>Эмодзи, обозначающий определённую тему оформления чата</td></tr><tr><td><strong>requests_pending</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.28?<a href="/type/int">int</a></td><td>Ожидающие рассмотрения <a href="/api/invites#join-requests">заявки на вступление »</a></td></tr><tr><td><strong>recent_requesters</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.28?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Идентификаторы пользователей, недавно подавших заявку на вступление</td></tr><tr><td><strong>default_send_as</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.29?<a href="/type/Peer">Peer</a></td><td>Пир, используемый по умолчанию для отправки сообщений в этот канал</td></tr><tr><td><strong>available_reactions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.30?<a href="/type/ChatReactions">ChatReactions</a></td><td>Разрешённые <a href="/api/reactions">реакции на сообщения »</a></td></tr><tr><td><strong>reactions_limit</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.13?<a href="/type/int">int</a></td><td>Этот флаг позволяет задать собственное ограничение на число уникальных реакций (то есть настраиваемый аналог <a href="/api/config#reactions-uniq-max">appConfig.reactions_uniq_max</a>).</td></tr><tr><td><strong>stories</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.4?<a href="/type/PeerStories">PeerStories</a></td><td><a href="/api/stories">Истории</a> канала</td></tr><tr><td><strong>wallpaper</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.7?<a href="/type/WallPaper">WallPaper</a></td><td><a href="/api/wallpapers">Обои</a></td></tr><tr><td><strong>boosts_applied</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.8?<a href="/type/int">int</a></td><td>Количество <a href="/api/boost">бустов</a>, которые текущий пользователь отдал текущей <em>супергруппе</em>.</td></tr><tr><td><strong>boosts_unrestrict</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.9?<a href="/type/int">int</a></td><td>Количество <a href="/api/boost">бустов</a>, которое требуется этой <em>супергруппе</em>, чтобы обойти медленный режим и другие ограничения; подробнее см. <a href="/api/boost#bypass-slowmode-and-chat-restrictions">здесь »</a>.</td></tr><tr><td><strong>emojiset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.10?<a href="/type/StickerSet">StickerSet</a></td><td><a href="/api/custom-emoji">Набор стикеров с пользовательскими эмодзи</a>, привязанный к текущей <em>супергруппе</em> с помощью метода <a href="/method/channels.setEmojiStickers">channels.setEmojiStickers</a> после достижения нужного уровня бустов; подробнее см. <a href="/api/boost#setting-a-custom-emoji-stickerset-for-supergroups">здесь »</a>.</td></tr><tr><td><strong>bot_verification</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.17?<a href="/type/BotVerification">BotVerification</a></td><td><a href="/api/bots/verification">Значок верификации бота</a></td></tr><tr><td><strong>stargifts_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.18?<a href="/type/int">int</a></td><td>Администраторы с правами <a href="/constructor/chatAdminRights">chatAdminRights</a>.<code>post_messages</code> увидят общее число полученных подарков, все остальные — число подарков, добавленных в профиль канала.</td></tr><tr><td><strong>send_paid_messages_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.21?<a href="/type/long">long</a></td><td>Если установлено и больше 0, в этой супергруппе, <a href="/api/monoforum">монофоруме</a> или монофоруме, связанном с этим каналом, включены <a href="/api/paid-messages">платные сообщения »</a>, и мы <em>обязаны</em> заплатить указанное количество <a href="/api/stars">Stars</a>, чтобы отправлять туда сообщения; полное описание процесса см. <a href="/api/paid-messages">здесь »</a>.<br>Этот флаг будет установлен и для монофорума, и в <a href="/constructor/channelFull">channelFull</a> связанного канала).<br>Если установлено и равно 0, монофорум в целом требует оплаты, но мы освобождены от неё.</td></tr><tr><td><strong>main_tab</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.22?<a href="/type/ProfileTab">ProfileTab</a></td><td>Основная вкладка профиля канала, <a href="/api/profile#tabs">подробнее здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatFull](/type/ChatFull/)
 
-## Related pages
+### Связанные страницы
 
 #### [channels.setStickers](/method/channels.setStickers/)
 
-Associate a stickerset to the supergroup
+Привязать набор стикеров к супергруппе
 
-#### [Channel statistics](https://core.telegram.org/api/stats)
+#### [Статистика каналов](/api/stats/)
 
-Telegram offers detailed channel statistics for channels and supergroups.
+Telegram предоставляет подробную статистику для каналов и супергрупп.
 
-#### [Admin, banned, default rights](https://core.telegram.org/api/rights)
+#### [Права администраторов, ограничения и права по умолчанию](/api/rights/)
 
-How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.
+Как работать с правами администраторов, детальными ограничениями и общими правами в каналах, группах и супергруппах.
 
-#### [Discussion groups](https://core.telegram.org/api/discussion)
+#### [Группы обсуждения](/api/discussion/)
 
-Groups can be associated to a channel as a discussion group, to allow users to discuss about posts.
+Группы можно связать с каналом в качестве группы обсуждения, чтобы пользователи могли обсуждать посты.
 
-#### [Native antispam system](https://core.telegram.org/api/antispam)
+#### [Встроенная система антиспама](/api/antispam/)
 
-Admins of supergroups with a certain number of members can choose to unleash the full proactive power of Telegram's own antispam algorithms – turning on the new Aggressive mode for the automated spam filters.
+Администраторы супергрупп с определённым числом участников могут задействовать всю упреждающую мощь собственных антиспам-алгоритмов Telegram — включить новый агрессивный режим автоматических спам-фильтров.
 
-#### [Message translation](https://core.telegram.org/api/translation)
+#### [Перевод сообщений](/api/translation/)
 
-Telegram allows translating chat messages: Telegram Premium users may even enable real-time chat translation.
+Telegram позволяет переводить сообщения в чатах: пользователи Telegram Premium могут даже включить перевод чата в реальном времени.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.
 
 #### [channels.toggleViewForumAsMessages](/method/channels.toggleViewForumAsMessages/)
 
-Users may also choose to display messages from all topics of a [forum](https://core.telegram.org/api/forum) as if they were sent to a normal group, using a "View as messages" setting in the local client: this setting only affects the current account, and is synced to other logged in sessions using this method.
+Пользователи также могут отображать сообщения из всех тем [форума](/api/forum/) так, как если бы они были отправлены в обычную группу, — с помощью настройки «Показывать как сообщения» в локальном клиенте: эта настройка влияет только на текущий аккаунт и синхронизируется с другими активными сессиями с помощью этого метода.
 
-Invoking this method will update the value of the `view_forum_as_messages` flag of [channelFull](/constructor/channelFull/) or [dialog](/constructor/dialog/) and emit an [updateChannelViewForumAsMessages](/constructor/updateChannelViewForumAsMessages/).
+Вызов этого метода обновит значение флага `view_forum_as_messages` в [channelFull](/constructor/channelFull/) или [dialog](/constructor/dialog/) и отправит обновление [updateChannelViewForumAsMessages](/constructor/updateChannelViewForumAsMessages/).
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.
 
-#### [Channel and bot ad revenue](https://core.telegram.org/api/revenue)
+#### [Доход от рекламы в каналах и ботах](/api/revenue/)
 
-Telegram has one of the most generous reward systems in the history of social media. Telegram channel and bot owners can now receive 50% of the revenue from ads displayed in their channels and bots. This page describes the methods used to withdraw channel/bot ad revenue, as well as view detailed revenue stats.
+В Telegram действует одна из самых щедрых систем вознаграждения в истории социальных сетей. Владельцы каналов и ботов Telegram теперь могут получать 50% дохода от рекламы, показанной в их каналах и ботах. На этой странице описаны методы для вывода дохода от рекламы в каналах и ботах, а также для просмотра подробной статистики доходов.
 
-#### [Paid media](https://core.telegram.org/api/paid-media)
+#### [Платные медиа](/api/paid-media/)
 
-Content creators can accept Stars by publishing paid photos or videos on their channels. Subscribers will be allowed to view such posts only after paying the author to unlock them.
+Авторы контента могут принимать Stars, публикуя в своих каналах платные фотографии и видео. Подписчики смогут просмотреть такие посты, только заплатив автору за их разблокировку.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
-#### [Paid messages](https://core.telegram.org/api/paid-messages)
+#### [Платные сообщения](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.
+Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Pinned messages](https://core.telegram.org/api/pin)
+#### [Закреплённые сообщения](/api/pin/)
 
-Telegram allows pinning multiple messages on top of a specific chat.
+Telegram позволяет закреплять несколько сообщений вверху конкретного чата.
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
 #### [channels.setEmojiStickers](/method/channels.setEmojiStickers/)
 
-Set a [custom emoji stickerset](https://core.telegram.org/api/custom-emoji) for supergroups. Only usable after reaching at least the [boost level »](https://core.telegram.org/api/boost) specified in the [`group_emoji_stickers_level_min` »](https://core.telegram.org/api/config#group-emoji-stickers-level-min) config parameter.
+Задать [набор пользовательских эмодзи](/api/custom-emoji/) для супергрупп. Использовать можно только после достижения как минимум [уровня буста »](/api/boost/), указанного в параметре конфигурации [`group_emoji_stickers_level_min` »](/api/config/#group-emoji-stickers-level-min).
 
-#### [Third-party verification](https://core.telegram.org/api/bots/verification)
+#### [Сторонняя верификация](/api/bots/verification/)
 
-To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and reduce misinformation.
+Чтобы ещё повысить прозрачность в Telegram, официальные сторонние сервисы могут присваивать аккаунтам пользователей и чатам дополнительные значки верификации — чтобы предотвратить мошенничество и снизить распространение недостоверной информации.
 
 #### [chatAdminRights](/constructor/chatAdminRights/)
 
-Represents the rights of an admin in a [channel/supergroup](https://core.telegram.org/api/channel).
+Представляет права администратора в [канале или супергруппе](/api/channel/).
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
 #### [channelFull](/constructor/channelFull/)
 
-Full info about a [channel](https://core.telegram.org/api/channel#channels), [supergroup](https://core.telegram.org/api/channel#supergroups) or [gigagroup](https://core.telegram.org/api/channel#gigagroups).
+Полная информация о [канале](/api/channel/#channels), [супергруппе](/api/channel/#supergroups) или [гигагруппе](/api/channel/#gigagroups).
 
-When updating the [local peer database »](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров »](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!
 
-#### [Peer database](https://core.telegram.org/api/peers)
+#### [База данных пиров](/api/peers/)
 
-Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.
+Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.

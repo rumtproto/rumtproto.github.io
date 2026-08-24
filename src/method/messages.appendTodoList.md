@@ -1,18 +1,15 @@
 ---
-title: "messages.appendTodoList (метод)"
+title: "messages.appendTodoList"
 original: "https://core.telegram.org/method/messages.appendTodoList"
 section: ref
 kind: method
+description: "Добавляет один или несколько пунктов в список задач »."
 layout: layout.njk
 ---
 
 # messages.appendTodoList
 
-*Метод из схемы TL.*
-
-> Appends one or more items to a [todo list »](https://core.telegram.org/api/todo).
-
-## Определение TL
+Добавляет один или несколько пунктов в [список задач »](/api/todo/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,31 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.appendTodoList#21a61057 peer:InputPeer msg_id:int list:Vector<TodoItem> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer where the todo list was posted. |
-| msg_id | [int](/type/int/) | ID of the message with the todo list. |
-| list | [Vector](https://core.telegram.org/type/Vector%20t)<[TodoItem](/type/TodoItem/)> | Items to append. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в котором был опубликован список задач.</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения со списком задач.</td></tr><tr><td><strong>list</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/TodoItem">TodoItem</a>&gt;</td><td>Пункты для добавления.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | TODO_ITEM_DUPLICATE | Duplicate [checklist items](https://core.telegram.org/api/todo) detected. |
-| 400 | TODO_NOT_MODIFIED | No todo items were specified, so no changes were made to the todo list. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>TODO_ITEM_DUPLICATE</td><td>Обнаружены повторяющиеся <a href="/api/todo">пункты списка задач</a>.</td></tr><tr><td>400</td><td>TODO_NOT_MODIFIED</td><td>Пункты списка задач не указаны, поэтому в список задач не внесено никаких изменений.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Checklists and to-do lists](https://core.telegram.org/api/todo)
+#### [Чек-листы и списки задач](/api/todo/)
 
-Premium users can now create collaborative checklists in any chat to track tasks and coordinate teams — or manage shopping and to-do lists.
+Пользователи Premium теперь могут создавать совместные чек-листы в любом чате, чтобы отслеживать задачи и координировать команды — или вести списки покупок и дел.

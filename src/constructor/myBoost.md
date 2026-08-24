@@ -1,40 +1,30 @@
 ---
-title: "myBoost (конструктор)"
+title: "myBoost"
 original: "https://core.telegram.org/constructor/myBoost"
 section: ref
 kind: constructor
+description: "Содержит информацию об одном слоте буста »."
 layout: layout.njk
 ---
 
 # myBoost
 
-*Конструктор из схемы TL.*
-
-> Contains information about a single [boost slot »](https://core.telegram.org/api/boost).
-
-## Определение TL
+Содержит информацию об одном [слоте буста »](/api/boost/).
 
 ```
 myBoost#c448415c flags:# slot:int peer:flags.0?Peer date:int expires:int cooldown_until_date:flags.1?int = MyBoost;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| slot | [int](/type/int/) | [Boost slot ID »](https://core.telegram.org/api/boost) |
-| peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Peer](/type/Peer/) | If set, indicates this slot is currently occupied, i.e. we are [boosting](https://core.telegram.org/api/boost) this peer. Note that we can assign multiple boost slots to the same peer. |
-| date | [int](/type/int/) | When (unixtime) we started boosting the peer, 0 otherwise. |
-| expires | [int](/type/int/) | Indicates the (unixtime) expiration date of the boost in peer (0 if peer is not set). |
-| cooldown_until_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | If peer is set, indicates the (unixtime) date after which this boost can be reassigned to another channel. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>slot</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/boost">Идентификатор слота буста »</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Peer">Peer</a></td><td>[@term:peer] Если установлено, указывает, что этот слот сейчас занят, то есть мы <a href="/api/boost">бустим</a> этого пира.<br>Обратите внимание, что одному и тому же пиру можно назначить несколько слотов буста.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда (unixtime) мы начали бустить <code>peer</code>, иначе <code>0</code>.</td></tr><tr><td><strong>expires</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Указывает дату истечения буста в <code>peer</code> (unixtime) (<code>0</code>, если <code>peer</code> не задан).</td></tr><tr><td><strong>cooldown_until_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Если задано поле <code>peer</code>, указывает дату (unixtime), после которой этот буст можно переназначить другому каналу.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MyBoost](/type/MyBoost/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.

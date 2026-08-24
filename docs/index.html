@@ -1,198 +1,56 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Документация MTProto на русском — MTProto по-русски</title>
-<link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
-    <nav class="top-nav">
-      <a href="/mtproto/">MTProto</a>
-      <a href="/api/">API</a>
-      <a href="/schema/">Схема</a>
-      <a href="/glossary/">Глоссарий</a>
-    </nav>
-  </div>
-</header>
-<div class="layout">
-  <aside class="sidebar">
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Протокол MTProto</div>
-        <ul>
-          
-            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
-          
-            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
-          
-            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
-          
-            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
-          
-            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
-          
-            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
-          
-            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
-          
-            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
-          
-            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
-          
-            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
-          
-            <li><a href="/mtproto/TL/">Язык TL</a></li>
-          
-            <li><a href="/mtproto/transports/">Транспорты</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Telegram API</div>
-        <ul>
-          
-            <li><a href="/api/">Telegram API</a></li>
-          
-            <li><a href="/api/auth/">Авторизация пользователя</a></li>
-          
-            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
-          
-            <li><a href="/api/errors/">Ошибки</a></li>
-          
-            <li><a href="/api/files/">Работа с файлами</a></li>
-          
-            <li><a href="/api/invoking/">Вызов методов</a></li>
-          
-            <li><a href="/api/layers/">Слои схемы</a></li>
-          
-            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
-          
-            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
-          
-            <li><a href="/api/updates/">Получение обновлений</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Схема TL</div>
-        <ul>
-          
-            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
-          
-            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
-          
-            <li><a href="/methods/">Методы по категориям</a></li>
-          
-            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
-          
-            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
-          
-            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
-          
-            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Другое</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-            <li><a href="/techfaq/">Технический FAQ</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Справочник схемы</div>
-        <ul>
-          
-            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
-          
-            <li><a href="/method/">Методы (справочник)</a></li>
-          
-            <li><a href="/type/">Типы (справочник)</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Приложение</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-        </ul>
-      </div>
-    
-  </aside>
-  <main class="content">
-    <article>
-      <h1 id="документация-mtproto-на-русском" tabindex="-1">Документация MTProto на русском</h1>
-<p>Неофициальный русскоязычный справочник по протоколу <strong>MTProto</strong> и схеме данных Telegram, подготовленный как офлайн-дополнение к оригиналу на <a href="https://core.telegram.org">core.telegram.org</a>.</p>
-<p><strong>Что внутри:</strong></p>
-<ul>
-<li><strong>Оригинальные русскоязычные статьи</strong> об устройстве протокола: обзор, формат сообщений, генерация ключа, безопасность, сериализация, транспорты, сервисные сообщения, секретные чаты, обновления, файлы, авторизация и другое.</li>
-<li><strong>Полный справочник схемы</strong> (около 2900 страниц): конструкторы, методы и типы. Определения на языке <a href="/mtproto/TL/">TL</a> сохранены без изменений; структурные подписи переведены.</li>
-<li><strong><a href="/glossary/">Глоссарий</a></strong> — термины с пояснениями на русском.</li>
-</ul>
-<p><strong>Принципы:</strong></p>
-<ul>
-<li>Термины (названия сущностей протокола, конструкторов, методов и полей) сохранены в оригинальном написании; при упоминании даётся пояснение.</li>
-<li>Каждая страница содержит ссылку на английскую первоисточную статью.</li>
-<li>Функциональные определения схемы и код приведены без изменений.</li>
-<li>Разделы оригинала, выходящие за рамки протокола (тематическая документация функций приложения), даны ссылками на оригинал.</li>
-</ul>
-<h2 id="основные-разделы" tabindex="-1">Основные разделы</h2>
-<h3 id="протокол-mtproto" tabindex="-1">Протокол MTProto</h3>
-<ul>
-<li><a href="/mtproto/">MTProto — обзор</a></li>
-<li><a href="/mtproto/description/">Подробное описание протокола</a> — формат сообщений, контейнеры, подтверждения, время</li>
-<li><a href="/mtproto/auth_key/">Создание авторизационного ключа</a> и <a href="/mtproto/samples-auth_key/">разбор примера</a></li>
-<li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности</a></li>
-<li><a href="/mtproto/serialize/">Сериализация данных</a></li>
-<li><a href="/mtproto/service_messages/">Сервисные сообщения</a> и <a href="/mtproto/service_messages_about_messages/">сообщения о сообщениях</a></li>
-<li><a href="/mtproto/transports/">Транспорты</a> и <a href="/mtproto/mtproto-transports/">кадры/обфускация</a></li>
-<li><a href="/mtproto/TL/">Язык TL</a></li>
-<li><a href="/mtproto_v1/">Устаревшая версия 1.0</a></li>
-</ul>
-<h3 id="уровень-api" tabindex="-1">Уровень API</h3>
-<ul>
-<li><a href="/api/">Telegram API — обзор</a></li>
-<li><a href="/api/auth/">Авторизация</a>, <a href="/api/srp/">SRP (2FA)</a></li>
-<li><a href="/api/updates/">Обновления</a>, <a href="/api/files/">файлы</a></li>
-<li><a href="/api/invoking/">Вызов методов</a>, <a href="/api/errors/">ошибки</a>, <a href="/api/layers/">слои</a></li>
-<li><a href="/api/end-to-end/">Секретные чаты</a> и <a href="/api/pfs/">Perfect Forward Secrecy</a></li>
-</ul>
-<h3 id="схема" tabindex="-1">Схема</h3>
-<ul>
-<li><a href="/schema/">Схема TL</a>, <a href="/schema/mtproto/">слой MTProto</a>, <a href="/schema/end-to-end/">слой секретных чатов</a></li>
-<li>Справочники: <a href="/constructor/">конструкторы</a>, <a href="/method/">методы</a>, <a href="/type/">типы</a>, <a href="/methods/">методы по категориям</a></li>
-<li>Машиночитаемые данные: <a href="/schema/json/">схема в JSON</a></li>
-</ul>
-<h3 id="приложение" tabindex="-1">Приложение</h3>
-<ul>
-<li><a href="/glossary/">Глоссарий терминов</a></li>
-<li><a href="/techfaq/">Технический FAQ</a></li>
-</ul>
-
-      <div class="source-note">
-        Оригинал: <a href="https://core.telegram.org/mtproto" rel="noopener">https://core.telegram.org/mtproto</a>
-      </div>
-    </article>
-  </main>
-</div>
-<footer class="site-footer">
-  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
-  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
-</footer>
-</body>
-</html>
+<!doctype html> <html lang="ru"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script> <title>Документация MTProto на русском — MTProto по-русски</title> <meta name="description" content="Полный русский перевод документации Telegram: протокол MTProto, Telegram API и справочник схемы TL. Каждый абзац связан с оригиналом."> <meta property="og:title" content="Документация MTProto на русском"> <meta property="og:description" content="Полный русский перевод документации Telegram: протокол MTProto, Telegram API и справочник схемы TL. Каждый абзац связан с оригиналом."> <meta property="og:type" content="article"> <meta property="og:site_name" content="MTProto по-русски"> <meta property="og:locale" content="ru_RU"> <meta property="og:url" content="https://rumtproto.github.io/"> <meta property="og:image" content="https://rumtproto.github.io/apple-touch-icon.png"> <meta name="twitter:card" content="summary"> <link rel="canonical" href="https://rumtproto.github.io/"> <link rel="manifest" href="/manifest.webmanifest"> <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)"> <link rel="icon" href="/favicon.svg" type="image/svg+xml"> <link rel="icon" href="/icon-64.png" type="image/png" sizes="64x64"> <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <link rel="stylesheet" href="/css/style.css"> </head> <body> <a class="skip-link" href="#content">К содержанию</a> <header class="site-header"> <div class="header-inner"> <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a> <nav class="top-nav" aria-label="Разделы"> <a href="/api/" >API</a> <a href="/mtproto/" >MTProto</a> <a href="/schema/" >Схема</a> <a href="/techfaq/" >FAQ</a> </nav> <form class="site-search" action="/search/" method="get" role="search"> <span class="search-field"> <input type="search" name="q" placeholder="Поиск" aria-label="Поиск (нажмите / для фокуса)"> <kbd class="search-kbd" aria-hidden="true">/</kbd> </span> </form> <a class="search-button" href="/search/" aria-label="Поиск"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg> </a> <a class="source-link" href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener"> <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="source-link-text">Исходный код</span> </a> <div class="theme-switch" role="group" aria-label="Цветовая тема"> <div class="theme-seg"> <button type="button" data-mode="auto" aria-pressed="false" title="Системная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="light" aria-pressed="false" title="Светлая тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="dark" aria-pressed="false" title="Тёмная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> <button class="theme-toggle" type="button" data-mode="auto" title="Цветовая тема: auto"> <svg class="icon-auto" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-light" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-dark" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> </div> </header> <div class="layout"> <aside class="sidebar" aria-label="Страницы раздела"> <details class="nav-group nav-collapsible"> <summary class="nav-group-title"> <svg class="chev" width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Telegram API</span> </summary> <ul> <li><a href="/api/">API Telegram</a></li> <li><a href="/api/account-deletion/">Удаление аккаунта</a></li> <li><a href="/api/action-bar/">Панель действий</a></li> <li><a href="/api/age-verification/">Проверка возраста</a></li> <li><a href="/api/ai/">Возможности ИИ</a></li> <li><a href="/api/animated-emojis/">Анимированные эмодзи</a></li> <li><a href="/api/antispam/">Встроенная система антиспама</a></li> <li><a href="/api/auctions/">Аукционы коллекционных подарков</a></li> <li><a href="/api/auth/">Авторизация пользователя</a></li> <li><a href="/api/block/">Заблокированные пользователи</a></li> <li><a href="/api/boost/">Бусты каналов и супергрупп</a></li> <li><a href="/api/bots/">Работа с ботами</a></li> <li><a href="/api/bots/ai/">Возможности ИИ для ботов</a></li> <li><a href="/api/bots/attach/">Пункты меню вложений и бокового меню для ботов</a></li> <li><a href="/api/bots/bot-to-bot/">Взаимодействие между ботами</a></li> <li><a href="/api/bots/buttons/">Кнопки ботов</a></li> <li><a href="/api/bots/commands/">Команды ботов</a></li> <li><a href="/api/bots/connected-business-bots/">Подключённые бизнес-боты</a></li> <li><a href="/api/bots/games/">HTML5-игры</a></li> <li><a href="/api/bots/guest-mode/">Гостевой режим для ботов</a></li> <li><a href="/api/bots/ids/">Идентификаторы диалогов Bot API</a></li> <li><a href="/api/bots/info/">Изменение информации о боте</a></li> <li><a href="/api/bots/inline/">Инлайн-запросы</a></li> <li><a href="/api/bots/managed-bots/">Управляемые боты</a></li> <li><a href="/api/bots/menu/">Кнопка меню бота</a></li> <li><a href="/api/bots/referrals/">Партнёрские программы</a></li> <li><a href="/api/bots/verification/">Сторонняя верификация</a></li> <li><a href="/api/bots/webapps/">Mini Apps в Telegram</a></li> <li><a href="/api/business/">Telegram Business</a></li> <li><a href="/api/calls/">Звонки</a></li> <li><a href="/api/channel/">Каналы, супергруппы, гигагруппы и обычные группы</a></li> <li><a href="/api/colors/">Акцентные цвета</a></li> <li><a href="/api/config.json/">config.json</a></li> <li><a href="/api/config/">Конфигурация клиента</a></li> <li><a href="/api/contacts/">Список контактов</a></li> <li><a href="/api/content-protection/">Защита контента</a></li> <li><a href="/api/custom-emoji/">Пользовательские эмодзи</a></li> <li><a href="/api/datacenter/">Работа с разными дата-центрами</a></li> <li><a href="/api/dice/">Анимированные кости</a></li> <li><a href="/api/discussion/">Группы обсуждения</a></li> <li><a href="/api/drafts/">Черновики сообщений</a></li> <li><a href="/api/effects/">Анимированные эффекты для сообщений</a></li> <li><a href="/api/emoji-categories/">Категории эмодзи</a></li> <li><a href="/api/emoji-status/">Эмодзи-статус</a></li> <li><a href="/api/end-to-end_v1/">Секретные чаты, сквозное шифрование (версия 1.0, УСТАРЕЛО)</a></li> <li><a href="/api/end-to-end/">Сквозное шифрование, секретные чаты</a></li> <li><a href="/api/end-to-end/group-calls/">Групповые звонки с E2E-шифрованием</a></li> <li><a href="/api/end-to-end/pfs/">Perfect Forward Secrecy</a></li> <li><a href="/api/end-to-end/seq_no/">Порядковые номера в секретных чатах</a></li> <li><a href="/api/end-to-end/video-calls/">Голосовые и видеозвонки со сквозным шифрованием</a></li> <li><a href="/api/end-to-end/voice-calls/">Сквозное шифрование голосовых звонков</a></li> <li><a href="/api/entities/">Оформленный текст и сущности оформления</a></li> <li><a href="/api/errors.json/">errors.json</a></li> <li><a href="/api/errors/">Обработка ошибок</a></li> <li><a href="/api/factcheck/">Проверки фактов</a></li> <li><a href="/api/file-reference-generator/">Генератор ссылок на файлы</a></li> <li><a href="/api/file-references/">Ссылки на файлы</a></li> <li><a href="/api/file-references/db-schema/">Схема БД</a></li> <li><a href="/api/file-references/incoming-traversers/">Входящие обходчики ссылок на файлы</a></li> <li><a href="/api/file-references/map-schema/">Схема файла карты ссылок на файлы</a></li> <li><a href="/api/file-references/outgoing-traversers/">Исходящие обходчики ссылок на файлы</a></li> <li><a href="/api/file-references/refresh-actions/">Действия обновления</a></li> <li><a href="/api/file-references/sources/">Источники ссылок на файлы</a></li> <li><a href="/api/files/">Загрузка и скачивание файлов</a></li> <li><a href="/api/folders/">Папки диалогов</a></li> <li><a href="/api/forum/">Темы форума</a></li> <li><a href="/api/fragment/">Коллекционные объекты Fragment</a></li> <li><a href="/api/gifs/">Работа с GIF</a></li> <li><a href="/api/gifts/">Подарки Telegram</a></li> <li><a href="/api/giveaways/">Розыгрыши и подарки</a></li> <li><a href="/api/group-calls/">Групповые звонки</a></li> <li><a href="/api/import/">Импортированные сообщения</a></li> <li><a href="/api/invites/">Пригласительные ссылки</a></li> <li><a href="/api/invoking/">Вызов методов API</a></li> <li><a href="/api/layers/">История изменений слоёв</a></li> <li><a href="/api/links/">Глубокие ссылки</a></li> <li><a href="/api/live-location/">Трансляция геопозиции</a></li> <li><a href="/api/mentions/">Упоминания и ответы</a></li> <li><a href="/api/min/">Конструкторы min</a></li> <li><a href="/api/monoforum/">Личные сообщения в каналы</a></li> <li><a href="/api/nearby/">Пользователи и чаты поблизости</a></li> <li><a href="/api/obtaining_api_id/">Создание своего приложения Telegram</a></li> <li><a href="/api/offsets/">Постраничная выборка в API</a></li> <li><a href="/api/optimisation/">Оптимизация на стороне клиента</a></li> <li><a href="/api/paid-media/">Платные медиа</a></li> <li><a href="/api/paid-messages/">Платные сообщения</a></li> <li><a href="/api/passkeys/">Вход по passkey</a></li> <li><a href="/api/passport/">Telegram passport</a></li> <li><a href="/api/pattern/">Сопоставление с шаблоном</a></li> <li><a href="/api/payments/">API платежей</a></li> <li><a href="/api/peers/">База данных пиров</a></li> <li><a href="/api/pfs/">Perfect Forward Secrecy</a></li> <li><a href="/api/pin/">Закреплённые сообщения</a></li> <li><a href="/api/poll/">Опросы и викторины</a></li> <li><a href="/api/premium/">Telegram Premium</a></li> <li><a href="/api/privacy/">Настройки приватности</a></li> <li><a href="/api/profile/">Профили пользователей</a></li> <li><a href="/api/push-updates/">Обработка PUSH-уведомлений</a></li> <li><a href="/api/qr-login/">Вход по QR-коду</a></li> <li><a href="/api/rank/">Звание</a></li> <li><a href="/api/reactions/">Реакции на сообщения</a></li> <li><a href="/api/recent-actions/">Журнал действий администраторов</a></li> <li><a href="/api/recommend/">Похожие каналы и боты</a></li> <li><a href="/api/revenue/">Доход от рекламы в каналах и ботах</a></li> <li><a href="/api/rights/">Права администраторов, ограничения и права по умолчанию</a></li> <li><a href="/api/ringtones/">Звуки уведомлений</a></li> <li><a href="/api/saved-messages/">Избранные сообщения</a></li> <li><a href="/api/scheduled-messages/">Отложенные сообщения</a></li> <li><a href="/api/search/">Поиск и фильтры</a></li> <li><a href="/api/sponsored-messages/">Спонсируемые сообщения</a></li> <li><a href="/api/srp/">Двухфакторная аутентификация</a></li> <li><a href="/api/stars/">Telegram Stars</a></li> <li><a href="/api/stats/">Статистика каналов</a></li> <li><a href="/api/stickers/">Стикеры и маски</a></li> <li><a href="/api/stories/">Telegram Stories</a></li> <li><a href="/api/subscriptions/">Подписки за звёзды</a></li> <li><a href="/api/suggested-posts/">Предлагаемые посты</a></li> <li><a href="/api/takeout/">Takeout API</a></li> <li><a href="/api/terms/">Условия использования Telegram API</a></li> <li><a href="/api/themes/">Темы оформления Telegram</a></li> <li><a href="/api/threads/">Треды сообщений</a></li> <li><a href="/api/todo/">Чек-листы и списки задач</a></li> <li><a href="/api/top-rating/">Рейтинг популярных пиров</a></li> <li><a href="/api/transcribe/">Расшифровка голосовых сообщений</a></li> <li><a href="/api/translation/">Перевод сообщений</a></li> <li><a href="/api/updates/">Работа с обновлениями</a></li> <li><a href="/api/url-authorization/">Бесшовный вход через Telegram</a></li> <li><a href="/api/views/">Просмотры и метрики прочтения</a></li> <li><a href="/api/wallpapers/">Обои чатов</a></li> <li><a href="/api/web-events/">Веб-события</a></li> </ul> </details> <details class="nav-group nav-collapsible"> <summary class="nav-group-title"> <svg class="chev" width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Протокол MTProto</span> </summary> <ul> <li><a href="/mtproto/">Мобильный протокол MTProto</a></li> <li><a href="/mtproto/description/">Мобильный протокол: подробное описание</a></li> <li><a href="/mtproto/auth_key/">Создание авторизационного ключа</a></li> <li><a href="/mtproto/samples-auth_key/">Пример генерации авторизационного ключа</a></li> <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности для разработчиков клиентов</a></li> <li><a href="/mtproto/serialize/">Двоичная сериализация данных</a></li> <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li> <li><a href="/mtproto/service_messages_about_messages/">Сервисные сообщения о сообщениях</a></li> <li><a href="/mtproto/transports/">Транспортные протоколы</a></li> <li><a href="/mtproto/mtproto-transports/">Транспорты MTProto</a></li> <li><a href="/mtproto/TL/">Язык TL</a></li> <li><a href="/mtproto_v1/">Мобильный протокол MTProto версии 1.0 (УСТАРЕЛО)</a></li> <li><a href="/mtproto/description_v1/">Мобильный протокол: подробное описание (версия 1.0, УСТАРЕЛО)</a></li> <li><a href="/mtproto/security_guidelines_v1/">Рекомендации по безопасности для разработчиков клиентов (версия 1.0, УСТАРЕЛО)</a></li> <li><a href="/mtproto/TL-abstract-types/">Двоичная сериализация и абстрактные типы TL</a></li> <li><a href="/mtproto/TL-combinators/">Формальное описание комбинаторов TL</a></li> <li><a href="/mtproto/TL-dependent/">Зависимые типы TL</a></li> <li><a href="/mtproto/TL-formal/">Формальное описание TL</a></li> <li><a href="/mtproto/TL-optargs/">Необязательные параметры комбинаторов и их значения</a></li> <li><a href="/mtproto/TL-patterns/">Шаблонные типы TL</a></li> <li><a href="/mtproto/TL-polymorph/">Полиморфизм в TL</a></li> <li><a href="/mtproto/TL-tl/">TL-схема для сериализации TL-схем</a></li> <li><a href="/mtproto/TL-types/">Сериализация типов</a></li> </ul> </details> <details class="nav-group nav-collapsible"> <summary class="nav-group-title"> <svg class="chev" width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Схема</span> </summary> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </details> <details class="nav-group nav-collapsible"> <summary class="nav-group-title"> <svg class="chev" width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Прочее</span> </summary> <ul> <li><a href="/faq/">Telegram FAQ</a></li> <li><a href="/techfaq/">FAQ для технически подготовленных</a></li> <li><a href="/techfaq/mtproto_v1/">FAQ для технически подкованных (MTProto версии 1.0)</a></li> </ul> </details> </aside> <main class="content" id="content"> <div class="mobile-nav" role="navigation" aria-label="Страницы раздела"> <details class="mobile-nav-group"> <summary>Telegram API</summary> <ul> <li><a href="/api/">API Telegram</a></li> <li><a href="/api/account-deletion/">Удаление аккаунта</a></li> <li><a href="/api/action-bar/">Панель действий</a></li> <li><a href="/api/age-verification/">Проверка возраста</a></li> <li><a href="/api/ai/">Возможности ИИ</a></li> <li><a href="/api/animated-emojis/">Анимированные эмодзи</a></li> <li><a href="/api/antispam/">Встроенная система антиспама</a></li> <li><a href="/api/auctions/">Аукционы коллекционных подарков</a></li> <li><a href="/api/auth/">Авторизация пользователя</a></li> <li><a href="/api/block/">Заблокированные пользователи</a></li> <li><a href="/api/boost/">Бусты каналов и супергрупп</a></li> <li><a href="/api/bots/">Работа с ботами</a></li> <li><a href="/api/bots/ai/">Возможности ИИ для ботов</a></li> <li><a href="/api/bots/attach/">Пункты меню вложений и бокового меню для ботов</a></li> <li><a href="/api/bots/bot-to-bot/">Взаимодействие между ботами</a></li> <li><a href="/api/bots/buttons/">Кнопки ботов</a></li> <li><a href="/api/bots/commands/">Команды ботов</a></li> <li><a href="/api/bots/connected-business-bots/">Подключённые бизнес-боты</a></li> <li><a href="/api/bots/games/">HTML5-игры</a></li> <li><a href="/api/bots/guest-mode/">Гостевой режим для ботов</a></li> <li><a href="/api/bots/ids/">Идентификаторы диалогов Bot API</a></li> <li><a href="/api/bots/info/">Изменение информации о боте</a></li> <li><a href="/api/bots/inline/">Инлайн-запросы</a></li> <li><a href="/api/bots/managed-bots/">Управляемые боты</a></li> <li><a href="/api/bots/menu/">Кнопка меню бота</a></li> <li><a href="/api/bots/referrals/">Партнёрские программы</a></li> <li><a href="/api/bots/verification/">Сторонняя верификация</a></li> <li><a href="/api/bots/webapps/">Mini Apps в Telegram</a></li> <li><a href="/api/business/">Telegram Business</a></li> <li><a href="/api/calls/">Звонки</a></li> <li><a href="/api/channel/">Каналы, супергруппы, гигагруппы и обычные группы</a></li> <li><a href="/api/colors/">Акцентные цвета</a></li> <li><a href="/api/config.json/">config.json</a></li> <li><a href="/api/config/">Конфигурация клиента</a></li> <li><a href="/api/contacts/">Список контактов</a></li> <li><a href="/api/content-protection/">Защита контента</a></li> <li><a href="/api/custom-emoji/">Пользовательские эмодзи</a></li> <li><a href="/api/datacenter/">Работа с разными дата-центрами</a></li> <li><a href="/api/dice/">Анимированные кости</a></li> <li><a href="/api/discussion/">Группы обсуждения</a></li> <li><a href="/api/drafts/">Черновики сообщений</a></li> <li><a href="/api/effects/">Анимированные эффекты для сообщений</a></li> <li><a href="/api/emoji-categories/">Категории эмодзи</a></li> <li><a href="/api/emoji-status/">Эмодзи-статус</a></li> <li><a href="/api/end-to-end_v1/">Секретные чаты, сквозное шифрование (версия 1.0, УСТАРЕЛО)</a></li> <li><a href="/api/end-to-end/">Сквозное шифрование, секретные чаты</a></li> <li><a href="/api/end-to-end/group-calls/">Групповые звонки с E2E-шифрованием</a></li> <li><a href="/api/end-to-end/pfs/">Perfect Forward Secrecy</a></li> <li><a href="/api/end-to-end/seq_no/">Порядковые номера в секретных чатах</a></li> <li><a href="/api/end-to-end/video-calls/">Голосовые и видеозвонки со сквозным шифрованием</a></li> <li><a href="/api/end-to-end/voice-calls/">Сквозное шифрование голосовых звонков</a></li> <li><a href="/api/entities/">Оформленный текст и сущности оформления</a></li> <li><a href="/api/errors.json/">errors.json</a></li> <li><a href="/api/errors/">Обработка ошибок</a></li> <li><a href="/api/factcheck/">Проверки фактов</a></li> <li><a href="/api/file-reference-generator/">Генератор ссылок на файлы</a></li> <li><a href="/api/file-references/">Ссылки на файлы</a></li> <li><a href="/api/file-references/db-schema/">Схема БД</a></li> <li><a href="/api/file-references/incoming-traversers/">Входящие обходчики ссылок на файлы</a></li> <li><a href="/api/file-references/map-schema/">Схема файла карты ссылок на файлы</a></li> <li><a href="/api/file-references/outgoing-traversers/">Исходящие обходчики ссылок на файлы</a></li> <li><a href="/api/file-references/refresh-actions/">Действия обновления</a></li> <li><a href="/api/file-references/sources/">Источники ссылок на файлы</a></li> <li><a href="/api/files/">Загрузка и скачивание файлов</a></li> <li><a href="/api/folders/">Папки диалогов</a></li> <li><a href="/api/forum/">Темы форума</a></li> <li><a href="/api/fragment/">Коллекционные объекты Fragment</a></li> <li><a href="/api/gifs/">Работа с GIF</a></li> <li><a href="/api/gifts/">Подарки Telegram</a></li> <li><a href="/api/giveaways/">Розыгрыши и подарки</a></li> <li><a href="/api/group-calls/">Групповые звонки</a></li> <li><a href="/api/import/">Импортированные сообщения</a></li> <li><a href="/api/invites/">Пригласительные ссылки</a></li> <li><a href="/api/invoking/">Вызов методов API</a></li> <li><a href="/api/layers/">История изменений слоёв</a></li> <li><a href="/api/links/">Глубокие ссылки</a></li> <li><a href="/api/live-location/">Трансляция геопозиции</a></li> <li><a href="/api/mentions/">Упоминания и ответы</a></li> <li><a href="/api/min/">Конструкторы min</a></li> <li><a href="/api/monoforum/">Личные сообщения в каналы</a></li> <li><a href="/api/nearby/">Пользователи и чаты поблизости</a></li> <li><a href="/api/obtaining_api_id/">Создание своего приложения Telegram</a></li> <li><a href="/api/offsets/">Постраничная выборка в API</a></li> <li><a href="/api/optimisation/">Оптимизация на стороне клиента</a></li> <li><a href="/api/paid-media/">Платные медиа</a></li> <li><a href="/api/paid-messages/">Платные сообщения</a></li> <li><a href="/api/passkeys/">Вход по passkey</a></li> <li><a href="/api/passport/">Telegram passport</a></li> <li><a href="/api/pattern/">Сопоставление с шаблоном</a></li> <li><a href="/api/payments/">API платежей</a></li> <li><a href="/api/peers/">База данных пиров</a></li> <li><a href="/api/pfs/">Perfect Forward Secrecy</a></li> <li><a href="/api/pin/">Закреплённые сообщения</a></li> <li><a href="/api/poll/">Опросы и викторины</a></li> <li><a href="/api/premium/">Telegram Premium</a></li> <li><a href="/api/privacy/">Настройки приватности</a></li> <li><a href="/api/profile/">Профили пользователей</a></li> <li><a href="/api/push-updates/">Обработка PUSH-уведомлений</a></li> <li><a href="/api/qr-login/">Вход по QR-коду</a></li> <li><a href="/api/rank/">Звание</a></li> <li><a href="/api/reactions/">Реакции на сообщения</a></li> <li><a href="/api/recent-actions/">Журнал действий администраторов</a></li> <li><a href="/api/recommend/">Похожие каналы и боты</a></li> <li><a href="/api/revenue/">Доход от рекламы в каналах и ботах</a></li> <li><a href="/api/rights/">Права администраторов, ограничения и права по умолчанию</a></li> <li><a href="/api/ringtones/">Звуки уведомлений</a></li> <li><a href="/api/saved-messages/">Избранные сообщения</a></li> <li><a href="/api/scheduled-messages/">Отложенные сообщения</a></li> <li><a href="/api/search/">Поиск и фильтры</a></li> <li><a href="/api/sponsored-messages/">Спонсируемые сообщения</a></li> <li><a href="/api/srp/">Двухфакторная аутентификация</a></li> <li><a href="/api/stars/">Telegram Stars</a></li> <li><a href="/api/stats/">Статистика каналов</a></li> <li><a href="/api/stickers/">Стикеры и маски</a></li> <li><a href="/api/stories/">Telegram Stories</a></li> <li><a href="/api/subscriptions/">Подписки за звёзды</a></li> <li><a href="/api/suggested-posts/">Предлагаемые посты</a></li> <li><a href="/api/takeout/">Takeout API</a></li> <li><a href="/api/terms/">Условия использования Telegram API</a></li> <li><a href="/api/themes/">Темы оформления Telegram</a></li> <li><a href="/api/threads/">Треды сообщений</a></li> <li><a href="/api/todo/">Чек-листы и списки задач</a></li> <li><a href="/api/top-rating/">Рейтинг популярных пиров</a></li> <li><a href="/api/transcribe/">Расшифровка голосовых сообщений</a></li> <li><a href="/api/translation/">Перевод сообщений</a></li> <li><a href="/api/updates/">Работа с обновлениями</a></li> <li><a href="/api/url-authorization/">Бесшовный вход через Telegram</a></li> <li><a href="/api/views/">Просмотры и метрики прочтения</a></li> <li><a href="/api/wallpapers/">Обои чатов</a></li> <li><a href="/api/web-events/">Веб-события</a></li> </ul> </details> <details class="mobile-nav-group"> <summary>Протокол MTProto</summary> <ul> <li><a href="/mtproto/">Мобильный протокол MTProto</a></li> <li><a href="/mtproto/description/">Мобильный протокол: подробное описание</a></li> <li><a href="/mtproto/auth_key/">Создание авторизационного ключа</a></li> <li><a href="/mtproto/samples-auth_key/">Пример генерации авторизационного ключа</a></li> <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности для разработчиков клиентов</a></li> <li><a href="/mtproto/serialize/">Двоичная сериализация данных</a></li> <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li> <li><a href="/mtproto/service_messages_about_messages/">Сервисные сообщения о сообщениях</a></li> <li><a href="/mtproto/transports/">Транспортные протоколы</a></li> <li><a href="/mtproto/mtproto-transports/">Транспорты MTProto</a></li> <li><a href="/mtproto/TL/">Язык TL</a></li> <li><a href="/mtproto_v1/">Мобильный протокол MTProto версии 1.0 (УСТАРЕЛО)</a></li> <li><a href="/mtproto/description_v1/">Мобильный протокол: подробное описание (версия 1.0, УСТАРЕЛО)</a></li> <li><a href="/mtproto/security_guidelines_v1/">Рекомендации по безопасности для разработчиков клиентов (версия 1.0, УСТАРЕЛО)</a></li> <li><a href="/mtproto/TL-abstract-types/">Двоичная сериализация и абстрактные типы TL</a></li> <li><a href="/mtproto/TL-combinators/">Формальное описание комбинаторов TL</a></li> <li><a href="/mtproto/TL-dependent/">Зависимые типы TL</a></li> <li><a href="/mtproto/TL-formal/">Формальное описание TL</a></li> <li><a href="/mtproto/TL-optargs/">Необязательные параметры комбинаторов и их значения</a></li> <li><a href="/mtproto/TL-patterns/">Шаблонные типы TL</a></li> <li><a href="/mtproto/TL-polymorph/">Полиморфизм в TL</a></li> <li><a href="/mtproto/TL-tl/">TL-схема для сериализации TL-схем</a></li> <li><a href="/mtproto/TL-types/">Сериализация типов</a></li> </ul> </details> <details class="mobile-nav-group"> <summary>Схема</summary> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </details> <details class="mobile-nav-group"> <summary>Прочее</summary> <ul> <li><a href="/faq/">Telegram FAQ</a></li> <li><a href="/techfaq/">FAQ для технически подготовленных</a></li> <li><a href="/techfaq/mtproto_v1/">FAQ для технически подкованных (MTProto версии 1.0)</a></li> </ul> </details> </div> <article data-mirror="0"> <h1 id="документация-mtproto-на-русском" tabindex="-1">Документация MTProto на русском <a class="header-anchor" href="#документация-mtproto-на-русском" aria-hidden="true">#</a></h1> <p id="p-1">Полный русскоязычный перевод документации Telegram: протокола <strong>MTProto</strong>, <strong>Telegram API</strong> и справочника <strong>схемы TL</strong>. Содержимое — снимок оригинала на <a href="https://core.telegram.org">core.telegram.org</a> (дата снимка указана в подвале); каждая страница ссылается на первоисточник и на английскую версию.<a class="p-anchor" href="#p-1" aria-label="Ссылка на этот абзац">¶</a></p> <p id="p-2"><strong>Что здесь есть, чего нет в оригинале:</strong><a class="p-anchor" href="#p-2" aria-label="Ссылка на этот абзац">¶</a></p> <ul> <li><strong>Перевод абзац в абзац.</strong> У каждого абзаца своя метка со ссылкой на тот же абзац английского оригинала: абзац №7 здесь — абзац №7 там.</li> <li><strong>Метки терминов.</strong> Непереводимые термины (<code>auth_key</code>, <code>access_hash</code>, <code>pts</code>, <code>file_reference</code> и другие) сохранены в оригинальном написании и поясняются прямо на странице при первом появлении.</li> <li><strong>Пояснения переводчика</strong> там, где оригинал труден без дополнительного контекста.</li> <li><strong>Полнотекстовый поиск</strong> по всем страницам, включая имена конструкторов, методов и типов — см. <a href="/search/">страницу поиска</a>; результаты можно ограничить разделом.</li> <li><strong>Якоря на каждом абзаце и заголовке</strong>: наведите курсор на абзац, чтобы увидеть ссылку ¶, на заголовок — ссылку #.</li> <li><strong>Боковое меню</strong> со всеми статьями раздела и хлебные крошки на каждой странице.</li> </ul> <h2 id="разделы" tabindex="-1">Разделы <a class="header-anchor" href="#разделы" aria-hidden="true">#</a></h2> <h3 id="telegram-api" tabindex="-1"><a href="/api/">Telegram API</a> <a class="header-anchor" href="#telegram-api" aria-hidden="true">#</a></h3> <p id="p-3">Прикладной уровень: авторизация, обновления, файлы, секретные чаты, звонки, платежи, боты, каналы, истории и остальные возможности. Начните с <a href="/api/">указателя API</a>; полный перечень вызовов — в <a href="/method/">справочнике методов</a>.<a class="p-anchor" href="#p-3" aria-label="Ссылка на этот абзац">¶</a></p> <h3 id="протокол-mtproto" tabindex="-1"><a href="/mtproto/">Протокол MTProto</a> <a class="header-anchor" href="#протокол-mtproto" aria-hidden="true">#</a></h3> <p id="p-4">Транспортный и криптографический уровень под API: формат сообщений, создание <code>auth_key</code>, сериализация, сервисные сообщения, транспорты и рекомендации по безопасности. Начните с <a href="/mtproto/">обзора протокола</a>.<a class="p-anchor" href="#p-4" aria-label="Ссылка на этот абзац">¶</a></p> <h3 id="схема" tabindex="-1"><a href="/schema/">Схема</a> <a class="header-anchor" href="#схема" aria-hidden="true">#</a></h3> <p id="p-5">Схема TL: все <a href="/constructor/">конструкторы</a>, <a href="/method/">методы</a>, <a href="/type/">типы</a>, <a href="/schema/mtproto/">схема слоя MTProto</a>, <a href="/schema/end-to-end/">схема секретных чатов</a> и машиночитаемые дампы в формате JSON.<a class="p-anchor" href="#p-5" aria-label="Ссылка на этот абзац">¶</a></p> <h3 id="прочее" tabindex="-1">Прочее <a class="header-anchor" href="#прочее" aria-hidden="true">#</a></h3> <ul> <li><a href="/faq/">Telegram FAQ</a> — общий пользовательский FAQ с telegram.org (единственная страница за пределами core.telegram.org).</li> <li><a href="/techfaq/">FAQ для технически подкованных</a> — вопросы о криптографии и устройстве протокола.</li> </ul> <h2 id="о-переводе" tabindex="-1">О переводе <a class="header-anchor" href="#о-переводе" aria-hidden="true">#</a></h2> <p id="p-6">Определения схемы TL, имена конструкторов, методов, полей и коды ошибок сохранены без изменений — их нельзя переводить, не сломав совместимость. Переведены заголовки, текст абзацев, списки и описания в таблицах. Правила, по которым выполняется перевод, собраны в <a href="https://github.com/rumtproto/rumtproto.github.io/blob/main/tools/STYLEGUIDE.md">руководстве переводчика</a>.<a class="p-anchor" href="#p-6" aria-label="Ссылка на этот абзац">¶</a></p> <p id="p-7">Нашли неточность — открывайте <a href="https://github.com/rumtproto/rumtproto.github.io/issues">issue</a> или присылайте pull request.<a class="p-anchor" href="#p-7" aria-label="Ссылка на этот абзац">¶</a></p> <div class="source-note"> Оригинал: <a href="https://core.telegram.org/mtproto" rel="noopener">https://core.telegram.org/mtproto</a> </div> </article> </main> </div> <footer class="site-footer"> Неофициальный русскоязычный перевод документации <a href="https://core.telegram.org/mtproto" rel="noopener">core.telegram.org</a>. Снимок контента: 2026-08-23. Исходники сайта — <a href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener">rumtproto/rumtproto.github.io</a>. </footer> <script src="/pagefind/pagefind-ui.js"></script> <script>
+  (function () {
+    var btn = document.querySelector('.theme-toggle');
+    var seg = Array.prototype.slice.call(document.querySelectorAll('.theme-seg button'));
+    if (!btn && !seg.length) return;
+    var order = ['auto', 'light', 'dark'];
+    function current() { try { return localStorage.getItem('theme') || 'auto'; } catch (e) { return 'auto'; } }
+    function set(mode) {
+      try { mode === 'auto' ? localStorage.removeItem('theme') : localStorage.setItem('theme', mode); } catch (e) {}
+      apply(mode);
+    }
+    function apply(mode) {
+      if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', mode);
+      if (btn) {
+        btn.dataset.mode = mode;
+        btn.title = 'Цветовая тема: ' + mode;
+        btn.setAttribute('aria-label', 'Цветовая тема: ' + mode + '. Нажмите для переключения.');
+      }
+      seg.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.mode === mode)); });
+      var dark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+        if ((m.media || '').indexOf('dark') !== -1) m.content = dark ? '#0d1117' : '#ffffff';
+      });
+    }
+    seg.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.mode); }); });
+    if (btn) btn.addEventListener('click', function () { set(order[(order.indexOf(current()) + 1) % order.length]); });
+    apply(current());
+  })();
+  (function () {
+    document.addEventListener('keydown', function (e) {
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (e.key === '/' && !/^(input|textarea|select)$/i.test(tag)) {
+        var q = document.querySelector('.site-search input') || document.querySelector('.pagefind-ui__search-input');
+        if (q) { e.preventDefault(); q.focus(); }
+      }
+    });
+  })();
+  (function () {
+    /* скрыть плейсхолдер после реальной загрузки медиа */
+    document.querySelectorAll('.img-box').forEach(function (box) {
+      var im = box.querySelector('img') || box.querySelector('video');
+      if (!im) return;
+      var ok = function () { box.classList.add('img-ok'); };
+      if (im.complete && im.naturalWidth > 0) ok();
+      else im.addEventListener('load', ok);
+    });
+  })();
+</script> </body> </html> 

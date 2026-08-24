@@ -1,29 +1,24 @@
 ---
-title: "updateLangPack (конструктор)"
+title: "updateLangPack"
 original: "https://core.telegram.org/constructor/updateLangPack"
 section: ref
 kind: constructor
+description: "Языковой пакет обновлён"
 layout: layout.njk
 ---
 
 # updateLangPack
 
-*Конструктор из схемы TL.*
-
-> Language pack updated
-
-## Определение TL
+Языковой пакет обновлён
 
 ```
 updateLangPack#56022f4d difference:LangPackDifference = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| difference | [LangPackDifference](/type/LangPackDifference/) | Changed strings |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>difference</strong></td><td style="text-align: center;"><a href="/type/LangPackDifference">LangPackDifference</a></td><td>Изменённые строки</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

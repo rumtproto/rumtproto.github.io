@@ -1,37 +1,30 @@
 ---
-title: "payments.starGiftUpgradePreview (конструктор)"
+title: "payments.starGiftUpgradePreview"
 original: "https://core.telegram.org/constructor/payments.starGiftUpgradePreview"
 section: ref
 kind: constructor
+description: "Предпросмотр возможных атрибутов (выбираемых случайно), которые подарок » может получить после улучшения до коллекционного подарка »; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # payments.starGiftUpgradePreview
 
-*Конструктор из схемы TL.*
-
-> A preview of the possible attributes (chosen randomly) a [gift »](https://core.telegram.org/api/gifts) can receive after upgrading it to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts), see [here »](https://core.telegram.org/api/gifts#collectible-gifts) for more info.
-
-## Определение TL
+Предпросмотр возможных атрибутов (выбираемых случайно), которые [подарок »](/api/gifts/) может получить после улучшения до [коллекционного подарка »](/api/gifts/#collectible-gifts); подробнее см. [здесь »](/api/gifts/#collectible-gifts).
 
 ```
 payments.starGiftUpgradePreview#3de1dfed sample_attributes:Vector<StarGiftAttribute> prices:Vector<StarGiftUpgradePrice> next_prices:Vector<StarGiftUpgradePrice> = payments.StarGiftUpgradePreview;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| sample_attributes | [Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftAttribute](/type/StarGiftAttribute/)> | Possible gift attributes |
-| prices | [Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftUpgradePrice](/type/StarGiftUpgradePrice/)> | Contains a similar list of upgrade prices and timestamps, not as granular as in next_prices (i.e. prices are approximately 1 month apart), to be used mainly to scale the price graph, and to show a more general future overview of the upgrade price. |
-| next_prices | [Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftUpgradePrice](/type/StarGiftUpgradePrice/)> | Contains the current upgrade price and a list of future prices, each associated to a UNIX timestamp that indicates when the price comes in effect (the current price is valid only until the next one comes into effect, and so on for all prices in the list). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>sample_attributes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftAttribute">StarGiftAttribute</a>&gt;</td><td>Возможные атрибуты подарка</td></tr><tr><td><strong>prices</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftUpgradePrice">StarGiftUpgradePrice</a>&gt;</td><td>Содержит аналогичный список цен обновления и меток времени, менее подробный, чем в <code>next_prices</code> (то есть цены отстоят друг от друга примерно на месяц); используется в основном для масштабирования графика цен и для показа более общей картины будущей цены обновления.</td></tr><tr><td><strong>next_prices</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftUpgradePrice">StarGiftUpgradePrice</a>&gt;</td><td>Содержит текущую цену улучшения и список будущих цен, каждая из которых связана с меткой времени UNIX, указывающей, когда цена вступает в силу (текущая цена действует только до вступления в силу следующей, и так далее для всех цен в списке).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.StarGiftUpgradePreview](/type/payments.StarGiftUpgradePreview/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

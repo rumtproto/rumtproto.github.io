@@ -1,27 +1,24 @@
 ---
-title: "topPeerCategoryChannels (конструктор)"
+title: "topPeerCategoryChannels"
 original: "https://core.telegram.org/constructor/topPeerCategoryChannels"
 section: ref
 kind: constructor
+description: "Наиболее посещаемые каналы"
 layout: layout.njk
 ---
 
 # topPeerCategoryChannels
 
-*Конструктор из схемы TL.*
-
-> Most frequently visited channels
-
-## Определение TL
+Наиболее посещаемые каналы
 
 ```
 topPeerCategoryChannels#161d9628 = TopPeerCategory;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [TopPeerCategory](/type/TopPeerCategory/)

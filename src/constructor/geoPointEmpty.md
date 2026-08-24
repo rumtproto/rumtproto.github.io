@@ -1,27 +1,24 @@
 ---
-title: "geoPointEmpty (конструктор)"
+title: "geoPointEmpty"
 original: "https://core.telegram.org/constructor/geoPointEmpty"
 section: ref
 kind: constructor
+description: "Пустой конструктор."
 layout: layout.njk
 ---
 
 # geoPointEmpty
 
-*Конструктор из схемы TL.*
-
-> Empty constructor.
-
-## Определение TL
+Пустой конструктор.
 
 ```
 geoPointEmpty#1117dd5f = GeoPoint;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [GeoPoint](/type/GeoPoint/)

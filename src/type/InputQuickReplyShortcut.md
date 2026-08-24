@@ -1,33 +1,27 @@
 ---
-title: "InputQuickReplyShortcut (тип)"
+title: "InputQuickReplyShortcut"
 original: "https://core.telegram.org/type/InputQuickReplyShortcut"
 section: ref
 kind: type
+description: "Представляет шаблон быстрого ответа »."
 layout: layout.njk
 ---
 
 # InputQuickReplyShortcut
 
-*Тип из схемы TL.*
-
-> Represents a [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts).
-
-## Определение TL
+Представляет [шаблон быстрого ответа »](/api/business/#quick-reply-shortcuts).
 
 ```
 inputQuickReplyShortcut#24596d41 shortcut:string = InputQuickReplyShortcut;
 inputQuickReplyShortcutId#1190cf1 shortcut_id:int = InputQuickReplyShortcut;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputQuickReplyShortcut](/constructor/inputQuickReplyShortcut/) | Selects a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts) by name. |
-| [inputQuickReplyShortcutId](/constructor/inputQuickReplyShortcutId/) | Selects a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts) by its numeric ID. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputQuickReplyShortcut">inputQuickReplyShortcut</a></td><td>Выбирает <a href="/api/business#quick-reply-shortcuts">шаблон быстрого ответа</a> по названию.</td></tr><tr><td><a href="/constructor/inputQuickReplyShortcutId">inputQuickReplyShortcutId</a></td><td>Выбирает <a href="/api/business#quick-reply-shortcuts">шаблон быстрого ответа</a> по его числовому идентификатору.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

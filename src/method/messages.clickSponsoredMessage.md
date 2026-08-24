@@ -1,18 +1,15 @@
 ---
-title: "messages.clickSponsoredMessage (метод)"
+title: "messages.clickSponsoredMessage"
 original: "https://core.telegram.org/method/messages.clickSponsoredMessage"
 section: ref
 kind: method
+description: "Сообщает серверу, что пользователь взаимодействовал с рекламным сообщением одним из перечисленных здесь способов »."
 layout: layout.njk
 ---
 
 # messages.clickSponsoredMessage
 
-*Метод из схемы TL.*
-
-> Informs the server that the user has interacted with a sponsored message in [one of the ways listed here »](https://core.telegram.org/api/sponsored-messages#clicking-on-sponsored-messages).
-
-## Определение TL
+Сообщает серверу, что пользователь взаимодействовал с рекламным сообщением [одним из перечисленных здесь способов »](/api/sponsored-messages/#clicking-on-sponsored-messages).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,27 +18,22 @@ boolTrue#997275b5 = Bool;
 messages.clickSponsoredMessage#8235057e flags:# media:flags.0?true fullscreen:flags.1?true random_id:bytes = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | The user clicked on the media |
-| fullscreen | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | The user expanded the video to full screen, and then clicked on it. |
-| random_id | [bytes](/type/bytes/) | The ad's unique ID. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Пользователь нажал на медиафайл</td></tr><tr><td><strong>fullscreen</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Пользователь развернул видео на весь экран и затем нажал на него.</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>[@term:random_id] Уникальный идентификатор рекламного объявления. Подробнее о дедупликации по случайным идентификаторам и сопоставлении через updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Sponsored messages](https://core.telegram.org/api/sponsored-messages)
+#### [Спонсируемые сообщения](/api/sponsored-messages/)
 
-How clients should fetch, display and interact with sponsored messages.
+Как клиентам получать, показывать рекламные сообщения и взаимодействовать с ними.

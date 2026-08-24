@@ -1,29 +1,24 @@
 ---
-title: "textUnderline (конструктор)"
+title: "textUnderline"
 original: "https://core.telegram.org/constructor/textUnderline"
 section: ref
 kind: constructor
+description: "Подчёркнутый текст"
 layout: layout.njk
 ---
 
 # textUnderline
 
-*Конструктор из схемы TL.*
-
-> Underlined text
-
-## Определение TL
+Подчёркнутый текст
 
 ```
 textUnderline#c12622c4 text:RichText = RichText;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [RichText](/type/RichText/) | Text |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Текст</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [RichText](/type/RichText/)

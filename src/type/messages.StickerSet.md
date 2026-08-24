@@ -1,18 +1,15 @@
 ---
-title: "Messages.StickerSet (тип)"
+title: "messages.StickerSet"
 original: "https://core.telegram.org/type/messages.StickerSet"
 section: ref
 kind: type
+description: "Набор стикеров"
 layout: layout.njk
 ---
 
 # Messages.StickerSet
 
-*Тип из схемы TL.*
-
-> Stickerset
-
-## Определение TL
+Набор стикеров
 
 ```
 messages.stickerSet#6e153f16 set:StickerSet packs:Vector<StickerPack> keywords:Vector<StickerKeyword> documents:Vector<Document> = messages.StickerSet;
@@ -32,23 +29,10 @@ stickers.renameStickerSet#124b1c00 stickerset:InputStickerSet title:string = mes
 stickers.replaceSticker#4696459a sticker:InputDocument new_sticker:InputStickerSetItem = messages.StickerSet;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.stickerSet](/constructor/messages.stickerSet/) | Stickerset and stickers inside it |
-| [messages.stickerSetNotModified](/constructor/messages.stickerSetNotModified/) | The stickerset hasn't changed |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.stickerSet">messages.stickerSet</a></td><td>Набор стикеров и стикеры внутри него</td></tr><tr><td><a href="/constructor/messages.stickerSetNotModified">messages.stickerSetNotModified</a></td><td>Набор стикеров не изменился</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getStickerSet](/method/messages.getStickerSet/) | Get info about a stickerset |
-| [stickers.createStickerSet](/method/stickers.createStickerSet/) | Create a stickerset. |
-| [stickers.removeStickerFromSet](/method/stickers.removeStickerFromSet/) | Remove a sticker from the set where it belongs. The sticker set must have been created by the current user/bot. |
-| [stickers.changeStickerPosition](/method/stickers.changeStickerPosition/) | Changes the absolute position of a sticker in the set to which it belongs. The sticker set must have been created by the current user/bot. |
-| [stickers.addStickerToSet](/method/stickers.addStickerToSet/) | Add a sticker to a stickerset. The sticker set must have been created by the current user/bot. |
-| [stickers.setStickerSetThumb](/method/stickers.setStickerSetThumb/) | Set stickerset thumbnail |
-| [stickers.changeSticker](/method/stickers.changeSticker/) | Update the keywords, emojis or [mask coordinates](https://core.telegram.org/api/stickers#mask-stickers) of a sticker. |
-| [stickers.renameStickerSet](/method/stickers.renameStickerSet/) | Renames a stickerset. |
-| [stickers.replaceSticker](/method/stickers.replaceSticker/) | Replace a sticker in a [stickerset »](https://core.telegram.org/api/stickers). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getStickerSet">messages.getStickerSet</a></td><td>Получить информацию о наборе стикеров</td></tr><tr><td><a href="/method/stickers.createStickerSet">stickers.createStickerSet</a></td><td>Создать набор стикеров.</td></tr><tr><td><a href="/method/stickers.removeStickerFromSet">stickers.removeStickerFromSet</a></td><td>Удалить стикер из набора, которому он принадлежит. Набор стикеров должен быть создан текущим пользователем или ботом.</td></tr><tr><td><a href="/method/stickers.changeStickerPosition">stickers.changeStickerPosition</a></td><td>Изменяет абсолютную позицию стикера в наборе, которому он принадлежит. Набор стикеров должен быть создан текущим пользователем или ботом.</td></tr><tr><td><a href="/method/stickers.addStickerToSet">stickers.addStickerToSet</a></td><td>Добавить стикер в набор стикеров. Набор стикеров должен быть создан текущим пользователем или ботом.</td></tr><tr><td><a href="/method/stickers.setStickerSetThumb">stickers.setStickerSetThumb</a></td><td>Задать миниатюру набора стикеров</td></tr><tr><td><a href="/method/stickers.changeSticker">stickers.changeSticker</a></td><td>Обновить ключевые слова, эмодзи или <a href="/api/stickers#mask-stickers">координаты маски</a> стикера.</td></tr><tr><td><a href="/method/stickers.renameStickerSet">stickers.renameStickerSet</a></td><td>Переименовывает набор стикеров.</td></tr><tr><td><a href="/method/stickers.replaceSticker">stickers.replaceSticker</a></td><td>Заменить стикер в <a href="/api/stickers">наборе стикеров »</a>.</td></tr></tbody></table>

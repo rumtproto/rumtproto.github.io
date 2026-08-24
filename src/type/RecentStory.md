@@ -1,31 +1,26 @@
 ---
-title: "RecentStory (тип)"
+title: "RecentStory"
 original: "https://core.telegram.org/type/RecentStory"
 section: ref
 kind: type
+description: "Сводка активных историй » пира."
 layout: layout.njk
 ---
 
 # RecentStory
 
-*Тип из схемы TL.*
-
-> Summary of a peer's [active stories »](https://core.telegram.org/api/stories#recent-story-summaries).
-
-## Определение TL
+Сводка [активных историй »](/api/stories/#recent-story-summaries) пира.
 
 ```
 recentStory#711d692d flags:# live:flags.0?true max_id:flags.1?int = RecentStory;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [recentStory](/constructor/recentStory/) | Summary of a peer's [active stories »](https://core.telegram.org/api/stories#recent-story-summaries), embedded in [user](/constructor/user/).stories_max_id and [channel](/constructor/channel/).stories_max_id and returned by [stories.getPeerMaxIDs](/method/stories.getPeerMaxIDs/). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/recentStory">recentStory</a></td><td>Сводка <a href="/api/stories#recent-story-summaries">активных историй »</a> пира, встроенная в <a href="/constructor/user">user</a>.<code>stories_max_id</code> и <a href="/constructor/channel">channel</a>.<code>stories_max_id</code> и возвращаемая методом <a href="/method/stories.getPeerMaxIDs">stories.getPeerMaxIDs</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

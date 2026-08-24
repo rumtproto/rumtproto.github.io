@@ -1,147 +1,13 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MessageEntity (тип) — MTProto по-русски</title>
-<link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
-    <nav class="top-nav">
-      <a href="/mtproto/">MTProto</a>
-      <a href="/api/">API</a>
-      <a href="/schema/">Схема</a>
-      <a href="/glossary/">Глоссарий</a>
-    </nav>
-  </div>
-</header>
-<div class="layout">
-  <aside class="sidebar">
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Протокол MTProto</div>
-        <ul>
-          
-            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
-          
-            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
-          
-            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
-          
-            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
-          
-            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
-          
-            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
-          
-            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
-          
-            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
-          
-            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
-          
-            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
-          
-            <li><a href="/mtproto/TL/">Язык TL</a></li>
-          
-            <li><a href="/mtproto/transports/">Транспорты</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Telegram API</div>
-        <ul>
-          
-            <li><a href="/api/">Telegram API</a></li>
-          
-            <li><a href="/api/auth/">Авторизация пользователя</a></li>
-          
-            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
-          
-            <li><a href="/api/errors/">Ошибки</a></li>
-          
-            <li><a href="/api/files/">Работа с файлами</a></li>
-          
-            <li><a href="/api/invoking/">Вызов методов</a></li>
-          
-            <li><a href="/api/layers/">Слои схемы</a></li>
-          
-            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
-          
-            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
-          
-            <li><a href="/api/updates/">Получение обновлений</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Схема TL</div>
-        <ul>
-          
-            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
-          
-            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
-          
-            <li><a href="/methods/">Методы по категориям</a></li>
-          
-            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
-          
-            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
-          
-            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
-          
-            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Другое</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-            <li><a href="/techfaq/">Технический FAQ</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Справочник схемы</div>
-        <ul>
-          
-            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
-          
-            <li><a href="/method/">Методы (справочник)</a></li>
-          
-            <li><a href="/type/">Типы (справочник)</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Приложение</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-        </ul>
-      </div>
-    
-  </aside>
-  <main class="content">
-    <article>
-      <h1 id="messageentity" tabindex="-1">MessageEntity</h1>
-<p><em>Тип из схемы TL.</em></p>
-<blockquote>
-<p>Message entities, representing styled text in a message</p>
-<h4 id="end-to-end-schema" tabindex="-1"><a href="/schema/end-to-end/">End-to-end schema</a></h4>
-<pre><code>===45===
+<!doctype html> <html lang="ru"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script> <title>MessageEntity — MTProto по-русски</title> <meta name="description" content="Сущности оформления сообщения, задающие форматирование текста"> <meta property="og:title" content="MessageEntity"> <meta property="og:description" content="Сущности оформления сообщения, задающие форматирование текста"> <meta property="og:type" content="article"> <meta property="og:site_name" content="MTProto по-русски"> <meta property="og:locale" content="ru_RU"> <meta property="og:url" content="https://rumtproto.github.io/type/MessageEntity/"> <meta property="og:image" content="https://rumtproto.github.io/apple-touch-icon.png"> <meta name="twitter:card" content="summary"> <link rel="canonical" href="https://rumtproto.github.io/type/MessageEntity/"> <link rel="alternate" hreflang="en" href="https://mirrortproto.github.io/type/MessageEntity/"> <link rel="alternate" hreflang="ru" href="https://rumtproto.github.io/type/MessageEntity/"> <link rel="manifest" href="/manifest.webmanifest"> <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)"> <link rel="icon" href="/favicon.svg" type="image/svg+xml"> <link rel="icon" href="/icon-64.png" type="image/png" sizes="64x64"> <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <link rel="stylesheet" href="/css/style.css"> <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Схема","item":"https://rumtproto.github.io/schema/"},{"@type":"ListItem","position":2,"name":"Типы","item":"https://rumtproto.github.io/type/"}]}
+</script> </head> <body data-pagefind-filter="Раздел:Схема"> <a class="skip-link" href="#content">К содержанию</a> <header class="site-header"> <div class="header-inner"> <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a> <nav class="top-nav" aria-label="Разделы"> <a href="/api/" >API</a> <a href="/mtproto/" >MTProto</a> <a href="/schema/" class="active" aria-current="section">Схема</a> <a href="/techfaq/" >FAQ</a> </nav> <form class="site-search" action="/search/" method="get" role="search"> <span class="search-field"> <input type="search" name="q" placeholder="Поиск" aria-label="Поиск (нажмите / для фокуса)"> <kbd class="search-kbd" aria-hidden="true">/</kbd> </span> </form> <a class="search-button" href="/search/" aria-label="Поиск"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg> </a> <a class="source-link" href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener"> <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="source-link-text">Исходный код</span> </a> <div class="theme-switch" role="group" aria-label="Цветовая тема"> <div class="theme-seg"> <button type="button" data-mode="auto" aria-pressed="false" title="Системная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="light" aria-pressed="false" title="Светлая тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="dark" aria-pressed="false" title="Тёмная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> <button class="theme-toggle" type="button" data-mode="auto" title="Цветовая тема: auto"> <svg class="icon-auto" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-light" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-dark" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> </div> </header> <div class="layout"> <aside class="sidebar" aria-label="Страницы раздела"> <div class="nav-group"> <div class="nav-group-title">Схема</div> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </div> </aside> <main class="content" id="content"> <nav class="crumbs" aria-label="Хлебные крошки"> <a href="/schema/">Схема</a> <span class="crumb-sep">›</span> <a href="/type/">Типы</a> <span class="crumb-sep">›</span> <span class="crumb-current">MessageEntity</span> </nav> <div class="mobile-nav" role="navigation" aria-label="Страницы раздела"> <details class="mobile-nav-group"> <summary>Схема</summary> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </details> </div> <article> <h1 id="messageentity" tabindex="-1">MessageEntity <a class="header-anchor" href="#messageentity" aria-hidden="true">#</a></h1> <p id="p-1"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/type/MessageEntity/#p-1" rel="noopener" title="Перевод абзаца 1" data-tip="Перевод: абзац 1 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Сущности оформления сообщения, задающие форматирование текста<a class="p-anchor" href="#p-1" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="актуальная-tl-схема-сквозного-шифрования"></span><h4 id="end-to-end-schema" tabindex="-1"><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a> <a class="header-anchor" href="#end-to-end-schema" aria-hidden="true">#</a></h4> <pre><code>===45===
 messageEntityBold#bd610bc9 offset:int length:int = MessageEntity;
 messageEntityBotCommand#6cef8ac7 offset:int length:int = MessageEntity;
 messageEntityCode#28a20571 offset:int length:int = MessageEntity;
@@ -153,18 +19,16 @@ messageEntityPre#73924be0 offset:int length:int language:string = MessageEntity;
 messageEntityTextUrl#76a6d327 offset:int length:int url:string = MessageEntity;
 messageEntityUnknown#bb92ba95 offset:int length:int = MessageEntity;
 messageEntityUrl#6ed02538 offset:int length:int = MessageEntity;
+
 ===101===
 messageEntityBlockquote#020df5d0 offset:int length:int = MessageEntity;
 messageEntityStrike#bf0693d4 offset:int length:int = MessageEntity;
 messageEntityUnderline#9c4e7e8b offset:int length:int = MessageEntity;
+
 ===144===
 messageEntityCustomEmoji#c8cf05f8 offset:int length:int document_id:long = MessageEntity;
 messageEntitySpoiler#32ca960f offset:int length:int = MessageEntity;
-</code></pre>
-<p>API schema:</p>
-</blockquote>
-<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
-<pre><code>messageEntityUnknown#bb92ba95 offset:int length:int = MessageEntity;
+</code></pre> <p id="p-2"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/type/MessageEntity/#p-2" rel="noopener" title="Перевод абзаца 2" data-tip="Перевод: абзац 2 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Схема API:<a class="p-anchor" href="#p-2" aria-label="Ссылка на этот абзац">¶</a></p> <pre><code>messageEntityUnknown#bb92ba95 offset:int length:int = MessageEntity;
 messageEntityMention#fa04579d offset:int length:int = MessageEntity;
 messageEntityHashtag#6f635b0d offset:int length:int = MessageEntity;
 messageEntityBotCommand#6cef8ac7 offset:int length:int = MessageEntity;
@@ -186,128 +50,52 @@ messageEntitySpoiler#32ca960f offset:int length:int = MessageEntity;
 messageEntityCustomEmoji#c8cf05f8 offset:int length:int document_id:long = MessageEntity;
 messageEntityBlockquote#f1ccaaac flags:# collapsed:flags.0?true offset:int length:int = MessageEntity;
 messageEntityFormattedDate#904ac7c7 flags:# relative:flags.0?true short_time:flags.1?true long_time:flags.2?true short_date:flags.3?true long_date:flags.4?true day_of_week:flags.5?true offset:int length:int date:int = MessageEntity;
-</code></pre>
-<h2 id="конструкторы" tabindex="-1">Конструкторы</h2>
-<table>
-<thead>
-<tr>
-<th>Constructor</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="/constructor/messageEntityUnknown/">messageEntityUnknown</a></td>
-<td>Unknown message entity</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityMention/">messageEntityMention</a></td>
-<td>Message entity <a href="https://core.telegram.org/api/mentions">mentioning</a> a user by @username; <a href="/constructor/messageEntityMentionName/">messageEntityMentionName</a> can also be used to mention users by their ID.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityHashtag/">messageEntityHashtag</a></td>
-<td>#hashtag message entity</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityBotCommand/">messageEntityBotCommand</a></td>
-<td>Message entity representing a bot /command</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityUrl/">messageEntityUrl</a></td>
-<td>Message entity representing an in-text url: <a href="https://google.com">https://google.com</a>; for <a href="https://google.com">text urls</a>, use <a href="/constructor/messageEntityTextUrl/">messageEntityTextUrl</a>.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityEmail/">messageEntityEmail</a></td>
-<td>Message entity representing an <a href="mailto:email@example.com">email@example.com</a>.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityBold/">messageEntityBold</a></td>
-<td>Message entity representing bold text.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityItalic/">messageEntityItalic</a></td>
-<td>Message entity representing italic text.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityCode/">messageEntityCode</a></td>
-<td>Message entity representing a codeblock.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityPre/">messageEntityPre</a></td>
-<td>Message entity representing a preformatted codeblock, allowing the user to specify a programming language for the codeblock.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityTextUrl/">messageEntityTextUrl</a></td>
-<td>Message entity representing a <a href="https://google.com">text url</a>: for in-text urls like <a href="https://google.com">https://google.com</a> use <a href="/constructor/messageEntityUrl/">messageEntityUrl</a>. Note that an additional confirmation popup with the full URL must be displayed to the user before opening this link, unless the domain satisfies the conditions specified in the <a href="https://core.telegram.org/api/config#whitelisted-domains">domain whitelist documentation »</a>.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityUnderline/">messageEntityUnderline</a></td>
-<td>Message entity representing underlined text.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityStrike/">messageEntityStrike</a></td>
-<td>Message entity representing strikethrough text.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityBlockquote/">messageEntityBlockquote</a></td>
-<td>Message entity representing a block quote.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntitySpoiler/">messageEntitySpoiler</a></td>
-<td>Message entity representing a spoiler</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityCustomEmoji/">messageEntityCustomEmoji</a></td>
-<td>Represents a custom emoji. Note that this entity must wrap exactly one regular emoji (the one contained in <a href="/constructor/documentAttributeCustomEmoji/">documentAttributeCustomEmoji</a>.alt) in the related text, otherwise the server will ignore it.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityMentionName/">messageEntityMentionName</a></td>
-<td>Message entity representing a <a href="https://core.telegram.org/api/mentions">user mention</a>: for creating a mention use <a href="/constructor/inputMessageEntityMentionName/">inputMessageEntityMentionName</a>.</td>
-</tr>
-<tr>
-<td><a href="/constructor/inputMessageEntityMentionName/">inputMessageEntityMentionName</a></td>
-<td>Message entity that can be used to create a user <a href="https://core.telegram.org/api/mentions">user mention</a>: received mentions use the <a href="/constructor/messageEntityMentionName/">messageEntityMentionName</a> constructor, instead.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityPhone/">messageEntityPhone</a></td>
-<td>Message entity representing a phone number.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityCashtag/">messageEntityCashtag</a></td>
-<td>Message entity representing a $cashtag.</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityBankCard/">messageEntityBankCard</a></td>
-<td>Indicates a credit card number</td>
-</tr>
-<tr>
-<td><a href="/constructor/messageEntityFormattedDate/">messageEntityFormattedDate</a></td>
-<td>Represents a specific point in time, rendered as specified <a href="https://core.telegram.org/api/entities#date-entities">here »</a> All flags are optional, with the following limitations: - relative cannot combined with any other flag - short_time and long_time cannot be combined with each other - short_date and long_date cannot be combined with each other If any of the flags are combined, their rendering order in the text is the following: - day_of_week - short_time/long_time - short_date/long_date</td>
-</tr>
-<tr>
-<td><a href="https://core.telegram.org/constructor/messageEntityDiffInsert">messageEntityDiffInsert</a></td>
-<td>Represents an diff addition: render it by simply underlining the specified section and coloring it in green, see <a href="https://core.telegram.org/api/entities#diff-entities">here »</a> for more info on how to render diff entities.</td>
-</tr>
-<tr>
-<td><a href="https://core.telegram.org/constructor/messageEntityDiffReplace">messageEntityDiffReplace</a></td>
-<td>Represents an diff replacement, render it as follows: - Insert old_text into the text at offset offset, underline it and color it in red: note that this insertion does not affect the offsets of entities that come after it. - underline the section delimited by offset and limit and color it in green. See <a href="https://core.telegram.org/api/entities#diff-entities">here »</a> for more info on how to render diff entities.</td>
-</tr>
-<tr>
-<td><a href="https://core.telegram.org/constructor/messageEntityDiffDelete">messageEntityDiffDelete</a></td>
-<td>Represents an diff deletion: render it by simply underlining the specified section and coloring it in red, see <a href="https://core.telegram.org/api/entities#diff-entities">here »</a> for more info on how to render diff entities.</td>
-</tr>
-</tbody>
-</table>
-
-      <div class="source-note">
-        Оригинал: <a href="https://core.telegram.org/type/MessageEntity" rel="noopener">https://core.telegram.org/type/MessageEntity</a>
-      </div>
-    </article>
-  </main>
-</div>
-<footer class="site-footer">
-  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
-  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
-</footer>
-</body>
-</html>
+</code></pre> <span class="heading-alias" id="конструкторы"></span><h3 id="constructors" tabindex="-1">Конструкторы <a class="header-anchor" href="#constructors" aria-hidden="true">#</a></h3> <table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messageEntityUnknown">messageEntityUnknown</a></td><td>Неизвестная сущность оформления</td></tr><tr><td><a href="/constructor/messageEntityMention">messageEntityMention</a></td><td>Сущность оформления, <a href="/api/mentions">упоминающая</a> пользователя по <code>@username</code>; для упоминания пользователей по их идентификатору можно также использовать <a href="/constructor/messageEntityMentionName">messageEntityMentionName</a>.</td></tr><tr><td><a href="/constructor/messageEntityHashtag">messageEntityHashtag</a></td><td>Сущность оформления <strong>#хештег</strong></td></tr><tr><td><a href="/constructor/messageEntityBotCommand">messageEntityBotCommand</a></td><td>Сущность оформления, представляющая /команду бота</td></tr><tr><td><a href="/constructor/messageEntityUrl">messageEntityUrl</a></td><td>Сущность оформления, представляющая ссылку в тексте: <a href="https://google.com">https://google.com</a>; для <a href="https://google.com">текстовых ссылок</a> используйте <a href="/constructor/messageEntityTextUrl">messageEntityTextUrl</a>.</td></tr><tr><td><a href="/constructor/messageEntityEmail">messageEntityEmail</a></td><td>Сущность оформления, представляющая адрес <a href="mailto:email@example.com">email@example.com</a>.</td></tr><tr><td><a href="/constructor/messageEntityBold">messageEntityBold</a></td><td>Сущность оформления, представляющая <strong>полужирный текст</strong>.</td></tr><tr><td><a href="/constructor/messageEntityItalic">messageEntityItalic</a></td><td>Сущность оформления, представляющая <em>курсивный текст</em>.</td></tr><tr><td><a href="/constructor/messageEntityCode">messageEntityCode</a></td><td>Сущность оформления, представляющая <code>codeblock</code>.</td></tr><tr><td><a href="/constructor/messageEntityPre">messageEntityPre</a></td><td>Сущность оформления, представляющая форматированный <code>codeblock</code> с возможностью указать язык программирования для этого блока кода.</td></tr><tr><td><a href="/constructor/messageEntityTextUrl">messageEntityTextUrl</a></td><td>Сущность оформления, представляющая <a href="https://google.com">текстовую ссылку</a>: для ссылок прямо в тексте, вроде <a href="https://google.com">https://google.com</a>, используйте <a href="/constructor/messageEntityUrl">messageEntityUrl</a>.<br><br>Обратите внимание, что перед открытием этой ссылки пользователю необходимо показать дополнительное окно подтверждения с полным URL, если только домен не удовлетворяет условиям, указанным в <a href="/api/config#whitelisted-domains">документации по белому списку доменов »</a>.</td></tr><tr><td><a href="/constructor/messageEntityUnderline">messageEntityUnderline</a></td><td>Сущность оформления, представляющая подчёркнутый текст.</td></tr><tr><td><a href="/constructor/messageEntityStrike">messageEntityStrike</a></td><td>Сущность оформления, представляющая <del>зачёркнутый</del> текст.</td></tr><tr><td><a href="/constructor/messageEntityBlockquote">messageEntityBlockquote</a></td><td>Сущность оформления, представляющая цитату.</td></tr><tr><td><a href="/constructor/messageEntitySpoiler">messageEntitySpoiler</a></td><td>Сущность оформления, представляющая спойлер</td></tr><tr><td><a href="/constructor/messageEntityCustomEmoji">messageEntityCustomEmoji</a></td><td>Представляет пользовательский эмодзи.<br>Учтите, что эта сущность обязана охватывать ровно один обычный эмодзи (тот, который содержится в <a href="/constructor/documentAttributeCustomEmoji">documentAttributeCustomEmoji</a>.<code>alt</code>) в соответствующем тексте, иначе сервер её проигнорирует.</td></tr><tr><td><a href="/constructor/messageEntityMentionName">messageEntityMentionName</a></td><td>Сущность оформления, представляющая <a href="/api/mentions">упоминание пользователя</a>; для <em>создания</em> упоминания используйте <a href="/constructor/inputMessageEntityMentionName">inputMessageEntityMentionName</a>.</td></tr><tr><td><a href="/constructor/inputMessageEntityMentionName">inputMessageEntityMentionName</a></td><td>Сущность оформления, с помощью которой можно создать <a href="/api/mentions">упоминание пользователя</a>; в получаемых упоминаниях вместо неё используется конструктор <a href="/constructor/messageEntityMentionName">messageEntityMentionName</a>.</td></tr><tr><td><a href="/constructor/messageEntityPhone">messageEntityPhone</a></td><td>Сущность оформления, представляющая номер телефона.</td></tr><tr><td><a href="/constructor/messageEntityCashtag">messageEntityCashtag</a></td><td>Сущность оформления, представляющая <strong>$cashtag</strong>.</td></tr><tr><td><a href="/constructor/messageEntityBankCard">messageEntityBankCard</a></td><td>Обозначает номер банковской карты</td></tr><tr><td><a href="/constructor/messageEntityFormattedDate">messageEntityFormattedDate</a></td><td>Представляет конкретный момент времени, отображаемый так, как указано <a href="/api/entities#date-entities">здесь »</a><br><br>Все флаги необязательны, но действуют следующие ограничения:<br><br>- <code>relative</code> нельзя сочетать ни с каким другим флагом<br>- <code>short_time</code> и <code>long_time</code> нельзя сочетать друг с другом<br>- <code>short_date</code> и <code>long_date</code> нельзя сочетать друг с другом<br><br>Если флаги сочетаются, порядок их отображения в тексте следующий:<br><br>- <code>day_of_week</code><br>- <code>short_time</code>/<code>long_time</code><br>- <code>short_date</code>/<code>long_date</code></td></tr><tr><td><a href="/constructor/messageEntityDiffInsert">messageEntityDiffInsert</a></td><td>Представляет добавление в diff: отобразите его, просто <u>подчеркнув</u> указанный фрагмент и окрасив его в зелёный цвет; подробнее об отображении сущностей diff см. <a href="/api/entities#diff-entities">здесь »</a>.</td></tr><tr><td><a href="/constructor/messageEntityDiffReplace">messageEntityDiffReplace</a></td><td>Представляет замену в diff, отображайте её следующим образом:<br><br>- Вставьте <code>old_text</code> в текст по смещению <code>offset</code>, <u>подчеркните</u> его и окрасьте в красный цвет: учтите, что эта вставка не влияет на смещения следующих за ней сущностей.<br>- <u>Подчеркните</u> фрагмент, ограниченный значениями <code>offset</code> и <code>limit</code>, и окрасьте его в зелёный цвет.<br><br>Подробнее об отображении сущностей diff см. <a href="/api/entities#diff-entities">здесь »</a>.</td></tr><tr><td><a href="/constructor/messageEntityDiffDelete">messageEntityDiffDelete</a></td><td>Представляет удаление в diff: отобразите его, просто <u>подчеркнув</u> указанный фрагмент и окрасив его в красный цвет; подробнее об отображении сущностей diff см. <a href="/api/entities#diff-entities">здесь »</a>.</td></tr></tbody></table> <div class="source-note"> Оригинал: <a href="https://core.telegram.org/type/MessageEntity" rel="noopener">https://core.telegram.org/type/MessageEntity</a> · Английская версия: <a href="https://mirrortproto.github.io/type/MessageEntity/" rel="noopener">mirrortproto.github.io</a> </div> </article> </main> </div> <footer class="site-footer"> Неофициальный русскоязычный перевод документации <a href="https://core.telegram.org/mtproto" rel="noopener">core.telegram.org</a>. Снимок контента: 2026-08-23. Исходники сайта — <a href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener">rumtproto/rumtproto.github.io</a>. </footer> <script src="/pagefind/pagefind-ui.js"></script> <script>
+  (function () {
+    var btn = document.querySelector('.theme-toggle');
+    var seg = Array.prototype.slice.call(document.querySelectorAll('.theme-seg button'));
+    if (!btn && !seg.length) return;
+    var order = ['auto', 'light', 'dark'];
+    function current() { try { return localStorage.getItem('theme') || 'auto'; } catch (e) { return 'auto'; } }
+    function set(mode) {
+      try { mode === 'auto' ? localStorage.removeItem('theme') : localStorage.setItem('theme', mode); } catch (e) {}
+      apply(mode);
+    }
+    function apply(mode) {
+      if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', mode);
+      if (btn) {
+        btn.dataset.mode = mode;
+        btn.title = 'Цветовая тема: ' + mode;
+        btn.setAttribute('aria-label', 'Цветовая тема: ' + mode + '. Нажмите для переключения.');
+      }
+      seg.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.mode === mode)); });
+      var dark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+        if ((m.media || '').indexOf('dark') !== -1) m.content = dark ? '#0d1117' : '#ffffff';
+      });
+    }
+    seg.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.mode); }); });
+    if (btn) btn.addEventListener('click', function () { set(order[(order.indexOf(current()) + 1) % order.length]); });
+    apply(current());
+  })();
+  (function () {
+    document.addEventListener('keydown', function (e) {
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (e.key === '/' && !/^(input|textarea|select)$/i.test(tag)) {
+        var q = document.querySelector('.site-search input') || document.querySelector('.pagefind-ui__search-input');
+        if (q) { e.preventDefault(); q.focus(); }
+      }
+    });
+  })();
+  (function () {
+    /* скрыть плейсхолдер после реальной загрузки медиа */
+    document.querySelectorAll('.img-box').forEach(function (box) {
+      var im = box.querySelector('img') || box.querySelector('video');
+      if (!im) return;
+      var ok = function () { box.classList.add('img-ok'); };
+      if (im.complete && im.naturalWidth > 0) ok();
+      else im.addEventListener('load', ok);
+    });
+  })();
+</script> </body> </html> 

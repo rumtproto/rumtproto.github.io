@@ -1,19 +1,17 @@
 ---
-title: "messages.prolongWebView (метод)"
+title: "messages.prolongWebView"
 original: "https://core.telegram.org/method/messages.prolongWebView"
 section: ref
 kind: method
+description: "Сообщить серверу (со стороны пользователя), что пользователь всё ещё работает с веб-приложением."
 layout: layout.njk
 ---
 
 # messages.prolongWebView
 
-*Метод из схемы TL.*
+Сообщить серверу (со стороны пользователя), что пользователь всё ещё работает с веб-приложением.
 
-> Indicate to the server (from the user side) that the user is still using a web app.
-> If the method returns a `QUERY_ID_INVALID` error, the webview must be closed.
-
-## Определение TL
+Если метод возвращает ошибку `QUERY_ID_INVALID`, веб-представление необходимо закрыть.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,42 +20,32 @@ boolTrue#997275b5 = Bool;
 messages.prolongWebView#b0d81a83 flags:# silent:flags.5?true peer:InputPeer bot:InputUser query_id:long reply_to:flags.0?InputReplyTo send_as:flags.13?InputPeer = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| silent | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether the inline message that will be sent by the bot on behalf of the user once the web app interaction is [terminated](/method/messages.sendWebViewResultMessage/) should be sent silently (no notifications for the receivers). |
-| peer | [InputPeer](/type/InputPeer/) | Dialog where the web app was opened. |
-| bot | [InputUser](/type/InputUser/) | Bot that owns the [web app](https://core.telegram.org/api/bots/webapps) |
-| query_id | [long](/type/long/) | Web app interaction ID obtained from [messages.requestWebView](/method/messages.requestWebView/) |
-| reply_to | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputReplyTo](/type/InputReplyTo/) | If set, indicates that the inline message that will be sent by the bot on behalf of the user once the web app interaction is [terminated](/method/messages.sendWebViewResultMessage/) should be sent in reply to the specified message or story. |
-| send_as | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[InputPeer](/type/InputPeer/) | Open the web app as the specified peer |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>silent</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Следует ли отправить без звука (без уведомлений для получателей) инлайн-сообщение, которое бот отправит от имени пользователя после <a href="/method/messages.sendWebViewResultMessage">завершения</a> взаимодействия с веб-приложением.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Диалог, в котором было открыто веб-приложение.</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот, которому принадлежит <a href="/api/bots/webapps">веб-приложение</a></td></tr><tr><td><strong>query_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор взаимодействия с веб-приложением, полученный из <a href="/method/messages.requestWebView">messages.requestWebView</a></td></tr><tr><td><strong>reply_to</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputReplyTo">InputReplyTo</a></td><td>Если установлено, указывает, что инлайн-сообщение, которое бот отправит от имени пользователя после <a href="/method/messages.sendWebViewResultMessage">завершения</a> взаимодействия с веб-приложением, следует отправить в ответ на указанное сообщение или историю.</td></tr><tr><td><strong>send_as</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/InputPeer">InputPeer</a></td><td>Открыть веб-приложение от имени указанного пира</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [messages.sendWebViewResultMessage](/method/messages.sendWebViewResultMessage/)
 
-Terminate webview interaction started with [messages.requestWebView](/method/messages.requestWebView/), sending the specified message to the chat on behalf of the user.
+Завершить взаимодействие с веб-представлением, начатое через [messages.requestWebView](/method/messages.requestWebView/), отправив указанное сообщение в чат от имени пользователя.
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
 #### [messages.requestWebView](/method/messages.requestWebView/)
 
-Open a [bot mini app](https://core.telegram.org/bots/webapps), sending over user information after user confirmation.
+[@term:Mini App] Открыть [mini app бота](https://core.telegram.org/bots/webapps), передав сведения о пользователе после его подтверждения.
 
-After calling this method, until the user closes the webview, [messages.prolongWebView](/method/messages.prolongWebView/) must be called every 60 seconds.
+После вызова этого метода и до тех пор, пока пользователь не закроет webview, необходимо каждые 60 секунд вызывать [messages.prolongWebView](/method/messages.prolongWebView/).

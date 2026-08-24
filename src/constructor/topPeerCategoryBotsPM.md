@@ -1,27 +1,24 @@
 ---
-title: "topPeerCategoryBotsPM (конструктор)"
+title: "topPeerCategoryBotsPM"
 original: "https://core.telegram.org/constructor/topPeerCategoryBotsPM"
 section: ref
 kind: constructor
+description: "Наиболее используемые боты"
 layout: layout.njk
 ---
 
 # topPeerCategoryBotsPM
 
-*Конструктор из схемы TL.*
-
-> Most used bots
-
-## Определение TL
+Наиболее используемые боты
 
 ```
 topPeerCategoryBotsPM#ab661b5b = TopPeerCategory;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [TopPeerCategory](/type/TopPeerCategory/)

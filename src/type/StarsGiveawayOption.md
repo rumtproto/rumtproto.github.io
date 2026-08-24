@@ -1,31 +1,26 @@
 ---
-title: "StarsGiveawayOption (тип)"
+title: "StarsGiveawayOption"
 original: "https://core.telegram.org/type/StarsGiveawayOption"
 section: ref
 kind: type
+description: "Содержит информацию о варианте розыгрыша Telegram Stars."
 layout: layout.njk
 ---
 
 # StarsGiveawayOption
 
-*Тип из схемы TL.*
-
-> Contains info about a [Telegram Star giveaway](https://core.telegram.org/api/giveaways#star-giveaways) option.
-
-## Определение TL
+Содержит информацию о варианте [розыгрыша Telegram Stars](/api/giveaways/#star-giveaways).
 
 ```
 starsGiveawayOption#94ce852a flags:# extended:flags.0?true default:flags.1?true stars:long yearly_boosts:int store_product:flags.2?string currency:string amount:long winners:Vector<StarsGiveawayWinnersOption> = StarsGiveawayOption;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starsGiveawayOption](/constructor/starsGiveawayOption/) | Contains info about a [Telegram Star giveaway](https://core.telegram.org/api/giveaways#star-giveaways) option. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starsGiveawayOption">starsGiveawayOption</a></td><td>Содержит информацию о варианте <a href="/api/giveaways#star-giveaways">розыгрыша Telegram Stars</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

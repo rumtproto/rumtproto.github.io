@@ -1,27 +1,24 @@
 ---
-title: "messageMediaUnsupported (конструктор)"
+title: "messageMediaUnsupported"
 original: "https://core.telegram.org/constructor/messageMediaUnsupported"
 section: ref
 kind: constructor
+description: "Текущая версия клиента не поддерживает этот тип медиафайлов."
 layout: layout.njk
 ---
 
 # messageMediaUnsupported
 
-*Конструктор из схемы TL.*
-
-> Current version of the client does not support this media type.
-
-## Определение TL
+Текущая версия клиента не поддерживает этот тип медиафайлов.
 
 ```
 messageMediaUnsupported#9f84f49e = MessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessageMedia](/type/MessageMedia/)

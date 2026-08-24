@@ -1,36 +1,30 @@
 ---
-title: "starsAmount (конструктор)"
+title: "starsAmount"
 original: "https://core.telegram.org/constructor/starsAmount"
 section: ref
 kind: constructor
+description: "Описывает вещественную (то есть возможно дробную) сумму в Telegram Stars."
 layout: layout.njk
 ---
 
 # starsAmount
 
-*Конструктор из схемы TL.*
-
-> Describes a real (i.e. possibly decimal) amount of [Telegram Stars](https://core.telegram.org/api/stars).
-
-## Определение TL
+Описывает вещественную (то есть возможно дробную) сумму в [Telegram Stars](/api/stars/).
 
 ```
 starsAmount#bbb6b4a3 amount:long nanos:int = StarsAmount;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| amount | [long](/type/long/) | The integer amount of Telegram Stars. |
-| nanos | [int](/type/int/) | The decimal amount of Telegram Stars, expressed as nanostars (i.e. 1 nanostar is equal to 1/1_000_000_000th (one billionth) of a Telegram Star). This field may also be negative (the allowed range is from -999_999_999 to 999_999_999). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Целое количество Telegram Stars.</td></tr><tr><td><strong>nanos</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дробное количество Telegram Stars, выраженное в наностарах (то есть 1 наностар равен <code>1/1_000_000_000</code> (одной миллиардной) части Telegram Star).<br>Значение этого поля может быть и отрицательным (допустимый диапазон — от <code>-999_999_999</code> до <code>999_999_999</code>).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarsAmount](/type/StarsAmount/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

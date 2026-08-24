@@ -1,18 +1,15 @@
 ---
-title: "channels.SponsoredMessageReportResult (тип)"
+title: "channels.SponsoredMessageReportResult"
 original: "https://core.telegram.org/type/channels.SponsoredMessageReportResult"
 section: ref
 kind: type
+description: "Состояние вызова метода, использованного для жалобы на спонсируемое сообщение »."
 layout: layout.njk
 ---
 
 # channels.SponsoredMessageReportResult
 
-*Тип из схемы TL.*
-
-> Status of the method call used to report a [sponsored message »](https://core.telegram.org/api/sponsored-messages).
-
-## Определение TL
+Состояние вызова метода, использованного для жалобы на [спонсируемое сообщение »](/api/sponsored-messages/).
 
 ```
 channels.sponsoredMessageReportResultChooseOption#846f9e42 title:string options:Vector<SponsoredMessageReportOption> = channels.SponsoredMessageReportResult;
@@ -24,22 +21,16 @@ channels.sponsoredMessageReportResultReported#ad798849 = channels.SponsoredMessa
 messages.reportSponsoredMessage#12cbf0c4 random_id:bytes option:bytes = channels.SponsoredMessageReportResult;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [channels.sponsoredMessageReportResultChooseOption](/constructor/channels.sponsoredMessageReportResultChooseOption/) | The user must choose a report option from the localized options available in options, and after selection, [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/) must be invoked again, passing the option's option field to the option param of the method. |
-| [channels.sponsoredMessageReportResultAdsHidden](/constructor/channels.sponsoredMessageReportResultAdsHidden/) | Sponsored messages were hidden for the user in all chats. |
-| [channels.sponsoredMessageReportResultReported](/constructor/channels.sponsoredMessageReportResultReported/) | The sponsored message was reported successfully. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/channels.sponsoredMessageReportResultChooseOption">channels.sponsoredMessageReportResultChooseOption</a></td><td>Пользователь должен выбрать вариант жалобы из локализованных вариантов, доступных в <code>options</code>, после чего необходимо повторно вызвать <a href="/method/messages.reportSponsoredMessage">messages.reportSponsoredMessage</a>, передав поле <code>option</code> выбранного варианта в параметр <code>option</code> метода.</td></tr><tr><td><a href="/constructor/channels.sponsoredMessageReportResultAdsHidden">channels.sponsoredMessageReportResultAdsHidden</a></td><td>Спонсируемые сообщения были скрыты для пользователя во всех чатах.</td></tr><tr><td><a href="/constructor/channels.sponsoredMessageReportResultReported">channels.sponsoredMessageReportResultReported</a></td><td>Жалоба на рекламное сообщение успешно отправлена.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/) | Report a [sponsored message »](https://core.telegram.org/api/sponsored-messages), see [here »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.reportSponsoredMessage">messages.reportSponsoredMessage</a></td><td>Пожаловаться на <a href="/api/sponsored-messages">рекламное сообщение »</a>; подробнее обо всём процессе см. <a href="/api/sponsored-messages#reporting-sponsored-messages">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Sponsored messages](https://core.telegram.org/api/sponsored-messages)
+#### [Спонсируемые сообщения](/api/sponsored-messages/)
 
-How clients should fetch, display and interact with sponsored messages.
+Как клиентам получать, показывать рекламные сообщения и взаимодействовать с ними.

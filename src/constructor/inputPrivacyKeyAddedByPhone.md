@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyKeyAddedByPhone (конструктор)"
+title: "inputPrivacyKeyAddedByPhone"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyAddedByPhone"
 section: ref
 kind: constructor
+description: "Могут ли другие добавить вас в список контактов по номеру телефона"
 layout: layout.njk
 ---
 
 # inputPrivacyKeyAddedByPhone
 
-*Конструктор из схемы TL.*
-
-> Whether people can add you to their contact list by your phone number
-
-## Определение TL
+Могут ли другие добавить вас в список контактов по номеру телефона
 
 ```
 inputPrivacyKeyAddedByPhone#d1219bdd = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)

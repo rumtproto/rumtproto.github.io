@@ -1,18 +1,15 @@
 ---
-title: "stories.PeerStories (тип)"
+title: "stories.PeerStories"
 original: "https://core.telegram.org/type/stories.PeerStories"
 section: ref
 kind: type
+description: "Список активных историй конкретного пира."
 layout: layout.njk
 ---
 
 # stories.PeerStories
 
-*Тип из схемы TL.*
-
-> [Active story list](https://core.telegram.org/api/stories#watching-stories) of a specific peer.
-
-## Определение TL
+[Список активных историй](/api/stories/#watching-stories) конкретного пира.
 
 ```
 stories.peerStories#cae68768 stories:PeerStories chats:Vector<Chat> users:Vector<User> = stories.PeerStories;
@@ -22,20 +19,16 @@ stories.peerStories#cae68768 stories:PeerStories chats:Vector<Chat> users:Vector
 stories.getPeerStories#2c4ada50 peer:InputPeer = stories.PeerStories;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [stories.peerStories](/constructor/stories.peerStories/) | [Active story list](https://core.telegram.org/api/stories#watching-stories) of a specific peer. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/stories.peerStories">stories.peerStories</a></td><td><a href="/api/stories#watching-stories">Список активных историй</a> конкретного пира.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stories.getPeerStories](/method/stories.getPeerStories/) | Fetch the full active [story list](https://core.telegram.org/api/stories#watching-stories) of a specific peer. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stories.getPeerStories">stories.getPeerStories</a></td><td>Получить полный <a href="/api/stories#watching-stories">список активных историй</a> конкретного пира.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

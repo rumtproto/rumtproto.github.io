@@ -1,36 +1,30 @@
 ---
-title: "urlAuthResultAccepted (конструктор)"
+title: "urlAuthResultAccepted"
 original: "https://core.telegram.org/constructor/urlAuthResultAccepted"
 section: ref
 kind: constructor
+description: "Сведения о принятом запросе авторизации; подробнее см. здесь »"
 layout: layout.njk
 ---
 
 # urlAuthResultAccepted
 
-*Конструктор из схемы TL.*
-
-> Details about an accepted authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
-
-## Определение TL
+Сведения о принятом запросе авторизации; подробнее [см. здесь »](/api/url-authorization/)
 
 ```
 urlAuthResultAccepted#623a8fa0 flags:# url:flags.0?string = UrlAuthResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | If present, the URL to open in the external browser (may use a custom scheme for direct switching to another app); if absent, the login succeeded and clients should simply show a confirmation toast. Always set for [bot button URL authorization](https://core.telegram.org/api/url-authorization#bot-button-url-authorization) and [link URL authorization](https://core.telegram.org/api/url-authorization#link-url-authorization). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Если присутствует — URL, который нужно открыть во внешнем браузере (может использовать пользовательскую схему для прямого перехода в другое приложение); если отсутствует, вход выполнен успешно и клиентам следует просто показать всплывающее уведомление с подтверждением.<br>Всегда задано для <a href="/api/url-authorization#bot-button-url-authorization">авторизации по URL из кнопки бота</a> и <a href="/api/url-authorization#link-url-authorization">авторизации по URL из ссылки</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [UrlAuthResult](/type/UrlAuthResult/)
 
-## Related pages
+### Связанные страницы
 
-#### [Seamless Telegram Login](https://core.telegram.org/api/url-authorization)
+#### [Бесшовный вход через Telegram](/api/url-authorization/)
 
-Handle Seamless Telegram Login URL authorization requests.
+Обработка запросов авторизации по URL через Seamless Telegram Login.

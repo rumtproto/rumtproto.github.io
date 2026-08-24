@@ -1,56 +1,38 @@
 ---
-title: "messageFwdHeader (конструктор)"
+title: "messageFwdHeader"
 original: "https://core.telegram.org/constructor/messageFwdHeader"
 section: ref
 kind: constructor
+description: "Информация о пересланном сообщении"
 layout: layout.njk
 ---
 
 # messageFwdHeader
 
-*Конструктор из схемы TL.*
-
-> Info about a forwarded message
-
-## Определение TL
+Информация о пересланном сообщении
 
 ```
 messageFwdHeader#4e4df4bb flags:# imported:flags.7?true saved_out:flags.11?true from_id:flags.0?Peer from_name:flags.5?string date:int channel_post:flags.2?int post_author:flags.3?string saved_from_peer:flags.4?Peer saved_from_msg_id:flags.4?int saved_from_id:flags.8?Peer saved_from_name:flags.9?string saved_date:flags.10?int psa_type:flags.6?string = MessageFwdHeader;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| imported | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | Whether this message was [imported from a foreign chat service, click here for more info »](https://core.telegram.org/api/import) |
-| saved_out | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[true](/constructor/true/) | Only for messages forwarded to [saved messages »](https://core.telegram.org/api/saved-messages), set if the original message was outgoing (though the message may have been originally outgoing even if this flag is not set, if from_id points to the current user). |
-| from_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Peer](/type/Peer/) | The ID of the user that originally sent the message |
-| from_name | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[string](/type/string/) | The name of the user that originally sent the message |
-| date | [int](/type/int/) | When was the message originally sent |
-| channel_post | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | ID of the channel message that was forwarded |
-| post_author | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[string](/type/string/) | For channels and if signatures are enabled, author of the channel message |
-| saved_from_peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[Peer](/type/Peer/) | Only for messages forwarded to [saved messages »](https://core.telegram.org/api/saved-messages), contains the dialog where the message was originally sent. |
-| saved_from_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[int](/type/int/) | Only for messages forwarded to [saved messages »](https://core.telegram.org/api/saved-messages), contains the original ID of the message in saved_from_peer. |
-| saved_from_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[Peer](/type/Peer/) | Only for forwarded messages reforwarded to [saved messages »](https://core.telegram.org/api/saved-messages), contains the sender of the original message (i.e. if user A sends a message, then user B forwards it somewhere, then user C saves it to saved messages, this field will contain the ID of user B and from_id will contain the ID of user A). |
-| saved_from_name | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[string](/type/string/) | Only for forwarded messages from users with forward privacy enabled, sent by users with forward privacy enabled, reforwarded to [saved messages »](https://core.telegram.org/api/saved-messages), contains the sender of the original message (i.e. if user A (fwd privacy enabled) sends a message, then user B (fwd privacy enabled) forwards it somewhere, then user C saves it to saved messages, this field will contain the name of user B and from_name will contain the name of user A). |
-| saved_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[int](/type/int/) | Only for forwarded messages reforwarded to [saved messages »](https://core.telegram.org/api/saved-messages), indicates when was the original message sent (i.e. if user A sends a message @ unixtime 1, then user B forwards it somewhere @ unixtime 2, then user C saves it to saved messages @ unixtime 3, this field will contain 2, date will contain 1 and the date of the containing [message](/constructor/message/) will contain 3). |
-| psa_type | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[string](/type/string/) | PSA type |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>imported</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Было ли это сообщение <a href="/api/import">импортировано из стороннего мессенджера, подробнее см. здесь »</a></td></tr><tr><td><strong>saved_out</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true">true</a></td><td>Только для сообщений, пересланных в <a href="/api/saved-messages">избранное »</a>: установлено, если исходное сообщение было исходящим (при этом сообщение могло быть исходящим и без этого флага, если <code>from_id</code> указывает на текущего пользователя).</td></tr><tr><td><strong>from_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Peer">Peer</a></td><td>Идентификатор пользователя, который изначально отправил сообщение</td></tr><tr><td><strong>from_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/string">string</a></td><td>Имя пользователя, который изначально отправил сообщение</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда сообщение было отправлено изначально</td></tr><tr><td><strong>channel_post</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Идентификатор пересланного сообщения канала</td></tr><tr><td><strong>post_author</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string">string</a></td><td>Для каналов, в которых включены подписи, — автор сообщения канала</td></tr><tr><td><strong>saved_from_peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/Peer">Peer</a></td><td>Только для сообщений, пересланных в <a href="/api/saved-messages">избранное »</a>; содержит диалог, в котором сообщение было отправлено изначально.</td></tr><tr><td><strong>saved_from_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int">int</a></td><td>Только для сообщений, пересланных в <a href="/api/saved-messages">избранное »</a>; содержит исходный идентификатор сообщения в <code>saved_from_peer</code>.</td></tr><tr><td><strong>saved_from_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/Peer">Peer</a></td><td>Только для пересланных сообщений, повторно пересланных в <a href="/api/saved-messages">избранное »</a>; содержит отправителя исходного сообщения (то есть если пользователь A отправляет сообщение, затем пользователь B пересылает его куда-либо, а затем пользователь C сохраняет его в избранное, то это поле будет содержать идентификатор пользователя B, а <code>from_id</code> — идентификатор пользователя A).</td></tr><tr><td><strong>saved_from_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/string">string</a></td><td>Только для пересланных сообщений от пользователей с включённой приватностью пересылки, отправленных пользователями с включённой приватностью пересылки и повторно пересланных в <a href="/api/saved-messages">избранное »</a>; содержит отправителя исходного сообщения (то есть если пользователь A с включённой приватностью пересылки отправляет сообщение, затем пользователь B с включённой приватностью пересылки пересылает его куда-либо, а затем пользователь C сохраняет его в избранное, то это поле будет содержать имя пользователя B, а <code>from_name</code> — имя пользователя A).</td></tr><tr><td><strong>saved_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/int">int</a></td><td>Только для пересланных сообщений, повторно пересланных в <a href="/api/saved-messages">избранное »</a>; указывает, когда было отправлено исходное сообщение (то есть если пользователь A отправляет сообщение в момент unixtime 1, затем пользователь B пересылает его куда-либо в момент unixtime 2, а затем пользователь C сохраняет его в избранное в момент unixtime 3, то это поле будет содержать 2, поле <code>date</code> — 1, а поле <code>date</code> содержащего <a href="/constructor/message">сообщения</a> — 3).</td></tr><tr><td><strong>psa_type</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/string">string</a></td><td>Тип социальной рекламы (PSA)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageFwdHeader](/type/MessageFwdHeader/)
 
-## Related pages
+### Связанные страницы
 
-#### [Imported messages](https://core.telegram.org/api/import)
+#### [Импортированные сообщения](/api/import/)
 
-Telegram allows importing messages and media from foreign chat apps.
+Telegram позволяет импортировать сообщения и медиа из сторонних мессенджеров.
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.
 
 #### [message](/constructor/message/)
 
-A message
+Сообщение

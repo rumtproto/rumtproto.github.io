@@ -1,18 +1,15 @@
 ---
-title: "contacts.deleteContacts (метод)"
+title: "contacts.deleteContacts"
 original: "https://core.telegram.org/method/contacts.deleteContacts"
 section: ref
 kind: method
+description: "Удаляет несколько контактов из списка."
 layout: layout.njk
 ---
 
 # contacts.deleteContacts
 
-*Метод из схемы TL.*
-
-> Deletes several contacts from the list.
-
-## Определение TL
+Удаляет несколько контактов из списка.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,20 +23,16 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 contacts.deleteContacts#96a0e00 id:Vector<InputUser> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[InputUser](/type/InputUser/)> | User ID list |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputUser">InputUser</a>&gt;</td><td>Список идентификаторов пользователей</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr></tbody></table>

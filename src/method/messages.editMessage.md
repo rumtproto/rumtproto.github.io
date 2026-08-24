@@ -1,18 +1,15 @@
 ---
-title: "messages.editMessage (метод)"
+title: "messages.editMessage"
 original: "https://core.telegram.org/method/messages.editMessage"
 section: ref
 kind: method
+description: "Изменить сообщение"
 layout: layout.njk
 ---
 
 # messages.editMessage
 
-*Метод из схемы TL.*
-
-> Edit message
-
-## Определение TL
+Изменить сообщение
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,124 +23,60 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.editMessage#51e842e1 flags:# no_webpage:flags.1?true invert_media:flags.16?true peer:InputPeer id:int message:flags.11?string media:flags.14?InputMedia reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> schedule_date:flags.15?int schedule_repeat_period:flags.18?int quick_reply_shortcut_id:flags.17?int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| no_webpage | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Disable webpage preview |
-| invert_media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).16?[true](/constructor/true/) | If set, any eventual webpage preview will be shown on top of the message instead of at the bottom. |
-| peer | [InputPeer](/type/InputPeer/) | Where was the message sent |
-| id | [int](/type/int/) | ID of the message to edit |
-| message | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[string](/type/string/) | New message |
-| media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[InputMedia](/type/InputMedia/) | New attached media |
-| reply_markup | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[ReplyMarkup](/type/ReplyMarkup/) | Reply markup for inline keyboards |
-| entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text](https://core.telegram.org/api/entities) |
-| schedule_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[int](/type/int/) | Scheduled message date for [scheduled messages](https://core.telegram.org/api/scheduled-messages) |
-| schedule_repeat_period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[int](/type/int/) | Once sent, this message will be automatically re-scheduled to be re-sent again this many seconds in the future, see [here »](https://core.telegram.org/api/scheduled-messages#repeating-scheduled-messages) for more info on repeating scheduled messages. |
-| quick_reply_shortcut_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[int](/type/int/) | If specified, edits a [quick reply shortcut message, instead »](https://core.telegram.org/api/business#quick-reply-shortcuts). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>no_webpage</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Отключить предпросмотр веб-страницы</td></tr><tr><td><strong>invert_media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true">true</a></td><td>Если задано, предпросмотр веб-страницы, если он будет, показывается над сообщением, а не под ним.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Куда было отправлено сообщение</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор редактируемого сообщения</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/string">string</a></td><td>Новое сообщение</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/InputMedia">InputMedia</a></td><td>Новый прикреплённый медиафайл</td></tr><tr><td><strong>reply_markup</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/ReplyMarkup">ReplyMarkup</a></td><td>Разметка ответа для инлайн-клавиатур</td></tr><tr><td><strong>entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления для форматированного текста</a></td></tr><tr><td><strong>schedule_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/int">int</a></td><td>Дата отправки для <a href="/api/scheduled-messages">отложенных сообщений</a></td></tr><tr><td><strong>schedule_repeat_period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/int">int</a></td><td>После отправки это сообщение будет автоматически запланировано на повторную отправку через указанное число секунд; подробнее о повторяющихся отложенных сообщениях см. <a href="/api/scheduled-messages#repeating-scheduled-messages">здесь »</a>.</td></tr><tr><td><strong>quick_reply_shortcut_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/int">int</a></td><td>Если указано, вместо этого редактирует <a href="/api/business#quick-reply-shortcuts">сообщение шаблона быстрого ответа »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## This method can be invoked over a business connection »
+### Этот метод можно вызывать через [бизнес-подключение »](/api/bots/connected-business-bots/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_DOMAIN_INVALID | Bot domain invalid. |
-| 400 | BOT_INVALID | This is not a valid bot. |
-| 400 | BUSINESS_CONNECTION_INVALID | The connection_id passed to the wrapping [invokeWithBusinessConnection](https://core.telegram.org/api/business) call is invalid. |
-| 400 | BUSINESS_PEER_INVALID | Messages can't be set to the specified peer through the current [business connection](https://core.telegram.org/api/business#connected-bots). |
-| 400 | BUTTON_COPY_TEXT_INVALID | The specified [keyboardButtonCopy](/constructor/keyboardButtonCopy/).copy_text is invalid. |
-| 400 | BUTTON_DATA_INVALID | The data of one or more of the buttons you provided is invalid. |
-| 400 | BUTTON_TYPE_INVALID | The type of one or more of the buttons you provided is invalid. |
-| 400 | BUTTON_URL_INVALID | Button URL invalid. |
-| 400 | BUTTON_USER_PRIVACY_RESTRICTED | The privacy setting of the user specified in a [inputKeyboardButtonUserProfile](/constructor/inputKeyboardButtonUserProfile/) button do not allow creating such a button. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 403 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_FORWARDS_RESTRICTED | You can't forward messages from a protected chat. |
-| 403 | CHAT_SEND_GIFS_FORBIDDEN | You can't send gifs in this chat. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | DOCUMENT_INVALID | The specified document is invalid. |
-| 406 | EDIT_MESSAGE_TEMP_RESTRICTED | Message editing is temporarily forbidden for this user due to regulatory restrictions. |
-| 400 | ENTITIES_TOO_LONG | You provided too many styled message entities. |
-| 400 | ENTITY_BOUNDS_INVALID | A specified [entity offset or length](https://core.telegram.org/api/entities#entity-length) is invalid, see [here »](https://core.telegram.org/api/entities#entity-length) for info on how to properly compute the entity offset/length. |
-| 400 | FILE_PARTS_INVALID | The number of file parts is invalid. |
-| 400 | IMAGE_PROCESS_FAILED | Failure while processing image. |
-| 403 | INLINE_BOT_REQUIRED | Only the inline bot can edit message. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | MEDIA_CAPTION_TOO_LONG | The caption is too long. |
-| 400 | MEDIA_EMPTY | The provided media object is invalid. |
-| 400 | MEDIA_GROUPED_INVALID | You tried to send media of different types in an album. |
-| 400 | MEDIA_INVALID | Media invalid. |
-| 400 | MEDIA_NEW_INVALID | The new media is invalid. |
-| 400 | MEDIA_PREV_INVALID | Previous media invalid. |
-| 400 | MEDIA_TTL_INVALID | The specified media TTL is invalid. |
-| 403 | MESSAGE_AUTHOR_REQUIRED | Message author required. |
-| 400 | MESSAGE_EDIT_TIME_EXPIRED | You can't edit this message anymore, too much time has passed since its creation. |
-| 400 | MESSAGE_EMPTY | The provided message is empty. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | MESSAGE_NOT_MODIFIED | The provided message data is identical to the previous message data, the message wasn't modified. |
-| 400 | MESSAGE_TOO_LONG | The provided message is too long. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 500 | MSG_WAIT_FAILED | A waiting call returned an error. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | PEER_TYPES_INVALID | The passed [keyboardButtonSwitchInline](/constructor/keyboardButtonSwitchInline/).peer_types field is invalid. |
-| 400 | PHOTO_EXT_INVALID | The extension of the photo is invalid. |
-| 400 | PHOTO_INVALID_DIMENSIONS | The photo dimensions are invalid. |
-| 400 | PHOTO_SAVE_FILE_INVALID | Internal issues, try again later. |
-| 400 | REPLY_MARKUP_INVALID | The provided reply markup is invalid. |
-| 400 | REPLY_MARKUP_TOO_LONG | The specified reply_markup is too long. |
-| 400 | SCHEDULE_DATE_INVALID | Invalid schedule date provided. |
-| 400 | TODO_ITEMS_EMPTY | A checklist was specified, but no [checklist items](https://core.telegram.org/api/todo) were passed. |
-| 400 | TODO_ITEM_DUPLICATE | Duplicate [checklist items](https://core.telegram.org/api/todo) detected. |
-| 400 | USER_BANNED_IN_CHANNEL | You're banned from sending messages in supergroups/channels. |
-| 400 | WEBPAGE_NOT_FOUND | A preview for the specified webpage url could not be generated. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_DOMAIN_INVALID</td><td>Недействительный домен бота.</td></tr><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr><tr><td>400</td><td>BUSINESS_CONNECTION_INVALID</td><td>Значение <code>connection_id</code>, переданное в объемлющем вызове <a href="/api/business">invokeWithBusinessConnection</a>, недействительно.</td></tr><tr><td>400</td><td>BUSINESS_PEER_INVALID</td><td>Через текущее <a href="/api/business#connected-bots">бизнес-подключение</a> нельзя отправлять сообщения указанному пиру.</td></tr><tr><td>400</td><td>BUTTON_COPY_TEXT_INVALID</td><td>Указанное значение <a href="/constructor/keyboardButtonCopy">keyboardButtonCopy</a>.<code>copy_text</code> недействительно.</td></tr><tr><td>400</td><td>BUTTON_DATA_INVALID</td><td>Данные одной или нескольких переданных вами кнопок недействительны.</td></tr><tr><td>400</td><td>BUTTON_TYPE_INVALID</td><td>Недопустимый тип одной или нескольких переданных вами кнопок.</td></tr><tr><td>400</td><td>BUTTON_URL_INVALID</td><td>Недействительный URL кнопки.</td></tr><tr><td>400</td><td>BUTTON_USER_PRIVACY_RESTRICTED</td><td>Настройка приватности пользователя, указанного в кнопке <a href="/constructor/inputKeyboardButtonUserProfile">inputKeyboardButtonUserProfile</a>, не позволяет создать такую кнопку.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>403</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_FORWARDS_RESTRICTED</td><td>Нельзя пересылать сообщения из защищённого чата.</td></tr><tr><td>403</td><td>CHAT_SEND_GIFS_FORBIDDEN</td><td>В этом чате нельзя отправлять GIF.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>DOCUMENT_INVALID</td><td>Указанный документ недействителен.</td></tr><tr><td>406</td><td>EDIT_MESSAGE_TEMP_RESTRICTED</td><td>Редактирование сообщений временно запрещено для этого пользователя из-за нормативных ограничений.</td></tr><tr><td>400</td><td>ENTITIES_TOO_LONG</td><td>Вы указали слишком много сущностей оформления текста.</td></tr><tr><td>400</td><td>ENTITY_BOUNDS_INVALID</td><td>Одно из указанных <a href="/api/entities#entity-length">смещений или значений длины сущности оформления</a> недействительно; о том, как правильно вычислять смещение и длину сущности, см. <a href="/api/entities#entity-length">здесь&nbsp;»</a>.</td></tr><tr><td>400</td><td>FILE_PARTS_INVALID</td><td>Недопустимое число частей файла.</td></tr><tr><td>400</td><td>IMAGE_PROCESS_FAILED</td><td>Сбой при обработке изображения.</td></tr><tr><td>403</td><td>INLINE_BOT_REQUIRED</td><td>Редактировать сообщение может только инлайн-бот.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>MEDIA_CAPTION_TOO_LONG</td><td>Подпись слишком длинная.</td></tr><tr><td>400</td><td>MEDIA_EMPTY</td><td>Указанный объект медиа недействителен.</td></tr><tr><td>400</td><td>MEDIA_GROUPED_INVALID</td><td>Вы попытались отправить в альбоме медиа разных типов.</td></tr><tr><td>400</td><td>MEDIA_INVALID</td><td>Медиа недействительно.</td></tr><tr><td>400</td><td>MEDIA_NEW_INVALID</td><td>Новый медиафайл недействителен.</td></tr><tr><td>400</td><td>MEDIA_PREV_INVALID</td><td>Предыдущее медиа недействительно.</td></tr><tr><td>400</td><td>MEDIA_TTL_INVALID</td><td>[@term:TTL] Указанное значение TTL для медиа недействительно.</td></tr><tr><td>403</td><td>MESSAGE_AUTHOR_REQUIRED</td><td>Требуется автор сообщения.</td></tr><tr><td>400</td><td>MESSAGE_EDIT_TIME_EXPIRED</td><td>Это сообщение больше нельзя редактировать: с момента его создания прошло слишком много времени.</td></tr><tr><td>400</td><td>MESSAGE_EMPTY</td><td>Указанное сообщение пусто.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>MESSAGE_NOT_MODIFIED</td><td>Переданные данные сообщения совпадают с прежними, сообщение не было изменено.</td></tr><tr><td>400</td><td>MESSAGE_TOO_LONG</td><td>Указанное сообщение слишком длинное.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>500</td><td>MSG_WAIT_FAILED</td><td>Вызов, окончания которого ожидал этот запрос, вернул ошибку.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>PEER_TYPES_INVALID</td><td>Переданное поле <a href="/constructor/keyboardButtonSwitchInline">keyboardButtonSwitchInline</a>.<code>peer_types</code> недействительно.</td></tr><tr><td>400</td><td>PHOTO_EXT_INVALID</td><td>Недопустимое расширение фотографии.</td></tr><tr><td>400</td><td>PHOTO_INVALID_DIMENSIONS</td><td>Недопустимые размеры фотографии.</td></tr><tr><td>400</td><td>PHOTO_SAVE_FILE_INVALID</td><td>Внутренние неполадки, попробуйте ещё раз позже.</td></tr><tr><td>400</td><td>REPLY_MARKUP_INVALID</td><td>Указанная разметка ответа недействительна.</td></tr><tr><td>400</td><td>REPLY_MARKUP_TOO_LONG</td><td>Указанное значение reply_markup слишком длинное.</td></tr><tr><td>400</td><td>SCHEDULE_DATE_INVALID</td><td>Указана недопустимая дата отложенной отправки.</td></tr><tr><td>400</td><td>TODO_ITEMS_EMPTY</td><td>Был указан список задач, но <a href="/api/todo">пункты списка задач</a> не переданы.</td></tr><tr><td>400</td><td>TODO_ITEM_DUPLICATE</td><td>Обнаружены повторяющиеся <a href="/api/todo">пункты списка задач</a>.</td></tr><tr><td>400</td><td>USER_BANNED_IN_CHANNEL</td><td>Вам запрещено отправлять сообщения в супергруппах и каналах.</td></tr><tr><td>400</td><td>WEBPAGE_NOT_FOUND</td><td>Не удалось создать предпросмотр для веб-страницы, указанной в <code>url</code>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Scheduled messages](https://core.telegram.org/api/scheduled-messages)
+#### [Отложенные сообщения](/api/scheduled-messages/)
 
-Telegram allows scheduling messages
+Telegram позволяет планировать отправку сообщений
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.
 
 #### [keyboardButtonCopy](/constructor/keyboardButtonCopy/)
 
-Clipboard button
+Кнопка копирования в буфер обмена
 
-Available only in [inline keyboards](/constructor/replyInlineMarkup/).
+Доступно только в [инлайн-клавиатурах](/constructor/replyInlineMarkup/).
 
-When pressed, clients must copy `copy_text` to the clipboard.
+При нажатии клиенты обязаны скопировать `copy_text` в буфер обмена.
 
 #### [inputKeyboardButtonUserProfile](/constructor/inputKeyboardButtonUserProfile/)
 
-Button that links directly to a user profile
+Кнопка, ведущая непосредственно в профиль пользователя
 
-Use this constructor to send a [keyboardButtonUserProfile](/constructor/keyboardButtonUserProfile/) button in an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards).
+Используйте этот конструктор, чтобы отправить кнопку [keyboardButtonUserProfile](/constructor/keyboardButtonUserProfile/) в [инлайн-клавиатуре](https://core.telegram.org/bots/features#inline-keyboards).
 
 #### [keyboardButtonSwitchInline](/constructor/keyboardButtonSwitchInline/)
 
-Button to switch the user to inline mode
+Кнопка для переключения пользователя в инлайн-режим
 
-Available only in [inline keyboards](/constructor/replyInlineMarkup/).
+Доступно только в [инлайн-клавиатурах](/constructor/replyInlineMarkup/).
 
-When pressed, clients must insert the bot's username and `query` into the chat input field, triggering an [inline query](https://core.telegram.org/api/bots/inline).
+При нажатии клиенты обязаны вставить имя пользователя бота и `query` в поле ввода чата, инициировав [инлайн-запрос](/api/bots/inline/).
 
-If `same_peer` is set, clients use the current chat. Otherwise, clients prompt the user to select a chat, filtered by `peer_types` if specified.
+Если установлен `same_peer`, клиенты используют текущий чат. Иначе клиенты предлагают пользователю выбрать чат, отфильтрованный по `peer_types`, если он указан.
 
-#### [Checklists and to-do lists](https://core.telegram.org/api/todo)
+#### [Чек-листы и списки задач](/api/todo/)
 
-Premium users can now create collaborative checklists in any chat to track tasks and coordinate teams — or manage shopping and to-do lists.
+Пользователи Premium теперь могут создавать совместные чек-листы в любом чате, чтобы отслеживать задачи и координировать команды — или вести списки покупок и дел.

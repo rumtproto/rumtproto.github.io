@@ -1,33 +1,33 @@
 ---
-title: "sendMessageChooseContactAction (конструктор)"
+title: "sendMessageChooseContactAction"
 original: "https://core.telegram.org/constructor/sendMessageChooseContactAction"
 section: ref
 kind: constructor
+description: "Пользователь выбирает контакт для отправки."
 layout: layout.njk
 ---
 
 # sendMessageChooseContactAction
 
-*Конструктор из схемы TL.*
+Пользователь выбирает контакт для отправки.
 
-> User is selecting a contact to share.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===17===
-> sendMessageChooseContactAction#628cbc6f = SendMessageAction;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===17===
+sendMessageChooseContactAction#628cbc6f = SendMessageAction;
+```
+
+#### Схема API
 
 ```
 sendMessageChooseContactAction#628cbc6f = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)

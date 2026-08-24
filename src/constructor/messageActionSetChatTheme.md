@@ -1,29 +1,24 @@
 ---
-title: "messageActionSetChatTheme (конструктор)"
+title: "messageActionSetChatTheme"
 original: "https://core.telegram.org/constructor/messageActionSetChatTheme"
 section: ref
 kind: constructor
+description: "Тема оформления чата была изменена"
 layout: layout.njk
 ---
 
 # messageActionSetChatTheme
 
-*Конструктор из схемы TL.*
-
-> The chat theme was changed
-
-## Определение TL
+Тема оформления чата была изменена
 
 ```
 messageActionSetChatTheme#b91bbd3a theme:ChatTheme = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| theme | [ChatTheme](/type/ChatTheme/) | The new chat theme. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>theme</strong></td><td style="text-align: center;"><a href="/type/ChatTheme">ChatTheme</a></td><td>Новая тема оформления чата.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)

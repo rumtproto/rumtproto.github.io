@@ -1,48 +1,38 @@
 ---
-title: "phone.groupParticipants (конструктор)"
+title: "phone.groupParticipants"
 original: "https://core.telegram.org/constructor/phone.groupParticipants"
 section: ref
 kind: constructor
+description: "Содержит страницу списка участников группового звонка, см. получение сведений о групповом звонке »."
 layout: layout.njk
 ---
 
 # phone.groupParticipants
 
-*Конструктор из схемы TL.*
-
-> Contains a page of group call participants, see [getting info about a group call »](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call).
-
-## Определение TL
+Содержит страницу списка участников группового звонка, см. [получение сведений о групповом звонке »](/api/group-calls/#getting-info-about-a-group-call).
 
 ```
 phone.groupParticipants#f47751b6 count:int participants:Vector<GroupCallParticipant> next_offset:string chats:Vector<Chat> users:Vector<User> version:int = phone.GroupParticipants;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| count | [int](/type/int/) | Number of participants |
-| participants | [Vector](https://core.telegram.org/type/Vector%20t)<[GroupCallParticipant](/type/GroupCallParticipant/)> | List of participants |
-| next_offset | [string](/type/string/) | If not empty, the specified list of participants is partial, and more participants can be fetched specifying this parameter as offset in [phone.getGroupParticipants](/method/phone.getGroupParticipants/). |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Mentioned chats |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Mentioned users |
-| version | [int](/type/int/) | Current participant-list version, used to apply and detect gaps in versioned [updateGroupCallParticipants](/constructor/updateGroupCallParticipants/) updates |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество участников</td></tr><tr><td><strong>participants</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/GroupCallParticipant">GroupCallParticipant</a>&gt;</td><td>Список участников</td></tr><tr><td><strong>next_offset</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:next_offset] Если поле не пусто, указанный список участников неполон, и остальных участников можно получить, передав это значение как <code>offset</code> в <a href="/method/phone.getGroupParticipants">phone.getGroupParticipants</a>.</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Упомянутые чаты</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Упомянутые пользователи</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Текущая версия списка участников, используемая для применения и обнаружения пропусков в версионируемых обновлениях <a href="/constructor/updateGroupCallParticipants">updateGroupCallParticipants</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [phone.GroupParticipants](/type/phone.GroupParticipants/)
 
-## Related pages
+### Связанные страницы
 
 #### [phone.getGroupParticipants](/method/phone.getGroupParticipants/)
 
-Get [group call](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call) participants.
+Получить участников [группового звонка](/api/group-calls/#getting-info-about-a-group-call).
 
 #### [updateGroupCallParticipants](/constructor/updateGroupCallParticipants/)
 
-The participant list of a [group call](https://core.telegram.org/api/group-calls#applying-group-call-updates) has changed.
+Изменился список участников [группового звонка](/api/group-calls/#applying-group-call-updates).
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

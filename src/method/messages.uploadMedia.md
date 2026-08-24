@@ -1,19 +1,17 @@
 ---
-title: "messages.uploadMedia (метод)"
+title: "messages.uploadMedia"
 original: "https://core.telegram.org/method/messages.uploadMedia"
 section: ref
 kind: method
+description: "Загрузить файл и связать его с чатом (не отправляя его в чат)"
 layout: layout.njk
 ---
 
 # messages.uploadMedia
 
-*Метод из схемы TL.*
+Загрузить файл и связать его с чатом (не отправляя его в чат)
 
-> Upload a file and associate it to a chat (without actually sending it to the chat)
-> May also be used in a [business connection](https://core.telegram.org/api/bots/connected-business-bots), _not_ by wrapping the query in [invokeWithBusinessConnection »](/method/invokeWithBusinessConnection/), but rather by specifying the business connection ID in the `business_connection_id` parameter.
-
-## Определение TL
+Может также применяться в рамках [бизнес-подключения](/api/bots/connected-business-bots/), причём _не_ путём оборачивания запроса в [invokeWithBusinessConnection »](/method/invokeWithBusinessConnection/), а путём указания идентификатора бизнес-подключения в параметре `business_connection_id`.
 
 ```
 messageMediaEmpty#3ded6320 = MessageMedia;
@@ -39,65 +37,40 @@ messageMediaVideoStream#ca5cab89 flags:# rtmp_stream:flags.0?true call:InputGrou
 messages.uploadMedia#14967978 flags:# business_connection_id:flags.0?string peer:InputPeer media:InputMedia = MessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| business_connection_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Whether the media will be used only in the specified [business connection »](https://core.telegram.org/api/bots/connected-business-bots), and not directly by the bot. |
-| peer | [InputPeer](/type/InputPeer/) | The chat, can be [inputPeerEmpty](/constructor/inputPeerEmpty/) for bots and [inputPeerSelf](/constructor/inputPeerSelf/) for users. |
-| media | [InputMedia](/type/InputMedia/) | File uploaded in chunks as described in [files »](/api/files/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>business_connection_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Будет ли медиафайл использоваться только в указанном <a href="/api/bots/connected-business-bots">бизнес-подключении »</a>, а не непосредственно ботом.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат; для ботов допускается <a href="/constructor/inputPeerEmpty">inputPeerEmpty</a>, для пользователей — <a href="/constructor/inputPeerSelf">inputPeerSelf</a>.</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/InputMedia">InputMedia</a></td><td>Файл, загруженный по частям, как описано в разделе <a href="/api/files">файлы »</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [MessageMedia](/type/MessageMedia/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | CHAT_RESTRICTED | You can't send messages in this chat, you were restricted. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | FILE_PARTS_INVALID | The number of file parts is invalid. |
-| 400 | FILE_PART_LENGTH_INVALID | The length of a file part is invalid. |
-| 400 | IMAGE_PROCESS_FAILED | Failure while processing image. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | MEDIA_INVALID | Media invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | PHOTO_EXT_INVALID | The extension of the photo is invalid. |
-| 400 | PHOTO_INVALID_DIMENSIONS | The photo dimensions are invalid. |
-| 400 | PHOTO_SAVE_FILE_INVALID | Internal issues, try again later. |
-| 400 | USER_BANNED_IN_CHANNEL | You're banned from sending messages in supergroups/channels. |
-| 400 | VOICE_MESSAGES_FORBIDDEN | This user's privacy settings forbid you from sending voice messages. |
-| 400 | WEBPAGE_CURL_FAILED | Failure while fetching the webpage with cURL. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>CHAT_RESTRICTED</td><td>Вы не можете отправлять сообщения в этот чат: на вас наложены ограничения.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>FILE_PARTS_INVALID</td><td>Недопустимое число частей файла.</td></tr><tr><td>400</td><td>FILE_PART_LENGTH_INVALID</td><td>Недействительная длина части файла.</td></tr><tr><td>400</td><td>IMAGE_PROCESS_FAILED</td><td>Сбой при обработке изображения.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>MEDIA_INVALID</td><td>Медиа недействительно.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>PHOTO_EXT_INVALID</td><td>Недопустимое расширение фотографии.</td></tr><tr><td>400</td><td>PHOTO_INVALID_DIMENSIONS</td><td>Недопустимые размеры фотографии.</td></tr><tr><td>400</td><td>PHOTO_SAVE_FILE_INVALID</td><td>Внутренние неполадки, попробуйте ещё раз позже.</td></tr><tr><td>400</td><td>USER_BANNED_IN_CHANNEL</td><td>Вам запрещено отправлять сообщения в супергруппах и каналах.</td></tr><tr><td>400</td><td>VOICE_MESSAGES_FORBIDDEN</td><td>Настройки приватности этого пользователя запрещают вам отправлять ему голосовые сообщения.</td></tr><tr><td>400</td><td>WEBPAGE_CURL_FAILED</td><td>Сбой при получении веб-страницы с помощью cURL.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
 #### [inputPeerEmpty](/constructor/inputPeerEmpty/)
 
-An empty constructor, no user or chat is defined.
+Пустой конструктор, не задан ни пользователь, ни чат.
 
 #### [inputPeerSelf](/constructor/inputPeerSelf/)
 
-Defines the current user.
+Определяет текущего пользователя.
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.
 
 #### [invokeWithBusinessConnection](/method/invokeWithBusinessConnection/)
 
-Invoke a method using a [Telegram Business Bot connection, see here » for more info, including a list of the methods that can be wrapped in this constructor](https://core.telegram.org/api/bots/connected-business-bots).
+Вызвать метод через [подключение Telegram Business Bot; подробнее, включая список методов, которые можно обернуть в этот конструктор, см. здесь »](/api/bots/connected-business-bots/).
 
-Make sure to always send queries wrapped in a `invokeWithBusinessConnection` to the datacenter ID, specified in the `dc_id` field of the [botBusinessConnection](/constructor/botBusinessConnection/) that is being used.
+Всегда отправляйте запросы, обёрнутые в `invokeWithBusinessConnection`, в дата-центр с идентификатором, указанным в поле `dc_id` используемого [botBusinessConnection](/constructor/botBusinessConnection/).

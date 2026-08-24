@@ -1,43 +1,38 @@
 ---
-title: "keyboardButton (конструктор)"
+title: "keyboardButton"
 original: "https://core.telegram.org/constructor/keyboardButton"
 section: ref
 kind: constructor
+description: "Кнопка клавиатуры бота"
 layout: layout.njk
 ---
 
 # keyboardButton
 
-*Конструктор из схемы TL.*
+Кнопка клавиатуры бота
 
-> Bot keyboard button
-> Available only in [reply keyboards](/constructor/replyKeyboardMarkup/).
-> When pressed, clients must send `text` as a message to the current chat, replying to the message that attached the [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/).
+Доступно только в [клавиатурах ответа](/constructor/replyKeyboardMarkup/).
 
-## Определение TL
+При нажатии клиенты обязаны отправить `text` в качестве сообщения в текущий чат, отвечая на сообщение, к которому был приложен [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/).
 
 ```
 keyboardButton#7d170cff flags:# style:flags.10?KeyboardButtonStyle text:string = KeyboardButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| style | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[KeyboardButtonStyle](/type/KeyboardButtonStyle/) | Button style, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info on button styles. |
-| text | [string](/type/string/) | Button text |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>style</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/KeyboardButtonStyle">KeyboardButtonStyle</a></td><td>Стиль кнопки; подробнее о стилях кнопок см. <a href="/api/bots/buttons#button-styles">здесь »</a>.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст кнопки</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [KeyboardButton](/type/KeyboardButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.
 
 #### [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/)
 
-Represents a reply keyboard
+Представляет клавиатуру ответа

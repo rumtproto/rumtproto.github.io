@@ -1,35 +1,30 @@
 ---
-title: "phone.groupCallStreamChannels (конструктор)"
+title: "phone.groupCallStreamChannels"
 original: "https://core.telegram.org/constructor/phone.groupCallStreamChannels"
 section: ref
 kind: constructor
+description: "Содержит доступные каналы группового звонка в режиме RTMP, см. воспроизведение RTMP-трансляции »."
 layout: layout.njk
 ---
 
 # phone.groupCallStreamChannels
 
-*Конструктор из схемы TL.*
-
-> Contains the available channels of an RTMP-mode group call, see [playing an RTMP livestream »](https://core.telegram.org/api/group-calls#rtmp-mode).
-
-## Определение TL
+Содержит доступные каналы группового звонка в режиме RTMP, см. [воспроизведение RTMP-трансляции »](/api/group-calls/#rtmp-mode).
 
 ```
 phone.groupCallStreamChannels#d0e482b2 channels:Vector<GroupCallStreamChannel> = phone.GroupCallStreamChannels;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channels | [Vector](https://core.telegram.org/type/Vector%20t)<[GroupCallStreamChannel](/type/GroupCallStreamChannel/)> | Available RTMP stream channels; may be empty while the external publisher is not sending media |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channels</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/GroupCallStreamChannel">GroupCallStreamChannel</a>&gt;</td><td>Доступные каналы RTMP-потока; список может быть пустым, пока внешний вещатель не передаёт медиаданные</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [phone.GroupCallStreamChannels](/type/phone.GroupCallStreamChannels/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

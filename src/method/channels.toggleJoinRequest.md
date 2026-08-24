@@ -1,18 +1,15 @@
 ---
-title: "channels.toggleJoinRequest (метод)"
+title: "channels.toggleJoinRequest"
 original: "https://core.telegram.org/method/channels.toggleJoinRequest"
 section: ref
 kind: method
+description: "Задать, должны ли все пользователи запрашивать одобрение администратора для вступления в группу »."
 layout: layout.njk
 ---
 
 # channels.toggleJoinRequest
 
-*Метод из схемы TL.*
-
-> Set whether all users should [request admin approval to join the group »](https://core.telegram.org/api/invites#join-requests).
-
-## Определение TL
+Задать, должны ли все пользователи [запрашивать одобрение администратора для вступления в группу »](/api/invites/#join-requests).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,31 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.toggleJoinRequest#4c2985b6 channel:InputChannel enabled:Bool = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | Group |
-| enabled | [Bool](/type/Bool/) | Toggle |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Группа</td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Переключатель</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | CHAT_PUBLIC_REQUIRED | You can only enable join requests in public groups. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>CHAT_PUBLIC_REQUIRED</td><td>Заявки на вступление можно включить только в публичных группах.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.

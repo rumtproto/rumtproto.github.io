@@ -1,18 +1,15 @@
 ---
-title: "Chat (тип)"
+title: "Chat"
 original: "https://core.telegram.org/type/Chat"
 section: ref
 kind: type
+description: "Объект описывает группу."
 layout: layout.njk
 ---
 
 # Chat
 
-*Тип из схемы TL.*
-
-> Object defines a group.
-
-## Определение TL
+Объект описывает группу.
 
 ```
 chatEmpty#29562865 id:long = Chat;
@@ -22,12 +19,6 @@ channel#1c32b11c flags:# creator:flags.0?true left:flags.2?true broadcast:flags.
 channelForbidden#17d493d5 flags:# broadcast:flags.5?true megagroup:flags.8?true monoforum:flags.10?true id:long access_hash:long title:string until_date:flags.16?int = Chat;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [chatEmpty](/constructor/chatEmpty/) | Empty constructor, group doesn't exist |
-| [chat](/constructor/chat/) | Info about a group. When updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor). See [here »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L5679) for an implementation of the logic to use when updating the [local chat peer database](https://core.telegram.org/api/peers). |
-| [chatForbidden](/constructor/chatForbidden/) | A group to which the user has no access. E.g., because the user was kicked from the group. |
-| [channel](/constructor/channel/) | Channel/supergroup info When updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor). The only exception to the above rule is when the min flag is set, in which case only the following fields must be applied over any locally stored version: - title - megagroup - color - photo - username - usernames - has_geo - noforwards - emoji_status - has_link - slow_mode_enabled - scam - fake - gigagroup - forum - level - restricted - restriction_reason - join_to_send - join_request - is_verified - default_banned_rights - signature_profiles - autotranslation - broadcast_messages_allowed - monoforum - forum_tabs - linked_monoforum_id - send_paid_messages_stars - bot_verification_icon See [here »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176) for an implementation of the logic to use when updating the [local channel peer database](https://core.telegram.org/api/peers). |
-| [channelForbidden](/constructor/channelForbidden/) | Indicates a channel/supergroup we can't access because we were banned, or for some other reason. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/chatEmpty">chatEmpty</a></td><td>Пустой конструктор, группа не существует</td></tr><tr><td><a href="/constructor/chat">chat</a></td><td>Информация о группе.<br><br>При обновлении <a href="/api/peers">локальной базы пиров</a> все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).<br><br>См. <a href="https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L5679">здесь »</a> реализацию логики, которую следует применять при обновлении <a href="/api/peers">локальной базы пиров-чатов</a>.</td></tr><tr><td><a href="/constructor/chatForbidden">chatForbidden</a></td><td>Группа, к которой у пользователя нет доступа. Например, потому что пользователя исключили из группы.</td></tr><tr><td><a href="/constructor/channel">channel</a></td><td>[@term:min] Информация о канале или супергруппе<br><br>При обновлении <a href="/api/peers">локальной базы пиров</a> все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).<br><br>Единственное исключение из приведённого выше правила — установленный флаг <code>min</code>: в этом случае поверх локально сохранённой версии обязаны применяться <strong>только</strong> следующие поля:<br><br>- <code>title</code><br>- <code>megagroup</code><br>- <code>color</code><br>- <code>photo</code><br>- <code>username</code><br>- <code>usernames</code><br>- <code>has_geo</code><br>- <code>noforwards</code><br>- <code>emoji_status</code><br>- <code>has_link</code><br>- <code>slow_mode_enabled</code><br>- <code>scam</code><br>- <code>fake</code><br>- <code>gigagroup</code><br>- <code>forum</code><br>- <code>level</code><br>- <code>restricted</code><br>- <code>restriction_reason</code><br>- <code>join_to_send</code><br>- <code>join_request</code><br>- <code>is_verified</code><br>- <code>default_banned_rights</code><br>- <code>signature_profiles</code><br>- <code>autotranslation</code><br>- <code>broadcast_messages_allowed</code><br>- <code>monoforum</code><br>- <code>forum_tabs</code><br>- <code>linked_monoforum_id</code><br>- <code>send_paid_messages_stars</code><br>- <code>bot_verification_icon</code><br><br>См. <a href="https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176">здесь »</a> реализацию логики, которую следует применять при обновлении <a href="/api/peers">локальной базы пиров-каналов</a>.</td></tr><tr><td><a href="/constructor/channelForbidden">channelForbidden</a></td><td>Обозначает канал или супергруппу, к которым у нас нет доступа из-за блокировки или по иной причине.</td></tr></tbody></table>

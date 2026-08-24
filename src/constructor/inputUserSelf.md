@@ -1,27 +1,24 @@
 ---
-title: "inputUserSelf (конструктор)"
+title: "inputUserSelf"
 original: "https://core.telegram.org/constructor/inputUserSelf"
 section: ref
 kind: constructor
+description: "Определяет текущего пользователя."
 layout: layout.njk
 ---
 
 # inputUserSelf
 
-*Конструктор из схемы TL.*
-
-> Defines the current user.
-
-## Определение TL
+Определяет текущего пользователя.
 
 ```
 inputUserSelf#f7c1b13f = InputUser;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputUser](/type/InputUser/)

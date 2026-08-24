@@ -1,29 +1,24 @@
 ---
-title: "updateTheme (конструктор)"
+title: "updateTheme"
 original: "https://core.telegram.org/constructor/updateTheme"
 section: ref
 kind: constructor
+description: "Облачная тема была обновлена"
 layout: layout.njk
 ---
 
 # updateTheme
 
-*Конструктор из схемы TL.*
-
-> A cloud theme was updated
-
-## Определение TL
+Облачная тема была обновлена
 
 ```
 updateTheme#8216fba3 theme:Theme = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| theme | [Theme](/type/Theme/) | Theme |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>theme</strong></td><td style="text-align: center;"><a href="/type/Theme">Theme</a></td><td>Тема оформления</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

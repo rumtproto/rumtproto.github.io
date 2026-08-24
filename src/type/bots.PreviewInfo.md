@@ -1,18 +1,15 @@
 ---
-title: "bots.PreviewInfo (тип)"
+title: "bots.PreviewInfo"
 original: "https://core.telegram.org/type/bots.PreviewInfo"
 section: ref
 kind: type
+description: "Содержит информацию о превью Main Mini App, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # bots.PreviewInfo
 
-*Тип из схемы TL.*
-
-> Contains info about [Main Mini App previews, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info.
-
-## Определение TL
+[@term:Mini App] Содержит информацию о [превью Main Mini App, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews).
 
 ```
 bots.previewInfo#ca71d64 media:Vector<BotPreviewMedia> lang_codes:Vector<string> = bots.PreviewInfo;
@@ -22,20 +19,16 @@ bots.previewInfo#ca71d64 media:Vector<BotPreviewMedia> lang_codes:Vector<string>
 bots.getPreviewInfo#423ab3ad bot:InputUser lang_code:string = bots.PreviewInfo;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [bots.previewInfo](/constructor/bots.previewInfo/) | Contains info about [Main Mini App previews, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/bots.previewInfo">bots.previewInfo</a></td><td>Содержит информацию о <a href="/api/bots/webapps#main-mini-app-previews">превью Main Mini App, подробнее см. здесь »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [bots.getPreviewInfo](/method/bots.getPreviewInfo/) | Bot owners only, fetch [main mini app preview information, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info. Note: technically non-owners may also invoke this method, but it will always behave exactly as [bots.getPreviewMedias](/method/bots.getPreviewMedias/), returning only previews for the current language and an empty lang_codes array, regardless of the passed lang_code, so please only use [bots.getPreviewMedias](/method/bots.getPreviewMedias/) if you're not the owner of the bot. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/bots.getPreviewInfo">bots.getPreviewInfo</a></td><td>Только для владельцев ботов: получить <a href="/api/bots/webapps#main-mini-app-previews">сведения о предпросмотре главного mini app, подробнее см. здесь »</a>.<br><br>Примечание: технически этот метод могут вызывать и не владельцы, но тогда он всегда ведёт себя в точности как <a href="/method/bots.getPreviewMedias">bots.getPreviewMedias</a>, возвращая только предпросмотры для текущего языка и пустой массив <code>lang_codes</code> независимо от переданного <code>lang_code</code>, поэтому используйте, пожалуйста, <a href="/method/bots.getPreviewMedias">bots.getPreviewMedias</a>, если вы не владелец бота <code>bot</code>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

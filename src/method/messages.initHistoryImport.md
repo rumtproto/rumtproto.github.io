@@ -1,18 +1,15 @@
 ---
-title: "messages.initHistoryImport (метод)"
+title: "messages.initHistoryImport"
 original: "https://core.telegram.org/method/messages.initHistoryImport"
 section: ref
 kind: method
+description: "Импортировать историю переписки из стороннего мессенджера в определённый чат Telegram; подробнее об импортированных чатах см. здесь »."
 layout: layout.njk
 ---
 
 # messages.initHistoryImport
 
-*Метод из схемы TL.*
-
-> Import chat history from a foreign chat app into a specific Telegram chat, [click here for more info about imported chats »](https://core.telegram.org/api/import).
-
-## Определение TL
+Импортировать историю переписки из стороннего мессенджера в определённый чат Telegram; [подробнее об импортированных чатах см. здесь »](/api/import/).
 
 ```
 messages.historyImport#1662af0b id:long = messages.HistoryImport;
@@ -20,38 +17,26 @@ messages.historyImport#1662af0b id:long = messages.HistoryImport;
 messages.initHistoryImport#34090c3b peer:InputPeer file:InputFile media_count:int = messages.HistoryImport;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The Telegram chat where the [history should be imported](https://core.telegram.org/api/import). |
-| file | [InputFile](/type/InputFile/) | File with messages to import. |
-| media_count | [int](/type/int/) | Number of media files associated with the chat that will be uploaded using [messages.uploadImportedMedia](/method/messages.uploadImportedMedia/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат Telegram, в который <a href="/api/import">следует импортировать историю сообщений</a>.</td></tr><tr><td><strong>file</strong></td><td style="text-align: center;"><a href="/type/InputFile">InputFile</a></td><td>Файл с сообщениями для импорта.</td></tr><tr><td><strong>media_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество медиафайлов, связанных с чатом, которые будут загружены с помощью <a href="/method/messages.uploadImportedMedia">messages.uploadImportedMedia</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.HistoryImport](/type/messages.HistoryImport/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | IMPORT_FILE_INVALID | The specified chat export file is invalid. |
-| 400 | IMPORT_FORMAT_DATE_INVALID | The date specified in the import file is invalid. |
-| 400 | IMPORT_FORMAT_UNRECOGNIZED | The specified chat export file was exported from an unsupported chat app. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 406 | PREVIOUS_CHAT_IMPORT_ACTIVE_WAIT_%dMIN | Import for this chat is already in progress, wait %d minutes before starting a new one. |
-| 400 | USER_NOT_MUTUAL_CONTACT | The provided user is not a mutual contact. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>IMPORT_FILE_INVALID</td><td>Указанный файл экспорта чата недействителен.</td></tr><tr><td>400</td><td>IMPORT_FORMAT_DATE_INVALID</td><td>В файле импорта указана недопустимая дата.</td></tr><tr><td>400</td><td>IMPORT_FORMAT_UNRECOGNIZED</td><td>Указанный файл экспорта чата был выгружен из неподдерживаемого мессенджера.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>406</td><td>PREVIOUS_CHAT_IMPORT_ACTIVE_WAIT_%dMIN</td><td>Импорт для этого чата уже выполняется, подождите %d минут перед началом нового.</td></tr><tr><td>400</td><td>USER_NOT_MUTUAL_CONTACT</td><td>Указанный пользователь не является взаимным контактом.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Imported messages](https://core.telegram.org/api/import)
+#### [Импортированные сообщения](/api/import/)
 
-Telegram allows importing messages and media from foreign chat apps.
+Telegram позволяет импортировать сообщения и медиа из сторонних мессенджеров.
 
 #### [messages.uploadImportedMedia](/method/messages.uploadImportedMedia/)
 
-Upload a media file associated with an [imported chat, click here for more info »](https://core.telegram.org/api/import).
+Загрузить медиафайл, связанный с [импортированным чатом; подробнее см. здесь »](/api/import/).

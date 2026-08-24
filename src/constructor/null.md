@@ -1,27 +1,24 @@
 ---
-title: "null (конструктор)"
+title: "null"
 original: "https://core.telegram.org/constructor/null"
 section: ref
 kind: constructor
+description: "Соответствует произвольному пустому объекту."
 layout: layout.njk
 ---
 
 # null
 
-*Конструктор из схемы TL.*
-
-> Corresponds to an arbitrary empty object.
-
-## Определение TL
+Соответствует произвольному пустому объекту.
 
 ```
 null#56730bcc = Null;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Null](/type/Null/)

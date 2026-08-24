@@ -1,18 +1,15 @@
 ---
-title: "messages.SearchResultsPositions (тип)"
+title: "messages.SearchResultsPositions"
 original: "https://core.telegram.org/type/messages.SearchResultsPositions"
 section: ref
 kind: type
+description: "Информация о разреженных позициях сообщений"
 layout: layout.njk
 ---
 
 # messages.SearchResultsPositions
 
-*Тип из схемы TL.*
-
-> Information about sparse positions of messages
-
-## Определение TL
+Информация о разреженных позициях сообщений
 
 ```
 messages.searchResultsPositions#53b22baf count:int positions:Vector<SearchResultsPosition> = messages.SearchResultsPositions;
@@ -22,14 +19,10 @@ messages.searchResultsPositions#53b22baf count:int positions:Vector<SearchResult
 messages.getSearchResultsPositions#9c7f2f10 flags:# peer:InputPeer saved_peer_id:flags.2?InputPeer filter:MessagesFilter offset_id:int limit:int = messages.SearchResultsPositions;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.searchResultsPositions](/constructor/messages.searchResultsPositions/) | Information about sparse positions of messages |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.searchResultsPositions">messages.searchResultsPositions</a></td><td>Информация о разреженных позициях сообщений</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getSearchResultsPositions](/method/messages.getSearchResultsPositions/) | Returns sparse positions of messages of the specified type in the chat to be used for shared media scroll implementation. Returns the results in reverse chronological order (i.e., in order of decreasing message_id). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getSearchResultsPositions">messages.getSearchResultsPositions</a></td><td>Возвращает разреженные позиции сообщений указанного типа в чате для реализации прокрутки общих медиа.<br><br>Результаты возвращаются в обратном хронологическом порядке (то есть по убыванию message_id).</td></tr></tbody></table>

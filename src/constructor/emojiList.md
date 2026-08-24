@@ -1,40 +1,34 @@
 ---
-title: "emojiList (конструктор)"
+title: "emojiList"
 original: "https://core.telegram.org/constructor/emojiList"
 section: ref
 kind: constructor
+description: "Представляет список пользовательских эмодзи."
 layout: layout.njk
 ---
 
 # emojiList
 
-*Конструктор из схемы TL.*
-
-> Represents a list of [custom emojis](https://core.telegram.org/api/custom-emoji).
-
-## Определение TL
+Представляет список [пользовательских эмодзи](/api/custom-emoji/).
 
 ```
 emojiList#7a1e11d1 hash:long document_id:Vector<long> = EmojiList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| document_id | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | Custom emoji IDs |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Идентификаторы пользовательских эмодзи</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [EmojiList](/type/EmojiList/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.

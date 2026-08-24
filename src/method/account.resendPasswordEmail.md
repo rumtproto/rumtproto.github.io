@@ -1,18 +1,15 @@
 ---
-title: "account.resendPasswordEmail (метод)"
+title: "account.resendPasswordEmail"
 original: "https://core.telegram.org/method/account.resendPasswordEmail"
 section: ref
 kind: method
+description: "Повторно отправить код для подтверждения адреса электронной почты, используемого как способ восстановления 2FA."
 layout: layout.njk
 ---
 
 # account.resendPasswordEmail
 
-*Метод из схемы TL.*
-
-> Resend the code to verify an email to use as [2FA recovery method](/api/srp/).
-
-## Определение TL
+Повторно отправить код для подтверждения адреса электронной почты, используемого как [способ восстановления 2FA](/api/srp/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,24 +18,22 @@ boolTrue#997275b5 = Bool;
 account.resendPasswordEmail#7a7f2a15 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | EMAIL_HASH_EXPIRED | Email hash expired. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>EMAIL_HASH_EXPIRED</td><td>Срок действия хеша электронной почты истёк.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.

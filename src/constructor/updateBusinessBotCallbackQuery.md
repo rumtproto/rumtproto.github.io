@@ -1,42 +1,30 @@
 ---
-title: "updateBusinessBotCallbackQuery (конструктор)"
+title: "updateBusinessBotCallbackQuery"
 original: "https://core.telegram.org/constructor/updateBusinessBotCallbackQuery"
 section: ref
 kind: constructor
+description: "Была нажата callback-кнопка, отправленная через бизнес-подключение, и данные кнопки были отправлены боту, который её создал."
 layout: layout.njk
 ---
 
 # updateBusinessBotCallbackQuery
 
-*Конструктор из схемы TL.*
-
-> A callback button sent via a [business connection](https://core.telegram.org/api/bots/connected-business-bots) was pressed, and the button data was sent to the bot that created the button.
-
-## Определение TL
+Была нажата callback-кнопка, отправленная через [бизнес-подключение](/api/bots/connected-business-bots/), и данные кнопки были отправлены боту, который её создал.
 
 ```
 updateBusinessBotCallbackQuery#1ea2fda7 flags:# query_id:long user_id:long connection_id:string message:Message reply_to_message:flags.2?Message chat_instance:long data:flags.0?bytes = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| query_id | [long](/type/long/) | Query ID |
-| user_id | [long](/type/long/) | ID of the user that pressed the button |
-| connection_id | [string](/type/string/) | [Business connection ID](https://core.telegram.org/api/bots/connected-business-bots) |
-| message | [Message](/type/Message/) | Message that contains the keyboard (also contains info about the chat where the message was sent). |
-| reply_to_message | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[Message](/type/Message/) | The message that message is replying to. |
-| chat_instance | [long](/type/long/) | Global identifier, uniquely corresponding to the chat to which the message with the callback button was sent. Useful for high scores in games. |
-| data | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[bytes](/type/bytes/) | Callback data |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>query_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор запроса</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя, нажавшего кнопку</td></tr><tr><td><strong>connection_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/bots/connected-business-bots">Идентификатор бизнес-подключения</a></td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message">Message</a></td><td>Сообщение, содержащее клавиатуру (также содержит сведения о чате, в который оно было отправлено).</td></tr><tr><td><strong>reply_to_message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Message">Message</a></td><td>Сообщение, на которое отвечает <code>message</code>.</td></tr><tr><td><strong>chat_instance</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Глобальный идентификатор, однозначно соответствующий чату, в который было отправлено сообщение с callback-кнопкой. Полезен для рекордов в играх.</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/bytes">bytes</a></td><td>Данные для callback-запроса</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.

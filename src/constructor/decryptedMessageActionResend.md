@@ -1,37 +1,31 @@
 ---
-title: "decryptedMessageActionResend (конструктор)"
+title: "decryptedMessageActionResend"
 original: "https://core.telegram.org/constructor/decryptedMessageActionResend"
 section: ref
 kind: constructor
+description: "Запрос к другой стороне секретного чата на автоматическую повторную отправку непрерывного диапазона ранее отправленных сообщений, как описано в разделе Sequence number is Secret…"
 layout: layout.njk
 ---
 
 # decryptedMessageActionResend
 
-*Конструктор из схемы TL.*
-
-> Request for the other party in a Secret Chat to automatically resend a contiguous range of previously sent messages, as explained in [Sequence number is Secret Chats](https://core.telegram.org/api/end-to-end/seq_no).
-
-## Определение TL
+Запрос к другой стороне секретного чата на автоматическую повторную отправку непрерывного диапазона ранее отправленных сообщений, как описано в разделе [Sequence number is Secret Chats](/api/end-to-end/seq_no/).
 
 ```
 ===17===
 decryptedMessageActionResend#511110b0 start_seq_no:int end_seq_no:int = DecryptedMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| start_seq_no | [int](/type/int/) | out_seq_no of the first message to be resent, with correct parity |
-| end_seq_no | [int](/type/int/) | out_seq_no of the last message to be resent, with same parity. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>start_seq_no</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><code>out_seq_no</code> первого сообщения, которое нужно переслать заново, с правильной чётностью</td></tr><tr><td><strong>end_seq_no</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><code>out_seq_no</code> последнего сообщения, которое нужно переслать заново, с той же чётностью.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DecryptedMessageAction](/type/DecryptedMessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Sequence numbers in Secret Chats](https://core.telegram.org/api/end-to-end/seq_no)
+#### [Порядковые номера в секретных чатах](/api/end-to-end/seq_no/)
 
-How to assign and interpret seq\_no counters in secret chats to protect against message manipulation.
+Как назначать и интерпретировать счётчики seq\_no в секретных чатах для защиты от манипуляций с сообщениями.

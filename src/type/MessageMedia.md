@@ -1,18 +1,15 @@
 ---
-title: "MessageMedia (тип)"
+title: "MessageMedia"
 original: "https://core.telegram.org/type/MessageMedia"
 section: ref
 kind: type
+description: "Медиа"
 layout: layout.njk
 ---
 
 # MessageMedia
 
-*Тип из схемы TL.*
-
-> Media
-
-## Определение TL
+Медиа
 
 ```
 messageMediaEmpty#3ded6320 = MessageMedia;
@@ -41,33 +38,10 @@ messages.uploadMedia#14967978 flags:# business_connection_id:flags.0?string peer
 messages.uploadImportedMedia#2a862092 peer:InputPeer import_id:long file_name:string media:InputMedia = MessageMedia;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messageMediaEmpty](/constructor/messageMediaEmpty/) | Empty constructor. |
-| [messageMediaPhoto](/constructor/messageMediaPhoto/) | Attached photo. |
-| [messageMediaGeo](/constructor/messageMediaGeo/) | Attached map. |
-| [messageMediaContact](/constructor/messageMediaContact/) | Attached contact. |
-| [messageMediaUnsupported](/constructor/messageMediaUnsupported/) | Current version of the client does not support this media type. |
-| [messageMediaDocument](/constructor/messageMediaDocument/) | Document (video, audio, voice, sticker, any media type except photo) |
-| [messageMediaWebPage](/constructor/messageMediaWebPage/) | Preview of webpage |
-| [messageMediaVenue](/constructor/messageMediaVenue/) | Venue |
-| [messageMediaGame](/constructor/messageMediaGame/) | Telegram game |
-| [messageMediaInvoice](/constructor/messageMediaInvoice/) | Invoice |
-| [messageMediaGeoLive](/constructor/messageMediaGeoLive/) | Indicates a [live geolocation](https://core.telegram.org/api/live-location) |
-| [messageMediaPoll](/constructor/messageMediaPoll/) | Poll |
-| [messageMediaDice](/constructor/messageMediaDice/) | [Dice-based animated sticker](https://core.telegram.org/api/dice) |
-| [messageMediaStory](/constructor/messageMediaStory/) | Represents a forwarded [story](https://core.telegram.org/api/stories) or a story mention. |
-| [messageMediaGiveaway](/constructor/messageMediaGiveaway/) | Contains info about a [giveaway, see here »](https://core.telegram.org/api/giveaways) for more info. |
-| [messageMediaGiveawayResults](/constructor/messageMediaGiveawayResults/) | A [giveaway](https://core.telegram.org/api/giveaways) with public winners has finished, this constructor contains info about the winners. |
-| [messageMediaPaidMedia](/constructor/messageMediaPaidMedia/) | [Paid media, see here »](https://core.telegram.org/api/paid-media) for more info. |
-| [messageMediaToDo](/constructor/messageMediaToDo/) | Represents a [todo list »](https://core.telegram.org/api/todo). |
-| [messageMediaVideoStream](/constructor/messageMediaVideoStream/) | Identifies the active group call associated with a [live story »](https://core.telegram.org/api/group-calls#live-stories). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messageMediaEmpty">messageMediaEmpty</a></td><td>Пустой конструктор.</td></tr><tr><td><a href="/constructor/messageMediaPhoto">messageMediaPhoto</a></td><td>Вложенная фотография.</td></tr><tr><td><a href="/constructor/messageMediaGeo">messageMediaGeo</a></td><td>Вложенная карта.</td></tr><tr><td><a href="/constructor/messageMediaContact">messageMediaContact</a></td><td>Вложенный контакт.</td></tr><tr><td><a href="/constructor/messageMediaUnsupported">messageMediaUnsupported</a></td><td>Текущая версия клиента не поддерживает этот тип медиафайлов.</td></tr><tr><td><a href="/constructor/messageMediaDocument">messageMediaDocument</a></td><td>Документ (видео, аудио, голосовое сообщение, стикер, любой тип медиа, кроме фотографии)</td></tr><tr><td><a href="/constructor/messageMediaWebPage">messageMediaWebPage</a></td><td>Предпросмотр веб-страницы</td></tr><tr><td><a href="/constructor/messageMediaVenue">messageMediaVenue</a></td><td>Заведение</td></tr><tr><td><a href="/constructor/messageMediaGame">messageMediaGame</a></td><td>Игра Telegram</td></tr><tr><td><a href="/constructor/messageMediaInvoice">messageMediaInvoice</a></td><td>Счёт</td></tr><tr><td><a href="/constructor/messageMediaGeoLive">messageMediaGeoLive</a></td><td>Обозначает <a href="/api/live-location">геопозицию в реальном времени</a></td></tr><tr><td><a href="/constructor/messageMediaPoll">messageMediaPoll</a></td><td>Опрос</td></tr><tr><td><a href="/constructor/messageMediaDice">messageMediaDice</a></td><td><a href="/api/dice">Анимированный стикер с кубиком</a></td></tr><tr><td><a href="/constructor/messageMediaStory">messageMediaStory</a></td><td>Представляет пересланную <a href="/api/stories">историю</a> или упоминание истории.</td></tr><tr><td><a href="/constructor/messageMediaGiveaway">messageMediaGiveaway</a></td><td>Содержит информацию о <a href="/api/giveaways">розыгрыше, подробнее см. здесь »</a>.</td></tr><tr><td><a href="/constructor/messageMediaGiveawayResults">messageMediaGiveawayResults</a></td><td><a href="/api/giveaways">Розыгрыш</a> с публичными победителями завершился; этот конструктор содержит сведения о победителях.</td></tr><tr><td><a href="/constructor/messageMediaPaidMedia">messageMediaPaidMedia</a></td><td><a href="/api/paid-media">Платное медиа, подробнее см. здесь »</a>.</td></tr><tr><td><a href="/constructor/messageMediaToDo">messageMediaToDo</a></td><td>Представляет <a href="/api/todo">список задач »</a>.</td></tr><tr><td><a href="/constructor/messageMediaVideoStream">messageMediaVideoStream</a></td><td>Определяет активный групповой звонок, связанный с <a href="/api/group-calls#live-stories">прямой историей »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.uploadMedia](/method/messages.uploadMedia/) | Upload a file and associate it to a chat (without actually sending it to the chat) May also be used in a [business connection](https://core.telegram.org/api/bots/connected-business-bots), not by wrapping the query in [invokeWithBusinessConnection »](/method/invokeWithBusinessConnection/), but rather by specifying the business connection ID in the business_connection_id parameter. |
-| [messages.uploadImportedMedia](/method/messages.uploadImportedMedia/) | Upload a media file associated with an [imported chat, click here for more info »](https://core.telegram.org/api/import). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.uploadMedia">messages.uploadMedia</a></td><td>Загрузить файл и связать его с чатом (не отправляя его в чат)<br><br>Может также применяться в рамках <a href="/api/bots/connected-business-bots">бизнес-подключения</a>, причём <em>не</em> путём оборачивания запроса в <a href="/method/invokeWithBusinessConnection">invokeWithBusinessConnection »</a>, а путём указания идентификатора бизнес-подключения в параметре <code>business_connection_id</code>.</td></tr><tr><td><a href="/method/messages.uploadImportedMedia">messages.uploadImportedMedia</a></td><td>Загрузить медиафайл, связанный с <a href="/api/import">импортированным чатом, подробнее см. здесь »</a>.</td></tr></tbody></table>

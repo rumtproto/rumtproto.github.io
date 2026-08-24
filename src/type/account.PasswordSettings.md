@@ -1,18 +1,15 @@
 ---
-title: "account.PasswordSettings (тип)"
+title: "account.PasswordSettings"
 original: "https://core.telegram.org/type/account.PasswordSettings"
 section: ref
 kind: type
+description: "Личные сведения, связанные с информацией о пароле (почта для восстановления, данные Telegram Passport и так далее)"
 layout: layout.njk
 ---
 
 # account.PasswordSettings
 
-*Тип из схемы TL.*
-
-> Private info associated to the password info (recovery email, telegram [passport](https://core.telegram.org/passport) info & so on)
-
-## Определение TL
+Личные сведения, связанные с информацией о пароле (почта для восстановления, данные Telegram [Passport](https://core.telegram.org/passport) и так далее)
 
 ```
 account.passwordSettings#9a5c33e5 flags:# email:flags.0?string secure_settings:flags.1?SecureSecretSettings = account.PasswordSettings;
@@ -22,20 +19,16 @@ account.passwordSettings#9a5c33e5 flags:# email:flags.0?string secure_settings:f
 account.getPasswordSettings#9cd4eaf9 password:InputCheckPasswordSRP = account.PasswordSettings;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.passwordSettings](/constructor/account.passwordSettings/) | Private info associated to the password info (recovery email, telegram [passport](https://core.telegram.org/passport) info & so on) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.passwordSettings">account.passwordSettings</a></td><td>Личные сведения, связанные с информацией о пароле (почта для восстановления, данные Telegram <a href="/passport">Passport</a> и так далее)</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getPasswordSettings](/method/account.getPasswordSettings/) | Get private info associated to the password info (recovery email, telegram [passport](https://core.telegram.org/passport) info & so on) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getPasswordSettings">account.getPasswordSettings</a></td><td>Получить личные данные, связанные с настройками пароля (резервный адрес электронной почты, данные telegram <a href="/passport">passport</a> &amp; т. д.)</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

@@ -1,18 +1,15 @@
 ---
-title: "Messages.BotPreparedInlineMessage (тип)"
+title: "messages.BotPreparedInlineMessage"
 original: "https://core.telegram.org/type/messages.BotPreparedInlineMessage"
 section: ref
 kind: type
+description: "Представляет заранее подготовленное инлайн-сообщение, сохранённое ботом для отправки пользователю через веб-приложение »"
 layout: layout.njk
 ---
 
 # Messages.BotPreparedInlineMessage
 
-*Тип из схемы TL.*
-
-> Represents a [prepared inline message saved by a bot, to be sent to the user via a web app »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message)
-
-## Определение TL
+Представляет [заранее подготовленное инлайн-сообщение, сохранённое ботом для отправки пользователю через веб-приложение »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message)
 
 ```
 messages.botPreparedInlineMessage#8ecf0511 id:string expire_date:int = messages.BotPreparedInlineMessage;
@@ -22,20 +19,16 @@ messages.botPreparedInlineMessage#8ecf0511 id:string expire_date:int = messages.
 messages.savePreparedInlineMessage#f21f7f2f flags:# result:InputBotInlineResult user_id:InputUser peer_types:flags.0?Vector<InlineQueryPeerType> = messages.BotPreparedInlineMessage;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.botPreparedInlineMessage](/constructor/messages.botPreparedInlineMessage/) | Represents a [prepared inline message saved by a bot, to be sent to the user via a web app »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.botPreparedInlineMessage">messages.botPreparedInlineMessage</a></td><td>Представляет <a href="/api/bots/inline#21-using-a-prepared-inline-message">заранее подготовленное инлайн-сообщение, сохранённое ботом для отправки пользователю через веб-приложение »</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.savePreparedInlineMessage](/method/messages.savePreparedInlineMessage/) | Save a [prepared inline message](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message), to be shared by the user of the mini app using a [web_app_send_prepared_message event](https://core.telegram.org/api/web-events#web-app-send-prepared-message) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.savePreparedInlineMessage">messages.savePreparedInlineMessage</a></td><td>[@term:Mini App] Сохранить <a href="/api/bots/inline#21-using-a-prepared-inline-message">заранее подготовленное инлайн-сообщение</a> для отправки пользователем mini app через <a href="/api/web-events#web-app-send-prepared-message">событие web_app_send_prepared_message</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Inline queries](https://core.telegram.org/api/bots/inline)
+#### [Инлайн-запросы](/api/bots/inline/)
 
-Users can interact with your bot via inline queries, straight from the text input field in any chat.
+Пользователи могут взаимодействовать с вашим ботом через инлайн-запросы прямо из поля ввода текста в любом чате.

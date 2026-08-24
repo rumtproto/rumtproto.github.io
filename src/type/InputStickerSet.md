@@ -1,25 +1,25 @@
 ---
-title: "InputStickerSet (тип)"
+title: "InputStickerSet"
 original: "https://core.telegram.org/type/InputStickerSet"
 section: ref
 kind: type
+description: "Представляет набор стикеров"
 layout: layout.njk
 ---
 
 # InputStickerSet
 
-*Тип из схемы TL.*
+Представляет набор стикеров
 
-> Represents a stickerset
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===45===
-> inputStickerSetEmpty#ffb62b95 = InputStickerSet;
-> inputStickerSetShortName#861cc8a0 short_name:string = InputStickerSet;
-> ```
-> API schema:
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===45===
+inputStickerSetEmpty#ffb62b95 = InputStickerSet;
+inputStickerSetShortName#861cc8a0 short_name:string = InputStickerSet;
+```
+
+Схема API:
 
 ```
 inputStickerSetEmpty#ffb62b95 = InputStickerSet;
@@ -36,19 +36,6 @@ inputStickerSetEmojiChannelDefaultStatuses#49748553 = InputStickerSet;
 inputStickerSetTonGifts#1cf671a0 = InputStickerSet;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputStickerSetShortName](/constructor/inputStickerSetShortName/) | Stickerset by short name, from a [stickerset deep link »](https://core.telegram.org/api/links#stickerset-links) |
-| [inputStickerSetEmpty](/constructor/inputStickerSetEmpty/) | Empty constructor |
-| [inputStickerSetID](/constructor/inputStickerSetID/) | Stickerset by ID |
-| [inputStickerSetAnimatedEmoji](/constructor/inputStickerSetAnimatedEmoji/) | Animated emojis stickerset |
-| [inputStickerSetDice](/constructor/inputStickerSetDice/) | Used for fetching [animated dice stickers](https://core.telegram.org/api/dice) |
-| [inputStickerSetAnimatedEmojiAnimations](/constructor/inputStickerSetAnimatedEmojiAnimations/) | Animated emoji reaction stickerset (contains animations to play when a user clicks on a given animated emoji) |
-| [inputStickerSetPremiumGifts](/constructor/inputStickerSetPremiumGifts/) | Stickers to show when receiving a gifted Telegram Premium subscription |
-| [inputStickerSetEmojiGenericAnimations](/constructor/inputStickerSetEmojiGenericAnimations/) | Generic animation stickerset containing animations to play when [reacting to messages using a normal emoji without a custom animation](https://core.telegram.org/api/reactions) |
-| [inputStickerSetEmojiDefaultStatuses](/constructor/inputStickerSetEmojiDefaultStatuses/) | Default [custom emoji status](https://core.telegram.org/api/emoji-status) stickerset |
-| [inputStickerSetEmojiDefaultTopicIcons](/constructor/inputStickerSetEmojiDefaultTopicIcons/) | Default [custom emoji](https://core.telegram.org/api/custom-emoji) stickerset for [forum topic icons](https://core.telegram.org/api/forum#forum-topics) |
-| [inputStickerSetEmojiChannelDefaultStatuses](/constructor/inputStickerSetEmojiChannelDefaultStatuses/) | Default [custom emoji status](https://core.telegram.org/api/emoji-status) stickerset for channel statuses |
-| [inputStickerSetTonGifts](/constructor/inputStickerSetTonGifts/) | TON gifts stickerset. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputStickerSetShortName">inputStickerSetShortName</a></td><td>Набор стикеров по краткому имени, из <a href="/api/links#stickerset-links">глубокой ссылки на набор стикеров »</a></td></tr><tr><td><a href="/constructor/inputStickerSetEmpty">inputStickerSetEmpty</a></td><td>Пустой конструктор</td></tr><tr><td><a href="/constructor/inputStickerSetID">inputStickerSetID</a></td><td>Набор стикеров по идентификатору</td></tr><tr><td><a href="/constructor/inputStickerSetAnimatedEmoji">inputStickerSetAnimatedEmoji</a></td><td>Набор анимированных эмодзи</td></tr><tr><td><a href="/constructor/inputStickerSetDice">inputStickerSetDice</a></td><td>Используется для получения <a href="/api/dice">анимированных стикеров с кубиками</a></td></tr><tr><td><a href="/constructor/inputStickerSetAnimatedEmojiAnimations">inputStickerSetAnimatedEmojiAnimations</a></td><td>Набор стикеров для реакций анимированными эмодзи (содержит анимации, которые проигрываются при нажатии пользователем на соответствующий анимированный эмодзи)</td></tr><tr><td><a href="/constructor/inputStickerSetPremiumGifts">inputStickerSetPremiumGifts</a></td><td>Стикеры, показываемые при получении подписки Telegram Premium в подарок</td></tr><tr><td><a href="/constructor/inputStickerSetEmojiGenericAnimations">inputStickerSetEmojiGenericAnimations</a></td><td>Общий набор анимаций, содержащий анимации, которые проигрываются при <a href="/api/reactions">реакции на сообщения обычным эмодзи без собственной анимации</a></td></tr><tr><td><a href="/constructor/inputStickerSetEmojiDefaultStatuses">inputStickerSetEmojiDefaultStatuses</a></td><td>Набор стикеров <a href="/api/emoji-status">эмодзи-статусов</a> по умолчанию</td></tr><tr><td><a href="/constructor/inputStickerSetEmojiDefaultTopicIcons">inputStickerSetEmojiDefaultTopicIcons</a></td><td>Набор <a href="/api/custom-emoji">пользовательских эмодзи</a> по умолчанию для <a href="/api/forum#forum-topics">значков тем форума</a></td></tr><tr><td><a href="/constructor/inputStickerSetEmojiChannelDefaultStatuses">inputStickerSetEmojiChannelDefaultStatuses</a></td><td>Набор стикеров <a href="/api/emoji-status">эмодзи-статусов</a> по умолчанию для статусов каналов</td></tr><tr><td><a href="/constructor/inputStickerSetTonGifts">inputStickerSetTonGifts</a></td><td>Набор стикеров для подарков TON.</td></tr></tbody></table>

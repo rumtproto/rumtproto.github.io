@@ -1,35 +1,30 @@
 ---
-title: "cdnConfig (конструктор)"
+title: "cdnConfig"
 original: "https://core.telegram.org/constructor/cdnConfig"
 section: ref
 kind: constructor
+description: "Конфигурация для скачивания файлов через CDN."
 layout: layout.njk
 ---
 
 # cdnConfig
 
-*Конструктор из схемы TL.*
-
-> Configuration for [CDN](https://core.telegram.org/cdn) file downloads.
-
-## Определение TL
+Конфигурация для скачивания файлов через [CDN](https://core.telegram.org/cdn).
 
 ```
 cdnConfig#5725e40a public_keys:Vector<CdnPublicKey> = CdnConfig;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| public_keys | [Vector](https://core.telegram.org/type/Vector%20t)<[CdnPublicKey](/type/CdnPublicKey/)> | Vector of public keys to use only during handshakes to [CDN](https://core.telegram.org/cdn) DCs. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>public_keys</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/CdnPublicKey">CdnPublicKey</a>&gt;</td><td>Вектор открытых ключей, используемых <strong>только</strong> при рукопожатиях с дата-центрами <a href="/cdn">CDN</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [CdnConfig](/type/CdnConfig/)
 
-## Related pages
+### Связанные страницы
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Шифрованные CDN: скорость и безопасность](https://core.telegram.org/cdn)
 
-How client apps download popular public files from secondary CDN data centers.
+Как клиентские приложения скачивают популярные публичные файлы из вспомогательных CDN-дата-центров.

@@ -1,41 +1,43 @@
 ---
-title: "MessageEntity (тип)"
+title: "MessageEntity"
 original: "https://core.telegram.org/type/MessageEntity"
 section: ref
 kind: type
+description: "Сущности оформления сообщения, задающие форматирование текста"
 layout: layout.njk
 ---
 
 # MessageEntity
 
-*Тип из схемы TL.*
+Сущности оформления сообщения, задающие форматирование текста
 
-> Message entities, representing styled text in a message
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===45===
-> messageEntityBold#bd610bc9 offset:int length:int = MessageEntity;
-> messageEntityBotCommand#6cef8ac7 offset:int length:int = MessageEntity;
-> messageEntityCode#28a20571 offset:int length:int = MessageEntity;
-> messageEntityEmail#64e475c2 offset:int length:int = MessageEntity;
-> messageEntityHashtag#6f635b0d offset:int length:int = MessageEntity;
-> messageEntityItalic#826f8b60 offset:int length:int = MessageEntity;
-> messageEntityMention#fa04579d offset:int length:int = MessageEntity;
-> messageEntityPre#73924be0 offset:int length:int language:string = MessageEntity;
-> messageEntityTextUrl#76a6d327 offset:int length:int url:string = MessageEntity;
-> messageEntityUnknown#bb92ba95 offset:int length:int = MessageEntity;
-> messageEntityUrl#6ed02538 offset:int length:int = MessageEntity;
-> ===101===
-> messageEntityBlockquote#020df5d0 offset:int length:int = MessageEntity;
-> messageEntityStrike#bf0693d4 offset:int length:int = MessageEntity;
-> messageEntityUnderline#9c4e7e8b offset:int length:int = MessageEntity;
-> ===144===
-> messageEntityCustomEmoji#c8cf05f8 offset:int length:int document_id:long = MessageEntity;
-> messageEntitySpoiler#32ca960f offset:int length:int = MessageEntity;
-> ```
-> API schema:
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===45===
+messageEntityBold#bd610bc9 offset:int length:int = MessageEntity;
+messageEntityBotCommand#6cef8ac7 offset:int length:int = MessageEntity;
+messageEntityCode#28a20571 offset:int length:int = MessageEntity;
+messageEntityEmail#64e475c2 offset:int length:int = MessageEntity;
+messageEntityHashtag#6f635b0d offset:int length:int = MessageEntity;
+messageEntityItalic#826f8b60 offset:int length:int = MessageEntity;
+messageEntityMention#fa04579d offset:int length:int = MessageEntity;
+messageEntityPre#73924be0 offset:int length:int language:string = MessageEntity;
+messageEntityTextUrl#76a6d327 offset:int length:int url:string = MessageEntity;
+messageEntityUnknown#bb92ba95 offset:int length:int = MessageEntity;
+messageEntityUrl#6ed02538 offset:int length:int = MessageEntity;
+
+===101===
+messageEntityBlockquote#020df5d0 offset:int length:int = MessageEntity;
+messageEntityStrike#bf0693d4 offset:int length:int = MessageEntity;
+messageEntityUnderline#9c4e7e8b offset:int length:int = MessageEntity;
+
+===144===
+messageEntityCustomEmoji#c8cf05f8 offset:int length:int document_id:long = MessageEntity;
+messageEntitySpoiler#32ca960f offset:int length:int = MessageEntity;
+```
+
+Схема API:
 
 ```
 messageEntityUnknown#bb92ba95 offset:int length:int = MessageEntity;
@@ -62,32 +64,6 @@ messageEntityBlockquote#f1ccaaac flags:# collapsed:flags.0?true offset:int lengt
 messageEntityFormattedDate#904ac7c7 flags:# relative:flags.0?true short_time:flags.1?true long_time:flags.2?true short_date:flags.3?true long_date:flags.4?true day_of_week:flags.5?true offset:int length:int date:int = MessageEntity;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messageEntityUnknown](/constructor/messageEntityUnknown/) | Unknown message entity |
-| [messageEntityMention](/constructor/messageEntityMention/) | Message entity [mentioning](https://core.telegram.org/api/mentions) a user by @username; [messageEntityMentionName](/constructor/messageEntityMentionName/) can also be used to mention users by their ID. |
-| [messageEntityHashtag](/constructor/messageEntityHashtag/) | #hashtag message entity |
-| [messageEntityBotCommand](/constructor/messageEntityBotCommand/) | Message entity representing a bot /command |
-| [messageEntityUrl](/constructor/messageEntityUrl/) | Message entity representing an in-text url: [https://google.com](https://google.com); for [text urls](https://google.com), use [messageEntityTextUrl](/constructor/messageEntityTextUrl/). |
-| [messageEntityEmail](/constructor/messageEntityEmail/) | Message entity representing an [email@example.com](mailto:email@example.com). |
-| [messageEntityBold](/constructor/messageEntityBold/) | Message entity representing bold text. |
-| [messageEntityItalic](/constructor/messageEntityItalic/) | Message entity representing italic text. |
-| [messageEntityCode](/constructor/messageEntityCode/) | Message entity representing a codeblock. |
-| [messageEntityPre](/constructor/messageEntityPre/) | Message entity representing a preformatted codeblock, allowing the user to specify a programming language for the codeblock. |
-| [messageEntityTextUrl](/constructor/messageEntityTextUrl/) | Message entity representing a [text url](https://google.com): for in-text urls like [https://google.com](https://google.com) use [messageEntityUrl](/constructor/messageEntityUrl/). Note that an additional confirmation popup with the full URL must be displayed to the user before opening this link, unless the domain satisfies the conditions specified in the [domain whitelist documentation »](https://core.telegram.org/api/config#whitelisted-domains). |
-| [messageEntityUnderline](/constructor/messageEntityUnderline/) | Message entity representing underlined text. |
-| [messageEntityStrike](/constructor/messageEntityStrike/) | Message entity representing strikethrough text. |
-| [messageEntityBlockquote](/constructor/messageEntityBlockquote/) | Message entity representing a block quote. |
-| [messageEntitySpoiler](/constructor/messageEntitySpoiler/) | Message entity representing a spoiler |
-| [messageEntityCustomEmoji](/constructor/messageEntityCustomEmoji/) | Represents a custom emoji. Note that this entity must wrap exactly one regular emoji (the one contained in [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/).alt) in the related text, otherwise the server will ignore it. |
-| [messageEntityMentionName](/constructor/messageEntityMentionName/) | Message entity representing a [user mention](https://core.telegram.org/api/mentions): for creating a mention use [inputMessageEntityMentionName](/constructor/inputMessageEntityMentionName/). |
-| [inputMessageEntityMentionName](/constructor/inputMessageEntityMentionName/) | Message entity that can be used to create a user [user mention](https://core.telegram.org/api/mentions): received mentions use the [messageEntityMentionName](/constructor/messageEntityMentionName/) constructor, instead. |
-| [messageEntityPhone](/constructor/messageEntityPhone/) | Message entity representing a phone number. |
-| [messageEntityCashtag](/constructor/messageEntityCashtag/) | Message entity representing a $cashtag. |
-| [messageEntityBankCard](/constructor/messageEntityBankCard/) | Indicates a credit card number |
-| [messageEntityFormattedDate](/constructor/messageEntityFormattedDate/) | Represents a specific point in time, rendered as specified [here »](https://core.telegram.org/api/entities#date-entities) All flags are optional, with the following limitations: - relative cannot combined with any other flag - short_time and long_time cannot be combined with each other - short_date and long_date cannot be combined with each other If any of the flags are combined, their rendering order in the text is the following: - day_of_week - short_time/long_time - short_date/long_date |
-| [messageEntityDiffInsert](https://core.telegram.org/constructor/messageEntityDiffInsert) | Represents an diff addition: render it by simply underlining the specified section and coloring it in green, see [here »](https://core.telegram.org/api/entities#diff-entities) for more info on how to render diff entities. |
-| [messageEntityDiffReplace](https://core.telegram.org/constructor/messageEntityDiffReplace) | Represents an diff replacement, render it as follows: - Insert old_text into the text at offset offset, underline it and color it in red: note that this insertion does not affect the offsets of entities that come after it. - underline the section delimited by offset and limit and color it in green. See [here »](https://core.telegram.org/api/entities#diff-entities) for more info on how to render diff entities. |
-| [messageEntityDiffDelete](https://core.telegram.org/constructor/messageEntityDiffDelete) | Represents an diff deletion: render it by simply underlining the specified section and coloring it in red, see [here »](https://core.telegram.org/api/entities#diff-entities) for more info on how to render diff entities. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messageEntityUnknown">messageEntityUnknown</a></td><td>Неизвестная сущность оформления</td></tr><tr><td><a href="/constructor/messageEntityMention">messageEntityMention</a></td><td>Сущность оформления, <a href="/api/mentions">упоминающая</a> пользователя по <code>@username</code>; для упоминания пользователей по их идентификатору можно также использовать <a href="/constructor/messageEntityMentionName">messageEntityMentionName</a>.</td></tr><tr><td><a href="/constructor/messageEntityHashtag">messageEntityHashtag</a></td><td>Сущность оформления <strong>#хештег</strong></td></tr><tr><td><a href="/constructor/messageEntityBotCommand">messageEntityBotCommand</a></td><td>Сущность оформления, представляющая /команду бота</td></tr><tr><td><a href="/constructor/messageEntityUrl">messageEntityUrl</a></td><td>Сущность оформления, представляющая ссылку в тексте: <a href="https://google.com">https://google.com</a>; для <a href="https://google.com">текстовых ссылок</a> используйте <a href="/constructor/messageEntityTextUrl">messageEntityTextUrl</a>.</td></tr><tr><td><a href="/constructor/messageEntityEmail">messageEntityEmail</a></td><td>Сущность оформления, представляющая адрес <a href="mailto:email@example.com">email@example.com</a>.</td></tr><tr><td><a href="/constructor/messageEntityBold">messageEntityBold</a></td><td>Сущность оформления, представляющая <strong>полужирный текст</strong>.</td></tr><tr><td><a href="/constructor/messageEntityItalic">messageEntityItalic</a></td><td>Сущность оформления, представляющая <em>курсивный текст</em>.</td></tr><tr><td><a href="/constructor/messageEntityCode">messageEntityCode</a></td><td>Сущность оформления, представляющая <code>codeblock</code>.</td></tr><tr><td><a href="/constructor/messageEntityPre">messageEntityPre</a></td><td>Сущность оформления, представляющая форматированный <code>codeblock</code> с возможностью указать язык программирования для этого блока кода.</td></tr><tr><td><a href="/constructor/messageEntityTextUrl">messageEntityTextUrl</a></td><td>Сущность оформления, представляющая <a href="https://google.com">текстовую ссылку</a>: для ссылок прямо в тексте, вроде <a href="https://google.com">https://google.com</a>, используйте <a href="/constructor/messageEntityUrl">messageEntityUrl</a>.<br><br>Обратите внимание, что перед открытием этой ссылки пользователю необходимо показать дополнительное окно подтверждения с полным URL, если только домен не удовлетворяет условиям, указанным в <a href="/api/config#whitelisted-domains">документации по белому списку доменов »</a>.</td></tr><tr><td><a href="/constructor/messageEntityUnderline">messageEntityUnderline</a></td><td>Сущность оформления, представляющая подчёркнутый текст.</td></tr><tr><td><a href="/constructor/messageEntityStrike">messageEntityStrike</a></td><td>Сущность оформления, представляющая <del>зачёркнутый</del> текст.</td></tr><tr><td><a href="/constructor/messageEntityBlockquote">messageEntityBlockquote</a></td><td>Сущность оформления, представляющая цитату.</td></tr><tr><td><a href="/constructor/messageEntitySpoiler">messageEntitySpoiler</a></td><td>Сущность оформления, представляющая спойлер</td></tr><tr><td><a href="/constructor/messageEntityCustomEmoji">messageEntityCustomEmoji</a></td><td>Представляет пользовательский эмодзи.<br>Учтите, что эта сущность обязана охватывать ровно один обычный эмодзи (тот, который содержится в <a href="/constructor/documentAttributeCustomEmoji">documentAttributeCustomEmoji</a>.<code>alt</code>) в соответствующем тексте, иначе сервер её проигнорирует.</td></tr><tr><td><a href="/constructor/messageEntityMentionName">messageEntityMentionName</a></td><td>Сущность оформления, представляющая <a href="/api/mentions">упоминание пользователя</a>; для <em>создания</em> упоминания используйте <a href="/constructor/inputMessageEntityMentionName">inputMessageEntityMentionName</a>.</td></tr><tr><td><a href="/constructor/inputMessageEntityMentionName">inputMessageEntityMentionName</a></td><td>Сущность оформления, с помощью которой можно создать <a href="/api/mentions">упоминание пользователя</a>; в получаемых упоминаниях вместо неё используется конструктор <a href="/constructor/messageEntityMentionName">messageEntityMentionName</a>.</td></tr><tr><td><a href="/constructor/messageEntityPhone">messageEntityPhone</a></td><td>Сущность оформления, представляющая номер телефона.</td></tr><tr><td><a href="/constructor/messageEntityCashtag">messageEntityCashtag</a></td><td>Сущность оформления, представляющая <strong>$cashtag</strong>.</td></tr><tr><td><a href="/constructor/messageEntityBankCard">messageEntityBankCard</a></td><td>Обозначает номер банковской карты</td></tr><tr><td><a href="/constructor/messageEntityFormattedDate">messageEntityFormattedDate</a></td><td>Представляет конкретный момент времени, отображаемый так, как указано <a href="/api/entities#date-entities">здесь »</a><br><br>Все флаги необязательны, но действуют следующие ограничения:<br><br>- <code>relative</code> нельзя сочетать ни с каким другим флагом<br>- <code>short_time</code> и <code>long_time</code> нельзя сочетать друг с другом<br>- <code>short_date</code> и <code>long_date</code> нельзя сочетать друг с другом<br><br>Если флаги сочетаются, порядок их отображения в тексте следующий:<br><br>- <code>day_of_week</code><br>- <code>short_time</code>/<code>long_time</code><br>- <code>short_date</code>/<code>long_date</code></td></tr><tr><td><a href="/constructor/messageEntityDiffInsert">messageEntityDiffInsert</a></td><td>Представляет добавление в diff: отобразите его, просто <u>подчеркнув</u> указанный фрагмент и окрасив его в зелёный цвет; подробнее об отображении сущностей diff см. <a href="/api/entities#diff-entities">здесь »</a>.</td></tr><tr><td><a href="/constructor/messageEntityDiffReplace">messageEntityDiffReplace</a></td><td>Представляет замену в diff, отображайте её следующим образом:<br><br>- Вставьте <code>old_text</code> в текст по смещению <code>offset</code>, <u>подчеркните</u> его и окрасьте в красный цвет: учтите, что эта вставка не влияет на смещения следующих за ней сущностей.<br>- <u>Подчеркните</u> фрагмент, ограниченный значениями <code>offset</code> и <code>limit</code>, и окрасьте его в зелёный цвет.<br><br>Подробнее об отображении сущностей diff см. <a href="/api/entities#diff-entities">здесь »</a>.</td></tr><tr><td><a href="/constructor/messageEntityDiffDelete">messageEntityDiffDelete</a></td><td>Представляет удаление в diff: отобразите его, просто <u>подчеркнув</u> указанный фрагмент и окрасив его в красный цвет; подробнее об отображении сущностей diff см. <a href="/api/entities#diff-entities">здесь »</a>.</td></tr></tbody></table>

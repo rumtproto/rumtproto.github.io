@@ -1,18 +1,15 @@
 ---
-title: "messages.toggleDialogPin (метод)"
+title: "messages.toggleDialogPin"
 original: "https://core.telegram.org/method/messages.toggleDialogPin"
 section: ref
 kind: method
+description: "Закрепить или открепить диалог"
 layout: layout.njk
 ---
 
 # messages.toggleDialogPin
 
-*Метод из схемы TL.*
-
-> Pin/unpin a dialog
-
-## Определение TL
+Закрепить или открепить диалог
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,25 +18,16 @@ boolTrue#997275b5 = Bool;
 messages.toggleDialogPin#a731e257 flags:# pinned:flags.0?true peer:InputDialogPeer = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| pinned | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to pin or unpin the dialog |
-| peer | [InputDialogPeer](/type/InputDialogPeer/) | The dialog to pin |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>pinned</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Закрепить или открепить диалог</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputDialogPeer">InputDialogPeer</a></td><td>[@term:peer] Диалог, который нужно закрепить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | PEER_HISTORY_EMPTY | You can't pin an empty chat with a user. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | PINNED_DIALOGS_TOO_MUCH | Too many pinned dialogs. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>PEER_HISTORY_EMPTY</td><td>Нельзя закрепить пустой чат с пользователем.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>PINNED_DIALOGS_TOO_MUCH</td><td>Слишком много закреплённых диалогов.</td></tr></tbody></table>

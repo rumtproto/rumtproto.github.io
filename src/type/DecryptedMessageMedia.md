@@ -1,18 +1,15 @@
 ---
-title: "DecryptedMessageMedia (тип)"
+title: "DecryptedMessageMedia"
 original: "https://core.telegram.org/type/DecryptedMessageMedia"
 section: ref
 kind: type
+description: "Объект описывает медиасодержимое зашифрованного сообщения."
 layout: layout.njk
 ---
 
 # DecryptedMessageMedia
 
-*Тип из схемы TL.*
-
-> Object describes media contents of an encrypted message.
-
-## Определение TL
+Объект описывает медиасодержимое зашифрованного сообщения.
 
 ```
 ===8===
@@ -42,17 +39,6 @@ decryptedMessageMediaWebPage#e50511d8 url:string = DecryptedMessageMedia;
 decryptedMessageMediaDocument#6abd9782 thumb:bytes thumb_w:int thumb_h:int mime_type:string size:long key:bytes iv:bytes attributes:Vector<DocumentAttribute> caption:string = DecryptedMessageMedia;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [decryptedMessageMediaEmpty](/constructor/decryptedMessageMediaEmpty/) | Empty constructor, no media content. |
-| [decryptedMessageMediaPhoto](/constructor/decryptedMessageMediaPhoto/) | Photo attached to an encrypted message. |
-| [decryptedMessageMediaVideo](/constructor/decryptedMessageMediaVideo/) | Video attached to an encrypted message. |
-| [decryptedMessageMediaGeoPoint](/constructor/decryptedMessageMediaGeoPoint/) | GeoPoint attached to an encrypted message. |
-| [decryptedMessageMediaContact](/constructor/decryptedMessageMediaContact/) | Contact attached to an encrypted message. |
-| [decryptedMessageMediaDocument](/constructor/decryptedMessageMediaDocument/) | Document attached to a message in a secret chat. |
-| [decryptedMessageMediaAudio](/constructor/decryptedMessageMediaAudio/) | Audio file attached to a secret chat message. |
-| [decryptedMessageMediaExternalDocument](/constructor/decryptedMessageMediaExternalDocument/) | Non-e2e documented forwarded from non-secret chat |
-| [decryptedMessageMediaVenue](/constructor/decryptedMessageMediaVenue/) | Venue |
-| [decryptedMessageMediaWebPage](/constructor/decryptedMessageMediaWebPage/) | Webpage preview |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/decryptedMessageMediaEmpty">decryptedMessageMediaEmpty</a></td><td>Пустой конструктор, медиасодержимое отсутствует.</td></tr><tr><td><a href="/constructor/decryptedMessageMediaPhoto">decryptedMessageMediaPhoto</a></td><td>Фотография, вложенная в зашифрованное сообщение.</td></tr><tr><td><a href="/constructor/decryptedMessageMediaVideo">decryptedMessageMediaVideo</a></td><td>Видео, вложенное в зашифрованное сообщение.</td></tr><tr><td><a href="/constructor/decryptedMessageMediaGeoPoint">decryptedMessageMediaGeoPoint</a></td><td>Географическая точка, приложенная к зашифрованному сообщению.</td></tr><tr><td><a href="/constructor/decryptedMessageMediaContact">decryptedMessageMediaContact</a></td><td>Контакт, приложенный к зашифрованному сообщению.</td></tr><tr><td><a href="/constructor/decryptedMessageMediaDocument">decryptedMessageMediaDocument</a></td><td>Документ, вложенный в сообщение в секретном чате.</td></tr><tr><td><a href="/constructor/decryptedMessageMediaAudio">decryptedMessageMediaAudio</a></td><td>Аудиофайл, вложенный в сообщение секретного чата.</td></tr><tr><td><a href="/constructor/decryptedMessageMediaExternalDocument">decryptedMessageMediaExternalDocument</a></td><td>Документ не из сквозного шифрования, пересланный из несекретного чата</td></tr><tr><td><a href="/constructor/decryptedMessageMediaVenue">decryptedMessageMediaVenue</a></td><td>Заведение</td></tr><tr><td><a href="/constructor/decryptedMessageMediaWebPage">decryptedMessageMediaWebPage</a></td><td>Предпросмотр веб-страницы</td></tr></tbody></table>

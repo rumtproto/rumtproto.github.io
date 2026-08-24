@@ -1,27 +1,24 @@
 ---
-title: "contacts.contactsNotModified (конструктор)"
+title: "contacts.contactsNotModified"
 original: "https://core.telegram.org/constructor/contacts.contactsNotModified"
 section: ref
 kind: constructor
+description: "Список контактов на сервере совпадает со списком на клиенте."
 layout: layout.njk
 ---
 
 # contacts.contactsNotModified
 
-*Конструктор из схемы TL.*
-
-> Contact list on the server is the same as the list on the client.
-
-## Определение TL
+Список контактов на сервере совпадает со списком на клиенте.
 
 ```
 contacts.contactsNotModified#b74ba9d2 = contacts.Contacts;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [contacts.Contacts](/type/contacts.Contacts/)

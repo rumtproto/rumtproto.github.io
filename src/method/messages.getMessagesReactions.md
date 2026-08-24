@@ -1,18 +1,15 @@
 ---
-title: "messages.getMessagesReactions (метод)"
+title: "messages.getMessagesReactions"
 original: "https://core.telegram.org/method/messages.getMessagesReactions"
 section: ref
 kind: method
+description: "Получить реакции на сообщения »"
 layout: layout.njk
 ---
 
 # messages.getMessagesReactions
 
-*Метод из схемы TL.*
-
-> Get [message reactions »](https://core.telegram.org/api/reactions)
-
-## Определение TL
+Получить [реакции на сообщения »](/api/reactions/)
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,29 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.getMessagesReactions#8bba90e6 peer:InputPeer id:Vector<int> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer |
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Message IDs |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы сообщений</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

@@ -1,18 +1,15 @@
 ---
-title: "channels.updateColor (метод)"
+title: "channels.updateColor"
 original: "https://core.telegram.org/method/channels.updateColor"
 section: ref
 kind: method
+description: "Обновить акцентный цвет и фоновый пользовательский эмодзи » канала."
 layout: layout.njk
 ---
 
 # channels.updateColor
 
-*Метод из схемы TL.*
-
-> Update the [accent color and background custom emoji »](https://core.telegram.org/api/colors) of a channel.
-
-## Определение TL
+Обновить [акцентный цвет и фоновый пользовательский эмодзи »](/api/colors/) канала.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,35 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.updateColor#d8aa3671 flags:# for_profile:flags.1?true channel:InputChannel color:flags.2?int background_emoji_id:flags.0?long = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| for_profile | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether to change the accent color emoji pattern of the profile page; otherwise, the accent color and emoji pattern of messages will be changed. Channels can change both message and profile palettes; supergroups can only change the profile palette, of course after reaching the [appropriate boost level](https://core.telegram.org/api/colors). |
-| channel | [InputChannel](/type/InputChannel/) | Channel whose accent color should be changed. |
-| color | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | [ID of the accent color palette »](https://core.telegram.org/api/colors) to use (not RGB24, see [here »](https://core.telegram.org/api/colors) for more info); if not set, the default palette is used. |
-| background_emoji_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | Custom emoji ID used in the accent color pattern. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>for_profile</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Менять ли акцентный цвет и узор из эмодзи на странице профиля; иначе будут изменены акцентный цвет и узор из эмодзи в сообщениях.<br>Каналы могут менять палитру и сообщений, и профиля; супергруппы могут менять только палитру профиля — разумеется, после достижения <a href="/api/colors">соответствующего уровня бустов</a>.</td></tr><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал, акцентный цвет которого нужно изменить.</td></tr><tr><td><strong>color</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td><a href="/api/colors">Идентификатор используемой палитры акцентных цветов »</a> (не RGB24, подробнее см. <a href="/api/colors">здесь »</a>); если не задан, используется палитра по умолчанию.</td></tr><tr><td><strong>background_emoji_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Идентификатор пользовательского эмодзи, используемого в узоре акцентного цвета.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOOSTS_REQUIRED | The specified channel must first be [boosted by its users](https://core.telegram.org/api/boost) in order to perform this action. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOOSTS_REQUIRED</td><td>Чтобы выполнить это действие, указанный канал должен быть сначала <a href="/api/boost">забустен своими пользователями</a>.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.

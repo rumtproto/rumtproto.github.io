@@ -1,18 +1,15 @@
 ---
-title: "payments.StarsRevenueAdsAccountUrl (тип)"
+title: "payments.StarsRevenueAdsAccountUrl"
 original: "https://core.telegram.org/type/payments.StarsRevenueAdsAccountUrl"
 section: ref
 kind: type
+description: "Содержит URL страницы, на которой пользователь сможет размещать рекламу для канала или бота, оплачивая её Telegram Stars."
 layout: layout.njk
 ---
 
 # payments.StarsRevenueAdsAccountUrl
 
-*Тип из схемы TL.*
-
-> Contains a URL leading to a page where the user will be able to place ads for the channel/bot, paying using [Telegram Stars](https://core.telegram.org/api/stars#paying-for-ads).
-
-## Определение TL
+Содержит URL страницы, на которой пользователь сможет размещать рекламу для канала или бота, оплачивая её [Telegram Stars](/api/stars/#paying-for-ads).
 
 ```
 payments.starsRevenueAdsAccountUrl#394e7f21 url:string = payments.StarsRevenueAdsAccountUrl;
@@ -22,20 +19,16 @@ payments.starsRevenueAdsAccountUrl#394e7f21 url:string = payments.StarsRevenueAd
 payments.getStarsRevenueAdsAccountUrl#d1d7efc5 peer:InputPeer = payments.StarsRevenueAdsAccountUrl;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.starsRevenueAdsAccountUrl](/constructor/payments.starsRevenueAdsAccountUrl/) | Contains a URL leading to a page where the user will be able to place ads for the channel/bot, paying using [Telegram Stars](https://core.telegram.org/api/stars#paying-for-ads). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starsRevenueAdsAccountUrl">payments.starsRevenueAdsAccountUrl</a></td><td>Содержит URL страницы, на которой пользователь сможет размещать рекламу для канала или бота, оплачивая её <a href="/api/stars#paying-for-ads">Telegram Stars</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getStarsRevenueAdsAccountUrl](/method/payments.getStarsRevenueAdsAccountUrl/) | Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for channel/bot in peer, paid using the Telegram Stars owned by the specified peer, see [here »](https://core.telegram.org/api/stars#paying-for-ads) for more info. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarsRevenueAdsAccountUrl">payments.getStarsRevenueAdsAccountUrl</a></td><td>[@term:peer] Возвращает URL аккаунта рекламной платформы Telegram, который можно использовать для настройки рекламы канала или бота в <code>peer</code> с оплатой при помощи Telegram Stars, принадлежащих указанному <code>peer</code>; подробнее см. <a href="/api/stars#paying-for-ads">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

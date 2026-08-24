@@ -1,31 +1,26 @@
 ---
-title: "PeerStories (тип)"
+title: "PeerStories"
 original: "https://core.telegram.org/type/PeerStories"
 section: ref
 kind: type
+description: "Истории, связанные с пиром"
 layout: layout.njk
 ---
 
 # PeerStories
 
-*Тип из схемы TL.*
-
-> [Stories](https://core.telegram.org/api/stories) associated to a peer
-
-## Определение TL
+[Истории](/api/stories/), связанные с пиром
 
 ```
 peerStories#9a35e999 flags:# peer:Peer max_read_id:flags.0?int stories:Vector<StoryItem> = PeerStories;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [peerStories](/constructor/peerStories/) | [Stories](https://core.telegram.org/api/stories) associated to a peer |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/peerStories">peerStories</a></td><td><a href="/api/stories">Истории</a>, связанные с пиром</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

@@ -1,18 +1,15 @@
 ---
-title: "channels.setEmojiStickers (метод)"
+title: "channels.setEmojiStickers"
 original: "https://core.telegram.org/method/channels.setEmojiStickers"
 section: ref
 kind: method
+description: "Задать набор пользовательских эмодзи для супергрупп. Использовать можно только после достижения как минимум уровня буста », указанного в параметре конфигурации…"
 layout: layout.njk
 ---
 
 # channels.setEmojiStickers
 
-*Метод из схемы TL.*
-
-> Set a [custom emoji stickerset](https://core.telegram.org/api/custom-emoji) for supergroups. Only usable after reaching at least the [boost level »](https://core.telegram.org/api/boost) specified in the [`group_emoji_stickers_level_min` »](https://core.telegram.org/api/config#group-emoji-stickers-level-min) config parameter.
-
-## Определение TL
+Задать [набор пользовательских эмодзи](/api/custom-emoji/) для супергрупп. Использовать можно только после достижения как минимум [уровня буста »](/api/boost/), указанного в параметре конфигурации [`group_emoji_stickers_level_min` »](/api/config/#group-emoji-stickers-level-min).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,35 +18,30 @@ boolTrue#997275b5 = Bool;
 channels.setEmojiStickers#3cd930b7 channel:InputChannel stickerset:InputStickerSet = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The supergroup |
-| stickerset | [InputStickerSet](/type/InputStickerSet/) | The custom emoji stickerset to associate to the supergroup |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Супергруппа</td></tr><tr><td><strong>stickerset</strong></td><td style="text-align: center;"><a href="/type/InputStickerSet">InputStickerSet</a></td><td>Набор пользовательских эмодзи, привязываемый к супергруппе</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

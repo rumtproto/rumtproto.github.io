@@ -1,31 +1,26 @@
 ---
-title: "InlineBotWebView (тип)"
+title: "InlineBotWebView"
 original: "https://core.telegram.org/type/InlineBotWebView"
 section: ref
 kind: type
+description: "Задаёт кнопку Mini App в инлайн-режиме, отображаемую над списком результатов инлайн-запроса."
 layout: layout.njk
 ---
 
 # InlineBotWebView
 
-*Тип из схемы TL.*
-
-> Specifies an [inline mode mini app](https://core.telegram.org/api/bots/webapps#inline-mode-mini-apps) button, shown on top of the inline query results list.
-
-## Определение TL
+[@term:Mini App] Задаёт кнопку [Mini App в инлайн-режиме](/api/bots/webapps/#inline-mode-mini-apps), отображаемую над списком результатов инлайн-запроса.
 
 ```
 inlineBotWebView#b57295d5 text:string url:string = InlineBotWebView;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inlineBotWebView](/constructor/inlineBotWebView/) | Specifies an [inline mode mini app](https://core.telegram.org/api/bots/webapps#inline-mode-mini-apps) button, shown on top of the inline query results list. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inlineBotWebView">inlineBotWebView</a></td><td>Задаёт кнопку <a href="/api/bots/webapps#inline-mode-mini-apps">Mini App в инлайн-режиме</a>, отображаемую над списком результатов инлайн-запроса.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

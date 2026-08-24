@@ -1,29 +1,24 @@
 ---
-title: "textSubscript (конструктор)"
+title: "textSubscript"
 original: "https://core.telegram.org/constructor/textSubscript"
 section: ref
 kind: constructor
+description: "Подстрочный текст"
 layout: layout.njk
 ---
 
 # textSubscript
 
-*Конструктор из схемы TL.*
-
-> Subscript text
-
-## Определение TL
+Подстрочный текст
 
 ```
 textSubscript#ed6a8504 text:RichText = RichText;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [RichText](/type/RichText/) | Text |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Текст</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [RichText](/type/RichText/)

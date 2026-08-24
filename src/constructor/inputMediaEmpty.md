@@ -1,27 +1,24 @@
 ---
-title: "inputMediaEmpty (конструктор)"
+title: "inputMediaEmpty"
 original: "https://core.telegram.org/constructor/inputMediaEmpty"
 section: ref
 kind: constructor
+description: "Пустое медиасодержимое сообщения."
 layout: layout.njk
 ---
 
 # inputMediaEmpty
 
-*Конструктор из схемы TL.*
-
-> Empty media content of a message.
-
-## Определение TL
+Пустое медиасодержимое сообщения.
 
 ```
 inputMediaEmpty#9664f57f = InputMedia;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputMedia](/type/InputMedia/)

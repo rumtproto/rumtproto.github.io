@@ -1,37 +1,30 @@
 ---
-title: "updateBotCommands (конструктор)"
+title: "updateBotCommands"
 original: "https://core.telegram.org/constructor/updateBotCommands"
 section: ref
 kind: constructor
+description: "Изменился набор команд определённого бота в определённом чате."
 layout: layout.njk
 ---
 
 # updateBotCommands
 
-*Конструктор из схемы TL.*
-
-> The [command set](https://core.telegram.org/api/bots/commands) of a certain bot in a certain chat has changed.
-
-## Определение TL
+Изменился [набор команд](/api/bots/commands/) определённого бота в определённом чате.
 
 ```
 updateBotCommands#4d712f2e peer:Peer bot_id:long commands:Vector<BotCommand> = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | The affected chat |
-| bot_id | [long](/type/long/) | ID of the bot that changed its command set |
-| commands | [Vector](https://core.telegram.org/type/Vector%20t)<[BotCommand](/type/BotCommand/)> | New bot commands |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Затронутый чат</td></tr><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор бота, изменившего свой набор команд</td></tr><tr><td><strong>commands</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/BotCommand">BotCommand</a>&gt;</td><td>Новые команды бота</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot commands](https://core.telegram.org/api/bots/commands)
+#### [Команды ботов](/api/bots/commands/)
 
-Bots offer a set of commands that can be used by users in private, or in a chat.
+Боты предлагают набор команд, которыми пользователи могут пользоваться в личных сообщениях или в чате.

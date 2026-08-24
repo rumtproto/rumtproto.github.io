@@ -1,47 +1,34 @@
 ---
-title: "channelParticipantAdmin (конструктор)"
+title: "channelParticipantAdmin"
 original: "https://core.telegram.org/constructor/channelParticipantAdmin"
 section: ref
 kind: constructor
+description: "Администратор"
 layout: layout.njk
 ---
 
 # channelParticipantAdmin
 
-*Конструктор из схемы TL.*
-
-> Admin
-
-## Определение TL
+Администратор
 
 ```
 channelParticipantAdmin#34c3bb53 flags:# can_edit:flags.0?true self:flags.1?true user_id:long inviter_id:flags.1?long promoted_by:long date:int admin_rights:ChatAdminRights rank:flags.2?string = ChannelParticipant;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| can_edit | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Can this admin promote other admins with the same permissions? |
-| self | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Is this the current user |
-| user_id | [long](/type/long/) | Admin user ID |
-| inviter_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[long](/type/long/) | User that invited the admin to the channel/group |
-| promoted_by | [long](/type/long/) | User that promoted the user to admin |
-| date | [int](/type/int/) | When did the user join |
-| admin_rights | [ChatAdminRights](/type/ChatAdminRights/) | Admin [rights](https://core.telegram.org/api/rights) |
-| rank | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | The participant's [tag »](https://core.telegram.org/api/rank), defaults to "Admin" if not set. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>can_edit</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Может ли этот администратор назначать других администраторов с теми же правами?</td></tr><tr><td><strong>self</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Является ли это текущим пользователем</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя-администратора</td></tr><tr><td><strong>inviter_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/long">long</a></td><td>Пользователь, пригласивший администратора в канал или группу</td></tr><tr><td><strong>promoted_by</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Пользователь, назначивший данного пользователя администратором</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда пользователь присоединился</td></tr><tr><td><strong>admin_rights</strong></td><td style="text-align: center;"><a href="/type/ChatAdminRights">ChatAdminRights</a></td><td><a href="/api/rights">Права</a> администратора</td></tr><tr><td><strong>rank</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td><a href="/api/rank">Звание »</a> участника; если не задано, по умолчанию используется «Admin».</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelParticipant](/type/ChannelParticipant/)
 
-## Related pages
+### Связанные страницы
 
-#### [Admin, banned, default rights](https://core.telegram.org/api/rights)
+#### [Права администраторов, ограничения и права по умолчанию](/api/rights/)
 
-How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.
+Как работать с правами администраторов, детальными ограничениями и общими правами в каналах, группах и супергруппах.
 
-#### [Group participant tags](https://core.telegram.org/api/rank)
+#### [Звание](/api/rank/)
 
-Members in group chats (both basic groups and supergroups) can add a tag next to their name — to show their role at work, what they study in school, and more.
+Участники групповых чатов (как обычных групп, так и супергрупп) могут добавить рядом со своим именем тег — чтобы указать свою роль на работе, что они изучают в учебном заведении и прочее.

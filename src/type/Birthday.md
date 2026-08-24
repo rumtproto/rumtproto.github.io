@@ -1,31 +1,26 @@
 ---
-title: "Birthday (тип)"
+title: "Birthday"
 original: "https://core.telegram.org/type/Birthday"
 section: ref
 kind: type
+description: "Сведения о дне рождения пользователя."
 layout: layout.njk
 ---
 
 # Birthday
 
-*Тип из схемы TL.*
-
-> [Birthday](https://core.telegram.org/api/profile#birthday) information for a user.
-
-## Определение TL
+Сведения о [дне рождения](/api/profile/#birthday) пользователя.
 
 ```
 birthday#6c8e1e06 flags:# day:int month:int year:flags.0?int = Birthday;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [birthday](/constructor/birthday/) | [Birthday](https://core.telegram.org/api/profile#birthday) information for a user. Also used to invite users to gift [Telegram Premium subscriptions »](https://core.telegram.org/api/premium#gifting-telegram-premium) to other users with birthdays within a +1/-1 day time range, related to the current day. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/birthday">birthday</a></td><td>Сведения о <a href="/api/profile#birthday">дне рождения</a> пользователя.<br><br>Также используется, чтобы предложить пользователям подарить <a href="/api/premium#gifting-telegram-premium">подписку Telegram Premium »</a> тем, у кого день рождения приходится на промежуток ±1 день относительно текущего дня.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

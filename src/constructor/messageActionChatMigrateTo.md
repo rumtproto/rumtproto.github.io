@@ -1,35 +1,30 @@
 ---
-title: "messageActionChatMigrateTo (конструктор)"
+title: "messageActionChatMigrateTo"
 original: "https://core.telegram.org/constructor/messageActionChatMigrateTo"
 section: ref
 kind: constructor
+description: "Указывает, что чат был перенесён в указанную супергруппу"
 layout: layout.njk
 ---
 
 # messageActionChatMigrateTo
 
-*Конструктор из схемы TL.*
-
-> Indicates the chat was [migrated](https://core.telegram.org/api/channel) to the specified supergroup
-
-## Определение TL
+Указывает, что чат был [перенесён](/api/channel/) в указанную супергруппу
 
 ```
 messageActionChatMigrateTo#e1037f92 channel_id:long = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel_id | [long](/type/long/) | The supergroup it was migrated to |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Супергруппа, в которую она была перенесена</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

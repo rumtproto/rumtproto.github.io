@@ -1,18 +1,15 @@
 ---
-title: "messages.exportChatInvite (метод)"
+title: "messages.exportChatInvite"
 original: "https://core.telegram.org/method/messages.exportChatInvite"
 section: ref
 kind: method
+description: "Экспортировать пригласительную ссылку для чата"
 layout: layout.njk
 ---
 
 # messages.exportChatInvite
 
-*Метод из схемы TL.*
-
-> Export an invite link for a chat
-
-## Определение TL
+Экспортировать пригласительную ссылку для чата
 
 ```
 chatInviteExported#a22cbd96 flags:# revoked:flags.0?true permanent:flags.5?true request_needed:flags.6?true link:string admin_id:long date:int start_date:flags.4?int expire_date:flags.1?int usage_limit:flags.2?int usage:flags.3?int requested:flags.7?int subscription_expired:flags.10?int title:flags.8?string subscription_pricing:flags.9?StarsSubscriptionPricing = ExportedChatInvite;
@@ -21,57 +18,34 @@ chatInvitePublicJoinRequests#ed107ab7 = ExportedChatInvite;
 messages.exportChatInvite#a455de90 flags:# legacy_revoke_permanent:flags.2?true request_needed:flags.3?true peer:InputPeer expire_date:flags.0?int usage_limit:flags.1?int title:flags.4?string subscription_pricing:flags.5?StarsSubscriptionPricing = ExportedChatInvite;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| legacy_revoke_permanent | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Legacy flag, reproducing legacy behavior of this method: if set, revokes all previous links before creating a new one. Kept for bot API BC, should not be used by modern clients. |
-| request_needed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether admin confirmation is required before admitting each separate user into the chat |
-| peer | [InputPeer](/type/InputPeer/) | Chat |
-| expire_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Expiration date |
-| usage_limit | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | Maximum number of users that can join using this link |
-| title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[string](/type/string/) | Description of the invite link, visible only to administrators |
-| subscription_pricing | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[StarsSubscriptionPricing](/type/StarsSubscriptionPricing/) | For [Telegram Star subscriptions »](https://core.telegram.org/api/stars#star-subscriptions), contains the pricing of the subscription the user must activate to join the private channel. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>legacy_revoke_permanent</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Устаревший флаг, воспроизводящий прежнее поведение этого метода: если установлен, отзывает все предыдущие ссылки перед созданием новой. Сохранён для обратной совместимости с Bot API, современным клиентам использовать не следует.</td></tr><tr><td><strong>request_needed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Требуется ли подтверждение администратора перед допуском каждого отдельного пользователя в чат</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат</td></tr><tr><td><strong>expire_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Дата истечения</td></tr><tr><td><strong>usage_limit</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Максимальное число пользователей, которые могут присоединиться по этой ссылке</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string">string</a></td><td>Описание пригласительной ссылки, видимое только администраторам</td></tr><tr><td><strong>subscription_pricing</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/StarsSubscriptionPricing">StarsSubscriptionPricing</a></td><td>Для <a href="/api/stars#star-subscriptions">подписок за Telegram Stars »</a> содержит стоимость подписки, которую пользователь должен активировать, чтобы вступить в закрытый канал.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [ExportedChatInvite](/type/ExportedChatInvite/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_MONOFORUM_UNSUPPORTED | [Monoforums](https://core.telegram.org/api/channel#monoforums) do not support this feature. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | EXPIRE_DATE_INVALID | The specified expiration date is invalid. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | PRICING_CHAT_INVALID | The pricing for the [subscription](https://core.telegram.org/api/subscriptions) is invalid, the maximum price is specified in the [stars_subscription_amount_max config key »](https://core.telegram.org/api/config#stars-subscription-amount-max). |
-| 400 | SUBSCRIPTION_PERIOD_INVALID | The specified subscription_pricing.period is invalid. |
-| 400 | USAGE_LIMIT_INVALID | The specified usage limit is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_MONOFORUM_UNSUPPORTED</td><td><a href="/api/channel#monoforums">Монофорумы</a> не поддерживают эту возможность.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>EXPIRE_DATE_INVALID</td><td>Указанный срок действия недействителен.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>PRICING_CHAT_INVALID</td><td>Недопустимая стоимость <a href="/api/subscriptions">подписки</a>; максимальная цена указана в <a href="/api/config#stars-subscription-amount-max">ключе конфигурации <code>stars_subscription_amount_max</code>&nbsp;»</a>.</td></tr><tr><td>400</td><td>SUBSCRIPTION_PERIOD_INVALID</td><td>Указанное значение subscription_pricing.period недопустимо.</td></tr><tr><td>400</td><td>USAGE_LIMIT_INVALID</td><td>Указанное ограничение числа использований недействительно.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Star subscriptions](https://core.telegram.org/api/subscriptions)
+#### [Подписки за звёзды](/api/subscriptions/)
 
-Bots and channels may create subscriptions, periodically charging users a certain amount of Telegram Stars in exchange for content and services.
+Боты и каналы могут создавать подписки, периодически списывая с пользователей определённое количество Telegram Stars в обмен на контент и услуги.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

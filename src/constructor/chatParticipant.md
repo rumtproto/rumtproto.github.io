@@ -1,43 +1,34 @@
 ---
-title: "chatParticipant (конструктор)"
+title: "chatParticipant"
 original: "https://core.telegram.org/constructor/chatParticipant"
 section: ref
 kind: constructor
+description: "Участник обычной группы (неприменимо к супергруппам)."
 layout: layout.njk
 ---
 
 # chatParticipant
 
-*Конструктор из схемы TL.*
-
-> [Basic group](https://core.telegram.org/api/channel#basic-groups) member (not usable by supergroups).
-
-## Определение TL
+Участник [обычной группы](/api/channel/#basic-groups) (неприменимо к супергруппам).
 
 ```
 chatParticipant#38e79fde flags:# user_id:long inviter_id:long date:int rank:flags.0?string = ChatParticipant;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| user_id | [long](/type/long/) | Member user ID |
-| inviter_id | [long](/type/long/) | ID of the user that added the member to the group |
-| date | [int](/type/int/) | Date added to the group |
-| rank | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | The participant's [tag »](https://core.telegram.org/api/rank). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя-участника</td></tr><tr><td><strong>inviter_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя, добавившего участника в группу</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата добавления в группу</td></tr><tr><td><strong>rank</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td><a href="/api/rank">Звание »</a> участника.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatParticipant](/type/ChatParticipant/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group participant tags](https://core.telegram.org/api/rank)
+#### [Звание](/api/rank/)
 
-Members in group chats (both basic groups and supergroups) can add a tag next to their name — to show their role at work, what they study in school, and more.
+Участники групповых чатов (как обычных групп, так и супергрупп) могут добавить рядом со своим именем тег — чтобы указать свою роль на работе, что они изучают в учебном заведении и прочее.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

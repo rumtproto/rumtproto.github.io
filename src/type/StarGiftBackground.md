@@ -1,31 +1,26 @@
 ---
-title: "StarGiftBackground (тип)"
+title: "StarGiftBackground"
 original: "https://core.telegram.org/type/StarGiftBackground"
 section: ref
 kind: type
+description: "Содержит фоновую палитру по умолчанию для типа подарка »."
 layout: layout.njk
 ---
 
 # StarGiftBackground
 
-*Тип из схемы TL.*
-
-> Contains the default background palette of a [gift type »](https://core.telegram.org/api/gifts#listing-all-possible-collectible-variants).
-
-## Определение TL
+Содержит фоновую палитру по умолчанию для [типа подарка »](/api/gifts/#listing-all-possible-collectible-variants).
 
 ```
 starGiftBackground#aff56398 center_color:int edge_color:int text_color:int = StarGiftBackground;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starGiftBackground](/constructor/starGiftBackground/) | Contains the default background palette of a [gift type »](https://core.telegram.org/api/gifts#listing-all-possible-collectible-variants). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftBackground">starGiftBackground</a></td><td>Содержит фоновую палитру по умолчанию для <a href="/api/gifts#listing-all-possible-collectible-variants">типа подарка »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

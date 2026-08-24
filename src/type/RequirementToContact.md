@@ -1,18 +1,15 @@
 ---
-title: "RequirementToContact (тип)"
+title: "RequirementToContact"
 original: "https://core.telegram.org/type/RequirementToContact"
 section: ref
 kind: type
+description: "Задаёт требование, которое должно быть выполнено, чтобы связаться с пользователем."
 layout: layout.njk
 ---
 
 # RequirementToContact
 
-*Тип из схемы TL.*
-
-> Specifies a requirement that must be satisfied in order to contact a user.
-
-## Определение TL
+Задаёт требование, которое должно быть выполнено, чтобы связаться с пользователем.
 
 ```
 requirementToContactEmpty#50a9839 = RequirementToContact;
@@ -20,10 +17,6 @@ requirementToContactPremium#e581e4e9 = RequirementToContact;
 requirementToContactPaidMessages#b4f67e93 stars_amount:long = RequirementToContact;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [requirementToContactEmpty](/constructor/requirementToContactEmpty/) | This user can be freely contacted. |
-| [requirementToContactPremium](/constructor/requirementToContactPremium/) | This user requires us to buy a [Premium](https://core.telegram.org/api/premium) subscription in order to contact them. |
-| [requirementToContactPaidMessages](/constructor/requirementToContactPaidMessages/) | This user requires us to pay the specified amount of [Telegram Stars](https://core.telegram.org/api/stars) to send them a message, see [here »](https://core.telegram.org/api/paid-messages) for the full flow. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/requirementToContactEmpty">requirementToContactEmpty</a></td><td>С этим пользователем можно свободно связаться.</td></tr><tr><td><a href="/constructor/requirementToContactPremium">requirementToContactPremium</a></td><td>Этот пользователь требует приобрести подписку <a href="/api/premium">Premium</a>, чтобы связаться с ним.</td></tr><tr><td><a href="/constructor/requirementToContactPaidMessages">requirementToContactPaidMessages</a></td><td>Этот пользователь требует уплатить указанное количество <a href="/api/stars">Telegram Stars</a> за отправку ему сообщения; полное описание процесса см. <a href="/api/paid-messages">здесь »</a>.</td></tr></tbody></table>

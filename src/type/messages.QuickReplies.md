@@ -1,18 +1,15 @@
 ---
-title: "messages.QuickReplies (тип)"
+title: "messages.QuickReplies"
 original: "https://core.telegram.org/type/messages.QuickReplies"
 section: ref
 kind: type
+description: "Информация о шаблонах быстрых ответов »."
 layout: layout.njk
 ---
 
 # messages.QuickReplies
 
-*Тип из схемы TL.*
-
-> Info about [quick reply shortcuts »](https://core.telegram.org/api/business#quick-reply-shortcuts).
-
-## Определение TL
+Информация о [шаблонах быстрых ответов »](/api/business/#quick-reply-shortcuts).
 
 ```
 messages.quickReplies#c68d6695 quick_replies:Vector<QuickReply> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.QuickReplies;
@@ -23,21 +20,16 @@ messages.quickRepliesNotModified#5f91eb5b = messages.QuickReplies;
 messages.getQuickReplies#d483f2a8 hash:long = messages.QuickReplies;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.quickReplies](/constructor/messages.quickReplies/) | Info about [quick reply shortcuts »](https://core.telegram.org/api/business#quick-reply-shortcuts). |
-| [messages.quickRepliesNotModified](/constructor/messages.quickRepliesNotModified/) | Info about [quick reply shortcuts »](https://core.telegram.org/api/business#quick-reply-shortcuts) hasn't changed. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.quickReplies">messages.quickReplies</a></td><td>Информация о <a href="/api/business#quick-reply-shortcuts">шаблонах быстрых ответов »</a>.</td></tr><tr><td><a href="/constructor/messages.quickRepliesNotModified">messages.quickRepliesNotModified</a></td><td>Информация о <a href="/api/business#quick-reply-shortcuts">шаблонах быстрых ответов »</a> не изменилась.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getQuickReplies](/method/messages.getQuickReplies/) | Fetch basic info about all existing [quick reply shortcuts](https://core.telegram.org/api/business#quick-reply-shortcuts). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getQuickReplies">messages.getQuickReplies</a></td><td>Получить основные сведения обо всех существующих <a href="/api/business#quick-reply-shortcuts">шаблонах быстрых ответов</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

@@ -1,37 +1,31 @@
 ---
-title: "InputSecureFile (тип)"
+title: "InputSecureFile"
 original: "https://core.telegram.org/type/InputSecureFile"
 section: ref
 kind: type
+description: "Защищённый файл passport; подробнее см. документацию по Telegram Passport »"
 layout: layout.njk
 ---
 
 # InputSecureFile
 
-*Тип из схемы TL.*
-
-> Secure [passport](https://core.telegram.org/passport) file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile)
-
-## Определение TL
+Защищённый файл [passport](https://core.telegram.org/passport); подробнее [см. документацию по Telegram Passport »](https://core.telegram.org/passport/encryption#inputsecurefile)
 
 ```
 inputSecureFileUploaded#3334b0f0 id:long parts:int md5_checksum:string file_hash:bytes secret:bytes = InputSecureFile;
 inputSecureFile#5367e5be id:long access_hash:long = InputSecureFile;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputSecureFileUploaded](/constructor/inputSecureFileUploaded/) | Uploaded secure file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile) |
-| [inputSecureFile](/constructor/inputSecureFile/) | Pre-uploaded [passport](https://core.telegram.org/passport) file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputSecureFileUploaded">inputSecureFileUploaded</a></td><td>Загруженный защищённый файл; подробнее <a href="/passport/encryption#inputsecurefile">см. документацию по Telegram Passport »</a></td></tr><tr><td><a href="/constructor/inputSecureFile">inputSecureFile</a></td><td>Заранее загруженный файл <a href="/passport">passport</a>; подробнее <a href="/passport/encryption#inputsecurefile">см. документацию по Telegram Passport »</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport: детали шифрования](https://core.telegram.org/passport/encryption)
 
-How Telegram Passport data is stored and encrypted end-to-end.
+Как данные Telegram Passport хранятся и шифруются сквозным шифрованием.

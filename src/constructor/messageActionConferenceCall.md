@@ -1,52 +1,42 @@
 ---
-title: "messageActionConferenceCall (конструктор)"
+title: "messageActionConferenceCall"
 original: "https://core.telegram.org/constructor/messageActionConferenceCall"
 section: ref
 kind: constructor
+description: "Представляет конференц-звонок » либо приглашение на него, если не установлен ни флаг missed, ни флаг active."
 layout: layout.njk
 ---
 
 # messageActionConferenceCall
 
-*Конструктор из схемы TL.*
+Представляет [конференц-звонок »](/api/group-calls/#conference-calls) либо приглашение на него, если не установлен ни флаг `missed`, ни флаг `active`.
 
-> Represents a [conference call »](https://core.telegram.org/api/group-calls#conference-calls), or an invitation to one if neither the `missed` nor `active` flags are set.
-> If [call\_requests\_disabled](https://core.telegram.org/api/config#call-requests-disabled) is not set or false, an incoming [messageActionConferenceCall](/constructor/messageActionConferenceCall/) with the `missed` and `active` flags **not** set should trigger ringing and an incoming call screen, just like for one-on-one calls.
-
-## Определение TL
+Если [call\_requests\_disabled](/api/config/#call-requests-disabled) не установлен или равен false, входящий [messageActionConferenceCall](/constructor/messageActionConferenceCall/), у которого **не** установлены флаги `missed` и `active`, должен вызывать звонок и экран входящего вызова — так же, как при звонках один на один.
 
 ```
 messageActionConferenceCall#2ffe2f7a flags:# missed:flags.0?true active:flags.1?true video:flags.4?true call_id:long duration:flags.2?int other_participants:flags.3?Vector<Peer> = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| missed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the conference call has ended and the user hasn't joined. |
-| active | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the user is currently in the conference call. |
-| video | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Whether this is a video conference call. |
-| call_id | [long](/type/long/) | Call ID. |
-| duration | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Call duration, for left calls only. |
-| other_participants | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[Peer](/type/Peer/)> | Identifiers of some other call participants. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>missed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Завершилась ли конференция без того, чтобы пользователь к ней присоединился.</td></tr><tr><td><strong>active</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Находится ли пользователь сейчас в конференц-звонке.</td></tr><tr><td><strong>video</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Является ли это видеоконференц-звонком.</td></tr><tr><td><strong>call_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор звонка.</td></tr><tr><td><strong>duration</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Длительность звонка, только для завершённых звонков.</td></tr><tr><td><strong>other_participants</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Peer">Peer</a>&gt;</td><td>Идентификаторы некоторых других участников звонка.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
 #### [messageActionConferenceCall](/constructor/messageActionConferenceCall/)
 
-Represents a [conference call »](https://core.telegram.org/api/group-calls#conference-calls), or an invitation to one if neither the `missed` nor `active` flags are set.
+Представляет [конференц-звонок »](/api/group-calls/#conference-calls) либо приглашение на него, если не установлен ни флаг `missed`, ни флаг `active`.
 
-If [call\_requests\_disabled](https://core.telegram.org/api/config#call-requests-disabled) is not set or false, an incoming [messageActionConferenceCall](/constructor/messageActionConferenceCall/) with the `missed` and `active` flags **not** set should trigger ringing and an incoming call screen, just like for one-on-one calls.
+Если [call\_requests\_disabled](/api/config/#call-requests-disabled) не установлен или равен false, входящий [messageActionConferenceCall](/constructor/messageActionConferenceCall/), у которого **не** установлены флаги `missed` и `active`, должен вызывать звонок и экран входящего вызова — так же, как при звонках один на один.

@@ -1,33 +1,30 @@
 ---
-title: "payments.starGiftActiveAuctionsNotModified (конструктор)"
+title: "payments.starGiftActiveAuctionsNotModified"
 original: "https://core.telegram.org/constructor/payments.starGiftActiveAuctionsNotModified"
 section: ref
 kind: constructor
+description: "Список аукционов подарков, которые сейчас активны и **в которых пользователь сделал ставку**, не изменился."
 layout: layout.njk
 ---
 
 # payments.starGiftActiveAuctionsNotModified
 
-*Конструктор из схемы TL.*
-
-> The list of currently active [gift auctions](https://core.telegram.org/api/auctions) **where the user has placed a bid** hasn't changed.
-
-## Определение TL
+Список [аукционов подарков](/api/auctions/), которые сейчас активны и **в которых пользователь сделал ставку**, не изменился.
 
 ```
 payments.starGiftActiveAuctionsNotModified#db33dad0 = payments.StarGiftActiveAuctions;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [payments.StarGiftActiveAuctions](/type/payments.StarGiftActiveAuctions/)
 
-## Related pages
+### Связанные страницы
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

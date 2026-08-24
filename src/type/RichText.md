@@ -1,18 +1,15 @@
 ---
-title: "RichText (тип)"
+title: "RichText"
 original: "https://core.telegram.org/type/RichText"
 section: ref
 kind: type
+description: "Форматированный текст"
 layout: layout.njk
 ---
 
 # RichText
 
-*Тип из схемы TL.*
-
-> Rich text
-
-## Определение TL
+Форматированный текст
 
 ```
 textEmpty#dc3d824f = RichText;
@@ -33,23 +30,6 @@ textImage#81ccf4f document_id:long w:int h:int = RichText;
 textAnchor#35553762 text:RichText name:string = RichText;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [textEmpty](/constructor/textEmpty/) | Empty rich text element |
-| [textPlain](/constructor/textPlain/) | Plain text |
-| [textBold](/constructor/textBold/) | Bold text |
-| [textItalic](/constructor/textItalic/) | Italic text |
-| [textUnderline](/constructor/textUnderline/) | Underlined text |
-| [textStrike](/constructor/textStrike/) | Strikethrough text |
-| [textFixed](/constructor/textFixed/) | fixed-width rich text |
-| [textUrl](/constructor/textUrl/) | Link |
-| [textEmail](/constructor/textEmail/) | Rich text email link |
-| [textConcat](/constructor/textConcat/) | Concatenation of rich texts |
-| [textSubscript](/constructor/textSubscript/) | Subscript text |
-| [textSuperscript](/constructor/textSuperscript/) | Superscript text |
-| [textMarked](/constructor/textMarked/) | Highlighted text |
-| [textPhone](/constructor/textPhone/) | Rich text linked to a phone number |
-| [textImage](/constructor/textImage/) | Inline image |
-| [textAnchor](/constructor/textAnchor/) | Text linking to another section of the page |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/textEmpty">textEmpty</a></td><td>Пустой элемент форматированного текста</td></tr><tr><td><a href="/constructor/textPlain">textPlain</a></td><td>Обычный текст</td></tr><tr><td><a href="/constructor/textBold">textBold</a></td><td><strong>Полужирный</strong> текст</td></tr><tr><td><a href="/constructor/textItalic">textItalic</a></td><td><em>Курсивный</em> текст</td></tr><tr><td><a href="/constructor/textUnderline">textUnderline</a></td><td>Подчёркнутый текст</td></tr><tr><td><a href="/constructor/textStrike">textStrike</a></td><td><del>Зачёркнутый</del> текст</td></tr><tr><td><a href="/constructor/textFixed">textFixed</a></td><td>Моноширинный (<code>fixed-width</code>) форматированный текст</td></tr><tr><td><a href="/constructor/textUrl">textUrl</a></td><td>Ссылка</td></tr><tr><td><a href="/constructor/textEmail">textEmail</a></td><td>Форматированный текст со ссылкой на адрес электронной почты</td></tr><tr><td><a href="/constructor/textConcat">textConcat</a></td><td>Объединение форматированных текстов</td></tr><tr><td><a href="/constructor/textSubscript">textSubscript</a></td><td>Подстрочный текст</td></tr><tr><td><a href="/constructor/textSuperscript">textSuperscript</a></td><td>Надстрочный текст</td></tr><tr><td><a href="/constructor/textMarked">textMarked</a></td><td>Выделенный текст</td></tr><tr><td><a href="/constructor/textPhone">textPhone</a></td><td>Форматированный текст со ссылкой на номер телефона</td></tr><tr><td><a href="/constructor/textImage">textImage</a></td><td>Встроенное изображение</td></tr><tr><td><a href="/constructor/textAnchor">textAnchor</a></td><td>Текст, ссылающийся на другой раздел страницы</td></tr></tbody></table>

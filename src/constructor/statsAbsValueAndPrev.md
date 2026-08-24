@@ -1,30 +1,24 @@
 ---
-title: "statsAbsValueAndPrev (конструктор)"
+title: "statsAbsValueAndPrev"
 original: "https://core.telegram.org/constructor/statsAbsValueAndPrev"
 section: ref
 kind: constructor
+description: "Пара статистических значений: начальное и конечное значение за рассматриваемый период времени"
 layout: layout.njk
 ---
 
 # statsAbsValueAndPrev
 
-*Конструктор из схемы TL.*
-
-> Statistics value couple; initial and final value for period of time currently in consideration
-
-## Определение TL
+Пара статистических значений: начальное и конечное значение за рассматриваемый период времени
 
 ```
 statsAbsValueAndPrev#cb43acde current:double previous:double = StatsAbsValueAndPrev;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| current | [double](/type/double/) | Current value |
-| previous | [double](/type/double/) | Previous value |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>current</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Текущее значение</td></tr><tr><td><strong>previous</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Предыдущее значение</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StatsAbsValueAndPrev](/type/StatsAbsValueAndPrev/)

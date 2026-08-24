@@ -1,18 +1,15 @@
 ---
-title: "messages.sendEncryptedService (метод)"
+title: "messages.sendEncryptedService"
 original: "https://core.telegram.org/method/messages.sendEncryptedService"
 section: ref
 kind: method
+description: "Отправляет сервисное сообщение в секретный чат."
 layout: layout.njk
 ---
 
 # messages.sendEncryptedService
 
-*Метод из схемы TL.*
-
-> Sends a service message to a secret chat.
-
-## Определение TL
+Отправляет сервисное сообщение в секретный чат.
 
 ```
 messages.sentEncryptedMessage#560f8935 date:int = messages.SentEncryptedMessage;
@@ -21,39 +18,26 @@ messages.sentEncryptedFile#9493ff32 date:int file:EncryptedFile = messages.SentE
 messages.sendEncryptedService#32d439a4 peer:InputEncryptedChat random_id:long data:bytes = messages.SentEncryptedMessage;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputEncryptedChat](/type/InputEncryptedChat/) | Secret chat ID |
-| random_id | [long](/type/long/) | Unique client message ID required to prevent message resending. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| data | [bytes](/type/bytes/) | TL-serialization of [DecryptedMessage](/type/DecryptedMessage/) type, encrypted with a key generated during chat initialization |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputEncryptedChat">InputEncryptedChat</a></td><td>[@term:peer] Идентификатор секретного чата</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:random_id] Уникальный идентификатор сообщения на стороне клиента, необходимый для предотвращения повторной отправки сообщения. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>TL-сериализация типа <a href="/type/DecryptedMessage">DecryptedMessage</a>, зашифрованная ключом, выработанным при создании чата</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.SentEncryptedMessage](/type/messages.SentEncryptedMessage/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | DATA_INVALID | Encrypted data invalid. |
-| 400 | DATA_TOO_LONG | Data too long. |
-| 400 | ENCRYPTION_DECLINED | The secret chat was declined. |
-| 400 | ENCRYPTION_ID_INVALID | The provided secret chat ID is invalid. |
-| 500 | MSG_WAIT_FAILED | A waiting call returned an error. |
-| 403 | USER_DELETED | You can't send this secret message because the other participant deleted their account. |
-| 403 | USER_IS_BLOCKED | You were blocked by this user. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>DATA_INVALID</td><td>Зашифрованные данные недействительны.</td></tr><tr><td>400</td><td>DATA_TOO_LONG</td><td>Слишком длинные данные.</td></tr><tr><td>400</td><td>ENCRYPTION_DECLINED</td><td>Секретный чат был отклонён.</td></tr><tr><td>400</td><td>ENCRYPTION_ID_INVALID</td><td>Указанный идентификатор секретного чата недействителен.</td></tr><tr><td>500</td><td>MSG_WAIT_FAILED</td><td>Вызов, окончания которого ожидал этот запрос, вернул ошибку.</td></tr><tr><td>403</td><td>USER_DELETED</td><td>Вы не можете отправить это секретное сообщение, так как другой участник удалил свой аккаунт.</td></tr><tr><td>403</td><td>USER_IS_BLOCKED</td><td>Этот пользователь вас заблокировал.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
 #### [DecryptedMessage](/type/DecryptedMessage/)
 
-Object describes the contents of an encrypted message.
+Объект описывает содержимое зашифрованного сообщения.

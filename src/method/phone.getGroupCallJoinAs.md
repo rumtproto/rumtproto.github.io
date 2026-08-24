@@ -1,19 +1,17 @@
 ---
-title: "phone.getGroupCallJoinAs (метод)"
+title: "phone.getGroupCallJoinAs"
 original: "https://core.telegram.org/method/phone.getGroupCallJoinAs"
 section: ref
 kind: method
+description: "Получить список пиров, от имени которых можно присоединиться к видеочату или трансляции », представившись определённым пользователем или каналом."
 layout: layout.njk
 ---
 
 # phone.getGroupCallJoinAs
 
-*Метод из схемы TL.*
+Получить список пиров, от имени которых можно присоединиться к [видеочату или трансляции »](/api/group-calls/#joining-a-group-call-on-behalf-of-owned-channels), представившись определённым пользователем или каналом.
 
-> Get a list of peers that can be used to join a [video chat or livestream »](https://core.telegram.org/api/group-calls#joining-a-group-call-on-behalf-of-owned-channels), presenting yourself as a specific user/channel.
-> This method cannot be used for live stories or conference calls. To comment or react in a live story as another peer, use [channels.getSendAs](/method/channels.getSendAs/) with `for_live_stories` set and pass one of the returned peers to [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/).`send_as`.
-
-## Определение TL
+Этот метод нельзя использовать для прямых историй и конференций. Чтобы комментировать прямую историю или ставить в ней реакции от имени другого пира, вызовите [channels.getSendAs](/method/channels.getSendAs/) с установленным `for_live_stories` и передайте один из возвращённых пиров в [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/).`send_as`.
 
 ```
 phone.joinAsPeers#afe5623f peers:Vector<Peer> chats:Vector<Chat> users:Vector<User> = phone.JoinAsPeers;
@@ -21,41 +19,36 @@ phone.joinAsPeers#afe5623f peers:Vector<Peer> chats:Vector<Chat> users:Vector<Us
 phone.getGroupCallJoinAs#ef7c213a peer:InputPeer = phone.JoinAsPeers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The basic group, supergroup or channel whose video chat/livestream we're trying to join; cannot target a live story. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Обычная группа, супергруппа или канал, к видеочату или трансляции которых мы пытаемся присоединиться; не может указывать на прямой эфир в историях.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [phone.JoinAsPeers](/type/phone.JoinAsPeers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
 #### [channels.getSendAs](/method/channels.getSendAs/)
 
-Obtains a list of peers that can be displayed as the sender in a specific context. With `for_live_stories`, returns peers that may author [live story in-call messages »](https://core.telegram.org/api/group-calls#in-call-messages).
+Получает список пиров, которые могут отображаться в качестве отправителя в определённом контексте. С флагом `for_live_stories` возвращает пиров, которые могут быть авторами [сообщений во время прямого эфира »](/api/group-calls/#in-call-messages).
 
 #### [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/)
 
-Send an in-call message to all participants of a video chat/livestream or live story, including in RTMP mode, see [here »](https://core.telegram.org/api/group-calls#in-call-messages) for more info.
+Отправить сообщение внутри звонка всем участникам видеочата, трансляции или прямой истории, в том числе в режиме RTMP; подробнее см. [здесь »](/api/group-calls/#in-call-messages).
 
-The `send_as` field can only be populated for live stories, where it optionally selects the displayed author. If omitted, the server automatically selects the appropriate author. Do not populate it for video chats/livestreams.
+Поле `send_as` можно заполнять только для прямых историй, где оно необязательно задаёт отображаемого автора. Если оно не задано, сервер выбирает подходящего автора автоматически. Не заполняйте его для видеочатов и трансляций.
 
-Video chats/livestreams and live stories support [animated emoji reactions »](https://core.telegram.org/api/group-calls#in-call-reactions), encoded as messages containing only a standard available reaction emoji or a single custom emoji entity.
+Видеочаты, трансляции и прямые истории поддерживают [анимированные эмодзи-реакции »](/api/group-calls/#in-call-reactions), закодированные как сообщения, содержащие только стандартный доступный эмодзи реакции или одну сущность пользовательского эмодзи.
 
-For a paid live story comment, pass the user-confirmed donation amount in `allow_paid_stars`. For commenters other than the live story owner, this amount must be at least the current [groupCall](/constructor/groupCall/).`send_paid_messages_stars` minimum. A higher amount may be donated to highlight the comment. The live story owner may comment without populating `allow_paid_stars`. To send a standalone paid live story donation, pass a positive `allow_paid_stars` value and an empty `message`, see [here »](https://core.telegram.org/api/group-calls#paid-live-story-donations) for the full flow.
+Для платного комментария к прямой истории передайте подтверждённую пользователем сумму пожертвования в `allow_paid_stars`. Для всех комментаторов, кроме владельца прямой истории, эта сумма должна быть не меньше текущего минимума, заданного в [groupCall](/constructor/groupCall/).`send_paid_messages_stars`. Чтобы выделить комментарий, можно пожертвовать большую сумму. Владелец прямой истории может комментировать, не заполняя `allow_paid_stars`. Чтобы отправить отдельное платное пожертвование прямой истории, передайте положительное значение `allow_paid_stars` и пустое поле `message`; полный порядок действий см. [здесь »](/api/group-calls/#paid-live-story-donations).

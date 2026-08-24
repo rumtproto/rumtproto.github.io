@@ -1,33 +1,30 @@
 ---
-title: "updateRecentReactions (конструктор)"
+title: "updateRecentReactions"
 original: "https://core.telegram.org/constructor/updateRecentReactions"
 section: ref
 kind: constructor
+description: "Список недавних реакций на сообщения изменился"
 layout: layout.njk
 ---
 
 # updateRecentReactions
 
-*Конструктор из схемы TL.*
-
-> The list of recent [message reactions](https://core.telegram.org/api/reactions) has changed
-
-## Определение TL
+Список недавних [реакций на сообщения](/api/reactions/) изменился
 
 ```
 updateRecentReactions#6f7863f4 = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

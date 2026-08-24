@@ -1,27 +1,24 @@
 ---
-title: "inputMessagesFilterRoundVoice (конструктор)"
+title: "inputMessagesFilterRoundVoice"
 original: "https://core.telegram.org/constructor/inputMessagesFilterRoundVoice"
 section: ref
 kind: constructor
+description: "Возвращать только видеосообщения и голосовые сообщения"
 layout: layout.njk
 ---
 
 # inputMessagesFilterRoundVoice
 
-*Конструктор из схемы TL.*
-
-> Return only round videos and voice notes
-
-## Определение TL
+Возвращать только видеосообщения и голосовые сообщения
 
 ```
 inputMessagesFilterRoundVoice#7a7c17a4 = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)

@@ -1,44 +1,37 @@
 ---
-title: "bots.getPreviewMedias (метод)"
+title: "bots.getPreviewMedias"
 original: "https://core.telegram.org/method/bots.getPreviewMedias"
 section: ref
 kind: method
+description: "Получить превью Main Mini App, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # bots.getPreviewMedias
 
-*Метод из схемы TL.*
-
-> Fetch [main mini app previews, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info.
-
-## Определение TL
+[@term:Mini App] Получить [превью Main Mini App, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews).
 
 ```
 ---functions---
 bots.getPreviewMedias#a2a5594d bot:InputUser = Vector<BotPreviewMedia>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot | [InputUser](/type/InputUser/) | The bot that owns the Main Mini App. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот, которому принадлежит Main Mini App.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[BotPreviewMedia](/type/BotPreviewMedia/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

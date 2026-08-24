@@ -1,32 +1,24 @@
 ---
-title: "inputAppEvent (конструктор)"
+title: "inputAppEvent"
 original: "https://core.telegram.org/constructor/inputAppEvent"
 section: ref
 kind: constructor
+description: "Событие, произошедшее в приложении."
 layout: layout.njk
 ---
 
 # inputAppEvent
 
-*Конструктор из схемы TL.*
-
-> Event that occurred in the application.
-
-## Определение TL
+Событие, произошедшее в приложении.
 
 ```
 inputAppEvent#1d1b1245 time:double type:string peer:long data:JSONValue = InputAppEvent;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| time | [double](/type/double/) | Client's exact timestamp for the event |
-| type | [string](/type/string/) | Type of event |
-| peer | [long](/type/long/) | Arbitrary numeric value for more convenient selection of certain event types, or events referring to a certain object |
-| data | [JSONValue](/type/JSONValue/) | Details of the event |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>time</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Точная клиентская отметка времени события</td></tr><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Тип события</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:peer] Произвольное числовое значение для более удобной выборки определённых типов событий или событий, относящихся к определённому объекту</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/JSONValue">JSONValue</a></td><td>Сведения о событии</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputAppEvent](/type/InputAppEvent/)

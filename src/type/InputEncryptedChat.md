@@ -1,31 +1,26 @@
 ---
-title: "InputEncryptedChat (тип)"
+title: "InputEncryptedChat"
 original: "https://core.telegram.org/type/InputEncryptedChat"
 section: ref
 kind: type
+description: "Чат со сквозным шифрованием."
 layout: layout.njk
 ---
 
 # InputEncryptedChat
 
-*Тип из схемы TL.*
-
-> An [e2e encrypted chat](/api/end-to-end/).
-
-## Определение TL
+[Чат со сквозным шифрованием](/api/end-to-end/).
 
 ```
 inputEncryptedChat#f141b5e1 chat_id:int access_hash:long = InputEncryptedChat;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputEncryptedChat](/constructor/inputEncryptedChat/) | An [e2e encrypted chat](/api/end-to-end/). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputEncryptedChat">inputEncryptedChat</a></td><td><a href="/api/end-to-end">Чат со сквозным шифрованием</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [End-to-End Encryption, Secret Chats](/api/end-to-end/)
+#### [Сквозное шифрование, секретные чаты](/api/end-to-end/)
 
-New feature for end-to-end-encrypted messaging.
+Новая возможность для обмена сообщениями со сквозным шифрованием.

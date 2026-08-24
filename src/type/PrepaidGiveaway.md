@@ -1,33 +1,27 @@
 ---
-title: "PrepaidGiveaway (тип)"
+title: "PrepaidGiveaway"
 original: "https://core.telegram.org/type/PrepaidGiveaway"
 section: ref
 kind: type
+description: "Содержит информацию о предоплаченном розыгрыше »."
 layout: layout.njk
 ---
 
 # PrepaidGiveaway
 
-*Тип из схемы TL.*
-
-> Contains info about a [prepaid giveaway »](https://core.telegram.org/api/giveaways).
-
-## Определение TL
+Содержит информацию о [предоплаченном розыгрыше »](/api/giveaways/).
 
 ```
 prepaidGiveaway#b2539d54 id:long months:int quantity:int date:int = PrepaidGiveaway;
 prepaidStarsGiveaway#9a9d77e0 id:long stars:long quantity:int boosts:int date:int = PrepaidGiveaway;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [prepaidGiveaway](/constructor/prepaidGiveaway/) | Contains info about a [prepaid giveaway »](https://core.telegram.org/api/giveaways). |
-| [prepaidStarsGiveaway](/constructor/prepaidStarsGiveaway/) | Contains info about a [prepaid Telegram Star giveaway »](https://core.telegram.org/api/giveaways#star-giveaways). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/prepaidGiveaway">prepaidGiveaway</a></td><td>Содержит информацию о <a href="/api/giveaways">предоплаченном розыгрыше »</a>.</td></tr><tr><td><a href="/constructor/prepaidStarsGiveaway">prepaidStarsGiveaway</a></td><td>Содержит информацию о <a href="/api/giveaways#star-giveaways">предоплаченном розыгрыше Telegram Stars »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

@@ -1,18 +1,15 @@
 ---
-title: "messages.deleteTopicHistory (метод)"
+title: "messages.deleteTopicHistory"
 original: "https://core.telegram.org/method/messages.deleteTopicHistory"
 section: ref
 kind: method
+description: "Удалить историю сообщений темы форума"
 layout: layout.njk
 ---
 
 # messages.deleteTopicHistory
 
-*Метод из схемы TL.*
-
-> Delete message history of a [forum topic](https://core.telegram.org/api/forum)
-
-## Определение TL
+Удалить историю сообщений [темы форума](/api/forum/)
 
 ```
 messages.affectedHistory#b45c69d1 pts:int pts_count:int offset:int = messages.AffectedHistory;
@@ -20,27 +17,22 @@ messages.affectedHistory#b45c69d1 pts:int pts_count:int offset:int = messages.Af
 messages.deleteTopicHistory#d2816f10 peer:InputPeer top_msg_id:int = messages.AffectedHistory;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The supergroup forum, private chat (for forum-enabled bots) or bot forum (for users) where the topic is located. |
-| top_msg_id | [int](/type/int/) | Topic ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Форум-супергруппа, личный чат (для ботов с поддержкой форумов) или форум бота (для пользователей), где находится тема.</td></tr><tr><td><strong>top_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор темы</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.AffectedHistory](/type/messages.AffectedHistory/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

@@ -1,18 +1,15 @@
 ---
-title: "help.getTimezonesList (метод)"
+title: "help.getTimezonesList"
 original: "https://core.telegram.org/method/help.getTimezonesList"
 section: ref
 kind: method
+description: "Возвращает сведения о часовых поясах, которые могут использоваться в других частях API — например, для указания часов работы Telegram Business »."
 layout: layout.njk
 ---
 
 # help.getTimezonesList
 
-*Метод из схемы TL.*
-
-> Returns timezone information that may be used elsewhere in the API, such as to set [Telegram Business opening hours »](https://core.telegram.org/api/business#opening-hours).
-
-## Определение TL
+Возвращает сведения о часовых поясах, которые могут использоваться в других частях API — например, для указания [часов работы Telegram Business »](/api/business/#opening-hours).
 
 ```
 help.timezonesListNotModified#970708cc = help.TimezonesList;
@@ -21,24 +18,22 @@ help.timezonesList#7b74ed71 timezones:Vector<Timezone> hash:int = help.Timezones
 help.getTimezonesList#49b30240 hash:int = help.TimezonesList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [help.TimezonesList](/type/help.TimezonesList/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

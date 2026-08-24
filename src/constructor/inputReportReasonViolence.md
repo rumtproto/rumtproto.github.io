@@ -1,27 +1,24 @@
 ---
-title: "inputReportReasonViolence (конструктор)"
+title: "inputReportReasonViolence"
 original: "https://core.telegram.org/constructor/inputReportReasonViolence"
 section: ref
 kind: constructor
+description: "Жалоба на насилие"
 layout: layout.njk
 ---
 
 # inputReportReasonViolence
 
-*Конструктор из схемы TL.*
-
-> Report for violence
-
-## Определение TL
+Жалоба на насилие
 
 ```
 inputReportReasonViolence#1e22c78d = ReportReason;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReportReason](/type/ReportReason/)

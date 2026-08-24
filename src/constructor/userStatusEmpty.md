@@ -1,27 +1,24 @@
 ---
-title: "userStatusEmpty (конструктор)"
+title: "userStatusEmpty"
 original: "https://core.telegram.org/constructor/userStatusEmpty"
 section: ref
 kind: constructor
+description: "Статус пользователя ещё не установлен."
 layout: layout.njk
 ---
 
 # userStatusEmpty
 
-*Конструктор из схемы TL.*
-
-> User status has not been set yet.
-
-## Определение TL
+Статус пользователя ещё не установлен.
 
 ```
 userStatusEmpty#9d05049 = UserStatus;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [UserStatus](/type/UserStatus/)

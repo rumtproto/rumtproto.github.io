@@ -1,36 +1,30 @@
 ---
-title: "messageActionSecureValuesSentMe (конструктор)"
+title: "messageActionSecureValuesSentMe"
 original: "https://core.telegram.org/constructor/messageActionSecureValuesSentMe"
 section: ref
 kind: constructor
+description: "Получены защищённые значения telegram passport"
 layout: layout.njk
 ---
 
 # messageActionSecureValuesSentMe
 
-*Конструктор из схемы TL.*
-
-> Secure [telegram passport](https://core.telegram.org/passport) values were received
-
-## Определение TL
+Получены защищённые значения [telegram passport](https://core.telegram.org/passport)
 
 ```
 messageActionSecureValuesSentMe#1b287353 values:Vector<SecureValue> credentials:SecureCredentialsEncrypted = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| values | [Vector](https://core.telegram.org/type/Vector%20t)<[SecureValue](/type/SecureValue/)> | Vector with information about documents and other Telegram Passport elements that were shared with the bot |
-| credentials | [SecureCredentialsEncrypted](/type/SecureCredentialsEncrypted/) | Encrypted credentials required to decrypt the data |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>values</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SecureValue">SecureValue</a>&gt;</td><td>Вектор со сведениями о документах и других элементах Telegram Passport, которые были переданы боту</td></tr><tr><td><strong>credentials</strong></td><td style="text-align: center;"><a href="/type/SecureCredentialsEncrypted">SecureCredentialsEncrypted</a></td><td>Зашифрованные учётные данные, необходимые для расшифровки данных</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

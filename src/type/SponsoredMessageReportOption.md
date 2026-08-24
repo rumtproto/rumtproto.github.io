@@ -1,31 +1,26 @@
 ---
-title: "SponsoredMessageReportOption (тип)"
+title: "SponsoredMessageReportOption"
 original: "https://core.telegram.org/type/SponsoredMessageReportOption"
 section: ref
 kind: type
+description: "Вариант жалобы на рекламное сообщение »."
 layout: layout.njk
 ---
 
 # SponsoredMessageReportOption
 
-*Тип из схемы TL.*
-
-> A [report option for a sponsored message »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages).
-
-## Определение TL
+[Вариант жалобы на рекламное сообщение »](/api/sponsored-messages/#reporting-sponsored-messages).
 
 ```
 sponsoredMessageReportOption#430d3150 text:string option:bytes = SponsoredMessageReportOption;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [sponsoredMessageReportOption](/constructor/sponsoredMessageReportOption/) | A [report option for a sponsored message »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/sponsoredMessageReportOption">sponsoredMessageReportOption</a></td><td><a href="/api/sponsored-messages#reporting-sponsored-messages">Вариант жалобы на рекламное сообщение »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Sponsored messages](https://core.telegram.org/api/sponsored-messages)
+#### [Спонсируемые сообщения](/api/sponsored-messages/)
 
-How clients should fetch, display and interact with sponsored messages.
+Как клиентам получать, показывать рекламные сообщения и взаимодействовать с ними.

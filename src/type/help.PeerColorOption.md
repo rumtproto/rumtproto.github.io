@@ -1,31 +1,26 @@
 ---
-title: "Help.PeerColorOption (тип)"
+title: "help.PeerColorOption"
 original: "https://core.telegram.org/type/help.PeerColorOption"
 section: ref
 kind: type
+description: "Содержит информацию о цветовой палитре »."
 layout: layout.njk
 ---
 
 # Help.PeerColorOption
 
-*Тип из схемы TL.*
-
-> Contains info about a [color palette »](https://core.telegram.org/api/colors).
-
-## Определение TL
+Содержит информацию о [цветовой палитре »](/api/colors/).
 
 ```
 help.peerColorOption#adec6ebe flags:# hidden:flags.0?true color_id:int colors:flags.1?help.PeerColorSet dark_colors:flags.2?help.PeerColorSet channel_min_level:flags.3?int group_min_level:flags.4?int = help.PeerColorOption;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [help.peerColorOption](/constructor/help.peerColorOption/) | Contains info about a [color palette »](https://core.telegram.org/api/colors). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/help.peerColorOption">help.peerColorOption</a></td><td>Содержит информацию о <a href="/api/colors">цветовой палитре »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!

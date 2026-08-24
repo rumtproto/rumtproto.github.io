@@ -1,18 +1,15 @@
 ---
-title: "stories.getAllReadPeerStories (метод)"
+title: "stories.getAllReadPeerStories"
 original: "https://core.telegram.org/method/stories.getAllReadPeerStories"
 section: ref
 kind: method
+description: "Получить идентификатор последней прочитанной истории для всех пиров при первом входе в систему; возвращается в виде списка обновлений updateReadStories; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # stories.getAllReadPeerStories
 
-*Метод из схемы TL.*
-
-> Obtain the latest read story ID for all peers when first logging in, returned as a list of [updateReadStories](/constructor/updateReadStories/) updates, see [here »](https://core.telegram.org/api/stories#watching-stories) for more info.
-
-## Определение TL
+Получить идентификатор последней прочитанной истории для всех пиров при первом входе в систему; возвращается в виде списка обновлений [updateReadStories](/constructor/updateReadStories/); подробнее см. [здесь »](/api/stories/#watching-stories).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,22 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 stories.getAllReadPeerStories#9b5ae7f9 = Updates;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
 #### [updateReadStories](/constructor/updateReadStories/)
 
-Stories of a specific peer were marked as read.
+Истории определённого пира были отмечены как прочитанные.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

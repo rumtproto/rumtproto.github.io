@@ -1,39 +1,30 @@
 ---
-title: "inputSecureFileUploaded (конструктор)"
+title: "inputSecureFileUploaded"
 original: "https://core.telegram.org/constructor/inputSecureFileUploaded"
 section: ref
 kind: constructor
+description: "Загруженный защищённый файл; подробнее см. документацию по Telegram Passport »"
 layout: layout.njk
 ---
 
 # inputSecureFileUploaded
 
-*Конструктор из схемы TL.*
-
-> Uploaded secure file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile)
-
-## Определение TL
+Загруженный защищённый файл; подробнее [см. документацию по Telegram Passport »](https://core.telegram.org/passport/encryption#inputsecurefile)
 
 ```
 inputSecureFileUploaded#3334b0f0 id:long parts:int md5_checksum:string file_hash:bytes secret:bytes = InputSecureFile;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | Secure file ID |
-| parts | [int](/type/int/) | Secure file part count |
-| md5_checksum | [string](/type/string/) | MD5 hash of encrypted uploaded file, to be checked server-side |
-| file_hash | [bytes](/type/bytes/) | File hash |
-| secret | [bytes](/type/bytes/) | Secret |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор защищённого файла</td></tr><tr><td><strong>parts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество частей защищённого файла</td></tr><tr><td><strong>md5_checksum</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>MD5-хеш зашифрованного загруженного файла для проверки на стороне сервера</td></tr><tr><td><strong>file_hash</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Хеш файла</td></tr><tr><td><strong>secret</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Секрет</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputSecureFile](/type/InputSecureFile/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport: детали шифрования](https://core.telegram.org/passport/encryption)
 
-How Telegram Passport data is stored and encrypted end-to-end.
+Как данные Telegram Passport хранятся и шифруются сквозным шифрованием.

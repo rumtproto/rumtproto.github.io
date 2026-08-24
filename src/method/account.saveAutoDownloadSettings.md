@@ -1,18 +1,15 @@
 ---
-title: "account.saveAutoDownloadSettings (метод)"
+title: "account.saveAutoDownloadSettings"
 original: "https://core.telegram.org/method/account.saveAutoDownloadSettings"
 section: ref
 kind: method
+description: "Изменить настройки автозагрузки медиафайлов"
 layout: layout.njk
 ---
 
 # account.saveAutoDownloadSettings
 
-*Метод из схемы TL.*
-
-> Change media autodownload settings
-
-## Определение TL
+Изменить настройки автозагрузки медиафайлов
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,17 +18,12 @@ boolTrue#997275b5 = Bool;
 account.saveAutoDownloadSettings#76f36233 flags:# low:flags.0?true high:flags.1?true settings:AutoDownloadSettings = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| low | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to save media in the low data usage preset |
-| high | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether to save media in the high data usage preset |
-| settings | [AutoDownloadSettings](/type/AutoDownloadSettings/) | Media autodownload settings |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>low</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Сохранять ли медиафайлы в профиле с низким расходом трафика</td></tr><tr><td><strong>high</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Сохранять ли медиафайлы в профиле высокого потребления трафика</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/AutoDownloadSettings">AutoDownloadSettings</a></td><td>Настройки автозагрузки медиафайлов</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

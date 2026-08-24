@@ -1,30 +1,24 @@
 ---
-title: "updateUserStatus (конструктор)"
+title: "updateUserStatus"
 original: "https://core.telegram.org/constructor/updateUserStatus"
 section: ref
 kind: constructor
+description: "Обновление статуса контакта."
 layout: layout.njk
 ---
 
 # updateUserStatus
 
-*Конструктор из схемы TL.*
-
-> Contact status update.
-
-## Определение TL
+Обновление статуса контакта.
 
 ```
 updateUserStatus#e5bdf8de user_id:long status:UserStatus = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [long](/type/long/) | User identifier |
-| status | [UserStatus](/type/UserStatus/) | New status |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя</td></tr><tr><td><strong>status</strong></td><td style="text-align: center;"><a href="/type/UserStatus">UserStatus</a></td><td>Новый статус</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

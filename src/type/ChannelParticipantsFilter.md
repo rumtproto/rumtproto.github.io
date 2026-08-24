@@ -1,18 +1,15 @@
 ---
-title: "ChannelParticipantsFilter (тип)"
+title: "ChannelParticipantsFilter"
 original: "https://core.telegram.org/type/ChannelParticipantsFilter"
 section: ref
 kind: type
+description: "Фильтр для получения участников канала"
 layout: layout.njk
 ---
 
 # ChannelParticipantsFilter
 
-*Тип из схемы TL.*
-
-> Filter for fetching channel participants
-
-## Определение TL
+Фильтр для получения участников канала
 
 ```
 channelParticipantsRecent#de3f3c79 = ChannelParticipantsFilter;
@@ -25,15 +22,6 @@ channelParticipantsContacts#bb6ae88d q:string = ChannelParticipantsFilter;
 channelParticipantsMentions#e04b5ceb flags:# q:flags.0?string top_msg_id:flags.1?int = ChannelParticipantsFilter;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [channelParticipantsRecent](/constructor/channelParticipantsRecent/) | Fetch only recent participants |
-| [channelParticipantsAdmins](/constructor/channelParticipantsAdmins/) | Fetch only admin participants |
-| [channelParticipantsKicked](/constructor/channelParticipantsKicked/) | Fetch only kicked participants |
-| [channelParticipantsBots](/constructor/channelParticipantsBots/) | Fetch only bot participants |
-| [channelParticipantsBanned](/constructor/channelParticipantsBanned/) | Fetch only banned participants |
-| [channelParticipantsSearch](/constructor/channelParticipantsSearch/) | Query participants by name |
-| [channelParticipantsContacts](/constructor/channelParticipantsContacts/) | Fetch only participants that are also contacts |
-| [channelParticipantsMentions](/constructor/channelParticipantsMentions/) | This filter is used when looking for supergroup members to mention. This filter will automatically remove anonymous admins, and return even non-participant users that replied to a specific [thread](https://core.telegram.org/api/threads) through the [comment section](https://core.telegram.org/api/threads#channel-comments) of a channel. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/channelParticipantsRecent">channelParticipantsRecent</a></td><td>Получить только недавних участников</td></tr><tr><td><a href="/constructor/channelParticipantsAdmins">channelParticipantsAdmins</a></td><td>Получить только участников-администраторов</td></tr><tr><td><a href="/constructor/channelParticipantsKicked">channelParticipantsKicked</a></td><td>Получить только исключённых участников</td></tr><tr><td><a href="/constructor/channelParticipantsBots">channelParticipantsBots</a></td><td>Получить только участников-ботов</td></tr><tr><td><a href="/constructor/channelParticipantsBanned">channelParticipantsBanned</a></td><td>Получить только заблокированных участников</td></tr><tr><td><a href="/constructor/channelParticipantsSearch">channelParticipantsSearch</a></td><td>Поиск участников по имени</td></tr><tr><td><a href="/constructor/channelParticipantsContacts">channelParticipantsContacts</a></td><td>Получить только участников из числа контактов</td></tr><tr><td><a href="/constructor/channelParticipantsMentions">channelParticipantsMentions</a></td><td>Этот фильтр используется при поиске участников супергруппы для упоминания.<br>Этот фильтр автоматически исключает анонимных администраторов и возвращает даже тех пользователей, которые не являются участниками, но ответили в определённом <a href="/api/threads">обсуждении</a> через <a href="/api/threads#channel-comments">раздел комментариев</a> канала.</td></tr></tbody></table>

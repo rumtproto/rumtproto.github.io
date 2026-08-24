@@ -1,18 +1,15 @@
 ---
-title: "updates.getState (метод)"
+title: "updates.getState"
 original: "https://core.telegram.org/method/updates.getState"
 section: ref
 kind: method
+description: "Возвращает текущее состояние обновлений."
 layout: layout.njk
 ---
 
 # updates.getState
 
-*Метод из схемы TL.*
-
-> Returns a current state of updates.
-
-## Определение TL
+Возвращает текущее состояние обновлений.
 
 ```
 updates.state#a56c2a3e pts:int qts:int date:int seq:int unread_count:int = updates.State;
@@ -20,12 +17,12 @@ updates.state#a56c2a3e pts:int qts:int date:int seq:int unread_count:int = updat
 updates.getState#edd4882a = updates.State;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [updates.State](/type/updates.State/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам

@@ -1,50 +1,42 @@
 ---
-title: "keyboardButtonRequestPeer (конструктор)"
+title: "keyboardButtonRequestPeer"
 original: "https://core.telegram.org/constructor/keyboardButtonRequestPeer"
 section: ref
 kind: constructor
+description: "Предлагает пользователю выбрать одного или нескольких пиров и передать их боту с помощью messages.sendBotRequestedPeer"
 layout: layout.njk
 ---
 
 # keyboardButtonRequestPeer
 
-*Конструктор из схемы TL.*
+Предлагает пользователю выбрать одного или нескольких пиров и передать их боту с помощью [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/)
 
-> Prompts the user to select and share one or more peers with the bot using [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/)
-> Available only in private chats, in [reply keyboards](/constructor/replyKeyboardMarkup/).
-> See [peer requests](https://core.telegram.org/api/bots/buttons#peer-requests) for the full flow.
+Доступно только в личных чатах, в [клавиатурах ответа](/constructor/replyKeyboardMarkup/).
 
-## Определение TL
+Полное описание процесса см. в разделе [запросы пиров](/api/bots/buttons/#peer-requests).
 
 ```
 keyboardButtonRequestPeer#5b0f15f5 flags:# style:flags.10?KeyboardButtonStyle text:string button_id:int peer_type:RequestPeerType max_quantity:int = KeyboardButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| style | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[KeyboardButtonStyle](/type/KeyboardButtonStyle/) | Button style, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info on button styles. |
-| text | [string](/type/string/) | Button text |
-| button_id | [int](/type/int/) | Button ID, to be passed to [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/). |
-| peer_type | [RequestPeerType](/type/RequestPeerType/) | Filtering criteria to use for the peer selection list shown to the user. The list should display all existing peers of the specified type, and should also offer an option for the user to create and immediately use one or more (up to max_quantity) peers of the specified type, if needed. |
-| max_quantity | [int](/type/int/) | Maximum number of peers that can be chosen. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>style</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/KeyboardButtonStyle">KeyboardButtonStyle</a></td><td>Стиль кнопки; подробнее о стилях кнопок см. <a href="/api/bots/buttons#button-styles">здесь »</a>.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст кнопки</td></tr><tr><td><strong>button_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор кнопки, который следует передать в <a href="/method/messages.sendBotRequestedPeer">messages.sendBotRequestedPeer</a>.</td></tr><tr><td><strong>peer_type</strong></td><td style="text-align: center;"><a href="/type/RequestPeerType">RequestPeerType</a></td><td>Критерии отбора для списка выбора пиров, показываемого пользователю.<br>В списке следует показать все существующие пиры указанного типа, а также, при необходимости, предложить пользователю создать и сразу же использовать один или несколько (не более <code>max_quantity</code>) пиров указанного типа.</td></tr><tr><td><strong>max_quantity</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число пиров, которых можно выбрать.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [KeyboardButton](/type/KeyboardButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.
 
 #### [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/)
 
-Send one or more chosen peers, as requested by a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button.
+Отправить один или несколько выбранных пиров по запросу кнопки [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/).
 
 #### [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/)
 
-Represents a reply keyboard
+Представляет клавиатуру ответа

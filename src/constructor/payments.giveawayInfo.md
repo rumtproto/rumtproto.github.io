@@ -1,46 +1,36 @@
 ---
-title: "payments.giveawayInfo (конструктор)"
+title: "payments.giveawayInfo"
 original: "https://core.telegram.org/constructor/payments.giveawayInfo"
 section: ref
 kind: constructor
+description: "Содержит информацию о текущем розыгрыше."
 layout: layout.njk
 ---
 
 # payments.giveawayInfo
 
-*Конструктор из схемы TL.*
+Содержит информацию о текущем [розыгрыше](/api/giveaways/).
 
-> Contains info about an ongoing [giveaway](https://core.telegram.org/api/giveaways).
-> If neither the `participating`, `joined_too_early_date`, `admin_disallowed_chat_id` or `disallowed_country` flags are set, the user is not currently participating in the giveaway but could participate by joining all the channels specified in the [messageMediaGiveaway](/constructor/messageMediaGiveaway/).`channels` field.
-
-## Определение TL
+Если не задан ни один из флагов `participating`, `joined_too_early_date`, `admin_disallowed_chat_id` и `disallowed_country`, пользователь сейчас не участвует в розыгрыше, но может принять в нём участие, вступив во все каналы, указанные в поле [messageMediaGiveaway](/constructor/messageMediaGiveaway/).`channels`.
 
 ```
 payments.giveawayInfo#4367daa0 flags:# participating:flags.0?true preparing_results:flags.3?true start_date:int joined_too_early_date:flags.1?int admin_disallowed_chat_id:flags.2?long disallowed_country:flags.4?string = payments.GiveawayInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| participating | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | The current user is participating in the giveaway. |
-| preparing_results | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | If set, the giveaway has ended and the results are being prepared. |
-| start_date | [int](/type/int/) | When was the giveaway started |
-| joined_too_early_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | The current user can't participate in the giveaway, because they were already a member of the channel when the giveaway started, and the only_new_subscribers was set when starting the giveaway. |
-| admin_disallowed_chat_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[long](/type/long/) | If set, the current user can't participate in the giveaway, because they are an administrator in one of the channels (ID specified in this flag) that created the giveaway. |
-| disallowed_country | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[string](/type/string/) | If set, the current user can't participate in this giveaway, because their phone number is from the specified disallowed country (specified as a two-letter ISO 3166-1 alpha-2 country code). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>participating</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Текущий пользователь участвует в розыгрыше.</td></tr><tr><td><strong>preparing_results</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Если установлено, розыгрыш завершился и результаты готовятся.</td></tr><tr><td><strong>start_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда розыгрыш был начат</td></tr><tr><td><strong>joined_too_early_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Текущий пользователь не может участвовать в розыгрыше, поскольку он уже был участником канала на момент начала розыгрыша, а при запуске розыгрыша был задан флаг <code>only_new_subscribers</code>.</td></tr><tr><td><strong>admin_disallowed_chat_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/long">long</a></td><td>Если установлено, текущий пользователь не может участвовать в розыгрыше, поскольку является администратором одного из каналов (идентификатор указан в этом флаге), создавших розыгрыш.</td></tr><tr><td><strong>disallowed_country</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string">string</a></td><td>Если установлено, текущий пользователь не может участвовать в этом розыгрыше, поскольку его номер телефона принадлежит указанной недопустимой стране (задаётся двухбуквенным кодом страны по стандарту ISO 3166-1 alpha-2).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.GiveawayInfo](/type/payments.GiveawayInfo/)
 
-## Related pages
+### Связанные страницы
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.
 
 #### [messageMediaGiveaway](/constructor/messageMediaGiveaway/)
 
-Contains info about a [giveaway, see here »](https://core.telegram.org/api/giveaways) for more info.
+Содержит информацию о [розыгрыше, подробнее см. здесь »](/api/giveaways/).

@@ -1,18 +1,15 @@
 ---
-title: "SecureValueType (тип)"
+title: "SecureValueType"
 original: "https://core.telegram.org/type/SecureValueType"
 section: ref
 kind: type
+description: "Тип защищённого значения"
 layout: layout.njk
 ---
 
 # SecureValueType
 
-*Тип из схемы TL.*
-
-> Secure value type
-
-## Определение TL
+Тип защищённого значения
 
 ```
 secureValueTypePersonalDetails#9d2a81e3 = SecureValueType;
@@ -30,20 +27,6 @@ secureValueTypePhone#b320aadb = SecureValueType;
 secureValueTypeEmail#8e3ca7ee = SecureValueType;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [secureValueTypePersonalDetails](/constructor/secureValueTypePersonalDetails/) | Personal details |
-| [secureValueTypePassport](/constructor/secureValueTypePassport/) | Passport |
-| [secureValueTypeDriverLicense](/constructor/secureValueTypeDriverLicense/) | Driver's license |
-| [secureValueTypeIdentityCard](/constructor/secureValueTypeIdentityCard/) | Identity card |
-| [secureValueTypeInternalPassport](/constructor/secureValueTypeInternalPassport/) | Internal [passport](https://core.telegram.org/passport) |
-| [secureValueTypeAddress](/constructor/secureValueTypeAddress/) | Address |
-| [secureValueTypeUtilityBill](/constructor/secureValueTypeUtilityBill/) | Utility bill |
-| [secureValueTypeBankStatement](/constructor/secureValueTypeBankStatement/) | Bank statement |
-| [secureValueTypeRentalAgreement](/constructor/secureValueTypeRentalAgreement/) | Rental agreement |
-| [secureValueTypePassportRegistration](/constructor/secureValueTypePassportRegistration/) | Internal registration [passport](https://core.telegram.org/passport) |
-| [secureValueTypeTemporaryRegistration](/constructor/secureValueTypeTemporaryRegistration/) | Temporary registration |
-| [secureValueTypePhone](/constructor/secureValueTypePhone/) | Phone |
-| [secureValueTypeEmail](/constructor/secureValueTypeEmail/) | Email |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/secureValueTypePersonalDetails">secureValueTypePersonalDetails</a></td><td>Личные данные</td></tr><tr><td><a href="/constructor/secureValueTypePassport">secureValueTypePassport</a></td><td>Passport</td></tr><tr><td><a href="/constructor/secureValueTypeDriverLicense">secureValueTypeDriverLicense</a></td><td>Водительское удостоверение</td></tr><tr><td><a href="/constructor/secureValueTypeIdentityCard">secureValueTypeIdentityCard</a></td><td>Удостоверение личности</td></tr><tr><td><a href="/constructor/secureValueTypeInternalPassport">secureValueTypeInternalPassport</a></td><td>Внутренний <a href="/passport">passport</a></td></tr><tr><td><a href="/constructor/secureValueTypeAddress">secureValueTypeAddress</a></td><td>Адрес</td></tr><tr><td><a href="/constructor/secureValueTypeUtilityBill">secureValueTypeUtilityBill</a></td><td>Счёт за коммунальные услуги</td></tr><tr><td><a href="/constructor/secureValueTypeBankStatement">secureValueTypeBankStatement</a></td><td>Выписка из банка</td></tr><tr><td><a href="/constructor/secureValueTypeRentalAgreement">secureValueTypeRentalAgreement</a></td><td>Договор аренды</td></tr><tr><td><a href="/constructor/secureValueTypePassportRegistration">secureValueTypePassportRegistration</a></td><td>Внутренняя регистрация <a href="/passport">passport</a></td></tr><tr><td><a href="/constructor/secureValueTypeTemporaryRegistration">secureValueTypeTemporaryRegistration</a></td><td>Временная регистрация</td></tr><tr><td><a href="/constructor/secureValueTypePhone">secureValueTypePhone</a></td><td>Телефон</td></tr><tr><td><a href="/constructor/secureValueTypeEmail">secureValueTypeEmail</a></td><td>Электронная почта</td></tr></tbody></table>

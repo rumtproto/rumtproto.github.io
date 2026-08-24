@@ -1,18 +1,15 @@
 ---
-title: "bots.getBotInfo (метод)"
+title: "bots.getBotInfo"
 original: "https://core.telegram.org/method/bots.getBotInfo"
 section: ref
 kind: method
+description: "Получить локализованное имя, текст «о себе» и описание бота (или текущего аккаунта, если метод вызван ботом)."
 layout: layout.njk
 ---
 
 # bots.getBotInfo
 
-*Метод из схемы TL.*
-
-> Get localized name, about text and description of a bot (or of the current account, if called by a bot).
-
-## Определение TL
+Получить локализованное имя, текст «о себе» и описание бота (или текущего аккаунта, если метод вызван ботом).
 
 ```
 bots.botInfo#e8a775b0 name:string about:string description:string = bots.BotInfo;
@@ -20,24 +17,16 @@ bots.botInfo#e8a775b0 name:string about:string description:string = bots.BotInfo
 bots.getBotInfo#dcd914fd flags:# bot:flags.0?InputUser lang_code:string = bots.BotInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| bot | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputUser](/type/InputUser/) | If called by a user, must contain the peer of a bot we own. |
-| lang_code | [string](/type/string/) | Language code, if left empty this method will return the fallback about text and description. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputUser">InputUser</a></td><td>При вызове пользователем <strong>обязано</strong> содержать пир принадлежащего нам бота.</td></tr><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код языка; если оставить пустым, метод вернёт запасные текст «о себе» и описание.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [bots.BotInfo](/type/bots.BotInfo/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
-| 400 | LANG_CODE_INVALID | The specified language code is invalid. |
-| 400 | USER_BOT_INVALID | User accounts must provide the bot method parameter when calling this method. If there is no such method parameter, this method can only be invoked by bot accounts. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr><tr><td>400</td><td>LANG_CODE_INVALID</td><td>Указанный код языка недействителен.</td></tr><tr><td>400</td><td>USER_BOT_INVALID</td><td>При вызове этого метода пользовательские аккаунты обязаны передавать параметр метода <code>bot</code>. Если такого параметра у метода нет, метод могут вызывать только аккаунты ботов.</td></tr></tbody></table>

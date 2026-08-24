@@ -1,27 +1,24 @@
 ---
-title: "messageActionScreenshotTaken (конструктор)"
+title: "messageActionScreenshotTaken"
 original: "https://core.telegram.org/constructor/messageActionScreenshotTaken"
 section: ref
 kind: constructor
+description: "Сделан снимок экрана чата"
 layout: layout.njk
 ---
 
 # messageActionScreenshotTaken
 
-*Конструктор из схемы TL.*
-
-> A screenshot of the chat was taken
-
-## Определение TL
+Сделан снимок экрана чата
 
 ```
 messageActionScreenshotTaken#4792929b = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)

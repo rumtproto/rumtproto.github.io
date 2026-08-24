@@ -1,18 +1,15 @@
 ---
-title: "help.getCdnConfig (метод)"
+title: "help.getCdnConfig"
 original: "https://core.telegram.org/method/help.getCdnConfig"
 section: ref
 kind: method
+description: "Получить конфигурацию для скачивания файлов через CDN."
 layout: layout.njk
 ---
 
 # help.getCdnConfig
 
-*Метод из схемы TL.*
-
-> Get configuration for [CDN](https://core.telegram.org/cdn) file downloads.
-
-## Определение TL
+Получить конфигурацию для скачивания файлов через [CDN](https://core.telegram.org/cdn).
 
 ```
 cdnConfig#5725e40a public_keys:Vector<CdnPublicKey> = CdnConfig;
@@ -20,18 +17,18 @@ cdnConfig#5725e40a public_keys:Vector<CdnPublicKey> = CdnConfig;
 help.getCdnConfig#52029342 = CdnConfig;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [CdnConfig](/type/CdnConfig/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Related pages
+### Связанные страницы
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Шифрованные CDN: скорость и безопасность](https://core.telegram.org/cdn)
 
-How client apps download popular public files from secondary CDN data centers.
+Как клиентские приложения скачивают популярные публичные файлы из вспомогательных CDN-дата-центров.

@@ -1,18 +1,15 @@
 ---
-title: "account.updateBusinessIntro (метод)"
+title: "account.updateBusinessIntro"
 original: "https://core.telegram.org/method/account.updateBusinessIntro"
 section: ref
 kind: method
+description: "Задать или удалить приветствие Telegram Business »."
 layout: layout.njk
 ---
 
 # account.updateBusinessIntro
 
-*Метод из схемы TL.*
-
-> Set or remove the [Telegram Business introduction »](https://core.telegram.org/api/business#business-introduction).
-
-## Определение TL
+Задать или удалить [приветствие Telegram Business »](/api/business/#business-introduction).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,21 +18,18 @@ boolTrue#997275b5 = Bool;
 account.updateBusinessIntro#a614d034 flags:# intro:flags.0?InputBusinessIntro = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| intro | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputBusinessIntro](/type/InputBusinessIntro/) | Telegram Business introduction, to remove it call the method without setting this flag. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>intro</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputBusinessIntro">InputBusinessIntro</a></td><td>Представление Telegram Business; чтобы удалить его, вызовите метод, не устанавливая этот флаг.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

@@ -1,18 +1,15 @@
 ---
-title: "messages.sendScheduledMessages (метод)"
+title: "messages.sendScheduledMessages"
 original: "https://core.telegram.org/method/messages.sendScheduledMessages"
 section: ref
 kind: method
+description: "Немедленно отправить отложенные сообщения"
 layout: layout.njk
 ---
 
 # messages.sendScheduledMessages
 
-*Метод из схемы TL.*
-
-> Send scheduled messages right away
-
-## Определение TL
+Немедленно отправить отложенные сообщения
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,23 +23,16 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.sendScheduledMessages#bd38850a peer:InputPeer id:Vector<int> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer |
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Scheduled message IDs |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы отложенных сообщений</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 500 | RANDOM_ID_DUPLICATE | You provided a random ID that was already used. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>500</td><td>RANDOM_ID_DUPLICATE</td><td>Вы передали случайный идентификатор, который уже использовался.</td></tr></tbody></table>

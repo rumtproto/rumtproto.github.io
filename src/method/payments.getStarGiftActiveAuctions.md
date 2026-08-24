@@ -1,20 +1,19 @@
 ---
-title: "payments.getStarGiftActiveAuctions (метод)"
+title: "payments.getStarGiftActiveAuctions"
 original: "https://core.telegram.org/method/payments.getStarGiftActiveAuctions"
 section: ref
 kind: method
+description: "Получает все текущие активные аукционы подарков, **на которых пользователь когда-либо делал ставку** (включая аукционы, где ставку пользователя перебили и она была возвращена),…"
 layout: layout.njk
 ---
 
 # payments.getStarGiftActiveAuctions
 
-*Метод из схемы TL.*
+Получает все текущие активные [аукционы подарков](/api/auctions/), **на которых пользователь когда-либо делал ставку** (включая аукционы, где ставку пользователя перебили и она была возвращена), при условии что аукцион ещё не завершился.
 
-> Fetches all currently active [gift auctions](https://core.telegram.org/api/auctions) **the user has ever bid on** (including auctions where the user was outbid and their bid was returned), as long as the auction hasn't ended yet.
-> This method is primarily used to display an auction badge in the chat list immediately on app startup, without waiting for real-time [updateStarGiftAuctionState](/constructor/updateStarGiftAuctionState/) updates to arrive: the client calls it to discover which auctions the user is participating in and show the badge proactively.
-> To instead fetch the full state of a single auction, subscribe to its real-time updates and render the detailed auction UI (typically when the user opens a specific auction), use [payments.getStarGiftAuctionState](/method/payments.getStarGiftAuctionState/).
+Этот метод в первую очередь используется, чтобы отобразить значок аукциона в списке чатов сразу при запуске приложения, не дожидаясь поступления обновлений [updateStarGiftAuctionState](/constructor/updateStarGiftAuctionState/) в реальном времени: клиент вызывает его, чтобы узнать, в каких аукционах участвует пользователь, и заранее показать значок.
 
-## Определение TL
+Чтобы вместо этого получить полное состояние одного аукциона, подписаться на его обновления в реальном времени и отобразить подробный интерфейс аукциона (обычно когда пользователь открывает конкретный аукцион), используйте [payments.getStarGiftAuctionState](/method/payments.getStarGiftAuctionState/).
 
 ```
 payments.starGiftActiveAuctionsNotModified#db33dad0 = payments.StarGiftActiveAuctions;
@@ -23,28 +22,26 @@ payments.starGiftActiveAuctions#aef6abbc auctions:Vector<StarGiftActiveAuctionSt
 payments.getStarGiftActiveAuctions#a5d0514d hash:long = payments.StarGiftActiveAuctions;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | Hash generated [as specified here »](https://core.telegram.org/api/auctions) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] Хеш, вычисленный <a href="/api/auctions">так, как указано здесь »</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.StarGiftActiveAuctions](/type/payments.StarGiftActiveAuctions/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.
 
 #### [updateStarGiftAuctionState](/constructor/updateStarGiftAuctionState/)
 
-Contains updates to [auction state, see here »](https://core.telegram.org/api/auctions) for more info on how to enable these updates.
+Содержит обновления [состояния аукциона; подробнее о том, как включить эти обновления, см. здесь »](/api/auctions/).
 
 #### [payments.getStarGiftAuctionState](/method/payments.getStarGiftAuctionState/)
 
-Returns info about a [collectible gift auction »](https://core.telegram.org/api/auctions); also subscribes the user to auction updates, see [here »](https://core.telegram.org/api/auctions) for more info on the full flow.
+Возвращает сведения об [аукционе коллекционных подарков »](/api/auctions/); также подписывает пользователя на обновления аукциона, подробнее обо всём процессе см. [здесь »](/api/auctions/).

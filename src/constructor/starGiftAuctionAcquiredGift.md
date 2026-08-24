@@ -1,43 +1,30 @@
 ---
-title: "starGiftAuctionAcquiredGift (конструктор)"
+title: "starGiftAuctionAcquiredGift"
 original: "https://core.telegram.org/constructor/starGiftAuctionAcquiredGift"
 section: ref
 kind: constructor
+description: "Описывает подарок, который текущий пользователь выиграл на аукционе."
 layout: layout.njk
 ---
 
 # starGiftAuctionAcquiredGift
 
-*Конструктор из схемы TL.*
-
-> Describes a gift that the current user won in an auction.
-
-## Определение TL
+Описывает подарок, который текущий пользователь выиграл на аукционе.
 
 ```
 starGiftAuctionAcquiredGift#42b00348 flags:# name_hidden:flags.0?true peer:Peer date:int bid_amount:long round:int pos:int message:flags.1?TextWithEntities gift_num:flags.2?int = StarGiftAuctionAcquiredGift;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| name_hidden | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, your name will be hidden if the destination peer decides to display the gift on their profile (they will still see that you sent the gift). |
-| peer | [Peer](/type/Peer/) | The peer that received the gift. |
-| date | [int](/type/int/) | When was the gift obtained. |
-| bid_amount | [long](/type/long/) | The amount in [Telegram Stars](https://core.telegram.org/api/stars) that was bid in order to obtain the gift. |
-| round | [int](/type/int/) | The round number where the gift was obtained. |
-| pos | [int](/type/int/) | The position of the gift in the auction. |
-| message | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[TextWithEntities](/type/TextWithEntities/) | Optional message that attached with the gift, passed when making the bid. |
-| gift_num | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | If set, the collectible number of the won gift among all collectibles of the same type. This field is optional because only auction collectibles won before this field was introduced in the API will not have this flag set. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>name_hidden</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, ваше имя будет скрыто, если пир назначения решит показать подарок в своём профиле (он всё равно будет видеть, что подарок отправили вы).</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир, получивший подарок.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда подарок был получен.</td></tr><tr><td><strong>bid_amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Сумма в <a href="/api/stars">Telegram Stars</a>, предложенная на торгах для получения подарка.</td></tr><tr><td><strong>round</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Номер раунда, в котором был получен подарок.</td></tr><tr><td><strong>pos</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Позиция подарка на аукционе.</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/TextWithEntities">TextWithEntities</a></td><td>Необязательное сообщение, приложенное к подарку, переданное при размещении ставки.</td></tr><tr><td><strong>gift_num</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Если установлено, коллекционный номер выигранного подарка среди всех коллекционных экземпляров того же типа.<br>Это поле необязательное, потому что флаг не будет установлен <strong>только</strong> у аукционных коллекционных подарков, выигранных до появления этого поля в API.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftAuctionAcquiredGift](/type/StarGiftAuctionAcquiredGift/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

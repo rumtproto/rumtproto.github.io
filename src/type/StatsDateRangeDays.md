@@ -1,25 +1,20 @@
 ---
-title: "StatsDateRangeDays (тип)"
+title: "StatsDateRangeDays"
 original: "https://core.telegram.org/type/StatsDateRangeDays"
 section: ref
 kind: type
+description: "Диапазон дат статистики канала"
 layout: layout.njk
 ---
 
 # StatsDateRangeDays
 
-*Тип из схемы TL.*
-
-> Channel statistics date range
-
-## Определение TL
+Диапазон дат статистики канала
 
 ```
 statsDateRangeDays#b637edaf min_date:int max_date:int = StatsDateRangeDays;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [statsDateRangeDays](/constructor/statsDateRangeDays/) | [Channel statistics](https://core.telegram.org/api/stats) date range |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/statsDateRangeDays">statsDateRangeDays</a></td><td>Диапазон дат <a href="/api/stats">статистики канала</a></td></tr></tbody></table>

@@ -1,18 +1,15 @@
 ---
-title: "ChannelParticipant (тип)"
+title: "ChannelParticipant"
 original: "https://core.telegram.org/type/ChannelParticipant"
 section: ref
 kind: type
+description: "Участник канала"
 layout: layout.njk
 ---
 
 # ChannelParticipant
 
-*Тип из схемы TL.*
-
-> Channel participant
-
-## Определение TL
+Участник канала
 
 ```
 channelParticipant#1bd54456 flags:# user_id:long date:int subscription_until_date:flags.0?int rank:flags.2?string = ChannelParticipant;
@@ -23,13 +20,6 @@ channelParticipantBanned#d5f0ad91 flags:# left:flags.0?true peer:Peer kicked_by:
 channelParticipantLeft#1b03f006 peer:Peer = ChannelParticipant;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [channelParticipant](/constructor/channelParticipant/) | Channel/supergroup participant |
-| [channelParticipantSelf](/constructor/channelParticipantSelf/) | Myself |
-| [channelParticipantCreator](/constructor/channelParticipantCreator/) | Channel/supergroup creator |
-| [channelParticipantAdmin](/constructor/channelParticipantAdmin/) | Admin |
-| [channelParticipantBanned](/constructor/channelParticipantBanned/) | Banned/kicked user |
-| [channelParticipantLeft](/constructor/channelParticipantLeft/) | A participant that left the channel/supergroup |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/channelParticipant">channelParticipant</a></td><td>Участник канала или супергруппы</td></tr><tr><td><a href="/constructor/channelParticipantSelf">channelParticipantSelf</a></td><td>Я сам</td></tr><tr><td><a href="/constructor/channelParticipantCreator">channelParticipantCreator</a></td><td>Создатель канала или супергруппы</td></tr><tr><td><a href="/constructor/channelParticipantAdmin">channelParticipantAdmin</a></td><td>Администратор</td></tr><tr><td><a href="/constructor/channelParticipantBanned">channelParticipantBanned</a></td><td>Заблокированный/исключённый пользователь</td></tr><tr><td><a href="/constructor/channelParticipantLeft">channelParticipantLeft</a></td><td>Участник, покинувший канал или супергруппу</td></tr></tbody></table>

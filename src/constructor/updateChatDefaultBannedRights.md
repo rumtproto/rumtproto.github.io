@@ -1,41 +1,34 @@
 ---
-title: "updateChatDefaultBannedRights (конструктор)"
+title: "updateChatDefaultBannedRights"
 original: "https://core.telegram.org/constructor/updateChatDefaultBannedRights"
 section: ref
 kind: constructor
+description: "Права по умолчанию для заблокированных пользователей в обычной группе были изменены"
 layout: layout.njk
 ---
 
 # updateChatDefaultBannedRights
 
-*Конструктор из схемы TL.*
-
-> Default banned rights in a [basic group](https://core.telegram.org/api/channel#basic-groups) were updated
-
-## Определение TL
+Права по умолчанию для заблокированных пользователей в [обычной группе](/api/channel/#basic-groups) были изменены
 
 ```
 updateChatDefaultBannedRights#54c01850 peer:Peer default_banned_rights:ChatBannedRights version:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | The chat |
-| default_banned_rights | [ChatBannedRights](/type/ChatBannedRights/) | New default banned rights |
-| version | [int](/type/int/) | Used similarly to pts values to deduplicate/update outdated chat information as specified [here »](https://core.telegram.org/api/peers#basic-group-updates). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Чат</td></tr><tr><td><strong>default_banned_rights</strong></td><td style="text-align: center;"><a href="/type/ChatBannedRights">ChatBannedRights</a></td><td>Новые права по умолчанию для заблокированных пользователей</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] Используется аналогично значениям <code>pts</code> для устранения дубликатов и обновления устаревшей информации о чате, как описано <a href="/api/peers#basic-group-updates">здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Peer database](https://core.telegram.org/api/peers)
+#### [База данных пиров](/api/peers/)
 
-Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.
+Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

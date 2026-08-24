@@ -1,37 +1,30 @@
 ---
-title: "updateDeleteMessages (конструктор)"
+title: "updateDeleteMessages"
 original: "https://core.telegram.org/constructor/updateDeleteMessages"
 section: ref
 kind: constructor
+description: "Сообщения были удалены."
 layout: layout.njk
 ---
 
 # updateDeleteMessages
 
-*Конструктор из схемы TL.*
-
-> Messages were deleted.
-
-## Определение TL
+Сообщения были удалены.
 
 ```
 updateDeleteMessages#a20db0e5 messages:Vector<int> pts:int pts_count:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| messages | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | List of identifiers of deleted messages |
-| pts | [int](/type/int/) | New quality of actions in a message box |
-| pts_count | [int](/type/int/) | Number of generated [events](/api/updates/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Список идентификаторов удалённых сообщений</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] Новое качество действий в ящике сообщений</td></tr><tr><td><strong>pts_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество сгенерированных <a href="/api/updates">событий</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

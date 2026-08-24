@@ -1,59 +1,42 @@
 ---
-title: "messageMediaGiveawayResults (конструктор)"
+title: "messageMediaGiveawayResults"
 original: "https://core.telegram.org/constructor/messageMediaGiveawayResults"
 section: ref
 kind: constructor
+description: "Розыгрыш с публичными победителями завершился; этот конструктор содержит сведения о победителях."
 layout: layout.njk
 ---
 
 # messageMediaGiveawayResults
 
-*Конструктор из схемы TL.*
-
-> A [giveaway](https://core.telegram.org/api/giveaways) with public winners has finished, this constructor contains info about the winners.
-
-## Определение TL
+[Розыгрыш](/api/giveaways/) с публичными победителями завершился; этот конструктор содержит сведения о победителях.
 
 ```
 messageMediaGiveawayResults#ceaa3ea1 flags:# only_new_subscribers:flags.0?true refunded:flags.2?true channel_id:long additional_peers_count:flags.3?int launch_msg_id:int winners_count:int unclaimed_count:int winners:Vector<long> months:flags.4?int stars:flags.5?long prize_description:flags.1?string until_date:int = MessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| only_new_subscribers | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, only new subscribers starting from the giveaway creation date participated in the giveaway. |
-| refunded | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | If set, the giveaway was canceled and was fully refunded. |
-| channel_id | [long](/type/long/) | ID of the channel/supergroup that was automatically [boosted](https://core.telegram.org/api/boost) by the winners of the giveaway for duration of the Premium subscription. |
-| additional_peers_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[int](/type/int/) | Number of other channels that participated in the giveaway. |
-| launch_msg_id | [int](/type/int/) | Identifier of the message with the giveaway in channel_id. |
-| winners_count | [int](/type/int/) | Total number of winners in the giveaway. |
-| unclaimed_count | [int](/type/int/) | Number of not-yet-claimed prizes. |
-| winners | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | Up to 100 user identifiers of the winners of the giveaway. |
-| months | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[int](/type/int/) | Duration in months of each [Telegram Premium](https://core.telegram.org/api/premium) subscription in the giveaway. |
-| stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[long](/type/long/) | For [Telegram Star giveaways](https://core.telegram.org/api/stars#star-giveaways), the total number of Telegram Stars being given away. |
-| prize_description | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Can contain a textual description of additional giveaway prizes. |
-| until_date | [int](/type/int/) | Point in time (Unix timestamp) when the winners were selected. May be bigger than winners selection date specified in initial parameters of the giveaway. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>only_new_subscribers</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, в розыгрыше участвовали только новые подписчики, подписавшиеся начиная с даты создания розыгрыша.</td></tr><tr><td><strong>refunded</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Если установлено, розыгрыш был отменён, а средства полностью возвращены.</td></tr><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор канала или супергруппы, которые были автоматически <a href="/api/boost">забустены</a> победителями розыгрыша на срок действия подписки Premium.</td></tr><tr><td><strong>additional_peers_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/int">int</a></td><td>Количество других каналов, участвовавших в розыгрыше.</td></tr><tr><td><strong>launch_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения с розыгрышем в <code>channel_id</code>.</td></tr><tr><td><strong>winners_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число победителей в розыгрыше.</td></tr><tr><td><strong>unclaimed_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество ещё не полученных призов.</td></tr><tr><td><strong>winners</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>До 100 идентификаторов пользователей — победителей розыгрыша.</td></tr><tr><td><strong>months</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int">int</a></td><td>Длительность каждой подписки <a href="/api/premium">Telegram Premium</a> в розыгрыше, в месяцах.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/long">long</a></td><td>Для <a href="/api/stars#star-giveaways">розыгрышей Telegram Stars</a> — общее количество разыгрываемых Telegram Stars.</td></tr><tr><td><strong>prize_description</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Может содержать текстовое описание дополнительных призов розыгрыша.</td></tr><tr><td><strong>until_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Момент времени (Unix timestamp), когда были определены победители. Может быть больше даты определения победителей, указанной в исходных параметрах розыгрыша.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageMedia](/type/MessageMedia/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

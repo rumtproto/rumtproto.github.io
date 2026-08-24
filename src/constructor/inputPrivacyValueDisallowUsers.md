@@ -1,29 +1,24 @@
 ---
-title: "inputPrivacyValueDisallowUsers (конструктор)"
+title: "inputPrivacyValueDisallowUsers"
 original: "https://core.telegram.org/constructor/inputPrivacyValueDisallowUsers"
 section: ref
 kind: constructor
+description: "Запретить только определённым пользователям"
 layout: layout.njk
 ---
 
 # inputPrivacyValueDisallowUsers
 
-*Конструктор из схемы TL.*
-
-> Disallow only certain users
-
-## Определение TL
+Запретить только определённым пользователям
 
 ```
 inputPrivacyValueDisallowUsers#90110467 users:Vector<InputUser> = InputPrivacyRule;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[InputUser](/type/InputUser/)> | Users to disallow |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputUser">InputUser</a>&gt;</td><td>Пользователи, которым следует запретить</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputPrivacyRule](/type/InputPrivacyRule/)

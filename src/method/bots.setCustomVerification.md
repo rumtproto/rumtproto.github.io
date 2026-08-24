@@ -1,18 +1,15 @@
 ---
-title: "bots.setCustomVerification (метод)"
+title: "bots.setCustomVerification"
 original: "https://core.telegram.org/method/bots.setCustomVerification"
 section: ref
 kind: method
+description: "Верифицировать пользователя или чат от имени организации »."
 layout: layout.njk
 ---
 
 # bots.setCustomVerification
 
-*Метод из схемы TL.*
-
-> Verify a user or chat [on behalf of an organization »](https://core.telegram.org/api/bots/verification).
-
-## Определение TL
+Верифицировать пользователя или чат [от имени организации »](/api/bots/verification/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,36 +18,26 @@ boolTrue#997275b5 = Bool;
 bots.setCustomVerification#8b89dfbd flags:# enabled:flags.1?true bot:flags.0?InputUser peer:InputPeer custom_description:flags.2?string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| enabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, adds the verification; otherwise removes verification. |
-| bot | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputUser](/type/InputUser/) | Must not be set if invoked by a bot, must be set to the ID of an owned bot if invoked by a user. |
-| peer | [InputPeer](/type/InputPeer/) | The peer to verify |
-| custom_description | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | Custom description for the verification, the UTF-8 length limit for this field is contained in [bot_verification_description_length_limit »](https://core.telegram.org/api/config#bot-verification-description-length-limit). If not set, Was verified by organization "organization_name" will be used as description. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, добавляет верификацию; в противном случае снимает её.</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputUser">InputUser</a></td><td><strong>Не</strong> должно устанавливаться при вызове ботом; при вызове пользователем <strong>обязано</strong> быть равно идентификатору принадлежащего ему бота.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, который нужно проверить</td></tr><tr><td><strong>custom_description</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Произвольное описание проверки; ограничение на его длину в UTF-8 содержится в <a href="/api/config#bot-verification-description-length-limit">bot_verification_description_length_limit »</a>.<br>Если поле не задано, в качестве описания будет использовано <code>Was verified by organization "organization_name"</code>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
-| 403 | BOT_VERIFIER_FORBIDDEN | This bot cannot assign [verification icons](https://core.telegram.org/api/bots/verification). |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr><tr><td>403</td><td>BOT_VERIFIER_FORBIDDEN</td><td>Этот бот не может присваивать <a href="/api/bots/verification">значки верификации</a>.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Third-party verification](https://core.telegram.org/api/bots/verification)
+#### [Сторонняя верификация](/api/bots/verification/)
 
-To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and reduce misinformation.
+Чтобы ещё повысить прозрачность в Telegram, официальные сторонние сервисы могут присваивать аккаунтам пользователей и чатам дополнительные значки верификации — чтобы предотвратить мошенничество и снизить распространение недостоверной информации.

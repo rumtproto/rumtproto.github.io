@@ -1,33 +1,30 @@
 ---
-title: "payments.starGiftCollectionsNotModified (конструктор)"
+title: "payments.starGiftCollectionsNotModified"
 original: "https://core.telegram.org/constructor/payments.starGiftCollectionsNotModified"
 section: ref
 kind: constructor
+description: "Список коллекций звёздных подарков » не изменился."
 layout: layout.njk
 ---
 
 # payments.starGiftCollectionsNotModified
 
-*Конструктор из схемы TL.*
-
-> The list of [star gift collections »](https://core.telegram.org/api/gifts#gift-collections) hasn't changed.
-
-## Определение TL
+Список [коллекций звёздных подарков »](/api/gifts/#gift-collections) не изменился.
 
 ```
 payments.starGiftCollectionsNotModified#a0ba4f17 = payments.StarGiftCollections;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [payments.StarGiftCollections](/type/payments.StarGiftCollections/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

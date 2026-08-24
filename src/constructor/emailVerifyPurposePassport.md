@@ -1,33 +1,30 @@
 ---
-title: "emailVerifyPurposePassport (конструктор)"
+title: "emailVerifyPurposePassport"
 original: "https://core.telegram.org/constructor/emailVerifyPurposePassport"
 section: ref
 kind: constructor
+description: "Подтвердить адрес электронной почты для использования в telegram passport"
 layout: layout.njk
 ---
 
 # emailVerifyPurposePassport
 
-*Конструктор из схемы TL.*
-
-> Verify an email for use in [telegram passport](https://core.telegram.org/api/passport)
-
-## Определение TL
+Подтвердить адрес электронной почты для использования в [telegram passport](/api/passport/)
 
 ```
 emailVerifyPurposePassport#bbf51685 = EmailVerifyPurpose;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [EmailVerifyPurpose](/type/EmailVerifyPurpose/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram passport](https://core.telegram.org/api/passport)
+#### [Telegram passport](/api/passport/)
 
-Client-side passport flow
+Работа с Passport на стороне клиента

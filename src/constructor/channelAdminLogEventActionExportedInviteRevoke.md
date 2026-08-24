@@ -1,29 +1,24 @@
 ---
-title: "channelAdminLogEventActionExportedInviteRevoke (конструктор)"
+title: "channelAdminLogEventActionExportedInviteRevoke"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionExportedInviteRevoke"
 section: ref
 kind: constructor
+description: "Конкретная пригласительная ссылка отозвана"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionExportedInviteRevoke
 
-*Конструктор из схемы TL.*
-
-> A specific invite link was revoked
-
-## Определение TL
+Конкретная пригласительная ссылка отозвана
 
 ```
 channelAdminLogEventActionExportedInviteRevoke#410a134e invite:ExportedChatInvite = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| invite | [ExportedChatInvite](/type/ExportedChatInvite/) | The invite link that was revoked |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>invite</strong></td><td style="text-align: center;"><a href="/type/ExportedChatInvite">ExportedChatInvite</a></td><td>Пригласительная ссылка, которая была отозвана</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)

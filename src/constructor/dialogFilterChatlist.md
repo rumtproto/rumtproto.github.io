@@ -1,47 +1,34 @@
 ---
-title: "dialogFilterChatlist (конструктор)"
+title: "dialogFilterChatlist"
 original: "https://core.telegram.org/constructor/dialogFilterChatlist"
 section: ref
 kind: constructor
+description: "Папка, импортированная по глубокой ссылке на папку чатов »."
 layout: layout.njk
 ---
 
 # dialogFilterChatlist
 
-*Конструктор из схемы TL.*
-
-> A folder imported using a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links).
-
-## Определение TL
+Папка, импортированная по [глубокой ссылке на папку чатов »](/api/links/#chat-folder-links).
 
 ```
 dialogFilterChatlist#96537bd7 flags:# has_my_invites:flags.26?true title_noanimate:flags.28?true id:int title:TextWithEntities emoticon:flags.25?string color:flags.27?int pinned_peers:Vector<InputPeer> include_peers:Vector<InputPeer> = DialogFilter;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| has_my_invites | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).26?[true](/constructor/true/) | Whether the current user has created some [chat folder deep links »](https://core.telegram.org/api/links#chat-folder-links) to share the folder as well. |
-| title_noanimate | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).28?[true](/constructor/true/) | If set, any animated emojis present in title should not be animated and should be instead frozen on the first frame. |
-| id | [int](/type/int/) | ID of the folder |
-| title | [TextWithEntities](/type/TextWithEntities/) | Name of the folder (max 12 UTF-8 chars) |
-| emoticon | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).25?[string](/type/string/) | Emoji to use as icon for the folder. |
-| color | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).27?[int](/type/int/) | A color ID for the [folder tag associated to this folder, see here »](https://core.telegram.org/api/folders#folder-tags) for more info. |
-| pinned_peers | [Vector](https://core.telegram.org/type/Vector%20t)<[InputPeer](/type/InputPeer/)> | Pinned chats, [folders](https://core.telegram.org/api/folders) can have unlimited pinned chats |
-| include_peers | [Vector](https://core.telegram.org/type/Vector%20t)<[InputPeer](/type/InputPeer/)> | Chats to include in the folder |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>has_my_invites</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.26?<a href="/constructor/true">true</a></td><td>Создал ли текущий пользователь <a href="/api/links#chat-folder-links">глубокие ссылки на папку чатов »</a>, чтобы поделиться и самой папкой.</td></tr><tr><td><strong>title_noanimate</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.28?<a href="/constructor/true">true</a></td><td>Если установлено, анимированные эмодзи в поле <code>title</code> не следует анимировать — их нужно остановить на первом кадре.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор папки</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Название папки (не более 12 символов UTF-8)</td></tr><tr><td><strong>emoticon</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/type/string">string</a></td><td>[@term:emoticon] Эмодзи, используемый как значок папки.</td></tr><tr><td><strong>color</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.27?<a href="/type/int">int</a></td><td>Идентификатор цвета для <a href="/api/folders#folder-tags">тега, связанного с этой папкой, подробнее см. здесь »</a>.</td></tr><tr><td><strong>pinned_peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPeer">InputPeer</a>&gt;</td><td>Закреплённые чаты; в <a href="/api/folders">папках</a> количество закреплённых чатов не ограничено</td></tr><tr><td><strong>include_peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPeer">InputPeer</a>&gt;</td><td>Чаты, которые нужно включить в папку</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DialogFilter](/type/DialogFilter/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.

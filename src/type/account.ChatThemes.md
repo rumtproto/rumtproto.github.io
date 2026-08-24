@@ -1,18 +1,15 @@
 ---
-title: "account.ChatThemes (тип)"
+title: "account.ChatThemes"
 original: "https://core.telegram.org/type/account.ChatThemes"
 section: ref
 kind: type
+description: "Доступные темы чата"
 layout: layout.njk
 ---
 
 # account.ChatThemes
 
-*Тип из схемы TL.*
-
-> Available chat themes
-
-## Определение TL
+Доступные темы чата
 
 ```
 account.chatThemesNotModified#e011e1c4 = account.ChatThemes;
@@ -23,15 +20,10 @@ account.chatThemes#be098173 flags:# hash:long themes:Vector<ChatTheme> chats:Vec
 account.getUniqueGiftChatThemes#e42ce9c9 offset:string limit:int hash:long = account.ChatThemes;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.chatThemesNotModified](/constructor/account.chatThemesNotModified/) | The available chat themes were not modified |
-| [account.chatThemes](/constructor/account.chatThemes/) | Available [chat themes](https://core.telegram.org/api/themes#chat-themes) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.chatThemesNotModified">account.chatThemesNotModified</a></td><td>Доступные темы оформления чатов не изменились</td></tr><tr><td><a href="/constructor/account.chatThemes">account.chatThemes</a></td><td>Доступные <a href="/api/themes#chat-themes">темы чата</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getUniqueGiftChatThemes](/method/account.getUniqueGiftChatThemes/) | Obtain all [chat themes »](https://core.telegram.org/api/themes#chat-themes) associated to owned or [hosted collectible gifts »](https://core.telegram.org/api/gifts#hosted-collectible-gifts). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getUniqueGiftChatThemes">account.getUniqueGiftChatThemes</a></td><td>Получить все <a href="/api/themes#chat-themes">темы оформления чатов »</a>, связанные с принадлежащими вам или <a href="/api/gifts#hosted-collectible-gifts">размещёнными коллекционными подарками »</a>.</td></tr></tbody></table>

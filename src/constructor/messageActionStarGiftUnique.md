@@ -1,66 +1,42 @@
 ---
-title: "messageActionStarGiftUnique (конструктор)"
+title: "messageActionStarGiftUnique"
 original: "https://core.telegram.org/constructor/messageActionStarGiftUnique"
 section: ref
 kind: constructor
+description: "Подарок » был улучшен до коллекционного подарка »."
 layout: layout.njk
 ---
 
 # messageActionStarGiftUnique
 
-*Конструктор из схемы TL.*
-
-> A [gift »](https://core.telegram.org/api/gifts) was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
-
-## Определение TL
+[Подарок »](/api/gifts/) был улучшен до [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
 ```
 messageActionStarGiftUnique#e6c31522 flags:# upgrade:flags.0?true transferred:flags.1?true saved:flags.2?true refunded:flags.5?true prepaid_upgrade:flags.11?true assigned:flags.13?true from_offer:flags.14?true craft:flags.16?true gift:StarGift can_export_at:flags.3?int transfer_stars:flags.4?long from_id:flags.6?Peer peer:flags.7?Peer saved_id:flags.7?long resale_amount:flags.8?StarsAmount can_transfer_at:flags.9?int can_resell_at:flags.10?int drop_original_details_stars:flags.12?long can_craft_at:flags.15?int = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| upgrade | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, this collectible was [upgraded »](https://core.telegram.org/api/gifts#collectible-gifts) to a collectible gift from a previously received or sent (depending on the out flag of the containing [messageService](/constructor/messageService/)) non-collectible gift. |
-| transferred | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, this collectible was transferred (either to the current user or by the current user to the other user in the private chat, depending on the out flag of the containing [messageService](/constructor/messageService/)). |
-| saved | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | If set, this gift is visible on the user or channel's profile page; can only be set for the receiver of a gift. |
-| refunded | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | This gift was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) and then re-downgraded to a regular gift because a request to refund the payment related to the upgrade was made, and the money was returned. |
-| prepaid_upgrade | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[true](/constructor/true/) | The sender has pre-paid for the upgrade of this gift to a collectible gift. |
-| assigned | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[true](/constructor/true/) | This collectible gift was [linked from the TON blockchain to a Telegram profile »](https://core.telegram.org/api/gifts#hosted-collectible-gifts). |
-| from_offer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[true](/constructor/true/) | This collectible gift was transferred after a [purchase offer »](https://core.telegram.org/api/gifts#collectible-gift-purchase-offers) was accepted. |
-| craft | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).16?[true](/constructor/true/) | This collectible gift was obtained by [crafting »](https://core.telegram.org/api/gifts#crafting-collectible-gifts). |
-| gift | [StarGift](/type/StarGift/) | The collectible gift. |
-| can_export_at | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[int](/type/int/) | If set, indicates that the current gift can't be [exported to the TON blockchain »](https://core.telegram.org/api/gifts#withdraw-a-collectible-gift-to-the-ton-blockchain) yet: the owner will be able to export it at the specified unixtime. |
-| transfer_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[long](/type/long/) | If set, indicates that the gift can be [transferred »](https://core.telegram.org/api/gifts#transferring-collectible-gifts) to another user by paying the specified amount of stars. |
-| from_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[Peer](/type/Peer/) | Sender of the gift (unset for anonymous gifts). |
-| peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[Peer](/type/Peer/) | Receiver of the gift. |
-| saved_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[long](/type/long/) | For channel gifts, ID to use in [inputSavedStarGiftChat](/constructor/inputSavedStarGiftChat/) constructors. |
-| resale_amount | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[StarsAmount](/type/StarsAmount/) | Resale price of the gift. |
-| can_transfer_at | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[int](/type/int/) | If set, indicates that the current gift can't be [transferred »](https://core.telegram.org/api/gifts#transferring-collectible-gifts) yet: the owner will be able to transfer it at the specified unixtime. |
-| can_resell_at | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[int](/type/int/) | If set, indicates that the current gift can't be [resold »](https://core.telegram.org/api/gifts#reselling-collectible-gifts) yet: the owner will be able to put it up for sale at the specified unixtime. |
-| drop_original_details_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[long](/type/long/) | If set, the [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/) attribute of this gift may be removed by paying the specified amount of stars, see [here »](https://core.telegram.org/api/gifts#dropping-the-original-details-of-an-upgraded-gift) for the full flow. |
-| can_craft_at | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[int](/type/int/) | If set, this gift can be used for [crafting »](https://core.telegram.org/api/gifts#crafting-collectible-gifts) only starting from the specified unixtime. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>upgrade</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, этот коллекционный предмет был <a href="/api/gifts#collectible-gifts">улучшен »</a> до коллекционного подарка из ранее полученного или отправленного (в зависимости от флага <code>out</code> содержащего его <a href="/constructor/messageService">messageService</a>) обычного подарка.</td></tr><tr><td><strong>transferred</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, этот коллекционный предмет был передан (либо текущему пользователю, либо текущим пользователем другому пользователю в личном чате — в зависимости от флага <code>out</code> содержащего его <a href="/constructor/messageService">messageService</a>).</td></tr><tr><td><strong>saved</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Если установлено, этот подарок виден на странице профиля пользователя или канала; может быть установлено только для получателя подарка.</td></tr><tr><td><strong>refunded</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Этот подарок был улучшен до <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>, а затем понижен обратно до обычного подарка, поскольку был запрошен возврат платежа за улучшение и деньги были возвращены.</td></tr><tr><td><strong>prepaid_upgrade</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true">true</a></td><td>Отправитель заранее оплатил улучшение этого подарка до коллекционного.</td></tr><tr><td><strong>assigned</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true">true</a></td><td>Этот коллекционный подарок был <a href="/api/gifts#hosted-collectible-gifts">привязан к профилю Telegram из блокчейна TON »</a>.</td></tr><tr><td><strong>from_offer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true">true</a></td><td>Этот коллекционный подарок был передан после того, как <a href="/api/gifts#collectible-gift-purchase-offers">предложение о покупке »</a> было принято.</td></tr><tr><td><strong>craft</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true">true</a></td><td>Этот коллекционный подарок получен с помощью <a href="/api/gifts#crafting-collectible-gifts">крафта »</a>.</td></tr><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/type/StarGift">StarGift</a></td><td>Коллекционный подарок.</td></tr><tr><td><strong>can_export_at</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/int">int</a></td><td>Если установлено, указывает, что текущий подарок пока нельзя <a href="/api/gifts#withdraw-a-collectible-gift-to-the-ton-blockchain">вывести в блокчейн TON »</a>: владелец сможет вывести его в указанное время (unixtime).</td></tr><tr><td><strong>transfer_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/long">long</a></td><td>Если установлено, указывает, что подарок можно <a href="/api/gifts#transferring-collectible-gifts">передать »</a> другому пользователю, заплатив указанное количество звёзд.</td></tr><tr><td><strong>from_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/Peer">Peer</a></td><td>Отправитель подарка (не задан для анонимных подарков).</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/Peer">Peer</a></td><td>[@term:peer] Получатель подарка.</td></tr><tr><td><strong>saved_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/long">long</a></td><td>Для подарков каналам — идентификатор, который следует использовать в конструкторах <a href="/constructor/inputSavedStarGiftChat">inputSavedStarGiftChat</a>.</td></tr><tr><td><strong>resale_amount</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/StarsAmount">StarsAmount</a></td><td>Цена перепродажи подарка.</td></tr><tr><td><strong>can_transfer_at</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/int">int</a></td><td>Если установлено, указывает, что текущий подарок пока нельзя <a href="/api/gifts#transferring-collectible-gifts">передать »</a>: владелец сможет передать его в указанное время (unixtime).</td></tr><tr><td><strong>can_resell_at</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/int">int</a></td><td>Если установлено, указывает, что текущий подарок пока нельзя <a href="/api/gifts#reselling-collectible-gifts">перепродать »</a>: владелец сможет выставить его на продажу в указанное время (unixtime).</td></tr><tr><td><strong>drop_original_details_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/long">long</a></td><td>Если установлено, атрибут <a href="/constructor/starGiftAttributeOriginalDetails">starGiftAttributeOriginalDetails</a> этого подарка можно удалить, заплатив указанное количество звёзд; полное описание процесса см. <a href="/api/gifts#dropping-the-original-details-of-an-upgraded-gift">здесь »</a>.</td></tr><tr><td><strong>can_craft_at</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/int">int</a></td><td>Если установлено, этот подарок можно использовать для <a href="/api/gifts#crafting-collectible-gifts">создания »</a> только начиная с указанного времени (unixtime).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [messageService](/constructor/messageService/)
 
-Indicates a service message
+Обозначает сервисное сообщение
 
 #### [inputSavedStarGiftChat](/constructor/inputSavedStarGiftChat/)
 
-A gift received by a channel we own.
+Подарок, полученный каналом, которым мы владеем.
 
 #### [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/)
 
-Info about the sender, receiver and message attached to the original [gift »](https://core.telegram.org/api/gifts), before it was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+Сведения об отправителе, получателе и сообщении, приложенных к исходному [подарку »](/api/gifts/), до того как он был превращён в [коллекционный подарок »](/api/gifts/#collectible-gifts).

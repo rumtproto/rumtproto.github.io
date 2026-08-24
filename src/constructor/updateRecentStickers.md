@@ -1,27 +1,24 @@
 ---
-title: "updateRecentStickers (конструктор)"
+title: "updateRecentStickers"
 original: "https://core.telegram.org/constructor/updateRecentStickers"
 section: ref
 kind: constructor
+description: "Список недавних стикеров был обновлён"
 layout: layout.njk
 ---
 
 # updateRecentStickers
 
-*Конструктор из схемы TL.*
-
-> The recent sticker list was updated
-
-## Определение TL
+Список недавних стикеров был обновлён
 
 ```
 updateRecentStickers#9a422c20 = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

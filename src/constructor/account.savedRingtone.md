@@ -1,27 +1,24 @@
 ---
-title: "account.savedRingtone (конструктор)"
+title: "account.savedRingtone"
 original: "https://core.telegram.org/constructor/account.savedRingtone"
 section: ref
 kind: constructor
+description: "Звук уведомления уже был в формате MP3 и был сохранён без изменений"
 layout: layout.njk
 ---
 
 # account.savedRingtone
 
-*Конструктор из схемы TL.*
-
-> The notification sound was already in MP3 format and was saved without any modification
-
-## Определение TL
+Звук уведомления уже был в формате MP3 и был сохранён без изменений
 
 ```
 account.savedRingtone#b7263f6d = account.SavedRingtone;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [account.SavedRingtone](/type/account.SavedRingtone/)

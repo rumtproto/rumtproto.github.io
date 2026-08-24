@@ -1,45 +1,38 @@
 ---
-title: "updateBotPurchasedPaidMedia (конструктор)"
+title: "updateBotPurchasedPaidMedia"
 original: "https://core.telegram.org/constructor/updateBotPurchasedPaidMedia"
 section: ref
 kind: constructor
+description: "Только для ботов: пользователь приобрёл платное медиа."
 layout: layout.njk
 ---
 
 # updateBotPurchasedPaidMedia
 
-*Конструктор из схемы TL.*
-
-> Bots only: a user has purchased a [paid media](https://core.telegram.org/api/paid-media).
-
-## Определение TL
+Только для ботов: пользователь приобрёл [платное медиа](/api/paid-media/).
 
 ```
 updateBotPurchasedPaidMedia#283bd312 user_id:long payload:string qts:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [long](/type/long/) | The user that bought the media |
-| payload | [string](/type/string/) | Payload passed by the bot in [inputMediaPaidMedia](/constructor/inputMediaPaidMedia/).payload |
-| qts | [int](/type/int/) | New qts value, see [updates »](/api/updates/) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Пользователь, купивший медиафайл</td></tr><tr><td><strong>payload</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Полезная нагрузка, переданная ботом в <a href="/constructor/inputMediaPaidMedia">inputMediaPaidMedia</a>.<code>payload</code></td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] Новое значение <strong>qts</strong>, подробнее см. <a href="/api/updates">обновления »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [inputMediaPaidMedia](/constructor/inputMediaPaidMedia/)
 
-[Paid media, see here »](https://core.telegram.org/api/paid-media) for more info.
+[Платное медиа, подробнее см. здесь »](/api/paid-media/).
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Paid media](https://core.telegram.org/api/paid-media)
+#### [Платные медиа](/api/paid-media/)
 
-Content creators can accept Stars by publishing paid photos or videos on their channels. Subscribers will be allowed to view such posts only after paying the author to unlock them.
+Авторы контента могут принимать Stars, публикуя в своих каналах платные фотографии и видео. Подписчики смогут просмотреть такие посты, только заплатив автору за их разблокировку.

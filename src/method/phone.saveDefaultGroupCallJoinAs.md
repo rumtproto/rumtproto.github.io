@@ -1,18 +1,15 @@
 ---
-title: "phone.saveDefaultGroupCallJoinAs (метод)"
+title: "phone.saveDefaultGroupCallJoinAs"
 original: "https://core.telegram.org/method/phone.saveDefaultGroupCallJoinAs"
 section: ref
 kind: method
+description: "Задать пир по умолчанию, используемый для присоединения к видеочату или трансляции », связанным с конкретным диалогом."
 layout: layout.njk
 ---
 
 # phone.saveDefaultGroupCallJoinAs
 
-*Метод из схемы TL.*
-
-> Set the default peer used to join a [video chat/livestream »](https://core.telegram.org/api/group-calls#joining-a-group-call-on-behalf-of-owned-channels) associated with a specific dialog.
-
-## Определение TL
+Задать пир по умолчанию, используемый для присоединения к [видеочату или трансляции »](/api/group-calls/#joining-a-group-call-on-behalf-of-owned-channels), связанным с конкретным диалогом.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,34 +18,28 @@ boolTrue#997275b5 = Bool;
 phone.saveDefaultGroupCallJoinAs#575e1f8c peer:InputPeer join_as:InputPeer = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Basic group, supergroup or channel whose video chat/livestream default should be changed |
-| join_as | [InputPeer](/type/InputPeer/) | Eligible peer to use by default when joining the dialog's video chats/livestreams, selected from [phone.getGroupCallJoinAs](/method/phone.getGroupCallJoinAs/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Обычная группа, супергруппа или канал, для которых требуется изменить настройку видеочата или трансляции по умолчанию</td></tr><tr><td><strong>join_as</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Подходящий пир, используемый по умолчанию при подключении к видеочатам и трансляциям этого диалога; выбирается из <a href="/method/phone.getGroupCallJoinAs">phone.getGroupCallJoinAs</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | JOIN_AS_PEER_INVALID | The specified peer cannot be used to join a group call. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>JOIN_AS_PEER_INVALID</td><td>Указанный пир нельзя использовать для присоединения к групповому звонку.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [phone.getGroupCallJoinAs](/method/phone.getGroupCallJoinAs/)
 
-Get a list of peers that can be used to join a [video chat or livestream »](https://core.telegram.org/api/group-calls#joining-a-group-call-on-behalf-of-owned-channels), presenting yourself as a specific user/channel.
+Получить список пиров, от имени которых можно присоединиться к [видеочату или трансляции »](/api/group-calls/#joining-a-group-call-on-behalf-of-owned-channels), представившись определённым пользователем или каналом.
 
-This method cannot be used for live stories or conference calls. To comment or react in a live story as another peer, use [channels.getSendAs](/method/channels.getSendAs/) with `for_live_stories` set and pass one of the returned peers to [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/).`send_as`.
+Этот метод нельзя использовать для прямых историй и конференций. Чтобы комментировать прямую историю или ставить в ней реакции от имени другого пира, вызовите [channels.getSendAs](/method/channels.getSendAs/) с установленным `for_live_stories` и передайте один из возвращённых пиров в [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/).`send_as`.
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

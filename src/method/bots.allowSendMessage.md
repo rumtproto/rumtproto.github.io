@@ -1,18 +1,15 @@
 ---
-title: "bots.allowSendMessage (метод)"
+title: "bots.allowSendMessage"
 original: "https://core.telegram.org/method/bots.allowSendMessage"
 section: ref
 kind: method
+description: "Разрешить указанному боту отправлять нам сообщения"
 layout: layout.njk
 ---
 
 # bots.allowSendMessage
 
-*Метод из схемы TL.*
-
-> Allow the specified bot to send us messages
-
-## Определение TL
+Разрешить указанному боту отправлять нам сообщения
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,20 +23,16 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 bots.allowSendMessage#f132e3ef bot:InputUser = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot | [InputUser](/type/InputUser/) | The bot |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr></tbody></table>

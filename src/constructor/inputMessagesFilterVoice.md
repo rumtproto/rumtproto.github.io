@@ -1,27 +1,24 @@
 ---
-title: "inputMessagesFilterVoice (конструктор)"
+title: "inputMessagesFilterVoice"
 original: "https://core.telegram.org/constructor/inputMessagesFilterVoice"
 section: ref
 kind: constructor
+description: "Возвращать только сообщения с голосовыми сообщениями"
 layout: layout.njk
 ---
 
 # inputMessagesFilterVoice
 
-*Конструктор из схемы TL.*
-
-> Return only messages containing voice notes
-
-## Определение TL
+Возвращать только сообщения с голосовыми сообщениями
 
 ```
 inputMessagesFilterVoice#50f5c392 = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)

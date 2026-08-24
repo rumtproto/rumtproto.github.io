@@ -1,39 +1,34 @@
 ---
-title: "payments.starGiftUpgradeAttributes (конструктор)"
+title: "payments.starGiftUpgradeAttributes"
 original: "https://core.telegram.org/constructor/payments.starGiftUpgradeAttributes"
 section: ref
 kind: constructor
+description: "Список только тех коллекционных атрибутов, которые могут появиться у типа подарка после его улучшения до коллекционного подарка »."
 layout: layout.njk
 ---
 
 # payments.starGiftUpgradeAttributes
 
-*Конструктор из схемы TL.*
-
-> List of just the collectible attributes that may appear for a gift type once it's upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
-
-## Определение TL
+Список только тех коллекционных атрибутов, которые могут появиться у типа подарка после его улучшения до [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
 ```
 payments.starGiftUpgradeAttributes#46c6e36f attributes:Vector<StarGiftAttribute> = payments.StarGiftUpgradeAttributes;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| attributes | [Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftAttribute](/type/StarGiftAttribute/)> | Full list of possible attributes that may be assigned when gifts of the specified type are turned into [collectible gifts »](https://core.telegram.org/api/gifts#collectible-gifts), including craft-only models marked with [starGiftAttributeModel](/constructor/starGiftAttributeModel/).crafted. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>attributes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftAttribute">StarGiftAttribute</a>&gt;</td><td>Полный список возможных атрибутов, которые могут быть назначены при превращении подарков указанного типа в <a href="/api/gifts#collectible-gifts">коллекционные подарки »</a>, включая модели, доступные только при крафте и отмеченные полем <a href="/constructor/starGiftAttributeModel">starGiftAttributeModel</a>.<code>crafted</code>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.StarGiftUpgradeAttributes](/type/payments.StarGiftUpgradeAttributes/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [starGiftAttributeModel](/constructor/starGiftAttributeModel/)
 
-The model of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+Модель [коллекционного подарка »](/api/gifts/#collectible-gifts).

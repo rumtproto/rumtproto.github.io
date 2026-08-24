@@ -1,18 +1,15 @@
 ---
-title: "stories.getStoryViewsList (метод)"
+title: "stories.getStoryViewsList"
 original: "https://core.telegram.org/method/stories.getStoryViewsList"
 section: ref
 kind: method
+description: "Получить список пользователей, просмотревших конкретную опубликованную нами историю"
 layout: layout.njk
 ---
 
 # stories.getStoryViewsList
 
-*Метод из схемы TL.*
-
-> Obtain the list of users that have viewed a specific [story we posted](https://core.telegram.org/api/stories)
-
-## Определение TL
+Получить список пользователей, просмотревших конкретную [опубликованную нами историю](/api/stories/)
 
 ```
 stories.storyViewsList#59d78fc5 flags:# count:int views_count:int forwards_count:int reactions_count:int views:Vector<StoryView> chats:Vector<Chat> users:Vector<User> next_offset:flags.0?string = stories.StoryViewsList;
@@ -20,51 +17,38 @@ stories.storyViewsList#59d78fc5 flags:# count:int views_count:int forwards_count
 stories.getStoryViewsList#7ed23c57 flags:# just_contacts:flags.0?true reactions_first:flags.2?true forwards_first:flags.3?true peer:InputPeer q:flags.1?string id:int offset:string limit:int = stories.StoryViewsList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| just_contacts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to only fetch view reaction/views made by our [contacts](https://core.telegram.org/api/contacts) |
-| reactions_first | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether to return [storyView](/constructor/storyView/) info about users that reacted to the story (i.e. if set, the server will first sort results by view date as usual, and then also additionally sort the list by putting [storyView](/constructor/storyView/)s with an associated reaction first in the list). Ignored if forwards_first is set. |
-| forwards_first | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | If set, returns forwards and reposts first, then reactions, then other views; otherwise returns interactions sorted just by interaction date. |
-| peer | [InputPeer](/type/InputPeer/) | Peer where the story was posted |
-| q | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Search for specific peers |
-| id | [int](/type/int/) | Story ID |
-| offset | [string](/type/string/) | Offset for pagination, obtained from [stories.storyViewsList](/constructor/stories.storyViewsList/).next_offset |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>just_contacts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Получать ли только реакции и просмотры, сделанные нашими <a href="/api/contacts">контактами</a></td></tr><tr><td><strong>reactions_first</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Возвращать ли сведения <a href="/constructor/storyView">storyView</a> о пользователях, отреагировавших на историю (то есть если флаг установлен, сервер сначала, как обычно, отсортирует результаты по дате просмотра, а затем дополнительно поставит в начало списка те <a href="/constructor/storyView">storyView</a>, с которыми связана реакция). Игнорируется, если установлен <code>forwards_first</code>.</td></tr><tr><td><strong>forwards_first</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Если установлено, сначала возвращает пересылки и репосты, затем реакции, затем остальные просмотры; иначе возвращает взаимодействия, отсортированные просто по дате взаимодействия.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в котором была опубликована история</td></tr><tr><td><strong>q</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Поиск определённых пиров</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор истории</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:next_offset] Смещение для постраничной выборки, берётся из <a href="/constructor/stories.storyViewsList">stories.storyViewsList</a>.<code>next_offset</code></td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [stories.StoryViewsList](/type/stories.StoryViewsList/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | STORY_ID_INVALID | The specified story ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>STORY_ID_INVALID</td><td>Указанный идентификатор истории недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Contact list](https://core.telegram.org/api/contacts)
+#### [Список контактов](/api/contacts/)
 
-Working with contacts.
+Работа с контактами.
 
 #### [storyView](/constructor/storyView/)
 
-[Story](https://core.telegram.org/api/stories) view date and reaction information
+Сведения о датах просмотра и реакциях для [истории](/api/stories/)
 
 #### [stories.storyViewsList](/constructor/stories.storyViewsList/)
 
-Reaction and view counters for a [story](https://core.telegram.org/api/stories)
+Счётчики реакций и просмотров [истории](/api/stories/)
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

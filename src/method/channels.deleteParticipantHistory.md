@@ -1,18 +1,15 @@
 ---
-title: "channels.deleteParticipantHistory (метод)"
+title: "channels.deleteParticipantHistory"
 original: "https://core.telegram.org/method/channels.deleteParticipantHistory"
 section: ref
 kind: method
+description: "Удалить все сообщения, отправленные определённым участником заданной супергруппы"
 layout: layout.njk
 ---
 
 # channels.deleteParticipantHistory
 
-*Метод из схемы TL.*
-
-> Delete all messages sent by a specific participant of a given supergroup
-
-## Определение TL
+Удалить все сообщения, отправленные определённым участником заданной супергруппы
 
 ```
 messages.affectedHistory#b45c69d1 pts:int pts_count:int offset:int = messages.AffectedHistory;
@@ -20,26 +17,16 @@ messages.affectedHistory#b45c69d1 pts:int pts_count:int offset:int = messages.Af
 channels.deleteParticipantHistory#367544db channel:InputChannel participant:InputPeer = messages.AffectedHistory;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | Supergroup |
-| participant | [InputPeer](/type/InputPeer/) | The participant whose messages should be deleted |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Супергруппа</td></tr><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Участник, чьи сообщения следует удалить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.AffectedHistory](/type/messages.AffectedHistory/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PARTICIPANT_ID_INVALID | The specified participant ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PARTICIPANT_ID_INVALID</td><td>Указанный идентификатор участника недействителен.</td></tr></tbody></table>

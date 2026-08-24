@@ -1,59 +1,47 @@
 ---
-title: "stories.deleteStories (метод)"
+title: "stories.deleteStories"
 original: "https://core.telegram.org/method/stories.deleteStories"
 section: ref
 kind: method
+description: "Удаляет несколько опубликованных историй."
 layout: layout.njk
 ---
 
 # stories.deleteStories
 
-*Метод из схемы TL.*
-
-> Deletes some posted [stories](https://core.telegram.org/api/stories).
-
-## Определение TL
+Удаляет несколько опубликованных [историй](/api/stories/).
 
 ```
 ---functions---
 stories.deleteStories#ae59db5f peer:InputPeer id:Vector<int> = Vector<int>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Channel/user from where to delete stories. |
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | IDs of stories to delete. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Канал или пользователь, откуда нужно удалить истории.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы историй, которые нужно удалить.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over a business connection »
+### Этот метод можно вызывать через [бизнес-подключение »](/api/bots/connected-business-bots/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | BOT_ACCESS_FORBIDDEN | The specified method can be used over a [business connection](https://core.telegram.org/api/bots/connected-business-bots) for some operations, but the specified query attempted an operation that is not allowed over a business connection. |
-| 400 | BUSINESS_CONNECTION_INVALID | The connection_id passed to the wrapping [invokeWithBusinessConnection](https://core.telegram.org/api/business) call is invalid. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | STORY_ID_EMPTY | You specified no story IDs. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>BOT_ACCESS_FORBIDDEN</td><td>Указанный метод <em>можно</em> использовать через <a href="/api/bots/connected-business-bots">бизнес-подключение</a> для некоторых операций, но в данном запросе была предпринята операция, недопустимая через бизнес-подключение.</td></tr><tr><td>400</td><td>BUSINESS_CONNECTION_INVALID</td><td>Значение <code>connection_id</code>, переданное в объемлющем вызове <a href="/api/business">invokeWithBusinessConnection</a>, недействительно.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>STORY_ID_EMPTY</td><td>Вы не указали ни одного идентификатора истории.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

@@ -1,18 +1,15 @@
 ---
-title: "channels.getParticipants (метод)"
+title: "channels.getParticipants"
 original: "https://core.telegram.org/method/channels.getParticipants"
 section: ref
 kind: method
+description: "Получить участников супергруппы или канала"
 layout: layout.njk
 ---
 
 # channels.getParticipants
 
-*Метод из схемы TL.*
-
-> Get the participants of a [supergroup/channel](https://core.telegram.org/api/channel)
-
-## Определение TL
+Получить участников [супергруппы или канала](/api/channel/)
 
 ```
 channels.channelParticipants#9ab0feaf count:int participants:Vector<ChannelParticipant> chats:Vector<Chat> users:Vector<User> = channels.ChannelParticipants;
@@ -21,38 +18,26 @@ channels.channelParticipantsNotModified#f0173fe9 = channels.ChannelParticipants;
 channels.getParticipants#77ced9d0 channel:InputChannel filter:ChannelParticipantsFilter offset:int limit:int hash:long = channels.ChannelParticipants;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | Channel |
-| filter | [ChannelParticipantsFilter](/type/ChannelParticipantsFilter/) | Which participant types to fetch |
-| offset | [int](/type/int/) | [Offset](https://core.telegram.org/api/offsets) |
-| limit | [int](/type/int/) | [Limit](https://core.telegram.org/api/offsets) |
-| hash | [long](/type/long/) | [Hash](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал</td></tr><tr><td><strong>filter</strong></td><td style="text-align: center;"><a href="/type/ChannelParticipantsFilter">ChannelParticipantsFilter</a></td><td>Какие типы участников получить</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets">Смещение</a></td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets">Ограничение</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets">Хеш выборки</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [channels.ChannelParticipants](/type/channels.ChannelParticipants/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_MONOFORUM_UNSUPPORTED | [Monoforums](https://core.telegram.org/api/channel#monoforums) do not support this feature. |
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 403 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_MONOFORUM_UNSUPPORTED</td><td><a href="/api/channel#monoforums">Монофорумы</a> не поддерживают эту возможность.</td></tr><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>403</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

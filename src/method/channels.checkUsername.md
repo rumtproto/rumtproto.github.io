@@ -1,18 +1,15 @@
 ---
-title: "channels.checkUsername (метод)"
+title: "channels.checkUsername"
 original: "https://core.telegram.org/method/channels.checkUsername"
 section: ref
 kind: method
+description: "Проверить, свободно ли имя пользователя и можно ли назначить его каналу или супергруппе"
 layout: layout.njk
 ---
 
 # channels.checkUsername
 
-*Метод из схемы TL.*
-
-> Check if a username is free and can be assigned to a channel/supergroup
-
-## Определение TL
+Проверить, свободно ли имя пользователя и можно ли назначить его каналу или супергруппе
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,35 +18,22 @@ boolTrue#997275b5 = Bool;
 channels.checkUsername#10e6bd2c channel:InputChannel username:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The [channel/supergroup](https://core.telegram.org/api/channel) that will assigned the specified username |
-| username | [string](/type/string/) | The username to check |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Канал или супергруппа</a>, которой будет назначено указанное имя пользователя</td></tr><tr><td><strong>username</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Имя пользователя, которое нужно проверить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNELS_ADMIN_PUBLIC_TOO_MUCH | You're admin of too many public channels, make some channels private to change the username of this channel. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | USERNAME_INVALID | The provided username is not valid. |
-| 400 | USERNAME_OCCUPIED | The provided username is already occupied. |
-| 400 | USERNAME_PURCHASE_AVAILABLE | The specified username can be purchased on [https://fragment.com](https://fragment.com). |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNELS_ADMIN_PUBLIC_TOO_MUCH</td><td>Вы администратор слишком многих публичных каналов; сделайте часть каналов закрытыми, чтобы изменить имя пользователя этого канала.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>USERNAME_INVALID</td><td>Указанное имя пользователя недействительно.</td></tr><tr><td>400</td><td>USERNAME_OCCUPIED</td><td>Указанное имя пользователя уже занято.</td></tr><tr><td>400</td><td>USERNAME_PURCHASE_AVAILABLE</td><td>Указанное имя пользователя можно приобрести на <a href="https://fragment.com">https://fragment.com</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

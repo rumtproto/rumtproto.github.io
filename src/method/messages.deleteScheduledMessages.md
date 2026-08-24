@@ -1,18 +1,15 @@
 ---
-title: "messages.deleteScheduledMessages (метод)"
+title: "messages.deleteScheduledMessages"
 original: "https://core.telegram.org/method/messages.deleteScheduledMessages"
 section: ref
 kind: method
+description: "Удалить отложенные сообщения"
 layout: layout.njk
 ---
 
 # messages.deleteScheduledMessages
 
-*Метод из схемы TL.*
-
-> Delete scheduled messages
-
-## Определение TL
+Удалить отложенные сообщения
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,23 +23,16 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.deleteScheduledMessages#59ae2b16 peer:InputPeer id:Vector<int> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer |
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Scheduled message IDs |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы отложенных сообщений</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 403 | MESSAGE_DELETE_FORBIDDEN | You can't delete one of the messages you tried to delete, most likely because it is a service message. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>403</td><td>MESSAGE_DELETE_FORBIDDEN</td><td>Одно из сообщений, которые вы пытались удалить, удалить нельзя: скорее всего, это сервисное сообщение.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>

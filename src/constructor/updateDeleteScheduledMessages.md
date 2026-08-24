@@ -1,42 +1,34 @@
 ---
-title: "updateDeleteScheduledMessages (конструктор)"
+title: "updateDeleteScheduledMessages"
 original: "https://core.telegram.org/constructor/updateDeleteScheduledMessages"
 section: ref
 kind: constructor
+description: "Некоторые отложенные сообщения были удалены (или отправлены) из очереди отложенных сообщений чата"
 layout: layout.njk
 ---
 
 # updateDeleteScheduledMessages
 
-*Конструктор из схемы TL.*
-
-> Some [scheduled messages](https://core.telegram.org/api/scheduled-messages) were deleted (or sent) from the schedule queue of a chat
-
-## Определение TL
+Некоторые [отложенные сообщения](/api/scheduled-messages/) были удалены (или отправлены) из очереди отложенных сообщений чата
 
 ```
 updateDeleteScheduledMessages#f2a71983 flags:# peer:Peer messages:Vector<int> sent_messages:flags.0?Vector<int> = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [Peer](/type/Peer/) | Peer |
-| messages | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Deleted scheduled messages |
-| sent_messages | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | If set, this update indicates that some scheduled messages were sent (not simply deleted from the schedule queue). In this case, the messages field will contain the scheduled message IDs for the sent messages (initially returned in [updateNewScheduledMessage](/constructor/updateNewScheduledMessage/)), and sent_messages will contain the real message IDs for the sent messages. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Удалённые отложенные сообщения</td></tr><tr><td><strong>sent_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Если установлено, это обновление означает, что отложенные сообщения были отправлены (а не просто удалены из очереди отложенных).<br>В этом случае поле <code>messages</code> будет содержать идентификаторы отложенных сообщений для отправленных сообщений (изначально возвращённые в <a href="/constructor/updateNewScheduledMessage">updateNewScheduledMessage</a>), а <code>sent_messages</code> — реальные идентификаторы отправленных сообщений.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [updateNewScheduledMessage](/constructor/updateNewScheduledMessage/)
 
-A message was added to the [schedule queue of a chat](https://core.telegram.org/api/scheduled-messages)
+Сообщение добавлено в [очередь отложенных сообщений чата](/api/scheduled-messages/)
 
-#### [Scheduled messages](https://core.telegram.org/api/scheduled-messages)
+#### [Отложенные сообщения](/api/scheduled-messages/)
 
-Telegram allows scheduling messages
+Telegram позволяет планировать отправку сообщений

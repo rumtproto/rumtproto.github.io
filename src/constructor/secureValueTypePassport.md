@@ -1,27 +1,24 @@
 ---
-title: "secureValueTypePassport (конструктор)"
+title: "secureValueTypePassport"
 original: "https://core.telegram.org/constructor/secureValueTypePassport"
 section: ref
 kind: constructor
+description: "Passport"
 layout: layout.njk
 ---
 
 # secureValueTypePassport
 
-*Конструктор из схемы TL.*
-
-> Passport
-
-## Определение TL
+Passport
 
 ```
 secureValueTypePassport#3dac6a00 = SecureValueType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureValueType](/type/SecureValueType/)

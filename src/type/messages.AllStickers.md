@@ -1,18 +1,15 @@
 ---
-title: "Messages.AllStickers (тип)"
+title: "messages.AllStickers"
 original: "https://core.telegram.org/type/messages.AllStickers"
 section: ref
 kind: type
+description: "Все стикеры"
 layout: layout.njk
 ---
 
 # Messages.AllStickers
 
-*Тип из схемы TL.*
-
-> All stickers
-
-## Определение TL
+Все стикеры
 
 ```
 messages.allStickersNotModified#e86602c3 = messages.AllStickers;
@@ -25,17 +22,10 @@ messages.getMaskStickers#640f82b8 hash:long = messages.AllStickers;
 messages.getEmojiStickers#fbfca18f hash:long = messages.AllStickers;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.allStickersNotModified](/constructor/messages.allStickersNotModified/) | Info about all installed stickers hasn't changed |
-| [messages.allStickers](/constructor/messages.allStickers/) | Info about all installed stickers |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.allStickersNotModified">messages.allStickersNotModified</a></td><td>Информация обо всех установленных стикерах не изменилась</td></tr><tr><td><a href="/constructor/messages.allStickers">messages.allStickers</a></td><td>Информация обо всех установленных стикерах</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getAllStickers](/method/messages.getAllStickers/) | Get all installed stickers |
-| [messages.getMaskStickers](/method/messages.getMaskStickers/) | Get installed mask stickers |
-| [messages.getEmojiStickers](/method/messages.getEmojiStickers/) | Gets the list of currently installed [custom emoji stickersets](https://core.telegram.org/api/custom-emoji). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getAllStickers">messages.getAllStickers</a></td><td>Получить все установленные стикеры</td></tr><tr><td><a href="/method/messages.getMaskStickers">messages.getMaskStickers</a></td><td>Получить установленные стикеры-маски</td></tr><tr><td><a href="/method/messages.getEmojiStickers">messages.getEmojiStickers</a></td><td>Получает список установленных на данный момент <a href="/api/custom-emoji">наборов стикеров с пользовательскими эмодзи</a>.</td></tr></tbody></table>

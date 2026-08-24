@@ -1,38 +1,31 @@
 ---
-title: "channelParticipantsMentions (конструктор)"
+title: "channelParticipantsMentions"
 original: "https://core.telegram.org/constructor/channelParticipantsMentions"
 section: ref
 kind: constructor
+description: "Этот фильтр используется при поиске участников супергруппы для упоминания."
 layout: layout.njk
 ---
 
 # channelParticipantsMentions
 
-*Конструктор из схемы TL.*
-
-> This filter is used when looking for supergroup members to mention.  
-> This filter will automatically remove anonymous admins, and return even non-participant users that replied to a specific [thread](https://core.telegram.org/api/threads) through the [comment section](https://core.telegram.org/api/threads#channel-comments) of a channel.
-
-## Определение TL
+Этот фильтр используется при поиске участников супергруппы для упоминания.  
+Этот фильтр автоматически исключает анонимных администраторов и возвращает даже тех пользователей, которые не являются участниками, но ответили в определённом [обсуждении](/api/threads/) через [раздел комментариев](/api/threads/#channel-comments) канала.
 
 ```
 channelParticipantsMentions#e04b5ceb flags:# q:flags.0?string top_msg_id:flags.1?int = ChannelParticipantsFilter;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| q | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Filter by user name or username |
-| top_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | Look only for users that posted in this [thread](https://core.telegram.org/api/threads) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>q</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Фильтр по имени или имени пользователя</td></tr><tr><td><strong>top_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Искать только среди пользователей, писавших в этой <a href="/api/threads">ветке</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelParticipantsFilter](/type/ChannelParticipantsFilter/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message threads](https://core.telegram.org/api/threads)
+#### [Треды сообщений](/api/threads/)
 
-Telegram allows commenting on a channel post or on a generic supergroup message, thanks to message threads.
+Благодаря веткам обсуждения Telegram позволяет комментировать пост канала или обычное сообщение супергруппы.

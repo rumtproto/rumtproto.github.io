@@ -1,18 +1,15 @@
 ---
-title: "phone.discardCall (метод)"
+title: "phone.discardCall"
 original: "https://core.telegram.org/method/phone.discardCall"
 section: ref
 kind: method
+description: "Отклонить или завершить текущий звонок; подробнее о полном порядке действий см. здесь »."
 layout: layout.njk
 ---
 
 # phone.discardCall
 
-*Метод из схемы TL.*
-
-> Refuse or end running call, see [here »](https://core.telegram.org/api/calls#one-to-one-calls) for more info on the full flow.
-
-## Определение TL
+Отклонить или завершить текущий звонок; подробнее о полном порядке действий см. [здесь »](/api/calls/#one-to-one-calls).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,33 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.discardCall#b2cbc1c0 flags:# video:flags.0?true peer:InputPhoneCall duration:int reason:PhoneCallDiscardReason connection_id:long = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| video | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether this is a video call |
-| peer | [InputPhoneCall](/type/InputPhoneCall/) | The phone call |
-| duration | [int](/type/int/) | Call duration |
-| reason | [PhoneCallDiscardReason](/type/PhoneCallDiscardReason/) | Why was the call discarded |
-| connection_id | [long](/type/long/) | Preferred libtgvoip relay ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>video</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Является ли это видеозвонком</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPhoneCall">InputPhoneCall</a></td><td>[@term:peer] Телефонный звонок</td></tr><tr><td><strong>duration</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Длительность звонка</td></tr><tr><td><strong>reason</strong></td><td style="text-align: center;"><a href="/type/PhoneCallDiscardReason">PhoneCallDiscardReason</a></td><td>Почему звонок был завершён</td></tr><tr><td><strong>connection_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Предпочтительный идентификатор ретранслятора libtgvoip</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CALL_ALREADY_ACCEPTED | The call was already accepted. |
-| 500 | CALL_OCCUPY_FAILED | The call failed because the user is already making another call. |
-| 400 | CALL_PEER_INVALID | The provided call peer object is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CALL_ALREADY_ACCEPTED</td><td>Звонок уже был принят.</td></tr><tr><td>500</td><td>CALL_OCCUPY_FAILED</td><td>Звонок не удался, так как пользователь уже участвует в другом звонке.</td></tr><tr><td>400</td><td>CALL_PEER_INVALID</td><td>Указанный объект пира звонка недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Phone calls](https://core.telegram.org/api/calls)
+#### [Звонки](/api/calls/)
 
-Telegram supports end-to-end-encrypted one-to-one voice and video calls.
+Telegram поддерживает голосовые и видеозвонки один на один со сквозным шифрованием.

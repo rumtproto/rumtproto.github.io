@@ -1,36 +1,30 @@
 ---
-title: "botPreviewMedia (конструктор)"
+title: "botPreviewMedia"
 original: "https://core.telegram.org/constructor/botPreviewMedia"
 section: ref
 kind: constructor
+description: "Представляет медиафайл предпросмотра главного Mini App, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # botPreviewMedia
 
-*Конструктор из схемы TL.*
-
-> Represents a [Main Mini App preview media, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info.
-
-## Определение TL
+[@term:Mini App] Представляет [медиафайл предпросмотра главного Mini App, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews).
 
 ```
 botPreviewMedia#23e91ba3 date:int media:MessageMedia = BotPreviewMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| date | [int](/type/int/) | When was this media last updated. |
-| media | [MessageMedia](/type/MessageMedia/) | The actual photo/video. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда этот медиафайл обновлялся в последний раз.</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/MessageMedia">MessageMedia</a></td><td>Само фото или видео.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BotPreviewMedia](/type/BotPreviewMedia/)
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

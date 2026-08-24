@@ -1,19 +1,17 @@
 ---
-title: "auth.finishPasskeyLogin (метод)"
+title: "auth.finishPasskeyLogin"
 original: "https://core.telegram.org/method/auth.finishPasskeyLogin"
 section: ref
 kind: method
+description: "Завершить вход по ключу доступа через неавторизованное подключение; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # auth.finishPasskeyLogin
 
-*Метод из схемы TL.*
+Завершить вход по ключу доступа через неавторизованное подключение; подробнее см. [здесь »](/api/passkeys/#logging-in-with-a-passkey).
 
-> Complete login with a passkey over an unauthenticated connection, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for more info.
-> Must be sent to the user's native DC, as specified by the `user_handle` (`dcId:userId`) returned in the passkey assertion, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for the full flow.
-
-## Определение TL
+Обязан отправляться в родной DC пользователя, определяемый по `user_handle` (`dcId:userId`) из ответа passkey; полное описание процедуры см. [здесь »](/api/passkeys/#logging-in-with-a-passkey).
 
 ```
 auth.authorization#2ea2c0d4 flags:# setup_password_required:flags.1?true otherwise_relogin_days:flags.1?int tmp_sessions:flags.0?int future_auth_token:flags.2?bytes user:User = auth.Authorization;
@@ -22,37 +20,28 @@ auth.authorizationSignUpRequired#44747e9a flags:# terms_of_service:flags.0?help.
 auth.finishPasskeyLogin#9857ad07 flags:# credential:InputPasskeyCredential from_dc_id:flags.0?int from_auth_key_id:flags.0?long = auth.Authorization;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| credential | [InputPasskeyCredential](/type/InputPasskeyCredential/) | Passkey assertion result. |
-| from_dc_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | DC ID used for the initial [auth.initPasskeyLogin](/method/auth.initPasskeyLogin/) request; set only if the user's DC is different from the DC used for the initial [auth.initPasskeyLogin](/method/auth.initPasskeyLogin/). |
-| from_auth_key_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | Auth key ID for the connection to from_dc_id (use the permanent auth key ID if PFS is enabled); set only if the user's DC is different from the DC used for the initial [auth.initPasskeyLogin](/method/auth.initPasskeyLogin/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>credential</strong></td><td style="text-align: center;"><a href="/type/InputPasskeyCredential">InputPasskeyCredential</a></td><td>Результат подтверждения ключа доступа.</td></tr><tr><td><strong>from_dc_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Идентификатор DC, использованный для исходного запроса <a href="/method/auth.initPasskeyLogin">auth.initPasskeyLogin</a>; задаётся, только если DC пользователя отличается от DC, использованного для исходного запроса <a href="/method/auth.initPasskeyLogin">auth.initPasskeyLogin</a>.</td></tr><tr><td><strong>from_auth_key_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Идентификатор авторизационного ключа для соединения с <code>from_dc_id</code> (при включённом PFS используйте идентификатор постоянного авторизационного ключа); задаётся, только если DC пользователя отличается от DC, использованного для первоначального вызова <a href="/method/auth.initPasskeyLogin">auth.initPasskeyLogin</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.Authorization](/type/auth.Authorization/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 500 | AUTH_RESTART | Restart the authorization process. |
-| 400 | CREDENTIAL_INVALID | The specified credential is invalid. |
-| 400 | PASSKEY_ORIGIN_MISMATCH | Third-party clients currently don't support passkeys even when changing the origin. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>500</td><td>AUTH_RESTART</td><td>Начать процесс авторизации заново.</td></tr><tr><td>400</td><td>CREDENTIAL_INVALID</td><td>Указанные платёжные реквизиты недействительны.</td></tr><tr><td>400</td><td>PASSKEY_ORIGIN_MISMATCH</td><td>Сторонние клиенты пока не поддерживают passkey, даже при смене origin.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [auth.initPasskeyLogin](/method/auth.initPasskeyLogin/)
 
-Initialize login with a passkey over an unauthenticated connection, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for more info.
+Начать вход по ключу доступа через неавторизованное подключение; подробнее см. [здесь »](/api/passkeys/#logging-in-with-a-passkey).
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

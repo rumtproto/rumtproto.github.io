@@ -1,27 +1,24 @@
 ---
-title: "notificationSoundNone (конструктор)"
+title: "notificationSoundNone"
 original: "https://core.telegram.org/constructor/notificationSoundNone"
 section: ref
 kind: constructor
+description: "Звук уведомления использовать не следует"
 layout: layout.njk
 ---
 
 # notificationSoundNone
 
-*Конструктор из схемы TL.*
-
-> No notification sound should be used
-
-## Определение TL
+Звук уведомления использовать не следует
 
 ```
 notificationSoundNone#6f0c34df = NotificationSound;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [NotificationSound](/type/NotificationSound/)

@@ -1,18 +1,15 @@
 ---
-title: "messages.setChatTheme (метод)"
+title: "messages.setChatTheme"
 original: "https://core.telegram.org/method/messages.setChatTheme"
 section: ref
 kind: method
+description: "Изменить тему оформления определённого чата, подробнее здесь »."
 layout: layout.njk
 ---
 
 # messages.setChatTheme
 
-*Метод из схемы TL.*
-
-> Change the chat theme of a certain chat, see [here »](https://core.telegram.org/api/themes#chat-themes) for more info.
-
-## Определение TL
+Изменить тему оформления определённого чата, подробнее [здесь »](/api/themes/#chat-themes).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,29 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.setChatTheme#81202c9 peer:InputPeer theme:InputChatTheme = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Private chat where to change theme |
-| theme | [InputChatTheme](/type/InputChatTheme/) | The theme to set. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Личный чат, в котором нужно изменить тему оформления</td></tr><tr><td><strong>theme</strong></td><td style="text-align: center;"><a href="/type/InputChatTheme">InputChatTheme</a></td><td>Тема, которую нужно установить.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | EMOJI_INVALID | The specified theme emoji is valid. |
-| 400 | EMOJI_NOT_MODIFIED | The theme wasn't changed. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>EMOJI_INVALID</td><td>Указанный эмодзи темы действителен.</td></tr><tr><td>400</td><td>EMOJI_NOT_MODIFIED</td><td>Тема не изменилась.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram themes](https://core.telegram.org/api/themes)
+#### [Темы оформления Telegram](/api/themes/)
 
-Telegram apps support generating, sharing and synchronizing app themes.
+Приложения Telegram умеют создавать, отправлять и синхронизировать темы оформления.

@@ -1,18 +1,15 @@
 ---
-title: "auth.SentCodeType (тип)"
+title: "auth.SentCodeType"
 original: "https://core.telegram.org/type/auth.SentCodeType"
 section: ref
 kind: type
+description: "Тип отправленного кода подтверждения"
 layout: layout.njk
 ---
 
 # auth.SentCodeType
 
-*Тип из схемы TL.*
-
-> Type of the verification code that was sent
-
-## Определение TL
+Тип отправленного кода подтверждения
 
 ```
 auth.sentCodeTypeApp#3dbb5986 length:int = auth.SentCodeType;
@@ -28,18 +25,6 @@ auth.sentCodeTypeSmsWord#a416ac81 flags:# beginning:flags.0?string = auth.SentCo
 auth.sentCodeTypeSmsPhrase#b37794af flags:# beginning:flags.0?string = auth.SentCodeType;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [auth.sentCodeTypeApp](/constructor/auth.sentCodeTypeApp/) | The code was sent through the telegram app |
-| [auth.sentCodeTypeSms](/constructor/auth.sentCodeTypeSms/) | The code was sent via SMS |
-| [auth.sentCodeTypeCall](/constructor/auth.sentCodeTypeCall/) | The code will be sent via a phone call: a synthesized voice will tell the user which verification code to input. |
-| [auth.sentCodeTypeFlashCall](/constructor/auth.sentCodeTypeFlashCall/) | The code will be sent via a flash phone call, that will be closed immediately. The phone code will then be the phone number itself, just make sure that the phone number matches the specified pattern. |
-| [auth.sentCodeTypeMissedCall](/constructor/auth.sentCodeTypeMissedCall/) | The code will be sent via a flash phone call, that will be closed immediately. The last digits of the phone number that calls are the code that must be entered manually by the user. |
-| [auth.sentCodeTypeEmailCode](/constructor/auth.sentCodeTypeEmailCode/) | The code was sent via the [previously configured login email »](https://core.telegram.org/api/auth/#email-verification) |
-| [auth.sentCodeTypeSetUpEmailRequired](/constructor/auth.sentCodeTypeSetUpEmailRequired/) | The user should add and verify an email address in order to login as described [here »](https://core.telegram.org/api/auth/#email-verification). |
-| [auth.sentCodeTypeFragmentSms](/constructor/auth.sentCodeTypeFragmentSms/) | The code was delivered via [fragment.com](https://fragment.com). |
-| [auth.sentCodeTypeFirebaseSms](/constructor/auth.sentCodeTypeFirebaseSms/) | An authentication code should be delivered via SMS after Firebase attestation, as described in the [auth documentation »](/api/auth/). |
-| [auth.sentCodeTypeSmsWord](/constructor/auth.sentCodeTypeSmsWord/) | The code was sent via SMS as a secret word, starting with the letter specified in beginning |
-| [auth.sentCodeTypeSmsPhrase](/constructor/auth.sentCodeTypeSmsPhrase/) | The code was sent via SMS as a secret phrase starting with the word specified in beginning |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/auth.sentCodeTypeApp">auth.sentCodeTypeApp</a></td><td>Код был отправлен через приложение Telegram</td></tr><tr><td><a href="/constructor/auth.sentCodeTypeSms">auth.sentCodeTypeSms</a></td><td>Код был отправлен по SMS</td></tr><tr><td><a href="/constructor/auth.sentCodeTypeCall">auth.sentCodeTypeCall</a></td><td>Код будет передан телефонным звонком: синтезированный голос продиктует пользователю код подтверждения, который нужно ввести.</td></tr><tr><td><a href="/constructor/auth.sentCodeTypeFlashCall">auth.sentCodeTypeFlashCall</a></td><td>Код будет отправлен сбросом звонка, который сразу же завершится. Кодом при этом будет сам номер телефона — достаточно убедиться, что номер соответствует указанному шаблону.</td></tr><tr><td><a href="/constructor/auth.sentCodeTypeMissedCall">auth.sentCodeTypeMissedCall</a></td><td>Код будет отправлен сбросом звонка, который сразу же завершится. Код — это последние цифры номера, с которого поступил звонок; пользователь должен ввести их вручную.</td></tr><tr><td><a href="/constructor/auth.sentCodeTypeEmailCode">auth.sentCodeTypeEmailCode</a></td><td>Код был отправлен на <a href="/api/auth#email-verification">ранее заданный адрес электронной почты для входа »</a></td></tr><tr><td><a href="/constructor/auth.sentCodeTypeSetUpEmailRequired">auth.sentCodeTypeSetUpEmailRequired</a></td><td>Для входа пользователь должен добавить и подтвердить адрес электронной почты, как описано <a href="/api/auth#email-verification">здесь »</a>.</td></tr><tr><td><a href="/constructor/auth.sentCodeTypeFragmentSms">auth.sentCodeTypeFragmentSms</a></td><td>Код был доставлен через <a href="https://fragment.com">fragment.com</a>.</td></tr><tr><td><a href="/constructor/auth.sentCodeTypeFirebaseSms">auth.sentCodeTypeFirebaseSms</a></td><td>Код аутентификации должен быть доставлен по SMS после аттестации Firebase, как описано в <a href="/api/auth">документации по авторизации »</a>.</td></tr><tr><td><a href="/constructor/auth.sentCodeTypeSmsWord">auth.sentCodeTypeSmsWord</a></td><td>Код был отправлен по SMS в виде секретного слова, начинающегося с буквы, указанной в <code>beginning</code></td></tr><tr><td><a href="/constructor/auth.sentCodeTypeSmsPhrase">auth.sentCodeTypeSmsPhrase</a></td><td>Код был отправлен по SMS в виде секретной фразы, начинающейся со слова, указанного в <code>beginning</code></td></tr></tbody></table>

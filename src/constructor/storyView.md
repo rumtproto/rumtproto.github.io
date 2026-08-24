@@ -1,44 +1,34 @@
 ---
-title: "storyView (конструктор)"
+title: "storyView"
 original: "https://core.telegram.org/constructor/storyView"
 section: ref
 kind: constructor
+description: "Сведения о датах просмотра и реакциях для истории"
 layout: layout.njk
 ---
 
 # storyView
 
-*Конструктор из схемы TL.*
-
-> [Story](https://core.telegram.org/api/stories) view date and reaction information
-
-## Определение TL
+Сведения о датах просмотра и реакциях для [истории](/api/stories/)
 
 ```
 storyView#b0bdeac5 flags:# blocked:flags.0?true blocked_my_stories_from:flags.1?true user_id:long date:int reaction:flags.2?Reaction = StoryView;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| blocked | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether we have [completely blocked](https://core.telegram.org/api/block) this user, including from viewing more of our stories. |
-| blocked_my_stories_from | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether we have [blocked](https://core.telegram.org/api/block) this user from viewing more of our stories. |
-| user_id | [long](/type/long/) | The user that viewed the story |
-| date | [int](/type/int/) | When did the user view the story |
-| reaction | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[Reaction](/type/Reaction/) | If present, contains the reaction that the user left on the story |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>blocked</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td><a href="/api/block">Полностью заблокировали</a> ли мы этого пользователя, в том числе закрыв ему просмотр наших историй.</td></tr><tr><td><strong>blocked_my_stories_from</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td><a href="/api/block">Заблокировали</a> ли мы этому пользователю просмотр наших историй.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Пользователь, просмотревший историю</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда пользователь просмотрел историю</td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Reaction">Reaction</a></td><td>Если присутствует, содержит реакцию, оставленную пользователем на историю</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StoryView](/type/StoryView/)
 
-## Related pages
+### Связанные страницы
 
-#### [Blocked users](https://core.telegram.org/api/block)
+#### [Заблокированные пользователи](/api/block/)
 
-Working with the blocklist.
+Работа со списком заблокированных.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

@@ -1,18 +1,15 @@
 ---
-title: "account.resetNotifySettings (метод)"
+title: "account.resetNotifySettings"
 original: "https://core.telegram.org/method/account.resetNotifySettings"
 section: ref
 kind: method
+description: "Сбрасывает все настройки уведомлений от пользователей и групп."
 layout: layout.njk
 ---
 
 # account.resetNotifySettings
 
-*Метод из схемы TL.*
-
-> Resets all notification settings from users and groups.
-
-## Определение TL
+Сбрасывает все настройки уведомлений от пользователей и групп.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,12 +18,12 @@ boolTrue#997275b5 = Bool;
 account.resetNotifySettings#db7e1747 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

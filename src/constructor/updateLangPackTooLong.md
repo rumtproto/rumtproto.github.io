@@ -1,35 +1,30 @@
 ---
-title: "updateLangPackTooLong (конструктор)"
+title: "updateLangPackTooLong"
 original: "https://core.telegram.org/constructor/updateLangPackTooLong"
 section: ref
 kind: constructor
+description: "Языковой пакет изменился, клиенту следует самостоятельно получить изменившиеся строки с помощью langpack.getDifference"
 layout: layout.njk
 ---
 
 # updateLangPackTooLong
 
-*Конструктор из схемы TL.*
-
-> A language pack has changed, the client should manually fetch the changed strings using [langpack.getDifference](/method/langpack.getDifference/)
-
-## Определение TL
+Языковой пакет изменился, клиенту следует самостоятельно получить изменившиеся строки с помощью [langpack.getDifference](/method/langpack.getDifference/)
 
 ```
 updateLangPackTooLong#46560264 lang_code:string = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| lang_code | [string](/type/string/) | Language code |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код языка</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [langpack.getDifference](/method/langpack.getDifference/)
 
-Get new strings in language pack
+Получить новые строки языкового пакета

@@ -1,19 +1,17 @@
 ---
-title: "messages.getSearchResultsPositions (метод)"
+title: "messages.getSearchResultsPositions"
 original: "https://core.telegram.org/method/messages.getSearchResultsPositions"
 section: ref
 kind: method
+description: "Возвращает разреженные позиции сообщений указанного типа в чате для реализации прокрутки общих медиа."
 layout: layout.njk
 ---
 
 # messages.getSearchResultsPositions
 
-*Метод из схемы TL.*
+Возвращает разреженные позиции сообщений указанного типа в чате для реализации прокрутки общих медиа.
 
-> Returns sparse positions of messages of the specified type in the chat to be used for shared media scroll implementation.
-> Returns the results in reverse chronological order (i.e., in order of decreasing message\_id).
-
-## Определение TL
+Результаты возвращаются в обратном хронологическом порядке (то есть по убыванию message\_id).
 
 ```
 messages.searchResultsPositions#53b22baf count:int positions:Vector<SearchResultsPosition> = messages.SearchResultsPositions;
@@ -21,43 +19,34 @@ messages.searchResultsPositions#53b22baf count:int positions:Vector<SearchResult
 messages.getSearchResultsPositions#9c7f2f10 flags:# peer:InputPeer saved_peer_id:flags.2?InputPeer filter:MessagesFilter offset_id:int limit:int = messages.SearchResultsPositions;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [InputPeer](/type/InputPeer/) | Peer where to search |
-| saved_peer_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[InputPeer](/type/InputPeer/) | Search within the [saved message dialog »](https://core.telegram.org/api/saved-messages) with this ID. |
-| filter | [MessagesFilter](/type/MessagesFilter/) | Message filter, [inputMessagesFilterEmpty](/constructor/inputMessagesFilterEmpty/), [inputMessagesFilterMyMentions](/constructor/inputMessagesFilterMyMentions/) filters are not supported by this method. |
-| offset_id | [int](/type/int/) | [Offsets for pagination, for more info click here](https://core.telegram.org/api/offsets) |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в котором выполняется поиск</td></tr><tr><td><strong>saved_peer_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/InputPeer">InputPeer</a></td><td>Искать в <a href="/api/saved-messages">диалоге сохранённых сообщений »</a> с этим идентификатором.</td></tr><tr><td><strong>filter</strong></td><td style="text-align: center;"><a href="/type/MessagesFilter">MessagesFilter</a></td><td>Фильтр сообщений; фильтры <a href="/constructor/inputMessagesFilterEmpty">inputMessagesFilterEmpty</a> и <a href="/constructor/inputMessagesFilterMyMentions">inputMessagesFilterMyMentions</a> этим методом не поддерживаются.</td></tr><tr><td><strong>offset_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets">Смещения для постраничной выборки, подробнее см. здесь</a></td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.SearchResultsPositions](/type/messages.SearchResultsPositions/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.
 
 #### [inputMessagesFilterEmpty](/constructor/inputMessagesFilterEmpty/)
 
-Filter is absent.
+Фильтр отсутствует.
 
 #### [inputMessagesFilterMyMentions](/constructor/inputMessagesFilterMyMentions/)
 
-Return only messages where the current user was [mentioned](https://core.telegram.org/api/mentions).
+Возвращать только сообщения, в которых [упомянут](/api/mentions/) текущий пользователь.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

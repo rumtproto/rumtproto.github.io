@@ -1,18 +1,15 @@
 ---
-title: "messages.rateTranscribedAudio (метод)"
+title: "messages.rateTranscribedAudio"
 original: "https://core.telegram.org/method/messages.rateTranscribedAudio"
 section: ref
 kind: method
+description: "Оценить расшифровку голосового сообщения"
 layout: layout.njk
 ---
 
 # messages.rateTranscribedAudio
 
-*Метод из схемы TL.*
-
-> Rate [transcribed voice message](https://core.telegram.org/api/transcribe)
-
-## Определение TL
+Оценить [расшифровку голосового сообщения](/api/transcribe/)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,23 +18,18 @@ boolTrue#997275b5 = Bool;
 messages.rateTranscribedAudio#7f1d072f peer:InputPeer msg_id:int transcription_id:long good:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer where the voice message was sent |
-| msg_id | [int](/type/int/) | Message ID |
-| transcription_id | [long](/type/long/) | Transcription ID |
-| good | [Bool](/type/Bool/) | Whether the transcription was correct |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в который было отправлено голосовое сообщение</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения</td></tr><tr><td><strong>transcription_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор расшифровки</td></tr><tr><td><strong>good</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Была ли расшифровка верной</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Voice message transcription](https://core.telegram.org/api/transcribe)
+#### [Расшифровка голосовых сообщений](/api/transcribe/)
 
-How to transcribe voice messages.
+Как расшифровывать голосовые сообщения.

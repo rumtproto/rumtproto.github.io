@@ -1,41 +1,36 @@
 ---
-title: "documentAttributeSticker (конструктор)"
+title: "documentAttributeSticker"
 original: "https://core.telegram.org/constructor/documentAttributeSticker"
 section: ref
 kind: constructor
+description: "Определяет стикер"
 layout: layout.njk
 ---
 
 # documentAttributeSticker
 
-*Конструктор из схемы TL.*
+Определяет стикер
 
-> Defines a sticker
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===23===
-> documentAttributeSticker#fb0a5727 = DocumentAttribute;
-> ===45===
-> documentAttributeSticker#3a556302 alt:string stickerset:InputStickerSet = DocumentAttribute;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===23===
+documentAttributeSticker#fb0a5727 = DocumentAttribute;
+
+===45===
+documentAttributeSticker#3a556302 alt:string stickerset:InputStickerSet = DocumentAttribute;
+```
+
+#### Схема API
 
 ```
 documentAttributeSticker#6319d612 flags:# mask:flags.1?true alt:string stickerset:InputStickerSet mask_coords:flags.0?MaskCoords = DocumentAttribute;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| mask | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether this is a mask sticker |
-| alt | [string](/type/string/) | Alternative emoji representation of sticker |
-| stickerset | [InputStickerSet](/type/InputStickerSet/) | Associated stickerset |
-| mask_coords | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[MaskCoords](/type/MaskCoords/) | Mask coordinates (if this is a mask sticker, attached to a photo) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>mask</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Является ли это стикером-маской</td></tr><tr><td><strong>alt</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Альтернативное представление стикера в виде эмодзи</td></tr><tr><td><strong>stickerset</strong></td><td style="text-align: center;"><a href="/type/InputStickerSet">InputStickerSet</a></td><td>Привязанный набор стикеров</td></tr><tr><td><strong>mask_coords</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/MaskCoords">MaskCoords</a></td><td>Координаты маски (если это стикер-маска, наложенный на фотографию)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DocumentAttribute](/type/DocumentAttribute/)

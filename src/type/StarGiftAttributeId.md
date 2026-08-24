@@ -1,18 +1,15 @@
 ---
-title: "StarGiftAttributeId (тип)"
+title: "StarGiftAttributeId"
 original: "https://core.telegram.org/type/StarGiftAttributeId"
 section: ref
 kind: type
+description: "Представляет _идентификатор_ атрибута коллекционного подарка."
 layout: layout.njk
 ---
 
 # StarGiftAttributeId
 
-*Тип из схемы TL.*
-
-> Represents the _identifier_ of a [collectible gift attribute](https://core.telegram.org/api/gifts#collectible-gifts).
-
-## Определение TL
+Представляет _идентификатор_ [атрибута коллекционного подарка](/api/gifts/#collectible-gifts).
 
 ```
 starGiftAttributeIdModel#48aaae3c document_id:long = StarGiftAttributeId;
@@ -20,16 +17,12 @@ starGiftAttributeIdPattern#4a162433 document_id:long = StarGiftAttributeId;
 starGiftAttributeIdBackdrop#1f01c757 backdrop_id:int = StarGiftAttributeId;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starGiftAttributeIdModel](/constructor/starGiftAttributeIdModel/) | The ID of a model of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| [starGiftAttributeIdPattern](/constructor/starGiftAttributeIdPattern/) | The ID of a pattern of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| [starGiftAttributeIdBackdrop](/constructor/starGiftAttributeIdBackdrop/) | The ID of a backdrop of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftAttributeIdModel">starGiftAttributeIdModel</a></td><td>Идентификатор модели <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>.</td></tr><tr><td><a href="/constructor/starGiftAttributeIdPattern">starGiftAttributeIdPattern</a></td><td>Идентификатор узора <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>.</td></tr><tr><td><a href="/constructor/starGiftAttributeIdBackdrop">starGiftAttributeIdBackdrop</a></td><td>Идентификатор подложки <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

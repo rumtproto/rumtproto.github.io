@@ -1,27 +1,24 @@
 ---
-title: "emailVerifyPurposeLoginChange (конструктор)"
+title: "emailVerifyPurposeLoginChange"
 original: "https://core.telegram.org/constructor/emailVerifyPurposeLoginChange"
 section: ref
 kind: constructor
+description: "Назначение подтверждения электронной почты: смена почты для входа"
 layout: layout.njk
 ---
 
 # emailVerifyPurposeLoginChange
 
-*Конструктор из схемы TL.*
-
-> Email verification purpose: change login email
-
-## Определение TL
+Назначение подтверждения электронной почты: смена почты для входа
 
 ```
 emailVerifyPurposeLoginChange#527d22eb = EmailVerifyPurpose;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [EmailVerifyPurpose](/type/EmailVerifyPurpose/)

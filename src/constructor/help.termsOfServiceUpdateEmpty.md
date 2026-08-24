@@ -1,35 +1,30 @@
 ---
-title: "help.termsOfServiceUpdateEmpty (конструктор)"
+title: "help.termsOfServiceUpdateEmpty"
 original: "https://core.telegram.org/constructor/help.termsOfServiceUpdateEmpty"
 section: ref
 kind: constructor
+description: "Условия использования Telegram не изменились"
 layout: layout.njk
 ---
 
 # help.termsOfServiceUpdateEmpty
 
-*Конструктор из схемы TL.*
-
-> No changes were made to telegram's terms of service
-
-## Определение TL
+Условия использования Telegram не изменились
 
 ```
 help.termsOfServiceUpdateEmpty#e3309f7f expires:int = help.TermsOfServiceUpdate;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| expires | [int](/type/int/) | New TOS updates will have to be queried using [help.getTermsOfServiceUpdate](/method/help.getTermsOfServiceUpdate/) in expires seconds |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>expires</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Обновления условий использования нужно будет запросить с помощью <a href="/method/help.getTermsOfServiceUpdate">help.getTermsOfServiceUpdate</a> через <code>expires</code> секунд</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [help.TermsOfServiceUpdate](/type/help.TermsOfServiceUpdate/)
 
-## Related pages
+### Связанные страницы
 
 #### [help.getTermsOfServiceUpdate](/method/help.getTermsOfServiceUpdate/)
 
-Look for updates of telegram's terms of service
+Проверить наличие обновлений условий использования Telegram

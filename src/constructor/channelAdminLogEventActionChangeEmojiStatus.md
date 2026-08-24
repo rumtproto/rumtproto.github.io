@@ -1,36 +1,30 @@
 ---
-title: "channelAdminLogEventActionChangeEmojiStatus (конструктор)"
+title: "channelAdminLogEventActionChangeEmojiStatus"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionChangeEmojiStatus"
 section: ref
 kind: constructor
+description: "Изменился эмодзи-статус"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionChangeEmojiStatus
 
-*Конструктор из схемы TL.*
-
-> The [emoji status](https://core.telegram.org/api/emoji-status) was changed
-
-## Определение TL
+Изменился [эмодзи-статус](/api/emoji-status/)
 
 ```
 channelAdminLogEventActionChangeEmojiStatus#3ea9feb1 prev_value:EmojiStatus new_value:EmojiStatus = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| prev_value | [EmojiStatus](/type/EmojiStatus/) | Previous emoji status |
-| new_value | [EmojiStatus](/type/EmojiStatus/) | New emoji status |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>prev_value</strong></td><td style="text-align: center;"><a href="/type/EmojiStatus">EmojiStatus</a></td><td>Предыдущий статус эмодзи</td></tr><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/EmojiStatus">EmojiStatus</a></td><td>Новый эмодзи-статус</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

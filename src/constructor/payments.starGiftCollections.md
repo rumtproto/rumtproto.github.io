@@ -1,35 +1,30 @@
 ---
-title: "payments.starGiftCollections (конструктор)"
+title: "payments.starGiftCollections"
 original: "https://core.telegram.org/constructor/payments.starGiftCollections"
 section: ref
 kind: constructor
+description: "Представляет список коллекций подарков »."
 layout: layout.njk
 ---
 
 # payments.starGiftCollections
 
-*Конструктор из схемы TL.*
-
-> Represents a list of [star gift collections »](https://core.telegram.org/api/gifts#gift-collections).
-
-## Определение TL
+Представляет список [коллекций подарков »](/api/gifts/#gift-collections).
 
 ```
 payments.starGiftCollections#8a2932f3 collections:Vector<StarGiftCollection> = payments.StarGiftCollections;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| collections | [Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftCollection](/type/StarGiftCollection/)> | Star gift collections. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>collections</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftCollection">StarGiftCollection</a>&gt;</td><td>Коллекции подарков за Stars.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.StarGiftCollections](/type/payments.StarGiftCollections/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

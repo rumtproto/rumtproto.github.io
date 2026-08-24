@@ -1,37 +1,30 @@
 ---
-title: "updateGroupCallParticipants (конструктор)"
+title: "updateGroupCallParticipants"
 original: "https://core.telegram.org/constructor/updateGroupCallParticipants"
 section: ref
 kind: constructor
+description: "Изменился список участников группового звонка."
 layout: layout.njk
 ---
 
 # updateGroupCallParticipants
 
-*Конструктор из схемы TL.*
-
-> The participant list of a [group call](https://core.telegram.org/api/group-calls#applying-group-call-updates) has changed.
-
-## Определение TL
+Изменился список участников [группового звонка](/api/group-calls/#applying-group-call-updates).
 
 ```
 updateGroupCallParticipants#f2ebdb4e call:InputGroupCall participants:Vector<GroupCallParticipant> version:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Group call whose participants changed |
-| participants | [Vector](https://core.telegram.org/type/Vector%20t)<[GroupCallParticipant](/type/GroupCallParticipant/)> | Participants whose state changed |
-| version | [int](/type/int/) | Group call revision used by the [update application rules »](https://core.telegram.org/api/group-calls#applying-group-call-updates) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Групповой звонок, состав участников которого изменился</td></tr><tr><td><strong>participants</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/GroupCallParticipant">GroupCallParticipant</a>&gt;</td><td>Участники, состояние которых изменилось</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Ревизия группового звонка, используемая <a href="/api/group-calls#applying-group-call-updates">правилами применения обновлений »</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

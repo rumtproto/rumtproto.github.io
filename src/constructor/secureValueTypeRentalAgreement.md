@@ -1,27 +1,24 @@
 ---
-title: "secureValueTypeRentalAgreement (конструктор)"
+title: "secureValueTypeRentalAgreement"
 original: "https://core.telegram.org/constructor/secureValueTypeRentalAgreement"
 section: ref
 kind: constructor
+description: "Договор аренды"
 layout: layout.njk
 ---
 
 # secureValueTypeRentalAgreement
 
-*Конструктор из схемы TL.*
-
-> Rental agreement
-
-## Определение TL
+Договор аренды
 
 ```
 secureValueTypeRentalAgreement#8b883488 = SecureValueType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureValueType](/type/SecureValueType/)

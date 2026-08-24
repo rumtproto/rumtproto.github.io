@@ -1,18 +1,15 @@
 ---
-title: "decryptedMessageMediaDocument (конструктор)"
+title: "decryptedMessageMediaDocument"
 original: "https://core.telegram.org/constructor/decryptedMessageMediaDocument"
 section: ref
 kind: constructor
+description: "Документ, вложенный в сообщение в секретном чате."
 layout: layout.njk
 ---
 
 # decryptedMessageMediaDocument
 
-*Конструктор из схемы TL.*
-
-> Document attached to a message in a secret chat.
-
-## Определение TL
+Документ, вложенный в сообщение в секретном чате.
 
 ```
 ===8===
@@ -25,31 +22,20 @@ decryptedMessageMediaDocument#7afe8ae2 thumb:bytes thumb_w:int thumb_h:int mime_
 decryptedMessageMediaDocument#6abd9782 thumb:bytes thumb_w:int thumb_h:int mime_type:string size:long key:bytes iv:bytes attributes:Vector<DocumentAttribute> caption:string = DecryptedMessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| thumb | [bytes](/type/bytes/) | Thumbnail-file contents (JPEG-file, quality 55, set in a 90x90 square) |
-| thumb_w | [int](/type/int/) | Thumbnail width |
-| thumb_h | [int](/type/int/) | Thumbnail height |
-| file_name | [string](/type/string/) | File name, moved to attributes in Layer 45. |
-| mime_type | [string](/type/string/) | File MIME-type |
-| size | [long](/type/long/) | Document size ([int](/type/int/) on layer <143, [long](/type/long/) on layer >=143) |
-| key | [bytes](/type/bytes/) | Key to decrypt the attached document file |
-| iv | [bytes](/type/bytes/) | Initialization |
-| attributes | [Vector](https://core.telegram.org/type/Vector%20t)<[DocumentAttribute](/type/DocumentAttribute/)> | Document attributes for media types |
-| caption | [string](/type/string/) | Caption |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>thumb</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Содержимое файла миниатюры (файл JPEG, качество 55, вписанный в квадрат 90x90)</td></tr><tr><td><strong>thumb_w</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Ширина миниатюры</td></tr><tr><td><strong>thumb_h</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Высота миниатюры</td></tr><tr><td><strong>file_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Имя файла, перенесено в <code>attributes</code> в слое 45.</td></tr><tr><td><strong>mime_type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>MIME-тип файла</td></tr><tr><td><strong>size</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Размер документа (<a href="/type/int">int</a> на слое &lt;143, <a href="/type/long">long</a> на слое &gt;=143)</td></tr><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Ключ для расшифровки прикреплённого файла документа</td></tr><tr><td><strong>iv</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Инициализация</td></tr><tr><td><strong>attributes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/DocumentAttribute">DocumentAttribute</a>&gt;</td><td>Атрибуты документа для типов медиафайлов</td></tr><tr><td><strong>caption</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Подпись</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DecryptedMessageMedia](/type/DecryptedMessageMedia/)
 
-## Related pages
+### Связанные страницы
 
 #### [int](/type/int/)
 
-A basic bare type, the values of which correspond to single-element sequences, i.e. numbers from -2^31 to 2^31-1 which in this case represent themselves.
+[@term:bare] Базовый голый тип, значения которого соответствуют одноэлементным последовательностям, то есть числам от -2^31 до 2^31-1, которые в этом случае представляют сами себя.
 
 #### [long](/type/long/)
 
-A basic bare type, elements of which correspond to two-element sequences, representing 64-bit signed numbers (little-endian).
+Базовый голый тип, значения которого соответствуют последовательностям из двух элементов, представляющим 64-битные знаковые числа (в порядке little-endian).

@@ -1,31 +1,26 @@
 ---
-title: "InputSecureValue (тип)"
+title: "InputSecureValue"
 original: "https://core.telegram.org/type/InputSecureValue"
 section: ref
 kind: type
+description: "Защищённое значение, подробнее см. в документации по Passport »"
 layout: layout.njk
 ---
 
 # InputSecureValue
 
-*Тип из схемы TL.*
-
-> Secure value, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption)
-
-## Определение TL
+Защищённое значение, [подробнее см. в документации по Passport »](https://core.telegram.org/passport/encryption#encryption)
 
 ```
 inputSecureValue#db21d0a7 flags:# type:SecureValueType data:flags.0?SecureData front_side:flags.1?InputSecureFile reverse_side:flags.2?InputSecureFile selfie:flags.3?InputSecureFile translation:flags.6?Vector<InputSecureFile> files:flags.4?Vector<InputSecureFile> plain_data:flags.5?SecurePlainData = InputSecureValue;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputSecureValue](/constructor/inputSecureValue/) | Secure value, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputSecureValue">inputSecureValue</a></td><td>Защищённое значение, <a href="/passport/encryption#encryption">подробнее см. в документации по Passport »</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport: детали шифрования](https://core.telegram.org/passport/encryption)
 
-How Telegram Passport data is stored and encrypted end-to-end.
+Как данные Telegram Passport хранятся и шифруются сквозным шифрованием.

@@ -1,18 +1,15 @@
 ---
-title: "payments.StarsStatus (тип)"
+title: "payments.StarsStatus"
 original: "https://core.telegram.org/type/payments.StarsStatus"
 section: ref
 kind: type
+description: "Информация о текущих подписках за Telegram Stars, балансе и истории транзакций »."
 layout: layout.njk
 ---
 
 # payments.StarsStatus
 
-*Тип из схемы TL.*
-
-> Info about the current [Telegram Star subscriptions, balance and transaction history »](https://core.telegram.org/api/stars#balance-and-transaction-history).
-
-## Определение TL
+Информация о текущих [подписках за Telegram Stars, балансе и истории транзакций »](/api/stars/#balance-and-transaction-history).
 
 ```
 payments.starsStatus#6c9ce8ed flags:# balance:StarsAmount subscriptions:flags.1?Vector<StarsSubscription> subscriptions_next_offset:flags.2?string subscriptions_missing_balance:flags.4?long history:flags.3?Vector<StarsTransaction> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = payments.StarsStatus;
@@ -25,23 +22,16 @@ payments.getStarsTransactionsByID#2dca16b8 flags:# ton:flags.0?true peer:InputPe
 payments.getStarsSubscriptions#32512c5 flags:# missing_balance:flags.0?true peer:InputPeer offset:string = payments.StarsStatus;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.starsStatus](/constructor/payments.starsStatus/) | Info about the current [Telegram Star subscriptions, balance and transaction history »](https://core.telegram.org/api/stars#balance-and-transaction-history). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starsStatus">payments.starsStatus</a></td><td>Информация о текущих <a href="/api/stars#balance-and-transaction-history">подписках Telegram Star, балансе и истории транзакций »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getStarsStatus](/method/payments.getStarsStatus/) | Get the current [Telegram Stars balance](https://core.telegram.org/api/stars) of the current account (with peer=[inputPeerSelf](/constructor/inputPeerSelf/)), or the stars balance of the bot or channel specified in peer. |
-| [payments.getStarsTransactions](/method/payments.getStarsTransactions/) | Fetch [Telegram Stars transactions](https://core.telegram.org/api/stars#balance-and-transaction-history). The inbound and outbound flags are mutually exclusive: if none of the two are set, both incoming and outgoing transactions are fetched. |
-| [payments.getStarsTransactionsByID](/method/payments.getStarsTransactionsByID/) | Obtain info about [Telegram Star transactions »](https://core.telegram.org/api/stars#balance-and-transaction-history) using specific transaction IDs. |
-| [payments.getStarsSubscriptions](/method/payments.getStarsSubscriptions/) | Obtain a list of active, expired or cancelled [Telegram Star subscriptions »](https://core.telegram.org/api/invites#paid-invite-links). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarsStatus">payments.getStarsStatus</a></td><td>[@term:peer] Получить текущий <a href="/api/stars">баланс Telegram Stars</a> текущего аккаунта (при peer=<a href="/constructor/inputPeerSelf">inputPeerSelf</a>) либо баланс звёзд бота или канала, указанного в <code>peer</code>.</td></tr><tr><td><a href="/method/payments.getStarsTransactions">payments.getStarsTransactions</a></td><td>Получить <a href="/api/stars#balance-and-transaction-history">транзакции Telegram Stars</a>.<br><br>Флаги <code>inbound</code> и <code>outbound</code> взаимоисключающие: если не задан ни один из них, возвращаются как входящие, так и исходящие транзакции.</td></tr><tr><td><a href="/method/payments.getStarsTransactionsByID">payments.getStarsTransactionsByID</a></td><td>Получить информацию о <a href="/api/stars#balance-and-transaction-history">транзакциях Telegram Stars »</a> по конкретным идентификаторам транзакций.</td></tr><tr><td><a href="/method/payments.getStarsSubscriptions">payments.getStarsSubscriptions</a></td><td>Получить список активных, истёкших или отменённых <a href="/api/invites#paid-invite-links">подписок за Telegram Stars »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

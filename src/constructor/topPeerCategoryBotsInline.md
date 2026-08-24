@@ -1,27 +1,24 @@
 ---
-title: "topPeerCategoryBotsInline (конструктор)"
+title: "topPeerCategoryBotsInline"
 original: "https://core.telegram.org/constructor/topPeerCategoryBotsInline"
 section: ref
 kind: constructor
+description: "Наиболее используемые инлайн-боты"
 layout: layout.njk
 ---
 
 # topPeerCategoryBotsInline
 
-*Конструктор из схемы TL.*
-
-> Most used inline bots
-
-## Определение TL
+Наиболее используемые инлайн-боты
 
 ```
 topPeerCategoryBotsInline#148677e2 = TopPeerCategory;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [TopPeerCategory](/type/TopPeerCategory/)

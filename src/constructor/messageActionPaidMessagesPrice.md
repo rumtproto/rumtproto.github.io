@@ -1,45 +1,38 @@
 ---
-title: "messageActionPaidMessagesPrice (конструктор)"
+title: "messageActionPaidMessagesPrice"
 original: "https://core.telegram.org/constructor/messageActionPaidMessagesPrice"
 section: ref
 kind: constructor
+description: "Цена платных сообщений » в этом чате была изменена."
 layout: layout.njk
 ---
 
 # messageActionPaidMessagesPrice
 
-*Конструктор из схемы TL.*
-
-> The price of [paid messages »](https://core.telegram.org/api/paid-messages) in this chat was changed.
-
-## Определение TL
+Цена [платных сообщений »](/api/paid-messages/) в этом чате была изменена.
 
 ```
 messageActionPaidMessagesPrice#84b88578 flags:# broadcast_messages_allowed:flags.0?true stars:long = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| broadcast_messages_allowed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Can only be set for channels, if set indicates that [direct messages were enabled »](https://core.telegram.org/api/monoforum), otherwise indicates that direct messages were disabled; the price of paid messages is related to the price of direct messages (aka those sent to the associated [monoforum](https://core.telegram.org/api/monoforum)). |
-| stars | [long](/type/long/) | The new price in [Telegram Stars](https://core.telegram.org/api/stars), can be 0 if messages are now free. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>broadcast_messages_allowed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Может быть указано только для каналов; если установлено, означает, что <a href="/api/monoforum">личные сообщения включены »</a>, иначе — что личные сообщения отключены; цена платных сообщений связана с ценой личных сообщений (то есть сообщений, отправляемых в связанный <a href="/api/monoforum">монофорум</a>).</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Новая цена в <a href="/api/stars">Telegram Stars</a>; может быть равна <code>0</code>, если сообщения теперь бесплатны.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Paid messages](https://core.telegram.org/api/paid-messages)
+#### [Платные сообщения](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.
+Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.

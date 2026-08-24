@@ -1,19 +1,17 @@
 ---
-title: "bots.invokeWebViewCustomMethod (метод)"
+title: "bots.invokeWebViewCustomMethod"
 original: "https://core.telegram.org/method/bots.invokeWebViewCustomMethod"
 section: ref
 kind: method
+description: "Отправить произвольный запрос от mini bot app, инициированный событием web\\_app\\_invoke\\_custom\\_method »."
 layout: layout.njk
 ---
 
 # bots.invokeWebViewCustomMethod
 
-*Метод из схемы TL.*
+Отправить произвольный запрос от [mini bot app](/api/bots/webapps/), инициированный [событием web\_app\_invoke\_custom\_method »](/api/web-events/#web-app-invoke-custom-method).
 
-> Send a custom request from a [mini bot app](https://core.telegram.org/api/bots/webapps), triggered by a [web\_app\_invoke\_custom\_method event »](https://core.telegram.org/api/web-events#web-app-invoke-custom-method).
-> The response should be sent using a [custom\_method\_invoked](https://core.telegram.org/api/bots/webapps#custom-method-invoked) event, [see here »](https://core.telegram.org/api/web-events#web-app-invoke-custom-method) for more info on the flow.
-
-## Определение TL
+Ответ следует отправлять с помощью события [custom\_method\_invoked](/api/bots/webapps/#custom-method-invoked); подробнее обо всём процессе [см. здесь »](/api/web-events/#web-app-invoke-custom-method).
 
 ```
 dataJSON#7d748d04 data:string = DataJSON;
@@ -21,34 +19,26 @@ dataJSON#7d748d04 data:string = DataJSON;
 bots.invokeWebViewCustomMethod#87fc5e7 bot:InputUser custom_method:string params:DataJSON = DataJSON;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot | [InputUser](/type/InputUser/) | Identifier of the bot associated to the [mini bot app](https://core.telegram.org/api/bots/webapps) |
-| custom_method | [string](/type/string/) | Identifier of the custom method to invoke |
-| params | [DataJSON](/type/DataJSON/) | Method parameters |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор бота, связанного с <a href="/api/bots/webapps">mini bot app</a></td></tr><tr><td><strong>custom_method</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор пользовательского метода, который нужно вызвать</td></tr><tr><td><strong>params</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Параметры метода</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [DataJSON](/type/DataJSON/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
-| 400 | DATA_JSON_INVALID | The provided JSON data is invalid. |
-| 400 | METHOD_INVALID | The specified method is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr><tr><td>400</td><td>DATA_JSON_INVALID</td><td>Указанные данные JSON недействительны.</td></tr><tr><td>400</td><td>METHOD_INVALID</td><td>Указанный метод недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
-#### [Web events](https://core.telegram.org/api/web-events)
+#### [Веб-события](/api/web-events/)
 
-How telegram apps interact with webpages
+Как приложения Telegram взаимодействуют с веб-страницами

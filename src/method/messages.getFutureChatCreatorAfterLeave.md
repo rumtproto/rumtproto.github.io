@@ -1,18 +1,15 @@
 ---
-title: "messages.getFutureChatCreatorAfterLeave (метод)"
+title: "messages.getFutureChatCreatorAfterLeave"
 original: "https://core.telegram.org/method/messages.getFutureChatCreatorAfterLeave"
 section: ref
 kind: method
+description: "Только для владельцев групп и каналов: возвращает идентификатор пользователя, который станет новым владельцем группы, если мы решим её покинуть; подробнее о полном порядке…"
 layout: layout.njk
 ---
 
 # messages.getFutureChatCreatorAfterLeave
 
-*Метод из схемы TL.*
-
-> Group/channel owners only: returns the ID of the user that will become the new owner of the group if we decide to leave the group, see [here »](https://core.telegram.org/api/channel#leaving-groups-channels) for more info on the full flow.
-
-## Определение TL
+Только для владельцев групп и каналов: возвращает идентификатор пользователя, который станет новым владельцем группы, если мы решим её покинуть; подробнее о полном порядке действий см. [здесь »](/api/channel/#leaving-groups-channels).
 
 ```
 userEmpty#d3bc4b7a id:long = User;
@@ -21,26 +18,22 @@ user#31774388 flags:# self:flags.10?true contact:flags.11?true mutual_contact:fl
 messages.getFutureChatCreatorAfterLeave#3b7d0ea6 peer:InputPeer = User;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The basic group/supergroup/channel we're about to leave. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Обычная группа, супергруппа или канал, которые мы собираемся покинуть.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [User](/type/User/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_ID_INVALID | The specified supergroup ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_ID_INVALID</td><td>Указанный идентификатор супергруппы недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

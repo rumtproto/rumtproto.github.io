@@ -1,29 +1,24 @@
 ---
-title: "chatTheme (конструктор)"
+title: "chatTheme"
 original: "https://core.telegram.org/constructor/chatTheme"
 section: ref
 kind: constructor
+description: "Тема оформления чата"
 layout: layout.njk
 ---
 
 # chatTheme
 
-*Конструктор из схемы TL.*
-
-> A chat theme
-
-## Определение TL
+Тема оформления чата
 
 ```
 chatTheme#c3dffc04 emoticon:string = ChatTheme;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| emoticon | [string](/type/string/) | The emoji identifying the chat theme. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>emoticon</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:emoticon] Эмодзи, определяющий тему чата.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatTheme](/type/ChatTheme/)

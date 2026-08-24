@@ -1,27 +1,21 @@
 ---
-title: "ReactionNotificationsFrom (тип)"
+title: "ReactionNotificationsFrom"
 original: "https://core.telegram.org/type/ReactionNotificationsFrom"
 section: ref
 kind: type
+description: "Настройки уведомлений о реакциях"
 layout: layout.njk
 ---
 
 # ReactionNotificationsFrom
 
-*Тип из схемы TL.*
-
-> Reaction notification settings
-
-## Определение TL
+Настройки уведомлений о реакциях
 
 ```
 reactionNotificationsFromContacts#bac3a61a = ReactionNotificationsFrom;
 reactionNotificationsFromAll#4b9e22a0 = ReactionNotificationsFrom;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [reactionNotificationsFromContacts](/constructor/reactionNotificationsFromContacts/) | Receive notifications about reactions made only by our contacts. |
-| [reactionNotificationsFromAll](/constructor/reactionNotificationsFromAll/) | Receive notifications about reactions made by any user. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/reactionNotificationsFromContacts">reactionNotificationsFromContacts</a></td><td>Получать уведомления о реакциях только от наших контактов.</td></tr><tr><td><a href="/constructor/reactionNotificationsFromAll">reactionNotificationsFromAll</a></td><td>Получать уведомления о реакциях от любых пользователей.</td></tr></tbody></table>

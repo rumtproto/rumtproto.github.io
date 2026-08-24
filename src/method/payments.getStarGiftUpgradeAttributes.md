@@ -1,19 +1,17 @@
 ---
-title: "payments.getStarGiftUpgradeAttributes (метод)"
+title: "payments.getStarGiftUpgradeAttributes"
 original: "https://core.telegram.org/method/payments.getStarGiftUpgradeAttributes"
 section: ref
 kind: method
+description: "Получает **полный** список только тех коллекционных атрибутов, которые могут появиться у типа подарка после его превращения в коллекционный подарок »."
 layout: layout.njk
 ---
 
 # payments.getStarGiftUpgradeAttributes
 
-*Метод из схемы TL.*
+Получает **полный** список только тех коллекционных атрибутов, которые могут появиться у типа подарка после его превращения в [коллекционный подарок »](/api/gifts/#collectible-gifts).
 
-> Obtains the **full** list of just the collectible attributes that may appear for a gift type once it's upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
-> The result may also include [starGiftAttributeModel](/constructor/starGiftAttributeModel/) constructors with the `crafted` flag set: these models are reserved for [crafting »](https://core.telegram.org/api/gifts#crafting-collectible-gifts) and should be filtered out from regular upgrade previews (and vice versa).
-
-## Определение TL
+Результат может также содержать конструкторы [starGiftAttributeModel](/constructor/starGiftAttributeModel/) с установленным флагом `crafted`: эти модели зарезервированы для [крафта »](/api/gifts/#crafting-collectible-gifts) и должны отфильтровываться из обычных предпросмотров улучшения (и наоборот).
 
 ```
 payments.starGiftUpgradeAttributes#46c6e36f attributes:Vector<StarGiftAttribute> = payments.StarGiftUpgradeAttributes;
@@ -21,34 +19,30 @@ payments.starGiftUpgradeAttributes#46c6e36f attributes:Vector<StarGiftAttribute>
 payments.getStarGiftUpgradeAttributes#6d038b58 gift_id:long = payments.StarGiftUpgradeAttributes;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| gift_id | [long](/type/long/) | Non-collectible base gift ID, from [starGift](/constructor/starGift/).id |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор базового неколлекционного подарка, из <a href="/constructor/starGift">starGift</a>.<code>id</code></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.StarGiftUpgradeAttributes](/type/payments.StarGiftUpgradeAttributes/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | STARGIFT_INVALID | The passed gift is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>STARGIFT_INVALID</td><td>Переданный подарок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [starGift](/constructor/starGift/)
 
-Represents a [star gift, see here »](https://core.telegram.org/api/gifts) for more info.
+Представляет [звёздный подарок, подробнее см. здесь »](/api/gifts/).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [starGiftAttributeModel](/constructor/starGiftAttributeModel/)
 
-The model of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+Модель [коллекционного подарка »](/api/gifts/#collectible-gifts).

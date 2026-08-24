@@ -1,42 +1,39 @@
 ---
-title: "textWithEntities (конструктор)"
+title: "textWithEntities"
 original: "https://core.telegram.org/constructor/textWithEntities"
 section: ref
 kind: constructor
+description: "Оформленный текст с сущностями оформления"
 layout: layout.njk
 ---
 
 # textWithEntities
 
-*Конструктор из схемы TL.*
+Оформленный текст с [сущностями оформления](/api/entities/)
 
-> Styled text with [message entities](https://core.telegram.org/api/entities)
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===216===
-> textWithEntities#751f3146 text:string entities:Vector<MessageEntity> = TextWithEntities;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===216===
+textWithEntities#751f3146 text:string entities:Vector<MessageEntity> = TextWithEntities;
+```
+
+#### Схема API
 
 ```
 textWithEntities#751f3146 text:string entities:Vector<MessageEntity> = TextWithEntities;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [string](/type/string/) | Text |
-| entities | [Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text](https://core.telegram.org/api/entities) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст</td></tr><tr><td><strong>entities</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления для форматированного текста</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [TextWithEntities](/type/TextWithEntities/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

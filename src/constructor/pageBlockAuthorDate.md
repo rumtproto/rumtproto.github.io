@@ -1,30 +1,24 @@
 ---
-title: "pageBlockAuthorDate (конструктор)"
+title: "pageBlockAuthorDate"
 original: "https://core.telegram.org/constructor/pageBlockAuthorDate"
 section: ref
 kind: constructor
+description: "Автор и дата создания статьи"
 layout: layout.njk
 ---
 
 # pageBlockAuthorDate
 
-*Конструктор из схемы TL.*
-
-> Author and date of creation of article
-
-## Определение TL
+Автор и дата создания статьи
 
 ```
 pageBlockAuthorDate#baafe5e0 author:RichText published_date:int = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| author | [RichText](/type/RichText/) | Author name |
-| published_date | [int](/type/int/) | Date of publication |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>author</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Имя автора</td></tr><tr><td><strong>published_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата публикации</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

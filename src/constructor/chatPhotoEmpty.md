@@ -1,27 +1,24 @@
 ---
-title: "chatPhotoEmpty (конструктор)"
+title: "chatPhotoEmpty"
 original: "https://core.telegram.org/constructor/chatPhotoEmpty"
 section: ref
 kind: constructor
+description: "Фотография группы не установлена."
 layout: layout.njk
 ---
 
 # chatPhotoEmpty
 
-*Конструктор из схемы TL.*
-
-> Group photo is not set.
-
-## Определение TL
+Фотография группы не установлена.
 
 ```
 chatPhotoEmpty#37c1011c = ChatPhoto;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ChatPhoto](/type/ChatPhoto/)

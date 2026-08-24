@@ -1,18 +1,15 @@
 ---
-title: "channels.setBoostsToUnblockRestrictions (метод)"
+title: "channels.setBoostsToUnblockRestrictions"
 original: "https://core.telegram.org/method/channels.setBoostsToUnblockRestrictions"
 section: ref
 kind: method
+description: "Администраторы с правами администратора ban\\_users » могут разрешить пользователям, отдавшим группе определённое количество бустов », обходить медленный режим » и другие »…"
 layout: layout.njk
 ---
 
 # channels.setBoostsToUnblockRestrictions
 
-*Метод из схемы TL.*
-
-> Admins with [ban\_users admin rights »](/constructor/chatAdminRights/) may allow users that apply a certain number of [booosts »](https://core.telegram.org/api/boost) to the group to bypass [slow mode »](/method/channels.toggleSlowMode/) and [other »](https://core.telegram.org/api/rights#default-rights) supergroup restrictions, see [here »](https://core.telegram.org/api/boost#bypass-slowmode-and-chat-restrictions) for more info.
-
-## Определение TL
+Администраторы с [правами администратора ban\_users »](/constructor/chatAdminRights/) могут разрешить пользователям, отдавшим группе определённое количество [бустов »](/api/boost/), обходить [медленный режим »](/method/channels.toggleSlowMode/) и [другие »](/api/rights/#default-rights) ограничения супергруппы; подробнее [см. здесь »](/api/boost/#bypass-slowmode-and-chat-restrictions).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,39 +23,34 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.setBoostsToUnblockRestrictions#ad399cee channel:InputChannel boosts:int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The supergroup. |
-| boosts | [int](/type/int/) | The number of required boosts (1-8, 0 to disable). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Супергруппа.</td></tr><tr><td><strong>boosts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Требуемое количество бустов (1–8, 0 — чтобы отключить).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [chatAdminRights](/constructor/chatAdminRights/)
 
-Represents the rights of an admin in a [channel/supergroup](https://core.telegram.org/api/channel).
+Представляет права администратора в [канале или супергруппе](/api/channel/).
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.
 
 #### [channels.toggleSlowMode](/method/channels.toggleSlowMode/)
 
-Toggle supergroup slow mode: if enabled, users will only be able to send one message every `seconds` seconds
+Переключить медленный режим в супергруппе: если он включён, пользователи смогут отправлять только одно сообщение каждые `seconds` секунд
 
-#### [Admin, banned, default rights](https://core.telegram.org/api/rights)
+#### [Права администраторов, ограничения и права по умолчанию](/api/rights/)
 
-How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.
+Как работать с правами администраторов, детальными ограничениями и общими правами в каналах, группах и супергруппах.

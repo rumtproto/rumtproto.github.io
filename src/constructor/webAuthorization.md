@@ -1,41 +1,28 @@
 ---
-title: "webAuthorization (конструктор)"
+title: "webAuthorization"
 original: "https://core.telegram.org/constructor/webAuthorization"
 section: ref
 kind: constructor
+description: "Представляет бота, авторизованного через виджет входа Telegram"
 layout: layout.njk
 ---
 
 # webAuthorization
 
-*Конструктор из схемы TL.*
-
-> Represents a bot logged in using the [Telegram login widget](https://core.telegram.org/widgets/login)
-
-## Определение TL
+Представляет бота, авторизованного через [виджет входа Telegram](https://core.telegram.org/widgets/login)
 
 ```
 webAuthorization#a6f8f452 hash:long bot_id:long domain:string browser:string platform:string date_created:int date_active:int ip:string region:string = WebAuthorization;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | Authorization hash |
-| bot_id | [long](/type/long/) | Bot ID |
-| domain | [string](/type/string/) | The domain name of the website on which the user has logged in. |
-| browser | [string](/type/string/) | Browser user-agent |
-| platform | [string](/type/string/) | Platform |
-| date_created | [int](/type/int/) | When was the web session created |
-| date_active | [int](/type/int/) | When was the web session last active |
-| ip | [string](/type/string/) | IP address |
-| region | [string](/type/string/) | Region, determined from IP address |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] Хеш авторизации</td></tr><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор бота</td></tr><tr><td><strong>domain</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Доменное имя сайта, на котором пользователь выполнил вход.</td></tr><tr><td><strong>browser</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>User-agent браузера</td></tr><tr><td><strong>platform</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Платформа</td></tr><tr><td><strong>date_created</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда была создана веб-сессия</td></tr><tr><td><strong>date_active</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда веб-сессия была активна в последний раз</td></tr><tr><td><strong>ip</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>IP-адрес</td></tr><tr><td><strong>region</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Регион, определённый по IP-адресу</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [WebAuthorization](/type/WebAuthorization/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Login Widget](https://core.telegram.org/widgets/login)
+#### [Виджет входа через Telegram](https://core.telegram.org/widgets/login)

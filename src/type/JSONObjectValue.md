@@ -1,31 +1,29 @@
 ---
-title: "JSONObjectValue (тип)"
+title: "JSONObjectValue"
 original: "https://core.telegram.org/type/JSONObjectValue"
 section: ref
 kind: type
+description: "Пара «ключ: значение» в формате JSON"
 layout: layout.njk
 ---
 
 # JSONObjectValue
 
-*Тип из схемы TL.*
+Пара «ключ: значение» в формате JSON
 
-> JSON key: value pair
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===216===
-> jsonObjectValue#c0de1bd9 key:string value:JSONValue = JSONObjectValue;
-> ```
-> API schema:
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===216===
+jsonObjectValue#c0de1bd9 key:string value:JSONValue = JSONObjectValue;
+```
+
+Схема API:
 
 ```
 jsonObjectValue#c0de1bd9 key:string value:JSONValue = JSONObjectValue;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [jsonObjectValue](/constructor/jsonObjectValue/) | JSON key: value pair |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/jsonObjectValue">jsonObjectValue</a></td><td>Пара «ключ: значение» в формате JSON</td></tr></tbody></table>

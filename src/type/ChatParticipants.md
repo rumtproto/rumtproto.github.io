@@ -1,33 +1,27 @@
 ---
-title: "ChatParticipants (тип)"
+title: "ChatParticipants"
 original: "https://core.telegram.org/type/ChatParticipants"
 section: ref
 kind: type
+description: "Содержит полный список участников обычных групп »; **НЕ** применимо к супергруппам и каналам."
 layout: layout.njk
 ---
 
 # ChatParticipants
 
-*Тип из схемы TL.*
-
-> Contains the full list of members of [basic groups »](https://core.telegram.org/api/channel#basic-groups); is **NOT** usable for supergroups/channels.
-
-## Определение TL
+Содержит полный список участников [обычных групп »](/api/channel/#basic-groups); **НЕ** применимо к супергруппам и каналам.
 
 ```
 chatParticipantsForbidden#8763d3e1 flags:# chat_id:long self_participant:flags.0?ChatParticipant = ChatParticipants;
 chatParticipants#3cbc93f8 chat_id:long participants:Vector<ChatParticipant> version:int = ChatParticipants;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [chatParticipantsForbidden](/constructor/chatParticipantsForbidden/) | The full list of members of [basic groups »](https://core.telegram.org/api/channel#basic-groups) is not available to you, because you were banned. |
-| [chatParticipants](/constructor/chatParticipants/) | Contains the full list of members of [basic groups »](https://core.telegram.org/api/channel#basic-groups); is NOT usable for supergroups/channels. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/chatParticipantsForbidden">chatParticipantsForbidden</a></td><td>Полный список участников <a href="/api/channel#basic-groups">обычных групп »</a> вам недоступен, поскольку вы были заблокированы.</td></tr><tr><td><a href="/constructor/chatParticipants">chatParticipants</a></td><td>Содержит полный список участников <a href="/api/channel#basic-groups">обычных групп »</a>; <strong>НЕ</strong> применимо к супергруппам и каналам.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

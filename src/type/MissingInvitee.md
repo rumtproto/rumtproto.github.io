@@ -1,31 +1,26 @@
 ---
-title: "MissingInvitee (тип)"
+title: "MissingInvitee"
 original: "https://core.telegram.org/type/MissingInvitee"
 section: ref
 kind: type
+description: "Информация о том, почему определённого пользователя не удалось пригласить »."
 layout: layout.njk
 ---
 
 # MissingInvitee
 
-*Тип из схемы TL.*
-
-> Info about why a specific user could not be [invited »](https://core.telegram.org/api/invites#direct-invites).
-
-## Определение TL
+Информация о том, почему определённого пользователя не удалось [пригласить »](/api/invites/#direct-invites).
 
 ```
 missingInvitee#628c9224 flags:# premium_would_allow_invite:flags.0?true premium_required_for_pm:flags.1?true user_id:long = MissingInvitee;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [missingInvitee](/constructor/missingInvitee/) | Info about why a specific user could not be [invited »](https://core.telegram.org/api/invites#direct-invites). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/missingInvitee">missingInvitee</a></td><td>Информация о том, почему определённого пользователя не удалось <a href="/api/invites#direct-invites">пригласить »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.

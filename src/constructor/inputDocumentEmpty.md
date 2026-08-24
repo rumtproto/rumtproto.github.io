@@ -1,27 +1,24 @@
 ---
-title: "inputDocumentEmpty (конструктор)"
+title: "inputDocumentEmpty"
 original: "https://core.telegram.org/constructor/inputDocumentEmpty"
 section: ref
 kind: constructor
+description: "Пустой конструктор."
 layout: layout.njk
 ---
 
 # inputDocumentEmpty
 
-*Конструктор из схемы TL.*
-
-> Empty constructor.
-
-## Определение TL
+Пустой конструктор.
 
 ```
 inputDocumentEmpty#72f0eaae = InputDocument;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputDocument](/type/InputDocument/)

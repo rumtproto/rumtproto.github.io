@@ -1,27 +1,24 @@
 ---
-title: "inputChatThemeEmpty (конструктор)"
+title: "inputChatThemeEmpty"
 original: "https://core.telegram.org/constructor/inputChatThemeEmpty"
 section: ref
 kind: constructor
+description: "Удалить любую заданную в данный момент тему оформления."
 layout: layout.njk
 ---
 
 # inputChatThemeEmpty
 
-*Конструктор из схемы TL.*
-
-> Remove any currently configured theme.
-
-## Определение TL
+Удалить любую заданную в данный момент тему оформления.
 
 ```
 inputChatThemeEmpty#83268483 = InputChatTheme;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputChatTheme](/type/InputChatTheme/)

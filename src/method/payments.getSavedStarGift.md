@@ -1,19 +1,17 @@
 ---
-title: "payments.getSavedStarGift (метод)"
+title: "payments.getSavedStarGift"
 original: "https://core.telegram.org/method/payments.getSavedStarGift"
 section: ref
 kind: method
+description: "Получить сведения о конкретных подарках, принадлежащих подконтрольному нам пиру."
 layout: layout.njk
 ---
 
 # payments.getSavedStarGift
 
-*Метод из схемы TL.*
+Получить сведения о конкретных [подарках](/api/gifts/), принадлежащих подконтрольному нам пиру.
 
-> Fetch info about specific [gifts](https://core.telegram.org/api/gifts) owned by a peer we control.
-> Note that unlike what the name suggests, the method can be used to fetch both "saved" and "unsaved" gifts (aka gifts both pinned and not pinned to the profile).
-
-## Определение TL
+Обратите внимание, что вопреки названию метод можно использовать для получения как «сохранённых», так и «несохранённых» подарков (то есть подарков как закреплённых в профиле, так и не закреплённых).
 
 ```
 payments.savedStarGifts#95f389b1 flags:# count:int chat_notifications_enabled:flags.1?Bool gifts:Vector<SavedStarGift> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = payments.SavedStarGifts;
@@ -21,28 +19,22 @@ payments.savedStarGifts#95f389b1 flags:# count:int chat_notifications_enabled:fl
 payments.getSavedStarGift#b455a106 stargift:Vector<InputSavedStarGift> = payments.SavedStarGifts;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| stargift | [Vector](https://core.telegram.org/type/Vector%20t)<[InputSavedStarGift](/type/InputSavedStarGift/)> | List of gifts to fetch info about. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputSavedStarGift">InputSavedStarGift</a>&gt;</td><td>Список подарков, о которых нужно получить информацию.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.SavedStarGifts](/type/payments.SavedStarGifts/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | SAVED_ID_EMPTY | The passed inputSavedStarGiftChat.saved_id is empty. |
-| 400 | STARGIFT_OWNER_INVALID | You cannot transfer or sell a gift owned by another user. |
-| 400 | STARGIFT_SLUG_INVALID | The specified gift slug is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>SAVED_ID_EMPTY</td><td>Переданное значение inputSavedStarGiftChat.saved_id пусто.</td></tr><tr><td>400</td><td>STARGIFT_OWNER_INVALID</td><td>Нельзя передать или продать подарок, принадлежащий другому пользователю.</td></tr><tr><td>400</td><td>STARGIFT_SLUG_INVALID</td><td>Указанный слаг подарка недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

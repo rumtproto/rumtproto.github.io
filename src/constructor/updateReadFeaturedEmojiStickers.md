@@ -1,33 +1,30 @@
 ---
-title: "updateReadFeaturedEmojiStickers (конструктор)"
+title: "updateReadFeaturedEmojiStickers"
 original: "https://core.telegram.org/constructor/updateReadFeaturedEmojiStickers"
 section: ref
 kind: constructor
+description: "Некоторые рекомендуемые стикеры с пользовательскими эмодзи были отмечены как прочитанные"
 layout: layout.njk
 ---
 
 # updateReadFeaturedEmojiStickers
 
-*Конструктор из схемы TL.*
-
-> Some featured [custom emoji stickers](https://core.telegram.org/api/custom-emoji) were marked as read
-
-## Определение TL
+Некоторые рекомендуемые [стикеры с пользовательскими эмодзи](/api/custom-emoji/) были отмечены как прочитанные
 
 ```
 updateReadFeaturedEmojiStickers#fb4c496c = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.

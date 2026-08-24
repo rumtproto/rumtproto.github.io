@@ -1,18 +1,15 @@
 ---
-title: "contacts.Found (тип)"
+title: "contacts.Found"
 original: "https://core.telegram.org/type/contacts.Found"
 section: ref
 kind: type
+description: "Объект содержит информацию о пользователях, найденных по подстроке имени, и вспомогательные данные."
 layout: layout.njk
 ---
 
 # contacts.Found
 
-*Тип из схемы TL.*
-
-> Object contains info on users found by name substring and auxiliary data.
-
-## Определение TL
+Объект содержит информацию о пользователях, найденных по подстроке имени, и вспомогательные данные.
 
 ```
 contacts.found#b3134d9d my_results:Vector<Peer> results:Vector<Peer> chats:Vector<Chat> users:Vector<User> = contacts.Found;
@@ -22,14 +19,10 @@ contacts.found#b3134d9d my_results:Vector<Peer> results:Vector<Peer> chats:Vecto
 contacts.search#11f812d8 q:string limit:int = contacts.Found;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [contacts.found](/constructor/contacts.found/) | Users found by name substring and auxiliary data. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/contacts.found">contacts.found</a></td><td>Пользователи, найденные по подстроке имени, и вспомогательные данные.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [contacts.search](/method/contacts.search/) | Returns users found by username substring. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/contacts.search">contacts.search</a></td><td>Возвращает пользователей, найденных по подстроке имени пользователя.</td></tr></tbody></table>

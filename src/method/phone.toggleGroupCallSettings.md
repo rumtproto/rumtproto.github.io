@@ -1,18 +1,15 @@
 ---
-title: "phone.toggleGroupCallSettings (метод)"
+title: "phone.toggleGroupCallSettings"
 original: "https://core.telegram.org/method/phone.toggleGroupCallSettings"
 section: ref
 kind: method
+description: "Изменить настройки группового звонка. Каждая настройка поддерживает разные типы групповых звонков, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # phone.toggleGroupCallSettings
 
-*Метод из схемы TL.*
-
-> Change group call settings. Each setting supports different group call types, see [here »](https://core.telegram.org/api/group-calls#managing-an-active-group-call) for more info.
-
-## Определение TL
+Изменить настройки группового звонка. Каждая настройка поддерживает разные типы групповых звонков, подробнее см. [здесь »](/api/group-calls/#managing-an-active-group-call).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,34 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.toggleGroupCallSettings#974392f2 flags:# reset_invite_hash:flags.1?true call:InputGroupCall join_muted:flags.0?Bool messages_enabled:flags.2?Bool send_paid_messages_stars:flags.3?long = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| reset_invite_hash | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Invalidate existing invite links for video chats, livestreams and conferences |
-| call | [InputGroupCall](/type/InputGroupCall/) | Group call whose settings should be changed |
-| join_muted | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Bool](/type/Bool/) | Whether users joining a non-RTMP video chat/livestream should be muted by default |
-| messages_enabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[Bool](/type/Bool/) | Enable or disable the in-call message overlay in video chats/livestreams, conferences and live stories, including in RTMP mode |
-| send_paid_messages_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[long](/type/long/) | Set the minimum Telegram Stars donation required from users other than the live story owner for each comment; the owner may always comment without donating, and 0 allows free comments for everyone |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>reset_invite_hash</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Аннулировать существующие пригласительные ссылки для видеочатов, трансляций и конференций</td></tr><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Групповой звонок, настройки которого нужно изменить</td></tr><tr><td><strong>join_muted</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Bool">Bool</a></td><td>Следует ли по умолчанию отключать микрофон пользователям, присоединяющимся к видеочату или трансляции не в режиме RTMP</td></tr><tr><td><strong>messages_enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Bool">Bool</a></td><td>Включить или отключить оверлей сообщений в звонке в видеочатах и трансляциях, конференц-звонках и прямых эфирах в историях, в том числе в режиме RTMP</td></tr><tr><td><strong>send_paid_messages_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/long">long</a></td><td>Задать минимальное пожертвование в Telegram Stars, требуемое за каждый комментарий от всех пользователей, кроме владельца живой истории; владелец всегда может комментировать без пожертвования, а значение <code>0</code> разрешает бесплатные комментарии для всех</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | GROUPCALL_CHANGE_FORBIDDEN | You cannot change this group call setting. |
-| 403 | GROUPCALL_FORBIDDEN | The specified group call cannot be used in this context. |
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
-| 400 | GROUPCALL_NOT_MODIFIED | Group call settings weren't modified. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>GROUPCALL_CHANGE_FORBIDDEN</td><td>Вы не можете изменить эту настройку группового звонка.</td></tr><tr><td>403</td><td>GROUPCALL_FORBIDDEN</td><td>Указанный групповой звонок нельзя использовать в этом контексте.</td></tr><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr><tr><td>400</td><td>GROUPCALL_NOT_MODIFIED</td><td>Настройки группового звонка не были изменены.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

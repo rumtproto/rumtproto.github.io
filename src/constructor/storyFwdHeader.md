@@ -1,33 +1,24 @@
 ---
-title: "storyFwdHeader (конструктор)"
+title: "storyFwdHeader"
 original: "https://core.telegram.org/constructor/storyFwdHeader"
 section: ref
 kind: constructor
+description: "Содержит информацию о первоначальном авторе истории, на которую сделан репост."
 layout: layout.njk
 ---
 
 # storyFwdHeader
 
-*Конструктор из схемы TL.*
-
-> Contains info about the original poster of a reposted story.
-
-## Определение TL
+Содержит информацию о первоначальном авторе истории, на которую сделан репост.
 
 ```
 storyFwdHeader#b826e150 flags:# modified:flags.3?true from:flags.0?Peer from_name:flags.1?string story_id:flags.2?int = StoryFwdHeader;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| modified | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether the story media was modified before reposting it (for example by overlaying a round video with a reaction). |
-| from | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Peer](/type/Peer/) | Peer that originally posted the story; will be empty for stories forwarded from a user with forwards privacy enabled, in which case from_name will be set, instead. |
-| from_name | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Will be set for stories forwarded from a user with forwards privacy enabled, in which case from will also be empty. |
-| story_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | , contains the story ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>modified</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Было ли медиа истории изменено перед повторной публикацией (например, наложением реакции на видеосообщение).</td></tr><tr><td><strong>from</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Peer">Peer</a></td><td>Пир, изначально опубликовавший историю; будет пустым для историй, пересланных от пользователя с включённой приватностью пересылок, — в этом случае вместо него задаётся <code>from_name</code>.</td></tr><tr><td><strong>from_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Будет установлено для историй, пересланных от пользователя с включённой приватностью пересылок; в этом случае поле <code>from</code> также будет пустым.</td></tr><tr><td><strong>story_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>, содержит идентификатор истории</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StoryFwdHeader](/type/StoryFwdHeader/)

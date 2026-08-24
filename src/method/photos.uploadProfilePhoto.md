@@ -1,19 +1,17 @@
 ---
-title: "photos.uploadProfilePhoto (метод)"
+title: "photos.uploadProfilePhoto"
 original: "https://core.telegram.org/method/photos.uploadProfilePhoto"
 section: ref
 kind: method
+description: "Обновляет фотографию профиля текущего пользователя."
 layout: layout.njk
 ---
 
 # photos.uploadProfilePhoto
 
-*Метод из схемы TL.*
+Обновляет фотографию профиля текущего пользователя.
 
-> Updates current user profile photo.
-> The `file`, `video` and `video_emoji_markup` flags are mutually exclusive.
-
-## Определение TL
+Флаги `file`, `video` и `video_emoji_markup` взаимоисключающие.
 
 ```
 photos.photo#20212ca8 photo:Photo users:Vector<User> = photos.Photo;
@@ -21,51 +19,30 @@ photos.photo#20212ca8 photo:Photo users:Vector<User> = photos.Photo;
 photos.uploadProfilePhoto#388a3b5 flags:# fallback:flags.3?true bot:flags.5?InputUser file:flags.0?InputFile video:flags.1?InputFile video_start_ts:flags.2?double video_emoji_markup:flags.4?VideoSize = photos.Photo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| fallback | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | If set, the chosen profile photo will be shown to users that can't display your main profile photo due to your privacy settings. |
-| bot | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[InputUser](/type/InputUser/) | Can contain info of a bot we own, to change the profile photo of that bot, instead of the current user. |
-| file | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputFile](/type/InputFile/) | Profile photo |
-| video | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[InputFile](/type/InputFile/) | [Animated profile picture](https://core.telegram.org/api/files/#animated-profile-pictures) video |
-| video_start_ts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[double](/type/double/) | Floating point UNIX timestamp in seconds, indicating the frame of the video/sticker that should be used as static preview; can only be used if video or video_emoji_markup is set. |
-| video_emoji_markup | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[VideoSize](/type/VideoSize/) | Animated sticker profile picture, must contain either a [videoSizeEmojiMarkup](/constructor/videoSizeEmojiMarkup/) or a [videoSizeStickerMarkup](/constructor/videoSizeStickerMarkup/) constructor. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>fallback</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Если установлено, выбранная фотография профиля будет показываться пользователям, которые не могут видеть вашу основную фотографию профиля из-за ваших настроек приватности.</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/InputUser">InputUser</a></td><td>Может содержать сведения о боте, которым мы владеем, чтобы изменить фотографию профиля этого бота, а не текущего пользователя.</td></tr><tr><td><strong>file</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputFile">InputFile</a></td><td>Фотография профиля</td></tr><tr><td><strong>video</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/InputFile">InputFile</a></td><td>Видео <a href="/api/files#animated-profile-pictures">анимированной фотографии профиля</a></td></tr><tr><td><strong>video_start_ts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/double">double</a></td><td>Временная метка UNIX в секундах с плавающей точкой, указывающая кадр видео или стикера, который следует использовать как статичный предпросмотр; может использоваться, только если задано поле <code>video</code> или <code>video_emoji_markup</code>.</td></tr><tr><td><strong>video_emoji_markup</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/VideoSize">VideoSize</a></td><td>Анимированный стикер в качестве фотографии профиля; должен содержать конструктор либо <a href="/constructor/videoSizeEmojiMarkup">videoSizeEmojiMarkup</a>, либо <a href="/constructor/videoSizeStickerMarkup">videoSizeStickerMarkup</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [photos.Photo](/type/photos.Photo/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | ALBUM_PHOTOS_TOO_MANY | You have uploaded too many profile photos, delete some before retrying. |
-| 400 | BOT_INVALID | This is not a valid bot. |
-| 400 | EMOJI_MARKUP_INVALID | The specified video_emoji_markup was invalid. |
-| 400 | FILE_PARTS_INVALID | The number of file parts is invalid. |
-| 400 | IMAGE_PROCESS_FAILED | Failure while processing image. |
-| 400 | PHOTO_CROP_FILE_MISSING | Photo crop file missing. |
-| 400 | PHOTO_CROP_SIZE_SMALL | Photo is too small. |
-| 400 | PHOTO_EXT_INVALID | The extension of the photo is invalid. |
-| 400 | PHOTO_FILE_MISSING | Profile photo file missing. |
-| 400 | PHOTO_INVALID | Photo invalid. |
-| 400 | STICKER_MIME_INVALID | The specified sticker MIME type is invalid. |
-| 400 | VIDEO_FILE_INVALID | The specified video file is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>ALBUM_PHOTOS_TOO_MANY</td><td>Вы загрузили слишком много фотографий профиля, удалите часть из них перед повторной попыткой.</td></tr><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr><tr><td>400</td><td>EMOJI_MARKUP_INVALID</td><td>Указанное значение <code>video_emoji_markup</code> недействительно.</td></tr><tr><td>400</td><td>FILE_PARTS_INVALID</td><td>Недопустимое число частей файла.</td></tr><tr><td>400</td><td>IMAGE_PROCESS_FAILED</td><td>Сбой при обработке изображения.</td></tr><tr><td>400</td><td>PHOTO_CROP_FILE_MISSING</td><td>Отсутствует файл кадрирования фотографии.</td></tr><tr><td>400</td><td>PHOTO_CROP_SIZE_SMALL</td><td>Фотография слишком мала.</td></tr><tr><td>400</td><td>PHOTO_EXT_INVALID</td><td>Недопустимое расширение фотографии.</td></tr><tr><td>400</td><td>PHOTO_FILE_MISSING</td><td>Отсутствует файл фотографии профиля.</td></tr><tr><td>400</td><td>PHOTO_INVALID</td><td>Недействительная фотография.</td></tr><tr><td>400</td><td>STICKER_MIME_INVALID</td><td>Указанный MIME-тип стикера недействителен.</td></tr><tr><td>400</td><td>VIDEO_FILE_INVALID</td><td>Указанный видеофайл недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.
 
 #### [videoSizeEmojiMarkup](/constructor/videoSizeEmojiMarkup/)
 
-An [animated profile picture](https://core.telegram.org/api/files/#animated-profile-pictures) based on a [custom emoji sticker](https://core.telegram.org/api/custom-emoji).
+[Анимированная фотография профиля](/api/files/#animated-profile-pictures) на основе [стикера пользовательского эмодзи](/api/custom-emoji/).
 
 #### [videoSizeStickerMarkup](/constructor/videoSizeStickerMarkup/)
 
-An [animated profile picture](https://core.telegram.org/api/files/#animated-profile-pictures) based on a [sticker](https://core.telegram.org/api/stickers).
+[Анимированная фотография профиля](/api/files/#animated-profile-pictures) на основе [стикера](/api/stickers/).

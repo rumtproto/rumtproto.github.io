@@ -1,35 +1,30 @@
 ---
-title: "inputThemeSlug (конструктор)"
+title: "inputThemeSlug"
 original: "https://core.telegram.org/constructor/inputThemeSlug"
 section: ref
 kind: constructor
+description: "Тема оформления по её идентификатору"
 layout: layout.njk
 ---
 
 # inputThemeSlug
 
-*Конструктор из схемы TL.*
-
-> Theme by theme ID
-
-## Определение TL
+Тема оформления по её идентификатору
 
 ```
 inputThemeSlug#f5890df1 slug:string = InputTheme;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| slug | [string](/type/string/) | Unique theme ID obtained from a [theme deep link »](https://core.telegram.org/api/links#theme-links) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Уникальный идентификатор темы оформления, полученный из <a href="/api/links#theme-links">глубокой ссылки на тему оформления »</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputTheme](/type/InputTheme/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

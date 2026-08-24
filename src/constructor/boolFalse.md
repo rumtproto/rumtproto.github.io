@@ -1,27 +1,24 @@
 ---
-title: "boolFalse (конструктор)"
+title: "boolFalse"
 original: "https://core.telegram.org/constructor/boolFalse"
 section: ref
 kind: constructor
+description: "Конструктор может интерпретироваться как **логическое**false-значение."
 layout: layout.njk
 ---
 
 # boolFalse
 
-*Конструктор из схемы TL.*
-
-> Constructor may be interpreted as a **boolean**`false` value.
-
-## Определение TL
+Конструктор может интерпретироваться как **логическое**`false`-значение.
 
 ```
 boolFalse#bc799737 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Bool](/type/Bool/)

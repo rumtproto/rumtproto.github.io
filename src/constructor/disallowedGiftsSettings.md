@@ -1,44 +1,34 @@
 ---
-title: "disallowedGiftsSettings (конструктор)"
+title: "disallowedGiftsSettings"
 original: "https://core.telegram.org/constructor/disallowedGiftsSettings"
 section: ref
 kind: constructor
+description: "Запретить получение определённых типов подарков."
 layout: layout.njk
 ---
 
 # disallowedGiftsSettings
 
-*Конструктор из схемы TL.*
-
-> Disallow the reception of specific [gift](https://core.telegram.org/api/gifts) types.
-
-## Определение TL
+Запретить получение определённых типов [подарков](/api/gifts/).
 
 ```
 disallowedGiftsSettings#71f276c4 flags:# disallow_unlimited_stargifts:flags.0?true disallow_limited_stargifts:flags.1?true disallow_unique_stargifts:flags.2?true disallow_premium_gifts:flags.3?true disallow_stargifts_from_channels:flags.4?true = DisallowedGiftsSettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| disallow_unlimited_stargifts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Disallow the reception of gifts with an unlimited supply (those with the [starGift](/constructor/starGift/).limited flag not set). |
-| disallow_limited_stargifts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Disallow the reception of limited-supply gifts (those with the [starGift](/constructor/starGift/).limited flag set). |
-| disallow_unique_stargifts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Disallow the reception of [collectible gifts »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| disallow_premium_gifts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Disallow the reception of [gifted Telegram Premium subscriptions »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| disallow_stargifts_from_channels | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Disallow the reception of gifts sent by channels. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>disallow_unlimited_stargifts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Запретить получение подарков с неограниченным тиражом (тех, у которых флаг <a href="/constructor/starGift">starGift</a>.<code>limited</code> <strong>не</strong> установлен).</td></tr><tr><td><strong>disallow_limited_stargifts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Запретить получение подарков ограниченного тиража (тех, у которых установлен флаг <a href="/constructor/starGift">starGift</a>.<code>limited</code>).</td></tr><tr><td><strong>disallow_unique_stargifts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Запретить получение <a href="/api/gifts#collectible-gifts">коллекционных подарков »</a>.</td></tr><tr><td><strong>disallow_premium_gifts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Запретить получение <a href="/api/gifts#collectible-gifts">подаренных подписок Telegram Premium »</a>.</td></tr><tr><td><strong>disallow_stargifts_from_channels</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Запретить получение подарков, отправленных каналами.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DisallowedGiftsSettings](/type/DisallowedGiftsSettings/)
 
-## Related pages
+### Связанные страницы
 
 #### [starGift](/constructor/starGift/)
 
-Represents a [star gift, see here »](https://core.telegram.org/api/gifts) for more info.
+Представляет [звёздный подарок, подробнее см. здесь »](/api/gifts/).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

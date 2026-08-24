@@ -1,38 +1,30 @@
 ---
-title: "storyViewPublicForward (конструктор)"
+title: "storyViewPublicForward"
 original: "https://core.telegram.org/constructor/storyViewPublicForward"
 section: ref
 kind: constructor
+description: "Определённый пир переслал историю в виде сообщения в публичный чат или канал."
 layout: layout.njk
 ---
 
 # storyViewPublicForward
 
-*Конструктор из схемы TL.*
-
-> A certain peer has forwarded the story as a message to a public chat or channel.
-
-## Определение TL
+Определённый пир переслал историю в виде сообщения в публичный чат или канал.
 
 ```
 storyViewPublicForward#9083670b flags:# blocked:flags.0?true blocked_my_stories_from:flags.1?true message:Message = StoryView;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| blocked | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether we have [completely blocked](https://core.telegram.org/api/block) this user, including from viewing more of our stories. |
-| blocked_my_stories_from | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether we have [blocked](https://core.telegram.org/api/block) this user from viewing more of our stories. |
-| message | [Message](/type/Message/) | The message with the forwarded story. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>blocked</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td><a href="/api/block">Полностью заблокировали</a> ли мы этого пользователя, в том числе закрыв ему просмотр наших историй.</td></tr><tr><td><strong>blocked_my_stories_from</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td><a href="/api/block">Заблокировали</a> ли мы этому пользователю просмотр наших историй.</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message">Message</a></td><td>Сообщение с пересланной историей.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StoryView](/type/StoryView/)
 
-## Related pages
+### Связанные страницы
 
-#### [Blocked users](https://core.telegram.org/api/block)
+#### [Заблокированные пользователи](/api/block/)
 
-Working with the blocklist.
+Работа со списком заблокированных.

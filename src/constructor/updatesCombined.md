@@ -1,34 +1,24 @@
 ---
-title: "updatesCombined (конструктор)"
+title: "updatesCombined"
 original: "https://core.telegram.org/constructor/updatesCombined"
 section: ref
 kind: constructor
+description: "Конструктор для группы обновлений."
 layout: layout.njk
 ---
 
 # updatesCombined
 
-*Конструктор из схемы TL.*
-
-> Constructor for a group of updates.
-
-## Определение TL
+Конструктор для группы обновлений.
 
 ```
 updatesCombined#725b04c3 updates:Vector<Update> users:Vector<User> chats:Vector<Chat> date:int seq_start:int seq:int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| updates | [Vector](https://core.telegram.org/type/Vector%20t)<[Update](/type/Update/)> | List of updates |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | List of users mentioned in updates |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | List of chats mentioned in updates |
-| date | [int](/type/int/) | Current date |
-| seq_start | [int](/type/int/) | Value seq for the earliest update in a group |
-| seq | [int](/type/int/) | Value seq for the latest update in a group |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>updates</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Update">Update</a>&gt;</td><td>Список обновлений</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Список пользователей, упомянутых в обновлениях</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Список чатов, упомянутых в обновлениях</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Текущая дата</td></tr><tr><td><strong>seq_start</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Значение <strong>seq</strong> для самого раннего обновления в группе</td></tr><tr><td><strong>seq</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Значение <strong>seq</strong> для самого позднего обновления в группе</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Updates](/type/Updates/)

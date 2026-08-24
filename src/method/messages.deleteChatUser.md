@@ -1,18 +1,15 @@
 ---
-title: "messages.deleteChatUser (метод)"
+title: "messages.deleteChatUser"
 original: "https://core.telegram.org/method/messages.deleteChatUser"
 section: ref
 kind: method
+description: "Удаляет пользователя из чата и отправляет об этом сервисное сообщение."
 layout: layout.njk
 ---
 
 # messages.deleteChatUser
 
-*Метод из схемы TL.*
-
-> Deletes a user from a chat and sends a service message on it.
-
-## Определение TL
+Удаляет пользователя из чата и отправляет об этом сервисное сообщение.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,28 +23,16 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.deleteChatUser#a2185cab flags:# revoke_history:flags.0?true chat_id:long user_id:InputUser = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| revoke_history | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Remove the entire chat history of the specified user in this chat. |
-| chat_id | [long](/type/long/) | Chat ID |
-| user_id | [InputUser](/type/InputUser/) | User ID to be deleted |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>revoke_history</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Удалить всю историю сообщений указанного пользователя в этом чате.</td></tr><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор чата</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор удаляемого пользователя</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
-| 400 | USER_NOT_PARTICIPANT | You're not a member of this supergroup/channel. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr><tr><td>400</td><td>USER_NOT_PARTICIPANT</td><td>Вы не состоите в этой супергруппе или канале.</td></tr></tbody></table>

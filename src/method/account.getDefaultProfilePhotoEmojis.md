@@ -1,18 +1,15 @@
 ---
-title: "account.getDefaultProfilePhotoEmojis (метод)"
+title: "account.getDefaultProfilePhotoEmojis"
 original: "https://core.telegram.org/method/account.getDefaultProfilePhotoEmojis"
 section: ref
 kind: method
+description: "Получить набор рекомендуемых стикеров пользовательских эмодзи, которые можно использовать в качестве фотографии профиля"
 layout: layout.njk
 ---
 
 # account.getDefaultProfilePhotoEmojis
 
-*Метод из схемы TL.*
-
-> Get a set of suggested [custom emoji stickers](https://core.telegram.org/api/custom-emoji) that can be [used as profile picture](https://core.telegram.org/api/files/#sticker-profile-pictures)
-
-## Определение TL
+Получить набор рекомендуемых [стикеров пользовательских эмодзи](/api/custom-emoji/), которые можно [использовать в качестве фотографии профиля](/api/files/#sticker-profile-pictures)
 
 ```
 emojiListNotModified#481eadfa = EmojiList;
@@ -21,28 +18,26 @@ emojiList#7a1e11d1 hash:long document_id:Vector<long> = EmojiList;
 account.getDefaultProfilePhotoEmojis#e2750328 hash:long = EmojiList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [EmojiList](/type/EmojiList/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

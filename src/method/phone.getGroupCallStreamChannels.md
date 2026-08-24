@@ -1,19 +1,16 @@
 ---
-title: "phone.getGroupCallStreamChannels (метод)"
+title: "phone.getGroupCallStreamChannels"
 original: "https://core.telegram.org/method/phone.getGroupCallStreamChannels"
 section: ref
 kind: method
+description: "Получить доступные каналы потока и текущую позицию воспроизведения видеочата, трансляции или прямой истории в режиме RTMP; полный порядок действий описан здесь »."
 layout: layout.njk
 ---
 
 # phone.getGroupCallStreamChannels
 
-*Метод из схемы TL.*
-
-> Get the available stream channels and current playback timestamp of an RTMP-mode video chat, livestream or live story, see [here »](https://core.telegram.org/api/group-calls#rtmp-mode) for the full flow.  
-> The group call must be joined before invoking this method. Send the request to the media DC specified by [groupCall](/constructor/groupCall/).`stream_dc_id`.
-
-## Определение TL
+Получить доступные каналы потока и текущую позицию воспроизведения видеочата, трансляции или прямой истории в режиме RTMP; полный порядок действий описан [здесь »](/api/group-calls/#rtmp-mode).  
+Перед вызовом этого метода необходимо подключиться к групповому звонку. Отправляйте запрос в медиа-DC, указанный в [groupCall](/constructor/groupCall/).`stream_dc_id`.
 
 ```
 phone.groupCallStreamChannels#d0e482b2 channels:Vector<GroupCallStreamChannel> = phone.GroupCallStreamChannels;
@@ -21,49 +18,44 @@ phone.groupCallStreamChannels#d0e482b2 channels:Vector<GroupCallStreamChannel> =
 phone.getGroupCallStreamChannels#1ab21940 call:InputGroupCall = phone.GroupCallStreamChannels;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | RTMP-mode video chat, livestream or live story |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Видеочат, трансляция или прямая история в режиме RTMP</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [phone.GroupCallStreamChannels](/type/phone.GroupCallStreamChannels/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
-| 400 | GROUPCALL_JOIN_MISSING | You haven't joined this group call. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr><tr><td>400</td><td>GROUPCALL_JOIN_MISSING</td><td>Вы не присоединились к этому групповому звонку.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
 #### [groupCall](/constructor/groupCall/)
 
-Describes a [group call](https://core.telegram.org/api/group-calls).
+Описывает [групповой звонок](/api/group-calls/).
 
-If the `min` flag is set, this is a partial (`min`) constructor: only a subset of its fields contains up-to-date information, and it must be merged into a previously cached non-`min` constructor as described below. If no full (non-`min`) constructor for this call was cached previously, the `min` constructor must be discarded.
+[@term:min] Если установлен флаг `min`, это частичный (`min`) конструктор: только часть его полей содержит актуальные сведения, и его необходимо объединить с ранее закешированным не-`min` конструктором, как описано ниже. Если полный (не-`min`) конструктор для этого звонка ранее не был закеширован, `min`-конструктор следует отбросить.
 
-When `min` is set, the following mandatory fields may be used: `id`, `access_hash`, `participants_count` and `version`. In addition, **only** the following conditional fields may be used if present, subject to the usual `version` check:
+[@term:access_hash] Если установлен флаг `min`, допускается использовать следующие обязательные поля: `id`, `access_hash`, `participants_count` и `version`. Кроме того, **только** следующие условные поля допускается использовать при их наличии, с учётом обычной проверки `version`:
 
 -   `conference`
 -   `rtmp_stream`
 -   `listeners_hidden`
 -   `title`
 -   `messages_enabled`
--   `record_start_date` and `record_video_active`
+-   `record_start_date` и `record_video_active`
 -   `schedule_date`
 -   `send_paid_messages_stars`
 
-When `min` is set, the following fields **must be ignored**, keeping the values from the previously cached non-`min` constructor:
+Если установлен флаг `min`, следующие поля **обязательно игнорируются**, а их значения берутся из ранее закешированного не-`min` конструктора:
 
 -   `join_muted`
 -   `can_change_join_muted`
@@ -77,4 +69,4 @@ When `min` is set, the following fields **must be ignored**, keeping the values 
 -   `invite_link`
 -   `default_send_as`
 
-The `join_date_asc` flag is set only when the call is created and never changes afterwards, so it too is not applied from a `min` constructor.
+Флаг `join_date_asc` устанавливается только при создании звонка и в дальнейшем никогда не меняется, поэтому он тоже не применяется из `min`-конструктора.

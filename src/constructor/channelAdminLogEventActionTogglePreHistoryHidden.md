@@ -1,35 +1,30 @@
 ---
-title: "channelAdminLogEventActionTogglePreHistoryHidden (конструктор)"
+title: "channelAdminLogEventActionTogglePreHistoryHidden"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionTogglePreHistoryHidden"
 section: ref
 kind: constructor
+description: "Настройка скрытия предыдущей истории была изменена"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionTogglePreHistoryHidden
 
-*Конструктор из схемы TL.*
-
-> The hidden prehistory setting was [changed](/method/channels.togglePreHistoryHidden/)
-
-## Определение TL
+Настройка скрытия предыдущей истории была [изменена](/method/channels.togglePreHistoryHidden/)
 
 ```
 channelAdminLogEventActionTogglePreHistoryHidden#5f5c95f1 new_value:Bool = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| new_value | [Bool](/type/Bool/) | New value |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Новое значение</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
 #### [channels.togglePreHistoryHidden](/method/channels.togglePreHistoryHidden/)
 
-Hide/unhide message history for new channel/supergroup users
+Скрыть или показать историю сообщений для новых участников канала или супергруппы

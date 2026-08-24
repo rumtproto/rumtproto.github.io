@@ -1,18 +1,15 @@
 ---
-title: "messages.TranslatedText (тип)"
+title: "messages.TranslatedText"
 original: "https://core.telegram.org/type/messages.TranslatedText"
 section: ref
 kind: type
+description: "Переведённый текст с сущностями оформления."
 layout: layout.njk
 ---
 
 # messages.TranslatedText
 
-*Тип из схемы TL.*
-
-> Translated text with [entities](https://core.telegram.org/api/entities).
-
-## Определение TL
+Переведённый текст с [сущностями оформления](/api/entities/).
 
 ```
 messages.translateResult#33db32f8 result:Vector<TextWithEntities> = messages.TranslatedText;
@@ -22,20 +19,16 @@ messages.translateResult#33db32f8 result:Vector<TextWithEntities> = messages.Tra
 messages.translateText#63183030 flags:# peer:flags.0?InputPeer id:flags.0?Vector<int> text:flags.1?Vector<TextWithEntities> to_lang:string = messages.TranslatedText;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.translateResult](/constructor/messages.translateResult/) | Translated text with [entities](https://core.telegram.org/api/entities) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.translateResult">messages.translateResult</a></td><td>Переведённый текст с <a href="/api/entities">сущностями оформления</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.translateText](/method/messages.translateText/) | Translate a given text. [Styled text entities](https://core.telegram.org/api/entities) will only be preserved for [Telegram Premium](https://core.telegram.org/api/premium) users. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.translateText">messages.translateText</a></td><td>Перевести заданный текст.<br><br><a href="/api/entities">Сущности оформления текста</a> сохраняются только для пользователей <a href="/api/premium">Telegram Premium</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

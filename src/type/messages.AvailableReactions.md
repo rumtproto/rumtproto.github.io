@@ -1,18 +1,15 @@
 ---
-title: "messages.AvailableReactions (тип)"
+title: "messages.AvailableReactions"
 original: "https://core.telegram.org/type/messages.AvailableReactions"
 section: ref
 kind: type
+description: "Анимации и метаданные, связанные с реакциями на сообщения »"
 layout: layout.njk
 ---
 
 # messages.AvailableReactions
 
-*Тип из схемы TL.*
-
-> Animations and metadata associated with [message reactions »](https://core.telegram.org/api/reactions)
-
-## Определение TL
+Анимации и метаданные, связанные с [реакциями на сообщения »](/api/reactions/)
 
 ```
 messages.availableReactionsNotModified#9f071957 = messages.AvailableReactions;
@@ -23,21 +20,16 @@ messages.availableReactions#768e3aad hash:int reactions:Vector<AvailableReaction
 messages.getAvailableReactions#18dea0ac hash:int = messages.AvailableReactions;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.availableReactionsNotModified](/constructor/messages.availableReactionsNotModified/) | No new reactions are available |
-| [messages.availableReactions](/constructor/messages.availableReactions/) | Animations and metadata associated with [message reactions »](https://core.telegram.org/api/reactions) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.availableReactionsNotModified">messages.availableReactionsNotModified</a></td><td>Новых реакций нет</td></tr><tr><td><a href="/constructor/messages.availableReactions">messages.availableReactions</a></td><td>Анимации и метаданные, связанные с <a href="/api/reactions">реакциями на сообщения »</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getAvailableReactions](/method/messages.getAvailableReactions/) | Obtain available [message reactions »](https://core.telegram.org/api/reactions) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getAvailableReactions">messages.getAvailableReactions</a></td><td>Получить доступные <a href="/api/reactions">реакции на сообщения »</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

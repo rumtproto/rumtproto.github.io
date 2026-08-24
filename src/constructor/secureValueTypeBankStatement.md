@@ -1,27 +1,24 @@
 ---
-title: "secureValueTypeBankStatement (конструктор)"
+title: "secureValueTypeBankStatement"
 original: "https://core.telegram.org/constructor/secureValueTypeBankStatement"
 section: ref
 kind: constructor
+description: "Выписка из банка"
 layout: layout.njk
 ---
 
 # secureValueTypeBankStatement
 
-*Конструктор из схемы TL.*
-
-> Bank statement
-
-## Определение TL
+Выписка из банка
 
 ```
 secureValueTypeBankStatement#89137c0d = SecureValueType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureValueType](/type/SecureValueType/)

@@ -1,18 +1,15 @@
 ---
-title: "account.deleteAutoSaveExceptions (метод)"
+title: "account.deleteAutoSaveExceptions"
 original: "https://core.telegram.org/method/account.deleteAutoSaveExceptions"
 section: ref
 kind: method
+description: "Удалить все настройки автосохранения для отдельных пиров."
 layout: layout.njk
 ---
 
 # account.deleteAutoSaveExceptions
 
-*Метод из схемы TL.*
-
-> Clear all peer-specific autosave settings.
-
-## Определение TL
+Удалить все настройки автосохранения для отдельных пиров.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,12 +18,12 @@ boolTrue#997275b5 = Bool;
 account.deleteAutoSaveExceptions#53bc0020 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

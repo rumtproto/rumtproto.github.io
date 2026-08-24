@@ -1,19 +1,17 @@
 ---
-title: "account.toggleSponsoredMessages (метод)"
+title: "account.toggleSponsoredMessages"
 original: "https://core.telegram.org/method/account.toggleSponsoredMessages"
 section: ref
 kind: method
+description: "Отключить или снова включить рекламу Telegram для текущего аккаунта Premium."
 layout: layout.njk
 ---
 
 # account.toggleSponsoredMessages
 
-*Метод из схемы TL.*
+Отключить или снова включить рекламу Telegram для текущего аккаунта [Premium](/api/premium/).
 
-> Disable or re-enable Telegram ads for the current [Premium](https://core.telegram.org/api/premium) account.
-> Useful for business owners that may want to launch and view their own Telegram ads via the [Telegram ad platform »](https://ads.telegram.org).
-
-## Определение TL
+Полезно владельцам бизнеса, которые хотят запускать и просматривать собственную рекламу в Telegram через [рекламную платформу Telegram »](https://ads.telegram.org).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,20 +20,18 @@ boolTrue#997275b5 = Bool;
 account.toggleSponsoredMessages#b9d9a38d enabled:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| enabled | [Bool](/type/Bool/) | Enable or disable ads. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Включить или отключить рекламу.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.

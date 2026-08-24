@@ -1,27 +1,24 @@
 ---
-title: "reactionNotificationsFromContacts (конструктор)"
+title: "reactionNotificationsFromContacts"
 original: "https://core.telegram.org/constructor/reactionNotificationsFromContacts"
 section: ref
 kind: constructor
+description: "Получать уведомления о реакциях только от наших контактов."
 layout: layout.njk
 ---
 
 # reactionNotificationsFromContacts
 
-*Конструктор из схемы TL.*
-
-> Receive notifications about reactions made only by our contacts.
-
-## Определение TL
+Получать уведомления о реакциях только от наших контактов.
 
 ```
 reactionNotificationsFromContacts#bac3a61a = ReactionNotificationsFrom;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReactionNotificationsFrom](/type/ReactionNotificationsFrom/)

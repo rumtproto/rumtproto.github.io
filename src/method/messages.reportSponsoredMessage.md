@@ -1,18 +1,15 @@
 ---
-title: "messages.reportSponsoredMessage (метод)"
+title: "messages.reportSponsoredMessage"
 original: "https://core.telegram.org/method/messages.reportSponsoredMessage"
 section: ref
 kind: method
+description: "Пожаловаться на рекламное сообщение »; подробнее обо всём процессе см. здесь »."
 layout: layout.njk
 ---
 
 # messages.reportSponsoredMessage
 
-*Метод из схемы TL.*
-
-> Report a [sponsored message »](https://core.telegram.org/api/sponsored-messages), see [here »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages) for more info on the full flow.
-
-## Определение TL
+Пожаловаться на [рекламное сообщение »](/api/sponsored-messages/); подробнее обо всём процессе см. [здесь »](/api/sponsored-messages/#reporting-sponsored-messages).
 
 ```
 channels.sponsoredMessageReportResultChooseOption#846f9e42 title:string options:Vector<SponsoredMessageReportOption> = channels.SponsoredMessageReportResult;
@@ -22,25 +19,22 @@ channels.sponsoredMessageReportResultReported#ad798849 = channels.SponsoredMessa
 messages.reportSponsoredMessage#12cbf0c4 random_id:bytes option:bytes = channels.SponsoredMessageReportResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| random_id | [bytes](/type/bytes/) | The ad's unique ID. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| option | [bytes](/type/bytes/) | Chosen report option, initially an empty string, see [here »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>[@term:random_id] Уникальный идентификатор рекламного объявления. Подробнее о дедупликации по случайным идентификаторам и сопоставлении через updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Выбранный вариант жалобы, изначально — пустая строка; подробнее о полном порядке действий см. <a href="/api/sponsored-messages#reporting-sponsored-messages">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [channels.SponsoredMessageReportResult](/type/channels.SponsoredMessageReportResult/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Sponsored messages](https://core.telegram.org/api/sponsored-messages)
+#### [Спонсируемые сообщения](/api/sponsored-messages/)
 
-How clients should fetch, display and interact with sponsored messages.
+Как клиентам получать, показывать рекламные сообщения и взаимодействовать с ними.

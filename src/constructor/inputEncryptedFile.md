@@ -1,36 +1,30 @@
 ---
-title: "inputEncryptedFile (конструктор)"
+title: "inputEncryptedFile"
 original: "https://core.telegram.org/constructor/inputEncryptedFile"
 section: ref
 kind: constructor
+description: "Задаёт пересылаемый зашифрованный файл для вложения."
 layout: layout.njk
 ---
 
 # inputEncryptedFile
 
-*Конструктор из схемы TL.*
-
-> Sets forwarded encrypted file for attachment.
-
-## Определение TL
+Задаёт пересылаемый зашифрованный файл для вложения.
 
 ```
 inputEncryptedFile#5a17b5e5 id:long access_hash:long = InputEncryptedFile;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | File ID, value of id parameter from [encryptedFile](/constructor/encryptedFile/) |
-| access_hash | [long](/type/long/) | Checking sum, value of access_hash parameter from [encryptedFile](/constructor/encryptedFile/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор файла, значение параметра <strong>id</strong> из <a href="/constructor/encryptedFile">encryptedFile</a></td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:access_hash] Контрольная сумма, значение параметра <strong>access_hash</strong> из <a href="/constructor/encryptedFile">encryptedFile</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputEncryptedFile](/type/InputEncryptedFile/)
 
-## Related pages
+### Связанные страницы
 
 #### [encryptedFile](/constructor/encryptedFile/)
 
-Encrypted file.
+Зашифрованный файл.

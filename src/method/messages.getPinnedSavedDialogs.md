@@ -1,18 +1,15 @@
 ---
-title: "messages.getPinnedSavedDialogs (метод)"
+title: "messages.getPinnedSavedDialogs"
 original: "https://core.telegram.org/method/messages.getPinnedSavedDialogs"
 section: ref
 kind: method
+description: "Получить закреплённые сохранённые диалоги, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # messages.getPinnedSavedDialogs
 
-*Метод из схемы TL.*
-
-> Get pinned [saved dialogs, see here »](https://core.telegram.org/api/saved-messages) for more info.
-
-## Определение TL
+Получить закреплённые [сохранённые диалоги, подробнее см. здесь »](/api/saved-messages/).
 
 ```
 messages.savedDialogs#f83ae221 dialogs:Vector<SavedDialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.SavedDialogs;
@@ -22,18 +19,18 @@ messages.savedDialogsNotModified#c01f6fe8 count:int = messages.SavedDialogs;
 messages.getPinnedSavedDialogs#d63d94e0 = messages.SavedDialogs;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [messages.SavedDialogs](/type/messages.SavedDialogs/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.

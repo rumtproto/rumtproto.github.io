@@ -1,42 +1,34 @@
 ---
-title: "help.deepLinkInfo (конструктор)"
+title: "help.deepLinkInfo"
 original: "https://core.telegram.org/constructor/help.deepLinkInfo"
 section: ref
 kind: constructor
+description: "Информация о глубокой ссылке, подробнее см. здесь"
 layout: layout.njk
 ---
 
 # help.deepLinkInfo
 
-*Конструктор из схемы TL.*
-
-> Deep link info, see [the here for more details](https://core.telegram.org/api/links#unsupported-links)
-
-## Определение TL
+Информация о глубокой ссылке, [подробнее см. здесь](/api/links/#unsupported-links)
 
 ```
 help.deepLinkInfo#6a4ee832 flags:# update_app:flags.0?true message:string entities:flags.1?Vector<MessageEntity> = help.DeepLinkInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| update_app | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | An update of the app is required to parse this link |
-| message | [string](/type/string/) | Message to show to the user |
-| entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text](https://core.telegram.org/api/entities) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>update_app</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Для разбора этой ссылки требуется обновление приложения</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Сообщение, которое нужно показать пользователю</td></tr><tr><td><strong>entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления для форматированного текста</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [help.DeepLinkInfo](/type/help.DeepLinkInfo/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

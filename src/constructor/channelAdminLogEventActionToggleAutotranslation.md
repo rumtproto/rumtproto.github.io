@@ -1,35 +1,30 @@
 ---
-title: "channelAdminLogEventActionToggleAutotranslation (конструктор)"
+title: "channelAdminLogEventActionToggleAutotranslation"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionToggleAutotranslation"
 section: ref
 kind: constructor
+description: "Автоперевод в канале был переключён »."
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionToggleAutotranslation
 
-*Конструктор из схемы TL.*
-
-> [Channel autotranslation was toggled »](https://core.telegram.org/api/translation#autotranslation-for-channels).
-
-## Определение TL
+[Автоперевод в канале был переключён »](/api/translation/#autotranslation-for-channels).
 
 ```
 channelAdminLogEventActionToggleAutotranslation#c517f77e new_value:Bool = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| new_value | [Bool](/type/Bool/) | New value of the toggle |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Новое значение переключателя</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message translation](https://core.telegram.org/api/translation)
+#### [Перевод сообщений](/api/translation/)
 
-Telegram allows translating chat messages: Telegram Premium users may even enable real-time chat translation.
+Telegram позволяет переводить сообщения в чатах: пользователи Telegram Premium могут даже включить перевод чата в реальном времени.

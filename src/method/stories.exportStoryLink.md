@@ -1,18 +1,15 @@
 ---
-title: "stories.exportStoryLink (метод)"
+title: "stories.exportStoryLink"
 original: "https://core.telegram.org/method/stories.exportStoryLink"
 section: ref
 kind: method
+description: "Создать глубокую ссылку на историю для конкретной истории"
 layout: layout.njk
 ---
 
 # stories.exportStoryLink
 
-*Метод из схемы TL.*
-
-> Generate a [story deep link](https://core.telegram.org/api/links#story-links) for a specific story
-
-## Определение TL
+Создать [глубокую ссылку на историю](/api/links/#story-links) для конкретной истории
 
 ```
 exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
@@ -20,29 +17,22 @@ exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
 stories.exportStoryLink#7b8def20 peer:InputPeer id:int = ExportedStoryLink;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer where the story was posted |
-| id | [int](/type/int/) | Story ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в котором была опубликована история</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор истории</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [ExportedStoryLink](/type/ExportedStoryLink/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | STORY_ID_EMPTY | You specified no story IDs. |
-| 400 | USER_PUBLIC_MISSING | Cannot generate a link to stories posted by a peer without a username. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>STORY_ID_EMPTY</td><td>Вы не указали ни одного идентификатора истории.</td></tr><tr><td>400</td><td>USER_PUBLIC_MISSING</td><td>Невозможно сформировать ссылку на истории, опубликованные пиром без имени пользователя.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

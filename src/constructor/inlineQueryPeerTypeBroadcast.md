@@ -1,33 +1,30 @@
 ---
-title: "inlineQueryPeerTypeBroadcast (конструктор)"
+title: "inlineQueryPeerTypeBroadcast"
 original: "https://core.telegram.org/constructor/inlineQueryPeerTypeBroadcast"
 section: ref
 kind: constructor
+description: "Тип пира: канал"
 layout: layout.njk
 ---
 
 # inlineQueryPeerTypeBroadcast
 
-*Конструктор из схемы TL.*
-
-> Peer type: [channel](https://core.telegram.org/api/channel)
-
-## Определение TL
+Тип пира: [канал](/api/channel/)
 
 ```
 inlineQueryPeerTypeBroadcast#6334ee9a = InlineQueryPeerType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InlineQueryPeerType](/type/InlineQueryPeerType/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

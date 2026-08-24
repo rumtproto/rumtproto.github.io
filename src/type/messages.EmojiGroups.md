@@ -1,18 +1,15 @@
 ---
-title: "messages.EmojiGroups (тип)"
+title: "messages.EmojiGroups"
 original: "https://core.telegram.org/type/messages.EmojiGroups"
 section: ref
 kind: type
+description: "Представляет список категорий эмодзи."
 layout: layout.njk
 ---
 
 # messages.EmojiGroups
 
-*Тип из схемы TL.*
-
-> Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories).
-
-## Определение TL
+Представляет список [категорий эмодзи](/api/emoji-categories/).
 
 ```
 messages.emojiGroupsNotModified#6fb4ad87 = messages.EmojiGroups;
@@ -26,24 +23,16 @@ messages.getEmojiProfilePhotoGroups#21a548f3 hash:int = messages.EmojiGroups;
 messages.getEmojiStickerGroups#1dd840f5 hash:int = messages.EmojiGroups;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.emojiGroupsNotModified](/constructor/messages.emojiGroupsNotModified/) | The list of [emoji categories](https://core.telegram.org/api/emoji-categories) hasn't changed. |
-| [messages.emojiGroups](/constructor/messages.emojiGroups/) | Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.emojiGroupsNotModified">messages.emojiGroupsNotModified</a></td><td>Список <a href="/api/emoji-categories">категорий эмодзи</a> не изменился.</td></tr><tr><td><a href="/constructor/messages.emojiGroups">messages.emojiGroups</a></td><td>Представляет список <a href="/api/emoji-categories">категорий эмодзи</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getEmojiGroups](/method/messages.getEmojiGroups/) | Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories). |
-| [messages.getEmojiStatusGroups](/method/messages.getEmojiStatusGroups/) | Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories), to be used when selecting custom emojis to set as [custom emoji status](/api/). |
-| [messages.getEmojiProfilePhotoGroups](/method/messages.getEmojiProfilePhotoGroups/) | Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories), to be used when selecting custom emojis to set as [profile picture](https://core.telegram.org/api/files/#sticker-profile-pictures). |
-| [messages.getEmojiStickerGroups](/method/messages.getEmojiStickerGroups/) | Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories), to be used when choosing a sticker. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getEmojiGroups">messages.getEmojiGroups</a></td><td>Представляет список <a href="/api/emoji-categories">категорий эмодзи</a>.</td></tr><tr><td><a href="/method/messages.getEmojiStatusGroups">messages.getEmojiStatusGroups</a></td><td>Представляет список <a href="/api/emoji-categories">категорий эмодзи</a>, используемый при выборе пользовательских эмодзи для установки в качестве <a href="/api">эмодзи-статуса</a>.</td></tr><tr><td><a href="/method/messages.getEmojiProfilePhotoGroups">messages.getEmojiProfilePhotoGroups</a></td><td>Представляет список <a href="/api/emoji-categories">категорий эмодзи</a>, используемый при выборе пользовательских эмодзи для установки в качестве <a href="/api/files#sticker-profile-pictures">фотографии профиля</a>.</td></tr><tr><td><a href="/method/messages.getEmojiStickerGroups">messages.getEmojiStickerGroups</a></td><td>Представляет список <a href="/api/emoji-categories">категорий эмодзи</a>, используемый при выборе стикера.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji categories](https://core.telegram.org/api/emoji-categories)
+#### [Категории эмодзи](/api/emoji-categories/)
 
-Sticker, custom emoji and GIF selection UIs should offer a list of categories to quickly filter results by a (list of) emojis, or by some other criteria.
+Интерфейсы выбора стикеров, пользовательских эмодзи и GIF должны предлагать список категорий для быстрой фильтрации результатов по эмодзи (или набору эмодзи) либо по иным критериям.

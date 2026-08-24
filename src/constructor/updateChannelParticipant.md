@@ -1,52 +1,38 @@
 ---
-title: "updateChannelParticipant (конструктор)"
+title: "updateChannelParticipant"
 original: "https://core.telegram.org/constructor/updateChannelParticipant"
 section: ref
 kind: constructor
+description: "Участник вышел, вступил, был заблокирован или назначен администратором в канале или супергруппе."
 layout: layout.njk
 ---
 
 # updateChannelParticipant
 
-*Конструктор из схемы TL.*
-
-> A participant has left, joined, was banned or admined in a [channel or supergroup](https://core.telegram.org/api/channel).
-
-## Определение TL
+Участник вышел, вступил, был заблокирован или назначен администратором в [канале или супергруппе](/api/channel/).
 
 ```
 updateChannelParticipant#985d3abb flags:# via_chatlist:flags.3?true channel_id:long date:int actor_id:long user_id:long prev_participant:flags.0?ChannelParticipant new_participant:flags.1?ChannelParticipant invite:flags.2?ExportedChatInvite qts:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| via_chatlist | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether the participant joined using a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| channel_id | [long](/type/long/) | Channel ID |
-| date | [int](/type/int/) | Date of the event |
-| actor_id | [long](/type/long/) | User that triggered the change (inviter, admin that kicked the user, or the even the user_id itself) |
-| user_id | [long](/type/long/) | User that was affected by the change |
-| prev_participant | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[ChannelParticipant](/type/ChannelParticipant/) | Previous participant status |
-| new_participant | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[ChannelParticipant](/type/ChannelParticipant/) | New participant status |
-| invite | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[ExportedChatInvite](/type/ExportedChatInvite/) | Chat invite used to join the [channel/supergroup](https://core.telegram.org/api/channel) |
-| qts | [int](/type/int/) | New qts value, see [updates »](/api/updates/) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>via_chatlist</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Присоединился ли участник по <a href="/api/links#chat-folder-links">глубокой ссылке на папку чатов »</a>.</td></tr><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор канала</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата события</td></tr><tr><td><strong>actor_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Пользователь, вызвавший изменение (пригласивший, администратор, исключивший пользователя, или даже сам <strong>user_id</strong>)</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Пользователь, которого затронуло изменение</td></tr><tr><td><strong>prev_participant</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/ChannelParticipant">ChannelParticipant</a></td><td>Предыдущий статус участника</td></tr><tr><td><strong>new_participant</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/ChannelParticipant">ChannelParticipant</a></td><td>Новый статус участника</td></tr><tr><td><strong>invite</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/ExportedChatInvite">ExportedChatInvite</a></td><td>Приглашение в чат, использованное для вступления в <a href="/api/channel">канал или супергруппу</a></td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] Новое значение <strong>qts</strong>, подробнее см. <a href="/api/updates">обновления »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

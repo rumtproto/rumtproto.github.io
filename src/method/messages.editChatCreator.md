@@ -1,18 +1,15 @@
 ---
-title: "messages.editChatCreator (метод)"
+title: "messages.editChatCreator"
 original: "https://core.telegram.org/method/messages.editChatCreator"
 section: ref
 kind: method
+description: "Передать права владельца обычной группы, супергруппы или канала другому пользователю; полное описание процесса см. здесь »."
 layout: layout.njk
 ---
 
 # messages.editChatCreator
 
-*Метод из схемы TL.*
-
-> Transfer the ownership of a basic group, supergroup or channel to another user, see [here »](https://core.telegram.org/api/channel#transferring-ownership-of-a-group-channel) for the full flow.
-
-## Определение TL
+Передать права владельца обычной группы, супергруппы или канала другому пользователю; полное описание процесса см. [здесь »](/api/channel/#transferring-ownership-of-a-group-channel).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,45 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.editChatCreator#f743b857 peer:InputPeer user_id:InputUser password:InputCheckPasswordSRP = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Owned group/supergroup/channel. |
-| user_id | [InputUser](/type/InputUser/) | ID of the new owner. |
-| password | [InputCheckPasswordSRP](/type/InputCheckPasswordSRP/) | The current account's [2FA password](/api/srp/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Группа/супергруппа/канал, которыми мы владеем.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор нового владельца.</td></tr><tr><td><strong>password</strong></td><td style="text-align: center;"><a href="/type/InputCheckPasswordSRP">InputCheckPasswordSRP</a></td><td><a href="/api/srp">Пароль двухфакторной авторизации</a> текущей учётной записи.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNELS_ADMIN_PUBLIC_TOO_MUCH | You're admin of too many public channels, make some channels private to change the username of this channel. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_MEMBER_ADD_FAILED | Could not add participants. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | PASSWORD_HASH_INVALID | The provided password hash is invalid. |
-| 400 | PASSWORD_MISSING | You must [enable 2FA](/api/srp/) before executing this operation. |
-| 400 | PASSWORD_TOO_FRESH_%d | The password was modified less than 24 hours ago, try again in %d seconds. |
-| 400 | SESSION_TOO_FRESH_%d | This session was created less than 24 hours ago, try again in %d seconds. |
-| 400 | SRP_ID_INVALID | Invalid SRP ID provided. |
-| 400 | USERS_TOO_MUCH | The maximum number of users has been exceeded (to create a chat, for example). |
-| 403 | USER_CHANNELS_TOO_MUCH | One of the users you tried to add is already in too many channels/supergroups. |
-| 400 | USER_NOT_MUTUAL_CONTACT | The provided user is not a mutual contact. |
-| 403 | USER_PRIVACY_RESTRICTED | The user's privacy settings do not allow you to do this. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNELS_ADMIN_PUBLIC_TOO_MUCH</td><td>Вы администратор слишком многих публичных каналов; сделайте часть каналов закрытыми, чтобы изменить имя пользователя этого канала.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_MEMBER_ADD_FAILED</td><td>Не удалось добавить участников.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>PASSWORD_HASH_INVALID</td><td>Указанный хеш пароля недействителен.</td></tr><tr><td>400</td><td>PASSWORD_MISSING</td><td>Перед выполнением этой операции вы обязаны <a href="/api/srp">включить двухфакторную аутентификацию</a>.</td></tr><tr><td>400</td><td>PASSWORD_TOO_FRESH_%d</td><td>Пароль был изменён менее 24 часов назад, повторите попытку через %d секунд.</td></tr><tr><td>400</td><td>SESSION_TOO_FRESH_%d</td><td>Эта сессия была создана менее 24 часов назад, повторите попытку через %d секунд.</td></tr><tr><td>400</td><td>SRP_ID_INVALID</td><td>Указан недействительный SRP ID.</td></tr><tr><td>400</td><td>USERS_TOO_MUCH</td><td>Превышено максимальное количество пользователей (например, при создании чата).</td></tr><tr><td>403</td><td>USER_CHANNELS_TOO_MUCH</td><td>Один из пользователей, которых вы попытались добавить, уже состоит в слишком большом числе каналов и супергрупп.</td></tr><tr><td>400</td><td>USER_NOT_MUTUAL_CONTACT</td><td>Указанный пользователь не является взаимным контактом.</td></tr><tr><td>403</td><td>USER_PRIVACY_RESTRICTED</td><td>Настройки приватности пользователя не позволяют вам это сделать.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

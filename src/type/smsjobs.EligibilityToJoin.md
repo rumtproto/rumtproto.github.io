@@ -1,18 +1,15 @@
 ---
-title: "smsjobs.EligibilityToJoin (тип)"
+title: "smsjobs.EligibilityToJoin"
 original: "https://core.telegram.org/type/smsjobs.EligibilityToJoin"
 section: ref
 kind: type
+description: "Допуск к SMS-заданиям"
 layout: layout.njk
 ---
 
 # smsjobs.EligibilityToJoin
 
-*Тип из схемы TL.*
-
-> SMS jobs eligibility
-
-## Определение TL
+Допуск к SMS-заданиям
 
 ```
 smsjobs.eligibleToJoin#dc8b44cf terms_url:string monthly_sent_sms:int = smsjobs.EligibilityToJoin;
@@ -22,14 +19,10 @@ smsjobs.eligibleToJoin#dc8b44cf terms_url:string monthly_sent_sms:int = smsjobs.
 smsjobs.isEligibleToJoin#edc39d0 = smsjobs.EligibilityToJoin;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [smsjobs.eligibleToJoin](/constructor/smsjobs.eligibleToJoin/) | SMS jobs eligibility |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/smsjobs.eligibleToJoin">smsjobs.eligibleToJoin</a></td><td>Допуск к SMS-заданиям</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [smsjobs.isEligibleToJoin](/method/smsjobs.isEligibleToJoin/) | Check if we can process SMS jobs (official clients only). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/smsjobs.isEligibleToJoin">smsjobs.isEligibleToJoin</a></td><td>Проверить, можем ли мы обрабатывать задания на отправку SMS (только для официальных клиентов).</td></tr></tbody></table>

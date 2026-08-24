@@ -1,27 +1,24 @@
 ---
-title: "inputStickerSetAnimatedEmojiAnimations (конструктор)"
+title: "inputStickerSetAnimatedEmojiAnimations"
 original: "https://core.telegram.org/constructor/inputStickerSetAnimatedEmojiAnimations"
 section: ref
 kind: constructor
+description: "Набор стикеров для реакций анимированными эмодзи (содержит анимации, которые проигрываются при нажатии пользователем на соответствующий анимированный эмодзи)"
 layout: layout.njk
 ---
 
 # inputStickerSetAnimatedEmojiAnimations
 
-*Конструктор из схемы TL.*
-
-> Animated emoji reaction stickerset (contains animations to play when a user clicks on a given animated emoji)
-
-## Определение TL
+Набор стикеров для реакций анимированными эмодзи (содержит анимации, которые проигрываются при нажатии пользователем на соответствующий анимированный эмодзи)
 
 ```
 inputStickerSetAnimatedEmojiAnimations#cde3739 = InputStickerSet;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputStickerSet](/type/InputStickerSet/)

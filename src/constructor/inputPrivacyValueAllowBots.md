@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyValueAllowBots (конструктор)"
+title: "inputPrivacyValueAllowBots"
 original: "https://core.telegram.org/constructor/inputPrivacyValueAllowBots"
 section: ref
 kind: constructor
+description: "Разрешить ботам и mini app"
 layout: layout.njk
 ---
 
 # inputPrivacyValueAllowBots
 
-*Конструктор из схемы TL.*
-
-> Allow bots and mini apps
-
-## Определение TL
+[@term:Mini App] Разрешить ботам и mini app
 
 ```
 inputPrivacyValueAllowBots#5a4fcce5 = InputPrivacyRule;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyRule](/type/InputPrivacyRule/)

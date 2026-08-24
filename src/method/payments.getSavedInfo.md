@@ -1,18 +1,15 @@
 ---
-title: "payments.getSavedInfo (метод)"
+title: "payments.getSavedInfo"
 original: "https://core.telegram.org/method/payments.getSavedInfo"
 section: ref
 kind: method
+description: "Получить сохранённые платёжные данные"
 layout: layout.njk
 ---
 
 # payments.getSavedInfo
 
-*Метод из схемы TL.*
-
-> Get saved payment information
-
-## Определение TL
+Получить сохранённые платёжные данные
 
 ```
 payments.savedInfo#fb8fe43c flags:# has_saved_credentials:flags.1?true saved_info:flags.0?PaymentRequestedInfo = payments.SavedInfo;
@@ -20,12 +17,12 @@ payments.savedInfo#fb8fe43c flags:# has_saved_credentials:flags.1?true saved_inf
 payments.getSavedInfo#227d824b = payments.SavedInfo;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [payments.SavedInfo](/type/payments.SavedInfo/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

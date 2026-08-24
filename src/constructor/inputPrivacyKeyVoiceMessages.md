@@ -1,33 +1,30 @@
 ---
-title: "inputPrivacyKeyVoiceMessages (конструктор)"
+title: "inputPrivacyKeyVoiceMessages"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyVoiceMessages"
 section: ref
 kind: constructor
+description: "Могут ли другие отправлять вам голосовые сообщения или видеосообщения (только для пользователей Premium)."
 layout: layout.njk
 ---
 
 # inputPrivacyKeyVoiceMessages
 
-*Конструктор из схемы TL.*
-
-> Whether people can send you voice messages or round videos ([Premium](https://core.telegram.org/api/premium) users only).
-
-## Определение TL
+Могут ли другие отправлять вам голосовые сообщения или видеосообщения (только для пользователей [Premium](/api/premium/)).
 
 ```
 inputPrivacyKeyVoiceMessages#aee69d68 = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.

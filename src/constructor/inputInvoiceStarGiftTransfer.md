@@ -1,36 +1,30 @@
 ---
-title: "inputInvoiceStarGiftTransfer (конструктор)"
+title: "inputInvoiceStarGiftTransfer"
 original: "https://core.telegram.org/constructor/inputInvoiceStarGiftTransfer"
 section: ref
 kind: constructor
+description: "Используется, чтобы оплатить передачу коллекционного подарка другому пиру; подробнее см. документацию по подаркам »."
 layout: layout.njk
 ---
 
 # inputInvoiceStarGiftTransfer
 
-*Конструктор из схемы TL.*
-
-> Used to [pay to transfer a collectible gift to another peer](https://core.telegram.org/api/gifts#transferring-collectible-gifts), see the [gifts »](https://core.telegram.org/api/gifts#transferring-collectible-gifts) documentation for more info.
-
-## Определение TL
+Используется, чтобы [оплатить передачу коллекционного подарка другому пиру](/api/gifts/#transferring-collectible-gifts); подробнее см. документацию по [подаркам »](/api/gifts/#transferring-collectible-gifts).
 
 ```
 inputInvoiceStarGiftTransfer#4a5f5bd9 stargift:InputSavedStarGift to_id:InputPeer = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| stargift | [InputSavedStarGift](/type/InputSavedStarGift/) | The identifier of the received gift |
-| to_id | [InputPeer](/type/InputPeer/) | The destination peer |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>Идентификатор полученного подарка</td></tr><tr><td><strong>to_id</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Пир назначения</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

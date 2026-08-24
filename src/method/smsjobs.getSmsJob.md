@@ -1,18 +1,15 @@
 ---
-title: "smsjobs.getSmsJob (метод)"
+title: "smsjobs.getSmsJob"
 original: "https://core.telegram.org/method/smsjobs.getSmsJob"
 section: ref
 kind: method
+description: "Получить информацию о задании на отправку SMS (только для официальных клиентов)."
 layout: layout.njk
 ---
 
 # smsjobs.getSmsJob
 
-*Метод из схемы TL.*
-
-> Get info about an SMS job (official clients only).
-
-## Определение TL
+Получить информацию о задании на отправку SMS (только для официальных клиентов).
 
 ```
 smsJob#e6a1eeb8 job_id:string phone_number:string text:string = SmsJob;
@@ -20,20 +17,16 @@ smsJob#e6a1eeb8 job_id:string phone_number:string text:string = SmsJob;
 smsjobs.getSmsJob#778d902f job_id:string = SmsJob;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| job_id | [string](/type/string/) | Job ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>job_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор задания</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [SmsJob](/type/SmsJob/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | SMSJOB_ID_INVALID | The specified job ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>SMSJOB_ID_INVALID</td><td>Указанный идентификатор задания недействителен.</td></tr></tbody></table>

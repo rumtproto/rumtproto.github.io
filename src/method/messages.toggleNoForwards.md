@@ -1,18 +1,15 @@
 ---
-title: "messages.toggleNoForwards (метод)"
+title: "messages.toggleNoForwards"
 original: "https://core.telegram.org/method/messages.toggleNoForwards"
 section: ref
 kind: method
+description: "Включить или отключить защиту контента в канале, группе или личном чате."
 layout: layout.njk
 ---
 
 # messages.toggleNoForwards
 
-*Метод из схемы TL.*
-
-> Enable or disable [content protection](https://core.telegram.org/api/content-protection) on a channel, group or private chat.
-
-## Определение TL
+Включить или отключить [защиту контента](/api/content-protection/) в канале, группе или личном чате.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,32 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.toggleNoForwards#b2081a35 flags:# peer:InputPeer enabled:Bool request_msg_id:flags.0?int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [InputPeer](/type/InputPeer/) | The chat or channel |
-| enabled | [Bool](/type/Bool/) | Enable or disable content protection |
-| request_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Used only inside private chats to accept or refuse a request to disable content protection, see [here »](https://core.telegram.org/api/content-protection#for-users) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат или канал</td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Включить или отключить защиту контента</td></tr><tr><td><strong>request_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Используется только в личных чатах, чтобы принять или отклонить просьбу отключить защиту контента; подробнее обо всём процессе см. <a href="/api/content-protection#for-users">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | REQUEST_MSG_EXPIRED | The request specified in request_msg_id has already expired. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>REQUEST_MSG_EXPIRED</td><td>Срок действия запроса, указанного в request_msg_id, уже истёк.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Content protection](https://core.telegram.org/api/content-protection)
+#### [Защита контента](/api/content-protection/)
 
-Users and bots who want to keep their messages private, as well as Group and Channel owners who want to keep their content members-only can enable content protection, which prevents screenshots, copying, disables message forwards and limits the ability to save media from posts.
+Пользователи и боты, желающие сохранить приватность своих сообщений, а также владельцы групп и каналов, желающие оставить свой контент доступным только участникам, могут включить защиту контента: она препятствует созданию снимков экрана и копированию, отключает пересылку сообщений и ограничивает возможность сохранять медиа из публикаций.

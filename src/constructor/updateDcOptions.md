@@ -1,29 +1,24 @@
 ---
-title: "updateDcOptions (конструктор)"
+title: "updateDcOptions"
 original: "https://core.telegram.org/constructor/updateDcOptions"
 section: ref
 kind: constructor
+description: "Изменения в параметрах конфигурации дата-центров."
 layout: layout.njk
 ---
 
 # updateDcOptions
 
-*Конструктор из схемы TL.*
-
-> Changes in the data center configuration options.
-
-## Определение TL
+Изменения в параметрах конфигурации дата-центров.
 
 ```
 updateDcOptions#8e5e9873 dc_options:Vector<DcOption> = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| dc_options | [Vector](https://core.telegram.org/type/Vector%20t)<[DcOption](/type/DcOption/)> | New connection options |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>dc_options</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/DcOption">DcOption</a>&gt;</td><td>Новые параметры подключения</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

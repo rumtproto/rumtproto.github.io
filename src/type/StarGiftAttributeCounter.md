@@ -1,25 +1,20 @@
 ---
-title: "StarGiftAttributeCounter (тип)"
+title: "StarGiftAttributeCounter"
 original: "https://core.telegram.org/type/StarGiftAttributeCounter"
 section: ref
 kind: type
+description: "Указывает общее количество подарков, обладающих указанным атрибутом."
 layout: layout.njk
 ---
 
 # StarGiftAttributeCounter
 
-*Тип из схемы TL.*
-
-> Indicates the total number of gifts that have the specified attribute.
-
-## Определение TL
+Указывает общее количество подарков, обладающих указанным атрибутом.
 
 ```
 starGiftAttributeCounter#2eb1b658 attribute:StarGiftAttributeId count:int = StarGiftAttributeCounter;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starGiftAttributeCounter](/constructor/starGiftAttributeCounter/) | Indicates the total number of gifts that have the specified attribute. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftAttributeCounter">starGiftAttributeCounter</a></td><td>Указывает общее количество подарков, обладающих указанным атрибутом.</td></tr></tbody></table>

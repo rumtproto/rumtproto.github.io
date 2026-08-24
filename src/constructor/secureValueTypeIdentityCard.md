@@ -1,27 +1,24 @@
 ---
-title: "secureValueTypeIdentityCard (конструктор)"
+title: "secureValueTypeIdentityCard"
 original: "https://core.telegram.org/constructor/secureValueTypeIdentityCard"
 section: ref
 kind: constructor
+description: "Удостоверение личности"
 layout: layout.njk
 ---
 
 # secureValueTypeIdentityCard
 
-*Конструктор из схемы TL.*
-
-> Identity card
-
-## Определение TL
+Удостоверение личности
 
 ```
 secureValueTypeIdentityCard#a0d0744b = SecureValueType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureValueType](/type/SecureValueType/)

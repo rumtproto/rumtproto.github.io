@@ -1,35 +1,24 @@
 ---
-title: "inputMediaDocument (конструктор)"
+title: "inputMediaDocument"
 original: "https://core.telegram.org/constructor/inputMediaDocument"
 section: ref
 kind: constructor
+description: "Пересланный документ"
 layout: layout.njk
 ---
 
 # inputMediaDocument
 
-*Конструктор из схемы TL.*
-
-> Forwarded document
-
-## Определение TL
+Пересланный документ
 
 ```
 inputMediaDocument#a8763ab5 flags:# spoiler:flags.2?true id:InputDocument video_cover:flags.3?InputPhoto video_timestamp:flags.4?int ttl_seconds:flags.0?int query:flags.1?string = InputMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| spoiler | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether this media should be hidden behind a spoiler warning |
-| id | [InputDocument](/type/InputDocument/) | The document to be forwarded. |
-| video_cover | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[InputPhoto](/type/InputPhoto/) | Custom video cover. |
-| video_timestamp | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[int](/type/int/) | Start playing the video at the specified timestamp (seconds). |
-| ttl_seconds | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Time to live of self-destructing document, can be 0 to disable self-destruction, 0x7FFFFFFF to self-destruct the document immediately after it's played; otherwise self-destructs ttl_seconds after it's played. |
-| query | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Text query or emoji that was used by the user to find this sticker or GIF: used to improve search result relevance. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>spoiler</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Следует ли скрыть это медиа за предупреждением о спойлере</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputDocument">InputDocument</a></td><td>Документ, который требуется переслать.</td></tr><tr><td><strong>video_cover</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/InputPhoto">InputPhoto</a></td><td>Пользовательская обложка видео.</td></tr><tr><td><strong>video_timestamp</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int">int</a></td><td>Начать воспроизведение видео с указанной отметки времени (в секундах).</td></tr><tr><td><strong>ttl_seconds</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Время жизни самоуничтожающегося документа; может быть равно <code>0</code>, чтобы отключить самоуничтожение, или <code>0x7FFFFFFF</code>, чтобы документ уничтожился сразу после воспроизведения; в остальных случаях документ самоуничтожается через <code>ttl_seconds</code> после воспроизведения.</td></tr><tr><td><strong>query</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Текстовый запрос или эмодзи, по которому пользователь нашёл этот стикер или GIF: используется для повышения релевантности результатов поиска.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputMedia](/type/InputMedia/)

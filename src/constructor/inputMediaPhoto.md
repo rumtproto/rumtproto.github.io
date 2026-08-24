@@ -1,34 +1,24 @@
 ---
-title: "inputMediaPhoto (конструктор)"
+title: "inputMediaPhoto"
 original: "https://core.telegram.org/constructor/inputMediaPhoto"
 section: ref
 kind: constructor
+description: "Пересланная фотография"
 layout: layout.njk
 ---
 
 # inputMediaPhoto
 
-*Конструктор из схемы TL.*
-
-> Forwarded photo
-
-## Определение TL
+Пересланная фотография
 
 ```
 inputMediaPhoto#b3ba0635 flags:# spoiler:flags.1?true id:InputPhoto ttl_seconds:flags.0?int = InputMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| spoiler | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether this media should be hidden behind a spoiler warning |
-| live_photo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether this is a live photo, i.e. a still photo paired with the short video clip captured alongside it |
-| id | [InputPhoto](/type/InputPhoto/) | Photo to be forwarded |
-| ttl_seconds | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Time to live of self-destructing photo, can be 0 to disable self-destruction, 0x7FFFFFFF to self-destruct the document immediately after it's played; otherwise self-destructs ttl_seconds after it's played. |
-| video | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[InputDocument](/type/InputDocument/) | The short video clip of the live photo |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>spoiler</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Следует ли скрыть это медиа за предупреждением о спойлере</td></tr><tr><td><strong>live_photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Живое ли это фото, то есть неподвижный снимок в паре с коротким фрагментом <code>video</code>, снятым одновременно с ним</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputPhoto">InputPhoto</a></td><td>Фотография для пересылки</td></tr><tr><td><strong>ttl_seconds</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Время жизни самоуничтожающейся фотографии; может быть равно <code>0</code>, чтобы отключить самоуничтожение, либо <code>0x7FFFFFFF</code>, чтобы документ уничтожился сразу после воспроизведения; в остальных случаях самоуничтожение происходит через <code>ttl_seconds</code> после воспроизведения.</td></tr><tr><td><strong>video</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/InputDocument">InputDocument</a></td><td>Короткий видеофрагмент живого фото</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputMedia](/type/InputMedia/)

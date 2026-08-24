@@ -1,18 +1,15 @@
 ---
-title: "Channels.ChannelParticipant (тип)"
+title: "channels.ChannelParticipant"
 original: "https://core.telegram.org/type/channels.ChannelParticipant"
 section: ref
 kind: type
+description: "Участник канала"
 layout: layout.njk
 ---
 
 # Channels.ChannelParticipant
 
-*Тип из схемы TL.*
-
-> Channel participant
-
-## Определение TL
+Участник канала
 
 ```
 channels.channelParticipant#dfb80317 participant:ChannelParticipant chats:Vector<Chat> users:Vector<User> = channels.ChannelParticipant;
@@ -22,14 +19,10 @@ channels.channelParticipant#dfb80317 participant:ChannelParticipant chats:Vector
 channels.getParticipant#a0ab6cc6 channel:InputChannel participant:InputPeer = channels.ChannelParticipant;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [channels.channelParticipant](/constructor/channels.channelParticipant/) | Represents a channel participant |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/channels.channelParticipant">channels.channelParticipant</a></td><td>Представляет участника канала</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [channels.getParticipant](/method/channels.getParticipant/) | Get info about a [channel/supergroup](https://core.telegram.org/api/channel) participant |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/channels.getParticipant">channels.getParticipant</a></td><td>Получить информацию об участнике <a href="/api/channel">канала или супергруппы</a></td></tr></tbody></table>

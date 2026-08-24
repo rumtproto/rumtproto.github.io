@@ -1,18 +1,15 @@
 ---
-title: "users.getSavedMusic (метод)"
+title: "users.getSavedMusic"
 original: "https://core.telegram.org/method/users.getSavedMusic"
 section: ref
 kind: method
+description: "Получить композиции, закреплённые в профиле пользователя; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # users.getSavedMusic
 
-*Метод из схемы TL.*
-
-> Get songs [pinned to the user's profile, see here »](https://core.telegram.org/api/profile#music) for more info.
-
-## Определение TL
+Получить композиции, [закреплённые в профиле пользователя; подробнее см. здесь »](/api/profile/#music).
 
 ```
 users.savedMusicNotModified#e3878aa4 count:int = users.SavedMusic;
@@ -21,33 +18,26 @@ users.savedMusic#34a2f297 count:int documents:Vector<Document> = users.SavedMusi
 users.getSavedMusic#788d7fe3 id:InputUser offset:int limit:int hash:long = users.SavedMusic;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [InputUser](/type/InputUser/) | The ID of the user. |
-| offset | [int](/type/int/) | Offset for pagination. |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
-| hash | [long](/type/long/) | [Hash »](https://core.telegram.org/api/offsets#hash-generation) of the IDs of previously added songs, to avoid returning any result if there was no change. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор пользователя.</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Смещение для постраничной выборки.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш »</a> идентификаторов ранее добавленных композиций; позволяет не возвращать результат, если изменений не было.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [users.SavedMusic](/type/users.SavedMusic/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

@@ -1,27 +1,24 @@
 ---
-title: "reportResultReported (конструктор)"
+title: "reportResultReported"
 original: "https://core.telegram.org/constructor/reportResultReported"
 section: ref
 kind: constructor
+description: "Жалоба успешно отправлена, дальнейшие действия не требуются."
 layout: layout.njk
 ---
 
 # reportResultReported
 
-*Конструктор из схемы TL.*
-
-> The report was sent successfully, no further actions are required.
-
-## Определение TL
+Жалоба успешно отправлена, дальнейшие действия не требуются.
 
 ```
 reportResultReported#8db33c4b = ReportResult;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReportResult](/type/ReportResult/)

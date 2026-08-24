@@ -1,29 +1,24 @@
 ---
-title: "channelAdminLogEventActionToggleSignatureProfiles (конструктор)"
+title: "channelAdminLogEventActionToggleSignatureProfiles"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionToggleSignatureProfiles"
 section: ref
 kind: constructor
+description: "Ссылки на профили в подписях канала были включены или отключены."
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionToggleSignatureProfiles
 
-*Конструктор из схемы TL.*
-
-> Channel signature profiles were enabled/disabled.
-
-## Определение TL
+Ссылки на профили в подписях канала были включены или отключены.
 
 ```
 channelAdminLogEventActionToggleSignatureProfiles#60a79c79 new_value:Bool = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| new_value | [Bool](/type/Bool/) | New value |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Новое значение</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)

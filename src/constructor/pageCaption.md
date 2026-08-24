@@ -1,30 +1,24 @@
 ---
-title: "pageCaption (конструктор)"
+title: "pageCaption"
 original: "https://core.telegram.org/constructor/pageCaption"
 section: ref
 kind: constructor
+description: "Подпись страницы"
 layout: layout.njk
 ---
 
 # pageCaption
 
-*Конструктор из схемы TL.*
-
-> Page caption
-
-## Определение TL
+Подпись страницы
 
 ```
 pageCaption#6f747657 text:RichText credit:RichText = PageCaption;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [RichText](/type/RichText/) | Caption |
-| credit | [RichText](/type/RichText/) | Credits |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Подпись</td></tr><tr><td><strong>credit</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Кредиты</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageCaption](/type/PageCaption/)

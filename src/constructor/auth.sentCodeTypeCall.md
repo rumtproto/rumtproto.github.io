@@ -1,29 +1,24 @@
 ---
-title: "auth.sentCodeTypeCall (конструктор)"
+title: "auth.sentCodeTypeCall"
 original: "https://core.telegram.org/constructor/auth.sentCodeTypeCall"
 section: ref
 kind: constructor
+description: "Код будет передан телефонным звонком: синтезированный голос продиктует пользователю код подтверждения, который нужно ввести."
 layout: layout.njk
 ---
 
 # auth.sentCodeTypeCall
 
-*Конструктор из схемы TL.*
-
-> The code will be sent via a phone call: a synthesized voice will tell the user which verification code to input.
-
-## Определение TL
+Код будет передан телефонным звонком: синтезированный голос продиктует пользователю код подтверждения, который нужно ввести.
 
 ```
 auth.sentCodeTypeCall#5353e5a7 length:int = auth.SentCodeType;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| length | [int](/type/int/) | Length of the verification code |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Длина кода подтверждения</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [auth.SentCodeType](/type/auth.SentCodeType/)

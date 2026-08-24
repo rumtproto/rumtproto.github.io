@@ -1,33 +1,30 @@
 ---
-title: "inputPrivacyKeyStarGiftsAutoSave (конструктор)"
+title: "inputPrivacyKeyStarGiftsAutoSave"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyStarGiftsAutoSave"
 section: ref
 kind: constructor
+description: "Будут ли полученные подарки автоматически отображаться в нашем профиле"
 layout: layout.njk
 ---
 
 # inputPrivacyKeyStarGiftsAutoSave
 
-*Конструктор из схемы TL.*
-
-> Whether received [gifts](https://core.telegram.org/api/gifts) will be automatically displayed on our profile
-
-## Определение TL
+Будут ли полученные [подарки](/api/gifts/) автоматически отображаться в нашем профиле
 
 ```
 inputPrivacyKeyStarGiftsAutoSave#e1732341 = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

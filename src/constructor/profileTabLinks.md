@@ -1,27 +1,24 @@
 ---
-title: "profileTabLinks (конструктор)"
+title: "profileTabLinks"
 original: "https://core.telegram.org/constructor/profileTabLinks"
 section: ref
 kind: constructor
+description: "Представляет вкладку ссылок на странице профиля."
 layout: layout.njk
 ---
 
 # profileTabLinks
 
-*Конструктор из схемы TL.*
-
-> Represents the shared links tab of a profile page.
-
-## Определение TL
+Представляет вкладку ссылок на странице профиля.
 
 ```
 profileTabLinks#d3656499 = ProfileTab;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ProfileTab](/type/ProfileTab/)

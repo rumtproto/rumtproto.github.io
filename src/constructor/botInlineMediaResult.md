@@ -1,44 +1,32 @@
 ---
-title: "botInlineMediaResult (конструктор)"
+title: "botInlineMediaResult"
 original: "https://core.telegram.org/constructor/botInlineMediaResult"
 section: ref
 kind: constructor
+description: "Результат с медиа"
 layout: layout.njk
 ---
 
 # botInlineMediaResult
 
-*Конструктор из схемы TL.*
-
-> Media result
-
-## Определение TL
+Результат с медиа
 
 ```
 botInlineMediaResult#17db940b flags:# id:string type:string photo:flags.0?Photo document:flags.1?Document title:flags.2?string description:flags.3?string send_message:BotInlineMessage = BotInlineResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| id | [string](/type/string/) | Result ID |
-| type | [string](/type/string/) | Result type (see [bot API docs](https://core.telegram.org/bots/api#inlinequeryresult)) |
-| photo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Photo](/type/Photo/) | If type is photo, the photo to send |
-| document | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Document](/type/Document/) | If type is document, the document to send |
-| title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | Result title |
-| description | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[string](/type/string/) | Description |
-| send_message | [BotInlineMessage](/type/BotInlineMessage/) | Depending on the type and on the [constructor](/type/BotInlineMessage/), contains the caption of the media or the content of the message to be sent instead of the media |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор результата</td></tr><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Тип результата (см. <a href="/bots/api#inlinequeryresult">документацию Bot API</a>)</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Photo">Photo</a></td><td>Если тип — <code>photo</code>, отправляемая фотография</td></tr><tr><td><strong>document</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Document">Document</a></td><td>Если тип — <code>document</code>, отправляемый документ</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Заголовок результата</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string">string</a></td><td>Описание</td></tr><tr><td><strong>send_message</strong></td><td style="text-align: center;"><a href="/type/BotInlineMessage">BotInlineMessage</a></td><td>В зависимости от значения <code>type</code> и от <a href="/type/BotInlineMessage">конструктора</a> содержит подпись к медиафайлу или содержимое сообщения, которое будет отправлено <strong>вместо</strong> медиафайла</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BotInlineResult](/type/BotInlineResult/)
 
-## Related pages
+### Связанные страницы
 
 #### [Telegram Bot API](https://core.telegram.org/bots/api)
 
 #### [BotInlineMessage](/type/BotInlineMessage/)
 
-Inline message
+Инлайн-сообщение

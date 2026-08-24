@@ -1,63 +1,54 @@
 ---
-title: "availableEffect (конструктор)"
+title: "availableEffect"
 original: "https://core.telegram.org/constructor/availableEffect"
 section: ref
 kind: constructor
+description: "Представляет эффект сообщения »."
 layout: layout.njk
 ---
 
 # availableEffect
 
-*Конструктор из схемы TL.*
+Представляет [эффект сообщения »](/api/effects/).
 
-> Represents a [message effect »](https://core.telegram.org/api/effects).
-> All `long` IDs except for `id` are [document](/constructor/document/).`id`s from the containing [messages.availableEffects](/constructor/messages.availableEffects/) constructor.
-> See [here »](https://core.telegram.org/api/effects) for more info on how to use following fields.
+Все идентификаторы типа `long`, кроме `id`, — это значения [document](/constructor/document/).`id` из содержащего их конструктора [messages.availableEffects](/constructor/messages.availableEffects/).
 
-## Определение TL
+Подробнее об использовании следующих полей см. [здесь »](/api/effects/).
 
 ```
 availableEffect#93c3e27e flags:# premium_required:flags.2?true id:long emoticon:string static_icon_id:flags.0?long effect_sticker_id:long effect_animation_id:flags.1?long = AvailableEffect;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| premium_required | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether a [Premium](https://core.telegram.org/api/premium) subscription is required to use this effect. |
-| id | [long](/type/long/) | Unique effect ID. |
-| emoticon | [string](/type/string/) | Emoji corresponding to the effect, to be used as icon for the effect if static_icon_id is not set. |
-| static_icon_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | ID of the document containing the static icon (WEBP) of the effect. |
-| effect_sticker_id | [long](/type/long/) | Contains the preview [animation (TGS format »)](https://core.telegram.org/api/stickers#animated-stickers), used for the effect selection menu. |
-| effect_animation_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[long](/type/long/) | If set, contains the actual animated effect [(TGS format »)](https://core.telegram.org/api/stickers#animated-stickers). If not set, the animated effect must be set equal to the [premium animated sticker effect](https://core.telegram.org/api/stickers#premium-animated-sticker-effects) associated to the animated sticker specified in effect_sticker_id (always different from the preview animation, fetched thanks to the [videoSize](/constructor/videoSize/) of type f as specified [here »](https://core.telegram.org/api/stickers#premium-animated-sticker-effects)). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>premium_required</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Требуется ли подписка <a href="/api/premium">Premium</a> для использования этого эффекта.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Уникальный идентификатор эффекта.</td></tr><tr><td><strong>emoticon</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:emoticon] Эмодзи, соответствующий эффекту; используется в качестве значка эффекта, если не задано <code>static_icon_id</code>.</td></tr><tr><td><strong>static_icon_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Идентификатор документа со статичным значком (WEBP) эффекта.</td></tr><tr><td><strong>effect_sticker_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Содержит <a href="/api/stickers#animated-stickers">анимацию предпросмотра (формат TGS »)</a>, используемую в меню выбора эффекта.</td></tr><tr><td><strong>effect_animation_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/long">long</a></td><td>Если установлено, содержит сам анимированный эффект <a href="/api/stickers#animated-stickers">(формат TGS »)</a>. Если не установлено, анимированный эффект обязан совпадать с <a href="/api/stickers#premium-animated-sticker-effects">анимированным эффектом премиум-стикера</a>, связанным с анимированным стикером, указанным в <code>effect_sticker_id</code> (всегда отличается от анимации предпросмотра, получаемой через <a href="/constructor/videoSize">videoSize</a> типа <code>f</code>, как описано <a href="/api/stickers#premium-animated-sticker-effects">здесь »</a>).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [AvailableEffect](/type/AvailableEffect/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.
 
 #### [videoSize](/constructor/videoSize/)
 
-An [animated profile picture](https://core.telegram.org/api/files/#animated-profile-pictures) in MPEG4 format
+[Анимированная фотография профиля](/api/files/#animated-profile-pictures) в формате MPEG4
 
-#### [Animated message effects](https://core.telegram.org/api/effects)
+#### [Анимированные эффекты для сообщений](/api/effects/)
 
-Telegram allows adding spectacular animated effects to messages you send.
+Telegram позволяет добавлять к отправляемым сообщениям зрелищные анимированные эффекты.
 
 #### [document](/constructor/document/)
 
-Document
+Документ
 
 #### [messages.availableEffects](/constructor/messages.availableEffects/)
 
-The full list of usable [animated message effects »](https://core.telegram.org/api/effects).
+Полный список доступных [анимированных эффектов для сообщений »](/api/effects/).

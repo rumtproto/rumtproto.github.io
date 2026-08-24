@@ -1,35 +1,30 @@
 ---
-title: "upload.cdnFileReuploadNeeded (конструктор)"
+title: "upload.cdnFileReuploadNeeded"
 original: "https://core.telegram.org/constructor/upload.cdnFileReuploadNeeded"
 section: ref
 kind: constructor
+description: "Файл был удалён из временного кеша в оперативной памяти CDN, и его необходимо загрузить повторно."
 layout: layout.njk
 ---
 
 # upload.cdnFileReuploadNeeded
 
-*Конструктор из схемы TL.*
-
-> The file was cleared from the temporary RAM cache of the [CDN](https://core.telegram.org/cdn) and has to be re-uploaded.
-
-## Определение TL
+Файл был удалён из временного кеша в оперативной памяти [CDN](https://core.telegram.org/cdn), и его необходимо загрузить повторно.
 
 ```
 upload.cdnFileReuploadNeeded#eea8e46e request_token:bytes = upload.CdnFile;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| request_token | [bytes](/type/bytes/) | Request token (see [CDN](https://core.telegram.org/cdn)) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>request_token</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Токен запроса (см. <a href="/cdn">CDN</a>)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [upload.CdnFile](/type/upload.CdnFile/)
 
-## Related pages
+### Связанные страницы
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Шифрованные CDN: скорость и безопасность](https://core.telegram.org/cdn)
 
-How client apps download popular public files from secondary CDN data centers.
+Как клиентские приложения скачивают популярные публичные файлы из вспомогательных CDN-дата-центров.

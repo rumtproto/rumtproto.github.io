@@ -1,29 +1,24 @@
 ---
-title: "account.takeout (конструктор)"
+title: "account.takeout"
 original: "https://core.telegram.org/constructor/account.takeout"
 section: ref
 kind: constructor
+description: "Сведения о выгрузке данных"
 layout: layout.njk
 ---
 
 # account.takeout
 
-*Конструктор из схемы TL.*
-
-> Takeout info
-
-## Определение TL
+Сведения о выгрузке данных
 
 ```
 account.takeout#4dba4501 id:long = account.Takeout;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | Takeout ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор выгрузки данных</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.Takeout](/type/account.Takeout/)

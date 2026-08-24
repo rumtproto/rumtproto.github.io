@@ -1,27 +1,24 @@
 ---
-title: "inputChannelEmpty (конструктор)"
+title: "inputChannelEmpty"
 original: "https://core.telegram.org/constructor/inputChannelEmpty"
 section: ref
 kind: constructor
+description: "Представляет отсутствие канала"
 layout: layout.njk
 ---
 
 # inputChannelEmpty
 
-*Конструктор из схемы TL.*
-
-> Represents the absence of a channel
-
-## Определение TL
+Представляет отсутствие канала
 
 ```
 inputChannelEmpty#ee8c1e86 = InputChannel;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputChannel](/type/InputChannel/)

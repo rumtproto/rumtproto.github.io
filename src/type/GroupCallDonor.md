@@ -1,31 +1,26 @@
 ---
-title: "GroupCallDonor (тип)"
+title: "GroupCallDonor"
 original: "https://core.telegram.org/type/GroupCallDonor"
 section: ref
 kind: type
+description: "Описывает донатера прямого эфира истории в таблице лидеров пожертвований »."
 layout: layout.njk
 ---
 
 # GroupCallDonor
 
-*Тип из схемы TL.*
-
-> Describes a live story donor in the [donation leaderboard »](https://core.telegram.org/api/group-calls#paid-live-story-donations).
-
-## Определение TL
+Описывает донатера прямого эфира истории в [таблице лидеров пожертвований »](/api/group-calls/#paid-live-story-donations).
 
 ```
 groupCallDonor#ee430c85 flags:# top:flags.0?true my:flags.1?true peer_id:flags.3?Peer stars:long = GroupCallDonor;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [groupCallDonor](/constructor/groupCallDonor/) | Describes a live story donor in the [donation leaderboard »](https://core.telegram.org/api/group-calls#paid-live-story-donations). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/groupCallDonor">groupCallDonor</a></td><td>Описывает донатера прямого эфира в <a href="/api/group-calls#paid-live-story-donations">таблице лидеров пожертвований »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

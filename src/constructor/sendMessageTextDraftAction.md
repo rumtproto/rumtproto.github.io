@@ -1,40 +1,34 @@
 ---
-title: "sendMessageTextDraftAction (конструктор)"
+title: "sendMessageTextDraftAction"
 original: "https://core.telegram.org/constructor/sendMessageTextDraftAction"
 section: ref
 kind: constructor
+description: "Используется ботами для реализации потоковой передачи сообщений »."
 layout: layout.njk
 ---
 
 # sendMessageTextDraftAction
 
-*Конструктор из схемы TL.*
-
-> Used by bots to implement [live message streaming »](https://core.telegram.org/api/bots/ai#live-response-streaming).
-
-## Определение TL
+Используется ботами для реализации [потоковой передачи сообщений »](/api/bots/ai/#live-response-streaming).
 
 ```
 sendMessageTextDraftAction#376d975c random_id:long text:TextWithEntities = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| random_id | [long](/type/long/) | Live draft ID: used by graphical clients to slightly change the rendering behavior, see [here »](https://core.telegram.org/api/bots/ai#live-response-streaming) for more info. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| text | [TextWithEntities](/type/TextWithEntities/) | The contents of the live draft. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:random_id] Идентификатор живого черновика: используется графическими клиентами для небольшого изменения способа отрисовки, подробнее см. <a href="/api/bots/ai#live-response-streaming">здесь »</a>. Подробнее о дедупликации случайных идентификаторов и сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Содержимое актуального черновика.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [AI features for bots](https://core.telegram.org/api/bots/ai)
+#### [Возможности ИИ для ботов](/api/bots/ai/)
 
-Telegram bots offer a number of features for AI chatbots.
+Боты Telegram предлагают ряд возможностей для ИИ-чатботов.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

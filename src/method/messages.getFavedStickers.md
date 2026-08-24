@@ -1,18 +1,15 @@
 ---
-title: "messages.getFavedStickers (метод)"
+title: "messages.getFavedStickers"
 original: "https://core.telegram.org/method/messages.getFavedStickers"
 section: ref
 kind: method
+description: "Получить избранные стикеры"
 layout: layout.njk
 ---
 
 # messages.getFavedStickers
 
-*Метод из схемы TL.*
-
-> Get faved stickers
-
-## Определение TL
+Получить избранные стикеры
 
 ```
 messages.favedStickersNotModified#9e8fa6d3 = messages.FavedStickers;
@@ -21,20 +18,18 @@ messages.favedStickers#2cb51097 hash:long packs:Vector<StickerPack> stickers:Vec
 messages.getFavedStickers#4f1aaa9 hash:long = messages.FavedStickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.FavedStickers](/type/messages.FavedStickers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

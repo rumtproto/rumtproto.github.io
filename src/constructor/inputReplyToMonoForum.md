@@ -1,35 +1,30 @@
 ---
-title: "inputReplyToMonoForum (конструктор)"
+title: "inputReplyToMonoForum"
 original: "https://core.telegram.org/constructor/inputReplyToMonoForum"
 section: ref
 kind: constructor
+description: "Используется для отправки сообщений в тему монофорума."
 layout: layout.njk
 ---
 
 # inputReplyToMonoForum
 
-*Конструктор из схемы TL.*
-
-> Used to send messages to a [monoforum topic](https://core.telegram.org/api/monoforum).
-
-## Определение TL
+Используется для отправки сообщений в [тему монофорума](/api/monoforum/).
 
 ```
 inputReplyToMonoForum#69d66c45 monoforum_peer_id:InputPeer = InputReplyTo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| monoforum_peer_id | [InputPeer](/type/InputPeer/) | The topic ID. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>monoforum_peer_id</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Идентификатор темы.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputReplyTo](/type/InputReplyTo/)
 
-## Related pages
+### Связанные страницы
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.

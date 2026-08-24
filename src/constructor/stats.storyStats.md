@@ -1,40 +1,34 @@
 ---
-title: "stats.storyStats (конструктор)"
+title: "stats.storyStats"
 original: "https://core.telegram.org/constructor/stats.storyStats"
 section: ref
 kind: constructor
+description: "Содержит статистику по истории."
 layout: layout.njk
 ---
 
 # stats.storyStats
 
-*Конструктор из схемы TL.*
-
-> Contains [statistics](https://core.telegram.org/api/stats) about a [story](https://core.telegram.org/api/stories).
-
-## Определение TL
+Содержит [статистику](/api/stats/) по [истории](/api/stories/).
 
 ```
 stats.storyStats#50cd067c views_graph:StatsGraph reactions_by_emotion_graph:StatsGraph = stats.StoryStats;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| views_graph | [StatsGraph](/type/StatsGraph/) | A graph containing the number of story views and shares |
-| reactions_by_emotion_graph | [StatsGraph](/type/StatsGraph/) | A bar graph containing the number of story reactions categorized by "emotion" (i.e. Positive, Negative, Other, etc...) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>views_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График количества просмотров и репостов историй</td></tr><tr><td><strong>reactions_by_emotion_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>Столбчатая диаграмма с числом реакций на истории по «эмоциям» (то есть положительные, отрицательные, прочие и т. д.)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [stats.StoryStats](/type/stats.StoryStats/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channel statistics](https://core.telegram.org/api/stats)
+#### [Статистика каналов](/api/stats/)
 
-Telegram offers detailed channel statistics for channels and supergroups.
+Telegram предоставляет подробную статистику для каналов и супергрупп.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

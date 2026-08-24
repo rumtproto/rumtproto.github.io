@@ -1,25 +1,20 @@
 ---
-title: "GroupCallStreamChannel (тип)"
+title: "GroupCallStreamChannel"
 original: "https://core.telegram.org/type/GroupCallStreamChannel"
 section: ref
 kind: type
+description: "Информация о потоке RTMP в групповом звонке или трансляции"
 layout: layout.njk
 ---
 
 # GroupCallStreamChannel
 
-*Тип из схемы TL.*
-
-> Info about an RTMP stream in a group call or livestream
-
-## Определение TL
+Информация о потоке RTMP в групповом звонке или трансляции
 
 ```
 groupCallStreamChannel#80eb48af channel:int scale:int last_timestamp_ms:long = GroupCallStreamChannel;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [groupCallStreamChannel](/constructor/groupCallStreamChannel/) | Describes an available RTMP stream channel and its current playback timestamp, see [playing an RTMP livestream »](https://core.telegram.org/api/group-calls#rtmp-mode). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/groupCallStreamChannel">groupCallStreamChannel</a></td><td>Описывает доступный канал RTMP-трансляции и его текущую позицию воспроизведения, см. <a href="/api/group-calls#rtmp-mode">воспроизведение RTMP-трансляции »</a>.</td></tr></tbody></table>

@@ -1,27 +1,24 @@
 ---
-title: "inputChatPhotoEmpty (конструктор)"
+title: "inputChatPhotoEmpty"
 original: "https://core.telegram.org/constructor/inputChatPhotoEmpty"
 section: ref
 kind: constructor
+description: "Пустой конструктор, удалить фотографию группы."
 layout: layout.njk
 ---
 
 # inputChatPhotoEmpty
 
-*Конструктор из схемы TL.*
-
-> Empty constructor, remove group photo.
-
-## Определение TL
+Пустой конструктор, удалить фотографию группы.
 
 ```
 inputChatPhotoEmpty#1ca48f57 = InputChatPhoto;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputChatPhoto](/type/InputChatPhoto/)

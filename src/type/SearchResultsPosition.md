@@ -1,25 +1,20 @@
 ---
-title: "SearchResultsPosition (тип)"
+title: "SearchResultsPosition"
 original: "https://core.telegram.org/type/SearchResultsPosition"
 section: ref
 kind: type
+description: "Информация о сообщении в определённой позиции"
 layout: layout.njk
 ---
 
 # SearchResultsPosition
 
-*Тип из схемы TL.*
-
-> Information about a message in a specific position
-
-## Определение TL
+Информация о сообщении в определённой позиции
 
 ```
 searchResultPosition#7f648b67 msg_id:int date:int offset:int = SearchResultsPosition;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [searchResultPosition](/constructor/searchResultPosition/) | Information about a message in a specific position |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/searchResultPosition">searchResultPosition</a></td><td>Информация о сообщении в определённой позиции</td></tr></tbody></table>

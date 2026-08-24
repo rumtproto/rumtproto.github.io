@@ -1,18 +1,15 @@
 ---
-title: "payments.getStarGiftWithdrawalUrl (метод)"
+title: "payments.getStarGiftWithdrawalUrl"
 original: "https://core.telegram.org/method/payments.getStarGiftWithdrawalUrl"
 section: ref
 kind: method
+description: "Преобразовать коллекционный подарок » в NFT в блокчейне TON."
 layout: layout.njk
 ---
 
 # payments.getStarGiftWithdrawalUrl
 
-*Метод из схемы TL.*
-
-> Convert a [collectible gift »](https://core.telegram.org/api/gifts) to an NFT on the TON blockchain.
-
-## Определение TL
+Преобразовать [коллекционный подарок »](/api/gifts/) в NFT в блокчейне TON.
 
 ```
 payments.starGiftWithdrawalUrl#84aa3a9c url:string = payments.StarGiftWithdrawalUrl;
@@ -20,33 +17,26 @@ payments.starGiftWithdrawalUrl#84aa3a9c url:string = payments.StarGiftWithdrawal
 payments.getStarGiftWithdrawalUrl#d06e93a8 stargift:InputSavedStarGift password:InputCheckPasswordSRP = payments.StarGiftWithdrawalUrl;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| stargift | [InputSavedStarGift](/type/InputSavedStarGift/) | The collectible gift to export. |
-| password | [InputCheckPasswordSRP](/type/InputCheckPasswordSRP/) | The current user's 2FA password, passed as [specified here »](/api/srp/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>Коллекционный подарок, который требуется экспортировать.</td></tr><tr><td><strong>password</strong></td><td style="text-align: center;"><a href="/type/InputCheckPasswordSRP">InputCheckPasswordSRP</a></td><td>Пароль двухфакторной авторизации текущего пользователя, передаваемый <a href="/api/srp">как описано здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.StarGiftWithdrawalUrl](/type/payments.StarGiftWithdrawalUrl/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PASSWORD_HASH_INVALID | The provided password hash is invalid. |
-| 400 | PASSWORD_TOO_FRESH_%d | The password was modified less than 24 hours ago, try again in %d seconds. |
-| 400 | SESSION_TOO_FRESH_%d | This session was created less than 24 hours ago, try again in %d seconds. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PASSWORD_HASH_INVALID</td><td>Указанный хеш пароля недействителен.</td></tr><tr><td>400</td><td>PASSWORD_TOO_FRESH_%d</td><td>Пароль был изменён менее 24 часов назад, повторите попытку через %d секунд.</td></tr><tr><td>400</td><td>SESSION_TOO_FRESH_%d</td><td>Эта сессия была создана менее 24 часов назад, повторите попытку через %d секунд.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

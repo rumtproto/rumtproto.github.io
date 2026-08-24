@@ -1,18 +1,15 @@
 ---
-title: "ExportedStoryLink (тип)"
+title: "ExportedStoryLink"
 original: "https://core.telegram.org/type/ExportedStoryLink"
 section: ref
 kind: type
+description: "Представляет глубокую ссылку на историю"
 layout: layout.njk
 ---
 
 # ExportedStoryLink
 
-*Тип из схемы TL.*
-
-> Represents a [story deep link](https://core.telegram.org/api/stories#story-links)
-
-## Определение TL
+Представляет [глубокую ссылку на историю](/api/stories/#story-links)
 
 ```
 exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
@@ -22,20 +19,16 @@ exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
 stories.exportStoryLink#7b8def20 peer:InputPeer id:int = ExportedStoryLink;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [exportedStoryLink](/constructor/exportedStoryLink/) | Represents a [story deep link](https://core.telegram.org/api/stories#story-links). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/exportedStoryLink">exportedStoryLink</a></td><td>Представляет <a href="/api/stories#story-links">глубокую ссылку на историю</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stories.exportStoryLink](/method/stories.exportStoryLink/) | Generate a [story deep link](https://core.telegram.org/api/links#story-links) for a specific story |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stories.exportStoryLink">stories.exportStoryLink</a></td><td>Создать <a href="/api/links#story-links">глубокую ссылку на историю</a> для конкретной истории</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

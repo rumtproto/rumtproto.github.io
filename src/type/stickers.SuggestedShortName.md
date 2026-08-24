@@ -1,18 +1,15 @@
 ---
-title: "stickers.SuggestedShortName (тип)"
+title: "stickers.SuggestedShortName"
 original: "https://core.telegram.org/type/stickers.SuggestedShortName"
 section: ref
 kind: type
+description: "Предлагаемое краткое имя для указанного стикерпака"
 layout: layout.njk
 ---
 
 # stickers.SuggestedShortName
 
-*Тип из схемы TL.*
-
-> A suggested short name for the specified stickerpack
-
-## Определение TL
+Предлагаемое краткое имя для указанного стикерпака
 
 ```
 stickers.suggestedShortName#85fea03f short_name:string = stickers.SuggestedShortName;
@@ -22,14 +19,10 @@ stickers.suggestedShortName#85fea03f short_name:string = stickers.SuggestedShort
 stickers.suggestShortName#4dafc503 title:string = stickers.SuggestedShortName;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [stickers.suggestedShortName](/constructor/stickers.suggestedShortName/) | A suggested short name for a stickerpack |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/stickers.suggestedShortName">stickers.suggestedShortName</a></td><td>Предлагаемое краткое имя набора стикеров</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stickers.suggestShortName](/method/stickers.suggestShortName/) | Suggests a short name for a given stickerpack name |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stickers.suggestShortName">stickers.suggestShortName</a></td><td>Предлагает краткое имя для заданного названия стикерпака</td></tr></tbody></table>

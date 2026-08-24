@@ -1,27 +1,24 @@
 ---
-title: "inputMessagePinned (конструктор)"
+title: "inputMessagePinned"
 original: "https://core.telegram.org/constructor/inputMessagePinned"
 section: ref
 kind: constructor
+description: "Закреплённое сообщение"
 layout: layout.njk
 ---
 
 # inputMessagePinned
 
-*Конструктор из схемы TL.*
-
-> Pinned message
-
-## Определение TL
+Закреплённое сообщение
 
 ```
 inputMessagePinned#86872538 = InputMessage;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputMessage](/type/InputMessage/)

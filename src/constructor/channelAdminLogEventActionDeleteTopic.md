@@ -1,35 +1,30 @@
 ---
-title: "channelAdminLogEventActionDeleteTopic (конструктор)"
+title: "channelAdminLogEventActionDeleteTopic"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionDeleteTopic"
 section: ref
 kind: constructor
+description: "Тема форума была удалена"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionDeleteTopic
 
-*Конструктор из схемы TL.*
-
-> A [forum topic](https://core.telegram.org/api/forum#forum-topics) was deleted
-
-## Определение TL
+[Тема форума](/api/forum/#forum-topics) была удалена
 
 ```
 channelAdminLogEventActionDeleteTopic#ae168909 topic:ForumTopic = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| topic | [ForumTopic](/type/ForumTopic/) | The [forum topic](https://core.telegram.org/api/forum#forum-topics) that was deleted |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>topic</strong></td><td style="text-align: center;"><a href="/type/ForumTopic">ForumTopic</a></td><td><a href="/api/forum#forum-topics">Тема форума</a>, которая была удалена</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

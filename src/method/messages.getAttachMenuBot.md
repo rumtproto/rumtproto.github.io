@@ -1,18 +1,15 @@
 ---
-title: "messages.getAttachMenuBot (метод)"
+title: "messages.getAttachMenuBot"
 original: "https://core.telegram.org/method/messages.getAttachMenuBot"
 section: ref
 kind: method
+description: "Возвращает запись меню вложений для mini app бота, который можно запустить из меню вложений »"
 layout: layout.njk
 ---
 
 # messages.getAttachMenuBot
 
-*Метод из схемы TL.*
-
-> Returns attachment menu entry for a [bot mini app that can be launched from the attachment menu »](https://core.telegram.org/api/bots/attach)
-
-## Определение TL
+[@term:Mini App] Возвращает запись меню вложений для [mini app бота, который можно запустить из меню вложений »](/api/bots/attach/)
 
 ```
 attachMenuBotsBot#93bf667f bot:AttachMenuBot users:Vector<User> = AttachMenuBotsBot;
@@ -20,26 +17,22 @@ attachMenuBotsBot#93bf667f bot:AttachMenuBot users:Vector<User> = AttachMenuBots
 messages.getAttachMenuBot#77216192 bot:InputUser = AttachMenuBotsBot;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot | [InputUser](/type/InputUser/) | Bot ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор бота</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [AttachMenuBotsBot](/type/AttachMenuBotsBot/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Bot attachment menu and side menu entries](https://core.telegram.org/api/bots/attach)
+#### [Пункты меню вложений и бокового меню для ботов](/api/bots/attach/)
 
-Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile web apps.
+Боты могут добавлять пункты в меню вложений и в боковое меню, предлагая легкодоступные многофункциональные веб-приложения.

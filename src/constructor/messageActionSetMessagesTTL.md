@@ -1,37 +1,30 @@
 ---
-title: "messageActionSetMessagesTTL (конструктор)"
+title: "messageActionSetMessagesTTL"
 original: "https://core.telegram.org/constructor/messageActionSetMessagesTTL"
 section: ref
 kind: constructor
+description: "Время жизни сообщений в этом чате было изменено."
 layout: layout.njk
 ---
 
 # messageActionSetMessagesTTL
 
-*Конструктор из схемы TL.*
-
-> The Time-To-Live of messages in this chat was changed.
-
-## Определение TL
+Время жизни сообщений в этом чате было изменено.
 
 ```
 messageActionSetMessagesTTL#3c134d7b flags:# period:int auto_setting_from:flags.0?long = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| period | [int](/type/int/) | New Time-To-Live of all messages sent in this chat; if 0, autodeletion was disabled. |
-| auto_setting_from | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | If set, the chat TTL setting was set not due to a manual change by one of participants, but automatically because one of the participants has the [default TTL settings enabled »](/method/messages.setDefaultHistoryTTL/). For example, when a user writes to us for the first time and we have set a default messages TTL of 1 week, this service message (with auto_setting_from=our_userid) will be emitted before our first message. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Новое время жизни (Time-To-Live) всех сообщений, отправляемых в этом чате; если 0, автоудаление было отключено.</td></tr><tr><td><strong>auto_setting_from</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>[@term:TTL] Если установлено, настройка TTL чата была изменена не вручную одним из участников, а автоматически, потому что у одного из участников включены <a href="/method/messages.setDefaultHistoryTTL">настройки TTL по умолчанию »</a>. Например, если пользователь пишет нам впервые, а у нас задан TTL сообщений по умолчанию в одну неделю, это сервисное сообщение (с <code>auto_setting_from=our_userid</code>) будет отправлено перед нашим первым сообщением.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.setDefaultHistoryTTL](/method/messages.setDefaultHistoryTTL/)
 
-Changes the default value of the Time-To-Live setting, applied to all new chats.
+Изменяет значение по умолчанию настройки времени жизни сообщений (Time-To-Live), применяемое ко всем новым чатам.

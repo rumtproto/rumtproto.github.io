@@ -1,27 +1,24 @@
 ---
-title: "channelParticipantsRecent (конструктор)"
+title: "channelParticipantsRecent"
 original: "https://core.telegram.org/constructor/channelParticipantsRecent"
 section: ref
 kind: constructor
+description: "Получить только недавних участников"
 layout: layout.njk
 ---
 
 # channelParticipantsRecent
 
-*Конструктор из схемы TL.*
-
-> Fetch only recent participants
-
-## Определение TL
+Получить только недавних участников
 
 ```
 channelParticipantsRecent#de3f3c79 = ChannelParticipantsFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ChannelParticipantsFilter](/type/ChannelParticipantsFilter/)

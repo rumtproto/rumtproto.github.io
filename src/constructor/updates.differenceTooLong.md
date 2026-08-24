@@ -1,35 +1,30 @@
 ---
-title: "updates.differenceTooLong (конструктор)"
+title: "updates.differenceTooLong"
 original: "https://core.telegram.org/constructor/updates.differenceTooLong"
 section: ref
 kind: constructor
+description: "Разница слишком велика, и для повторного получения обновлений следует использовать указанное состояние."
 layout: layout.njk
 ---
 
 # updates.differenceTooLong
 
-*Конструктор из схемы TL.*
-
-> The difference is [too long](https://core.telegram.org/api/updates/#recovering-gaps), and the specified state must be used to refetch updates.
-
-## Определение TL
+Разница [слишком велика](/api/updates/#recovering-gaps), и для повторного получения обновлений следует использовать указанное состояние.
 
 ```
 updates.differenceTooLong#4afe8f6d pts:int = updates.Difference;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| pts | [int](/type/int/) | The new state to use. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] Новое состояние, которое следует использовать.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [updates.Difference](/type/updates.Difference/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

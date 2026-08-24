@@ -1,18 +1,15 @@
 ---
-title: "Premium.BoostsStatus (тип)"
+title: "premium.BoostsStatus"
 original: "https://core.telegram.org/type/premium.BoostsStatus"
 section: ref
 kind: type
+description: "Содержит информацию о текущем состоянии бустов пира."
 layout: layout.njk
 ---
 
 # Premium.BoostsStatus
 
-*Тип из схемы TL.*
-
-> Contains info about the current [boost status](https://core.telegram.org/api/boost) of a peer.
-
-## Определение TL
+Содержит информацию о текущем [состоянии бустов](/api/boost/) пира.
 
 ```
 premium.boostsStatus#4959427a flags:# my_boost:flags.2?true level:int current_level_boosts:int boosts:int gift_boosts:flags.4?int next_level_boosts:flags.0?int premium_audience:flags.1?StatsPercentValue boost_url:string prepaid_giveaways:flags.3?Vector<PrepaidGiveaway> my_boost_slots:flags.2?Vector<int> = premium.BoostsStatus;
@@ -22,20 +19,16 @@ premium.boostsStatus#4959427a flags:# my_boost:flags.2?true level:int current_le
 premium.getBoostsStatus#42f1f61 peer:InputPeer = premium.BoostsStatus;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [premium.boostsStatus](/constructor/premium.boostsStatus/) | Contains info about the current [boost status](https://core.telegram.org/api/boost) of a peer. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/premium.boostsStatus">premium.boostsStatus</a></td><td>Содержит информацию о текущем <a href="/api/boost">состоянии бустов</a> пира.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [premium.getBoostsStatus](/method/premium.getBoostsStatus/) | Gets the current [number of boosts](https://core.telegram.org/api/boost) of a channel/supergroup. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/premium.getBoostsStatus">premium.getBoostsStatus</a></td><td>Получает текущее <a href="/api/boost">количество бустов</a> канала или супергруппы.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.

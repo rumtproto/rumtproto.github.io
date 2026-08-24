@@ -1,18 +1,15 @@
 ---
-title: "messages.checkChatInvite (метод)"
+title: "messages.checkChatInvite"
 original: "https://core.telegram.org/method/messages.checkChatInvite"
 section: ref
 kind: method
+description: "Проверить действительность пригласительной ссылки на чат и получить основные сведения о ней"
 layout: layout.njk
 ---
 
 # messages.checkChatInvite
 
-*Метод из схемы TL.*
-
-> Check the validity of a chat invite link and get basic info about it
-
-## Определение TL
+Проверить действительность пригласительной ссылки на чат и получить основные сведения о ней
 
 ```
 chatInviteAlready#5a686d7c chat:Chat = ChatInvite;
@@ -22,29 +19,22 @@ chatInvitePeek#61695cb0 chat:Chat expires:int = ChatInvite;
 messages.checkChatInvite#3eadb1bb hash:string = ChatInvite;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [string](/type/string/) | Invite hash from [chat invite deep link »](https://core.telegram.org/api/links#chat-invite-links). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:hash] Хеш приглашения из <a href="/api/links#chat-invite-links">пригласительной глубокой ссылки на чат »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [ChatInvite](/type/ChatInvite/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | INVITE_HASH_EMPTY | The invite hash is empty. |
-| 406 | INVITE_HASH_EXPIRED | The invite link has expired. |
-| 400 | INVITE_HASH_INVALID | The invite hash is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>INVITE_HASH_EMPTY</td><td>Хеш приглашения пуст.</td></tr><tr><td>406</td><td>INVITE_HASH_EXPIRED</td><td>Срок действия пригласительной ссылки истёк.</td></tr><tr><td>400</td><td>INVITE_HASH_INVALID</td><td>Хеш приглашения недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

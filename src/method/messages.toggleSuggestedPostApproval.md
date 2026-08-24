@@ -1,18 +1,15 @@
 ---
-title: "messages.toggleSuggestedPostApproval (метод)"
+title: "messages.toggleSuggestedPostApproval"
 original: "https://core.telegram.org/method/messages.toggleSuggestedPostApproval"
 section: ref
 kind: method
+description: "Одобрить или отклонить предлагаемый пост »."
 layout: layout.njk
 ---
 
 # messages.toggleSuggestedPostApproval
 
-*Метод из схемы TL.*
-
-> Approve or reject a [suggested post »](https://core.telegram.org/api/suggested-posts).
-
-## Определение TL
+Одобрить или отклонить [предлагаемый пост »](/api/suggested-posts/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,35 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.toggleSuggestedPostApproval#8107455c flags:# reject:flags.1?true peer:InputPeer msg_id:int schedule_date:flags.0?int reject_comment:flags.2?string = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| reject | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Reject the suggested post. |
-| peer | [InputPeer](/type/InputPeer/) | Both for users and channels, must contain the ID of the [direct messages monoforum »](https://core.telegram.org/api/monoforum) (for channels, the topic ID is extracted automatically from the msg_id). |
-| msg_id | [int](/type/int/) | ID of the suggestion message. |
-| schedule_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Custom scheduling date. |
-| reject_comment | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | Optional comment for rejections (can only be used if reject is set). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>reject</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Отклонить предложенный пост.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Как для пользователей, так и для каналов обязано содержать идентификатор <a href="/api/monoforum">монофорума личных сообщений »</a> (для каналов идентификатор темы извлекается из <code>msg_id</code> автоматически).</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения с предложением.</td></tr><tr><td><strong>schedule_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Произвольная дата отправки по расписанию.</td></tr><tr><td><strong>reject_comment</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Необязательный комментарий для отклонённых заявок (можно использовать, только если установлено <code>reject</code>).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
-#### [Suggested posts](https://core.telegram.org/api/suggested-posts)
+#### [Предлагаемые посты](/api/suggested-posts/)
 
-Telegram offers a powerful monetization feature to channel administrators: suggested posts.
+Telegram предлагает администраторам каналов мощный инструмент монетизации — предлагаемые посты.

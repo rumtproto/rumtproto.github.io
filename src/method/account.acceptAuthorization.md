@@ -1,18 +1,15 @@
 ---
-title: "account.acceptAuthorization (метод)"
+title: "account.acceptAuthorization"
 original: "https://core.telegram.org/method/account.acceptAuthorization"
 section: ref
 kind: method
+description: "Отправляет форму авторизации Telegram Passport, тем самым передавая данные сервису"
 layout: layout.njk
 ---
 
 # account.acceptAuthorization
 
-*Метод из схемы TL.*
-
-> Sends a Telegram Passport authorization form, effectively sharing data with the service
-
-## Определение TL
+Отправляет форму авторизации Telegram Passport, тем самым передавая данные сервису
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,25 +18,16 @@ boolTrue#997275b5 = Bool;
 account.acceptAuthorization#f3ed4c73 bot_id:long scope:string public_key:string value_hashes:Vector<SecureValueHash> credentials:SecureCredentialsEncrypted = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot_id | [long](/type/long/) | Bot ID |
-| scope | [string](/type/string/) | Telegram Passport element types requested by the service |
-| public_key | [string](/type/string/) | Service's public key |
-| value_hashes | [Vector](https://core.telegram.org/type/Vector%20t)<[SecureValueHash](/type/SecureValueHash/)> | Types of values sent and their hashes |
-| credentials | [SecureCredentialsEncrypted](/type/SecureCredentialsEncrypted/) | Encrypted values |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор бота</td></tr><tr><td><strong>scope</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Типы элементов Telegram Passport, запрошенные сервисом</td></tr><tr><td><strong>public_key</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Открытый ключ сервиса</td></tr><tr><td><strong>value_hashes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SecureValueHash">SecureValueHash</a>&gt;</td><td>Типы отправленных значений и их хеши</td></tr><tr><td><strong>credentials</strong></td><td style="text-align: center;"><a href="/type/SecureCredentialsEncrypted">SecureCredentialsEncrypted</a></td><td>Зашифрованные значения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
-| 400 | PUBLIC_KEY_REQUIRED | A public key is required. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr><tr><td>400</td><td>PUBLIC_KEY_REQUIRED</td><td>Требуется открытый ключ.</td></tr></tbody></table>

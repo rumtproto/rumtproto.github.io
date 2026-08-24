@@ -1,31 +1,24 @@
 ---
-title: "contacts.contacts (конструктор)"
+title: "contacts.contacts"
 original: "https://core.telegram.org/constructor/contacts.contacts"
 section: ref
 kind: constructor
+description: "Список контактов текущего пользователя и сведения о пользователях."
 layout: layout.njk
 ---
 
 # contacts.contacts
 
-*Конструктор из схемы TL.*
-
-> The current user's contact list and info on users.
-
-## Определение TL
+Список контактов текущего пользователя и сведения о пользователях.
 
 ```
 contacts.contacts#eae87e42 contacts:Vector<Contact> saved_count:int users:Vector<User> = contacts.Contacts;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| contacts | [Vector](https://core.telegram.org/type/Vector%20t)<[Contact](/type/Contact/)> | Contact list |
-| saved_count | [int](/type/int/) | Number of contacts that were saved successfully |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | User list |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>contacts</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Contact">Contact</a>&gt;</td><td>Список контактов</td></tr><tr><td><strong>saved_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество успешно сохранённых контактов</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Список пользователей</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [contacts.Contacts](/type/contacts.Contacts/)

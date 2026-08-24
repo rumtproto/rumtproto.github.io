@@ -1,27 +1,24 @@
 ---
-title: "baseThemeDay (конструктор)"
+title: "baseThemeDay"
 original: "https://core.telegram.org/constructor/baseThemeDay"
 section: ref
 kind: constructor
+description: "Дневная тема"
 layout: layout.njk
 ---
 
 # baseThemeDay
 
-*Конструктор из схемы TL.*
-
-> Day theme
-
-## Определение TL
+Дневная тема
 
 ```
 baseThemeDay#fbd81688 = BaseTheme;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [BaseTheme](/type/BaseTheme/)

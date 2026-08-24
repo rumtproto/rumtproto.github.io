@@ -1,35 +1,30 @@
 ---
-title: "messages.savedDialogsNotModified (конструктор)"
+title: "messages.savedDialogsNotModified"
 original: "https://core.telegram.org/constructor/messages.savedDialogsNotModified"
 section: ref
 kind: constructor
+description: "Сохранённые диалоги не изменились"
 layout: layout.njk
 ---
 
 # messages.savedDialogsNotModified
 
-*Конструктор из схемы TL.*
-
-> The saved dialogs haven't changed
-
-## Определение TL
+Сохранённые диалоги не изменились
 
 ```
 messages.savedDialogsNotModified#c01f6fe8 count:int = messages.SavedDialogs;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| count | [int](/type/int/) | Number of [saved dialogs](https://core.telegram.org/api/saved-messages) found server-side by the query |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество <a href="/api/saved-messages">сохранённых диалогов</a>, найденных по запросу на стороне сервера</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.SavedDialogs](/type/messages.SavedDialogs/)
 
-## Related pages
+### Связанные страницы
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.

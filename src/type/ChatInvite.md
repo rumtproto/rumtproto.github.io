@@ -1,18 +1,15 @@
 ---
-title: "ChatInvite (тип)"
+title: "ChatInvite"
 original: "https://core.telegram.org/type/ChatInvite"
 section: ref
 kind: type
+description: "Приглашение в чат"
 layout: layout.njk
 ---
 
 # ChatInvite
 
-*Тип из схемы TL.*
-
-> Chat invite
-
-## Определение TL
+Приглашение в чат
 
 ```
 chatInviteAlready#5a686d7c chat:Chat = ChatInvite;
@@ -24,16 +21,10 @@ chatInvitePeek#61695cb0 chat:Chat expires:int = ChatInvite;
 messages.checkChatInvite#3eadb1bb hash:string = ChatInvite;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [chatInviteAlready](/constructor/chatInviteAlready/) | The user has already joined this chat |
-| [chatInvite](/constructor/chatInvite/) | Chat invite info |
-| [chatInvitePeek](/constructor/chatInvitePeek/) | A chat invitation that also allows peeking into the group to read messages without joining it. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/chatInviteAlready">chatInviteAlready</a></td><td>Пользователь уже вступил в этот чат</td></tr><tr><td><a href="/constructor/chatInvite">chatInvite</a></td><td>Сведения о приглашении в чат</td></tr><tr><td><a href="/constructor/chatInvitePeek">chatInvitePeek</a></td><td>Приглашение в чат, которое также позволяет заглянуть в группу и читать сообщения, не вступая в неё.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.checkChatInvite](/method/messages.checkChatInvite/) | Check the validity of a chat invite link and get basic info about it |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.checkChatInvite">messages.checkChatInvite</a></td><td>Проверить действительность пригласительной ссылки на чат и получить основные сведения о ней</td></tr></tbody></table>

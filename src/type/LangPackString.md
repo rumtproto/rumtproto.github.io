@@ -1,18 +1,15 @@
 ---
-title: "LangPackString (тип)"
+title: "LangPackString"
 original: "https://core.telegram.org/type/LangPackString"
 section: ref
 kind: type
+description: "Строка языкового пакета"
 layout: layout.njk
 ---
 
 # LangPackString
 
-*Тип из схемы TL.*
-
-> Language pack string
-
-## Определение TL
+Строка языкового пакета
 
 ```
 langPackString#cad181f6 key:string value:string = LangPackString;
@@ -20,10 +17,6 @@ langPackStringPluralized#6c47ac9f flags:# key:string zero_value:flags.0?string o
 langPackStringDeleted#2979eeb2 key:string = LangPackString;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [langPackString](/constructor/langPackString/) | Translated localization string |
-| [langPackStringPluralized](/constructor/langPackStringPluralized/) | A language pack string which has different forms based on the number of some object it mentions. See [https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html](https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html) for more info |
-| [langPackStringDeleted](/constructor/langPackStringDeleted/) | Deleted localization string |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/langPackString">langPackString</a></td><td>Переведённая строка локализации</td></tr><tr><td><a href="/constructor/langPackStringPluralized">langPackStringPluralized</a></td><td>Строка языкового пакета, имеющая разные формы в зависимости от количества упоминаемого в ней объекта. Подробнее см. <a href="https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html">https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html</a></td></tr><tr><td><a href="/constructor/langPackStringDeleted">langPackStringDeleted</a></td><td>Удалённая строка локализации</td></tr></tbody></table>

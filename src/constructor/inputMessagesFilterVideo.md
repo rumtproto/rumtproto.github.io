@@ -1,27 +1,24 @@
 ---
-title: "inputMessagesFilterVideo (конструктор)"
+title: "inputMessagesFilterVideo"
 original: "https://core.telegram.org/constructor/inputMessagesFilterVideo"
 section: ref
 kind: constructor
+description: "Фильтр для сообщений, содержащих видео."
 layout: layout.njk
 ---
 
 # inputMessagesFilterVideo
 
-*Конструктор из схемы TL.*
-
-> Filter for messages containing videos.
-
-## Определение TL
+Фильтр для сообщений, содержащих видео.
 
 ```
 inputMessagesFilterVideo#9fc00e65 = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)

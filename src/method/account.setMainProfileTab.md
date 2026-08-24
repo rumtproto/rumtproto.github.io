@@ -1,18 +1,15 @@
 ---
-title: "account.setMainProfileTab (метод)"
+title: "account.setMainProfileTab"
 original: "https://core.telegram.org/method/account.setMainProfileTab"
 section: ref
 kind: method
+description: "Изменяет основную вкладку профиля текущего пользователя, подробнее здесь »."
 layout: layout.njk
 ---
 
 # account.setMainProfileTab
 
-*Метод из схемы TL.*
-
-> Changes the main profile tab of the current user, see [here »](https://core.telegram.org/api/profile#tabs) for more info.
-
-## Определение TL
+Изменяет основную вкладку профиля текущего пользователя, подробнее [здесь »](/api/profile/#tabs).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,20 +18,18 @@ boolTrue#997275b5 = Bool;
 account.setMainProfileTab#5dee78b0 tab:ProfileTab = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| tab | [ProfileTab](/type/ProfileTab/) | The tab to set as main tab. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>tab</strong></td><td style="text-align: center;"><a href="/type/ProfileTab">ProfileTab</a></td><td>Вкладка, которую нужно сделать главной.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

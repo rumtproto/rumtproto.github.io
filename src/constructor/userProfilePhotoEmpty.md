@@ -1,27 +1,24 @@
 ---
-title: "userProfilePhotoEmpty (конструктор)"
+title: "userProfilePhotoEmpty"
 original: "https://core.telegram.org/constructor/userProfilePhotoEmpty"
 section: ref
 kind: constructor
+description: "Фотография профиля не установлена или скрыта."
 layout: layout.njk
 ---
 
 # userProfilePhotoEmpty
 
-*Конструктор из схемы TL.*
-
-> Profile photo has not been set, or was hidden.
-
-## Определение TL
+Фотография профиля не установлена или скрыта.
 
 ```
 userProfilePhotoEmpty#4f11bae1 = UserProfilePhoto;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [UserProfilePhoto](/type/UserProfilePhoto/)

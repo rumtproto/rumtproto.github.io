@@ -1,27 +1,24 @@
 ---
-title: "help.deepLinkInfoEmpty (конструктор)"
+title: "help.deepLinkInfoEmpty"
 original: "https://core.telegram.org/constructor/help.deepLinkInfoEmpty"
 section: ref
 kind: constructor
+description: "Информация о глубокой ссылке отсутствует"
 layout: layout.njk
 ---
 
 # help.deepLinkInfoEmpty
 
-*Конструктор из схемы TL.*
-
-> Deep link info empty
-
-## Определение TL
+Информация о глубокой ссылке отсутствует
 
 ```
 help.deepLinkInfoEmpty#66afa166 = help.DeepLinkInfo;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [help.DeepLinkInfo](/type/help.DeepLinkInfo/)

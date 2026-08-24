@@ -1,27 +1,24 @@
 ---
-title: "inputReportReasonSpam (конструктор)"
+title: "inputReportReasonSpam"
 original: "https://core.telegram.org/constructor/inputReportReasonSpam"
 section: ref
 kind: constructor
+description: "Жалоба на спам"
 layout: layout.njk
 ---
 
 # inputReportReasonSpam
 
-*Конструктор из схемы TL.*
-
-> Report for spam
-
-## Определение TL
+Жалоба на спам
 
 ```
 inputReportReasonSpam#58dbcab8 = ReportReason;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReportReason](/type/ReportReason/)

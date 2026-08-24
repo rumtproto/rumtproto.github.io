@@ -1,27 +1,24 @@
 ---
-title: "attachMenuPeerTypeBroadcast (конструктор)"
+title: "attachMenuPeerTypeBroadcast"
 original: "https://core.telegram.org/constructor/attachMenuPeerTypeBroadcast"
 section: ref
 kind: constructor
+description: "Пункт меню вложений бота доступен в каналах"
 layout: layout.njk
 ---
 
 # attachMenuPeerTypeBroadcast
 
-*Конструктор из схемы TL.*
-
-> The bot attachment menu entry is available in channels
-
-## Определение TL
+Пункт меню вложений бота доступен в каналах
 
 ```
 attachMenuPeerTypeBroadcast#7bfbdefc = AttachMenuPeerType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [AttachMenuPeerType](/type/AttachMenuPeerType/)

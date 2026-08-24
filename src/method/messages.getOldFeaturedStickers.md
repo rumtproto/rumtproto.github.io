@@ -1,18 +1,15 @@
 ---
-title: "messages.getOldFeaturedStickers (метод)"
+title: "messages.getOldFeaturedStickers"
 original: "https://core.telegram.org/method/messages.getOldFeaturedStickers"
 section: ref
 kind: method
+description: "Метод для получения ранее рекомендуемых стикеров"
 layout: layout.njk
 ---
 
 # messages.getOldFeaturedStickers
 
-*Метод из схемы TL.*
-
-> Method for fetching previously featured stickers
-
-## Определение TL
+Метод для получения ранее рекомендуемых стикеров
 
 ```
 messages.featuredStickersNotModified#c6dc0c66 count:int = messages.FeaturedStickers;
@@ -21,22 +18,18 @@ messages.featuredStickers#be382906 flags:# premium:flags.0?true hash:long count:
 messages.getOldFeaturedStickers#7ed094a1 offset:int limit:int hash:long = messages.FeaturedStickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| offset | [int](/type/int/) | Offset |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Смещение</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.FeaturedStickers](/type/messages.FeaturedStickers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

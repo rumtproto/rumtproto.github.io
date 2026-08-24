@@ -1,31 +1,24 @@
 ---
-title: "timezone (конструктор)"
+title: "timezone"
 original: "https://core.telegram.org/constructor/timezone"
 section: ref
 kind: constructor
+description: "Сведения о часовом поясе."
 layout: layout.njk
 ---
 
 # timezone
 
-*Конструктор из схемы TL.*
-
-> Timezone information.
-
-## Определение TL
+Сведения о часовом поясе.
 
 ```
 timezone#ff9289f5 id:string name:string utc_offset:int = Timezone;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [string](/type/string/) | Unique timezone ID. |
-| name | [string](/type/string/) | Human-readable and localized timezone name. |
-| utc_offset | [int](/type/int/) | UTC offset in seconds, which may be displayed in hh:mm format by the client together with the human-readable name (i.e. $name UTC -01:00). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Уникальный идентификатор часового пояса.</td></tr><tr><td><strong>name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Понятное человеку локализованное название часового пояса.</td></tr><tr><td><strong>utc_offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Смещение относительно UTC в секундах; клиент может отображать его в формате hh:mm вместе с человекочитаемым названием (например, <code>$name UTC -01:00</code>).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Timezone](/type/Timezone/)

@@ -1,27 +1,24 @@
 ---
-title: "reactionEmpty (конструктор)"
+title: "reactionEmpty"
 original: "https://core.telegram.org/constructor/reactionEmpty"
 section: ref
 kind: constructor
+description: "Без реакции"
 layout: layout.njk
 ---
 
 # reactionEmpty
 
-*Конструктор из схемы TL.*
-
-> No reaction
-
-## Определение TL
+Без реакции
 
 ```
 reactionEmpty#79f5d419 = Reaction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Reaction](/type/Reaction/)

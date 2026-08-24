@@ -1,43 +1,34 @@
 ---
-title: "updateBotEditBusinessMessage (конструктор)"
+title: "updateBotEditBusinessMessage"
 original: "https://core.telegram.org/constructor/updateBotEditBusinessMessage"
 section: ref
 kind: constructor
+description: "Сообщение было отредактировано в подключённом бизнес-чате »."
 layout: layout.njk
 ---
 
 # updateBotEditBusinessMessage
 
-*Конструктор из схемы TL.*
-
-> A message was edited in a [connected business chat »](https://core.telegram.org/api/bots/connected-business-bots).
-
-## Определение TL
+Сообщение было отредактировано в [подключённом бизнес-чате »](/api/bots/connected-business-bots/).
 
 ```
 updateBotEditBusinessMessage#7df587c flags:# connection_id:string message:Message reply_to_message:flags.0?Message qts:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| connection_id | [string](/type/string/) | Business connection ID |
-| message | [Message](/type/Message/) | New message. |
-| reply_to_message | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Message](/type/Message/) | The message that message is replying to. |
-| qts | [int](/type/int/) | New qts value, see [updates »](/api/updates/) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>connection_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор бизнес-подключения</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message">Message</a></td><td>Новое сообщение.</td></tr><tr><td><strong>reply_to_message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Message">Message</a></td><td>Сообщение, на которое отвечает <code>message</code>.</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] Новое значение <strong>qts</strong>, подробнее см. <a href="/api/updates">обновления »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.

@@ -1,45 +1,34 @@
 ---
-title: "chatInviteImporter (конструктор)"
+title: "chatInviteImporter"
 original: "https://core.telegram.org/constructor/chatInviteImporter"
 section: ref
 kind: constructor
+description: "Когда и какой пользователь вступил в чат по пригласительной ссылке"
 layout: layout.njk
 ---
 
 # chatInviteImporter
 
-*Конструктор из схемы TL.*
-
-> When and which user joined the chat using a chat invite
-
-## Определение TL
+Когда и какой пользователь вступил в чат по пригласительной ссылке
 
 ```
 chatInviteImporter#8c5adfd9 flags:# requested:flags.0?true via_chatlist:flags.3?true user_id:long date:int about:flags.2?string approved_by:flags.1?long = ChatInviteImporter;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| requested | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether this user currently has a pending [join request »](https://core.telegram.org/api/invites#join-requests) |
-| via_chatlist | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | The participant joined by importing a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| user_id | [long](/type/long/) | The user |
-| date | [int](/type/int/) | When did the user join |
-| about | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | For users with pending requests, contains bio of the user that requested to join |
-| approved_by | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[long](/type/long/) | The administrator that approved the [join request »](https://core.telegram.org/api/invites#join-requests) of the user |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>requested</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Есть ли у этого пользователя ожидающая рассмотрения <a href="/api/invites#join-requests">заявка на вступление »</a></td></tr><tr><td><strong>via_chatlist</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Участник вступил, импортировав <a href="/api/links#chat-folder-links">глубокую ссылку на папку чатов »</a>.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Пользователь</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда пользователь присоединился</td></tr><tr><td><strong>about</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Для пользователей с ожидающими заявками содержит биографию пользователя, подавшего заявку на вступление</td></tr><tr><td><strong>approved_by</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/long">long</a></td><td>Администратор, одобривший <a href="/api/invites#join-requests">заявку на вступление »</a> пользователя</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatInviteImporter](/type/ChatInviteImporter/)
 
-## Related pages
+### Связанные страницы
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

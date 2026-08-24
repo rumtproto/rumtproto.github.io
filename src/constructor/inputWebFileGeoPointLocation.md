@@ -1,44 +1,34 @@
 ---
-title: "inputWebFileGeoPointLocation (конструктор)"
+title: "inputWebFileGeoPointLocation"
 original: "https://core.telegram.org/constructor/inputWebFileGeoPointLocation"
 section: ref
 kind: constructor
+description: "Используется для скачивания сгенерированного сервером изображения с предпросмотром карты по geoPoint; подробнее см. документацию по веб-файлам »."
 layout: layout.njk
 ---
 
 # inputWebFileGeoPointLocation
 
-*Конструктор из схемы TL.*
-
-> Used to download a server-generated image with the map preview from a [geoPoint](/constructor/geoPoint/), see the [webfile docs for more info »](https://core.telegram.org/api/files/#downloading-webfiles).
-
-## Определение TL
+Используется для скачивания сгенерированного сервером изображения с предпросмотром карты по [geoPoint](/constructor/geoPoint/); подробнее см. [документацию по веб-файлам »](/api/files/#downloading-webfiles).
 
 ```
 inputWebFileGeoPointLocation#9f2221c9 geo_point:InputGeoPoint access_hash:long w:int h:int zoom:int scale:int = InputWebFileLocation;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| geo_point | [InputGeoPoint](/type/InputGeoPoint/) | Generated from the lat, long and accuracy_radius parameters of the [geoPoint](/constructor/geoPoint/) |
-| access_hash | [long](/type/long/) | Access hash of the [geoPoint](/constructor/geoPoint/) |
-| w | [int](/type/int/) | Map width in pixels before applying scale; 16-1024 |
-| h | [int](/type/int/) | Map height in pixels before applying scale; 16-1024 |
-| zoom | [int](/type/int/) | Map zoom level; 13-20 |
-| scale | [int](/type/int/) | Map scale; 1-3 |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>geo_point</strong></td><td style="text-align: center;"><a href="/type/InputGeoPoint">InputGeoPoint</a></td><td>Формируется из параметров <code>lat</code>, <code>long</code> и <code>accuracy_radius</code> конструктора <a href="/constructor/geoPoint">geoPoint</a></td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:access_hash] Хеш доступа <a href="/constructor/geoPoint">geoPoint</a></td></tr><tr><td><strong>w</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Ширина карты в пикселях до применения масштаба; 16-1024</td></tr><tr><td><strong>h</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Высота карты в пикселях до применения масштаба; 16–1024</td></tr><tr><td><strong>zoom</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Уровень приближения карты; 13–20</td></tr><tr><td><strong>scale</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Масштаб карты; 1-3</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputWebFileLocation](/type/InputWebFileLocation/)
 
-## Related pages
+### Связанные страницы
 
 #### [geoPoint](/constructor/geoPoint/)
 
-GeoPoint.
+Географическая точка.
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

@@ -1,18 +1,15 @@
 ---
-title: "Account.WallPapers (тип)"
+title: "account.WallPapers"
 original: "https://core.telegram.org/type/account.WallPapers"
 section: ref
 kind: type
+description: "Обои"
 layout: layout.njk
 ---
 
 # Account.WallPapers
 
-*Тип из схемы TL.*
-
-> [Wallpapers](https://core.telegram.org/api/wallpapers)
-
-## Определение TL
+[Обои](/api/wallpapers/)
 
 ```
 account.wallPapersNotModified#1c199183 = account.WallPapers;
@@ -23,21 +20,16 @@ account.wallPapers#cdc3858c hash:long wallpapers:Vector<WallPaper> = account.Wal
 account.getWallPapers#7967d36 hash:long = account.WallPapers;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.wallPapersNotModified](/constructor/account.wallPapersNotModified/) | No new [wallpapers](https://core.telegram.org/api/wallpapers) were found |
-| [account.wallPapers](/constructor/account.wallPapers/) | Installed [wallpapers](https://core.telegram.org/api/wallpapers) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.wallPapersNotModified">account.wallPapersNotModified</a></td><td>Новых <a href="/api/wallpapers">обоев</a> не найдено</td></tr><tr><td><a href="/constructor/account.wallPapers">account.wallPapers</a></td><td>Установленные <a href="/api/wallpapers">обои</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getWallPapers](/method/account.getWallPapers/) | Returns a list of available [wallpapers](https://core.telegram.org/api/wallpapers). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getWallPapers">account.getWallPapers</a></td><td>Возвращает список доступных <a href="/api/wallpapers">обоев</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.

@@ -1,30 +1,24 @@
 ---
-title: "updateBotMenuButton (конструктор)"
+title: "updateBotMenuButton"
 original: "https://core.telegram.org/constructor/updateBotMenuButton"
 section: ref
 kind: constructor
+description: "Поведение кнопки меню для указанного бота изменилось"
 layout: layout.njk
 ---
 
 # updateBotMenuButton
 
-*Конструктор из схемы TL.*
-
-> The menu button behavior for the specified bot has changed
-
-## Определение TL
+Поведение кнопки меню для указанного бота изменилось
 
 ```
 updateBotMenuButton#14b85813 bot_id:long button:BotMenuButton = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot_id | [long](/type/long/) | Bot ID |
-| button | [BotMenuButton](/type/BotMenuButton/) | New menu button |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор бота</td></tr><tr><td><strong>button</strong></td><td style="text-align: center;"><a href="/type/BotMenuButton">BotMenuButton</a></td><td>Новая кнопка меню</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

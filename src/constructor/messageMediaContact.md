@@ -1,33 +1,24 @@
 ---
-title: "messageMediaContact (конструктор)"
+title: "messageMediaContact"
 original: "https://core.telegram.org/constructor/messageMediaContact"
 section: ref
 kind: constructor
+description: "Вложенный контакт."
 layout: layout.njk
 ---
 
 # messageMediaContact
 
-*Конструктор из схемы TL.*
-
-> Attached contact.
-
-## Определение TL
+Вложенный контакт.
 
 ```
 messageMediaContact#70322949 phone_number:string first_name:string last_name:string vcard:string user_id:long = MessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_number | [string](/type/string/) | Phone number |
-| first_name | [string](/type/string/) | Contact's first name |
-| last_name | [string](/type/string/) | Contact's last name |
-| vcard | [string](/type/string/) | VCARD of contact |
-| user_id | [long](/type/long/) | User identifier or 0, if the user with the given phone number is not registered |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона</td></tr><tr><td><strong>first_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Имя контакта</td></tr><tr><td><strong>last_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Фамилия контакта</td></tr><tr><td><strong>vcard</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>VCARD контакта</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя или <code>0</code>, если пользователь с указанным номером телефона не зарегистрирован</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageMedia](/type/MessageMedia/)

@@ -1,18 +1,15 @@
 ---
-title: "StoryView (тип)"
+title: "StoryView"
 original: "https://core.telegram.org/type/StoryView"
 section: ref
 kind: type
+description: "Сведения о датах просмотра и реакциях для истории"
 layout: layout.njk
 ---
 
 # StoryView
 
-*Тип из схемы TL.*
-
-> [Story](https://core.telegram.org/api/stories) view date and reaction information
-
-## Определение TL
+Сведения о датах просмотра и реакциях для [истории](/api/stories/)
 
 ```
 storyView#b0bdeac5 flags:# blocked:flags.0?true blocked_my_stories_from:flags.1?true user_id:long date:int reaction:flags.2?Reaction = StoryView;
@@ -20,16 +17,12 @@ storyViewPublicForward#9083670b flags:# blocked:flags.0?true blocked_my_stories_
 storyViewPublicRepost#bd74cf49 flags:# blocked:flags.0?true blocked_my_stories_from:flags.1?true peer_id:Peer story:StoryItem = StoryView;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [storyView](/constructor/storyView/) | [Story](https://core.telegram.org/api/stories) view date and reaction information |
-| [storyViewPublicForward](/constructor/storyViewPublicForward/) | A certain peer has forwarded the story as a message to a public chat or channel. |
-| [storyViewPublicRepost](/constructor/storyViewPublicRepost/) | A certain peer has reposted the story. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/storyView">storyView</a></td><td>Сведения о датах просмотров и реакциях для <a href="/api/stories">истории</a></td></tr><tr><td><a href="/constructor/storyViewPublicForward">storyViewPublicForward</a></td><td>Определённый пир переслал историю в виде сообщения в публичный чат или канал.</td></tr><tr><td><a href="/constructor/storyViewPublicRepost">storyViewPublicRepost</a></td><td>Определённый пир сделал репост истории.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

@@ -1,27 +1,24 @@
 ---
-title: "payments.checkCanSendGiftResultOk (конструктор)"
+title: "payments.checkCanSendGiftResultOk"
 original: "https://core.telegram.org/constructor/payments.checkCanSendGiftResultOk"
 section: ref
 kind: constructor
+description: "Указанный подарок можно отправить."
 layout: layout.njk
 ---
 
 # payments.checkCanSendGiftResultOk
 
-*Конструктор из схемы TL.*
-
-> The specified gift can be sent.
-
-## Определение TL
+Указанный подарок можно отправить.
 
 ```
 payments.checkCanSendGiftResultOk#374fa7ad = payments.CheckCanSendGiftResult;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [payments.CheckCanSendGiftResult](/type/payments.CheckCanSendGiftResult/)

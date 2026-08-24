@@ -1,18 +1,15 @@
 ---
-title: "account.getChannelDefaultEmojiStatuses (метод)"
+title: "account.getChannelDefaultEmojiStatuses"
 original: "https://core.telegram.org/method/account.getChannelDefaultEmojiStatuses"
 section: ref
 kind: method
+description: "Получить список предлагаемых по умолчанию эмодзи-статусов канала."
 layout: layout.njk
 ---
 
 # account.getChannelDefaultEmojiStatuses
 
-*Метод из схемы TL.*
-
-> Get a list of default suggested [channel emoji statuses](https://core.telegram.org/api/emoji-status).
-
-## Определение TL
+Получить список предлагаемых по умолчанию [эмодзи-статусов канала](/api/emoji-status/).
 
 ```
 account.emojiStatusesNotModified#d08ce645 = account.EmojiStatuses;
@@ -21,24 +18,22 @@ account.emojiStatuses#90c467d1 hash:long statuses:Vector<EmojiStatus> = account.
 account.getChannelDefaultEmojiStatuses#7727a7d5 hash:long = account.EmojiStatuses;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.EmojiStatuses](/type/account.EmojiStatuses/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

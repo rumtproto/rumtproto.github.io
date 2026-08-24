@@ -1,49 +1,44 @@
 ---
-title: "updateStoryID (конструктор)"
+title: "updateStoryID"
 original: "https://core.telegram.org/constructor/updateStoryID"
 section: ref
 kind: constructor
+description: "История успешно загружена."
 layout: layout.njk
 ---
 
 # updateStoryID
 
-*Конструктор из схемы TL.*
+История успешно загружена.
 
-> A story was successfully uploaded.
-> Once a story is successfully uploaded, an [updateStoryID](/constructor/updateStoryID/) will be returned, indicating the story ID (`id`) that was attributed to the story (like for messages, `random_id` indicates the `random_id` that was passed to [stories.sendStory](/method/stories.sendStory/): this way, you can tell which story was assigned a specific `id` by checking which [stories.sendStory](/method/stories.sendStory/) call has the returned `random_id`).
-
-## Определение TL
+[@term:random_id] После успешной загрузки истории будет возвращено обновление [updateStoryID](/constructor/updateStoryID/) с идентификатором истории (`id`), присвоенным этой истории (как и для сообщений, `random_id` указывает `random_id`, переданный в [stories.sendStory](/method/stories.sendStory/): так вы можете понять, какой истории присвоен конкретный `id`, посмотрев, в каком вызове [stories.sendStory](/method/stories.sendStory/) был возвращённый `random_id`).
 
 ```
 updateStoryID#1bf335b9 id:int random_id:long = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [int](/type/int/) | The id that was attributed to the story. |
-| random_id | [long](/type/long/) | The random_id that was passed to [stories.sendStory](/method/stories.sendStory/). See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><code>id</code>, присвоенный истории.</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><code>random_id</code>, переданный в <a href="/method/stories.sendStory">stories.sendStory</a>. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [stories.sendStory](/method/stories.sendStory/)
 
-Uploads a [Telegram Story](https://core.telegram.org/api/stories).
+Загружает [историю Telegram](/api/stories/).
 
-May also be used in a [business connection](https://core.telegram.org/api/bots/connected-business-bots), _not_ by wrapping the query in [invokeWithBusinessConnection »](/method/invokeWithBusinessConnection/), but rather by specifying the ID of a controlled business user in `peer`.
+[@term:peer] Может также применяться в рамках [бизнес-подключения](/api/bots/connected-business-bots/), причём _не_ через оборачивание запроса в [invokeWithBusinessConnection »](/method/invokeWithBusinessConnection/), а путём указания идентификатора управляемого бизнес-пользователя в `peer`.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
 #### [updateStoryID](/constructor/updateStoryID/)
 
-A story was successfully uploaded.
+История успешно загружена.
 
-Once a story is successfully uploaded, an [updateStoryID](/constructor/updateStoryID/) will be returned, indicating the story ID (`id`) that was attributed to the story (like for messages, `random_id` indicates the `random_id` that was passed to [stories.sendStory](/method/stories.sendStory/): this way, you can tell which story was assigned a specific `id` by checking which [stories.sendStory](/method/stories.sendStory/) call has the returned `random_id`).
+После успешной загрузки истории будет возвращено обновление [updateStoryID](/constructor/updateStoryID/) с идентификатором истории (`id`), присвоенным этой истории (как и для сообщений, `random_id` указывает `random_id`, переданный в [stories.sendStory](/method/stories.sendStory/): так вы можете понять, какой истории присвоен конкретный `id`, посмотрев, в каком вызове [stories.sendStory](/method/stories.sendStory/) был возвращённый `random_id`).

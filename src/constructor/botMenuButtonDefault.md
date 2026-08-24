@@ -1,33 +1,30 @@
 ---
-title: "botMenuButtonDefault (конструктор)"
+title: "botMenuButtonDefault"
 original: "https://core.telegram.org/constructor/botMenuButtonDefault"
 section: ref
 kind: constructor
+description: "Заглушка кнопки меню бота, никогда не возвращаемая пользователям: подробнее см. документацию."
 layout: layout.njk
 ---
 
 # botMenuButtonDefault
 
-*Конструктор из схемы TL.*
-
-> Placeholder [bot menu button](https://core.telegram.org/api/bots/menu) never returned to users: see [the docs for more info](https://core.telegram.org/api/bots/menu).
-
-## Определение TL
+Заглушка [кнопки меню бота](/api/bots/menu/), никогда не возвращаемая пользователям: подробнее [см. документацию](/api/bots/menu/).
 
 ```
 botMenuButtonDefault#7533a588 = BotMenuButton;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [BotMenuButton](/type/BotMenuButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot menu button](https://core.telegram.org/api/bots/menu)
+#### [Кнопка меню бота](/api/bots/menu/)
 
-Bots can choose the behavior of the menu button shown next to the text input field.
+Боты могут выбирать поведение кнопки меню, отображаемой рядом с полем ввода текста.

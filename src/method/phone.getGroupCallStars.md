@@ -1,18 +1,15 @@
 ---
-title: "phone.getGroupCallStars (метод)"
+title: "phone.getGroupCallStars"
 original: "https://core.telegram.org/method/phone.getGroupCallStars"
 section: ref
 kind: method
+description: "Получить общую сумму пожертвований для прямой истории и список крупнейших жертвователей, см. платные пожертвования в прямых историях »."
 layout: layout.njk
 ---
 
 # phone.getGroupCallStars
 
-*Метод из схемы TL.*
-
-> Fetch a live story's total donations and top donors, see [paid live story donations »](https://core.telegram.org/api/group-calls#paid-live-story-donations).
-
-## Определение TL
+Получить общую сумму пожертвований для прямой истории и список крупнейших жертвователей, см. [платные пожертвования в прямых историях »](/api/group-calls/#paid-live-story-donations).
 
 ```
 phone.groupCallStars#9d1dbd26 total_stars:long top_donors:Vector<GroupCallDonor> chats:Vector<Chat> users:Vector<User> = phone.GroupCallStars;
@@ -20,26 +17,22 @@ phone.groupCallStars#9d1dbd26 total_stars:long top_donors:Vector<GroupCallDonor>
 phone.getGroupCallStars#6f636302 call:InputGroupCall = phone.GroupCallStars;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Live story group call |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Групповой звонок прямой истории</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [phone.GroupCallStars](/type/phone.GroupCallStars/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

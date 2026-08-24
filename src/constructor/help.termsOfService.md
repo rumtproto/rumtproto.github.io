@@ -1,40 +1,30 @@
 ---
-title: "help.termsOfService (конструктор)"
+title: "help.termsOfService"
 original: "https://core.telegram.org/constructor/help.termsOfService"
 section: ref
 kind: constructor
+description: "Информация о последних условиях использования Telegram"
 layout: layout.njk
 ---
 
 # help.termsOfService
 
-*Конструктор из схемы TL.*
-
-> Info about the latest telegram Terms Of Service
-
-## Определение TL
+Информация о последних условиях использования Telegram
 
 ```
 help.termsOfService#780a0310 flags:# popup:flags.0?true id:DataJSON text:string entities:Vector<MessageEntity> min_age_confirm:flags.1?int = help.TermsOfService;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| popup | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether a prompt must be showed to the user, in order to accept the new terms. |
-| id | [DataJSON](/type/DataJSON/) | ID of the new terms |
-| text | [string](/type/string/) | Text of the new terms |
-| entities | [Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text](https://core.telegram.org/api/entities) |
-| min_age_confirm | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | Minimum age required to sign up to telegram, the user must confirm that they is older than the minimum age. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>popup</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Требуется ли показать пользователю запрос на принятие новых условий.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Идентификатор новых условий использования</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст новых условий</td></tr><tr><td><strong>entities</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления для форматированного текста</a></td></tr><tr><td><strong>min_age_confirm</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Минимальный возраст для регистрации в Telegram; пользователь обязан подтвердить, что он старше этого возраста.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [help.TermsOfService](/type/help.TermsOfService/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

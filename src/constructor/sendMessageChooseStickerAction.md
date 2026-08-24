@@ -1,27 +1,24 @@
 ---
-title: "sendMessageChooseStickerAction (конструктор)"
+title: "sendMessageChooseStickerAction"
 original: "https://core.telegram.org/constructor/sendMessageChooseStickerAction"
 section: ref
 kind: constructor
+description: "Пользователь выбирает стикер"
 layout: layout.njk
 ---
 
 # sendMessageChooseStickerAction
 
-*Конструктор из схемы TL.*
-
-> User is choosing a sticker
-
-## Определение TL
+Пользователь выбирает стикер
 
 ```
 sendMessageChooseStickerAction#b05ac6b1 = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)

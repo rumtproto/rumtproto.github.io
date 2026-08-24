@@ -1,63 +1,45 @@
 ---
-title: "urlAuthResultRequest (конструктор)"
+title: "urlAuthResultRequest"
 original: "https://core.telegram.org/constructor/urlAuthResultRequest"
 section: ref
 kind: constructor
+description: "Сведения о запросе авторизации; подробнее см. здесь »"
 layout: layout.njk
 ---
 
 # urlAuthResultRequest
 
-*Конструктор из схемы TL.*
-
-> Details about the authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
-
-## Определение TL
+Сведения о запросе авторизации; подробнее [см. здесь »](/api/url-authorization/)
 
 ```
 urlAuthResultRequest#f8f8eb1e flags:# request_write_access:flags.0?true request_phone_number:flags.1?true match_codes_first:flags.5?true bot:User domain:string browser:flags.2?string platform:flags.2?string ip:flags.2?string region:flags.2?string match_codes:flags.3?Vector<string> user_id_hint:flags.4?long = UrlAuthResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| request_write_access | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the bot would like to send messages to the user |
-| request_phone_number | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | The app/website is requesting the user's phone number; if the user consents, set share_phone_number when calling [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/) |
-| match_codes_first | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Can only be set if match_codes is also set; if set, clients must ask the user to select the matching code before showing the rest of the login confirmation UI, and must validate the selection with [messages.checkUrlAuthMatchCode](/method/messages.checkUrlAuthMatchCode/) before proceeding |
-| is_app | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | Set if an OAuth request originated from an app rather than a website; when set, domain must be replaced in the confirmation prompt by verified_app_name (if present) or "Unverified App" |
-| bot | [User](/type/User/) | Username of a bot, which will be used for user authorization. If not specified, the current bot's username will be assumed. The url's domain must be the same as the domain linked with the bot. See [Linking your domain to the bot](https://core.telegram.org/widgets/login#linking-your-domain-to-the-bot) for more details. |
-| domain | [string](/type/string/) | The domain name of the website on which the user will log in. |
-| browser | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | The browser the user used to make the OAuth request |
-| platform | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | The platform (operating system) of the user that made the OAuth request |
-| ip | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | The IP address of the user making the OAuth request |
-| region | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | The location of the user, inferred from the IP address |
-| match_codes | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[string](/type/string/)> | A list of emojis or codes, one of which is currently being shown on the login page of the website/app; the user must select the matching one and pass it to [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/).match_code |
-| user_id_hint | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[long](/type/long/) | May contain the ID of the account for which the login request was created; if it matches a logged-in account, clients should automatically switch to that account and re-invoke [messages.requestUrlAuth](/method/messages.requestUrlAuth/) before showing the prompt |
-| verified_app_name | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[string](/type/string/) | Can only be set if is_app is set and the app is verified; must replace domain in the confirmation prompt when present |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>request_write_access</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Хочет ли бот отправлять сообщения пользователю</td></tr><tr><td><strong>request_phone_number</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Приложение или сайт запрашивает номер телефона пользователя; если пользователь согласен, установите <code>share_phone_number</code> при вызове <a href="/method/messages.acceptUrlAuth">messages.acceptUrlAuth</a></td></tr><tr><td><strong>match_codes_first</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Может быть указано, только если также установлено <code>match_codes</code>; если установлено, клиенты обязаны попросить пользователя выбрать подходящий код <em>до</em> показа остального интерфейса подтверждения входа и обязаны проверить выбор с помощью <a href="/method/messages.checkUrlAuthMatchCode">messages.checkUrlAuthMatchCode</a>, прежде чем продолжать</td></tr><tr><td><strong>is_app</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Устанавливается, если запрос OAuth пришёл из приложения, а не с сайта; в этом случае <code>domain</code> в запросе подтверждения должен быть заменён на <code>verified_app_name</code> (если задано) или на «Unverified App»</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/User">User</a></td><td>Имя пользователя бота, который будет использован для авторизации пользователя. Если не указано, подразумевается имя пользователя текущего бота. Домен в URL должен совпадать с доменом, привязанным к боту. Подробнее см. <a href="https://core.telegram.org/widgets/login#linking-your-domain-to-the-bot">Привязка домена к боту</a>.</td></tr><tr><td><strong>domain</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Доменное имя сайта, на котором пользователь выполнит вход.</td></tr><tr><td><strong>browser</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Браузер, из которого пользователь выполнил OAuth-запрос</td></tr><tr><td><strong>platform</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Платформа (операционная система) пользователя, отправившего запрос OAuth</td></tr><tr><td><strong>ip</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>IP-адрес пользователя, выполняющего запрос OAuth</td></tr><tr><td><strong>region</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Местоположение пользователя, определённое по IP-адресу</td></tr><tr><td><strong>match_codes</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/string">string</a>&gt;</td><td>Список эмодзи или кодов, один из которых сейчас отображается на странице входа сайта или приложения; пользователь должен выбрать совпадающий и передать его в <a href="/method/messages.acceptUrlAuth">messages.acceptUrlAuth</a>.<code>match_code</code></td></tr><tr><td><strong>user_id_hint</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/long">long</a></td><td>Может содержать идентификатор аккаунта, для которого был создан запрос на вход; если он совпадает с одним из аккаунтов, в которые выполнен вход, клиентам следует автоматически переключиться на этот аккаунт и повторно вызвать <a href="/method/messages.requestUrlAuth">messages.requestUrlAuth</a> перед показом запроса подтверждения</td></tr><tr><td><strong>verified_app_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/string">string</a></td><td>Может быть указано, только если установлено <code>is_app</code> и приложение верифицировано; при наличии должно заменять <code>domain</code> в запросе подтверждения</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [UrlAuthResult](/type/UrlAuthResult/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/)
 
-Use this to accept a Seamless Telegram Login authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
+Используйте этот метод, чтобы подтвердить запрос авторизации Seamless Telegram Login; подробнее [см. здесь »](/api/url-authorization/)
 
 #### [messages.checkUrlAuthMatchCode](/method/messages.checkUrlAuthMatchCode/)
 
-Validate the match code selected by the user against the code shown on the login page, as part of the [OAuth authorization flow »](https://core.telegram.org/api/url-authorization#oauth-authorization).
+Сверить выбранный пользователем код соответствия с кодом, показанным на странице входа, в рамках [процесса авторизации OAuth »](/api/url-authorization/#oauth-authorization).
 
-Only usable when both `match_codes` and `match_codes_first` are set in the [urlAuthResultRequest](/constructor/urlAuthResultRequest/) returned by [messages.requestUrlAuth](/method/messages.requestUrlAuth/).  
-If [boolTrue](/constructor/boolTrue/) is returned, proceed with the login flow and pass the verified code to [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/).`match_code`.
+Используется только тогда, когда в конструкторе [urlAuthResultRequest](/constructor/urlAuthResultRequest/), возвращённом методом [messages.requestUrlAuth](/method/messages.requestUrlAuth/), установлены оба флага `match_codes` и `match_codes_first`.  
+Если возвращается [boolTrue](/constructor/boolTrue/), продолжите процедуру входа и передайте проверенный код в [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/).`match_code`.
 
 #### [messages.requestUrlAuth](/method/messages.requestUrlAuth/)
 
-Get more info about a Seamless Telegram Login authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
+Получить дополнительную информацию о запросе авторизации Seamless Telegram Login; подробнее [см. здесь »](/api/url-authorization/)
 
-#### [Seamless Telegram Login](https://core.telegram.org/api/url-authorization)
+#### [Бесшовный вход через Telegram](/api/url-authorization/)
 
-Handle Seamless Telegram Login URL authorization requests.
+Обработка запросов авторизации по URL через Seamless Telegram Login.

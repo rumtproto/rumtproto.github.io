@@ -1,31 +1,24 @@
 ---
-title: "inputBotInlineResultGame (конструктор)"
+title: "inputBotInlineResultGame"
 original: "https://core.telegram.org/constructor/inputBotInlineResultGame"
 section: ref
 kind: constructor
+description: "Игра"
 layout: layout.njk
 ---
 
 # inputBotInlineResultGame
 
-*Конструктор из схемы TL.*
-
-> Game
-
-## Определение TL
+Игра
 
 ```
 inputBotInlineResultGame#4fa417f2 id:string short_name:string send_message:InputBotInlineMessage = InputBotInlineResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [string](/type/string/) | Result ID |
-| short_name | [string](/type/string/) | Game short name |
-| send_message | [InputBotInlineMessage](/type/InputBotInlineMessage/) | Message to send when the result is selected |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор результата</td></tr><tr><td><strong>short_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:short_name] Краткое имя игры</td></tr><tr><td><strong>send_message</strong></td><td style="text-align: center;"><a href="/type/InputBotInlineMessage">InputBotInlineMessage</a></td><td>Сообщение, которое будет отправлено при выборе результата</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputBotInlineResult](/type/InputBotInlineResult/)

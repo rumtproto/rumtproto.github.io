@@ -1,35 +1,30 @@
 ---
-title: "inputQuickReplyShortcutId (конструктор)"
+title: "inputQuickReplyShortcutId"
 original: "https://core.telegram.org/constructor/inputQuickReplyShortcutId"
 section: ref
 kind: constructor
+description: "Выбирает шаблон быстрого ответа по его числовому идентификатору."
 layout: layout.njk
 ---
 
 # inputQuickReplyShortcutId
 
-*Конструктор из схемы TL.*
-
-> Selects a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts) by its numeric ID.
-
-## Определение TL
+Выбирает [шаблон быстрого ответа](/api/business/#quick-reply-shortcuts) по его числовому идентификатору.
 
 ```
 inputQuickReplyShortcutId#1190cf1 shortcut_id:int = InputQuickReplyShortcut;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| shortcut_id | [int](/type/int/) | Shortcut ID. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор шаблона.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputQuickReplyShortcut](/type/InputQuickReplyShortcut/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

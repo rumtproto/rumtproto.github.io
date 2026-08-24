@@ -1,18 +1,15 @@
 ---
-title: "account.getBusinessChatLinks (метод)"
+title: "account.getBusinessChatLinks"
 original: "https://core.telegram.org/method/account.getBusinessChatLinks"
 section: ref
 kind: method
+description: "Перечислить все созданные глубокие ссылки на бизнес-чат »."
 layout: layout.njk
 ---
 
 # account.getBusinessChatLinks
 
-*Метод из схемы TL.*
-
-> List all created [business chat deep links »](https://core.telegram.org/api/business#business-chat-links).
-
-## Определение TL
+Перечислить все созданные [глубокие ссылки на бизнес-чат »](/api/business/#business-chat-links).
 
 ```
 account.businessChatLinks#ec43a2d1 links:Vector<BusinessChatLink> chats:Vector<Chat> users:Vector<User> = account.BusinessChatLinks;
@@ -20,18 +17,18 @@ account.businessChatLinks#ec43a2d1 links:Vector<BusinessChatLink> chats:Vector<C
 account.getBusinessChatLinks#6f70dde1 = account.BusinessChatLinks;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [account.BusinessChatLinks](/type/account.BusinessChatLinks/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

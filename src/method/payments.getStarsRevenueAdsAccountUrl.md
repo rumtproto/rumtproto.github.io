@@ -1,18 +1,15 @@
 ---
-title: "payments.getStarsRevenueAdsAccountUrl (метод)"
+title: "payments.getStarsRevenueAdsAccountUrl"
 original: "https://core.telegram.org/method/payments.getStarsRevenueAdsAccountUrl"
 section: ref
 kind: method
+description: "Возвращает URL аккаунта рекламной платформы Telegram, который можно использовать для настройки рекламы канала или бота в peer с оплатой звёздами Telegram Stars, принадлежащими…"
 layout: layout.njk
 ---
 
 # payments.getStarsRevenueAdsAccountUrl
 
-*Метод из схемы TL.*
-
-> Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for channel/bot in `peer`, paid using the Telegram Stars owned by the specified `peer`, see [here »](https://core.telegram.org/api/stars#paying-for-ads) for more info.
-
-## Определение TL
+[@term:peer] Возвращает URL аккаунта рекламной платформы Telegram, который можно использовать для настройки рекламы канала или бота в `peer` с оплатой звёздами Telegram Stars, принадлежащими указанному `peer`; подробнее см. [здесь »](/api/stars/#paying-for-ads).
 
 ```
 payments.starsRevenueAdsAccountUrl#394e7f21 url:string = payments.StarsRevenueAdsAccountUrl;
@@ -20,27 +17,22 @@ payments.starsRevenueAdsAccountUrl#394e7f21 url:string = payments.StarsRevenueAd
 payments.getStarsRevenueAdsAccountUrl#d1d7efc5 peer:InputPeer = payments.StarsRevenueAdsAccountUrl;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Channel or bot that owns the stars. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Канал или бот, которому принадлежат звёзды.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.StarsRevenueAdsAccountUrl](/type/payments.StarsRevenueAdsAccountUrl/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

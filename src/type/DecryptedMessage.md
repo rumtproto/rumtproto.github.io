@@ -1,18 +1,15 @@
 ---
-title: "DecryptedMessage (тип)"
+title: "DecryptedMessage"
 original: "https://core.telegram.org/type/DecryptedMessage"
 section: ref
 kind: type
+description: "Объект описывает содержимое зашифрованного сообщения."
 layout: layout.njk
 ---
 
 # DecryptedMessage
 
-*Тип из схемы TL.*
-
-> Object describes the contents of an encrypted message.
-
-## Определение TL
+Объект описывает содержимое зашифрованного сообщения.
 
 ```
 ===8===
@@ -30,9 +27,6 @@ decryptedMessage#36b091de flags:# random_id:long ttl:int message:string media:fl
 decryptedMessage#91cc4674 flags:# no_webpage:flags.1?true silent:flags.5?true random_id:long ttl:int message:string media:flags.9?DecryptedMessageMedia entities:flags.7?Vector<MessageEntity> via_bot_name:flags.11?string reply_to_random_id:flags.3?long grouped_id:flags.17?long = DecryptedMessage;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [decryptedMessage](/constructor/decryptedMessage/) | Contents of an encrypted message. |
-| [decryptedMessageService](/constructor/decryptedMessageService/) | Contents of an encrypted service message. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/decryptedMessage">decryptedMessage</a></td><td>Содержимое зашифрованного сообщения.</td></tr><tr><td><a href="/constructor/decryptedMessageService">decryptedMessageService</a></td><td>Содержимое зашифрованного сервисного сообщения.</td></tr></tbody></table>

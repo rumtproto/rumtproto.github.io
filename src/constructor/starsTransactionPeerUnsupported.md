@@ -1,33 +1,30 @@
 ---
-title: "starsTransactionPeerUnsupported (конструктор)"
+title: "starsTransactionPeerUnsupported"
 original: "https://core.telegram.org/constructor/starsTransactionPeerUnsupported"
 section: ref
 kind: constructor
+description: "Описывает транзакцию Telegram Stars, которую невозможно описать средствами текущего слоя."
 layout: layout.njk
 ---
 
 # starsTransactionPeerUnsupported
 
-*Конструктор из схемы TL.*
-
-> Describes a [Telegram Star](https://core.telegram.org/api/stars) transaction that cannot be described using the current layer.
-
-## Определение TL
+Описывает транзакцию [Telegram Stars](/api/stars/), которую невозможно описать средствами текущего слоя.
 
 ```
 starsTransactionPeerUnsupported#95f2bfe4 = StarsTransactionPeer;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [StarsTransactionPeer](/type/StarsTransactionPeer/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

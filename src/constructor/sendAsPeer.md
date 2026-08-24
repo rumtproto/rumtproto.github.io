@@ -1,31 +1,24 @@
 ---
-title: "sendAsPeer (конструктор)"
+title: "sendAsPeer"
 original: "https://core.telegram.org/constructor/sendAsPeer"
 section: ref
 kind: constructor
+description: "Указывает пир, который может использоваться для отправки сообщений"
 layout: layout.njk
 ---
 
 # sendAsPeer
 
-*Конструктор из схемы TL.*
-
-> Indicates a peer that can be used to send messages
-
-## Определение TL
+Указывает пир, который может использоваться для отправки сообщений
 
 ```
 sendAsPeer#b81c7034 flags:# premium_required:flags.0?true peer:Peer = SendAsPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| premium_required | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether a Telegram Premium account is required to send messages as this peer |
-| peer | [Peer](/type/Peer/) | Peer |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>premium_required</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Требуется ли аккаунт Telegram Premium для отправки сообщений от имени этого пира</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SendAsPeer](/type/SendAsPeer/)

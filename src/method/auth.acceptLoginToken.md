@@ -1,20 +1,19 @@
 ---
-title: "auth.acceptLoginToken (метод)"
+title: "auth.acceptLoginToken"
 original: "https://core.telegram.org/method/auth.acceptLoginToken"
 section: ref
 kind: method
+description: "Принять токен входа по QR-коду, выполнив вход в приложении, которое его сгенерировало."
 layout: layout.njk
 ---
 
 # auth.acceptLoginToken
 
-*Метод из схемы TL.*
+Принять токен входа по QR-коду, выполнив вход в приложении, которое его сгенерировало.
 
-> Accept QR code login token, logging in the app that generated it.
-> Returns info about the new session.
-> For more info, see [login via QR code](https://core.telegram.org/api/qr-login).
+Возвращает информацию о новой сессии.
 
-## Определение TL
+Подробнее см. [вход по QR-коду](/api/qr-login/).
 
 ```
 authorization#ad01d61d flags:# current:flags.0?true official_app:flags.1?true password_pending:flags.2?true encrypted_requests_disabled:flags.3?true call_requests_disabled:flags.4?true unconfirmed:flags.5?true hash:long device_model:string platform:string system_version:string api_id:int app_name:string app_version:string date_created:int date_active:int ip:string country:string region:string = Authorization;
@@ -22,29 +21,22 @@ authorization#ad01d61d flags:# current:flags.0?true official_app:flags.1?true pa
 auth.acceptLoginToken#e894ad4d token:bytes = Authorization;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| token | [bytes](/type/bytes/) | Login token embedded in QR code, for more info, see [login via QR code](https://core.telegram.org/api/qr-login). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Токен входа, встроенный в QR-код; подробнее см. <a href="/api/qr-login">вход по QR-коду</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Authorization](/type/Authorization/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | AUTH_TOKEN_ALREADY_ACCEPTED | The specified auth token was already accepted. |
-| 400 | AUTH_TOKEN_EXCEPTION | An error occurred while importing the auth token. |
-| 400 | AUTH_TOKEN_EXPIRED | The authorization token has expired. |
-| 400 | AUTH_TOKEN_INVALIDX | The specified auth token is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>AUTH_TOKEN_ALREADY_ACCEPTED</td><td>Указанный токен авторизации уже был принят.</td></tr><tr><td>400</td><td>AUTH_TOKEN_EXCEPTION</td><td>При импорте токена авторизации произошла ошибка.</td></tr><tr><td>400</td><td>AUTH_TOKEN_EXPIRED</td><td>Срок действия токена авторизации истёк.</td></tr><tr><td>400</td><td>AUTH_TOKEN_INVALIDX</td><td>Указанный токен авторизации недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Login via QR code](https://core.telegram.org/api/qr-login)
+#### [Вход по QR-коду](/api/qr-login/)
 
-QR code login flow
+Вход по QR-коду

@@ -1,33 +1,30 @@
 ---
-title: "messages.reactionsNotModified (конструктор)"
+title: "messages.reactionsNotModified"
 original: "https://core.telegram.org/constructor/messages.reactionsNotModified"
 section: ref
 kind: constructor
+description: "Серверный список реакций на сообщения не изменился"
 layout: layout.njk
 ---
 
 # messages.reactionsNotModified
 
-*Конструктор из схемы TL.*
-
-> The server-side list of [message reactions](https://core.telegram.org/api/reactions) hasn't changed
-
-## Определение TL
+Серверный список [реакций на сообщения](/api/reactions/) не изменился
 
 ```
 messages.reactionsNotModified#b06fdbdf = messages.Reactions;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.Reactions](/type/messages.Reactions/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

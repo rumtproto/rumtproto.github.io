@@ -1,18 +1,15 @@
 ---
-title: "Reaction (тип)"
+title: "Reaction"
 original: "https://core.telegram.org/type/Reaction"
 section: ref
 kind: type
+description: "Реакция на сообщение"
 layout: layout.njk
 ---
 
 # Reaction
 
-*Тип из схемы TL.*
-
-> [Message reaction](https://core.telegram.org/api/reactions)
-
-## Определение TL
+[Реакция на сообщение](/api/reactions/)
 
 ```
 reactionEmpty#79f5d419 = Reaction;
@@ -21,17 +18,12 @@ reactionCustomEmoji#8935fc73 document_id:long = Reaction;
 reactionPaid#523da4eb = Reaction;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [reactionEmpty](/constructor/reactionEmpty/) | No reaction |
-| [reactionEmoji](/constructor/reactionEmoji/) | Normal emoji message reaction |
-| [reactionCustomEmoji](/constructor/reactionCustomEmoji/) | [Custom emoji](https://core.telegram.org/api/custom-emoji) message reaction |
-| [reactionPaid](/constructor/reactionPaid/) | Represents a [paid Telegram Star reaction »](https://core.telegram.org/api/reactions#paid-reactions). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/reactionEmpty">reactionEmpty</a></td><td>Без реакции</td></tr><tr><td><a href="/constructor/reactionEmoji">reactionEmoji</a></td><td>Обычная реакция на сообщение в виде эмодзи</td></tr><tr><td><a href="/constructor/reactionCustomEmoji">reactionCustomEmoji</a></td><td>Реакция на сообщение <a href="/api/custom-emoji">пользовательским эмодзи</a></td></tr><tr><td><a href="/constructor/reactionPaid">reactionPaid</a></td><td>Представляет <a href="/api/reactions#paid-reactions">платную реакцию за Telegram Stars »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

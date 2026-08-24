@@ -1,18 +1,15 @@
 ---
-title: "payments.StarsRevenueWithdrawalUrl (тип)"
+title: "payments.StarsRevenueWithdrawalUrl"
 original: "https://core.telegram.org/type/payments.StarsRevenueWithdrawalUrl"
 section: ref
 kind: type
+description: "Содержит URL, который следует использовать для вывода дохода в Telegram Stars."
 layout: layout.njk
 ---
 
 # payments.StarsRevenueWithdrawalUrl
 
-*Тип из схемы TL.*
-
-> Contains the URL to use to [withdraw Telegram Star revenue](https://core.telegram.org/api/stars#withdrawing-revenue).
-
-## Определение TL
+Содержит URL, который следует использовать для [вывода дохода в Telegram Stars](/api/stars/#withdrawing-revenue).
 
 ```
 payments.starsRevenueWithdrawalUrl#1dab80b7 url:string = payments.StarsRevenueWithdrawalUrl;
@@ -22,20 +19,16 @@ payments.starsRevenueWithdrawalUrl#1dab80b7 url:string = payments.StarsRevenueWi
 payments.getStarsRevenueWithdrawalUrl#2433dc92 flags:# ton:flags.0?true peer:InputPeer amount:flags.1?long password:InputCheckPasswordSRP = payments.StarsRevenueWithdrawalUrl;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.starsRevenueWithdrawalUrl](/constructor/payments.starsRevenueWithdrawalUrl/) | Contains the URL to use to [withdraw Telegram Star revenue](https://core.telegram.org/api/stars#withdrawing-revenue). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starsRevenueWithdrawalUrl">payments.starsRevenueWithdrawalUrl</a></td><td>Содержит URL, который следует использовать для <a href="/api/stars#withdrawing-revenue">вывода дохода в Telegram Stars</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getStarsRevenueWithdrawalUrl](/method/payments.getStarsRevenueWithdrawalUrl/) | Withdraw funds from a channel or bot's [star balance »](https://core.telegram.org/api/stars#withdrawing-revenue). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarsRevenueWithdrawalUrl">payments.getStarsRevenueWithdrawalUrl</a></td><td>Вывести средства с <a href="/api/stars#withdrawing-revenue">баланса Stars »</a> канала или бота.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

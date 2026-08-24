@@ -1,18 +1,15 @@
 ---
-title: "payments.upgradeStarGift (метод)"
+title: "payments.upgradeStarGift"
 original: "https://core.telegram.org/method/payments.upgradeStarGift"
 section: ref
 kind: method
+description: "Улучшить подарок до коллекционного подарка: может использоваться, только если улучшение уже оплачено отправителем подарка; подробнее о полном порядке действий (включая другой…"
 layout: layout.njk
 ---
 
 # payments.upgradeStarGift
 
-*Метод из схемы TL.*
-
-> Upgrade a [gift](https://core.telegram.org/api/gifts) to a [collectible gift](https://core.telegram.org/api/gifts#collectible-gifts): can only be used if the upgrade was already paid by the gift sender; see [here »](https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift) for more info on the full flow (including the different flow to use in case the upgrade was not paid by the gift sender).
-
-## Определение TL
+Улучшить [подарок](/api/gifts/) до [коллекционного подарка](/api/gifts/#collectible-gifts): может использоваться, только если улучшение уже оплачено отправителем подарка; подробнее о полном порядке действий (включая другой порядок на случай, когда улучшение не было оплачено отправителем подарка) [см. здесь »](/api/gifts/#upgrade-a-gift-to-a-collectible-gift).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,52 +23,40 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 payments.upgradeStarGift#aed6e4f5 flags:# keep_original_details:flags.0?true stargift:InputSavedStarGift = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| keep_original_details | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Set this flag to keep the original gift text, sender and receiver in the upgraded gift as a [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/) attribute. |
-| stargift | [InputSavedStarGift](/type/InputSavedStarGift/) | The gift to upgrade |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>keep_original_details</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Установите этот флаг, чтобы сохранить исходный текст подарка, отправителя и получателя в улучшенном подарке в виде атрибута <a href="/constructor/starGiftAttributeOriginalDetails">starGiftAttributeOriginalDetails</a>.</td></tr><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>Подарок для улучшения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over a business connection »
+### Этот метод можно вызывать через [бизнес-подключение »](/api/bots/connected-business-bots/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BUSINESS_CONNECTION_INVALID | The connection_id passed to the wrapping [invokeWithBusinessConnection](https://core.telegram.org/api/business) call is invalid. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | PAYMENT_REQUIRED | Payment is required for this action, see [here »](https://core.telegram.org/api/gifts) for more info. |
-| 400 | SAVED_ID_EMPTY | The passed inputSavedStarGiftChat.saved_id is empty. |
-| 400 | STARGIFT_ALREADY_CONVERTED | The specified star gift was already converted to Stars. |
-| 400 | STARGIFT_ALREADY_UPGRADED | The specified gift was already upgraded to a collectible gift. |
-| 400 | STARGIFT_UPGRADE_UNAVAILABLE | A received gift can only be upgraded to a collectible gift if the [messageActionStarGift](/constructor/messageActionStarGift/)/[savedStarGift](/constructor/savedStarGift/).can_upgrade flag is set. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BUSINESS_CONNECTION_INVALID</td><td>Значение <code>connection_id</code>, переданное в объемлющем вызове <a href="/api/business">invokeWithBusinessConnection</a>, недействительно.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>PAYMENT_REQUIRED</td><td>Для этого действия требуется оплата, подробнее см. <a href="/api/gifts">здесь&nbsp;»</a>.</td></tr><tr><td>400</td><td>SAVED_ID_EMPTY</td><td>Переданное значение inputSavedStarGiftChat.saved_id пусто.</td></tr><tr><td>400</td><td>STARGIFT_ALREADY_CONVERTED</td><td>Указанный звёздный подарок уже обменян на Stars.</td></tr><tr><td>400</td><td>STARGIFT_ALREADY_UPGRADED</td><td>Указанный подарок уже был улучшен до коллекционного.</td></tr><tr><td>400</td><td>STARGIFT_UPGRADE_UNAVAILABLE</td><td>Полученный подарок можно улучшить до коллекционного только в том случае, если установлен флаг <a href="/constructor/messageActionStarGift">messageActionStarGift</a>/<a href="/constructor/savedStarGift">savedStarGift</a>.<code>can_upgrade</code>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/)
 
-Info about the sender, receiver and message attached to the original [gift »](https://core.telegram.org/api/gifts), before it was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+Сведения об отправителе, получателе и сообщении, приложенных к исходному [подарку »](/api/gifts/), до того как он был превращён в [коллекционный подарок »](/api/gifts/#collectible-gifts).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.
 
 #### [messageActionStarGift](/constructor/messageActionStarGift/)
 
-You received a [gift, see here »](https://core.telegram.org/api/gifts) for more info.
+Вы получили [подарок, подробнее см. здесь »](/api/gifts/).
 
 #### [savedStarGift](/constructor/savedStarGift/)
 
-Represents a [gift](https://core.telegram.org/api/gifts) owned by a peer.
+Представляет [подарок](/api/gifts/), принадлежащий пиру.

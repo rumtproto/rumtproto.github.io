@@ -1,18 +1,15 @@
 ---
-title: "messages.AvailableEffects (тип)"
+title: "messages.AvailableEffects"
 original: "https://core.telegram.org/type/messages.AvailableEffects"
 section: ref
 kind: type
+description: "Полный список доступных анимированных эффектов для сообщений »."
 layout: layout.njk
 ---
 
 # messages.AvailableEffects
 
-*Тип из схемы TL.*
-
-> Full list of usable [animated message effects »](https://core.telegram.org/api/effects).
-
-## Определение TL
+Полный список доступных [анимированных эффектов для сообщений »](/api/effects/).
 
 ```
 messages.availableEffectsNotModified#d1ed9a5b = messages.AvailableEffects;
@@ -23,21 +20,16 @@ messages.availableEffects#bddb616e hash:int effects:Vector<AvailableEffect> docu
 messages.getAvailableEffects#dea20a39 hash:int = messages.AvailableEffects;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.availableEffectsNotModified](/constructor/messages.availableEffectsNotModified/) | The full list of usable [animated message effects »](https://core.telegram.org/api/effects) hasn't changed. |
-| [messages.availableEffects](/constructor/messages.availableEffects/) | The full list of usable [animated message effects »](https://core.telegram.org/api/effects). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.availableEffectsNotModified">messages.availableEffectsNotModified</a></td><td>Полный список доступных <a href="/api/effects">анимированных эффектов для сообщений »</a> не изменился.</td></tr><tr><td><a href="/constructor/messages.availableEffects">messages.availableEffects</a></td><td>Полный список доступных <a href="/api/effects">анимированных эффектов для сообщений »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getAvailableEffects](/method/messages.getAvailableEffects/) | Fetch the full list of usable [animated message effects »](https://core.telegram.org/api/effects). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getAvailableEffects">messages.getAvailableEffects</a></td><td>Получить полный список доступных <a href="/api/effects">анимированных эффектов для сообщений »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Animated message effects](https://core.telegram.org/api/effects)
+#### [Анимированные эффекты для сообщений](/api/effects/)
 
-Telegram allows adding spectacular animated effects to messages you send.
+Telegram позволяет добавлять к отправляемым сообщениям зрелищные анимированные эффекты.

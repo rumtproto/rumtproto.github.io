@@ -1,18 +1,15 @@
 ---
-title: "channels.exportMessageLink (метод)"
+title: "channels.exportMessageLink"
 original: "https://core.telegram.org/method/channels.exportMessageLink"
 section: ref
 kind: method
+description: "Получить ссылку и данные для встраивания сообщения в канале или супергруппе"
 layout: layout.njk
 ---
 
 # channels.exportMessageLink
 
-*Метод из схемы TL.*
-
-> Get link and embed info of a message in a [channel/supergroup](https://core.telegram.org/api/channel)
-
-## Определение TL
+Получить ссылку и данные для встраивания сообщения в [канале или супергруппе](/api/channel/)
 
 ```
 exportedMessageLink#5dab1af4 link:string html:string = ExportedMessageLink;
@@ -20,33 +17,22 @@ exportedMessageLink#5dab1af4 link:string html:string = ExportedMessageLink;
 channels.exportMessageLink#e63fadeb flags:# grouped:flags.0?true thread:flags.1?true channel:InputChannel id:int = ExportedMessageLink;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| grouped | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to include other grouped media (for albums) |
-| thread | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether to also include a thread ID, if available, inside of the link |
-| channel | [InputChannel](/type/InputChannel/) | Channel |
-| id | [int](/type/int/) | Message ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>grouped</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Включать ли остальные сгруппированные медиафайлы (для альбомов)</td></tr><tr><td><strong>thread</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Включать ли в ссылку также идентификатор ветки обсуждения, если он доступен</td></tr><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [ExportedMessageLink](/type/ExportedMessageLink/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

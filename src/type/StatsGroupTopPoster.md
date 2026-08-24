@@ -1,31 +1,26 @@
 ---
-title: "StatsGroupTopPoster (тип)"
+title: "StatsGroupTopPoster"
 original: "https://core.telegram.org/type/StatsGroupTopPoster"
 section: ref
 kind: type
+description: "Самый активный пользователь в супергруппе"
 layout: layout.njk
 ---
 
 # StatsGroupTopPoster
 
-*Тип из схемы TL.*
-
-> Most active user in a [supergroup](https://core.telegram.org/api/channel)
-
-## Определение TL
+Самый активный пользователь в [супергруппе](/api/channel/)
 
 ```
 statsGroupTopPoster#9d04af9b user_id:long messages:int avg_chars:int = StatsGroupTopPoster;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [statsGroupTopPoster](/constructor/statsGroupTopPoster/) | Information about an active user in a supergroup |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/statsGroupTopPoster">statsGroupTopPoster</a></td><td>Информация об активном пользователе супергруппы</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

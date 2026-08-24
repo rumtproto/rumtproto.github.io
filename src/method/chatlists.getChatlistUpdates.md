@@ -1,18 +1,15 @@
 ---
-title: "chatlists.getChatlistUpdates (метод)"
+title: "chatlists.getChatlistUpdates"
 original: "https://core.telegram.org/method/chatlists.getChatlistUpdates"
 section: ref
 kind: method
+description: "Получить новые чаты, связанные с импортированной глубокой ссылкой на папку чатов ». Вызывается не чаще одного раза в chatlist_update_period секунд (согласно соответствующему…"
 layout: layout.njk
 ---
 
 # chatlists.getChatlistUpdates
 
-*Метод из схемы TL.*
-
-> Fetch new chats associated with an imported [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). Must be invoked at most every `chatlist_update_period` seconds (as per the related [client configuration parameter »](https://core.telegram.org/api/config#chatlist-update-period)).
-
-## Определение TL
+Получить новые чаты, связанные с импортированной [глубокой ссылкой на папку чатов »](/api/links/#chat-folder-links). Вызывается не чаще одного раза в `chatlist_update_period` секунд (согласно соответствующему [параметру конфигурации клиента »](/api/config/#chatlist-update-period)).
 
 ```
 chatlists.chatlistUpdates#93bd878d missing_peers:Vector<Peer> chats:Vector<Chat> users:Vector<User> = chatlists.ChatlistUpdates;
@@ -20,32 +17,26 @@ chatlists.chatlistUpdates#93bd878d missing_peers:Vector<Peer> chats:Vector<Chat>
 chatlists.getChatlistUpdates#89419521 chatlist:InputChatlist = chatlists.ChatlistUpdates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chatlist | [InputChatlist](/type/InputChatlist/) | The folder |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chatlist</strong></td><td style="text-align: center;"><a href="/type/InputChatlist">InputChatlist</a></td><td>Папка</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [chatlists.ChatlistUpdates](/type/chatlists.ChatlistUpdates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | FILTER_ID_INVALID | The specified filter ID is invalid. |
-| 400 | FILTER_NOT_SUPPORTED | The specified filter cannot be used in this context. |
-| 400 | INPUT_CHATLIST_INVALID | The specified folder is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>FILTER_ID_INVALID</td><td>Указанный идентификатор фильтра недействителен.</td></tr><tr><td>400</td><td>FILTER_NOT_SUPPORTED</td><td>Указанный фильтр нельзя использовать в этом контексте.</td></tr><tr><td>400</td><td>INPUT_CHATLIST_INVALID</td><td>Указанная папка недействительна.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

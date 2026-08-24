@@ -1,18 +1,15 @@
 ---
-title: "account.changePhone (метод)"
+title: "account.changePhone"
 original: "https://core.telegram.org/method/account.changePhone"
 section: ref
 kind: method
+description: "Изменить номер телефона текущего аккаунта"
 layout: layout.njk
 ---
 
 # account.changePhone
 
-*Метод из схемы TL.*
-
-> Change the phone number of the current account
-
-## Определение TL
+Изменить номер телефона текущего аккаунта
 
 ```
 userEmpty#d3bc4b7a id:long = User;
@@ -21,32 +18,22 @@ user#31774388 flags:# self:flags.10?true contact:flags.11?true mutual_contact:fl
 account.changePhone#70c32edb phone_number:string phone_code_hash:string phone_code:string = User;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_number | [string](/type/string/) | New phone number |
-| phone_code_hash | [string](/type/string/) | Phone code hash received when calling [account.sendChangePhoneCode](/method/account.sendChangePhoneCode/) |
-| phone_code | [string](/type/string/) | Phone code received when calling [account.sendChangePhoneCode](/method/account.sendChangePhoneCode/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Новый номер телефона</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш телефонного кода, полученный при вызове <a href="/method/account.sendChangePhoneCode">account.sendChangePhoneCode</a></td></tr><tr><td><strong>phone_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Телефонный код, полученный при вызове <a href="/method/account.sendChangePhoneCode">account.sendChangePhoneCode</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [User](/type/User/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PHONE_CODE_EMPTY | phone_code is missing. |
-| 400 | PHONE_CODE_EXPIRED | The phone code you provided has expired. |
-| 400 | PHONE_CODE_INVALID | The provided phone code is invalid. |
-| 406 | PHONE_NUMBER_INVALID | The phone number is invalid. |
-| 400 | PHONE_NUMBER_OCCUPIED | The phone number is already in use. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PHONE_CODE_EMPTY</td><td>Отсутствует phone_code.</td></tr><tr><td>400</td><td>PHONE_CODE_EXPIRED</td><td>Срок действия указанного вами кода подтверждения истёк.</td></tr><tr><td>400</td><td>PHONE_CODE_INVALID</td><td>Указан недействительный телефонный код.</td></tr><tr><td>406</td><td>PHONE_NUMBER_INVALID</td><td>Недействительный номер телефона.</td></tr><tr><td>400</td><td>PHONE_NUMBER_OCCUPIED</td><td>Этот номер телефона уже используется.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [account.sendChangePhoneCode](/method/account.sendChangePhoneCode/)
 
-Verify a new phone number to associate to the current account
+Подтвердить новый номер телефона для привязки к текущему аккаунту

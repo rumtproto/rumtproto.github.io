@@ -1,18 +1,15 @@
 ---
-title: "Payments.ConnectedStarRefBots (тип)"
+title: "payments.ConnectedStarRefBots"
 original: "https://core.telegram.org/type/payments.ConnectedStarRefBots"
 section: ref
 kind: type
+description: "Активные партнёрства"
 layout: layout.njk
 ---
 
 # Payments.ConnectedStarRefBots
 
-*Тип из схемы TL.*
-
-> Active [affiliations](https://core.telegram.org/api/bots/referrals#becoming-an-affiliate)
-
-## Определение TL
+Активные [партнёрства](/api/bots/referrals/#becoming-an-affiliate)
 
 ```
 payments.connectedStarRefBots#98d5ea1d count:int connected_bots:Vector<ConnectedBotStarRef> users:Vector<User> = payments.ConnectedStarRefBots;
@@ -25,23 +22,16 @@ payments.connectStarRefBot#7ed5348a peer:InputPeer bot:InputUser = payments.Conn
 payments.editConnectedStarRefBot#e4fca4a3 flags:# revoked:flags.0?true peer:InputPeer link:string = payments.ConnectedStarRefBots;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.connectedStarRefBots](/constructor/payments.connectedStarRefBots/) | Active [affiliations](https://core.telegram.org/api/bots/referrals#becoming-an-affiliate) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.connectedStarRefBots">payments.connectedStarRefBots</a></td><td>Активные <a href="/api/bots/referrals#becoming-an-affiliate">партнёрства</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getConnectedStarRefBots](/method/payments.getConnectedStarRefBots/) | Fetch all affiliations we have created for a certain peer |
-| [payments.getConnectedStarRefBot](/method/payments.getConnectedStarRefBot/) | Fetch info about a specific [bot affiliation »](https://core.telegram.org/api/bots/referrals) |
-| [payments.connectStarRefBot](/method/payments.connectStarRefBot/) | Join a bot's [affiliate program, becoming an affiliate »](https://core.telegram.org/api/bots/referrals#becoming-an-affiliate) |
-| [payments.editConnectedStarRefBot](/method/payments.editConnectedStarRefBot/) | Leave a bot's [affiliate program »](https://core.telegram.org/api/bots/referrals#becoming-an-affiliate) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getConnectedStarRefBots">payments.getConnectedStarRefBots</a></td><td>Получить все партнёрства, созданные нами для определённого пира</td></tr><tr><td><a href="/method/payments.getConnectedStarRefBot">payments.getConnectedStarRefBot</a></td><td>Получить сведения о конкретном <a href="/api/bots/referrals">партнёрстве с ботом »</a></td></tr><tr><td><a href="/method/payments.connectStarRefBot">payments.connectStarRefBot</a></td><td>Присоединиться к <a href="/api/bots/referrals#becoming-an-affiliate">партнёрской программе бота, став партнёром »</a></td></tr><tr><td><a href="/method/payments.editConnectedStarRefBot">payments.editConnectedStarRefBot</a></td><td>Выйти из <a href="/api/bots/referrals#becoming-an-affiliate">партнёрской программы »</a> бота</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Affiliate programs](https://core.telegram.org/api/bots/referrals)
+#### [Партнёрские программы](/api/bots/referrals/)
 
-Developers can open affiliate programs for their mini app – allowing content creators, other mini app developers and any Telegram user to promote it and earn commissions on purchases made by people they referred.
+[@term:Mini App] Разработчики могут открывать партнёрские программы для своих mini app — это позволяет авторам контента, другим разработчикам mini app и любому пользователю Telegram продвигать приложение и получать комиссию с покупок, совершённых приведёнными ими людьми.

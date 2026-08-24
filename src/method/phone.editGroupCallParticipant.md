@@ -1,22 +1,21 @@
 ---
-title: "phone.editGroupCallParticipant (метод)"
+title: "phone.editGroupCallParticipant"
 original: "https://core.telegram.org/method/phone.editGroupCallParticipant"
 section: ref
 kind: method
+description: "Изменить сведения об участнике видеочата, трансляции или конференции без RTMP. Поле raise_hand поддерживается только в видеочатах и трансляциях; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # phone.editGroupCallParticipant
 
-*Метод из схемы TL.*
+Изменить сведения об участнике видеочата, трансляции или конференции без RTMP. Поле `raise_hand` поддерживается только в видеочатах и трансляциях; подробнее см. [здесь »](/api/group-calls/#managing-an-active-group-call).
 
-> Edit information about a participant of a non-RTMP video chat/livestream or conference. The `raise_hand` field is only supported in video chats/livestreams, see [here »](https://core.telegram.org/api/group-calls#managing-an-active-group-call) for more info.
-> Note: [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).N?[Bool](/type/Bool/) parameters can have three possible values:
-> -   If the [TL flag](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) is not set, the previous value will not be changed.
-> -   If the [TL flag](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) is set and contains a [boolTrue](/constructor/boolTrue/), the previous value will be overwritten to `true`.
-> -   If the [TL flag](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) is set and contains a [boolFalse](/constructor/boolFalse/), the previous value will be overwritten to `false`.
+Обратите внимание: параметры [flags](/mtproto/TL-combinators/#conditional-fields).N?[Bool](/type/Bool/) могут принимать три значения:
 
-## Определение TL
+-   Если [флаг TL](/mtproto/TL-combinators/#conditional-fields) не установлен, прежнее значение не изменится.
+-   Если [флаг TL](/mtproto/TL-combinators/#conditional-fields) установлен и содержит [boolTrue](/constructor/boolTrue/), прежнее значение будет заменено на `true`.
+-   Если [флаг TL](/mtproto/TL-combinators/#conditional-fields) установлен и содержит [boolFalse](/constructor/boolFalse/), прежнее значение будет заменено на `false`.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -30,64 +29,45 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.editGroupCallParticipant#a5273abf flags:# call:InputGroupCall participant:InputPeer muted:flags.0?Bool volume:flags.1?int raise_hand:flags.2?Bool video_stopped:flags.3?Bool video_paused:flags.4?Bool presentation_paused:flags.5?Bool = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| call | [InputGroupCall](/type/InputGroupCall/) | Non-RTMP video chat/livestream or conference |
-| participant | [InputPeer](/type/InputPeer/) | The group call participant (can also be the user itself) |
-| muted | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Bool](/type/Bool/) | Change the participant's mute state; allowing a forcibly muted participant to self-unmute does not immediately unmute them |
-| volume | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | New volume, between 1 and 20000; 10000 represents 100%. Without moderation rights, changing another participant's volume affects only local playback |
-| raise_hand | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[Bool](/type/Bool/) | Raise or lower hand; only supported in video chats/livestreams |
-| video_stopped | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Bool](/type/Bool/) | Start or stop the current user's video stream |
-| video_paused | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[Bool](/type/Bool/) | Pause or resume the current user's video stream |
-| presentation_paused | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[Bool](/type/Bool/) | Pause or resume the current user's presentation stream |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Видеочат, трансляция или конференция без RTMP</td></tr><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Участник группового звонка (может быть и сам пользователь)</td></tr><tr><td><strong>muted</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Bool">Bool</a></td><td>Изменить состояние отключения микрофона у участника; разрешение принудительно заглушённому участнику самостоятельно включить микрофон не включает его немедленно</td></tr><tr><td><strong>volume</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Новая громкость, от <code>1</code> до <code>20000</code>; значение <code>10000</code> соответствует 100%. Без прав модерации изменение громкости другого участника влияет только на локальное воспроизведение</td></tr><tr><td><strong>raise_hand</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Bool">Bool</a></td><td>Поднять или опустить руку; поддерживается только в видеочатах и трансляциях</td></tr><tr><td><strong>video_stopped</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Bool">Bool</a></td><td>Начать или остановить видеопоток текущего пользователя</td></tr><tr><td><strong>video_paused</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/Bool">Bool</a></td><td>Приостановить или возобновить видеопоток текущего пользователя</td></tr><tr><td><strong>presentation_paused</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/Bool">Bool</a></td><td>Приостановить или возобновить поток демонстрации экрана текущего пользователя</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | GROUPCALL_FORBIDDEN | The specified group call cannot be used in this context. |
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
-| 400 | PARTICIPANT_JOIN_MISSING | Trying to enable a presentation, when the user hasn't joined the Video Chat with [phone.joinGroupCall](/method/phone.joinGroupCall/). |
-| 400 | RAISE_HAND_FORBIDDEN | You cannot raise your hand. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
-| 400 | USER_VOLUME_INVALID | The specified user volume is invalid. |
-| 400 | VIDEO_PAUSE_FORBIDDEN | You cannot pause the video stream. |
-| 400 | VIDEO_STOP_FORBIDDEN | You cannot stop the video stream. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>GROUPCALL_FORBIDDEN</td><td>Указанный групповой звонок нельзя использовать в этом контексте.</td></tr><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr><tr><td>400</td><td>PARTICIPANT_JOIN_MISSING</td><td>Попытка включить презентацию, когда пользователь не присоединился к видеочату с помощью <a href="/method/phone.joinGroupCall">phone.joinGroupCall</a>.</td></tr><tr><td>400</td><td>RAISE_HAND_FORBIDDEN</td><td>Вы не можете поднять руку.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr><tr><td>400</td><td>USER_VOLUME_INVALID</td><td>Указанная громкость пользователя недопустима.</td></tr><tr><td>400</td><td>VIDEO_PAUSE_FORBIDDEN</td><td>Вы не можете приостановить видеопоток.</td></tr><tr><td>400</td><td>VIDEO_STOP_FORBIDDEN</td><td>Вы не можете остановить видеопоток.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
 #### [Bool](/type/Bool/)
 
-Boolean type.
+Логический тип.
 
 #### [boolTrue](/constructor/boolTrue/)
 
-The constructor can be interpreted as a **boolean**`true` value.
+Конструктор можно трактовать как **логическое** значение `true`.
 
 #### [boolFalse](/constructor/boolFalse/)
 
-Constructor may be interpreted as a **boolean**`false` value.
+Конструктор может интерпретироваться как **логическое**`false`-значение.
 
 #### [phone.joinGroupCall](/method/phone.joinGroupCall/)
 
-Join any [group call type »](https://core.telegram.org/api/group-calls#group-call-types). Conference calls additionally require the [E2E joining flow »](https://core.telegram.org/api/end-to-end/group-calls#joining-a-call).
+Присоединиться к групповому звонку [любого типа »](/api/group-calls/#group-call-types). Для конференций дополнительно требуется [сквозной сценарий подключения »](/api/end-to-end/group-calls/#joining-a-call).
 
-The `params` field must contain a join payload generated by the local tgcalls group-call engine. It contains a random non-zero audio `ssrc`, ICE `ufrag` and `pwd`, DTLS `fingerprints`, and, when publishing video, `ssrc-groups`.
+Поле `params` должно содержать полезную нагрузку для входа, сформированную локальным движком групповых звонков tgcalls. Она содержит случайный ненулевой аудио-`ssrc`, ICE-значения `ufrag` и `pwd`, DTLS-`fingerprints`, а при публикации видео — ещё и `ssrc-groups`.
 
-For example, a join payload without published video has the following shape:
+Например, полезная нагрузка для входа без публикации видео имеет следующий вид:
 
 ```
 {
@@ -102,4 +82,4 @@ For example, a join payload without published video has the following shape:
 }
 ```
 
-When joining an RTMP-mode call, generate the payload without published video source groups.
+При подключении к звонку в режиме RTMP формируйте полезную нагрузку без групп публикуемых видеоисточников.

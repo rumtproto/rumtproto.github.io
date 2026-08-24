@@ -1,18 +1,15 @@
 ---
-title: "channels.deleteChannel (метод)"
+title: "channels.deleteChannel"
 original: "https://core.telegram.org/method/channels.deleteChannel"
 section: ref
 kind: method
+description: "Удалить канал/супергруппу"
 layout: layout.njk
 ---
 
 # channels.deleteChannel
 
-*Метод из схемы TL.*
-
-> Delete a [channel/supergroup](https://core.telegram.org/api/channel)
-
-## Определение TL
+Удалить [канал/супергруппу](/api/channel/)
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,31 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.deleteChannel#c0111fe3 channel:InputChannel = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | [Channel/supergroup](https://core.telegram.org/api/channel) to delete |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Канал или супергруппа</a>, которую нужно удалить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 406 | CHANNEL_TOO_LARGE | Channel is too large to be deleted; this error is issued when trying to delete channels with more than 1000 members (subject to change). |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>406</td><td>CHANNEL_TOO_LARGE</td><td>Канал слишком велик для удаления; эта ошибка возвращается при попытке удалить канал более чем с 1000 участников (значение может измениться).</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

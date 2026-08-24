@@ -1,37 +1,30 @@
 ---
-title: "botVerification (конструктор)"
+title: "botVerification"
 original: "https://core.telegram.org/constructor/botVerification"
 section: ref
 kind: constructor
+description: "Описывает значок верификации бота »."
 layout: layout.njk
 ---
 
 # botVerification
 
-*Конструктор из схемы TL.*
-
-> Describes a [bot verification icon »](https://core.telegram.org/api/bots/verification).
-
-## Определение TL
+Описывает [значок верификации бота »](/api/bots/verification/).
 
 ```
 botVerification#f93cd45c bot_id:long icon:long description:string = BotVerification;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot_id | [long](/type/long/) | ID of the bot that verified this peer |
-| icon | [long](/type/long/) | Verification icon |
-| description | [string](/type/string/) | Verification description |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор бота, подтвердившего этот пир</td></tr><tr><td><strong>icon</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Значок верификации</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Описание верификации</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BotVerification](/type/BotVerification/)
 
-## Related pages
+### Связанные страницы
 
-#### [Third-party verification](https://core.telegram.org/api/bots/verification)
+#### [Сторонняя верификация](/api/bots/verification/)
 
-To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and reduce misinformation.
+Чтобы ещё повысить прозрачность в Telegram, официальные сторонние сервисы могут присваивать аккаунтам пользователей и чатам дополнительные значки верификации — чтобы предотвратить мошенничество и снизить распространение недостоверной информации.

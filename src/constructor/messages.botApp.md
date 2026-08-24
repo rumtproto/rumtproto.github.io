@@ -1,45 +1,36 @@
 ---
-title: "messages.botApp (конструктор)"
+title: "messages.botApp"
 original: "https://core.telegram.org/constructor/messages.botApp"
 section: ref
 kind: constructor
+description: "Содержит информацию о Mini App с прямой ссылкой"
 layout: layout.njk
 ---
 
 # messages.botApp
 
-*Конструктор из схемы TL.*
-
-> Contains information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps)
-
-## Определение TL
+[@term:Mini App] Содержит информацию о [Mini App с прямой ссылкой](/api/bots/webapps/#direct-link-mini-apps)
 
 ```
 messages.botApp#eb50adf5 flags:# inactive:flags.0?true request_write_access:flags.1?true has_settings:flags.2?true app:BotApp = messages.BotApp;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| inactive | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the web app was never used by the user, and confirmation must be asked from the user before opening it. |
-| request_write_access | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | The bot is asking permission to send messages to the user: if the user agrees, set the write_allowed flag when invoking [messages.requestAppWebView](/method/messages.requestAppWebView/). |
-| has_settings | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Deprecated flag, can be ignored. |
-| app | [BotApp](/type/BotApp/) | Bot app information |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>inactive</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Не использовалось ли веб-приложение пользователем ни разу, из-за чего перед его открытием необходимо запросить подтверждение.</td></tr><tr><td><strong>request_write_access</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Бот запрашивает разрешение отправлять сообщения пользователю: если пользователь согласен, установите флаг <code>write_allowed</code> при вызове <a href="/method/messages.requestAppWebView">messages.requestAppWebView</a>.</td></tr><tr><td><strong>has_settings</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Устаревший флаг, можно игнорировать.</td></tr><tr><td><strong>app</strong></td><td style="text-align: center;"><a href="/type/BotApp">BotApp</a></td><td>Сведения о приложении бота</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.BotApp](/type/messages.BotApp/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.requestAppWebView](/method/messages.requestAppWebView/)
 
-Open a [bot mini app](https://core.telegram.org/bots/webapps) from a [direct Mini App deep link](https://core.telegram.org/api/links#direct-mini-app-links), sending over user information after user confirmation.
+Открыть [mini app бота](https://core.telegram.org/bots/webapps) по [прямой ссылке на Mini App](/api/links/#direct-mini-app-links), передав сведения о пользователе после его подтверждения.
 
-After calling this method, until the user closes the webview, [messages.prolongWebView](/method/messages.prolongWebView/) must be called every 60 seconds.
+После вызова этого метода и до тех пор, пока пользователь не закроет webview, необходимо каждые 60 секунд вызывать [messages.prolongWebView](/method/messages.prolongWebView/).
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

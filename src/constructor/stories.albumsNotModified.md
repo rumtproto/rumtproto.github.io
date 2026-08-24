@@ -1,33 +1,30 @@
 ---
-title: "stories.albumsNotModified (конструктор)"
+title: "stories.albumsNotModified"
 original: "https://core.telegram.org/constructor/stories.albumsNotModified"
 section: ref
 kind: constructor
+description: "Список альбомов историй » не изменился."
 layout: layout.njk
 ---
 
 # stories.albumsNotModified
 
-*Конструктор из схемы TL.*
-
-> The [story album list »](https://core.telegram.org/api/stories#story-albums) hasn't changed.
-
-## Определение TL
+[Список альбомов историй »](/api/stories/#story-albums) не изменился.
 
 ```
 stories.albumsNotModified#564edaeb = stories.Albums;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [stories.Albums](/type/stories.Albums/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

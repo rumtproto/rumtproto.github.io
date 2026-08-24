@@ -1,27 +1,24 @@
 ---
-title: "updateSavedGifs (конструктор)"
+title: "updateSavedGifs"
 original: "https://core.telegram.org/constructor/updateSavedGifs"
 section: ref
 kind: constructor
+description: "Список сохранённых GIF изменился, клиенту следует запросить его заново с помощью messages.getSavedGifs"
 layout: layout.njk
 ---
 
 # updateSavedGifs
 
-*Конструктор из схемы TL.*
-
-> The saved gif list has changed, the client should refetch it using [messages.getSavedGifs](https://core.telegram.org/method/messages.getSavedGifs)
-
-## Определение TL
+Список сохранённых GIF изменился, клиенту следует запросить его заново с помощью [messages.getSavedGifs](/method/messages.getSavedGifs/)
 
 ```
 updateSavedGifs#9375341e = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

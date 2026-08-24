@@ -1,18 +1,15 @@
 ---
-title: "auth.requestPasswordRecovery (метод)"
+title: "auth.requestPasswordRecovery"
 original: "https://core.telegram.org/method/auth.requestPasswordRecovery"
 section: ref
 kind: method
+description: "Запросить код восстановления пароля двухфакторной аутентификации; доступно только для аккаунтов с настроенной почтой для восстановления."
 layout: layout.njk
 ---
 
 # auth.requestPasswordRecovery
 
-*Метод из схемы TL.*
-
-> Request recovery code of a [2FA password](/api/srp/), only for accounts with a [recovery email configured](https://core.telegram.org/api/srp/#email-verification).
-
-## Определение TL
+Запросить код восстановления [пароля двухфакторной аутентификации](/api/srp/); доступно только для аккаунтов с [настроенной почтой для восстановления](/api/srp/#email-verification).
 
 ```
 auth.passwordRecovery#137948a5 email_pattern:string = auth.PasswordRecovery;
@@ -20,25 +17,22 @@ auth.passwordRecovery#137948a5 email_pattern:string = auth.PasswordRecovery;
 auth.requestPasswordRecovery#d897bc66 = auth.PasswordRecovery;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [auth.PasswordRecovery](/type/auth.PasswordRecovery/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PASSWORD_EMPTY | The provided password is empty. |
-| 400 | PASSWORD_RECOVERY_NA | No email was set, can't recover password via email. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PASSWORD_EMPTY</td><td>Указанный пароль пуст.</td></tr><tr><td>400</td><td>PASSWORD_RECOVERY_NA</td><td>Адрес электронной почты не задан, восстановить пароль по электронной почте невозможно.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.

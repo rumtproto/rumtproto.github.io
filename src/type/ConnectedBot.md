@@ -1,31 +1,26 @@
 ---
-title: "ConnectedBot (тип)"
+title: "ConnectedBot"
 original: "https://core.telegram.org/type/ConnectedBot"
 section: ref
 kind: type
+description: "Содержит информацию о подключённом бизнес-боте »."
 layout: layout.njk
 ---
 
 # ConnectedBot
 
-*Тип из схемы TL.*
-
-> Contains info about a [connected business bot »](https://core.telegram.org/api/bots/connected-business-bots).
-
-## Определение TL
+Содержит информацию о [подключённом бизнес-боте »](/api/bots/connected-business-bots/).
 
 ```
 connectedBot#cd64636c flags:# bot_id:long recipients:BusinessBotRecipients rights:BusinessBotRights = ConnectedBot;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [connectedBot](/constructor/connectedBot/) | Contains info about a [connected business bot »](https://core.telegram.org/api/bots/connected-business-bots). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/connectedBot">connectedBot</a></td><td>Содержит информацию о <a href="/api/bots/connected-business-bots">подключённом бизнес-боте »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.

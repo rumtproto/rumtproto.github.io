@@ -1,62 +1,42 @@
 ---
-title: "sponsoredMessage (конструктор)"
+title: "sponsoredMessage"
 original: "https://core.telegram.org/constructor/sponsoredMessage"
 section: ref
 kind: constructor
+description: "Рекламное сообщение."
 layout: layout.njk
 ---
 
 # sponsoredMessage
 
-*Конструктор из схемы TL.*
-
-> A [sponsored message](https://core.telegram.org/api/sponsored-messages).
-
-## Определение TL
+[Рекламное сообщение](/api/sponsored-messages/).
 
 ```
 sponsoredMessage#7dbf8673 flags:# recommended:flags.5?true can_report:flags.12?true random_id:bytes url:string title:string message:string entities:flags.1?Vector<MessageEntity> photo:flags.6?Photo media:flags.14?MessageMedia color:flags.13?PeerColor button_text:string sponsor_info:flags.7?string additional_info:flags.8?string min_display_duration:flags.15?int max_display_duration:flags.15?int = SponsoredMessage;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| recommended | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether the message needs to be labeled as "recommended" instead of "sponsored" |
-| can_report | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[true](/constructor/true/) | Whether this message can be [reported as specified here »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages). |
-| random_id | [bytes](/type/bytes/) | Message ID. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| url | [string](/type/string/) | Contains the URL to open when the user clicks on the sponsored message. |
-| title | [string](/type/string/) | Contains the title of the sponsored message. |
-| message | [string](/type/string/) | Sponsored message |
-| entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text](https://core.telegram.org/api/entities) in message. |
-| photo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[Photo](/type/Photo/) | If set, contains a custom profile photo bubble that should be displayed for the sponsored message, like for messages sent in groups. |
-| media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[MessageMedia](/type/MessageMedia/) | If set, contains some media. |
-| color | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[PeerColor](/type/PeerColor/) | If set, the sponsored message should use the [message accent color »](https://core.telegram.org/api/colors) specified in color. |
-| button_text | [string](/type/string/) | Label of the sponsored message button. |
-| sponsor_info | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[string](/type/string/) | If set, contains additional information about the sponsor to be shown along with the message. |
-| additional_info | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[string](/type/string/) | If set, contains additional information about the sponsored message to be shown along with the message. |
-| min_display_duration | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[int](/type/int/) | For [sponsored messages to show on channel videos »](https://core.telegram.org/api/sponsored-messages#getting-sponsored-video-advertisements), allow the user to hide the ad only after the specified amount of seconds. |
-| max_display_duration | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[int](/type/int/) | For [sponsored messages to show on channel videos »](https://core.telegram.org/api/sponsored-messages#getting-sponsored-video-advertisements), autohide the ad after after the specified amount of seconds. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>recommended</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Следует ли пометить сообщение как «рекомендованное», а не как «рекламное»</td></tr><tr><td><strong>can_report</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true">true</a></td><td>Можно ли пожаловаться на это сообщение <a href="/api/sponsored-messages#reporting-sponsored-messages">так, как описано здесь »</a>.</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>[@term:random_id] Идентификатор сообщения. Подробнее о дедупликации по случайному идентификатору и о сопоставлении с updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Содержит URL, который следует открыть, когда пользователь нажимает на рекламное сообщение.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Содержит заголовок рекламного сообщения.</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Спонсируемое сообщение</td></tr><tr><td><strong>entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления для форматированного текста</a> в поле <code>message</code>.</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/Photo">Photo</a></td><td>Если установлено, содержит пользовательский кружок фотографии профиля, который следует отображать для рекламного сообщения, как для сообщений, отправленных в группах.</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/MessageMedia">MessageMedia</a></td><td>Если установлено, содержит некоторое медиа.</td></tr><tr><td><strong>color</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/PeerColor">PeerColor</a></td><td>Если установлено, рекламное сообщение должно использовать <a href="/api/colors">акцентный цвет сообщения »</a>, заданный в поле <code>color</code>.</td></tr><tr><td><strong>button_text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Надпись на кнопке рекламного сообщения.</td></tr><tr><td><strong>sponsor_info</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/string">string</a></td><td>Если установлено, содержит дополнительные сведения о рекламодателе, которые следует показать вместе с сообщением.</td></tr><tr><td><strong>additional_info</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/string">string</a></td><td>Если установлено, содержит дополнительные сведения о рекламном сообщении, которые следует показать вместе с сообщением.</td></tr><tr><td><strong>min_display_duration</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/int">int</a></td><td>Для <a href="/api/sponsored-messages#getting-sponsored-video-advertisements">рекламных сообщений, показываемых поверх видео в каналах »</a>, — разрешать пользователю скрыть рекламу только по прошествии указанного числа секунд.</td></tr><tr><td><strong>max_display_duration</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/int">int</a></td><td>Для <a href="/api/sponsored-messages#getting-sponsored-video-advertisements">рекламных сообщений, показываемых поверх видео в каналах »</a>, — автоматически скрывать рекламу по прошествии указанного числа секунд.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SponsoredMessage](/type/SponsoredMessage/)
 
-## Related pages
+### Связанные страницы
 
-#### [Sponsored messages](https://core.telegram.org/api/sponsored-messages)
+#### [Спонсируемые сообщения](/api/sponsored-messages/)
 
-How clients should fetch, display and interact with sponsored messages.
+Как клиентам получать, показывать рекламные сообщения и взаимодействовать с ними.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!

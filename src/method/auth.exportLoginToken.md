@@ -1,20 +1,18 @@
 ---
-title: "auth.exportLoginToken (метод)"
+title: "auth.exportLoginToken"
 original: "https://core.telegram.org/method/auth.exportLoginToken"
 section: ref
 kind: method
+description: "Сгенерировать токен входа для входа по QR-коду."
 layout: layout.njk
 ---
 
 # auth.exportLoginToken
 
-*Метод из схемы TL.*
+Сгенерировать токен входа для [входа по QR-коду](/api/qr-login/).  
+Сгенерированный токен входа следует закодировать в base64url и показать в QR-коде в виде `tg://login?token=base64encodedtoken` — [глубокой ссылки »](/api/links/#qr-code-login-links).
 
-> Generate a login token, for [login via QR code](https://core.telegram.org/api/qr-login).  
-> The generated login token should be encoded using base64url, then shown as a `tg://login?token=base64encodedtoken` [deep link »](https://core.telegram.org/api/links#qr-code-login-links) in the QR code.
-> For more info, see [login via QR code](https://core.telegram.org/api/qr-login).
-
-## Определение TL
+Подробнее см. [вход по QR-коду](/api/qr-login/).
 
 ```
 auth.loginToken#629f1980 expires:int token:bytes = auth.LoginToken;
@@ -24,36 +22,28 @@ auth.loginTokenSuccess#390d5c5e authorization:auth.Authorization = auth.LoginTok
 auth.exportLoginToken#b7e085fe api_id:int api_hash:string except_ids:Vector<long> = auth.LoginToken;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| api_id | [int](/type/int/) | Application identifier (see. [App configuration](https://core.telegram.org/myapp)) |
-| api_hash | [string](/type/string/) | Application identifier hash (see. [App configuration](https://core.telegram.org/myapp)) |
-| except_ids | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | List of already logged-in user IDs, to prevent logging in twice with the same user |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор приложения (см. <a href="/myapp">Настройка приложения</a>)</td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш идентификатора приложения (см. <a href="/myapp">Настройка приложения</a>)</td></tr><tr><td><strong>except_ids</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Список идентификаторов уже вошедших пользователей — чтобы не выполнить вход дважды под одним и тем же пользователем</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.LoginToken](/type/auth.LoginToken/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | API_ID_INVALID | API ID invalid. |
-| 400 | API_ID_PUBLISHED_FLOOD | This API id was published somewhere, you can't use it now. |
-| 500 | AUTH_RESTART | Restart the authorization process. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>API_ID_INVALID</td><td>Недействительный API ID.</td></tr><tr><td>400</td><td>API_ID_PUBLISHED_FLOOD</td><td>Этот API id был где-то опубликован, использовать его больше нельзя.</td></tr><tr><td>500</td><td>AUTH_RESTART</td><td>Начать процесс авторизации заново.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Login via QR code](https://core.telegram.org/api/qr-login)
+#### [Вход по QR-коду](/api/qr-login/)
 
-QR code login flow
+Вход по QR-коду
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

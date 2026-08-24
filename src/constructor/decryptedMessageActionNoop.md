@@ -1,28 +1,25 @@
 ---
-title: "decryptedMessageActionNoop (конструктор)"
+title: "decryptedMessageActionNoop"
 original: "https://core.telegram.org/constructor/decryptedMessageActionNoop"
 section: ref
 kind: constructor
+description: "Действие NOOP"
 layout: layout.njk
 ---
 
 # decryptedMessageActionNoop
 
-*Конструктор из схемы TL.*
-
-> NOOP action
-
-## Определение TL
+Действие NOOP
 
 ```
 ===20===
 decryptedMessageActionNoop#a82fdd63 = DecryptedMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [DecryptedMessageAction](/type/DecryptedMessageAction/)

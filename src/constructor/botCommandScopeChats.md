@@ -1,33 +1,30 @@
 ---
-title: "botCommandScopeChats (конструктор)"
+title: "botCommandScopeChats"
 original: "https://core.telegram.org/constructor/botCommandScopeChats"
 section: ref
 kind: constructor
+description: "Указанные команды бота будут действовать во всех группах и супергруппах."
 layout: layout.njk
 ---
 
 # botCommandScopeChats
 
-*Конструктор из схемы TL.*
-
-> The specified bot commands will be valid in all [groups and supergroups](https://core.telegram.org/api/channel).
-
-## Определение TL
+Указанные команды бота будут действовать во всех [группах и супергруппах](/api/channel/).
 
 ```
 botCommandScopeChats#6fe1a881 = BotCommandScope;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [BotCommandScope](/type/BotCommandScope/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

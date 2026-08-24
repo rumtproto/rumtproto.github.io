@@ -1,80 +1,54 @@
 ---
-title: "peerSettings (конструктор)"
+title: "peerSettings"
 original: "https://core.telegram.org/constructor/peerSettings"
 section: ref
 kind: constructor
+description: "Список действий, доступных при взаимодействии с этим пользователем; они показываются как предлагаемые действия в панели действий чата », подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # peerSettings
 
-*Конструктор из схемы TL.*
-
-> List of actions that are possible when interacting with this user, to be shown as suggested actions in the [chat action bar »](https://core.telegram.org/api/action-bar), see [here »](https://core.telegram.org/api/action-bar) for more info.
-
-## Определение TL
+Список действий, доступных при взаимодействии с этим пользователем; они показываются как предлагаемые действия в [панели действий чата »](/api/action-bar/), подробнее [см. здесь »](/api/action-bar/).
 
 ```
 peerSettings#f47741f7 flags:# report_spam:flags.0?true add_contact:flags.1?true block_contact:flags.2?true share_contact:flags.3?true need_contacts_exception:flags.4?true report_geo:flags.5?true autoarchived:flags.7?true invite_members:flags.8?true request_chat_broadcast:flags.10?true business_bot_paused:flags.11?true business_bot_can_reply:flags.12?true geo_distance:flags.6?int request_chat_title:flags.9?string request_chat_date:flags.9?int business_bot_id:flags.13?long business_bot_manage_url:flags.13?string charge_paid_message_stars:flags.14?long registration_month:flags.15?string phone_country:flags.16?string name_change_date:flags.17?int photo_change_date:flags.18?int = PeerSettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| report_spam | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether we can still report the user for spam |
-| add_contact | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether we can add the user as contact |
-| block_contact | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether we can block the user |
-| share_contact | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether we can share the user's contact |
-| need_contacts_exception | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Whether a special exception for contacts is needed |
-| report_geo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether we can report a geogroup as irrelevant for this location |
-| autoarchived | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | Whether this peer was automatically archived according to [privacy settings](/constructor/globalPrivacySettings/) and can be unarchived |
-| invite_members | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[true](/constructor/true/) | If set, this is a recently created group chat to which new members can be invited |
-| request_chat_broadcast | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[true](/constructor/true/) | This flag is set if request_chat_title and request_chat_date fields are set and the [join request »](https://core.telegram.org/api/invites#join-requests) is related to a channel (otherwise if only the request fields are set, the [join request »](https://core.telegram.org/api/invites#join-requests) is related to a chat). |
-| business_bot_paused | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[true](/constructor/true/) | This flag is set if both business_bot_id and business_bot_manage_url are set and all [connected business bots »](https://core.telegram.org/api/bots/connected-business-bots) were paused in this chat using [account.toggleConnectedBotPaused »](/method/account.toggleConnectedBotPaused/). |
-| business_bot_can_reply | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[true](/constructor/true/) | This flag is set if both business_bot_id and business_bot_manage_url are set and [connected business bots »](https://core.telegram.org/api/bots/connected-business-bots) can reply to messages in this chat, as specified by the settings during [initial configuration](https://core.telegram.org/api/bots/connected-business-bots). |
-| geo_distance | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[int](/type/int/) | Distance in meters between us and this peer |
-| request_chat_title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[string](/type/string/) | If set, this is a private chat with an administrator of a chat or channel to which the user sent a join request, and this field contains the chat/channel's title. |
-| request_chat_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[int](/type/int/) | If set, this is a private chat with an administrator of a chat or channel to which the user sent a join request, and this field contains the timestamp when the [join request »](https://core.telegram.org/api/invites#join-requests) was sent. |
-| business_bot_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[long](/type/long/) | Contains the ID of the [business bot »](https://core.telegram.org/api/bots/connected-business-bots) managing this chat, used to display info about the bot in the action bar. |
-| business_bot_manage_url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[string](/type/string/) | Contains a [deep link »](https://core.telegram.org/api/links), used to open a management menu in the business bot. This flag is set if and only if business_bot_id is set. |
-| charge_paid_message_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[long](/type/long/) | All users that must [pay us »](https://core.telegram.org/api/paid-messages) to send us private messages will have this flag set only for us, containing the amount of required stars, see [here »](https://core.telegram.org/api/paid-messages) for more info on paid messages. |
-| registration_month | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[string](/type/string/) | Used to display the user's registration year and month, the string is in MM.YYYY format, where MM is the registration month (1-12), and YYYY is the registration year. |
-| phone_country | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).16?[string](/type/string/) | The country code of the user's phone number. |
-| name_change_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[int](/type/int/) | When was the user's name last changed. |
-| photo_change_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[int](/type/int/) | When was the user's photo last changed. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>report_spam</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Можем ли мы ещё пожаловаться на пользователя за спам</td></tr><tr><td><strong>add_contact</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Можем ли мы добавить пользователя в контакты</td></tr><tr><td><strong>block_contact</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Можем ли мы заблокировать пользователя</td></tr><tr><td><strong>share_contact</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Можем ли мы поделиться контактом пользователя</td></tr><tr><td><strong>need_contacts_exception</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Требуется ли особое исключение для контактов</td></tr><tr><td><strong>report_geo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Можем ли мы пожаловаться на геогруппу как нерелевантную для этого местоположения</td></tr><tr><td><strong>autoarchived</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Был ли этот пир автоматически архивирован в соответствии с <a href="/constructor/globalPrivacySettings">настройками приватности</a> и можно ли его разархивировать</td></tr><tr><td><strong>invite_members</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true">true</a></td><td>Если установлено, это недавно созданный групповой чат, в который можно приглашать новых участников</td></tr><tr><td><strong>request_chat_broadcast</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true">true</a></td><td>Этот флаг устанавливается, если заданы поля <code>request_chat_title</code> и <code>request_chat_date</code> и <a href="/api/invites#join-requests">заявка на вступление »</a> относится к каналу (если же заданы только поля заявки, <a href="/api/invites#join-requests">заявка на вступление »</a> относится к чату).</td></tr><tr><td><strong>business_bot_paused</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true">true</a></td><td>Этот флаг устанавливается, если заданы и <code>business_bot_id</code>, и <code>business_bot_manage_url</code> и все <a href="/api/bots/connected-business-bots">подключённые бизнес-боты »</a> были приостановлены в этом чате с помощью <a href="/method/account.toggleConnectedBotPaused">account.toggleConnectedBotPaused »</a>.</td></tr><tr><td><strong>business_bot_can_reply</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true">true</a></td><td>Этот флаг устанавливается, если заданы и <code>business_bot_id</code>, и <code>business_bot_manage_url</code> и <a href="/api/bots/connected-business-bots">подключённые бизнес-боты »</a> могут отвечать на сообщения в этом чате в соответствии с настройками, заданными при <a href="/api/bots/connected-business-bots">первоначальной настройке</a>.</td></tr><tr><td><strong>geo_distance</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/int">int</a></td><td>Расстояние в метрах между нами и этим пиром</td></tr><tr><td><strong>request_chat_title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/string">string</a></td><td>Если установлено, это личный чат с администратором чата или канала, в который пользователь отправил заявку на вступление, и это поле содержит название чата или канала.</td></tr><tr><td><strong>request_chat_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/int">int</a></td><td>Если установлено, это личный чат с администратором чата или канала, в который пользователь отправил заявку на вступление, и это поле содержит время отправки <a href="/api/invites#join-requests">заявки на вступление »</a>.</td></tr><tr><td><strong>business_bot_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/long">long</a></td><td>Содержит идентификатор <a href="/api/bots/connected-business-bots">бизнес-бота »</a>, управляющего этим чатом; используется для показа сведений о боте в панели действий.</td></tr><tr><td><strong>business_bot_manage_url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/string">string</a></td><td>Содержит <a href="/api/links">глубокую ссылку »</a>, открывающую меню управления в бизнес-боте. Этот флаг установлен тогда и только тогда, когда задано поле <code>business_bot_id</code>.</td></tr><tr><td><strong>charge_paid_message_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/long">long</a></td><td>У всех пользователей, которые обязаны <a href="/api/paid-messages">платить <em>нам</em> »</a> за отправку нам личных сообщений, этот флаг будет установлен <em>только для нас</em> и будет содержать необходимое количество звёзд; подробнее о платных сообщениях см. <a href="/api/paid-messages">здесь »</a>.</td></tr><tr><td><strong>registration_month</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/string">string</a></td><td>Используется для отображения года и месяца регистрации пользователя; строка имеет формат <code>MM.YYYY</code>, где <code>MM</code> — месяц регистрации (<code>1-12</code>), а <code>YYYY</code> — год регистрации.</td></tr><tr><td><strong>phone_country</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/type/string">string</a></td><td>Код страны для номера телефона пользователя.</td></tr><tr><td><strong>name_change_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/int">int</a></td><td>Когда имя пользователя менялось в последний раз.</td></tr><tr><td><strong>photo_change_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/int">int</a></td><td>Когда фотография пользователя менялась в последний раз.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PeerSettings](/type/PeerSettings/)
 
-## Related pages
+### Связанные страницы
 
 #### [globalPrivacySettings](/constructor/globalPrivacySettings/)
 
-Global privacy settings
+Глобальные настройки приватности
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
 #### [account.toggleConnectedBotPaused](/method/account.toggleConnectedBotPaused/)
 
-Pause or unpause a specific chat, temporarily disconnecting it from all [business bots »](https://core.telegram.org/api/bots/connected-business-bots).
+Приостановить или возобновить конкретный чат, временно отключив его от всех [бизнес-ботов »](/api/bots/connected-business-bots/).
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Paid messages](https://core.telegram.org/api/paid-messages)
+#### [Платные сообщения](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.
+Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.
 
-#### [Action bar](https://core.telegram.org/api/action-bar)
+#### [Панель действий](/api/action-bar/)
 
-Sometimes, when interacting with Telegram users via private or secret chats, an action bar must be shown on top of the chat, offering convenient action buttons or notices regarding the user.
+Иногда при взаимодействии с пользователями Telegram через личные или секретные чаты вверху чата необходимо показать панель действий, предлагающую удобные кнопки или уведомления об этом пользователе.

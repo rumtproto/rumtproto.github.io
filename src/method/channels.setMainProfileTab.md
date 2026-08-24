@@ -1,18 +1,15 @@
 ---
-title: "channels.setMainProfileTab (метод)"
+title: "channels.setMainProfileTab"
 original: "https://core.telegram.org/method/channels.setMainProfileTab"
 section: ref
 kind: method
+description: "Изменяет основную вкладку профиля канала, подробнее здесь »."
 layout: layout.njk
 ---
 
 # channels.setMainProfileTab
 
-*Метод из схемы TL.*
-
-> Changes the main profile tab of a channel, see [here »](https://core.telegram.org/api/profile#tabs) for more info.
-
-## Определение TL
+Изменяет основную вкладку профиля канала, подробнее [здесь »](/api/profile/#tabs).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,27 +18,22 @@ boolTrue#997275b5 = Bool;
 channels.setMainProfileTab#3583fcb1 channel:InputChannel tab:ProfileTab = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The channel. |
-| tab | [ProfileTab](/type/ProfileTab/) | The tab to set as main tab. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал.</td></tr><tr><td><strong>tab</strong></td><td style="text-align: center;"><a href="/type/ProfileTab">ProfileTab</a></td><td>Вкладка, которую нужно сделать главной.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

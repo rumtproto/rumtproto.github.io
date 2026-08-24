@@ -1,38 +1,30 @@
 ---
-title: "updatePeerBlocked (конструктор)"
+title: "updatePeerBlocked"
 original: "https://core.telegram.org/constructor/updatePeerBlocked"
 section: ref
 kind: constructor
+description: "Мы заблокировали пира; подробнее о списках заблокированных см. здесь »."
 layout: layout.njk
 ---
 
 # updatePeerBlocked
 
-*Конструктор из схемы TL.*
-
-> We blocked a peer, see [here »](https://core.telegram.org/api/block) for more info on blocklists.
-
-## Определение TL
+Мы заблокировали пира; подробнее о списках заблокированных см. [здесь »](/api/block/).
 
 ```
 updatePeerBlocked#ebe07752 flags:# blocked:flags.0?true blocked_my_stories_from:flags.1?true peer_id:Peer = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| blocked | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the peer was blocked or unblocked |
-| blocked_my_stories_from | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the peer was added/removed to/from the story blocklist; if not set, this update affects the main blocklist, see [here »](https://core.telegram.org/api/block) for more info. |
-| peer_id | [Peer](/type/Peer/) | The (un)blocked peer |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>blocked</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Был ли пир заблокирован или разблокирован</td></tr><tr><td><strong>blocked_my_stories_from</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Был ли пир добавлен в список заблокированных для историй или удалён из него; если не установлено, обновление относится к основному списку блокировок, подробнее <a href="/api/block">см. здесь »</a>.</td></tr><tr><td><strong>peer_id</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>Заблокированный или разблокированный пир</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Blocked users](https://core.telegram.org/api/block)
+#### [Заблокированные пользователи](/api/block/)
 
-Working with the blocklist.
+Работа со списком заблокированных.

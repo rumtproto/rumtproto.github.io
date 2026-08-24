@@ -1,19 +1,17 @@
 ---
-title: "messages.sendReaction (метод)"
+title: "messages.sendReaction"
 original: "https://core.telegram.org/method/messages.sendReaction"
 section: ref
 kind: method
+description: "Поставить реакцию на сообщение."
 layout: layout.njk
 ---
 
 # messages.sendReaction
 
-*Метод из схемы TL.*
+Поставить реакцию на сообщение.
 
-> React to message.
-> Starting from layer 159, the reaction will be sent from the peer specified using [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/).
-
-## Определение TL
+Начиная со слоя 159 реакция отправляется от имени пира, указанного через [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -27,60 +25,38 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.sendReaction#d30d78d4 flags:# big:flags.1?true add_to_recent:flags.2?true peer:InputPeer msg_id:int reaction:flags.0?Vector<Reaction> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| big | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether a bigger and longer reaction should be shown |
-| add_to_recent | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether to add this reaction to the [recent reactions list »](https://core.telegram.org/api/reactions#recent-reactions). |
-| peer | [InputPeer](/type/InputPeer/) | Peer |
-| msg_id | [int](/type/int/) | Message ID to react to |
-| reaction | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Vector](https://core.telegram.org/type/Vector%20t)<[Reaction](/type/Reaction/)> | A list of reactions (doesn't accept [reactionPaid](/constructor/reactionPaid/) constructors, use [messages.sendPaidReaction](/method/messages.sendPaidReaction/) to send paid reactions, instead). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>big</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Следует ли показать более крупную и длительную анимацию реакции</td></tr><tr><td><strong>add_to_recent</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Добавлять ли эту реакцию в <a href="/api/reactions#recent-reactions">список недавних реакций »</a>.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения, на которое нужно поставить реакцию</td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Reaction">Reaction</a>&gt;</td><td>Список реакций (конструкторы <a href="/constructor/reactionPaid">reactionPaid</a> не принимаются, для отправки платных реакций используйте <a href="/method/messages.sendPaidReaction">messages.sendPaidReaction</a>).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | CUSTOM_REACTIONS_TOO_MANY | Too many custom reactions were specified. |
-| 400 | DOCUMENT_INVALID | The specified document is invalid. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | MESSAGE_NOT_MODIFIED | The provided message data is identical to the previous message data, the message wasn't modified. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 403 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
-| 400 | REACTIONS_TOO_MANY | The message already has exactly reactions_uniq_max reaction emojis, you can't react with a new emoji, see [the docs for more info »](https://core.telegram.org/api/config#client-configuration). |
-| 400 | REACTION_EMPTY | Empty reaction provided. |
-| 400 | REACTION_INVALID | The specified reaction is invalid. |
-| 403 | USER_BANNED_IN_CHANNEL | You're banned from sending messages in supergroups/channels. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>CUSTOM_REACTIONS_TOO_MANY</td><td>Указано слишком много пользовательских реакций.</td></tr><tr><td>400</td><td>DOCUMENT_INVALID</td><td>Указанный документ недействителен.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>MESSAGE_NOT_MODIFIED</td><td>Переданные данные сообщения совпадают с прежними, сообщение не было изменено.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>403</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr><tr><td>400</td><td>REACTIONS_TOO_MANY</td><td>К сообщению уже добавлено ровно <code>reactions_uniq_max</code> эмодзи-реакций, поэтому отреагировать новым эмодзи нельзя, <a href="/api/config#client-configuration">подробнее см. в документации&nbsp;»</a>.</td></tr><tr><td>400</td><td>REACTION_EMPTY</td><td>Передана пустая реакция.</td></tr><tr><td>400</td><td>REACTION_INVALID</td><td>Указанная реакция недействительна.</td></tr><tr><td>403</td><td>USER_BANNED_IN_CHANNEL</td><td>Вам запрещено отправлять сообщения в супергруппах и каналах.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.
 
 #### [reactionPaid](/constructor/reactionPaid/)
 
-Represents a [paid Telegram Star reaction »](https://core.telegram.org/api/reactions#paid-reactions).
+Представляет [платную реакцию за Telegram Stars »](/api/reactions/#paid-reactions).
 
 #### [messages.sendPaidReaction](/method/messages.sendPaidReaction/)
 
-Sends one or more [paid Telegram Star reactions »](https://core.telegram.org/api/reactions#paid-reactions), transferring [Telegram Stars »](https://core.telegram.org/api/stars) to a channel's balance.
+Отправляет одну или несколько [платных реакций Telegram Stars »](/api/reactions/#paid-reactions), переводя [Telegram Stars »](/api/stars/) на баланс канала.
 
 #### [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/)
 
-Change the default peer that should be used when sending messages, reactions, poll votes to a specific group
+Изменить пир по умолчанию, используемый при отправке сообщений, реакций и голосов в опросах в определённую группу
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

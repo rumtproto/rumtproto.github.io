@@ -1,18 +1,15 @@
 ---
-title: "stories.startLive (метод)"
+title: "stories.startLive"
 original: "https://core.telegram.org/method/stories.startLive"
 section: ref
 kind: method
+description: "Начать прямую историю, при необходимости в режиме трансляции RTMP; полный сценарий см. здесь »."
 layout: layout.njk
 ---
 
 # stories.startLive
 
-*Метод из схемы TL.*
-
-> Start a live story, optionally using RTMP livestream mode, see [here »](https://core.telegram.org/api/group-calls#live-stories) for the full flow.
-
-## Определение TL
+Начать прямую историю, при необходимости в режиме трансляции RTMP; полный сценарий см. [здесь »](/api/group-calls/#live-stories).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,51 +23,34 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 stories.startLive#d069ccde flags:# pinned:flags.2?true noforwards:flags.4?true rtmp_stream:flags.5?true peer:InputPeer caption:flags.0?string entities:flags.1?Vector<MessageEntity> privacy_rules:Vector<InputPrivacyRule> random_id:long messages_enabled:flags.6?Bool send_paid_messages_stars:flags.7?long = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| pinned | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether to pin the live story on the peer's profile |
-| noforwards | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Whether viewers must be prevented from forwarding or saving the live story |
-| rtmp_stream | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Create the live story in [RTMP livestream mode »](https://core.telegram.org/api/group-calls#stream-mode), where one external streamer publishes all audio and video |
-| peer | [InputPeer](/type/InputPeer/) | User, supergroup or channel that will own the live story; basic groups cannot post live stories |
-| caption | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Live story caption |
-| entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text](https://core.telegram.org/api/entities) |
-| privacy_rules | [Vector](https://core.telegram.org/type/Vector%20t)<[InputPrivacyRule](/type/InputPrivacyRule/)> | Privacy rules defining who can view the live story |
-| random_id | [long](/type/long/) | Client-generated random ID used to prevent duplicate live stories. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| messages_enabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[Bool](/type/Bool/) | Whether the [in-call message overlay »](https://core.telegram.org/api/group-calls#in-call-messages) should be enabled |
-| send_paid_messages_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[long](/type/long/) | Minimum Telegram Stars donation required from users other than the live story owner for each comment; the owner may always comment without donating, and 0 allows free comments for everyone |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>pinned</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Закреплять ли прямую историю в профиле пира</td></tr><tr><td><strong>noforwards</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Следует ли запретить зрителям пересылать или сохранять прямую историю</td></tr><tr><td><strong>rtmp_stream</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Создать прямую историю в <a href="/api/group-calls#stream-mode">режиме RTMP-трансляции »</a>, когда весь звук и видео публикует один внешний вещатель</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пользователь, супергруппа или канал, которому будет принадлежать прямая история; обычные группы не могут публиковать прямые истории</td></tr><tr><td><strong>caption</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Подпись живой истории</td></tr><tr><td><strong>entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления для форматированного текста</a></td></tr><tr><td><strong>privacy_rules</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPrivacyRule">InputPrivacyRule</a>&gt;</td><td>Правила приватности, определяющие, кто может просматривать прямую трансляцию истории</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:random_id] Случайный идентификатор, сгенерированный клиентом и служащий для предотвращения дублирования прямых эфиров. Подробнее о дедупликации по случайному идентификатору и сопоставлении через updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>messages_enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/Bool">Bool</a></td><td>Следует ли включить <a href="/api/group-calls#in-call-messages">наложение сообщений во время звонка »</a></td></tr><tr><td><strong>send_paid_messages_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/long">long</a></td><td>Минимальное пожертвование в Telegram Stars, требуемое за каждый комментарий от всех пользователей, кроме владельца прямой истории; владелец всегда может комментировать без пожертвования, а <code>0</code> разрешает бесплатные комментарии для всех</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_MONOFORUM_UNSUPPORTED | [Monoforums](https://core.telegram.org/api/channel#monoforums) do not support this feature. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | STORY_LIVE_ALREADY_%d | This peer already has an active live story, and its ID is equal to %d. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_MONOFORUM_UNSUPPORTED</td><td><a href="/api/channel#monoforums">Монофорумы</a> не поддерживают эту возможность.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>STORY_LIVE_ALREADY_%d</td><td>У этого пира уже есть активная прямая история, её идентификатор равен %d.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

@@ -1,43 +1,34 @@
 ---
-title: "todoList (конструктор)"
+title: "todoList"
 original: "https://core.telegram.org/constructor/todoList"
 section: ref
 kind: constructor
+description: "Представляет список задач »."
 layout: layout.njk
 ---
 
 # todoList
 
-*Конструктор из схемы TL.*
-
-> Represents a [todo list »](https://core.telegram.org/api/todo).
-
-## Определение TL
+Представляет [список задач »](/api/todo/).
 
 ```
 todoList#49b92a26 flags:# others_can_append:flags.0?true others_can_complete:flags.1?true title:TextWithEntities list:Vector<TodoItem> = TodoList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| others_can_append | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, users different from the creator of the list can append items to the list. |
-| others_can_complete | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, users different from the creator of the list can complete items in the list. |
-| title | [TextWithEntities](/type/TextWithEntities/) | Title of the todo list, maximum length equal to [todo_title_length_max »](https://core.telegram.org/api/config#todo-title-length-max). |
-| list | [Vector](https://core.telegram.org/type/Vector%20t)<[TodoItem](/type/TodoItem/)> | Items of the list. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>others_can_append</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, пользователи, отличные от создателя списка, могут добавлять в него пункты.</td></tr><tr><td><strong>others_can_complete</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, пользователи, отличные от создателя списка, могут отмечать пункты списка выполненными.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Название списка задач, максимальная длина равна <a href="/api/config#todo-title-length-max">todo_title_length_max »</a>.</td></tr><tr><td><strong>list</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/TodoItem">TodoItem</a>&gt;</td><td>Пункты списка.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [TodoList](/type/TodoList/)
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Checklists and to-do lists](https://core.telegram.org/api/todo)
+#### [Чек-листы и списки задач](/api/todo/)
 
-Premium users can now create collaborative checklists in any chat to track tasks and coordinate teams — or manage shopping and to-do lists.
+Пользователи Premium теперь могут создавать совместные чек-листы в любом чате, чтобы отслеживать задачи и координировать команды — или вести списки покупок и дел.

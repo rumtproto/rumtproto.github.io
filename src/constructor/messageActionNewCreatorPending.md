@@ -1,36 +1,32 @@
 ---
-title: "messageActionNewCreatorPending (конструктор)"
+title: "messageActionNewCreatorPending"
 original: "https://core.telegram.org/constructor/messageActionNewCreatorPending"
 section: ref
 kind: constructor
+description: "Сервисное сообщение: отправляется в супергруппу, когда создатель группы или канала покидает группу », и означает, что передача прав владения ожидает завершения. Пользователь…"
 layout: layout.njk
 ---
 
 # messageActionNewCreatorPending
 
-*Конструктор из схемы TL.*
+Сервисное сообщение: отправляется в супергруппу, когда [создатель группы или канала покидает группу »](/api/channel/#leaving-groups-channels), и означает, что передача прав владения ожидает завершения. Пользователь `new_creator_id` станет новым владельцем через 7 дней, если прежний владелец не вернётся.
 
-> Service message: emitted to a supergroup when the [group/channel creator leaves the group »](https://core.telegram.org/api/channel#leaving-groups-channels), indicating that ownership transfer is pending. The `new_creator_id` user will become the new owner after 7 days if the old owner does not rejoin.
-> Sent from the user ID of the old owner.
-
-## Определение TL
+Отправлено с идентификатора пользователя прежнего владельца.
 
 ```
 messageActionNewCreatorPending#b07ed085 new_creator_id:long = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| new_creator_id | [long](/type/long/) | The ID of the user who will become the new owner of the group/channel after 7 days if the old owner does not rejoin. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>new_creator_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя, который станет новым владельцем группы или канала через 7 дней, если прежний владелец не вернётся.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

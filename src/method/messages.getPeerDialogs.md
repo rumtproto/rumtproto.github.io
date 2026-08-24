@@ -1,18 +1,15 @@
 ---
-title: "messages.getPeerDialogs (метод)"
+title: "messages.getPeerDialogs"
 original: "https://core.telegram.org/method/messages.getPeerDialogs"
 section: ref
 kind: method
+description: "Получить сведения о диалогах указанных пиров"
 layout: layout.njk
 ---
 
 # messages.getPeerDialogs
 
-*Метод из схемы TL.*
-
-> Get dialog info of specified peers
-
-## Определение TL
+Получить сведения о диалогах указанных пиров
 
 ```
 messages.peerDialogs#3371c354 dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> state:updates.State = messages.PeerDialogs;
@@ -20,31 +17,22 @@ messages.peerDialogs#3371c354 dialogs:Vector<Dialog> messages:Vector<Message> ch
 messages.getPeerDialogs#e470bcfd peers:Vector<InputDialogPeer> = messages.PeerDialogs;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peers | [Vector](https://core.telegram.org/type/Vector%20t)<[InputDialogPeer](/type/InputDialogPeer/)> | Peers |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputDialogPeer">InputDialogPeer</a>&gt;</td><td>Пиры</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.PeerDialogs](/type/messages.PeerDialogs/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | FROZEN_PARTICIPANT_MISSING | The current account is [frozen](https://core.telegram.org/api/auth/#frozen-accounts), and cannot access the specified peer. |
-| 400 | INPUT_PEERS_EMPTY | The specified peer array is empty. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>FROZEN_PARTICIPANT_MISSING</td><td>Текущий аккаунт <a href="/api/auth#frozen-accounts">заморожен</a> и не может обращаться к указанному пиру.</td></tr><tr><td>400</td><td>INPUT_PEERS_EMPTY</td><td>Указанный массив пиров пуст.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

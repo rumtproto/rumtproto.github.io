@@ -1,38 +1,30 @@
 ---
-title: "inputFile (конструктор)"
+title: "inputFile"
 original: "https://core.telegram.org/constructor/inputFile"
 section: ref
 kind: constructor
+description: "Определяет файл, сохранённый по частям с помощью метода upload.saveFilePart."
 layout: layout.njk
 ---
 
 # inputFile
 
-*Конструктор из схемы TL.*
-
-> Defines a file saved in parts using the method [upload.saveFilePart](/method/upload.saveFilePart/).
-
-## Определение TL
+Определяет файл, сохранённый по частям с помощью метода [upload.saveFilePart](/method/upload.saveFilePart/).
 
 ```
 inputFile#f52ff27f id:long parts:int name:string md5_checksum:string = InputFile;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | Random file identifier created by the client |
-| parts | [int](/type/int/) | Number of parts saved |
-| name | [string](/type/string/) | Full name of the file |
-| md5_checksum | [string](/type/string/) | In case the file's [md5-hash](https://en.wikipedia.org/wiki/MD5#MD5_hashes) was passed, contents of the file will be checked prior to use |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Случайный идентификатор файла, созданный клиентом</td></tr><tr><td><strong>parts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество сохранённых частей</td></tr><tr><td><strong>name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Полное имя файла</td></tr><tr><td><strong>md5_checksum</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Если был передан <a href="https://en.wikipedia.org/wiki/MD5#MD5_hashes">md5-хеш</a> файла, содержимое файла будет проверено перед использованием</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputFile](/type/InputFile/)
 
-## Related pages
+### Связанные страницы
 
 #### [upload.saveFilePart](/method/upload.saveFilePart/)
 
-Saves a part of file for further sending to one of the methods.
+Сохраняет часть файла для дальнейшей передачи в один из методов.

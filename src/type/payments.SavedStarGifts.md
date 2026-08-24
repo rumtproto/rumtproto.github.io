@@ -1,18 +1,15 @@
 ---
-title: "payments.SavedStarGifts (тип)"
+title: "payments.SavedStarGifts"
 original: "https://core.telegram.org/type/payments.SavedStarGifts"
 section: ref
 kind: type
+description: "Представляет список подарков."
 layout: layout.njk
 ---
 
 # payments.SavedStarGifts
 
-*Тип из схемы TL.*
-
-> Represents a list of [gifts](https://core.telegram.org/api/gifts).
-
-## Определение TL
+Представляет список [подарков](/api/gifts/).
 
 ```
 payments.savedStarGifts#95f389b1 flags:# count:int chat_notifications_enabled:flags.1?Bool gifts:Vector<SavedStarGift> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = payments.SavedStarGifts;
@@ -24,22 +21,16 @@ payments.getSavedStarGift#b455a106 stargift:Vector<InputSavedStarGift> = payment
 payments.getCraftStarGifts#fd05dd00 gift_id:long offset:string limit:int = payments.SavedStarGifts;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.savedStarGifts](/constructor/payments.savedStarGifts/) | Represents a list of [gifts](https://core.telegram.org/api/gifts). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.savedStarGifts">payments.savedStarGifts</a></td><td>Представляет список <a href="/api/gifts">подарков</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getSavedStarGifts](/method/payments.getSavedStarGifts/) | Fetch the full list of [gifts »](https://core.telegram.org/api/gifts#list-all-received-gifts) owned, received or [hosted »](https://core.telegram.org/api/gifts#hosted-collectible-gifts) by a peer. Note that unlike what the name suggests, the method can be used to fetch both "saved" and "unsaved" gifts (aka gifts both pinned and not pinned) to the profile, depending on the passed flags. |
-| [payments.getSavedStarGift](/method/payments.getSavedStarGift/) | Fetch info about specific [gifts](https://core.telegram.org/api/gifts) owned by a peer we control. Note that unlike what the name suggests, the method can be used to fetch both "saved" and "unsaved" gifts (aka gifts both pinned and not pinned to the profile). |
-| [payments.getCraftStarGifts](/method/payments.getCraftStarGifts/) | Obtain owned [collectible gifts »](https://core.telegram.org/api/gifts#collectible-gifts) of a specific type that can be used for [crafting »](https://core.telegram.org/api/gifts#crafting-collectible-gifts). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getSavedStarGifts">payments.getSavedStarGifts</a></td><td>Получить полный список <a href="/api/gifts#list-all-received-gifts">подарков »</a>, которыми владеет пир, которые он получил или <a href="/api/gifts#hosted-collectible-gifts">размещает »</a>.<br><br>Обратите внимание: вопреки названию, метод может использоваться для получения как «сохранённых», так и «несохранённых» подарков (то есть как закреплённых, так и не закреплённых в профиле) — в зависимости от переданных флагов.</td></tr><tr><td><a href="/method/payments.getSavedStarGift">payments.getSavedStarGift</a></td><td>Получить сведения о конкретных <a href="/api/gifts">подарках</a>, принадлежащих подконтрольному нам пиру.<br><br>Обратите внимание: вопреки названию, метод позволяет получать как «сохранённые», так и «несохранённые» подарки (то есть как закреплённые в профиле, так и не закреплённые).</td></tr><tr><td><a href="/method/payments.getCraftStarGifts">payments.getCraftStarGifts</a></td><td>Получить принадлежащие пользователю <a href="/api/gifts#collectible-gifts">коллекционные подарки »</a> определённого типа, которые можно использовать для <a href="/api/gifts#crafting-collectible-gifts">создания »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

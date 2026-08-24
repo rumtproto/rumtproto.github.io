@@ -1,18 +1,15 @@
 ---
-title: "account.getAuthorizations (метод)"
+title: "account.getAuthorizations"
 original: "https://core.telegram.org/method/account.getAuthorizations"
 section: ref
 kind: method
+description: "Получить список активных сессий"
 layout: layout.njk
 ---
 
 # account.getAuthorizations
 
-*Метод из схемы TL.*
-
-> Get logged-in sessions
-
-## Определение TL
+Получить список активных сессий
 
 ```
 account.authorizations#4bff8ea0 authorization_ttl_days:int authorizations:Vector<Authorization> = account.Authorizations;
@@ -20,12 +17,12 @@ account.authorizations#4bff8ea0 authorization_ttl_days:int authorizations:Vector
 account.getAuthorizations#e320c158 = account.Authorizations;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [account.Authorizations](/type/account.Authorizations/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

@@ -1,537 +1,59 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>userFull (конструктор) — MTProto по-русски</title>
-<link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
-    <nav class="top-nav">
-      <a href="/mtproto/">MTProto</a>
-      <a href="/api/">API</a>
-      <a href="/schema/">Схема</a>
-      <a href="/glossary/">Глоссарий</a>
-    </nav>
-  </div>
-</header>
-<div class="layout">
-  <aside class="sidebar">
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Протокол MTProto</div>
-        <ul>
-          
-            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
-          
-            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
-          
-            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
-          
-            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
-          
-            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
-          
-            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
-          
-            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
-          
-            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
-          
-            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
-          
-            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
-          
-            <li><a href="/mtproto/TL/">Язык TL</a></li>
-          
-            <li><a href="/mtproto/transports/">Транспорты</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Telegram API</div>
-        <ul>
-          
-            <li><a href="/api/">Telegram API</a></li>
-          
-            <li><a href="/api/auth/">Авторизация пользователя</a></li>
-          
-            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
-          
-            <li><a href="/api/errors/">Ошибки</a></li>
-          
-            <li><a href="/api/files/">Работа с файлами</a></li>
-          
-            <li><a href="/api/invoking/">Вызов методов</a></li>
-          
-            <li><a href="/api/layers/">Слои схемы</a></li>
-          
-            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
-          
-            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
-          
-            <li><a href="/api/updates/">Получение обновлений</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Схема TL</div>
-        <ul>
-          
-            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
-          
-            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
-          
-            <li><a href="/methods/">Методы по категориям</a></li>
-          
-            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
-          
-            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
-          
-            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
-          
-            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Другое</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-            <li><a href="/techfaq/">Технический FAQ</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Справочник схемы</div>
-        <ul>
-          
-            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
-          
-            <li><a href="/method/">Методы (справочник)</a></li>
-          
-            <li><a href="/type/">Типы (справочник)</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Приложение</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-        </ul>
-      </div>
-    
-  </aside>
-  <main class="content">
-    <article>
-      <h1 id="userfull" tabindex="-1">userFull</h1>
-<p><em>Конструктор из схемы TL.</em></p>
-<blockquote>
-<p>Extended user info
-When updating the <a href="https://core.telegram.org/api/peers">local peer database »</a>, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).</p>
-</blockquote>
-<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
-<pre><code>userFull#a02bc13e flags:# blocked:flags.0?true phone_calls_available:flags.4?true phone_calls_private:flags.5?true can_pin_message:flags.7?true has_scheduled:flags.12?true video_calls_available:flags.13?true voice_messages_forbidden:flags.20?true translations_disabled:flags.23?true stories_pinned_available:flags.26?true blocked_my_stories_from:flags.27?true wallpaper_overridden:flags.28?true contact_require_premium:flags.29?true read_dates_private:flags.30?true flags2:# sponsored_enabled:flags2.7?true can_view_revenue:flags2.9?true bot_can_manage_emoji_status:flags2.10?true display_gifts_button:flags2.16?true noforwards_my_enabled:flags2.23?true noforwards_peer_enabled:flags2.24?true id:long about:flags.1?string settings:PeerSettings personal_photo:flags.21?Photo profile_photo:flags.2?Photo fallback_photo:flags.22?Photo notify_settings:PeerNotifySettings bot_info:flags.3?BotInfo pinned_msg_id:flags.6?int common_chats_count:int folder_id:flags.11?int ttl_period:flags.14?int theme:flags.15?ChatTheme private_forward_name:flags.16?string bot_group_admin_rights:flags.17?ChatAdminRights bot_broadcast_admin_rights:flags.18?ChatAdminRights wallpaper:flags.24?WallPaper stories:flags.25?PeerStories business_work_hours:flags2.0?BusinessWorkHours business_location:flags2.1?BusinessLocation business_greeting_message:flags2.2?BusinessGreetingMessage business_away_message:flags2.3?BusinessAwayMessage business_intro:flags2.4?BusinessIntro birthday:flags2.5?Birthday personal_channel_id:flags2.6?long personal_channel_message:flags2.6?int stargifts_count:flags2.8?int starref_program:flags2.11?StarRefProgram bot_verification:flags2.12?BotVerification send_paid_messages_stars:flags2.14?long disallowed_gifts:flags2.15?DisallowedGiftsSettings stars_rating:flags2.17?StarsRating stars_my_pending_rating:flags2.18?StarsRating stars_my_pending_rating_date:flags2.18?int main_tab:flags2.20?ProfileTab saved_music:flags2.21?Document note:flags2.22?TextWithEntities = UserFull;
-</code></pre>
-<h2 id="параметры" tabindex="-1">Параметры</h2>
-<table>
-<thead>
-<tr>
-<th>Имя</th>
-<th>Тип</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>flags</td>
-<td><a href="https://core.telegram.org/type/%23">#</a></td>
-<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
-</tr>
-<tr>
-<td>blocked</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td>
-<td>Whether you have blocked this user</td>
-</tr>
-<tr>
-<td>phone_calls_available</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true/">true</a></td>
-<td>Whether this user can make VoIP calls</td>
-</tr>
-<tr>
-<td>phone_calls_private</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true/">true</a></td>
-<td>Whether this user's privacy settings allow you to call them</td>
-</tr>
-<tr>
-<td>can_pin_message</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true/">true</a></td>
-<td>Whether you can pin messages in the chat with this user, you can do this only for a chat with yourself</td>
-</tr>
-<tr>
-<td>has_scheduled</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true/">true</a></td>
-<td>Whether <a href="https://core.telegram.org/api/scheduled-messages">scheduled messages</a> are available</td>
-</tr>
-<tr>
-<td>video_calls_available</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true/">true</a></td>
-<td>Whether the user can receive video calls</td>
-</tr>
-<tr>
-<td>voice_messages_forbidden</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/constructor/true/">true</a></td>
-<td>Whether this user doesn't allow sending voice messages in a private chat with them</td>
-</tr>
-<tr>
-<td>translations_disabled</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/constructor/true/">true</a></td>
-<td>Whether the <a href="https://core.telegram.org/api/translation">real-time chat translation popup</a> should be hidden.</td>
-</tr>
-<tr>
-<td>stories_pinned_available</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.26?<a href="/constructor/true/">true</a></td>
-<td>Whether this user has some <a href="https://core.telegram.org/api/stories#pinned-or-archived-stories">pinned stories</a>.</td>
-</tr>
-<tr>
-<td>blocked_my_stories_from</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.27?<a href="/constructor/true/">true</a></td>
-<td>Whether we've <a href="https://core.telegram.org/api/block">blocked this user, preventing them from seeing our stories »</a>.</td>
-</tr>
-<tr>
-<td>wallpaper_overridden</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.28?<a href="/constructor/true/">true</a></td>
-<td>Whether the other user has chosen a custom wallpaper for us using <a href="/method/messages.setChatWallPaper/">messages.setChatWallPaper</a> and the for_both flag, see <a href="https://core.telegram.org/api/wallpapers#installing-wallpapers-in-a-specific-chat-or-channel">here »</a> for more info.</td>
-</tr>
-<tr>
-<td>contact_require_premium</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.29?<a href="/constructor/true/">true</a></td>
-<td>If set, we cannot write to this user: subscribe to <a href="https://core.telegram.org/api/premium">Telegram Premium</a> to get permission to write to this user. To set this flag for ourselves invoke <a href="/method/account.setGlobalPrivacySettings/">account.setGlobalPrivacySettings</a>, setting the settings.new_noncontact_peers_require_premium flag, see <a href="https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users">here »</a> for more info.</td>
-</tr>
-<tr>
-<td>read_dates_private</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.30?<a href="/constructor/true/">true</a></td>
-<td>If set, we cannot fetch the exact read date of messages we send to this user using <a href="/method/messages.getOutboxReadDate/">messages.getOutboxReadDate</a>. The exact read date of messages might still be unavailable for other reasons, see <a href="/method/messages.getOutboxReadDate/">here »</a> for more info. To set this flag for ourselves invoke <a href="/method/account.setGlobalPrivacySettings/">account.setGlobalPrivacySettings</a>, setting the settings.hide_read_marks flag.</td>
-</tr>
-<tr>
-<td>flags2</td>
-<td><a href="https://core.telegram.org/type/%23">#</a></td>
-<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
-</tr>
-<tr>
-<td>sponsored_enabled</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.7?<a href="/constructor/true/">true</a></td>
-<td>Whether ads were re-enabled for the current account (only accessible to the currently logged-in user), see <a href="https://core.telegram.org/api/business#re-enable-ads">here »</a> for more info.</td>
-</tr>
-<tr>
-<td>can_view_revenue</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.9?<a href="/constructor/true/">true</a></td>
-<td>If set, this user can view <a href="https://core.telegram.org/api/revenue#revenue-statistics">ad revenue statistics »</a> for this bot.</td>
-</tr>
-<tr>
-<td>bot_can_manage_emoji_status</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.10?<a href="/constructor/true/">true</a></td>
-<td>If set, this is a bot that can <a href="https://core.telegram.org/api/emoji-status#setting-an-emoji-status-from-a-bot">change our emoji status »</a></td>
-</tr>
-<tr>
-<td>display_gifts_button</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.16?<a href="/constructor/true/">true</a></td>
-<td>If this flag is set for both us and another user (changed through <a href="/constructor/globalPrivacySettings/">globalPrivacySettings</a>), a gift button should always be displayed in the text field in private chats with the other user: once clicked, the gift UI should be displayed, offering the user options to gift <a href="https://core.telegram.org/api/premium">Telegram Premium »</a> subscriptions or <a href="https://core.telegram.org/api/gifts">Telegram Gifts »</a>.</td>
-</tr>
-<tr>
-<td>noforwards_my_enabled</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.23?<a href="/constructor/true/">true</a></td>
-<td>If set, <a href="https://core.telegram.org/api/content-protection#for-users">content protection »</a> was enabled in this private chat by us.</td>
-</tr>
-<tr>
-<td>noforwards_peer_enabled</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.24?<a href="/constructor/true/">true</a></td>
-<td>If set, <a href="https://core.telegram.org/api/content-protection#for-users">content protection »</a> was enabled in this private chat by this user.</td>
-</tr>
-<tr>
-<td>unofficial_security_risk</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.26?<a href="/constructor/true/">true</a></td>
-<td>If set, this user uses an unofficial Telegram client, and messages sent to them may be less secure; clients should display a warning in the user's profile.</td>
-</tr>
-<tr>
-<td>id</td>
-<td><a href="/type/long/">long</a></td>
-<td>User ID</td>
-</tr>
-<tr>
-<td>about</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string/">string</a></td>
-<td>Bio of the user</td>
-</tr>
-<tr>
-<td>settings</td>
-<td><a href="/type/PeerSettings/">PeerSettings</a></td>
-<td>Peer settings</td>
-</tr>
-<tr>
-<td>personal_photo</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/type/Photo/">Photo</a></td>
-<td>Personal profile photo, to be shown instead of profile_photo.</td>
-</tr>
-<tr>
-<td>profile_photo</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Photo/">Photo</a></td>
-<td>Profile photo</td>
-</tr>
-<tr>
-<td>fallback_photo</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/type/Photo/">Photo</a></td>
-<td>Fallback profile photo, displayed if no photo is present in profile_photo or personal_photo, due to privacy settings.</td>
-</tr>
-<tr>
-<td>notify_settings</td>
-<td><a href="/type/PeerNotifySettings/">PeerNotifySettings</a></td>
-<td>Notification settings</td>
-</tr>
-<tr>
-<td>bot_info</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/BotInfo/">BotInfo</a></td>
-<td>For bots, info about the bot (bot commands, etc)</td>
-</tr>
-<tr>
-<td>pinned_msg_id</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/int/">int</a></td>
-<td>Message ID of the last <a href="https://core.telegram.org/api/pin">pinned message</a></td>
-</tr>
-<tr>
-<td>common_chats_count</td>
-<td><a href="/type/int/">int</a></td>
-<td>Chats in common with this user</td>
-</tr>
-<tr>
-<td>folder_id</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/int/">int</a></td>
-<td><a href="https://core.telegram.org/api/folders#peer-folders">Peer folder ID, for more info click here</a></td>
-</tr>
-<tr>
-<td>ttl_period</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/int/">int</a></td>
-<td>Time To Live of all messages in this chat; once a message is this many seconds old, it must be deleted.</td>
-</tr>
-<tr>
-<td>theme</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/ChatTheme/">ChatTheme</a></td>
-<td><a href="https://core.telegram.org/api/themes#chat-themes">The chat theme associated with this user »</a>.</td>
-</tr>
-<tr>
-<td>private_forward_name</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/type/string/">string</a></td>
-<td>Anonymized text to be shown instead of the user's name on forwarded messages</td>
-</tr>
-<tr>
-<td>bot_group_admin_rights</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/ChatAdminRights/">ChatAdminRights</a></td>
-<td>A <a href="https://core.telegram.org/api/rights#suggested-bot-rights">suggested set of administrator rights</a> for the bot, to be shown when adding the bot as admin to a group, see <a href="https://core.telegram.org/api/rights#suggested-bot-rights">here for more info on how to handle them »</a>.</td>
-</tr>
-<tr>
-<td>bot_broadcast_admin_rights</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/ChatAdminRights/">ChatAdminRights</a></td>
-<td>A <a href="https://core.telegram.org/api/rights#suggested-bot-rights">suggested set of administrator rights</a> for the bot, to be shown when adding the bot as admin to a channel, see <a href="https://core.telegram.org/api/rights#suggested-bot-rights">here for more info on how to handle them »</a>.</td>
-</tr>
-<tr>
-<td>wallpaper</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/type/WallPaper/">WallPaper</a></td>
-<td><a href="https://core.telegram.org/api/wallpapers">Wallpaper</a> to use in the private chat with the user.</td>
-</tr>
-<tr>
-<td>stories</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/type/PeerStories/">PeerStories</a></td>
-<td>Active <a href="https://core.telegram.org/api/stories">stories »</a></td>
-</tr>
-<tr>
-<td>business_work_hours</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.0?<a href="/type/BusinessWorkHours/">BusinessWorkHours</a></td>
-<td><a href="https://core.telegram.org/api/business#opening-hours">Telegram Business working hours »</a>.</td>
-</tr>
-<tr>
-<td>business_location</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.1?<a href="/type/BusinessLocation/">BusinessLocation</a></td>
-<td><a href="https://core.telegram.org/api/business#location">Telegram Business location »</a>.</td>
-</tr>
-<tr>
-<td>business_greeting_message</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.2?<a href="/type/BusinessGreetingMessage/">BusinessGreetingMessage</a></td>
-<td><a href="https://core.telegram.org/api/business#greeting-messages">Telegram Business greeting message »</a>.</td>
-</tr>
-<tr>
-<td>business_away_message</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.3?<a href="/type/BusinessAwayMessage/">BusinessAwayMessage</a></td>
-<td><a href="https://core.telegram.org/api/business#away-messages">Telegram Business away message »</a>.</td>
-</tr>
-<tr>
-<td>business_intro</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.4?<a href="/type/BusinessIntro/">BusinessIntro</a></td>
-<td>Specifies a custom <a href="https://core.telegram.org/api/business#business-introduction">Telegram Business profile introduction »</a>.</td>
-</tr>
-<tr>
-<td>birthday</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.5?<a href="/type/Birthday/">Birthday</a></td>
-<td>Contains info about the user's <a href="https://core.telegram.org/api/profile#birthday">birthday »</a>.</td>
-</tr>
-<tr>
-<td>personal_channel_id</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.6?<a href="/type/long/">long</a></td>
-<td>ID of the associated personal <a href="https://core.telegram.org/api/channel">channel »</a>, that should be shown in the <a href="https://core.telegram.org/api/profile#personal-channel">profile page</a>.</td>
-</tr>
-<tr>
-<td>personal_channel_message</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.6?<a href="/type/int/">int</a></td>
-<td>ID of the latest message of the associated personal <a href="https://core.telegram.org/api/channel">channel »</a>, that should be previewed in the <a href="https://core.telegram.org/api/profile#personal-channel">profile page</a>.</td>
-</tr>
-<tr>
-<td>stargifts_count</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.8?<a href="/type/int/">int</a></td>
-<td>Number of <a href="https://core.telegram.org/api/gifts">gifts</a> the user has chosen to display on their profile</td>
-</tr>
-<tr>
-<td>starref_program</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.11?<a href="/type/StarRefProgram/">StarRefProgram</a></td>
-<td>This bot has an active <a href="https://core.telegram.org/api/bots/referrals">referral program »</a></td>
-</tr>
-<tr>
-<td>bot_verification</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.12?<a href="/type/BotVerification/">BotVerification</a></td>
-<td>Describes a <a href="https://core.telegram.org/api/bots/verification">bot verification icon »</a>.</td>
-</tr>
-<tr>
-<td>send_paid_messages_stars</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.14?<a href="/type/long/">long</a></td>
-<td>If set and bigger than 0, this user has enabled <a href="https://core.telegram.org/api/paid-messages">paid messages »</a> and we must pay the specified amount of <a href="https://core.telegram.org/api/stars">Stars</a> to send messages to them, see <a href="https://core.telegram.org/api/paid-messages">here »</a> for the full flow. If set and equal to 0, the user requires payment in general but we were exempted from paying <a href="https://core.telegram.org/api/paid-messages">for any of the reasons specified in the docs »</a>.</td>
-</tr>
-<tr>
-<td>disallowed_gifts</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.15?<a href="/type/DisallowedGiftsSettings/">DisallowedGiftsSettings</a></td>
-<td>Disallows the reception of specific gift types.</td>
-</tr>
-<tr>
-<td>stars_rating</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.17?<a href="/type/StarsRating/">StarsRating</a></td>
-<td>The user's <a href="https://core.telegram.org/api/stars#star-rating">star rating</a>.</td>
-</tr>
-<tr>
-<td>stars_my_pending_rating</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.18?<a href="/type/StarsRating/">StarsRating</a></td>
-<td>Our pending <a href="https://core.telegram.org/api/stars#star-rating">star rating</a>, only visible for ourselves.</td>
-</tr>
-<tr>
-<td>stars_my_pending_rating_date</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.18?<a href="/type/int/">int</a></td>
-<td>When the pending <a href="https://core.telegram.org/api/stars#star-rating">star rating</a> will be applied, only visible for ourselves.</td>
-</tr>
-<tr>
-<td>main_tab</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.20?<a href="/type/ProfileTab/">ProfileTab</a></td>
-<td>The main tab for the user's profile, see <a href="https://core.telegram.org/api/profile#tabs">here »</a> for more info.</td>
-</tr>
-<tr>
-<td>saved_music</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.21?<a href="/type/Document/">Document</a></td>
-<td>The first song on the music tab of the profile, see <a href="https://core.telegram.org/api/profile#music">here »</a> for more info on the music profile tab.</td>
-</tr>
-<tr>
-<td>note</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.22?<a href="/type/TextWithEntities/">TextWithEntities</a></td>
-<td>A private note for this contact, only visible to us; see <a href="https://core.telegram.org/api/contacts#private-notes-for-contacts">here »</a> for more info on contact notes.</td>
-</tr>
-<tr>
-<td>bot_manager_id</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.25?<a href="/type/long/">long</a></td>
-<td>If this user is a <a href="https://core.telegram.org/api/bots/managed-bots">managed bot »</a>, the ID of the user or manager bot that manages it.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="тип" tabindex="-1">Тип</h2>
-<p><a href="/type/UserFull/">UserFull</a></p>
-<h2 id="related-pages" tabindex="-1">Related pages</h2>
-<h4 id="scheduled-messages" tabindex="-1"><a href="https://core.telegram.org/api/scheduled-messages">Scheduled messages</a></h4>
-<p>Telegram allows scheduling messages</p>
-<h4 id="message-translation" tabindex="-1"><a href="https://core.telegram.org/api/translation">Message translation</a></h4>
-<p>Telegram allows translating chat messages: Telegram Premium users may even enable real-time chat translation.</p>
-<h4 id="telegram-stories" tabindex="-1"><a href="https://core.telegram.org/api/stories">Telegram Stories</a></h4>
-<p>Telegram users and channels can easily post and view stories through the API.</p>
-<h4 id="blocked-users" tabindex="-1"><a href="https://core.telegram.org/api/block">Blocked users</a></h4>
-<p>Working with the blocklist.</p>
-<h4 id="messages.setchatwallpaper" tabindex="-1"><a href="/method/messages.setChatWallPaper/">messages.setChatWallPaper</a></h4>
-<p>Set a custom <a href="https://core.telegram.org/api/wallpapers">wallpaper »</a> in a specific private chat with another user.</p>
-<h4 id="chat-wallpapers" tabindex="-1"><a href="https://core.telegram.org/api/wallpapers">Chat wallpapers</a></h4>
-<p>Telegram apps support generating, sharing and synchronizing chat backgrounds.</p>
-<h4 id="telegram-premium" tabindex="-1"><a href="https://core.telegram.org/api/premium">Telegram Premium</a></h4>
-<p>Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.</p>
-<h4 id="account.setglobalprivacysettings" tabindex="-1"><a href="/method/account.setGlobalPrivacySettings/">account.setGlobalPrivacySettings</a></h4>
-<p>Set global privacy settings</p>
-<h4 id="privacy-settings" tabindex="-1"><a href="https://core.telegram.org/api/privacy">Privacy settings</a></h4>
-<p>Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.</p>
-<h4 id="messages.getoutboxreaddate" tabindex="-1"><a href="/method/messages.getOutboxReadDate/">messages.getOutboxReadDate</a></h4>
-<p>Get the exact read date of one of our messages, sent to a private chat with another user.</p>
-<p>Can be only done for private outgoing messages not older than <a href="https://core.telegram.org/api/config#pm-read-date-expire-period">appConfig.pm_read_date_expire_period »</a>.</p>
-<p>If the <code>peer</code>'s <a href="/constructor/userFull/">userFull</a>.<code>read_dates_private</code> flag is set, we will not be able to fetch the exact read date of messages we send to them, and a <code>USER_PRIVACY_RESTRICTED</code> RPC error will be emitted.<br>
-The exact read date of messages might still be unavailable for other reasons, see <a href="/constructor/globalPrivacySettings/">here »</a> for more info.<br>
-To set <a href="/constructor/userFull/">userFull</a>.<code>read_dates_private</code> for ourselves invoke <a href="/method/account.setGlobalPrivacySettings/">account.setGlobalPrivacySettings</a>, setting the <code>settings.hide_read_marks</code> flag.</p>
-<h4 id="telegram-business" tabindex="-1"><a href="https://core.telegram.org/api/business">Telegram Business</a></h4>
-<p>Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.</p>
-<h4 id="channel-and-bot-ad-revenue" tabindex="-1"><a href="https://core.telegram.org/api/revenue">Channel and bot ad revenue</a></h4>
-<p>Telegram has one of the most generous reward systems in the history of social media. Telegram channel and bot owners can now receive 50% of the revenue from ads displayed in their channels and bots. This page describes the methods used to withdraw channel/bot ad revenue, as well as view detailed revenue stats.</p>
-<h4 id="emoji-status" tabindex="-1"><a href="https://core.telegram.org/api/emoji-status">Emoji status</a></h4>
-<p>Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.</p>
-<h4 id="globalprivacysettings" tabindex="-1"><a href="/constructor/globalPrivacySettings/">globalPrivacySettings</a></h4>
-<p>Global privacy settings</p>
-<h4 id="telegram-gifts" tabindex="-1"><a href="https://core.telegram.org/api/gifts">Telegram Gifts</a></h4>
-<p>Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.</p>
-<h4 id="content-protection" tabindex="-1"><a href="https://core.telegram.org/api/content-protection">Content protection</a></h4>
-<p>Users and bots who want to keep their messages private, as well as Group and Channel owners who want to keep their content members-only can enable content protection, which prevents screenshots, copying, disables message forwards and limits the ability to save media from posts.</p>
-<h4 id="pinned-messages" tabindex="-1"><a href="https://core.telegram.org/api/pin">Pinned messages</a></h4>
-<p>Telegram allows pinning multiple messages on top of a specific chat.</p>
-<h4 id="dialog-folders" tabindex="-1"><a href="https://core.telegram.org/api/folders">Dialog folders</a></h4>
-<p>Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.</p>
-<h4 id="telegram-themes" tabindex="-1"><a href="https://core.telegram.org/api/themes">Telegram themes</a></h4>
-<p>Telegram apps support generating, sharing and synchronizing app themes.</p>
-<h4 id="admin,-banned,-default-rights" tabindex="-1"><a href="https://core.telegram.org/api/rights">Admin, banned, default rights</a></h4>
-<p>How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.</p>
-<h4 id="user-profiles" tabindex="-1"><a href="https://core.telegram.org/api/profile">User profiles</a></h4>
-<p>Telegram offers many customization options for your profile!</p>
-<h4 id="channels,-supergroups,-gigagroups-and-basic-groups" tabindex="-1"><a href="https://core.telegram.org/api/channel">Channels, supergroups, gigagroups and basic groups</a></h4>
-<p>How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.</p>
-<h4 id="affiliate-programs" tabindex="-1"><a href="https://core.telegram.org/api/bots/referrals">Affiliate programs</a></h4>
-<p>Developers can open affiliate programs for their mini app – allowing content creators, other mini app developers and any Telegram user to promote it and earn commissions on purchases made by people they referred.</p>
-<h4 id="third-party-verification" tabindex="-1"><a href="https://core.telegram.org/api/bots/verification">Third-party verification</a></h4>
-<p>To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and reduce misinformation.</p>
-<h4 id="paid-messages" tabindex="-1"><a href="https://core.telegram.org/api/paid-messages">Paid messages</a></h4>
-<p>Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.</p>
-<h4 id="telegram-stars" tabindex="-1"><a href="https://core.telegram.org/api/stars">Telegram Stars</a></h4>
-<p>Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.</p>
-<h4 id="contact-list" tabindex="-1"><a href="https://core.telegram.org/api/contacts">Contact list</a></h4>
-<p>Working with contacts.</p>
-<h4 id="managed-bots" tabindex="-1"><a href="https://core.telegram.org/api/bots/managed-bots">Managed bots</a></h4>
-<p>Users can create <strong>managed</strong> bots (which are controlled by a specific manager bot) directly through the MTProto API, without interacting with <a href="https://t.me/botfather">@BotFather</a>.</p>
-<h4 id="peer-database" tabindex="-1"><a href="https://core.telegram.org/api/peers">Peer database</a></h4>
-<p>Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.</p>
-
-      <div class="source-note">
-        Оригинал: <a href="https://core.telegram.org/constructor/userFull" rel="noopener">https://core.telegram.org/constructor/userFull</a>
-      </div>
-    </article>
-  </main>
-</div>
-<footer class="site-footer">
-  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
-  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
-</footer>
-</body>
-</html>
+<!doctype html> <html lang="ru"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script> <title>userFull — MTProto по-русски</title> <meta name="description" content="Расширенные сведения о пользователе"> <meta property="og:title" content="userFull"> <meta property="og:description" content="Расширенные сведения о пользователе"> <meta property="og:type" content="article"> <meta property="og:site_name" content="MTProto по-русски"> <meta property="og:locale" content="ru_RU"> <meta property="og:url" content="https://rumtproto.github.io/constructor/userFull/"> <meta property="og:image" content="https://rumtproto.github.io/apple-touch-icon.png"> <meta name="twitter:card" content="summary"> <link rel="canonical" href="https://rumtproto.github.io/constructor/userFull/"> <link rel="alternate" hreflang="en" href="https://mirrortproto.github.io/constructor/userFull/"> <link rel="alternate" hreflang="ru" href="https://rumtproto.github.io/constructor/userFull/"> <link rel="manifest" href="/manifest.webmanifest"> <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)"> <link rel="icon" href="/favicon.svg" type="image/svg+xml"> <link rel="icon" href="/icon-64.png" type="image/png" sizes="64x64"> <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <link rel="stylesheet" href="/css/style.css"> <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Схема","item":"https://rumtproto.github.io/schema/"},{"@type":"ListItem","position":2,"name":"Конструкторы","item":"https://rumtproto.github.io/constructor/"}]}
+</script> </head> <body data-pagefind-filter="Раздел:Схема"> <a class="skip-link" href="#content">К содержанию</a> <header class="site-header"> <div class="header-inner"> <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a> <nav class="top-nav" aria-label="Разделы"> <a href="/api/" >API</a> <a href="/mtproto/" >MTProto</a> <a href="/schema/" class="active" aria-current="section">Схема</a> <a href="/techfaq/" >FAQ</a> </nav> <form class="site-search" action="/search/" method="get" role="search"> <span class="search-field"> <input type="search" name="q" placeholder="Поиск" aria-label="Поиск (нажмите / для фокуса)"> <kbd class="search-kbd" aria-hidden="true">/</kbd> </span> </form> <a class="search-button" href="/search/" aria-label="Поиск"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg> </a> <a class="source-link" href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener"> <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="source-link-text">Исходный код</span> </a> <div class="theme-switch" role="group" aria-label="Цветовая тема"> <div class="theme-seg"> <button type="button" data-mode="auto" aria-pressed="false" title="Системная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="light" aria-pressed="false" title="Светлая тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="dark" aria-pressed="false" title="Тёмная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> <button class="theme-toggle" type="button" data-mode="auto" title="Цветовая тема: auto"> <svg class="icon-auto" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-light" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-dark" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> </div> </header> <div class="layout"> <aside class="sidebar" aria-label="Страницы раздела"> <div class="nav-group"> <div class="nav-group-title">Схема</div> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </div> </aside> <main class="content" id="content"> <nav class="crumbs" aria-label="Хлебные крошки"> <a href="/schema/">Схема</a> <span class="crumb-sep">›</span> <a href="/constructor/">Конструкторы</a> <span class="crumb-sep">›</span> <span class="crumb-current">userFull</span> </nav> <div class="mobile-nav" role="navigation" aria-label="Страницы раздела"> <details class="mobile-nav-group"> <summary>Схема</summary> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </details> </div> <article> <h1 id="userfull" tabindex="-1">userFull <a class="header-anchor" href="#userfull" aria-hidden="true">#</a></h1> <p id="p-1"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-1" rel="noopener" title="Перевод абзаца 1" data-tip="Перевод: абзац 1 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Расширенные сведения о пользователе<a class="p-anchor" href="#p-1" aria-label="Ссылка на этот абзац">¶</a></p> <p id="p-2"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-2" rel="noopener" title="Перевод абзаца 2" data-tip="Перевод: абзац 2 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> При обновлении <a href="/api/peers/">локальной базы пиров »</a> все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).<a class="p-anchor" href="#p-2" aria-label="Ссылка на этот абзац">¶</a></p> <pre><code>userFull#a02bc13e flags:# blocked:flags.0?true phone_calls_available:flags.4?true phone_calls_private:flags.5?true can_pin_message:flags.7?true has_scheduled:flags.12?true video_calls_available:flags.13?true voice_messages_forbidden:flags.20?true translations_disabled:flags.23?true stories_pinned_available:flags.26?true blocked_my_stories_from:flags.27?true wallpaper_overridden:flags.28?true contact_require_premium:flags.29?true read_dates_private:flags.30?true flags2:# sponsored_enabled:flags2.7?true can_view_revenue:flags2.9?true bot_can_manage_emoji_status:flags2.10?true display_gifts_button:flags2.16?true noforwards_my_enabled:flags2.23?true noforwards_peer_enabled:flags2.24?true id:long about:flags.1?string settings:PeerSettings personal_photo:flags.21?Photo profile_photo:flags.2?Photo fallback_photo:flags.22?Photo notify_settings:PeerNotifySettings bot_info:flags.3?BotInfo pinned_msg_id:flags.6?int common_chats_count:int folder_id:flags.11?int ttl_period:flags.14?int theme:flags.15?ChatTheme private_forward_name:flags.16?string bot_group_admin_rights:flags.17?ChatAdminRights bot_broadcast_admin_rights:flags.18?ChatAdminRights wallpaper:flags.24?WallPaper stories:flags.25?PeerStories business_work_hours:flags2.0?BusinessWorkHours business_location:flags2.1?BusinessLocation business_greeting_message:flags2.2?BusinessGreetingMessage business_away_message:flags2.3?BusinessAwayMessage business_intro:flags2.4?BusinessIntro birthday:flags2.5?Birthday personal_channel_id:flags2.6?long personal_channel_message:flags2.6?int stargifts_count:flags2.8?int starref_program:flags2.11?StarRefProgram bot_verification:flags2.12?BotVerification send_paid_messages_stars:flags2.14?long disallowed_gifts:flags2.15?DisallowedGiftsSettings stars_rating:flags2.17?StarsRating stars_my_pending_rating:flags2.18?StarsRating stars_my_pending_rating_date:flags2.18?int main_tab:flags2.20?ProfileTab saved_music:flags2.21?Document note:flags2.22?TextWithEntities = UserFull;
+</code></pre> <span class="heading-alias" id="параметры"></span><h3 id="parameters" tabindex="-1">Параметры <a class="header-anchor" href="#parameters" aria-hidden="true">#</a></h3> <table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td><span class="para-labels"><span class="para-label para-term" tabindex="0" role="note" title="Термин: flags" data-tip="Термин: flags — битовое поле: каждый бит отмечает наличие соответствующего необязательного параметра конструктора"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h10v13l-5-3.5-5 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span></span> Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>blocked</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Заблокировали ли вы этого пользователя</td></tr><tr><td><strong>phone_calls_available</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Может ли этот пользователь совершать VoIP-звонки</td></tr><tr><td><strong>phone_calls_private</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Разрешают ли настройки приватности этого пользователя звонить ему</td></tr><tr><td><strong>can_pin_message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Можете ли вы закреплять сообщения в чате с этим пользователем; это возможно только в чате с самим собой</td></tr><tr><td><strong>has_scheduled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true">true</a></td><td>Доступны ли <a href="/api/scheduled-messages">отложенные сообщения</a></td></tr><tr><td><strong>video_calls_available</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true">true</a></td><td>Может ли пользователь принимать видеозвонки</td></tr><tr><td><strong>voice_messages_forbidden</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/constructor/true">true</a></td><td>Запрещает ли этот пользователь отправлять голосовые сообщения в личном чате с ним</td></tr><tr><td><strong>translations_disabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/constructor/true">true</a></td><td>Следует ли скрыть <a href="/api/translation">всплывающее окно перевода чата в реальном времени</a>.</td></tr><tr><td><strong>stories_pinned_available</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.26?<a href="/constructor/true">true</a></td><td>Есть ли у этого пользователя <a href="/api/stories#pinned-or-archived-stories">закреплённые истории</a>.</td></tr><tr><td><strong>blocked_my_stories_from</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.27?<a href="/constructor/true">true</a></td><td><a href="/api/block">Заблокировали ли мы этого пользователя, запретив ему просматривать наши истории »</a>.</td></tr><tr><td><strong>wallpaper_overridden</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.28?<a href="/constructor/true">true</a></td><td>Выбрал ли другой пользователь обои для нас с помощью <a href="/method/messages.setChatWallPaper">messages.setChatWallPaper</a> и флага <code>for_both</code>; подробнее <a href="/api/wallpapers#installing-wallpapers-in-a-specific-chat-or-channel">см. здесь »</a>.</td></tr><tr><td><strong>contact_require_premium</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.29?<a href="/constructor/true">true</a></td><td>Если установлено, мы не можем писать этому пользователю: оформите подписку <a href="/api/premium">Telegram Premium</a>, чтобы получить право писать ему.<br>Чтобы установить этот флаг для себя, вызовите <a href="/method/account.setGlobalPrivacySettings">account.setGlobalPrivacySettings</a>, задав флаг <code>settings.new_noncontact_peers_require_premium</code>; подробнее см. <a href="/api/privacy#require-premium-for-new-non-contact-users">здесь »</a>.</td></tr><tr><td><strong>read_dates_private</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.30?<a href="/constructor/true">true</a></td><td>Если установлено, мы не можем получить точную дату прочтения отправленных этому пользователю сообщений с помощью <a href="/method/messages.getOutboxReadDate">messages.getOutboxReadDate</a>.<br>Точная дата прочтения сообщений может быть недоступна и по другим причинам, подробнее см. <a href="/method/messages.getOutboxReadDate">здесь »</a>.<br>Чтобы установить этот флаг для себя, вызовите <a href="/method/account.setGlobalPrivacySettings">account.setGlobalPrivacySettings</a>, задав флаг <code>settings.hide_read_marks</code>.</td></tr><tr><td><strong>flags2</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>sponsored_enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.7?<a href="/constructor/true">true</a></td><td>Была ли реклама снова включена для текущего аккаунта (доступно только пользователю, вошедшему в систему), подробнее см. <a href="/api/business#re-enable-ads">здесь »</a>.</td></tr><tr><td><strong>can_view_revenue</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.9?<a href="/constructor/true">true</a></td><td>Если установлено, этот пользователь может просматривать <a href="/api/revenue#revenue-statistics">статистику доходов от рекламы »</a> для этого бота.</td></tr><tr><td><strong>bot_can_manage_emoji_status</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.10?<a href="/constructor/true">true</a></td><td>Если установлено, это бот, который может <a href="/api/emoji-status#setting-an-emoji-status-from-a-bot">менять наш эмодзи-статус »</a></td></tr><tr><td><strong>display_gifts_button</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.16?<a href="/constructor/true">true</a></td><td>Если этот флаг установлен и у нас, и у другого пользователя (изменяется через <a href="/constructor/globalPrivacySettings">globalPrivacySettings</a>), в текстовом поле личных чатов с этим пользователем всегда должна отображаться кнопка подарка: по нажатию должен открываться интерфейс подарков, предлагающий подарить подписку <a href="/api/premium">Telegram Premium »</a> или <a href="/api/gifts">подарки Telegram »</a>.</td></tr><tr><td><strong>noforwards_my_enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.23?<a href="/constructor/true">true</a></td><td>Если установлено, мы включили в данном личном чате <a href="/api/content-protection#for-users">защиту контента »</a>.</td></tr><tr><td><strong>noforwards_peer_enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.24?<a href="/constructor/true">true</a></td><td>Если установлено, этот пользователь включил в данном личном чате <a href="/api/content-protection#for-users">защиту контента »</a>.</td></tr><tr><td><strong>unofficial_security_risk</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.26?<a href="/constructor/true">true</a></td><td>Если установлено, этот пользователь использует неофициальный клиент Telegram, и отправляемые ему сообщения могут быть менее защищёнными; клиентам следует показывать предупреждение в профиле пользователя.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя</td></tr><tr><td><strong>about</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Биография пользователя</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/PeerSettings">PeerSettings</a></td><td>Настройки пира</td></tr><tr><td><strong>personal_photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/type/Photo">Photo</a></td><td>Персональная фотография профиля, показываемая вместо <code>profile_photo</code>.</td></tr><tr><td><strong>profile_photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Photo">Photo</a></td><td>Фотография профиля</td></tr><tr><td><strong>fallback_photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/type/Photo">Photo</a></td><td>Запасная фотография профиля, отображаемая, если из-за настроек приватности отсутствует фотография в <code>profile_photo</code> или <code>personal_photo</code>.</td></tr><tr><td><strong>notify_settings</strong></td><td style="text-align: center;"><a href="/type/PeerNotifySettings">PeerNotifySettings</a></td><td>Настройки уведомлений</td></tr><tr><td><strong>bot_info</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/BotInfo">BotInfo</a></td><td>Для ботов — сведения о боте (команды бота и т. д.)</td></tr><tr><td><strong>pinned_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/int">int</a></td><td>Идентификатор последнего <a href="/api/pin">закреплённого сообщения</a></td></tr><tr><td><strong>common_chats_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общие с этим пользователем чаты</td></tr><tr><td><strong>folder_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/int">int</a></td><td><a href="/api/folders#peer-folders">Идентификатор папки пира, подробнее см. здесь</a></td></tr><tr><td><strong>ttl_period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/int">int</a></td><td>Время жизни всех сообщений в этом чате: как только сообщению исполнится столько секунд, оно должно быть удалено.</td></tr><tr><td><strong>theme</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/ChatTheme">ChatTheme</a></td><td><a href="/api/themes#chat-themes">Тема оформления чата, связанная с этим пользователем »</a>.</td></tr><tr><td><strong>private_forward_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/type/string">string</a></td><td>Анонимный текст, который следует показывать вместо имени пользователя в пересланных сообщениях</td></tr><tr><td><strong>bot_group_admin_rights</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/ChatAdminRights">ChatAdminRights</a></td><td><a href="/api/rights#suggested-bot-rights">Рекомендуемый набор прав администратора</a> для бота, который следует показать при добавлении бота администратором в группу; подробнее о том, как их обрабатывать, см. <a href="/api/rights#suggested-bot-rights">здесь »</a>.</td></tr><tr><td><strong>bot_broadcast_admin_rights</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/ChatAdminRights">ChatAdminRights</a></td><td><a href="/api/rights#suggested-bot-rights">Рекомендуемый набор прав администратора</a> для бота, который следует показать при добавлении бота администратором в канал; подробнее о том, как их обрабатывать, см. <a href="/api/rights#suggested-bot-rights">здесь »</a>.</td></tr><tr><td><strong>wallpaper</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/type/WallPaper">WallPaper</a></td><td><a href="/api/wallpapers">Обои</a> для использования в личном чате с пользователем.</td></tr><tr><td><strong>stories</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/type/PeerStories">PeerStories</a></td><td>Активные <a href="/api/stories">истории »</a></td></tr><tr><td><strong>business_work_hours</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.0?<a href="/type/BusinessWorkHours">BusinessWorkHours</a></td><td><a href="/api/business#opening-hours">Часы работы Telegram Business »</a>.</td></tr><tr><td><strong>business_location</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.1?<a href="/type/BusinessLocation">BusinessLocation</a></td><td><a href="/api/business#location">Местоположение Telegram Business »</a>.</td></tr><tr><td><strong>business_greeting_message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.2?<a href="/type/BusinessGreetingMessage">BusinessGreetingMessage</a></td><td><a href="/api/business#greeting-messages">Приветственное сообщение Telegram Business »</a>.</td></tr><tr><td><strong>business_away_message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.3?<a href="/type/BusinessAwayMessage">BusinessAwayMessage</a></td><td><a href="/api/business#away-messages">Сообщение об отсутствии Telegram Business »</a>.</td></tr><tr><td><strong>business_intro</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.4?<a href="/type/BusinessIntro">BusinessIntro</a></td><td>Задаёт пользовательское <a href="/api/business#business-introduction">представление профиля Telegram Business »</a>.</td></tr><tr><td><strong>birthday</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.5?<a href="/type/Birthday">Birthday</a></td><td>Содержит информацию о <a href="/api/profile#birthday">дне рождения »</a> пользователя.</td></tr><tr><td><strong>personal_channel_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.6?<a href="/type/long">long</a></td><td>Идентификатор привязанного личного <a href="/api/channel">канала »</a>, который следует показывать на <a href="/api/profile#personal-channel">странице профиля</a>.</td></tr><tr><td><strong>personal_channel_message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.6?<a href="/type/int">int</a></td><td>Идентификатор последнего сообщения связанного персонального <a href="/api/channel">канала »</a>, которое следует показывать на <a href="/api/profile#personal-channel">странице профиля</a>.</td></tr><tr><td><strong>stargifts_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.8?<a href="/type/int">int</a></td><td>Количество <a href="/api/gifts">подарков</a>, которые пользователь решил показывать в своём профиле</td></tr><tr><td><strong>starref_program</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.11?<a href="/type/StarRefProgram">StarRefProgram</a></td><td>У этого бота есть действующая <a href="/api/bots/referrals">реферальная программа »</a></td></tr><tr><td><strong>bot_verification</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.12?<a href="/type/BotVerification">BotVerification</a></td><td>Описывает <a href="/api/bots/verification">значок верификации бота »</a>.</td></tr><tr><td><strong>send_paid_messages_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.14?<a href="/type/long">long</a></td><td>Если установлено и больше 0, этот пользователь включил <a href="/api/paid-messages">платные сообщения »</a>, и мы <em>обязаны</em> заплатить указанное количество <a href="/api/stars">Stars</a>, чтобы отправлять ему сообщения; полное описание процесса см. <a href="/api/paid-messages">здесь »</a>.<br>Если установлено и равно 0, пользователь в целом требует оплаты, но мы освобождены от неё <a href="/api/paid-messages">по одной из причин, указанных в документации »</a>.</td></tr><tr><td><strong>disallowed_gifts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.15?<a href="/type/DisallowedGiftsSettings">DisallowedGiftsSettings</a></td><td>Запрещает получение определённых типов подарков.</td></tr><tr><td><strong>stars_rating</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.17?<a href="/type/StarsRating">StarsRating</a></td><td><a href="/api/stars#star-rating">Звёздный рейтинг</a> пользователя.</td></tr><tr><td><strong>stars_my_pending_rating</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.18?<a href="/type/StarsRating">StarsRating</a></td><td>Наш ожидающий <a href="/api/stars#star-rating">звёздный рейтинг</a>, виден только нам самим.</td></tr><tr><td><strong>stars_my_pending_rating_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.18?<a href="/type/int">int</a></td><td>Когда будет применён ожидающий <a href="/api/stars#star-rating">звёздный рейтинг</a>; виден только нам самим.</td></tr><tr><td><strong>main_tab</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.20?<a href="/type/ProfileTab">ProfileTab</a></td><td>Основная вкладка профиля пользователя, <a href="/api/profile#tabs">подробнее здесь »</a>.</td></tr><tr><td><strong>saved_music</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.21?<a href="/type/Document">Document</a></td><td>Первая композиция на вкладке музыки в профиле; подробнее о вкладке музыки в профиле см. <a href="/api/profile#music">здесь »</a>.</td></tr><tr><td><strong>note</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.22?<a href="/type/TextWithEntities">TextWithEntities</a></td><td>Личная заметка об этом контакте, видимая только нам; подробнее о заметках о контактах см. <a href="/api/contacts#private-notes-for-contacts">здесь »</a>.</td></tr><tr><td><strong>bot_manager_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.25?<a href="/type/long">long</a></td><td>Если этот пользователь является <a href="/api/bots/managed-bots">управляемым ботом »</a> — идентификатор пользователя или бота-менеджера, который им управляет.</td></tr></tbody></table> <span class="heading-alias" id="тип"></span><h3 id="type" tabindex="-1">Тип <a class="header-anchor" href="#type" aria-hidden="true">#</a></h3> <p id="p-3"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-3" rel="noopener" title="Перевод абзаца 3" data-tip="Перевод: абзац 3 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> <a href="/type/UserFull/">UserFull</a><a class="p-anchor" href="#p-3" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="связанные-страницы"></span><h3 id="related-pages" tabindex="-1">Связанные страницы <a class="header-anchor" href="#related-pages" aria-hidden="true">#</a></h3> <span class="heading-alias" id="отложенные-сообщения"></span><h4 id="scheduled-messages" tabindex="-1"><a href="/api/scheduled-messages/">Отложенные сообщения</a> <a class="header-anchor" href="#scheduled-messages" aria-hidden="true">#</a></h4> <p id="p-4"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-4" rel="noopener" title="Перевод абзаца 4" data-tip="Перевод: абзац 4 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram позволяет планировать отправку сообщений<a class="p-anchor" href="#p-4" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="перевод-сообщений"></span><h4 id="message-translation" tabindex="-1"><a href="/api/translation/">Перевод сообщений</a> <a class="header-anchor" href="#message-translation" aria-hidden="true">#</a></h4> <p id="p-5"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-5" rel="noopener" title="Перевод абзаца 5" data-tip="Перевод: абзац 5 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram позволяет переводить сообщения в чатах: пользователи Telegram Premium могут даже включить перевод чата в реальном времени.<a class="p-anchor" href="#p-5" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="telegram-stories" tabindex="-1"><a href="/api/stories/">Telegram Stories</a> <a class="header-anchor" href="#telegram-stories" aria-hidden="true">#</a></h4> <p id="p-6"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-6" rel="noopener" title="Перевод абзаца 6" data-tip="Перевод: абзац 6 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.<a class="p-anchor" href="#p-6" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="заблокированные-пользователи"></span><h4 id="blocked-users" tabindex="-1"><a href="/api/block/">Заблокированные пользователи</a> <a class="header-anchor" href="#blocked-users" aria-hidden="true">#</a></h4> <p id="p-7"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-7" rel="noopener" title="Перевод абзаца 7" data-tip="Перевод: абзац 7 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Работа со списком заблокированных.<a class="p-anchor" href="#p-7" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="messagessetchatwallpaper"></span><h4 id="messages-setchatwallpaper" tabindex="-1"><a href="/method/messages.setChatWallPaper/">messages.setChatWallPaper</a> <a class="header-anchor" href="#messages-setchatwallpaper" aria-hidden="true">#</a></h4> <p id="p-8"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-8" rel="noopener" title="Перевод абзаца 8" data-tip="Перевод: абзац 8 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Установить пользовательские <a href="/api/wallpapers/">обои »</a> в конкретном личном чате с другим пользователем.<a class="p-anchor" href="#p-8" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="обои-чатов"></span><h4 id="chat-wallpapers" tabindex="-1"><a href="/api/wallpapers/">Обои чатов</a> <a class="header-anchor" href="#chat-wallpapers" aria-hidden="true">#</a></h4> <p id="p-9"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-9" rel="noopener" title="Перевод абзаца 9" data-tip="Перевод: абзац 9 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.<a class="p-anchor" href="#p-9" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="telegram-premium" tabindex="-1"><a href="/api/premium/">Telegram Premium</a> <a class="header-anchor" href="#telegram-premium" aria-hidden="true">#</a></h4> <p id="p-10"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-10" rel="noopener" title="Перевод абзаца 10" data-tip="Перевод: абзац 10 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.<a class="p-anchor" href="#p-10" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="accountsetglobalprivacysettings"></span><h4 id="account-setglobalprivacysettings" tabindex="-1"><a href="/method/account.setGlobalPrivacySettings/">account.setGlobalPrivacySettings</a> <a class="header-anchor" href="#account-setglobalprivacysettings" aria-hidden="true">#</a></h4> <p id="p-11"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-11" rel="noopener" title="Перевод абзаца 11" data-tip="Перевод: абзац 11 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Задать глобальные настройки приватности<a class="p-anchor" href="#p-11" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="настройки-приватности"></span><h4 id="privacy-settings" tabindex="-1"><a href="/api/privacy/">Настройки приватности</a> <a class="header-anchor" href="#privacy-settings" aria-hidden="true">#</a></h4> <p id="p-12"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-12" rel="noopener" title="Перевод абзаца 12" data-tip="Перевод: абзац 12 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным способом.<a class="p-anchor" href="#p-12" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="messagesgetoutboxreaddate"></span><h4 id="messages-getoutboxreaddate" tabindex="-1"><a href="/method/messages.getOutboxReadDate/">messages.getOutboxReadDate</a> <a class="header-anchor" href="#messages-getoutboxreaddate" aria-hidden="true">#</a></h4> <p id="p-13"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-13" rel="noopener" title="Перевод абзаца 13" data-tip="Перевод: абзац 13 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Получить точную дату прочтения одного из наших сообщений, отправленных в личный чат с другим пользователем.<a class="p-anchor" href="#p-13" aria-label="Ссылка на этот абзац">¶</a></p> <p id="p-14"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-14" rel="noopener" title="Перевод абзаца 14" data-tip="Перевод: абзац 14 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Возможно только для исходящих личных сообщений не старше <a href="/api/config/#pm-read-date-expire-period">appConfig.pm_read_date_expire_period »</a>.<a class="p-anchor" href="#p-14" aria-label="Ссылка на этот абзац">¶</a></p> <p id="p-15"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-15" rel="noopener" title="Перевод абзаца 15" data-tip="Перевод: абзац 15 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="para-label para-term" tabindex="0" role="note" title="Термин: peer" data-tip="Термин: peer — пир: собеседник в широком смысле — пользователь, обычная группа, супергруппа или канал"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h10v13l-5-3.5-5 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span></span> Если у <code>peer</code> установлен флаг <a href="/constructor/userFull/">userFull</a>.<code>read_dates_private</code>, мы не сможем получить точную дату прочтения отправленных ему сообщений, и будет возвращена ошибка RPC <code>USER_PRIVACY_RESTRICTED</code>.<br> Точная дата прочтения сообщений может быть недоступна и по другим причинам, подробнее <a href="/constructor/globalPrivacySettings/">см. здесь »</a>.<br> Чтобы установить <a href="/constructor/userFull/">userFull</a>.<code>read_dates_private</code> для себя, вызовите <a href="/method/account.setGlobalPrivacySettings/">account.setGlobalPrivacySettings</a>, установив флаг <code>settings.hide_read_marks</code>.<a class="p-anchor" href="#p-15" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="telegram-business" tabindex="-1"><a href="/api/business/">Telegram Business</a> <a class="header-anchor" href="#telegram-business" aria-hidden="true">#</a></h4> <p id="p-16"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-16" rel="noopener" title="Перевод абзаца 16" data-tip="Перевод: абзац 16 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.<a class="p-anchor" href="#p-16" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="доход-от-рекламы-в-каналах-и-ботах"></span><h4 id="channel-and-bot-ad-revenue" tabindex="-1"><a href="/api/revenue/">Доход от рекламы в каналах и ботах</a> <a class="header-anchor" href="#channel-and-bot-ad-revenue" aria-hidden="true">#</a></h4> <p id="p-17"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-17" rel="noopener" title="Перевод абзаца 17" data-tip="Перевод: абзац 17 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> В Telegram действует одна из самых щедрых систем вознаграждения в истории социальных сетей. Владельцы каналов и ботов Telegram теперь могут получать 50% дохода от рекламы, показанной в их каналах и ботах. На этой странице описаны методы для вывода дохода от рекламы в каналах и ботах, а также для просмотра подробной статистики доходов.<a class="p-anchor" href="#p-17" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="эмодзи-статус"></span><h4 id="emoji-status" tabindex="-1"><a href="/api/emoji-status/">Эмодзи-статус</a> <a class="header-anchor" href="#emoji-status" aria-hidden="true">#</a></h4> <p id="p-18"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-18" rel="noopener" title="Перевод абзаца 18" data-tip="Перевод: абзац 18 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.<a class="p-anchor" href="#p-18" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="globalprivacysettings" tabindex="-1"><a href="/constructor/globalPrivacySettings/">globalPrivacySettings</a> <a class="header-anchor" href="#globalprivacysettings" aria-hidden="true">#</a></h4> <p id="p-19"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-19" rel="noopener" title="Перевод абзаца 19" data-tip="Перевод: абзац 19 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Глобальные настройки приватности<a class="p-anchor" href="#p-19" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="подарки-telegram"></span><h4 id="telegram-gifts" tabindex="-1"><a href="/api/gifts/">Подарки Telegram</a> <a class="header-anchor" href="#telegram-gifts" aria-hidden="true">#</a></h4> <p id="p-20"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-20" rel="noopener" title="Перевод абзаца 20" data-tip="Перевод: абзац 20 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.<a class="p-anchor" href="#p-20" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="защита-контента"></span><h4 id="content-protection" tabindex="-1"><a href="/api/content-protection/">Защита контента</a> <a class="header-anchor" href="#content-protection" aria-hidden="true">#</a></h4> <p id="p-21"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-21" rel="noopener" title="Перевод абзаца 21" data-tip="Перевод: абзац 21 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Пользователи и боты, желающие сохранить приватность своих сообщений, а также владельцы групп и каналов, желающие оставить свой контент доступным только участникам, могут включить защиту контента: она препятствует созданию снимков экрана и копированию, отключает пересылку сообщений и ограничивает возможность сохранять медиа из публикаций.<a class="p-anchor" href="#p-21" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="закреплённые-сообщения"></span><h4 id="pinned-messages" tabindex="-1"><a href="/api/pin/">Закреплённые сообщения</a> <a class="header-anchor" href="#pinned-messages" aria-hidden="true">#</a></h4> <p id="p-22"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-22" rel="noopener" title="Перевод абзаца 22" data-tip="Перевод: абзац 22 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram позволяет закреплять несколько сообщений вверху конкретного чата.<a class="p-anchor" href="#p-22" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="папки-диалогов"></span><h4 id="dialog-folders" tabindex="-1"><a href="/api/folders/">Папки диалогов</a> <a class="header-anchor" href="#dialog-folders" aria-hidden="true">#</a></h4> <p id="p-23"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-23" rel="noopener" title="Перевод абзаца 23" data-tip="Перевод: абзац 23 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.<a class="p-anchor" href="#p-23" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="темы-оформления-telegram"></span><h4 id="telegram-themes" tabindex="-1"><a href="/api/themes/">Темы оформления Telegram</a> <a class="header-anchor" href="#telegram-themes" aria-hidden="true">#</a></h4> <p id="p-24"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-24" rel="noopener" title="Перевод абзаца 24" data-tip="Перевод: абзац 24 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Приложения Telegram умеют создавать, отправлять и синхронизировать темы оформления.<a class="p-anchor" href="#p-24" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="права-администраторов-ограничения-и-права-по-умолчанию"></span><h4 id="admin-banned-default-rights" tabindex="-1"><a href="/api/rights/">Права администраторов, ограничения и права по умолчанию</a> <a class="header-anchor" href="#admin-banned-default-rights" aria-hidden="true">#</a></h4> <p id="p-25"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-25" rel="noopener" title="Перевод абзаца 25" data-tip="Перевод: абзац 25 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Как работать с правами администраторов, детальными ограничениями и общими правами в каналах, группах и супергруппах.<a class="p-anchor" href="#p-25" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="профили-пользователей"></span><h4 id="user-profiles" tabindex="-1"><a href="/api/profile/">Профили пользователей</a> <a class="header-anchor" href="#user-profiles" aria-hidden="true">#</a></h4> <p id="p-26"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-26" rel="noopener" title="Перевод абзаца 26" data-tip="Перевод: абзац 26 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram предлагает множество вариантов настройки вашего профиля!<a class="p-anchor" href="#p-26" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="каналы-супергруппы-гигагруппы-и-обычные-группы"></span><h4 id="channels-supergroups-gigagroups-and-basic-groups" tabindex="-1"><a href="/api/channel/">Каналы, супергруппы, гигагруппы и обычные группы</a> <a class="header-anchor" href="#channels-supergroups-gigagroups-and-basic-groups" aria-hidden="true">#</a></h4> <p id="p-27"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-27" rel="noopener" title="Перевод абзаца 27" data-tip="Перевод: абзац 27 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.<a class="p-anchor" href="#p-27" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="партнёрские-программы"></span><h4 id="affiliate-programs" tabindex="-1"><a href="/api/bots/referrals/">Партнёрские программы</a> <a class="header-anchor" href="#affiliate-programs" aria-hidden="true">#</a></h4> <p id="p-28"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-28" rel="noopener" title="Перевод абзаца 28" data-tip="Перевод: абзац 28 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><span class="para-label para-term" tabindex="0" role="note" title="Термин: Mini App" data-tip="Термин: Mini App — Mini App: веб-приложение, открываемое внутри Telegram и получающее данные о пользователе от клиента"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h10v13l-5-3.5-5 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span></span> Разработчики могут открывать партнёрские программы для своих mini app — это позволяет авторам контента, другим разработчикам mini app и любому пользователю Telegram продвигать приложение и получать комиссию с покупок, совершённых приведёнными ими людьми.<a class="p-anchor" href="#p-28" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="сторонняя-верификация"></span><h4 id="third-party-verification" tabindex="-1"><a href="/api/bots/verification/">Сторонняя верификация</a> <a class="header-anchor" href="#third-party-verification" aria-hidden="true">#</a></h4> <p id="p-29"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-29" rel="noopener" title="Перевод абзаца 29" data-tip="Перевод: абзац 29 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Чтобы ещё повысить прозрачность в Telegram, официальные сторонние сервисы могут присваивать аккаунтам пользователей и чатам дополнительные значки верификации — чтобы предотвратить мошенничество и снизить распространение недостоверной информации.<a class="p-anchor" href="#p-29" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="платные-сообщения"></span><h4 id="paid-messages" tabindex="-1"><a href="/api/paid-messages/">Платные сообщения</a> <a class="header-anchor" href="#paid-messages" aria-hidden="true">#</a></h4> <p id="p-30"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-30" rel="noopener" title="Перевод абзаца 30" data-tip="Перевод: абзац 30 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.<a class="p-anchor" href="#p-30" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="telegram-stars" tabindex="-1"><a href="/api/stars/">Telegram Stars</a> <a class="header-anchor" href="#telegram-stars" aria-hidden="true">#</a></h4> <p id="p-31"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-31" rel="noopener" title="Перевод абзаца 31" data-tip="Перевод: абзац 31 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.<a class="p-anchor" href="#p-31" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="список-контактов"></span><h4 id="contact-list" tabindex="-1"><a href="/api/contacts/">Список контактов</a> <a class="header-anchor" href="#contact-list" aria-hidden="true">#</a></h4> <p id="p-32"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-32" rel="noopener" title="Перевод абзаца 32" data-tip="Перевод: абзац 32 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Работа с контактами.<a class="p-anchor" href="#p-32" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="управляемые-боты"></span><h4 id="managed-bots" tabindex="-1"><a href="/api/bots/managed-bots/">Управляемые боты</a> <a class="header-anchor" href="#managed-bots" aria-hidden="true">#</a></h4> <p id="p-33"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-33" rel="noopener" title="Перевод абзаца 33" data-tip="Перевод: абзац 33 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Пользователи могут создавать <strong>управляемых</strong> ботов (которыми управляет определённый бот-менеджер) прямо через MTProto API, не обращаясь к <a href="https://t.me/botfather">@BotFather</a>.<a class="p-anchor" href="#p-33" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="база-данных-пиров"></span><h4 id="peer-database" tabindex="-1"><a href="/api/peers/">База данных пиров</a> <a class="header-anchor" href="#peer-database" aria-hidden="true">#</a></h4> <p id="p-34"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/userFull/#p-34" rel="noopener" title="Перевод абзаца 34" data-tip="Перевод: абзац 34 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.<a class="p-anchor" href="#p-34" aria-label="Ссылка на этот абзац">¶</a></p> <div class="source-note"> Оригинал: <a href="https://core.telegram.org/constructor/userFull" rel="noopener">https://core.telegram.org/constructor/userFull</a> · Английская версия: <a href="https://mirrortproto.github.io/constructor/userFull/" rel="noopener">mirrortproto.github.io</a> </div> </article> </main> </div> <footer class="site-footer"> Неофициальный русскоязычный перевод документации <a href="https://core.telegram.org/mtproto" rel="noopener">core.telegram.org</a>. Снимок контента: 2026-08-23. Исходники сайта — <a href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener">rumtproto/rumtproto.github.io</a>. </footer> <script src="/pagefind/pagefind-ui.js"></script> <script>
+  (function () {
+    var btn = document.querySelector('.theme-toggle');
+    var seg = Array.prototype.slice.call(document.querySelectorAll('.theme-seg button'));
+    if (!btn && !seg.length) return;
+    var order = ['auto', 'light', 'dark'];
+    function current() { try { return localStorage.getItem('theme') || 'auto'; } catch (e) { return 'auto'; } }
+    function set(mode) {
+      try { mode === 'auto' ? localStorage.removeItem('theme') : localStorage.setItem('theme', mode); } catch (e) {}
+      apply(mode);
+    }
+    function apply(mode) {
+      if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', mode);
+      if (btn) {
+        btn.dataset.mode = mode;
+        btn.title = 'Цветовая тема: ' + mode;
+        btn.setAttribute('aria-label', 'Цветовая тема: ' + mode + '. Нажмите для переключения.');
+      }
+      seg.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.mode === mode)); });
+      var dark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+        if ((m.media || '').indexOf('dark') !== -1) m.content = dark ? '#0d1117' : '#ffffff';
+      });
+    }
+    seg.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.mode); }); });
+    if (btn) btn.addEventListener('click', function () { set(order[(order.indexOf(current()) + 1) % order.length]); });
+    apply(current());
+  })();
+  (function () {
+    document.addEventListener('keydown', function (e) {
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (e.key === '/' && !/^(input|textarea|select)$/i.test(tag)) {
+        var q = document.querySelector('.site-search input') || document.querySelector('.pagefind-ui__search-input');
+        if (q) { e.preventDefault(); q.focus(); }
+      }
+    });
+  })();
+  (function () {
+    /* скрыть плейсхолдер после реальной загрузки медиа */
+    document.querySelectorAll('.img-box').forEach(function (box) {
+      var im = box.querySelector('img') || box.querySelector('video');
+      if (!im) return;
+      var ok = function () { box.classList.add('img-ok'); };
+      if (im.complete && im.naturalWidth > 0) ok();
+      else im.addEventListener('load', ok);
+    });
+  })();
+</script> </body> </html> 

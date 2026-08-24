@@ -1,18 +1,15 @@
 ---
-title: "auth.CodeType (тип)"
+title: "auth.CodeType"
 original: "https://core.telegram.org/type/auth.CodeType"
 section: ref
 kind: type
+description: "Тип кода подтверждения, который будет отправлен следующим при вызове метода resendCode"
 layout: layout.njk
 ---
 
 # auth.CodeType
 
-*Тип из схемы TL.*
-
-> Type of verification code that will be sent next if you call the resendCode method
-
-## Определение TL
+Тип кода подтверждения, который будет отправлен следующим при вызове метода resendCode
 
 ```
 auth.codeTypeSms#72a3158c = auth.CodeType;
@@ -22,12 +19,6 @@ auth.codeTypeMissedCall#d61ad6ee = auth.CodeType;
 auth.codeTypeFragmentSms#6ed998c = auth.CodeType;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [auth.codeTypeSms](/constructor/auth.codeTypeSms/) | The next time, the authentication code will be delivered via an immediately canceled incoming call. |
-| [auth.codeTypeCall](/constructor/auth.codeTypeCall/) | The next time, the authentication code is to be delivered via an outgoing phone call. |
-| [auth.codeTypeFlashCall](/constructor/auth.codeTypeFlashCall/) | The next time, the authentication code will be delivered via an immediately canceled incoming call. |
-| [auth.codeTypeMissedCall](/constructor/auth.codeTypeMissedCall/) | The next time, the authentication code will be delivered via an immediately canceled incoming call, handled manually by the user. |
-| [auth.codeTypeFragmentSms](/constructor/auth.codeTypeFragmentSms/) | The next time, the authentication code will be delivered via [fragment.com](https://fragment.com) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/auth.codeTypeSms">auth.codeTypeSms</a></td><td>В следующий раз код аутентификации будет доставлен через немедленно сброшенный входящий звонок.</td></tr><tr><td><a href="/constructor/auth.codeTypeCall">auth.codeTypeCall</a></td><td>В следующий раз код аутентификации будет доставлен через исходящий телефонный звонок.</td></tr><tr><td><a href="/constructor/auth.codeTypeFlashCall">auth.codeTypeFlashCall</a></td><td>В следующий раз код аутентификации будет доставлен через немедленно сброшенный входящий звонок.</td></tr><tr><td><a href="/constructor/auth.codeTypeMissedCall">auth.codeTypeMissedCall</a></td><td>В следующий раз код аутентификации будет доставлен через немедленно сброшенный входящий звонок, который пользователь обрабатывает вручную.</td></tr><tr><td><a href="/constructor/auth.codeTypeFragmentSms">auth.codeTypeFragmentSms</a></td><td>В следующий раз код аутентификации будет доставлен через <a href="https://fragment.com">fragment.com</a></td></tr></tbody></table>

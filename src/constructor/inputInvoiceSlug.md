@@ -1,39 +1,34 @@
 ---
-title: "inputInvoiceSlug (конструктор)"
+title: "inputInvoiceSlug"
 original: "https://core.telegram.org/constructor/inputInvoiceSlug"
 section: ref
 kind: constructor
+description: "Идентификатор счёта (slug), взятый из глубокой ссылки на счёт или из параметра конфигурации приложения premium_invoice_slug »"
 layout: layout.njk
 ---
 
 # inputInvoiceSlug
 
-*Конструктор из схемы TL.*
-
-> An invoice slug taken from an [invoice deep link](https://core.telegram.org/api/links#invoice-links) or from the [`premium_invoice_slug` app config parameter »](https://core.telegram.org/api/config#premium-invoice-slug)
-
-## Определение TL
+Идентификатор счёта (slug), взятый из [глубокой ссылки на счёт](/api/links/#invoice-links) или из [параметра конфигурации приложения `premium_invoice_slug` »](/api/config/#premium-invoice-slug)
 
 ```
 inputInvoiceSlug#c326caef slug:string = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| slug | [string](/type/string/) | The invoice slug |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Идентификатор счёта (slug)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

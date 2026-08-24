@@ -1,18 +1,15 @@
 ---
-title: "account.getChatThemes (метод)"
+title: "account.getChatThemes"
 original: "https://core.telegram.org/method/account.getChatThemes"
 section: ref
 kind: method
+description: "Получить все доступные темы оформления чатов »."
 layout: layout.njk
 ---
 
 # account.getChatThemes
 
-*Метод из схемы TL.*
-
-> Get all available chat [themes »](https://core.telegram.org/api/themes).
-
-## Определение TL
+Получить все доступные [темы оформления чатов »](/api/themes/).
 
 ```
 account.themesNotModified#f41eb622 = account.Themes;
@@ -21,24 +18,22 @@ account.themes#9a3d8c6d hash:long themes:Vector<Theme> = account.Themes;
 account.getChatThemes#d638de89 hash:long = account.Themes;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.Themes](/type/account.Themes/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Telegram themes](https://core.telegram.org/api/themes)
+#### [Темы оформления Telegram](/api/themes/)
 
-Telegram apps support generating, sharing and synchronizing app themes.
+Приложения Telegram умеют создавать, отправлять и синхронизировать темы оформления.

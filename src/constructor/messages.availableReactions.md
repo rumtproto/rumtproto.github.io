@@ -1,40 +1,34 @@
 ---
-title: "messages.availableReactions (конструктор)"
+title: "messages.availableReactions"
 original: "https://core.telegram.org/constructor/messages.availableReactions"
 section: ref
 kind: constructor
+description: "Анимации и метаданные, связанные с реакциями на сообщения »"
 layout: layout.njk
 ---
 
 # messages.availableReactions
 
-*Конструктор из схемы TL.*
-
-> Animations and metadata associated with [message reactions »](https://core.telegram.org/api/reactions)
-
-## Определение TL
+Анимации и метаданные, связанные с [реакциями на сообщения »](/api/reactions/)
 
 ```
 messages.availableReactions#768e3aad hash:int reactions:Vector<AvailableReaction> = messages.AvailableReactions;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| reactions | [Vector](https://core.telegram.org/type/Vector%20t)<[AvailableReaction](/type/AvailableReaction/)> | Animations and metadata associated with [message reactions »](https://core.telegram.org/api/reactions) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>reactions</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/AvailableReaction">AvailableReaction</a>&gt;</td><td>Анимации и метаданные, связанные с <a href="/api/reactions">реакциями на сообщения »</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.AvailableReactions](/type/messages.AvailableReactions/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

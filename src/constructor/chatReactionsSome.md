@@ -1,35 +1,30 @@
 ---
-title: "chatReactionsSome (конструктор)"
+title: "chatReactionsSome"
 original: "https://core.telegram.org/constructor/chatReactionsSome"
 section: ref
 kind: constructor
+description: "Разрешены некоторые реакции"
 layout: layout.njk
 ---
 
 # chatReactionsSome
 
-*Конструктор из схемы TL.*
-
-> Some reactions are allowed
-
-## Определение TL
+Разрешены некоторые реакции
 
 ```
 chatReactionsSome#661d4037 reactions:Vector<Reaction> = ChatReactions;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| reactions | [Vector](https://core.telegram.org/type/Vector%20t)<[Reaction](/type/Reaction/)> | Allowed set of reactions: the [reactions_in_chat_max](https://core.telegram.org/api/config#reactions-in-chat-max) configuration field indicates the maximum number of reactions that can be specified in this field. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>reactions</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Reaction">Reaction</a>&gt;</td><td>Разрешённый набор реакций: поле конфигурации <a href="/api/config#reactions-in-chat-max">reactions_in_chat_max</a> указывает максимальное количество реакций, которое можно задать в этом поле.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatReactions](/type/ChatReactions/)
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

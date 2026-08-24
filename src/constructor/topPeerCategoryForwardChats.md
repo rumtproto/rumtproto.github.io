@@ -1,27 +1,24 @@
 ---
-title: "topPeerCategoryForwardChats (конструктор)"
+title: "topPeerCategoryForwardChats"
 original: "https://core.telegram.org/constructor/topPeerCategoryForwardChats"
 section: ref
 kind: constructor
+description: "Чаты, в которые пользователь часто пересылает сообщения"
 layout: layout.njk
 ---
 
 # topPeerCategoryForwardChats
 
-*Конструктор из схемы TL.*
-
-> Chats to which the users often forwards messages to
-
-## Определение TL
+Чаты, в которые пользователь часто пересылает сообщения
 
 ```
 topPeerCategoryForwardChats#fbeec0f0 = TopPeerCategory;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [TopPeerCategory](/type/TopPeerCategory/)

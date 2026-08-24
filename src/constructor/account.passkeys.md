@@ -1,35 +1,30 @@
 ---
-title: "account.passkeys (конструктор)"
+title: "account.passkeys"
 original: "https://core.telegram.org/constructor/account.passkeys"
 section: ref
 kind: constructor
+description: "Список ключей доступа », привязанных к текущему аккаунту."
 layout: layout.njk
 ---
 
 # account.passkeys
 
-*Конструктор из схемы TL.*
-
-> List of [passkeys »](https://core.telegram.org/api/passkeys#list-passkeys) associated to the current account.
-
-## Определение TL
+Список [ключей доступа »](/api/passkeys/#list-passkeys), привязанных к текущему аккаунту.
 
 ```
 account.passkeys#f8e0aa1c passkeys:Vector<Passkey> = account.Passkeys;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| passkeys | [Vector](https://core.telegram.org/type/Vector%20t)<[Passkey](/type/Passkey/)> | List of passkeys that can be used to log into the current account |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>passkeys</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Passkey">Passkey</a>&gt;</td><td>Список ключей доступа, которыми можно войти в текущий аккаунт</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.Passkeys](/type/account.Passkeys/)
 
-## Related pages
+### Связанные страницы
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

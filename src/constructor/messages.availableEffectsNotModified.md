@@ -1,33 +1,30 @@
 ---
-title: "messages.availableEffectsNotModified (конструктор)"
+title: "messages.availableEffectsNotModified"
 original: "https://core.telegram.org/constructor/messages.availableEffectsNotModified"
 section: ref
 kind: constructor
+description: "Полный список доступных анимированных эффектов для сообщений » не изменился."
 layout: layout.njk
 ---
 
 # messages.availableEffectsNotModified
 
-*Конструктор из схемы TL.*
-
-> The full list of usable [animated message effects »](https://core.telegram.org/api/effects) hasn't changed.
-
-## Определение TL
+Полный список доступных [анимированных эффектов для сообщений »](/api/effects/) не изменился.
 
 ```
 messages.availableEffectsNotModified#d1ed9a5b = messages.AvailableEffects;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.AvailableEffects](/type/messages.AvailableEffects/)
 
-## Related pages
+### Связанные страницы
 
-#### [Animated message effects](https://core.telegram.org/api/effects)
+#### [Анимированные эффекты для сообщений](/api/effects/)
 
-Telegram allows adding spectacular animated effects to messages you send.
+Telegram позволяет добавлять к отправляемым сообщениям зрелищные анимированные эффекты.

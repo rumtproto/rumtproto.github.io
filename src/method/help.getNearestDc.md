@@ -1,18 +1,15 @@
 ---
-title: "help.getNearestDc (метод)"
+title: "help.getNearestDc"
 original: "https://core.telegram.org/method/help.getNearestDc"
 section: ref
 kind: method
+description: "Возвращает сведения о ближайшем к пользователю дата-центре."
 layout: layout.njk
 ---
 
 # help.getNearestDc
 
-*Метод из схемы TL.*
-
-> Returns info on data center nearest to the user.
-
-## Определение TL
+Возвращает сведения о ближайшем к пользователю дата-центре.
 
 ```
 nearestDc#8e1a1775 country:string this_dc:int nearest_dc:int = NearestDc;
@@ -20,14 +17,14 @@ nearestDc#8e1a1775 country:string this_dc:int nearest_dc:int = NearestDc;
 help.getNearestDc#1fb33026 = NearestDc;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [NearestDc](/type/NearestDc/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)

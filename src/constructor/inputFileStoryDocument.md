@@ -1,35 +1,30 @@
 ---
-title: "inputFileStoryDocument (конструктор)"
+title: "inputFileStoryDocument"
 original: "https://core.telegram.org/constructor/inputFileStoryDocument"
 section: ref
 kind: constructor
+description: "Используется, чтобы изменить миниатюру или статичный предпросмотр истории; подробнее обо всём процессе см. здесь »."
 layout: layout.njk
 ---
 
 # inputFileStoryDocument
 
-*Конструктор из схемы TL.*
-
-> Used to [edit the thumbnail/static preview of a story, see here »](https://core.telegram.org/api/stories#editing-stories) for more info on the full flow.
-
-## Определение TL
+Используется, чтобы [изменить миниатюру или статичный предпросмотр истории; подробнее обо всём процессе см. здесь »](/api/stories/#editing-stories).
 
 ```
 inputFileStoryDocument#62dc8b48 id:InputDocument = InputFile;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [InputDocument](/type/InputDocument/) | The old story video. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputDocument">InputDocument</a></td><td>Прежнее видео истории.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputFile](/type/InputFile/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

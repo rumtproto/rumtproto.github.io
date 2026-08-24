@@ -1,18 +1,15 @@
 ---
-title: "messages.importChatInvite (метод)"
+title: "messages.importChatInvite"
 original: "https://core.telegram.org/method/messages.importChatInvite"
 section: ref
 kind: method
+description: "Применить приглашение в чат и вступить в личный чат/супергруппу/канал"
 layout: layout.njk
 ---
 
 # messages.importChatInvite
 
-*Метод из схемы TL.*
-
-> Import a chat invite and join a private chat/supergroup/channel
-
-## Определение TL
+Применить приглашение в чат и вступить в личный чат/супергруппу/канал
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,43 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.importChatInvite#6c50051c hash:string = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [string](/type/string/) | hash from a [chat invite deep link](https://core.telegram.org/api/links#chat-invite-links) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:hash] <code>hash</code> из <a href="/api/links#chat-invite-links">глубокой пригласительной ссылки на чат</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNELS_TOO_MUCH | You have joined too many channels/supergroups. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_INVALID | Invalid chat. |
-| 400 | INVITE_HASH_EMPTY | The invite hash is empty. |
-| 406 | INVITE_HASH_EXPIRED | The invite link has expired. |
-| 400 | INVITE_HASH_INVALID | The invite hash is invalid. |
-| 400 | INVITE_REQUEST_SENT | You have successfully requested to join this chat or channel. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | STARS_PAYMENT_REQUIRED | To import this chat invite link, you must first [pay for the associated Telegram Star subscription »](https://core.telegram.org/api/subscriptions#channel-subscriptions). |
-| 400 | USERS_TOO_MUCH | The maximum number of users has been exceeded (to create a chat, for example). |
-| 400 | USER_ALREADY_PARTICIPANT | The user is already in the group. |
-| 400 | USER_CHANNELS_TOO_MUCH | One of the users you tried to add is already in too many channels/supergroups. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNELS_TOO_MUCH</td><td>Вы состоите в слишком большом числе каналов и супергрупп.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_INVALID</td><td>Недействительный чат.</td></tr><tr><td>400</td><td>INVITE_HASH_EMPTY</td><td>Хеш приглашения пуст.</td></tr><tr><td>406</td><td>INVITE_HASH_EXPIRED</td><td>Срок действия пригласительной ссылки истёк.</td></tr><tr><td>400</td><td>INVITE_HASH_INVALID</td><td>Хеш приглашения недействителен.</td></tr><tr><td>400</td><td>INVITE_REQUEST_SENT</td><td>Вы успешно подали заявку на вступление в этот чат или канал.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>STARS_PAYMENT_REQUIRED</td><td>Чтобы воспользоваться этой пригласительной ссылкой, необходимо сначала <a href="/api/subscriptions#channel-subscriptions">оплатить связанную с ней подписку за Telegram Stars&nbsp;»</a>.</td></tr><tr><td>400</td><td>USERS_TOO_MUCH</td><td>Превышено максимальное количество пользователей (например, при создании чата).</td></tr><tr><td>400</td><td>USER_ALREADY_PARTICIPANT</td><td>Пользователь уже состоит в группе.</td></tr><tr><td>400</td><td>USER_CHANNELS_TOO_MUCH</td><td>Один из пользователей, которых вы попытались добавить, уже состоит в слишком большом числе каналов и супергрупп.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Star subscriptions](https://core.telegram.org/api/subscriptions)
+#### [Подписки за звёзды](/api/subscriptions/)
 
-Bots and channels may create subscriptions, periodically charging users a certain amount of Telegram Stars in exchange for content and services.
+Боты и каналы могут создавать подписки, периодически списывая с пользователей определённое количество Telegram Stars в обмен на контент и услуги.

@@ -1,148 +1,13 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>updates.Difference (тип) — MTProto по-русски</title>
-<link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
-    <nav class="top-nav">
-      <a href="/mtproto/">MTProto</a>
-      <a href="/api/">API</a>
-      <a href="/schema/">Схема</a>
-      <a href="/glossary/">Глоссарий</a>
-    </nav>
-  </div>
-</header>
-<div class="layout">
-  <aside class="sidebar">
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Протокол MTProto</div>
-        <ul>
-          
-            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
-          
-            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
-          
-            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
-          
-            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
-          
-            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
-          
-            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
-          
-            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
-          
-            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
-          
-            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
-          
-            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
-          
-            <li><a href="/mtproto/TL/">Язык TL</a></li>
-          
-            <li><a href="/mtproto/transports/">Транспорты</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Telegram API</div>
-        <ul>
-          
-            <li><a href="/api/">Telegram API</a></li>
-          
-            <li><a href="/api/auth/">Авторизация пользователя</a></li>
-          
-            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
-          
-            <li><a href="/api/errors/">Ошибки</a></li>
-          
-            <li><a href="/api/files/">Работа с файлами</a></li>
-          
-            <li><a href="/api/invoking/">Вызов методов</a></li>
-          
-            <li><a href="/api/layers/">Слои схемы</a></li>
-          
-            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
-          
-            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
-          
-            <li><a href="/api/updates/">Получение обновлений</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Схема TL</div>
-        <ul>
-          
-            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
-          
-            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
-          
-            <li><a href="/methods/">Методы по категориям</a></li>
-          
-            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
-          
-            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
-          
-            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
-          
-            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Другое</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-            <li><a href="/techfaq/">Технический FAQ</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Справочник схемы</div>
-        <ul>
-          
-            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
-          
-            <li><a href="/method/">Методы (справочник)</a></li>
-          
-            <li><a href="/type/">Типы (справочник)</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Приложение</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-        </ul>
-      </div>
-    
-  </aside>
-  <main class="content">
-    <article>
-      <h1 id="updates.difference" tabindex="-1">updates.Difference</h1>
-<p><em>Тип из схемы TL.</em></p>
-<blockquote>
-<p>Occurred changes.</p>
-</blockquote>
-<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
-<pre><code>updates.differenceEmpty#5d75a138 date:int seq:int = updates.Difference;
+<!doctype html> <html lang="ru"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script> <title>updates.Difference — MTProto по-русски</title> <meta name="description" content="Произошедшие изменения."> <meta property="og:title" content="updates.Difference"> <meta property="og:description" content="Произошедшие изменения."> <meta property="og:type" content="article"> <meta property="og:site_name" content="MTProto по-русски"> <meta property="og:locale" content="ru_RU"> <meta property="og:url" content="https://rumtproto.github.io/type/updates.Difference/"> <meta property="og:image" content="https://rumtproto.github.io/apple-touch-icon.png"> <meta name="twitter:card" content="summary"> <link rel="canonical" href="https://rumtproto.github.io/type/updates.Difference/"> <link rel="alternate" hreflang="en" href="https://mirrortproto.github.io/type/updates.Difference/"> <link rel="alternate" hreflang="ru" href="https://rumtproto.github.io/type/updates.Difference/"> <link rel="manifest" href="/manifest.webmanifest"> <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)"> <link rel="icon" href="/favicon.svg" type="image/svg+xml"> <link rel="icon" href="/icon-64.png" type="image/png" sizes="64x64"> <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <link rel="stylesheet" href="/css/style.css"> <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Схема","item":"https://rumtproto.github.io/schema/"},{"@type":"ListItem","position":2,"name":"Типы","item":"https://rumtproto.github.io/type/"}]}
+</script> </head> <body data-pagefind-filter="Раздел:Схема"> <a class="skip-link" href="#content">К содержанию</a> <header class="site-header"> <div class="header-inner"> <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a> <nav class="top-nav" aria-label="Разделы"> <a href="/api/" >API</a> <a href="/mtproto/" >MTProto</a> <a href="/schema/" class="active" aria-current="section">Схема</a> <a href="/techfaq/" >FAQ</a> </nav> <form class="site-search" action="/search/" method="get" role="search"> <span class="search-field"> <input type="search" name="q" placeholder="Поиск" aria-label="Поиск (нажмите / для фокуса)"> <kbd class="search-kbd" aria-hidden="true">/</kbd> </span> </form> <a class="search-button" href="/search/" aria-label="Поиск"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg> </a> <a class="source-link" href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener"> <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="source-link-text">Исходный код</span> </a> <div class="theme-switch" role="group" aria-label="Цветовая тема"> <div class="theme-seg"> <button type="button" data-mode="auto" aria-pressed="false" title="Системная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="light" aria-pressed="false" title="Светлая тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="dark" aria-pressed="false" title="Тёмная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> <button class="theme-toggle" type="button" data-mode="auto" title="Цветовая тема: auto"> <svg class="icon-auto" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-light" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-dark" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> </div> </header> <div class="layout"> <aside class="sidebar" aria-label="Страницы раздела"> <div class="nav-group"> <div class="nav-group-title">Схема</div> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </div> </aside> <main class="content" id="content"> <nav class="crumbs" aria-label="Хлебные крошки"> <a href="/schema/">Схема</a> <span class="crumb-sep">›</span> <a href="/type/">Типы</a> <span class="crumb-sep">›</span> <span class="crumb-current">updates.Difference</span> </nav> <div class="mobile-nav" role="navigation" aria-label="Страницы раздела"> <details class="mobile-nav-group"> <summary>Схема</summary> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </details> </div> <article> <span class="heading-alias" id="updatesdifference"></span><h1 id="updates-difference" tabindex="-1">updates.Difference <a class="header-anchor" href="#updates-difference" aria-hidden="true">#</a></h1> <p id="p-1"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/type/updates.Difference/#p-1" rel="noopener" title="Перевод абзаца 1" data-tip="Перевод: абзац 1 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Произошедшие изменения.<a class="p-anchor" href="#p-1" aria-label="Ссылка на этот абзац">¶</a></p> <pre><code>updates.differenceEmpty#5d75a138 date:int seq:int = updates.Difference;
 updates.difference#f49ca0 new_messages:Vector&lt;Message&gt; new_encrypted_messages:Vector&lt;EncryptedMessage&gt; other_updates:Vector&lt;Update&gt; chats:Vector&lt;Chat&gt; users:Vector&lt;User&gt; state:updates.State = updates.Difference;
 updates.differenceSlice#a8fb1981 new_messages:Vector&lt;Message&gt; new_encrypted_messages:Vector&lt;EncryptedMessage&gt; other_updates:Vector&lt;Update&gt; chats:Vector&lt;Chat&gt; users:Vector&lt;User&gt; intermediate_state:updates.State = updates.Difference;
 updates.differenceTooLong#4afe8f6d pts:int = updates.Difference;
@@ -150,59 +15,52 @@ updates.differenceTooLong#4afe8f6d pts:int = updates.Difference;
 ---functions---
 
 updates.getDifference#19c2f763 flags:# pts:int pts_limit:flags.1?int pts_total_limit:flags.0?int date:int qts:int qts_limit:flags.2?int = updates.Difference;
-</code></pre>
-<h2 id="конструкторы" tabindex="-1">Конструкторы</h2>
-<table>
-<thead>
-<tr>
-<th>Constructor</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="/constructor/updates.differenceEmpty/">updates.differenceEmpty</a></td>
-<td>No events.</td>
-</tr>
-<tr>
-<td><a href="/constructor/updates.difference/">updates.difference</a></td>
-<td>Full list of occurred events.</td>
-</tr>
-<tr>
-<td><a href="/constructor/updates.differenceSlice/">updates.differenceSlice</a></td>
-<td>Incomplete list of occurred events.</td>
-</tr>
-<tr>
-<td><a href="/constructor/updates.differenceTooLong/">updates.differenceTooLong</a></td>
-<td>The difference is <a href="https://core.telegram.org/api/updates/#recovering-gaps">too long</a>, and the specified state must be used to refetch updates.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="методы" tabindex="-1">Методы</h2>
-<table>
-<thead>
-<tr>
-<th>Method</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="/method/updates.getDifference/">updates.getDifference</a></td>
-<td>Get new <a href="/api/updates/">updates</a>.</td>
-</tr>
-</tbody>
-</table>
-
-      <div class="source-note">
-        Оригинал: <a href="https://core.telegram.org/type/updates.Difference" rel="noopener">https://core.telegram.org/type/updates.Difference</a>
-      </div>
-    </article>
-  </main>
-</div>
-<footer class="site-footer">
-  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
-  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
-</footer>
-</body>
-</html>
+</code></pre> <span class="heading-alias" id="конструкторы"></span><h3 id="constructors" tabindex="-1">Конструкторы <a class="header-anchor" href="#constructors" aria-hidden="true">#</a></h3> <table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/updates.differenceEmpty">updates.differenceEmpty</a></td><td>Событий нет.</td></tr><tr><td><a href="/constructor/updates.difference">updates.difference</a></td><td>Полный список произошедших событий.</td></tr><tr><td><a href="/constructor/updates.differenceSlice">updates.differenceSlice</a></td><td>Неполный список произошедших событий.</td></tr><tr><td><a href="/constructor/updates.differenceTooLong">updates.differenceTooLong</a></td><td>Разница <a href="/api/updates#recovering-gaps">слишком велика</a>, и для повторного получения обновлений следует использовать указанное состояние.</td></tr></tbody></table> <span class="heading-alias" id="методы"></span><h3 id="methods" tabindex="-1">Методы <a class="header-anchor" href="#methods" aria-hidden="true">#</a></h3> <table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/updates.getDifference">updates.getDifference</a></td><td>Получить новые <a href="/api/updates">обновления</a>.</td></tr></tbody></table> <div class="source-note"> Оригинал: <a href="https://core.telegram.org/type/updates.Difference" rel="noopener">https://core.telegram.org/type/updates.Difference</a> · Английская версия: <a href="https://mirrortproto.github.io/type/updates.Difference/" rel="noopener">mirrortproto.github.io</a> </div> </article> </main> </div> <footer class="site-footer"> Неофициальный русскоязычный перевод документации <a href="https://core.telegram.org/mtproto" rel="noopener">core.telegram.org</a>. Снимок контента: 2026-08-23. Исходники сайта — <a href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener">rumtproto/rumtproto.github.io</a>. </footer> <script src="/pagefind/pagefind-ui.js"></script> <script>
+  (function () {
+    var btn = document.querySelector('.theme-toggle');
+    var seg = Array.prototype.slice.call(document.querySelectorAll('.theme-seg button'));
+    if (!btn && !seg.length) return;
+    var order = ['auto', 'light', 'dark'];
+    function current() { try { return localStorage.getItem('theme') || 'auto'; } catch (e) { return 'auto'; } }
+    function set(mode) {
+      try { mode === 'auto' ? localStorage.removeItem('theme') : localStorage.setItem('theme', mode); } catch (e) {}
+      apply(mode);
+    }
+    function apply(mode) {
+      if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', mode);
+      if (btn) {
+        btn.dataset.mode = mode;
+        btn.title = 'Цветовая тема: ' + mode;
+        btn.setAttribute('aria-label', 'Цветовая тема: ' + mode + '. Нажмите для переключения.');
+      }
+      seg.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.mode === mode)); });
+      var dark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+        if ((m.media || '').indexOf('dark') !== -1) m.content = dark ? '#0d1117' : '#ffffff';
+      });
+    }
+    seg.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.mode); }); });
+    if (btn) btn.addEventListener('click', function () { set(order[(order.indexOf(current()) + 1) % order.length]); });
+    apply(current());
+  })();
+  (function () {
+    document.addEventListener('keydown', function (e) {
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (e.key === '/' && !/^(input|textarea|select)$/i.test(tag)) {
+        var q = document.querySelector('.site-search input') || document.querySelector('.pagefind-ui__search-input');
+        if (q) { e.preventDefault(); q.focus(); }
+      }
+    });
+  })();
+  (function () {
+    /* скрыть плейсхолдер после реальной загрузки медиа */
+    document.querySelectorAll('.img-box').forEach(function (box) {
+      var im = box.querySelector('img') || box.querySelector('video');
+      if (!im) return;
+      var ok = function () { box.classList.add('img-ok'); };
+      if (im.complete && im.naturalWidth > 0) ok();
+      else im.addEventListener('load', ok);
+    });
+  })();
+</script> </body> </html> 

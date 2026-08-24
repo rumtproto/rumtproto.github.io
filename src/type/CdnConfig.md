@@ -1,18 +1,15 @@
 ---
-title: "CdnConfig (тип)"
+title: "CdnConfig"
 original: "https://core.telegram.org/type/CdnConfig"
 section: ref
 kind: type
+description: "Конфигурация для скачивания файлов через CDN."
 layout: layout.njk
 ---
 
 # CdnConfig
 
-*Тип из схемы TL.*
-
-> Configuration for [CDN](https://core.telegram.org/cdn) file downloads.
-
-## Определение TL
+Конфигурация для скачивания файлов через [CDN](https://core.telegram.org/cdn).
 
 ```
 cdnConfig#5725e40a public_keys:Vector<CdnPublicKey> = CdnConfig;
@@ -22,20 +19,16 @@ cdnConfig#5725e40a public_keys:Vector<CdnPublicKey> = CdnConfig;
 help.getCdnConfig#52029342 = CdnConfig;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [cdnConfig](/constructor/cdnConfig/) | Configuration for [CDN](https://core.telegram.org/cdn) file downloads. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/cdnConfig">cdnConfig</a></td><td>Настройки загрузки файлов через <a href="/cdn">CDN</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [help.getCdnConfig](/method/help.getCdnConfig/) | Get configuration for [CDN](https://core.telegram.org/cdn) file downloads. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/help.getCdnConfig">help.getCdnConfig</a></td><td>Получить конфигурацию для скачивания файлов через <a href="/cdn">CDN</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Шифрованные CDN: скорость и безопасность](https://core.telegram.org/cdn)
 
-How client apps download popular public files from secondary CDN data centers.
+Как клиентские приложения скачивают популярные публичные файлы из вспомогательных CDN-дата-центров.

@@ -1,27 +1,24 @@
 ---
-title: "help.timezonesListNotModified (конструктор)"
+title: "help.timezonesListNotModified"
 original: "https://core.telegram.org/constructor/help.timezonesListNotModified"
 section: ref
 kind: constructor
+description: "Список часовых поясов не изменился."
 layout: layout.njk
 ---
 
 # help.timezonesListNotModified
 
-*Конструктор из схемы TL.*
-
-> The timezone list has not changed.
-
-## Определение TL
+Список часовых поясов не изменился.
 
 ```
 help.timezonesListNotModified#970708cc = help.TimezonesList;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [help.TimezonesList](/type/help.TimezonesList/)

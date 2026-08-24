@@ -1,19 +1,17 @@
 ---
-title: "messages.translateText (метод)"
+title: "messages.translateText"
 original: "https://core.telegram.org/method/messages.translateText"
 section: ref
 kind: method
+description: "Перевести заданный текст."
 layout: layout.njk
 ---
 
 # messages.translateText
 
-*Метод из схемы TL.*
+Перевести заданный текст.
 
-> Translate a given text.
-> [Styled text entities](https://core.telegram.org/api/entities) will only be preserved for [Telegram Premium](https://core.telegram.org/api/premium) users.
-
-## Определение TL
+[Сущности оформления текста](/api/entities/) сохраняются только для пользователей [Telegram Premium](/api/premium/).
 
 ```
 messages.translateResult#33db32f8 result:Vector<TextWithEntities> = messages.TranslatedText;
@@ -21,51 +19,34 @@ messages.translateResult#33db32f8 result:Vector<TextWithEntities> = messages.Tra
 messages.translateText#63183030 flags:# peer:flags.0?InputPeer id:flags.0?Vector<int> text:flags.1?Vector<TextWithEntities> to_lang:string = messages.TranslatedText;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputPeer](/type/InputPeer/) | If the text is a chat message, the peer ID |
-| id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | A list of message IDs to translate |
-| text | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[TextWithEntities](/type/TextWithEntities/)> | A list of styled messages to translate |
-| to_lang | [string](/type/string/) | Two-letter ISO 639-1 language code of the language to which the message is translated |
-| tone | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | If set, rephrases the translation using the specified [AI composer tone »](https://core.telegram.org/api/ai#ai-compose-tones) (pass the tone identifier) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Если текст является сообщением чата — идентификатор пира</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Список идентификаторов сообщений для перевода</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/TextWithEntities">TextWithEntities</a>&gt;</td><td>Список оформленных сообщений для перевода</td></tr><tr><td><strong>to_lang</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Двухбуквенный код языка по ISO 639-1, на который переведено сообщение</td></tr><tr><td><strong>tone</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Если установлено, перефразирует перевод с использованием указанной <a href="/api/ai#ai-compose-tones">тональности AI-редактора »</a> (передайте идентификатор тональности)</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.TranslatedText](/type/messages.TranslatedText/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | INPUT_TEXT_EMPTY | The specified text is empty. |
-| 400 | INPUT_TEXT_TOO_LONG | The specified text is too long. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | TO_LANG_INVALID | The specified destination language is invalid. |
-| 500 | TRANSLATE_REQ_FAILED | Translation failed, please try again later. |
-| 400 | TRANSLATE_REQ_QUOTA_EXCEEDED | Translation is currently unavailable due to a temporary server-side lack of resources. |
-| 406 | TRANSLATIONS_DISABLED | Translations are unavailable, a detailed and localized description for the error will be emitted via an [updateServiceNotification as specified here »](https://core.telegram.org/api/errors/#406-not-acceptable). |
-| 500 | TRANSLATION_TIMEOUT | A timeout occurred while translating the specified text. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>INPUT_TEXT_EMPTY</td><td>Указанный текст пуст.</td></tr><tr><td>400</td><td>INPUT_TEXT_TOO_LONG</td><td>Указанный текст слишком длинный.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>TO_LANG_INVALID</td><td>Указанный язык перевода недействителен.</td></tr><tr><td>500</td><td>TRANSLATE_REQ_FAILED</td><td>Не удалось выполнить перевод, повторите попытку позже.</td></tr><tr><td>400</td><td>TRANSLATE_REQ_QUOTA_EXCEEDED</td><td>Перевод сейчас недоступен из-за временной нехватки ресурсов на сервере.</td></tr><tr><td>406</td><td>TRANSLATIONS_DISABLED</td><td>Переводы недоступны; подробное локализованное описание ошибки будет передано через <a href="/api/errors#406-not-acceptable">updateServiceNotification, как описано здесь&nbsp;»</a>.</td></tr><tr><td>500</td><td>TRANSLATION_TIMEOUT</td><td>При переводе указанного текста истекло время ожидания.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [AI features](https://core.telegram.org/api/ai)
+#### [Возможности ИИ](/api/ai/)
 
-Telegram offers many AI features powered by Cocoon — a decentralized network designed to maximize privacy.
+Telegram предлагает множество возможностей на основе ИИ, работающих на Cocoon — децентрализованной сети, спроектированной для максимальной приватности.
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Error handling](/api/errors/)
+#### [Обработка ошибок](/api/errors/)
 
-How to handle API return errors correctly.
+Как правильно обрабатывать ошибки, возвращаемые API.

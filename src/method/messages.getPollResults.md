@@ -1,18 +1,15 @@
 ---
-title: "messages.getPollResults (метод)"
+title: "messages.getPollResults"
 original: "https://core.telegram.org/method/messages.getPollResults"
 section: ref
 kind: method
+description: "Получить результаты опроса"
 layout: layout.njk
 ---
 
 # messages.getPollResults
 
-*Метод из схемы TL.*
-
-> Get poll results
-
-## Определение TL
+Получить результаты опроса
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,23 +23,16 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.getPollResults#73bb643b peer:InputPeer msg_id:int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer where the poll was found |
-| msg_id | [int](/type/int/) | Message ID of poll message |
-| poll_hash | [long](/type/long/) | Pass the poll.hash from the last received poll state; the server skips returning unchanged data |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в котором был найден опрос</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения с опросом</td></tr><tr><td><strong>poll_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Передайте <code>poll.hash</code> из последнего полученного состояния опроса; сервер не будет возвращать неизменившиеся данные</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>

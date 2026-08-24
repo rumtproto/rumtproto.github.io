@@ -1,27 +1,24 @@
 ---
-title: "privacyValueAllowAll (конструктор)"
+title: "privacyValueAllowAll"
 original: "https://core.telegram.org/constructor/privacyValueAllowAll"
 section: ref
 kind: constructor
+description: "Разрешить всем пользователям"
 layout: layout.njk
 ---
 
 # privacyValueAllowAll
 
-*Конструктор из схемы TL.*
-
-> Allow all users
-
-## Определение TL
+Разрешить всем пользователям
 
 ```
 privacyValueAllowAll#65427b82 = PrivacyRule;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyRule](/type/PrivacyRule/)

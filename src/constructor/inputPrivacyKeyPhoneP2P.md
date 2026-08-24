@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyKeyPhoneP2P (конструктор)"
+title: "inputPrivacyKeyPhoneP2P"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyPhoneP2P"
 section: ref
 kind: constructor
+description: "Разрешать ли P2P-связь во время VoIP-звонков"
 layout: layout.njk
 ---
 
 # inputPrivacyKeyPhoneP2P
 
-*Конструктор из схемы TL.*
-
-> Whether to allow P2P communication during VoIP calls
-
-## Определение TL
+Разрешать ли P2P-связь во время VoIP-звонков
 
 ```
 inputPrivacyKeyPhoneP2P#db9e70d2 = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)

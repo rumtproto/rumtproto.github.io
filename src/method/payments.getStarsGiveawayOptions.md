@@ -1,36 +1,33 @@
 ---
-title: "payments.getStarsGiveawayOptions (метод)"
+title: "payments.getStarsGiveawayOptions"
 original: "https://core.telegram.org/method/payments.getStarsGiveawayOptions"
 section: ref
 kind: method
+description: "Получить список вариантов розыгрыша звёзд »."
 layout: layout.njk
 ---
 
 # payments.getStarsGiveawayOptions
 
-*Метод из схемы TL.*
-
-> Fetch a list of [star giveaway options »](https://core.telegram.org/api/giveaways#star-giveaways).
-
-## Определение TL
+Получить список [вариантов розыгрыша звёзд »](/api/giveaways/#star-giveaways).
 
 ```
 ---functions---
 payments.getStarsGiveawayOptions#bd1efd3e = Vector<StarsGiveawayOption>;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[StarsGiveawayOption](/type/StarsGiveawayOption/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

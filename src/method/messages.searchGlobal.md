@@ -1,18 +1,15 @@
 ---
-title: "messages.searchGlobal (метод)"
+title: "messages.searchGlobal"
 original: "https://core.telegram.org/method/messages.searchGlobal"
 section: ref
 kind: method
+description: "Глобальный поиск сообщений и пиров"
 layout: layout.njk
 ---
 
 # messages.searchGlobal
 
-*Метод из схемы TL.*
-
-> Search for messages and peers globally
-
-## Определение TL
+Глобальный поиск сообщений и пиров
 
 ```
 messages.messages#1d73e7ea messages:Vector<Message> topics:Vector<ForumTopic> chats:Vector<Chat> users:Vector<User> = messages.Messages;
@@ -23,52 +20,34 @@ messages.messagesNotModified#74535f21 count:int = messages.Messages;
 messages.searchGlobal#4bc6589a flags:# broadcasts_only:flags.1?true groups_only:flags.2?true users_only:flags.3?true folder_id:flags.0?int q:string filter:MessagesFilter min_date:int max_date:int offset_rate:int offset_peer:InputPeer offset_id:int limit:int = messages.Messages;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| broadcasts_only | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, only returns results from channels (used in the [global channel search tab »](https://core.telegram.org/api/search#global-search)). |
-| groups_only | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether to search only in groups |
-| users_only | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether to search only in private chats |
-| folder_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | [Peer folder ID, for more info click here](https://core.telegram.org/api/folders#peer-folders) |
-| q | [string](/type/string/) | Query |
-| filter | [MessagesFilter](/type/MessagesFilter/) | Global search filter |
-| min_date | [int](/type/int/) | If a positive value was specified, the method will return only messages with date bigger than min_date |
-| max_date | [int](/type/int/) | If a positive value was transferred, the method will return only messages with date smaller than max_date |
-| offset_rate | [int](/type/int/) | Initially 0, then set to the [next_rate parameter of messages.messagesSlice](/constructor/messages.messagesSlice/), or if that is absent, the date of the last returned message. |
-| offset_peer | [InputPeer](/type/InputPeer/) | [Offsets for pagination, for more info click here](https://core.telegram.org/api/offsets) |
-| offset_id | [int](/type/int/) | [Offsets for pagination, for more info click here](https://core.telegram.org/api/offsets) |
-| limit | [int](/type/int/) | [Offsets for pagination, for more info click here](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>broadcasts_only</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, возвращает результаты только из каналов (используется во <a href="/api/search#global-search">вкладке глобального поиска по каналам »</a>).</td></tr><tr><td><strong>groups_only</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Искать ли только в группах</td></tr><tr><td><strong>users_only</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Искать ли только в личных чатах</td></tr><tr><td><strong>folder_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td><a href="/api/folders#peer-folders">Идентификатор папки пира, подробнее см. здесь</a></td></tr><tr><td><strong>q</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Запрос</td></tr><tr><td><strong>filter</strong></td><td style="text-align: center;"><a href="/type/MessagesFilter">MessagesFilter</a></td><td>Фильтр глобального поиска</td></tr><tr><td><strong>min_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Если передано положительное значение, метод вернёт только сообщения с датой больше min_date</td></tr><tr><td><strong>max_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Если передано положительное значение, метод вернёт только сообщения с датой меньше max_date</td></tr><tr><td><strong>offset_rate</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Изначально 0, затем устанавливается в <a href="/constructor/messages.messagesSlice">параметр <code>next_rate</code> конструктора messages.messagesSlice</a>, а если он отсутствует — в <code>date</code> последнего возвращённого сообщения.</td></tr><tr><td><strong>offset_peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td><a href="/api/offsets">Смещения для постраничной выборки, подробнее см. здесь</a></td></tr><tr><td><strong>offset_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets">Смещения для постраничной выборки, подробнее см. здесь</a></td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets">Смещения для постраничной выборки, подробнее см. здесь</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Messages](/type/messages.Messages/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | FOLDER_ID_INVALID | Invalid folder ID. |
-| 400 | INPUT_FILTER_INVALID | The specified filter is invalid. |
-| 400 | SEARCH_QUERY_EMPTY | The search query is empty. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>FOLDER_ID_INVALID</td><td>Недопустимый идентификатор папки.</td></tr><tr><td>400</td><td>INPUT_FILTER_INVALID</td><td>Указанный фильтр недействителен.</td></tr><tr><td>400</td><td>SEARCH_QUERY_EMPTY</td><td>Поисковый запрос пуст.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Search and filters](https://core.telegram.org/api/search)
+#### [Поиск и фильтры](/api/search/)
 
-Telegram allows applying detailed message filters while looking for messages in chats.
+Telegram позволяет применять подробные фильтры сообщений при поиске в чатах.
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.
 
 #### [messages.messagesSlice](/constructor/messages.messagesSlice/)
 
-Incomplete list of messages and auxiliary data.
+Неполный список сообщений и вспомогательных данных.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

@@ -1,18 +1,15 @@
 ---
-title: "Auth.PasskeyLoginOptions (тип)"
+title: "auth.PasskeyLoginOptions"
 original: "https://core.telegram.org/type/auth.PasskeyLoginOptions"
 section: ref
 kind: type
+description: "Параметры входа по passkey; подробнее о полном процессе см. здесь »."
 layout: layout.njk
 ---
 
 # Auth.PasskeyLoginOptions
 
-*Тип из схемы TL.*
-
-> Passkey login options, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for more info on the full flow.
-
-## Определение TL
+Параметры входа по passkey; подробнее о полном процессе см. [здесь »](/api/passkeys/#logging-in-with-a-passkey).
 
 ```
 auth.passkeyLoginOptions#e2037789 options:DataJSON = auth.PasskeyLoginOptions;
@@ -22,20 +19,16 @@ auth.passkeyLoginOptions#e2037789 options:DataJSON = auth.PasskeyLoginOptions;
 auth.initPasskeyLogin#518ad0b7 api_id:int api_hash:string = auth.PasskeyLoginOptions;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [auth.passkeyLoginOptions](/constructor/auth.passkeyLoginOptions/) | Passkey login options, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/auth.passkeyLoginOptions">auth.passkeyLoginOptions</a></td><td>Параметры входа по ключу доступа; подробнее о полном процессе см. <a href="/api/passkeys#logging-in-with-a-passkey">здесь »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [auth.initPasskeyLogin](/method/auth.initPasskeyLogin/) | Initialize login with a passkey over an unauthenticated connection, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for more info. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/auth.initPasskeyLogin">auth.initPasskeyLogin</a></td><td>Начать вход по ключу доступа через неавторизованное подключение; подробнее см. <a href="/api/passkeys#logging-in-with-a-passkey">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

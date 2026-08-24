@@ -1,52 +1,39 @@
 ---
-title: "invokeWithLayer (метод)"
+title: "invokeWithLayer"
 original: "https://core.telegram.org/method/invokeWithLayer"
 section: ref
 kind: method
+description: "Выполнить указанный запрос с использованием указанного слоя API"
 layout: layout.njk
 ---
 
 # invokeWithLayer
 
-*Метод из схемы TL.*
-
-> Invoke the specified query using the specified API [layer](https://core.telegram.org/api/invoking/#layers)
-
-## Определение TL
+Выполнить указанный запрос с использованием указанного [слоя](/api/invoking/#layers) API
 
 ```
 ---functions---
 invokeWithLayer#da9b0d0d {X:Type} layer:int query:!X = X;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| layer | [int](/type/int/) | The layer to use |
-| query | !X | The query |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>layer</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:layer] Слой, который нужно использовать</td></tr><tr><td><strong>query</strong></td><td style="text-align: center;">!X</td><td>Запрос</td></tr></tbody></table>
 
-## Результат
+### Результат
 
-Returns the type returned by the invoked method.
+Возвращает тип, возвращаемый вызванным методом.
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | AUTH_BYTES_INVALID | The provided authorization is invalid. |
-| 400 | CDN_METHOD_INVALID | You can't call this method in a CDN DC. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | CONNECTION_API_ID_INVALID | The provided API id is invalid. |
-| 400 | CONNECTION_LAYER_INVALID | Layer invalid. |
-| 406 | INVITE_HASH_EXPIRED | The invite link has expired. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>AUTH_BYTES_INVALID</td><td>Указанная авторизация недействительна.</td></tr><tr><td>400</td><td>CDN_METHOD_INVALID</td><td>Этот метод нельзя вызывать в CDN DC.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>CONNECTION_API_ID_INVALID</td><td>Указанный идентификатор API недействителен.</td></tr><tr><td>400</td><td>CONNECTION_LAYER_INVALID</td><td>Недействительный слой.</td></tr><tr><td>406</td><td>INVITE_HASH_EXPIRED</td><td>Срок действия пригласительной ссылки истёк.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Calling API Methods](/api/invoking/)
+#### [Вызов методов API](/api/invoking/)
 
-Additional options for calling methods.
+Дополнительные параметры вызова методов.

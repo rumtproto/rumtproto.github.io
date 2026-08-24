@@ -1,18 +1,15 @@
 ---
-title: "messages.createChat (метод)"
+title: "messages.createChat"
 original: "https://core.telegram.org/method/messages.createChat"
 section: ref
 kind: method
+description: "Создаёт новый чат."
 layout: layout.njk
 ---
 
 # messages.createChat
 
-*Метод из схемы TL.*
-
-> Creates a new chat.
-
-## Определение TL
+Создаёт новый чат.
 
 ```
 messages.invitedUsers#7f5defa6 updates:Updates missing_invitees:Vector<MissingInvitee> = messages.InvitedUsers;
@@ -20,36 +17,22 @@ messages.invitedUsers#7f5defa6 updates:Updates missing_invitees:Vector<MissingIn
 messages.createChat#92ceddd4 flags:# users:Vector<InputUser> title:string ttl_period:flags.0?int = messages.InvitedUsers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[InputUser](/type/InputUser/)> | List of user IDs to be invited |
-| title | [string](/type/string/) | Chat name |
-| ttl_period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Time-to-live of all messages that will be sent in the chat: once message.date+message.ttl_period === time(), the message will be deleted on the server, and must be deleted locally as well. You can use [messages.setDefaultHistoryTTL](/method/messages.setDefaultHistoryTTL/) to edit this value later. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputUser">InputUser</a>&gt;</td><td>Список идентификаторов пользователей, которых нужно пригласить</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название чата</td></tr><tr><td><strong>ttl_period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Время жизни всех сообщений, которые будут отправлены в чат: как только message.date+message.ttl_period === time(), сообщение будет удалено на сервере, и его также необходимо удалить локально. Изменить это значение позже можно с помощью метода <a href="/method/messages.setDefaultHistoryTTL">messages.setDefaultHistoryTTL</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.InvitedUsers](/type/messages.InvitedUsers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 500 | CHAT_ID_GENERATE_FAILED | Failure while generating the chat ID. |
-| 400 | CHAT_INVALID | Invalid chat. |
-| 400 | CHAT_MEMBER_ADD_FAILED | Could not add participants. |
-| 400 | CHAT_TITLE_EMPTY | No chat title provided. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | TTL_PERIOD_INVALID | The specified TTL period is invalid. |
-| 400 | USERS_TOO_FEW | Not enough users (to create a chat, for example). |
-| 406 | USER_RESTRICTED | You're spamreported, you can't create channels or chats. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>500</td><td>CHAT_ID_GENERATE_FAILED</td><td>Сбой при генерации идентификатора чата.</td></tr><tr><td>400</td><td>CHAT_INVALID</td><td>Недействительный чат.</td></tr><tr><td>400</td><td>CHAT_MEMBER_ADD_FAILED</td><td>Не удалось добавить участников.</td></tr><tr><td>400</td><td>CHAT_TITLE_EMPTY</td><td>Не указано название чата.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>TTL_PERIOD_INVALID</td><td>[@term:TTL] Указанный период TTL недействителен.</td></tr><tr><td>400</td><td>USERS_TOO_FEW</td><td>Недостаточно пользователей (например, для создания чата).</td></tr><tr><td>406</td><td>USER_RESTRICTED</td><td>На вас пожаловались как на спам, вы не можете создавать каналы или чаты.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [messages.setDefaultHistoryTTL](/method/messages.setDefaultHistoryTTL/)
 
-Changes the default value of the Time-To-Live setting, applied to all new chats.
+Изменяет значение по умолчанию настройки времени жизни сообщений (Time-To-Live), применяемое ко всем новым чатам.

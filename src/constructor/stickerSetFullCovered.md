@@ -1,43 +1,35 @@
 ---
-title: "stickerSetFullCovered (конструктор)"
+title: "stickerSetFullCovered"
 original: "https://core.telegram.org/constructor/stickerSetFullCovered"
 section: ref
 kind: constructor
+description: "Предпросмотр набора стикеров со всеми входящими в него стикерами."
 layout: layout.njk
 ---
 
 # stickerSetFullCovered
 
-*Конструктор из схемы TL.*
-
-> Stickerset preview with all stickers of the stickerset included.  
-> Currently used only for [custom emoji stickersets](https://core.telegram.org/api/custom-emoji), to avoid a further call to [messages.getStickerSet](/method/messages.getStickerSet/).
-
-## Определение TL
+Предпросмотр набора стикеров со всеми входящими в него стикерами.  
+Сейчас используется только для [наборов стикеров с пользовательскими эмодзи](/api/custom-emoji/), чтобы избежать дополнительного вызова [messages.getStickerSet](/method/messages.getStickerSet/).
 
 ```
 stickerSetFullCovered#40d13c0e set:StickerSet packs:Vector<StickerPack> keywords:Vector<StickerKeyword> documents:Vector<Document> = StickerSetCovered;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| set | [StickerSet](/type/StickerSet/) | Stickerset |
-| packs | [Vector](https://core.telegram.org/type/Vector%20t)<[StickerPack](/type/StickerPack/)> | Emoji information about every sticker in the stickerset |
-| keywords | [Vector](https://core.telegram.org/type/Vector%20t)<[StickerKeyword](/type/StickerKeyword/)> | Keywords for some or every sticker in the stickerset. |
-| documents | [Vector](https://core.telegram.org/type/Vector%20t)<[Document](/type/Document/)> | Stickers |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>set</strong></td><td style="text-align: center;"><a href="/type/StickerSet">StickerSet</a></td><td>Набор стикеров</td></tr><tr><td><strong>packs</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StickerPack">StickerPack</a>&gt;</td><td>Сведения об эмодзи для каждого стикера в наборе</td></tr><tr><td><strong>keywords</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StickerKeyword">StickerKeyword</a>&gt;</td><td>Ключевые слова для некоторых или для всех стикеров набора.</td></tr><tr><td><strong>documents</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Document">Document</a>&gt;</td><td>Стикеры</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StickerSetCovered](/type/StickerSetCovered/)
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
 #### [messages.getStickerSet](/method/messages.getStickerSet/)
 
-Get info about a stickerset
+Получить информацию о наборе стикеров

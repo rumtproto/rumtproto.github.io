@@ -1,18 +1,15 @@
 ---
-title: "phone.editGroupCallTitle (метод)"
+title: "phone.editGroupCallTitle"
 original: "https://core.telegram.org/method/phone.editGroupCallTitle"
 section: ref
 kind: method
+description: "Изменить название видеочата или трансляции. Этот метод нельзя использовать с прямыми историями и конференциями; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # phone.editGroupCallTitle
 
-*Метод из схемы TL.*
-
-> Edit the title of a video chat or livestream. This method cannot be used with live stories or conferences, see [here »](https://core.telegram.org/api/group-calls#video-chats-livestreams) for more info.
-
-## Определение TL
+Изменить название видеочата или трансляции. Этот метод нельзя использовать с прямыми историями и конференциями; подробнее см. [здесь »](/api/group-calls/#video-chats-livestreams).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,28 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.editGroupCallTitle#1ca6ac0a call:InputGroupCall title:string = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Video chat or livestream whose title should be changed |
-| title | [string](/type/string/) | New title |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Видеочат или трансляция, название которых нужно изменить</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Новое название</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | GROUPCALL_FORBIDDEN | The specified group call cannot be used in this context. |
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>GROUPCALL_FORBIDDEN</td><td>Указанный групповой звонок нельзя использовать в этом контексте.</td></tr><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

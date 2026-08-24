@@ -1,42 +1,37 @@
 ---
-title: "invokeWithoutUpdates (метод)"
+title: "invokeWithoutUpdates"
 original: "https://core.telegram.org/method/invokeWithoutUpdates"
 section: ref
 kind: method
+description: "Выполнить запрос, не подписывая используемое соединение на обновления (для файловых запросов это включено по умолчанию)."
 layout: layout.njk
 ---
 
 # invokeWithoutUpdates
 
-*Метод из схемы TL.*
-
-> Invoke a request without subscribing the used connection for [updates](/api/updates/) (this is enabled by default for [file queries](/api/files/)).
-
-## Определение TL
+Выполнить запрос, не подписывая используемое соединение на [обновления](/api/updates/) (для [файловых запросов](/api/files/) это включено по умолчанию).
 
 ```
 ---functions---
 invokeWithoutUpdates#bf9459b7 {X:Type} query:!X = X;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| query | !X | The query |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>query</strong></td><td style="text-align: center;">!X</td><td>Запрос</td></tr></tbody></table>
 
-## Результат
+### Результат
 
-Returns the type returned by the invoked method.
+Возвращает тип, возвращаемый вызванным методом.
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

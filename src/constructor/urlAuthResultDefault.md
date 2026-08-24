@@ -1,33 +1,30 @@
 ---
-title: "urlAuthResultDefault (конструктор)"
+title: "urlAuthResultDefault"
 original: "https://core.telegram.org/constructor/urlAuthResultDefault"
 section: ref
 kind: constructor
+description: "Сведения о принятом запросе авторизации; подробнее см. здесь »"
 layout: layout.njk
 ---
 
 # urlAuthResultDefault
 
-*Конструктор из схемы TL.*
-
-> Details about an accepted authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
-
-## Определение TL
+Сведения о принятом запросе авторизации; подробнее [см. здесь »](/api/url-authorization/)
 
 ```
 urlAuthResultDefault#a9d6db1f = UrlAuthResult;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [UrlAuthResult](/type/UrlAuthResult/)
 
-## Related pages
+### Связанные страницы
 
-#### [Seamless Telegram Login](https://core.telegram.org/api/url-authorization)
+#### [Бесшовный вход через Telegram](/api/url-authorization/)
 
-Handle Seamless Telegram Login URL authorization requests.
+Обработка запросов авторизации по URL через Seamless Telegram Login.

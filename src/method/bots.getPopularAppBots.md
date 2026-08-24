@@ -1,18 +1,15 @@
 ---
-title: "bots.getPopularAppBots (метод)"
+title: "bots.getPopularAppBots"
 original: "https://core.telegram.org/method/bots.getPopularAppBots"
 section: ref
 kind: method
+description: "Получить популярные Main Mini Apps для использования во вкладке приложений в глобальном поиске »."
 layout: layout.njk
 ---
 
 # bots.getPopularAppBots
 
-*Метод из схемы TL.*
-
-> Fetch popular [Main Mini Apps](https://core.telegram.org/api/bots/webapps#main-mini-apps), to be used in the [apps tab of global search »](https://core.telegram.org/api/search#apps-tab).
-
-## Определение TL
+Получить популярные [Main Mini Apps](/api/bots/webapps/#main-mini-apps) для использования во [вкладке приложений в глобальном поиске »](/api/search/#apps-tab).
 
 ```
 bots.popularAppBots#1991b13b flags:# next_offset:flags.0?string users:Vector<User> = bots.PopularAppBots;
@@ -20,29 +17,26 @@ bots.popularAppBots#1991b13b flags:# next_offset:flags.0?string users:Vector<Use
 bots.getPopularAppBots#c2510192 offset:string limit:int = bots.PopularAppBots;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| offset | [string](/type/string/) | Offset for [pagination](https://core.telegram.org/api/offsets), initially an empty string, then re-use the next_offset returned by the previous query. |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:next_offset] Смещение для <a href="/api/offsets">постраничной выборки</a>; изначально — пустая строка, затем повторно используйте <code>next_offset</code>, возвращённый предыдущим запросом.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [bots.PopularAppBots](/type/bots.PopularAppBots/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
-#### [Search and filters](https://core.telegram.org/api/search)
+#### [Поиск и фильтры](/api/search/)
 
-Telegram allows applying detailed message filters while looking for messages in chats.
+Telegram позволяет применять подробные фильтры сообщений при поиске в чатах.

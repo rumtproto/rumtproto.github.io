@@ -1,18 +1,15 @@
 ---
-title: "channels.getMessageAuthor (метод)"
+title: "channels.getMessageAuthor"
 original: "https://core.telegram.org/method/channels.getMessageAuthor"
 section: ref
 kind: method
+description: "Может быть вызван только администраторами монофорума », не являющимися ботами; возвращает исходного отправителя сообщения, отправленного в монофорум другими администраторами…"
 layout: layout.njk
 ---
 
 # channels.getMessageAuthor
 
-*Метод из схемы TL.*
-
-> Can only be invoked by non-bot admins of a [monoforum »](https://core.telegram.org/api/monoforum), obtains the original sender of a message sent by other monoforum admins to the monoforum, on behalf of the channel associated to the monoforum.
-
-## Определение TL
+Может быть вызван только администраторами [монофорума »](/api/monoforum/), не являющимися ботами; возвращает исходного отправителя сообщения, отправленного в монофорум другими администраторами монофорума от имени канала, связанного с этим монофорумом.
 
 ```
 userEmpty#d3bc4b7a id:long = User;
@@ -21,27 +18,22 @@ user#31774388 flags:# self:flags.10?true contact:flags.11?true mutual_contact:fl
 channels.getMessageAuthor#ece2a0e6 channel:InputChannel id:int = User;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | ID of the monoforum. |
-| id | [int](/type/int/) | ID of the message sent by a monoforum admin. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Идентификатор монофорума.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения, отправленного администратором монофорума.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [User](/type/User/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.

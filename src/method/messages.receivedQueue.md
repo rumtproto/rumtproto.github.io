@@ -1,40 +1,32 @@
 ---
-title: "messages.receivedQueue (метод)"
+title: "messages.receivedQueue"
 original: "https://core.telegram.org/method/messages.receivedQueue"
 section: ref
 kind: method
+description: "Подтверждает получение сообщений в секретном чате клиентом, отменяет push-уведомления."
 layout: layout.njk
 ---
 
 # messages.receivedQueue
 
-*Метод из схемы TL.*
-
-> Confirms receipt of messages in a secret chat by client, cancels push notifications.  
-> The method returns a list of **random\_id**s of messages for which push notifications were cancelled.
-
-## Определение TL
+Подтверждает получение сообщений в секретном чате клиентом, отменяет push-уведомления.  
+Метод возвращает список значений **random\_id** тех сообщений, для которых push-уведомления были отменены.
 
 ```
 ---functions---
 messages.receivedQueue#55a5bb66 max_qts:int = Vector<long>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| max_qts | [int](/type/int/) | Maximum qts value available at the client |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>max_qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное значение qts, доступное в клиенте</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MAX_QTS_INVALID | The specified max_qts is invalid. |
-| 500 | MSG_WAIT_FAILED | A waiting call returned an error. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MAX_QTS_INVALID</td><td>Указанное значение max_qts недействительно.</td></tr><tr><td>500</td><td>MSG_WAIT_FAILED</td><td>Вызов, окончания которого ожидал этот запрос, вернул ошибку.</td></tr></tbody></table>

@@ -1,37 +1,30 @@
 ---
-title: "businessLocation (конструктор)"
+title: "businessLocation"
 original: "https://core.telegram.org/constructor/businessLocation"
 section: ref
 kind: constructor
+description: "Представляет местоположение Telegram Business »."
 layout: layout.njk
 ---
 
 # businessLocation
 
-*Конструктор из схемы TL.*
-
-> Represents the location of a [Telegram Business »](https://core.telegram.org/api/business#location).
-
-## Определение TL
+Представляет местоположение [Telegram Business »](/api/business/#location).
 
 ```
 businessLocation#ac5c1af7 flags:# geo_point:flags.0?GeoPoint address:string = BusinessLocation;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| geo_point | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[GeoPoint](/type/GeoPoint/) | Geographical coordinates (optional). |
-| address | [string](/type/string/) | Textual description of the address (mandatory). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>geo_point</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/GeoPoint">GeoPoint</a></td><td>Географические координаты (необязательно).</td></tr><tr><td><strong>address</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текстовое описание адреса (обязательно).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BusinessLocation](/type/BusinessLocation/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

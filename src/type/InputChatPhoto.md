@@ -1,18 +1,15 @@
 ---
-title: "InputChatPhoto (тип)"
+title: "InputChatPhoto"
 original: "https://core.telegram.org/type/InputChatPhoto"
 section: ref
 kind: type
+description: "Определяет новую фотографию профиля группы."
 layout: layout.njk
 ---
 
 # InputChatPhoto
 
-*Тип из схемы TL.*
-
-> Defines a new group profile photo.
-
-## Определение TL
+Определяет новую фотографию профиля группы.
 
 ```
 inputChatPhotoEmpty#1ca48f57 = InputChatPhoto;
@@ -20,10 +17,6 @@ inputChatUploadedPhoto#bdcdaec0 flags:# file:flags.0?InputFile video:flags.1?Inp
 inputChatPhoto#8953ad37 id:InputPhoto = InputChatPhoto;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputChatPhotoEmpty](/constructor/inputChatPhotoEmpty/) | Empty constructor, remove group photo. |
-| [inputChatUploadedPhoto](/constructor/inputChatUploadedPhoto/) | New photo to be set as group profile photo. The file, video and video_emoji_markup flags are mutually exclusive. |
-| [inputChatPhoto](/constructor/inputChatPhoto/) | Existing photo to be set as a chat profile photo. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputChatPhotoEmpty">inputChatPhotoEmpty</a></td><td>Пустой конструктор, удалить фотографию группы.</td></tr><tr><td><a href="/constructor/inputChatUploadedPhoto">inputChatUploadedPhoto</a></td><td>Новая фотография, которая будет установлена как фотография профиля группы.<br><br>Флаги <code>file</code>, <code>video</code> и <code>video_emoji_markup</code> взаимоисключающие.</td></tr><tr><td><a href="/constructor/inputChatPhoto">inputChatPhoto</a></td><td>Существующая фотография, которую нужно установить как фотографию профиля чата.</td></tr></tbody></table>

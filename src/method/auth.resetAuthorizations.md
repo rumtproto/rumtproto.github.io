@@ -1,19 +1,17 @@
 ---
-title: "auth.resetAuthorizations (метод)"
+title: "auth.resetAuthorizations"
 original: "https://core.telegram.org/method/auth.resetAuthorizations"
 section: ref
 kind: method
+description: "Завершает все авторизованные сессии пользователя, кроме текущей."
 layout: layout.njk
 ---
 
 # auth.resetAuthorizations
 
-*Метод из схемы TL.*
+Завершает все авторизованные сессии пользователя, кроме текущей.
 
-> Terminates all user's authorized sessions except for the current one.
-> After calling this method it is necessary to reregister the current device using the method [account.registerDevice](/method/account.registerDevice/)
-
-## Определение TL
+После вызова этого метода необходимо заново зарегистрировать текущее устройство методом [account.registerDevice](/method/account.registerDevice/)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,24 +20,22 @@ boolTrue#997275b5 = Bool;
 auth.resetAuthorizations#9fab0d1a = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 406 | FRESH_RESET_AUTHORISATION_FORBIDDEN | You can't logout other sessions if less than 24 hours have passed since you logged on the current session. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>406</td><td>FRESH_RESET_AUTHORISATION_FORBIDDEN</td><td>Нельзя завершить другие сессии, если с момента входа в текущую сессию прошло менее 24 часов.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [account.registerDevice](/method/account.registerDevice/)
 
-Register device to receive [PUSH notifications](https://core.telegram.org/api/push-updates)
+Зарегистрировать устройство для получения [PUSH-уведомлений](/api/push-updates/)

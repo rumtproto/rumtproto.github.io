@@ -1,18 +1,15 @@
 ---
-title: "account.ResetPasswordResult (тип)"
+title: "account.ResetPasswordResult"
 original: "https://core.telegram.org/type/account.ResetPasswordResult"
 section: ref
 kind: type
+description: "Результат запроса account.resetPassword."
 layout: layout.njk
 ---
 
 # account.ResetPasswordResult
 
-*Тип из схемы TL.*
-
-> Result of an [account.resetPassword](/method/account.resetPassword/) request.
-
-## Определение TL
+Результат запроса [account.resetPassword](/method/account.resetPassword/).
 
 ```
 account.resetPasswordFailedWait#e3779861 retry_date:int = account.ResetPasswordResult;
@@ -24,22 +21,16 @@ account.resetPasswordOk#e926d63e = account.ResetPasswordResult;
 account.resetPassword#9308ce1b = account.ResetPasswordResult;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.resetPasswordFailedWait](/constructor/account.resetPasswordFailedWait/) | You recently requested a password reset that was canceled, please wait until the specified date before requesting another reset. |
-| [account.resetPasswordRequestedWait](/constructor/account.resetPasswordRequestedWait/) | You successfully requested a password reset, please wait until the specified date before finalizing the reset. |
-| [account.resetPasswordOk](/constructor/account.resetPasswordOk/) | The 2FA password was reset successfully. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.resetPasswordFailedWait">account.resetPasswordFailedWait</a></td><td>Недавно вы запросили сброс пароля, который был отменён; дождитесь указанной даты, прежде чем запрашивать новый сброс.</td></tr><tr><td><a href="/constructor/account.resetPasswordRequestedWait">account.resetPasswordRequestedWait</a></td><td>Сброс пароля успешно запрошен; дождитесь указанной даты, прежде чем завершать сброс.</td></tr><tr><td><a href="/constructor/account.resetPasswordOk">account.resetPasswordOk</a></td><td>Пароль двухфакторной аутентификации успешно сброшен.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.resetPassword](/method/account.resetPassword/) | Initiate a 2FA password reset: can only be used if the user is already logged-in, [see here for more info »](https://core.telegram.org/api/srp/#password-reset) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.resetPassword">account.resetPassword</a></td><td>Начать сброс пароля двухфакторной аутентификации: может использоваться, только если пользователь уже вошёл в аккаунт, <a href="/api/srp#password-reset">подробнее см. здесь »</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [account.resetPassword](/method/account.resetPassword/)
 
-Initiate a 2FA password reset: can only be used if the user is already logged-in, [see here for more info »](https://core.telegram.org/api/srp/#password-reset)
+Начать сброс пароля двухфакторной аутентификации: может использоваться, только если пользователь уже вошёл в аккаунт, [подробнее см. здесь »](/api/srp/#password-reset)

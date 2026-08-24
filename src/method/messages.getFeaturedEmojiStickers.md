@@ -1,18 +1,15 @@
 ---
-title: "messages.getFeaturedEmojiStickers (метод)"
+title: "messages.getFeaturedEmojiStickers"
 original: "https://core.telegram.org/method/messages.getFeaturedEmojiStickers"
 section: ref
 kind: method
+description: "Получает рекомендуемые наборы стикеров с пользовательскими эмодзи."
 layout: layout.njk
 ---
 
 # messages.getFeaturedEmojiStickers
 
-*Метод из схемы TL.*
-
-> Gets featured custom emoji stickersets.
-
-## Определение TL
+Получает рекомендуемые наборы стикеров с пользовательскими эмодзи.
 
 ```
 messages.featuredStickersNotModified#c6dc0c66 count:int = messages.FeaturedStickers;
@@ -21,20 +18,18 @@ messages.featuredStickers#be382906 flags:# premium:flags.0?true hash:long count:
 messages.getFeaturedEmojiStickers#ecf6736 hash:long = messages.FeaturedStickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.FeaturedStickers](/type/messages.FeaturedStickers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

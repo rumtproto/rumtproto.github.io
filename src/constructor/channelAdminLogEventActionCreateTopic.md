@@ -1,35 +1,30 @@
 ---
-title: "channelAdminLogEventActionCreateTopic (конструктор)"
+title: "channelAdminLogEventActionCreateTopic"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionCreateTopic"
 section: ref
 kind: constructor
+description: "Тема форума была создана"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionCreateTopic
 
-*Конструктор из схемы TL.*
-
-> A [forum topic](https://core.telegram.org/api/forum#forum-topics) was created
-
-## Определение TL
+[Тема форума](/api/forum/#forum-topics) была создана
 
 ```
 channelAdminLogEventActionCreateTopic#58707d28 topic:ForumTopic = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| topic | [ForumTopic](/type/ForumTopic/) | The [forum topic](https://core.telegram.org/api/forum#forum-topics) that was created |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>topic</strong></td><td style="text-align: center;"><a href="/type/ForumTopic">ForumTopic</a></td><td><a href="/api/forum#forum-topics">Тема форума</a>, которая была создана</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

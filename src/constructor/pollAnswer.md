@@ -1,56 +1,46 @@
 ---
-title: "pollAnswer (конструктор)"
+title: "pollAnswer"
 original: "https://core.telegram.org/constructor/pollAnswer"
 section: ref
 kind: constructor
+description: "Возможный вариант ответа в опросе"
 layout: layout.njk
 ---
 
 # pollAnswer
 
-*Конструктор из схемы TL.*
-
-> A possible answer of a poll
-
-## Определение TL
+Возможный вариант ответа в опросе
 
 ```
 pollAnswer#ff16e2ca text:TextWithEntities option:bytes = PollAnswer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| text | [TextWithEntities](/type/TextWithEntities/) | Textual representation of the answer (only [Premium](https://core.telegram.org/api/premium) users can use [custom emoji entities](https://core.telegram.org/api/custom-emoji) here). |
-| option | [bytes](/type/bytes/) | The param that has to be passed to [messages.sendVote](/method/messages.sendVote/). |
-| media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[MessageMedia](/type/MessageMedia/) | Optional media attachment displayed alongside the answer |
-| added_by | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Peer](/type/Peer/) | The peer who added this answer; only set for answers dynamically added to an open-answer poll, see [polls »](https://core.telegram.org/api/poll#open-answer-polls) |
-| date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | When this answer was added; only set for answers dynamically added to an open-answer poll |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Текстовое представление ответа (только пользователи <a href="/api/premium">Premium</a> могут использовать здесь <a href="/api/custom-emoji">сущности пользовательских эмодзи</a>).</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Параметр, который необходимо передать в <a href="/method/messages.sendVote">messages.sendVote</a>.</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/MessageMedia">MessageMedia</a></td><td>Необязательное вложение, отображаемое рядом с ответом</td></tr><tr><td><strong>added_by</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Peer">Peer</a></td><td>Пир, добавивший этот вариант ответа; задаётся только для вариантов, динамически добавленных в опрос с открытыми ответами, см. <a href="/api/poll#open-answer-polls">опросы »</a></td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Когда был добавлен этот вариант ответа; задаётся только для вариантов, динамически добавленных в опрос с открытыми ответами</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PollAnswer](/type/PollAnswer/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
 #### [messages.sendVote](/method/messages.sendVote/)
 
-Vote in a [poll](/constructor/poll/)
+Проголосовать в [опросе](/constructor/poll/)
 
-Starting from layer 159, the vote will be sent from the peer specified using [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/).
+Начиная со слоя 159 голос отправляется от имени пира, указанного через [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/).
 
-Before voting, clients should check that the user is actually allowed to vote: voting is not possible if the poll is closed, if it is [subscriber-only »](https://core.telegram.org/api/poll#subscriber-only-polls) and the user is not an eligible subscriber, or if it is [country-restricted »](https://core.telegram.org/api/poll#country-restricted-polls) and the user's [`phone_country_iso2` »](https://core.telegram.org/api/config#phone-country-iso2) is not in the poll's allowed country list. See [vote restrictions »](https://core.telegram.org/api/poll#vote-restrictions) for the full list of conditions.
+Перед голосованием клиентам следует проверить, что пользователю действительно разрешено голосовать: голосование невозможно, если опрос закрыт, если он [только для подписчиков »](/api/poll/#subscriber-only-polls), а у пользователя нет нужной подписки, либо если он [ограничен по странам »](/api/poll/#country-restricted-polls), а [`phone_country_iso2` »](/api/config/#phone-country-iso2) пользователя отсутствует в списке разрешённых стран опроса. Полный перечень условий см. в разделе [ограничения на голосование »](/api/poll/#vote-restrictions).
 
-#### [Polls and quizzes](https://core.telegram.org/api/poll)
+#### [Опросы и викторины](/api/poll/)
 
-Telegram allows sending polls and quizzes, that can be voted on by thousands, if not millions of users in chats and channels.
+Telegram позволяет отправлять опросы и викторины, в которых могут проголосовать тысячи, если не миллионы пользователей в чатах и каналах.

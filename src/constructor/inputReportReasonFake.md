@@ -1,27 +1,24 @@
 ---
-title: "inputReportReasonFake (конструктор)"
+title: "inputReportReasonFake"
 original: "https://core.telegram.org/constructor/inputReportReasonFake"
 section: ref
 kind: constructor
+description: "Жалоба на выдачу себя за другое лицо"
 layout: layout.njk
 ---
 
 # inputReportReasonFake
 
-*Конструктор из схемы TL.*
-
-> Report for impersonation
-
-## Определение TL
+Жалоба на выдачу себя за другое лицо
 
 ```
 inputReportReasonFake#f5ddd6e7 = ReportReason;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReportReason](/type/ReportReason/)

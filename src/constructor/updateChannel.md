@@ -1,44 +1,41 @@
 ---
-title: "updateChannel (конструктор)"
+title: "updateChannel"
 original: "https://core.telegram.org/constructor/updateChannel"
 section: ref
 kind: constructor
+description: "Информация о канале или супергруппе (channel и/или channelFull) была обновлена."
 layout: layout.njk
 ---
 
 # updateChannel
 
-*Конструктор из схемы TL.*
+Информация о канале или супергруппе ([channel](/constructor/channel/) и/или [channelFull](/constructor/channelFull/)) была обновлена.
 
-> Channel/supergroup ([channel](/constructor/channel/) and/or [channelFull](/constructor/channelFull/)) information was updated.
-> This update can only be received through getDifference or in [updates](/constructor/updates/)/[updatesCombined](/constructor/updatesCombined/) constructors, so it will **always** come bundled with the updated [channel](/constructor/channel/), that should be applied [as usual »](https://core.telegram.org/api/peers), **without** re-fetching the info manually.
-> However, full peer information will not come bundled in updates, so the full peer cache ([channelFull](/constructor/channelFull/)) must be invalidated for `channel_id` when receiving this update.
+Это обновление можно получить только через getDifference либо в конструкторах [updates](/constructor/updates/)/[updatesCombined](/constructor/updatesCombined/), поэтому оно **всегда** приходит вместе с обновлёнными данными [channel](/constructor/channel/), которые следует применить [обычным образом »](/api/peers/), **без** повторного запроса сведений вручную.
 
-## Определение TL
+Однако полные сведения о пире в обновлениях не передаются, поэтому при получении этого обновления кеш полных сведений о пире ([channelFull](/constructor/channelFull/)) для `channel_id` необходимо считать недействительным.
 
 ```
 updateChannel#635b4c09 channel_id:long = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel_id | [long](/type/long/) | Channel ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор канала</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [channel](/constructor/channel/)
 
-Channel/supergroup info
+Информация о канале или супергруппе
 
-When updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-The only exception to the above rule is when the `min` flag is set, in which case **only** the following fields must be applied over any locally stored version:
+[@term:min] Единственное исключение из приведённого выше правила — установленный флаг `min`: в этом случае поверх локально сохранённой версии обязаны применяться **только** следующие поля:
 
 -   `title`
 -   `megagroup`
@@ -65,28 +62,28 @@ The only exception to the above rule is when the `min` flag is set, in which cas
 -   `signature_profiles`
 -   `autotranslation`
 -   `broadcast_messages_allowed`
--   `monoforum`
+-   [@term:monoforum] `monoforum`
 -   `forum_tabs`
 -   `linked_monoforum_id`
 -   `send_paid_messages_stars`
 -   `bot_verification_icon`
 
-See [here »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176) for an implementation of the logic to use when updating the [local channel peer database](https://core.telegram.org/api/peers).
+См. [здесь »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176) реализацию логики, которую следует применять при обновлении [локальной базы пиров-каналов](/api/peers/).
 
 #### [channelFull](/constructor/channelFull/)
 
-Full info about a [channel](https://core.telegram.org/api/channel#channels), [supergroup](https://core.telegram.org/api/channel#supergroups) or [gigagroup](https://core.telegram.org/api/channel#gigagroups).
+Полная информация о [канале](/api/channel/#channels), [супергруппе](/api/channel/#supergroups) или [гигагруппе](/api/channel/#gigagroups).
 
-When updating the [local peer database »](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров »](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).
 
 #### [Updates](/constructor/updates/)
 
-Full constructor of updates
+Полный конструктор обновлений
 
 #### [updatesCombined](/constructor/updatesCombined/)
 
-Constructor for a group of updates.
+Конструктор для группы обновлений.
 
-#### [Peer database](https://core.telegram.org/api/peers)
+#### [База данных пиров](/api/peers/)
 
-Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.
+Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.

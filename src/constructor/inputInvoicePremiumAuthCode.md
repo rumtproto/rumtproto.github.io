@@ -1,39 +1,34 @@
 ---
-title: "inputInvoicePremiumAuthCode (конструктор)"
+title: "inputInvoicePremiumAuthCode"
 original: "https://core.telegram.org/constructor/inputInvoicePremiumAuthCode"
 section: ref
 kind: constructor
+description: "Используется для оплаты кодов входа в случае высокой стоимости SMS с кодами подтверждения для страны или оператора пользователя; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # inputInvoicePremiumAuthCode
 
-*Конструктор из схемы TL.*
-
-> Used to pay for login codes, in case of high cost of SMS verification codes for the user's country/provider, see [here »](https://core.telegram.org/api/auth/#paid-auth) for more info.
-
-## Определение TL
+Используется для оплаты кодов входа в случае высокой стоимости SMS с кодами подтверждения для страны или оператора пользователя; подробнее [см. здесь »](/api/auth/#paid-auth).
 
 ```
 inputInvoicePremiumAuthCode#3e77f614 purpose:InputStorePaymentPurpose = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| purpose | [InputStorePaymentPurpose](/type/InputStorePaymentPurpose/) | Must contain an [inputStorePaymentAuthCode](/constructor/inputStorePaymentAuthCode/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose">InputStorePaymentPurpose</a></td><td>Обязано содержать <a href="/constructor/inputStorePaymentAuthCode">inputStorePaymentAuthCode</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
 #### [inputStorePaymentAuthCode](/constructor/inputStorePaymentAuthCode/)
 
-Indicates payment for a login code.
+Обозначает оплату кода для входа.
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

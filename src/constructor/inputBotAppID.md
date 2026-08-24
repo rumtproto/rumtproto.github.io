@@ -1,40 +1,34 @@
 ---
-title: "inputBotAppID (конструктор)"
+title: "inputBotAppID"
 original: "https://core.telegram.org/constructor/inputBotAppID"
 section: ref
 kind: constructor
+description: "Используется для получения информации о Mini App с прямой ссылкой по его идентификатору"
 layout: layout.njk
 ---
 
 # inputBotAppID
 
-*Конструктор из схемы TL.*
-
-> Used to fetch information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps) by its ID
-
-## Определение TL
+[@term:Mini App] Используется для получения информации о [Mini App с прямой ссылкой](/api/bots/webapps/#direct-link-mini-apps) по его идентификатору
 
 ```
 inputBotAppID#a920bd7a id:long access_hash:long = InputBotApp;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps) ID. |
-| access_hash | [long](/type/long/) | Access hash, obtained from the [botApp](/constructor/botApp/) constructor. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор <a href="/api/bots/webapps#direct-link-mini-apps">Mini App с прямой ссылкой</a>.</td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:access_hash] Хеш доступа, полученный из конструктора <a href="/constructor/botApp">botApp</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputBotApp](/type/InputBotApp/)
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
 #### [botApp](/constructor/botApp/)
 
-Contains information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps).
+Содержит информацию о [Mini App с прямой ссылкой](/api/bots/webapps/#direct-link-mini-apps).

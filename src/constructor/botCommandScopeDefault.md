@@ -1,27 +1,24 @@
 ---
-title: "botCommandScopeDefault (конструктор)"
+title: "botCommandScopeDefault"
 original: "https://core.telegram.org/constructor/botCommandScopeDefault"
 section: ref
 kind: constructor
+description: "Команды будут действовать во всех диалогах"
 layout: layout.njk
 ---
 
 # botCommandScopeDefault
 
-*Конструктор из схемы TL.*
-
-> The commands will be valid in all dialogs
-
-## Определение TL
+Команды будут действовать во всех диалогах
 
 ```
 botCommandScopeDefault#2f6cb2ab = BotCommandScope;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [BotCommandScope](/type/BotCommandScope/)

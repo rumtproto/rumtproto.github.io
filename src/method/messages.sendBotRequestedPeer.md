@@ -1,18 +1,15 @@
 ---
-title: "messages.sendBotRequestedPeer (метод)"
+title: "messages.sendBotRequestedPeer"
 original: "https://core.telegram.org/method/messages.sendBotRequestedPeer"
 section: ref
 kind: method
+description: "Отправить один или несколько выбранных пиров по запросу кнопки keyboardButtonRequestPeer."
 layout: layout.njk
 ---
 
 # messages.sendBotRequestedPeer
 
-*Метод из схемы TL.*
-
-> Send one or more chosen peers, as requested by a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button.
-
-## Определение TL
+Отправить один или несколько выбранных пиров по запросу кнопки [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,44 +23,34 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.sendBotRequestedPeer#91b2d060 peer:InputPeer msg_id:int button_id:int requested_peers:Vector<InputPeer> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [InputPeer](/type/InputPeer/) | The bot that sent the [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button. |
-| msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | ID of the message that contained the reply keyboard with the [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button. |
-| webapp_req_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | If the button was prepared for a [Mini App »](https://core.telegram.org/api/bots/buttons#requesting-peers-via-mini-apps), the Mini App request ID returned by [bots.requestWebViewButton](https://core.telegram.org/method/bots.requestWebViewButton). |
-| button_id | [int](/type/int/) | The button_id field from the [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) constructor. |
-| requested_peers | [Vector](https://core.telegram.org/type/Vector%20t)<[InputPeer](/type/InputPeer/)> | The chosen peers. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Бот, отправивший кнопку <a href="/constructor/keyboardButtonRequestPeer">keyboardButtonRequestPeer</a>.</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения, содержавшего клавиатуру ответа с кнопкой <a href="/constructor/keyboardButtonRequestPeer">keyboardButtonRequestPeer</a>.</td></tr><tr><td><strong>webapp_req_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>[@term:Mini App] Если кнопка была подготовлена для <a href="/api/bots/buttons#requesting-peers-via-mini-apps">Mini App »</a> — идентификатор запроса Mini App, возвращённый методом <a href="/method/bots.requestWebViewButton">bots.requestWebViewButton</a>.</td></tr><tr><td><strong>button_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Поле <code>button_id</code> из конструктора <a href="/constructor/keyboardButtonRequestPeer">keyboardButtonRequestPeer</a>.</td></tr><tr><td><strong>requested_peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPeer">InputPeer</a>&gt;</td><td>Выбранные пиры.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/)
 
-Prompts the user to select and share one or more peers with the bot using [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/)
+Предлагает пользователю выбрать одного или нескольких пиров и передать их боту с помощью [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/)
 
-Available only in private chats, in [reply keyboards](/constructor/replyKeyboardMarkup/).
+Доступно только в личных чатах, в [клавиатурах ответа](/constructor/replyKeyboardMarkup/).
 
-See [peer requests](https://core.telegram.org/api/bots/buttons#peer-requests) for the full flow.
+Полное описание процесса см. в разделе [запросы пиров](/api/bots/buttons/#peer-requests).
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.
 
-#### [bots.requestWebViewButton](https://core.telegram.org/method/bots.requestWebViewButton)
+#### [bots.requestWebViewButton](/method/bots.requestWebViewButton/)
 
-Bots may use this method to prepare a peer request button for a [Mini App](https://core.telegram.org/api/bots/webapps), see [here »](https://core.telegram.org/api/bots/buttons#requesting-peers-via-mini-apps) for more info.
+Боты могут использовать этот метод, чтобы подготовить кнопку запроса пира для [Mini App](/api/bots/webapps/); подробнее см. [здесь »](/api/bots/buttons/#requesting-peers-via-mini-apps).

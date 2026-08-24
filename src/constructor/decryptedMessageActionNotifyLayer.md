@@ -1,30 +1,25 @@
 ---
-title: "decryptedMessageActionNotifyLayer (конструктор)"
+title: "decryptedMessageActionNotifyLayer"
 original: "https://core.telegram.org/constructor/decryptedMessageActionNotifyLayer"
 section: ref
 kind: constructor
+description: "Уведомление о том, какой слой API использует клиент. Следует использовать свой текущий слой и при отправке сообщений учитывать слой, используемый на другой стороне переписки."
 layout: layout.njk
 ---
 
 # decryptedMessageActionNotifyLayer
 
-*Конструктор из схемы TL.*
-
-> A notification stating the API layer that is used by the client. You should use your current layer and take notice of the layer used on the other side of a conversation when sending messages.
-
-## Определение TL
+Уведомление о том, какой слой API использует клиент. Следует использовать свой текущий слой и при отправке сообщений учитывать слой, используемый на другой стороне переписки.
 
 ```
 ===17===
 decryptedMessageActionNotifyLayer#f3048883 layer:int = DecryptedMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| layer | [int](/type/int/) | Layer number, must be 17 or higher (this constructor was introduced in Layer 17. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>layer</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:layer] Номер слоя, обязан быть <strong>17</strong> или выше (этот конструктор появился в слое 17.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DecryptedMessageAction](/type/DecryptedMessageAction/)

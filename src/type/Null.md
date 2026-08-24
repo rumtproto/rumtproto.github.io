@@ -1,25 +1,20 @@
 ---
-title: "Null (тип)"
+title: "Null"
 original: "https://core.telegram.org/type/Null"
 section: ref
 kind: type
+description: "Объект соответствует произвольному пустому объекту."
 layout: layout.njk
 ---
 
 # Null
 
-*Тип из схемы TL.*
-
-> Object corresponds to an arbitrary empty object.
-
-## Определение TL
+Объект соответствует произвольному пустому объекту.
 
 ```
 null#56730bcc = Null;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [null](/constructor/null/) | Corresponds to an arbitrary empty object. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/null">null</a></td><td>Соответствует произвольному пустому объекту.</td></tr></tbody></table>

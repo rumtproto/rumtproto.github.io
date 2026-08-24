@@ -1,18 +1,15 @@
 ---
-title: "TopPeerCategory (тип)"
+title: "TopPeerCategory"
 original: "https://core.telegram.org/type/TopPeerCategory"
 section: ref
 kind: type
+description: "Категория популярных пиров"
 layout: layout.njk
 ---
 
 # TopPeerCategory
 
-*Тип из схемы TL.*
-
-> Top peer category
-
-## Определение TL
+Категория популярных пиров
 
 ```
 topPeerCategoryBotsPM#ab661b5b = TopPeerCategory;
@@ -26,17 +23,6 @@ topPeerCategoryForwardChats#fbeec0f0 = TopPeerCategory;
 topPeerCategoryBotsApp#fd9e7bec = TopPeerCategory;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [topPeerCategoryBotsPM](/constructor/topPeerCategoryBotsPM/) | Most used bots |
-| [topPeerCategoryBotsInline](/constructor/topPeerCategoryBotsInline/) | Most used inline bots |
-| [topPeerCategoryCorrespondents](/constructor/topPeerCategoryCorrespondents/) | Users we've chatted most frequently with |
-| [topPeerCategoryGroups](/constructor/topPeerCategoryGroups/) | Often-opened groups and supergroups |
-| [topPeerCategoryChannels](/constructor/topPeerCategoryChannels/) | Most frequently visited channels |
-| [topPeerCategoryPhoneCalls](/constructor/topPeerCategoryPhoneCalls/) | Most frequently called users |
-| [topPeerCategoryForwardUsers](/constructor/topPeerCategoryForwardUsers/) | Users to which the users often forwards messages to |
-| [topPeerCategoryForwardChats](/constructor/topPeerCategoryForwardChats/) | Chats to which the users often forwards messages to |
-| [topPeerCategoryBotsApp](/constructor/topPeerCategoryBotsApp/) | Most frequently used [Main Mini Bot Apps](https://core.telegram.org/api/bots/webapps#main-mini-apps). |
-| [topPeerCategoryBotsGuestChat](https://core.telegram.org/constructor/topPeerCategoryBotsGuestChat) | Top [guest bots »](https://core.telegram.org/api/bots/guest-mode), i.e. bots most frequently invoked as guests in chats. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/topPeerCategoryBotsPM">topPeerCategoryBotsPM</a></td><td>Наиболее используемые боты</td></tr><tr><td><a href="/constructor/topPeerCategoryBotsInline">topPeerCategoryBotsInline</a></td><td>Наиболее используемые инлайн-боты</td></tr><tr><td><a href="/constructor/topPeerCategoryCorrespondents">topPeerCategoryCorrespondents</a></td><td>Пользователи, с которыми мы переписываемся чаще всего</td></tr><tr><td><a href="/constructor/topPeerCategoryGroups">topPeerCategoryGroups</a></td><td>Часто открываемые группы и супергруппы</td></tr><tr><td><a href="/constructor/topPeerCategoryChannels">topPeerCategoryChannels</a></td><td>Наиболее посещаемые каналы</td></tr><tr><td><a href="/constructor/topPeerCategoryPhoneCalls">topPeerCategoryPhoneCalls</a></td><td>Пользователи, которым чаще всего звонят</td></tr><tr><td><a href="/constructor/topPeerCategoryForwardUsers">topPeerCategoryForwardUsers</a></td><td>Пользователи, которым пользователь часто пересылает сообщения</td></tr><tr><td><a href="/constructor/topPeerCategoryForwardChats">topPeerCategoryForwardChats</a></td><td>Чаты, в которые пользователь часто пересылает сообщения</td></tr><tr><td><a href="/constructor/topPeerCategoryBotsApp">topPeerCategoryBotsApp</a></td><td>[@term:Mini App] Наиболее часто используемые <a href="/api/bots/webapps#main-mini-apps">основные Mini App ботов</a>.</td></tr><tr><td><a href="/constructor/topPeerCategoryBotsGuestChat">topPeerCategoryBotsGuestChat</a></td><td>Популярные <a href="/api/bots/guest-mode">гостевые боты »</a>, то есть боты, которых чаще всего вызывают в чатах как гостей.</td></tr></tbody></table>

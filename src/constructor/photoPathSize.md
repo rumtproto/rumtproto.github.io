@@ -1,36 +1,30 @@
 ---
-title: "photoPathSize (конструктор)"
+title: "photoPathSize"
 original: "https://core.telegram.org/constructor/photoPathSize"
 section: ref
 kind: constructor
+description: "Сообщения с анимированными стикерами могут содержать сжатый svg (< 300 байт), чтобы показать контур стикера до загрузки самой анимации lottie."
 layout: layout.njk
 ---
 
 # photoPathSize
 
-*Конструктор из схемы TL.*
-
-> Messages with animated stickers can have a compressed svg (< 300 bytes) to show the outline of the sticker before fetching the actual lottie animation.
-
-## Определение TL
+Сообщения с анимированными стикерами могут содержать сжатый svg (< 300 байт), чтобы показать контур стикера до загрузки самой анимации lottie.
 
 ```
 photoPathSize#d8214d41 type:string bytes:bytes = PhotoSize;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| type | [string](/type/string/) | Always [j »](https://core.telegram.org/api/files/#vector-thumbnails) |
-| bytes | [bytes](/type/bytes/) | Compressed SVG path payload, see [vector thumbnails »](https://core.telegram.org/api/files/#vector-thumbnails) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Всегда <a href="/api/files#vector-thumbnails"><code>j</code> »</a></td></tr><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Сжатые данные SVG-контура, см. <a href="/api/files#vector-thumbnails">векторные миниатюры »</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PhotoSize](/type/PhotoSize/)
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

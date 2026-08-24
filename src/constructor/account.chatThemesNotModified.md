@@ -1,27 +1,24 @@
 ---
-title: "account.chatThemesNotModified (конструктор)"
+title: "account.chatThemesNotModified"
 original: "https://core.telegram.org/constructor/account.chatThemesNotModified"
 section: ref
 kind: constructor
+description: "Доступные темы оформления чатов не изменились"
 layout: layout.njk
 ---
 
 # account.chatThemesNotModified
 
-*Конструктор из схемы TL.*
-
-> The available chat themes were not modified
-
-## Определение TL
+Доступные темы оформления чатов не изменились
 
 ```
 account.chatThemesNotModified#e011e1c4 = account.ChatThemes;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [account.ChatThemes](/type/account.ChatThemes/)

@@ -1,18 +1,15 @@
 ---
-title: "channels.createChannel (метод)"
+title: "channels.createChannel"
 original: "https://core.telegram.org/method/channels.createChannel"
 section: ref
 kind: method
+description: "Создать супергруппу или канал."
 layout: layout.njk
 ---
 
 # channels.createChannel
 
-*Метод из схемы TL.*
-
-> Create a [supergroup/channel](https://core.telegram.org/api/channel).
-
-## Определение TL
+Создать [супергруппу или канал](/api/channel/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,58 +23,38 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.createChannel#91006707 flags:# broadcast:flags.0?true megagroup:flags.1?true for_import:flags.3?true forum:flags.5?true title:string about:string geo_point:flags.2?InputGeoPoint address:flags.2?string ttl_period:flags.4?int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| broadcast | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to create a [channel](https://core.telegram.org/api/channel) |
-| megagroup | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether to create a [supergroup](https://core.telegram.org/api/channel) |
-| for_import | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether the supergroup is being created to import messages from a foreign chat service using [messages.initHistoryImport](/method/messages.initHistoryImport/) |
-| forum | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether to create a [forum](https://core.telegram.org/api/forum) |
-| title | [string](/type/string/) | Channel title |
-| about | [string](/type/string/) | Channel description |
-| geo_point | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[InputGeoPoint](/type/InputGeoPoint/) | Geogroup location, see [here »](https://core.telegram.org/api/nearby) for more info on geogroups. |
-| address | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | Geogroup address, see [here »](https://core.telegram.org/api/nearby) for more info on geogroups. |
-| ttl_period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[int](/type/int/) | Time-to-live of all messages that will be sent in the supergroup: once message.date+message.ttl_period === time(), the message will be deleted on the server, and must be deleted locally as well. You can use [messages.setDefaultHistoryTTL](/method/messages.setDefaultHistoryTTL/) to edit this value later. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>broadcast</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Создать ли <a href="/api/channel">канал</a></td></tr><tr><td><strong>megagroup</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Создать ли <a href="/api/channel">супергруппу</a></td></tr><tr><td><strong>for_import</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Создаётся ли супергруппа для импорта сообщений из стороннего мессенджера с помощью <a href="/method/messages.initHistoryImport">messages.initHistoryImport</a></td></tr><tr><td><strong>forum</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Создать ли <a href="/api/forum">форум</a></td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название канала</td></tr><tr><td><strong>about</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Описание канала</td></tr><tr><td><strong>geo_point</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/InputGeoPoint">InputGeoPoint</a></td><td>Местоположение геогруппы, <a href="/api/nearby">подробнее о геогруппах см. здесь »</a>.</td></tr><tr><td><strong>address</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Адрес геогруппы, <a href="/api/nearby">подробнее о геогруппах см. здесь »</a>.</td></tr><tr><td><strong>ttl_period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int">int</a></td><td>Время жизни всех сообщений, которые будут отправлены в супергруппу: как только message.date+message.ttl_period === time(), сообщение будет удалено на сервере, и его также необходимо удалить локально. Изменить это значение позже можно с помощью метода <a href="/method/messages.setDefaultHistoryTTL">messages.setDefaultHistoryTTL</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | ADDRESS_INVALID | The specified geopoint address is invalid. |
-| 400 | CHANNELS_ADMIN_LOCATED_TOO_MUCH | The user has reached the limit of public geogroups. |
-| 400 | CHANNELS_TOO_MUCH | You have joined too many channels/supergroups. |
-| 400 | CHAT_ABOUT_TOO_LONG | Chat about too long. |
-| 500 | CHAT_INVALID | Invalid chat. |
-| 400 | CHAT_TITLE_EMPTY | No chat title provided. |
-| 400 | TTL_PERIOD_INVALID | The specified TTL period is invalid. |
-| 406 | USER_RESTRICTED | You're spamreported, you can't create channels or chats. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>ADDRESS_INVALID</td><td>Указанный адрес географической точки недействителен.</td></tr><tr><td>400</td><td>CHANNELS_ADMIN_LOCATED_TOO_MUCH</td><td>Пользователь достиг предела числа публичных геогрупп.</td></tr><tr><td>400</td><td>CHANNELS_TOO_MUCH</td><td>Вы состоите в слишком большом числе каналов и супергрупп.</td></tr><tr><td>400</td><td>CHAT_ABOUT_TOO_LONG</td><td>Слишком длинное описание чата.</td></tr><tr><td>500</td><td>CHAT_INVALID</td><td>Недействительный чат.</td></tr><tr><td>400</td><td>CHAT_TITLE_EMPTY</td><td>Не указано название чата.</td></tr><tr><td>400</td><td>TTL_PERIOD_INVALID</td><td>[@term:TTL] Указанный период TTL недействителен.</td></tr><tr><td>406</td><td>USER_RESTRICTED</td><td>На вас пожаловались как на спам, вы не можете создавать каналы или чаты.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
 #### [messages.initHistoryImport](/method/messages.initHistoryImport/)
 
-Import chat history from a foreign chat app into a specific Telegram chat, [click here for more info about imported chats »](https://core.telegram.org/api/import).
+Импортировать историю переписки из стороннего мессенджера в определённый чат Telegram; [подробнее об импортированных чатах см. здесь »](/api/import/).
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.
 
-#### [Nearby users&chats](https://core.telegram.org/api/nearby)
+#### [Пользователи и чаты поблизости](/api/nearby/)
 
-How to work with geolocation-based features like geochats and the nearby users feature.
+Как работать с возможностями на основе геолокации, такими как геочаты и поиск пользователей поблизости.
 
 #### [messages.setDefaultHistoryTTL](/method/messages.setDefaultHistoryTTL/)
 
-Changes the default value of the Time-To-Live setting, applied to all new chats.
+Изменяет значение по умолчанию настройки времени жизни сообщений (Time-To-Live), применяемое ко всем новым чатам.

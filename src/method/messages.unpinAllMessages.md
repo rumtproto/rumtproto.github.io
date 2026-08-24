@@ -1,18 +1,15 @@
 ---
-title: "messages.unpinAllMessages (метод)"
+title: "messages.unpinAllMessages"
 original: "https://core.telegram.org/method/messages.unpinAllMessages"
 section: ref
 kind: method
+description: "Открепить все закреплённые сообщения"
 layout: layout.njk
 ---
 
 # messages.unpinAllMessages
 
-*Метод из схемы TL.*
-
-> [Unpin](https://core.telegram.org/api/pin) all pinned messages
-
-## Определение TL
+[Открепить](/api/pin/) все закреплённые сообщения
 
 ```
 messages.affectedHistory#b45c69d1 pts:int pts_count:int offset:int = messages.AffectedHistory;
@@ -20,40 +17,30 @@ messages.affectedHistory#b45c69d1 pts:int pts_count:int offset:int = messages.Af
 messages.unpinAllMessages#62dd747 flags:# peer:InputPeer top_msg_id:flags.0?int saved_peer_id:flags.1?InputPeer = messages.AffectedHistory;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [InputPeer](/type/InputPeer/) | Chat where to unpin |
-| top_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | [Forum topic](https://core.telegram.org/api/forum#forum-topics) where to unpin |
-| saved_peer_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[InputPeer](/type/InputPeer/) | If set, must be equal to the ID of a [monoforum topic](https://core.telegram.org/api/monoforum), and will unpin all messages pinned in the passed monoforum topic. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат, в котором нужно открепить</td></tr><tr><td><strong>top_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td><a href="/api/forum#forum-topics">Тема форума</a>, в которой нужно открепить</td></tr><tr><td><strong>saved_peer_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/InputPeer">InputPeer</a></td><td>Если установлено, должно быть равно идентификатору <a href="/api/monoforum">темы монофорума</a>; открепит все сообщения, закреплённые в переданной теме монофорума.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.AffectedHistory](/type/messages.AffectedHistory/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
-#### [Pinned messages](https://core.telegram.org/api/pin)
+#### [Закреплённые сообщения](/api/pin/)
 
-Telegram allows pinning multiple messages on top of a specific chat.
+Telegram позволяет закреплять несколько сообщений вверху конкретного чата.

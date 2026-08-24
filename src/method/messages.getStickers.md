@@ -1,18 +1,15 @@
 ---
-title: "messages.getStickers (метод)"
+title: "messages.getStickers"
 original: "https://core.telegram.org/method/messages.getStickers"
 section: ref
 kind: method
+description: "Получить стикеры по эмодзи"
 layout: layout.njk
 ---
 
 # messages.getStickers
 
-*Метод из схемы TL.*
-
-> Get stickers by emoji
-
-## Определение TL
+Получить стикеры по эмодзи
 
 ```
 messages.stickersNotModified#f1749a22 = messages.Stickers;
@@ -21,27 +18,22 @@ messages.stickers#30a6ec7e hash:long stickers:Vector<Document> = messages.Sticke
 messages.getStickers#d5a5d3a1 emoticon:string hash:long = messages.Stickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| emoticon | [string](/type/string/) | The emoji |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>emoticon</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:emoticon] Эмодзи</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Stickers](/type/messages.Stickers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | EMOTICON_EMPTY | The emoji is empty. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>EMOTICON_EMPTY</td><td>Эмодзи пуст.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

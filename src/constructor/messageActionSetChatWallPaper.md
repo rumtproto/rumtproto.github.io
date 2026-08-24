@@ -1,46 +1,38 @@
 ---
-title: "messageActionSetChatWallPaper (конструктор)"
+title: "messageActionSetChatWallPaper"
 original: "https://core.telegram.org/constructor/messageActionSetChatWallPaper"
 section: ref
 kind: constructor
+description: "Обои » текущего чата были изменены."
 layout: layout.njk
 ---
 
 # messageActionSetChatWallPaper
 
-*Конструктор из схемы TL.*
-
-> The [wallpaper »](https://core.telegram.org/api/wallpapers) of the current chat was changed.
-
-## Определение TL
+[Обои »](/api/wallpapers/) текущего чата были изменены.
 
 ```
 messageActionSetChatWallPaper#5060a3f4 flags:# same:flags.0?true for_both:flags.1?true wallpaper:WallPaper = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| same | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, indicates the user applied a [wallpaper »](https://core.telegram.org/api/wallpapers) previously sent by the other user in a [messageActionSetChatWallPaper](/constructor/messageActionSetChatWallPaper/) message. |
-| for_both | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, indicates the wallpaper was forcefully applied for both sides, without explicit confirmation from the other side. If the message is incoming, and we did not like the new wallpaper the other user has chosen for us, we can re-set our previous wallpaper just on our side, by invoking [messages.setChatWallPaper](/method/messages.setChatWallPaper/), providing only the revert flag (and obviously the peer parameter). |
-| wallpaper | [WallPaper](/type/WallPaper/) | New [wallpaper](https://core.telegram.org/api/wallpapers) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>same</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, указывает, что пользователь применил <a href="/api/wallpapers">обои »</a>, ранее отправленные другим пользователем в сообщении <a href="/constructor/messageActionSetChatWallPaper">messageActionSetChatWallPaper</a>.</td></tr><tr><td><strong>for_both</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>[@term:peer] Если установлено, указывает, что обои были принудительно применены для обеих сторон, без явного подтверждения со стороны собеседника.<br>Если сообщение входящее и новые обои, выбранные для нас другим пользователем, нам не понравились, мы можем вернуть прежние обои только на своей стороне, вызвав <a href="/method/messages.setChatWallPaper">messages.setChatWallPaper</a> и передав только флаг <code>revert</code> (и, разумеется, параметр <code>peer</code>).</td></tr><tr><td><strong>wallpaper</strong></td><td style="text-align: center;"><a href="/type/WallPaper">WallPaper</a></td><td>Новые <a href="/api/wallpapers">обои</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.
 
 #### [messageActionSetChatWallPaper](/constructor/messageActionSetChatWallPaper/)
 
-The [wallpaper »](https://core.telegram.org/api/wallpapers) of the current chat was changed.
+[Обои »](/api/wallpapers/) текущего чата были изменены.
 
 #### [messages.setChatWallPaper](/method/messages.setChatWallPaper/)
 
-Set a custom [wallpaper »](https://core.telegram.org/api/wallpapers) in a specific private chat with another user.
+Установить пользовательские [обои »](/api/wallpapers/) в конкретном личном чате с другим пользователем.

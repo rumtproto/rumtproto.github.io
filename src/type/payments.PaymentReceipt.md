@@ -1,18 +1,15 @@
 ---
-title: "Payments.PaymentReceipt (тип)"
+title: "payments.PaymentReceipt"
 original: "https://core.telegram.org/type/payments.PaymentReceipt"
 section: ref
 kind: type
+description: "Чек об оплате"
 layout: layout.njk
 ---
 
 # Payments.PaymentReceipt
 
-*Тип из схемы TL.*
-
-> Payment receipt
-
-## Определение TL
+Чек об оплате
 
 ```
 payments.paymentReceipt#70c4fe03 flags:# date:int bot_id:long provider_id:long title:string description:string photo:flags.2?WebDocument invoice:Invoice info:flags.0?PaymentRequestedInfo shipping:flags.1?ShippingOption tip_amount:flags.3?long currency:string total_amount:long credentials_title:string users:Vector<User> = payments.PaymentReceipt;
@@ -23,15 +20,10 @@ payments.paymentReceiptStars#dabbf83a flags:# date:int bot_id:long title:string 
 payments.getPaymentReceipt#2478d1cc peer:InputPeer msg_id:int = payments.PaymentReceipt;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.paymentReceipt](/constructor/payments.paymentReceipt/) | Receipt |
-| [payments.paymentReceiptStars](/constructor/payments.paymentReceiptStars/) | Receipt for [payment made using Telegram Stars](https://core.telegram.org/api/stars). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.paymentReceipt">payments.paymentReceipt</a></td><td>Чек</td></tr><tr><td><a href="/constructor/payments.paymentReceiptStars">payments.paymentReceiptStars</a></td><td>Чек за <a href="/api/stars">платёж, совершённый с помощью Telegram Stars</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getPaymentReceipt](/method/payments.getPaymentReceipt/) | Get payment receipt |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getPaymentReceipt">payments.getPaymentReceipt</a></td><td>Получить чек об оплате</td></tr></tbody></table>

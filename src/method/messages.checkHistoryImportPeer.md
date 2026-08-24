@@ -1,19 +1,17 @@
 ---
-title: "messages.checkHistoryImportPeer (метод)"
+title: "messages.checkHistoryImportPeer"
 original: "https://core.telegram.org/method/messages.checkHistoryImportPeer"
 section: ref
 kind: method
+description: "Проверить, можно ли импортировать в определённый чат Telegram историю переписки, экспортированную из другого мессенджера; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # messages.checkHistoryImportPeer
 
-*Метод из схемы TL.*
+Проверить, можно ли [импортировать в определённый чат Telegram историю переписки, экспортированную из другого мессенджера; подробнее см. здесь »](/api/import/).
 
-> Check whether chat history exported from another chat app can be [imported into a specific Telegram chat, click here for more info »](https://core.telegram.org/api/import).
-> If the check succeeds, and no RPC errors are returned, a [messages.CheckedHistoryImportPeer](/type/messages.CheckedHistoryImportPeer/) constructor will be returned, with a confirmation text to be shown to the user, before actually initializing the import.
-
-## Определение TL
+Если проверка проходит успешно и не возвращается ошибок RPC, будет возвращён конструктор [messages.CheckedHistoryImportPeer](/type/messages.CheckedHistoryImportPeer/) с текстом подтверждения, который следует показать пользователю перед фактическим началом импорта.
 
 ```
 messages.checkedHistoryImportPeer#a24de717 confirm_text:string = messages.CheckedHistoryImportPeer;
@@ -21,32 +19,26 @@ messages.checkedHistoryImportPeer#a24de717 confirm_text:string = messages.Checke
 messages.checkHistoryImportPeer#5dc60f03 peer:InputPeer = messages.CheckedHistoryImportPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The chat where we want to [import history »](https://core.telegram.org/api/import). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат, в который требуется <a href="/api/import">импортировать историю »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.CheckedHistoryImportPeer](/type/messages.CheckedHistoryImportPeer/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | USER_NOT_MUTUAL_CONTACT | The provided user is not a mutual contact. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>USER_NOT_MUTUAL_CONTACT</td><td>Указанный пользователь не является взаимным контактом.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Imported messages](https://core.telegram.org/api/import)
+#### [Импортированные сообщения](/api/import/)
 
-Telegram allows importing messages and media from foreign chat apps.
+Telegram позволяет импортировать сообщения и медиа из сторонних мессенджеров.
 
 #### [messages.CheckedHistoryImportPeer](/type/messages.CheckedHistoryImportPeer/)
 
-Contains a confirmation text to be shown to the user, upon [importing chat history, click here for more info »](https://core.telegram.org/api/import).
+Содержит текст подтверждения, который следует показать пользователю при [импорте истории переписки, подробнее см. здесь »](/api/import/).

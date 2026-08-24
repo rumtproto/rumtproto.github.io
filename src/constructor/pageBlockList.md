@@ -1,29 +1,24 @@
 ---
-title: "pageBlockList (конструктор)"
+title: "pageBlockList"
 original: "https://core.telegram.org/constructor/pageBlockList"
 section: ref
 kind: constructor
+description: "Неупорядоченный список блоков IV"
 layout: layout.njk
 ---
 
 # pageBlockList
 
-*Конструктор из схемы TL.*
-
-> Unordered list of IV blocks
-
-## Определение TL
+Неупорядоченный список блоков IV
 
 ```
 pageBlockList#e4e88011 items:Vector<PageListItem> = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| items | [Vector](https://core.telegram.org/type/Vector%20t)<[PageListItem](/type/PageListItem/)> | List of blocks in an IV page |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>items</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/PageListItem">PageListItem</a>&gt;</td><td>Список блоков страницы IV</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

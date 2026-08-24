@@ -1,45 +1,34 @@
 ---
-title: "channelParticipantBanned (конструктор)"
+title: "channelParticipantBanned"
 original: "https://core.telegram.org/constructor/channelParticipantBanned"
 section: ref
 kind: constructor
+description: "Заблокированный/исключённый пользователь"
 layout: layout.njk
 ---
 
 # channelParticipantBanned
 
-*Конструктор из схемы TL.*
-
-> Banned/kicked user
-
-## Определение TL
+Заблокированный/исключённый пользователь
 
 ```
 channelParticipantBanned#d5f0ad91 flags:# left:flags.0?true peer:Peer kicked_by:long date:int banned_rights:ChatBannedRights rank:flags.2?string = ChannelParticipant;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| left | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the user has left the group |
-| peer | [Peer](/type/Peer/) | The banned peer |
-| kicked_by | [long](/type/long/) | User was kicked by the specified admin |
-| date | [int](/type/int/) | When did the user join the group |
-| banned_rights | [ChatBannedRights](/type/ChatBannedRights/) | Banned [rights](https://core.telegram.org/api/rights) |
-| rank | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | The participant's [tag »](https://core.telegram.org/api/rank). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>left</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Покинул ли пользователь группу</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Заблокированный пир</td></tr><tr><td><strong>kicked_by</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Пользователь был исключён указанным администратором</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда пользователь присоединился к группе</td></tr><tr><td><strong>banned_rights</strong></td><td style="text-align: center;"><a href="/type/ChatBannedRights">ChatBannedRights</a></td><td>Ограниченные <a href="/api/rights">права</a></td></tr><tr><td><strong>rank</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td><a href="/api/rank">Звание »</a> участника.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelParticipant](/type/ChannelParticipant/)
 
-## Related pages
+### Связанные страницы
 
-#### [Admin, banned, default rights](https://core.telegram.org/api/rights)
+#### [Права администраторов, ограничения и права по умолчанию](/api/rights/)
 
-How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.
+Как работать с правами администраторов, детальными ограничениями и общими правами в каналах, группах и супергруппах.
 
-#### [Group participant tags](https://core.telegram.org/api/rank)
+#### [Звание](/api/rank/)
 
-Members in group chats (both basic groups and supergroups) can add a tag next to their name — to show their role at work, what they study in school, and more.
+Участники групповых чатов (как обычных групп, так и супергрупп) могут добавить рядом со своим именем тег — чтобы указать свою роль на работе, что они изучают в учебном заведении и прочее.

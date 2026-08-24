@@ -1,25 +1,20 @@
 ---
-title: "ReceivedNotifyMessage (тип)"
+title: "ReceivedNotifyMessage"
 original: "https://core.telegram.org/type/ReceivedNotifyMessage"
 section: ref
 kind: type
+description: "Подтверждение получения сообщения"
 layout: layout.njk
 ---
 
 # ReceivedNotifyMessage
 
-*Тип из схемы TL.*
-
-> Confirmation of message receipt
-
-## Определение TL
+Подтверждение получения сообщения
 
 ```
 receivedNotifyMessage#a384b779 id:int flags:int = ReceivedNotifyMessage;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [receivedNotifyMessage](/constructor/receivedNotifyMessage/) | Message ID, for which PUSH-notifications were cancelled. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/receivedNotifyMessage">receivedNotifyMessage</a></td><td>Идентификатор сообщения, для которого были отменены PUSH-уведомления.</td></tr></tbody></table>

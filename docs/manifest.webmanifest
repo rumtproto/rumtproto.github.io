@@ -1,0 +1,14 @@
+{
+  "name": "MTProto по-русски — документация Telegram API",
+  "short_name": "MTProto RU",
+  "description": "Русскоязычный справочник по Telegram API, MTProto и схеме TL.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#2489d6",
+  "icons": [
+    { "src": "/icon-64.png", "sizes": "64x64", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

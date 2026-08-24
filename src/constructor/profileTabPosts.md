@@ -1,33 +1,30 @@
 ---
-title: "profileTabPosts (конструктор)"
+title: "profileTabPosts"
 original: "https://core.telegram.org/constructor/profileTabPosts"
 section: ref
 kind: constructor
+description: "Представляет вкладку историй на странице профиля."
 layout: layout.njk
 ---
 
 # profileTabPosts
 
-*Конструктор из схемы TL.*
-
-> Represents the [stories](https://core.telegram.org/api/stories) tab of a profile page.
-
-## Определение TL
+Представляет вкладку [историй](/api/stories/) на странице профиля.
 
 ```
 profileTabPosts#b98cd696 = ProfileTab;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ProfileTab](/type/ProfileTab/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

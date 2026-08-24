@@ -1,18 +1,15 @@
 ---
-title: "account.resetWebAuthorizations (метод)"
+title: "account.resetWebAuthorizations"
 original: "https://core.telegram.org/method/account.resetWebAuthorizations"
 section: ref
 kind: method
+description: "Завершить все активные веб-сессии telegram login"
 layout: layout.njk
 ---
 
 # account.resetWebAuthorizations
 
-*Метод из схемы TL.*
-
-> Reset all active web [telegram login](https://core.telegram.org/widgets/login) sessions
-
-## Определение TL
+Завершить все активные веб-сессии [telegram login](https://core.telegram.org/widgets/login)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,16 +18,16 @@ boolTrue#997275b5 = Bool;
 account.resetWebAuthorizations#682d2594 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Login Widget](https://core.telegram.org/widgets/login)
+#### [Виджет входа через Telegram](https://core.telegram.org/widgets/login)

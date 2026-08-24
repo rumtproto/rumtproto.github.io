@@ -1,33 +1,30 @@
 ---
-title: "messages.quickRepliesNotModified (конструктор)"
+title: "messages.quickRepliesNotModified"
 original: "https://core.telegram.org/constructor/messages.quickRepliesNotModified"
 section: ref
 kind: constructor
+description: "Информация о шаблонах быстрых ответов » не изменилась."
 layout: layout.njk
 ---
 
 # messages.quickRepliesNotModified
 
-*Конструктор из схемы TL.*
-
-> Info about [quick reply shortcuts »](https://core.telegram.org/api/business#quick-reply-shortcuts) hasn't changed.
-
-## Определение TL
+Информация о [шаблонах быстрых ответов »](/api/business/#quick-reply-shortcuts) не изменилась.
 
 ```
 messages.quickRepliesNotModified#5f91eb5b = messages.QuickReplies;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.QuickReplies](/type/messages.QuickReplies/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

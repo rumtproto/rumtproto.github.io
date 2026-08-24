@@ -1,18 +1,15 @@
 ---
-title: "messages.uploadImportedMedia (метод)"
+title: "messages.uploadImportedMedia"
 original: "https://core.telegram.org/method/messages.uploadImportedMedia"
 section: ref
 kind: method
+description: "Загрузить медиафайл, связанный с импортированным чатом; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # messages.uploadImportedMedia
 
-*Метод из схемы TL.*
-
-> Upload a media file associated with an [imported chat, click here for more info »](https://core.telegram.org/api/import).
-
-## Определение TL
+Загрузить медиафайл, связанный с [импортированным чатом; подробнее см. здесь »](/api/import/).
 
 ```
 messageMediaEmpty#3ded6320 = MessageMedia;
@@ -38,35 +35,26 @@ messageMediaVideoStream#ca5cab89 flags:# rtmp_stream:flags.0?true call:InputGrou
 messages.uploadImportedMedia#2a862092 peer:InputPeer import_id:long file_name:string media:InputMedia = MessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The Telegram chat where the media will be imported |
-| import_id | [long](/type/long/) | Identifier of a [history import session](https://core.telegram.org/api/import), returned by [messages.initHistoryImport](/method/messages.initHistoryImport/) |
-| file_name | [string](/type/string/) | File name |
-| media | [InputMedia](/type/InputMedia/) | Media metadata |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат Telegram, в который будет импортирован медиафайл</td></tr><tr><td><strong>import_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор <a href="/api/import">сессии импорта истории</a>, возвращённый методом <a href="/method/messages.initHistoryImport">messages.initHistoryImport</a></td></tr><tr><td><strong>file_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Имя файла</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/InputMedia">InputMedia</a></td><td>Метаданные медиа</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [MessageMedia](/type/MessageMedia/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | IMPORT_ID_INVALID | The specified import ID is invalid. |
-| 400 | MEDIA_INVALID | Media invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>IMPORT_ID_INVALID</td><td>Указанный идентификатор импорта недействителен.</td></tr><tr><td>400</td><td>MEDIA_INVALID</td><td>Медиа недействительно.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Imported messages](https://core.telegram.org/api/import)
+#### [Импортированные сообщения](/api/import/)
 
-Telegram allows importing messages and media from foreign chat apps.
+Telegram позволяет импортировать сообщения и медиа из сторонних мессенджеров.
 
 #### [messages.initHistoryImport](/method/messages.initHistoryImport/)
 
-Import chat history from a foreign chat app into a specific Telegram chat, [click here for more info about imported chats »](https://core.telegram.org/api/import).
+Импортировать историю переписки из стороннего мессенджера в определённый чат Telegram; [подробнее об импортированных чатах см. здесь »](/api/import/).

@@ -1,37 +1,30 @@
 ---
-title: "channelAdminLogEventActionPinTopic (конструктор)"
+title: "channelAdminLogEventActionPinTopic"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionPinTopic"
 section: ref
 kind: constructor
+description: "Тема форума была закреплена или откреплена"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionPinTopic
 
-*Конструктор из схемы TL.*
-
-> A [forum topic](https://core.telegram.org/api/forum#forum-topics) was pinned or unpinned
-
-## Определение TL
+[Тема форума](/api/forum/#forum-topics) была закреплена или откреплена
 
 ```
 channelAdminLogEventActionPinTopic#5d8d353b flags:# prev_topic:flags.0?ForumTopic new_topic:flags.1?ForumTopic = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| prev_topic | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[ForumTopic](/type/ForumTopic/) | Previous topic information |
-| new_topic | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[ForumTopic](/type/ForumTopic/) | New topic information |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>prev_topic</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/ForumTopic">ForumTopic</a></td><td>Сведения о предыдущей теме</td></tr><tr><td><strong>new_topic</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/ForumTopic">ForumTopic</a></td><td>Новые сведения о теме</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

@@ -1,18 +1,15 @@
 ---
-title: "EmojiGroup (тип)"
+title: "EmojiGroup"
 original: "https://core.telegram.org/type/EmojiGroup"
 section: ref
 kind: type
+description: "Представляет категорию эмодзи."
 layout: layout.njk
 ---
 
 # EmojiGroup
 
-*Тип из схемы TL.*
-
-> Represents an [emoji category](https://core.telegram.org/api/emoji-categories).
-
-## Определение TL
+Представляет [категорию эмодзи](/api/emoji-categories/).
 
 ```
 emojiGroup#7a9abda9 title:string icon_emoji_id:long emoticons:Vector<string> = EmojiGroup;
@@ -20,16 +17,12 @@ emojiGroupGreeting#80d26cc7 title:string icon_emoji_id:long emoticons:Vector<str
 emojiGroupPremium#93bcf34 title:string icon_emoji_id:long = EmojiGroup;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [emojiGroup](/constructor/emojiGroup/) | Represents an [emoji category](https://core.telegram.org/api/emoji-categories). |
-| [emojiGroupGreeting](/constructor/emojiGroupGreeting/) | Represents an [emoji category](https://core.telegram.org/api/emoji-categories), that should be moved to the top of the list when choosing a sticker for a [business introduction](https://core.telegram.org/api/business#business-introduction) |
-| [emojiGroupPremium](/constructor/emojiGroupPremium/) | An [emoji category](https://core.telegram.org/api/emoji-categories), used to select all [Premium](https://core.telegram.org/api/premium)-only stickers (i.e. those with a [Premium effect »](https://core.telegram.org/api/stickers#premium-animated-sticker-effects))/[Premium](https://core.telegram.org/api/premium)-only [custom emojis](https://core.telegram.org/api/custom-emoji) (i.e. those where the [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/).free flag is not set) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/emojiGroup">emojiGroup</a></td><td>Представляет <a href="/api/emoji-categories">категорию эмодзи</a>.</td></tr><tr><td><a href="/constructor/emojiGroupGreeting">emojiGroupGreeting</a></td><td>Представляет <a href="/api/emoji-categories">категорию эмодзи</a>, которую следует переместить в начало списка при выборе стикера для <a href="/api/business#business-introduction">приветствия Telegram Business</a></td></tr><tr><td><a href="/constructor/emojiGroupPremium">emojiGroupPremium</a></td><td><a href="/api/emoji-categories">Категория эмодзи</a>, используемая для выбора всех <a href="/api/premium">Premium</a>-стикеров (то есть тех, у которых есть <a href="/api/stickers#premium-animated-sticker-effects">эффект Premium »</a>)/<a href="/api/premium">Premium</a>-<a href="/api/custom-emoji">пользовательских эмодзи</a> (то есть тех, у которых флаг <a href="/constructor/documentAttributeCustomEmoji">documentAttributeCustomEmoji</a>.<code>free</code> <strong>не</strong> установлен)</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji categories](https://core.telegram.org/api/emoji-categories)
+#### [Категории эмодзи](/api/emoji-categories/)
 
-Sticker, custom emoji and GIF selection UIs should offer a list of categories to quickly filter results by a (list of) emojis, or by some other criteria.
+Интерфейсы выбора стикеров, пользовательских эмодзи и GIF должны предлагать список категорий для быстрой фильтрации результатов по эмодзи (или набору эмодзи) либо по иным критериям.

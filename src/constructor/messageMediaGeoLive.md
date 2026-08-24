@@ -1,39 +1,30 @@
 ---
-title: "messageMediaGeoLive (конструктор)"
+title: "messageMediaGeoLive"
 original: "https://core.telegram.org/constructor/messageMediaGeoLive"
 section: ref
 kind: constructor
+description: "Обозначает геопозицию в реальном времени"
 layout: layout.njk
 ---
 
 # messageMediaGeoLive
 
-*Конструктор из схемы TL.*
-
-> Indicates a [live geolocation](https://core.telegram.org/api/live-location)
-
-## Определение TL
+Обозначает [геопозицию в реальном времени](/api/live-location/)
 
 ```
 messageMediaGeoLive#b940c666 flags:# geo:GeoPoint heading:flags.0?int period:int proximity_notification_radius:flags.1?int = MessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| geo | [GeoPoint](/type/GeoPoint/) | Geolocation |
-| heading | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | For [live locations](https://core.telegram.org/api/live-location), a direction in which the location moves, in degrees; 1-360 |
-| period | [int](/type/int/) | Validity period of provided geolocation |
-| proximity_notification_radius | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | For [live locations](https://core.telegram.org/api/live-location), a maximum distance to another chat member for proximity alerts, in meters (0-100000). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>geo</strong></td><td style="text-align: center;"><a href="/type/GeoPoint">GeoPoint</a></td><td>Геопозиция</td></tr><tr><td><strong>heading</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Для <a href="/api/live-location">геопозиций в реальном времени</a> — направление, в котором перемещается геопозиция, в градусах; 1–360</td></tr><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Срок действия переданной геопозиции</td></tr><tr><td><strong>proximity_notification_radius</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Для <a href="/api/live-location">геопозиций в реальном времени</a> — максимальное расстояние до другого участника чата для оповещений о приближении, в метрах (0–100000).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageMedia](/type/MessageMedia/)
 
-## Related pages
+### Связанные страницы
 
-#### [Live geolocation](https://core.telegram.org/api/live-location)
+#### [Трансляция геопозиции](/api/live-location/)
 
-Telegram allows sending the live geolocation of a user in a chat, optionally setting a proximity alert.
+Telegram позволяет отправлять в чат геопозицию пользователя в реальном времени, при желании задавая оповещение о приближении.

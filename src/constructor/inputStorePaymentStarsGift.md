@@ -1,40 +1,32 @@
 ---
-title: "inputStorePaymentStarsGift (конструктор)"
+title: "inputStorePaymentStarsGift"
 original: "https://core.telegram.org/constructor/inputStorePaymentStarsGift"
 section: ref
 kind: constructor
+description: "Используется, чтобы подарить другу Telegram Stars."
 layout: layout.njk
 ---
 
 # inputStorePaymentStarsGift
 
-*Конструктор из схемы TL.*
-
-> Used to gift [Telegram Stars](https://core.telegram.org/api/stars) to a friend.
-
-## Определение TL
+Используется, чтобы подарить другу [Telegram Stars](/api/stars/).
 
 ```
 inputStorePaymentStarsGift#1d741ef7 user_id:InputUser stars:long currency:string amount:long = InputStorePaymentPurpose;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [InputUser](/type/InputUser/) | The user to which the stars should be gifted. |
-| stars | [long](/type/long/) | Amount of stars to gift |
-| currency | [string](/type/string/) | Three-letter ISO 4217 [currency](https://core.telegram.org/bots/payments#supported-currencies) code |
-| amount | [long](/type/long/) | Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in [currencies.json](https://core.telegram.org/bots/payments/currencies.json), it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Пользователь, которому нужно подарить звёзды.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Количество звёзд для подарка</td></tr><tr><td><strong>currency</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Трёхбуквенный код <a href="/bots/payments#supported-currencies">валюты</a> по ISO 4217</td></tr><tr><td><strong>amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Итоговая цена в наименьших единицах валюты (целое число, не float/double). Например, для цены <code>US$ 1.45</code> следует передать <code>amount = 145</code>. См. параметр exp в <a href="/bots/payments/currencies.json">currencies.json</a>: он указывает число знаков после запятой для каждой валюты (2 для большинства валют).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputStorePaymentPurpose](/type/InputStorePaymentPurpose/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot Payments API](https://core.telegram.org/bots/payments)
+#### [Bot Payments API — платежи в ботах](https://core.telegram.org/bots/payments)
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

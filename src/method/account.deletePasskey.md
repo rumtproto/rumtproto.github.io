@@ -1,18 +1,15 @@
 ---
-title: "account.deletePasskey (метод)"
+title: "account.deletePasskey"
 original: "https://core.telegram.org/method/account.deletePasskey"
 section: ref
 kind: method
+description: "Удалить ключ доступа, привязанный к текущему аккаунту; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # account.deletePasskey
 
-*Метод из схемы TL.*
-
-> Delete a passkey associated to the current account, see [here »](https://core.telegram.org/api/passkeys#delete-passkeys) for more info.
-
-## Определение TL
+Удалить ключ доступа, привязанный к текущему аккаунту; подробнее см. [здесь »](/api/passkeys/#delete-passkeys).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,28 +18,26 @@ boolTrue#997275b5 = Bool;
 account.deletePasskey#f5b5563f id:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [string](/type/string/) | Identifier of the passkey to delete, taken from [passkey](/constructor/passkey/).id, usually obtained using [account.getPasskeys](/method/account.getPasskeys/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор удаляемого ключа доступа, взятый из <a href="/constructor/passkey">passkey</a>.<code>id</code>; обычно получается с помощью <a href="/method/account.getPasskeys">account.getPasskeys</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
 #### [passkey](/constructor/passkey/)
 
-Human-readable info about a passkey associated to an account, returned when [creating a passkey »](https://core.telegram.org/api/passkeys#creating-a-passkey) or [listing passkeys »](https://core.telegram.org/api/passkeys#list-passkeys).
+Понятные человеку сведения о ключе доступа, привязанном к аккаунту; возвращаются при [создании ключа доступа »](/api/passkeys/#creating-a-passkey) или [получении списка ключей доступа »](/api/passkeys/#list-passkeys).
 
 #### [account.getPasskeys](/method/account.getPasskeys/)
 
-List the passkeys associated to the current account that can be used to log in, see [here »](https://core.telegram.org/api/passkeys#list-passkeys) for more info on passkeys.
+Получить список ключей доступа, привязанных к текущему аккаунту и пригодных для входа; подробнее о ключах доступа [см. здесь »](/api/passkeys/#list-passkeys).
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

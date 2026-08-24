@@ -1,27 +1,29 @@
 ---
-title: "string (тип)"
+title: "string"
 original: "https://core.telegram.org/type/string"
 section: ref
 kind: type
+description: "Базовый голый тип. Значения типа string выглядят по-разному в зависимости от длины L сериализуемой строки:"
 layout: layout.njk
 ---
 
 # string
 
-*Тип из схемы TL.*
+[@term:bare] Базовый голый тип. Значения типа `string` выглядят по-разному в зависимости от длины `L` сериализуемой строки:
 
-> A basic bare type. Values of type `string` look differently depending on the length `L` of the string being serialized:
-> -   If `L <= 253`, the serialization contains one byte with the value of `L`, then `L` bytes of the string followed by 0 to 3 characters containing 0, such that the overall length of the value be divisible by 4, whereupon all of this is interpreted as a sequence of `int(L/4)+1` 32-bit little-endian integers.
-> -   If `L >= 254`, the serialization contains byte 254, followed by 3 bytes with the string length `L` in little-endian order, followed by `L` bytes of the string, further followed by 0 to 3 null padding bytes.
-> All strings passed to the API must be encoded in UTF-8. When arbitrary byte sequences have to be serialized, [bytes](/type/bytes/) alias is to be used.
-> [Further details on basic types»](/mtproto/serialize/)
+-   Если `L <= 253`, сериализация содержит один байт со значением `L`, затем `L` байт строки, за которыми следует от 0 до 3 символов со значением 0 — так, чтобы общая длина значения делилась на 4; всё это вместе интерпретируется как последовательность из `int(L/4)+1` 32-битных целых чисел с порядком байтов little-endian.
+-   Если `L >= 254`, сериализация содержит байт 254, затем 3 байта с длиной строки `L` в порядке little-endian, затем `L` байт строки, за которыми следует от 0 до 3 нулевых байтов дополнения.
 
-## Related pages
+Все строки, передаваемые в API, должны быть закодированы в UTF-8. Когда требуется сериализовать произвольные последовательности байтов, следует использовать псевдоним [bytes](/type/bytes/).
+
+[Подробнее о базовых типах»](/mtproto/serialize/)
+
+### Связанные страницы
 
 #### [bytes](/type/bytes/)
 
-Basic bare type. It is an alias of the **[string](/type/string/)** type, with the difference that the value may contain arbitrary byte sequences, including invalid UTF-8 sequences.
+Базовый «голый» тип. Синоним типа **[string](/type/string/)** с той разницей, что значение может содержать произвольные последовательности байтов, в том числе некорректные последовательности UTF-8.
 
-When computing crc32 for a constructor or method it is necessary to replace all byte types with string types.
+При вычислении crc32 для конструктора или метода необходимо заменить все байтовые типы строковыми.
 
-#### ﻿[Binary Data Serialization](/mtproto/serialize/)
+#### [Двоичная сериализация данных](/mtproto/serialize/)

@@ -1,45 +1,40 @@
 ---
-title: "inputChatThemeUniqueGift (конструктор)"
+title: "inputChatThemeUniqueGift"
 original: "https://core.telegram.org/constructor/inputChatThemeUniqueGift"
 section: ref
 kind: constructor
+description: "Установить тему оформления на основе принадлежащего вам или размещённого коллекционного подарка », возвращаемого методом account.getUniqueGiftChatThemes."
 layout: layout.njk
 ---
 
 # inputChatThemeUniqueGift
 
-*Конструктор из схемы TL.*
-
-> Set a theme based on an owned or [hosted collectible gift »](https://core.telegram.org/api/gifts#hosted-collectible-gifts), returned by [account.getUniqueGiftChatThemes](/method/account.getUniqueGiftChatThemes/).
-
-## Определение TL
+Установить тему оформления на основе принадлежащего вам или [размещённого коллекционного подарка »](/api/gifts/#hosted-collectible-gifts), возвращаемого методом [account.getUniqueGiftChatThemes](/method/account.getUniqueGiftChatThemes/).
 
 ```
 inputChatThemeUniqueGift#87e5dfe4 slug:string = InputChatTheme;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| slug | [string](/type/string/) | The slug from [starGiftUnique](/constructor/starGiftUnique/).slug. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Слаг из поля <a href="/constructor/starGiftUnique">starGiftUnique</a>.<code>slug</code>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputChatTheme](/type/InputChatTheme/)
 
-## Related pages
+### Связанные страницы
 
 #### [starGiftUnique](/constructor/starGiftUnique/)
 
-Represents a [collectible star gift, see here »](https://core.telegram.org/api/gifts#collectible-gifts) for more info.
+Представляет коллекционный звёздный подарок, [подробнее см. здесь »](/api/gifts/#collectible-gifts).
 
-The sticker that represents the gift is contained in a [starGiftAttributeModel](/constructor/starGiftAttributeModel/) object in `attributes`.
+Стикер, представляющий подарок, содержится в объекте [starGiftAttributeModel](/constructor/starGiftAttributeModel/) в поле `attributes`.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [account.getUniqueGiftChatThemes](/method/account.getUniqueGiftChatThemes/)
 
-Obtain all [chat themes »](https://core.telegram.org/api/themes#chat-themes) associated to owned or [hosted collectible gifts »](https://core.telegram.org/api/gifts#hosted-collectible-gifts).
+Получить все [темы оформления чатов »](/api/themes/#chat-themes), связанные с принадлежащими вам или [размещёнными коллекционными подарками »](/api/gifts/#hosted-collectible-gifts).

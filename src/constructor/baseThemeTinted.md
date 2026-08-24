@@ -1,27 +1,24 @@
 ---
-title: "baseThemeTinted (конструктор)"
+title: "baseThemeTinted"
 original: "https://core.telegram.org/constructor/baseThemeTinted"
 section: ref
 kind: constructor
+description: "Тонированная тема оформления"
 layout: layout.njk
 ---
 
 # baseThemeTinted
 
-*Конструктор из схемы TL.*
-
-> Tinted theme
-
-## Определение TL
+Тонированная тема оформления
 
 ```
 baseThemeTinted#6d5f77ee = BaseTheme;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [BaseTheme](/type/BaseTheme/)

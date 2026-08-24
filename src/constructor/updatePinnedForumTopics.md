@@ -1,37 +1,30 @@
 ---
-title: "updatePinnedForumTopics (конструктор)"
+title: "updatePinnedForumTopics"
 original: "https://core.telegram.org/constructor/updatePinnedForumTopics"
 section: ref
 kind: constructor
+description: "Изменились закреплённые темы форума."
 layout: layout.njk
 ---
 
 # updatePinnedForumTopics
 
-*Конструктор из схемы TL.*
-
-> The [pinned topics](https://core.telegram.org/api/forum#forum-topics) of a forum have changed.
-
-## Определение TL
+Изменились [закреплённые темы](/api/forum/#forum-topics) форума.
 
 ```
 updatePinnedForumTopics#def143d0 flags:# peer:Peer order:flags.0?Vector<int> = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [Peer](/type/Peer/) | The supergroup forum, private chat (for forum-enabled bots) or bot forum (for users) where the topic is located. |
-| order | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Ordered list containing the IDs of all pinned topics. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Форум-супергруппа, личный чат (для ботов с поддержкой форумов) или форум бота (для пользователей), где находится тема.</td></tr><tr><td><strong>order</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Упорядоченный список идентификаторов всех закреплённых тем.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

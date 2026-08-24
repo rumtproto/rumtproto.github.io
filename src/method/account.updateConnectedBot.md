@@ -1,18 +1,15 @@
 ---
-title: "account.updateConnectedBot (метод)"
+title: "account.updateConnectedBot"
 original: "https://core.telegram.org/method/account.updateConnectedBot"
 section: ref
 kind: method
+description: "Подключить бизнес-бота » к текущему аккаунту либо изменить текущие настройки подключения."
 layout: layout.njk
 ---
 
 # account.updateConnectedBot
 
-*Метод из схемы TL.*
-
-> Connect a [business bot »](https://core.telegram.org/api/bots/connected-business-bots) to the current account, or to change the current connection settings.
-
-## Определение TL
+Подключить [бизнес-бота »](/api/bots/connected-business-bots/) к текущему аккаунту либо изменить текущие настройки подключения.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,39 +23,30 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 account.updateConnectedBot#66a08c7e flags:# deleted:flags.1?true rights:flags.0?BusinessBotRights bot:InputUser recipients:InputBusinessBotRecipients = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| deleted | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether to fully disconnect the bot from the current account. |
-| rights | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[BusinessBotRights](/type/BusinessBotRights/) | Business bot rights. |
-| bot | [InputUser](/type/InputUser/) | The bot to connect or disconnect |
-| recipients | [InputBusinessBotRecipients](/type/InputBusinessBotRecipients/) | Configuration for the business connection |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>deleted</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Полностью ли отключить бота от текущего аккаунта.</td></tr><tr><td><strong>rights</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/BusinessBotRights">BusinessBotRights</a></td><td>Права бизнес-бота.</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот, которого нужно подключить или отключить</td></tr><tr><td><strong>recipients</strong></td><td style="text-align: center;"><a href="/type/InputBusinessBotRecipients">InputBusinessBotRecipients</a></td><td>Настройки бизнес-подключения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_BUSINESS_MISSING | The specified bot is not a business bot (the [user](/constructor/user/).bot_business flag is not set). |
-| 400 | BUSINESS_RECIPIENTS_EMPTY | You didn't set any flag in inputBusinessBotRecipients, thus the bot cannot work with any peer. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_BUSINESS_MISSING</td><td>Указанный бот не является бизнес-ботом (флаг <a href="/constructor/user">user</a>.<code>bot_business</code> не установлен).</td></tr><tr><td>400</td><td>BUSINESS_RECIPIENTS_EMPTY</td><td>Вы не задали ни одного флага в inputBusinessBotRecipients, поэтому бот не может работать <em>ни с одним</em> пиром.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
 #### [user](/constructor/user/)
 
-Indicates info about a certain user.
+Содержит сведения об определённом пользователе.
 
-Unless specified otherwise, when updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+Если не указано иное, при обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-See [here »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) for an implementation of the logic to use when updating the [local user peer database](https://core.telegram.org/api/peers).
+См. [здесь »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) реализацию логики, которую следует применять при обновлении [локальной базы пиров-пользователей](/api/peers/).

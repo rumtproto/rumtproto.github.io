@@ -1,39 +1,34 @@
 ---
-title: "inputInvoiceStarGiftDropOriginalDetails (конструктор)"
+title: "inputInvoiceStarGiftDropOriginalDetails"
 original: "https://core.telegram.org/constructor/inputInvoiceStarGiftDropOriginalDetails"
 section: ref
 kind: constructor
+description: "Используется для оплаты удаления атрибута starGiftAttributeOriginalDetails у коллекционного подарка; полный порядок действий см. здесь »."
 layout: layout.njk
 ---
 
 # inputInvoiceStarGiftDropOriginalDetails
 
-*Конструктор из схемы TL.*
-
-> Used to pay for for the removal of the [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/) attribute from a collectible gift, see [here »](https://core.telegram.org/api/gifts#dropping-the-original-details-of-an-upgraded-gift) for the full flow.
-
-## Определение TL
+Используется для оплаты удаления атрибута [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/) у коллекционного подарка; полный порядок действий см. [здесь »](/api/gifts/#dropping-the-original-details-of-an-upgraded-gift).
 
 ```
 inputInvoiceStarGiftDropOriginalDetails#923d8d1 stargift:InputSavedStarGift = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| stargift | [InputSavedStarGift](/type/InputSavedStarGift/) | The collectible gift whose [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/) attribute should be removed. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>Коллекционный подарок, у которого требуется удалить атрибут <a href="/constructor/starGiftAttributeOriginalDetails">starGiftAttributeOriginalDetails</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
 #### [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/)
 
-Info about the sender, receiver and message attached to the original [gift »](https://core.telegram.org/api/gifts), before it was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+Сведения об отправителе, получателе и сообщении, приложенных к исходному [подарку »](/api/gifts/), до того как он был превращён в [коллекционный подарок »](/api/gifts/#collectible-gifts).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

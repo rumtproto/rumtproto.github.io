@@ -1,18 +1,15 @@
 ---
-title: "messages.getEmojiKeywords (метод)"
+title: "messages.getEmojiKeywords"
 original: "https://core.telegram.org/method/messages.getEmojiKeywords"
 section: ref
 kind: method
+description: "Получить локализованные ключевые слова эмодзи »."
 layout: layout.njk
 ---
 
 # messages.getEmojiKeywords
 
-*Метод из схемы TL.*
-
-> Get localized [emoji keywords »](https://core.telegram.org/api/custom-emoji#emoji-keywords).
-
-## Определение TL
+Получить локализованные [ключевые слова эмодзи »](/api/custom-emoji/#emoji-keywords).
 
 ```
 emojiKeywordsDifference#5cc761bd lang_code:string from_version:int version:int keywords:Vector<EmojiKeyword> = EmojiKeywordsDifference;
@@ -20,20 +17,18 @@ emojiKeywordsDifference#5cc761bd lang_code:string from_version:int version:int k
 messages.getEmojiKeywords#35a0e062 lang_code:string = EmojiKeywordsDifference;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| lang_code | [string](/type/string/) | Language code |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код языка</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [EmojiKeywordsDifference](/type/EmojiKeywordsDifference/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.

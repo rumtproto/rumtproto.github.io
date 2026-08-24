@@ -1,27 +1,24 @@
 ---
-title: "help.countriesListNotModified (конструктор)"
+title: "help.countriesListNotModified"
 original: "https://core.telegram.org/constructor/help.countriesListNotModified"
 section: ref
 kind: constructor
+description: "Список стран не изменился"
 layout: layout.njk
 ---
 
 # help.countriesListNotModified
 
-*Конструктор из схемы TL.*
-
-> The country list has not changed
-
-## Определение TL
+Список стран не изменился
 
 ```
 help.countriesListNotModified#93cc1f32 = help.CountriesList;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [help.CountriesList](/type/help.CountriesList/)

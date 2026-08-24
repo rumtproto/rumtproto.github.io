@@ -1,43 +1,34 @@
 ---
-title: "updateReadMessagesContents (конструктор)"
+title: "updateReadMessagesContents"
 original: "https://core.telegram.org/constructor/updateReadMessagesContents"
 section: ref
 kind: constructor
+description: "Содержимое сообщений в общем ящике сообщений было прочитано (генерируется специально для таких сообщений, как голосовые сообщения или видео, только после того, как медиафайл…"
 layout: layout.njk
 ---
 
 # updateReadMessagesContents
 
-*Конструктор из схемы TL.*
-
-> Contents of messages in the common [message box](/api/updates/) were read (emitted specifically for messages like voice messages or video, only once the media is watched and marked as read using [messages.readMessageContents](/method/messages.readMessageContents/)).
-
-## Определение TL
+Содержимое сообщений в общем [ящике сообщений](/api/updates/) было прочитано (генерируется специально для таких сообщений, как голосовые сообщения или видео, только после того, как медиафайл просмотрен и отмечен как прочитанный с помощью [messages.readMessageContents](/method/messages.readMessageContents/)).
 
 ```
 updateReadMessagesContents#f8227181 flags:# messages:Vector<int> pts:int pts_count:int date:flags.0?int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| messages | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | IDs of read messages |
-| pts | [int](/type/int/) | [Event count after generation](/api/updates/) |
-| pts_count | [int](/type/int/) | [Number of events that were generated](/api/updates/) |
-| date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | When was the last message in messages marked as read. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы прочитанных сообщений</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] <a href="/api/updates">Число событий после генерации</a></td></tr><tr><td><strong>pts_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/updates">Число сгенерированных событий</a></td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Когда последнее сообщение в <code>messages</code> было отмечено как прочитанное.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
 #### [messages.readMessageContents](/method/messages.readMessageContents/)
 
-Notifies the sender about the recipient having listened a voice message or watched a video, emitting an [updateReadMessagesContents](/constructor/updateReadMessagesContents/).
+Уведомляет отправителя о том, что получатель прослушал голосовое сообщение или посмотрел видео, порождая [updateReadMessagesContents](/constructor/updateReadMessagesContents/).

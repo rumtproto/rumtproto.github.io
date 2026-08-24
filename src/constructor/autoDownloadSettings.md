@@ -1,50 +1,34 @@
 ---
-title: "autoDownloadSettings (конструктор)"
+title: "autoDownloadSettings"
 original: "https://core.telegram.org/constructor/autoDownloadSettings"
 section: ref
 kind: constructor
+description: "Настройки автозагрузки"
 layout: layout.njk
 ---
 
 # autoDownloadSettings
 
-*Конструктор из схемы TL.*
-
-> Autodownload settings
-
-## Определение TL
+Настройки автозагрузки
 
 ```
 autoDownloadSettings#baa57628 flags:# disabled:flags.0?true video_preload_large:flags.1?true audio_preload_next:flags.2?true phonecalls_less_data:flags.3?true stories_preload:flags.4?true photo_size_max:int video_size_max:long file_size_max:long video_upload_maxbitrate:int small_queue_active_operations_max:int large_queue_active_operations_max:int = AutoDownloadSettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| disabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Disable automatic media downloads? |
-| video_preload_large | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether to preload the first seconds of videos larger than the specified limit |
-| audio_preload_next | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether to preload the next audio track when you're listening to music |
-| phonecalls_less_data | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether to enable data saving mode in phone calls |
-| stories_preload | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Whether to preload [stories](https://core.telegram.org/api/stories); in particular, the first [documentAttributeVideo](/constructor/documentAttributeVideo/).preload_prefix_size bytes of story videos should be preloaded. |
-| photo_size_max | [int](/type/int/) | Maximum size of photos to preload |
-| video_size_max | [long](/type/long/) | Maximum size of videos to preload |
-| file_size_max | [long](/type/long/) | Maximum size of other files to preload |
-| video_upload_maxbitrate | [int](/type/int/) | Maximum suggested bitrate for uploading videos |
-| small_queue_active_operations_max | [int](/type/int/) | A limit, specifying the maximum number of files that should be downloaded in parallel from the same DC, for files smaller than 20MB. |
-| large_queue_active_operations_max | [int](/type/int/) | A limit, specifying the maximum number of files that should be downloaded in parallel from the same DC, for files bigger than 20MB. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>disabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Отключить автоматическую загрузку медиафайлов?</td></tr><tr><td><strong>video_preload_large</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Предзагружать ли первые секунды видео, размер которых превышает указанное ограничение</td></tr><tr><td><strong>audio_preload_next</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Предзагружать ли следующий аудиотрек во время прослушивания музыки</td></tr><tr><td><strong>phonecalls_less_data</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Включать ли режим экономии трафика в звонках</td></tr><tr><td><strong>stories_preload</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Предзагружать ли <a href="/api/stories">истории</a>; в частности, следует предзагрузить первые <a href="/constructor/documentAttributeVideo">documentAttributeVideo</a>.<code>preload_prefix_size</code> байт видео историй.</td></tr><tr><td><strong>photo_size_max</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальный размер фотографий для предварительной загрузки</td></tr><tr><td><strong>video_size_max</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Максимальный размер видео для предварительной загрузки</td></tr><tr><td><strong>file_size_max</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Максимальный размер прочих файлов для предварительной загрузки</td></tr><tr><td><strong>video_upload_maxbitrate</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальный рекомендуемый битрейт для <strong>отправки</strong> видео</td></tr><tr><td><strong>small_queue_active_operations_max</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Ограничение, задающее максимальное число файлов, которые следует скачивать параллельно с одного DC, для файлов меньше 20 МБ.</td></tr><tr><td><strong>large_queue_active_operations_max</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Ограничение, задающее максимальное число файлов, которые следует скачивать параллельно с одного DC, для файлов больше 20 МБ.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [AutoDownloadSettings](/type/AutoDownloadSettings/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.
 
 #### [documentAttributeVideo](/constructor/documentAttributeVideo/)
 
-Defines a video
+Определяет видео

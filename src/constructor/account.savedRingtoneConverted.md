@@ -1,35 +1,30 @@
 ---
-title: "account.savedRingtoneConverted (конструктор)"
+title: "account.savedRingtoneConverted"
 original: "https://core.telegram.org/constructor/account.savedRingtoneConverted"
 section: ref
 kind: constructor
+description: "Звук уведомления был не в формате MP3, он был успешно преобразован и сохранён; далее используйте возвращённый Document для обращения к этому звуку уведомления"
 layout: layout.njk
 ---
 
 # account.savedRingtoneConverted
 
-*Конструктор из схемы TL.*
-
-> The notification sound was not in MP3 format and was successfully converted and saved, use the returned [Document](/type/Document/) to refer to the notification sound from now on
-
-## Определение TL
+Звук уведомления был не в формате MP3, он был успешно преобразован и сохранён; далее используйте возвращённый [Document](/type/Document/) для обращения к этому звуку уведомления
 
 ```
 account.savedRingtoneConverted#1f307eb7 document:Document = account.SavedRingtone;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| document | [Document](/type/Document/) | The converted notification sound |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>document</strong></td><td style="text-align: center;"><a href="/type/Document">Document</a></td><td>Преобразованный звук уведомления</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.SavedRingtone](/type/account.SavedRingtone/)
 
-## Related pages
+### Связанные страницы
 
 #### [Document](/type/Document/)
 
-A document.
+Документ.

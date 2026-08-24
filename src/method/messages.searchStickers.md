@@ -1,18 +1,15 @@
 ---
-title: "messages.searchStickers (метод)"
+title: "messages.searchStickers"
 original: "https://core.telegram.org/method/messages.searchStickers"
 section: ref
 kind: method
+description: "Поиск стикеров по ключевым словам с использованием ИИ"
 layout: layout.njk
 ---
 
 # messages.searchStickers
 
-*Метод из схемы TL.*
-
-> Search for stickers using AI-powered keyword search
-
-## Определение TL
+Поиск стикеров по ключевым словам с использованием ИИ
 
 ```
 messages.foundStickersNotModified#6010c534 flags:# next_offset:flags.0?int = messages.FoundStickers;
@@ -21,35 +18,26 @@ messages.foundStickers#82c9e290 flags:# next_offset:flags.0?int hash:long sticke
 messages.searchStickers#29b1c66a flags:# emojis:flags.0?true q:string emoticon:string lang_code:Vector<string> offset:int limit:int hash:long = messages.FoundStickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| emojis | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, returns [custom emoji stickers](https://core.telegram.org/api/custom-emoji) |
-| q | [string](/type/string/) | The search term |
-| emoticon | [string](/type/string/) | Space-separated list of emojis to search for |
-| lang_code | [Vector](https://core.telegram.org/type/Vector%20t)<[string](/type/string/)> | List of possible IETF language tags of the user's input language; may be empty if unknown |
-| offset | [int](/type/int/) | [Offset for pagination](https://core.telegram.org/api/offsets) |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). The hash may be generated locally by using the ids of the returned or stored sticker [document](/constructor/document/)s. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>emojis</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, возвращает <a href="/api/custom-emoji">стикеры с пользовательскими эмодзи</a></td></tr><tr><td><strong>q</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Поисковый запрос</td></tr><tr><td><strong>emoticon</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:emoticon] Разделённый пробелами список эмодзи для поиска</td></tr><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/string">string</a>&gt;</td><td>Список возможных языковых тегов IETF для языка ввода пользователя; может быть пустым, если язык неизвестен</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets">Смещение для постраничной выборки</a></td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.<br>Хеш можно вычислить локально по полям <code>id</code> возвращённых или сохранённых объектов <a href="/constructor/document">document</a> со стикерами.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.FoundStickers](/type/messages.FoundStickers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
 #### [document](/constructor/document/)
 
-Document
+Документ

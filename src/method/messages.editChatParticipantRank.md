@@ -1,18 +1,15 @@
 ---
-title: "messages.editChatParticipantRank (метод)"
+title: "messages.editChatParticipantRank"
 original: "https://core.telegram.org/method/messages.editChatParticipantRank"
 section: ref
 kind: method
+description: "Изменить звание » участника группы."
 layout: layout.njk
 ---
 
 # messages.editChatParticipantRank
 
-*Метод из схемы TL.*
-
-> Edit a group participant's [tag »](https://core.telegram.org/api/rank).
-
-## Определение TL
+Изменить [звание »](/api/rank/) участника группы.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,28 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.editChatParticipantRank#a00f32b0 peer:InputPeer participant:InputPeer rank:string = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The basic group/supergroup. |
-| participant | [InputPeer](/type/InputPeer/) | The participant. |
-| rank | [string](/type/string/) | The new tag. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Обычная группа или супергруппа.</td></tr><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Участник.</td></tr><tr><td><strong>rank</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Новое звание.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group participant tags](https://core.telegram.org/api/rank)
+#### [Звание](/api/rank/)
 
-Members in group chats (both basic groups and supergroups) can add a tag next to their name — to show their role at work, what they study in school, and more.
+Участники групповых чатов (как обычных групп, так и супергрупп) могут добавить рядом со своим именем тег — чтобы указать свою роль на работе, что они изучают в учебном заведении и прочее.

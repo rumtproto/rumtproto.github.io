@@ -1,31 +1,24 @@
 ---
-title: "account.contentSettings (конструктор)"
+title: "account.contentSettings"
 original: "https://core.telegram.org/constructor/account.contentSettings"
 section: ref
 kind: constructor
+description: "Настройки материалов деликатного характера"
 layout: layout.njk
 ---
 
 # account.contentSettings
 
-*Конструктор из схемы TL.*
-
-> Sensitive content settings
-
-## Определение TL
+Настройки материалов деликатного характера
 
 ```
 account.contentSettings#57e28221 flags:# sensitive_enabled:flags.0?true sensitive_can_change:flags.1?true = account.ContentSettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| sensitive_enabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether viewing of sensitive (NSFW) content is enabled |
-| sensitive_can_change | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the current client can change the sensitive content settings to view NSFW content |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>sensitive_enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Включён ли просмотр материалов деликатного характера (NSFW)</td></tr><tr><td><strong>sensitive_can_change</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Может ли текущий клиент изменять настройки материалов деликатного характера для просмотра содержимого NSFW</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.ContentSettings](/type/account.ContentSettings/)

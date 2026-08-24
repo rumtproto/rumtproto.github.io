@@ -1,18 +1,15 @@
 ---
-title: "auth.checkRecoveryPassword (метод)"
+title: "auth.checkRecoveryPassword"
 original: "https://core.telegram.org/method/auth.checkRecoveryPassword"
 section: ref
 kind: method
+description: "Проверить, действителен ли код восстановления двухфакторной аутентификации, отправленный методом auth.requestPasswordRecovery, прежде чем передавать его в auth.recoverPassword."
 layout: layout.njk
 ---
 
 # auth.checkRecoveryPassword
 
-*Метод из схемы TL.*
-
-> Check if the [2FA recovery code](/api/srp/) sent using [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/) is valid, before passing it to [auth.recoverPassword](/method/auth.recoverPassword/).
-
-## Определение TL
+Проверить, действителен ли [код восстановления двухфакторной аутентификации](/api/srp/), отправленный методом [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/), прежде чем передавать его в [auth.recoverPassword](/method/auth.recoverPassword/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,35 +18,30 @@ boolTrue#997275b5 = Bool;
 auth.checkRecoveryPassword#d36bf79 code:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| code | [string](/type/string/) | Code received via email |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код, полученный по электронной почте</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CODE_EMPTY | The provided code is empty. |
-| 400 | PASSWORD_RECOVERY_EXPIRED | The recovery code has expired. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CODE_EMPTY</td><td>Указанный код пуст.</td></tr><tr><td>400</td><td>PASSWORD_RECOVERY_EXPIRED</td><td>Срок действия кода восстановления истёк.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.
 
 #### [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/)
 
-Request recovery code of a [2FA password](/api/srp/), only for accounts with a [recovery email configured](https://core.telegram.org/api/srp/#email-verification).
+Запросить код восстановления [пароля двухфакторной аутентификации](/api/srp/); доступно только для аккаунтов с [настроенной почтой для восстановления](/api/srp/#email-verification).
 
 #### [auth.recoverPassword](/method/auth.recoverPassword/)
 
-Reset the [2FA password](/api/srp/) using the recovery code sent using [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/).
+Сбросить [пароль двухфакторной аутентификации](/api/srp/) с помощью кода восстановления, отправленного методом [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/).

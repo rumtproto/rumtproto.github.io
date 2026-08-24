@@ -1,30 +1,24 @@
 ---
-title: "updatePrivacy (конструктор)"
+title: "updatePrivacy"
 original: "https://core.telegram.org/constructor/updatePrivacy"
 section: ref
 kind: constructor
+description: "Правила приватности были изменены"
 layout: layout.njk
 ---
 
 # updatePrivacy
 
-*Конструктор из схемы TL.*
-
-> Privacy rules were changed
-
-## Определение TL
+Правила приватности были изменены
 
 ```
 updatePrivacy#ee3b272a key:PrivacyKey rules:Vector<PrivacyRule> = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| key | [PrivacyKey](/type/PrivacyKey/) | Peers to which the privacy rules apply |
-| rules | [Vector](https://core.telegram.org/type/Vector%20t)<[PrivacyRule](/type/PrivacyRule/)> | New privacy rules |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/PrivacyKey">PrivacyKey</a></td><td>Пиры, к которым применяются правила приватности</td></tr><tr><td><strong>rules</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/PrivacyRule">PrivacyRule</a>&gt;</td><td>Новые правила приватности</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

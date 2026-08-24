@@ -1,33 +1,30 @@
 ---
-title: "topPeerCategoryBotsApp (конструктор)"
+title: "topPeerCategoryBotsApp"
 original: "https://core.telegram.org/constructor/topPeerCategoryBotsApp"
 section: ref
 kind: constructor
+description: "Наиболее часто используемые основные Mini App ботов."
 layout: layout.njk
 ---
 
 # topPeerCategoryBotsApp
 
-*Конструктор из схемы TL.*
-
-> Most frequently used [Main Mini Bot Apps](https://core.telegram.org/api/bots/webapps#main-mini-apps).
-
-## Определение TL
+[@term:Mini App] Наиболее часто используемые [основные Mini App ботов](/api/bots/webapps/#main-mini-apps).
 
 ```
 topPeerCategoryBotsApp#fd9e7bec = TopPeerCategory;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [TopPeerCategory](/type/TopPeerCategory/)
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

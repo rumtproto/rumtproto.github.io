@@ -1,18 +1,15 @@
 ---
-title: "channels.editAdmin (метод)"
+title: "channels.editAdmin"
 original: "https://core.telegram.org/method/channels.editAdmin"
 section: ref
 kind: method
+description: "Изменить права администратора пользователя в супергруппе или канале."
 layout: layout.njk
 ---
 
 # channels.editAdmin
 
-*Метод из схемы TL.*
-
-> Modify the admin rights of a user in a [supergroup/channel](https://core.telegram.org/api/channel).
-
-## Определение TL
+Изменить права администратора пользователя в [супергруппе или канале](/api/channel/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,55 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.editAdmin#9a98ad68 flags:# channel:InputChannel user_id:InputUser admin_rights:ChatAdminRights rank:flags.0?string = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| channel | [InputChannel](/type/InputChannel/) | The [supergroup/channel](https://core.telegram.org/api/channel). |
-| user_id | [InputUser](/type/InputUser/) | The ID of the user whose admin rights should be modified |
-| admin_rights | [ChatAdminRights](/type/ChatAdminRights/) | The admin rights |
-| rank | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Indicates the role (rank) of the admin in the group: just an arbitrary string. If the flag is not set, the rank is left unchanged. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Супергруппа или канал</a>.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор пользователя, права администратора которого нужно изменить</td></tr><tr><td><strong>admin_rights</strong></td><td style="text-align: center;"><a href="/type/ChatAdminRights">ChatAdminRights</a></td><td>Права администратора</td></tr><tr><td><strong>rank</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Указывает роль (звание) администратора в группе — произвольная строка. Если флаг не установлен, звание остаётся без изменений.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | ADMINS_TOO_MUCH | There are too many admins. |
-| 400 | ADMIN_RANK_EMOJI_NOT_ALLOWED | An admin rank cannot contain emojis. |
-| 400 | ADMIN_RANK_INVALID | The specified admin rank is invalid. |
-| 400 | BOTS_TOO_MUCH | There are too many bots in this chat/channel. |
-| 400 | BOT_CHANNELS_NA | Bots can't edit admin privileges. |
-| 400 | BOT_GROUPS_BLOCKED | This bot can't be added to groups. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_MONOFORUM_UNSUPPORTED | [Monoforums](https://core.telegram.org/api/channel#monoforums) do not support this feature. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 403 | CHAT_ADMIN_INVITE_REQUIRED | You do not have the rights to do this. |
-| 403 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 406 | FRESH_CHANGE_ADMINS_FORBIDDEN | You were just elected admin, you can't add or modify other admins yet. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 403 | RIGHT_FORBIDDEN | Your admin rights do not allow you to do this. |
-| 400 | USERS_TOO_MUCH | The maximum number of users has been exceeded (to create a chat, for example). |
-| 400 | USER_BLOCKED | User blocked. |
-| 403 | USER_CHANNELS_TOO_MUCH | One of the users you tried to add is already in too many channels/supergroups. |
-| 400 | USER_CREATOR | For channels.editAdmin: you've tried to edit the admin rights of the owner, but you're not the owner; for channels.leaveChannel: you can't leave this channel, because you're its creator. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
-| 400 | USER_KICKED | This user was kicked from this supergroup/channel. |
-| 403 | USER_NOT_MUTUAL_CONTACT | The provided user is not a mutual contact. |
-| 403 | USER_PRIVACY_RESTRICTED | The user's privacy settings do not allow you to do this. |
-| 403 | USER_RESTRICTED | You're spamreported, you can't create channels or chats. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>ADMINS_TOO_MUCH</td><td>Слишком много администраторов.</td></tr><tr><td>400</td><td>ADMIN_RANK_EMOJI_NOT_ALLOWED</td><td>Ранг администратора не может содержать эмодзи.</td></tr><tr><td>400</td><td>ADMIN_RANK_INVALID</td><td>Указанный ранг администратора недействителен.</td></tr><tr><td>400</td><td>BOTS_TOO_MUCH</td><td>В этом чате или канале слишком много ботов.</td></tr><tr><td>400</td><td>BOT_CHANNELS_NA</td><td>Боты не могут изменять права администраторов.</td></tr><tr><td>400</td><td>BOT_GROUPS_BLOCKED</td><td>Этого бота нельзя добавлять в группы.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_MONOFORUM_UNSUPPORTED</td><td><a href="/api/channel#monoforums">Монофорумы</a> не поддерживают эту возможность.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>403</td><td>CHAT_ADMIN_INVITE_REQUIRED</td><td>У вас нет прав на это действие.</td></tr><tr><td>403</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>406</td><td>FRESH_CHANGE_ADMINS_FORBIDDEN</td><td>Вы только что назначены администратором и пока не можете добавлять или изменять других администраторов.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>403</td><td>RIGHT_FORBIDDEN</td><td>Ваши права администратора не позволяют вам это сделать.</td></tr><tr><td>400</td><td>USERS_TOO_MUCH</td><td>Превышено максимальное количество пользователей (например, при создании чата).</td></tr><tr><td>400</td><td>USER_BLOCKED</td><td>Пользователь заблокирован.</td></tr><tr><td>403</td><td>USER_CHANNELS_TOO_MUCH</td><td>Один из пользователей, которых вы попытались добавить, уже состоит в слишком большом числе каналов и супергрупп.</td></tr><tr><td>400</td><td>USER_CREATOR</td><td>Для channels.editAdmin: вы попытались изменить права администратора владельца, не будучи владельцем; для channels.leaveChannel: вы не можете покинуть этот канал, поскольку вы его создатель.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr><tr><td>400</td><td>USER_KICKED</td><td>Этот пользователь был исключён из этой супергруппы или канала.</td></tr><tr><td>403</td><td>USER_NOT_MUTUAL_CONTACT</td><td>Указанный пользователь не является взаимным контактом.</td></tr><tr><td>403</td><td>USER_PRIVACY_RESTRICTED</td><td>Настройки приватности пользователя не позволяют вам это сделать.</td></tr><tr><td>403</td><td>USER_RESTRICTED</td><td>На вас пожаловались как на спам, вы не можете создавать каналы или чаты.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

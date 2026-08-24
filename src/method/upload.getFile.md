@@ -1,18 +1,15 @@
 ---
-title: "upload.getFile (метод)"
+title: "upload.getFile"
 original: "https://core.telegram.org/method/upload.getFile"
 section: ref
 kind: method
+description: "Возвращает содержимое файла целиком или его части."
 layout: layout.njk
 ---
 
 # upload.getFile
 
-*Метод из схемы TL.*
-
-> Returns content of a whole file or its part.
-
-## Определение TL
+Возвращает содержимое файла целиком или его части.
 
 ```
 upload.file#96a18d5 type:storage.FileType mtime:int bytes:bytes = upload.File;
@@ -21,52 +18,30 @@ upload.fileCdnRedirect#f18cda44 dc_id:int file_token:bytes encryption_key:bytes 
 upload.getFile#be5335be flags:# precise:flags.0?true cdn_supported:flags.1?true location:InputFileLocation offset:long limit:int = upload.File;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| precise | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Disable some checks on limit and offset values, useful for example to stream videos by keyframes |
-| cdn_supported | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the current client supports [CDN downloads](https://core.telegram.org/cdn) |
-| location | [InputFileLocation](/type/InputFileLocation/) | File location |
-| offset | [long](/type/long/) | Number of bytes to be skipped |
-| limit | [int](/type/int/) | Number of bytes to be returned |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>precise</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Отключить часть проверок значений limit и offset; полезно, например, для потоковой передачи видео по ключевым кадрам</td></tr><tr><td><strong>cdn_supported</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Поддерживает ли текущий клиент <a href="/cdn">загрузку через CDN</a></td></tr><tr><td><strong>location</strong></td><td style="text-align: center;"><a href="/type/InputFileLocation">InputFileLocation</a></td><td>Расположение файла</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Количество пропускаемых байт</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество возвращаемых байт</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [upload.File](/type/upload.File/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CDN_METHOD_INVALID | You can't call this method in a CDN DC. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 406 | FILEREF_UPGRADE_NEEDED | The client has to be updated in order to support [file references](https://core.telegram.org/api/file-references). |
-| 400 | FILE_ID_INVALID | The provided file id is invalid. |
-| 400 | FILE_REFERENCE_EMPTY | An empty [file reference](https://core.telegram.org/api/file-references) was specified. |
-| 400 | FILE_REFERENCE_EXPIRED | File reference expired, it must be refetched as described in [the documentation](https://core.telegram.org/api/file-references). |
-| 400 | FILE_REFERENCE_INVALID | The specified [file reference](https://core.telegram.org/api/file-references) is invalid. |
-| 420 | FLOOD_PREMIUM_WAIT_%d | Please wait %d seconds before repeating the action, or purchase a [Telegram Premium subscription](https://core.telegram.org/api/premium) to remove this rate limit. |
-| 400 | LIMIT_INVALID | The provided limit is invalid. |
-| 400 | LOCATION_INVALID | The provided location is invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | OFFSET_INVALID | The provided offset is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CDN_METHOD_INVALID</td><td>Этот метод нельзя вызывать в CDN DC.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>406</td><td>FILEREF_UPGRADE_NEEDED</td><td>Для поддержки <a href="/api/file-references">ссылок на файлы</a> клиент необходимо обновить.</td></tr><tr><td>400</td><td>FILE_ID_INVALID</td><td>Указанный идентификатор файла недействителен.</td></tr><tr><td>400</td><td>FILE_REFERENCE_EMPTY</td><td>Указана пустая <a href="/api/file-references">ссылка на файл</a>.</td></tr><tr><td>400</td><td>FILE_REFERENCE_EXPIRED</td><td>Срок действия ссылки на файл истёк, её необходимо получить заново, как описано в <a href="/api/file-references">документации</a>.</td></tr><tr><td>400</td><td>FILE_REFERENCE_INVALID</td><td>Указанная <a href="/api/file-references">ссылка на файл</a> недействительна.</td></tr><tr><td>420</td><td>FLOOD_PREMIUM_WAIT_%d</td><td>Подождите %d секунд, прежде чем повторять действие, либо приобретите <a href="/api/premium">подписку Telegram Premium</a>, чтобы снять это ограничение частоты запросов.</td></tr><tr><td>400</td><td>LIMIT_INVALID</td><td>Указанное ограничение недействительно.</td></tr><tr><td>400</td><td>LOCATION_INVALID</td><td>Указанное местоположение недействительно.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>OFFSET_INVALID</td><td>Указанное смещение недействительно.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Шифрованные CDN: скорость и безопасность](https://core.telegram.org/cdn)
 
-How client apps download popular public files from secondary CDN data centers.
+Как клиентские приложения скачивают популярные публичные файлы из вспомогательных CDN-дата-центров.
 
-#### [File references](https://core.telegram.org/api/file-references)
+#### [Ссылки на файлы](/api/file-references/)
 
-How to handle file references.
+Как работать со ссылками на файлы.
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.

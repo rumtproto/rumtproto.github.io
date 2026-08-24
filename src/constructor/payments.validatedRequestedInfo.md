@@ -1,31 +1,24 @@
 ---
-title: "payments.ValidatedRequestedInfo (конструктор)"
+title: "payments.validatedRequestedInfo"
 original: "https://core.telegram.org/constructor/payments.validatedRequestedInfo"
 section: ref
 kind: constructor
+description: "Проверенные данные, предоставленные пользователем"
 layout: layout.njk
 ---
 
 # payments.ValidatedRequestedInfo
 
-*Конструктор из схемы TL.*
-
-> Validated user-provided info
-
-## Определение TL
+Проверенные данные, предоставленные пользователем
 
 ```
 payments.validatedRequestedInfo#d1451883 flags:# id:flags.0?string shipping_options:flags.1?Vector<ShippingOption> = payments.ValidatedRequestedInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | ID |
-| shipping_options | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[ShippingOption](/type/ShippingOption/)> | Shipping options |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>ID</td></tr><tr><td><strong>shipping_options</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ShippingOption">ShippingOption</a>&gt;</td><td>Варианты доставки</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.ValidatedRequestedInfo](/type/payments.ValidatedRequestedInfo/)

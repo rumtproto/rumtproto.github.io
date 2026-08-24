@@ -1,39 +1,34 @@
 ---
-title: "statsGraphAsync (конструктор)"
+title: "statsGraphAsync"
 original: "https://core.telegram.org/constructor/statsGraphAsync"
 section: ref
 kind: constructor
+description: "Этот график статистики канала должен формироваться асинхронно с помощью stats.loadAsyncGraph, чтобы снизить нагрузку на сервер"
 layout: layout.njk
 ---
 
 # statsGraphAsync
 
-*Конструктор из схемы TL.*
-
-> This [channel statistics graph](https://core.telegram.org/api/stats) must be generated asynchronously using [stats.loadAsyncGraph](/method/stats.loadAsyncGraph/) to reduce server load
-
-## Определение TL
+Этот [график статистики канала](/api/stats/) должен формироваться асинхронно с помощью [stats.loadAsyncGraph](/method/stats.loadAsyncGraph/), чтобы снизить нагрузку на сервер
 
 ```
 statsGraphAsync#4a27eb2d token:string = StatsGraph;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| token | [string](/type/string/) | Token to use for fetching the async graph |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Токен для получения асинхронного графика</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StatsGraph](/type/StatsGraph/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channel statistics](https://core.telegram.org/api/stats)
+#### [Статистика каналов](/api/stats/)
 
-Telegram offers detailed channel statistics for channels and supergroups.
+Telegram предоставляет подробную статистику для каналов и супергрупп.
 
 #### [stats.loadAsyncGraph](/method/stats.loadAsyncGraph/)
 
-Load [channel statistics graph](https://core.telegram.org/api/stats) asynchronously
+Асинхронно загрузить [график статистики канала](/api/stats/)

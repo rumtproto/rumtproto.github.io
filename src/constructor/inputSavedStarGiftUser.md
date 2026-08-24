@@ -1,39 +1,34 @@
 ---
-title: "inputSavedStarGiftUser (конструктор)"
+title: "inputSavedStarGiftUser"
 original: "https://core.telegram.org/constructor/inputSavedStarGiftUser"
 section: ref
 kind: constructor
+description: "Подарок, полученный в личном чате с другим пользователем."
 layout: layout.njk
 ---
 
 # inputSavedStarGiftUser
 
-*Конструктор из схемы TL.*
-
-> A gift received in a private chat with another user.
-
-## Определение TL
+Подарок, полученный в личном чате с другим пользователем.
 
 ```
 inputSavedStarGiftUser#69279795 msg_id:int = InputSavedStarGift;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| msg_id | [int](/type/int/) | ID of the [messageService](/constructor/messageService/) with the [messageActionStarGift](/constructor/messageActionStarGift/) with the gift. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор <a href="/constructor/messageService">messageService</a> с <a href="/constructor/messageActionStarGift">messageActionStarGift</a>, содержащим подарок.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputSavedStarGift](/type/InputSavedStarGift/)
 
-## Related pages
+### Связанные страницы
 
 #### [messageService](/constructor/messageService/)
 
-Indicates a service message
+Обозначает сервисное сообщение
 
 #### [messageActionStarGift](/constructor/messageActionStarGift/)
 
-You received a [gift, see here »](https://core.telegram.org/api/gifts) for more info.
+Вы получили [подарок, подробнее см. здесь »](/api/gifts/).

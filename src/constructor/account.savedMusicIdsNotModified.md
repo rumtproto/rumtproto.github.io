@@ -1,33 +1,30 @@
 ---
-title: "account.savedMusicIdsNotModified (конструктор)"
+title: "account.savedMusicIdsNotModified"
 original: "https://core.telegram.org/constructor/account.savedMusicIdsNotModified"
 section: ref
 kind: constructor
+description: "Список идентификаторов композиций (значений document.id), закреплённых в нашем профиле, не изменился."
 layout: layout.njk
 ---
 
 # account.savedMusicIdsNotModified
 
-*Конструктор из схемы TL.*
-
-> The list of IDs of songs ([document](/constructor/document/).`id`s) currently pinned on our profile hasn't changed.
-
-## Определение TL
+Список идентификаторов композиций (значений [document](/constructor/document/).`id`), закреплённых в нашем профиле, не изменился.
 
 ```
 account.savedMusicIdsNotModified#4fc81d6e = account.SavedMusicIds;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [account.SavedMusicIds](/type/account.SavedMusicIds/)
 
-## Related pages
+### Связанные страницы
 
 #### [document](/constructor/document/)
 
-Document
+Документ

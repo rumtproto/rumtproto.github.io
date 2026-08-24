@@ -1,20 +1,19 @@
 ---
-title: "payments.craftStarGift (метод)"
+title: "payments.craftStarGift"
 original: "https://core.telegram.org/method/payments.craftStarGift"
 section: ref
 kind: method
+description: "Создать новый коллекционный подарок », объединив от 1 до 4 принадлежащих вам коллекционных подарков одного и того же базового типа."
 layout: layout.njk
 ---
 
 # payments.craftStarGift
 
-*Метод из схемы TL.*
+Создать новый [коллекционный подарок »](/api/gifts/#collectible-gifts), объединив от 1 до 4 принадлежащих вам коллекционных подарков одного и того же базового типа.
 
-> Craft a new [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) by combining 1 to 4 owned collectible gifts of the same base gift type.
-> The passed gifts must all have the same [starGiftUnique](/constructor/starGiftUnique/).`gift_id`, must be usable for crafting, and must not be blocked by a future `can_craft_at` timestamp.
-> The first passed gift must not be [located on the TON blockchain](https://core.telegram.org/api/gifts#hosted-collectible-gifts).
+У всех переданных подарков должно совпадать поле [starGiftUnique](/constructor/starGiftUnique/).`gift_id`, они должны быть пригодны для крафта и не должны быть заблокированы будущей отметкой времени `can_craft_at`.
 
-## Определение TL
+Первый переданный подарок не должен быть [размещён в блокчейне TON](/api/gifts/#hosted-collectible-gifts).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -28,32 +27,28 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 payments.craftStarGift#b0f9684f stargift:Vector<InputSavedStarGift> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| stargift | [Vector](https://core.telegram.org/type/Vector%20t)<[InputSavedStarGift](/type/InputSavedStarGift/)> | 1 to 4 owned collectible gifts of the same type to use for [crafting »](https://core.telegram.org/api/gifts#crafting-collectible-gifts). The first gift's ID is reused if crafting succeeds. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputSavedStarGift">InputSavedStarGift</a>&gt;</td><td>От 1 до 4 принадлежащих пользователю коллекционных подарков одного типа, которые используются для <a href="/api/gifts#crafting-collectible-gifts">крафта »</a>. При успешном крафте идентификатор первого подарка используется повторно.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | SAVED_ID_EMPTY | The passed inputSavedStarGiftChat.saved_id is empty. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>SAVED_ID_EMPTY</td><td>Переданное значение inputSavedStarGiftChat.saved_id пусто.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [starGiftUnique](/constructor/starGiftUnique/)
 
-Represents a [collectible star gift, see here »](https://core.telegram.org/api/gifts#collectible-gifts) for more info.
+Представляет коллекционный звёздный подарок, [подробнее см. здесь »](/api/gifts/#collectible-gifts).
 
-The sticker that represents the gift is contained in a [starGiftAttributeModel](/constructor/starGiftAttributeModel/) object in `attributes`.
+Стикер, представляющий подарок, содержится в объекте [starGiftAttributeModel](/constructor/starGiftAttributeModel/) в поле `attributes`.

@@ -1,47 +1,38 @@
 ---
-title: "factCheck (конструктор)"
+title: "factCheck"
 original: "https://core.telegram.org/constructor/factCheck"
 section: ref
 kind: constructor
+description: "Представляет проверку фактов », выполненную независимым фактчекером."
 layout: layout.njk
 ---
 
 # factCheck
 
-*Конструктор из схемы TL.*
-
-> Represents a [fact-check »](https://core.telegram.org/api/factcheck) created by an independent fact-checker.
-
-## Определение TL
+Представляет [проверку фактов »](/api/factcheck/), выполненную независимым фактчекером.
 
 ```
 factCheck#b89bfccf flags:# need_check:flags.0?true country:flags.1?string text:flags.1?TextWithEntities hash:long = FactCheck;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| need_check | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, the country/text fields will not be set, and the fact check must be fetched manually by the client (if it isn't already cached with the key specified in hash) using bundled [messages.getFactCheck](/method/messages.getFactCheck/) requests, when the message with the factcheck scrolls into view. |
-| country | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | A two-letter ISO 3166-1 alpha-2 country code of the country for which the fact-check should be shown. |
-| text | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[TextWithEntities](/type/TextWithEntities/) | The fact-check. |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>need_check</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>[@term:hash] Если установлено, поля <code>country</code> и <code>text</code> заданы <strong>не</strong> будут, и клиент обязан получить проверку фактов вручную (если она ещё не закеширована с ключом, указанным в <code>hash</code>) с помощью объединённых в пакет запросов <a href="/method/messages.getFactCheck">messages.getFactCheck</a>, когда сообщение с проверкой фактов попадает в область видимости.</td></tr><tr><td><strong>country</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Двухбуквенный код страны по стандарту ISO 3166-1 alpha-2, определяющий страну, для которой должна показываться проверка фактов.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/TextWithEntities">TextWithEntities</a></td><td>Проверка достоверности.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [FactCheck](/type/FactCheck/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.getFactCheck](/method/messages.getFactCheck/)
 
-Fetch one or more [factchecks, see here »](https://core.telegram.org/api/factcheck) for the full flow.
+Получить одну или несколько [проверок фактов; полное описание процесса см. здесь »](/api/factcheck/).
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Fact checks](https://core.telegram.org/api/factcheck)
+#### [Проверки фактов](/api/factcheck/)
 
-Telegram clients support displaying fact-checks added to messages by independent fact-checkers.
+Клиенты Telegram поддерживают отображение проверок фактов, добавленных к сообщениям независимыми фактчекерами.

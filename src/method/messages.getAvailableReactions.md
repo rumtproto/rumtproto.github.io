@@ -1,18 +1,15 @@
 ---
-title: "messages.getAvailableReactions (метод)"
+title: "messages.getAvailableReactions"
 original: "https://core.telegram.org/method/messages.getAvailableReactions"
 section: ref
 kind: method
+description: "Получить доступные реакции на сообщения »"
 layout: layout.njk
 ---
 
 # messages.getAvailableReactions
 
-*Метод из схемы TL.*
-
-> Obtain available [message reactions »](https://core.telegram.org/api/reactions)
-
-## Определение TL
+Получить доступные [реакции на сообщения »](/api/reactions/)
 
 ```
 messages.availableReactionsNotModified#9f071957 = messages.AvailableReactions;
@@ -21,24 +18,22 @@ messages.availableReactions#768e3aad hash:int reactions:Vector<AvailableReaction
 messages.getAvailableReactions#18dea0ac hash:int = messages.AvailableReactions;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.AvailableReactions](/type/messages.AvailableReactions/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

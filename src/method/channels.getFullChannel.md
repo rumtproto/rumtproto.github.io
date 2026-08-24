@@ -1,18 +1,15 @@
 ---
-title: "channels.getFullChannel (метод)"
+title: "channels.getFullChannel"
 original: "https://core.telegram.org/method/channels.getFullChannel"
 section: ref
 kind: method
+description: "Получить полную информацию о супергруппе, гигагруппе или канале"
 layout: layout.njk
 ---
 
 # channels.getFullChannel
 
-*Метод из схемы TL.*
-
-> Get full info about a [supergroup](https://core.telegram.org/api/channel#supergroups), [gigagroup](https://core.telegram.org/api/channel#gigagroups) or [channel](https://core.telegram.org/api/channel#channels)
-
-## Определение TL
+Получить полную информацию о [супергруппе](/api/channel/#supergroups), [гигагруппе](/api/channel/#gigagroups) или [канале](/api/channel/#channels)
 
 ```
 messages.chatFull#e5d7d19c full_chat:ChatFull chats:Vector<Chat> users:Vector<User> = messages.ChatFull;
@@ -20,30 +17,22 @@ messages.chatFull#e5d7d19c full_chat:ChatFull chats:Vector<Chat> users:Vector<Us
 channels.getFullChannel#8736a09 channel:InputChannel = messages.ChatFull;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The [channel](https://core.telegram.org/api/channel#channels), [supergroup](https://core.telegram.org/api/channel#supergroups) or [gigagroup](https://core.telegram.org/api/channel#gigagroups) to get info about |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel#channels">Канал</a>, <a href="/api/channel#supergroups">супергруппа</a> или <a href="/api/channel#gigagroups">гигагруппа</a>, о которой нужно получить сведения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.ChatFull](/type/messages.ChatFull/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 403 | CHANNEL_PUBLIC_GROUP_NA | channel/supergroup not available. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>403</td><td>CHANNEL_PUBLIC_GROUP_NA</td><td>канал/супергруппа недоступны.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

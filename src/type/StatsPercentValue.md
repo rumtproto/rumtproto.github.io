@@ -1,25 +1,20 @@
 ---
-title: "StatsPercentValue (тип)"
+title: "StatsPercentValue"
 original: "https://core.telegram.org/type/StatsPercentValue"
 section: ref
 kind: type
+description: "Процентное соотношение в статистике канала"
 layout: layout.njk
 ---
 
 # StatsPercentValue
 
-*Тип из схемы TL.*
-
-> Channel statistics percentage
-
-## Определение TL
+Процентное соотношение в статистике канала
 
 ```
 statsPercentValue#cbce2fe0 part:double total:double = StatsPercentValue;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [statsPercentValue](/constructor/statsPercentValue/) | [Channel statistics percentage](https://core.telegram.org/api/stats). Compute the percentage simply by doing part * total / 100 |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/statsPercentValue">statsPercentValue</a></td><td><a href="/api/stats">Процентная доля в статистике канала</a>.<br>Процент вычисляется просто как <code>part * total / 100</code></td></tr></tbody></table>

@@ -1,18 +1,15 @@
 ---
-title: "account.saveTheme (метод)"
+title: "account.saveTheme"
 original: "https://core.telegram.org/method/account.saveTheme"
 section: ref
 kind: method
+description: "Сохранить тему оформления"
 layout: layout.njk
 ---
 
 # account.saveTheme
 
-*Метод из схемы TL.*
-
-> Save a theme
-
-## Определение TL
+Сохранить тему оформления
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,21 +18,16 @@ boolTrue#997275b5 = Bool;
 account.saveTheme#f257106c theme:InputTheme unsave:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| theme | [InputTheme](/type/InputTheme/) | Theme to save |
-| unsave | [Bool](/type/Bool/) | Unsave |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>theme</strong></td><td style="text-align: center;"><a href="/type/InputTheme">InputTheme</a></td><td>Тема оформления, которую нужно сохранить</td></tr><tr><td><strong>unsave</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Удалить из сохранённых</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | THEME_INVALID | Invalid theme provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>THEME_INVALID</td><td>Указана недействительная тема оформления.</td></tr></tbody></table>

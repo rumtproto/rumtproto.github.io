@@ -1,18 +1,15 @@
 ---
-title: "Stories.Albums (тип)"
+title: "stories.Albums"
 original: "https://core.telegram.org/type/stories.Albums"
 section: ref
 kind: type
+description: "Представляет список альбомов историй »."
 layout: layout.njk
 ---
 
 # Stories.Albums
 
-*Тип из схемы TL.*
-
-> Represents a list of [story albums »](https://core.telegram.org/api/stories#story-albums).
-
-## Определение TL
+Представляет список [альбомов историй »](/api/stories/#story-albums).
 
 ```
 stories.albumsNotModified#564edaeb = stories.Albums;
@@ -23,21 +20,16 @@ stories.albums#c3987a3a hash:long albums:Vector<StoryAlbum> = stories.Albums;
 stories.getAlbums#25b3eac7 peer:InputPeer hash:long = stories.Albums;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [stories.albumsNotModified](/constructor/stories.albumsNotModified/) | The [story album list »](https://core.telegram.org/api/stories#story-albums) hasn't changed. |
-| [stories.albums](/constructor/stories.albums/) | [Story albums »](https://core.telegram.org/api/stories#story-albums). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/stories.albumsNotModified">stories.albumsNotModified</a></td><td><a href="/api/stories#story-albums">Список альбомов историй »</a> не изменился.</td></tr><tr><td><a href="/constructor/stories.albums">stories.albums</a></td><td><a href="/api/stories#story-albums">Альбомы историй »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stories.getAlbums](/method/stories.getAlbums/) | Get [story albums](https://core.telegram.org/api/stories#story-albums) created by a peer. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stories.getAlbums">stories.getAlbums</a></td><td>Получить <a href="/api/stories#story-albums">альбомы историй</a>, созданные пиром.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

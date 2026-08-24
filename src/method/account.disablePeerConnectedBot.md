@@ -1,18 +1,15 @@
 ---
-title: "account.disablePeerConnectedBot (метод)"
+title: "account.disablePeerConnectedBot"
 original: "https://core.telegram.org/method/account.disablePeerConnectedBot"
 section: ref
 kind: method
+description: "Безвозвратно отключить конкретный чат от всех бизнес-ботов » (равнозначно указанию его в recipients.exclude_users при первоначальной настройке через account.updateConnectedBot »);…"
 layout: layout.njk
 ---
 
 # account.disablePeerConnectedBot
 
-*Метод из схемы TL.*
-
-> Permanently disconnect a specific chat from all [business bots »](https://core.telegram.org/api/bots/connected-business-bots) (equivalent to specifying it in `recipients.exclude_users` during initial configuration with [account.updateConnectedBot »](/method/account.updateConnectedBot/)); to reconnect of a chat disconnected using this method the user must reconnect the entire bot by invoking [account.updateConnectedBot »](/method/account.updateConnectedBot/).
-
-## Определение TL
+Безвозвратно отключить конкретный чат от всех [бизнес-ботов »](/api/bots/connected-business-bots/) (равнозначно указанию его в `recipients.exclude_users` при первоначальной настройке через [account.updateConnectedBot »](/method/account.updateConnectedBot/)); чтобы снова подключить чат, отключённый этим методом, пользователь обязан заново подключить бота целиком, вызвав [account.updateConnectedBot »](/method/account.updateConnectedBot/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,36 +18,30 @@ boolTrue#997275b5 = Bool;
 account.disablePeerConnectedBot#5e437ed9 peer:InputPeer = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The chat to disconnect |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат, который следует отключить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_ALREADY_DISABLED | The connected business bot was already disabled for the specified peer. |
-| 400 | BOT_NOT_CONNECTED_YET | No [business bot](https://core.telegram.org/api/business#connected-bots) is connected to the currently logged in user. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_ALREADY_DISABLED</td><td>Подключённый бизнес-бот уже был отключён для указанного пира.</td></tr><tr><td>400</td><td>BOT_NOT_CONNECTED_YET</td><td>К пользователю, вошедшему в аккаунт в данный момент, не подключён ни один <a href="/api/business#connected-bots">бизнес-бот</a>.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
 #### [account.updateConnectedBot](/method/account.updateConnectedBot/)
 
-Connect a [business bot »](https://core.telegram.org/api/bots/connected-business-bots) to the current account, or to change the current connection settings.
+Подключить [бизнес-бота »](/api/bots/connected-business-bots/) к текущему аккаунту либо изменить текущие настройки подключения.
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

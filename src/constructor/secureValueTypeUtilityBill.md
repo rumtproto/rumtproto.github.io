@@ -1,27 +1,24 @@
 ---
-title: "secureValueTypeUtilityBill (конструктор)"
+title: "secureValueTypeUtilityBill"
 original: "https://core.telegram.org/constructor/secureValueTypeUtilityBill"
 section: ref
 kind: constructor
+description: "Счёт за коммунальные услуги"
 layout: layout.njk
 ---
 
 # secureValueTypeUtilityBill
 
-*Конструктор из схемы TL.*
-
-> Utility bill
-
-## Определение TL
+Счёт за коммунальные услуги
 
 ```
 secureValueTypeUtilityBill#fc36954e = SecureValueType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureValueType](/type/SecureValueType/)

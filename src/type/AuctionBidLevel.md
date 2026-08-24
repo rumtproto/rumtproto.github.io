@@ -1,31 +1,26 @@
 ---
-title: "AuctionBidLevel (тип)"
+title: "AuctionBidLevel"
 original: "https://core.telegram.org/type/AuctionBidLevel"
 section: ref
 kind: type
+description: "Описывает ставку на аукционе."
 layout: layout.njk
 ---
 
 # AuctionBidLevel
 
-*Тип из схемы TL.*
-
-> Describes a bid in an [auction](https://core.telegram.org/api/auctions).
-
-## Определение TL
+Описывает ставку на [аукционе](/api/auctions/).
 
 ```
 auctionBidLevel#310240cc pos:int amount:long date:int = AuctionBidLevel;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [auctionBidLevel](/constructor/auctionBidLevel/) | Describes a bid in an [auction](https://core.telegram.org/api/auctions). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/auctionBidLevel">auctionBidLevel</a></td><td>Описывает ставку на <a href="/api/auctions">аукционе</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

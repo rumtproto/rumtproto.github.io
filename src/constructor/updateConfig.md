@@ -1,37 +1,34 @@
 ---
-title: "updateConfig (конструктор)"
+title: "updateConfig"
 original: "https://core.telegram.org/constructor/updateConfig"
 section: ref
 kind: constructor
+description: "Конфигурация на стороне сервера изменилась; клиенту следует заново запросить её с помощью help.getConfig и help.getAppConfig."
 layout: layout.njk
 ---
 
 # updateConfig
 
-*Конструктор из схемы TL.*
-
-> The server-side configuration has changed; the client should re-fetch the config using [help.getConfig](/method/help.getConfig/) and [help.getAppConfig](/method/help.getAppConfig/).
-
-## Определение TL
+Конфигурация на стороне сервера изменилась; клиенту следует заново запросить её с помощью [help.getConfig](/method/help.getConfig/) и [help.getAppConfig](/method/help.getAppConfig/).
 
 ```
 updateConfig#a229dd06 = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [help.getConfig](/method/help.getConfig/)
 
-Returns current configuration, including data center configuration.
+Возвращает текущую конфигурацию, включая конфигурацию дата-центров.
 
 #### [help.getAppConfig](/method/help.getAppConfig/)
 
-Get app-specific configuration, see [client configuration](https://core.telegram.org/api/config#client-configuration) for more info on the result.
+Получить конфигурацию, специфичную для приложения; подробнее о результате см. [клиентскую конфигурацию](/api/config/#client-configuration).

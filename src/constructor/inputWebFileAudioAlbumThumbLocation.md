@@ -1,45 +1,36 @@
 ---
-title: "inputWebFileAudioAlbumThumbLocation (конструктор)"
+title: "inputWebFileAudioAlbumThumbLocation"
 original: "https://core.telegram.org/constructor/inputWebFileAudioAlbumThumbLocation"
 section: ref
 kind: constructor
+description: "Используется для загрузки обложки альбома для любого музыкального файла с помощью upload.getWebFile; подробнее см. документацию по webfile »."
 layout: layout.njk
 ---
 
 # inputWebFileAudioAlbumThumbLocation
 
-*Конструктор из схемы TL.*
-
-> Used to download an album cover for any music file using [upload.getWebFile](/method/upload.getWebFile/), see the [webfile docs for more info »](https://core.telegram.org/api/files/#downloading-webfiles).
-
-## Определение TL
+Используется для загрузки обложки альбома для любого музыкального файла с помощью [upload.getWebFile](/method/upload.getWebFile/); подробнее см. [документацию по webfile »](/api/files/#downloading-webfiles).
 
 ```
 inputWebFileAudioAlbumThumbLocation#f46fe924 flags:# small:flags.2?true document:flags.0?InputDocument title:flags.1?string performer:flags.1?string = InputWebFileLocation;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| small | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Used to return a thumbnail with 100x100 resolution (instead of the default 600x600) |
-| document | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputDocument](/type/InputDocument/) | The audio file in question: must NOT be provided in secret chats, provide the title and performer fields instead. |
-| title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Song title: should only be used in secret chats, in normal chats provide document instead, as it has more lax rate limits. |
-| performer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Song performer: should only be used in secret chats, in normal chats provide document instead, as it has more lax rate limits. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>small</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Используется для получения миниатюры с разрешением <code>100x100</code> (вместо <code>600x600</code> по умолчанию)</td></tr><tr><td><strong>document</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputDocument">InputDocument</a></td><td>Аудиофайл, о котором идёт речь: НЕ должен передаваться в секретных чатах, вместо этого укажите поля <code>title</code> и <code>performer</code>.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Название композиции: следует использовать только в секретных чатах, в обычных чатах вместо этого передавайте <code>document</code>, так как для него мягче ограничения частоты запросов.</td></tr><tr><td><strong>performer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Исполнитель композиции: следует использовать только в секретных чатах, в обычных чатах вместо этого передавайте <code>document</code>, так как для него мягче ограничения частоты запросов.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputWebFileLocation](/type/InputWebFileLocation/)
 
-## Related pages
+### Связанные страницы
 
 #### [upload.getWebfile](/method/upload.getWebFile/)
 
-Returns content of a web file, by proxying the request through telegram, see the [webfile docs for more info](https://core.telegram.org/api/files/#downloading-webfiles).
+Возвращает содержимое веб-файла, проксируя запрос через Telegram; подробнее см. [документацию по веб-файлам](/api/files/#downloading-webfiles).
 
-**Note**: the query must be sent to the DC specified in the `webfile_dc_id` [MTProto configuration field](https://core.telegram.org/api/config#mtproto-configuration).
+**Примечание**: запрос должен отправляться в дата-центр, указанный в поле `webfile_dc_id` [конфигурации MTProto](/api/config/#mtproto-configuration).
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

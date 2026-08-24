@@ -1,19 +1,17 @@
 ---
-title: "messages.editFactCheck (метод)"
+title: "messages.editFactCheck"
 original: "https://core.telegram.org/method/messages.editFactCheck"
 section: ref
 kind: method
+description: "Изменить или создать проверку фактов для сообщения."
 layout: layout.njk
 ---
 
 # messages.editFactCheck
 
-*Метод из схемы TL.*
+Изменить или создать [проверку фактов](/api/factcheck/) для сообщения.
 
-> Edit/create a [fact-check](https://core.telegram.org/api/factcheck) on a message.
-> Can only be used by independent fact-checkers as specified by the [appConfig.can\_edit\_factcheck](https://core.telegram.org/api/config#can-edit-factcheck) configuration flag.
-
-## Определение TL
+Может использоваться только независимыми фактчекерами, определяемыми флагом конфигурации [appConfig.can\_edit\_factcheck](/api/config/#can-edit-factcheck).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -27,33 +25,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.editFactCheck#589ee75 peer:InputPeer msg_id:int text:TextWithEntities = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer where the message was sent |
-| msg_id | [int](/type/int/) | Message ID |
-| text | [TextWithEntities](/type/TextWithEntities/) | Fact-check (maximum UTF-8 length specified in [appConfig.factcheck_length_limit](https://core.telegram.org/api/config#factcheck-length-limit)). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в который было отправлено сообщение</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Проверка фактов (максимальная длина в UTF-8 задаётся параметром <a href="/api/config#factcheck-length-limit">appConfig.factcheck_length_limit</a>).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | CHAT_ACTION_FORBIDDEN | You cannot execute this action. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>CHAT_ACTION_FORBIDDEN</td><td>Вы не можете выполнить это действие.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Fact checks](https://core.telegram.org/api/factcheck)
+#### [Проверки фактов](/api/factcheck/)
 
-Telegram clients support displaying fact-checks added to messages by independent fact-checkers.
+Клиенты Telegram поддерживают отображение проверок фактов, добавленных к сообщениям независимыми фактчекерами.

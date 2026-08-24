@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyKeyForwards (конструктор)"
+title: "inputPrivacyKeyForwards"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyForwards"
 section: ref
 kind: constructor
+description: "Будут ли сообщения, пересланные от вас, анонимными"
 layout: layout.njk
 ---
 
 # inputPrivacyKeyForwards
 
-*Конструктор из схемы TL.*
-
-> Whether messages forwarded from you will be [anonymous](https://telegram.org/blog/unsend-privacy-emoji#anonymous-forwarding)
-
-## Определение TL
+Будут ли сообщения, пересланные от вас, [анонимными](https://telegram.org/blog/unsend-privacy-emoji#anonymous-forwarding)
 
 ```
 inputPrivacyKeyForwards#a4dd4c08 = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)

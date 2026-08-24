@@ -1,27 +1,24 @@
 ---
-title: "inputMessagesFilterDocument (конструктор)"
+title: "inputMessagesFilterDocument"
 original: "https://core.telegram.org/constructor/inputMessagesFilterDocument"
 section: ref
 kind: constructor
+description: "Фильтр для сообщений, содержащих документы."
 layout: layout.njk
 ---
 
 # inputMessagesFilterDocument
 
-*Конструктор из схемы TL.*
-
-> Filter for messages containing documents.
-
-## Определение TL
+Фильтр для сообщений, содержащих документы.
 
 ```
 inputMessagesFilterDocument#9eddf188 = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)

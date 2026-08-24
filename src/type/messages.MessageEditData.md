@@ -1,18 +1,15 @@
 ---
-title: "Messages.MessageEditData (тип)"
+title: "messages.MessageEditData"
 original: "https://core.telegram.org/type/messages.MessageEditData"
 section: ref
 kind: type
+description: "Данные для редактирования сообщения с медиа"
 layout: layout.njk
 ---
 
 # Messages.MessageEditData
 
-*Тип из схемы TL.*
-
-> Message edit data for media
-
-## Определение TL
+Данные для редактирования сообщения с медиа
 
 ```
 messages.messageEditData#26b5dde6 flags:# caption:flags.0?true = messages.MessageEditData;
@@ -22,14 +19,10 @@ messages.messageEditData#26b5dde6 flags:# caption:flags.0?true = messages.Messag
 messages.getMessageEditData#fda68d36 peer:InputPeer id:int = messages.MessageEditData;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.messageEditData](/constructor/messages.messageEditData/) | Message edit data for media |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.messageEditData">messages.messageEditData</a></td><td>Данные для редактирования сообщения с медиа</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getMessageEditData](/method/messages.getMessageEditData/) | Find out if a media message's caption can be edited |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getMessageEditData">messages.getMessageEditData</a></td><td>Узнать, можно ли изменить подпись к медиасообщению</td></tr></tbody></table>

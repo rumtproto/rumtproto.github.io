@@ -1,27 +1,24 @@
 ---
-title: "account.savedRingtonesNotModified (конструктор)"
+title: "account.savedRingtonesNotModified"
 original: "https://core.telegram.org/constructor/account.savedRingtonesNotModified"
 section: ref
 kind: constructor
+description: "Список звуков уведомлений не изменился."
 layout: layout.njk
 ---
 
 # account.savedRingtonesNotModified
 
-*Конструктор из схемы TL.*
-
-> The notification sound list hasn't changed.
-
-## Определение TL
+Список звуков уведомлений не изменился.
 
 ```
 account.savedRingtonesNotModified#fbf6e8b1 = account.SavedRingtones;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [account.SavedRingtones](/type/account.SavedRingtones/)

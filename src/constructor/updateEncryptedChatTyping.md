@@ -1,29 +1,24 @@
 ---
-title: "updateEncryptedChatTyping (конструктор)"
+title: "updateEncryptedChatTyping"
 original: "https://core.telegram.org/constructor/updateEncryptedChatTyping"
 section: ref
 kind: constructor
+description: "Собеседник набирает сообщение в секретном чате. Период обновления — 6 секунд. Если за это время повторное обновление не пришло, следует считать, что собеседник перестал набирать…"
 layout: layout.njk
 ---
 
 # updateEncryptedChatTyping
 
-*Конструктор из схемы TL.*
-
-> Interlocutor is typing a message in an encrypted chat. Update period is 6 second. If upon this time there is no repeated update, it shall be considered that the interlocutor stopped typing.
-
-## Определение TL
+Собеседник набирает сообщение в секретном чате. Период обновления — 6 секунд. Если за это время повторное обновление не пришло, следует считать, что собеседник перестал набирать текст.
 
 ```
 updateEncryptedChatTyping#1710f156 chat_id:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chat_id | [int](/type/int/) | Chat ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор чата</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

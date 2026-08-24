@@ -1,27 +1,24 @@
 ---
-title: "inlineQueryPeerTypePM (конструктор)"
+title: "inlineQueryPeerTypePM"
 original: "https://core.telegram.org/constructor/inlineQueryPeerTypePM"
 section: ref
 kind: constructor
+description: "Тип пира: личный чат"
 layout: layout.njk
 ---
 
 # inlineQueryPeerTypePM
 
-*Конструктор из схемы TL.*
-
-> Peer type: private chat
-
-## Определение TL
+Тип пира: личный чат
 
 ```
 inlineQueryPeerTypePM#833c0fac = InlineQueryPeerType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InlineQueryPeerType](/type/InlineQueryPeerType/)

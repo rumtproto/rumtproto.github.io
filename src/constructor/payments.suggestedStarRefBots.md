@@ -1,47 +1,38 @@
 ---
-title: "payments.suggestedStarRefBots (конструктор)"
+title: "payments.suggestedStarRefBots"
 original: "https://core.telegram.org/constructor/payments.suggestedStarRefBots"
 section: ref
 kind: constructor
+description: "Список предлагаемых Mini Apps с доступными партнёрскими программами"
 layout: layout.njk
 ---
 
 # payments.suggestedStarRefBots
 
-*Конструктор из схемы TL.*
-
-> A list of suggested [mini apps](https://core.telegram.org/api/bots/webapps) with available [affiliate programs](https://core.telegram.org/api/bots/referrals)
-
-## Определение TL
+Список предлагаемых [Mini Apps](/api/bots/webapps/) с доступными [партнёрскими программами](/api/bots/referrals/)
 
 ```
 payments.suggestedStarRefBots#b4d5d859 flags:# count:int suggested_bots:Vector<StarRefProgram> users:Vector<User> next_offset:flags.0?string = payments.SuggestedStarRefBots;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| count | [int](/type/int/) | Total number of results (for pagination) |
-| suggested_bots | [Vector](https://core.telegram.org/type/Vector%20t)<[StarRefProgram](/type/StarRefProgram/)> | Suggested affiliate programs (full or partial list to be fetched using pagination) |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Peers mentioned in suggested_bots |
-| next_offset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Next offset for [pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число результатов (для постраничной выборки)</td></tr><tr><td><strong>suggested_bots</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarRefProgram">StarRefProgram</a>&gt;</td><td>Рекомендуемые партнёрские программы (полный или частичный список, получаемый постраничной выборкой)</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пиры, упомянутые в <code>suggested_bots</code></td></tr><tr><td><strong>next_offset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>[@term:next_offset] Следующее смещение для <a href="/api/offsets">постраничной выборки</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.SuggestedStarRefBots](/type/payments.SuggestedStarRefBots/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
-#### [Affiliate programs](https://core.telegram.org/api/bots/referrals)
+#### [Партнёрские программы](/api/bots/referrals/)
 
-Developers can open affiliate programs for their mini app – allowing content creators, other mini app developers and any Telegram user to promote it and earn commissions on purchases made by people they referred.
+[@term:Mini App] Разработчики могут открывать партнёрские программы для своих mini app — это позволяет авторам контента, другим разработчикам mini app и любому пользователю Telegram продвигать приложение и получать комиссию с покупок, совершённых приведёнными ими людьми.

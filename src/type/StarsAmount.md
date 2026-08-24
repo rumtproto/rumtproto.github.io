@@ -1,33 +1,27 @@
 ---
-title: "StarsAmount (тип)"
+title: "StarsAmount"
 original: "https://core.telegram.org/type/StarsAmount"
 section: ref
 kind: type
+description: "Описывает вещественную (то есть возможно дробную) сумму в Telegram Stars."
 layout: layout.njk
 ---
 
 # StarsAmount
 
-*Тип из схемы TL.*
-
-> Describes a real (i.e. possibly decimal) amount of [Telegram Stars](https://core.telegram.org/api/stars).
-
-## Определение TL
+Описывает вещественную (то есть возможно дробную) сумму в [Telegram Stars](/api/stars/).
 
 ```
 starsAmount#bbb6b4a3 amount:long nanos:int = StarsAmount;
 starsTonAmount#74aee3e0 amount:long = StarsAmount;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starsAmount](/constructor/starsAmount/) | Describes a real (i.e. possibly decimal) amount of [Telegram Stars](https://core.telegram.org/api/stars). |
-| [starsTonAmount](/constructor/starsTonAmount/) | Describes an amount of Gram in nanograms (i.e. 1/1_000_000_000 of a Gram). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starsAmount">starsAmount</a></td><td>Описывает вещественную (то есть возможно дробную) сумму в <a href="/api/stars">Telegram Stars</a>.</td></tr><tr><td><a href="/constructor/starsTonAmount">starsTonAmount</a></td><td>Описывает сумму в Gram, выраженную в нанограммах (то есть в <code>1/1_000_000_000</code> доли Gram).</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

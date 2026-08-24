@@ -1,18 +1,15 @@
 ---
-title: "account.getThemes (метод)"
+title: "account.getThemes"
 original: "https://core.telegram.org/method/account.getThemes"
 section: ref
 kind: method
+description: "Получить установленные темы оформления"
 layout: layout.njk
 ---
 
 # account.getThemes
 
-*Метод из схемы TL.*
-
-> Get installed themes
-
-## Определение TL
+Получить установленные темы оформления
 
 ```
 account.themesNotModified#f41eb622 = account.Themes;
@@ -21,21 +18,18 @@ account.themes#9a3d8c6d hash:long themes:Vector<Theme> = account.Themes;
 account.getThemes#7206e458 format:string hash:long = account.Themes;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| format | [string](/type/string/) | Theme format, a string that identifies the theming engines supported by the client |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>format</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Формат темы оформления — строка, определяющая движки оформления, поддерживаемые клиентом</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.Themes](/type/account.Themes/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

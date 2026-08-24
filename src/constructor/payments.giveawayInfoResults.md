@@ -1,51 +1,38 @@
 ---
-title: "payments.giveawayInfoResults (конструктор)"
+title: "payments.giveawayInfoResults"
 original: "https://core.telegram.org/constructor/payments.giveawayInfoResults"
 section: ref
 kind: constructor
+description: "Розыгрыш завершён."
 layout: layout.njk
 ---
 
 # payments.giveawayInfoResults
 
-*Конструктор из схемы TL.*
-
-> A [giveaway](https://core.telegram.org/api/giveaways) has ended.
-
-## Определение TL
+[Розыгрыш](/api/giveaways/) завершён.
 
 ```
 payments.giveawayInfoResults#e175e66f flags:# winner:flags.0?true refunded:flags.1?true start_date:int gift_code_slug:flags.3?string stars_prize:flags.4?long finish_date:int winners_count:int activated_count:flags.2?int = payments.GiveawayInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| winner | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether we're one of the winners of this giveaway. |
-| refunded | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the giveaway was canceled and was fully refunded. |
-| start_date | [int](/type/int/) | Start date of the giveaway |
-| gift_code_slug | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[string](/type/string/) | If we're one of the winners of this giveaway, contains the [Premium gift code](https://core.telegram.org/api/links#premium-giftcode-links), see [here »](https://core.telegram.org/api/giveaways) for more info on the full giveaway flow. |
-| stars_prize | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[long](/type/long/) | If we're one of the winners of this [Telegram Star giveaway](https://core.telegram.org/api/giveaways#star-giveaways), the number [Telegram Stars](https://core.telegram.org/api/stars) we won. |
-| finish_date | [int](/type/int/) | End date of the giveaway. May be bigger than the end date specified in parameters of the giveaway. |
-| winners_count | [int](/type/int/) | Number of winners in the giveaway |
-| activated_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Number of winners, which activated their [gift codes](https://core.telegram.org/api/links#premium-giftcode-links). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>winner</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Являемся ли мы одним из победителей этого розыгрыша.</td></tr><tr><td><strong>refunded</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Был ли розыгрыш отменён, а средства полностью возвращены.</td></tr><tr><td><strong>start_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата начала розыгрыша</td></tr><tr><td><strong>gift_code_slug</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string">string</a></td><td>Если мы оказались одним из победителей этого розыгрыша, содержит <a href="/api/links#premium-giftcode-links">подарочный код Premium</a>; подробнее о полном процессе розыгрыша см. <a href="/api/giveaways">здесь »</a>.</td></tr><tr><td><strong>stars_prize</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/long">long</a></td><td>Если мы оказались одним из победителей этого <a href="/api/giveaways#star-giveaways">розыгрыша Telegram Stars</a> — количество выигранных нами <a href="/api/stars">Telegram Stars</a>.</td></tr><tr><td><strong>finish_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата окончания розыгрыша. Может быть больше даты окончания, указанной в параметрах розыгрыша.</td></tr><tr><td><strong>winners_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество победителей в розыгрыше</td></tr><tr><td><strong>activated_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Количество победителей, активировавших свои <a href="/api/links#premium-giftcode-links">подарочные коды</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.GiveawayInfo](/type/payments.GiveawayInfo/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

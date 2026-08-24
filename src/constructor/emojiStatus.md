@@ -1,41 +1,34 @@
 ---
-title: "emojiStatus (конструктор)"
+title: "emojiStatus"
 original: "https://core.telegram.org/constructor/emojiStatus"
 section: ref
 kind: constructor
+description: "Статус эмодзи"
 layout: layout.njk
 ---
 
 # emojiStatus
 
-*Конструктор из схемы TL.*
-
-> An [emoji status](https://core.telegram.org/api/emoji-status)
-
-## Определение TL
+[Статус эмодзи](/api/emoji-status/)
 
 ```
 emojiStatus#e7ff068a flags:# document_id:long until:flags.0?int = EmojiStatus;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| document_id | [long](/type/long/) | [Custom emoji document ID](https://core.telegram.org/api/custom-emoji) |
-| until | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | If set, the emoji status will be active until the specified unixtime. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/custom-emoji">Идентификатор документа пользовательского эмодзи</a></td></tr><tr><td><strong>until</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Если установлено, эмодзи-статус будет активен до указанного unixtime.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [EmojiStatus](/type/EmojiStatus/)
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

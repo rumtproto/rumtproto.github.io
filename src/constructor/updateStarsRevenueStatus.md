@@ -1,36 +1,30 @@
 ---
-title: "updateStarsRevenueStatus (конструктор)"
+title: "updateStarsRevenueStatus"
 original: "https://core.telegram.org/constructor/updateStarsRevenueStatus"
 section: ref
 kind: constructor
+description: "Баланс Telegram Stars канала или бота, которым мы владеем, изменился »."
 layout: layout.njk
 ---
 
 # updateStarsRevenueStatus
 
-*Конструктор из схемы TL.*
-
-> The [Telegram Star balance of a channel/bot we own has changed »](https://core.telegram.org/api/stars#revenue-statistics).
-
-## Определение TL
+[Баланс Telegram Stars канала или бота, которым мы владеем, изменился »](/api/stars/#revenue-statistics).
 
 ```
 updateStarsRevenueStatus#a584b019 peer:Peer status:StarsRevenueStatus = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | Channel/bot |
-| status | [StarsRevenueStatus](/type/StarsRevenueStatus/) | New Telegram Star balance. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Канал/бот</td></tr><tr><td><strong>status</strong></td><td style="text-align: center;"><a href="/type/StarsRevenueStatus">StarsRevenueStatus</a></td><td>Новый баланс Telegram Stars.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

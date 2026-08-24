@@ -1,38 +1,30 @@
 ---
-title: "messages.searchCounter (конструктор)"
+title: "messages.searchCounter"
 original: "https://core.telegram.org/constructor/messages.searchCounter"
 section: ref
 kind: constructor
+description: "Указывает, сколько результатов было бы найдено вызовом messages.search с теми же параметрами"
 layout: layout.njk
 ---
 
 # messages.searchCounter
 
-*Конструктор из схемы TL.*
-
-> Indicates how many results would be found by a [messages.search](/method/messages.search/) call with the same parameters
-
-## Определение TL
+Указывает, сколько результатов было бы найдено вызовом [messages.search](/method/messages.search/) с теми же параметрами
 
 ```
 messages.searchCounter#e844ebff flags:# inexact:flags.1?true filter:MessagesFilter count:int = messages.SearchCounter;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| inexact | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, the results may be inexact |
-| filter | [MessagesFilter](/type/MessagesFilter/) | Provided message filter |
-| count | [int](/type/int/) | Number of results that were found server-side |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>inexact</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, результаты могут быть неточными</td></tr><tr><td><strong>filter</strong></td><td style="text-align: center;"><a href="/type/MessagesFilter">MessagesFilter</a></td><td>Указанный фильтр сообщений</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество результатов, найденных на сервере</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.SearchCounter](/type/messages.SearchCounter/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.search](/method/messages.search/)
 
-Search for messages.
+Поиск сообщений.

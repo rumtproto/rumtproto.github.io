@@ -2,609 +2,633 @@
 title: "Типы — справочник схемы TL"
 original: "https://core.telegram.org/schema"
 section: ref
+description: "Алфавитный указатель всех 620 типов схемы TL Telegram с кратким описанием каждого."
 layout: layout.njk
 ---
 
-# Типы — справочник схемы TL
+# Типы
 
-Полный список: каждый тип схемы TL со ссылкой на страницу с определением, параметрами и описанием. Всего: **597**.
+Все типы схемы TL (620). Имена ведут на страницы со списком конструкторов и методов, возвращающих этот тип.
 
 | Название | Описание |
 |---|---|
-| [Account.AuthorizationForm](/type/account.AuthorizationForm/) | Authorization form |
-| [Account.Authorizations](/type/account.Authorizations/) | Logged-in sessions |
-| [Account.AutoDownloadSettings](/type/account.AutoDownloadSettings/) | Media autodownload settings |
-| [account.AutoSaveSettings](/type/account.AutoSaveSettings/) | Contains media autosave settings |
-| [account.BusinessChatLinks](/type/account.BusinessChatLinks/) | Contains info about [business chat deep links »](https://core.telegram.org/api/business#business-chat-links) created by the current account. |
-| [account.ChatThemes](/type/account.ChatThemes/) | Available chat themes |
-| [account.ConnectedBots](/type/account.ConnectedBots/) | Info about currently connected [business bots](https://core.telegram.org/api/bots/connected-business-bots). |
-| [account.ContentSettings](/type/account.ContentSettings/) | Sensitive content settings |
-| [account.EmailVerified](/type/account.EmailVerified/) | Email verification status |
-| [account.EmojiStatuses](/type/account.EmojiStatuses/) | A list of [emoji statuses](https://core.telegram.org/api/emoji-status) |
-| [account.PaidMessagesRevenue](/type/account.PaidMessagesRevenue/) | Total number of non-refunded [Telegram Stars](https://core.telegram.org/api/stars) a user has spent on sending us messages either directly or through a channel, see [here »](https://core.telegram.org/api/paid-messages) for more info on paid messages. |
-| [Account.PasskeyRegistrationOptions](/type/account.PasskeyRegistrationOptions/) | Passkey registration options, see [here »](https://core.telegram.org/api/passkeys#creating-a-passkey) for more info on the full flow. |
-| [Account.Passkeys](/type/account.Passkeys/) | List of [passkeys »](https://core.telegram.org/api/passkeys#list-passkeys) associated to the current account. |
-| [account.Password](/type/account.Password/) | Configuration for two-factor authorization |
-| [account.PasswordInputSettings](/type/account.PasswordInputSettings/) | Constructor for setting up a new [2FA SRP password](/api/srp/) |
-| [account.PasswordSettings](/type/account.PasswordSettings/) | Private info associated to the password info (recovery email, telegram [passport](https://core.telegram.org/passport) info & so on) |
-| [Account.PrivacyRules](/type/account.PrivacyRules/) | Privacy rules |
-| [account.ResetPasswordResult](/type/account.ResetPasswordResult/) | Result of an [account.resetPassword](/method/account.resetPassword/) request. |
-| [account.ResolvedBusinessChatLinks](/type/account.ResolvedBusinessChatLinks/) | Contains info about a single resolved [business chat deep link »](https://core.telegram.org/api/business#business-chat-links). |
-| [account.SavedMusicIds](/type/account.SavedMusicIds/) | List of IDs of songs ([document](/constructor/document/).`id`s) currently pinned on our profile, see [here »](https://core.telegram.org/api/profile#music) for more info. |
-| [account.SavedRingtone](/type/account.SavedRingtone/) | Contains information about a saved notification sound |
-| [account.SavedRingtones](/type/account.SavedRingtones/) | Contains a list of saved notification sounds |
-| [account.SentEmailCode](/type/account.SentEmailCode/) | The email code that was sent |
-| [Account.Takeout](/type/account.Takeout/) | Takeout info |
-| [account.Themes](/type/account.Themes/) | Installed themes |
-| [Account.TmpPassword](/type/account.TmpPassword/) | Temporary password |
-| [Account.WallPapers](/type/account.WallPapers/) | [Wallpapers](https://core.telegram.org/api/wallpapers) |
-| [Account.WebAuthorizations](/type/account.WebAuthorizations/) | Web authorizations |
-| [AccountDaysTTL](/type/AccountDaysTTL/) | Time-to-live of current account |
-| [AttachMenuBot](/type/AttachMenuBot/) | Represents a [bot mini app that can be launched from the attachment menu »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
-| [AttachMenuBotIcon](/type/AttachMenuBotIcon/) | Represents an attachment menu icon for [bot mini apps »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
-| [AttachMenuBotIconColor](/type/AttachMenuBotIconColor/) | Represents an attachment menu icon color for [bot mini apps »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
-| [AttachMenuBots](/type/AttachMenuBots/) | Represents a list of [bot mini apps that can be launched from the attachment menu »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
-| [AttachMenuBotsBot](/type/AttachMenuBotsBot/) | Represents a [bot mini app that can be launched from the attachment menu »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
-| [AttachMenuPeerType](/type/AttachMenuPeerType/) | Indicates a supported peer type for a [bot mini app attachment menu](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
-| [AuctionBidLevel](/type/AuctionBidLevel/) | Describes a bid in an [auction](https://core.telegram.org/api/auctions). |
-| [auth.Authorization](/type/auth.Authorization/) | Object contains info on user authorization. |
-| [auth.CodeType](/type/auth.CodeType/) | Type of verification code that will be sent next if you call the resendCode method |
-| [Auth.ExportedAuthorization](/type/auth.ExportedAuthorization/) | Exported authorization |
-| [auth.LoggedOut](/type/auth.LoggedOut/) | [Future auth token »](https://core.telegram.org/api/auth/#future-auth-tokens) to be used on subsequent authorizations |
-| [auth.LoginToken](/type/auth.LoginToken/) | Login token (for QR code login) |
-| [Auth.PasskeyLoginOptions](/type/auth.PasskeyLoginOptions/) | Passkey login options, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for more info on the full flow. |
-| [auth.PasswordRecovery](/type/auth.PasswordRecovery/) | Recovery info of a [2FA password](/api/srp/), only for accounts with a [recovery email configured](https://core.telegram.org/api/srp/#email-verification). |
-| [auth.SentCode](/type/auth.SentCode/) | Contains info on a confirmation code message sent via SMS, phone call or Telegram. |
-| [auth.SentCodeType](/type/auth.SentCodeType/) | Type of the verification code that was sent |
-| [Authorization](/type/Authorization/) | Represents a logged-in session |
-| [AutoDownloadSettings](/type/AutoDownloadSettings/) | Media autodownload settings |
-| [AutoSaveException](/type/AutoSaveException/) | Peer-specific autosave settings |
-| [AutoSaveSettings](/type/AutoSaveSettings/) | Media autosave settings |
-| [AvailableEffect](/type/AvailableEffect/) | Describes a [message effect »](https://core.telegram.org/api/effects). |
-| [AvailableReaction](/type/AvailableReaction/) | Animations associated with a message reaction |
-| [BankCardOpenUrl](/type/BankCardOpenUrl/) | Credit card info URL provided by the bank |
-| [BaseTheme](/type/BaseTheme/) | Basic theme settings |
-| [Birthday](/type/Birthday/) | [Birthday](https://core.telegram.org/api/profile#birthday) information for a user. |
-| [Bool](/type/Bool/) | Boolean type. |
-| [Boost](/type/Boost/) | Info about one or more [boosts](https://core.telegram.org/api/boost) applied by a specific user. |
-| [BotApp](/type/BotApp/) | Contains information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps). |
-| [BotAppSettings](/type/BotAppSettings/) | [Mini app »](https://core.telegram.org/api/bots/webapps) settings |
-| [BotBusinessConnection](/type/BotBusinessConnection/) | Contains info about a [bot business connection](https://core.telegram.org/api/bots/connected-business-bots). |
-| [BotCommand](/type/BotCommand/) | Describes a bot command that can be used in a chat |
-| [BotCommandScope](/type/BotCommandScope/) | Represents a scope where the bot commands, specified using [bots.setBotCommands](/method/bots.setBotCommands/) will be valid. |
-| [BotInfo](/type/BotInfo/) | Info about bots (available bot commands, etc) |
-| [BotInlineMessage](/type/BotInlineMessage/) | Inline message |
-| [BotInlineResult](/type/BotInlineResult/) | Results of an inline query |
-| [BotMenuButton](/type/BotMenuButton/) | Indicates the action to execute when pressing the in-UI menu button for bots |
-| [BotPreviewMedia](/type/BotPreviewMedia/) | Represents a [Main Mini App preview media, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info. |
-| [bots.BotInfo](/type/bots.BotInfo/) | Localized name, about text and description of a bot. |
-| [bots.PopularAppBots](/type/bots.PopularAppBots/) | Popular [Main Mini Apps](https://core.telegram.org/api/bots/webapps#main-mini-apps), to be used in the [apps tab of global search »](https://core.telegram.org/api/search#apps-tab). |
-| [bots.PreviewInfo](/type/bots.PreviewInfo/) | Contains info about [Main Mini App previews, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info. |
-| [BotVerification](/type/BotVerification/) | Describes a [bot verification icon »](https://core.telegram.org/api/bots/verification). |
-| [BotVerifierSettings](/type/BotVerifierSettings/) | Info about the current [verifier bot »](https://core.telegram.org/api/bots/verification). |
-| [BusinessAwayMessage](/type/BusinessAwayMessage/) | Describes a [Telegram Business away message](https://core.telegram.org/api/business#away-messages), automatically sent to users writing to us when we're offline, during closing hours, while we're on vacation, or in some other custom time period when we cannot immediately answer to the user. |
-| [BusinessAwayMessageSchedule](/type/BusinessAwayMessageSchedule/) | Specifies when should the [Telegram Business away messages](https://core.telegram.org/api/business#away-messages) be sent. |
-| [BusinessBotRecipients](/type/BusinessBotRecipients/) | Specifies the private chats that a [connected business bot »](https://core.telegram.org/api/bots/connected-business-bots) may receive messages and interact with. |
-| [BusinessBotRights](/type/BusinessBotRights/) | [Business bot rights](https://core.telegram.org/api/bots/connected-business-bots). |
-| [BusinessChatLink](/type/BusinessChatLink/) | Contains info about a [business chat deep link »](https://core.telegram.org/api/business#business-chat-links) created by the current account. |
-| [BusinessGreetingMessage](/type/BusinessGreetingMessage/) | Describes a [Telegram Business greeting](https://core.telegram.org/api/business#greeting-messages), automatically sent to new users writing to us in private for the first time, or after a certain inactivity period. |
-| [BusinessIntro](/type/BusinessIntro/) | [Telegram Business introduction »](https://core.telegram.org/api/business#business-introduction). |
-| [BusinessLocation](/type/BusinessLocation/) | Represents the location of a [Telegram Business »](https://core.telegram.org/api/business#location). |
-| [BusinessRecipients](/type/BusinessRecipients/) | Specifies the chats that **can** receive Telegram Business [away »](https://core.telegram.org/api/business#away-messages) and [greeting »](https://core.telegram.org/api/business#greeting-messages) messages. |
-| [BusinessWeeklyOpen](/type/BusinessWeeklyOpen/) | A time interval, indicating the opening hours of a [Telegram Business](https://core.telegram.org/api/business#opening-hours). |
-| [BusinessWorkHours](/type/BusinessWorkHours/) | Specifies a set of [Telegram Business opening hours](https://core.telegram.org/api/business#opening-hours). |
-| [bytes](/type/bytes/) | Basic bare type. It is an alias of the **[string](/type/string/)** type, with the difference that the value may contain arbitrary byte sequences, including invalid UTF-8 sequences. When computing crc32 for a constructor or method it is necessary to replace all byte types with string types. |
-| [CdnConfig](/type/CdnConfig/) | Configuration for [CDN](https://core.telegram.org/cdn) file downloads. |
-| [CdnPublicKey](/type/CdnPublicKey/) | Public key to use **only** during handshakes to [CDN](https://core.telegram.org/cdn) DCs. |
-| [ChannelAdminLogEvent](/type/ChannelAdminLogEvent/) | An event in a channel admin log |
-| [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/) | Channel admin log event |
-| [ChannelAdminLogEventsFilter](/type/ChannelAdminLogEventsFilter/) | Filter for fetching events in the channel admin log |
-| [ChannelLocation](/type/ChannelLocation/) | Geographical location of supergroup (geogroups) |
-| [ChannelMessagesFilter](/type/ChannelMessagesFilter/) | Filter for fetching only certain types of channel messages |
-| [ChannelParticipant](/type/ChannelParticipant/) | Channel participant |
-| [ChannelParticipantsFilter](/type/ChannelParticipantsFilter/) | Filter for fetching channel participants |
-| [Channels.AdminLogResults](/type/channels.AdminLogResults/) | Admin log events |
-| [Channels.ChannelParticipant](/type/channels.ChannelParticipant/) | Channel participant |
-| [Channels.ChannelParticipants](/type/channels.ChannelParticipants/) | Channel/supergroup participants |
-| [channels.SendAsPeers](/type/channels.SendAsPeers/) | A list of peers that can be used to send messages in a specific group |
-| [channels.SponsoredMessageReportResult](/type/channels.SponsoredMessageReportResult/) | Status of the method call used to report a [sponsored message »](https://core.telegram.org/api/sponsored-messages). |
-| [Chat](/type/Chat/) | Object defines a group. |
-| [ChatAdminRights](/type/ChatAdminRights/) | Represents the rights of an admin in a [channel/supergroup](https://core.telegram.org/api/channel). |
-| [ChatAdminWithInvites](/type/ChatAdminWithInvites/) | Info about chat invites generated by admins. |
-| [ChatBannedRights](/type/ChatBannedRights/) | Represents the rights of a normal user in a [supergroup/channel/chat](https://core.telegram.org/api/channel). |
-| [ChatFull](/type/ChatFull/) | Full info about a [channel](https://core.telegram.org/api/channel#channels), [supergroup](https://core.telegram.org/api/channel#supergroups), [gigagroup](https://core.telegram.org/api/channel#gigagroups) or [basic group](https://core.telegram.org/api/channel#basic-groups). |
-| [ChatInvite](/type/ChatInvite/) | Chat invite |
-| [ChatInviteImporter](/type/ChatInviteImporter/) | When and which user joined the chat using a chat invite |
-| [chatlists.ChatlistInvite](/type/chatlists.ChatlistInvite/) | Info about a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| [chatlists.ChatlistUpdates](/type/chatlists.ChatlistUpdates/) | Updated info about a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| [chatlists.ExportedChatlistInvite](/type/chatlists.ExportedChatlistInvite/) | Exported [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| [chatlists.ExportedInvites](/type/chatlists.ExportedInvites/) | A list of exported [chat folder deep links »](https://core.telegram.org/api/links#chat-folder-links). |
-| [ChatOnlines](/type/ChatOnlines/) | Number of online users in a chat |
-| [ChatParticipant](/type/ChatParticipant/) | Details of a group member. |
-| [ChatParticipants](/type/ChatParticipants/) | Contains the full list of members of [basic groups »](https://core.telegram.org/api/channel#basic-groups); is **NOT** usable for supergroups/channels. |
-| [ChatPhoto](/type/ChatPhoto/) | Object defines a group profile photo. |
-| [ChatReactions](/type/ChatReactions/) | Available chat reactions |
-| [ChatTheme](/type/ChatTheme/) | A chat theme |
-| [CodeSettings](/type/CodeSettings/) | Settings for the code type to send |
-| [Config](/type/Config/) | Object contains info on API configuring parameters. |
-| [ConnectedBot](/type/ConnectedBot/) | Contains info about a [connected business bot »](https://core.telegram.org/api/bots/connected-business-bots). |
-| [ConnectedBotStarRef](/type/ConnectedBotStarRef/) | Info about an [active affiliate program we have with a Mini App](https://core.telegram.org/api/bots/referrals#becoming-an-affiliate) |
-| [Contact](/type/Contact/) | A contact of the current user. |
-| [ContactBirthday](/type/ContactBirthday/) | Birthday information of a contact. |
-| [contacts.Blocked](/type/contacts.Blocked/) | Info on users from the current user's black list. |
-| [contacts.ContactBirthdays](/type/contacts.ContactBirthdays/) | Birthday information of our contacts. |
-| [contacts.Contacts](/type/contacts.Contacts/) | Info on the current user's contact list. |
-| [contacts.Found](/type/contacts.Found/) | Object contains info on users found by name substring and auxiliary data. |
-| [contacts.ImportedContacts](/type/contacts.ImportedContacts/) | Object contains info on successfully imported contacts. |
-| [Contacts.ResolvedPeer](/type/contacts.ResolvedPeer/) | Peer returned after resolving a `@username` |
-| [contacts.SponsoredPeers](/type/contacts.SponsoredPeers/) | A list of sponsored peers. |
-| [Contacts.TopPeers](/type/contacts.TopPeers/) | Top peers |
-| [ContactStatus](/type/ContactStatus/) | Contact status: online / offline. |
-| [DataJSON](/type/DataJSON/) | Represent a JSON-encoded object |
-| [DcOption](/type/DcOption/) | Information for connection to data center. |
-| [DecryptedMessage](/type/DecryptedMessage/) | Object describes the contents of an encrypted message. |
-| [DecryptedMessageAction](/type/DecryptedMessageAction/) | Object describes the action to which a service message is linked. |
-| [DecryptedMessageLayer](/type/DecryptedMessageLayer/) | Object describes encrypted message content in relation to the required layer. |
-| [DecryptedMessageMedia](/type/DecryptedMessageMedia/) | Object describes media contents of an encrypted message. |
-| [DefaultHistoryTTL](/type/DefaultHistoryTTL/) | Contains info about the default value of the Time-To-Live setting, applied to all new chats. |
-| [Dialog](/type/Dialog/) | Chat info. |
-| [DialogFilter](/type/DialogFilter/) | Dialog filter ([folder »](https://core.telegram.org/api/folders)) |
-| [DialogFilterSuggested](/type/DialogFilterSuggested/) | Suggested dialog filters ([folder »](https://core.telegram.org/api/folders)) |
-| [DialogPeer](/type/DialogPeer/) | Peer, or all peers in a folder |
-| [DisallowedGiftsSettings](/type/DisallowedGiftsSettings/) | Disallow the reception of specific [gift](https://core.telegram.org/api/gifts) types. |
-| [Document](/type/Document/) | A document. |
-| [DocumentAttribute](/type/DocumentAttribute/) | Various possible attributes of a document (used to define if it's a sticker, a GIF, a video, a mask sticker, an image, an audio, and so on) #### [End-to-end schema](/schema/end-to-end/) ``` ===23=== documentAttributeAnimated#11b58939 = DocumentAttribute; documentAttributeAudio#051448e5 duration:int = DocumentAttribute; documentAttributeFilename#15590068 file_name:string = DocumentAttribute; documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute; documentAttributeSticker#fb0a5727 = DocumentAttribute; documentAttributeVideo#5910cccb duration:int w:int h:int = DocumentAttribute; ===45=== documentAttributeAudio#ded218e0 duration:int title:string performer:string = DocumentAttribute; documentAttributeSticker#3a556302 alt:string stickerset:InputStickerSet = DocumentAttribute; ===46=== documentAttributeAudio#9852f9c6 flags:# duration:int title:flags.0?string performer:flags.1?string waveform:flags.2?bytes = DocumentAttribute; ===66=== documentAttributeVideo#0ef02ce6 flags:# duration:int w:int h:int = DocumentAttribute; ``` API schema: |
-| [double](/type/double/) | A basic bare type, values of which correspond two-element sequences containing 64-bit real numbers in a standard _double_ format. [More on basic types»](/mtproto/serialize/) |
-| [DraftMessage](/type/DraftMessage/) | Represents a message [draft](https://core.telegram.org/api/drafts). |
-| [EmailVerification](/type/EmailVerification/) | Email verification code or token |
-| [EmailVerifyPurpose](/type/EmailVerifyPurpose/) | Email verification purpose |
-| [EmojiGroup](/type/EmojiGroup/) | Represents an [emoji category](https://core.telegram.org/api/emoji-categories). |
-| [EmojiKeyword](/type/EmojiKeyword/) | Emoji keyword |
-| [EmojiKeywordsDifference](/type/EmojiKeywordsDifference/) | New emoji keywords |
-| [EmojiLanguage](/type/EmojiLanguage/) | Emoji language |
-| [EmojiList](/type/EmojiList/) | Represents a list of [custom emojis](https://core.telegram.org/api/custom-emoji). |
-| [EmojiStatus](/type/EmojiStatus/) | [Emoji status](https://core.telegram.org/api/emoji-status) |
-| [EmojiURL](/type/EmojiURL/) | Emoji URL |
-| [EncryptedChat](/type/EncryptedChat/) | Object contains info on an encrypted chat. |
-| [EncryptedFile](/type/EncryptedFile/) | Seta an encrypted file. |
-| [EncryptedMessage](/type/EncryptedMessage/) | Object contains encrypted message. |
-| [Error](/type/Error/) | An object containing a query error. |
-| [ExportedChatInvite](/type/ExportedChatInvite/) | Exported chat invite |
-| [ExportedChatlistInvite](/type/ExportedChatlistInvite/) | An exported [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| [ExportedContactToken](/type/ExportedContactToken/) | Describes a [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links). |
-| [ExportedMessageLink](/type/ExportedMessageLink/) | HTTP link and embed info of channel message |
-| [ExportedStoryLink](/type/ExportedStoryLink/) | Represents a [story deep link](https://core.telegram.org/api/stories#story-links) |
-| [FactCheck](/type/FactCheck/) | Represents a [fact-check »](https://core.telegram.org/api/factcheck) created by an independent fact-checker. |
-| [FileHash](/type/FileHash/) | Hash of an uploaded file, to be checked for validity after download |
-| [FileLocation](/type/FileLocation/) | Indicates the location of a photo, will be deprecated soon |
-| [Folder](/type/Folder/) | A folder |
-| [FolderPeer](/type/FolderPeer/) | Peer associated to folder |
-| [ForumTopic](/type/ForumTopic/) | Contains information about a [forum topic](https://core.telegram.org/api/forum#forum-topics) |
-| [FoundStory](/type/FoundStory/) | A story found using [global story search »](https://core.telegram.org/api/stories#searching-stories). |
-| [fragment.CollectibleInfo](/type/fragment.CollectibleInfo/) | Info about a [fragment collectible](https://core.telegram.org/api/fragment). |
-| [Game](/type/Game/) | Indicates an already sent game |
-| [GeoPoint](/type/GeoPoint/) | Object defines a GeoPoint. |
-| [GeoPointAddress](/type/GeoPointAddress/) | Address optionally associated to a [geoPoint](/constructor/geoPoint/). |
-| [GlobalPrivacySettings](/type/GlobalPrivacySettings/) | Global privacy settings |
-| [GroupCall](/type/GroupCall/) | A group call |
-| [GroupCallDonor](/type/GroupCallDonor/) | Describes a live story donor in the [donation leaderboard »](https://core.telegram.org/api/group-calls#paid-live-story-donations). |
-| [GroupCallMessage](/type/GroupCallMessage/) | Represents an in-call message, [emoji reaction »](https://core.telegram.org/api/group-calls#in-call-reactions), paid live story comment or standalone paid live story donation. #### [End-to-end schema](/schema/end-to-end/) ``` ===216=== groupCallMessage#907ce88e random_id:long message:TextWithEntities = GroupCallMessage; ``` API schema: |
-| [GroupCallParticipant](/type/GroupCallParticipant/) | Info about a group call participant |
-| [GroupCallParticipantVideo](/type/GroupCallParticipantVideo/) | Info about a video stream |
-| [GroupCallParticipantVideoSourceGroup](/type/GroupCallParticipantVideoSourceGroup/) | Describes a group of video synchronization source identifiers |
-| [GroupCallStreamChannel](/type/GroupCallStreamChannel/) | Info about an RTMP stream in a group call or livestream |
-| [help.AppConfig](/type/help.AppConfig/) | Contains various [client configuration parameters](https://core.telegram.org/api/config#client-configuration) |
-| [help.AppUpdate](/type/help.AppUpdate/) | Contains info on app update availability. |
-| [help.CountriesList](/type/help.CountriesList/) | Name, ISO code, localized name and phone codes/patterns of all available countries |
-| [help.Country](/type/help.Country/) | Name, ISO code, localized name and phone codes/patterns of a specific country |
-| [help.CountryCode](/type/help.CountryCode/) | Country code and phone number pattern of a specific country |
-| [Help.DeepLinkInfo](/type/help.DeepLinkInfo/) | Contains information about an unsupported [deep link »](https://core.telegram.org/api/links#unsupported-links) |
-| [help.InviteText](/type/help.InviteText/) | Object contains info on the text of a message with an invitation. |
-| [Help.PassportConfig](/type/help.PassportConfig/) | Telegram [passport](https://core.telegram.org/passport) configuration |
-| [Help.PeerColorOption](/type/help.PeerColorOption/) | Contains info about a [color palette »](https://core.telegram.org/api/colors). |
-| [Help.PeerColors](/type/help.PeerColors/) | Contains info about multiple [color palettes »](https://core.telegram.org/api/colors). |
-| [Help.PeerColorSet](/type/help.PeerColorSet/) | Contains info about a [color palette »](https://core.telegram.org/api/colors). |
-| [help.PremiumPromo](/type/help.PremiumPromo/) | Telegram Premium promotion information |
-| [help.PromoData](/type/help.PromoData/) | Info about pinned MTProxy or Public Service Announcement peers. |
-| [Help.RecentMeUrls](/type/help.RecentMeUrls/) | Recent t.me URLs |
-| [help.Support](/type/help.Support/) | Info about the support user, relevant to the current user. |
-| [Help.SupportName](/type/help.SupportName/) | Get localized name for support user |
-| [help.TermsOfService](/type/help.TermsOfService/) | Contains info about the latest telegram Terms Of Service. |
-| [Help.TermsOfServiceUpdate](/type/help.TermsOfServiceUpdate/) | Update of Telegram's terms of service |
-| [help.TimezonesList](/type/help.TimezonesList/) | Timezone information that may be used elsewhere in the API, such as to set [Telegram Business opening hours »](https://core.telegram.org/api/business#opening-hours). |
-| [Help.UserInfo](/type/help.UserInfo/) | User info |
-| [HighScore](/type/HighScore/) | Game high score |
-| [ImportedContact](/type/ImportedContact/) | Object contains info on a successfully imported contact. |
-| [InlineBotSwitchPM](/type/InlineBotSwitchPM/) | The bot requested the user to message them in private |
-| [InlineBotWebView](/type/InlineBotWebView/) | Specifies an [inline mode mini app](https://core.telegram.org/api/bots/webapps#inline-mode-mini-apps) button, shown on top of the inline query results list. |
-| [InlineQueryPeerType](/type/InlineQueryPeerType/) | Inline query peer type. |
-| [InputAppEvent](/type/InputAppEvent/) | Object contains info about an event that occurred in the application. |
-| [InputBotApp](/type/InputBotApp/) | Used to fetch information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps) |
-| [InputBotInlineMessage](/type/InputBotInlineMessage/) | Represents a sent inline message from the perspective of a bot |
-| [InputBotInlineMessageID](/type/InputBotInlineMessageID/) | Represents a sent inline message from the perspective of a bot |
-| [InputBotInlineResult](/type/InputBotInlineResult/) | Inline bot result |
-| [InputBusinessAwayMessage](/type/InputBusinessAwayMessage/) | Describes a [Telegram Business away message](https://core.telegram.org/api/business#away-messages), automatically sent to users writing to us when we're offline, during closing hours, while we're on vacation, or in some other custom time period when we cannot immediately answer to the user. |
-| [InputBusinessBotRecipients](/type/InputBusinessBotRecipients/) | Specifies the private chats that a [connected business bot »](https://core.telegram.org/api/bots/connected-business-bots) may interact with. |
-| [InputBusinessChatLink](/type/InputBusinessChatLink/) | Contains info about a [business chat deep link »](https://core.telegram.org/api/business#business-chat-links) to be created by the current account. |
-| [InputBusinessGreetingMessage](/type/InputBusinessGreetingMessage/) | Describes a [Telegram Business greeting](https://core.telegram.org/api/business#greeting-messages), automatically sent to new users writing to us in private for the first time, or after a certain inactivity period. |
-| [InputBusinessIntro](/type/InputBusinessIntro/) | [Telegram Business introduction »](https://core.telegram.org/api/business#business-introduction). |
-| [InputBusinessRecipients](/type/InputBusinessRecipients/) | Specifies the chats that **can** receive Telegram Business [away »](https://core.telegram.org/api/business#away-messages) and [greeting »](https://core.telegram.org/api/business#greeting-messages) messages. If `exclude_selected` is set, specifies all chats that **cannot** receive Telegram Business [away »](https://core.telegram.org/api/business#away-messages) and [greeting »](https://core.telegram.org/api/business#greeting-messages) messages. |
-| [InputChannel](/type/InputChannel/) | Represents a channel |
-| [InputChatlist](/type/InputChatlist/) | Represents a folder |
-| [InputChatPhoto](/type/InputChatPhoto/) | Defines a new group profile photo. |
-| [InputChatTheme](/type/InputChatTheme/) | Specifies a [chat theme »](https://core.telegram.org/api/themes#chat-themes). |
-| [InputCheckPasswordSRP](/type/InputCheckPasswordSRP/) | Constructors for checking the validity of a [2FA SRP password](/api/srp/). See [here »](https://core.telegram.org/api/srp/#using-the-2fa-password) for more info on the 2FA authentication flow for methods that require it, before and after login. |
-| [InputClientProxy](/type/InputClientProxy/) | Info about an [MTProxy](https://core.telegram.org/mtproto/mtproto-transports/#transport-obfuscation) used to connect. |
-| [InputCollectible](/type/InputCollectible/) | Represents a [Fragment collectible »](https://core.telegram.org/api/fragment). |
-| [InputContact](/type/InputContact/) | Object defines a contact from the user's phone book. |
-| [InputDialogPeer](/type/InputDialogPeer/) | Peer, or all peers in a certain folder |
-| [InputDocument](/type/InputDocument/) | Defines a document for subsequent interaction. |
-| [InputEncryptedChat](/type/InputEncryptedChat/) | An [e2e encrypted chat](/api/end-to-end/). |
-| [InputEncryptedFile](/type/InputEncryptedFile/) | Object sets encrypted file for attachment |
-| [InputFile](/type/InputFile/) | Defines a file uploaded by the client. |
-| [InputFileLocation](/type/InputFileLocation/) | Defines the location of a file for download. |
-| [InputFolderPeer](/type/InputFolderPeer/) | Peer in a folder |
-| [InputGame](/type/InputGame/) | A game to send |
-| [InputGeoPoint](/type/InputGeoPoint/) | Defines a GeoPoint. |
-| [InputGroupCall](/type/InputGroupCall/) | Indicates a group call |
-| [InputInvoice](/type/InputInvoice/) | An invoice |
-| [InputMedia](/type/InputMedia/) | Defines media content of a message. |
-| [InputMessage](/type/InputMessage/) | A message |
-| [InputNotifyPeer](/type/InputNotifyPeer/) | Object defines the set of users and/or groups that generate notifications. |
-| [InputPasskeyCredential](/type/InputPasskeyCredential/) | Credential used to register a [passkey »](https://core.telegram.org/api/passkeys) or to log in with one. |
-| [InputPasskeyResponse](/type/InputPasskeyResponse/) | WebAuthn response generated by the authenticator when registering or logging in with a [public-key passkey »](https://core.telegram.org/api/passkeys). |
-| [InputPaymentCredentials](/type/InputPaymentCredentials/) | Payment credentials |
-| [InputPeer](/type/InputPeer/) | Peer |
-| [InputPeerNotifySettings](/type/InputPeerNotifySettings/) | Notifications settings. |
-| [InputPhoneCall](/type/InputPhoneCall/) | Phone call |
-| [InputPhoto](/type/InputPhoto/) | Defines a photo for further interaction. |
-| [InputPrivacyKey](/type/InputPrivacyKey/) | Privacy **keys** together with [privacy rules »](https://core.telegram.org/api/privacy#privacy-rules) indicate _what_ can or can't someone do and are specified by a [PrivacyKey](/type/PrivacyKey/) constructor, and its input counterpart [InputPrivacyKey](/type/InputPrivacyKey/). See the [privacy documentation »](https://core.telegram.org/api/privacy) for more info. |
-| [InputPrivacyRule](/type/InputPrivacyRule/) | Privacy **rules** indicate _who_ can or can't do something and are specified by a [PrivacyRule](/type/PrivacyRule/), and its input counterpart [InputPrivacyRule](/type/InputPrivacyRule/). See the [privacy documentation »](https://core.telegram.org/api/privacy) for more info. |
-| [InputQuickReplyShortcut](/type/InputQuickReplyShortcut/) | Represents a [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts). |
-| [InputReplyTo](/type/InputReplyTo/) | Contains info about a message or story to reply to. |
-| [InputSavedStarGift](/type/InputSavedStarGift/) | Points to a [gift »](https://core.telegram.org/api/gifts). |
-| [InputSecureFile](/type/InputSecureFile/) | Secure [passport](https://core.telegram.org/passport) file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile) |
-| [InputSecureValue](/type/InputSecureValue/) | Secure value, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption) |
-| [InputSingleMedia](/type/InputSingleMedia/) | A single media in an [album or grouped media](https://core.telegram.org/api/files/#albums-grouped-media) sent with [messages.sendMultiMedia](/method/messages.sendMultiMedia/). |
-| [InputStarGiftAuction](/type/InputStarGiftAuction/) | Identifies a [collectible gift auction »](https://core.telegram.org/api/auctions), either by the ID of the linked collectible gift or by an auction deep link slug. |
-| [InputStarsTransaction](/type/InputStarsTransaction/) | Used to fetch info about a [Telegram Star transaction »](https://core.telegram.org/api/stars#balance-and-transaction-history). |
-| [InputStickeredMedia](/type/InputStickeredMedia/) | Represents a media with attached stickers |
-| [InputStickerSet](/type/InputStickerSet/) | Represents a stickerset #### [End-to-end schema](/schema/end-to-end/) ``` ===45=== inputStickerSetEmpty#ffb62b95 = InputStickerSet; inputStickerSetShortName#861cc8a0 short_name:string = InputStickerSet; ``` API schema: |
-| [InputStickerSetItem](/type/InputStickerSetItem/) | Sticker |
-| [InputStorePaymentPurpose](/type/InputStorePaymentPurpose/) | Info about a Telegram Premium purchase |
-| [InputTheme](/type/InputTheme/) | Cloud theme |
-| [InputThemeSettings](/type/InputThemeSettings/) | Theme settings |
-| [InputUser](/type/InputUser/) | Defines a user for subsequent interaction. |
-| [InputWallPaper](/type/InputWallPaper/) | [Wallpaper](https://core.telegram.org/api/wallpapers) |
-| [InputWebDocument](/type/InputWebDocument/) | Specifies a document that will have to be downloaded from the URL by the telegram servers |
-| [InputWebFileLocation](/type/InputWebFileLocation/) | Location of remote file |
-| [int](/type/int/) | A basic bare type, the values of which correspond to single-element sequences, i.e. numbers from -2^31 to 2^31-1 which in this case represent themselves. [More on basic types »](/mtproto/serialize/) |
-| [int256](/type/int256/) | A basic bare type, the values of which correspond to a 256-bit integer. [More on basic types »](/mtproto/serialize/) |
-| [Invoice](/type/Invoice/) | Invoice |
-| [JSONObjectValue](/type/JSONObjectValue/) | JSON key: value pair #### [End-to-end schema](/schema/end-to-end/) ``` ===216=== jsonObjectValue#c0de1bd9 key:string value:JSONValue = JSONObjectValue; ``` API schema: |
-| [JSONValue](/type/JSONValue/) | JSON value #### [End-to-end schema](/schema/end-to-end/) ``` ===216=== jsonArray#f7444763 value:Vector<JSONValue> = JSONValue; jsonBool#c7345e6a value:Bool = JSONValue; jsonNull#3f6d7b68 = JSONValue; jsonNumber#2be0dfa4 value:double = JSONValue; jsonObject#99c1d49d value:Vector<JSONObjectValue> = JSONValue; jsonString#b71e767a value:string = JSONValue; ``` API schema: |
-| [KeyboardButton](/type/KeyboardButton/) | Bot or inline keyboard buttons |
-| [KeyboardButtonRow](/type/KeyboardButtonRow/) | Bot or inline keyboard rows |
-| [KeyboardButtonStyle](/type/KeyboardButtonStyle/) | This constructor allows setting a custom background color and custom emoji label for a button, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info. |
-| [LabeledPrice](/type/LabeledPrice/) | Labeled pricetag |
-| [LangPackDifference](/type/LangPackDifference/) | Language pack changes |
-| [LangPackLanguage](/type/LangPackLanguage/) | Language pack language |
-| [LangPackString](/type/LangPackString/) | Language pack string |
-| [long](/type/long/) | A basic bare type, elements of which correspond to two-element sequences, representing 64-bit signed numbers (little-endian). [More on basic types »](/mtproto/serialize/) |
-| [MaskCoords](/type/MaskCoords/) | Mask coordinates (if this is a mask sticker, attached to a photo) |
-| [MediaArea](/type/MediaArea/) | Represents a [story media area »](https://core.telegram.org/api/stories#media-areas) |
-| [MediaAreaCoordinates](/type/MediaAreaCoordinates/) | Coordinates and size of a clickable rectangular area on top of a story. |
-| [Message](/type/Message/) | Object describing a message. |
-| [MessageAction](/type/MessageAction/) | Object describing actions connected to a service message. |
-| [MessageEntity](/type/MessageEntity/) | Message entities, representing styled text in a message #### [End-to-end schema](/schema/end-to-end/) ``` ===45=== messageEntityBold#bd610bc9 offset:int length:int = MessageEntity; messageEntityBotCommand#6cef8ac7 offset:int length:int = MessageEntity; messageEntityCode#28a20571 offset:int length:int = MessageEntity; messageEntityEmail#64e475c2 offset:int length:int = MessageEntity; messageEntityHashtag#6f635b0d offset:int length:int = MessageEntity; messageEntityItalic#826f8b60 offset:int length:int = MessageEntity; messageEntityMention#fa04579d offset:int length:int = MessageEntity; messageEntityPre#73924be0 offset:int length:int language:string = MessageEntity; messageEntityTextUrl#76a6d327 offset:int length:int url:string = MessageEntity; messageEntityUnknown#bb92ba95 offset:int length:int = MessageEntity; messageEntityUrl#6ed02538 offset:int length:int = MessageEntity; ===101=== messageEntityBlockquote#020df5d0 offset:int length:int = MessageEntity; messageEntityStrike#bf0693d4 offset:int length:int = MessageEntity; messageEntityUnderline#9c4e7e8b offset:int length:int = MessageEntity; ===144=== messageEntityCustomEmoji#c8cf05f8 offset:int length:int document_id:long = MessageEntity; messageEntitySpoiler#32ca960f offset:int length:int = MessageEntity; ``` API schema: |
-| [MessageExtendedMedia](/type/MessageExtendedMedia/) | [Paid media, see here »](https://core.telegram.org/api/paid-media) for more info. |
-| [MessageFwdHeader](/type/MessageFwdHeader/) | Info about a forwarded message |
-| [MessageMedia](/type/MessageMedia/) | Media |
-| [MessagePeerReaction](/type/MessagePeerReaction/) | How a certain peer reacted to the message |
-| [MessagePeerVote](/type/MessagePeerVote/) | How a user voted in a poll |
-| [MessageRange](/type/MessageRange/) | Indicates a range of chat messages |
-| [MessageReactions](/type/MessageReactions/) | [Message reactions »](https://core.telegram.org/api/reactions) |
-| [MessageReactor](/type/MessageReactor/) | Info about a user in the [paid Star reactions leaderboard](https://core.telegram.org/api/reactions#paid-reactions) for a message. |
-| [MessageReplies](/type/MessageReplies/) | Info about [post comments (for channels) or message replies (for groups)](https://core.telegram.org/api/threads) |
-| [MessageReplyHeader](/type/MessageReplyHeader/) | Reply information |
-| [MessageReportOption](/type/MessageReportOption/) | Report menu option |
-| [messages.AffectedFoundMessages](/type/messages.AffectedFoundMessages/) | Messages found and affected by changes |
-| [messages.AffectedHistory](/type/messages.AffectedHistory/) | Object contains info on affected part of communication history with the user or in a chat. |
-| [Messages.AffectedMessages](/type/messages.AffectedMessages/) | Messages affected by changes |
-| [Messages.AllStickers](/type/messages.AllStickers/) | All stickers |
-| [Messages.ArchivedStickers](/type/messages.ArchivedStickers/) | Archived stickers |
-| [messages.AvailableEffects](/type/messages.AvailableEffects/) | Full list of usable [animated message effects »](https://core.telegram.org/api/effects). |
-| [messages.AvailableReactions](/type/messages.AvailableReactions/) | Animations and metadata associated with [message reactions »](https://core.telegram.org/api/reactions) |
-| [messages.BotApp](/type/messages.BotApp/) | Contains information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps) |
-| [Messages.BotCallbackAnswer](/type/messages.BotCallbackAnswer/) | Callback answer of bot |
-| [Messages.BotPreparedInlineMessage](/type/messages.BotPreparedInlineMessage/) | Represents a [prepared inline message saved by a bot, to be sent to the user via a web app »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message) |
-| [messages.BotResults](/type/messages.BotResults/) | Result of a query to an inline bot |
-| [messages.ChatAdminsWithInvites](/type/messages.ChatAdminsWithInvites/) | Info about chat invites generated by admins. |
-| [messages.ChatFull](/type/messages.ChatFull/) | Full info about a [channel](https://core.telegram.org/api/channel#channels), [supergroup](https://core.telegram.org/api/channel#supergroups), [gigagroup](https://core.telegram.org/api/channel#gigagroups) or [basic group](https://core.telegram.org/api/channel#basic-groups). |
-| [messages.ChatInviteImporters](/type/messages.ChatInviteImporters/) | List of users that imported a chat invitation link. |
-| [messages.Chats](/type/messages.Chats/) | Object contains list of chats with auxiliary data. |
-| [messages.CheckedHistoryImportPeer](/type/messages.CheckedHistoryImportPeer/) | Contains a confirmation text to be shown to the user, upon [importing chat history, click here for more info »](https://core.telegram.org/api/import). |
-| [Messages.DhConfig](/type/messages.DhConfig/) | Contains Diffie-Hellman key generation protocol parameters. |
-| [messages.DialogFilters](/type/messages.DialogFilters/) | [Folder](https://core.telegram.org/api/folders) information |
-| [messages.Dialogs](/type/messages.Dialogs/) | Object contains a list of chats with messages and auxiliary data. |
-| [messages.DiscussionMessage](/type/messages.DiscussionMessage/) | Info about a message thread |
-| [Messages.EmojiGameInfo](/type/messages.EmojiGameInfo/) | Dice game information. |
-| [Messages.EmojiGameOutcome](/type/messages.EmojiGameOutcome/) | Dice game outcome. |
-| [messages.EmojiGroups](/type/messages.EmojiGroups/) | Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories). |
-| [messages.ExportedChatInvite](/type/messages.ExportedChatInvite/) | Contains info about a chat invite, and eventually a pointer to the newest chat invite. |
-| [messages.ExportedChatInvites](/type/messages.ExportedChatInvites/) | Info about chat invites exported by a certain admin. |
-| [Messages.FavedStickers](/type/messages.FavedStickers/) | Favorited stickers |
-| [Messages.FeaturedStickers](/type/messages.FeaturedStickers/) | Featured stickers |
-| [messages.ForumTopics](/type/messages.ForumTopics/) | Contains information about multiple [forum topics](https://core.telegram.org/api/forum#forum-topics) |
-| [Messages.FoundStickers](/type/messages.FoundStickers/) | Found [stickers](https://core.telegram.org/api/stickers) |
-| [Messages.FoundStickerSets](/type/messages.FoundStickerSets/) | Found stickersets |
-| [Messages.HighScores](/type/messages.HighScores/) | High scores (in games) |
-| [messages.HistoryImport](/type/messages.HistoryImport/) | Identifier of a [history import session, click here for more info »](https://core.telegram.org/api/import). |
-| [messages.HistoryImportParsed](/type/messages.HistoryImportParsed/) | Contains information about a chat export file, generated by a foreign chat app. |
-| [messages.InactiveChats](/type/messages.InactiveChats/) | Inactive chat list |
-| [messages.InvitedUsers](/type/messages.InvitedUsers/) | Contains info about successfully or unsuccessfully [invited »](https://core.telegram.org/api/invites#direct-invites) users. |
-| [Messages.MessageEditData](/type/messages.MessageEditData/) | Message edit data for media |
-| [messages.MessageReactionsList](/type/messages.MessageReactionsList/) | List of peers that reacted to a specific message |
-| [messages.Messages](/type/messages.Messages/) | Object contains information on list of messages with auxiliary data. |
-| [messages.MessageViews](/type/messages.MessageViews/) | View, forward counter + info about replies |
-| [messages.MyStickers](/type/messages.MyStickers/) | The list of [stickersets owned by the current account »](https://core.telegram.org/api/stickers). |
-| [Messages.PeerDialogs](/type/messages.PeerDialogs/) | List of dialogs |
-| [messages.PeerSettings](/type/messages.PeerSettings/) | Peer settings |
-| [Messages.PreparedInlineMessage](/type/messages.PreparedInlineMessage/) | Represents a [prepared inline message received via a bot's mini app, that can be sent to some chats »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message) |
-| [messages.QuickReplies](/type/messages.QuickReplies/) | Info about [quick reply shortcuts »](https://core.telegram.org/api/business#quick-reply-shortcuts). |
-| [messages.Reactions](/type/messages.Reactions/) | A set of [message reactions](https://core.telegram.org/api/reactions) |
-| [Messages.RecentStickers](/type/messages.RecentStickers/) | Recent stickers |
-| [messages.SavedDialogs](/type/messages.SavedDialogs/) | Represents some [saved message dialogs »](https://core.telegram.org/api/saved-messages). |
-| [Messages.SavedGifs](/type/messages.SavedGifs/) | Saved GIFs |
-| [messages.SavedReactionTags](/type/messages.SavedReactionTags/) | List of [reaction tag »](https://core.telegram.org/api/saved-messages#tags) names assigned by the user. |
-| [Messages.SearchCounter](/type/messages.SearchCounter/) | Number of results that would be returned by a search |
-| [messages.SearchResultsCalendar](/type/messages.SearchResultsCalendar/) | Information about found messages sent on a specific day |
-| [messages.SearchResultsPositions](/type/messages.SearchResultsPositions/) | Information about sparse positions of messages |
-| [Messages.SentEncryptedMessage](/type/messages.SentEncryptedMessage/) | Contains info on message sent to an encrypted chat. |
-| [messages.SponsoredMessages](/type/messages.SponsoredMessages/) | A set of [sponsored messages](https://core.telegram.org/api/sponsored-messages) associated with a channel |
-| [Messages.Stickers](/type/messages.Stickers/) | Stickers |
-| [Messages.StickerSet](/type/messages.StickerSet/) | Stickerset |
-| [Messages.StickerSetInstallResult](/type/messages.StickerSetInstallResult/) | Result of stickerset installation process |
-| [messages.TranscribedAudio](/type/messages.TranscribedAudio/) | [Transcribed text](https://core.telegram.org/api/transcribe) from a voice message |
-| [messages.TranslatedText](/type/messages.TranslatedText/) | Translated text with [entities](https://core.telegram.org/api/entities). |
-| [messages.VotesList](/type/messages.VotesList/) | How users voted in a poll |
-| [Messages.WebPage](/type/messages.WebPage/) | Contains an instant view webpage. |
-| [messages.WebPagePreview](/type/messages.WebPagePreview/) | Represents a webpage preview. |
-| [MessagesFilter](/type/MessagesFilter/) | Object describes message filter. |
-| [MessageViews](/type/MessageViews/) | View, forward counter + info about replies of a specific message |
-| [MissingInvitee](/type/MissingInvitee/) | Info about why a specific user could not be [invited »](https://core.telegram.org/api/invites#direct-invites). |
-| [MyBoost](/type/MyBoost/) | Contains information about a single [boost slot »](https://core.telegram.org/api/boost). |
-| [NearestDc](/type/NearestDc/) | Object contains info on nearest data center. |
-| [NotificationSound](/type/NotificationSound/) | Represents a notification sound |
-| [NotifyPeer](/type/NotifyPeer/) | Object defines the set of users and/or groups that generate notifications. |
-| [Null](/type/Null/) | Object corresponds to an arbitrary empty object. |
-| [OutboxReadDate](/type/OutboxReadDate/) | Exact read date of a private message we sent to another user. |
-| [Page](/type/Page/) | [Instant view](https://instantview.telegram.org) page |
-| [Page not found](https://core.telegram.org/type/#/) | The page has not been saved |
-| [PageBlock](/type/PageBlock/) | Represents an [instant view page element](https://instantview.telegram.org) |
-| [PageCaption](/type/PageCaption/) | Page caption |
-| [PageListItem](/type/PageListItem/) | Item in block list |
-| [PageListOrderedItem](/type/PageListOrderedItem/) | Represents an [instant view ordered list](https://instantview.telegram.org) |
-| [PageRelatedArticle](/type/PageRelatedArticle/) | Related articles |
-| [PageTableCell](/type/PageTableCell/) | Represents a table in an [instant view table](https://instantview.telegram.org) |
-| [PageTableRow](/type/PageTableRow/) | Table row |
-| [PaidReactionPrivacy](/type/PaidReactionPrivacy/) | [Paid reaction privacy settings »](https://core.telegram.org/api/reactions#paid-reactions) |
-| [Passkey](/type/Passkey/) | Human-readable info about a passkey associated to an account, returned when [creating a passkey »](https://core.telegram.org/api/passkeys#creating-a-passkey) or [listing passkeys »](https://core.telegram.org/api/passkeys#list-passkeys). |
-| [PasswordKdfAlgo](/type/PasswordKdfAlgo/) | Key derivation function to use when generating the [password hash for SRP two-factor authorization](/api/srp/) |
-| [PaymentCharge](/type/PaymentCharge/) | Charged payment |
-| [PaymentFormMethod](/type/PaymentFormMethod/) | Represents a payment method |
-| [PaymentRequestedInfo](/type/PaymentRequestedInfo/) | Requested payment info |
-| [payments.BankCardData](/type/payments.BankCardData/) | Credit card info, provided by the card's bank(s) |
-| [payments.CheckCanSendGiftResult](/type/payments.CheckCanSendGiftResult/) | Specifies if a gift can or cannot be sent. |
-| [Payments.CheckedGiftCode](/type/payments.CheckedGiftCode/) | Info about a [Telegram Premium Giftcode](https://core.telegram.org/api/giveaways). |
-| [Payments.ConnectedStarRefBots](/type/payments.ConnectedStarRefBots/) | Active [affiliations](https://core.telegram.org/api/bots/referrals#becoming-an-affiliate) |
-| [payments.ExportedInvoice](/type/payments.ExportedInvoice/) | Exported invoice |
-| [Payments.GiveawayInfo](/type/payments.GiveawayInfo/) | Info about a [Telegram Premium Giveaway](https://core.telegram.org/api/giveaways). |
-| [Payments.PaymentForm](/type/payments.PaymentForm/) | Payment form |
-| [Payments.PaymentReceipt](/type/payments.PaymentReceipt/) | Payment receipt |
-| [Payments.PaymentResult](/type/payments.PaymentResult/) | Payment result |
-| [payments.ResaleStarGifts](/type/payments.ResaleStarGifts/) | List of gifts currently on [resale »](https://core.telegram.org/api/gifts#reselling-collectible-gifts). |
-| [Payments.SavedInfo](/type/payments.SavedInfo/) | Saved payment info |
-| [payments.SavedStarGifts](/type/payments.SavedStarGifts/) | Represents a list of [gifts](https://core.telegram.org/api/gifts). |
-| [Payments.StarGiftActiveAuctions](/type/payments.StarGiftActiveAuctions/) | List of currently active [gift auctions »](https://core.telegram.org/api/auctions) where the user has placed a bid, or an indication that the locally cached list hasn't changed. |
-| [Payments.StarGiftAuctionAcquiredGifts](/type/payments.StarGiftAuctionAcquiredGifts/) | Describes all the gifts that the current user won in an [auction](https://core.telegram.org/api/auctions). |
-| [Payments.StarGiftAuctionState](/type/payments.StarGiftAuctionState/) | Describes a [collectible gift auction »](https://core.telegram.org/api/auctions). |
-| [payments.StarGiftCollections](/type/payments.StarGiftCollections/) | Represents a list of [star gift collections »](https://core.telegram.org/api/gifts#gift-collections). |
-| [payments.StarGifts](/type/payments.StarGifts/) | Available [gifts »](https://core.telegram.org/api/gifts). |
-| [Payments.StarGiftUpgradeAttributes](/type/payments.StarGiftUpgradeAttributes/) | List of just the collectible attributes that may appear for a gift type once it's upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| [payments.StarGiftUpgradePreview](/type/payments.StarGiftUpgradePreview/) | A preview of the possible attributes (chosen randomly) a [gift »](https://core.telegram.org/api/gifts) can receive after upgrading it to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts), see [here »](https://core.telegram.org/api/gifts#collectible-gifts) for more info. |
-| [payments.StarGiftWithdrawalUrl](/type/payments.StarGiftWithdrawalUrl/) | A URL that can be used to import the exported NFT on Fragment. |
-| [payments.StarsRevenueAdsAccountUrl](/type/payments.StarsRevenueAdsAccountUrl/) | Contains a URL leading to a page where the user will be able to place ads for the channel/bot, paying using [Telegram Stars](https://core.telegram.org/api/stars#paying-for-ads). |
-| [payments.StarsRevenueStats](/type/payments.StarsRevenueStats/) | [Star revenue statistics, see here »](https://core.telegram.org/api/stars) for more info. Note that all balances and currency amounts and graph values are in Stars. |
-| [payments.StarsRevenueWithdrawalUrl](/type/payments.StarsRevenueWithdrawalUrl/) | Contains the URL to use to [withdraw Telegram Star revenue](https://core.telegram.org/api/stars#withdrawing-revenue). |
-| [payments.StarsStatus](/type/payments.StarsStatus/) | Info about the current [Telegram Star subscriptions, balance and transaction history »](https://core.telegram.org/api/stars#balance-and-transaction-history). |
-| [Payments.SuggestedStarRefBots](/type/payments.SuggestedStarRefBots/) | A list of suggested [mini apps](https://core.telegram.org/api/bots/webapps) with available [affiliate programs](https://core.telegram.org/api/bots/referrals) |
-| [payments.UniqueStarGift](/type/payments.UniqueStarGift/) | Represents a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| [payments.UniqueStarGiftValueInfo](/type/payments.UniqueStarGiftValueInfo/) | Information about the value of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| [Payments.ValidatedRequestedInfo](/type/payments.ValidatedRequestedInfo/) | Validated requested info |
-| [PaymentSavedCredentials](/type/PaymentSavedCredentials/) | Saved payment credentials |
-| [Peer](/type/Peer/) | Identifier of a private chat, basic group, group or channel (see [here »](https://core.telegram.org/api/peers) for more info). |
-| [PeerBlocked](/type/PeerBlocked/) | Info about a blocked user |
-| [PeerColor](/type/PeerColor/) | Represents a [color palette »](https://core.telegram.org/api/colors). |
-| [PeerLocated](/type/PeerLocated/) | Geolocated peer |
-| [PeerNotifySettings](/type/PeerNotifySettings/) | Notification settings. |
-| [PeerSettings](/type/PeerSettings/) | List of actions that are possible when interacting with this user, to be shown as suggested actions in the chat bar |
-| [PeerStories](/type/PeerStories/) | [Stories](https://core.telegram.org/api/stories) associated to a peer |
-| [PendingSuggestion](/type/PendingSuggestion/) | Represents a [custom pending suggestion »](https://core.telegram.org/api/config#custom-suggestions). |
-| [phone.ExportedGroupCallInvite](/type/phone.ExportedGroupCallInvite/) | An exported group call invitation. |
-| [phone.GroupCall](/type/phone.GroupCall/) | Contains info about a group call, and partial info about its participants. |
-| [Phone.GroupCallStars](/type/phone.GroupCallStars/) | Contains a live story's total donations and top donors, see [paid live story donations »](https://core.telegram.org/api/group-calls#paid-live-story-donations). |
-| [phone.GroupCallStreamChannels](/type/phone.GroupCallStreamChannels/) | Info about RTMP streams in a group call or livestream |
-| [phone.GroupCallStreamRtmpUrl](/type/phone.GroupCallStreamRtmpUrl/) | RTMP URL and stream key to be used in streaming software |
-| [phone.GroupParticipants](/type/phone.GroupParticipants/) | Info about the participants of a group call or livestream |
-| [phone.JoinAsPeers](/type/phone.JoinAsPeers/) | A list of peers that can be used to join a group call, presenting yourself as a specific user/channel. |
-| [Phone.PhoneCall](/type/phone.PhoneCall/) | Phone call |
-| [PhoneCall](/type/PhoneCall/) | Phone call |
-| [PhoneCallDiscardReason](/type/PhoneCallDiscardReason/) | Why was the phone call discarded? |
-| [PhoneCallProtocol](/type/PhoneCallProtocol/) | Phone call protocol |
-| [PhoneConnection](/type/PhoneConnection/) | Phone call connection |
-| [Photo](/type/Photo/) | Object describes a photo. |
-| [photos.Photo](/type/photos.Photo/) | Photo with auxiliary data. |
-| [photos.Photos](/type/photos.Photos/) | Object contains list of photos with auxiliary data. |
-| [PhotoSize](/type/PhotoSize/) | Location of a certain size of a picture #### [End-to-end schema](/schema/end-to-end/) ``` ===23=== photoCachedSize#e9a734fa type:string location:FileLocation w:int h:int bytes:bytes = PhotoSize; photoSize#77bfb61b type:string location:FileLocation w:int h:int size:int = PhotoSize; photoSizeEmpty#0e17e23c type:string = PhotoSize; ``` API schema: |
-| [Poll](/type/Poll/) | Indicates a poll message |
-| [PollAnswer](/type/PollAnswer/) | Indicates a possible answer to a [poll](/type/Poll/). |
-| [PollAnswerVoters](/type/PollAnswerVoters/) | How users voted on a certain poll answer |
-| [PollResults](/type/PollResults/) | Results of poll |
-| [PopularContact](/type/PopularContact/) | Popular contact |
-| [PostAddress](/type/PostAddress/) | Shipping address |
-| [PostInteractionCounters](/type/PostInteractionCounters/) | Interaction counters |
-| [Premium.BoostsList](/type/premium.BoostsList/) | List of [boosts](https://core.telegram.org/api/boost) that were applied to a peer by multiple users. |
-| [Premium.BoostsStatus](/type/premium.BoostsStatus/) | Contains info about the current [boost status](https://core.telegram.org/api/boost) of a peer. |
-| [Premium.MyBoosts](/type/premium.MyBoosts/) | A list of peers we are currently [boosting](https://core.telegram.org/api/boost), and how many [boost slots](https://core.telegram.org/api/boost) we have left. |
-| [PremiumGiftCodeOption](/type/PremiumGiftCodeOption/) | [Giveaway](https://core.telegram.org/api/giveaways) option. |
-| [PremiumSubscriptionOption](/type/PremiumSubscriptionOption/) | Telegram Premium subscription option |
-| [PrepaidGiveaway](/type/PrepaidGiveaway/) | Contains info about a [prepaid giveaway »](https://core.telegram.org/api/giveaways). |
-| [PrivacyKey](/type/PrivacyKey/) | Privacy **keys** together with [privacy rules »](https://core.telegram.org/api/privacy#privacy-rules) indicate _what_ can or can't someone do and are specified by a [PrivacyKey](/type/PrivacyKey/) constructor, and its input counterpart [InputPrivacyKey](/type/InputPrivacyKey/). See the [privacy documentation »](https://core.telegram.org/api/privacy) for more info. |
-| [PrivacyRule](/type/PrivacyRule/) | Privacy **rules** together with [privacy keys](https://core.telegram.org/api/privacy#privacy-keys) indicate _what_ can or can't someone do and are specified by a [PrivacyRule](/type/PrivacyRule/) constructor, and its input counterpart [InputPrivacyRule](/type/InputPrivacyRule/). See the [privacy documentation »](https://core.telegram.org/api/privacy) for more info. |
-| [ProfileTab](/type/ProfileTab/) | Represents a [tab of a profile page »](https://core.telegram.org/api/profile#tabs). |
-| [PublicForward](/type/PublicForward/) | Contains info about the forwards of a [story](https://core.telegram.org/api/stories) as a message to public chats and reposts by public channels. |
-| [QuickReply](/type/QuickReply/) | A [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts). |
-| [Reaction](/type/Reaction/) | [Message reaction](https://core.telegram.org/api/reactions) |
-| [ReactionCount](/type/ReactionCount/) | Number of users that reacted with a certain emoji |
-| [ReactionNotificationsFrom](/type/ReactionNotificationsFrom/) | Reaction notification settings |
-| [ReactionsNotifySettings](/type/ReactionsNotifySettings/) | Reaction notification settings, see [here »](https://core.telegram.org/api/reactions#notifications-about-reactions) for more info. |
-| [ReadParticipantDate](/type/ReadParticipantDate/) | Contains info about when a certain participant has read a message |
-| [ReceivedNotifyMessage](/type/ReceivedNotifyMessage/) | Confirmation of message receipt |
-| [RecentMeUrl](/type/RecentMeUrl/) | Recent t.me urls |
-| [RecentStory](/type/RecentStory/) | Summary of a peer's [active stories »](https://core.telegram.org/api/stories#recent-story-summaries). |
-| [ReplyMarkup](/type/ReplyMarkup/) | Reply markup for bot and inline keyboards |
-| [ReportReason](/type/ReportReason/) | Report reason |
-| [ReportResult](/type/ReportResult/) | Represents a report menu or result |
-| [RequestedPeer](/type/RequestedPeer/) | Info about a peer, shared by a user with the currently logged in bot using [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/). |
-| [RequestPeerType](/type/RequestPeerType/) | Filtering criteria to use for the peer selection list shown to the user. |
-| [RequirementToContact](/type/RequirementToContact/) | Specifies a requirement that must be satisfied in order to contact a user. |
-| [RestrictionReason](/type/RestrictionReason/) | Restriction reason |
-| [RichText](/type/RichText/) | Rich text |
-| [SavedContact](/type/SavedContact/) | Saved contact |
-| [SavedDialog](/type/SavedDialog/) | Represents a [saved message dialog »](https://core.telegram.org/api/saved-messages). |
-| [SavedReactionTag](/type/SavedReactionTag/) | Info about a [saved message reaction tag »](https://core.telegram.org/api/saved-messages#tags). |
-| [SavedStarGift](/type/SavedStarGift/) | Represents a [gift](https://core.telegram.org/api/gifts) owned by a peer. |
-| [SearchPostsFlood](/type/SearchPostsFlood/) | Indicates if the specified [global post search »](https://core.telegram.org/api/search#posts-tab) requires payment. |
-| [SearchResultsCalendarPeriod](/type/SearchResultsCalendarPeriod/) | Information about found messages sent on a specific day, used to split the `messages` in [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/) constructors by days. |
-| [SearchResultsPosition](/type/SearchResultsPosition/) | Information about a message in a specific position |
-| [SecureCredentialsEncrypted](/type/SecureCredentialsEncrypted/) | Encrypted secure credentials |
-| [SecureData](/type/SecureData/) | Secure [passport](https://core.telegram.org/passport) data, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#securedata) |
-| [SecureFile](/type/SecureFile/) | Secure [passport](https://core.telegram.org/passport) file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile) |
-| [SecurePasswordKdfAlgo](/type/SecurePasswordKdfAlgo/) | KDF algorithm to use for computing telegram [passport](https://core.telegram.org/passport) hash |
-| [SecurePlainData](/type/SecurePlainData/) | Plaintext verified [passport data](https://core.telegram.org/passport/encryption#secureplaindata). |
-| [SecureRequiredType](/type/SecureRequiredType/) | Required secure file type |
-| [SecureSecretSettings](/type/SecureSecretSettings/) | Telegram [passport](https://core.telegram.org/passport) settings |
-| [SecureValue](/type/SecureValue/) | Secure Telegram Passport value |
-| [SecureValueError](/type/SecureValueError/) | Secure value error |
-| [SecureValueHash](/type/SecureValueHash/) | Secure value hash |
-| [SecureValueType](/type/SecureValueType/) | Secure value type |
-| [SendAsPeer](/type/SendAsPeer/) | Indicates a peer that can be used to send messages |
-| [SendMessageAction](/type/SendMessageAction/) | User actions. Use this to provide users with detailed info about their chat partner's actions: typing or sending attachments of all kinds. #### [End-to-end schema](/schema/end-to-end/) ``` ===17=== sendMessageCancelAction#fd5ec8f5 = SendMessageAction; sendMessageChooseContactAction#628cbc6f = SendMessageAction; sendMessageGeoLocationAction#176f8ba1 = SendMessageAction; sendMessageRecordAudioAction#d52f73f7 = SendMessageAction; sendMessageRecordVideoAction#a187d66f = SendMessageAction; sendMessageTypingAction#16bf744e = SendMessageAction; sendMessageUploadAudioAction#e6ac8a6f = SendMessageAction; sendMessageUploadDocumentAction#8faee98e = SendMessageAction; sendMessageUploadPhotoAction#990a3c1a = SendMessageAction; sendMessageUploadVideoAction#92042ff7 = SendMessageAction; ===66=== sendMessageRecordRoundAction#88f27fbc = SendMessageAction; sendMessageUploadRoundAction#bb718624 = SendMessageAction; ``` API schema: |
-| [ShippingOption](/type/ShippingOption/) | Shipping options |
-| [SmsJob](/type/SmsJob/) | Info about an SMS job. |
-| [smsjobs.EligibilityToJoin](/type/smsjobs.EligibilityToJoin/) | SMS jobs eligibility |
-| [smsjobs.Status](/type/smsjobs.Status/) | Status |
-| [SponsoredMessage](/type/SponsoredMessage/) | A sponsored message |
-| [SponsoredMessageReportOption](/type/SponsoredMessageReportOption/) | A [report option for a sponsored message »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages). |
-| [SponsoredPeer](/type/SponsoredPeer/) | A sponsored peer. |
-| [StarGift](/type/StarGift/) | Represents a [star gift, see here »](https://core.telegram.org/api/gifts) for more info. |
-| [StarGiftActiveAuctionState](/type/StarGiftActiveAuctionState/) | Contains info about [an auction where the user has placed a bid »](https://core.telegram.org/api/auctions). |
-| [StarGiftAttribute](/type/StarGiftAttribute/) | An attribute of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| [StarGiftAttributeCounter](/type/StarGiftAttributeCounter/) | Indicates the total number of gifts that have the specified attribute. |
-| [StarGiftAttributeId](/type/StarGiftAttributeId/) | Represents the _identifier_ of a [collectible gift attribute](https://core.telegram.org/api/gifts#collectible-gifts). |
-| [StarGiftAttributeRarity](/type/StarGiftAttributeRarity/) | Rarity of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) attribute, either as an exact permille value or as one of the named rarity tiers (uncommon, rare, epic, legendary). |
-| [StarGiftAuctionAcquiredGift](/type/StarGiftAuctionAcquiredGift/) | Describes a gift that the current user won in an auction. |
-| [StarGiftAuctionRound](/type/StarGiftAuctionRound/) | Describes one or more rounds of a [collectible gift auction »](https://core.telegram.org/api/auctions), optionally extendable. |
-| [StarGiftAuctionState](/type/StarGiftAuctionState/) | State of a [collectible gift auction »](https://core.telegram.org/api/auctions): active/pending, finished, or unchanged with respect to a locally cached version. |
-| [StarGiftAuctionUserState](/type/StarGiftAuctionUserState/) | Contains information about the current user's state in an [auction »](https://core.telegram.org/api/auctions). The `bid_amount`, `bid_date`, `bid_peer` and `min_bid_amount` flags of [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) will all be set if the user placed a bid in the auction. |
-| [StarGiftBackground](/type/StarGiftBackground/) | Contains the default background palette of a [gift type »](https://core.telegram.org/api/gifts#listing-all-possible-collectible-variants). |
-| [StarGiftCollection](/type/StarGiftCollection/) | Represents a [star gift collection »](https://core.telegram.org/api/gifts#gift-collections). |
-| [StarGiftUpgradePrice](/type/StarGiftUpgradePrice/) | Indicates the price for a [gift upgrade »](https://core.telegram.org/api/gifts#collectible-gifts) starting from a specific point in time. |
-| [StarRefProgram](/type/StarRefProgram/) | Indo about an [affiliate program offered by a bot](https://core.telegram.org/api/bots/referrals) |
-| [StarsAmount](/type/StarsAmount/) | Describes a real (i.e. possibly decimal) amount of [Telegram Stars](https://core.telegram.org/api/stars). |
-| [StarsGiftOption](/type/StarsGiftOption/) | [Telegram Stars gift option](https://core.telegram.org/api/stars#buying-or-gifting-stars). |
-| [StarsGiveawayOption](/type/StarsGiveawayOption/) | Contains info about a [Telegram Star giveaway](https://core.telegram.org/api/giveaways#star-giveaways) option. |
-| [StarsGiveawayWinnersOption](/type/StarsGiveawayWinnersOption/) | Represents a possible option for the number of winners in a star giveaway |
-| [StarsRating](/type/StarsRating/) | Represents the profile's [star rating, see here »](https://core.telegram.org/api/stars#star-rating) for more info. |
-| [StarsRevenueStatus](/type/StarsRevenueStatus/) | Describes [Telegram Star revenue balances »](https://core.telegram.org/api/stars). |
-| [StarsSubscription](/type/StarsSubscription/) | Represents a [Telegram Star subscription »](https://core.telegram.org/api/invites#paid-invite-links). |
-| [StarsSubscriptionPricing](/type/StarsSubscriptionPricing/) | Pricing of a [Telegram Star subscription »](https://core.telegram.org/api/invites#paid-invite-links). |
-| [StarsTopupOption](/type/StarsTopupOption/) | [Telegram Stars topup option](https://core.telegram.org/api/stars). |
-| [StarsTransaction](/type/StarsTransaction/) | Represents a [Telegram Stars transaction »](https://core.telegram.org/api/stars). |
-| [StarsTransactionPeer](/type/StarsTransactionPeer/) | Source of an incoming [Telegram Star transaction](https://core.telegram.org/api/stars), or its recipient for outgoing [Telegram Star transactions](https://core.telegram.org/api/stars). |
-| [Stats.BroadcastStats](/type/stats.BroadcastStats/) | Channel statistics |
-| [stats.MegagroupStats](/type/stats.MegagroupStats/) | Supergroup statistics |
-| [stats.MessageStats](/type/stats.MessageStats/) | Message statistics |
-| [Stats.PublicForwards](/type/stats.PublicForwards/) | Contains info about the forwards of a [story](https://core.telegram.org/api/stories) as a message to public chats and reposts by public channels. |
-| [Stats.StoryStats](/type/stats.StoryStats/) | Contains [statistics](https://core.telegram.org/api/stats) about a [story](https://core.telegram.org/api/stories). |
-| [StatsAbsValueAndPrev](/type/StatsAbsValueAndPrev/) | Channel statistics value pair |
-| [StatsDateRangeDays](/type/StatsDateRangeDays/) | Channel statistics date range |
-| [StatsGraph](/type/StatsGraph/) | Channel statistics graph |
-| [StatsGroupTopAdmin](/type/StatsGroupTopAdmin/) | Most active admin in a [supergroup](https://core.telegram.org/api/channel) |
-| [StatsGroupTopInviter](/type/StatsGroupTopInviter/) | Most active inviter in a [supergroup](https://core.telegram.org/api/channel) |
-| [StatsGroupTopPoster](/type/StatsGroupTopPoster/) | Most active user in a [supergroup](https://core.telegram.org/api/channel) |
-| [StatsPercentValue](/type/StatsPercentValue/) | Channel statistics percentage |
-| [StatsURL](/type/StatsURL/) | URL with chat statistics |
-| [StickerKeyword](/type/StickerKeyword/) | Keywords for a certain sticker |
-| [StickerPack](/type/StickerPack/) | Stickerpack |
-| [stickers.SuggestedShortName](/type/stickers.SuggestedShortName/) | A suggested short name for the specified stickerpack |
-| [StickerSet](/type/StickerSet/) | Represents a stickerset (stickerpack) |
-| [StickerSetCovered](/type/StickerSetCovered/) | Stickerset preview |
-| [storage.FileType](/type/storage.FileType/) | Object describes the file type. |
-| [Stories.Albums](/type/stories.Albums/) | Represents a list of [story albums »](https://core.telegram.org/api/stories#story-albums). |
-| [stories.AllStories](/type/stories.AllStories/) | Full list of active (or active and hidden) [stories](https://core.telegram.org/api/stories#watching-stories). |
-| [stories.CanSendStoryCount](/type/stories.CanSendStoryCount/) | Contains the number of available active story slots (equal to the value of the [`story_expiring_limit_*` client configuration parameter](https://core.telegram.org/api/config#story-expiring-limit-default) minus the number of currently active stories). |
-| [stories.FoundStories](/type/stories.FoundStories/) | Stories found using [global story search »](https://core.telegram.org/api/stories#searching-stories). |
-| [stories.PeerStories](/type/stories.PeerStories/) | [Active story list](https://core.telegram.org/api/stories#watching-stories) of a specific peer. |
-| [stories.Stories](/type/stories.Stories/) | List of [stories](https://core.telegram.org/api/stories#pinned-or-archived-stories) |
-| [stories.StoryReactionsList](/type/stories.StoryReactionsList/) | List of peers that reacted to a specific [story](https://core.telegram.org/api/stories) |
-| [stories.StoryViews](/type/stories.StoryViews/) | Reaction and view counters for a list of [stories](https://core.telegram.org/api/stories) |
-| [stories.StoryViewsList](/type/stories.StoryViewsList/) | Reaction and view counters for a [story](https://core.telegram.org/api/stories) |
-| [StoriesStealthMode](/type/StoriesStealthMode/) | [Story stealth mode status](https://core.telegram.org/api/stories#stealth-mode) |
-| [StoryAlbum](/type/StoryAlbum/) | Represents a [story album »](https://core.telegram.org/api/stories#story-albums). |
-| [StoryFwdHeader](/type/StoryFwdHeader/) | Contains info about the original poster of a reposted story. |
-| [StoryItem](/type/StoryItem/) | Represents a [Telegram Story](https://core.telegram.org/api/stories) |
-| [StoryReaction](/type/StoryReaction/) | How a certain peer reacted to or interacted with a story |
-| [StoryView](/type/StoryView/) | [Story](https://core.telegram.org/api/stories) view date and reaction information |
-| [StoryViews](/type/StoryViews/) | Aggregated view and reaction information of a [story](https://core.telegram.org/api/stories) |
-| [string](/type/string/) | A basic bare type. Values of type `string` look differently depending on the length `L` of the string being serialized: -   If `L <= 253`, the serialization contains one byte with the value of `L`, then `L` bytes of the string followed by 0 to 3 characters containing 0, such that the overall length of the value be divisible by 4, whereupon all of this is interpreted as a sequence of `int(L/4)+1` 32-bit little-endian integers. -   If `L >= 254`, the serialization contains byte 254, followed by 3 bytes with the string length `L` in little-endian order, followed by `L` bytes of the string, further followed by 0 to 3 null padding bytes. All strings passed to the API must be encoded in UTF-8. When arbitrary byte sequences have to be serialized, [bytes](/type/bytes/) alias is to be used. [Further details on basic types»](/mtproto/serialize/) |
-| [SuggestedPost](/type/SuggestedPost/) | Contains info about a [suggested post »](https://core.telegram.org/api/suggested-posts). |
-| [TextWithEntities](/type/TextWithEntities/) | Styled text with [message entities](https://core.telegram.org/api/entities) #### [End-to-end schema](/schema/end-to-end/) ``` ===216=== textWithEntities#751f3146 text:string entities:Vector<MessageEntity> = TextWithEntities; ``` API schema: |
-| [Theme](/type/Theme/) | Cloud theme |
-| [ThemeSettings](/type/ThemeSettings/) | Theme settings |
-| [Timezone](/type/Timezone/) | Timezone information. |
-| [TodoCompletion](/type/TodoCompletion/) | A completed [todo list »](https://core.telegram.org/api/todo) item. |
-| [TodoItem](/type/TodoItem/) | An item of a [todo list »](https://core.telegram.org/api/todo). |
-| [TodoList](/type/TodoList/) | Represents a [todo list »](https://core.telegram.org/api/todo). |
-| [TopPeer](/type/TopPeer/) | Top peer |
-| [TopPeerCategory](/type/TopPeerCategory/) | Top peer category |
-| [TopPeerCategoryPeers](/type/TopPeerCategoryPeers/) | Top peers by top peer category |
-| [True](/type/True/) | See [predefined identifiers](https://core.telegram.org/mtproto/TL-formal#predefined-identifiers). |
-| [Update](/type/Update/) | Object contains info on events occurred. |
-| [Updates](/type/Updates/) | Object which is perceived by the client without a call on its part when an event occurs. |
-| [updates.ChannelDifference](/type/updates.ChannelDifference/) | Contains the difference (new messages) between our local channel state and the remote state |
-| [updates.Difference](/type/updates.Difference/) | Occurred changes. |
-| [updates.State](/type/updates.State/) | Object contains info on state for further updates. |
-| [upload.CdnFile](/type/upload.CdnFile/) | Represents the download status of a CDN file |
-| [upload.File](/type/upload.File/) | Contains info on file. |
-| [Upload.WebFile](/type/upload.WebFile/) | Remote file |
-| [UrlAuthResult](/type/UrlAuthResult/) | URL authorization result |
-| [User](/type/User/) | Object defines a user. |
-| [UserFull](/type/UserFull/) | Object contains extended user info. |
-| [Username](/type/Username/) | Contains information about a username |
-| [UserProfilePhoto](/type/UserProfilePhoto/) | Object contains info on the user's profile photo. |
-| [users.SavedMusic](/type/users.SavedMusic/) | List of songs ([document](/constructor/document/).`id`s) currently pinned on a user's profile, see [here »](https://core.telegram.org/api/profile#music) for more info. |
-| [users.UserFull](/type/users.UserFull/) | Full user information, with attached context peers for reactions |
-| [users.Users](/type/users.Users/) | Describes a list of users (or bots). |
-| [UserStatus](/type/UserStatus/) | User online status |
-| [Vector t](/type/Vector t/) | Universal vector. |
-| [VideoSize](/type/VideoSize/) | Represents an animated video thumbnail |
-| [WallPaper](/type/WallPaper/) | Object contains info on a [wallpaper](https://core.telegram.org/api/wallpapers). |
-| [WallPaperSettings](/type/WallPaperSettings/) | Wallpaper rendering information. |
-| [WebAuthorization](/type/WebAuthorization/) | Web authorization |
-| [WebDocument](/type/WebDocument/) | Remote document |
-| [WebPage](/type/WebPage/) | [Instant View](https://instantview.telegram.org) webpage preview |
-| [WebPageAttribute](/type/WebPageAttribute/) | Webpage attributes |
-| [WebViewMessageSent](/type/WebViewMessageSent/) | Contains information about an inline message sent by a [Web App](https://core.telegram.org/bots/webapps) on behalf of a user. |
-| [WebViewResult](/type/WebViewResult/) | Contains the webview URL with appropriate theme and user info parameters added |
+| [#](/type/%23/) | Страница не была сохранена |
+| [account.AuthorizationForm](/type/account.AuthorizationForm/) | Форма авторизации |
+| [account.Authorizations](/type/account.Authorizations/) | Активные сессии |
+| [account.AutoDownloadSettings](/type/account.AutoDownloadSettings/) | Настройки автозагрузки медиафайлов |
+| [account.AutoSaveSettings](/type/account.AutoSaveSettings/) | Содержит настройки автосохранения медиафайлов |
+| [account.BusinessChatLinks](/type/account.BusinessChatLinks/) | Содержит информацию о [глубоких ссылках на бизнес-чат »](/api/business/#business-chat-links), созданных текущей учётной записью. |
+| [account.ChatThemes](/type/account.ChatThemes/) | Доступные темы чата |
+| [account.ConnectedBots](/type/account.ConnectedBots/) | Информация о подключённых в данный момент [бизнес-ботах](/api/bots/connected-business-bots/). |
+| [account.ContentSettings](/type/account.ContentSettings/) | Настройки материалов деликатного характера |
+| [account.EmailVerified](/type/account.EmailVerified/) | Статус подтверждения электронной почты |
+| [account.EmojiStatuses](/type/account.EmojiStatuses/) | Список [эмодзи-статусов](/api/emoji-status/) |
+| [account.PaidMessagesRevenue](/type/account.PaidMessagesRevenue/) | Общее количество невозвращённых [Telegram Stars](/api/stars/), потраченных пользователем на отправку нам сообщений — напрямую либо через канал; подробнее о платных сообщениях см. [здесь »](/api/paid-messages/). |
+| [account.PasskeyRegistrationOptions](/type/account.PasskeyRegistrationOptions/) | Параметры регистрации passkey; подробнее о полном процессе см. [здесь »](/api/passkeys/#creating-a-passkey). |
+| [account.Passkeys](/type/account.Passkeys/) | Список [ключей доступа »](/api/passkeys/#list-passkeys), привязанных к текущему аккаунту. |
+| [account.Password](/type/account.Password/) | Настройки двухфакторной авторизации |
+| [account.PasswordInputSettings](/type/account.PasswordInputSettings/) | Конструктор для установки нового [пароля двухфакторной аутентификации по SRP](/api/srp/) |
+| [account.PasswordSettings](/type/account.PasswordSettings/) | Личные сведения, связанные с информацией о пароле (почта для восстановления, данные Telegram [Passport](https://core.telegram.org/passport) и так далее) |
+| [account.PrivacyRules](/type/account.PrivacyRules/) | Правила приватности |
+| [account.ResetPasswordResult](/type/account.ResetPasswordResult/) | Результат запроса [account.resetPassword](/method/account.resetPassword/). |
+| [account.ResolvedBusinessChatLinks](/type/account.ResolvedBusinessChatLinks/) | Содержит информацию об одной разрешённой [глубокой ссылке на бизнес-чат »](/api/business/#business-chat-links). |
+| [account.SavedMusicIds](/type/account.SavedMusicIds/) | Список идентификаторов композиций (полей `id` конструктора [document](/constructor/document/)), закреплённых сейчас в нашем профиле, подробнее [см. здесь »](/api/profile/#music). |
+| [account.SavedRingtone](/type/account.SavedRingtone/) | Содержит информацию о сохранённом звуке уведомления |
+| [account.SavedRingtones](/type/account.SavedRingtones/) | Содержит список сохранённых звуков уведомлений |
+| [account.SentEmailCode](/type/account.SentEmailCode/) | Отправленный код подтверждения по электронной почте |
+| [account.Takeout](/type/account.Takeout/) | Сведения о выгрузке данных |
+| [account.Themes](/type/account.Themes/) | Установленные темы оформления |
+| [account.TmpPassword](/type/account.TmpPassword/) | Временный пароль |
+| [account.WallPapers](/type/account.WallPapers/) | [Обои](/api/wallpapers/) |
+| [account.WebAuthorizations](/type/account.WebAuthorizations/) | Веб-авторизации |
+| [AccountDaysTTL](/type/AccountDaysTTL/) | Время жизни текущей учётной записи |
+| [aicompose.Tones](/type/aicompose.Tones/) | Список сохранённых [тонов ИИ-редактора »](/api/ai/#ai-compose-tones) текущего пользователя. |
+| [AiComposeTone](/type/AiComposeTone/) | [Тон ИИ-редактора »](/api/ai/#ai-compose-tones), используемый для перефразирования сообщений в определённом стиле с помощью [ИИ-редактора сообщений](/api/ai/#compose-messages). |
+| [AiComposeToneExample](/type/AiComposeToneExample/) | Пример того, как [тон ИИ-редактора »](/api/ai/#ai-compose-tones) перефразирует сообщение; используется для предпросмотра в списке выбора тона. |
+| [AttachMenuBot](/type/AttachMenuBot/) | Представляет [mini app бота, который можно запустить из меню вложений »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
+| [AttachMenuBotIcon](/type/AttachMenuBotIcon/) | Представляет значок в меню вложений для [mini app ботов »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
+| [AttachMenuBotIconColor](/type/AttachMenuBotIconColor/) | Представляет цвет значка в меню вложений для [mini app ботов »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
+| [AttachMenuBots](/type/AttachMenuBots/) | Представляет список [mini app ботов, которые можно запустить из меню вложений »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
+| [AttachMenuBotsBot](/type/AttachMenuBotsBot/) | Представляет [mini app бота, который можно запустить из меню вложений »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
+| [AttachMenuPeerType](/type/AttachMenuPeerType/) | Обозначает тип пира, поддерживаемый [меню вложений mini app бота](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu) |
+| [AuctionBidLevel](/type/AuctionBidLevel/) | Описывает ставку на [аукционе](/api/auctions/). |
+| [auth.Authorization](/type/auth.Authorization/) | Объект содержит информацию об авторизации пользователя. |
+| [auth.CodeType](/type/auth.CodeType/) | Тип кода подтверждения, который будет отправлен следующим при вызове метода resendCode |
+| [auth.ExportedAuthorization](/type/auth.ExportedAuthorization/) | Экспортированная авторизация |
+| [auth.LoggedOut](/type/auth.LoggedOut/) | [Токен будущей авторизации »](/api/auth/#future-auth-tokens), который будет использоваться при последующих авторизациях |
+| [auth.LoginToken](/type/auth.LoginToken/) | Токен входа (для входа по QR-коду) |
+| [auth.PasskeyLoginOptions](/type/auth.PasskeyLoginOptions/) | Параметры входа по passkey; подробнее о полном процессе см. [здесь »](/api/passkeys/#logging-in-with-a-passkey). |
+| [auth.PasswordRecovery](/type/auth.PasswordRecovery/) | Сведения о восстановлении [пароля двухфакторной аутентификации](/api/srp/); только для аккаунтов с [настроенной почтой для восстановления](/api/srp/#email-verification). |
+| [auth.SentCode](/type/auth.SentCode/) | Содержит информацию о сообщении с кодом подтверждения, отправленном по SMS, звонком или через Telegram. |
+| [auth.SentCodeType](/type/auth.SentCodeType/) | Тип отправленного кода подтверждения |
+| [Authorization](/type/Authorization/) | Представляет активную сессию |
+| [AutoDownloadSettings](/type/AutoDownloadSettings/) | Настройки автозагрузки медиафайлов |
+| [AutoSaveException](/type/AutoSaveException/) | Настройки автосохранения для конкретного пира |
+| [AutoSaveSettings](/type/AutoSaveSettings/) | Настройки автосохранения медиафайлов |
+| [AvailableEffect](/type/AvailableEffect/) | Описывает [эффект сообщения »](/api/effects/). |
+| [AvailableReaction](/type/AvailableReaction/) | Анимации, связанные с реакцией на сообщение |
+| [BankCardOpenUrl](/type/BankCardOpenUrl/) | URL со сведениями о банковской карте, предоставленный банком |
+| [BaseTheme](/type/BaseTheme/) | Основные параметры темы |
+| [Birthday](/type/Birthday/) | Сведения о [дне рождения](/api/profile/#birthday) пользователя. |
+| [Bool](/type/Bool/) | Логический тип. |
+| [Boost](/type/Boost/) | Информация об одном или нескольких [бустах](/api/boost/), применённых определённым пользователем. |
+| [BotApp](/type/BotApp/) | Содержит информацию о [Mini App с прямой ссылкой](/api/bots/webapps/#direct-link-mini-apps). |
+| [BotAppSettings](/type/BotAppSettings/) | Настройки [Mini App »](/api/bots/webapps/) |
+| [BotBusinessConnection](/type/BotBusinessConnection/) | Содержит информацию о [бизнес-подключении бота](/api/bots/connected-business-bots/). |
+| [BotCommand](/type/BotCommand/) | Описывает команду бота, которую можно использовать в чате |
+| [BotCommandScope](/type/BotCommandScope/) | Представляет область видимости, в которой будут действовать команды бота, заданные с помощью [bots.setBotCommands](/method/bots.setBotCommands/). |
+| [BotInfo](/type/BotInfo/) | Информация о ботах (доступные команды бота и прочее) |
+| [BotInlineMessage](/type/BotInlineMessage/) | Инлайн-сообщение |
+| [BotInlineResult](/type/BotInlineResult/) | Результаты инлайн-запроса |
+| [BotMenuButton](/type/BotMenuButton/) | Указывает действие, выполняемое при нажатии на кнопку меню ботов в интерфейсе |
+| [BotPreviewMedia](/type/BotPreviewMedia/) | Представляет [медиафайл предпросмотра главного Mini App, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews). |
+| [bots.AccessSettings](/type/bots.AccessSettings/) | Настройки ограничения доступа для управляемого бота. |
+| [bots.BotInfo](/type/bots.BotInfo/) | Локализованные имя, текст «О боте» и описание бота. |
+| [bots.ExportedBotToken](/type/bots.ExportedBotToken/) | Токен управляемого бота, экспортированный ботом-менеджером. |
+| [bots.PopularAppBots](/type/bots.PopularAppBots/) | Популярные [Main Mini Apps](/api/bots/webapps/#main-mini-apps), предназначенные для [вкладки приложений в глобальном поиске »](/api/search/#apps-tab). |
+| [bots.PreviewInfo](/type/bots.PreviewInfo/) | Содержит информацию о [превью Main Mini App, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews). |
+| [bots.RequestedButton](/type/bots.RequestedButton/) | Содержит идентификатор запроса Mini App, сформированный, когда бот подготавливает кнопку запроса пира; подробнее см. [здесь »](/api/bots/buttons/#requesting-peers-via-mini-apps). |
+| [BotVerification](/type/BotVerification/) | Описывает [значок верификации бота »](/api/bots/verification/). |
+| [BotVerifierSettings](/type/BotVerifierSettings/) | Информация о текущем [боте-верификаторе »](/api/bots/verification/). |
+| [BusinessAwayMessage](/type/BusinessAwayMessage/) | Описывает [сообщение об отсутствии Telegram Business](/api/business/#away-messages), автоматически отправляемое пользователям, которые пишут нам, когда мы не в сети, в нерабочие часы, во время отпуска или в любой другой заданный период, когда мы не можем ответить сразу. |
+| [BusinessAwayMessageSchedule](/type/BusinessAwayMessageSchedule/) | Указывает, когда следует отправлять [сообщения об отсутствии Telegram Business](/api/business/#away-messages). |
+| [BusinessBotRecipients](/type/BusinessBotRecipients/) | Задаёт личные чаты, из которых [подключённый бизнес-бот »](/api/bots/connected-business-bots/) может получать сообщения и с которыми может взаимодействовать. |
+| [BusinessBotRights](/type/BusinessBotRights/) | [Права бизнес-бота](/api/bots/connected-business-bots/). |
+| [BusinessChatLink](/type/BusinessChatLink/) | Содержит информацию о [глубокой ссылке на бизнес-чат »](/api/business/#business-chat-links), созданной текущей учётной записью. |
+| [BusinessGreetingMessage](/type/BusinessGreetingMessage/) | Описывает [приветственное сообщение Telegram Business](/api/business/#greeting-messages), автоматически отправляемое новым пользователям, которые пишут нам в личные сообщения впервые или после определённого периода бездействия. |
+| [BusinessIntro](/type/BusinessIntro/) | [Введение в Telegram Business »](/api/business/#business-introduction). |
+| [BusinessLocation](/type/BusinessLocation/) | Представляет местоположение [Telegram Business »](/api/business/#location). |
+| [BusinessRecipients](/type/BusinessRecipients/) | Задаёт чаты, которые **могут** получать сообщения Telegram Business [об отсутствии »](/api/business/#away-messages) и [приветственные »](/api/business/#greeting-messages). |
+| [BusinessWeeklyOpen](/type/BusinessWeeklyOpen/) | Интервал времени, задающий часы работы [Telegram Business](/api/business/#opening-hours). |
+| [BusinessWorkHours](/type/BusinessWorkHours/) | Задаёт [часы работы Telegram Business](/api/business/#opening-hours). |
+| [bytes](/type/bytes/) | Базовый «голый» тип. Синоним типа **[string](/type/string/)** с той разницей, что значение может содержать произвольные последовательности байтов, в том числе некорректные последовательности UTF-8. |
+| [CdnConfig](/type/CdnConfig/) | Конфигурация для скачивания файлов через [CDN](https://core.telegram.org/cdn). |
+| [CdnPublicKey](/type/CdnPublicKey/) | Открытый ключ, используемый **только** при рукопожатиях с дата-центрами [CDN](https://core.telegram.org/cdn). |
+| [ChannelAdminLogEvent](/type/ChannelAdminLogEvent/) | Событие в журнале администратора канала |
+| [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/) | Событие журнала действий администратора канала |
+| [ChannelAdminLogEventsFilter](/type/ChannelAdminLogEventsFilter/) | Фильтр для получения событий из журнала администратора канала |
+| [ChannelLocation](/type/ChannelLocation/) | Географическое положение супергруппы (геогруппы) |
+| [ChannelMessagesFilter](/type/ChannelMessagesFilter/) | Фильтр для получения только определённых типов сообщений канала |
+| [ChannelParticipant](/type/ChannelParticipant/) | Участник канала |
+| [ChannelParticipantsFilter](/type/ChannelParticipantsFilter/) | Фильтр для получения участников канала |
+| [channels.AdminLogResults](/type/channels.AdminLogResults/) | События журнала администратора |
+| [channels.ChannelParticipant](/type/channels.ChannelParticipant/) | Участник канала |
+| [channels.ChannelParticipants](/type/channels.ChannelParticipants/) | Участники канала или супергруппы |
+| [channels.SendAsPeers](/type/channels.SendAsPeers/) | Список пиров, от имени которых можно отправлять сообщения в определённой группе |
+| [channels.SponsoredMessageReportResult](/type/channels.SponsoredMessageReportResult/) | Состояние вызова метода, использованного для жалобы на [спонсируемое сообщение »](/api/sponsored-messages/). |
+| [Chat](/type/Chat/) | Объект описывает группу. |
+| [ChatAdminRights](/type/ChatAdminRights/) | Представляет права администратора в [канале или супергруппе](/api/channel/). |
+| [ChatAdminWithInvites](/type/ChatAdminWithInvites/) | Сведения о приглашениях в чат, созданных администраторами. |
+| [ChatBannedRights](/type/ChatBannedRights/) | Представляет права обычного пользователя в [супергруппе, канале или чате](/api/channel/). |
+| [ChatFull](/type/ChatFull/) | Полная информация о [канале](/api/channel/#channels), [супергруппе](/api/channel/#supergroups), [гигагруппе](/api/channel/#gigagroups) или [обычной группе](/api/channel/#basic-groups). |
+| [ChatInvite](/type/ChatInvite/) | Приглашение в чат |
+| [ChatInviteImporter](/type/ChatInviteImporter/) | Когда и какой пользователь вступил в чат по пригласительной ссылке |
+| [chatlists.ChatlistInvite](/type/chatlists.ChatlistInvite/) | Информация о [глубокой ссылке на папку с чатами »](/api/links/#chat-folder-links). |
+| [chatlists.ChatlistUpdates](/type/chatlists.ChatlistUpdates/) | Обновлённые сведения о [глубокой ссылке на папку чатов »](/api/links/#chat-folder-links). |
+| [chatlists.ExportedChatlistInvite](/type/chatlists.ExportedChatlistInvite/) | Экспортированная [глубокая ссылка на папку с чатами »](/api/links/#chat-folder-links). |
+| [chatlists.ExportedInvites](/type/chatlists.ExportedInvites/) | Список экспортированных [глубоких ссылок на папки с чатами »](/api/links/#chat-folder-links). |
+| [ChatOnlines](/type/ChatOnlines/) | Количество пользователей чата, находящихся в сети |
+| [ChatParticipant](/type/ChatParticipant/) | Сведения об участнике группы. |
+| [ChatParticipants](/type/ChatParticipants/) | Содержит полный список участников [обычных групп »](/api/channel/#basic-groups); **НЕ** применимо к супергруппам и каналам. |
+| [ChatPhoto](/type/ChatPhoto/) | Объект описывает фотографию профиля группы. |
+| [ChatReactions](/type/ChatReactions/) | Доступные реакции в чате |
+| [ChatTheme](/type/ChatTheme/) | Тема оформления чата |
+| [CodeSettings](/type/CodeSettings/) | Настройки типа отправляемого кода |
+| [Config](/type/Config/) | Объект содержит информацию о параметрах настройки API. |
+| [ConnectedBot](/type/ConnectedBot/) | Содержит информацию о [подключённом бизнес-боте »](/api/bots/connected-business-bots/). |
+| [ConnectedBotStarRef](/type/ConnectedBotStarRef/) | Информация об [активной партнёрской программе, в которой мы участвуем с одним из Mini App](/api/bots/referrals/#becoming-an-affiliate) |
+| [Contact](/type/Contact/) | Контакт текущего пользователя. |
+| [ContactBirthday](/type/ContactBirthday/) | Сведения о дне рождения контакта. |
+| [contacts.Blocked](/type/contacts.Blocked/) | Информация о пользователях из чёрного списка текущего пользователя. |
+| [contacts.ContactBirthdays](/type/contacts.ContactBirthdays/) | Сведения о днях рождения наших контактов. |
+| [contacts.Contacts](/type/contacts.Contacts/) | Информация о списке контактов текущего пользователя. |
+| [contacts.Found](/type/contacts.Found/) | Объект содержит информацию о пользователях, найденных по подстроке имени, и вспомогательные данные. |
+| [contacts.ImportedContacts](/type/contacts.ImportedContacts/) | Объект содержит информацию об успешно импортированных контактах. |
+| [contacts.ResolvedPeer](/type/contacts.ResolvedPeer/) | Пир, возвращённый после разрешения `@username` |
+| [contacts.SponsoredPeers](/type/contacts.SponsoredPeers/) | Список спонсируемых пиров. |
+| [contacts.TopPeers](/type/contacts.TopPeers/) | Популярные пиры |
+| [ContactStatus](/type/ContactStatus/) | Статус контакта: в сети / не в сети. |
+| [DataJSON](/type/DataJSON/) | Представляет объект в формате JSON |
+| [DcOption](/type/DcOption/) | Информация для подключения к дата-центру. |
+| [DecryptedDataBlock](/type/DecryptedDataBlock/) | Расшифрованный блок данных VoIP |
+| [DecryptedMessage](/type/DecryptedMessage/) | Объект описывает содержимое зашифрованного сообщения. |
+| [DecryptedMessageAction](/type/DecryptedMessageAction/) | Объект описывает действие, с которым связано сервисное сообщение. |
+| [DecryptedMessageLayer](/type/DecryptedMessageLayer/) | Объект описывает содержимое зашифрованного сообщения применительно к требуемому слою. |
+| [DecryptedMessageMedia](/type/DecryptedMessageMedia/) | Объект описывает медиасодержимое зашифрованного сообщения. |
+| [DefaultHistoryTTL](/type/DefaultHistoryTTL/) | Содержит информацию о значении по умолчанию для настройки времени жизни (Time-To-Live), применяемой ко всем новым чатам. |
+| [Dialog](/type/Dialog/) | Информация о чате. |
+| [DialogFilter](/type/DialogFilter/) | Фильтр диалогов ([папка »](/api/folders/)) |
+| [DialogFilterSuggested](/type/DialogFilterSuggested/) | Рекомендуемые фильтры диалогов ([папки »](/api/folders/)) |
+| [DialogPeer](/type/DialogPeer/) | Пир или все пиры в папке |
+| [DisallowedGiftsSettings](/type/DisallowedGiftsSettings/) | Запретить получение определённых типов [подарков](/api/gifts/). |
+| [Document](/type/Document/) | Документ. |
+| [DocumentAttribute](/type/DocumentAttribute/) | Различные возможные атрибуты документа (используются, чтобы определить, является ли он стикером, GIF-анимацией, видео, стикером-маской, изображением, аудиозаписью и так далее) |
+| [double](/type/double/) | Базовый голый тип, значения которого соответствуют последовательностям из двух элементов, содержащим 64-битные вещественные числа в стандартном формате _double_. |
+| [DraftMessage](/type/DraftMessage/) | Представляет [черновик](/api/drafts/) сообщения. |
+| [e2e.CallPacket](/type/e2e.CallPacket/) | Конструктор-маркер, идентификатор которого (CRC32) используется при выработке и аутентификации [зашифрованных пакетов группового звонка](/api/end-to-end/group-calls/#packet-encryption). |
+| [e2e.CallPacketLargeMsgId](/type/e2e.CallPacketLargeMsgId/) | Конструктор-маркер, идентификатор которого (CRC32) используется при подписи большого идентификатора сообщения, формируемого при шифровании [пакетов группового звонка](/api/end-to-end/group-calls/#packet-encryption). |
+| [e2e.chain.Block](/type/e2e.chain.Block/) | Блок [основного блокчейна E2E-конференц-звонка](/api/end-to-end/group-calls/#block-structure), содержащий изменения состояния этого звонка и итоговое доказательство состояния. |
+| [e2e.chain.Change](/type/e2e.chain.Change/) | Изменение, применённое к [состоянию блокчейна сквозного конференц-звонка](/api/end-to-end/group-calls/#change-types-for-group-calls) и записанное в [e2e.chain.Block](/type/e2e.chain.Block/) для изменения хранилища «ключ-значение» звонка, списка участников или общего ключа шифрования. |
+| [e2e.chain.GroupBroadcast](/type/e2e.chain.GroupBroadcast/) | Широковещательное сообщение, используемое в [протоколе проверки ключей сквозного конференц-звонка](/api/end-to-end/group-calls/#commit-reveal-protocol-workflow), которое реализует схему commit/reveal для генерации проверяемых эмодзи звонка. |
+| [e2e.chain.GroupParticipant](/type/e2e.chain.GroupParticipant/) | Участник в [групповом состоянии конференц-звонка со сквозным шифрованием](/api/end-to-end/group-calls/#blockchain-state-management). |
+| [e2e.chain.GroupState](/type/e2e.chain.GroupState/) | Список участников и внешняя маска разрешений для [состояния блокчейна сквозного шифрования конференц-звонка](/api/end-to-end/group-calls/#blockchain-state-management). |
+| [e2e.chain.SharedKey](/type/e2e.chain.SharedKey/) | Зашифрованный [общий групповой ключевой материал](/api/end-to-end/group-calls/#shared-key-encryption) для конференц-звонка со сквозным шифрованием. |
+| [e2e.chain.StateProof](/type/e2e.chain.StateProof/) | Подтверждение [состояния блокчейна сквозного шифрования конференц-звонка](/api/end-to-end/group-calls/#block-application-process) после применения блока. |
+| [EmailVerification](/type/EmailVerification/) | Код подтверждения или токен электронной почты |
+| [EmailVerifyPurpose](/type/EmailVerifyPurpose/) | Назначение подтверждения электронной почты |
+| [EmojiGroup](/type/EmojiGroup/) | Представляет [категорию эмодзи](/api/emoji-categories/). |
+| [EmojiKeyword](/type/EmojiKeyword/) | Ключевое слово эмодзи |
+| [EmojiKeywordsDifference](/type/EmojiKeywordsDifference/) | Новые ключевые слова эмодзи |
+| [EmojiLanguage](/type/EmojiLanguage/) | Язык эмодзи |
+| [EmojiList](/type/EmojiList/) | Представляет список [пользовательских эмодзи](/api/custom-emoji/). |
+| [EmojiStatus](/type/EmojiStatus/) | [Эмодзи-статус](/api/emoji-status/) |
+| [EmojiURL](/type/EmojiURL/) | URL эмодзи |
+| [EncryptedChat](/type/EncryptedChat/) | Объект содержит информацию о секретном чате. |
+| [EncryptedFile](/type/EncryptedFile/) | Задаёт зашифрованный файл. |
+| [EncryptedMessage](/type/EncryptedMessage/) | Объект содержит зашифрованное сообщение. |
+| [Error](/type/Error/) | Объект, содержащий ошибку запроса. |
+| [ExportedChatInvite](/type/ExportedChatInvite/) | Экспортированное приглашение в чат |
+| [ExportedChatlistInvite](/type/ExportedChatlistInvite/) | Экспортированная [глубокая ссылка на папку с чатами »](/api/links/#chat-folder-links). |
+| [ExportedContactToken](/type/ExportedContactToken/) | Описывает [временную ссылку на профиль](/api/links/#temporary-profile-links). |
+| [ExportedMessageLink](/type/ExportedMessageLink/) | HTTP-ссылка и данные для встраивания сообщения канала |
+| [ExportedStoryLink](/type/ExportedStoryLink/) | Представляет [глубокую ссылку на историю](/api/stories/#story-links) |
+| [FactCheck](/type/FactCheck/) | Представляет [проверку фактов »](/api/factcheck/), выполненную независимым фактчекером. |
+| [FileHash](/type/FileHash/) | Хеш загруженного файла, который следует проверить после скачивания |
+| [FileLocation](/type/FileLocation/) | Указывает расположение фотографии; скоро будет объявлено устаревшим |
+| [Folder](/type/Folder/) | Папка |
+| [FolderPeer](/type/FolderPeer/) | Пир, связанный с папкой |
+| [ForumTopic](/type/ForumTopic/) | Содержит информацию о [теме форума](/api/forum/#forum-topics) |
+| [FoundStory](/type/FoundStory/) | История, найденная через [глобальный поиск историй »](/api/stories/#searching-stories). |
+| [fragment.CollectibleInfo](/type/fragment.CollectibleInfo/) | Информация о [коллекционном объекте fragment](/api/fragment/). |
+| [Game](/type/Game/) | Указывает на уже отправленную игру |
+| [GeoPoint](/type/GeoPoint/) | Объект определяет географическую точку. |
+| [GeoPointAddress](/type/GeoPointAddress/) | Необязательный адрес, связанный с [geoPoint](/constructor/geoPoint/). |
+| [GlobalPrivacySettings](/type/GlobalPrivacySettings/) | Глобальные настройки приватности |
+| [GroupCall](/type/GroupCall/) | Групповой звонок |
+| [GroupCallDonor](/type/GroupCallDonor/) | Описывает донатера прямого эфира истории в [таблице лидеров пожертвований »](/api/group-calls/#paid-live-story-donations). |
+| [GroupCallMessage](/type/GroupCallMessage/) | Представляет сообщение во время звонка, [реакцию эмодзи »](/api/group-calls/#in-call-reactions), платный комментарий к прямой трансляции истории или отдельное платное пожертвование в прямой трансляции истории. |
+| [GroupCallParticipant](/type/GroupCallParticipant/) | Информация об участнике группового звонка |
+| [GroupCallParticipantVideo](/type/GroupCallParticipantVideo/) | Информация о видеопотоке |
+| [GroupCallParticipantVideoSourceGroup](/type/GroupCallParticipantVideoSourceGroup/) | Описывает группу идентификаторов источников синхронизации видео |
+| [GroupCallStreamChannel](/type/GroupCallStreamChannel/) | Информация о потоке RTMP в групповом звонке или трансляции |
+| [help.AppConfig](/type/help.AppConfig/) | Содержит различные [параметры клиентской конфигурации](/api/config/#client-configuration) |
+| [help.AppUpdate](/type/help.AppUpdate/) | Содержит информацию о доступности обновления приложения. |
+| [help.CountriesList](/type/help.CountriesList/) | Название, код ISO, локализованное название и телефонные коды/шаблоны всех доступных стран |
+| [help.Country](/type/help.Country/) | Название, код ISO, локализованное название и телефонные коды/шаблоны конкретной страны |
+| [help.CountryCode](/type/help.CountryCode/) | Код страны и шаблон номера телефона для конкретной страны |
+| [help.DeepLinkInfo](/type/help.DeepLinkInfo/) | Содержит информацию о неподдерживаемой [глубокой ссылке »](/api/links/#unsupported-links) |
+| [help.InviteText](/type/help.InviteText/) | Объект содержит информацию о тексте сообщения с приглашением. |
+| [help.PassportConfig](/type/help.PassportConfig/) | Конфигурация Telegram [passport](https://core.telegram.org/passport) |
+| [help.PeerColorOption](/type/help.PeerColorOption/) | Содержит информацию о [цветовой палитре »](/api/colors/). |
+| [help.PeerColors](/type/help.PeerColors/) | Содержит информацию о нескольких [цветовых палитрах »](/api/colors/). |
+| [help.PeerColorSet](/type/help.PeerColorSet/) | Содержит информацию о [цветовой палитре »](/api/colors/). |
+| [help.PremiumPromo](/type/help.PremiumPromo/) | Сведения о рекламной кампании Telegram Premium |
+| [help.PromoData](/type/help.PromoData/) | Информация о закреплённых пирах MTProxy или общественных объявлений. |
+| [help.RecentMeUrls](/type/help.RecentMeUrls/) | Недавние ссылки t.me |
+| [help.Support](/type/help.Support/) | Информация о пользователе службы поддержки, относящаяся к текущему пользователю. |
+| [help.SupportName](/type/help.SupportName/) | Получить локализованное имя пользователя службы поддержки |
+| [help.TermsOfService](/type/help.TermsOfService/) | Содержит информацию о последних условиях использования Telegram. |
+| [help.TermsOfServiceUpdate](/type/help.TermsOfServiceUpdate/) | Обновление условий использования Telegram |
+| [help.TimezonesList](/type/help.TimezonesList/) | Сведения о часовых поясах, которые могут использоваться в других частях API — например, для указания [часов работы Telegram Business »](/api/business/#opening-hours). |
+| [help.UserInfo](/type/help.UserInfo/) | Информация о пользователе |
+| [HighScore](/type/HighScore/) | Рекорд в игре |
+| [ImportedContact](/type/ImportedContact/) | Объект содержит информацию об успешно импортированном контакте. |
+| [InlineBotSwitchPM](/type/InlineBotSwitchPM/) | Бот попросил пользователя написать ему в личных сообщениях |
+| [InlineBotWebView](/type/InlineBotWebView/) | Задаёт кнопку [Mini App в инлайн-режиме](/api/bots/webapps/#inline-mode-mini-apps), отображаемую над списком результатов инлайн-запроса. |
+| [InlineQueryPeerType](/type/InlineQueryPeerType/) | Тип пира для инлайн-запроса. |
+| [InputAiComposeTone](/type/InputAiComposeTone/) | Ссылается на [тональность AI-редактора »](/api/ai/#ai-compose-tones) — либо на встроенную стандартную, либо на пользовательскую (по ID или слагу). |
+| [InputAppEvent](/type/InputAppEvent/) | Объект содержит информацию о событии, произошедшем в приложении. |
+| [InputBotApp](/type/InputBotApp/) | Используется для получения информации о [Mini App с прямой ссылкой](/api/bots/webapps/#direct-link-mini-apps) |
+| [InputBotInlineMessage](/type/InputBotInlineMessage/) | Представляет отправленное инлайн-сообщение с точки зрения бота |
+| [InputBotInlineMessageID](/type/InputBotInlineMessageID/) | Представляет отправленное инлайн-сообщение с точки зрения бота |
+| [InputBotInlineResult](/type/InputBotInlineResult/) | Результат инлайн-бота |
+| [InputBusinessAwayMessage](/type/InputBusinessAwayMessage/) | Описывает [сообщение об отсутствии Telegram Business](/api/business/#away-messages), автоматически отправляемое пользователям, которые пишут нам, когда мы не в сети, в нерабочие часы, во время отпуска или в любой другой заданный период, когда мы не можем ответить сразу. |
+| [InputBusinessBotRecipients](/type/InputBusinessBotRecipients/) | Задаёт личные чаты, с которыми может взаимодействовать [подключённый бизнес-бот »](/api/bots/connected-business-bots/). |
+| [InputBusinessChatLink](/type/InputBusinessChatLink/) | Содержит информацию о [глубокой ссылке на бизнес-чат »](/api/business/#business-chat-links), которую предстоит создать текущей учётной записи. |
+| [InputBusinessGreetingMessage](/type/InputBusinessGreetingMessage/) | Описывает [приветственное сообщение Telegram Business](/api/business/#greeting-messages), автоматически отправляемое новым пользователям, которые пишут нам в личные сообщения впервые или после определённого периода бездействия. |
+| [InputBusinessIntro](/type/InputBusinessIntro/) | [Введение в Telegram Business »](/api/business/#business-introduction). |
+| [InputBusinessRecipients](/type/InputBusinessRecipients/) | Задаёт чаты, которые **могут** получать сообщения Telegram Business [об отсутствии »](/api/business/#away-messages) и [приветственные »](/api/business/#greeting-messages). |
+| [InputChannel](/type/InputChannel/) | Представляет канал |
+| [InputChatlist](/type/InputChatlist/) | Представляет папку |
+| [InputChatPhoto](/type/InputChatPhoto/) | Определяет новую фотографию профиля группы. |
+| [InputChatTheme](/type/InputChatTheme/) | Задаёт [тему оформления чата »](/api/themes/#chat-themes). |
+| [InputCheckPasswordSRP](/type/InputCheckPasswordSRP/) | Конструкторы для проверки правильности [пароля двухфакторной аутентификации по SRP](/api/srp/). |
+| [InputClientProxy](/type/InputClientProxy/) | Информация об [MTProxy](/mtproto/mtproto-transports/#transport-obfuscation), использованном для подключения. |
+| [InputCollectible](/type/InputCollectible/) | Представляет [коллекционный объект Fragment »](/api/fragment/). |
+| [InputContact](/type/InputContact/) | Объект описывает контакт из телефонной книги пользователя. |
+| [InputDialogPeer](/type/InputDialogPeer/) | Пир или все пиры в определённой папке |
+| [InputDocument](/type/InputDocument/) | Определяет документ для дальнейшего взаимодействия. |
+| [InputEncryptedChat](/type/InputEncryptedChat/) | [Чат со сквозным шифрованием](/api/end-to-end/). |
+| [InputEncryptedFile](/type/InputEncryptedFile/) | Объект задаёт зашифрованный файл для вложения |
+| [InputFile](/type/InputFile/) | Определяет файл, загруженный клиентом. |
+| [InputFileLocation](/type/InputFileLocation/) | Определяет расположение файла для загрузки. |
+| [InputFolderPeer](/type/InputFolderPeer/) | Пир в папке |
+| [InputGame](/type/InputGame/) | Игра для отправки |
+| [InputGeoPoint](/type/InputGeoPoint/) | Определяет географическую точку. |
+| [InputGroupCall](/type/InputGroupCall/) | Обозначает групповой звонок |
+| [InputInvoice](/type/InputInvoice/) | Счёт |
+| [InputMedia](/type/InputMedia/) | Определяет медиасодержимое сообщения. |
+| [InputMessage](/type/InputMessage/) | Сообщение |
+| [InputMessageReadMetric](/type/InputMessageReadMetric/) | Метрика прочтения для одного показа сообщения, описывающая, как долго сообщение было видно в области просмотра чата. |
+| [InputNotifyPeer](/type/InputNotifyPeer/) | Объект описывает набор пользователей и/или групп, которые создают уведомления. |
+| [InputPasskeyCredential](/type/InputPasskeyCredential/) | Учётные данные, используемые для регистрации [ключа доступа »](/api/passkeys/) или для входа с его помощью. |
+| [InputPasskeyResponse](/type/InputPasskeyResponse/) | Ответ WebAuthn, сформированный аутентификатором при регистрации или входе с помощью [ключа доступа с открытым ключом »](/api/passkeys/). |
+| [InputPaymentCredentials](/type/InputPaymentCredentials/) | Платёжные реквизиты |
+| [InputPeer](/type/InputPeer/) | Пир |
+| [InputPeerNotifySettings](/type/InputPeerNotifySettings/) | Настройки уведомлений. |
+| [InputPhoneCall](/type/InputPhoneCall/) | Телефонный звонок |
+| [InputPhoto](/type/InputPhoto/) | Определяет фотографию для дальнейшего взаимодействия. |
+| [InputPrivacyKey](/type/InputPrivacyKey/) | **Ключи** приватности вместе с [правилами приватности »](/api/privacy/#privacy-rules) определяют, _что_ кому разрешено или запрещено делать; они задаются конструктором [PrivacyKey](/type/PrivacyKey/) и его входным аналогом [InputPrivacyKey](/type/InputPrivacyKey/). |
+| [InputPrivacyRule](/type/InputPrivacyRule/) | **Правила** приватности указывают, _кто_ может и кто не может что-либо делать; они задаются типом [PrivacyRule](/type/PrivacyRule/) и его входным аналогом [InputPrivacyRule](/type/InputPrivacyRule/). |
+| [InputQuickReplyShortcut](/type/InputQuickReplyShortcut/) | Представляет [шаблон быстрого ответа »](/api/business/#quick-reply-shortcuts). |
+| [InputReplyTo](/type/InputReplyTo/) | Содержит информацию о сообщении или истории, на которые даётся ответ. |
+| [InputSavedStarGift](/type/InputSavedStarGift/) | Указывает на [подарок »](/api/gifts/). |
+| [InputSecureFile](/type/InputSecureFile/) | Защищённый файл [passport](https://core.telegram.org/passport); подробнее [см. документацию по Telegram Passport »](https://core.telegram.org/passport/encryption#inputsecurefile) |
+| [InputSecureValue](/type/InputSecureValue/) | Защищённое значение, [подробнее см. в документации по Passport »](https://core.telegram.org/passport/encryption#encryption) |
+| [InputSingleMedia](/type/InputSingleMedia/) | Отдельный медиафайл в [альбоме или сгруппированных медиафайлах](/api/files/#albums-grouped-media), отправленный методом [messages.sendMultiMedia](/method/messages.sendMultiMedia/). |
+| [InputStarGiftAuction](/type/InputStarGiftAuction/) | Определяет [аукцион коллекционных подарков »](/api/auctions/) — либо по идентификатору связанного коллекционного подарка, либо по слагу глубокой ссылки на аукцион. |
+| [InputStarsTransaction](/type/InputStarsTransaction/) | Используется для получения информации о [транзакции с Telegram Stars »](/api/stars/#balance-and-transaction-history). |
+| [InputStickeredMedia](/type/InputStickeredMedia/) | Представляет медиафайл с прикреплёнными стикерами |
+| [InputStickerSet](/type/InputStickerSet/) | Представляет набор стикеров |
+| [InputStickerSetItem](/type/InputStickerSetItem/) | Стикер |
+| [InputStorePaymentPurpose](/type/InputStorePaymentPurpose/) | Информация о покупке Telegram Premium |
+| [InputTheme](/type/InputTheme/) | Облачная тема оформления |
+| [InputThemeSettings](/type/InputThemeSettings/) | Параметры темы оформления |
+| [InputUser](/type/InputUser/) | Определяет пользователя для дальнейшего взаимодействия. |
+| [InputWallPaper](/type/InputWallPaper/) | [Обои](/api/wallpapers/) |
+| [InputWebDocument](/type/InputWebDocument/) | Задаёт документ, который серверы telegram должны будут загрузить по указанному адресу |
+| [InputWebFileLocation](/type/InputWebFileLocation/) | Расположение удалённого файла |
+| [int](/type/int/) | Базовый голый тип, значения которого соответствуют одноэлементным последовательностям, то есть числам от -2^31 до 2^31-1, которые в этом случае представляют сами себя. |
+| [int256](/type/int256/) | Базовый голый тип, значения которого соответствуют 256-битному целому числу. |
+| [int32](/type/int32/) | Базовый голый тип, значения которого соответствуют 32-битному целому числу. |
+| [int512](/type/int512/) | Базовый голый тип, значения которого соответствуют 512-битному целому числу. |
+| [int64](/type/int64/) | Базовый голый тип, значения которого соответствуют 64-битному целому числу. |
+| [Invoice](/type/Invoice/) | Счёт |
+| [JSONObjectValue](/type/JSONObjectValue/) | Пара «ключ: значение» в формате JSON |
+| [JSONValue](/type/JSONValue/) | Значение JSON |
+| [KeyboardButton](/type/KeyboardButton/) | Кнопки клавиатуры бота или инлайн-клавиатуры |
+| [KeyboardButtonRow](/type/KeyboardButtonRow/) | Ряды клавиатуры бота или инлайн-клавиатуры |
+| [KeyboardButtonStyle](/type/KeyboardButtonStyle/) | Этот конструктор позволяет задать для кнопки собственный цвет фона и подпись из пользовательского эмодзи, [подробнее »](/api/bots/buttons/#button-styles). |
+| [LabeledPrice](/type/LabeledPrice/) | Ценник с подписью |
+| [LangPackDifference](/type/LangPackDifference/) | Изменения языкового пакета |
+| [LangPackLanguage](/type/LangPackLanguage/) | Язык языкового пакета |
+| [LangPackString](/type/LangPackString/) | Строка языкового пакета |
+| [long](/type/long/) | Базовый голый тип, значения которого соответствуют последовательностям из двух элементов, представляющим 64-битные знаковые числа (в порядке little-endian). |
+| [MaskCoords](/type/MaskCoords/) | Координаты маски (если это стикер-маска, наложенный на фотографию) |
+| [MediaArea](/type/MediaArea/) | Представляет [медиазону истории »](/api/stories/#media-areas) |
+| [MediaAreaCoordinates](/type/MediaAreaCoordinates/) | Координаты и размер кликабельной прямоугольной области поверх истории. |
+| [Message](/type/Message/) | Объект, описывающий сообщение. |
+| [MessageAction](/type/MessageAction/) | Объект, описывающий действия, связанные с сервисным сообщением. |
+| [MessageEntity](/type/MessageEntity/) | Сущности оформления сообщения, задающие форматирование текста |
+| [MessageExtendedMedia](/type/MessageExtendedMedia/) | [Платное медиа, подробнее см. здесь »](/api/paid-media/). |
+| [MessageFwdHeader](/type/MessageFwdHeader/) | Информация о пересланном сообщении |
+| [MessageMedia](/type/MessageMedia/) | Медиа |
+| [MessagePeerReaction](/type/MessagePeerReaction/) | Как определённый пир отреагировал на сообщение |
+| [MessagePeerVote](/type/MessagePeerVote/) | Как пользователь проголосовал в опросе |
+| [MessageRange](/type/MessageRange/) | Указывает диапазон сообщений чата |
+| [MessageReactions](/type/MessageReactions/) | [Реакции на сообщения »](/api/reactions/) |
+| [MessageReactor](/type/MessageReactor/) | Информация о пользователе в [таблице лидеров платных реакций за Telegram Stars](/api/reactions/#paid-reactions) для сообщения. |
+| [MessageReplies](/type/MessageReplies/) | Информация о [комментариях к публикациям (для каналов) или ответах на сообщения (для групп)](/api/threads/) |
+| [MessageReplyHeader](/type/MessageReplyHeader/) | Сведения об ответе |
+| [MessageReportOption](/type/MessageReportOption/) | Пункт меню жалобы |
+| [messages.AffectedFoundMessages](/type/messages.AffectedFoundMessages/) | Найденные сообщения, затронутые изменениями |
+| [messages.AffectedHistory](/type/messages.AffectedHistory/) | Объект содержит информацию о затронутой части истории переписки с пользователем или в чате. |
+| [messages.AffectedMessages](/type/messages.AffectedMessages/) | Сообщения, затронутые изменениями |
+| [messages.AllStickers](/type/messages.AllStickers/) | Все стикеры |
+| [messages.ArchivedStickers](/type/messages.ArchivedStickers/) | Архивированные стикеры |
+| [messages.AvailableEffects](/type/messages.AvailableEffects/) | Полный список доступных [анимированных эффектов для сообщений »](/api/effects/). |
+| [messages.AvailableReactions](/type/messages.AvailableReactions/) | Анимации и метаданные, связанные с [реакциями на сообщения »](/api/reactions/) |
+| [messages.BotApp](/type/messages.BotApp/) | Содержит информацию о [Mini App с прямой ссылкой](/api/bots/webapps/#direct-link-mini-apps) |
+| [messages.BotCallbackAnswer](/type/messages.BotCallbackAnswer/) | Ответ бота на callback-запрос |
+| [messages.BotPreparedInlineMessage](/type/messages.BotPreparedInlineMessage/) | Представляет [заранее подготовленное инлайн-сообщение, сохранённое ботом для отправки пользователю через веб-приложение »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message) |
+| [messages.BotResults](/type/messages.BotResults/) | Результат запроса к инлайн-боту |
+| [messages.ChatAdminsWithInvites](/type/messages.ChatAdminsWithInvites/) | Сведения о приглашениях в чат, созданных администраторами. |
+| [messages.ChatFull](/type/messages.ChatFull/) | Полная информация о [канале](/api/channel/#channels), [супергруппе](/api/channel/#supergroups), [гигагруппе](/api/channel/#gigagroups) или [обычной группе](/api/channel/#basic-groups). |
+| [messages.ChatInviteImporters](/type/messages.ChatInviteImporters/) | Список пользователей, воспользовавшихся пригласительной ссылкой на чат. |
+| [messages.Chats](/type/messages.Chats/) | Объект содержит список чатов со вспомогательными данными. |
+| [messages.CheckedHistoryImportPeer](/type/messages.CheckedHistoryImportPeer/) | Содержит текст подтверждения, который следует показать пользователю при [импорте истории переписки, подробнее см. здесь »](/api/import/). |
+| [messages.ComposedMessageWithAI](/type/messages.ComposedMessageWithAI/) | Представляет сообщение, изменённое ИИ. |
+| [messages.DhConfig](/type/messages.DhConfig/) | Содержит параметры протокола генерации ключа по схеме Диффи — Хеллмана. |
+| [messages.DialogFilters](/type/messages.DialogFilters/) | Сведения о [папке](/api/folders/) |
+| [messages.Dialogs](/type/messages.Dialogs/) | Объект содержит список чатов с сообщениями и вспомогательными данными. |
+| [messages.DiscussionMessage](/type/messages.DiscussionMessage/) | Информация о ветке сообщений |
+| [messages.EmojiGameInfo](/type/messages.EmojiGameInfo/) | Информация об игре в кости. |
+| [messages.EmojiGameOutcome](/type/messages.EmojiGameOutcome/) | Результат игры в кости. |
+| [messages.EmojiGroups](/type/messages.EmojiGroups/) | Представляет список [категорий эмодзи](/api/emoji-categories/). |
+| [messages.ExportedChatInvite](/type/messages.ExportedChatInvite/) | Содержит информацию о приглашении в чат и, возможно, указатель на самое новое приглашение в чат. |
+| [messages.ExportedChatInvites](/type/messages.ExportedChatInvites/) | Информация о приглашениях в чат, экспортированных определённым администратором. |
+| [messages.FavedStickers](/type/messages.FavedStickers/) | Избранные стикеры |
+| [messages.FeaturedStickers](/type/messages.FeaturedStickers/) | Новые наборы стикеров |
+| [messages.ForumTopics](/type/messages.ForumTopics/) | Содержит информацию о нескольких [темах форума](/api/forum/#forum-topics) |
+| [messages.FoundStickers](/type/messages.FoundStickers/) | Найденные [стикеры](/api/stickers/) |
+| [messages.FoundStickerSets](/type/messages.FoundStickerSets/) | Найденные наборы стикеров |
+| [messages.HighScores](/type/messages.HighScores/) | Рекорды (в играх) |
+| [messages.HistoryImport](/type/messages.HistoryImport/) | Идентификатор [сессии импорта истории, подробнее см. здесь »](/api/import/). |
+| [messages.HistoryImportParsed](/type/messages.HistoryImportParsed/) | Содержит информацию о файле экспорта чата, выгруженном из стороннего мессенджера. |
+| [messages.InactiveChats](/type/messages.InactiveChats/) | Список неактивных чатов |
+| [messages.InvitedUsers](/type/messages.InvitedUsers/) | Содержит информацию об успешно и неуспешно [приглашённых »](/api/invites/#direct-invites) пользователях. |
+| [messages.MessageEditData](/type/messages.MessageEditData/) | Данные для редактирования сообщения с медиа |
+| [messages.MessageReactionsList](/type/messages.MessageReactionsList/) | Список пиров, отреагировавших на конкретное сообщение |
+| [messages.Messages](/type/messages.Messages/) | Объект содержит информацию о списке сообщений и вспомогательные данные. |
+| [messages.MessageViews](/type/messages.MessageViews/) | Счётчик просмотров и пересылок + сведения об ответах |
+| [messages.MyStickers](/type/messages.MyStickers/) | Список [наборов стикеров, принадлежащих текущему аккаунту »](/api/stickers/). |
+| [messages.PeerDialogs](/type/messages.PeerDialogs/) | Список диалогов |
+| [messages.PeerSettings](/type/messages.PeerSettings/) | Настройки пира |
+| [messages.PreparedInlineMessage](/type/messages.PreparedInlineMessage/) | Представляет [заранее подготовленное инлайн-сообщение, полученное через mini app бота, которое можно отправить в некоторые чаты »](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message) |
+| [messages.QuickReplies](/type/messages.QuickReplies/) | Информация о [шаблонах быстрых ответов »](/api/business/#quick-reply-shortcuts). |
+| [messages.Reactions](/type/messages.Reactions/) | Набор [реакций на сообщения](/api/reactions/) |
+| [messages.RecentStickers](/type/messages.RecentStickers/) | Недавние стикеры |
+| [messages.SavedDialogs](/type/messages.SavedDialogs/) | Представляет несколько [диалогов из сохранённых сообщений »](/api/saved-messages/). |
+| [messages.SavedGifs](/type/messages.SavedGifs/) | Сохранённые GIF |
+| [messages.SavedReactionTags](/type/messages.SavedReactionTags/) | Список имён [тегов-реакций »](/api/saved-messages/#tags), назначенных пользователем. |
+| [messages.SearchCounter](/type/messages.SearchCounter/) | Количество результатов, которые будут возвращены поиском |
+| [messages.SearchResultsCalendar](/type/messages.SearchResultsCalendar/) | Информация о найденных сообщениях, отправленных в определённый день |
+| [messages.SearchResultsPositions](/type/messages.SearchResultsPositions/) | Информация о разреженных позициях сообщений |
+| [messages.SentEncryptedMessage](/type/messages.SentEncryptedMessage/) | Содержит информацию о сообщении, отправленном в секретный чат. |
+| [messages.SponsoredMessages](/type/messages.SponsoredMessages/) | Набор [рекламных сообщений](/api/sponsored-messages/), связанных с каналом |
+| [messages.Stickers](/type/messages.Stickers/) | Стикеры |
+| [messages.StickerSet](/type/messages.StickerSet/) | Набор стикеров |
+| [messages.StickerSetInstallResult](/type/messages.StickerSetInstallResult/) | Результат процесса установки набора стикеров |
+| [messages.TranscribedAudio](/type/messages.TranscribedAudio/) | [Расшифрованный текст](/api/transcribe/) голосового сообщения |
+| [messages.TranslatedText](/type/messages.TranslatedText/) | Переведённый текст с [сущностями оформления](/api/entities/). |
+| [messages.VotesList](/type/messages.VotesList/) | Как пользователи проголосовали в опросе |
+| [messages.WebPage](/type/messages.WebPage/) | Содержит веб-страницу Instant View. |
+| [messages.WebPagePreview](/type/messages.WebPagePreview/) | Представляет предпросмотр веб-страницы. |
+| [MessagesFilter](/type/MessagesFilter/) | Объект описывает фильтр сообщений. |
+| [MessageViews](/type/MessageViews/) | Счётчик просмотров и пересылок + сведения об ответах на конкретное сообщение |
+| [MissingInvitee](/type/MissingInvitee/) | Информация о том, почему определённого пользователя не удалось [пригласить »](/api/invites/#direct-invites). |
+| [MyBoost](/type/MyBoost/) | Содержит информацию об одном [слоте буста »](/api/boost/). |
+| [NearestDc](/type/NearestDc/) | Объект содержит информацию о ближайшем дата-центре. |
+| [NotificationSound](/type/NotificationSound/) | Представляет звук уведомления |
+| [NotifyPeer](/type/NotifyPeer/) | Объект описывает набор пользователей и/или групп, которые создают уведомления. |
+| [Null](/type/Null/) | Объект соответствует произвольному пустому объекту. |
+| [OutboxReadDate](/type/OutboxReadDate/) | Точная дата прочтения личного сообщения, отправленного нами другому пользователю. |
+| [Page](/type/Page/) | Страница [Instant view](https://instantview.telegram.org) |
+| [PageBlock](/type/PageBlock/) | Представляет [элемент страницы instant view](https://instantview.telegram.org) |
+| [PageCaption](/type/PageCaption/) | Подпись страницы |
+| [PageListItem](/type/PageListItem/) | Запись в списке заблокированных |
+| [PageListOrderedItem](/type/PageListOrderedItem/) | Представляет [упорядоченный список instant view](https://instantview.telegram.org) |
+| [PageRelatedArticle](/type/PageRelatedArticle/) | Связанные статьи |
+| [PageTableCell](/type/PageTableCell/) | Представляет таблицу в [таблице instant view](https://instantview.telegram.org) |
+| [PageTableRow](/type/PageTableRow/) | Строка таблицы |
+| [PaidReactionPrivacy](/type/PaidReactionPrivacy/) | [Настройки приватности платных реакций »](/api/reactions/#paid-reactions) |
+| [Passkey](/type/Passkey/) | Понятные человеку сведения о ключе доступа, привязанном к аккаунту; возвращаются при [создании ключа доступа »](/api/passkeys/#creating-a-passkey) или [получении списка ключей доступа »](/api/passkeys/#list-passkeys). |
+| [PasswordKdfAlgo](/type/PasswordKdfAlgo/) | Функция формирования ключа, используемая при вычислении [хеша пароля для двухфакторной авторизации SRP](/api/srp/) |
+| [PaymentCharge](/type/PaymentCharge/) | Списанный платёж |
+| [PaymentFormMethod](/type/PaymentFormMethod/) | Представляет способ оплаты |
+| [PaymentRequestedInfo](/type/PaymentRequestedInfo/) | Запрошенные платёжные данные |
+| [payments.BankCardData](/type/payments.BankCardData/) | Сведения о банковской карте, предоставленные банком (или банками) карты |
+| [payments.CheckCanSendGiftResult](/type/payments.CheckCanSendGiftResult/) | Указывает, можно отправить подарок или нет. |
+| [payments.CheckedGiftCode](/type/payments.CheckedGiftCode/) | Информация о [подарочном коде Telegram Premium](/api/giveaways/). |
+| [payments.ConnectedStarRefBots](/type/payments.ConnectedStarRefBots/) | Активные [партнёрства](/api/bots/referrals/#becoming-an-affiliate) |
+| [payments.ExportedInvoice](/type/payments.ExportedInvoice/) | Экспортированный счёт |
+| [payments.GiveawayInfo](/type/payments.GiveawayInfo/) | Информация о [розыгрыше Telegram Premium](/api/giveaways/). |
+| [payments.PaymentForm](/type/payments.PaymentForm/) | Форма оплаты |
+| [payments.PaymentReceipt](/type/payments.PaymentReceipt/) | Чек об оплате |
+| [payments.PaymentResult](/type/payments.PaymentResult/) | Результат оплаты |
+| [payments.ResaleStarGifts](/type/payments.ResaleStarGifts/) | Список подарков, выставленных на [перепродажу »](/api/gifts/#reselling-collectible-gifts). |
+| [payments.SavedInfo](/type/payments.SavedInfo/) | Сохранённые платёжные данные |
+| [payments.SavedStarGifts](/type/payments.SavedStarGifts/) | Представляет список [подарков](/api/gifts/). |
+| [payments.StarGiftActiveAuctions](/type/payments.StarGiftActiveAuctions/) | Список [аукционов подарков »](/api/auctions/), в которых пользователь сделал ставку и которые сейчас активны, либо признак того, что локально закешированный список не изменился. |
+| [payments.StarGiftAuctionAcquiredGifts](/type/payments.StarGiftAuctionAcquiredGifts/) | Описывает все подарки, которые текущий пользователь выиграл на [аукционе](/api/auctions/). |
+| [payments.StarGiftAuctionState](/type/payments.StarGiftAuctionState/) | Описывает [аукцион коллекционных подарков »](/api/auctions/). |
+| [payments.StarGiftCollections](/type/payments.StarGiftCollections/) | Представляет список [коллекций подарков »](/api/gifts/#gift-collections). |
+| [payments.StarGifts](/type/payments.StarGifts/) | Доступные [подарки »](/api/gifts/). |
+| [payments.StarGiftUpgradeAttributes](/type/payments.StarGiftUpgradeAttributes/) | Список только тех коллекционных атрибутов, которые могут появиться у типа подарка после его улучшения до [коллекционного подарка »](/api/gifts/#collectible-gifts). |
+| [payments.StarGiftUpgradePreview](/type/payments.StarGiftUpgradePreview/) | Предпросмотр возможных атрибутов (выбираемых случайно), которые [подарок »](/api/gifts/) может получить после улучшения до [коллекционного подарка »](/api/gifts/#collectible-gifts); подробнее см. [здесь »](/api/gifts/#collectible-gifts). |
+| [payments.StarGiftWithdrawalUrl](/type/payments.StarGiftWithdrawalUrl/) | URL, по которому можно импортировать экспортированный NFT на Fragment. |
+| [payments.StarsRevenueAdsAccountUrl](/type/payments.StarsRevenueAdsAccountUrl/) | Содержит URL страницы, на которой пользователь сможет размещать рекламу для канала или бота, оплачивая её [Telegram Stars](/api/stars/#paying-for-ads). |
+| [payments.StarsRevenueStats](/type/payments.StarsRevenueStats/) | [Статистика доходов в Stars; подробнее см. здесь »](/api/stars/). |
+| [payments.StarsRevenueWithdrawalUrl](/type/payments.StarsRevenueWithdrawalUrl/) | Содержит URL, который следует использовать для [вывода дохода в Telegram Stars](/api/stars/#withdrawing-revenue). |
+| [payments.StarsStatus](/type/payments.StarsStatus/) | Информация о текущих [подписках за Telegram Stars, балансе и истории транзакций »](/api/stars/#balance-and-transaction-history). |
+| [payments.SuggestedStarRefBots](/type/payments.SuggestedStarRefBots/) | Список предлагаемых [Mini Apps](/api/bots/webapps/) с доступными [партнёрскими программами](/api/bots/referrals/) |
+| [payments.UniqueStarGift](/type/payments.UniqueStarGift/) | Представляет [коллекционный подарок »](/api/gifts/#collectible-gifts). |
+| [payments.UniqueStarGiftValueInfo](/type/payments.UniqueStarGiftValueInfo/) | Информация о стоимости [коллекционного подарка »](/api/gifts/#collectible-gifts). |
+| [payments.ValidatedRequestedInfo](/type/payments.ValidatedRequestedInfo/) | Проверенные запрошенные сведения |
+| [PaymentSavedCredentials](/type/PaymentSavedCredentials/) | Сохранённые платёжные реквизиты |
+| [Peer](/type/Peer/) | Идентификатор личного чата, обычной группы, группы или канала (подробнее см. [здесь »](/api/peers/)). |
+| [PeerBlocked](/type/PeerBlocked/) | Информация о заблокированном пользователе |
+| [PeerColor](/type/PeerColor/) | Представляет [цветовую палитру »](/api/colors/). |
+| [PeerLocated](/type/PeerLocated/) | Пир с геолокацией |
+| [PeerNotifySettings](/type/PeerNotifySettings/) | Настройки уведомлений. |
+| [PeerSettings](/type/PeerSettings/) | Список действий, доступных при взаимодействии с этим пользователем; отображаются как предлагаемые действия в панели чата |
+| [PeerStories](/type/PeerStories/) | [Истории](/api/stories/), связанные с пиром |
+| [PendingSuggestion](/type/PendingSuggestion/) | Представляет [пользовательскую ожидающую рекомендацию »](/api/config/#custom-suggestions). |
+| [phone.ExportedGroupCallInvite](/type/phone.ExportedGroupCallInvite/) | Экспортированное приглашение в групповой звонок. |
+| [phone.GroupCall](/type/phone.GroupCall/) | Содержит информацию о групповом звонке и частичную информацию о его участниках. |
+| [phone.GroupCallStars](/type/phone.GroupCallStars/) | Содержит общую сумму пожертвований для прямой истории и список крупнейших жертвователей, см. [платные пожертвования в прямых историях »](/api/group-calls/#paid-live-story-donations). |
+| [phone.GroupCallStreamChannels](/type/phone.GroupCallStreamChannels/) | Информация о потоках RTMP в групповом звонке или трансляции |
+| [phone.GroupCallStreamRtmpUrl](/type/phone.GroupCallStreamRtmpUrl/) | URL для RTMP и ключ потока для использования в программах трансляции |
+| [phone.GroupParticipants](/type/phone.GroupParticipants/) | Информация об участниках группового звонка или трансляции |
+| [phone.JoinAsPeers](/type/phone.JoinAsPeers/) | Список пиров, от имени которых можно присоединиться к групповому звонку, представившись определённым пользователем или каналом. |
+| [phone.PhoneCall](/type/phone.PhoneCall/) | Телефонный звонок |
+| [PhoneCall](/type/PhoneCall/) | Телефонный звонок |
+| [PhoneCallDiscardReason](/type/PhoneCallDiscardReason/) | Почему звонок был завершён? |
+| [PhoneCallProtocol](/type/PhoneCallProtocol/) | Протокол телефонного звонка |
+| [PhoneConnection](/type/PhoneConnection/) | Соединение телефонного звонка |
+| [Photo](/type/Photo/) | Объект описывает фотографию. |
+| [photos.Photo](/type/photos.Photo/) | Фотография со вспомогательными данными. |
+| [photos.Photos](/type/photos.Photos/) | Объект содержит список фотографий со вспомогательными данными. |
+| [PhotoSize](/type/PhotoSize/) | Расположение изображения определённого размера |
+| [Poll](/type/Poll/) | Обозначает сообщение с опросом |
+| [PollAnswer](/type/PollAnswer/) | Обозначает один из вариантов ответа в [опросе](/type/Poll/). |
+| [PollAnswerVoters](/type/PollAnswerVoters/) | Как пользователи проголосовали за определённый вариант ответа в опросе |
+| [PollResults](/type/PollResults/) | Результаты опроса |
+| [PopularContact](/type/PopularContact/) | Популярный контакт |
+| [PostAddress](/type/PostAddress/) | Адрес доставки |
+| [PostInteractionCounters](/type/PostInteractionCounters/) | Счётчики взаимодействий |
+| [premium.BoostsList](/type/premium.BoostsList/) | Список [бустов](/api/boost/), применённых к пиру несколькими пользователями. |
+| [premium.BoostsStatus](/type/premium.BoostsStatus/) | Содержит информацию о текущем [состоянии бустов](/api/boost/) пира. |
+| [premium.MyBoosts](/type/premium.MyBoosts/) | Список пиров, которых мы сейчас [бустим](/api/boost/), и количество оставшихся у нас [слотов бустов](/api/boost/). |
+| [PremiumGiftCodeOption](/type/PremiumGiftCodeOption/) | Вариант [розыгрыша](/api/giveaways/). |
+| [PremiumSubscriptionOption](/type/PremiumSubscriptionOption/) | Вариант подписки Telegram Premium |
+| [PrepaidGiveaway](/type/PrepaidGiveaway/) | Содержит информацию о [предоплаченном розыгрыше »](/api/giveaways/). |
+| [PrivacyKey](/type/PrivacyKey/) | **Ключи** приватности вместе с [правилами приватности »](/api/privacy/#privacy-rules) определяют, _что_ кому разрешено или запрещено делать; они задаются конструктором [PrivacyKey](/type/PrivacyKey/) и его входным аналогом [InputPrivacyKey](/type/InputPrivacyKey/). |
+| [PrivacyRule](/type/PrivacyRule/) | **Правила** приватности вместе с [ключами приватности](/api/privacy/#privacy-keys) указывают, _что_ можно и что нельзя делать; они задаются конструктором [PrivacyRule](/type/PrivacyRule/) и его входным аналогом [InputPrivacyRule](/type/InputPrivacyRule/). |
+| [ProfileTab](/type/ProfileTab/) | Представляет [вкладку страницы профиля »](/api/profile/#tabs). |
+| [PublicForward](/type/PublicForward/) | Содержит информацию о пересылках [истории](/api/stories/) в виде сообщения в публичные чаты и о репостах публичными каналами. |
+| [QuickReply](/type/QuickReply/) | [Шаблон быстрого ответа](/api/business/#quick-reply-shortcuts). |
+| [Reaction](/type/Reaction/) | [Реакция на сообщение](/api/reactions/) |
+| [ReactionCount](/type/ReactionCount/) | Количество пользователей, отреагировавших определённым эмодзи |
+| [ReactionNotificationsFrom](/type/ReactionNotificationsFrom/) | Настройки уведомлений о реакциях |
+| [ReactionsNotifySettings](/type/ReactionsNotifySettings/) | Настройки уведомлений о реакциях; подробнее см. [здесь »](/api/reactions/#notifications-about-reactions). |
+| [ReadParticipantDate](/type/ReadParticipantDate/) | Содержит информацию о том, когда определённый участник прочитал сообщение |
+| [ReceivedNotifyMessage](/type/ReceivedNotifyMessage/) | Подтверждение получения сообщения |
+| [RecentMeUrl](/type/RecentMeUrl/) | Недавние ссылки t.me |
+| [RecentStory](/type/RecentStory/) | Сводка [активных историй »](/api/stories/#recent-story-summaries) пира. |
+| [ReplyMarkup](/type/ReplyMarkup/) | Разметка ответа для клавиатур ботов и инлайн-клавиатур |
+| [ReportReason](/type/ReportReason/) | Причина жалобы |
+| [ReportResult](/type/ReportResult/) | Представляет меню жалобы или её результат |
+| [RequestedPeer](/type/RequestedPeer/) | Информация о пире, которым пользователь поделился с текущим авторизованным ботом с помощью [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/). |
+| [RequestPeerType](/type/RequestPeerType/) | Критерии отбора для списка выбора пиров, показываемого пользователю. |
+| [RequirementToContact](/type/RequirementToContact/) | Задаёт требование, которое должно быть выполнено, чтобы связаться с пользователем. |
+| [RestrictionReason](/type/RestrictionReason/) | Причина ограничения |
+| [RichText](/type/RichText/) | Форматированный текст |
+| [SavedContact](/type/SavedContact/) | Сохранённый контакт |
+| [SavedDialog](/type/SavedDialog/) | Представляет [диалог из сохранённых сообщений »](/api/saved-messages/). |
+| [SavedReactionTag](/type/SavedReactionTag/) | Информация о [теге реакции в избранном »](/api/saved-messages/#tags). |
+| [SavedStarGift](/type/SavedStarGift/) | Представляет [подарок](/api/gifts/), принадлежащий пиру. |
+| [SearchPostsFlood](/type/SearchPostsFlood/) | Указывает, требует ли оплаты указанный [глобальный поиск по публикациям »](/api/search/#posts-tab). |
+| [SearchResultsCalendarPeriod](/type/SearchResultsCalendarPeriod/) | Информация о найденных сообщениях, отправленных в определённый день; используется для разбивки поля `messages` в конструкторах [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/) по дням. |
+| [SearchResultsPosition](/type/SearchResultsPosition/) | Информация о сообщении в определённой позиции |
+| [SecureCredentialsEncrypted](/type/SecureCredentialsEncrypted/) | Зашифрованные защищённые учётные данные |
+| [SecureData](/type/SecureData/) | Защищённые данные [passport](https://core.telegram.org/passport); подробнее [см. документацию по Telegram Passport »](https://core.telegram.org/passport/encryption#securedata) |
+| [SecureFile](/type/SecureFile/) | Защищённый файл [passport](https://core.telegram.org/passport); подробнее [см. документацию по Telegram Passport »](https://core.telegram.org/passport/encryption#inputsecurefile) |
+| [SecurePasswordKdfAlgo](/type/SecurePasswordKdfAlgo/) | Алгоритм KDF, используемый для вычисления хеша telegram [passport](https://core.telegram.org/passport) |
+| [SecurePlainData](/type/SecurePlainData/) | Проверенные [данные passport](https://core.telegram.org/passport/encryption#secureplaindata) в виде открытого текста. |
+| [SecureRequiredType](/type/SecureRequiredType/) | Требуемый тип защищённого файла |
+| [SecureSecretSettings](/type/SecureSecretSettings/) | Настройки [Telegram Passport](https://core.telegram.org/passport) |
+| [SecureValue](/type/SecureValue/) | Защищённое значение Telegram Passport |
+| [SecureValueError](/type/SecureValueError/) | Ошибка защищённого значения |
+| [SecureValueHash](/type/SecureValueHash/) | Хеш защищённого значения |
+| [SecureValueType](/type/SecureValueType/) | Тип защищённого значения |
+| [SendAsPeer](/type/SendAsPeer/) | Указывает пир, который может использоваться для отправки сообщений |
+| [SendMessageAction](/type/SendMessageAction/) | Действия пользователя. Используйте это, чтобы показывать пользователям подробные сведения о действиях собеседника: наборе текста или отправке вложений любого рода. |
+| [ShippingOption](/type/ShippingOption/) | Варианты доставки |
+| [SmsJob](/type/SmsJob/) | Информация о задании на отправку SMS. |
+| [smsjobs.EligibilityToJoin](/type/smsjobs.EligibilityToJoin/) | Допуск к SMS-заданиям |
+| [smsjobs.Status](/type/smsjobs.Status/) | Статус |
+| [SponsoredMessage](/type/SponsoredMessage/) | Рекламное сообщение |
+| [SponsoredMessageReportOption](/type/SponsoredMessageReportOption/) | [Вариант жалобы на рекламное сообщение »](/api/sponsored-messages/#reporting-sponsored-messages). |
+| [SponsoredPeer](/type/SponsoredPeer/) | Рекламируемый пир. |
+| [StarGift](/type/StarGift/) | Представляет [звёздный подарок, подробнее см. здесь »](/api/gifts/). |
+| [StarGiftActiveAuctionState](/type/StarGiftActiveAuctionState/) | Содержит информацию об [аукционе, на котором пользователь сделал ставку »](/api/auctions/). |
+| [StarGiftAttribute](/type/StarGiftAttribute/) | Атрибут [коллекционного подарка »](/api/gifts/#collectible-gifts). |
+| [StarGiftAttributeCounter](/type/StarGiftAttributeCounter/) | Указывает общее количество подарков, обладающих указанным атрибутом. |
+| [StarGiftAttributeId](/type/StarGiftAttributeId/) | Представляет _идентификатор_ [атрибута коллекционного подарка](/api/gifts/#collectible-gifts). |
+| [StarGiftAttributeRarity](/type/StarGiftAttributeRarity/) | Редкость атрибута [коллекционного подарка »](/api/gifts/#collectible-gifts), заданная либо точным значением в промилле, либо одним из именованных уровней редкости (необычный, редкий, эпический, легендарный). |
+| [StarGiftAuctionAcquiredGift](/type/StarGiftAuctionAcquiredGift/) | Описывает подарок, который текущий пользователь выиграл на аукционе. |
+| [StarGiftAuctionRound](/type/StarGiftAuctionRound/) | Описывает один или несколько раундов [аукциона коллекционных подарков »](/api/auctions/) с возможностью продления. |
+| [StarGiftAuctionState](/type/StarGiftAuctionState/) | Состояние [аукциона коллекционных подарков »](/api/auctions/): активен или ожидает начала, завершён либо не изменился по сравнению с локально закешированной версией. |
+| [StarGiftAuctionUserState](/type/StarGiftAuctionUserState/) | Содержит информацию о состоянии текущего пользователя в [аукционе »](/api/auctions/). |
+| [StarGiftBackground](/type/StarGiftBackground/) | Содержит фоновую палитру по умолчанию для [типа подарка »](/api/gifts/#listing-all-possible-collectible-variants). |
+| [StarGiftCollection](/type/StarGiftCollection/) | Представляет [коллекцию звёздных подарков »](/api/gifts/#gift-collections). |
+| [StarGiftUpgradePrice](/type/StarGiftUpgradePrice/) | Указывает цену [улучшения подарка »](/api/gifts/#collectible-gifts), действующую начиная с определённого момента времени. |
+| [StarRefProgram](/type/StarRefProgram/) | Информация о [партнёрской программе, предлагаемой ботом](/api/bots/referrals/) |
+| [StarsAmount](/type/StarsAmount/) | Описывает вещественную (то есть возможно дробную) сумму в [Telegram Stars](/api/stars/). |
+| [StarsGiftOption](/type/StarsGiftOption/) | [Вариант подарка за Telegram Stars](/api/stars/#buying-or-gifting-stars). |
+| [StarsGiveawayOption](/type/StarsGiveawayOption/) | Содержит информацию о варианте [розыгрыша Telegram Stars](/api/giveaways/#star-giveaways). |
+| [StarsGiveawayWinnersOption](/type/StarsGiveawayWinnersOption/) | Представляет один из возможных вариантов количества победителей в звёздном розыгрыше |
+| [StarsRating](/type/StarsRating/) | Представляет [звёздный рейтинг профиля, подробнее см. здесь »](/api/stars/#star-rating). |
+| [StarsRevenueStatus](/type/StarsRevenueStatus/) | Описывает [балансы дохода в Telegram Stars »](/api/stars/). |
+| [StarsSubscription](/type/StarsSubscription/) | Представляет [подписку за Telegram Stars »](/api/invites/#paid-invite-links). |
+| [StarsSubscriptionPricing](/type/StarsSubscriptionPricing/) | Стоимость [подписки за Telegram Stars »](/api/invites/#paid-invite-links). |
+| [StarsTopupOption](/type/StarsTopupOption/) | [Вариант пополнения баланса Telegram Stars](/api/stars/). |
+| [StarsTransaction](/type/StarsTransaction/) | Представляет [транзакцию Telegram Stars »](/api/stars/). |
+| [StarsTransactionPeer](/type/StarsTransactionPeer/) | Источник входящей [транзакции Telegram Stars](/api/stars/) либо получатель исходящей [транзакции Telegram Stars](/api/stars/). |
+| [stats.BroadcastStats](/type/stats.BroadcastStats/) | Статистика канала |
+| [stats.MegagroupStats](/type/stats.MegagroupStats/) | Статистика супергруппы |
+| [stats.MessageStats](/type/stats.MessageStats/) | Статистика сообщения |
+| [stats.PollStats](/type/stats.PollStats/) | [Статистика](/api/stats/#poll-statistics) опроса, отправленного в сообщении. |
+| [stats.PublicForwards](/type/stats.PublicForwards/) | Содержит информацию о пересылках [истории](/api/stories/) в виде сообщения в публичные чаты и о репостах публичными каналами. |
+| [stats.StoryStats](/type/stats.StoryStats/) | Содержит [статистику](/api/stats/) по [истории](/api/stories/). |
+| [StatsAbsValueAndPrev](/type/StatsAbsValueAndPrev/) | Пара значений статистики канала |
+| [StatsDateRangeDays](/type/StatsDateRangeDays/) | Диапазон дат статистики канала |
+| [StatsGraph](/type/StatsGraph/) | График статистики канала |
+| [StatsGroupTopAdmin](/type/StatsGroupTopAdmin/) | Самый активный администратор в [супергруппе](/api/channel/) |
+| [StatsGroupTopInviter](/type/StatsGroupTopInviter/) | Самый активный приглашающий в [супергруппе](/api/channel/) |
+| [StatsGroupTopPoster](/type/StatsGroupTopPoster/) | Самый активный пользователь в [супергруппе](/api/channel/) |
+| [StatsPercentValue](/type/StatsPercentValue/) | Процентное соотношение в статистике канала |
+| [StatsURL](/type/StatsURL/) | URL со статистикой чата |
+| [StickerKeyword](/type/StickerKeyword/) | Ключевые слова для определённого стикера |
+| [StickerPack](/type/StickerPack/) | Набор стикеров |
+| [stickers.SuggestedShortName](/type/stickers.SuggestedShortName/) | Предлагаемое краткое имя для указанного стикерпака |
+| [StickerSet](/type/StickerSet/) | Представляет набор стикеров (стикерпак) |
+| [StickerSetCovered](/type/StickerSetCovered/) | Предпросмотр набора стикеров |
+| [storage.FileType](/type/storage.FileType/) | Объект описывает тип файла. |
+| [stories.Albums](/type/stories.Albums/) | Представляет список [альбомов историй »](/api/stories/#story-albums). |
+| [stories.AllStories](/type/stories.AllStories/) | Полный список активных (или активных и скрытых) [историй](/api/stories/#watching-stories). |
+| [stories.CanSendStoryCount](/type/stories.CanSendStoryCount/) | Содержит количество доступных слотов для активных историй (равно значению [параметра клиентской конфигурации `story_expiring_limit_*`](/api/config/#story-expiring-limit-default) за вычетом числа активных на данный момент историй). |
+| [stories.FoundStories](/type/stories.FoundStories/) | Истории, найденные с помощью [глобального поиска историй »](/api/stories/#searching-stories). |
+| [stories.PeerStories](/type/stories.PeerStories/) | [Список активных историй](/api/stories/#watching-stories) конкретного пира. |
+| [stories.Stories](/type/stories.Stories/) | Список [историй](/api/stories/#pinned-or-archived-stories) |
+| [stories.StoryReactionsList](/type/stories.StoryReactionsList/) | Список пиров, отреагировавших на конкретную [историю](/api/stories/) |
+| [stories.StoryViews](/type/stories.StoryViews/) | Счётчики реакций и просмотров для списка [историй](/api/stories/) |
+| [stories.StoryViewsList](/type/stories.StoryViewsList/) | Счётчики реакций и просмотров [истории](/api/stories/) |
+| [StoriesStealthMode](/type/StoriesStealthMode/) | [Состояние скрытого режима историй](/api/stories/#stealth-mode) |
+| [StoryAlbum](/type/StoryAlbum/) | Представляет [альбом историй »](/api/stories/#story-albums). |
+| [StoryFwdHeader](/type/StoryFwdHeader/) | Содержит информацию о первоначальном авторе истории, на которую сделан репост. |
+| [StoryItem](/type/StoryItem/) | Представляет [историю Telegram](/api/stories/) |
+| [StoryReaction](/type/StoryReaction/) | Как определённый пир отреагировал на историю или взаимодействовал с ней |
+| [StoryView](/type/StoryView/) | Сведения о датах просмотра и реакциях для [истории](/api/stories/) |
+| [StoryViews](/type/StoryViews/) | Сводные сведения о просмотрах и реакциях [истории](/api/stories/) |
+| [string](/type/string/) | Базовый голый тип. Значения типа `string` выглядят по-разному в зависимости от длины `L` сериализуемой строки: |
+| [SuggestedPost](/type/SuggestedPost/) | Содержит информацию о [предлагаемом посте »](/api/suggested-posts/). |
+| [TextWithEntities](/type/TextWithEntities/) | Оформленный текст с [сущностями оформления](/api/entities/) |
+| [Theme](/type/Theme/) | Облачная тема оформления |
+| [ThemeSettings](/type/ThemeSettings/) | Параметры темы оформления |
+| [Timezone](/type/Timezone/) | Сведения о часовом поясе. |
+| [TodoCompletion](/type/TodoCompletion/) | Выполненный пункт [списка задач »](/api/todo/). |
+| [TodoItem](/type/TodoItem/) | Пункт [списка задач »](/api/todo/). |
+| [TodoList](/type/TodoList/) | Представляет [список задач »](/api/todo/). |
+| [TopPeer](/type/TopPeer/) | Популярный пир |
+| [TopPeerCategory](/type/TopPeerCategory/) | Категория популярных пиров |
+| [TopPeerCategoryPeers](/type/TopPeerCategoryPeers/) | Популярные пиры по категории популярных пиров |
+| [True](/type/True/) | См. [предопределённые идентификаторы](/mtproto/TL-formal/#predefined-identifiers). |
+| [Update](/type/Update/) | Объект содержит информацию о произошедших событиях. |
+| [updates.ChannelDifference](/type/updates.ChannelDifference/) | Содержит разницу (новые сообщения) между нашим локальным состоянием канала и состоянием на сервере |
+| [updates.Difference](/type/updates.Difference/) | Произошедшие изменения. |
+| [Updates](/type/Updates/) | Объект, который воспринимается клиентом без вызова с его стороны при наступлении события. |
+| [updates.State](/type/updates.State/) | Объект содержит информацию о состоянии для дальнейших обновлений. |
+| [upload.CdnFile](/type/upload.CdnFile/) | Представляет состояние скачивания файла из CDN |
+| [upload.File](/type/upload.File/) | Содержит информацию о файле. |
+| [upload.WebFile](/type/upload.WebFile/) | Удалённый файл |
+| [UrlAuthResult](/type/UrlAuthResult/) | Результат авторизации по URL |
+| [User](/type/User/) | Объект описывает пользователя. |
+| [UserFull](/type/UserFull/) | Объект содержит расширенную информацию о пользователе. |
+| [Username](/type/Username/) | Содержит информацию об имени пользователя |
+| [UserProfilePhoto](/type/UserProfilePhoto/) | Объект содержит информацию о фотографии профиля пользователя. |
+| [users.SavedMusic](/type/users.SavedMusic/) | Список композиций ([document](/constructor/document/).`id`), закреплённых сейчас в профиле пользователя; подробнее см. [здесь »](/api/profile/#music). |
+| [users.UserFull](/type/users.UserFull/) | Полная информация о пользователе с прилагаемыми контекстными пирами для реакций |
+| [users.Users](/type/users.Users/) | Описывает список пользователей (или ботов). |
+| [UserStatus](/type/UserStatus/) | Статус пользователя в сети |
+| [Vector t](/type/Vector%20t/) | Универсальный вектор. |
+| [VideoSize](/type/VideoSize/) | Представляет анимированную миниатюру видео |
+| [WallPaper](/type/WallPaper/) | Объект содержит информацию об [обоях](/api/wallpapers/). |
+| [WallPaperSettings](/type/WallPaperSettings/) | Сведения об отрисовке обоев. |
+| [WebAuthorization](/type/WebAuthorization/) | Веб-авторизация |
+| [WebDocument](/type/WebDocument/) | Удалённый документ |
+| [WebPage](/type/WebPage/) | Предпросмотр веб-страницы в формате [Instant View](https://instantview.telegram.org) |
+| [WebPageAttribute](/type/WebPageAttribute/) | Атрибуты веб-страницы |
+| [WebViewMessageSent](/type/WebViewMessageSent/) | Содержит информацию об инлайн-сообщении, отправленном [Web App](https://core.telegram.org/bots/webapps) от имени пользователя. |
+| [WebViewResult](/type/WebViewResult/) | Содержит URL веб-представления с добавленными параметрами оформления и сведениями о пользователе |

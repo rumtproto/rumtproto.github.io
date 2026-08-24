@@ -1,18 +1,15 @@
 ---
-title: "bots.updateStarRefProgram (метод)"
+title: "bots.updateStarRefProgram"
 original: "https://core.telegram.org/method/bots.updateStarRefProgram"
 section: ref
 kind: method
+description: "Создать, изменить или удалить партнёрскую программу принадлежащего нам бота"
 layout: layout.njk
 ---
 
 # bots.updateStarRefProgram
 
-*Метод из схемы TL.*
-
-> Create, edit or delete the [affiliate program](https://core.telegram.org/api/bots/referrals) of a bot we own
-
-## Определение TL
+Создать, изменить или удалить [партнёрскую программу](/api/bots/referrals/) принадлежащего нам бота
 
 ```
 starRefProgram#dd0c66f2 flags:# bot_id:long commission_permille:int duration_months:flags.0?int end_date:flags.1?int daily_revenue_per_user:flags.2?StarsAmount = StarRefProgram;
@@ -20,36 +17,26 @@ starRefProgram#dd0c66f2 flags:# bot_id:long commission_permille:int duration_mon
 bots.updateStarRefProgram#778b5ab3 flags:# bot:InputUser commission_permille:int duration_months:flags.0?int = StarRefProgram;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| bot | [InputUser](/type/InputUser/) | The bot |
-| commission_permille | [int](/type/int/) | The permille commission rate: it indicates the share of Telegram Stars received by affiliates for every transaction made by users they referred inside of the bot. The minimum and maximum values for this parameter are contained in the [starref_min_commission_permille](https://core.telegram.org/api/config#starref-min-commission-permille) and [starref_max_commission_permille](https://core.telegram.org/api/config#starref-max-commission-permille) client configuration parameters. Can be 0 to terminate the affiliate program. Both the duration and the commission may only be raised after creation of the program: to lower them, the program must first be terminated and a new one created. |
-| duration_months | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Indicates the duration of the affiliate program; if not set, there is no expiration date. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот</td></tr><tr><td><strong>commission_permille</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Размер комиссии в промилле: указывает долю Telegram Stars, получаемую партнёрами с каждой транзакции, совершённой внутри бота приведёнными ими пользователями.<br>Минимальное и максимальное значения этого параметра содержатся в параметрах клиентской конфигурации <a href="/api/config#starref-min-commission-permille">starref_min_commission_permille</a> и <a href="/api/config#starref-max-commission-permille">starref_max_commission_permille</a>.<br>Может быть равен <code>0</code>, чтобы прекратить партнёрскую программу.<br>После создания программы как срок, так и комиссию можно только повышать: чтобы понизить их, программу необходимо сначала прекратить и создать новую.</td></tr><tr><td><strong>duration_months</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Указывает срок действия партнёрской программы; если не задан, срок действия не ограничен.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [StarRefProgram](/type/StarRefProgram/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
-| 400 | STARREF_AWAITING_END | The previous referral program was terminated less than 24 hours ago: further changes can be made after the date specified in userFull.starref_program.end_date. |
-| 400 | STARREF_PERMILLE_INVALID | The specified commission_permille is invalid: the minimum and maximum values for this parameter are contained in the [starref_min_commission_permille](https://core.telegram.org/api/config#starref-min-commission-permille) and [starref_max_commission_permille](https://core.telegram.org/api/config#starref-max-commission-permille) client configuration parameters. |
-| 400 | STARREF_PERMILLE_TOO_LOW | The specified commission_permille is too low: the minimum and maximum values for this parameter are contained in the [starref_min_commission_permille](https://core.telegram.org/api/config#starref-min-commission-permille) and [starref_max_commission_permille](https://core.telegram.org/api/config#starref-max-commission-permille) client configuration parameters. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr><tr><td>400</td><td>STARREF_AWAITING_END</td><td>Предыдущая партнёрская программа была прекращена менее 24 часов назад: дальнейшие изменения можно вносить после даты, указанной в userFull.starref_program.end_date.</td></tr><tr><td>400</td><td>STARREF_PERMILLE_INVALID</td><td>Указанное значение commission_permille недействительно: минимальное и максимальное значения этого параметра содержатся в параметрах клиентской конфигурации <a href="/api/config#starref-min-commission-permille">starref_min_commission_permille</a> и <a href="/api/config#starref-max-commission-permille">starref_max_commission_permille</a>.</td></tr><tr><td>400</td><td>STARREF_PERMILLE_TOO_LOW</td><td>Указанное значение commission_permille слишком мало: минимальное и максимальное значения этого параметра содержатся в параметрах клиентской конфигурации <a href="/api/config#starref-min-commission-permille">starref_min_commission_permille</a> и <a href="/api/config#starref-max-commission-permille">starref_max_commission_permille</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Affiliate programs](https://core.telegram.org/api/bots/referrals)
+#### [Партнёрские программы](/api/bots/referrals/)
 
-Developers can open affiliate programs for their mini app – allowing content creators, other mini app developers and any Telegram user to promote it and earn commissions on purchases made by people they referred.
+[@term:Mini App] Разработчики могут открывать партнёрские программы для своих mini app — это позволяет авторам контента, другим разработчикам mini app и любому пользователю Telegram продвигать приложение и получать комиссию с покупок, совершённых приведёнными ими людьми.

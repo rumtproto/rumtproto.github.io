@@ -1,18 +1,15 @@
 ---
-title: "channels.leaveChannel (метод)"
+title: "channels.leaveChannel"
 original: "https://core.telegram.org/method/channels.leaveChannel"
 section: ref
 kind: method
+description: "Покинуть канал или супергруппу"
 layout: layout.njk
 ---
 
 # channels.leaveChannel
 
-*Метод из схемы TL.*
-
-> Leave a [channel/supergroup](https://core.telegram.org/api/channel)
-
-## Определение TL
+Покинуть [канал или супергруппу](/api/channel/)
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,33 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.leaveChannel#f836aa95 channel:InputChannel = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | [Channel/supergroup](https://core.telegram.org/api/channel) to leave |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Канал или супергруппа</a>, которую нужно покинуть</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 403 | CHANNEL_PUBLIC_GROUP_NA | channel/supergroup not available. |
-| 400 | CHAT_INVALID | Invalid chat. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | USER_BANNED_IN_CHANNEL | You're banned from sending messages in supergroups/channels. |
-| 400 | USER_CREATOR | For channels.editAdmin: you've tried to edit the admin rights of the owner, but you're not the owner; for channels.leaveChannel: you can't leave this channel, because you're its creator. |
-| 400 | USER_NOT_PARTICIPANT | You're not a member of this supergroup/channel. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>403</td><td>CHANNEL_PUBLIC_GROUP_NA</td><td>канал/супергруппа недоступны.</td></tr><tr><td>400</td><td>CHAT_INVALID</td><td>Недействительный чат.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>USER_BANNED_IN_CHANNEL</td><td>Вам запрещено отправлять сообщения в супергруппах и каналах.</td></tr><tr><td>400</td><td>USER_CREATOR</td><td>Для channels.editAdmin: вы попытались изменить права администратора владельца, не будучи владельцем; для channels.leaveChannel: вы не можете покинуть этот канал, поскольку вы его создатель.</td></tr><tr><td>400</td><td>USER_NOT_PARTICIPANT</td><td>Вы не состоите в этой супергруппе или канале.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

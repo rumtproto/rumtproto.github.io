@@ -1,29 +1,24 @@
 ---
-title: "peerChat (конструктор)"
+title: "peerChat"
 original: "https://core.telegram.org/constructor/peerChat"
 section: ref
 kind: constructor
+description: "Группа."
 layout: layout.njk
 ---
 
 # peerChat
 
-*Конструктор из схемы TL.*
-
-> Group.
-
-## Определение TL
+Группа.
 
 ```
 peerChat#36c6019a chat_id:long = Peer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chat_id | [long](/type/long/) | Group identifier |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор группы</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Peer](/type/Peer/)

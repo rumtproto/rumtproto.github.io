@@ -1,18 +1,15 @@
 ---
-title: "channels.reportAntiSpamFalsePositive (метод)"
+title: "channels.reportAntiSpamFalsePositive"
 original: "https://core.telegram.org/method/channels.reportAntiSpamFalsePositive"
 section: ref
 kind: method
+description: "Сообщить о ложном срабатывании встроенной защиты от спама"
 layout: layout.njk
 ---
 
 # channels.reportAntiSpamFalsePositive
 
-*Метод из схемы TL.*
-
-> Report a [native antispam](https://core.telegram.org/api/antispam) false positive
-
-## Определение TL
+Сообщить о ложном срабатывании [встроенной защиты от спама](/api/antispam/)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,31 +18,26 @@ boolTrue#997275b5 = Bool;
 channels.reportAntiSpamFalsePositive#a850a693 channel:InputChannel msg_id:int = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | Supergroup ID |
-| msg_id | [int](/type/int/) | Message ID that was mistakenly deleted by the [native antispam](https://core.telegram.org/api/antispam) system, taken from the [admin log](https://core.telegram.org/api/recent-actions) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Идентификатор супергруппы</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения, ошибочно удалённого системой <a href="/api/antispam">встроенной защиты от спама</a>, взятый из <a href="/api/recent-actions">журнала администратора</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Native antispam system](https://core.telegram.org/api/antispam)
+#### [Встроенная система антиспама](/api/antispam/)
 
-Admins of supergroups with a certain number of members can choose to unleash the full proactive power of Telegram's own antispam algorithms – turning on the new Aggressive mode for the automated spam filters.
+Администраторы супергрупп с определённым числом участников могут задействовать всю упреждающую мощь собственных антиспам-алгоритмов Telegram — включить новый агрессивный режим автоматических спам-фильтров.
 
-#### [Admin log](https://core.telegram.org/api/recent-actions)
+#### [Журнал действий администраторов](/api/recent-actions/)
 
-Both supergroups and channels offer a so-called admin log, a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.
+И супергруппы, и каналы предоставляют так называемый журнал администратора — журнал недавних значимых действий в супергруппе и канале: изменение настроек или информации группы/канала от имени администратора, исключения и блокировки пользователей и многое другое.

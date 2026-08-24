@@ -1,27 +1,24 @@
 ---
-title: "attachMenuBotsNotModified (конструктор)"
+title: "attachMenuBotsNotModified"
 original: "https://core.telegram.org/constructor/attachMenuBotsNotModified"
 section: ref
 kind: constructor
+description: "Список mini app ботов не изменился"
 layout: layout.njk
 ---
 
 # attachMenuBotsNotModified
 
-*Конструктор из схемы TL.*
-
-> The list of bot mini apps hasn't changed
-
-## Определение TL
+[@term:Mini App] Список mini app ботов не изменился
 
 ```
 attachMenuBotsNotModified#f1d88a5c = AttachMenuBots;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [AttachMenuBots](/type/AttachMenuBots/)

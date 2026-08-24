@@ -1,41 +1,34 @@
 ---
-title: "starGiftAttributePattern (конструктор)"
+title: "starGiftAttributePattern"
 original: "https://core.telegram.org/constructor/starGiftAttributePattern"
 section: ref
 kind: constructor
+description: "Стикер, наложенный повторяющимся узором на подложку коллекционного подарка »."
 layout: layout.njk
 ---
 
 # starGiftAttributePattern
 
-*Конструктор из схемы TL.*
-
-> A [sticker](https://core.telegram.org/api/stickers) applied on the backdrop of a [collectible gift »](https://core.telegram.org/api/gifts) using a repeating pattern.
-
-## Определение TL
+[Стикер](/api/stickers/), наложенный повторяющимся узором на подложку [коллекционного подарка »](/api/gifts/).
 
 ```
 starGiftAttributePattern#4e7085ea name:string document:Document rarity:StarGiftAttributeRarity = StarGiftAttribute;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| name | [string](/type/string/) | Name of the symbol |
-| document | [Document](/type/Document/) | The symbol |
-| rarity | [StarGiftAttributeRarity](/type/StarGiftAttributeRarity/) | Rarity of this pattern. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название символа</td></tr><tr><td><strong>document</strong></td><td style="text-align: center;"><a href="/type/Document">Document</a></td><td>Символ</td></tr><tr><td><strong>rarity</strong></td><td style="text-align: center;"><a href="/type/StarGiftAttributeRarity">StarGiftAttributeRarity</a></td><td>Редкость этого узора.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftAttribute](/type/StarGiftAttribute/)
 
-## Related pages
+### Связанные страницы
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

@@ -1,40 +1,34 @@
 ---
-title: "stories.albums (конструктор)"
+title: "stories.albums"
 original: "https://core.telegram.org/constructor/stories.albums"
 section: ref
 kind: constructor
+description: "Альбомы историй »."
 layout: layout.njk
 ---
 
 # stories.albums
 
-*Конструктор из схемы TL.*
-
-> [Story albums »](https://core.telegram.org/api/stories#story-albums).
-
-## Определение TL
+[Альбомы историй »](/api/stories/#story-albums).
 
 ```
 stories.albums#c3987a3a hash:long albums:Vector<StoryAlbum> = stories.Albums;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | Hash to pass to [stories.getAlbums](/method/stories.getAlbums/) to avoid returning any results if they haven't changed. |
-| albums | [Vector](https://core.telegram.org/type/Vector%20t)<[StoryAlbum](/type/StoryAlbum/)> | The albums. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] Хеш, который нужно передать в <a href="/method/stories.getAlbums">stories.getAlbums</a>, чтобы не возвращать результаты, если они не изменились.</td></tr><tr><td><strong>albums</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StoryAlbum">StoryAlbum</a>&gt;</td><td>Альбомы.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [stories.Albums](/type/stories.Albums/)
 
-## Related pages
+### Связанные страницы
 
 #### [stories.getAlbums](/method/stories.getAlbums/)
 
-Get [story albums](https://core.telegram.org/api/stories#story-albums) created by a peer.
+Получить [альбомы историй](/api/stories/#story-albums), созданные пиром.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

@@ -1,43 +1,36 @@
 ---
-title: "birthday (конструктор)"
+title: "birthday"
 original: "https://core.telegram.org/constructor/birthday"
 section: ref
 kind: constructor
+description: "Сведения о дне рождения пользователя."
 layout: layout.njk
 ---
 
 # birthday
 
-*Конструктор из схемы TL.*
+Сведения о [дне рождения](/api/profile/#birthday) пользователя.
 
-> [Birthday](https://core.telegram.org/api/profile#birthday) information for a user.
-> Also used to invite users to gift [Telegram Premium subscriptions »](https://core.telegram.org/api/premium#gifting-telegram-premium) to other users with birthdays within a +1/-1 day time range, related to the current day.
-
-## Определение TL
+Также используется, чтобы предложить подарить [подписки Telegram Premium »](/api/premium/#gifting-telegram-premium) другим пользователям, у которых день рождения приходится на промежуток ±1 день от текущего дня.
 
 ```
 birthday#6c8e1e06 flags:# day:int month:int year:flags.0?int = Birthday;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| day | [int](/type/int/) | Birth day |
-| month | [int](/type/int/) | Birth month |
-| year | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | (Optional) birth year. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>day</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>День рождения (день)</td></tr><tr><td><strong>month</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>День рождения (месяц)</td></tr><tr><td><strong>year</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>(Необязательно) Год рождения.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Birthday](/type/Birthday/)
 
-## Related pages
+### Связанные страницы
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.

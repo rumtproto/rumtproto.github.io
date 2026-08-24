@@ -1,38 +1,30 @@
 ---
-title: "messages.messages (конструктор)"
+title: "messages.messages"
 original: "https://core.telegram.org/constructor/messages.messages"
 section: ref
 kind: constructor
+description: "Полный список сообщений со вспомогательными данными."
 layout: layout.njk
 ---
 
 # messages.messages
 
-*Конструктор из схемы TL.*
-
-> Full list of messages with auxiliary data.
-
-## Определение TL
+Полный список сообщений со вспомогательными данными.
 
 ```
 messages.messages#1d73e7ea messages:Vector<Message> topics:Vector<ForumTopic> chats:Vector<Chat> users:Vector<User> = messages.Messages;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| messages | [Vector](https://core.telegram.org/type/Vector%20t)<[Message](/type/Message/)> | List of messages |
-| topics | [Vector](https://core.telegram.org/type/Vector%20t)<[ForumTopic](/type/ForumTopic/)> | [Forum topics](https://core.telegram.org/api/forum#forum-topics) the returned messages belong to. |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | List of chats mentioned in dialogs |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | List of users mentioned in messages and chats |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Message">Message</a>&gt;</td><td>Список сообщений</td></tr><tr><td><strong>topics</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ForumTopic">ForumTopic</a>&gt;</td><td><a href="/api/forum#forum-topics">Темы форума</a>, которым принадлежат возвращённые сообщения.</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Список чатов, упомянутых в диалогах</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Список пользователей, упомянутых в сообщениях и чатах</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.Messages](/type/messages.Messages/)
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

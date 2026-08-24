@@ -1,18 +1,15 @@
 ---
-title: "auth.resetLoginEmail (метод)"
+title: "auth.resetLoginEmail"
 original: "https://core.telegram.org/method/auth.resetLoginEmail"
 section: ref
 kind: method
+description: "Сбросить почту для входа »."
 layout: layout.njk
 ---
 
 # auth.resetLoginEmail
 
-*Метод из схемы TL.*
-
-> Reset the [login email »](https://core.telegram.org/api/auth#email-verification).
-
-## Определение TL
+Сбросить [почту для входа »](/api/auth/#email-verification).
 
 ```
 auth.sentCode#5e002502 flags:# type:auth.SentCodeType phone_code_hash:string next_type:flags.1?auth.CodeType timeout:flags.2?int = auth.SentCode;
@@ -22,31 +19,24 @@ auth.sentCodePaymentRequired#e0955a3c store_product:string phone_code_hash:strin
 auth.resetLoginEmail#7e960193 phone_number:string phone_code_hash:string = auth.SentCode;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_number | [string](/type/string/) | Phone number of the account |
-| phone_code_hash | [string](/type/string/) | Phone code hash, obtained as described in the [documentation »](/api/auth/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона аккаунта</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш телефонного кода, полученный как описано в <a href="/api/auth">документации »</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.SentCode](/type/auth.SentCode/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | EMAIL_INSTALL_MISSING | Attempting to send a code to the recovery email, but no email is configured. |
-| 400 | PHONE_NUMBER_INVALID | The phone number is invalid. |
-| 400 | TASK_ALREADY_EXISTS | An email reset was already requested. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>EMAIL_INSTALL_MISSING</td><td>Попытка отправить код на почту для восстановления, но почта не настроена.</td></tr><tr><td>400</td><td>PHONE_NUMBER_INVALID</td><td>Недействительный номер телефона.</td></tr><tr><td>400</td><td>TASK_ALREADY_EXISTS</td><td>Сброс адреса электронной почты уже был запрошен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

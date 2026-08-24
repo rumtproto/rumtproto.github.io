@@ -1,44 +1,34 @@
 ---
-title: "updateReadChannelDiscussionInbox (конструктор)"
+title: "updateReadChannelDiscussionInbox"
 original: "https://core.telegram.org/constructor/updateReadChannelDiscussionInbox"
 section: ref
 kind: constructor
+description: "Входящие комментарии в обсуждении были отмечены как прочитанные"
 layout: layout.njk
 ---
 
 # updateReadChannelDiscussionInbox
 
-*Конструктор из схемы TL.*
-
-> Incoming comments in a [discussion thread](https://core.telegram.org/api/threads) were marked as read
-
-## Определение TL
+Входящие комментарии в [обсуждении](/api/threads/) были отмечены как прочитанные
 
 ```
 updateReadChannelDiscussionInbox#d6b19546 flags:# channel_id:long top_msg_id:int read_max_id:int broadcast_id:flags.0?long broadcast_post:flags.0?int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| channel_id | [long](/type/long/) | [Discussion group ID](https://core.telegram.org/api/channel) |
-| top_msg_id | [int](/type/int/) | ID of the group message that started the [thread](https://core.telegram.org/api/threads) (message in linked discussion group) |
-| read_max_id | [int](/type/int/) | Message ID of latest read incoming message for this [thread](https://core.telegram.org/api/threads) |
-| broadcast_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | If set, contains the ID of the [channel](https://core.telegram.org/api/channel) that contains the post that started the [comment thread](https://core.telegram.org/api/threads) in the discussion group (channel_id) |
-| broadcast_post | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | If set, contains the ID of the channel post that started the [comment thread](https://core.telegram.org/api/threads) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/channel">Идентификатор группы обсуждения</a></td></tr><tr><td><strong>top_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения в группе, с которого началась <a href="/api/threads">ветка</a> (сообщение в связанной группе обсуждения)</td></tr><tr><td><strong>read_max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор последнего прочитанного входящего сообщения для этой <a href="/api/threads">ветки</a></td></tr><tr><td><strong>broadcast_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Если установлено, содержит идентификатор <a href="/api/channel">канала</a>, в котором находится пост, начавший <a href="/api/threads">ветку комментариев</a> в группе обсуждения (<code>channel_id</code>)</td></tr><tr><td><strong>broadcast_post</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Если установлено, содержит идентификатор поста канала, начавшего <a href="/api/threads">ветку комментариев</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Message threads](https://core.telegram.org/api/threads)
+#### [Треды сообщений](/api/threads/)
 
-Telegram allows commenting on a channel post or on a generic supergroup message, thanks to message threads.
+Благодаря веткам обсуждения Telegram позволяет комментировать пост канала или обычное сообщение супергруппы.

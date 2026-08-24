@@ -1,27 +1,24 @@
 ---
-title: "inputMessagesFilterUrl (конструктор)"
+title: "inputMessagesFilterUrl"
 original: "https://core.telegram.org/constructor/inputMessagesFilterUrl"
 section: ref
 kind: constructor
+description: "Возвращать только сообщения со ссылками"
 layout: layout.njk
 ---
 
 # inputMessagesFilterUrl
 
-*Конструктор из схемы TL.*
-
-> Return only messages containing URLs
-
-## Определение TL
+Возвращать только сообщения со ссылками
 
 ```
 inputMessagesFilterUrl#7ef0dd87 = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)

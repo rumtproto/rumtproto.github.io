@@ -1,30 +1,24 @@
 ---
-title: "error (конструктор)"
+title: "error"
 original: "https://core.telegram.org/constructor/error"
 section: ref
 kind: constructor
+description: "Ошибка."
 layout: layout.njk
 ---
 
 # error
 
-*Конструктор из схемы TL.*
-
-> Error.
-
-## Определение TL
+Ошибка.
 
 ```
 error#c4b9f9bb code:int text:string = Error;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| code | [int](/type/int/) | Error code |
-| text | [string](/type/string/) | Message |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>code</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Код ошибки</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Сообщение</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Error](/type/Error/)

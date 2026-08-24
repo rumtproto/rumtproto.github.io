@@ -1,28 +1,25 @@
 ---
-title: "decryptedMessageActionFlushHistory (конструктор)"
+title: "decryptedMessageActionFlushHistory"
 original: "https://core.telegram.org/constructor/decryptedMessageActionFlushHistory"
 section: ref
 kind: constructor
+description: "Вся история сообщений была удалена."
 layout: layout.njk
 ---
 
 # decryptedMessageActionFlushHistory
 
-*Конструктор из схемы TL.*
-
-> The entire message history has been deleted.
-
-## Определение TL
+Вся история сообщений была удалена.
 
 ```
 ===8===
 decryptedMessageActionFlushHistory#6719e45c = DecryptedMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [DecryptedMessageAction](/type/DecryptedMessageAction/)

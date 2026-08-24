@@ -1,35 +1,30 @@
 ---
-title: "updateQuickReplies (конструктор)"
+title: "updateQuickReplies"
 original: "https://core.telegram.org/constructor/updateQuickReplies"
 section: ref
 kind: constructor
+description: "Изменились сведения о шаблонах быстрых ответов » или их порядок."
 layout: layout.njk
 ---
 
 # updateQuickReplies
 
-*Конструктор из схемы TL.*
-
-> Info about or the order of [quick reply shortcuts »](https://core.telegram.org/api/business#quick-reply-shortcuts) was changed.
-
-## Определение TL
+Изменились сведения о [шаблонах быстрых ответов »](/api/business/#quick-reply-shortcuts) или их порядок.
 
 ```
 updateQuickReplies#f9470ab2 quick_replies:Vector<QuickReply> = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| quick_replies | [Vector](https://core.telegram.org/type/Vector%20t)<[QuickReply](/type/QuickReply/)> | New quick reply shortcut order and information. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>quick_replies</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/QuickReply">QuickReply</a>&gt;</td><td>Новый порядок шаблонов быстрых ответов и сведения о них.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

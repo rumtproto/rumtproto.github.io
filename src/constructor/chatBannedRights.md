@@ -1,66 +1,38 @@
 ---
-title: "chatBannedRights (конструктор)"
+title: "chatBannedRights"
 original: "https://core.telegram.org/constructor/chatBannedRights"
 section: ref
 kind: constructor
+description: "Представляет права обычного пользователя в супергруппе, канале или чате. В этом случае флаги инвертированы: если флаг установлен, он **запрещает** пользователю выполнять…"
 layout: layout.njk
 ---
 
 # chatBannedRights
 
-*Конструктор из схемы TL.*
-
-> Represents the rights of a normal user in a [supergroup/channel/chat](https://core.telegram.org/api/channel). In this case, the flags are inverted: if set, a flag **does not allow** a user to do X.
-
-## Определение TL
+Представляет права обычного пользователя в [супергруппе, канале или чате](/api/channel/). В этом случае флаги инвертированы: если флаг установлен, он **запрещает** пользователю выполнять соответствующее действие.
 
 ```
 chatBannedRights#9f120418 flags:# view_messages:flags.0?true send_messages:flags.1?true send_media:flags.2?true send_stickers:flags.3?true send_gifs:flags.4?true send_games:flags.5?true send_inline:flags.6?true embed_links:flags.7?true send_polls:flags.8?true change_info:flags.10?true invite_users:flags.15?true pin_messages:flags.17?true manage_topics:flags.18?true send_photos:flags.19?true send_videos:flags.20?true send_roundvideos:flags.21?true send_audios:flags.22?true send_voices:flags.23?true send_docs:flags.24?true send_plain:flags.25?true edit_rank:flags.26?true until_date:int = ChatBannedRights;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| view_messages | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, does not allow a user to view messages in a [supergroup/channel/chat](https://core.telegram.org/api/channel) |
-| send_messages | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, does not allow a user to send messages in a [supergroup/chat](https://core.telegram.org/api/channel) |
-| send_media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | If set, does not allow a user to send any media in a [supergroup/chat](https://core.telegram.org/api/channel) |
-| send_stickers | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | If set, does not allow a user to send stickers in a [supergroup/chat](https://core.telegram.org/api/channel) |
-| send_gifs | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | If set, does not allow a user to send gifs in a [supergroup/chat](https://core.telegram.org/api/channel) |
-| send_games | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | If set, does not allow a user to send games in a [supergroup/chat](https://core.telegram.org/api/channel) |
-| send_inline | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | If set, does not allow a user to use inline bots in a [supergroup/chat](https://core.telegram.org/api/channel). |
-| embed_links | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | If set, does not allow a user to embed links in the messages of a [supergroup/chat](https://core.telegram.org/api/channel) |
-| send_polls | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[true](/constructor/true/) | If set, does not allow a user to send polls in a [supergroup/chat](https://core.telegram.org/api/channel) |
-| change_info | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[true](/constructor/true/) | If set, does not allow a user to change the description of a [supergroup/chat](https://core.telegram.org/api/channel) |
-| invite_users | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[true](/constructor/true/) | If set, does not allow a user to invite users in a [supergroup/chat](https://core.telegram.org/api/channel) |
-| pin_messages | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[true](/constructor/true/) | If set, does not allow a user to pin messages in a [supergroup/chat](https://core.telegram.org/api/channel) |
-| manage_topics | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[true](/constructor/true/) | If set, does not allow a user to create, delete or modify [forum topics »](https://core.telegram.org/api/forum#forum-topics). |
-| send_photos | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).19?[true](/constructor/true/) | If set, does not allow a user to send photos in a [supergroup/chat](https://core.telegram.org/api/channel). |
-| send_videos | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).20?[true](/constructor/true/) | If set, does not allow a user to send videos in a [supergroup/chat](https://core.telegram.org/api/channel). |
-| send_roundvideos | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).21?[true](/constructor/true/) | If set, does not allow a user to send round videos in a [supergroup/chat](https://core.telegram.org/api/channel). |
-| send_audios | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).22?[true](/constructor/true/) | If set, does not allow a user to send audio files in a [supergroup/chat](https://core.telegram.org/api/channel). |
-| send_voices | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).23?[true](/constructor/true/) | If set, does not allow a user to send voice messages in a [supergroup/chat](https://core.telegram.org/api/channel). |
-| send_docs | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).24?[true](/constructor/true/) | If set, does not allow a user to send documents in a [supergroup/chat](https://core.telegram.org/api/channel). |
-| send_plain | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).25?[true](/constructor/true/) | If set, does not allow a user to send text messages in a [supergroup/chat](https://core.telegram.org/api/channel). |
-| edit_rank | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).26?[true](/constructor/true/) | If set, does not allow a user to edit their own custom [tag (rank) »](https://core.telegram.org/api/rank) in a [supergroup/chat](https://core.telegram.org/api/channel). |
-| send_reactions | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).27?[true](/constructor/true/) | If set, does not allow a user to react to messages in a chat. |
-| until_date | [int](/type/int/) | Validity of said permissions (it is considered forever any value less then 30 seconds or more then 366 days). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>view_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю просматривать сообщения в <a href="/api/channel">супергруппе/канале/чате</a></td></tr><tr><td><strong>send_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять сообщения в <a href="/api/channel">супергруппе/чате</a></td></tr><tr><td><strong>send_media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять любые медиа в <a href="/api/channel">супергруппе/чате</a></td></tr><tr><td><strong>send_stickers</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять стикеры в <a href="/api/channel">супергруппе/чате</a></td></tr><tr><td><strong>send_gifs</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять гифки в <a href="/api/channel">супергруппе/чате</a></td></tr><tr><td><strong>send_games</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять игры в <a href="/api/channel">супергруппе/чате</a></td></tr><tr><td><strong>send_inline</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю использовать инлайн-ботов в <a href="/api/channel">супергруппе/чате</a>.</td></tr><tr><td><strong>embed_links</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю вставлять ссылки в сообщения <a href="/api/channel">супергруппы/чата</a></td></tr><tr><td><strong>send_polls</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять опросы в <a href="/api/channel">супергруппе/чате</a></td></tr><tr><td><strong>change_info</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю изменять описание <a href="/api/channel">супергруппы/чата</a></td></tr><tr><td><strong>invite_users</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю приглашать пользователей в <a href="/api/channel">супергруппу/чат</a></td></tr><tr><td><strong>pin_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю закреплять сообщения в <a href="/api/channel">супергруппе/чате</a></td></tr><tr><td><strong>manage_topics</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю создавать, удалять или изменять <a href="/api/forum#forum-topics">темы форума »</a>.</td></tr><tr><td><strong>send_photos</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять фотографии в <a href="/api/channel">супергруппе/чате</a>.</td></tr><tr><td><strong>send_videos</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять видео в <a href="/api/channel">супергруппе/чате</a>.</td></tr><tr><td><strong>send_roundvideos</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять видеосообщения в <a href="/api/channel">супергруппе/чате</a>.</td></tr><tr><td><strong>send_audios</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять аудиофайлы в <a href="/api/channel">супергруппе/чате</a>.</td></tr><tr><td><strong>send_voices</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять голосовые сообщения в <a href="/api/channel">супергруппе/чате</a>.</td></tr><tr><td><strong>send_docs</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять документы в <a href="/api/channel">супергруппе/чате</a>.</td></tr><tr><td><strong>send_plain</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю отправлять текстовые сообщения в <a href="/api/channel">супергруппе/чате</a>.</td></tr><tr><td><strong>edit_rank</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.26?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю редактировать собственную <a href="/api/rank">метку (звание) »</a> в <a href="/api/channel">супергруппе/чате</a>.</td></tr><tr><td><strong>send_reactions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.27?<a href="/constructor/true">true</a></td><td>Если установлено, не позволяет пользователю ставить реакции на сообщения в чате.</td></tr><tr><td><strong>until_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Срок действия указанных разрешений (значение меньше 30 секунд или больше 366 дней считается бессрочным).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatBannedRights](/type/ChatBannedRights/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.
 
-#### [Group participant tags](https://core.telegram.org/api/rank)
+#### [Звание](/api/rank/)
 
-Members in group chats (both basic groups and supergroups) can add a tag next to their name — to show their role at work, what they study in school, and more.
+Участники групповых чатов (как обычных групп, так и супергрупп) могут добавить рядом со своим именем тег — чтобы указать свою роль на работе, что они изучают в учебном заведении и прочее.

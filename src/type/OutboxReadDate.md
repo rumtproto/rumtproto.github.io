@@ -1,18 +1,15 @@
 ---
-title: "OutboxReadDate (тип)"
+title: "OutboxReadDate"
 original: "https://core.telegram.org/type/OutboxReadDate"
 section: ref
 kind: type
+description: "Точная дата прочтения личного сообщения, отправленного нами другому пользователю."
 layout: layout.njk
 ---
 
 # OutboxReadDate
 
-*Тип из схемы TL.*
-
-> Exact read date of a private message we sent to another user.
-
-## Определение TL
+Точная дата прочтения личного сообщения, отправленного нами другому пользователю.
 
 ```
 outboxReadDate#3bb842ac date:int = OutboxReadDate;
@@ -22,14 +19,10 @@ outboxReadDate#3bb842ac date:int = OutboxReadDate;
 messages.getOutboxReadDate#8c4bfe5d peer:InputPeer msg_id:int = OutboxReadDate;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [outboxReadDate](/constructor/outboxReadDate/) | Exact read date of a private message we sent to another user. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/outboxReadDate">outboxReadDate</a></td><td>Точная дата прочтения личного сообщения, отправленного нами другому пользователю.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getOutboxReadDate](/method/messages.getOutboxReadDate/) | Get the exact read date of one of our messages, sent to a private chat with another user. Can be only done for private outgoing messages not older than [appConfig.pm_read_date_expire_period »](https://core.telegram.org/api/config#pm-read-date-expire-period). If the peer's [userFull](/constructor/userFull/).read_dates_private flag is set, we will not be able to fetch the exact read date of messages we send to them, and a USER_PRIVACY_RESTRICTED RPC error will be emitted. The exact read date of messages might still be unavailable for other reasons, see [here »](/constructor/globalPrivacySettings/) for more info. To set [userFull](/constructor/userFull/).read_dates_private for ourselves invoke [account.setGlobalPrivacySettings](/method/account.setGlobalPrivacySettings/), setting the settings.hide_read_marks flag. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getOutboxReadDate">messages.getOutboxReadDate</a></td><td>[@term:peer] Получить точную дату прочтения одного из наших сообщений, отправленных в личный чат с другим пользователем.<br><br>Возможно только для исходящих личных сообщений не старше <a href="/api/config#pm-read-date-expire-period">appConfig.pm_read_date_expire_period »</a>.<br><br>Если у <code>peer</code> установлен флаг <a href="/constructor/userFull">userFull</a>.<code>read_dates_private</code>, мы не сможем получить точную дату прочтения отправленных ему сообщений, и будет возвращена ошибка RPC <code>USER_PRIVACY_RESTRICTED</code>.<br>Точная дата прочтения сообщений может быть недоступна и по другим причинам, подробнее см. <a href="/constructor/globalPrivacySettings">здесь »</a>.<br>Чтобы установить <a href="/constructor/userFull">userFull</a>.<code>read_dates_private</code> для себя, вызовите <a href="/method/account.setGlobalPrivacySettings">account.setGlobalPrivacySettings</a>, установив флаг <code>settings.hide_read_marks</code>.</td></tr></tbody></table>

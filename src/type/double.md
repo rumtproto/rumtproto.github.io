@@ -1,18 +1,18 @@
 ---
-title: "double (тип)"
+title: "double"
 original: "https://core.telegram.org/type/double"
 section: ref
 kind: type
+description: "Базовый голый тип, значения которого соответствуют последовательностям из двух элементов, содержащим 64-битные вещественные числа в стандартном формате _double_."
 layout: layout.njk
 ---
 
 # double
 
-*Тип из схемы TL.*
+[@term:bare] Базовый голый тип, значения которого соответствуют последовательностям из двух элементов, содержащим 64-битные вещественные числа в стандартном формате _double_.
 
-> A basic bare type, values of which correspond two-element sequences containing 64-bit real numbers in a standard _double_ format.
-> [More on basic types»](/mtproto/serialize/)
+[Подробнее о базовых типах »](/mtproto/serialize/)
 
-## Related pages
+### Связанные страницы
 
-#### ﻿[Binary Data Serialization](/mtproto/serialize/)
+#### [Двоичная сериализация данных](/mtproto/serialize/)

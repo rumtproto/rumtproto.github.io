@@ -1,18 +1,15 @@
 ---
-title: "payments.reorderStarGiftCollections (метод)"
+title: "payments.reorderStarGiftCollections"
 original: "https://core.telegram.org/method/payments.reorderStarGiftCollections"
 section: ref
 kind: method
+description: "Изменить порядок коллекций звёздных подарков » в профиле принадлежащего нам пира."
 layout: layout.njk
 ---
 
 # payments.reorderStarGiftCollections
 
-*Метод из схемы TL.*
-
-> Reorder the [star gift collections »](https://core.telegram.org/api/gifts#gift-collections) on an owned peer's profile.
-
-## Определение TL
+Изменить порядок [коллекций звёздных подарков »](/api/gifts/#gift-collections) в профиле принадлежащего нам пира.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,27 +18,22 @@ boolTrue#997275b5 = Bool;
 payments.reorderStarGiftCollections#c32af4cc peer:InputPeer order:Vector<int> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The owned peer. |
-| order | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | New collection order. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Принадлежащий пользователю пир.</td></tr><tr><td><strong>order</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Новый порядок коллекции.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

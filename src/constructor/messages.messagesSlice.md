@@ -1,52 +1,38 @@
 ---
-title: "messages.messagesSlice (конструктор)"
+title: "messages.messagesSlice"
 original: "https://core.telegram.org/constructor/messages.messagesSlice"
 section: ref
 kind: constructor
+description: "Неполный список сообщений и вспомогательных данных."
 layout: layout.njk
 ---
 
 # messages.messagesSlice
 
-*Конструктор из схемы TL.*
-
-> Incomplete list of messages and auxiliary data.
-
-## Определение TL
+Неполный список сообщений и вспомогательных данных.
 
 ```
 messages.messagesSlice#5f206716 flags:# inexact:flags.1?true count:int next_rate:flags.0?int offset_id_offset:flags.2?int search_flood:flags.3?SearchPostsFlood messages:Vector<Message> topics:Vector<ForumTopic> chats:Vector<Chat> users:Vector<User> = messages.Messages;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| inexact | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, indicates that the results may be inexact |
-| count | [int](/type/int/) | Total number of messages in the list |
-| next_rate | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Rate to use in the offset_rate parameter in the next call to [messages.searchGlobal](/method/messages.searchGlobal/) |
-| offset_id_offset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Indicates the absolute position of messages[0] within the total result set with count count. This is useful, for example, if the result was fetched using offset_id, and we need to display a progress/total counter (like photo 134 of 200, for all media in a chat, we could simply use photo ${offset_id_offset} of ${count}). |
-| search_flood | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[SearchPostsFlood](/type/SearchPostsFlood/) | [For global post searches »](https://core.telegram.org/api/search#posts-tab), the remaining amount of free searches, here query_is_free is related to the current call only, not to the next paginated call, and all subsequent pagination calls will always be free. |
-| messages | [Vector](https://core.telegram.org/type/Vector%20t)<[Message](/type/Message/)> | List of messages |
-| topics | [Vector](https://core.telegram.org/type/Vector%20t)<[ForumTopic](/type/ForumTopic/)> | [Forum topics](https://core.telegram.org/api/forum#forum-topics) the returned messages belong to. |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | List of chats mentioned in messages |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | List of users mentioned in messages and chats |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>inexact</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, указывает, что результаты могут быть неточными</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число сообщений в списке</td></tr><tr><td><strong>next_rate</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Значение для передачи в параметре <code>offset_rate</code> при следующем вызове <a href="/method/messages.searchGlobal">messages.searchGlobal</a></td></tr><tr><td><strong>offset_id_offset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Указывает абсолютную позицию <code>messages[0]</code> в полном наборе результатов размером <code>count</code>.<br>Это полезно, например, если результат был получен с помощью <code>offset_id</code> и требуется показать счётчик вида <code>progress/total</code> (например, <code>photo 134 of 200</code> для всех медиафайлов в чате — мы можем просто использовать <code>photo ${offset_id_offset} of ${count}</code>).</td></tr><tr><td><strong>search_flood</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/SearchPostsFlood">SearchPostsFlood</a></td><td><a href="/api/search#posts-tab">Для глобального поиска по постам »</a> — оставшееся число бесплатных поисковых запросов; здесь <code>query_is_free</code> относится только к текущему вызову, а не к следующему постраничному, при этом все последующие постраничные вызовы всегда бесплатны.</td></tr><tr><td><strong>messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Message">Message</a>&gt;</td><td>Список сообщений</td></tr><tr><td><strong>topics</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ForumTopic">ForumTopic</a>&gt;</td><td><a href="/api/forum#forum-topics">Темы форума</a>, которым принадлежат возвращённые сообщения.</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Список чатов, упомянутых в сообщениях</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Список пользователей, упомянутых в сообщениях и чатах</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.Messages](/type/messages.Messages/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.searchGlobal](/method/messages.searchGlobal/)
 
-Search for messages and peers globally
+Глобальный поиск сообщений и пиров
 
-#### [Search and filters](https://core.telegram.org/api/search)
+#### [Поиск и фильтры](/api/search/)
 
-Telegram allows applying detailed message filters while looking for messages in chats.
+Telegram позволяет применять подробные фильтры сообщений при поиске в чатах.
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

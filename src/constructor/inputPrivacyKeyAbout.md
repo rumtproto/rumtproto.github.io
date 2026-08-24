@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyKeyAbout (конструктор)"
+title: "inputPrivacyKeyAbout"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyAbout"
 section: ref
 kind: constructor
+description: "Могут ли другие видеть вашу биографию"
 layout: layout.njk
 ---
 
 # inputPrivacyKeyAbout
 
-*Конструктор из схемы TL.*
-
-> Whether people can see your bio
-
-## Определение TL
+Могут ли другие видеть вашу биографию
 
 ```
 inputPrivacyKeyAbout#3823cc40 = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)

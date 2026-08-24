@@ -1,18 +1,15 @@
 ---
-title: "InputWebFileLocation (тип)"
+title: "InputWebFileLocation"
 original: "https://core.telegram.org/type/InputWebFileLocation"
 section: ref
 kind: type
+description: "Расположение удалённого файла"
 layout: layout.njk
 ---
 
 # InputWebFileLocation
 
-*Тип из схемы TL.*
-
-> Location of remote file
-
-## Определение TL
+Расположение удалённого файла
 
 ```
 inputWebFileLocation#c239d686 url:string access_hash:long = InputWebFileLocation;
@@ -20,10 +17,6 @@ inputWebFileGeoPointLocation#9f2221c9 geo_point:InputGeoPoint access_hash:long w
 inputWebFileAudioAlbumThumbLocation#f46fe924 flags:# small:flags.2?true document:flags.0?InputDocument title:flags.1?string performer:flags.1?string = InputWebFileLocation;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputWebFileLocation](/constructor/inputWebFileLocation/) | Location of a remote HTTP(s) file |
-| [inputWebFileGeoPointLocation](/constructor/inputWebFileGeoPointLocation/) | Used to download a server-generated image with the map preview from a [geoPoint](/constructor/geoPoint/), see the [webfile docs for more info »](https://core.telegram.org/api/files/#downloading-webfiles). |
-| [inputWebFileAudioAlbumThumbLocation](/constructor/inputWebFileAudioAlbumThumbLocation/) | Used to download an album cover for any music file using [upload.getWebFile](/method/upload.getWebFile/), see the [webfile docs for more info »](https://core.telegram.org/api/files/#downloading-webfiles). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputWebFileLocation">inputWebFileLocation</a></td><td>Расположение удалённого файла HTTP(s)</td></tr><tr><td><a href="/constructor/inputWebFileGeoPointLocation">inputWebFileGeoPointLocation</a></td><td>Используется для скачивания сгенерированного сервером изображения с предпросмотром карты по <a href="/constructor/geoPoint">geoPoint</a>; подробнее см. <a href="/api/files#downloading-webfiles">документацию по веб-файлам »</a>.</td></tr><tr><td><a href="/constructor/inputWebFileAudioAlbumThumbLocation">inputWebFileAudioAlbumThumbLocation</a></td><td>Используется для загрузки обложки альбома для любого музыкального файла с помощью <a href="/method/upload.getWebFile">upload.getWebFile</a>; подробнее см. <a href="/api/files#downloading-webfiles">документацию по webfile »</a>.</td></tr></tbody></table>

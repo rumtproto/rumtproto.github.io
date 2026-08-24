@@ -1,40 +1,34 @@
 ---
-title: "help.passportConfig (конструктор)"
+title: "help.passportConfig"
 original: "https://core.telegram.org/constructor/help.passportConfig"
 section: ref
 kind: constructor
+description: "Конфигурация Telegram passport"
 layout: layout.njk
 ---
 
 # help.passportConfig
 
-*Конструктор из схемы TL.*
-
-> Telegram [passport](https://core.telegram.org/passport) configuration
-
-## Определение TL
+Конфигурация Telegram [passport](https://core.telegram.org/passport)
 
 ```
 help.passportConfig#a098d6af hash:int countries_langs:DataJSON = help.PassportConfig;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| countries_langs | [DataJSON](/type/DataJSON/) | Localization |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>countries_langs</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Локализация</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [help.PassportConfig](/type/help.PassportConfig/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

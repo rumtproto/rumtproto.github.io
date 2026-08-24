@@ -1,25 +1,20 @@
 ---
-title: "PageTableRow (тип)"
+title: "PageTableRow"
 original: "https://core.telegram.org/type/PageTableRow"
 section: ref
 kind: type
+description: "Строка таблицы"
 layout: layout.njk
 ---
 
 # PageTableRow
 
-*Тип из схемы TL.*
-
-> Table row
-
-## Определение TL
+Строка таблицы
 
 ```
 pageTableRow#e0c0c5e5 cells:Vector<PageTableCell> = PageTableRow;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [pageTableRow](/constructor/pageTableRow/) | Table row |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/pageTableRow">pageTableRow</a></td><td>Строка таблицы</td></tr></tbody></table>

@@ -1,39 +1,30 @@
 ---
-title: "upload.webFile (конструктор)"
+title: "upload.webFile"
 original: "https://core.telegram.org/constructor/upload.webFile"
 section: ref
 kind: constructor
+description: "Представляет фрагмент веб-файла HTTP, загружаемого через защищённые серверы MTProto Telegram"
 layout: layout.njk
 ---
 
 # upload.webFile
 
-*Конструктор из схемы TL.*
-
-> Represents a chunk of an [HTTP webfile](/api/files/) downloaded through telegram's secure MTProto servers
-
-## Определение TL
+Представляет фрагмент [веб-файла HTTP](/api/files/), загружаемого через защищённые серверы MTProto Telegram
 
 ```
 upload.webFile#21e753bc size:int mime_type:string file_type:storage.FileType mtime:int bytes:bytes = upload.WebFile;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| size | [int](/type/int/) | File size |
-| mime_type | [string](/type/string/) | Mime type |
-| file_type | [storage.FileType](/type/storage.FileType/) | File type |
-| mtime | [int](/type/int/) | Modified time |
-| bytes | [bytes](/type/bytes/) | Data |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>size</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Размер файла</td></tr><tr><td><strong>mime_type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>MIME-тип</td></tr><tr><td><strong>file_type</strong></td><td style="text-align: center;"><a href="/type/storage.FileType">storage.FileType</a></td><td>Тип файла</td></tr><tr><td><strong>mtime</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Время изменения</td></tr><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Данные</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [upload.WebFile](/type/upload.WebFile/)
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

@@ -1,18 +1,15 @@
 ---
-title: "account.updateEmojiStatus (метод)"
+title: "account.updateEmojiStatus"
 original: "https://core.telegram.org/method/account.updateEmojiStatus"
 section: ref
 kind: method
+description: "Установить эмодзи-статус"
 layout: layout.njk
 ---
 
 # account.updateEmojiStatus
 
-*Метод из схемы TL.*
-
-> Set an [emoji status](https://core.telegram.org/api/emoji-status)
-
-## Определение TL
+Установить [эмодзи-статус](/api/emoji-status/)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,28 +18,22 @@ boolTrue#997275b5 = Bool;
 account.updateEmojiStatus#fbd3de6b emoji_status:EmojiStatus = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| emoji_status | [EmojiStatus](/type/EmojiStatus/) | [Emoji status](https://core.telegram.org/api/emoji-status) to set |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>emoji_status</strong></td><td style="text-align: center;"><a href="/type/EmojiStatus">EmojiStatus</a></td><td><a href="/api/emoji-status">Эмодзи-статус</a>, который нужно установить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | COLLECTIBLE_INVALID | The specified collectible is invalid. |
-| 400 | DOCUMENT_INVALID | The specified document is invalid. |
-| 403 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>COLLECTIBLE_INVALID</td><td>Указанный коллекционный объект недействителен.</td></tr><tr><td>400</td><td>DOCUMENT_INVALID</td><td>Указанный документ недействителен.</td></tr><tr><td>403</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

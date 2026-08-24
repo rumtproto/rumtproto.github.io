@@ -1,36 +1,30 @@
 ---
-title: "messages.stickers (конструктор)"
+title: "messages.stickers"
 original: "https://core.telegram.org/constructor/messages.stickers"
 section: ref
 kind: constructor
+description: "Найденные стикеры"
 layout: layout.njk
 ---
 
 # messages.stickers
 
-*Конструктор из схемы TL.*
-
-> Found stickers
-
-## Определение TL
+Найденные стикеры
 
 ```
 messages.stickers#30a6ec7e hash:long stickers:Vector<Document> = messages.Stickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| stickers | [Vector](https://core.telegram.org/type/Vector%20t)<[Document](/type/Document/)> | Stickers |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>stickers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Document">Document</a>&gt;</td><td>Стикеры</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.Stickers](/type/messages.Stickers/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

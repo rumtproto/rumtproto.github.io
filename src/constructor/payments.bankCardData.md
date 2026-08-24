@@ -1,30 +1,24 @@
 ---
-title: "payments.bankCardData (конструктор)"
+title: "payments.bankCardData"
 original: "https://core.telegram.org/constructor/payments.bankCardData"
 section: ref
 kind: constructor
+description: "Сведения о банковской карте, предоставленные банком (или банками) карты"
 layout: layout.njk
 ---
 
 # payments.bankCardData
 
-*Конструктор из схемы TL.*
-
-> Credit card info, provided by the card's bank(s)
-
-## Определение TL
+Сведения о банковской карте, предоставленные банком (или банками) карты
 
 ```
 payments.bankCardData#3e24e573 title:string open_urls:Vector<BankCardOpenUrl> = payments.BankCardData;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| title | [string](/type/string/) | Credit card title |
-| open_urls | [Vector](https://core.telegram.org/type/Vector%20t)<[BankCardOpenUrl](/type/BankCardOpenUrl/)> | Info URL(s) provided by the card's bank(s) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название банковской карты</td></tr><tr><td><strong>open_urls</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/BankCardOpenUrl">BankCardOpenUrl</a>&gt;</td><td>URL со справочной информацией, предоставленный банком (или банками) карты</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.BankCardData](/type/payments.BankCardData/)

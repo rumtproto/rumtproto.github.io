@@ -1,84 +1,62 @@
 ---
-title: "chatAdminRights (конструктор)"
+title: "chatAdminRights"
 original: "https://core.telegram.org/constructor/chatAdminRights"
 section: ref
 kind: constructor
+description: "Представляет права администратора в канале или супергруппе."
 layout: layout.njk
 ---
 
 # chatAdminRights
 
-*Конструктор из схемы TL.*
-
-> Represents the rights of an admin in a [channel/supergroup](https://core.telegram.org/api/channel).
-
-## Определение TL
+Представляет права администратора в [канале или супергруппе](/api/channel/).
 
 ```
 chatAdminRights#5fb224d5 flags:# change_info:flags.0?true post_messages:flags.1?true edit_messages:flags.2?true delete_messages:flags.3?true ban_users:flags.4?true invite_users:flags.5?true pin_messages:flags.7?true add_admins:flags.9?true anonymous:flags.10?true manage_call:flags.11?true other:flags.12?true manage_topics:flags.13?true post_stories:flags.14?true edit_stories:flags.15?true delete_stories:flags.16?true manage_direct_messages:flags.17?true manage_ranks:flags.18?true = ChatAdminRights;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| change_info | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, allows the admin to modify the description of the [channel/supergroup](https://core.telegram.org/api/channel) |
-| post_messages | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, allows the admin to post messages in the [channel](https://core.telegram.org/api/channel) |
-| edit_messages | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | If set, allows the admin to also edit messages from other admins in the [channel](https://core.telegram.org/api/channel) |
-| delete_messages | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | If set, allows the admin to also delete messages from other admins in the [channel](https://core.telegram.org/api/channel) |
-| ban_users | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | If set, allows the admin to ban users from the [channel/supergroup](https://core.telegram.org/api/channel) |
-| invite_users | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | If set, allows the admin to invite users in the [channel/supergroup](https://core.telegram.org/api/channel) |
-| pin_messages | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | If set, allows the admin to pin messages in the [channel/supergroup](https://core.telegram.org/api/channel) |
-| add_admins | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[true](/constructor/true/) | If set, allows the admin to add other admins with the same (or more limited) permissions in the [channel/supergroup](https://core.telegram.org/api/channel) |
-| anonymous | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[true](/constructor/true/) | Whether this admin is anonymous |
-| manage_call | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[true](/constructor/true/) | If set, allows the admin to create and administer [video chats/livestreams »](https://core.telegram.org/api/group-calls#video-chats-livestreams) |
-| other | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[true](/constructor/true/) | Set this flag if none of the other flags are set, but you still want the user to be an admin: if this or any of the other flags are set, the admin can get the chat [admin log](https://core.telegram.org/api/recent-actions), get [chat statistics](https://core.telegram.org/api/stats), get [message statistics in channels](https://core.telegram.org/api/stats), get channel members, see anonymous administrators in supergroups and ignore slow mode. |
-| manage_topics | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[true](/constructor/true/) | If set, allows the admin to create, delete or modify [forum topics »](https://core.telegram.org/api/forum#forum-topics). |
-| post_stories | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[true](/constructor/true/) | If set, allows the admin to post [stories](https://core.telegram.org/api/stories) as the [channel](https://core.telegram.org/api/channel). |
-| edit_stories | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[true](/constructor/true/) | If set, allows the admin to edit [stories](https://core.telegram.org/api/stories) posted by the other admins of the [channel](https://core.telegram.org/api/channel). |
-| delete_stories | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).16?[true](/constructor/true/) | If set, allows the admin to delete [stories](https://core.telegram.org/api/stories) posted by the other admins of the [channel](https://core.telegram.org/api/channel). |
-| manage_direct_messages | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[true](/constructor/true/) | If set, allows the admin to manage the [direct messages monoforum »](https://core.telegram.org/api/monoforum) and [decline suggested posts »](https://core.telegram.org/api/suggested-posts). |
-| manage_ranks | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[true](/constructor/true/) | If set, allows the admin to modify the [member tag »](https://core.telegram.org/api/rank) of any user. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>change_info</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору изменять описание <a href="/api/channel">канала или супергруппы</a></td></tr><tr><td><strong>post_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору публиковать сообщения в <a href="/api/channel">канале</a></td></tr><tr><td><strong>edit_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору редактировать в <a href="/api/channel">канале</a> в том числе сообщения других администраторов</td></tr><tr><td><strong>delete_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору удалять в <a href="/api/channel">канале</a> в том числе сообщения других администраторов</td></tr><tr><td><strong>ban_users</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору блокировать пользователей в <a href="/api/channel">канале или супергруппе</a></td></tr><tr><td><strong>invite_users</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору приглашать пользователей в <a href="/api/channel">канал или супергруппу</a></td></tr><tr><td><strong>pin_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору закреплять сообщения в <a href="/api/channel">канале или супергруппе</a></td></tr><tr><td><strong>add_admins</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору назначать других администраторов с такими же (или более ограниченными) правами в <a href="/api/channel">канале или супергруппе</a></td></tr><tr><td><strong>anonymous</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true">true</a></td><td>Является ли этот администратор анонимным</td></tr><tr><td><strong>manage_call</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору создавать <a href="/api/group-calls#video-chats-livestreams">видеочаты и трансляции »</a> и управлять ими</td></tr><tr><td><strong>other</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true">true</a></td><td>Установите этот флаг, если ни один из остальных флагов не задан, но вы всё же хотите сделать пользователя администратором: если задан этот или любой из остальных флагов, администратор может получать <a href="/api/recent-actions">журнал администратора</a> чата, <a href="/api/stats">статистику чата</a>, <a href="/api/stats">статистику сообщений в каналах</a> и список участников канала, видеть анонимных администраторов в супергруппах и не подчиняться медленному режиму.</td></tr><tr><td><strong>manage_topics</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору создавать, удалять и изменять <a href="/api/forum#forum-topics">темы форума »</a>.</td></tr><tr><td><strong>post_stories</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору публиковать <a href="/api/stories">истории</a> от имени <a href="/api/channel">канала</a>.</td></tr><tr><td><strong>edit_stories</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору редактировать <a href="/api/stories">истории</a>, опубликованные другими администраторами <a href="/api/channel">канала</a>.</td></tr><tr><td><strong>delete_stories</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору удалять <a href="/api/stories">истории</a>, опубликованные другими администраторами <a href="/api/channel">канала</a>.</td></tr><tr><td><strong>manage_direct_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору управлять <a href="/api/monoforum">монофорумом личных сообщений »</a> и <a href="/api/suggested-posts">отклонять предлагаемые посты »</a>.</td></tr><tr><td><strong>manage_ranks</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/constructor/true">true</a></td><td>Если установлено, позволяет администратору изменять <a href="/api/rank">метку участника »</a> любого пользователя.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatAdminRights](/type/ChatAdminRights/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
-#### [Admin log](https://core.telegram.org/api/recent-actions)
+#### [Журнал действий администраторов](/api/recent-actions/)
 
-Both supergroups and channels offer a so-called admin log, a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.
+И супергруппы, и каналы предоставляют так называемый журнал администратора — журнал недавних значимых действий в супергруппе и канале: изменение настроек или информации группы/канала от имени администратора, исключения и блокировки пользователей и многое другое.
 
-#### [Channel statistics](https://core.telegram.org/api/stats)
+#### [Статистика каналов](/api/stats/)
 
-Telegram offers detailed channel statistics for channels and supergroups.
+Telegram предоставляет подробную статистику для каналов и супергрупп.
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
-#### [Suggested posts](https://core.telegram.org/api/suggested-posts)
+#### [Предлагаемые посты](/api/suggested-posts/)
 
-Telegram offers a powerful monetization feature to channel administrators: suggested posts.
+Telegram предлагает администраторам каналов мощный инструмент монетизации — предлагаемые посты.
 
-#### [Group participant tags](https://core.telegram.org/api/rank)
+#### [Звание](/api/rank/)
 
-Members in group chats (both basic groups and supergroups) can add a tag next to their name — to show their role at work, what they study in school, and more.
+Участники групповых чатов (как обычных групп, так и супергрупп) могут добавить рядом со своим именем тег — чтобы указать свою роль на работе, что они изучают в учебном заведении и прочее.

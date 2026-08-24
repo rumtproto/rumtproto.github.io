@@ -1,40 +1,30 @@
 ---
-title: "updates.differenceSlice (конструктор)"
+title: "updates.differenceSlice"
 original: "https://core.telegram.org/constructor/updates.differenceSlice"
 section: ref
 kind: constructor
+description: "Неполный список произошедших событий."
 layout: layout.njk
 ---
 
 # updates.differenceSlice
 
-*Конструктор из схемы TL.*
-
-> Incomplete list of occurred events.
-
-## Определение TL
+Неполный список произошедших событий.
 
 ```
 updates.differenceSlice#a8fb1981 new_messages:Vector<Message> new_encrypted_messages:Vector<EncryptedMessage> other_updates:Vector<Update> chats:Vector<Chat> users:Vector<User> intermediate_state:updates.State = updates.Difference;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| new_messages | [Vector](https://core.telegram.org/type/Vector%20t)<[Message](/type/Message/)> | List of new messages |
-| new_encrypted_messages | [Vector](https://core.telegram.org/type/Vector%20t)<[EncryptedMessage](/type/EncryptedMessage/)> | New messages from the [encrypted event sequence](/api/updates/) |
-| other_updates | [Vector](https://core.telegram.org/type/Vector%20t)<[Update](/type/Update/)> | List of updates |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | List of chats mentioned in events |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | List of users mentioned in events |
-| intermediate_state | [updates.State](/type/updates.State/) | Intermediary state |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>new_messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Message">Message</a>&gt;</td><td>Список новых сообщений</td></tr><tr><td><strong>new_encrypted_messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/EncryptedMessage">EncryptedMessage</a>&gt;</td><td>Новые сообщения из <a href="/api/updates">зашифрованной последовательности событий</a></td></tr><tr><td><strong>other_updates</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Update">Update</a>&gt;</td><td>Список обновлений</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Список чатов, упомянутых в событиях</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Список пользователей, упомянутых в событиях</td></tr><tr><td><strong>intermediate_state</strong></td><td style="text-align: center;"><a href="/type/updates.State">updates.State</a></td><td>Промежуточное состояние</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [updates.Difference](/type/updates.Difference/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

@@ -1,27 +1,24 @@
 ---
-title: "messages.stickerSetInstallResultSuccess (конструктор)"
+title: "messages.stickerSetInstallResultSuccess"
 original: "https://core.telegram.org/constructor/messages.stickerSetInstallResultSuccess"
 section: ref
 kind: constructor
+description: "Набор стикеров успешно установлен"
 layout: layout.njk
 ---
 
 # messages.stickerSetInstallResultSuccess
 
-*Конструктор из схемы TL.*
-
-> The stickerset was installed successfully
-
-## Определение TL
+Набор стикеров успешно установлен
 
 ```
 messages.stickerSetInstallResultSuccess#38641628 = messages.StickerSetInstallResult;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.StickerSetInstallResult](/type/messages.StickerSetInstallResult/)

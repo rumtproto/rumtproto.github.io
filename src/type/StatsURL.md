@@ -1,25 +1,20 @@
 ---
-title: "StatsURL (тип)"
+title: "StatsURL"
 original: "https://core.telegram.org/type/StatsURL"
 section: ref
 kind: type
+description: "URL со статистикой чата"
 layout: layout.njk
 ---
 
 # StatsURL
 
-*Тип из схемы TL.*
-
-> URL with chat statistics
-
-## Определение TL
+URL со статистикой чата
 
 ```
 statsURL#47a971e0 url:string = StatsURL;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [statsURL](/constructor/statsURL/) | URL with chat statistics |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/statsURL">statsURL</a></td><td>URL со статистикой чата</td></tr></tbody></table>

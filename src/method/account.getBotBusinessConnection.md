@@ -1,21 +1,18 @@
 ---
-title: "account.getBotBusinessConnection (метод)"
+title: "account.getBotBusinessConnection"
 original: "https://core.telegram.org/method/account.getBotBusinessConnection"
 section: ref
 kind: method
+description: "Боты могут вызывать этот метод, чтобы заново получить конструктор updateBotBusinessConnect, связанный с конкретным бизнес-подключением connection_id, подробнее о подключённых…"
 layout: layout.njk
 ---
 
 # account.getBotBusinessConnection
 
-*Метод из схемы TL.*
-
-> Bots may invoke this method to re-fetch the [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) constructor associated with a specific [business `connection_id`, see here »](https://core.telegram.org/api/bots/connected-business-bots) for more info on connected business bots.  
-> This is needed for example for freshly logged in bots that are receiving some [updateBotNewBusinessMessage](/constructor/updateBotNewBusinessMessage/), etc. updates because some users have already connected to the bot before it could login.  
-> In this case, the bot is receiving messages from the business connection, but it hasn't cached the associated [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) with info about the connection (can it reply to messages? etc.) yet, and cannot receive the old ones because they were sent when the bot wasn't logged into the session yet.  
-> This method can be used to fetch info about a not-yet-cached business connection, and should not be invoked if the info is already cached or to fetch changes, as eventual changes will automatically be sent as new [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) updates to the bot using the usual [update delivery methods »](/api/updates/).
-
-## Определение TL
+Боты могут вызывать этот метод, чтобы заново получить конструктор [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/), связанный с конкретным [бизнес-подключением `connection_id`, подробнее о подключённых бизнес-ботах см. здесь »](/api/bots/connected-business-bots/).  
+Это нужно, например, для только что вошедших в систему ботов, которые получают обновления [updateBotNewBusinessMessage](/constructor/updateBotNewBusinessMessage/) и подобные, потому что некоторые пользователи подключились к боту ещё до того, как он смог войти в систему.  
+В этом случае бот получает сообщения из бизнес-подключения, но ещё не закешировал связанное с ним [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) со сведениями о подключении (может ли он отвечать на сообщения? и т. д.) и не может получить старые обновления, поскольку они были отправлены, когда бот ещё не вошёл в сессию.  
+Этот метод можно использовать, чтобы получить сведения о ещё не закешированном бизнес-подключении; его не следует вызывать, если сведения уже закешированы или чтобы получить изменения, так как последующие изменения будут автоматически отправляться боту в виде новых обновлений [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) обычными [способами доставки обновлений »](/api/updates/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -29,38 +26,34 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 account.getBotBusinessConnection#76a86270 connection_id:string = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| connection_id | [string](/type/string/) | [Business connection ID »](https://core.telegram.org/api/bots/connected-business-bots). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>connection_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/bots/connected-business-bots">Идентификатор бизнес-подключения »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CONNECTION_ID_INVALID | The specified connection ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CONNECTION_ID_INVALID</td><td>Указанный идентификатор подключения недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
 #### [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/)
 
-Connecting or disconnecting a [business bot](https://core.telegram.org/api/bots/connected-business-bots) or changing the connection settings will emit an [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) update to the bot, with the new settings and a `connection_id` that will be used by the bot to handle updates from and send messages as the user.
+Подключение или отключение [бизнес-бота](/api/bots/connected-business-bots/), а также изменение настроек подключения отправляет боту обновление [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) с новыми настройками и идентификатором `connection_id`, который бот будет использовать, чтобы обрабатывать обновления от пользователя и отправлять сообщения от его имени.
 
 #### [updateBotNewBusinessMessage](/constructor/updateBotNewBusinessMessage/)
 
-A message was received via a [connected business chat »](https://core.telegram.org/api/bots/connected-business-bots).
+Сообщение получено через [подключённый бизнес-чат »](/api/bots/connected-business-bots/).
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

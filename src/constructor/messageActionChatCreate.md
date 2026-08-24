@@ -1,30 +1,24 @@
 ---
-title: "messageActionChatCreate (конструктор)"
+title: "messageActionChatCreate"
 original: "https://core.telegram.org/constructor/messageActionChatCreate"
 section: ref
 kind: constructor
+description: "Группа создана"
 layout: layout.njk
 ---
 
 # messageActionChatCreate
 
-*Конструктор из схемы TL.*
-
-> Group created
-
-## Определение TL
+Группа создана
 
 ```
 messageActionChatCreate#bd47cbad title:string users:Vector<long> = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| title | [string](/type/string/) | Group name |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | List of group members |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название группы</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Список участников группы</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)

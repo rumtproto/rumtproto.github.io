@@ -1,18 +1,15 @@
 ---
-title: "account.getSavedRingtones (метод)"
+title: "account.getSavedRingtones"
 original: "https://core.telegram.org/method/account.getSavedRingtones"
 section: ref
 kind: method
+description: "Получить сохранённые звуки уведомлений"
 layout: layout.njk
 ---
 
 # account.getSavedRingtones
 
-*Метод из схемы TL.*
-
-> Fetch saved notification sounds
-
-## Определение TL
+Получить сохранённые звуки уведомлений
 
 ```
 account.savedRingtonesNotModified#fbf6e8b1 = account.SavedRingtones;
@@ -21,20 +18,18 @@ account.savedRingtones#c1e92cc5 hash:long ringtones:Vector<Document> = account.S
 account.getSavedRingtones#e1902288 hash:long = account.SavedRingtones;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.SavedRingtones](/type/account.SavedRingtones/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

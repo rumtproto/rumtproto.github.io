@@ -1,43 +1,34 @@
 ---
-title: "premium.boostsList (конструктор)"
+title: "premium.boostsList"
 original: "https://core.telegram.org/constructor/premium.boostsList"
 section: ref
 kind: constructor
+description: "Список бустов, применённых к пиру несколькими пользователями."
 layout: layout.njk
 ---
 
 # premium.boostsList
 
-*Конструктор из схемы TL.*
-
-> List of [boosts](https://core.telegram.org/api/boost) that were applied to a peer by multiple users.
-
-## Определение TL
+Список [бустов](/api/boost/), применённых к пиру несколькими пользователями.
 
 ```
 premium.boostsList#86f8613c flags:# count:int boosts:Vector<Boost> next_offset:flags.0?string users:Vector<User> = premium.BoostsList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| count | [int](/type/int/) | Total number of results |
-| boosts | [Vector](https://core.telegram.org/type/Vector%20t)<[Boost](/type/Boost/)> | [Boosts](https://core.telegram.org/api/boost) |
-| next_offset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Offset that can be used for [pagination](https://core.telegram.org/api/offsets). |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Mentioned users |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число результатов</td></tr><tr><td><strong>boosts</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Boost">Boost</a>&gt;</td><td><a href="/api/boost">Бусты</a></td></tr><tr><td><strong>next_offset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>[@term:next_offset] Смещение, которое можно использовать для <a href="/api/offsets">постраничной выборки</a>.</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Упомянутые пользователи</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [premium.BoostsList](/type/premium.BoostsList/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

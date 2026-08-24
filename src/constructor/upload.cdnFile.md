@@ -1,35 +1,30 @@
 ---
-title: "upload.cdnFile (конструктор)"
+title: "upload.cdnFile"
 original: "https://core.telegram.org/constructor/upload.cdnFile"
 section: ref
 kind: constructor
+description: "Представляет фрагмент файла CDN."
 layout: layout.njk
 ---
 
 # upload.cdnFile
 
-*Конструктор из схемы TL.*
-
-> Represent a chunk of a [CDN](https://core.telegram.org/cdn) file.
-
-## Определение TL
+Представляет фрагмент файла [CDN](https://core.telegram.org/cdn).
 
 ```
 upload.cdnFile#a99fca4f bytes:bytes = upload.CdnFile;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bytes | [bytes](/type/bytes/) | The data |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Данные</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [upload.CdnFile](/type/upload.CdnFile/)
 
-## Related pages
+### Связанные страницы
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Шифрованные CDN: скорость и безопасность](https://core.telegram.org/cdn)
 
-How client apps download popular public files from secondary CDN data centers.
+Как клиентские приложения скачивают популярные публичные файлы из вспомогательных CDN-дата-центров.

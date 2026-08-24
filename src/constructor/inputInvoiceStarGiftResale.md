@@ -1,38 +1,30 @@
 ---
-title: "inputInvoiceStarGiftResale (конструктор)"
+title: "inputInvoiceStarGiftResale"
 original: "https://core.telegram.org/constructor/inputInvoiceStarGiftResale"
 section: ref
 kind: constructor
+description: "Используется для покупки коллекционного подарка, выставленного на перепродажу; подробнее обо всём процессе см. здесь."
 layout: layout.njk
 ---
 
 # inputInvoiceStarGiftResale
 
-*Конструктор из схемы TL.*
-
-> Used to buy a [collectible gift](https://core.telegram.org/api/gifts#collectible-gifts) currently up on resale, see [here](https://core.telegram.org/api/gifts#reselling-collectible-gifts) for more info on the full flow.
-
-## Определение TL
+Используется для покупки [коллекционного подарка](/api/gifts/#collectible-gifts), выставленного на перепродажу; подробнее обо всём процессе см. [здесь](/api/gifts/#reselling-collectible-gifts).
 
 ```
 inputInvoiceStarGiftResale#c39f5324 flags:# ton:flags.0?true slug:string to_id:InputPeer = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| ton | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Buy the gift using TON. |
-| slug | [string](/type/string/) | Slug of the gift to buy. |
-| to_id | [InputPeer](/type/InputPeer/) | The receiver of the gift. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>ton</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Купить подарок за TON.</td></tr><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Слаг подарка, который нужно купить.</td></tr><tr><td><strong>to_id</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Получатель подарка.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

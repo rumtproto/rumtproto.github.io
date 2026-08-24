@@ -1,19 +1,17 @@
 ---
-title: "phone.getGroupCallChainBlocks (метод)"
+title: "phone.getGroupCallChainBlocks"
 original: "https://core.telegram.org/method/phone.getGroupCallChainBlocks"
 section: ref
 kind: method
+description: "Получить блоки из подцепочки » группового звонка-конференции; возвращённое обновление updateGroupCallChainBlocks следует обрабатывать как описано здесь »."
 layout: layout.njk
 ---
 
 # phone.getGroupCallChainBlocks
 
-*Метод из схемы TL.*
+Получить блоки из [подцепочки »](/api/end-to-end/group-calls/#subchains) группового звонка-конференции; возвращённое обновление [updateGroupCallChainBlocks](/constructor/updateGroupCallChainBlocks/) следует обрабатывать [как описано здесь »](/api/end-to-end/group-calls/#handling-updates).
 
-> Fetch blocks from a conference call [subchain »](https://core.telegram.org/api/end-to-end/group-calls#subchains); handle the returned [updateGroupCallChainBlocks](/constructor/updateGroupCallChainBlocks/) as [specified here »](https://core.telegram.org/api/end-to-end/group-calls#handling-updates).
-> If the number of blocks returned by _any_ call to this method is equal to `limit`, this method must be re-invoked immediately after processing the returned [updateGroupCallChainBlocks](/constructor/updateGroupCallChainBlocks/), with the newly committed `offset` (usually equal to the returned `next_offset`).
-
-## Определение TL
+[@term:next_offset] Если число блоков, возвращённых _любым_ вызовом этого метода, равно `limit`, метод необходимо вызвать повторно сразу после обработки полученного [updateGroupCallChainBlocks](/constructor/updateGroupCallChainBlocks/), указав новое зафиксированное значение `offset` (обычно равное возвращённому `next_offset`).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -27,37 +25,30 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.getGroupCallChainBlocks#ee9f88a6 call:InputGroupCall sub_chain_id:int offset:int limit:int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Conference whose subchain blocks should be fetched |
-| sub_chain_id | [int](/type/int/) | 0 for the main state blockchain, 1 for the call verification subchain |
-| offset | [int](/type/int/) | Fetch blocks starting from this height; pass -1 to fetch the latest block |
-| limit | [int](/type/int/) | Maximum number of blocks to return in this call, [see pagination](https://core.telegram.org/api/offsets), max 100. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Конференция, блоки подцепочки которой требуется получить</td></tr><tr><td><strong>sub_chain_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><code>0</code> — для основного блокчейна состояния, <code>1</code> — для подцепочки проверки звонков</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Получать блоки начиная с этой высоты; передайте <code>-1</code>, чтобы получить последний блок</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное количество блоков, возвращаемых этим вызовом, <a href="/api/offsets">см. постраничную выборку</a>, не более 100.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [E2E Group Calls](https://core.telegram.org/api/end-to-end/group-calls)
+#### [Групповые звонки с E2E-шифрованием](/api/end-to-end/group-calls/)
 
-End-to-end encryption used for Telegram group voice and video calls, using a blockchain for state management.
+Сквозное шифрование, применяемое в групповых голосовых и видеозвонках Telegram; состояние хранится в блокчейне.
 
 #### [updateGroupCallChainBlocks](/constructor/updateGroupCallChainBlocks/)
 
-Contains conference call blockchain blocks, see [handling E2E group call updates »](https://core.telegram.org/api/end-to-end/group-calls#handling-updates).
+Содержит блоки блокчейна конференц-звонка, см. [обработку обновлений сквозного группового звонка »](/api/end-to-end/group-calls/#handling-updates).

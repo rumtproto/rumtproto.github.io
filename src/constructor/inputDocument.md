@@ -1,41 +1,34 @@
 ---
-title: "inputDocument (конструктор)"
+title: "inputDocument"
 original: "https://core.telegram.org/constructor/inputDocument"
 section: ref
 kind: constructor
+description: "Определяет документ для дальнейшего взаимодействия."
 layout: layout.njk
 ---
 
 # inputDocument
 
-*Конструктор из схемы TL.*
-
-> Defines a document for subsequent interaction.
-
-## Определение TL
+Определяет документ для дальнейшего взаимодействия.
 
 ```
 inputDocument#1abfb575 id:long access_hash:long file_reference:bytes = InputDocument;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | Document ID |
-| access_hash | [long](/type/long/) | access_hash parameter from the [document](/constructor/document/) constructor |
-| file_reference | [bytes](/type/bytes/) | [File reference](https://core.telegram.org/api/file-references) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор документа</td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:access_hash] Параметр <strong>access_hash</strong> из конструктора <a href="/constructor/document">document</a></td></tr><tr><td><strong>file_reference</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>[@term:file_reference] <a href="/api/file-references">Ссылка на файл</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputDocument](/type/InputDocument/)
 
-## Related pages
+### Связанные страницы
 
 #### [document](/constructor/document/)
 
-Document
+Документ
 
-#### [File references](https://core.telegram.org/api/file-references)
+#### [Ссылки на файлы](/api/file-references/)
 
-How to handle file references.
+Как работать со ссылками на файлы.

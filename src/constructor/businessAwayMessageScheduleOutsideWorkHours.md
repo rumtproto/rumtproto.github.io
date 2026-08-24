@@ -1,33 +1,30 @@
 ---
-title: "businessAwayMessageScheduleOutsideWorkHours (конструктор)"
+title: "businessAwayMessageScheduleOutsideWorkHours"
 original: "https://core.telegram.org/constructor/businessAwayMessageScheduleOutsideWorkHours"
 section: ref
 kind: constructor
+description: "Отправлять сообщения об отсутствии Telegram Business пользователям, которые пишут нам в личные сообщения вне заданных рабочих часов Telegram Business."
 layout: layout.njk
 ---
 
 # businessAwayMessageScheduleOutsideWorkHours
 
-*Конструктор из схемы TL.*
-
-> Send [Telegram Business away messages](https://core.telegram.org/api/business#away-messages) to users writing to us in private outside of the configured [Telegram Business working hours](https://core.telegram.org/api/business#opening-hours).
-
-## Определение TL
+Отправлять [сообщения об отсутствии Telegram Business](/api/business/#away-messages) пользователям, которые пишут нам в личные сообщения вне заданных [рабочих часов Telegram Business](/api/business/#opening-hours).
 
 ```
 businessAwayMessageScheduleOutsideWorkHours#c3f2f501 = BusinessAwayMessageSchedule;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [BusinessAwayMessageSchedule](/type/BusinessAwayMessageSchedule/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

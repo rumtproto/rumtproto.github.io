@@ -1,42 +1,34 @@
 ---
-title: "updateChatParticipantAdmin (конструктор)"
+title: "updateChatParticipantAdmin"
 original: "https://core.telegram.org/constructor/updateChatParticipantAdmin"
 section: ref
 kind: constructor
+description: "Изменены права администратора у пользователя в обычной группе"
 layout: layout.njk
 ---
 
 # updateChatParticipantAdmin
 
-*Конструктор из схемы TL.*
-
-> Admin permissions of a user in a [basic group](https://core.telegram.org/api/channel#basic-groups) were changed
-
-## Определение TL
+Изменены права администратора у пользователя в [обычной группе](/api/channel/#basic-groups)
 
 ```
 updateChatParticipantAdmin#d7ca61a2 chat_id:long user_id:long is_admin:Bool version:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chat_id | [long](/type/long/) | Chat ID |
-| user_id | [long](/type/long/) | ID of the (de)admined user |
-| is_admin | [Bool](/type/Bool/) | Whether the user was rendered admin |
-| version | [int](/type/int/) | Used similarly to pts values to deduplicate/update outdated chat information as specified [here »](https://core.telegram.org/api/peers#basic-group-updates). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор чата</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя, которому назначаются или снимаются права администратора</td></tr><tr><td><strong>is_admin</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Был ли пользователь назначен администратором</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] Используется аналогично значениям <code>pts</code> для устранения дубликатов и обновления устаревшей информации о чате, как описано <a href="/api/peers#basic-group-updates">здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Peer database](https://core.telegram.org/api/peers)
+#### [База данных пиров](/api/peers/)
 
-Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.
+Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

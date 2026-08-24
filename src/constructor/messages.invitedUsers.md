@@ -1,36 +1,30 @@
 ---
-title: "messages.invitedUsers (конструктор)"
+title: "messages.invitedUsers"
 original: "https://core.telegram.org/constructor/messages.invitedUsers"
 section: ref
 kind: constructor
+description: "Содержит информацию об успешно и неуспешно приглашённых » пользователях."
 layout: layout.njk
 ---
 
 # messages.invitedUsers
 
-*Конструктор из схемы TL.*
-
-> Contains info about successfully or unsuccessfully [invited »](https://core.telegram.org/api/invites#direct-invites) users.
-
-## Определение TL
+Содержит информацию об успешно и неуспешно [приглашённых »](/api/invites/#direct-invites) пользователях.
 
 ```
 messages.invitedUsers#7f5defa6 updates:Updates missing_invitees:Vector<MissingInvitee> = messages.InvitedUsers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| updates | [Updates](/type/Updates/) | List of updates about successfully invited users (and eventually info about the created group) |
-| missing_invitees | [Vector](https://core.telegram.org/type/Vector%20t)<[MissingInvitee](/type/MissingInvitee/)> | A list of users that could not be invited, along with the reason why they couldn't be invited. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>updates</strong></td><td style="text-align: center;"><a href="/type/Updates">Updates</a></td><td>Список обновлений об успешно приглашённых пользователях (и, при необходимости, сведения о созданной группе)</td></tr><tr><td><strong>missing_invitees</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MissingInvitee">MissingInvitee</a>&gt;</td><td>Список пользователей, которых не удалось пригласить, с указанием причины.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.InvitedUsers](/type/messages.InvitedUsers/)
 
-## Related pages
+### Связанные страницы
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.

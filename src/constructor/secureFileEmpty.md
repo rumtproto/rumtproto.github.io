@@ -1,27 +1,24 @@
 ---
-title: "secureFileEmpty (конструктор)"
+title: "secureFileEmpty"
 original: "https://core.telegram.org/constructor/secureFileEmpty"
 section: ref
 kind: constructor
+description: "Пустой конструктор"
 layout: layout.njk
 ---
 
 # secureFileEmpty
 
-*Конструктор из схемы TL.*
-
-> Empty constructor
-
-## Определение TL
+Пустой конструктор
 
 ```
 secureFileEmpty#64199744 = SecureFile;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureFile](/type/SecureFile/)

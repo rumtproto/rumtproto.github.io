@@ -1,39 +1,30 @@
 ---
-title: "botVerifierSettings (конструктор)"
+title: "botVerifierSettings"
 original: "https://core.telegram.org/constructor/botVerifierSettings"
 section: ref
 kind: constructor
+description: "Информация о текущем боте-верификаторе »."
 layout: layout.njk
 ---
 
 # botVerifierSettings
 
-*Конструктор из схемы TL.*
-
-> Info about the current [verifier bot »](https://core.telegram.org/api/bots/verification).
-
-## Определение TL
+Информация о текущем [боте-верификаторе »](/api/bots/verification/).
 
 ```
 botVerifierSettings#b0cd6617 flags:# can_modify_custom_description:flags.1?true icon:long company:string custom_description:flags.0?string = BotVerifierSettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| can_modify_custom_description | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Indicates whether the bot is allowed to set a custom description field for individual verified peers, different from the custom_description provided here. |
-| icon | [long](/type/long/) | Verification icon |
-| company | [string](/type/string/) | The name of the organization that provides the verification |
-| custom_description | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | An optional default description for the verification |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>can_modify_custom_description</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Указывает, разрешено ли боту задавать для отдельных верифицированных пиров собственное описание, отличное от указанного здесь <code>custom_description</code>.</td></tr><tr><td><strong>icon</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Значок верификации</td></tr><tr><td><strong>company</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название организации, которая выдаёт верификацию</td></tr><tr><td><strong>custom_description</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Необязательное описание по умолчанию для верификации</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BotVerifierSettings](/type/BotVerifierSettings/)
 
-## Related pages
+### Связанные страницы
 
-#### [Third-party verification](https://core.telegram.org/api/bots/verification)
+#### [Сторонняя верификация](/api/bots/verification/)
 
-To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and reduce misinformation.
+Чтобы ещё повысить прозрачность в Telegram, официальные сторонние сервисы могут присваивать аккаунтам пользователей и чатам дополнительные значки верификации — чтобы предотвратить мошенничество и снизить распространение недостоверной информации.

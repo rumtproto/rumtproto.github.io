@@ -1,35 +1,30 @@
 ---
-title: "starGiftAttributeIdBackdrop (конструктор)"
+title: "starGiftAttributeIdBackdrop"
 original: "https://core.telegram.org/constructor/starGiftAttributeIdBackdrop"
 section: ref
 kind: constructor
+description: "Идентификатор подложки коллекционного подарка »."
 layout: layout.njk
 ---
 
 # starGiftAttributeIdBackdrop
 
-*Конструктор из схемы TL.*
-
-> The ID of a backdrop of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
-
-## Определение TL
+Идентификатор подложки [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
 ```
 starGiftAttributeIdBackdrop#1f01c757 backdrop_id:int = StarGiftAttributeId;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| backdrop_id | [int](/type/int/) | Unique ID of the backdrop. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>backdrop_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Уникальный идентификатор фона.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftAttributeId](/type/StarGiftAttributeId/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

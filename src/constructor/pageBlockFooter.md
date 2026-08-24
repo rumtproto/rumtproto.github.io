@@ -1,29 +1,24 @@
 ---
-title: "pageBlockFooter (конструктор)"
+title: "pageBlockFooter"
 original: "https://core.telegram.org/constructor/pageBlockFooter"
 section: ref
 kind: constructor
+description: "Нижний колонтитул страницы"
 layout: layout.njk
 ---
 
 # pageBlockFooter
 
-*Конструктор из схемы TL.*
-
-> Page footer
-
-## Определение TL
+Нижний колонтитул страницы
 
 ```
 pageBlockFooter#48870999 text:RichText = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [RichText](/type/RichText/) | Contents |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Содержимое</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

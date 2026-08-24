@@ -1,31 +1,26 @@
 ---
-title: "StarsSubscriptionPricing (тип)"
+title: "StarsSubscriptionPricing"
 original: "https://core.telegram.org/type/StarsSubscriptionPricing"
 section: ref
 kind: type
+description: "Стоимость подписки за Telegram Stars »."
 layout: layout.njk
 ---
 
 # StarsSubscriptionPricing
 
-*Тип из схемы TL.*
-
-> Pricing of a [Telegram Star subscription »](https://core.telegram.org/api/invites#paid-invite-links).
-
-## Определение TL
+Стоимость [подписки за Telegram Stars »](/api/invites/#paid-invite-links).
 
 ```
 starsSubscriptionPricing#5416d58 period:int amount:long = StarsSubscriptionPricing;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starsSubscriptionPricing](/constructor/starsSubscriptionPricing/) | Pricing of a [Telegram Star subscription »](https://core.telegram.org/api/invites#paid-invite-links). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starsSubscriptionPricing">starsSubscriptionPricing</a></td><td>Стоимость <a href="/api/invites#paid-invite-links">подписки за Telegram Stars »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.

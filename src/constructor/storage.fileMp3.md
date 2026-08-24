@@ -1,27 +1,24 @@
 ---
-title: "storage.fileMp3 (конструктор)"
+title: "storage.fileMp3"
 original: "https://core.telegram.org/constructor/storage.fileMp3"
 section: ref
 kind: constructor
+description: "Аудио в формате Mp3. MIME-тип: audio/mpeg."
 layout: layout.njk
 ---
 
 # storage.fileMp3
 
-*Конструктор из схемы TL.*
-
-> Mp3 audio. MIME type: `audio/mpeg`.
-
-## Определение TL
+Аудио в формате Mp3. MIME-тип: `audio/mpeg`.
 
 ```
 storage.fileMp3#528a0677 = storage.FileType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [storage.FileType](/type/storage.FileType/)

@@ -1,40 +1,34 @@
 ---
-title: "messages.savedReactionTags (конструктор)"
+title: "messages.savedReactionTags"
 original: "https://core.telegram.org/constructor/messages.savedReactionTags"
 section: ref
 kind: constructor
+description: "Список имён тегов-реакций », назначенных пользователем."
 layout: layout.njk
 ---
 
 # messages.savedReactionTags
 
-*Конструктор из схемы TL.*
-
-> List of [reaction tag »](https://core.telegram.org/api/saved-messages#tags) names assigned by the user.
-
-## Определение TL
+Список имён [тегов-реакций »](/api/saved-messages/#tags), назначенных пользователем.
 
 ```
 messages.savedReactionTags#3259950a tags:Vector<SavedReactionTag> hash:long = messages.SavedReactionTags;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| tags | [Vector](https://core.telegram.org/type/Vector%20t)<[SavedReactionTag](/type/SavedReactionTag/)> | Saved reaction tags. |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). Can also be manually regenerated, if needed, using the [custom algorithm specified here »](https://core.telegram.org/api/saved-messages#tags). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>tags</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SavedReactionTag">SavedReactionTag</a>&gt;</td><td>Сохранённые теги реакций.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>. При необходимости его можно пересчитать вручную по <a href="/api/saved-messages#tags">особому алгоритму, описанному здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.SavedReactionTags](/type/messages.SavedReactionTags/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.

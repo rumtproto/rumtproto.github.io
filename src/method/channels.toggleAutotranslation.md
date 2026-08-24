@@ -1,18 +1,15 @@
 ---
-title: "channels.toggleAutotranslation (метод)"
+title: "channels.toggleAutotranslation"
 original: "https://core.telegram.org/method/channels.toggleAutotranslation"
 section: ref
 kind: method
+description: "Включить или отключить автоперевод в канале для всех пользователей: подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # channels.toggleAutotranslation
 
-*Метод из схемы TL.*
-
-> Toggle autotranslation in a channel, for all users: see [here »](https://core.telegram.org/api/translation#autotranslation-for-channels) for more info.
-
-## Определение TL
+Включить или отключить автоперевод в канале для всех пользователей: подробнее см. [здесь »](/api/translation/#autotranslation-for-channels).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,27 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.toggleAutotranslation#167fc0a1 channel:InputChannel enabled:Bool = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The channel where to toggle autotranslation. |
-| enabled | [Bool](/type/Bool/) | Whether to enable or disable autotranslation. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал, в котором переключается автоперевод.</td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Включить или отключить автоперевод.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Message translation](https://core.telegram.org/api/translation)
+#### [Перевод сообщений](/api/translation/)
 
-Telegram allows translating chat messages: Telegram Premium users may even enable real-time chat translation.
+Telegram позволяет переводить сообщения в чатах: пользователи Telegram Premium могут даже включить перевод чата в реальном времени.

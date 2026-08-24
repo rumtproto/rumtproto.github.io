@@ -1,18 +1,15 @@
 ---
-title: "messages.declineUrlAuth (метод)"
+title: "messages.declineUrlAuth"
 original: "https://core.telegram.org/method/messages.declineUrlAuth"
 section: ref
 kind: method
+description: "Отклонить входящий запрос авторизации OAuth », сообщив серверу, что пользователь отказал в запросе на вход."
 layout: layout.njk
 ---
 
 # messages.declineUrlAuth
 
-*Метод из схемы TL.*
-
-> Decline an incoming [OAuth authorization request »](https://core.telegram.org/api/url-authorization#oauth-authorization), notifying the server that the user refused the login request.
-
-## Определение TL
+Отклонить входящий [запрос авторизации OAuth »](/api/url-authorization/#oauth-authorization), сообщив серверу, что пользователь отказал в запросе на вход.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,34 +18,30 @@ boolTrue#997275b5 = Bool;
 messages.declineUrlAuth#35436bbc url:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| url | [string](/type/string/) | The OAuth deep link from the [OAUTH_REQUEST push notification](https://core.telegram.org/api/push-updates#oauth-request) or the [oauth_request web event](https://core.telegram.org/api/web-events#oauth-request) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Глубокая ссылка OAuth из <a href="/api/push-updates#oauth-request">push-уведомления OAUTH_REQUEST</a> или из <a href="/api/web-events#oauth-request">веб-события <code>oauth_request</code></a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | URL_INVALID | Invalid URL provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>URL_INVALID</td><td>Указан недействительный URL.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Handling PUSH-notifications](https://core.telegram.org/api/push-updates)
+#### [Обработка PUSH-уведомлений](/api/push-updates/)
 
-How to subscribe to and handle PUSH notifications
+Как подписаться на PUSH-уведомления и обрабатывать их
 
-#### [Web events](https://core.telegram.org/api/web-events)
+#### [Веб-события](/api/web-events/)
 
-How telegram apps interact with webpages
+Как приложения Telegram взаимодействуют с веб-страницами
 
-#### [Seamless Telegram Login](https://core.telegram.org/api/url-authorization)
+#### [Бесшовный вход через Telegram](/api/url-authorization/)
 
-Handle Seamless Telegram Login URL authorization requests.
+Обработка запросов авторизации по URL через Seamless Telegram Login.

@@ -1,18 +1,15 @@
 ---
-title: "Channels.ChannelParticipants (тип)"
+title: "channels.ChannelParticipants"
 original: "https://core.telegram.org/type/channels.ChannelParticipants"
 section: ref
 kind: type
+description: "Участники канала или супергруппы"
 layout: layout.njk
 ---
 
 # Channels.ChannelParticipants
 
-*Тип из схемы TL.*
-
-> Channel/supergroup participants
-
-## Определение TL
+Участники канала или супергруппы
 
 ```
 channels.channelParticipants#9ab0feaf count:int participants:Vector<ChannelParticipant> chats:Vector<Chat> users:Vector<User> = channels.ChannelParticipants;
@@ -23,15 +20,10 @@ channels.channelParticipantsNotModified#f0173fe9 = channels.ChannelParticipants;
 channels.getParticipants#77ced9d0 channel:InputChannel filter:ChannelParticipantsFilter offset:int limit:int hash:long = channels.ChannelParticipants;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [channels.channelParticipants](/constructor/channels.channelParticipants/) | Represents multiple channel participants |
-| [channels.channelParticipantsNotModified](/constructor/channels.channelParticipantsNotModified/) | No new participant info could be found |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/channels.channelParticipants">channels.channelParticipants</a></td><td>Представляет несколько участников канала</td></tr><tr><td><a href="/constructor/channels.channelParticipantsNotModified">channels.channelParticipantsNotModified</a></td><td>Новых сведений об участнике не найдено</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [channels.getParticipants](/method/channels.getParticipants/) | Get the participants of a [supergroup/channel](https://core.telegram.org/api/channel) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/channels.getParticipants">channels.getParticipants</a></td><td>Получить участников <a href="/api/channel">супергруппы или канала</a></td></tr></tbody></table>

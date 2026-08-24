@@ -1,38 +1,30 @@
 ---
-title: "webDocumentNoProxy (конструктор)"
+title: "webDocumentNoProxy"
 original: "https://core.telegram.org/constructor/webDocumentNoProxy"
 section: ref
 kind: constructor
+description: "Удалённый документ, который можно скачать без проксирования через telegram"
 layout: layout.njk
 ---
 
 # webDocumentNoProxy
 
-*Конструктор из схемы TL.*
-
-> Remote document that can be downloaded without [proxying through telegram](/api/files/)
-
-## Определение TL
+Удалённый документ, который можно скачать без [проксирования через telegram](/api/files/)
 
 ```
 webDocumentNoProxy#f9c8bcc6 url:string size:int mime_type:string attributes:Vector<DocumentAttribute> = WebDocument;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| url | [string](/type/string/) | Document URL |
-| size | [int](/type/int/) | File size |
-| mime_type | [string](/type/string/) | MIME type |
-| attributes | [Vector](https://core.telegram.org/type/Vector%20t)<[DocumentAttribute](/type/DocumentAttribute/)> | Attributes for media types |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>URL документа</td></tr><tr><td><strong>size</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Размер файла</td></tr><tr><td><strong>mime_type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>MIME-тип</td></tr><tr><td><strong>attributes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/DocumentAttribute">DocumentAttribute</a>&gt;</td><td>Атрибуты для типов медиафайлов</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [WebDocument](/type/WebDocument/)
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

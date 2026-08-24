@@ -1,18 +1,15 @@
 ---
-title: "payments.getCraftStarGifts (метод)"
+title: "payments.getCraftStarGifts"
 original: "https://core.telegram.org/method/payments.getCraftStarGifts"
 section: ref
 kind: method
+description: "Получить принадлежащие пользователю коллекционные подарки » определённого типа, которые можно использовать для создания »."
 layout: layout.njk
 ---
 
 # payments.getCraftStarGifts
 
-*Метод из схемы TL.*
-
-> Obtain owned [collectible gifts »](https://core.telegram.org/api/gifts#collectible-gifts) of a specific type that can be used for [crafting »](https://core.telegram.org/api/gifts#crafting-collectible-gifts).
-
-## Определение TL
+Получить принадлежащие пользователю [коллекционные подарки »](/api/gifts/#collectible-gifts) определённого типа, которые можно использовать для [создания »](/api/gifts/#crafting-collectible-gifts).
 
 ```
 payments.savedStarGifts#95f389b1 flags:# count:int chat_notifications_enabled:flags.1?Bool gifts:Vector<SavedStarGift> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = payments.SavedStarGifts;
@@ -20,38 +17,32 @@ payments.savedStarGifts#95f389b1 flags:# count:int chat_notifications_enabled:fl
 payments.getCraftStarGifts#fd05dd00 gift_id:long offset:string limit:int = payments.SavedStarGifts;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| gift_id | [long](/type/long/) | Identifier of the base gift type, equal to [starGiftUnique](/constructor/starGiftUnique/).gift_id of the first selected gift. |
-| offset | [string](/type/string/) | Offset for pagination. |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор базового типа подарка, равный <a href="/constructor/starGiftUnique">starGiftUnique</a>.<code>gift_id</code> первого выбранного подарка.</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Смещение для постраничной выборки.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.SavedStarGifts](/type/payments.SavedStarGifts/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | STARGIFT_INVALID | The passed gift is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>STARGIFT_INVALID</td><td>Переданный подарок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [starGiftUnique](/constructor/starGiftUnique/)
 
-Represents a [collectible star gift, see here »](https://core.telegram.org/api/gifts#collectible-gifts) for more info.
+Представляет коллекционный звёздный подарок, [подробнее см. здесь »](/api/gifts/#collectible-gifts).
 
-The sticker that represents the gift is contained in a [starGiftAttributeModel](/constructor/starGiftAttributeModel/) object in `attributes`.
+Стикер, представляющий подарок, содержится в объекте [starGiftAttributeModel](/constructor/starGiftAttributeModel/) в поле `attributes`.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

@@ -1,27 +1,24 @@
 ---
-title: "messages.stickerSetNotModified (конструктор)"
+title: "messages.stickerSetNotModified"
 original: "https://core.telegram.org/constructor/messages.stickerSetNotModified"
 section: ref
 kind: constructor
+description: "Набор стикеров не изменился"
 layout: layout.njk
 ---
 
 # messages.stickerSetNotModified
 
-*Конструктор из схемы TL.*
-
-> The stickerset hasn't changed
-
-## Определение TL
+Набор стикеров не изменился
 
 ```
 messages.stickerSetNotModified#d3f924eb = messages.StickerSet;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.StickerSet](/type/messages.StickerSet/)

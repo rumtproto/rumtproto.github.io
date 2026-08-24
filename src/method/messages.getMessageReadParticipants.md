@@ -1,48 +1,37 @@
 ---
-title: "messages.getMessageReadParticipants (метод)"
+title: "messages.getMessageReadParticipants"
 original: "https://core.telegram.org/method/messages.getMessageReadParticipants"
 section: ref
 kind: method
+description: "Получить список пользователей, прочитавших определённое сообщение: доступно только для групп и супергрупп, где менее chat_read_mark_size_threshold участников; сведения о прочтении…"
 layout: layout.njk
 ---
 
 # messages.getMessageReadParticipants
 
-*Метод из схемы TL.*
-
-> Get which users read a specific message: only available for groups and supergroups with less than [`chat_read_mark_size_threshold` members](https://core.telegram.org/api/config#chat-read-mark-size-threshold), read receipts will be stored for [`chat_read_mark_expire_period` seconds after the message was sent](https://core.telegram.org/api/config#chat-read-mark-expire-period), see [client configuration for more info »](https://core.telegram.org/api/config#client-configuration).
-
-## Определение TL
+Получить список пользователей, прочитавших определённое сообщение: доступно только для групп и супергрупп, где менее [`chat_read_mark_size_threshold` участников](/api/config/#chat-read-mark-size-threshold); сведения о прочтении хранятся в течение [`chat_read_mark_expire_period` секунд после отправки сообщения](/api/config/#chat-read-mark-expire-period), подробнее см. [конфигурацию клиента »](/api/config/#client-configuration).
 
 ```
 ---functions---
 messages.getMessageReadParticipants#31c1c44f peer:InputPeer msg_id:int = Vector<ReadParticipantDate>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Dialog |
-| msg_id | [int](/type/int/) | Message ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Диалог</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[ReadParticipantDate](/type/ReadParticipantDate/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_TOO_BIG | This method is not available for groups with more than chat_read_mark_size_threshold members, [see client configuration »](https://core.telegram.org/api/config#client-configuration). |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | MSG_TOO_OLD | [chat_read_mark_expire_period seconds](https://core.telegram.org/api/config#chat-read-mark-expire-period) have passed since the message was sent, read receipts were deleted. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_TOO_BIG</td><td>Этот метод недоступен для групп, в которых больше <code>chat_read_mark_size_threshold</code> участников, <a href="/api/config#client-configuration">см. конфигурацию клиента&nbsp;»</a>.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>MSG_TOO_OLD</td><td>С момента отправки сообщения прошло <a href="/api/config#chat-read-mark-expire-period"><code>chat_read_mark_expire_period</code> секунд</a>, и сведения о прочтении были удалены.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

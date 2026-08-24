@@ -1,29 +1,24 @@
 ---
-title: "emailVerificationCode (конструктор)"
+title: "emailVerificationCode"
 original: "https://core.telegram.org/constructor/emailVerificationCode"
 section: ref
 kind: constructor
+description: "Код подтверждения электронной почты"
 layout: layout.njk
 ---
 
 # emailVerificationCode
 
-*Конструктор из схемы TL.*
-
-> Email verification code
-
-## Определение TL
+Код подтверждения электронной почты
 
 ```
 emailVerificationCode#922e55a9 code:string = EmailVerification;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| code | [string](/type/string/) | Received verification code |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Полученный код подтверждения</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [EmailVerification](/type/EmailVerification/)

@@ -1,25 +1,20 @@
 ---
-title: "PhoneCallProtocol (тип)"
+title: "PhoneCallProtocol"
 original: "https://core.telegram.org/type/PhoneCallProtocol"
 section: ref
 kind: type
+description: "Протокол телефонного звонка"
 layout: layout.njk
 ---
 
 # PhoneCallProtocol
 
-*Тип из схемы TL.*
-
-> Phone call protocol
-
-## Определение TL
+Протокол телефонного звонка
 
 ```
 phoneCallProtocol#fc878fc8 flags:# udp_p2p:flags.0?true udp_reflector:flags.1?true min_layer:int max_layer:int library_versions:Vector<string> = PhoneCallProtocol;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [phoneCallProtocol](/constructor/phoneCallProtocol/) | Protocol info for the VoIP library, see [here »](https://core.telegram.org/api/calls#populating-phonecallprotocol) for details on how to populate it. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/phoneCallProtocol">phoneCallProtocol</a></td><td>Сведения о протоколе для библиотеки VoIP; подробнее о том, как их заполнять, см. <a href="/api/calls#populating-phonecallprotocol">здесь »</a>.</td></tr></tbody></table>

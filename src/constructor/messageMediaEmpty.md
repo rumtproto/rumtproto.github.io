@@ -1,27 +1,24 @@
 ---
-title: "messageMediaEmpty (конструктор)"
+title: "messageMediaEmpty"
 original: "https://core.telegram.org/constructor/messageMediaEmpty"
 section: ref
 kind: constructor
+description: "Пустой конструктор."
 layout: layout.njk
 ---
 
 # messageMediaEmpty
 
-*Конструктор из схемы TL.*
-
-> Empty constructor.
-
-## Определение TL
+Пустой конструктор.
 
 ```
 messageMediaEmpty#3ded6320 = MessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessageMedia](/type/MessageMedia/)

@@ -1,18 +1,15 @@
 ---
-title: "account.sendConfirmPhoneCode (метод)"
+title: "account.sendConfirmPhoneCode"
 original: "https://core.telegram.org/method/account.sendConfirmPhoneCode"
 section: ref
 kind: method
+description: "Отправить код подтверждения для отмены удаления аккаунта; подробнее см. здесь »"
 layout: layout.njk
 ---
 
 # account.sendConfirmPhoneCode
 
-*Метод из схемы TL.*
-
-> Send confirmation code to cancel account deletion, for more info [click here »](https://core.telegram.org/api/account-deletion)
-
-## Определение TL
+Отправить код подтверждения для отмены удаления аккаунта; подробнее [см. здесь »](/api/account-deletion/)
 
 ```
 auth.sentCode#5e002502 flags:# type:auth.SentCodeType phone_code_hash:string next_type:flags.1?auth.CodeType timeout:flags.2?int = auth.SentCode;
@@ -22,27 +19,22 @@ auth.sentCodePaymentRequired#e0955a3c store_product:string phone_code_hash:strin
 account.sendConfirmPhoneCode#1b3faa88 hash:string settings:CodeSettings = auth.SentCode;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [string](/type/string/) | The hash from the service notification, for more info [click here »](https://core.telegram.org/api/account-deletion) |
-| settings | [CodeSettings](/type/CodeSettings/) | Phone code settings |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:hash] Хеш из сервисного уведомления; подробнее <a href="/api/account-deletion">см. здесь »</a></td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/CodeSettings">CodeSettings</a></td><td>Настройки кода подтверждения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.SentCode](/type/auth.SentCode/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | HASH_INVALID | The provided hash is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>HASH_INVALID</td><td>Указанный хеш недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Account deletion](https://core.telegram.org/api/account-deletion)
+#### [Удаление аккаунта](/api/account-deletion/)
 
-How to reset an account if the 2FA password was forgotten.
+Как сбросить аккаунт, если пароль двухфакторной аутентификации забыт.

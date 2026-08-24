@@ -1,18 +1,15 @@
 ---
-title: "messages.searchEmojiStickerSets (метод)"
+title: "messages.searchEmojiStickerSets"
 original: "https://core.telegram.org/method/messages.searchEmojiStickerSets"
 section: ref
 kind: method
+description: "Поиск наборов стикеров с пользовательскими эмодзи »"
 layout: layout.njk
 ---
 
 # messages.searchEmojiStickerSets
 
-*Метод из схемы TL.*
-
-> Search for [custom emoji stickersets »](https://core.telegram.org/api/custom-emoji)
-
-## Определение TL
+Поиск [наборов стикеров с пользовательскими эмодзи »](/api/custom-emoji/)
 
 ```
 messages.foundStickerSetsNotModified#d54b65d = messages.FoundStickerSets;
@@ -21,27 +18,22 @@ messages.foundStickerSets#8af09dd2 hash:long sets:Vector<StickerSetCovered> = me
 messages.searchEmojiStickerSets#92b4494c flags:# exclude_featured:flags.0?true q:string hash:long = messages.FoundStickerSets;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| exclude_featured | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Exclude featured stickersets from results |
-| q | [string](/type/string/) | Query string |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>exclude_featured</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Исключить из результатов рекомендуемые наборы стикеров</td></tr><tr><td><strong>q</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Строка запроса</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.FoundStickerSets](/type/messages.FoundStickerSets/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.

@@ -1,33 +1,30 @@
 ---
-title: "updatePtsChanged (конструктор)"
+title: "updatePtsChanged"
 original: "https://core.telegram.org/constructor/updatePtsChanged"
 section: ref
 kind: constructor
+description: "Изменился PTS общего ящика сообщений, состояние нужно перезапросить с помощью updates.getState"
 layout: layout.njk
 ---
 
 # updatePtsChanged
 
-*Конструктор из схемы TL.*
-
-> [Common message box sequence PTS](/api/updates/) has changed, [state has to be refetched using updates.getState](https://core.telegram.org/api/updates/#fetching-state)
-
-## Определение TL
+Изменился [PTS общего ящика сообщений](/api/updates/), [состояние нужно перезапросить с помощью updates.getState](/api/updates/#fetching-state)
 
 ```
 updatePtsChanged#3354678f = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

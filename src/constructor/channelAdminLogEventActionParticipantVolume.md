@@ -1,29 +1,24 @@
 ---
-title: "channelAdminLogEventActionParticipantVolume (конструктор)"
+title: "channelAdminLogEventActionParticipantVolume"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantVolume"
 section: ref
 kind: constructor
+description: "channelAdminLogEvent.user\\_id установил громкость participant.peer в значение participant.volume"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionParticipantVolume
 
-*Конструктор из схемы TL.*
-
-> channelAdminLogEvent.user\_id has set the volume of participant.peer to participant.volume
-
-## Определение TL
+channelAdminLogEvent.user\_id установил громкость participant.peer в значение participant.volume
 
 ```
 channelAdminLogEventActionParticipantVolume#3e7f6847 participant:GroupCallParticipant = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| participant | [GroupCallParticipant](/type/GroupCallParticipant/) | The participant whose volume was changed |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/GroupCallParticipant">GroupCallParticipant</a></td><td>Участник, у которого изменилась громкость</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)

@@ -1,27 +1,24 @@
 ---
-title: "help.noAppUpdate (конструктор)"
+title: "help.noAppUpdate"
 original: "https://core.telegram.org/constructor/help.noAppUpdate"
 section: ref
 kind: constructor
+description: "Обновлений для приложения нет."
 layout: layout.njk
 ---
 
 # help.noAppUpdate
 
-*Конструктор из схемы TL.*
-
-> No updates are available for the application.
-
-## Определение TL
+Обновлений для приложения нет.
 
 ```
 help.noAppUpdate#c45a6536 = help.AppUpdate;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [help.AppUpdate](/type/help.AppUpdate/)

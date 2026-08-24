@@ -1,18 +1,15 @@
 ---
-title: "channels.toggleJoinToSend (метод)"
+title: "channels.toggleJoinToSend"
 original: "https://core.telegram.org/method/channels.toggleJoinToSend"
 section: ref
 kind: method
+description: "Задать, должны ли все пользователи вступать в группу обсуждения, чтобы комментировать пост »"
 layout: layout.njk
 ---
 
 # channels.toggleJoinToSend
 
-*Метод из схемы TL.*
-
-> Set whether all users [should join a discussion group in order to comment on a post »](https://core.telegram.org/api/discussion#requiring-users-to-join-the-group)
-
-## Определение TL
+Задать, должны ли все пользователи [вступать в группу обсуждения, чтобы комментировать пост »](/api/discussion/#requiring-users-to-join-the-group)
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,30 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.toggleJoinToSend#e4cb9580 channel:InputChannel enabled:Bool = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | Discussion group |
-| enabled | [Bool](/type/Bool/) | Toggle |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Группа обсуждения</td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Переключатель</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Discussion groups](https://core.telegram.org/api/discussion)
+#### [Группы обсуждения](/api/discussion/)
 
-Groups can be associated to a channel as a discussion group, to allow users to discuss about posts.
+Группы можно связать с каналом в качестве группы обсуждения, чтобы пользователи могли обсуждать посты.

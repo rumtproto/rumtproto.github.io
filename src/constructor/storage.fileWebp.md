@@ -1,27 +1,24 @@
 ---
-title: "storage.fileWebp (конструктор)"
+title: "storage.fileWebp"
 original: "https://core.telegram.org/constructor/storage.fileWebp"
 section: ref
 kind: constructor
+description: "Изображение WEBP. MIME-тип: image/webp."
 layout: layout.njk
 ---
 
 # storage.fileWebp
 
-*Конструктор из схемы TL.*
-
-> WEBP image. MIME type: `image/webp`.
-
-## Определение TL
+Изображение WEBP. MIME-тип: `image/webp`.
 
 ```
 storage.fileWebp#1081464c = storage.FileType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [storage.FileType](/type/storage.FileType/)

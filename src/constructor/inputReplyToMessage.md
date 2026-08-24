@@ -1,60 +1,46 @@
 ---
-title: "inputReplyToMessage (конструктор)"
+title: "inputReplyToMessage"
 original: "https://core.telegram.org/constructor/inputReplyToMessage"
 section: ref
 kind: constructor
+description: "Ответить на сообщение."
 layout: layout.njk
 ---
 
 # inputReplyToMessage
 
-*Конструктор из схемы TL.*
-
-> Reply to a message.
-
-## Определение TL
+Ответить на сообщение.
 
 ```
 inputReplyToMessage#869fbe10 flags:# reply_to_msg_id:int top_msg_id:flags.0?int reply_to_peer_id:flags.1?InputPeer quote_text:flags.2?string quote_entities:flags.3?Vector<MessageEntity> quote_offset:flags.4?int monoforum_peer_id:flags.5?InputPeer todo_item_id:flags.6?int = InputReplyTo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| reply_to_msg_id | [int](/type/int/) | The message ID to reply to. |
-| top_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | This field must contain the topic ID only when replying to messages in forum topics different from the "General" topic (i.e. reply_to_msg_id is set and reply_to_msg_id != topicID and topicID != 1). If the replied-to message is deleted before the method finishes execution, the value in this field will be used to send the message to the correct topic, instead of the "General" topic. |
-| reply_to_peer_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[InputPeer](/type/InputPeer/) | Used to reply to messages sent to another chat (specified here), can only be used for non-protected chats and messages. |
-| quote_text | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | Used to quote-reply to only a certain section (specified here) of the original message. The maximum UTF-8 length for quotes is specified in the [quote_length_max](https://core.telegram.org/api/config#quote-length-max) config key. |
-| quote_entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text](https://core.telegram.org/api/entities) from the quote_text field. |
-| quote_offset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[int](/type/int/) | Offset of the message quote_text within the original message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)). |
-| monoforum_peer_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[InputPeer](/type/InputPeer/) | Must be set to the ID of the topic when replying to a message within a [monoforum topic](https://core.telegram.org/api/monoforum). |
-| todo_item_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[int](/type/int/) | Can be set to reply to the specified item of a [todo list »](https://core.telegram.org/api/todo). |
-| poll_option | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[bytes](/type/bytes/) | If set, sends the message as a [reply to a specific poll answer option »](https://core.telegram.org/api/poll#replying-to-poll-options), containing the option bytes of the desired answer. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>reply_to_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения, на которое нужно ответить.</td></tr><tr><td><strong>top_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Это поле обязано содержать идентификатор темы <strong>только</strong> при ответе на сообщения в темах форума, отличных от темы «General» (то есть когда задан <code>reply_to_msg_id</code>, при этом <code>reply_to_msg_id != topicID</code> и <code>topicID != 1</code>).<br>Если сообщение, на которое даётся ответ, будет удалено до завершения работы метода, значение из этого поля будет использовано, чтобы отправить сообщение в нужную тему, а не в тему «General».</td></tr><tr><td><strong>reply_to_peer_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/InputPeer">InputPeer</a></td><td>Используется для ответа на сообщения, отправленные в другой чат (указанный здесь); может применяться только для чатов и сообщений без флага <code>protected</code>.</td></tr><tr><td><strong>quote_text</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Используется для ответа с цитированием только определённой части исходного сообщения (указанной здесь). Максимальная длина цитаты в UTF-8 задаётся ключом конфигурации <a href="/api/config#quote-length-max">quote_length_max</a>.</td></tr><tr><td><strong>quote_entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления текста</a> из поля <code>quote_text</code>.</td></tr><tr><td><strong>quote_offset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int">int</a></td><td>Смещение текста <code>quote_text</code> внутри исходного сообщения (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>).</td></tr><tr><td><strong>monoforum_peer_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/InputPeer">InputPeer</a></td><td>Обязано быть равно идентификатору темы при ответе на сообщение внутри <a href="/api/monoforum">темы монофорума</a>.</td></tr><tr><td><strong>todo_item_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/int">int</a></td><td>Может быть задано, чтобы ответить на указанный пункт <a href="/api/todo">списка задач »</a>.</td></tr><tr><td><strong>poll_option</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/bytes">bytes</a></td><td>Если установлено, отправляет сообщение как <a href="/api/poll#replying-to-poll-options">ответ на конкретный вариант ответа опроса »</a>, содержащий байты <code>option</code> нужного варианта.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputReplyTo](/type/InputReplyTo/)
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
-#### [Checklists and to-do lists](https://core.telegram.org/api/todo)
+#### [Чек-листы и списки задач](/api/todo/)
 
-Premium users can now create collaborative checklists in any chat to track tasks and coordinate teams — or manage shopping and to-do lists.
+Пользователи Premium теперь могут создавать совместные чек-листы в любом чате, чтобы отслеживать задачи и координировать команды — или вести списки покупок и дел.
 
-#### [Polls and quizzes](https://core.telegram.org/api/poll)
+#### [Опросы и викторины](/api/poll/)
 
-Telegram allows sending polls and quizzes, that can be voted on by thousands, if not millions of users in chats and channels.
+Telegram позволяет отправлять опросы и викторины, в которых могут проголосовать тысячи, если не миллионы пользователей в чатах и каналах.

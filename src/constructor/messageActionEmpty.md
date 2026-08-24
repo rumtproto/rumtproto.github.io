@@ -1,27 +1,24 @@
 ---
-title: "messageActionEmpty (конструктор)"
+title: "messageActionEmpty"
 original: "https://core.telegram.org/constructor/messageActionEmpty"
 section: ref
 kind: constructor
+description: "Пустой конструктор."
 layout: layout.njk
 ---
 
 # messageActionEmpty
 
-*Конструктор из схемы TL.*
-
-> Empty constructor.
-
-## Определение TL
+Пустой конструктор.
 
 ```
 messageActionEmpty#b6aef7b0 = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)

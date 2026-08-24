@@ -1,20 +1,18 @@
 ---
-title: "channels.getGroupsForDiscussion (метод)"
+title: "channels.getGroupsForDiscussion"
 original: "https://core.telegram.org/method/channels.getGroupsForDiscussion"
 section: ref
 kind: method
+description: "Получить все группы, которые можно использовать в качестве групп обсуждения."
 layout: layout.njk
 ---
 
 # channels.getGroupsForDiscussion
 
-*Метод из схемы TL.*
+Получить все группы, которые можно использовать в качестве [групп обсуждения](/api/discussion/).
 
-> Get all groups that can be used as [discussion groups](https://core.telegram.org/api/discussion).
-> Returned [basic group chats](https://core.telegram.org/api/channel#basic-groups) must be first upgraded to [supergroups](https://core.telegram.org/api/channel#supergroups) before they can be set as a discussion group.  
-> To set a returned supergroup as a discussion group, access to its old messages must be enabled using [channels.togglePreHistoryHidden](/method/channels.togglePreHistoryHidden/), first.
-
-## Определение TL
+Возвращённые [обычные группы](/api/channel/#basic-groups) необходимо сначала преобразовать в [супергруппы](/api/channel/#supergroups), прежде чем их можно будет назначить группой обсуждения.  
+Чтобы назначить возвращённую супергруппу группой обсуждения, необходимо сначала открыть доступ к её старым сообщениям методом [channels.togglePreHistoryHidden](/method/channels.togglePreHistoryHidden/).
 
 ```
 messages.chats#64ff9fd5 chats:Vector<Chat> = messages.Chats;
@@ -23,26 +21,26 @@ messages.chatsSlice#9cd81144 count:int chats:Vector<Chat> = messages.Chats;
 channels.getGroupsForDiscussion#f5dad378 = messages.Chats;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [messages.Chats](/type/messages.Chats/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Discussion groups](https://core.telegram.org/api/discussion)
+#### [Группы обсуждения](/api/discussion/)
 
-Groups can be associated to a channel as a discussion group, to allow users to discuss about posts.
+Группы можно связать с каналом в качестве группы обсуждения, чтобы пользователи могли обсуждать посты.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
 #### [channels.togglePreHistoryHidden](/method/channels.togglePreHistoryHidden/)
 
-Hide/unhide message history for new channel/supergroup users
+Скрыть или показать историю сообщений для новых участников канала или супергруппы

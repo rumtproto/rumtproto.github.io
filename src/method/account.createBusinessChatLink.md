@@ -1,18 +1,15 @@
 ---
-title: "account.createBusinessChatLink (метод)"
+title: "account.createBusinessChatLink"
 original: "https://core.telegram.org/method/account.createBusinessChatLink"
 section: ref
 kind: method
+description: "Создать глубокую ссылку на бизнес-чат »."
 layout: layout.njk
 ---
 
 # account.createBusinessChatLink
 
-*Метод из схемы TL.*
-
-> Create a [business chat deep link »](https://core.telegram.org/api/business#business-chat-links).
-
-## Определение TL
+Создать [глубокую ссылку на бизнес-чат »](/api/business/#business-chat-links).
 
 ```
 businessChatLink#b4ae666f flags:# link:string message:string entities:flags.0?Vector<MessageEntity> title:flags.1?string views:int = BusinessChatLink;
@@ -20,28 +17,22 @@ businessChatLink#b4ae666f flags:# link:string message:string entities:flags.0?Ve
 account.createBusinessChatLink#8851e68e link:InputBusinessChatLink = BusinessChatLink;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| link | [InputBusinessChatLink](/type/InputBusinessChatLink/) | Info about the link to create. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>link</strong></td><td style="text-align: center;"><a href="/type/InputBusinessChatLink">InputBusinessChatLink</a></td><td>Информация о создаваемой ссылке.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [BusinessChatLink](/type/BusinessChatLink/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHATLINKS_TOO_MUCH | Too many [business chat links](https://core.telegram.org/api/business#business-chat-links) were created, please delete some older links. |
-| 400 | DOCUMENT_INVALID | The specified document is invalid. |
-| 403 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHATLINKS_TOO_MUCH</td><td>Создано слишком много <a href="/api/business#business-chat-links">ссылок на бизнес-чат</a>, удалите часть старых ссылок.</td></tr><tr><td>400</td><td>DOCUMENT_INVALID</td><td>Указанный документ недействителен.</td></tr><tr><td>403</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

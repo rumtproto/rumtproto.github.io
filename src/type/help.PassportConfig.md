@@ -1,18 +1,15 @@
 ---
-title: "Help.PassportConfig (тип)"
+title: "help.PassportConfig"
 original: "https://core.telegram.org/type/help.PassportConfig"
 section: ref
 kind: type
+description: "Конфигурация Telegram passport"
 layout: layout.njk
 ---
 
 # Help.PassportConfig
 
-*Тип из схемы TL.*
-
-> Telegram [passport](https://core.telegram.org/passport) configuration
-
-## Определение TL
+Конфигурация Telegram [passport](https://core.telegram.org/passport)
 
 ```
 help.passportConfigNotModified#bfb9f457 = help.PassportConfig;
@@ -23,21 +20,16 @@ help.passportConfig#a098d6af hash:int countries_langs:DataJSON = help.PassportCo
 help.getPassportConfig#c661ad08 hash:int = help.PassportConfig;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [help.passportConfigNotModified](/constructor/help.passportConfigNotModified/) | Password configuration not modified |
-| [help.passportConfig](/constructor/help.passportConfig/) | Telegram [passport](https://core.telegram.org/passport) configuration |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/help.passportConfigNotModified">help.passportConfigNotModified</a></td><td>Настройки пароля не изменены</td></tr><tr><td><a href="/constructor/help.passportConfig">help.passportConfig</a></td><td>Конфигурация <a href="/passport">Telegram Passport</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [help.getPassportConfig](/method/help.getPassportConfig/) | Get [passport](https://core.telegram.org/passport) configuration |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/help.getPassportConfig">help.getPassportConfig</a></td><td>Получить конфигурацию <a href="/passport">passport</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

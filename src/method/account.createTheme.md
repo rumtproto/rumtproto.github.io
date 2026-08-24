@@ -1,18 +1,15 @@
 ---
-title: "account.createTheme (метод)"
+title: "account.createTheme"
 original: "https://core.telegram.org/method/account.createTheme"
 section: ref
 kind: method
+description: "Создать тему оформления"
 layout: layout.njk
 ---
 
 # account.createTheme
 
-*Метод из схемы TL.*
-
-> Create a theme
-
-## Определение TL
+Создать тему оформления
 
 ```
 theme#a00e67d6 flags:# creator:flags.0?true default:flags.1?true for_chat:flags.5?true id:long access_hash:long slug:string title:string document:flags.2?Document settings:flags.3?Vector<ThemeSettings> emoticon:flags.6?string installs_count:flags.4?int = Theme;
@@ -20,31 +17,22 @@ theme#a00e67d6 flags:# creator:flags.0?true default:flags.1?true for_chat:flags.
 account.createTheme#652e4400 flags:# slug:string title:string document:flags.2?InputDocument settings:flags.3?Vector<InputThemeSettings> = Theme;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| slug | [string](/type/string/) | Unique theme ID used to generate [theme deep links](https://core.telegram.org/api/links#theme-links), can be empty to autogenerate a random ID. |
-| title | [string](/type/string/) | Theme name |
-| document | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[InputDocument](/type/InputDocument/) | Theme file |
-| settings | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[InputThemeSettings](/type/InputThemeSettings/)> | Theme settings, multiple values can be provided for the different base themes (day/night mode, etc). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Уникальный идентификатор темы оформления, используемый для построения <a href="/api/links#theme-links">глубоких ссылок на тему оформления</a>; может быть пустым, чтобы идентификатор был сгенерирован случайным образом.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название темы оформления</td></tr><tr><td><strong>document</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/InputDocument">InputDocument</a></td><td>Файл темы оформления</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputThemeSettings">InputThemeSettings</a>&gt;</td><td>Параметры темы оформления; можно передать несколько значений для разных базовых тем (дневной/ночной режим и т. п.).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Theme](/type/Theme/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | THEME_MIME_INVALID | The theme's MIME type is invalid. |
-| 400 | THEME_TITLE_INVALID | The specified theme title is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>THEME_MIME_INVALID</td><td>MIME-тип темы оформления недействителен.</td></tr><tr><td>400</td><td>THEME_TITLE_INVALID</td><td>Указанное название темы недействительно.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

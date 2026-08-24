@@ -1,36 +1,30 @@
 ---
-title: "messages.myStickers (конструктор)"
+title: "messages.myStickers"
 original: "https://core.telegram.org/constructor/messages.myStickers"
 section: ref
 kind: constructor
+description: "Список наборов стикеров, принадлежащих текущему аккаунту »."
 layout: layout.njk
 ---
 
 # messages.myStickers
 
-*Конструктор из схемы TL.*
-
-> The list of [stickersets owned by the current account »](https://core.telegram.org/api/stickers).
-
-## Определение TL
+Список [наборов стикеров, принадлежащих текущему аккаунту »](/api/stickers/).
 
 ```
 messages.myStickers#faff629d count:int sets:Vector<StickerSetCovered> = messages.MyStickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| count | [int](/type/int/) | Total number of owned stickersets. |
-| sets | [Vector](https://core.telegram.org/type/Vector%20t)<[StickerSetCovered](/type/StickerSetCovered/)> | Stickersets |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число принадлежащих пользователю наборов стикеров.</td></tr><tr><td><strong>sets</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StickerSetCovered">StickerSetCovered</a>&gt;</td><td>Наборы стикеров</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.MyStickers](/type/messages.MyStickers/)
 
-## Related pages
+### Связанные страницы
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.

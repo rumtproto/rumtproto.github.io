@@ -1,39 +1,34 @@
 ---
-title: "inputStarGiftAuctionSlug (конструктор)"
+title: "inputStarGiftAuctionSlug"
 original: "https://core.telegram.org/constructor/inputStarGiftAuctionSlug"
 section: ref
 kind: constructor
+description: "Используется для получения аукционов по слагу глубокой ссылки на аукцион »."
 layout: layout.njk
 ---
 
 # inputStarGiftAuctionSlug
 
-*Конструктор из схемы TL.*
-
-> Used to fetch [auctions](https://core.telegram.org/api/auctions) using the [slug of an auction deep link »](https://core.telegram.org/api/links#auction-links).
-
-## Определение TL
+Используется для получения [аукционов](/api/auctions/) по [слагу глубокой ссылки на аукцион »](/api/links/#auction-links).
 
 ```
 inputStarGiftAuctionSlug#7ab58308 slug:string = InputStarGiftAuction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| slug | [string](/type/string/) | [Auction deep link slug »](https://core.telegram.org/api/links#auction-links). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] <a href="/api/links#auction-links">Слаг глубокой ссылки на аукцион »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputStarGiftAuction](/type/InputStarGiftAuction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

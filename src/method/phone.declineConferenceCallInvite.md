@@ -1,18 +1,15 @@
 ---
-title: "phone.declineConferenceCallInvite (метод)"
+title: "phone.declineConferenceCallInvite"
 original: "https://core.telegram.org/method/phone.declineConferenceCallInvite"
 section: ref
 kind: method
+description: "Отклонить приглашение на конференц-звонок."
 layout: layout.njk
 ---
 
 # phone.declineConferenceCallInvite
 
-*Метод из схемы TL.*
-
-> Decline a [conference call](https://core.telegram.org/api/group-calls#conference-calls) invite.
-
-## Определение TL
+Отклонить приглашение на [конференц-звонок](/api/group-calls/#conference-calls).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,32 +23,28 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.declineConferenceCallInvite#3c479971 msg_id:int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| msg_id | [int](/type/int/) | The ID of the [messageActionConferenceCall](/constructor/messageActionConferenceCall/) to decline. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор <a href="/constructor/messageActionConferenceCall">messageActionConferenceCall</a>, который нужно отклонить.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [messageActionConferenceCall](/constructor/messageActionConferenceCall/)
 
-Represents a [conference call »](https://core.telegram.org/api/group-calls#conference-calls), or an invitation to one if neither the `missed` nor `active` flags are set.
+Представляет [конференц-звонок »](/api/group-calls/#conference-calls) либо приглашение на него, если не установлен ни флаг `missed`, ни флаг `active`.
 
-If [call\_requests\_disabled](https://core.telegram.org/api/config#call-requests-disabled) is not set or false, an incoming [messageActionConferenceCall](/constructor/messageActionConferenceCall/) with the `missed` and `active` flags **not** set should trigger ringing and an incoming call screen, just like for one-on-one calls.
+Если [call\_requests\_disabled](/api/config/#call-requests-disabled) не установлен или равен false, входящий [messageActionConferenceCall](/constructor/messageActionConferenceCall/), у которого **не** установлены флаги `missed` и `active`, должен вызывать звонок и экран входящего вызова — так же, как при звонках один на один.
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

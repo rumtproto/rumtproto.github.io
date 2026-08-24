@@ -1,19 +1,17 @@
 ---
-title: "contacts.addContact (метод)"
+title: "contacts.addContact"
 original: "https://core.telegram.org/method/contacts.addContact"
 section: ref
 kind: method
+description: "Добавить существующего пользователя Telegram в контакты."
 layout: layout.njk
 ---
 
 # contacts.addContact
 
-*Метод из схемы TL.*
+Добавить существующего пользователя Telegram в контакты.
 
-> Add an existing telegram user as contact.
-> Use [contacts.importContacts](/method/contacts.importContacts/) to add contacts by phone number, without knowing their Telegram ID.
-
-## Определение TL
+Чтобы добавить контакты по номеру телефона, не зная их идентификатора в Telegram, используйте [contacts.importContacts](/method/contacts.importContacts/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -27,41 +25,28 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 contacts.addContact#d9ba2e54 flags:# add_phone_privacy_exception:flags.0?true id:InputUser first_name:string last_name:string phone:string note:flags.1?TextWithEntities = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| add_phone_privacy_exception | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Allow the other user to see our phone number? |
-| id | [InputUser](/type/InputUser/) | Telegram ID of the other user |
-| first_name | [string](/type/string/) | First name |
-| last_name | [string](/type/string/) | Last name |
-| phone | [string](/type/string/) | User's phone number, may be omitted to simply add the user to the contact list, without a phone number. |
-| note | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[TextWithEntities](/type/TextWithEntities/) | A private note for this contact, only visible to us; see [here »](https://core.telegram.org/api/contacts#private-notes-for-contacts) for more info on contact notes. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>add_phone_privacy_exception</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Разрешить другому пользователю видеть наш номер телефона?</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор другого пользователя в Telegram</td></tr><tr><td><strong>first_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Имя</td></tr><tr><td><strong>last_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Фамилия</td></tr><tr><td><strong>phone</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона пользователя; может быть опущен, чтобы просто добавить пользователя в список контактов без номера телефона.</td></tr><tr><td><strong>note</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/TextWithEntities">TextWithEntities</a></td><td>Личная заметка об этом контакте, видимая только нам; подробнее о заметках о контактах см. <a href="/api/contacts#private-notes-for-contacts">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CONTACT_ID_INVALID | The provided contact ID is invalid. |
-| 400 | CONTACT_NAME_EMPTY | Contact name empty. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CONTACT_ID_INVALID</td><td>Указанный идентификатор контакта недействителен.</td></tr><tr><td>400</td><td>CONTACT_NAME_EMPTY</td><td>Не указано имя контакта.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Contact list](https://core.telegram.org/api/contacts)
+#### [Список контактов](/api/contacts/)
 
-Working with contacts.
+Работа с контактами.
 
 #### [contacts.importContacts](/method/contacts.importContacts/)
 
-Imports contacts: saves a full list on the server, adds already registered contacts to the contact list, returns added contacts and their info.
+Импортирует контакты: сохраняет полный список на сервере, добавляет уже зарегистрированных контактов в список контактов, возвращает добавленные контакты и сведения о них.
 
-Use [contacts.addContact](/method/contacts.addContact/) to add Telegram contacts without actually using their phone number.
+Используйте [contacts.addContact](/method/contacts.addContact/), чтобы добавлять контакты Telegram, не используя их номер телефона.

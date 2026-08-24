@@ -1,31 +1,27 @@
 ---
-title: "decryptedMessageActionSetMessageTTL (конструктор)"
+title: "decryptedMessageActionSetMessageTTL"
 original: "https://core.telegram.org/constructor/decryptedMessageActionSetMessageTTL"
 section: ref
 kind: constructor
+description: "Установка времени жизни сообщения после прочтения."
 layout: layout.njk
 ---
 
 # decryptedMessageActionSetMessageTTL
 
-*Конструктор из схемы TL.*
+Установка времени жизни сообщения после прочтения.
 
-> Setting of a message lifetime after reading.
-> Upon receiving such message the client shall start deleting of all messages of an encrypted chat **ttl\_seconds** seconds after the messages were read by user.
-
-## Определение TL
+[@term:TTL] При получении такого сообщения клиенту следует начать удаление всех сообщений секретного чата через **ttl\_seconds** секунд после того, как пользователь их прочитает.
 
 ```
 ===8===
 decryptedMessageActionSetMessageTTL#a1733aec ttl_seconds:int = DecryptedMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| ttl_seconds | [int](/type/int/) | Lifetime in seconds |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>ttl_seconds</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Время жизни в секундах</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DecryptedMessageAction](/type/DecryptedMessageAction/)

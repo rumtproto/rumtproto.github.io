@@ -1,27 +1,24 @@
 ---
-title: "storage.fileMov (конструктор)"
+title: "storage.fileMov"
 original: "https://core.telegram.org/constructor/storage.fileMov"
 section: ref
 kind: constructor
+description: "Видео Quicktime. MIME-тип: video/quicktime."
 layout: layout.njk
 ---
 
 # storage.fileMov
 
-*Конструктор из схемы TL.*
-
-> Quicktime video. MIME type: `video/quicktime`.
-
-## Определение TL
+Видео Quicktime. MIME-тип: `video/quicktime`.
 
 ```
 storage.fileMov#4b09ebbc = storage.FileType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [storage.FileType](/type/storage.FileType/)

@@ -1,30 +1,24 @@
 ---
-title: "photos.photos (конструктор)"
+title: "photos.photos"
 original: "https://core.telegram.org/constructor/photos.photos"
 section: ref
 kind: constructor
+description: "Полный список фотографий со вспомогательными данными."
 layout: layout.njk
 ---
 
 # photos.photos
 
-*Конструктор из схемы TL.*
-
-> Full list of photos with auxiliary data.
-
-## Определение TL
+Полный список фотографий со вспомогательными данными.
 
 ```
 photos.photos#8dca6aa5 photos:Vector<Photo> users:Vector<User> = photos.Photos;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| photos | [Vector](https://core.telegram.org/type/Vector%20t)<[Photo](/type/Photo/)> | List of photos |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | List of mentioned users |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>photos</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Photo">Photo</a>&gt;</td><td>Список фотографий</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Список упомянутых пользователей</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [photos.Photos](/type/photos.Photos/)

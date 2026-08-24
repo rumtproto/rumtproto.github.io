@@ -1,25 +1,20 @@
 ---
-title: "MessageRange (тип)"
+title: "MessageRange"
 original: "https://core.telegram.org/type/MessageRange"
 section: ref
 kind: type
+description: "Указывает диапазон сообщений чата"
 layout: layout.njk
 ---
 
 # MessageRange
 
-*Тип из схемы TL.*
-
-> Indicates a range of chat messages
-
-## Определение TL
+Указывает диапазон сообщений чата
 
 ```
 messageRange#ae30253 min_id:int max_id:int = MessageRange;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messageRange](/constructor/messageRange/) | Indicates a range of chat messages |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messageRange">messageRange</a></td><td>Указывает диапазон сообщений чата</td></tr></tbody></table>

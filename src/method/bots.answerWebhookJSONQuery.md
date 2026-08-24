@@ -1,18 +1,15 @@
 ---
-title: "bots.answerWebhookJSONQuery (метод)"
+title: "bots.answerWebhookJSONQuery"
 original: "https://core.telegram.org/method/bots.answerWebhookJSONQuery"
 section: ref
 kind: method
+description: "Отвечает на пользовательский запрос; только для ботов"
 layout: layout.njk
 ---
 
 # bots.answerWebhookJSONQuery
 
-*Метод из схемы TL.*
-
-> Answers a custom query; for bots only
-
-## Определение TL
+Отвечает на пользовательский запрос; только для ботов
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,23 +18,16 @@ boolTrue#997275b5 = Bool;
 bots.answerWebhookJSONQuery#e6213f4d query_id:long data:DataJSON = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| query_id | [long](/type/long/) | Identifier of a custom query |
-| data | [DataJSON](/type/DataJSON/) | JSON-serialized answer to the query |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>query_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользовательского запроса</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Сериализованный в JSON ответ на запрос</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only bots can use this method
+### Этот метод доступен только ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | DATA_JSON_INVALID | The provided JSON data is invalid. |
-| 400 | QUERY_ID_INVALID | The query ID is invalid. |
-| 400 | USER_BOT_REQUIRED | This method can only be called by a bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>DATA_JSON_INVALID</td><td>Указанные данные JSON недействительны.</td></tr><tr><td>400</td><td>QUERY_ID_INVALID</td><td>Указанный идентификатор запроса недействителен.</td></tr><tr><td>400</td><td>USER_BOT_REQUIRED</td><td>Этот метод может вызывать только бот.</td></tr></tbody></table>

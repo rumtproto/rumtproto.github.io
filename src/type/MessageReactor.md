@@ -1,31 +1,26 @@
 ---
-title: "MessageReactor (тип)"
+title: "MessageReactor"
 original: "https://core.telegram.org/type/MessageReactor"
 section: ref
 kind: type
+description: "Информация о пользователе в таблице лидеров платных реакций за Telegram Stars для сообщения."
 layout: layout.njk
 ---
 
 # MessageReactor
 
-*Тип из схемы TL.*
-
-> Info about a user in the [paid Star reactions leaderboard](https://core.telegram.org/api/reactions#paid-reactions) for a message.
-
-## Определение TL
+Информация о пользователе в [таблице лидеров платных реакций за Telegram Stars](/api/reactions/#paid-reactions) для сообщения.
 
 ```
 messageReactor#4ba3a95a flags:# top:flags.0?true my:flags.1?true anonymous:flags.2?true peer_id:flags.3?Peer count:int = MessageReactor;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messageReactor](/constructor/messageReactor/) | Info about a user in the [paid Star reactions leaderboard](https://core.telegram.org/api/reactions#paid-reactions) for a message. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messageReactor">messageReactor</a></td><td>Информация о пользователе в <a href="/api/reactions#paid-reactions">таблице лидеров платных реакций Star</a> для сообщения.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

@@ -1,18 +1,15 @@
 ---
-title: "messages.AffectedHistory (тип)"
+title: "messages.AffectedHistory"
 original: "https://core.telegram.org/type/messages.AffectedHistory"
 section: ref
 kind: type
+description: "Объект содержит информацию о затронутой части истории переписки с пользователем или в чате."
 layout: layout.njk
 ---
 
 # messages.AffectedHistory
 
-*Тип из схемы TL.*
-
-> Object contains info on affected part of communication history with the user or in a chat.
-
-## Определение TL
+Объект содержит информацию о затронутой части истории переписки с пользователем или в чате.
 
 ```
 messages.affectedHistory#b45c69d1 pts:int pts_count:int offset:int = messages.AffectedHistory;
@@ -29,21 +26,10 @@ messages.deleteTopicHistory#d2816f10 peer:InputPeer top_msg_id:int = messages.Af
 channels.deleteParticipantHistory#367544db channel:InputChannel participant:InputPeer = messages.AffectedHistory;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.affectedHistory](/constructor/messages.affectedHistory/) | Affected part of communication history with the user or in a chat. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.affectedHistory">messages.affectedHistory</a></td><td>Затронутая часть истории переписки с пользователем или в чате.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.deleteHistory](/method/messages.deleteHistory/) | Deletes communication history. |
-| [messages.readMentions](/method/messages.readMentions/) | Mark mentions as read; can be used in [forums](https://core.telegram.org/api/forum) but cannot be used in [monoforums](https://core.telegram.org/api/monoforum). |
-| [messages.unpinAllMessages](/method/messages.unpinAllMessages/) | [Unpin](https://core.telegram.org/api/pin) all pinned messages |
-| [messages.readReactions](/method/messages.readReactions/) | Mark [message reactions »](https://core.telegram.org/api/reactions) as read |
-| [messages.deleteSavedHistory](/method/messages.deleteSavedHistory/) | Deletes messages from a [monoforum topic »](https://core.telegram.org/api/monoforum), or deletes messages forwarded from a specific peer to [saved messages »](https://core.telegram.org/api/saved-messages). |
-| [messages.deleteTopicHistory](/method/messages.deleteTopicHistory/) | Delete message history of a [forum topic](https://core.telegram.org/api/forum) |
-| [messages.readPollVotes](https://core.telegram.org/method/messages.readPollVotes) | Mark all [unread poll votes »](https://core.telegram.org/api/poll#unread-poll-votes) in a chat as read |
-| [channels.deleteParticipantHistory](/method/channels.deleteParticipantHistory/) | Delete all messages sent by a specific participant of a given supergroup |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.deleteHistory">messages.deleteHistory</a></td><td>Удаляет историю переписки.</td></tr><tr><td><a href="/method/messages.readMentions">messages.readMentions</a></td><td>Отметить упоминания как прочитанные; может использоваться в <a href="/api/forum">форумах</a>, но <strong>не может</strong> использоваться в <a href="/api/monoforum">монофорумах</a>.</td></tr><tr><td><a href="/method/messages.unpinAllMessages">messages.unpinAllMessages</a></td><td><a href="/api/pin">Открепить</a> все закреплённые сообщения</td></tr><tr><td><a href="/method/messages.readReactions">messages.readReactions</a></td><td>Отметить <a href="/api/reactions">реакции на сообщения »</a> как прочитанные</td></tr><tr><td><a href="/method/messages.deleteSavedHistory">messages.deleteSavedHistory</a></td><td>Удаляет сообщения из <a href="/api/monoforum">темы монофорума »</a> либо удаляет сообщения, пересланные от определённого пира в <a href="/api/saved-messages">избранное »</a>.</td></tr><tr><td><a href="/method/messages.deleteTopicHistory">messages.deleteTopicHistory</a></td><td>Удалить историю сообщений <a href="/api/forum">темы форума</a></td></tr><tr><td><a href="/method/messages.readPollVotes">messages.readPollVotes</a></td><td>Отметить все <a href="/api/poll#unread-poll-votes">непрочитанные голоса в опросах »</a> в чате как прочитанные</td></tr><tr><td><a href="/method/channels.deleteParticipantHistory">channels.deleteParticipantHistory</a></td><td>Удалить все сообщения, отправленные определённым участником заданной супергруппы</td></tr></tbody></table>

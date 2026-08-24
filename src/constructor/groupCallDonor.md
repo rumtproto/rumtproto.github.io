@@ -1,39 +1,30 @@
 ---
-title: "groupCallDonor (конструктор)"
+title: "groupCallDonor"
 original: "https://core.telegram.org/constructor/groupCallDonor"
 section: ref
 kind: constructor
+description: "Описывает донатера прямого эфира истории в таблице лидеров пожертвований »."
 layout: layout.njk
 ---
 
 # groupCallDonor
 
-*Конструктор из схемы TL.*
-
-> Describes a live story donor in the [donation leaderboard »](https://core.telegram.org/api/group-calls#paid-live-story-donations).
-
-## Определение TL
+Описывает донатера прямого эфира истории в [таблице лидеров пожертвований »](/api/group-calls/#paid-live-story-donations).
 
 ```
 groupCallDonor#ee430c85 flags:# top:flags.0?true my:flags.1?true peer_id:flags.3?Peer stars:long = GroupCallDonor;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| top | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether this donor is included in the top-donor leaderboard |
-| my | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether this entry describes the current user's donations |
-| peer_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Peer](/type/Peer/) | Donor displayed in the leaderboard |
-| stars | [long](/type/long/) | Total Stars donated by this donor |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>top</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Включён ли этот жертвователь в таблицу лидеров крупнейших жертвователей</td></tr><tr><td><strong>my</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Описывает ли эта запись пожертвования текущего пользователя</td></tr><tr><td><strong>peer_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Peer">Peer</a></td><td>Донатер, отображаемый в таблице лидеров</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Всего stars, пожертвованных этим жертвователем</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [GroupCallDonor](/type/GroupCallDonor/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

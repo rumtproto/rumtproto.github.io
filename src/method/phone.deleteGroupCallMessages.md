@@ -1,19 +1,17 @@
 ---
-title: "phone.deleteGroupCallMessages (метод)"
+title: "phone.deleteGroupCallMessages"
 original: "https://core.telegram.org/method/phone.deleteGroupCallMessages"
 section: ref
 kind: method
+description: "Удалить определённые сообщения из наложения сообщений во время звонка » видеочата, трансляции или прямой истории, в том числе в режиме RTMP."
 layout: layout.njk
 ---
 
 # phone.deleteGroupCallMessages
 
-*Метод из схемы TL.*
+Удалить определённые сообщения из [наложения сообщений во время звонка »](/api/group-calls/#in-call-messages) видеочата, трансляции или прямой истории, в том числе в режиме RTMP.
 
-> Delete specific messages from the [in-call message overlay »](https://core.telegram.org/api/group-calls#in-call-messages) of a video chat/livestream or live story, including in RTMP mode.
-> Non-admin participants may delete messages they sent; admins may delete any message.
-
-## Определение TL
+Участники, не являющиеся администраторами, могут удалять отправленные ими сообщения; администраторы могут удалить любое сообщение.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -27,29 +25,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.deleteGroupCallMessages#f64f54f7 flags:# report_spam:flags.0?true call:InputGroupCall messages:Vector<int> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| report_spam | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | When moderating another participant's messages, also report them as spam |
-| call | [InputGroupCall](/type/InputGroupCall/) | Video chat/livestream or live story containing the messages |
-| messages | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | IDs of the messages to delete |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>report_spam</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>При модерации сообщений другого участника — также пожаловаться на них как на спам</td></tr><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Видеочат, трансляция или прямая история, содержащие сообщения</td></tr><tr><td><strong>messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы сообщений, которые нужно удалить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

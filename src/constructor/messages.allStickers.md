@@ -1,36 +1,30 @@
 ---
-title: "messages.allStickers (конструктор)"
+title: "messages.allStickers"
 original: "https://core.telegram.org/constructor/messages.allStickers"
 section: ref
 kind: constructor
+description: "Информация обо всех установленных стикерах"
 layout: layout.njk
 ---
 
 # messages.allStickers
 
-*Конструктор из схемы TL.*
-
-> Info about all installed stickers
-
-## Определение TL
+Информация обо всех установленных стикерах
 
 ```
 messages.allStickers#cdbbcebb hash:long sets:Vector<StickerSet> = messages.AllStickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| sets | [Vector](https://core.telegram.org/type/Vector%20t)<[StickerSet](/type/StickerSet/)> | All stickersets |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>sets</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StickerSet">StickerSet</a>&gt;</td><td>Все наборы стикеров</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.AllStickers](/type/messages.AllStickers/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

@@ -1,33 +1,27 @@
 ---
-title: "messages.getDialogUnreadMarks (метод)"
+title: "messages.getDialogUnreadMarks"
 original: "https://core.telegram.org/method/messages.getDialogUnreadMarks"
 section: ref
 kind: method
+description: "Получить диалоги, вручную отмеченные как непрочитанные"
 layout: layout.njk
 ---
 
 # messages.getDialogUnreadMarks
 
-*Метод из схемы TL.*
-
-> Get dialogs manually marked as unread
-
-## Определение TL
+Получить диалоги, вручную отмеченные как непрочитанные
 
 ```
 ---functions---
 messages.getDialogUnreadMarks#21202222 flags:# parent_peer:flags.0?InputPeer = Vector<DialogPeer>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| parent_peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputPeer](/type/InputPeer/) | Can be equal to the ID of a monoforum, to fetch monoforum topics manually marked as unread. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>parent_peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputPeer">InputPeer</a></td><td>Может быть равно идентификатору монофорума, чтобы получить темы монофорума, вручную отмеченные как непрочитанные.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[DialogPeer](/type/DialogPeer/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям

@@ -1,40 +1,30 @@
 ---
-title: "messages.votesList (конструктор)"
+title: "messages.votesList"
 original: "https://core.telegram.org/constructor/messages.votesList"
 section: ref
 kind: constructor
+description: "Как пользователи проголосовали в опросе"
 layout: layout.njk
 ---
 
 # messages.votesList
 
-*Конструктор из схемы TL.*
-
-> How users voted in a poll
-
-## Определение TL
+Как пользователи проголосовали в опросе
 
 ```
 messages.votesList#4899484e flags:# count:int votes:Vector<MessagePeerVote> chats:Vector<Chat> users:Vector<User> next_offset:flags.0?string = messages.VotesList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| count | [int](/type/int/) | Total number of votes for all options (or only for the chosen option, if provided to [messages.getPollVotes](/method/messages.getPollVotes/)) |
-| votes | [Vector](https://core.telegram.org/type/Vector%20t)<[MessagePeerVote](/type/MessagePeerVote/)> | Vote info for each user |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Mentioned chats |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Info about users that voted in the poll |
-| next_offset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Offset to use with the next [messages.getPollVotes](/method/messages.getPollVotes/) request, empty string if no more results are available. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число голосов за все варианты (или только за выбранный вариант <code>option</code>, если он был передан в <a href="/method/messages.getPollVotes">messages.getPollVotes</a>)</td></tr><tr><td><strong>votes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessagePeerVote">MessagePeerVote</a>&gt;</td><td>Сведения о голосе каждого пользователя</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Упомянутые чаты</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Информация о пользователях, проголосовавших в опросе</td></tr><tr><td><strong>next_offset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>[@term:next_offset] Смещение, которое следует использовать в следующем запросе <a href="/method/messages.getPollVotes">messages.getPollVotes</a>; пустая строка, если больше результатов нет.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.VotesList](/type/messages.VotesList/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.getPollVotes](/method/messages.getPollVotes/)
 
-Get poll results for non-anonymous polls
+Получить результаты неанонимных опросов

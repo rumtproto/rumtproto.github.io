@@ -1,56 +1,42 @@
 ---
-title: "draftMessage (конструктор)"
+title: "draftMessage"
 original: "https://core.telegram.org/constructor/draftMessage"
 section: ref
 kind: constructor
+description: "Представляет черновик сообщения."
 layout: layout.njk
 ---
 
 # draftMessage
 
-*Конструктор из схемы TL.*
-
-> Represents a message [draft](https://core.telegram.org/api/drafts).
-
-## Определение TL
+Представляет [черновик](/api/drafts/) сообщения.
 
 ```
 draftMessage#96eaa5eb flags:# no_webpage:flags.1?true invert_media:flags.6?true reply_to:flags.4?InputReplyTo message:string entities:flags.3?Vector<MessageEntity> media:flags.5?InputMedia date:int effect:flags.7?long suggested_post:flags.8?SuggestedPost = DraftMessage;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| no_webpage | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether no webpage preview will be generated |
-| invert_media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | If set, any eventual webpage preview will be shown on top of the message instead of at the bottom. |
-| reply_to | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[InputReplyTo](/type/InputReplyTo/) | If set, indicates that the message should be sent in reply to the specified message or story. |
-| message | [string](/type/string/) | The draft |
-| entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | Message [entities](https://core.telegram.org/api/entities) for styled text. |
-| media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[InputMedia](/type/InputMedia/) | Media. |
-| date | [int](/type/int/) | Date of last update of the draft. |
-| effect | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[long](/type/long/) | A [message effect that should be played as specified here »](https://core.telegram.org/api/effects). |
-| suggested_post | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[SuggestedPost](/type/SuggestedPost/) | Used to [suggest a post to a channel, see here »](https://core.telegram.org/api/suggested-posts) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>no_webpage</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Не будет ли создаваться предпросмотр веб-страницы</td></tr><tr><td><strong>invert_media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Если задано, предпросмотр веб-страницы, если он будет, показывается над сообщением, а не под ним.</td></tr><tr><td><strong>reply_to</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/InputReplyTo">InputReplyTo</a></td><td>Если установлено, указывает, что сообщение следует отправить в ответ на указанное сообщение или историю.</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Черновик</td></tr><tr><td><strong>entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления</a> сообщения для форматированного текста.</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/InputMedia">InputMedia</a></td><td>Медиа.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата последнего изменения черновика.</td></tr><tr><td><strong>effect</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/long">long</a></td><td><a href="/api/effects">Эффект сообщения, который должен быть воспроизведён так, как описано здесь »</a>.</td></tr><tr><td><strong>suggested_post</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/SuggestedPost">SuggestedPost</a></td><td>Используется, чтобы <a href="/api/suggested-posts">предложить пост каналу; подробнее о полном сценарии см. здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DraftMessage](/type/DraftMessage/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Animated message effects](https://core.telegram.org/api/effects)
+#### [Анимированные эффекты для сообщений](/api/effects/)
 
-Telegram allows adding spectacular animated effects to messages you send.
+Telegram позволяет добавлять к отправляемым сообщениям зрелищные анимированные эффекты.
 
-#### [Suggested posts](https://core.telegram.org/api/suggested-posts)
+#### [Предлагаемые посты](/api/suggested-posts/)
 
-Telegram offers a powerful monetization feature to channel administrators: suggested posts.
+Telegram предлагает администраторам каналов мощный инструмент монетизации — предлагаемые посты.
 
-#### [Message drafts](https://core.telegram.org/api/drafts)
+#### [Черновики сообщений](/api/drafts/)
 
-How to handle message drafts
+Как работать с черновиками сообщений

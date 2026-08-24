@@ -1,29 +1,24 @@
 ---
-title: "messageMediaGame (конструктор)"
+title: "messageMediaGame"
 original: "https://core.telegram.org/constructor/messageMediaGame"
 section: ref
 kind: constructor
+description: "Игра Telegram"
 layout: layout.njk
 ---
 
 # messageMediaGame
 
-*Конструктор из схемы TL.*
-
-> Telegram game
-
-## Определение TL
+Игра Telegram
 
 ```
 messageMediaGame#fdb19008 game:Game = MessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| game | [Game](/type/Game/) | Game |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>game</strong></td><td style="text-align: center;"><a href="/type/Game">Game</a></td><td>Игра</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageMedia](/type/MessageMedia/)

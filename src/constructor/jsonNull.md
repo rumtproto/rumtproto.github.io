@@ -1,33 +1,33 @@
 ---
-title: "jsonNull (конструктор)"
+title: "jsonNull"
 original: "https://core.telegram.org/constructor/jsonNull"
 section: ref
 kind: constructor
+description: "Значение JSON null"
 layout: layout.njk
 ---
 
 # jsonNull
 
-*Конструктор из схемы TL.*
+Значение JSON null
 
-> null JSON value
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===216===
-> jsonNull#3f6d7b68 = JSONValue;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===216===
+jsonNull#3f6d7b68 = JSONValue;
+```
+
+#### Схема API
 
 ```
 jsonNull#3f6d7b68 = JSONValue;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [JSONValue](/type/JSONValue/)

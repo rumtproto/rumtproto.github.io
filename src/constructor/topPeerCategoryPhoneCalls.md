@@ -1,27 +1,24 @@
 ---
-title: "topPeerCategoryPhoneCalls (конструктор)"
+title: "topPeerCategoryPhoneCalls"
 original: "https://core.telegram.org/constructor/topPeerCategoryPhoneCalls"
 section: ref
 kind: constructor
+description: "Пользователи, которым чаще всего звонят"
 layout: layout.njk
 ---
 
 # topPeerCategoryPhoneCalls
 
-*Конструктор из схемы TL.*
-
-> Most frequently called users
-
-## Определение TL
+Пользователи, которым чаще всего звонят
 
 ```
 topPeerCategoryPhoneCalls#1e76a78c = TopPeerCategory;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [TopPeerCategory](/type/TopPeerCategory/)

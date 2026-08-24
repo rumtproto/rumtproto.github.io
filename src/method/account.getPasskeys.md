@@ -1,18 +1,15 @@
 ---
-title: "account.getPasskeys (метод)"
+title: "account.getPasskeys"
 original: "https://core.telegram.org/method/account.getPasskeys"
 section: ref
 kind: method
+description: "Получить список ключей доступа, привязанных к текущему аккаунту и пригодных для входа; подробнее о ключах доступа см. здесь »."
 layout: layout.njk
 ---
 
 # account.getPasskeys
 
-*Метод из схемы TL.*
-
-> List the passkeys associated to the current account that can be used to log in, see [here »](https://core.telegram.org/api/passkeys#list-passkeys) for more info on passkeys.
-
-## Определение TL
+Получить список ключей доступа, привязанных к текущему аккаунту и пригодных для входа; подробнее о ключах доступа [см. здесь »](/api/passkeys/#list-passkeys).
 
 ```
 account.passkeys#f8e0aa1c passkeys:Vector<Passkey> = account.Passkeys;
@@ -20,18 +17,18 @@ account.passkeys#f8e0aa1c passkeys:Vector<Passkey> = account.Passkeys;
 account.getPasskeys#ea1f0c52 = account.Passkeys;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [account.Passkeys](/type/account.Passkeys/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

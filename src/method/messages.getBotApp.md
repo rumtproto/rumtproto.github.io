@@ -1,18 +1,15 @@
 ---
-title: "messages.getBotApp (метод)"
+title: "messages.getBotApp"
 original: "https://core.telegram.org/method/messages.getBotApp"
 section: ref
 kind: method
+description: "Получить сведения о Mini App с прямой ссылкой"
 layout: layout.njk
 ---
 
 # messages.getBotApp
 
-*Метод из схемы TL.*
-
-> Obtain information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps)
-
-## Определение TL
+[@term:Mini App] Получить сведения о [Mini App с прямой ссылкой](/api/bots/webapps/#direct-link-mini-apps)
 
 ```
 messages.botApp#eb50adf5 flags:# inactive:flags.0?true request_write_access:flags.1?true has_settings:flags.2?true app:BotApp = messages.BotApp;
@@ -20,37 +17,30 @@ messages.botApp#eb50adf5 flags:# inactive:flags.0?true request_write_access:flag
 messages.getBotApp#34fdc5c3 app:InputBotApp hash:long = messages.BotApp;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| app | [InputBotApp](/type/InputBotApp/) | Bot app information obtained from a [Direct Mini App deep link »](https://core.telegram.org/api/links#direct-mini-app-links). |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>app</strong></td><td style="text-align: center;"><a href="/type/InputBotApp">InputBotApp</a></td><td>Сведения о приложении бота, полученные по <a href="/api/links#direct-mini-app-links">глубокой ссылке Direct Mini App »</a>.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.BotApp](/type/messages.BotApp/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_APP_BOT_INVALID | The bot_id passed in the inputBotAppShortName constructor is invalid. |
-| 400 | BOT_APP_INVALID | The specified bot app is invalid. |
-| 400 | BOT_APP_SHORTNAME_INVALID | The specified bot app short name is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_APP_BOT_INVALID</td><td>Значение bot_id, переданное в конструкторе inputBotAppShortName, недействительно.</td></tr><tr><td>400</td><td>BOT_APP_INVALID</td><td>Указанное приложение бота недействительно.</td></tr><tr><td>400</td><td>BOT_APP_SHORTNAME_INVALID</td><td>Указанное короткое имя приложения бота недействительно.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

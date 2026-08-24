@@ -1,18 +1,15 @@
 ---
-title: "chatlists.joinChatlistInvite (метод)"
+title: "chatlists.joinChatlistInvite"
 original: "https://core.telegram.org/method/chatlists.joinChatlistInvite"
 section: ref
 kind: method
+description: "Импортировать глубокую ссылку на папку чатов », вступив в некоторые или во все чаты папки."
 layout: layout.njk
 ---
 
 # chatlists.joinChatlistInvite
 
-*Метод из схемы TL.*
-
-> Import a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links), joining some or all the chats in the folder.
-
-## Определение TL
+Импортировать [глубокую ссылку на папку чатов »](/api/links/#chat-folder-links), вступив в некоторые или во все чаты папки.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,43 +23,34 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 chatlists.joinChatlistInvite#a6b1e39a slug:string peers:Vector<InputPeer> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| slug | [string](/type/string/) | slug obtained from a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| peers | [Vector](https://core.telegram.org/type/Vector%20t)<[InputPeer](/type/InputPeer/)> | List of new chats to join, fetched using [chatlists.checkChatlistInvite](/method/chatlists.checkChatlistInvite/) and filtered as specified in the [documentation »](https://core.telegram.org/api/folders#shared-folders). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] <code>slug</code>, полученный из <a href="/api/links#chat-folder-links">глубокой ссылки на папку с чатами »</a>.</td></tr><tr><td><strong>peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPeer">InputPeer</a>&gt;</td><td>Список новых чатов, к которым нужно присоединиться; получается методом <a href="/method/chatlists.checkChatlistInvite">chatlists.checkChatlistInvite</a> и фильтруется так, как указано в <a href="/api/folders#shared-folders">документации »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNELS_TOO_MUCH | You have joined too many channels/supergroups. |
-| 400 | CHATLISTS_TOO_MUCH | You have created too many folder links, hitting the chatlist_invites_limit_default/chatlist_invites_limit_premium [limits »](https://core.telegram.org/api/config#chatlist-invites-limit-default). |
-| 400 | FILTER_INCLUDE_EMPTY | The include_peers vector of the filter is empty. |
-| 400 | INVITE_SLUG_EMPTY | The specified invite slug is empty. |
-| 400 | INVITE_SLUG_EXPIRED | The specified chat folder link has expired. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNELS_TOO_MUCH</td><td>Вы состоите в слишком большом числе каналов и супергрупп.</td></tr><tr><td>400</td><td>CHATLISTS_TOO_MUCH</td><td>Вы создали слишком много ссылок на папки, достигнув заданных параметрами <code>chatlist_invites_limit_default</code>/<code>chatlist_invites_limit_premium</code> <a href="/api/config#chatlist-invites-limit-default">ограничений&nbsp;»</a>.</td></tr><tr><td>400</td><td>FILTER_INCLUDE_EMPTY</td><td>Вектор include_peers у фильтра пуст.</td></tr><tr><td>400</td><td>INVITE_SLUG_EMPTY</td><td>Указанный слаг приглашения пуст.</td></tr><tr><td>400</td><td>INVITE_SLUG_EXPIRED</td><td>Срок действия указанной ссылки на папку чатов истёк.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
 #### [chatlists.checkChatlistInvite](/method/chatlists.checkChatlistInvite/)
 
-Obtain information about a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links).
+Получить сведения о [глубокой ссылке на папку чатов »](/api/links/#chat-folder-links).
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

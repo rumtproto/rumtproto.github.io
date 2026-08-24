@@ -1,25 +1,20 @@
 ---
-title: "MessagePeerReaction (тип)"
+title: "MessagePeerReaction"
 original: "https://core.telegram.org/type/MessagePeerReaction"
 section: ref
 kind: type
+description: "Как определённый пир отреагировал на сообщение"
 layout: layout.njk
 ---
 
 # MessagePeerReaction
 
-*Тип из схемы TL.*
-
-> How a certain peer reacted to the message
-
-## Определение TL
+Как определённый пир отреагировал на сообщение
 
 ```
 messagePeerReaction#8c79b63c flags:# big:flags.0?true unread:flags.1?true my:flags.2?true peer_id:Peer date:int reaction:Reaction = MessagePeerReaction;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messagePeerReaction](/constructor/messagePeerReaction/) | How a certain peer reacted to the message |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messagePeerReaction">messagePeerReaction</a></td><td>Как определённый пир отреагировал на сообщение</td></tr></tbody></table>

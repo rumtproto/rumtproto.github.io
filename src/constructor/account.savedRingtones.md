@@ -1,36 +1,30 @@
 ---
-title: "account.savedRingtones (конструктор)"
+title: "account.savedRingtones"
 original: "https://core.telegram.org/constructor/account.savedRingtones"
 section: ref
 kind: constructor
+description: "Список сохранённых звуков уведомлений"
 layout: layout.njk
 ---
 
 # account.savedRingtones
 
-*Конструктор из схемы TL.*
-
-> A list of saved notification sounds
-
-## Определение TL
+Список сохранённых звуков уведомлений
 
 ```
 account.savedRingtones#c1e92cc5 hash:long ringtones:Vector<Document> = account.SavedRingtones;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| ringtones | [Vector](https://core.telegram.org/type/Vector%20t)<[Document](/type/Document/)> | Saved notification sounds |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>ringtones</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Document">Document</a>&gt;</td><td>Сохранённые звуки уведомлений</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.SavedRingtones](/type/account.SavedRingtones/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

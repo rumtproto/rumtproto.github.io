@@ -1,18 +1,18 @@
 ---
-title: "long (тип)"
+title: "long"
 original: "https://core.telegram.org/type/long"
 section: ref
 kind: type
+description: "Базовый голый тип, значения которого соответствуют последовательностям из двух элементов, представляющим 64-битные знаковые числа (в порядке little-endian)."
 layout: layout.njk
 ---
 
 # long
 
-*Тип из схемы TL.*
+[@term:bare] Базовый голый тип, значения которого соответствуют последовательностям из двух элементов, представляющим 64-битные знаковые числа (в порядке little-endian).
 
-> A basic bare type, elements of which correspond to two-element sequences, representing 64-bit signed numbers (little-endian).
-> [More on basic types »](/mtproto/serialize/)
+[Подробнее о базовых типах »](/mtproto/serialize/)
 
-## Related pages
+### Связанные страницы
 
-#### ﻿[Binary Data Serialization](/mtproto/serialize/)
+#### [Двоичная сериализация данных](/mtproto/serialize/)

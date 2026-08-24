@@ -1,18 +1,15 @@
 ---
-title: "account.updateDeviceLocked (метод)"
+title: "account.updateDeviceLocked"
 original: "https://core.telegram.org/method/account.updateDeviceLocked"
 section: ref
 kind: method
+description: "Если на стороне клиента включена блокировка кодом-паролем, тексты сообщений не будут показываться во входящих PUSH-уведомлениях."
 layout: layout.njk
 ---
 
 # account.updateDeviceLocked
 
-*Метод из схемы TL.*
-
-> When client-side passcode lock feature is enabled, will not show message texts in incoming [PUSH notifications](https://core.telegram.org/api/push-updates).
-
-## Определение TL
+Если на стороне клиента включена блокировка кодом-паролем, тексты сообщений не будут показываться во входящих [PUSH-уведомлениях](/api/push-updates/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,20 +18,18 @@ boolTrue#997275b5 = Bool;
 account.updateDeviceLocked#38df3532 period:int = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| period | [int](/type/int/) | Inactivity period after which to start hiding message texts in [PUSH notifications](https://core.telegram.org/api/push-updates). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Период бездействия, после которого следует начать скрывать тексты сообщений в <a href="/api/push-updates">PUSH-уведомлениях</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Handling PUSH-notifications](https://core.telegram.org/api/push-updates)
+#### [Обработка PUSH-уведомлений](/api/push-updates/)
 
-How to subscribe to and handle PUSH notifications
+Как подписаться на PUSH-уведомления и обрабатывать их

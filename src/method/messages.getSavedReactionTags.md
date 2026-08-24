@@ -1,18 +1,15 @@
 ---
-title: "messages.getSavedReactionTags (метод)"
+title: "messages.getSavedReactionTags"
 original: "https://core.telegram.org/method/messages.getSavedReactionTags"
 section: ref
 kind: method
+description: "Получить полный список тегов сохранённых сообщений, созданных пользователем."
 layout: layout.njk
 ---
 
 # messages.getSavedReactionTags
 
-*Метод из схемы TL.*
-
-> Fetch the full list of [saved message tags](https://core.telegram.org/api/saved-messages#tags) created by the user.
-
-## Определение TL
+Получить полный список [тегов сохранённых сообщений](/api/saved-messages/#tags), созданных пользователем.
 
 ```
 messages.savedReactionTagsNotModified#889b59ef = messages.SavedReactionTags;
@@ -21,32 +18,26 @@ messages.savedReactionTags#3259950a tags:Vector<SavedReactionTag> hash:long = me
 messages.getSavedReactionTags#3637e05b flags:# peer:flags.0?InputPeer hash:long = messages.SavedReactionTags;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputPeer](/type/InputPeer/) | If set, returns tags only used in the specified [saved message dialog](https://core.telegram.org/api/saved-messages#saved-message-dialogs). |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Если установлено, возвращает только те теги, которые используются в указанном <a href="/api/saved-messages#saved-message-dialogs">диалоге сохранённых сообщений</a>.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.SavedReactionTags](/type/messages.SavedReactionTags/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

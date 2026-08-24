@@ -1,37 +1,30 @@
 ---
-title: "help.peerColorProfileSet (конструктор)"
+title: "help.peerColorProfileSet"
 original: "https://core.telegram.org/constructor/help.peerColorProfileSet"
 section: ref
 kind: constructor
+description: "Представляет цветовую палитру, которую можно использовать на страницах профиля »."
 layout: layout.njk
 ---
 
 # help.peerColorProfileSet
 
-*Конструктор из схемы TL.*
-
-> Represents a [color palette that can be used in profile pages »](https://core.telegram.org/api/colors).
-
-## Определение TL
+Представляет [цветовую палитру, которую можно использовать на страницах профиля »](/api/colors/).
 
 ```
 help.peerColorProfileSet#767d61eb palette_colors:Vector<int> bg_colors:Vector<int> story_colors:Vector<int> = help.PeerColorSet;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| palette_colors | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | A list of 1-2 colors in RGB format, shown in the color palette settings to describe the current palette. |
-| bg_colors | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | A list of 1-2 colors in RGB format describing the colors used to generate the actual background used in the profile page. |
-| story_colors | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | A list of 2 colors in RGB format describing the colors of the gradient used for the unread active story indicator around the profile photo. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>palette_colors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Список из 1–2 цветов в формате RGB, отображаемых в настройках цветовой палитры для описания текущей палитры.</td></tr><tr><td><strong>bg_colors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Список из 1–2 цветов в формате RGB, описывающих цвета, по которым формируется фон, используемый на странице профиля.</td></tr><tr><td><strong>story_colors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Список из 2 цветов в формате RGB, описывающих цвета градиента, который используется для индикатора непрочитанной активной истории вокруг фотографии профиля.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [help.PeerColorSet](/type/help.PeerColorSet/)
 
-## Related pages
+### Связанные страницы
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!

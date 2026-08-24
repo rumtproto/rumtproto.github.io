@@ -1,18 +1,15 @@
 ---
-title: "EmojiList (тип)"
+title: "EmojiList"
 original: "https://core.telegram.org/type/EmojiList"
 section: ref
 kind: type
+description: "Представляет список пользовательских эмодзи."
 layout: layout.njk
 ---
 
 # EmojiList
 
-*Тип из схемы TL.*
-
-> Represents a list of [custom emojis](https://core.telegram.org/api/custom-emoji).
-
-## Определение TL
+Представляет список [пользовательских эмодзи](/api/custom-emoji/).
 
 ```
 emojiListNotModified#481eadfa = EmojiList;
@@ -28,25 +25,16 @@ account.getChannelRestrictedStatusEmojis#35a9e0d5 hash:long = EmojiList;
 messages.searchCustomEmoji#2c11c0d7 emoticon:string hash:long = EmojiList;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [emojiListNotModified](/constructor/emojiListNotModified/) | The list of [custom emojis](https://core.telegram.org/api/custom-emoji) hasn't changed. |
-| [emojiList](/constructor/emojiList/) | Represents a list of [custom emojis](https://core.telegram.org/api/custom-emoji). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/emojiListNotModified">emojiListNotModified</a></td><td>Список <a href="/api/custom-emoji">пользовательских эмодзи</a> не изменился.</td></tr><tr><td><a href="/constructor/emojiList">emojiList</a></td><td>Представляет список <a href="/api/custom-emoji">пользовательских эмодзи</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getDefaultProfilePhotoEmojis](/method/account.getDefaultProfilePhotoEmojis/) | Get a set of suggested [custom emoji stickers](https://core.telegram.org/api/custom-emoji) that can be [used as profile picture](https://core.telegram.org/api/files/#sticker-profile-pictures) |
-| [account.getDefaultGroupPhotoEmojis](/method/account.getDefaultGroupPhotoEmojis/) | Get a set of suggested [custom emoji stickers](https://core.telegram.org/api/custom-emoji) that can be [used as group picture](https://core.telegram.org/api/files/#sticker-profile-pictures) |
-| [account.getDefaultBackgroundEmojis](/method/account.getDefaultBackgroundEmojis/) | Get a set of suggested [custom emoji stickers](https://core.telegram.org/api/custom-emoji) that can be used in an [accent color pattern](https://core.telegram.org/api/colors). |
-| [account.getChannelRestrictedStatusEmojis](/method/account.getChannelRestrictedStatusEmojis/) | Returns fetch the full list of [custom emoji IDs »](https://core.telegram.org/api/custom-emoji) that cannot be used in [channel emoji statuses »](https://core.telegram.org/api/emoji-status). |
-| [messages.searchCustomEmoji](/method/messages.searchCustomEmoji/) | Look for [custom emojis](https://core.telegram.org/api/custom-emoji) associated to a UTF8 emoji |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getDefaultProfilePhotoEmojis">account.getDefaultProfilePhotoEmojis</a></td><td>Получить набор рекомендуемых <a href="/api/custom-emoji">стикеров пользовательских эмодзи</a>, которые можно <a href="/api/files#sticker-profile-pictures">использовать в качестве фотографии профиля</a></td></tr><tr><td><a href="/method/account.getDefaultGroupPhotoEmojis">account.getDefaultGroupPhotoEmojis</a></td><td>Получить набор рекомендуемых <a href="/api/custom-emoji">стикеров пользовательских эмодзи</a>, которые можно <a href="/api/files#sticker-profile-pictures">использовать в качестве изображения группы</a></td></tr><tr><td><a href="/method/account.getDefaultBackgroundEmojis">account.getDefaultBackgroundEmojis</a></td><td>Получить набор рекомендуемых <a href="/api/custom-emoji">стикеров с пользовательскими эмодзи</a>, которые можно использовать в <a href="/api/colors">узоре акцентного цвета</a>.</td></tr><tr><td><a href="/method/account.getChannelRestrictedStatusEmojis">account.getChannelRestrictedStatusEmojis</a></td><td>Возвращает полный список <a href="/api/custom-emoji">идентификаторов пользовательских эмодзи »</a>, которые нельзя использовать в <a href="/api/emoji-status">эмодзи-статусах каналов »</a>.</td></tr><tr><td><a href="/method/messages.searchCustomEmoji">messages.searchCustomEmoji</a></td><td>Искать <a href="/api/custom-emoji">пользовательские эмодзи</a>, связанные с UTF8-эмодзи</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.

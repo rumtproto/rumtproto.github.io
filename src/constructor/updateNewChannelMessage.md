@@ -1,41 +1,34 @@
 ---
-title: "updateNewChannelMessage (конструктор)"
+title: "updateNewChannelMessage"
 original: "https://core.telegram.org/constructor/updateNewChannelMessage"
 section: ref
 kind: constructor
+description: "В канале или супергруппе было отправлено новое сообщение"
 layout: layout.njk
 ---
 
 # updateNewChannelMessage
 
-*Конструктор из схемы TL.*
-
-> A new message was sent in a [channel/supergroup](https://core.telegram.org/api/channel)
-
-## Определение TL
+В [канале или супергруппе](/api/channel/) было отправлено новое сообщение
 
 ```
 updateNewChannelMessage#62ba04d9 message:Message pts:int pts_count:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| message | [Message](/type/Message/) | New message |
-| pts | [int](/type/int/) | [Event count after generation](/api/updates/) |
-| pts_count | [int](/type/int/) | [Number of events that were generated](/api/updates/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message">Message</a></td><td>Новое сообщение</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] <a href="/api/updates">Число событий после генерации</a></td></tr><tr><td><strong>pts_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/updates">Число сгенерированных событий</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

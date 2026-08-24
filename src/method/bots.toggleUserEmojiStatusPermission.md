@@ -1,18 +1,15 @@
 ---
-title: "bots.toggleUserEmojiStatusPermission (метод)"
+title: "bots.toggleUserEmojiStatusPermission"
 original: "https://core.telegram.org/method/bots.toggleUserEmojiStatusPermission"
 section: ref
 kind: method
+description: "Разрешить или запретить боту изменять наш эмодзи-статус »"
 layout: layout.njk
 ---
 
 # bots.toggleUserEmojiStatusPermission
 
-*Метод из схемы TL.*
-
-> Allow or prevent a bot from [changing our emoji status »](https://core.telegram.org/api/emoji-status#setting-an-emoji-status-from-a-bot)
-
-## Определение TL
+Разрешить или запретить боту [изменять наш эмодзи-статус »](/api/emoji-status/#setting-an-emoji-status-from-a-bot)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,27 +18,22 @@ boolTrue#997275b5 = Bool;
 bots.toggleUserEmojiStatusPermission#6de6392 bot:InputUser enabled:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot | [InputUser](/type/InputUser/) | The bot |
-| enabled | [Bool](/type/Bool/) | Whether to allow or prevent the bot from changing our emoji status |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот</td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Разрешить боту менять наш эмодзи-статус или запретить это</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

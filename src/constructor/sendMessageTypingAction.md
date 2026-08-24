@@ -1,33 +1,33 @@
 ---
-title: "sendMessageTypingAction (конструктор)"
+title: "sendMessageTypingAction"
 original: "https://core.telegram.org/constructor/sendMessageTypingAction"
 section: ref
 kind: constructor
+description: "Пользователь набирает текст."
 layout: layout.njk
 ---
 
 # sendMessageTypingAction
 
-*Конструктор из схемы TL.*
+Пользователь набирает текст.
 
-> User is typing.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===17===
-> sendMessageTypingAction#16bf744e = SendMessageAction;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===17===
+sendMessageTypingAction#16bf744e = SendMessageAction;
+```
+
+#### Схема API
 
 ```
 sendMessageTypingAction#16bf744e = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)

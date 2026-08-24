@@ -1,41 +1,34 @@
 ---
-title: "auctionBidLevel (конструктор)"
+title: "auctionBidLevel"
 original: "https://core.telegram.org/constructor/auctionBidLevel"
 section: ref
 kind: constructor
+description: "Описывает ставку на аукционе."
 layout: layout.njk
 ---
 
 # auctionBidLevel
 
-*Конструктор из схемы TL.*
-
-> Describes a bid in an [auction](https://core.telegram.org/api/auctions).
-
-## Определение TL
+Описывает ставку на [аукционе](/api/auctions/).
 
 ```
 auctionBidLevel#310240cc pos:int amount:long date:int = AuctionBidLevel;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| pos | [int](/type/int/) | Position of the bid. |
-| amount | [long](/type/long/) | Amount of the bid in [Telegram Stars](https://core.telegram.org/api/stars). |
-| date | [int](/type/int/) | Date when the bid was placed. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>pos</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Позиция ставки.</td></tr><tr><td><strong>amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Размер ставки в <a href="/api/stars">Telegram Stars</a>.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата, когда была сделана ставка.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [AuctionBidLevel](/type/AuctionBidLevel/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

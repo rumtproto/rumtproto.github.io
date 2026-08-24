@@ -1,18 +1,15 @@
 ---
-title: "contacts.acceptContact (метод)"
+title: "contacts.acceptContact"
 original: "https://core.telegram.org/method/contacts.acceptContact"
 section: ref
 kind: method
+description: "Если активна панель действий «добавить контакт», добавить этого пользователя в контакты"
 layout: layout.njk
 ---
 
 # contacts.acceptContact
 
-*Метод из схемы TL.*
-
-> If the [add contact action bar is active](https://core.telegram.org/api/action-bar#add-contact), add that user as contact
-
-## Определение TL
+Если [активна панель действий «добавить контакт»](/api/action-bar/#add-contact), добавить этого пользователя в контакты
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,29 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 contacts.acceptContact#f831a20f id:InputUser = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [InputUser](/type/InputUser/) | The user to add as contact |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Пользователь, которого нужно добавить в контакты</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CONTACT_ADD_MISSING | Contact to add is missing. |
-| 400 | CONTACT_ID_INVALID | The provided contact ID is invalid. |
-| 400 | CONTACT_REQ_MISSING | Missing contact request. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CONTACT_ADD_MISSING</td><td>Не указан добавляемый контакт.</td></tr><tr><td>400</td><td>CONTACT_ID_INVALID</td><td>Указанный идентификатор контакта недействителен.</td></tr><tr><td>400</td><td>CONTACT_REQ_MISSING</td><td>Отсутствует запрос на добавление в контакты.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Action bar](https://core.telegram.org/api/action-bar)
+#### [Панель действий](/api/action-bar/)
 
-Sometimes, when interacting with Telegram users via private or secret chats, an action bar must be shown on top of the chat, offering convenient action buttons or notices regarding the user.
+Иногда при взаимодействии с пользователями Telegram через личные или секретные чаты вверху чата необходимо показать панель действий, предлагающую удобные кнопки или уведомления об этом пользователе.

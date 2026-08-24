@@ -1,18 +1,15 @@
 ---
-title: "payments.resolveStarGiftOffer (метод)"
+title: "payments.resolveStarGiftOffer"
 original: "https://core.telegram.org/method/payments.resolveStarGiftOffer"
 section: ref
 kind: method
+description: "Принять или отклонить полученное ранее предложение о покупке коллекционного подарка »; полный порядок действий описан здесь »."
 layout: layout.njk
 ---
 
 # payments.resolveStarGiftOffer
 
-*Метод из схемы TL.*
-
-> Accept or decline a previously received [collectible gift purchase offer »](https://core.telegram.org/api/gifts#collectible-gift-purchase-offers), see [here »](https://core.telegram.org/api/gifts#collectible-gift-purchase-offers) for the full flow.
-
-## Определение TL
+Принять или отклонить полученное ранее [предложение о покупке коллекционного подарка »](/api/gifts/#collectible-gift-purchase-offers); полный порядок действий описан [здесь »](/api/gifts/#collectible-gift-purchase-offers).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,32 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 payments.resolveStarGiftOffer#e9ce781c flags:# decline:flags.0?true offer_msg_id:int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| decline | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, declines the offer; otherwise, accepts it. |
-| offer_msg_id | [int](/type/int/) | Identifier of the [messageActionStarGiftPurchaseOffer](/constructor/messageActionStarGiftPurchaseOffer/) service message describing the offer to act upon. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>decline</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, отклоняет предложение; иначе принимает его.</td></tr><tr><td><strong>offer_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сервисного сообщения <a href="/constructor/messageActionStarGiftPurchaseOffer">messageActionStarGiftPurchaseOffer</a>, описывающего предложение, с которым выполняется действие.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [messageActionStarGiftPurchaseOffer](/constructor/messageActionStarGiftPurchaseOffer/)
 
-Contains an offer to purchase a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gift-purchase-offers), see [here »](https://core.telegram.org/api/gifts#collectible-gift-purchase-offers) for the full flow.
+Содержит предложение о покупке [коллекционного подарка »](/api/gifts/#collectible-gift-purchase-offers); полный порядок действий см. [здесь »](/api/gifts/#collectible-gift-purchase-offers).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

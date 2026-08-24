@@ -1,37 +1,30 @@
 ---
-title: "payments.starGiftAuctionAcquiredGifts (конструктор)"
+title: "payments.starGiftAuctionAcquiredGifts"
 original: "https://core.telegram.org/constructor/payments.starGiftAuctionAcquiredGifts"
 section: ref
 kind: constructor
+description: "Описывает все подарки, которые текущий пользователь выиграл на аукционе."
 layout: layout.njk
 ---
 
 # payments.starGiftAuctionAcquiredGifts
 
-*Конструктор из схемы TL.*
-
-> Describes all the gifts that the current user won in an [auction](https://core.telegram.org/api/auctions).
-
-## Определение TL
+Описывает все подарки, которые текущий пользователь выиграл на [аукционе](/api/auctions/).
 
 ```
 payments.starGiftAuctionAcquiredGifts#7d5bd1f0 gifts:Vector<StarGiftAuctionAcquiredGift> users:Vector<User> chats:Vector<Chat> = payments.StarGiftAuctionAcquiredGifts;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| gifts | [Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftAuctionAcquiredGift](/type/StarGiftAuctionAcquiredGift/)> | The gifts |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Mentioned users |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Mentioned chats |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>gifts</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftAuctionAcquiredGift">StarGiftAuctionAcquiredGift</a>&gt;</td><td>Подарки</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Упомянутые пользователи</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Упомянутые чаты</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.StarGiftAuctionAcquiredGifts](/type/payments.StarGiftAuctionAcquiredGifts/)
 
-## Related pages
+### Связанные страницы
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

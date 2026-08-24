@@ -1,59 +1,56 @@
 ---
-title: "updateUser (конструктор)"
+title: "updateUser"
 original: "https://core.telegram.org/constructor/updateUser"
 section: ref
 kind: constructor
+description: "Информация о пользователе (user и/или userFull) была обновлена."
 layout: layout.njk
 ---
 
 # updateUser
 
-*Конструктор из схемы TL.*
+Информация о пользователе ([user](/constructor/user/) и/или [userFull](/constructor/userFull/)) была обновлена.
 
-> User ([user](/constructor/user/) and/or [userFull](/constructor/userFull/)) information was updated.
-> This update can only be received through getDifference or in [updates](/constructor/updates/)/[updatesCombined](/constructor/updatesCombined/) constructors, so it will **always** come bundled with the updated [user](/constructor/user/), that should be applied [as usual »](https://core.telegram.org/api/peers), **without** re-fetching the info manually.
-> However, full peer information will not come bundled in updates, so the full peer cache ([userFull](/constructor/userFull/)) must be invalidated for `user_id` when receiving this update.
+Это обновление можно получить только через getDifference либо в конструкторах [updates](/constructor/updates/)/[updatesCombined](/constructor/updatesCombined/), поэтому оно **всегда** приходит вместе с обновлёнными данными [user](/constructor/user/), которые следует применить [обычным образом »](/api/peers/), **без** повторного запроса сведений вручную.
 
-## Определение TL
+Однако полные сведения о пире в обновлениях не передаются, поэтому при получении этого обновления кеш полных сведений о пире ([userFull](/constructor/userFull/)) для `user_id` необходимо считать недействительным.
 
 ```
 updateUser#20529438 user_id:long = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [long](/type/long/) | User ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [user](/constructor/user/)
 
-Indicates info about a certain user.
+Содержит сведения об определённом пользователе.
 
-Unless specified otherwise, when updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+Если не указано иное, при обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-See [here »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) for an implementation of the logic to use when updating the [local user peer database](https://core.telegram.org/api/peers).
+См. [здесь »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) реализацию логики, которую следует применять при обновлении [локальной базы пиров-пользователей](/api/peers/).
 
 #### [userFull](/constructor/userFull/)
 
-Extended user info
+Расширенные сведения о пользователе
 
-When updating the [local peer database »](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров »](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).
 
 #### [Updates](/constructor/updates/)
 
-Full constructor of updates
+Полный конструктор обновлений
 
 #### [updatesCombined](/constructor/updatesCombined/)
 
-Constructor for a group of updates.
+Конструктор для группы обновлений.
 
-#### [Peer database](https://core.telegram.org/api/peers)
+#### [База данных пиров](/api/peers/)
 
-Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.
+Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.

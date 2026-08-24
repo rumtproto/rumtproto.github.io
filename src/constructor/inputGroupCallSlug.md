@@ -1,40 +1,36 @@
 ---
-title: "inputGroupCallSlug (конструктор)"
+title: "inputGroupCallSlug"
 original: "https://core.telegram.org/constructor/inputGroupCallSlug"
 section: ref
 kind: constructor
+description: "Определяет конференц-звонок » по слагу из его пригласительной ссылки."
 layout: layout.njk
 ---
 
 # inputGroupCallSlug
 
-*Конструктор из схемы TL.*
+Определяет [конференц-звонок »](/api/group-calls/#conference-calls) по слагу из его пригласительной ссылки.
 
-> Identify a [conference call »](https://core.telegram.org/api/group-calls#conference-calls) using the slug from its invitation link.
-> This constructor can only be used for conference calls. It cannot be used for video chats/livestreams, live stories or any other group call type.
-
-## Определение TL
+Этот конструктор можно использовать только для конференц-звонков. Его нельзя использовать для видеочатов и трансляций, прямых историй и любых других типов групповых звонков.
 
 ```
 inputGroupCallSlug#fe06823f slug:string = InputGroupCall;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| slug | [string](/type/string/) | Slug from the [conference link »](https://core.telegram.org/api/links#conference-links). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Слаг из <a href="/api/links#conference-links">ссылки на конференцию »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputGroupCall](/type/InputGroupCall/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

@@ -1,18 +1,15 @@
 ---
-title: "stories.getAllStories (метод)"
+title: "stories.getAllStories"
 original: "https://core.telegram.org/method/stories.getAllStories"
 section: ref
 kind: method
+description: "Получить список активных (или активных и скрытых) историй; подробнее о просмотре историй см. здесь »."
 layout: layout.njk
 ---
 
 # stories.getAllStories
 
-*Метод из схемы TL.*
-
-> Fetch the List of active (or active and hidden) stories, see [here »](https://core.telegram.org/api/stories#watching-stories) for more info on watching stories.
-
-## Определение TL
+Получить список активных (или активных и скрытых) историй; подробнее о просмотре историй см. [здесь »](/api/stories/#watching-stories).
 
 ```
 stories.allStoriesNotModified#1158fe3e flags:# state:string stealth_mode:StoriesStealthMode = stories.AllStories;
@@ -21,23 +18,18 @@ stories.allStories#6efc5e81 flags:# has_more:flags.0?true count:int state:string
 stories.getAllStories#eeb0d625 flags:# next:flags.1?true hidden:flags.2?true state:flags.0?string = stories.AllStories;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| next | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If next and state are both set, uses the passed state to paginate to the next results; if neither state nor next are set, fetches the initial page; if state is set and next is not set, check for changes in the active/hidden peerset, see [here »](https://core.telegram.org/api/stories#watching-stories) for more info on the full flow. |
-| hidden | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | If set, fetches the hidden active story list, otherwise fetches the active story list, see [here »](https://core.telegram.org/api/stories#watching-stories) for more info on the full flow. |
-| state | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | If next and state are both set, uses the passed state to paginate to the next results; if neither state nor next are set, fetches the initial page; if state is set and next is not set, check for changes in the active/hidden peerset, see [here »](https://core.telegram.org/api/stories#watching-stories) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>next</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если заданы оба поля <code>next</code> и <code>state</code>, переданное значение <code>state</code> используется для перехода к следующей странице результатов; если не заданы ни <code>state</code>, ни <code>next</code>, загружается первая страница; если <code>state</code> задано, а <code>next</code> — нет, выполняется проверка изменений в наборе активных/скрытых пиров; подробнее о полном порядке действий см. <a href="/api/stories#watching-stories">здесь »</a>.</td></tr><tr><td><strong>hidden</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Если установлено, получает скрытый список активных историй, иначе получает список активных историй; подробнее о полном порядке действий см. <a href="/api/stories#watching-stories">здесь »</a>.</td></tr><tr><td><strong>state</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Если заданы оба поля <code>next</code> и <code>state</code>, переданное значение <code>state</code> используется для перехода к следующей странице результатов; если не заданы ни <code>state</code>, ни <code>next</code>, загружается первая страница; если <code>state</code> задано, а <code>next</code> — нет, выполняется проверка изменений в наборе активных/скрытых пиров; подробнее о полном порядке действий см. <a href="/api/stories#watching-stories">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [stories.AllStories](/type/stories.AllStories/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

@@ -1,55 +1,46 @@
 ---
-title: "sponsoredPeer (конструктор)"
+title: "sponsoredPeer"
 original: "https://core.telegram.org/constructor/sponsoredPeer"
 section: ref
 kind: constructor
+description: "Рекламируемый пир."
 layout: layout.njk
 ---
 
 # sponsoredPeer
 
-*Конструктор из схемы TL.*
-
-> A sponsored peer.
-
-## Определение TL
+Рекламируемый пир.
 
 ```
 sponsoredPeer#c69708d3 flags:# random_id:bytes peer:Peer sponsor_info:flags.0?string additional_info:flags.1?string = SponsoredPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| random_id | [bytes](/type/bytes/) | ID of the sponsored peer, to be passed to [messages.viewSponsoredMessage](/method/messages.viewSponsoredMessage/), [messages.clickSponsoredMessage](/method/messages.clickSponsoredMessage/) or [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/) (the same methods used for [sponsored messages &raquo](https://core.telegram.org/api/sponsored-messages)). See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| peer | [Peer](/type/Peer/) | The sponsored peer. |
-| sponsor_info | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | If set, contains additional information about the sponsor to be shown along with the peer. |
-| additional_info | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | If set, contains additional information about the sponsored message to be shown along with the peer. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>[@term:random_id] Идентификатор рекламируемого пира, который следует передавать в <a href="/method/messages.viewSponsoredMessage">messages.viewSponsoredMessage</a>, <a href="/method/messages.clickSponsoredMessage">messages.clickSponsoredMessage</a> или <a href="/method/messages.reportSponsoredMessage">messages.reportSponsoredMessage</a> (те же методы, что используются для <a href="/api/sponsored-messages">рекламных сообщений &amp;raquo</a>). Подробнее об устранении дубликатов по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Спонсируемый пир.</td></tr><tr><td><strong>sponsor_info</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Если установлено, содержит дополнительные сведения о рекламодателе, которые следует показать вместе с пиром.</td></tr><tr><td><strong>additional_info</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Если установлено, содержит дополнительные сведения о рекламном сообщении, которые следует показать вместе с пиром.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SponsoredPeer](/type/SponsoredPeer/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.viewSponsoredMessage](/method/messages.viewSponsoredMessage/)
 
-Mark a specific [sponsored message »](https://core.telegram.org/api/sponsored-messages) as read
+Отметить конкретное [рекламное сообщение »](/api/sponsored-messages/) как прочитанное
 
 #### [messages.clickSponsoredMessage](/method/messages.clickSponsoredMessage/)
 
-Informs the server that the user has interacted with a sponsored message in [one of the ways listed here »](https://core.telegram.org/api/sponsored-messages#clicking-on-sponsored-messages).
+Сообщает серверу, что пользователь взаимодействовал с рекламным сообщением [одним из перечисленных здесь способов »](/api/sponsored-messages/#clicking-on-sponsored-messages).
 
 #### [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/)
 
-Report a [sponsored message »](https://core.telegram.org/api/sponsored-messages), see [here »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages) for more info on the full flow.
+Пожаловаться на [рекламное сообщение »](/api/sponsored-messages/); подробнее обо всём процессе см. [здесь »](/api/sponsored-messages/#reporting-sponsored-messages).
 
-#### [Sponsored messages](https://core.telegram.org/api/sponsored-messages)
+#### [Спонсируемые сообщения](/api/sponsored-messages/)
 
-How clients should fetch, display and interact with sponsored messages.
+Как клиентам получать, показывать рекламные сообщения и взаимодействовать с ними.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

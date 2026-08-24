@@ -1,27 +1,24 @@
 ---
-title: "inputReportReasonCopyright (конструктор)"
+title: "inputReportReasonCopyright"
 original: "https://core.telegram.org/constructor/inputReportReasonCopyright"
 section: ref
 kind: constructor
+description: "Жалоба на нарушение авторских прав"
 layout: layout.njk
 ---
 
 # inputReportReasonCopyright
 
-*Конструктор из схемы TL.*
-
-> Report for copyrighted content
-
-## Определение TL
+Жалоба на нарушение авторских прав
 
 ```
 inputReportReasonCopyright#9b89f93a = ReportReason;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReportReason](/type/ReportReason/)

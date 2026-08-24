@@ -1,43 +1,34 @@
 ---
-title: "auth.sentCode (конструктор)"
+title: "auth.sentCode"
 original: "https://core.telegram.org/constructor/auth.sentCode"
 section: ref
 kind: constructor
+description: "Содержит информацию об отправленном коде подтверждения."
 layout: layout.njk
 ---
 
 # auth.sentCode
 
-*Конструктор из схемы TL.*
-
-> Contains info about a sent verification code.
-
-## Определение TL
+Содержит информацию об отправленном коде подтверждения.
 
 ```
 auth.sentCode#5e002502 flags:# type:auth.SentCodeType phone_code_hash:string next_type:flags.1?auth.CodeType timeout:flags.2?int = auth.SentCode;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| type | [auth.SentCodeType](/type/auth.SentCodeType/) | Phone code type |
-| phone_code_hash | [string](/type/string/) | Phone code hash, to be stored and later re-used with [auth.signIn](/method/auth.signIn/) |
-| next_type | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[auth.CodeType](/type/auth.CodeType/) | Phone code type that will be sent next, if the phone code is not received within timeout seconds: to send it use [auth.resendCode](/method/auth.resendCode/) |
-| timeout | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Timeout for reception of the phone code |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/auth.SentCodeType">auth.SentCodeType</a></td><td>Тип телефонного кода</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш кода подтверждения, который следует сохранить и позднее повторно использовать в <a href="/method/auth.signIn">auth.signIn</a></td></tr><tr><td><strong>next_type</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/auth.CodeType">auth.CodeType</a></td><td>Тип телефонного кода, который будет отправлен следующим, если код не получен в течение <code>timeout</code> секунд: для его отправки используйте <a href="/method/auth.resendCode">auth.resendCode</a></td></tr><tr><td><strong>timeout</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Тайм-аут ожидания получения кода из SMS</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [auth.SentCode](/type/auth.SentCode/)
 
-## Related pages
+### Связанные страницы
 
 #### [auth.signIn](/method/auth.signIn/)
 
-Signs in a user with a validated phone number.
+Выполняет вход пользователя с подтверждённым номером телефона.
 
 #### [auth.resendCode](/method/auth.resendCode/)
 
-Resend the login code via another medium, the phone code type is determined by the return value of the previous auth.sendCode/auth.resendCode: see [login](/api/auth/) for more info.
+Повторно отправить код входа другим способом; тип кода определяется значением, возвращённым предыдущим вызовом auth.sendCode/auth.resendCode: подробнее см. [вход](/api/auth/).

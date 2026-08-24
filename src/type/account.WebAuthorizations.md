@@ -1,18 +1,15 @@
 ---
-title: "Account.WebAuthorizations (тип)"
+title: "account.WebAuthorizations"
 original: "https://core.telegram.org/type/account.WebAuthorizations"
 section: ref
 kind: type
+description: "Веб-авторизации"
 layout: layout.njk
 ---
 
 # Account.WebAuthorizations
 
-*Тип из схемы TL.*
-
-> Web authorizations
-
-## Определение TL
+Веб-авторизации
 
 ```
 account.webAuthorizations#ed56c9fc authorizations:Vector<WebAuthorization> users:Vector<User> = account.WebAuthorizations;
@@ -22,14 +19,10 @@ account.webAuthorizations#ed56c9fc authorizations:Vector<WebAuthorization> users
 account.getWebAuthorizations#182e6d6f = account.WebAuthorizations;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.webAuthorizations](/constructor/account.webAuthorizations/) | Web authorizations |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.webAuthorizations">account.webAuthorizations</a></td><td>Веб-авторизации</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getWebAuthorizations](/method/account.getWebAuthorizations/) | Get web [login widget](https://core.telegram.org/widgets/login) authorizations |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getWebAuthorizations">account.getWebAuthorizations</a></td><td>Получить авторизации через веб-<a href="/widgets/login">виджет входа</a></td></tr></tbody></table>

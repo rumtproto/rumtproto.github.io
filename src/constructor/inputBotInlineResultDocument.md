@@ -1,39 +1,28 @@
 ---
-title: "inputBotInlineResultDocument (конструктор)"
+title: "inputBotInlineResultDocument"
 original: "https://core.telegram.org/constructor/inputBotInlineResultDocument"
 section: ref
 kind: constructor
+description: "Документ (медиа любого типа, кроме фотографий)"
 layout: layout.njk
 ---
 
 # inputBotInlineResultDocument
 
-*Конструктор из схемы TL.*
-
-> Document (media of any type except for photos)
-
-## Определение TL
+Документ (медиа любого типа, кроме фотографий)
 
 ```
 inputBotInlineResultDocument#fff8fdc4 flags:# id:string type:string title:flags.1?string description:flags.2?string document:InputDocument send_message:InputBotInlineMessage = InputBotInlineResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| id | [string](/type/string/) | Result ID |
-| type | [string](/type/string/) | Result type (see [bot API docs](https://core.telegram.org/bots/api#inlinequeryresult)) |
-| title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Result title |
-| description | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | Result description |
-| document | [InputDocument](/type/InputDocument/) | Document to send |
-| send_message | [InputBotInlineMessage](/type/InputBotInlineMessage/) | Message to send when the result is selected |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор результата</td></tr><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Тип результата (см. <a href="/bots/api#inlinequeryresult">документацию Bot API</a>)</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Заголовок результата</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Описание результата</td></tr><tr><td><strong>document</strong></td><td style="text-align: center;"><a href="/type/InputDocument">InputDocument</a></td><td>Документ для отправки</td></tr><tr><td><strong>send_message</strong></td><td style="text-align: center;"><a href="/type/InputBotInlineMessage">InputBotInlineMessage</a></td><td>Сообщение, которое будет отправлено при выборе результата</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputBotInlineResult](/type/InputBotInlineResult/)
 
-## Related pages
+### Связанные страницы
 
 #### [Telegram Bot API](https://core.telegram.org/bots/api)

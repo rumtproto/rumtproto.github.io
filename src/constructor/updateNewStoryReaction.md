@@ -1,41 +1,34 @@
 ---
-title: "updateNewStoryReaction (конструктор)"
+title: "updateNewStoryReaction"
 original: "https://core.telegram.org/constructor/updateNewStoryReaction"
 section: ref
 kind: constructor
+description: "Представляет новую реакцию на историю."
 layout: layout.njk
 ---
 
 # updateNewStoryReaction
 
-*Конструктор из схемы TL.*
-
-> Represents a new [reaction to a story](https://core.telegram.org/api/reactions#notifications-about-reactions).
-
-## Определение TL
+Представляет новую [реакцию на историю](/api/reactions/#notifications-about-reactions).
 
 ```
 updateNewStoryReaction#1824e40b story_id:int peer:Peer reaction:Reaction = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| story_id | [int](/type/int/) | [Story ID](https://core.telegram.org/api/stories). |
-| peer | [Peer](/type/Peer/) | The peer where the story was posted. |
-| reaction | [Reaction](/type/Reaction/) | The [reaction](https://core.telegram.org/api/reactions). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>story_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/stories">Идентификатор истории</a>.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир, в котором была опубликована история.</td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/type/Reaction">Reaction</a></td><td><a href="/api/reactions">Реакция</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

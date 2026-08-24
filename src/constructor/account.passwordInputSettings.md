@@ -1,44 +1,34 @@
 ---
-title: "account.passwordInputSettings (конструктор)"
+title: "account.passwordInputSettings"
 original: "https://core.telegram.org/constructor/account.passwordInputSettings"
 section: ref
 kind: constructor
+description: "Параметры настройки нового пароля"
 layout: layout.njk
 ---
 
 # account.passwordInputSettings
 
-*Конструктор из схемы TL.*
-
-> Settings for setting up a new password
-
-## Определение TL
+Параметры настройки нового пароля
 
 ```
 account.passwordInputSettings#c23727c9 flags:# new_algo:flags.0?PasswordKdfAlgo new_password_hash:flags.0?bytes hint:flags.0?string email:flags.1?string new_secure_settings:flags.2?SecureSecretSettings = account.PasswordInputSettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| new_algo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[PasswordKdfAlgo](/type/PasswordKdfAlgo/) | The [SRP algorithm](/api/srp/) to use |
-| new_password_hash | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[bytes](/type/bytes/) | The [computed password hash](/api/srp/) |
-| hint | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Text hint for the password |
-| email | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Password recovery email |
-| new_secure_settings | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[SecureSecretSettings](/type/SecureSecretSettings/) | Telegram [passport](https://core.telegram.org/passport) settings |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>new_algo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/PasswordKdfAlgo">PasswordKdfAlgo</a></td><td><a href="/api/srp">Алгоритм SRP</a>, который следует использовать</td></tr><tr><td><strong>new_password_hash</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/bytes">bytes</a></td><td><a href="/api/srp">Вычисленный хеш пароля</a></td></tr><tr><td><strong>hint</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Текстовая подсказка для пароля</td></tr><tr><td><strong>email</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Адрес электронной почты для восстановления пароля</td></tr><tr><td><strong>new_secure_settings</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/SecureSecretSettings">SecureSecretSettings</a></td><td>Настройки Telegram <a href="/passport">passport</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.PasswordInputSettings](/type/account.PasswordInputSettings/)
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

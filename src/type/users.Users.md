@@ -1,18 +1,15 @@
 ---
-title: "users.Users (тип)"
+title: "users.Users"
 original: "https://core.telegram.org/type/users.Users"
 section: ref
 kind: type
+description: "Описывает список пользователей (или ботов)."
 layout: layout.njk
 ---
 
 # users.Users
 
-*Тип из схемы TL.*
-
-> Describes a list of users (or bots).
-
-## Определение TL
+Описывает список пользователей (или ботов).
 
 ```
 users.users#62d706b8 users:Vector<User> = users.Users;
@@ -23,15 +20,10 @@ users.usersSlice#315a4974 count:int users:Vector<User> = users.Users;
 bots.getBotRecommendations#a1b70815 bot:InputUser = users.Users;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [users.users](/constructor/users.users/) | Describes a list of users (or bots). |
-| [users.usersSlice](/constructor/users.usersSlice/) | Describes a partial list of users. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/users.users">users.users</a></td><td>Описывает список пользователей (или ботов).</td></tr><tr><td><a href="/constructor/users.usersSlice">users.usersSlice</a></td><td>Описывает частичный список пользователей.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [bots.getBotRecommendations](/method/bots.getBotRecommendations/) | Obtain a list of similarly themed bots, selected based on similarities in their subscriber bases, see [here »](https://core.telegram.org/api/recommend) for more info. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/bots.getBotRecommendations">bots.getBotRecommendations</a></td><td>Получить список ботов схожей тематики, отобранных по сходству их аудитории подписчиков; подробнее см. <a href="/api/recommend">здесь »</a>.</td></tr></tbody></table>

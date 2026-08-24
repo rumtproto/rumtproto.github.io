@@ -1,18 +1,15 @@
 ---
-title: "ReactionsNotifySettings (тип)"
+title: "ReactionsNotifySettings"
 original: "https://core.telegram.org/type/ReactionsNotifySettings"
 section: ref
 kind: type
+description: "Настройки уведомлений о реакциях; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # ReactionsNotifySettings
 
-*Тип из схемы TL.*
-
-> Reaction notification settings, see [here »](https://core.telegram.org/api/reactions#notifications-about-reactions) for more info.
-
-## Определение TL
+Настройки уведомлений о реакциях; подробнее см. [здесь »](/api/reactions/#notifications-about-reactions).
 
 ```
 reactionsNotifySettings#56e34970 flags:# messages_notify_from:flags.0?ReactionNotificationsFrom stories_notify_from:flags.1?ReactionNotificationsFrom sound:NotificationSound show_previews:Bool = ReactionsNotifySettings;
@@ -23,21 +20,16 @@ account.getReactionsNotifySettings#6dd654c = ReactionsNotifySettings;
 account.setReactionsNotifySettings#316ce548 settings:ReactionsNotifySettings = ReactionsNotifySettings;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [reactionsNotifySettings](/constructor/reactionsNotifySettings/) | Reaction notification settings, see [here »](https://core.telegram.org/api/reactions#notifications-about-reactions) for more info. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/reactionsNotifySettings">reactionsNotifySettings</a></td><td>Настройки уведомлений о реакциях; подробнее см. <a href="/api/reactions#notifications-about-reactions">здесь »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getReactionsNotifySettings](/method/account.getReactionsNotifySettings/) | Get the current [reaction notification settings »](https://core.telegram.org/api/reactions#notifications-about-reactions). |
-| [account.setReactionsNotifySettings](/method/account.setReactionsNotifySettings/) | Change the [reaction notification settings »](https://core.telegram.org/api/reactions#notifications-about-reactions). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getReactionsNotifySettings">account.getReactionsNotifySettings</a></td><td>Получить текущие <a href="/api/reactions#notifications-about-reactions">настройки уведомлений о реакциях »</a>.</td></tr><tr><td><a href="/method/account.setReactionsNotifySettings">account.setReactionsNotifySettings</a></td><td>Изменить <a href="/api/reactions#notifications-about-reactions">настройки уведомлений о реакциях »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

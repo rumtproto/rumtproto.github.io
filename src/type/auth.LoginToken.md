@@ -1,18 +1,15 @@
 ---
-title: "auth.LoginToken (тип)"
+title: "auth.LoginToken"
 original: "https://core.telegram.org/type/auth.LoginToken"
 section: ref
 kind: type
+description: "Токен входа (для входа по QR-коду)"
 layout: layout.njk
 ---
 
 # auth.LoginToken
 
-*Тип из схемы TL.*
-
-> Login token (for QR code login)
-
-## Определение TL
+Токен входа (для входа по QR-коду)
 
 ```
 auth.loginToken#629f1980 expires:int token:bytes = auth.LoginToken;
@@ -25,17 +22,10 @@ auth.exportLoginToken#b7e085fe api_id:int api_hash:string except_ids:Vector<long
 auth.importLoginToken#95ac5ce4 token:bytes = auth.LoginToken;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [auth.loginToken](/constructor/auth.loginToken/) | Login token (for [QR code login](https://core.telegram.org/api/qr-login)) |
-| [auth.loginTokenMigrateTo](/constructor/auth.loginTokenMigrateTo/) | Repeat the query to the specified DC |
-| [auth.loginTokenSuccess](/constructor/auth.loginTokenSuccess/) | Login via token (QR code) succeeded! |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/auth.loginToken">auth.loginToken</a></td><td>Токен входа (для <a href="/api/qr-login">входа по QR-коду</a>)</td></tr><tr><td><a href="/constructor/auth.loginTokenMigrateTo">auth.loginTokenMigrateTo</a></td><td>Повторить запрос к указанному дата-центру</td></tr><tr><td><a href="/constructor/auth.loginTokenSuccess">auth.loginTokenSuccess</a></td><td>Вход по токену (QR-коду) выполнен успешно!</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [auth.exportLoginToken](/method/auth.exportLoginToken/) | Generate a login token, for [login via QR code](https://core.telegram.org/api/qr-login). The generated login token should be encoded using base64url, then shown as a tg://login?token=base64encodedtoken [deep link »](https://core.telegram.org/api/links#qr-code-login-links) in the QR code. For more info, see [login via QR code](https://core.telegram.org/api/qr-login). |
-| [auth.importLoginToken](/method/auth.importLoginToken/) | Login using a redirected login token, generated in case of DC mismatch during [QR code login](https://core.telegram.org/api/qr-login). For more info, see [login via QR code](https://core.telegram.org/api/qr-login). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/auth.exportLoginToken">auth.exportLoginToken</a></td><td>Сгенерировать токен входа для <a href="/api/qr-login">входа по QR-коду</a>.<br>Сгенерированный токен входа следует закодировать в base64url и показать в QR-коде в виде <code>tg://login?token=base64encodedtoken</code> — <a href="/api/links#qr-code-login-links">глубокой ссылки »</a>.<br><br>Подробнее см. <a href="/api/qr-login">вход по QR-коду</a>.</td></tr><tr><td><a href="/method/auth.importLoginToken">auth.importLoginToken</a></td><td>Вход с использованием перенаправленного токена входа, который формируется при несовпадении DC во время <a href="/api/qr-login">входа по QR-коду</a>.<br><br>Подробнее см. <a href="/api/qr-login">вход по QR-коду</a>.</td></tr></tbody></table>

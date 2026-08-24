@@ -1,55 +1,30 @@
 ---
-title: "groupCallParticipant (конструктор)"
+title: "groupCallParticipant"
 original: "https://core.telegram.org/constructor/groupCallParticipant"
 section: ref
 kind: constructor
+description: "Описывает участника группового звонка и его текущее состояние, см. применение обновлений группового звонка »."
 layout: layout.njk
 ---
 
 # groupCallParticipant
 
-*Конструктор из схемы TL.*
-
-> Describes a group call participant and their current state, see [applying group call updates »](https://core.telegram.org/api/group-calls#applying-group-call-updates).
-
-## Определение TL
+Описывает участника группового звонка и его текущее состояние, см. [применение обновлений группового звонка »](/api/group-calls/#applying-group-call-updates).
 
 ```
 groupCallParticipant#2a3dc7ac flags:# muted:flags.0?true left:flags.1?true can_self_unmute:flags.2?true just_joined:flags.4?true versioned:flags.5?true min:flags.8?true muted_by_you:flags.9?true volume_by_admin:flags.10?true self:flags.12?true video_joined:flags.15?true peer:Peer date:int active_date:flags.3?int source:int volume:flags.7?int about:flags.11?string raise_hand_rating:flags.13?long video:flags.6?GroupCallParticipantVideo presentation:flags.14?GroupCallParticipantVideo paid_stars_total:flags.16?long = GroupCallParticipant;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| muted | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the participant is muted |
-| left | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the participant left the media layer; in conferences, another participant must then prune them from the E2E blockchain |
-| can_self_unmute | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether the participant can unmute themselves |
-| just_joined | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Whether the participant has just joined |
-| versioned | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | If set, the application logic for this update is slightly different, see [here »](https://core.telegram.org/api/group-calls#applying-group-call-updates) for more info on the full flow. |
-| min | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[true](/constructor/true/) | If not set, the volume and muted_by_you fields can be safely used to overwrite locally cached information; otherwise, volume will contain valid information only if volume_by_admin is set both in the cache and in the received constructor. |
-| muted_by_you | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[true](/constructor/true/) | Whether this participant was muted by the current user |
-| volume_by_admin | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[true](/constructor/true/) | Whether our volume can only changed by an admin |
-| self | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[true](/constructor/true/) | Whether this participant is the current user |
-| video_joined | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[true](/constructor/true/) | Whether this participant is currently broadcasting video |
-| peer | [Peer](/type/Peer/) | Peer represented by this participant |
-| date | [int](/type/int/) | When did this participant join the group call |
-| active_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[int](/type/int/) | When was this participant last active in the group call |
-| source | [int](/type/int/) | Source ID of the participant's main audio stream |
-| volume | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[int](/type/int/) | Volume, between 1 and 20000; 10000 represents 100% volume. If not set, the volume is set to 100%. |
-| about | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[string](/type/string/) | Info about this participant |
-| raise_hand_rating | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[long](/type/long/) | Specifies the UI visualization order of peers with raised hands: peers with a higher rating should be showed first in the list. |
-| video | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[GroupCallParticipantVideo](/type/GroupCallParticipantVideo/) | Info about the video stream the participant is currently broadcasting |
-| presentation | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[GroupCallParticipantVideo](/type/GroupCallParticipantVideo/) | Info about the screen sharing stream the participant is currently broadcasting |
-| paid_stars_total | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).16?[long](/type/long/) | Total Stars donated by this participant in a live story |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>muted</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Отключён ли у участника микрофон</td></tr><tr><td><strong>left</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Покинул ли участник медиауровень; в конференциях другой участник должен затем удалить его из блокчейна сквозного шифрования</td></tr><tr><td><strong>can_self_unmute</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Может ли участник включить себе микрофон</td></tr><tr><td><strong>just_joined</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Только что ли присоединился участник</td></tr><tr><td><strong>versioned</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Если установлено, логика обработки этого обновления в приложении немного отличается; подробнее обо всём процессе см. <a href="/api/group-calls#applying-group-call-updates">здесь »</a>.</td></tr><tr><td><strong>min</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true">true</a></td><td>[@term:min] Если не установлено, значения полей <code>volume</code> и <code>muted_by_you</code> можно без опасений использовать для перезаписи локально закешированных данных; в противном случае поле <code>volume</code> содержит достоверные данные только тогда, когда флаг <code>volume_by_admin</code> установлен и в кеше, и в полученном конструкторе.</td></tr><tr><td><strong>muted_by_you</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/constructor/true">true</a></td><td>Отключил ли текущий пользователь звук этого участника</td></tr><tr><td><strong>volume_by_admin</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true">true</a></td><td>Может ли нашу громкость менять только администратор</td></tr><tr><td><strong>self</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true">true</a></td><td>Является ли этот участник текущим пользователем</td></tr><tr><td><strong>video_joined</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/constructor/true">true</a></td><td>Ведёт ли этот участник сейчас видеотрансляцию</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир, который представляет этот участник</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда этот участник присоединился к групповому звонку</td></tr><tr><td><strong>active_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/int">int</a></td><td>Когда этот участник был активен в групповом звонке в последний раз</td></tr><tr><td><strong>source</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор источника основного аудиопотока участника</td></tr><tr><td><strong>volume</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/int">int</a></td><td>Громкость, от <code>1</code> до <code>20000</code>; <code>10000</code> соответствует 100% громкости. Если не задано, громкость устанавливается равной 100%.</td></tr><tr><td><strong>about</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/string">string</a></td><td>Информация об этом участнике</td></tr><tr><td><strong>raise_hand_rating</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/long">long</a></td><td>Задаёт порядок отображения в интерфейсе пиров с поднятой рукой: пиры с более высоким рейтингом должны показываться в списке первыми.</td></tr><tr><td><strong>video</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/GroupCallParticipantVideo">GroupCallParticipantVideo</a></td><td>Информация о видеопотоке, который участник транслирует в данный момент</td></tr><tr><td><strong>presentation</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/GroupCallParticipantVideo">GroupCallParticipantVideo</a></td><td>Информация о потоке демонстрации экрана, который участник транслирует в данный момент</td></tr><tr><td><strong>paid_stars_total</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/type/long">long</a></td><td>Всего stars, пожертвованных этим участником в прямой истории</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [GroupCallParticipant](/type/GroupCallParticipant/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

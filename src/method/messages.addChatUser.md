@@ -1,18 +1,15 @@
 ---
-title: "messages.addChatUser (метод)"
+title: "messages.addChatUser"
 original: "https://core.telegram.org/method/messages.addChatUser"
 section: ref
 kind: method
+description: "Добавляет пользователя в чат и отправляет в нём сервисное сообщение."
 layout: layout.njk
 ---
 
 # messages.addChatUser
 
-*Метод из схемы TL.*
-
-> Adds a user to a chat and sends a service message on it.
-
-## Определение TL
+Добавляет пользователя в чат и отправляет в нём сервисное сообщение.
 
 ```
 messages.invitedUsers#7f5defa6 updates:Updates missing_invitees:Vector<MissingInvitee> = messages.InvitedUsers;
@@ -20,37 +17,16 @@ messages.invitedUsers#7f5defa6 updates:Updates missing_invitees:Vector<MissingIn
 messages.addChatUser#cbc6d107 chat_id:long user_id:InputUser fwd_limit:int = messages.InvitedUsers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chat_id | [long](/type/long/) | Chat ID |
-| user_id | [InputUser](/type/InputUser/) | User ID to be added |
-| fwd_limit | [int](/type/int/) | Number of last messages to be forwarded |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор чата</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор добавляемого пользователя</td></tr><tr><td><strong>fwd_limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество последних сообщений, которые нужно переслать</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.InvitedUsers](/type/messages.InvitedUsers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_GROUPS_BLOCKED | This bot can't be added to groups. |
-| 403 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | CHAT_INVALID | Invalid chat. |
-| 400 | CHAT_MEMBER_ADD_FAILED | Could not add participants. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | USERS_TOO_MUCH | The maximum number of users has been exceeded (to create a chat, for example). |
-| 400 | USER_ALREADY_PARTICIPANT | The user is already in the group. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
-| 400 | USER_IS_BLOCKED | You were blocked by this user. |
-| 403 | USER_NOT_MUTUAL_CONTACT | The provided user is not a mutual contact. |
-| 403 | USER_PRIVACY_RESTRICTED | The user's privacy settings do not allow you to do this. |
-| 400 | YOU_BLOCKED_USER | You blocked this user. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_GROUPS_BLOCKED</td><td>Этого бота нельзя добавлять в группы.</td></tr><tr><td>403</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>CHAT_INVALID</td><td>Недействительный чат.</td></tr><tr><td>400</td><td>CHAT_MEMBER_ADD_FAILED</td><td>Не удалось добавить участников.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>USERS_TOO_MUCH</td><td>Превышено максимальное количество пользователей (например, при создании чата).</td></tr><tr><td>400</td><td>USER_ALREADY_PARTICIPANT</td><td>Пользователь уже состоит в группе.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr><tr><td>400</td><td>USER_IS_BLOCKED</td><td>Этот пользователь вас заблокировал.</td></tr><tr><td>403</td><td>USER_NOT_MUTUAL_CONTACT</td><td>Указанный пользователь не является взаимным контактом.</td></tr><tr><td>403</td><td>USER_PRIVACY_RESTRICTED</td><td>Настройки приватности пользователя не позволяют вам это сделать.</td></tr><tr><td>400</td><td>YOU_BLOCKED_USER</td><td>Вы заблокировали этого пользователя.</td></tr></tbody></table>

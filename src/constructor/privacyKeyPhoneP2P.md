@@ -1,27 +1,24 @@
 ---
-title: "privacyKeyPhoneP2P (конструктор)"
+title: "privacyKeyPhoneP2P"
 original: "https://core.telegram.org/constructor/privacyKeyPhoneP2P"
 section: ref
 kind: constructor
+description: "Разрешены ли P2P-соединения при звонках с этим пользователем"
 layout: layout.njk
 ---
 
 # privacyKeyPhoneP2P
 
-*Конструктор из схемы TL.*
-
-> Whether P2P connections in phone calls with this user are allowed
-
-## Определение TL
+Разрешены ли P2P-соединения при звонках с этим пользователем
 
 ```
 privacyKeyPhoneP2P#39491cc8 = PrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyKey](/type/PrivacyKey/)

@@ -1,33 +1,33 @@
 ---
-title: "sendMessageGeoLocationAction (конструктор)"
+title: "sendMessageGeoLocationAction"
 original: "https://core.telegram.org/constructor/sendMessageGeoLocationAction"
 section: ref
 kind: constructor
+description: "Пользователь выбирает геопозицию для отправки."
 layout: layout.njk
 ---
 
 # sendMessageGeoLocationAction
 
-*Конструктор из схемы TL.*
+Пользователь выбирает геопозицию для отправки.
 
-> User is selecting a location to share.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===17===
-> sendMessageGeoLocationAction#176f8ba1 = SendMessageAction;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===17===
+sendMessageGeoLocationAction#176f8ba1 = SendMessageAction;
+```
+
+#### Схема API
 
 ```
 sendMessageGeoLocationAction#176f8ba1 = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)

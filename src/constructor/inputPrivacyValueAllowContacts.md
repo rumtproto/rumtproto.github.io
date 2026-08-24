@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyValueAllowContacts (конструктор)"
+title: "inputPrivacyValueAllowContacts"
 original: "https://core.telegram.org/constructor/inputPrivacyValueAllowContacts"
 section: ref
 kind: constructor
+description: "Разрешить только контактам"
 layout: layout.njk
 ---
 
 # inputPrivacyValueAllowContacts
 
-*Конструктор из схемы TL.*
-
-> Allow only contacts
-
-## Определение TL
+Разрешить только контактам
 
 ```
 inputPrivacyValueAllowContacts#d09e07b = InputPrivacyRule;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyRule](/type/InputPrivacyRule/)

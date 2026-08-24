@@ -1,18 +1,15 @@
 ---
-title: "channels.joinChannel (метод)"
+title: "channels.joinChannel"
 original: "https://core.telegram.org/method/channels.joinChannel"
 section: ref
 kind: method
+description: "Вступить в канал или супергруппу"
 layout: layout.njk
 ---
 
 # channels.joinChannel
 
-*Метод из схемы TL.*
-
-> Join a channel/supergroup
-
-## Определение TL
+Вступить в канал или супергруппу
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,45 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.joinChannel#24b524c5 channel:InputChannel = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | Channel/supergroup to join |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал или супергруппа, куда нужно вступить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNELS_TOO_MUCH | You have joined too many channels/supergroups. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_MONOFORUM_UNSUPPORTED | [Monoforums](https://core.telegram.org/api/channel#monoforums) do not support this feature. |
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_INVALID | Invalid chat. |
-| 420 | FROZEN_METHOD_INVALID | The current account is [frozen](https://core.telegram.org/api/auth/#frozen-accounts), and thus cannot execute the specified action. |
-| 400 | INVITE_HASH_EMPTY | The invite hash is empty. |
-| 406 | INVITE_HASH_EXPIRED | The invite link has expired. |
-| 400 | INVITE_HASH_INVALID | The invite hash is invalid. |
-| 400 | INVITE_REQUEST_SENT | You have successfully requested to join this chat or channel. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | USERS_TOO_MUCH | The maximum number of users has been exceeded (to create a chat, for example). |
-| 400 | USER_ALREADY_PARTICIPANT | The user is already in the group. |
-| 400 | USER_BANNED_IN_CHANNEL | You're banned from sending messages in supergroups/channels. |
-| 400 | USER_CHANNELS_TOO_MUCH | One of the users you tried to add is already in too many channels/supergroups. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNELS_TOO_MUCH</td><td>Вы состоите в слишком большом числе каналов и супергрупп.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_MONOFORUM_UNSUPPORTED</td><td><a href="/api/channel#monoforums">Монофорумы</a> не поддерживают эту возможность.</td></tr><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_INVALID</td><td>Недействительный чат.</td></tr><tr><td>420</td><td>FROZEN_METHOD_INVALID</td><td>Текущий аккаунт <a href="/api/auth#frozen-accounts">заморожен</a> и поэтому не может выполнить указанное действие.</td></tr><tr><td>400</td><td>INVITE_HASH_EMPTY</td><td>Хеш приглашения пуст.</td></tr><tr><td>406</td><td>INVITE_HASH_EXPIRED</td><td>Срок действия пригласительной ссылки истёк.</td></tr><tr><td>400</td><td>INVITE_HASH_INVALID</td><td>Хеш приглашения недействителен.</td></tr><tr><td>400</td><td>INVITE_REQUEST_SENT</td><td>Вы успешно подали заявку на вступление в этот чат или канал.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>USERS_TOO_MUCH</td><td>Превышено максимальное количество пользователей (например, при создании чата).</td></tr><tr><td>400</td><td>USER_ALREADY_PARTICIPANT</td><td>Пользователь уже состоит в группе.</td></tr><tr><td>400</td><td>USER_BANNED_IN_CHANNEL</td><td>Вам запрещено отправлять сообщения в супергруппах и каналах.</td></tr><tr><td>400</td><td>USER_CHANNELS_TOO_MUCH</td><td>Один из пользователей, которых вы попытались добавить, уже состоит в слишком большом числе каналов и супергрупп.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

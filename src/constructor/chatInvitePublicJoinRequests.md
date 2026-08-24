@@ -1,33 +1,30 @@
 ---
-title: "chatInvitePublicJoinRequests (конструктор)"
+title: "chatInvitePublicJoinRequests"
 original: "https://core.telegram.org/constructor/chatInvitePublicJoinRequests"
 section: ref
 kind: constructor
+description: "Используется в обновлениях и в журнале канала, чтобы указать, что пользователь подаёт заявку на вступление в группу обсуждения или уже вступил в неё"
 layout: layout.njk
 ---
 
 # chatInvitePublicJoinRequests
 
-*Конструктор из схемы TL.*
-
-> Used in updates and in the channel log to indicate when a user is requesting to join or has joined a [discussion group](https://core.telegram.org/api/discussion#requiring-users-to-join-the-group)
-
-## Определение TL
+Используется в обновлениях и в журнале канала, чтобы указать, что пользователь подаёт заявку на вступление в [группу обсуждения](/api/discussion/#requiring-users-to-join-the-group) или уже вступил в неё
 
 ```
 chatInvitePublicJoinRequests#ed107ab7 = ExportedChatInvite;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ExportedChatInvite](/type/ExportedChatInvite/)
 
-## Related pages
+### Связанные страницы
 
-#### [Discussion groups](https://core.telegram.org/api/discussion)
+#### [Группы обсуждения](/api/discussion/)
 
-Groups can be associated to a channel as a discussion group, to allow users to discuss about posts.
+Группы можно связать с каналом в качестве группы обсуждения, чтобы пользователи могли обсуждать посты.

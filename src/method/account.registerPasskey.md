@@ -1,18 +1,15 @@
 ---
-title: "account.registerPasskey (метод)"
+title: "account.registerPasskey"
 original: "https://core.telegram.org/method/account.registerPasskey"
 section: ref
 kind: method
+description: "Завершить регистрацию ключа доступа для текущего аккаунта; подробнее о полном порядке действий см. здесь »."
 layout: layout.njk
 ---
 
 # account.registerPasskey
 
-*Метод из схемы TL.*
-
-> Complete passkey registration for the current account, see [here »](https://core.telegram.org/api/passkeys#creating-a-passkey) for more info on the full flow.
-
-## Определение TL
+Завершить регистрацию ключа доступа для текущего аккаунта; подробнее о полном порядке действий см. [здесь »](/api/passkeys/#creating-a-passkey).
 
 ```
 passkey#98613ebf flags:# id:string name:string date:int software_emoji_id:flags.0?long last_usage_date:flags.1?int = Passkey;
@@ -20,27 +17,22 @@ passkey#98613ebf flags:# id:string name:string date:int software_emoji_id:flags.
 account.registerPasskey#55b41fd6 credential:InputPasskeyCredential = Passkey;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| credential | [InputPasskeyCredential](/type/InputPasskeyCredential/) | Registration result. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>credential</strong></td><td style="text-align: center;"><a href="/type/InputPasskeyCredential">InputPasskeyCredential</a></td><td>Результат регистрации.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Passkey](/type/Passkey/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CREDENTIAL_INVALID | The specified credential is invalid. |
-| 400 | PASSKEY_ORIGIN_MISMATCH | Third-party clients currently don't support passkeys even when changing the origin. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CREDENTIAL_INVALID</td><td>Указанные платёжные реквизиты недействительны.</td></tr><tr><td>400</td><td>PASSKEY_ORIGIN_MISMATCH</td><td>Сторонние клиенты пока не поддерживают passkey, даже при смене origin.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

@@ -1,18 +1,15 @@
 ---
-title: "account.checkUsername (метод)"
+title: "account.checkUsername"
 original: "https://core.telegram.org/method/account.checkUsername"
 section: ref
 kind: method
+description: "Проверяет корректность имени пользователя и его доступность."
 layout: layout.njk
 ---
 
 # account.checkUsername
 
-*Метод из схемы TL.*
-
-> Validates a username and checks availability.
-
-## Определение TL
+Проверяет корректность имени пользователя и его доступность.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,22 +18,16 @@ boolTrue#997275b5 = Bool;
 account.checkUsername#2714d86c username:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| username | [string](/type/string/) | username Accepted characters: A-z (case-insensitive), 0-9 and underscores. Length: 5-32 characters. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>username</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>имя пользователя<br>Допустимые символы: A-z (без учёта регистра), 0-9 и подчёркивания.<br>Длина: 5–32 символа.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | USERNAME_INVALID | The provided username is not valid. |
-| 400 | USERNAME_OCCUPIED | The provided username is already occupied. |
-| 400 | USERNAME_PURCHASE_AVAILABLE | The specified username can be purchased on [https://fragment.com](https://fragment.com). |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>USERNAME_INVALID</td><td>Указанное имя пользователя недействительно.</td></tr><tr><td>400</td><td>USERNAME_OCCUPIED</td><td>Указанное имя пользователя уже занято.</td></tr><tr><td>400</td><td>USERNAME_PURCHASE_AVAILABLE</td><td>Указанное имя пользователя можно приобрести на <a href="https://fragment.com">https://fragment.com</a>.</td></tr></tbody></table>

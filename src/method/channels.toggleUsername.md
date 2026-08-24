@@ -1,18 +1,15 @@
 ---
-title: "channels.toggleUsername (метод)"
+title: "channels.toggleUsername"
 original: "https://core.telegram.org/method/channels.toggleUsername"
 section: ref
 kind: method
+description: "Активировать или деактивировать купленное на fragment.com имя пользователя, связанное с принадлежащими нам супергруппой или каналом."
 layout: layout.njk
 ---
 
 # channels.toggleUsername
 
-*Метод из схемы TL.*
-
-> Activate or deactivate a purchased [fragment.com](https://fragment.com) username associated to a [supergroup or channel](https://core.telegram.org/api/channel) we own.
-
-## Определение TL
+Активировать или деактивировать купленное на [fragment.com](https://fragment.com) имя пользователя, связанное с принадлежащими нам [супергруппой или каналом](/api/channel/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,34 +18,22 @@ boolTrue#997275b5 = Bool;
 channels.toggleUsername#50f24105 channel:InputChannel username:string active:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | [Supergroup or channel](https://core.telegram.org/api/channel) |
-| username | [string](/type/string/) | Username |
-| active | [Bool](/type/Bool/) | Whether to activate or deactivate the username |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Супергруппа или канал</a></td></tr><tr><td><strong>username</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Имя пользователя</td></tr><tr><td><strong>active</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Активировать или деактивировать имя пользователя</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | USERNAMES_ACTIVE_TOO_MUCH | The maximum number of active usernames was reached. |
-| 400 | USERNAME_INVALID | The provided username is not valid. |
-| 400 | USERNAME_NOT_MODIFIED | The username was not modified. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>USERNAMES_ACTIVE_TOO_MUCH</td><td>Достигнуто максимальное количество активных имён пользователя.</td></tr><tr><td>400</td><td>USERNAME_INVALID</td><td>Указанное имя пользователя недействительно.</td></tr><tr><td>400</td><td>USERNAME_NOT_MODIFIED</td><td>Имя пользователя не было изменено.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

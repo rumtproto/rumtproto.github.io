@@ -1,36 +1,30 @@
 ---
-title: "messageEntityBankCard (конструктор)"
+title: "messageEntityBankCard"
 original: "https://core.telegram.org/constructor/messageEntityBankCard"
 section: ref
 kind: constructor
+description: "Обозначает номер банковской карты"
 layout: layout.njk
 ---
 
 # messageEntityBankCard
 
-*Конструктор из схемы TL.*
-
-> Indicates a credit card number
-
-## Определение TL
+Обозначает номер банковской карты
 
 ```
 messageEntityBankCard#761e6af4 offset:int length:int = MessageEntity;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| offset | [int](/type/int/) | Offset of message entity within message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)) |
-| length | [int](/type/int/) | Length of message entity within message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Смещение сущности оформления в сообщении (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>)</td></tr><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Длина сущности оформления в сообщении (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageEntity](/type/MessageEntity/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

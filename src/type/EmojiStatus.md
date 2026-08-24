@@ -1,18 +1,15 @@
 ---
-title: "EmojiStatus (тип)"
+title: "EmojiStatus"
 original: "https://core.telegram.org/type/EmojiStatus"
 section: ref
 kind: type
+description: "Эмодзи-статус"
 layout: layout.njk
 ---
 
 # EmojiStatus
 
-*Тип из схемы TL.*
-
-> [Emoji status](https://core.telegram.org/api/emoji-status)
-
-## Определение TL
+[Эмодзи-статус](/api/emoji-status/)
 
 ```
 emojiStatusEmpty#2de11aae = EmojiStatus;
@@ -21,17 +18,12 @@ emojiStatusCollectible#7184603b flags:# collectible_id:long document_id:long tit
 inputEmojiStatusCollectible#7141dbf flags:# collectible_id:long until:flags.0?int = EmojiStatus;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [emojiStatusEmpty](/constructor/emojiStatusEmpty/) | No emoji status is set |
-| [emojiStatus](/constructor/emojiStatus/) | An [emoji status](https://core.telegram.org/api/emoji-status) |
-| [emojiStatusCollectible](/constructor/emojiStatusCollectible/) | An owned or [hosted collectible gift »](https://core.telegram.org/api/gifts#hosted-collectible-gifts) as emoji status. Cannot be passed to [account.updateEmojiStatus](/method/account.updateEmojiStatus/), must be converted to an [inputEmojiStatusCollectible](/constructor/inputEmojiStatusCollectible/) first before passing it to that method. |
-| [inputEmojiStatusCollectible](/constructor/inputEmojiStatusCollectible/) | An owned or [hosted collectible gift »](https://core.telegram.org/api/gifts#hosted-collectible-gifts) as emoji status: can only be used in [account.updateEmojiStatus](/method/account.updateEmojiStatus/), is never returned by the API. Note that once set, the status will be returned to users as a [emojiStatusCollectible](/constructor/emojiStatusCollectible/) constructor, instead (which cannot be passed to [account.updateEmojiStatus](/method/account.updateEmojiStatus/), and must be converted to an [inputEmojiStatusCollectible](/constructor/inputEmojiStatusCollectible/) first). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/emojiStatusEmpty">emojiStatusEmpty</a></td><td>Эмодзи-статус не установлен</td></tr><tr><td><a href="/constructor/emojiStatus">emojiStatus</a></td><td><a href="/api/emoji-status">Статус эмодзи</a></td></tr><tr><td><a href="/constructor/emojiStatusCollectible">emojiStatusCollectible</a></td><td>Принадлежащий пользователю или <a href="/api/gifts#hosted-collectible-gifts">размещённый коллекционный подарок »</a> в качестве эмодзи-статуса.<br><br><strong>Нельзя</strong> передавать в <a href="/method/account.updateEmojiStatus">account.updateEmojiStatus</a>: перед вызовом этого метода необходимо преобразовать его в <a href="/constructor/inputEmojiStatusCollectible">inputEmojiStatusCollectible</a>.</td></tr><tr><td><a href="/constructor/inputEmojiStatusCollectible">inputEmojiStatusCollectible</a></td><td>Принадлежащий пользователю или <a href="/api/gifts#hosted-collectible-gifts">размещённый коллекционный подарок »</a> в качестве эмодзи-статуса: может использоваться только в <a href="/method/account.updateEmojiStatus">account.updateEmojiStatus</a> и никогда не возвращается API.<br><br>Учтите, что после установки статус будет возвращаться пользователям в виде конструктора <a href="/constructor/emojiStatusCollectible">emojiStatusCollectible</a>, который <strong>нельзя</strong> передавать в <a href="/method/account.updateEmojiStatus">account.updateEmojiStatus</a> и который необходимо предварительно преобразовать в <a href="/constructor/inputEmojiStatusCollectible">inputEmojiStatusCollectible</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

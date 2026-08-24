@@ -1,36 +1,30 @@
 ---
-title: "messages.foundStickerSets (конструктор)"
+title: "messages.foundStickerSets"
 original: "https://core.telegram.org/constructor/messages.foundStickerSets"
 section: ref
 kind: constructor
+description: "Найденные наборы стикеров"
 layout: layout.njk
 ---
 
 # messages.foundStickerSets
 
-*Конструктор из схемы TL.*
-
-> Found stickersets
-
-## Определение TL
+Найденные наборы стикеров
 
 ```
 messages.foundStickerSets#8af09dd2 hash:long sets:Vector<StickerSetCovered> = messages.FoundStickerSets;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| sets | [Vector](https://core.telegram.org/type/Vector%20t)<[StickerSetCovered](/type/StickerSetCovered/)> | Found stickersets |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>sets</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StickerSetCovered">StickerSetCovered</a>&gt;</td><td>Найденные наборы стикеров</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.FoundStickerSets](/type/messages.FoundStickerSets/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

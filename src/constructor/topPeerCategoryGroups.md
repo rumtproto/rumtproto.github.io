@@ -1,27 +1,24 @@
 ---
-title: "topPeerCategoryGroups (конструктор)"
+title: "topPeerCategoryGroups"
 original: "https://core.telegram.org/constructor/topPeerCategoryGroups"
 section: ref
 kind: constructor
+description: "Часто открываемые группы и супергруппы"
 layout: layout.njk
 ---
 
 # topPeerCategoryGroups
 
-*Конструктор из схемы TL.*
-
-> Often-opened groups and supergroups
-
-## Определение TL
+Часто открываемые группы и супергруппы
 
 ```
 topPeerCategoryGroups#bd17a14a = TopPeerCategory;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [TopPeerCategory](/type/TopPeerCategory/)

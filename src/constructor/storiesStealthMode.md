@@ -1,37 +1,30 @@
 ---
-title: "storiesStealthMode (конструктор)"
+title: "storiesStealthMode"
 original: "https://core.telegram.org/constructor/storiesStealthMode"
 section: ref
 kind: constructor
+description: "Информация о текущем сеансе скрытого режима."
 layout: layout.njk
 ---
 
 # storiesStealthMode
 
-*Конструктор из схемы TL.*
-
-> Information about the current [stealth mode](https://core.telegram.org/api/stories#stealth-mode) session.
-
-## Определение TL
+Информация о текущем сеансе [скрытого режима](/api/stories/#stealth-mode).
 
 ```
 storiesStealthMode#712e27fd flags:# active_until_date:flags.0?int cooldown_until_date:flags.1?int = StoriesStealthMode;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| active_until_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | The date up to which stealth mode will be active. |
-| cooldown_until_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | The date starting from which the user will be allowed to re-enable stealth mode again. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>active_until_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Дата, до которой будет действовать скрытый режим.</td></tr><tr><td><strong>cooldown_until_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Дата, начиная с которой пользователю будет снова разрешено включить скрытый режим.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StoriesStealthMode](/type/StoriesStealthMode/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

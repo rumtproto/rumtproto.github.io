@@ -1,47 +1,34 @@
 ---
-title: "phoneCallAccepted (конструктор)"
+title: "phoneCallAccepted"
 original: "https://core.telegram.org/constructor/phoneCallAccepted"
 section: ref
 kind: constructor
+description: "Принятый звонок; подробнее о полном процессе см. здесь »."
 layout: layout.njk
 ---
 
 # phoneCallAccepted
 
-*Конструктор из схемы TL.*
-
-> An accepted phone call, see [here »](https://core.telegram.org/api/calls) for more info on the full flow.
-
-## Определение TL
+Принятый звонок; подробнее о полном процессе см. [здесь »](/api/calls/).
 
 ```
 phoneCallAccepted#3660c311 flags:# video:flags.6?true id:long access_hash:long date:int admin_id:long participant_id:long g_b:bytes protocol:PhoneCallProtocol = PhoneCall;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| video | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | Whether this is a video call |
-| id | [long](/type/long/) | ID of accepted phone call |
-| access_hash | [long](/type/long/) | Access hash of phone call |
-| date | [int](/type/int/) | When was the call accepted |
-| admin_id | [long](/type/long/) | ID of the call creator |
-| participant_id | [long](/type/long/) | ID of the other user in the call |
-| g_b | [bytes](/type/bytes/) | B parameter for [secure E2E phone call key exchange](https://core.telegram.org/api/end-to-end/voice-calls) |
-| protocol | [PhoneCallProtocol](/type/PhoneCallProtocol/) | Protocol to use for phone call |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>video</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Является ли это видеозвонком</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор принятого звонка</td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:access_hash] Хеш доступа звонка</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда звонок был принят</td></tr><tr><td><strong>admin_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор создателя звонка</td></tr><tr><td><strong>participant_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор второго пользователя в звонке</td></tr><tr><td><strong>g_b</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Параметр B для <a href="/api/end-to-end/voice-calls">защищённого обмена ключами сквозного шифрования звонка</a></td></tr><tr><td><strong>protocol</strong></td><td style="text-align: center;"><a href="/type/PhoneCallProtocol">PhoneCallProtocol</a></td><td>Протокол, используемый для телефонного звонка</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PhoneCall](/type/PhoneCall/)
 
-## Related pages
+### Связанные страницы
 
-#### [End-to-End Encrypted Voice Calls](https://core.telegram.org/api/end-to-end/voice-calls)
+#### [Сквозное шифрование голосовых звонков](/api/end-to-end/voice-calls/)
 
-Deprecated description of encryption in voice calls as implemented in Telegram apps older than version 7.0.
+Устаревшее описание шифрования в голосовых звонках, как оно было реализовано в приложениях Telegram до версии 7.0.
 
-#### [Phone calls](https://core.telegram.org/api/calls)
+#### [Звонки](/api/calls/)
 
-Telegram supports end-to-end-encrypted one-to-one voice and video calls.
+Telegram поддерживает голосовые и видеозвонки один на один со сквозным шифрованием.

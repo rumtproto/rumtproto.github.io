@@ -1,18 +1,15 @@
 ---
-title: "auth.logOut (метод)"
+title: "auth.logOut"
 original: "https://core.telegram.org/method/auth.logOut"
 section: ref
 kind: method
+description: "Выполняет выход пользователя."
 layout: layout.njk
 ---
 
 # auth.logOut
 
-*Метод из схемы TL.*
-
-> Logs out the user.
-
-## Определение TL
+Выполняет выход пользователя.
 
 ```
 auth.loggedOut#c3a2835f flags:# future_auth_token:flags.0?bytes = auth.LoggedOut;
@@ -20,12 +17,12 @@ auth.loggedOut#c3a2835f flags:# future_auth_token:flags.0?bytes = auth.LoggedOut
 auth.logOut#3e72ba19 = auth.LoggedOut;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [auth.LoggedOut](/type/auth.LoggedOut/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам

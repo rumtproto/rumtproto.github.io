@@ -1,47 +1,37 @@
 ---
-title: "stories.readStories (метод)"
+title: "stories.readStories"
 original: "https://core.telegram.org/method/stories.readStories"
 section: ref
 kind: method
+description: "Отметить все истории указанного пира вплоть до определённого ID как прочитанные; всем авторизованным сессиям будет отправлено обновление updateReadStories."
 layout: layout.njk
 ---
 
 # stories.readStories
 
-*Метод из схемы TL.*
-
-> Mark all stories up to a certain ID as read, for a given peer; will emit an [updateReadStories](/constructor/updateReadStories/) update to all logged-in sessions.
-
-## Определение TL
+Отметить все истории указанного пира вплоть до определённого ID как прочитанные; всем авторизованным сессиям будет отправлено обновление [updateReadStories](/constructor/updateReadStories/).
 
 ```
 ---functions---
 stories.readStories#a556dac8 peer:InputPeer max_id:int = Vector<int>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The peer whose stories should be marked as read. |
-| max_id | [int](/type/int/) | Mark all stories up to and including this ID as read |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, истории которого нужно пометить как прочитанные.</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Отметить как прочитанные все истории вплоть до этого ID включительно</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MAX_ID_INVALID | The provided max ID is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | STORIES_NEVER_CREATED | This peer hasn't ever posted any stories. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MAX_ID_INVALID</td><td>Указанный максимальный идентификатор недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>STORIES_NEVER_CREATED</td><td>Этот пир ни разу не публиковал историй.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [updateReadStories](/constructor/updateReadStories/)
 
-Stories of a specific peer were marked as read.
+Истории определённого пира были отмечены как прочитанные.

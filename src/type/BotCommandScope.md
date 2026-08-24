@@ -1,18 +1,15 @@
 ---
-title: "BotCommandScope (тип)"
+title: "BotCommandScope"
 original: "https://core.telegram.org/type/BotCommandScope"
 section: ref
 kind: type
+description: "Представляет область видимости, в которой будут действовать команды бота, заданные с помощью bots.setBotCommands."
 layout: layout.njk
 ---
 
 # BotCommandScope
 
-*Тип из схемы TL.*
-
-> Represents a scope where the bot commands, specified using [bots.setBotCommands](/method/bots.setBotCommands/) will be valid.
-
-## Определение TL
+Представляет область видимости, в которой будут действовать команды бота, заданные с помощью [bots.setBotCommands](/method/bots.setBotCommands/).
 
 ```
 botCommandScopeDefault#2f6cb2ab = BotCommandScope;
@@ -24,20 +21,12 @@ botCommandScopePeerAdmins#3fd863d1 peer:InputPeer = BotCommandScope;
 botCommandScopePeerUser#a1321f3 peer:InputPeer user_id:InputUser = BotCommandScope;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [botCommandScopeDefault](/constructor/botCommandScopeDefault/) | The commands will be valid in all dialogs |
-| [botCommandScopeUsers](/constructor/botCommandScopeUsers/) | The specified bot commands will only be valid in all private chats with users. |
-| [botCommandScopeChats](/constructor/botCommandScopeChats/) | The specified bot commands will be valid in all [groups and supergroups](https://core.telegram.org/api/channel). |
-| [botCommandScopeChatAdmins](/constructor/botCommandScopeChatAdmins/) | The specified bot commands will be valid only for chat administrators, in all [groups and supergroups](https://core.telegram.org/api/channel). |
-| [botCommandScopePeer](/constructor/botCommandScopePeer/) | The specified bot commands will be valid only in a specific dialog. |
-| [botCommandScopePeerAdmins](/constructor/botCommandScopePeerAdmins/) | The specified bot commands will be valid for all admins of the specified [group or supergroup](https://core.telegram.org/api/channel). |
-| [botCommandScopePeerUser](/constructor/botCommandScopePeerUser/) | The specified bot commands will be valid only for a specific user in the specified [group or supergroup](https://core.telegram.org/api/channel). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/botCommandScopeDefault">botCommandScopeDefault</a></td><td>Команды будут действовать во всех диалогах</td></tr><tr><td><a href="/constructor/botCommandScopeUsers">botCommandScopeUsers</a></td><td>Указанные команды бота будут действовать только во всех личных чатах с пользователями.</td></tr><tr><td><a href="/constructor/botCommandScopeChats">botCommandScopeChats</a></td><td>Указанные команды бота будут действовать во всех <a href="/api/channel">группах и супергруппах</a>.</td></tr><tr><td><a href="/constructor/botCommandScopeChatAdmins">botCommandScopeChatAdmins</a></td><td>Указанные команды бота будут действовать только для администраторов чатов во всех <a href="/api/channel">группах и супергруппах</a>.</td></tr><tr><td><a href="/constructor/botCommandScopePeer">botCommandScopePeer</a></td><td>Указанные команды бота будут действовать только в конкретном диалоге.</td></tr><tr><td><a href="/constructor/botCommandScopePeerAdmins">botCommandScopePeerAdmins</a></td><td>Указанные команды бота будут действовать для всех администраторов указанной <a href="/api/channel">группы или супергруппы</a>.</td></tr><tr><td><a href="/constructor/botCommandScopePeerUser">botCommandScopePeerUser</a></td><td>Указанные команды бота будут действовать только для конкретного пользователя в указанной <a href="/api/channel">группе или супергруппе</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [bots.setBotCommands](/method/bots.setBotCommands/)
 
-Set bot command list
+Задать список команд бота

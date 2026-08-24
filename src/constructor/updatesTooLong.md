@@ -1,38 +1,36 @@
 ---
-title: "updatesTooLong (конструктор)"
+title: "updatesTooLong"
 original: "https://core.telegram.org/constructor/updatesTooLong"
 section: ref
 kind: constructor
+description: "Количество обновлений в очереди общего ящика сообщений слишком велико, чтобы доставить их пассивно через сокет; вызовите updates.getDifference, чтобы получить разницу, как описано…"
 layout: layout.njk
 ---
 
 # updatesTooLong
 
-*Конструктор из схемы TL.*
+Количество обновлений в очереди общего ящика сообщений слишком велико, чтобы доставить их пассивно через сокет; вызовите [updates.getDifference](/method/updates.getDifference/), чтобы получить разницу, как описано в [документации »](/api/updates/).
 
-> The number of queued updates in the common message box is too large to be delivered passively through the socket, invoke [updates.getDifference](/method/updates.getDifference/) to fetch the difference as specified in the [documentation »](/api/updates/).
-> Does **not** necessarily indicate the [message box size limit was reached](https://core.telegram.org/api/updates/#recovering-gaps-for-very-old-messages), it simply indicates that the number of queued updates in a message box is too large to be delivered passively through the socket.
-
-## Определение TL
+**Не** обязательно означает, что [достигнут предел размера ящика сообщений](/api/updates/#recovering-gaps-for-very-old-messages); это лишь означает, что число обновлений в очереди ящика сообщений слишком велико, чтобы доставить их пассивно через сокет.
 
 ```
 updatesTooLong#e317af7e = Updates;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Updates](/type/Updates/)
 
-## Related pages
+### Связанные страницы
 
 #### [updates.getDifference](/method/updates.getDifference/)
 
-Get new [updates](/api/updates/).
+Получить новые [обновления](/api/updates/).
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

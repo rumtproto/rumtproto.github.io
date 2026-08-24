@@ -1,36 +1,30 @@
 ---
-title: "statsDateRangeDays (конструктор)"
+title: "statsDateRangeDays"
 original: "https://core.telegram.org/constructor/statsDateRangeDays"
 section: ref
 kind: constructor
+description: "Диапазон дат статистики канала"
 layout: layout.njk
 ---
 
 # statsDateRangeDays
 
-*Конструктор из схемы TL.*
-
-> [Channel statistics](https://core.telegram.org/api/stats) date range
-
-## Определение TL
+Диапазон дат [статистики канала](/api/stats/)
 
 ```
 statsDateRangeDays#b637edaf min_date:int max_date:int = StatsDateRangeDays;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| min_date | [int](/type/int/) | Initial date |
-| max_date | [int](/type/int/) | Final date |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>min_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Начальная дата</td></tr><tr><td><strong>max_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Конечная дата</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StatsDateRangeDays](/type/StatsDateRangeDays/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channel statistics](https://core.telegram.org/api/stats)
+#### [Статистика каналов](/api/stats/)
 
-Telegram offers detailed channel statistics for channels and supergroups.
+Telegram предоставляет подробную статистику для каналов и супергрупп.

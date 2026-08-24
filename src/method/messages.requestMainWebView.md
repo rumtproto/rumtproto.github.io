@@ -1,18 +1,15 @@
 ---
-title: "messages.requestMainWebView (метод)"
+title: "messages.requestMainWebView"
 original: "https://core.telegram.org/method/messages.requestMainWebView"
 section: ref
 kind: method
+description: "Открыть Main Mini App."
 layout: layout.njk
 ---
 
 # messages.requestMainWebView
 
-*Метод из схемы TL.*
-
-> Open a [Main Mini App](https://core.telegram.org/api/bots/webapps#main-mini-apps).
-
-## Определение TL
+[@term:Mini App] Открыть [Main Mini App](/api/bots/webapps/#main-mini-apps).
 
 ```
 webViewResultUrl#4d22ff98 flags:# fullsize:flags.1?true fullscreen:flags.2?true query_id:flags.0?long url:string = WebViewResult;
@@ -20,41 +17,30 @@ webViewResultUrl#4d22ff98 flags:# fullsize:flags.1?true fullscreen:flags.2?true 
 messages.requestMainWebView#c9e01e7b flags:# compact:flags.7?true fullscreen:flags.8?true peer:InputPeer bot:InputUser start_param:flags.1?string theme_params:flags.0?DataJSON platform:string = WebViewResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| compact | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | If set, requests to open the mini app in compact mode (as opposed to normal or fullscreen mode). Must be set if the mode parameter of the [Main Mini App link](https://core.telegram.org/api/links#main-mini-app-links) is equal to compact. |
-| fullscreen | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[true](/constructor/true/) | If set, requests to open the mini app in fullscreen mode (as opposed to compact or normal mode). Must be set if the mode parameter of the [Main Mini App link](https://core.telegram.org/api/links#main-mini-app-links) is equal to fullscreen. |
-| peer | [InputPeer](/type/InputPeer/) | Currently open chat, may be [inputPeerEmpty](/constructor/inputPeerEmpty/) if no chat is currently open. |
-| bot | [InputUser](/type/InputUser/) | Bot that owns the main mini app. |
-| start_param | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Start parameter, if opening from a [Main Mini App link »](https://core.telegram.org/api/links#main-mini-app-links). |
-| theme_params | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[DataJSON](/type/DataJSON/) | [Theme parameters »](https://core.telegram.org/api/bots/webapps#theme-parameters) |
-| platform | [string](/type/string/) | Short name of the application; 0-64 English letters, digits, and underscores |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>compact</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Если установлено, запрашивает открытие mini app в компактном режиме (в отличие от обычного и полноэкранного режимов). Должно быть установлено, если параметр <code>mode</code> <a href="/api/links#main-mini-app-links">ссылки на основной Mini App</a> равен <code>compact</code>.</td></tr><tr><td><strong>fullscreen</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true">true</a></td><td>Если установлено, запрашивает открытие mini app в полноэкранном режиме (в отличие от компактного и обычного режимов). Должно быть установлено, если параметр <code>mode</code> <a href="/api/links#main-mini-app-links">ссылки на основной Mini App</a> равен <code>fullscreen</code>.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Открытый в данный момент чат; может иметь значение <a href="/constructor/inputPeerEmpty">inputPeerEmpty</a>, если сейчас не открыт ни один чат.</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот, которому принадлежит главный mini app.</td></tr><tr><td><strong>start_param</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Параметр start, если открытие происходит по <a href="/api/links#main-mini-app-links">ссылке на главный Mini App »</a>.</td></tr><tr><td><strong>theme_params</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/DataJSON">DataJSON</a></td><td><a href="/api/bots/webapps#theme-parameters">Параметры темы оформления »</a></td></tr><tr><td><strong>platform</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Краткое имя приложения; 0–64 латинские буквы, цифры и подчёркивания</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [WebViewResult](/type/WebViewResult/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
 #### [inputPeerEmpty](/constructor/inputPeerEmpty/)
 
-An empty constructor, no user or chat is defined.
+Пустой конструктор, не задан ни пользователь, ни чат.
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

@@ -1,33 +1,27 @@
 ---
-title: "MessageExtendedMedia (тип)"
+title: "MessageExtendedMedia"
 original: "https://core.telegram.org/type/MessageExtendedMedia"
 section: ref
 kind: type
+description: "Платное медиа, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # MessageExtendedMedia
 
-*Тип из схемы TL.*
-
-> [Paid media, see here »](https://core.telegram.org/api/paid-media) for more info.
-
-## Определение TL
+[Платное медиа, подробнее см. здесь »](/api/paid-media/).
 
 ```
 messageExtendedMediaPreview#ad628cc8 flags:# w:flags.0?int h:flags.0?int thumb:flags.1?PhotoSize video_duration:flags.2?int = MessageExtendedMedia;
 messageExtendedMedia#ee479c64 media:MessageMedia = MessageExtendedMedia;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messageExtendedMediaPreview](/constructor/messageExtendedMediaPreview/) | Paid media preview for not yet purchased paid media, [see here »](https://core.telegram.org/api/paid-media) for more info. |
-| [messageExtendedMedia](/constructor/messageExtendedMedia/) | Already purchased paid media, [see here »](https://core.telegram.org/api/paid-media) for more info. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messageExtendedMediaPreview">messageExtendedMediaPreview</a></td><td>Предпросмотр платных медиа, которые ещё не куплены, подробнее <a href="/api/paid-media">см. здесь »</a>.</td></tr><tr><td><a href="/constructor/messageExtendedMedia">messageExtendedMedia</a></td><td>Уже оплаченные платные медиафайлы; подробнее <a href="/api/paid-media">см. здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Paid media](https://core.telegram.org/api/paid-media)
+#### [Платные медиа](/api/paid-media/)
 
-Content creators can accept Stars by publishing paid photos or videos on their channels. Subscribers will be allowed to view such posts only after paying the author to unlock them.
+Авторы контента могут принимать Stars, публикуя в своих каналах платные фотографии и видео. Подписчики смогут просмотреть такие посты, только заплатив автору за их разблокировку.

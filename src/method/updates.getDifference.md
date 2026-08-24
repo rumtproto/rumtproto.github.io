@@ -1,18 +1,15 @@
 ---
-title: "updates.getDifference (метод)"
+title: "updates.getDifference"
 original: "https://core.telegram.org/method/updates.getDifference"
 section: ref
 kind: method
+description: "Получить новые обновления."
 layout: layout.njk
 ---
 
 # updates.getDifference
 
-*Метод из схемы TL.*
-
-> Get new [updates](/api/updates/).
-
-## Определение TL
+Получить новые [обновления](/api/updates/).
 
 ```
 updates.differenceEmpty#5d75a138 date:int seq:int = updates.Difference;
@@ -23,47 +20,26 @@ updates.differenceTooLong#4afe8f6d pts:int = updates.Difference;
 updates.getDifference#19c2f763 flags:# pts:int pts_limit:flags.1?int pts_total_limit:flags.0?int date:int qts:int qts_limit:flags.2?int = updates.Difference;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| pts | [int](/type/int/) | PTS, see [updates](/api/updates/). |
-| pts_limit | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | PTS limit |
-| pts_total_limit | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | For fast updating: if provided and pts + pts_total_limit < remote pts, [updates.differenceTooLong](/constructor/updates.differenceTooLong/) will be returned. Simply tells the server to not return the difference if it is bigger than pts_total_limit If the remote pts is too big (> ~4000000), this field will default to 1000000 |
-| date | [int](/type/int/) | date, see [updates](/api/updates/). |
-| qts | [int](/type/int/) | QTS, see [updates](/api/updates/). |
-| qts_limit | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | QTS limit |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] PTS, см. <a href="/api/updates">обновления</a>.</td></tr><tr><td><strong>pts_limit</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Ограничение по PTS</td></tr><tr><td><strong>pts_total_limit</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Для ускоренного получения обновлений: если параметр задан и <code>pts + pts_total_limit &lt; remote pts</code>, будет возвращён <a href="/constructor/updates.differenceTooLong">updates.differenceTooLong</a>.<br>Проще говоря, указывает серверу не возвращать разницу, если она больше <code>pts_total_limit</code><br>Если удалённое значение pts слишком велико (&gt; ~4000000), по умолчанию это поле принимает значение 1000000</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>дата, см. <a href="/api/updates">обновления</a>.</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] QTS, см. <a href="/api/updates">обновления</a>.</td></tr><tr><td><strong>qts_limit</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Ограничение по QTS</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [updates.Difference](/type/updates.Difference/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CDN_METHOD_INVALID | You can't call this method in a CDN DC. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | DATE_EMPTY | Date empty. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PERSISTENT_TIMESTAMP_EMPTY | Persistent timestamp empty. |
-| 400 | PERSISTENT_TIMESTAMP_INVALID | Persistent timestamp invalid. |
-| 500 | RANDOM_ID_DUPLICATE | You provided a random ID that was already used. |
-| 400 | USERNAME_INVALID | The provided username is not valid. |
-| 400 | USER_NOT_PARTICIPANT | You're not a member of this supergroup/channel. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CDN_METHOD_INVALID</td><td>Этот метод нельзя вызывать в CDN DC.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>DATE_EMPTY</td><td>Дата отсутствует.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PERSISTENT_TIMESTAMP_EMPTY</td><td>Постоянная метка времени пуста.</td></tr><tr><td>400</td><td>PERSISTENT_TIMESTAMP_INVALID</td><td>Недействительная постоянная метка времени.</td></tr><tr><td>500</td><td>RANDOM_ID_DUPLICATE</td><td>Вы передали случайный идентификатор, который уже использовался.</td></tr><tr><td>400</td><td>USERNAME_INVALID</td><td>Указанное имя пользователя недействительно.</td></tr><tr><td>400</td><td>USER_NOT_PARTICIPANT</td><td>Вы не состоите в этой супергруппе или канале.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
 #### [updates.differenceTooLong](/constructor/updates.differenceTooLong/)
 
-The difference is [too long](https://core.telegram.org/api/updates/#recovering-gaps), and the specified state must be used to refetch updates.
+Разница [слишком велика](/api/updates/#recovering-gaps), и для повторного получения обновлений следует использовать указанное состояние.

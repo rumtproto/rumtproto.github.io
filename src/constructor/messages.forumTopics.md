@@ -1,58 +1,46 @@
 ---
-title: "messages.forumTopics (конструктор)"
+title: "messages.forumTopics"
 original: "https://core.telegram.org/constructor/messages.forumTopics"
 section: ref
 kind: constructor
+description: "Содержит информацию о нескольких темах форума"
 layout: layout.njk
 ---
 
 # messages.forumTopics
 
-*Конструктор из схемы TL.*
-
-> Contains information about multiple [forum topics](https://core.telegram.org/api/forum#forum-topics)
-
-## Определение TL
+Содержит информацию о нескольких [темах форума](/api/forum/#forum-topics)
 
 ```
 messages.forumTopics#367617d3 flags:# order_by_create_date:flags.0?true count:int topics:Vector<ForumTopic> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> pts:int = messages.ForumTopics;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| order_by_create_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the returned topics are ordered by creation date; if set, pagination by offset_date should use [forumTopic](/constructor/forumTopic/).date; otherwise topics are ordered by the last message date, so paginate by the date of the [message](/type/Message/) referenced by [forumTopic](/constructor/forumTopic/).top_message. |
-| count | [int](/type/int/) | Total number of topics matching query; may be more than the topics contained in topics, in which case [pagination](https://core.telegram.org/api/offsets) is required. |
-| topics | [Vector](https://core.telegram.org/type/Vector%20t)<[ForumTopic](/type/ForumTopic/)> | Forum topics |
-| messages | [Vector](https://core.telegram.org/type/Vector%20t)<[Message](/type/Message/)> | Related messages (contains the messages mentioned by [forumTopic](/constructor/forumTopic/).top_message). |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Related chats |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Related users |
-| pts | [int](/type/int/) | [Event count after generation](/api/updates/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>order_by_create_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Упорядочены ли возвращаемые темы по дате создания; если установлено, для постраничной выборки по <code>offset_date</code> следует использовать <a href="/constructor/forumTopic">forumTopic</a>.<code>date</code>; иначе темы упорядочены по дате последнего сообщения, поэтому выборку следует вести по полю <code>date</code> <a href="/type/Message">сообщения</a>, на которое ссылается <a href="/constructor/forumTopic">forumTopic</a>.<code>top_message</code>.</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число тем, соответствующих запросу; может быть больше числа тем, содержащихся в <code>topics</code>, в этом случае требуется <a href="/api/offsets">постраничная выборка</a>.</td></tr><tr><td><strong>topics</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ForumTopic">ForumTopic</a>&gt;</td><td>Темы форума</td></tr><tr><td><strong>messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Message">Message</a>&gt;</td><td>Связанные сообщения (содержит сообщения, на которые ссылается <a href="/constructor/forumTopic">forumTopic</a>.<code>top_message</code>).</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Связанные чаты</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Связанные пользователи</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] <a href="/api/updates">Число событий после генерации</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.ForumTopics](/type/messages.ForumTopics/)
 
-## Related pages
+### Связанные страницы
 
 #### [forumTopic](/constructor/forumTopic/)
 
-Represents a [forum topic](https://core.telegram.org/api/forum#forum-topics).
+Представляет [тему форума](/api/forum/#forum-topics).
 
 #### [Message](/type/Message/)
 
-Object describing a message.
+Объект, описывающий сообщение.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

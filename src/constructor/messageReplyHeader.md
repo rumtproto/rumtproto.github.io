@@ -1,64 +1,46 @@
 ---
-title: "messageReplyHeader (конструктор)"
+title: "messageReplyHeader"
 original: "https://core.telegram.org/constructor/messageReplyHeader"
 section: ref
 kind: constructor
+description: "Сведения об ответах на сообщение и о ветке обсуждения"
 layout: layout.njk
 ---
 
 # messageReplyHeader
 
-*Конструктор из схемы TL.*
-
-> Message replies and [thread](https://core.telegram.org/api/threads) information
-
-## Определение TL
+Сведения об ответах на сообщение и о [ветке обсуждения](/api/threads/)
 
 ```
 messageReplyHeader#6917560b flags:# reply_to_scheduled:flags.2?true forum_topic:flags.3?true quote:flags.9?true reply_to_msg_id:flags.4?int reply_to_peer_id:flags.0?Peer reply_from:flags.5?MessageFwdHeader reply_media:flags.8?MessageMedia reply_to_top_id:flags.1?int quote_text:flags.6?string quote_entities:flags.7?Vector<MessageEntity> quote_offset:flags.10?int todo_item_id:flags.11?int = MessageReplyHeader;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| reply_to_scheduled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | This is a reply to a scheduled message. |
-| forum_topic | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether this message was sent in a [forum topic](https://core.telegram.org/api/forum#forum-topics) (except for the General topic). |
-| quote | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[true](/constructor/true/) | Whether this message is quoting a part of another message. |
-| reply_to_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[int](/type/int/) | ID of message to which this message is replying |
-| reply_to_peer_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Peer](/type/Peer/) | For replies sent in [channel discussion threads](https://core.telegram.org/api/threads) of which the current user is not a member, the discussion group ID |
-| reply_from | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[MessageFwdHeader](/type/MessageFwdHeader/) | When replying to a message sent by a certain peer to another chat, contains info about the peer that originally sent the message to that other chat. |
-| reply_media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[MessageMedia](/type/MessageMedia/) | When replying to a media sent by a certain peer to another chat, contains the media of the replied-to message. |
-| reply_to_top_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | ID of the message that started this [message thread](https://core.telegram.org/api/threads) |
-| quote_text | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[string](/type/string/) | Used to quote-reply to only a certain section (specified here) of the original message. |
-| quote_entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text](https://core.telegram.org/api/entities) from the quote_text field. |
-| quote_offset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[int](/type/int/) | Offset of the message quote_text within the original message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)). |
-| todo_item_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[int](/type/int/) | Can be set to reply to the specified item of a [todo list »](https://core.telegram.org/api/todo). |
-| poll_option | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[bytes](/type/bytes/) | If the message is a [reply to a specific poll answer option »](https://core.telegram.org/api/poll#replying-to-poll-options), the option bytes of the answer the reply is directed at. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>reply_to_scheduled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Это ответ на отложенное сообщение.</td></tr><tr><td><strong>forum_topic</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Было ли это сообщение отправлено в <a href="/api/forum#forum-topics">теме форума</a> (кроме темы General).</td></tr><tr><td><strong>quote</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/constructor/true">true</a></td><td>Цитирует ли это сообщение часть другого сообщения.</td></tr><tr><td><strong>reply_to_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int">int</a></td><td>Идентификатор сообщения, на которое отвечает это сообщение</td></tr><tr><td><strong>reply_to_peer_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Peer">Peer</a></td><td>Для ответов, отправленных в <a href="/api/threads">обсуждениях канала</a>, участником которых текущий пользователь не является, — идентификатор группы обсуждения</td></tr><tr><td><strong>reply_from</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/MessageFwdHeader">MessageFwdHeader</a></td><td>При ответе на сообщение, отправленное определённым пиром в другой чат, содержит информацию о пире, который изначально отправил это сообщение в тот другой чат.</td></tr><tr><td><strong>reply_media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/MessageMedia">MessageMedia</a></td><td>При ответе на медиа, отправленное определённым пиром в другой чат, содержит медиа сообщения, на которое дан ответ.</td></tr><tr><td><strong>reply_to_top_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Идентификатор сообщения, с которого началась эта <a href="/api/threads">ветка сообщений</a></td></tr><tr><td><strong>quote_text</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/string">string</a></td><td>Используется для ответа с цитированием только определённой части исходного сообщения (указанной здесь).</td></tr><tr><td><strong>quote_entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления текста</a> из поля <code>quote_text</code>.</td></tr><tr><td><strong>quote_offset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/int">int</a></td><td>Смещение текста <code>quote_text</code> внутри исходного сообщения (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>).</td></tr><tr><td><strong>todo_item_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/int">int</a></td><td>Может быть задано, чтобы ответить на указанный пункт <a href="/api/todo">списка задач »</a>.</td></tr><tr><td><strong>poll_option</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/bytes">bytes</a></td><td>Если сообщение является <a href="/api/poll#replying-to-poll-options">ответом на конкретный вариант ответа в опросе »</a> — байты <code>option</code> того варианта, которому адресован ответ.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageReplyHeader](/type/MessageReplyHeader/)
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.
 
-#### [Message threads](https://core.telegram.org/api/threads)
+#### [Треды сообщений](/api/threads/)
 
-Telegram allows commenting on a channel post or on a generic supergroup message, thanks to message threads.
+Благодаря веткам обсуждения Telegram позволяет комментировать пост канала или обычное сообщение супергруппы.
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Checklists and to-do lists](https://core.telegram.org/api/todo)
+#### [Чек-листы и списки задач](/api/todo/)
 
-Premium users can now create collaborative checklists in any chat to track tasks and coordinate teams — or manage shopping and to-do lists.
+Пользователи Premium теперь могут создавать совместные чек-листы в любом чате, чтобы отслеживать задачи и координировать команды — или вести списки покупок и дел.
 
-#### [Polls and quizzes](https://core.telegram.org/api/poll)
+#### [Опросы и викторины](/api/poll/)
 
-Telegram allows sending polls and quizzes, that can be voted on by thousands, if not millions of users in chats and channels.
+Telegram позволяет отправлять опросы и викторины, в которых могут проголосовать тысячи, если не миллионы пользователей в чатах и каналах.

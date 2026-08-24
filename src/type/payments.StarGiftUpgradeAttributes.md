@@ -1,18 +1,15 @@
 ---
-title: "Payments.StarGiftUpgradeAttributes (тип)"
+title: "payments.StarGiftUpgradeAttributes"
 original: "https://core.telegram.org/type/payments.StarGiftUpgradeAttributes"
 section: ref
 kind: type
+description: "Список только тех коллекционных атрибутов, которые могут появиться у типа подарка после его улучшения до коллекционного подарка »."
 layout: layout.njk
 ---
 
 # Payments.StarGiftUpgradeAttributes
 
-*Тип из схемы TL.*
-
-> List of just the collectible attributes that may appear for a gift type once it's upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
-
-## Определение TL
+Список только тех коллекционных атрибутов, которые могут появиться у типа подарка после его улучшения до [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
 ```
 payments.starGiftUpgradeAttributes#46c6e36f attributes:Vector<StarGiftAttribute> = payments.StarGiftUpgradeAttributes;
@@ -22,20 +19,16 @@ payments.starGiftUpgradeAttributes#46c6e36f attributes:Vector<StarGiftAttribute>
 payments.getStarGiftUpgradeAttributes#6d038b58 gift_id:long = payments.StarGiftUpgradeAttributes;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.starGiftUpgradeAttributes](/constructor/payments.starGiftUpgradeAttributes/) | List of just the collectible attributes that may appear for a gift type once it's upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starGiftUpgradeAttributes">payments.starGiftUpgradeAttributes</a></td><td>Список только тех коллекционных атрибутов, которые могут появиться у данного типа подарка после его улучшения до <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getStarGiftUpgradeAttributes](/method/payments.getStarGiftUpgradeAttributes/) | Obtains the full list of just the collectible attributes that may appear for a gift type once it's upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). The result may also include [starGiftAttributeModel](/constructor/starGiftAttributeModel/) constructors with the crafted flag set: these models are reserved for [crafting »](https://core.telegram.org/api/gifts#crafting-collectible-gifts) and should be filtered out from regular upgrade previews (and vice versa). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarGiftUpgradeAttributes">payments.getStarGiftUpgradeAttributes</a></td><td>Получает <strong>полный</strong> список только тех коллекционных атрибутов, которые могут появиться у типа подарка после его превращения в <a href="/api/gifts#collectible-gifts">коллекционный подарок »</a>.<br><br>Результат может также содержать конструкторы <a href="/constructor/starGiftAttributeModel">starGiftAttributeModel</a> с установленным флагом <code>crafted</code>: эти модели зарезервированы для <a href="/api/gifts#crafting-collectible-gifts">создания »</a> и должны отфильтровываться из обычных предпросмотров улучшения (и наоборот).</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

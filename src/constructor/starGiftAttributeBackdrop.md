@@ -1,45 +1,34 @@
 ---
-title: "starGiftAttributeBackdrop (конструктор)"
+title: "starGiftAttributeBackdrop"
 original: "https://core.telegram.org/constructor/starGiftAttributeBackdrop"
 section: ref
 kind: constructor
+description: "Подложка коллекционного подарка »."
 layout: layout.njk
 ---
 
 # starGiftAttributeBackdrop
 
-*Конструктор из схемы TL.*
-
-> The backdrop of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
-
-## Определение TL
+Подложка [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
 ```
 starGiftAttributeBackdrop#9f2504e4 name:string backdrop_id:int center_color:int edge_color:int pattern_color:int text_color:int rarity:StarGiftAttributeRarity = StarGiftAttribute;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| name | [string](/type/string/) | Name of the backdrop |
-| backdrop_id | [int](/type/int/) | Unique ID of the backdrop |
-| center_color | [int](/type/int/) | Color of the center of the backdrop in RGB24 format. |
-| edge_color | [int](/type/int/) | Color of the edges of the backdrop in RGB24 format. |
-| pattern_color | [int](/type/int/) | Color of the [starGiftAttributePattern](/constructor/starGiftAttributePattern/) applied on the backdrop in RGB24 format. |
-| text_color | [int](/type/int/) | Color of the text on the backdrop in RGB24 format. |
-| rarity | [StarGiftAttributeRarity](/type/StarGiftAttributeRarity/) | Rarity of this backdrop. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название подложки</td></tr><tr><td><strong>backdrop_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Уникальный идентификатор фона</td></tr><tr><td><strong>center_color</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Цвет центра подложки в формате RGB24.</td></tr><tr><td><strong>edge_color</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Цвет краёв фона в формате RGB24.</td></tr><tr><td><strong>pattern_color</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Цвет узора <a href="/constructor/starGiftAttributePattern">starGiftAttributePattern</a>, наложенного на подложку, в формате RGB24.</td></tr><tr><td><strong>text_color</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Цвет текста на фоне в формате RGB24.</td></tr><tr><td><strong>rarity</strong></td><td style="text-align: center;"><a href="/type/StarGiftAttributeRarity">StarGiftAttributeRarity</a></td><td>Редкость этой подложки.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftAttribute](/type/StarGiftAttribute/)
 
-## Related pages
+### Связанные страницы
 
 #### [starGiftAttributePattern](/constructor/starGiftAttributePattern/)
 
-A [sticker](https://core.telegram.org/api/stickers) applied on the backdrop of a [collectible gift »](https://core.telegram.org/api/gifts) using a repeating pattern.
+[Стикер](/api/stickers/), наложенный повторяющимся узором на подложку [коллекционного подарка »](/api/gifts/).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

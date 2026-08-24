@@ -1,37 +1,30 @@
 ---
-title: "updateSentStoryReaction (конструктор)"
+title: "updateSentStoryReaction"
 original: "https://core.telegram.org/constructor/updateSentStoryReaction"
 section: ref
 kind: constructor
+description: "Указывает, что мы отреагировали на историю »."
 layout: layout.njk
 ---
 
 # updateSentStoryReaction
 
-*Конструктор из схемы TL.*
-
-> Indicates we [reacted to a story »](https://core.telegram.org/api/stories#reactions).
-
-## Определение TL
+Указывает, что мы [отреагировали на историю »](/api/stories/#reactions).
 
 ```
 updateSentStoryReaction#7d627683 peer:Peer story_id:int reaction:Reaction = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | The peer that sent the story |
-| story_id | [int](/type/int/) | ID of the story we reacted to |
-| reaction | [Reaction](/type/Reaction/) | The reaction that was sent |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир, отправивший историю</td></tr><tr><td><strong>story_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор истории, на которую мы поставили реакцию</td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/type/Reaction">Reaction</a></td><td>Отправленная реакция</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

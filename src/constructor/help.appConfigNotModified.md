@@ -1,27 +1,24 @@
 ---
-title: "help.appConfigNotModified (конструктор)"
+title: "help.appConfigNotModified"
 original: "https://core.telegram.org/constructor/help.appConfigNotModified"
 section: ref
 kind: constructor
+description: "Параметры конфигурации клиента не изменились"
 layout: layout.njk
 ---
 
 # help.appConfigNotModified
 
-*Конструктор из схемы TL.*
-
-> The client configuration parameters haven't changed
-
-## Определение TL
+Параметры конфигурации клиента не изменились
 
 ```
 help.appConfigNotModified#7cde641d = help.AppConfig;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [help.AppConfig](/type/help.AppConfig/)

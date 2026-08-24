@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyKeyChatInvite (конструктор)"
+title: "inputPrivacyKeyChatInvite"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyChatInvite"
 section: ref
 kind: constructor
+description: "Смогут ли другие приглашать вас в чаты"
 layout: layout.njk
 ---
 
 # inputPrivacyKeyChatInvite
 
-*Конструктор из схемы TL.*
-
-> Whether people will be able to invite you to chats
-
-## Определение TL
+Смогут ли другие приглашать вас в чаты
 
 ```
 inputPrivacyKeyChatInvite#bdfb0426 = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)

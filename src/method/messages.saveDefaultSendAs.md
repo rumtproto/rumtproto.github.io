@@ -1,18 +1,15 @@
 ---
-title: "messages.saveDefaultSendAs (метод)"
+title: "messages.saveDefaultSendAs"
 original: "https://core.telegram.org/method/messages.saveDefaultSendAs"
 section: ref
 kind: method
+description: "Изменить пир по умолчанию, используемый при отправке сообщений, реакций и голосов в опросах в определённую группу"
 layout: layout.njk
 ---
 
 # messages.saveDefaultSendAs
 
-*Метод из схемы TL.*
-
-> Change the default peer that should be used when sending messages, reactions, poll votes to a specific group
-
-## Определение TL
+Изменить пир по умолчанию, используемый при отправке сообщений, реакций и голосов в опросах в определённую группу
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,23 +18,16 @@ boolTrue#997275b5 = Bool;
 messages.saveDefaultSendAs#ccfddf96 peer:InputPeer send_as:InputPeer = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Group |
-| send_as | [InputPeer](/type/InputPeer/) | The default peer that should be used when sending messages to the group |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Группа</td></tr><tr><td><strong>send_as</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Пир, используемый по умолчанию при отправке сообщений в группу</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | SEND_AS_PEER_INVALID | You can't send messages as the specified peer. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>SEND_AS_PEER_INVALID</td><td>Вы не можете отправлять сообщения от имени указанного пира.</td></tr></tbody></table>

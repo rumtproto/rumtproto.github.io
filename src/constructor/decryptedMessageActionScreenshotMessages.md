@@ -1,30 +1,25 @@
 ---
-title: "decryptedMessageActionScreenshotMessages (конструктор)"
+title: "decryptedMessageActionScreenshotMessages"
 original: "https://core.telegram.org/constructor/decryptedMessageActionScreenshotMessages"
 section: ref
 kind: constructor
+description: "Сделан снимок экрана."
 layout: layout.njk
 ---
 
 # decryptedMessageActionScreenshotMessages
 
-*Конструктор из схемы TL.*
-
-> A screenshot was taken.
-
-## Определение TL
+Сделан снимок экрана.
 
 ```
 ===8===
 decryptedMessageActionScreenshotMessages#8ac1f475 random_ids:Vector<long> = DecryptedMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| random_ids | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | List of affected message ids (that appeared on the screenshot) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>random_ids</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Список идентификаторов затронутых сообщений (попавших на снимок экрана)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DecryptedMessageAction](/type/DecryptedMessageAction/)

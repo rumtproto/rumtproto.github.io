@@ -1,39 +1,34 @@
 ---
-title: "starGiftAttributeIdModel (конструктор)"
+title: "starGiftAttributeIdModel"
 original: "https://core.telegram.org/constructor/starGiftAttributeIdModel"
 section: ref
 kind: constructor
+description: "Идентификатор модели коллекционного подарка »."
 layout: layout.njk
 ---
 
 # starGiftAttributeIdModel
 
-*Конструктор из схемы TL.*
-
-> The ID of a model of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
-
-## Определение TL
+Идентификатор модели [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
 ```
 starGiftAttributeIdModel#48aaae3c document_id:long = StarGiftAttributeId;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| document_id | [long](/type/long/) | The [sticker](https://core.telegram.org/api/stickers) representing the upgraded gift |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/stickers">Стикер</a>, представляющий улучшенный подарок</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftAttributeId](/type/StarGiftAttributeId/)
 
-## Related pages
+### Связанные страницы
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

@@ -1,35 +1,30 @@
 ---
-title: "dialogPeerFolder (конструктор)"
+title: "dialogPeerFolder"
 original: "https://core.telegram.org/constructor/dialogPeerFolder"
 section: ref
 kind: constructor
+description: "Папка пира"
 layout: layout.njk
 ---
 
 # dialogPeerFolder
 
-*Конструктор из схемы TL.*
-
-> [Peer folder](https://core.telegram.org/api/folders#peer-folders)
-
-## Определение TL
+[Папка пира](/api/folders/#peer-folders)
 
 ```
 dialogPeerFolder#514519e2 folder_id:int = DialogPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| folder_id | [int](/type/int/) | [Peer folder ID, for more info click here](https://core.telegram.org/api/folders#peer-folders) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>folder_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/folders#peer-folders">Идентификатор папки пира, подробнее см. здесь</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DialogPeer](/type/DialogPeer/)
 
-## Related pages
+### Связанные страницы
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.

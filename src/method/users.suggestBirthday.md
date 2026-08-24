@@ -1,18 +1,15 @@
 ---
-title: "users.suggestBirthday (метод)"
+title: "users.suggestBirthday"
 original: "https://core.telegram.org/method/users.suggestBirthday"
 section: ref
 kind: method
+description: "Предложить другому пользователю дату рождения; подробнее о датах рождения в API см. здесь »."
 layout: layout.njk
 ---
 
 # users.suggestBirthday
 
-*Метод из схемы TL.*
-
-> Suggest a birthday to another user, see [here »](https://core.telegram.org/api/profile#birthday) for more info on birthdays in the API.
-
-## Определение TL
+Предложить другому пользователю дату рождения; подробнее о датах рождения в API см. [здесь »](/api/profile/#birthday).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,28 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 users.suggestBirthday#fc533372 id:InputUser birthday:Birthday = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [InputUser](/type/InputUser/) | The user that will receive the suggested birthday date. |
-| birthday | [Birthday](/type/Birthday/) | The birthday to suggest. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Пользователь, которому будет предложена дата дня рождения.</td></tr><tr><td><strong>birthday</strong></td><td style="text-align: center;"><a href="/type/Birthday">Birthday</a></td><td>Предлагаемая дата рождения.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BIRTHDAY_ALREADY | The target user already has a birthday set. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BIRTHDAY_ALREADY</td><td>У целевого пользователя уже задана дата рождения.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

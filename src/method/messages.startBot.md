@@ -1,18 +1,15 @@
 ---
-title: "messages.startBot (метод)"
+title: "messages.startBot"
 original: "https://core.telegram.org/method/messages.startBot"
 section: ref
 kind: method
+description: "Начать переписку с ботом, используя параметр глубокой ссылки"
 layout: layout.njk
 ---
 
 # messages.startBot
 
-*Метод из схемы TL.*
-
-> Start a conversation with a bot using a [deep linking parameter](https://core.telegram.org/api/links#bot-links)
-
-## Определение TL
+Начать переписку с ботом, используя [параметр глубокой ссылки](/api/links/#bot-links)
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,42 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.startBot#e6df7378 bot:InputUser peer:InputPeer random_id:long start_param:string = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot | [InputUser](/type/InputUser/) | The bot |
-| peer | [InputPeer](/type/InputPeer/) | The chat where to start the bot, can be the bot's private chat or a group |
-| random_id | [long](/type/long/) | Random ID to avoid resending the same message. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| start_param | [string](/type/string/) | [Deep linking parameter](https://core.telegram.org/api/links#bot-links) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат, в котором требуется запустить бота: это может быть личный чат с ботом или группа</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:random_id] Случайный идентификатор, позволяющий избежать повторной отправки того же сообщения. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>start_param</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/links#bot-links">Параметр глубокой ссылки</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 500 | RANDOM_ID_DUPLICATE | You provided a random ID that was already used. |
-| 400 | START_PARAM_EMPTY | The start parameter is empty. |
-| 400 | START_PARAM_INVALID | Start parameter invalid. |
-| 400 | START_PARAM_TOO_LONG | Start parameter is too long. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>500</td><td>RANDOM_ID_DUPLICATE</td><td>Вы передали случайный идентификатор, который уже использовался.</td></tr><tr><td>400</td><td>START_PARAM_EMPTY</td><td>Параметр start пуст.</td></tr><tr><td>400</td><td>START_PARAM_INVALID</td><td>Недействительный параметр start.</td></tr><tr><td>400</td><td>START_PARAM_TOO_LONG</td><td>Слишком длинный параметр start.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

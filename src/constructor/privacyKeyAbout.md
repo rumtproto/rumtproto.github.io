@@ -1,27 +1,24 @@
 ---
-title: "privacyKeyAbout (конструктор)"
+title: "privacyKeyAbout"
 original: "https://core.telegram.org/constructor/privacyKeyAbout"
 section: ref
 kind: constructor
+description: "Могут ли другие видеть вашу биографию"
 layout: layout.njk
 ---
 
 # privacyKeyAbout
 
-*Конструктор из схемы TL.*
-
-> Whether people can see your bio
-
-## Определение TL
+Могут ли другие видеть вашу биографию
 
 ```
 privacyKeyAbout#a486b761 = PrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyKey](/type/PrivacyKey/)

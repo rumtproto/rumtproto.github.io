@@ -1,27 +1,24 @@
 ---
-title: "storage.filePartial (конструктор)"
+title: "storage.filePartial"
 original: "https://core.telegram.org/constructor/storage.filePartial"
 section: ref
 kind: constructor
+description: "Часть более крупного файла."
 layout: layout.njk
 ---
 
 # storage.filePartial
 
-*Конструктор из схемы TL.*
-
-> Part of a bigger file.
-
-## Определение TL
+Часть более крупного файла.
 
 ```
 storage.filePartial#40bc6f52 = storage.FileType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [storage.FileType](/type/storage.FileType/)

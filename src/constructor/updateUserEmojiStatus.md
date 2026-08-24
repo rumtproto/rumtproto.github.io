@@ -1,36 +1,30 @@
 ---
-title: "updateUserEmojiStatus (конструктор)"
+title: "updateUserEmojiStatus"
 original: "https://core.telegram.org/constructor/updateUserEmojiStatus"
 section: ref
 kind: constructor
+description: "Изменился эмодзи-статус определённого пользователя"
 layout: layout.njk
 ---
 
 # updateUserEmojiStatus
 
-*Конструктор из схемы TL.*
-
-> The [emoji status](https://core.telegram.org/api/emoji-status) of a certain user has changed
-
-## Определение TL
+Изменился [эмодзи-статус](/api/emoji-status/) определённого пользователя
 
 ```
 updateUserEmojiStatus#28373599 user_id:long emoji_status:EmojiStatus = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [long](/type/long/) | User ID |
-| emoji_status | [EmojiStatus](/type/EmojiStatus/) | New [emoji status](https://core.telegram.org/api/emoji-status) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя</td></tr><tr><td><strong>emoji_status</strong></td><td style="text-align: center;"><a href="/type/EmojiStatus">EmojiStatus</a></td><td>Новый <a href="/api/emoji-status">эмодзи-статус</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

@@ -1,31 +1,26 @@
 ---
-title: "account.PasswordInputSettings (тип)"
+title: "account.PasswordInputSettings"
 original: "https://core.telegram.org/type/account.PasswordInputSettings"
 section: ref
 kind: type
+description: "Конструктор для установки нового пароля двухфакторной аутентификации по SRP"
 layout: layout.njk
 ---
 
 # account.PasswordInputSettings
 
-*Тип из схемы TL.*
-
-> Constructor for setting up a new [2FA SRP password](/api/srp/)
-
-## Определение TL
+Конструктор для установки нового [пароля двухфакторной аутентификации по SRP](/api/srp/)
 
 ```
 account.passwordInputSettings#c23727c9 flags:# new_algo:flags.0?PasswordKdfAlgo new_password_hash:flags.0?bytes hint:flags.0?string email:flags.1?string new_secure_settings:flags.2?SecureSecretSettings = account.PasswordInputSettings;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.passwordInputSettings](/constructor/account.passwordInputSettings/) | Settings for setting up a new password |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.passwordInputSettings">account.passwordInputSettings</a></td><td>Параметры настройки нового пароля</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.

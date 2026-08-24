@@ -1,20 +1,19 @@
 ---
-title: "payments.getResaleStarGifts (метод)"
+title: "payments.getResaleStarGifts"
 original: "https://core.telegram.org/method/payments.getResaleStarGifts"
 section: ref
 kind: method
+description: "Получить коллекционные подарки определённого типа, выставленные на перепродажу; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # payments.getResaleStarGifts
 
-*Метод из схемы TL.*
+Получить [коллекционные подарки](/api/gifts/#collectible-gifts) определённого типа, выставленные на перепродажу; подробнее [см. здесь »](/api/gifts/#reselling-collectible-gifts).
 
-> Get [collectible gifts](https://core.telegram.org/api/gifts#collectible-gifts) of a specific type currently on resale, see [here »](https://core.telegram.org/api/gifts#reselling-collectible-gifts) for more info.
-> `sort_by_price` and `sort_by_num` are mutually exclusive, if neither are set results are sorted by the unixtime (descending) when their resell price was last changed.
-> See [here »](https://core.telegram.org/api/gifts#sending-gifts) for detailed documentation on this method.
+Параметры `sort_by_price` и `sort_by_num` взаимно исключают друг друга; если не задан ни один из них, результаты сортируются по времени последнего изменения цены перепродажи (unixtime, по убыванию).
 
-## Определение TL
+Подробную документацию по этому методу см. [здесь »](/api/gifts/#sending-gifts).
 
 ```
 payments.resaleStarGifts#947a12df flags:# count:int gifts:Vector<StarGift> next_offset:flags.0?string attributes:flags.1?Vector<StarGiftAttribute> attributes_hash:flags.1?long chats:Vector<Chat> counters:flags.2?Vector<StarGiftAttributeCounter> users:Vector<User> = payments.ResaleStarGifts;
@@ -22,54 +21,40 @@ payments.resaleStarGifts#947a12df flags:# count:int gifts:Vector<StarGift> next_
 payments.getResaleStarGifts#7a5fa236 flags:# sort_by_price:flags.1?true sort_by_num:flags.2?true for_craft:flags.4?true stars_only:flags.5?true attributes_hash:flags.0?long gift_id:long attributes:flags.3?Vector<StarGiftAttributeId> offset:string limit:int = payments.ResaleStarGifts;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| sort_by_price | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Sort gifts by price (ascending). |
-| sort_by_num | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Sort gifts by number (ascending). |
-| for_craft | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Only return collectible gifts that can be bought and used for [crafting »](https://core.telegram.org/api/gifts#crafting-collectible-gifts); render each returned gift's [starGiftUnique](/constructor/starGiftUnique/).craft_chance_permille as its crafting success contribution. |
-| stars_only | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Only return gifts that can be bought using [Stars](https://core.telegram.org/api/stars). |
-| attributes_hash | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | If a previous call to the method was made and [payments.resaleStarGifts](/constructor/payments.resaleStarGifts/).attributes_hash was set, pass it here to avoid returning any results if they haven't changed. Otherwise, set this flag and pass 0 to return [payments.resaleStarGifts](/constructor/payments.resaleStarGifts/).attributes_hash and [payments.resaleStarGifts](/constructor/payments.resaleStarGifts/).attributes, these two fields will not be set if this flag is not set. |
-| gift_id | [long](/type/long/) | Mandatory identifier of the base gift from which the collectible gift was upgraded. |
-| attributes | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftAttributeId](/type/StarGiftAttributeId/)> | Optionally filter gifts with the specified attributes. If no attributes of a specific type are specified, all attributes of that type are allowed. |
-| offset | [string](/type/string/) | Offset for pagination. If not equal to an empty string, [payments.resaleStarGifts](/constructor/payments.resaleStarGifts/).counters will not be set to avoid returning the counters every time a new page is fetched. |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>sort_by_price</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Сортировать подарки по цене (по возрастанию).</td></tr><tr><td><strong>sort_by_num</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Сортировать подарки по номеру (по возрастанию).</td></tr><tr><td><strong>for_craft</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Возвращать только коллекционные подарки, которые можно купить и использовать для <a href="/api/gifts#crafting-collectible-gifts">создания »</a>; поле <a href="/constructor/starGiftUnique">starGiftUnique</a>.<code>craft_chance_permille</code> каждого возвращённого подарка отображать как его вклад в вероятность успешного создания.</td></tr><tr><td><strong>stars_only</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Возвращать только подарки, которые можно купить за <a href="/api/stars">Stars</a>.</td></tr><tr><td><strong>attributes_hash</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Если метод уже вызывался ранее и было задано поле <a href="/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.<code>attributes_hash</code>, передайте его здесь, чтобы не получать результаты, если они не изменились.<br>Иначе задайте этот флаг и передайте <code>0</code>, чтобы получить <a href="/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.<code>attributes_hash</code> и <a href="/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.<code>attributes</code>; <strong>эти два поля не будут заданы</strong>, если данный флаг не установлен.</td></tr><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Обязательный идентификатор базового подарка, из которого был улучшен коллекционный подарок.</td></tr><tr><td><strong>attributes</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftAttributeId">StarGiftAttributeId</a>&gt;</td><td>Необязательно отбирать подарки с указанными атрибутами. Если атрибуты какого-либо типа не указаны, допускаются все атрибуты этого типа.</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Смещение для постраничной выборки. Если оно не равно пустой строке, поле <a href="/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.<code>counters</code> не будет задано, чтобы не возвращать счётчики при получении каждой новой страницы.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.ResaleStarGifts](/type/payments.ResaleStarGifts/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | STARGIFT_ATTRIBUTE_INVALID | One of the specified star gift attributes is invalid. |
-| 400 | STARGIFT_INVALID | The passed gift is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>STARGIFT_ATTRIBUTE_INVALID</td><td>Один из указанных атрибутов звёздного подарка недействителен.</td></tr><tr><td>400</td><td>STARGIFT_INVALID</td><td>Переданный подарок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [starGiftUnique](/constructor/starGiftUnique/)
 
-Represents a [collectible star gift, see here »](https://core.telegram.org/api/gifts#collectible-gifts) for more info.
+Представляет коллекционный звёздный подарок, [подробнее см. здесь »](/api/gifts/#collectible-gifts).
 
-The sticker that represents the gift is contained in a [starGiftAttributeModel](/constructor/starGiftAttributeModel/) object in `attributes`.
+Стикер, представляющий подарок, содержится в объекте [starGiftAttributeModel](/constructor/starGiftAttributeModel/) в поле `attributes`.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
 #### [payments.resaleStarGifts](/constructor/payments.resaleStarGifts/)
 
-List of gifts currently on [resale »](https://core.telegram.org/api/gifts#reselling-collectible-gifts).
+Список подарков, выставленных на [перепродажу »](/api/gifts/#reselling-collectible-gifts).
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

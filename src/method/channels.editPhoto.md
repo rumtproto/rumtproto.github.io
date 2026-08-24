@@ -1,18 +1,15 @@
 ---
-title: "channels.editPhoto (метод)"
+title: "channels.editPhoto"
 original: "https://core.telegram.org/method/channels.editPhoto"
 section: ref
 kind: method
+description: "Изменить фотографию канала/супергруппы"
 layout: layout.njk
 ---
 
 # channels.editPhoto
 
-*Метод из схемы TL.*
-
-> Change the photo of a [channel/supergroup](https://core.telegram.org/api/channel)
-
-## Определение TL
+Изменить фотографию [канала/супергруппы](/api/channel/)
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,45 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.editPhoto#f12e57c9 channel:InputChannel photo:InputChatPhoto = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | Channel/supergroup whose photo should be edited |
-| photo | [InputChatPhoto](/type/InputChatPhoto/) | New photo |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал или супергруппа, фотографию которых нужно изменить</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/type/InputChatPhoto">InputChatPhoto</a></td><td>Новая фотография</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 403 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_INVALID | Invalid chat. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | FILE_PARTS_INVALID | The number of file parts is invalid. |
-| 400 | FILE_REFERENCE_INVALID | The specified [file reference](https://core.telegram.org/api/file-references) is invalid. |
-| 400 | IMAGE_PROCESS_FAILED | Failure while processing image. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | PHOTO_CROP_SIZE_SMALL | Photo is too small. |
-| 400 | PHOTO_EXT_INVALID | The extension of the photo is invalid. |
-| 400 | PHOTO_FILE_MISSING | Profile photo file missing. |
-| 400 | PHOTO_INVALID | Photo invalid. |
-| 400 | STICKER_MIME_INVALID | The specified sticker MIME type is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>403</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_INVALID</td><td>Недействительный чат.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>FILE_PARTS_INVALID</td><td>Недопустимое число частей файла.</td></tr><tr><td>400</td><td>FILE_REFERENCE_INVALID</td><td>Указанная <a href="/api/file-references">ссылка на файл</a> недействительна.</td></tr><tr><td>400</td><td>IMAGE_PROCESS_FAILED</td><td>Сбой при обработке изображения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>PHOTO_CROP_SIZE_SMALL</td><td>Фотография слишком мала.</td></tr><tr><td>400</td><td>PHOTO_EXT_INVALID</td><td>Недопустимое расширение фотографии.</td></tr><tr><td>400</td><td>PHOTO_FILE_MISSING</td><td>Отсутствует файл фотографии профиля.</td></tr><tr><td>400</td><td>PHOTO_INVALID</td><td>Недействительная фотография.</td></tr><tr><td>400</td><td>STICKER_MIME_INVALID</td><td>Указанный MIME-тип стикера недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [File references](https://core.telegram.org/api/file-references)
+#### [Ссылки на файлы](/api/file-references/)
 
-How to handle file references.
+Как работать со ссылками на файлы.

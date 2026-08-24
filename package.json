@@ -1,20 +1,35 @@
 {
-  "name": "mtproto-docs-ru",
+  "name": "rumtproto.github.io",
   "version": "1.0.0",
-  "description": "Russian translation of core.telegram.org/mtproto docs, built with Eleventy",
-  "main": "index.js",
+  "description": "Полный русский перевод документации Telegram (MTProto, Telegram API, схема TL), собирается на Eleventy",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy && pagefind --site docs",
     "serve": "eleventy --serve",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf docs",
+    "check": "node tools/verify.mjs",
+    "audit": "node tools/audit.mjs && node tools/checkrefs.mjs",
+    "en": "node tools/gen_en.mjs",
+    "chunks": "node tools/chunk_pages.mjs",
+    "assemble": "node tools/assemble.mjs",
+    "refstrings": "node tools/refstrings.mjs && node tools/tmbatches.mjs",
+    "genrefs": "node tools/genrefs.mjs && node tools/genrefindexes.mjs",
+    "nav": "node tools/genanchors.mjs && node tools/gennav.mjs",
+    "regenerate": "npm run en && npm run assemble && npm run genrefs && npm run nav && npm run build && npm run check"
   },
-  "keywords": [],
+  "keywords": [
+    "telegram",
+    "mtproto",
+    "documentation",
+    "russian",
+    "translation"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
     "markdown-it-anchor": "^9.2.1",
+    "pagefind": "^1.5.2",
     "turndown": "^7.2.4"
   },
   "private": true

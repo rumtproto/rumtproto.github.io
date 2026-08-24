@@ -1,18 +1,15 @@
 ---
-title: "phone.sendConferenceCallBroadcast (метод)"
+title: "phone.sendConferenceCallBroadcast"
 original: "https://core.telegram.org/method/phone.sendConferenceCallBroadcast"
 section: ref
 kind: method
+description: "Отправить сообщение проверки в подцепочку 1 конференц-звонка, см. подцепочки »."
 layout: layout.njk
 ---
 
 # phone.sendConferenceCallBroadcast
 
-*Метод из схемы TL.*
-
-> Submit a verification message to conference call subchain `1`, see [subchains »](https://core.telegram.org/api/end-to-end/group-calls#subchains).
-
-## Определение TL
+Отправить сообщение проверки в подцепочку `1` конференц-звонка, см. [подцепочки »](/api/end-to-end/group-calls/#subchains).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,27 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.sendConferenceCallBroadcast#c6701900 call:InputGroupCall block:bytes = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Conference whose verification subchain should receive the message |
-| block | [bytes](/type/bytes/) | Serialized e2e.chain.GroupBroadcast verification message. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Конференция, подцепочка проверки которой должна получить сообщение</td></tr><tr><td><strong>block</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Сериализованное сообщение проверки <code>e2e.chain.GroupBroadcast</code>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [E2E Group Calls](https://core.telegram.org/api/end-to-end/group-calls)
+#### [Групповые звонки с E2E-шифрованием](/api/end-to-end/group-calls/)
 
-End-to-end encryption used for Telegram group voice and video calls, using a blockchain for state management.
+Сквозное шифрование, применяемое в групповых голосовых и видеозвонках Telegram; состояние хранится в блокчейне.

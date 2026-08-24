@@ -2,769 +2,800 @@
 title: "Методы — справочник схемы TL"
 original: "https://core.telegram.org/schema"
 section: ref
+description: "Алфавитный указатель всех 787 методов схемы TL Telegram с кратким описанием каждого."
 layout: layout.njk
 ---
 
-# Методы — справочник схемы TL
+# Методы
 
-Полный список: каждый метод схемы TL со ссылкой на страницу с определением, параметрами и описанием. Всего: **757**.
+Все методы схемы TL (787). Имена ведут на страницы с полным определением, параметрами, результатом и возможными ошибками.
 
 | Название | Описание |
 |---|---|
-| [account.acceptAuthorization](/method/account.acceptAuthorization/) | Sends a Telegram Passport authorization form, effectively sharing data with the service |
-| [account.cancelPasswordEmail](/method/account.cancelPasswordEmail/) | Cancel the code that was sent to verify an email to use as [2FA recovery method](/api/srp/). |
-| [account.changeAuthorizationSettings](/method/account.changeAuthorizationSettings/) | Change settings related to a session. |
-| [account.changePhone](/method/account.changePhone/) | Change the phone number of the current account |
-| [account.checkUsername](/method/account.checkUsername/) | Validates a username and checks availability. |
-| [account.clearRecentEmojiStatuses](/method/account.clearRecentEmojiStatuses/) | Clears list of recently used [emoji statuses](https://core.telegram.org/api/emoji-status) |
-| [account.confirmPasswordEmail](/method/account.confirmPasswordEmail/) | Verify an email to use as [2FA recovery method](/api/srp/). |
-| [account.confirmPhone](/method/account.confirmPhone/) | Confirm a phone number to cancel account deletion, for more info [click here »](https://core.telegram.org/api/account-deletion) |
-| [account.createBusinessChatLink](/method/account.createBusinessChatLink/) | Create a [business chat deep link »](https://core.telegram.org/api/business#business-chat-links). |
-| [account.createTheme](/method/account.createTheme/) | Create a theme |
-| [account.declinePasswordReset](/method/account.declinePasswordReset/) | Abort a pending 2FA password reset, [see here for more info »](https://core.telegram.org/api/srp/#password-reset) |
-| [account.deleteAccount](/method/account.deleteAccount/) | Delete the user's account from the telegram servers. Can also be used to delete the account of a user that provided the login code, but forgot the 2FA password and no recovery method is configured, see [here »](https://core.telegram.org/api/srp/#password-recovery) for more info on password recovery, and [here »](https://core.telegram.org/api/account-deletion) for more info on account deletion. |
-| [account.deleteAutoSaveExceptions](/method/account.deleteAutoSaveExceptions/) | Clear all peer-specific autosave settings. |
-| [account.deleteBusinessChatLink](/method/account.deleteBusinessChatLink/) | Delete a [business chat deep link »](https://core.telegram.org/api/business#business-chat-links). |
-| [account.deletePasskey](/method/account.deletePasskey/) | Delete a passkey associated to the current account, see [here »](https://core.telegram.org/api/passkeys#delete-passkeys) for more info. |
-| [account.deleteSecureValue](/method/account.deleteSecureValue/) | Delete stored [Telegram Passport](https://core.telegram.org/passport) documents, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption) |
-| [account.disablePeerConnectedBot](/method/account.disablePeerConnectedBot/) | Permanently disconnect a specific chat from all [business bots »](https://core.telegram.org/api/bots/connected-business-bots) (equivalent to specifying it in `recipients.exclude_users` during initial configuration with [account.updateConnectedBot »](/method/account.updateConnectedBot/)); to reconnect of a chat disconnected using this method the user must reconnect the entire bot by invoking [account.updateConnectedBot »](/method/account.updateConnectedBot/). |
-| [account.editBusinessChatLink](/method/account.editBusinessChatLink/) | Edit a created [business chat deep link »](https://core.telegram.org/api/business#business-chat-links). |
-| [account.finishTakeoutSession](/method/account.finishTakeoutSession/) | Terminate a [takeout session, see here » for more info](https://core.telegram.org/api/takeout). |
-| [account.getAccountTTL](/method/account.getAccountTTL/) | Get days to live of account |
-| [account.getAllSecureValues](/method/account.getAllSecureValues/) | Get all saved [Telegram Passport](https://core.telegram.org/passport) documents, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption) |
-| [account.getAuthorizationForm](/method/account.getAuthorizationForm/) | Returns a Telegram Passport authorization form for sharing data with a service |
-| [account.getAuthorizations](/method/account.getAuthorizations/) | Get logged-in sessions |
-| [account.getAutoDownloadSettings](/method/account.getAutoDownloadSettings/) | Get media autodownload settings |
-| [account.getAutoSaveSettings](/method/account.getAutoSaveSettings/) | Get autosave settings |
-| [account.getBotBusinessConnection](/method/account.getBotBusinessConnection/) | Bots may invoke this method to re-fetch the [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) constructor associated with a specific [business `connection_id`, see here »](https://core.telegram.org/api/bots/connected-business-bots) for more info on connected business bots.   This is needed for example for freshly logged in bots that are receiving some [updateBotNewBusinessMessage](/constructor/updateBotNewBusinessMessage/), etc. updates because some users have already connected to the bot before it could login.   In this case, the bot is receiving messages from the business connection, but it hasn't cached the associated [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) with info about the connection (can it reply to messages? etc.) yet, and cannot receive the old ones because they were sent when the bot wasn't logged into the session yet.   This method can be used to fetch info about a not-yet-cached business connection, and should not be invoked if the info is already cached or to fetch changes, as eventual changes will automatically be sent as new [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) updates to the bot using the usual [update delivery methods »](/api/updates/). |
-| [account.getBusinessChatLinks](/method/account.getBusinessChatLinks/) | List all created [business chat deep links »](https://core.telegram.org/api/business#business-chat-links). |
-| [account.getChannelDefaultEmojiStatuses](/method/account.getChannelDefaultEmojiStatuses/) | Get a list of default suggested [channel emoji statuses](https://core.telegram.org/api/emoji-status). |
-| [account.getChannelRestrictedStatusEmojis](/method/account.getChannelRestrictedStatusEmojis/) | Returns fetch the full list of [custom emoji IDs »](https://core.telegram.org/api/custom-emoji) that cannot be used in [channel emoji statuses »](https://core.telegram.org/api/emoji-status). |
-| [account.getChatThemes](/method/account.getChatThemes/) | Get all available chat [themes »](https://core.telegram.org/api/themes). |
-| [account.getCollectibleEmojiStatuses](/method/account.getCollectibleEmojiStatuses/) | Obtain a list of [emoji statuses »](https://core.telegram.org/api/emoji-status) for owned or [hosted collectible gifts »](https://core.telegram.org/api/gifts#hosted-collectible-gifts). |
-| [account.getConnectedBots](/method/account.getConnectedBots/) | List all currently connected [business bots »](https://core.telegram.org/api/bots/connected-business-bots) |
-| [account.getContactSignUpNotification](/method/account.getContactSignUpNotification/) | Whether the user will receive notifications when contacts sign up |
-| [account.getContentSettings](/method/account.getContentSettings/) | Get sensitive content settings |
-| [account.getDefaultBackgroundEmojis](/method/account.getDefaultBackgroundEmojis/) | Get a set of suggested [custom emoji stickers](https://core.telegram.org/api/custom-emoji) that can be used in an [accent color pattern](https://core.telegram.org/api/colors). |
-| [account.getDefaultEmojiStatuses](/method/account.getDefaultEmojiStatuses/) | Get a list of default suggested [emoji statuses](https://core.telegram.org/api/emoji-status) |
-| [account.getDefaultGroupPhotoEmojis](/method/account.getDefaultGroupPhotoEmojis/) | Get a set of suggested [custom emoji stickers](https://core.telegram.org/api/custom-emoji) that can be [used as group picture](https://core.telegram.org/api/files/#sticker-profile-pictures) |
-| [account.getDefaultProfilePhotoEmojis](/method/account.getDefaultProfilePhotoEmojis/) | Get a set of suggested [custom emoji stickers](https://core.telegram.org/api/custom-emoji) that can be [used as profile picture](https://core.telegram.org/api/files/#sticker-profile-pictures) |
-| [account.getGlobalPrivacySettings](/method/account.getGlobalPrivacySettings/) | Get global privacy settings |
-| [account.getMultiWallPapers](/method/account.getMultiWallPapers/) | Get info about multiple [wallpapers](https://core.telegram.org/api/wallpapers) |
-| [account.getNotifyExceptions](/method/account.getNotifyExceptions/) | Returns list of chats with non-default notification settings |
-| [account.getNotifySettings](/method/account.getNotifySettings/) | Gets current notification settings for a given user/group, from all users/all groups. |
-| [account.getPaidMessagesRevenue](/method/account.getPaidMessagesRevenue/) | Get the number of stars we have received from the specified user thanks to [paid messages »](https://core.telegram.org/api/paid-messages); the received amount will be equal to the sent amount multiplied by [stars\_paid\_message\_commission\_permille](https://core.telegram.org/api/config#stars-paid-message-commission-permille) divided by 1000. |
-| [account.getPasskeys](/method/account.getPasskeys/) | List the passkeys associated to the current account that can be used to log in, see [here »](https://core.telegram.org/api/passkeys#list-passkeys) for more info on passkeys. |
-| [account.getPassword](/method/account.getPassword/) | Obtain configuration for two-factor authorization with password |
-| [account.getPasswordSettings](/method/account.getPasswordSettings/) | Get private info associated to the password info (recovery email, telegram [passport](https://core.telegram.org/passport) info & so on) |
-| [account.getPrivacy](/method/account.getPrivacy/) | Get privacy settings of current account |
-| [account.getReactionsNotifySettings](/method/account.getReactionsNotifySettings/) | Get the current [reaction notification settings »](https://core.telegram.org/api/reactions#notifications-about-reactions). |
-| [account.getRecentEmojiStatuses](/method/account.getRecentEmojiStatuses/) | Get recently used [emoji statuses](https://core.telegram.org/api/emoji-status) |
-| [account.getSavedMusicIds](/method/account.getSavedMusicIds/) | Fetch the full list of only the IDs of [songs currently added to the profile, see here »](https://core.telegram.org/api/profile#music) for more info. |
-| [account.getSavedRingtones](/method/account.getSavedRingtones/) | Fetch saved notification sounds |
-| [account.getSecureValue](/method/account.getSecureValue/) | Get saved [Telegram Passport](https://core.telegram.org/passport) document, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption) |
-| [account.getTheme](/method/account.getTheme/) | Get theme information |
-| [account.getThemes](/method/account.getThemes/) | Get installed themes |
-| [account.getTmpPassword](/method/account.getTmpPassword/) | Get temporary payment password |
-| [account.getUniqueGiftChatThemes](/method/account.getUniqueGiftChatThemes/) | Obtain all [chat themes »](https://core.telegram.org/api/themes#chat-themes) associated to owned or [hosted collectible gifts »](https://core.telegram.org/api/gifts#hosted-collectible-gifts). |
-| [account.getWallPaper](/method/account.getWallPaper/) | Get info about a certain [wallpaper](https://core.telegram.org/api/wallpapers) |
-| [account.getWallPapers](/method/account.getWallPapers/) | Returns a list of available [wallpapers](https://core.telegram.org/api/wallpapers). |
-| [account.getWebAuthorizations](/method/account.getWebAuthorizations/) | Get web [login widget](https://core.telegram.org/widgets/login) authorizations |
-| [account.initPasskeyRegistration](/method/account.initPasskeyRegistration/) | Initialize passkey registration for the current account, see [here »](https://core.telegram.org/api/passkeys#creating-a-passkey) for more info on the full flow. |
-| [account.initTakeoutSession](/method/account.initTakeoutSession/) | Initialize a [takeout session, see here » for more info](https://core.telegram.org/api/takeout). |
-| [account.installTheme](/method/account.installTheme/) | Install a theme |
-| [account.installWallPaper](/method/account.installWallPaper/) | Install [wallpaper](https://core.telegram.org/api/wallpapers) |
-| [account.invalidateSignInCodes](/method/account.invalidateSignInCodes/) | Invalidate the specified login codes, see [here »](https://core.telegram.org/api/auth/#invalidating-login-codes) for more info. |
-| [account.registerDevice](/method/account.registerDevice/) | Register device to receive [PUSH notifications](https://core.telegram.org/api/push-updates) |
-| [account.registerPasskey](/method/account.registerPasskey/) | Complete passkey registration for the current account, see [here »](https://core.telegram.org/api/passkeys#creating-a-passkey) for more info on the full flow. |
-| [account.reorderUsernames](/method/account.reorderUsernames/) | Reorder usernames associated with the currently logged-in user. |
-| [account.reportPeer](/method/account.reportPeer/) | Report a peer for violation of telegram's Terms of Service |
-| [account.reportProfilePhoto](/method/account.reportProfilePhoto/) | Report a profile photo of a dialog |
-| [account.resendPasswordEmail](/method/account.resendPasswordEmail/) | Resend the code to verify an email to use as [2FA recovery method](/api/srp/). |
-| [account.resetAuthorization](/method/account.resetAuthorization/) | Log out an active [authorized session](/api/auth/) by its hash |
-| [account.resetNotifySettings](/method/account.resetNotifySettings/) | Resets all notification settings from users and groups. |
-| [account.resetPassword](/method/account.resetPassword/) | Initiate a 2FA password reset: can only be used if the user is already logged-in, [see here for more info »](https://core.telegram.org/api/srp/#password-reset) |
-| [account.resetWallPapers](/method/account.resetWallPapers/) | Delete all installed [wallpapers](https://core.telegram.org/api/wallpapers), reverting to the default wallpaper set. |
-| [account.resetWebAuthorization](/method/account.resetWebAuthorization/) | Log out an active web [telegram login](https://core.telegram.org/widgets/login) session |
-| [account.resetWebAuthorizations](/method/account.resetWebAuthorizations/) | Reset all active web [telegram login](https://core.telegram.org/widgets/login) sessions |
-| [account.resolveBusinessChatLink](/method/account.resolveBusinessChatLink/) | Resolve a [business chat deep link »](https://core.telegram.org/api/business#business-chat-links). |
-| [account.saveAutoDownloadSettings](/method/account.saveAutoDownloadSettings/) | Change media autodownload settings |
-| [account.saveAutoSaveSettings](/method/account.saveAutoSaveSettings/) | Modify autosave settings |
-| [account.saveMusic](/method/account.saveMusic/) | Adds or removes a song from the current user's profile [see here »](https://core.telegram.org/api/profile#music) for more info on the music tab of the profile page. |
-| [account.saveRingtone](/method/account.saveRingtone/) | Save or remove saved notification sound. If the notification sound is already in MP3 format, [account.savedRingtone](/constructor/account.savedRingtone/) will be returned.   Otherwise, it will be automatically converted and a [account.savedRingtoneConverted](/constructor/account.savedRingtoneConverted/) will be returned, containing a new [document](/constructor/document/) object that should be used to refer to the ringtone from now on (ie when deleting it using the `unsave` parameter, or when downloading it). |
-| [account.saveSecureValue](/method/account.saveSecureValue/) | Securely save [Telegram Passport](https://core.telegram.org/passport) document, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption) |
-| [account.saveTheme](/method/account.saveTheme/) | Save a theme |
-| [account.saveWallPaper](/method/account.saveWallPaper/) | Install/uninstall [wallpaper](https://core.telegram.org/api/wallpapers) |
-| [account.sendChangePhoneCode](/method/account.sendChangePhoneCode/) | Verify a new phone number to associate to the current account |
-| [account.sendConfirmPhoneCode](/method/account.sendConfirmPhoneCode/) | Send confirmation code to cancel account deletion, for more info [click here »](https://core.telegram.org/api/account-deletion) |
-| [account.sendVerifyEmailCode](/method/account.sendVerifyEmailCode/) | Send an email verification code. |
-| [account.sendVerifyPhoneCode](/method/account.sendVerifyPhoneCode/) | Send the verification phone code for telegram [passport](https://core.telegram.org/passport). |
-| [account.setAccountTTL](/method/account.setAccountTTL/) | Set account self-destruction period |
-| [account.setAuthorizationTTL](/method/account.setAuthorizationTTL/) | Set time-to-live of current session |
-| [account.setContactSignUpNotification](/method/account.setContactSignUpNotification/) | Toggle contact sign up notifications |
-| [account.setContentSettings](/method/account.setContentSettings/) | Set sensitive content settings (for viewing or hiding NSFW content) |
-| [account.setGlobalPrivacySettings](/method/account.setGlobalPrivacySettings/) | Set global privacy settings |
-| [account.setMainProfileTab](/method/account.setMainProfileTab/) | Changes the main profile tab of the current user, see [here »](https://core.telegram.org/api/profile#tabs) for more info. |
-| [account.setPrivacy](/method/account.setPrivacy/) | Change privacy settings of current account |
-| [account.setReactionsNotifySettings](/method/account.setReactionsNotifySettings/) | Change the [reaction notification settings »](https://core.telegram.org/api/reactions#notifications-about-reactions). |
-| [account.toggleConnectedBotPaused](/method/account.toggleConnectedBotPaused/) | Pause or unpause a specific chat, temporarily disconnecting it from all [business bots »](https://core.telegram.org/api/bots/connected-business-bots). |
-| [account.toggleNoPaidMessagesException](/method/account.toggleNoPaidMessagesException/) | Allow a user to send us messages without paying if [paid messages »](https://core.telegram.org/api/paid-messages) are enabled. |
-| [account.toggleSponsoredMessages](/method/account.toggleSponsoredMessages/) | Disable or re-enable Telegram ads for the current [Premium](https://core.telegram.org/api/premium) account. Useful for business owners that may want to launch and view their own Telegram ads via the [Telegram ad platform »](https://ads.telegram.org). |
-| [account.toggleUsername](/method/account.toggleUsername/) | Activate or deactivate a purchased [fragment.com](https://fragment.com) username associated to the currently logged-in user. |
-| [account.unregisterDevice](/method/account.unregisterDevice/) | Deletes a device by its token, stops sending PUSH-notifications to it. |
-| [account.updateBirthday](/method/account.updateBirthday/) | Update our [birthday, see here »](https://core.telegram.org/api/profile#birthday) for more info. |
-| [account.updateBusinessAwayMessage](/method/account.updateBusinessAwayMessage/) | Set a list of [Telegram Business away messages](https://core.telegram.org/api/business#away-messages). |
-| [account.updateBusinessGreetingMessage](/method/account.updateBusinessGreetingMessage/) | Set a list of [Telegram Business greeting messages](https://core.telegram.org/api/business#greeting-messages). |
-| [account.updateBusinessIntro](/method/account.updateBusinessIntro/) | Set or remove the [Telegram Business introduction »](https://core.telegram.org/api/business#business-introduction). |
-| [account.updateBusinessLocation](/method/account.updateBusinessLocation/) | [Businesses »](https://core.telegram.org/api/business#location) may advertise their location using this method, see [here »](https://core.telegram.org/api/business#location) for more info. To remove business location information invoke the method without setting any of the parameters. |
-| [account.updateBusinessWorkHours](/method/account.updateBusinessWorkHours/) | Specify a set of [Telegram Business opening hours](https://core.telegram.org/api/business#opening-hours).   This info will be contained in [userFull](/constructor/userFull/).`business_work_hours`. To remove all opening hours, invoke the method without setting the `business_work_hours` field. Note that the opening hours specified by the user must be appropriately validated and transformed before invoking the method, as specified [here »](https://core.telegram.org/api/business#opening-hours). |
-| [account.updateColor](/method/account.updateColor/) | Update the [accent color and background custom emoji »](https://core.telegram.org/api/colors) of the current account. |
-| [account.updateConnectedBot](/method/account.updateConnectedBot/) | Connect a [business bot »](https://core.telegram.org/api/bots/connected-business-bots) to the current account, or to change the current connection settings. |
-| [account.updateDeviceLocked](/method/account.updateDeviceLocked/) | When client-side passcode lock feature is enabled, will not show message texts in incoming [PUSH notifications](https://core.telegram.org/api/push-updates). |
-| [account.updateEmojiStatus](/method/account.updateEmojiStatus/) | Set an [emoji status](https://core.telegram.org/api/emoji-status) |
-| [account.updateNotifySettings](/method/account.updateNotifySettings/) | Edits notification settings from a given user/group, from all users/all groups. |
-| [account.updatePasswordSettings](/method/account.updatePasswordSettings/) | Set a new 2FA password |
-| [account.updatePersonalChannel](/method/account.updatePersonalChannel/) | Associate (or remove) a personal [channel »](https://core.telegram.org/api/channel), that will be listed on our personal [profile page »](https://core.telegram.org/api/profile#personal-channel). Changing it will emit an [updateUser](/constructor/updateUser/) update. |
-| [account.updateProfile](/method/account.updateProfile/) | Updates user profile. |
-| [account.updateStatus](/method/account.updateStatus/) | Updates online user status. |
-| [account.updateTheme](/method/account.updateTheme/) | Update theme |
-| [account.updateUsername](/method/account.updateUsername/) | Changes username for the current user. |
-| [account.uploadRingtone](/method/account.uploadRingtone/) | Upload notification sound, use [account.saveRingtone](/method/account.saveRingtone/) to convert it and add it to the list of saved notification sounds. |
-| [account.uploadTheme](/method/account.uploadTheme/) | Upload theme |
-| [account.uploadWallPaper](/method/account.uploadWallPaper/) | Create and upload a new [wallpaper](https://core.telegram.org/api/wallpapers) |
-| [account.verifyEmail](/method/account.verifyEmail/) | Verify an email address. |
-| [account.verifyPhone](/method/account.verifyPhone/) | Verify a phone number for telegram [passport](https://core.telegram.org/passport). |
-| [auth.acceptLoginToken](/method/auth.acceptLoginToken/) | Accept QR code login token, logging in the app that generated it. Returns info about the new session. For more info, see [login via QR code](https://core.telegram.org/api/qr-login). |
-| [auth.bindTempAuthKey](/method/auth.bindTempAuthKey/) | Binds a temporary authorization key `temp_auth_key_id` to the permanent authorization key `perm_auth_key_id`. For more information, see [Perfect Forward Secrecy](/api/pfs/). |
-| [auth.cancelCode](/method/auth.cancelCode/) | Cancel the login verification code |
-| [auth.checkPaidAuth](/method/auth.checkPaidAuth/) | Checks the status of a [login payment](https://core.telegram.org/api/auth/#paid-auth). |
-| [auth.checkPassword](/method/auth.checkPassword/) | Try logging to an account protected by a [2FA password](/api/srp/). |
-| [auth.checkRecoveryPassword](/method/auth.checkRecoveryPassword/) | Check if the [2FA recovery code](/api/srp/) sent using [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/) is valid, before passing it to [auth.recoverPassword](/method/auth.recoverPassword/). |
-| [auth.dropTempAuthKeys](/method/auth.dropTempAuthKeys/) | Delete all temporary authorization keys **except for** the ones specified |
-| [auth.exportAuthorization](/method/auth.exportAuthorization/) | Returns data for copying authorization to another data-center. |
-| [auth.exportLoginToken](/method/auth.exportLoginToken/) | Generate a login token, for [login via QR code](https://core.telegram.org/api/qr-login).   The generated login token should be encoded using base64url, then shown as a `tg://login?token=base64encodedtoken` [deep link »](https://core.telegram.org/api/links#qr-code-login-links) in the QR code. For more info, see [login via QR code](https://core.telegram.org/api/qr-login). |
-| [auth.finishPasskeyLogin](/method/auth.finishPasskeyLogin/) | Complete login with a passkey over an unauthenticated connection, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for more info. Must be sent to the user's native DC, as specified by the `user_handle` (`dcId:userId`) returned in the passkey assertion, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for the full flow. |
-| [auth.importAuthorization](/method/auth.importAuthorization/) | Logs in a user using a key transmitted from his native data-center. |
-| [auth.importBotAuthorization](/method/auth.importBotAuthorization/) | Login as a bot |
-| [auth.importLoginToken](/method/auth.importLoginToken/) | Login using a redirected login token, generated in case of DC mismatch during [QR code login](https://core.telegram.org/api/qr-login). For more info, see [login via QR code](https://core.telegram.org/api/qr-login). |
-| [auth.importWebTokenAuthorization](/method/auth.importWebTokenAuthorization/) | Login by importing an authorization token |
-| [auth.initPasskeyLogin](/method/auth.initPasskeyLogin/) | Initialize login with a passkey over an unauthenticated connection, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for more info. |
-| [auth.logOut](/method/auth.logOut/) | Logs out the user. |
-| [auth.recoverPassword](/method/auth.recoverPassword/) | Reset the [2FA password](/api/srp/) using the recovery code sent using [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/). |
-| [auth.reportMissingCode](/method/auth.reportMissingCode/) | Official apps only, reports that the SMS authentication code wasn't delivered. |
-| [auth.requestFirebaseSms](/method/auth.requestFirebaseSms/) | Request an SMS code via Firebase. |
-| [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/) | Request recovery code of a [2FA password](/api/srp/), only for accounts with a [recovery email configured](https://core.telegram.org/api/srp/#email-verification). |
-| [auth.resendCode](/method/auth.resendCode/) | Resend the login code via another medium, the phone code type is determined by the return value of the previous auth.sendCode/auth.resendCode: see [login](/api/auth/) for more info. |
-| [auth.resetAuthorizations](/method/auth.resetAuthorizations/) | Terminates all user's authorized sessions except for the current one. After calling this method it is necessary to reregister the current device using the method [account.registerDevice](/method/account.registerDevice/) |
-| [auth.resetLoginEmail](/method/auth.resetLoginEmail/) | Reset the [login email »](https://core.telegram.org/api/auth#email-verification). |
-| [auth.sendCode](/method/auth.sendCode/) | Send the verification code for login |
-| [auth.signIn](/method/auth.signIn/) | Signs in a user with a validated phone number. |
-| [auth.signUp](/method/auth.signUp/) | Registers a validated phone number in the system. |
-| [bots.addPreviewMedia](/method/bots.addPreviewMedia/) | Add a [main mini app preview, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info. Only owners of bots with a configured Main Mini App can use this method, see [see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info on how to check if you can invoke this method. |
-| [bots.allowSendMessage](/method/bots.allowSendMessage/) | Allow the specified bot to send us messages |
-| [bots.answerWebhookJSONQuery](/method/bots.answerWebhookJSONQuery/) | Answers a custom query; for bots only |
-| [bots.canSendMessage](/method/bots.canSendMessage/) | Check whether the specified bot can send us messages |
-| [bots.checkDownloadFileParams](/method/bots.checkDownloadFileParams/) | Check if a [mini app](https://core.telegram.org/api/bots/webapps) can request the download of a specific file: called when handling [web\_app\_request\_file\_download events »](https://core.telegram.org/api/web-events#web-app-request-file-download) |
-| [bots.deletePreviewMedia](/method/bots.deletePreviewMedia/) | Delete a [main mini app preview, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info. Only owners of bots with a configured Main Mini App can use this method, see [see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info on how to check if you can invoke this method. |
-| [bots.editPreviewMedia](/method/bots.editPreviewMedia/) | Edit a [main mini app preview, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info. Only owners of bots with a configured Main Mini App can use this method, see [see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info on how to check if you can invoke this method. |
-| [bots.getAdminedBots](/method/bots.getAdminedBots/) | Get a list of bots owned by the current user |
-| [bots.getBotCommands](/method/bots.getBotCommands/) | Obtain a list of bot commands for the specified bot scope and language code |
-| [bots.getBotInfo](/method/bots.getBotInfo/) | Get localized name, about text and description of a bot (or of the current account, if called by a bot). |
-| [bots.getBotMenuButton](/method/bots.getBotMenuButton/) | Gets the menu button action for a given user or for all users, previously set using [bots.setBotMenuButton](/method/bots.setBotMenuButton/); users can see this information in the [botInfo](/constructor/botInfo/) constructor. |
-| [bots.getBotRecommendations](/method/bots.getBotRecommendations/) | Obtain a list of similarly themed bots, selected based on similarities in their subscriber bases, see [here »](https://core.telegram.org/api/recommend) for more info. |
-| [bots.getPopularAppBots](/method/bots.getPopularAppBots/) | Fetch popular [Main Mini Apps](https://core.telegram.org/api/bots/webapps#main-mini-apps), to be used in the [apps tab of global search »](https://core.telegram.org/api/search#apps-tab). |
-| [bots.getPreviewInfo](/method/bots.getPreviewInfo/) | Bot owners only, fetch [main mini app preview information, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info. Note: technically non-owners may also invoke this method, but it will always behave exactly as [bots.getPreviewMedias](/method/bots.getPreviewMedias/), returning only previews for the current language and an empty `lang_codes` array, regardless of the passed `lang_code`, so please only use [bots.getPreviewMedias](/method/bots.getPreviewMedias/) if you're not the owner of the `bot`. |
-| [bots.getPreviewMedias](/method/bots.getPreviewMedias/) | Fetch [main mini app previews, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info. |
-| [bots.invokeWebViewCustomMethod](/method/bots.invokeWebViewCustomMethod/) | Send a custom request from a [mini bot app](https://core.telegram.org/api/bots/webapps), triggered by a [web\_app\_invoke\_custom\_method event »](https://core.telegram.org/api/web-events#web-app-invoke-custom-method). The response should be sent using a [custom\_method\_invoked](https://core.telegram.org/api/bots/webapps#custom-method-invoked) event, [see here »](https://core.telegram.org/api/web-events#web-app-invoke-custom-method) for more info on the flow. |
-| [bots.reorderPreviewMedias](/method/bots.reorderPreviewMedias/) | Reorder a [main mini app previews, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info. Only owners of bots with a configured Main Mini App can use this method, see [see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info on how to check if you can invoke this method. |
-| [bots.reorderUsernames](/method/bots.reorderUsernames/) | Reorder usernames associated to a bot we own. |
-| [bots.resetBotCommands](/method/bots.resetBotCommands/) | Clear bot commands for the specified bot scope and language code |
-| [bots.sendCustomRequest](/method/bots.sendCustomRequest/) | Sends a custom request; for bots only |
-| [bots.setBotBroadcastDefaultAdminRights](/method/bots.setBotBroadcastDefaultAdminRights/) | Set the default [suggested admin rights](https://core.telegram.org/api/rights#suggested-bot-rights) for bots being added as admins to channels, see [here for more info on how to handle them »](https://core.telegram.org/api/rights#suggested-bot-rights). |
-| [bots.setBotCommands](/method/bots.setBotCommands/) | Set bot command list |
-| [bots.setBotGroupDefaultAdminRights](/method/bots.setBotGroupDefaultAdminRights/) | Set the default [suggested admin rights](https://core.telegram.org/api/rights#suggested-bot-rights) for bots being added as admins to groups, see [here for more info on how to handle them »](https://core.telegram.org/api/rights#suggested-bot-rights). |
-| [bots.setBotInfo](/method/bots.setBotInfo/) | Set localized name, about text and description of a bot (or of the current account, if called by a bot). |
-| [bots.setBotMenuButton](/method/bots.setBotMenuButton/) | Sets the [menu button action »](https://core.telegram.org/api/bots/menu) for a given user or for all users |
-| [bots.setCustomVerification](/method/bots.setCustomVerification/) | Verify a user or chat [on behalf of an organization »](https://core.telegram.org/api/bots/verification). |
-| [bots.toggleUserEmojiStatusPermission](/method/bots.toggleUserEmojiStatusPermission/) | Allow or prevent a bot from [changing our emoji status »](https://core.telegram.org/api/emoji-status#setting-an-emoji-status-from-a-bot) |
-| [bots.toggleUsername](/method/bots.toggleUsername/) | Activate or deactivate a purchased [fragment.com](https://fragment.com) username associated to a bot we own. |
-| [bots.updateStarRefProgram](/method/bots.updateStarRefProgram/) | Create, edit or delete the [affiliate program](https://core.telegram.org/api/bots/referrals) of a bot we own |
-| [bots.updateUserEmojiStatus](/method/bots.updateUserEmojiStatus/) | Change the emoji status of a user (invoked by bots, see [here »](https://core.telegram.org/api/emoji-status#setting-an-emoji-status-from-a-bot) for more info on the full flow) |
-| [channels.checkSearchPostsFlood](/method/channels.checkSearchPostsFlood/) | Check if the specified [global post search »](https://core.telegram.org/api/search#posts-tab) requires payment. |
-| [channels.checkUsername](/method/channels.checkUsername/) | Check if a username is free and can be assigned to a channel/supergroup |
-| [channels.convertToGigagroup](/method/channels.convertToGigagroup/) | Convert a [supergroup](https://core.telegram.org/api/channel) to a [gigagroup](https://core.telegram.org/api/channel), when requested by [channel suggestions](https://core.telegram.org/api/config#channel-suggestions). |
-| [channels.createChannel](/method/channels.createChannel/) | Create a [supergroup/channel](https://core.telegram.org/api/channel). |
-| [channels.deactivateAllUsernames](/method/channels.deactivateAllUsernames/) | Disable all purchased usernames of a supergroup or channel |
-| [channels.deleteChannel](/method/channels.deleteChannel/) | Delete a [channel/supergroup](https://core.telegram.org/api/channel) |
-| [channels.deleteHistory](/method/channels.deleteHistory/) | Delete the history of a [supergroup](https://core.telegram.org/api/channel) |
-| [channels.deleteMessages](/method/channels.deleteMessages/) | Delete messages in a [channel/supergroup](https://core.telegram.org/api/channel) |
-| [channels.deleteParticipantHistory](/method/channels.deleteParticipantHistory/) | Delete all messages sent by a specific participant of a given supergroup |
-| [channels.editAdmin](/method/channels.editAdmin/) | Modify the admin rights of a user in a [supergroup/channel](https://core.telegram.org/api/channel). |
-| [channels.editBanned](/method/channels.editBanned/) | Ban/unban/kick a user in a [supergroup/channel](https://core.telegram.org/api/channel). |
-| [channels.editLocation](/method/channels.editLocation/) | Edit location of geogroup, see [here »](https://core.telegram.org/api/nearby) for more info on geogroups. |
-| [channels.editPhoto](/method/channels.editPhoto/) | Change the photo of a [channel/supergroup](https://core.telegram.org/api/channel) |
-| [channels.editTitle](/method/channels.editTitle/) | Edit the name of a [channel/supergroup](https://core.telegram.org/api/channel) |
-| [channels.exportMessageLink](/method/channels.exportMessageLink/) | Get link and embed info of a message in a [channel/supergroup](https://core.telegram.org/api/channel) |
-| [channels.getAdminedPublicChannels](/method/channels.getAdminedPublicChannels/) | Get [channels/supergroups/geogroups](https://core.telegram.org/api/channel) we're admin in. Usually called when the user exceeds the [limit](/constructor/config/) for owned public [channels/supergroups/geogroups](https://core.telegram.org/api/channel), and the user is given the choice to remove one of his channels/supergroups/geogroups. |
-| [channels.getAdminLog](/method/channels.getAdminLog/) | Get the admin log of a [channel/supergroup](https://core.telegram.org/api/channel) |
-| [channels.getChannelRecommendations](/method/channels.getChannelRecommendations/) | Obtain a list of similarly themed public channels, selected based on similarities in their **subscriber bases**. |
-| [channels.getChannels](/method/channels.getChannels/) | Get info about [channels/supergroups](https://core.telegram.org/api/channel) |
-| [channels.getFullChannel](/method/channels.getFullChannel/) | Get full info about a [supergroup](https://core.telegram.org/api/channel#supergroups), [gigagroup](https://core.telegram.org/api/channel#gigagroups) or [channel](https://core.telegram.org/api/channel#channels) |
-| [channels.getGroupsForDiscussion](/method/channels.getGroupsForDiscussion/) | Get all groups that can be used as [discussion groups](https://core.telegram.org/api/discussion). Returned [basic group chats](https://core.telegram.org/api/channel#basic-groups) must be first upgraded to [supergroups](https://core.telegram.org/api/channel#supergroups) before they can be set as a discussion group.   To set a returned supergroup as a discussion group, access to its old messages must be enabled using [channels.togglePreHistoryHidden](/method/channels.togglePreHistoryHidden/), first. |
-| [channels.getInactiveChannels](/method/channels.getInactiveChannels/) | Get inactive channels and supergroups |
-| [channels.getLeftChannels](/method/channels.getLeftChannels/) | Get a list of [channels/supergroups](https://core.telegram.org/api/channel) we left, requires a [takeout session, see here » for more info](https://core.telegram.org/api/takeout). |
-| [channels.getMessageAuthor](/method/channels.getMessageAuthor/) | Can only be invoked by non-bot admins of a [monoforum »](https://core.telegram.org/api/monoforum), obtains the original sender of a message sent by other monoforum admins to the monoforum, on behalf of the channel associated to the monoforum. |
-| [channels.getMessages](/method/channels.getMessages/) | Get [channel/supergroup](https://core.telegram.org/api/channel) messages |
-| [channels.getParticipant](/method/channels.getParticipant/) | Get info about a [channel/supergroup](https://core.telegram.org/api/channel) participant |
-| [channels.getParticipants](/method/channels.getParticipants/) | Get the participants of a [supergroup/channel](https://core.telegram.org/api/channel) |
-| [channels.getSendAs](/method/channels.getSendAs/) | Obtains a list of peers that can be displayed as the sender in a specific context. With `for_live_stories`, returns peers that may author [live story in-call messages »](https://core.telegram.org/api/group-calls#in-call-messages). |
-| [channels.inviteToChannel](/method/channels.inviteToChannel/) | Invite users to a channel/supergroup |
-| [channels.joinChannel](/method/channels.joinChannel/) | Join a channel/supergroup |
-| [channels.leaveChannel](/method/channels.leaveChannel/) | Leave a [channel/supergroup](https://core.telegram.org/api/channel) |
-| [channels.readHistory](/method/channels.readHistory/) | Mark [channel/supergroup](https://core.telegram.org/api/channel) history as read |
-| [channels.readMessageContents](/method/channels.readMessageContents/) | Mark [channel/supergroup](https://core.telegram.org/api/channel) message contents as read, emitting an [updateChannelReadMessagesContents](/constructor/updateChannelReadMessagesContents/). |
-| [channels.reorderUsernames](/method/channels.reorderUsernames/) | Reorder active usernames |
-| [channels.reportAntiSpamFalsePositive](/method/channels.reportAntiSpamFalsePositive/) | Report a [native antispam](https://core.telegram.org/api/antispam) false positive |
-| [channels.reportSpam](/method/channels.reportSpam/) | Reports some messages from a user in a supergroup as spam; requires administrator rights in the supergroup |
-| [channels.restrictSponsoredMessages](/method/channels.restrictSponsoredMessages/) | Disable ads on the specified channel, for all users. Available only after reaching at least the [boost level »](https://core.telegram.org/api/boost) specified in the [`channel_restrict_sponsored_level_min` »](https://core.telegram.org/api/config#channel-restrict-sponsored-level-min) config parameter. |
-| [channels.searchPosts](/method/channels.searchPosts/) | Globally search for posts from public [channels »](https://core.telegram.org/api/channel) (_including_ those we aren't a member of) containing either a specific hashtag, _or_ a full text query. Exactly one of `query` and `hashtag` must be set. |
-| [channels.setBoostsToUnblockRestrictions](/method/channels.setBoostsToUnblockRestrictions/) | Admins with [ban\_users admin rights »](/constructor/chatAdminRights/) may allow users that apply a certain number of [booosts »](https://core.telegram.org/api/boost) to the group to bypass [slow mode »](/method/channels.toggleSlowMode/) and [other »](https://core.telegram.org/api/rights#default-rights) supergroup restrictions, see [here »](https://core.telegram.org/api/boost#bypass-slowmode-and-chat-restrictions) for more info. |
-| [channels.setDiscussionGroup](/method/channels.setDiscussionGroup/) | Associate a group to a channel as [discussion group](https://core.telegram.org/api/discussion) for that channel |
-| [channels.setEmojiStickers](/method/channels.setEmojiStickers/) | Set a [custom emoji stickerset](https://core.telegram.org/api/custom-emoji) for supergroups. Only usable after reaching at least the [boost level »](https://core.telegram.org/api/boost) specified in the [`group_emoji_stickers_level_min` »](https://core.telegram.org/api/config#group-emoji-stickers-level-min) config parameter. |
-| [channels.setMainProfileTab](/method/channels.setMainProfileTab/) | Changes the main profile tab of a channel, see [here »](https://core.telegram.org/api/profile#tabs) for more info. |
-| [channels.setStickers](/method/channels.setStickers/) | Associate a stickerset to the supergroup |
-| [channels.toggleAntiSpam](/method/channels.toggleAntiSpam/) | Enable or disable the [native antispam system](https://core.telegram.org/api/antispam). |
-| [channels.toggleAutotranslation](/method/channels.toggleAutotranslation/) | Toggle autotranslation in a channel, for all users: see [here »](https://core.telegram.org/api/translation#autotranslation-for-channels) for more info. |
-| [channels.toggleForum](/method/channels.toggleForum/) | Enable or disable [forum functionality](https://core.telegram.org/api/forum) in a supergroup. |
-| [channels.toggleJoinRequest](/method/channels.toggleJoinRequest/) | Set whether all users should [request admin approval to join the group »](https://core.telegram.org/api/invites#join-requests). |
-| [channels.toggleJoinToSend](/method/channels.toggleJoinToSend/) | Set whether all users [should join a discussion group in order to comment on a post »](https://core.telegram.org/api/discussion#requiring-users-to-join-the-group) |
-| [channels.toggleParticipantsHidden](/method/channels.toggleParticipantsHidden/) | Hide or display the participants list in a [supergroup](https://core.telegram.org/api/channel). The supergroup must have at least `hidden_members_group_size_min` participants in order to use this method, as specified by the [client configuration parameters »](https://core.telegram.org/api/config#client-configuration). |
-| [channels.togglePreHistoryHidden](/method/channels.togglePreHistoryHidden/) | Hide/unhide message history for new channel/supergroup users |
-| [channels.toggleSignatures](/method/channels.toggleSignatures/) | Enable/disable message signatures in channels |
-| [channels.toggleSlowMode](/method/channels.toggleSlowMode/) | Toggle supergroup slow mode: if enabled, users will only be able to send one message every `seconds` seconds |
-| [channels.toggleUsername](/method/channels.toggleUsername/) | Activate or deactivate a purchased [fragment.com](https://fragment.com) username associated to a [supergroup or channel](https://core.telegram.org/api/channel) we own. |
-| [channels.toggleViewForumAsMessages](/method/channels.toggleViewForumAsMessages/) | Users may also choose to display messages from all topics of a [forum](https://core.telegram.org/api/forum) as if they were sent to a normal group, using a "View as messages" setting in the local client: this setting only affects the current account, and is synced to other logged in sessions using this method. Invoking this method will update the value of the `view_forum_as_messages` flag of [channelFull](/constructor/channelFull/) or [dialog](/constructor/dialog/) and emit an [updateChannelViewForumAsMessages](/constructor/updateChannelViewForumAsMessages/). |
-| [channels.updateColor](/method/channels.updateColor/) | Update the [accent color and background custom emoji »](https://core.telegram.org/api/colors) of a channel. |
-| [channels.updateEmojiStatus](/method/channels.updateEmojiStatus/) | Set an [emoji status](https://core.telegram.org/api/emoji-status) for a channel or supergroup. |
-| [channels.updatePaidMessagesPrice](/method/channels.updatePaidMessagesPrice/) | Enable or disable [paid messages »](https://core.telegram.org/api/paid-messages) in this [supergroup](https://core.telegram.org/api/channel) or [monoforum](https://core.telegram.org/api/monoforum). Also used to [enable or disable monoforums aka direct messages in a channel](https://core.telegram.org/api/monoforum). Note that passing the ID of the monoforum itself to `channel` will return a `CHANNEL_MONOFORUM_UNSUPPORTED` error: pass the ID of the associated channel to edit the settings of the associated monoforum, instead. |
-| [channels.updateUsername](/method/channels.updateUsername/) | Change or remove the username of a supergroup/channel |
-| [chatlists.checkChatlistInvite](/method/chatlists.checkChatlistInvite/) | Obtain information about a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| [chatlists.deleteExportedInvite](/method/chatlists.deleteExportedInvite/) | Delete a previously created [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| [chatlists.editExportedInvite](/method/chatlists.editExportedInvite/) | Edit a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| [chatlists.exportChatlistInvite](/method/chatlists.exportChatlistInvite/) | Export a [folder »](https://core.telegram.org/api/folders), creating a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| [chatlists.getChatlistUpdates](/method/chatlists.getChatlistUpdates/) | Fetch new chats associated with an imported [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). Must be invoked at most every `chatlist_update_period` seconds (as per the related [client configuration parameter »](https://core.telegram.org/api/config#chatlist-update-period)). |
-| [chatlists.getExportedInvites](/method/chatlists.getExportedInvites/) | List all [chat folder deep links »](https://core.telegram.org/api/links#chat-folder-links) associated to a folder |
-| [chatlists.getLeaveChatlistSuggestions](/method/chatlists.getLeaveChatlistSuggestions/) | Returns identifiers of pinned or always included chats from a chat folder imported using a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links), which are suggested to be left when the chat folder is deleted. |
-| [chatlists.hideChatlistUpdates](/method/chatlists.hideChatlistUpdates/) | Dismiss new pending peers recently added to a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| [chatlists.joinChatlistInvite](/method/chatlists.joinChatlistInvite/) | Import a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links), joining some or all the chats in the folder. |
-| [chatlists.joinChatlistUpdates](/method/chatlists.joinChatlistUpdates/) | Join channels and supergroups recently added to a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| [chatlists.leaveChatlist](/method/chatlists.leaveChatlist/) | Delete a folder imported using a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links) |
-| [contacts.acceptContact](/method/contacts.acceptContact/) | If the [add contact action bar is active](https://core.telegram.org/api/action-bar#add-contact), add that user as contact |
-| [contacts.addContact](/method/contacts.addContact/) | Add an existing telegram user as contact. Use [contacts.importContacts](/method/contacts.importContacts/) to add contacts by phone number, without knowing their Telegram ID. |
-| [contacts.block](/method/contacts.block/) | Adds a peer to a blocklist, see [here »](https://core.telegram.org/api/block) for more info. |
-| [contacts.blockFromReplies](/method/contacts.blockFromReplies/) | Stop getting notifications about [discussion replies](https://core.telegram.org/api/discussion) of a certain user in `@replies` |
-| [contacts.deleteByPhones](/method/contacts.deleteByPhones/) | Delete contacts by phone number |
-| [contacts.deleteContacts](/method/contacts.deleteContacts/) | Deletes several contacts from the list. |
-| [contacts.editCloseFriends](/method/contacts.editCloseFriends/) | Edit the [close friends list, see here »](https://core.telegram.org/api/privacy) for more info. |
-| [contacts.exportContactToken](/method/contacts.exportContactToken/) | Generates a [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links) for the currently logged-in user. |
-| [contacts.getBirthdays](/method/contacts.getBirthdays/) | Fetch all users with birthdays that fall within +1/-1 days, relative to the current day: this method should be invoked by clients every 6-8 hours, and if the result is non-empty, it should be used to appropriately update locally cached birthday information in [user](/constructor/user/).`birthday`. [See here »](https://core.telegram.org/api/profile#birthday) for more info. |
-| [contacts.getBlocked](/method/contacts.getBlocked/) | Returns the list of blocked users. |
-| [contacts.getContactIDs](/method/contacts.getContactIDs/) | Get the telegram IDs of all contacts.   Returns an array of Telegram user IDs for all contacts (0 if a contact does not have an associated Telegram account or have hidden their account using privacy settings). |
-| [contacts.getContacts](/method/contacts.getContacts/) | Returns the current user's contact list. |
-| [contacts.getLocated](/method/contacts.getLocated/) | Get users and geochats near you, see [here »](https://core.telegram.org/api/nearby) for more info. |
-| [contacts.getSaved](/method/contacts.getSaved/) | Get all contacts, requires a [takeout session, see here » for more info](https://core.telegram.org/api/takeout). |
-| [contacts.getSponsoredPeers](/method/contacts.getSponsoredPeers/) | Obtain a list of sponsored peer search results for a given query |
-| [contacts.getStatuses](/method/contacts.getStatuses/) | Use this method to obtain the online statuses of all contacts with an accessible Telegram account. |
-| [contacts.getTopPeers](/method/contacts.getTopPeers/) | Get most used peers |
-| [contacts.importContacts](/method/contacts.importContacts/) | Imports contacts: saves a full list on the server, adds already registered contacts to the contact list, returns added contacts and their info. Use [contacts.addContact](/method/contacts.addContact/) to add Telegram contacts without actually using their phone number. |
-| [contacts.importContactToken](/method/contacts.importContactToken/) | Obtain user info from a [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links). |
-| [contacts.resetSaved](/method/contacts.resetSaved/) | Removes all contacts without an associated Telegram account. |
-| [contacts.resetTopPeerRating](/method/contacts.resetTopPeerRating/) | Reset [rating](https://core.telegram.org/api/top-rating) of top peer |
-| [contacts.resolvePhone](/method/contacts.resolvePhone/) | Resolve a phone number to get user info, if their privacy settings allow it. Make sure to implement client-side ratelimiting/debounce for this method, allowing at most 1 call every 3 seconds. |
-| [contacts.resolveUsername](/method/contacts.resolveUsername/) | Resolve a @username to get peer info |
-| [contacts.search](/method/contacts.search/) | Returns users found by username substring. |
-| [contacts.setBlocked](/method/contacts.setBlocked/) | Replace the contents of an entire [blocklist, see here for more info »](https://core.telegram.org/api/block). |
-| [contacts.toggleTopPeers](/method/contacts.toggleTopPeers/) | Enable/disable [top peers](https://core.telegram.org/api/top-rating) |
-| [contacts.unblock](/method/contacts.unblock/) | Deletes a peer from a blocklist, see [here »](https://core.telegram.org/api/block) for more info. |
-| [contacts.updateContactNote](/method/contacts.updateContactNote/) | Update the private note associated to a contact; see [here »](https://core.telegram.org/api/contacts#private-notes-for-contacts) for more info. |
-| [folders.editPeerFolders](/method/folders.editPeerFolders/) | Edit peers in [peer folder](https://core.telegram.org/api/folders#peer-folders) |
-| [fragment.getCollectibleInfo](/method/fragment.getCollectibleInfo/) | Fetch information about a [fragment collectible, see here »](https://core.telegram.org/api/fragment#fetching-info-about-fragment-collectibles) for more info on the full flow. |
-| [help.acceptTermsOfService](/method/help.acceptTermsOfService/) | Accept the new terms of service |
-| [help.dismissSuggestion](/method/help.dismissSuggestion/) | Dismiss a [suggestion, see here for more info »](https://core.telegram.org/api/config#suggestions). |
-| [help.editUserInfo](/method/help.editUserInfo/) | Internal use |
-| [help.getAppConfig](/method/help.getAppConfig/) | Get app-specific configuration, see [client configuration](https://core.telegram.org/api/config#client-configuration) for more info on the result. |
-| [help.getAppUpdate](/method/help.getAppUpdate/) | Returns information on update availability for the current application. |
-| [help.getCdnConfig](/method/help.getCdnConfig/) | Get configuration for [CDN](https://core.telegram.org/cdn) file downloads. |
-| [help.getConfig](/method/help.getConfig/) | Returns current configuration, including data center configuration. |
-| [help.getCountriesList](/method/help.getCountriesList/) | Get name, ISO code, localized name and phone codes/patterns of all available countries |
-| [help.getDeepLinkInfo](/method/help.getDeepLinkInfo/) | Get info about an unsupported deep link, see [here for more info »](https://core.telegram.org/api/links#unsupported-links). |
-| [help.getInviteText](/method/help.getInviteText/) | Returns localized text of a text message with an invitation. |
-| [help.getNearestDc](/method/help.getNearestDc/) | Returns info on data center nearest to the user. |
-| [help.getPassportConfig](/method/help.getPassportConfig/) | Get [passport](https://core.telegram.org/passport) configuration |
-| [help.getPeerColors](/method/help.getPeerColors/) | Get the set of [accent color palettes »](https://core.telegram.org/api/colors) that can be used for message accents. |
-| [help.getPeerProfileColors](/method/help.getPeerProfileColors/) | Get the set of [accent color palettes »](https://core.telegram.org/api/colors) that can be used in profile page backgrounds. |
-| [help.getPremiumPromo](/method/help.getPremiumPromo/) | Get Telegram Premium promotion information |
-| [help.getPromoData](/method/help.getPromoData/) | Returns a set of useful suggestions and PSA/MTProxy sponsored peers, see [here »](https://core.telegram.org/api/config#suggestions) for more info. |
-| [help.getRecentMeUrls](/method/help.getRecentMeUrls/) | Get recently used `t.me` links. When installing official applications from "Download Telegram" buttons present in [t.me](https://t.me) pages, a referral parameter is passed to applications after installation.   If, after downloading the application, the user creates a new account (instead of logging into an existing one), the referral parameter should be imported using this method, which returns the [t.me](https://t.me) pages the user recently opened, before installing Telegram. |
-| [help.getSupport](/method/help.getSupport/) | Returns the support user for the "ask a question" feature. |
-| [help.getSupportName](/method/help.getSupportName/) | Get localized name of the telegram support user |
-| [help.getTermsOfServiceUpdate](/method/help.getTermsOfServiceUpdate/) | Look for updates of telegram's terms of service |
-| [help.getTimezonesList](/method/help.getTimezonesList/) | Returns timezone information that may be used elsewhere in the API, such as to set [Telegram Business opening hours »](https://core.telegram.org/api/business#opening-hours). |
-| [help.getUserInfo](/method/help.getUserInfo/) | Can only be used by TSF members to obtain internal information. |
-| [help.hidePromoData](/method/help.hidePromoData/) | Hide MTProxy/Public Service Announcement information |
-| [help.saveAppLog](/method/help.saveAppLog/) | Saves logs of application on the server. |
-| [help.setBotUpdatesStatus](/method/help.setBotUpdatesStatus/) | Informs the server about the number of pending bot updates if they haven't been processed for a long time; for bots only |
-| [initConnection](/method/initConnection/) | Initialize connection |
-| [invokeAfterMsg](/method/invokeAfterMsg/) | Invokes a query after successful completion of one of the previous queries. |
-| [invokeAfterMsgs](/method/invokeAfterMsgs/) | Invokes a query after a successful completion of previous queries |
-| [invokeWithApnsSecret](/method/invokeWithApnsSecret/) | Official clients only, invoke with Apple push verification. |
-| [invokeWithBusinessConnection](/method/invokeWithBusinessConnection/) | Invoke a method using a [Telegram Business Bot connection, see here » for more info, including a list of the methods that can be wrapped in this constructor](https://core.telegram.org/api/bots/connected-business-bots). Make sure to always send queries wrapped in a `invokeWithBusinessConnection` to the datacenter ID, specified in the `dc_id` field of the [botBusinessConnection](/constructor/botBusinessConnection/) that is being used. |
-| [invokeWithGooglePlayIntegrity](/method/invokeWithGooglePlayIntegrity/) | Official clients only, invoke with Google Play Integrity token. |
-| [invokeWithLayer](/method/invokeWithLayer/) | Invoke the specified query using the specified API [layer](https://core.telegram.org/api/invoking/#layers) |
-| [invokeWithMessagesRange](/method/invokeWithMessagesRange/) | Invoke with the given message range |
-| [invokeWithoutUpdates](/method/invokeWithoutUpdates/) | Invoke a request without subscribing the used connection for [updates](/api/updates/) (this is enabled by default for [file queries](/api/files/)). |
-| [invokeWithReCaptcha](/method/invokeWithReCaptcha/) | Official clients only: re-execute a method call that required reCAPTCHA verification via a `RECAPTCHA_CHECK_%s__%s`, where the first placeholder is the `action`, and the second one is the reCAPTCHA key ID. |
-| [invokeWithTakeout](/method/invokeWithTakeout/) | Invoke a method within a [takeout session, see here » for more info](https://core.telegram.org/api/takeout). |
-| [langpack.getDifference](/method/langpack.getDifference/) | Get new strings in language pack |
-| [langpack.getLangPack](/method/langpack.getLangPack/) | Get localization pack strings |
-| [langpack.getLanguage](/method/langpack.getLanguage/) | Get information about a language in a localization pack |
-| [langpack.getLanguages](/method/langpack.getLanguages/) | Get information about all languages in a localization pack |
-| [langpack.getStrings](/method/langpack.getStrings/) | Get strings from a language pack |
-| [messages.acceptEncryption](/method/messages.acceptEncryption/) | Confirms creation of a secret chat |
-| [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/) | Use this to accept a Seamless Telegram Login authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization) |
-| [messages.addChatUser](/method/messages.addChatUser/) | Adds a user to a chat and sends a service message on it. |
-| [messages.appendTodoList](/method/messages.appendTodoList/) | Appends one or more items to a [todo list »](https://core.telegram.org/api/todo). |
-| [messages.checkChatInvite](/method/messages.checkChatInvite/) | Check the validity of a chat invite link and get basic info about it |
-| [messages.checkHistoryImport](/method/messages.checkHistoryImport/) | Obtains information about a chat export file, generated by a foreign chat app, [click here for more info about imported chats »](https://core.telegram.org/api/import). |
-| [messages.checkHistoryImportPeer](/method/messages.checkHistoryImportPeer/) | Check whether chat history exported from another chat app can be [imported into a specific Telegram chat, click here for more info »](https://core.telegram.org/api/import). If the check succeeds, and no RPC errors are returned, a [messages.CheckedHistoryImportPeer](/type/messages.CheckedHistoryImportPeer/) constructor will be returned, with a confirmation text to be shown to the user, before actually initializing the import. |
-| [messages.checkQuickReplyShortcut](/method/messages.checkQuickReplyShortcut/) | Before offering the user the choice to add a message to a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts), to make sure that none of the limits specified [here »](https://core.telegram.org/api/business#quick-reply-shortcuts) were reached. |
-| [messages.checkUrlAuthMatchCode](/method/messages.checkUrlAuthMatchCode/) | Validate the match code selected by the user against the code shown on the login page, as part of the [OAuth authorization flow »](https://core.telegram.org/api/url-authorization#oauth-authorization). Only usable when both `match_codes` and `match_codes_first` are set in the [urlAuthResultRequest](/constructor/urlAuthResultRequest/) returned by [messages.requestUrlAuth](/method/messages.requestUrlAuth/).   If [boolTrue](/constructor/boolTrue/) is returned, proceed with the login flow and pass the verified code to [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/).`match_code`. |
-| [messages.clearAllDrafts](/method/messages.clearAllDrafts/) | Clear all [drafts](https://core.telegram.org/api/drafts). |
-| [messages.clearRecentReactions](/method/messages.clearRecentReactions/) | Clear recently used [message reactions](https://core.telegram.org/api/reactions) |
-| [messages.clearRecentStickers](/method/messages.clearRecentStickers/) | Clear recent stickers |
-| [messages.clickSponsoredMessage](/method/messages.clickSponsoredMessage/) | Informs the server that the user has interacted with a sponsored message in [one of the ways listed here »](https://core.telegram.org/api/sponsored-messages#clicking-on-sponsored-messages). |
-| [messages.createChat](/method/messages.createChat/) | Creates a new chat. |
-| [messages.createForumTopic](/method/messages.createForumTopic/) | Create a [forum topic](https://core.telegram.org/api/forum). |
-| [messages.declineUrlAuth](/method/messages.declineUrlAuth/) | Decline an incoming [OAuth authorization request »](https://core.telegram.org/api/url-authorization#oauth-authorization), notifying the server that the user refused the login request. |
-| [messages.deleteChat](/method/messages.deleteChat/) | Delete a [chat](https://core.telegram.org/api/channel) |
-| [messages.deleteChatUser](/method/messages.deleteChatUser/) | Deletes a user from a chat and sends a service message on it. |
-| [messages.deleteExportedChatInvite](/method/messages.deleteExportedChatInvite/) | Delete a chat invite |
-| [messages.deleteFactCheck](/method/messages.deleteFactCheck/) | Delete a [fact-check](https://core.telegram.org/api/factcheck) from a message. Can only be used by independent fact-checkers as specified by the [appConfig.can\_edit\_factcheck](https://core.telegram.org/api/config#can-edit-factcheck) configuration flag. |
-| [messages.deleteHistory](/method/messages.deleteHistory/) | Deletes communication history. |
-| [messages.deleteMessages](/method/messages.deleteMessages/) | Deletes messages by their identifiers. |
-| [messages.deletePhoneCallHistory](/method/messages.deletePhoneCallHistory/) | Delete the entire phone call history. |
-| [messages.deleteQuickReplyMessages](/method/messages.deleteQuickReplyMessages/) | Delete one or more messages from a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts). This will also emit an [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/) update. |
-| [messages.deleteQuickReplyShortcut](/method/messages.deleteQuickReplyShortcut/) | Completely delete a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts).   This will also emit an [updateDeleteQuickReply](/constructor/updateDeleteQuickReply/) update to other logged-in sessions (and _no_ [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/) updates, even if all the messages in the shortcuts are also deleted by this method). |
-| [messages.deleteRevokedExportedChatInvites](/method/messages.deleteRevokedExportedChatInvites/) | Delete all revoked chat invites |
-| [messages.deleteSavedHistory](/method/messages.deleteSavedHistory/) | Deletes messages from a [monoforum topic »](https://core.telegram.org/api/monoforum), or deletes messages forwarded from a specific peer to [saved messages »](https://core.telegram.org/api/saved-messages). |
-| [messages.deleteScheduledMessages](/method/messages.deleteScheduledMessages/) | Delete scheduled messages |
-| [messages.deleteTopicHistory](/method/messages.deleteTopicHistory/) | Delete message history of a [forum topic](https://core.telegram.org/api/forum) |
-| [messages.discardEncryption](/method/messages.discardEncryption/) | Cancels a request for creation and/or delete info on secret chat. |
-| [messages.editChatAbout](/method/messages.editChatAbout/) | Edit the description of a [group/supergroup/channel](https://core.telegram.org/api/channel). |
-| [messages.editChatAdmin](/method/messages.editChatAdmin/) | Make a user admin in a [basic group](https://core.telegram.org/api/channel#basic-groups). |
-| [messages.editChatCreator](/method/messages.editChatCreator/) | Transfer the ownership of a basic group, supergroup or channel to another user, see [here »](https://core.telegram.org/api/channel#transferring-ownership-of-a-group-channel) for the full flow. |
-| [messages.editChatDefaultBannedRights](/method/messages.editChatDefaultBannedRights/) | Edit the default banned rights of a [channel/supergroup/group](https://core.telegram.org/api/channel). |
-| [messages.editChatParticipantRank](/method/messages.editChatParticipantRank/) | Edit a group participant's [tag »](https://core.telegram.org/api/rank). |
-| [messages.editChatPhoto](/method/messages.editChatPhoto/) | Changes chat photo and sends a service message on it |
-| [messages.editChatTitle](/method/messages.editChatTitle/) | Changes chat name and sends a service message on it. |
-| [messages.editExportedChatInvite](/method/messages.editExportedChatInvite/) | Edit an exported chat invite |
-| [messages.editFactCheck](/method/messages.editFactCheck/) | Edit/create a [fact-check](https://core.telegram.org/api/factcheck) on a message. Can only be used by independent fact-checkers as specified by the [appConfig.can\_edit\_factcheck](https://core.telegram.org/api/config#can-edit-factcheck) configuration flag. |
-| [messages.editForumTopic](/method/messages.editForumTopic/) | Edit [forum topic](https://core.telegram.org/api/forum). |
-| [messages.editInlineBotMessage](/method/messages.editInlineBotMessage/) | Edit an inline bot message |
-| [messages.editMessage](/method/messages.editMessage/) | Edit message |
-| [messages.editQuickReplyShortcut](/method/messages.editQuickReplyShortcut/) | Rename a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts).   This will emit an [updateQuickReplies](/constructor/updateQuickReplies/) update to other logged-in sessions. |
-| [messages.exportChatInvite](/method/messages.exportChatInvite/) | Export an invite link for a chat |
-| [messages.faveSticker](/method/messages.faveSticker/) | Mark or unmark a sticker as favorite |
-| [messages.forwardMessages](/method/messages.forwardMessages/) | Forwards messages by their IDs. |
-| [messages.getAdminsWithInvites](/method/messages.getAdminsWithInvites/) | Get info about chat invites generated by admins. |
-| [messages.getAllDrafts](/method/messages.getAllDrafts/) | Return all message [drafts](https://core.telegram.org/api/drafts).   Returns all the latest [updateDraftMessage](/constructor/updateDraftMessage/) updates related to all chats with drafts. |
-| [messages.getAllStickers](/method/messages.getAllStickers/) | Get all installed stickers |
-| [messages.getArchivedStickers](/method/messages.getArchivedStickers/) | Get all archived stickers |
-| [messages.getAttachedStickers](/method/messages.getAttachedStickers/) | Get stickers attached to a photo or video |
-| [messages.getAttachMenuBot](/method/messages.getAttachMenuBot/) | Returns attachment menu entry for a [bot mini app that can be launched from the attachment menu »](https://core.telegram.org/api/bots/attach) |
-| [messages.getAttachMenuBots](/method/messages.getAttachMenuBots/) | Returns installed attachment menu [bot mini apps »](https://core.telegram.org/api/bots/attach) |
-| [messages.getAvailableEffects](/method/messages.getAvailableEffects/) | Fetch the full list of usable [animated message effects »](https://core.telegram.org/api/effects). |
-| [messages.getAvailableReactions](/method/messages.getAvailableReactions/) | Obtain available [message reactions »](https://core.telegram.org/api/reactions) |
-| [messages.getBotApp](/method/messages.getBotApp/) | Obtain information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps) |
-| [messages.getBotCallbackAnswer](/method/messages.getBotCallbackAnswer/) | Press an inline callback button and get a callback answer from the bot |
-| [messages.getChatInviteImporters](/method/messages.getChatInviteImporters/) | Get info about the users that joined the chat using a specific chat invite |
-| [messages.getChats](/method/messages.getChats/) | Returns chat basic info on their IDs. |
-| [messages.getCommonChats](/method/messages.getCommonChats/) | Get chats in common with a user |
-| [messages.getCustomEmojiDocuments](/method/messages.getCustomEmojiDocuments/) | Fetch [custom emoji stickers »](https://core.telegram.org/api/custom-emoji). Returns a list of [documents](/constructor/document/) with the animated custom emoji in TGS format, and a [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/) attribute with the original emoji and info about the emoji stickerset this custom emoji belongs to. |
-| [messages.getDefaultHistoryTTL](/method/messages.getDefaultHistoryTTL/) | Gets the default value of the Time-To-Live setting, applied to all new chats. |
-| [messages.getDefaultTagReactions](/method/messages.getDefaultTagReactions/) | Fetch a default recommended list of [saved message tag reactions](https://core.telegram.org/api/saved-messages#tags). |
-| [messages.getDhConfig](/method/messages.getDhConfig/) | Returns configuration parameters for Diffie-Hellman key generation. Can also return a random sequence of bytes of required length. |
-| [messages.getDialogFilters](/method/messages.getDialogFilters/) | Get [folders](https://core.telegram.org/api/folders) |
-| [messages.getDialogs](/method/messages.getDialogs/) | Returns the current user dialog list. |
-| [messages.getDialogUnreadMarks](/method/messages.getDialogUnreadMarks/) | Get dialogs manually marked as unread |
-| [messages.getDiscussionMessage](/method/messages.getDiscussionMessage/) | Get [discussion message](https://core.telegram.org/api/threads) from the [associated discussion group](https://core.telegram.org/api/discussion) of a channel to show it on top of the comment section, without actually joining the group |
-| [messages.getDocumentByHash](/method/messages.getDocumentByHash/) | Get a document by its SHA256 hash, mainly used for gifs |
-| [messages.getEmojiGameInfo](/method/messages.getEmojiGameInfo/) | Fetch dice game information. |
-| [messages.getEmojiGroups](/method/messages.getEmojiGroups/) | Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories). |
-| [messages.getEmojiKeywords](/method/messages.getEmojiKeywords/) | Get localized [emoji keywords »](https://core.telegram.org/api/custom-emoji#emoji-keywords). |
-| [messages.getEmojiKeywordsDifference](/method/messages.getEmojiKeywordsDifference/) | Get changed [emoji keywords »](https://core.telegram.org/api/custom-emoji#emoji-keywords). |
-| [messages.getEmojiKeywordsLanguages](/method/messages.getEmojiKeywordsLanguages/) | Obtain a list of related languages that must be used when fetching [emoji keyword lists »](https://core.telegram.org/api/custom-emoji#emoji-keywords). Usually the method will return the passed language codes (if localized) + `en` + some language codes for similar languages (if applicable). |
-| [messages.getEmojiProfilePhotoGroups](/method/messages.getEmojiProfilePhotoGroups/) | Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories), to be used when selecting custom emojis to set as [profile picture](https://core.telegram.org/api/files/#sticker-profile-pictures). |
-| [messages.getEmojiStatusGroups](/method/messages.getEmojiStatusGroups/) | Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories), to be used when selecting custom emojis to set as [custom emoji status](/api/). |
-| [messages.getEmojiStickerGroups](/method/messages.getEmojiStickerGroups/) | Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories), to be used when choosing a sticker. |
-| [messages.getEmojiStickers](/method/messages.getEmojiStickers/) | Gets the list of currently installed [custom emoji stickersets](https://core.telegram.org/api/custom-emoji). |
-| [messages.getEmojiURL](/method/messages.getEmojiURL/) | Returns an HTTP URL which can be used to automatically log in into translation platform and suggest new [emoji keywords »](https://core.telegram.org/api/custom-emoji#emoji-keywords). The URL will be valid for 30 seconds after generation. |
-| [messages.getExportedChatInvite](/method/messages.getExportedChatInvite/) | Get info about a chat invite |
-| [messages.getExportedChatInvites](/method/messages.getExportedChatInvites/) | Get info about the chat invites of a specific chat |
-| [messages.getExtendedMedia](/method/messages.getExtendedMedia/) | Fetch updated information about [paid media, see here »](https://core.telegram.org/api/paid-media) for the full flow. This method will return an array of [updateMessageExtendedMedia](/constructor/updateMessageExtendedMedia/) updates, only for messages containing **already bought** paid media.   No information will be returned for messages containing not yet bought paid media. |
-| [messages.getFactCheck](/method/messages.getFactCheck/) | Fetch one or more [factchecks, see here »](https://core.telegram.org/api/factcheck) for the full flow. |
-| [messages.getFavedStickers](/method/messages.getFavedStickers/) | Get faved stickers |
-| [messages.getFeaturedEmojiStickers](/method/messages.getFeaturedEmojiStickers/) | Gets featured custom emoji stickersets. |
-| [messages.getFeaturedStickers](/method/messages.getFeaturedStickers/) | Get featured stickers |
-| [messages.getForumTopics](/method/messages.getForumTopics/) | Get [topics of a forum](https://core.telegram.org/api/forum) |
-| [messages.getForumTopicsByID](/method/messages.getForumTopicsByID/) | Get forum topics by their ID |
-| [messages.getFullChat](/method/messages.getFullChat/) | Get full info about a [basic group](https://core.telegram.org/api/channel#basic-groups). |
-| [messages.getFutureChatCreatorAfterLeave](/method/messages.getFutureChatCreatorAfterLeave/) | Group/channel owners only: returns the ID of the user that will become the new owner of the group if we decide to leave the group, see [here »](https://core.telegram.org/api/channel#leaving-groups-channels) for more info on the full flow. |
-| [messages.getGameHighScores](/method/messages.getGameHighScores/) | Get highscores of a game |
-| [messages.getHistory](/method/messages.getHistory/) | Returns the message history in a peer. Results are ordered by date (descending). |
-| [messages.getInlineBotResults](/method/messages.getInlineBotResults/) | Query an inline bot |
-| [messages.getInlineGameHighScores](/method/messages.getInlineGameHighScores/) | Get highscores of a game sent using an inline bot |
-| [messages.getMaskStickers](/method/messages.getMaskStickers/) | Get installed mask stickers |
-| [messages.getMessageEditData](/method/messages.getMessageEditData/) | Find out if a media message's caption can be edited |
-| [messages.getMessageReactionsList](/method/messages.getMessageReactionsList/) | Get [message reaction](https://core.telegram.org/api/reactions) list, along with the sender of each reaction. |
-| [messages.getMessageReadParticipants](/method/messages.getMessageReadParticipants/) | Get which users read a specific message: only available for groups and supergroups with less than [`chat_read_mark_size_threshold` members](https://core.telegram.org/api/config#chat-read-mark-size-threshold), read receipts will be stored for [`chat_read_mark_expire_period` seconds after the message was sent](https://core.telegram.org/api/config#chat-read-mark-expire-period), see [client configuration for more info »](https://core.telegram.org/api/config#client-configuration). |
-| [messages.getMessages](/method/messages.getMessages/) | Returns the list of messages by their IDs. |
-| [messages.getMessagesReactions](/method/messages.getMessagesReactions/) | Get [message reactions »](https://core.telegram.org/api/reactions) |
-| [messages.getMessagesViews](/method/messages.getMessagesViews/) | Get and increase the view counter of a message sent or forwarded from a [channel](https://core.telegram.org/api/channel) |
-| [messages.getMyStickers](/method/messages.getMyStickers/) | Fetch all [stickersets »](https://core.telegram.org/api/stickers) owned by the current user. |
-| [messages.getOldFeaturedStickers](/method/messages.getOldFeaturedStickers/) | Method for fetching previously featured stickers |
-| [messages.getOnlines](/method/messages.getOnlines/) | Get count of online users in a chat |
-| [messages.getOutboxReadDate](/method/messages.getOutboxReadDate/) | Get the exact read date of one of our messages, sent to a private chat with another user. Can be only done for private outgoing messages not older than [appConfig.pm\_read\_date\_expire\_period »](https://core.telegram.org/api/config#pm-read-date-expire-period). If the `peer`'s [userFull](/constructor/userFull/).`read_dates_private` flag is set, we will not be able to fetch the exact read date of messages we send to them, and a `USER_PRIVACY_RESTRICTED` RPC error will be emitted.   The exact read date of messages might still be unavailable for other reasons, see [here »](/constructor/globalPrivacySettings/) for more info.   To set [userFull](/constructor/userFull/).`read_dates_private` for ourselves invoke [account.setGlobalPrivacySettings](/method/account.setGlobalPrivacySettings/), setting the `settings.hide_read_marks` flag. |
-| [messages.getPaidReactionPrivacy](/method/messages.getPaidReactionPrivacy/) | Fetches an [updatePaidReactionPrivacy](/constructor/updatePaidReactionPrivacy/) update with the current [default paid reaction privacy, see here »](https://core.telegram.org/api/reactions#paid-reactions) for more info. |
-| [messages.getPeerDialogs](/method/messages.getPeerDialogs/) | Get dialog info of specified peers |
-| [messages.getPeerSettings](/method/messages.getPeerSettings/) | Get peer settings |
-| [messages.getPinnedDialogs](/method/messages.getPinnedDialogs/) | Get pinned dialogs |
-| [messages.getPinnedSavedDialogs](/method/messages.getPinnedSavedDialogs/) | Get pinned [saved dialogs, see here »](https://core.telegram.org/api/saved-messages) for more info. |
-| [messages.getPollResults](/method/messages.getPollResults/) | Get poll results |
-| [messages.getPollVotes](/method/messages.getPollVotes/) | Get poll results for non-anonymous polls |
-| [messages.getPreparedInlineMessage](/method/messages.getPreparedInlineMessage/) | Obtain a [prepared inline message](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message) generated by a [mini app](https://core.telegram.org/api/bots/webapps): invoked when handling [web\_app\_send\_prepared\_message events](https://core.telegram.org/api/web-events#web-app-send-prepared-message) |
-| [messages.getQuickReplies](/method/messages.getQuickReplies/) | Fetch basic info about all existing [quick reply shortcuts](https://core.telegram.org/api/business#quick-reply-shortcuts). |
-| [messages.getQuickReplyMessages](/method/messages.getQuickReplyMessages/) | Fetch (a subset or all) messages in a [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts). |
-| [messages.getRecentLocations](/method/messages.getRecentLocations/) | Get all recent [live locations](https://core.telegram.org/api/live-location) sent to a specific chat: returns up to 1 location message ([messageMediaGeoLive](/constructor/messageMediaGeoLive/)) per chat participant. |
-| [messages.getRecentReactions](/method/messages.getRecentReactions/) | Get recently used [message reactions](https://core.telegram.org/api/reactions) |
-| [messages.getRecentStickers](/method/messages.getRecentStickers/) | Get recent stickers |
-| [messages.getReplies](/method/messages.getReplies/) | Get messages in a reply thread |
-| [messages.getSavedDialogs](/method/messages.getSavedDialogs/) | Returns the current [saved dialog list »](https://core.telegram.org/api/saved-messages) or [monoforum topic list »](https://core.telegram.org/api/monoforum). |
-| [messages.getSavedDialogsByID](/method/messages.getSavedDialogsByID/) | Obtain information about specific [saved message dialogs »](https://core.telegram.org/api/saved-messages#saved-message-dialogs) or [monoforum topics »](https://core.telegram.org/api/monoforum). |
-| [messages.getSavedGifs](/method/messages.getSavedGifs/) | Get saved GIFs. |
-| [messages.getSavedHistory](/method/messages.getSavedHistory/) | Fetch [saved messages »](https://core.telegram.org/api/saved-messages) forwarded from a specific peer, or fetch messages from a [monoforum topic »](https://core.telegram.org/api/monoforum). |
-| [messages.getSavedReactionTags](/method/messages.getSavedReactionTags/) | Fetch the full list of [saved message tags](https://core.telegram.org/api/saved-messages#tags) created by the user. |
-| [messages.getScheduledHistory](/method/messages.getScheduledHistory/) | Get scheduled messages |
-| [messages.getScheduledMessages](/method/messages.getScheduledMessages/) | Get scheduled messages |
-| [messages.getSearchCounters](/method/messages.getSearchCounters/) | Get the number of results that would be found by a [messages.search](/method/messages.search/) call with the same parameters |
-| [messages.getSearchResultsCalendar](/method/messages.getSearchResultsCalendar/) | Returns information about the next messages of the specified type in the chat split by days. Returns the results in reverse chronological order.   Can return partial results for the last returned day. |
-| [messages.getSearchResultsPositions](/method/messages.getSearchResultsPositions/) | Returns sparse positions of messages of the specified type in the chat to be used for shared media scroll implementation. Returns the results in reverse chronological order (i.e., in order of decreasing message\_id). |
-| [messages.getSplitRanges](/method/messages.getSplitRanges/) | Get message ranges for saving the user's chat history |
-| [messages.getSponsoredMessages](/method/messages.getSponsoredMessages/) | Get a list of [sponsored messages for a peer, see here »](https://core.telegram.org/api/sponsored-messages) for more info. |
-| [messages.getStickers](/method/messages.getStickers/) | Get stickers by emoji |
-| [messages.getStickerSet](/method/messages.getStickerSet/) | Get info about a stickerset |
-| [messages.getSuggestedDialogFilters](/method/messages.getSuggestedDialogFilters/) | Get [suggested folders](https://core.telegram.org/api/folders) |
-| [messages.getTopReactions](/method/messages.getTopReactions/) | Got popular [message reactions](https://core.telegram.org/api/reactions) |
-| [messages.getUnreadMentions](/method/messages.getUnreadMentions/) | Get unread messages where we were mentioned |
-| [messages.getUnreadReactions](/method/messages.getUnreadReactions/) | Get unread reactions to messages you sent |
-| [messages.getWebPage](/method/messages.getWebPage/) | Get [instant view](https://instantview.telegram.org) page |
-| [messages.getWebPagePreview](/method/messages.getWebPagePreview/) | Get preview of webpage |
-| [messages.hideAllChatJoinRequests](/method/messages.hideAllChatJoinRequests/) | Dismiss or approve all [join requests](https://core.telegram.org/api/invites#join-requests) related to a specific chat or channel. |
-| [messages.hideChatJoinRequest](/method/messages.hideChatJoinRequest/) | Dismiss or approve a chat [join request](https://core.telegram.org/api/invites#join-requests) related to a specific chat or channel. |
-| [messages.hidePeerSettingsBar](/method/messages.hidePeerSettingsBar/) | Should be called after the user hides the [report spam/add as contact bar](https://core.telegram.org/api/action-bar) of a new chat, effectively prevents the user from executing the actions specified in the [action bar »](https://core.telegram.org/api/action-bar). |
-| [messages.importChatInvite](/method/messages.importChatInvite/) | Import a chat invite and join a private chat/supergroup/channel |
-| [messages.initHistoryImport](/method/messages.initHistoryImport/) | Import chat history from a foreign chat app into a specific Telegram chat, [click here for more info about imported chats »](https://core.telegram.org/api/import). |
-| [messages.installStickerSet](/method/messages.installStickerSet/) | Install a stickerset |
-| [messages.markDialogUnread](/method/messages.markDialogUnread/) | Manually mark dialog as unread |
-| [messages.migrateChat](/method/messages.migrateChat/) | Turn a [basic group into a supergroup](https://core.telegram.org/api/channel#migration) |
-| [messages.prolongWebView](/method/messages.prolongWebView/) | Indicate to the server (from the user side) that the user is still using a web app. If the method returns a `QUERY_ID_INVALID` error, the webview must be closed. |
-| [messages.rateTranscribedAudio](/method/messages.rateTranscribedAudio/) | Rate [transcribed voice message](https://core.telegram.org/api/transcribe) |
-| [messages.readDiscussion](/method/messages.readDiscussion/) | Mark a [thread](https://core.telegram.org/api/threads) as read |
-| [messages.readEncryptedHistory](/method/messages.readEncryptedHistory/) | Marks message history within a secret chat as read. |
-| [messages.readFeaturedStickers](/method/messages.readFeaturedStickers/) | Mark new featured stickers as read |
-| [messages.readHistory](/method/messages.readHistory/) | Marks message history as read. |
-| [messages.readMentions](/method/messages.readMentions/) | Mark mentions as read; can be used in [forums](https://core.telegram.org/api/forum) but **cannot** be used in [monoforums](https://core.telegram.org/api/monoforum). |
-| [messages.readMessageContents](/method/messages.readMessageContents/) | Notifies the sender about the recipient having listened a voice message or watched a video, emitting an [updateReadMessagesContents](/constructor/updateReadMessagesContents/). |
-| [messages.readReactions](/method/messages.readReactions/) | Mark [message reactions »](https://core.telegram.org/api/reactions) as read |
-| [messages.readSavedHistory](/method/messages.readSavedHistory/) | Mark messages as read in a [monoforum topic »](https://core.telegram.org/api/monoforum). |
-| [messages.receivedMessages](/method/messages.receivedMessages/) | Confirms receipt of messages by a client, cancels PUSH-notification sending. |
-| [messages.receivedQueue](/method/messages.receivedQueue/) | Confirms receipt of messages in a secret chat by client, cancels push notifications.   The method returns a list of **random\_id**s of messages for which push notifications were cancelled. |
-| [messages.reorderPinnedDialogs](/method/messages.reorderPinnedDialogs/) | Reorder pinned dialogs |
-| [messages.reorderPinnedForumTopics](/method/messages.reorderPinnedForumTopics/) | Reorder pinned forum topics |
-| [messages.reorderPinnedSavedDialogs](/method/messages.reorderPinnedSavedDialogs/) | Reorder pinned [saved message dialogs »](https://core.telegram.org/api/saved-messages). |
-| [messages.reorderQuickReplies](/method/messages.reorderQuickReplies/) | Reorder [quick reply shortcuts](https://core.telegram.org/api/business#quick-reply-shortcuts). This will emit an [updateQuickReplies](/constructor/updateQuickReplies/) update to other logged-in sessions. |
-| [messages.reorderStickerSets](/method/messages.reorderStickerSets/) | Reorder installed stickersets |
-| [messages.report](/method/messages.report/) | Report a message in a chat for violation of telegram's Terms of Service |
-| [messages.reportEncryptedSpam](/method/messages.reportEncryptedSpam/) | Report a secret chat for spam |
-| [messages.reportMessagesDelivery](/method/messages.reportMessagesDelivery/) | Used for [Telegram Gateway verification messages »](https://telegram.org/blog/star-messages-gateway-2-0-and-more#save-even-more-on-user-verification): indicate to the server that one or more [message](/constructor/message/)s were received by the client, if requested by the [message](/constructor/message/).**report\_delivery\_until\_date** flag or the equivalent flag in [push notifications](https://core.telegram.org/api/push-updates). |
-| [messages.reportReaction](/method/messages.reportReaction/) | Report a [message reaction](https://core.telegram.org/api/reactions) |
-| [messages.reportSpam](/method/messages.reportSpam/) | Report a new incoming chat for spam, if the [peer settings](/constructor/peerSettings/) of the chat allow us to do that |
-| [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/) | Report a [sponsored message »](https://core.telegram.org/api/sponsored-messages), see [here »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages) for more info on the full flow. |
-| [messages.requestAppWebView](/method/messages.requestAppWebView/) | Open a [bot mini app](https://core.telegram.org/bots/webapps) from a [direct Mini App deep link](https://core.telegram.org/api/links#direct-mini-app-links), sending over user information after user confirmation. After calling this method, until the user closes the webview, [messages.prolongWebView](/method/messages.prolongWebView/) must be called every 60 seconds. |
-| [messages.requestEncryption](/method/messages.requestEncryption/) | Sends a request to start a secret chat to the user. |
-| [messages.requestMainWebView](/method/messages.requestMainWebView/) | Open a [Main Mini App](https://core.telegram.org/api/bots/webapps#main-mini-apps). |
-| [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/) | Open a [bot mini app](https://core.telegram.org/api/bots/webapps). |
-| [messages.requestUrlAuth](/method/messages.requestUrlAuth/) | Get more info about a Seamless Telegram Login authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization) |
-| [messages.requestWebView](/method/messages.requestWebView/) | Open a [bot mini app](https://core.telegram.org/bots/webapps), sending over user information after user confirmation. After calling this method, until the user closes the webview, [messages.prolongWebView](/method/messages.prolongWebView/) must be called every 60 seconds. |
-| [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/) | Change the default peer that should be used when sending messages, reactions, poll votes to a specific group |
-| [messages.saveDraft](/method/messages.saveDraft/) | Save a message [draft](https://core.telegram.org/api/drafts) associated to a chat. |
-| [messages.saveGif](/method/messages.saveGif/) | Add GIF to saved gifs list |
-| [messages.savePreparedInlineMessage](/method/messages.savePreparedInlineMessage/) | Save a [prepared inline message](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message), to be shared by the user of the mini app using a [web\_app\_send\_prepared\_message event](https://core.telegram.org/api/web-events#web-app-send-prepared-message) |
-| [messages.saveRecentSticker](/method/messages.saveRecentSticker/) | Add/remove sticker from recent stickers list |
-| [messages.search](/method/messages.search/) | Search for messages. |
-| [messages.searchCustomEmoji](/method/messages.searchCustomEmoji/) | Look for [custom emojis](https://core.telegram.org/api/custom-emoji) associated to a UTF8 emoji |
-| [messages.searchEmojiStickerSets](/method/messages.searchEmojiStickerSets/) | Search for [custom emoji stickersets »](https://core.telegram.org/api/custom-emoji) |
-| [messages.searchGlobal](/method/messages.searchGlobal/) | Search for messages and peers globally |
-| [messages.searchSentMedia](/method/messages.searchSentMedia/) | View and search recently sent media.   This method does not support pagination. |
-| [messages.searchStickers](/method/messages.searchStickers/) | Search for stickers using AI-powered keyword search |
-| [messages.searchStickerSets](/method/messages.searchStickerSets/) | Search for stickersets |
-| [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/) | Send one or more chosen peers, as requested by a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button. |
-| [messages.sendEncrypted](/method/messages.sendEncrypted/) | Sends a text message to a secret chat. |
-| [messages.sendEncryptedFile](/method/messages.sendEncryptedFile/) | Sends a message with a file attachment to a secret chat |
-| [messages.sendEncryptedService](/method/messages.sendEncryptedService/) | Sends a service message to a secret chat. |
-| [messages.sendInlineBotResult](/method/messages.sendInlineBotResult/) | Send a result obtained using [messages.getInlineBotResults](/method/messages.getInlineBotResults/). |
-| [messages.sendMedia](/method/messages.sendMedia/) | Send a media |
-| [messages.sendMessage](/method/messages.sendMessage/) | Sends a message to a chat |
-| [messages.sendMultiMedia](/method/messages.sendMultiMedia/) | Send an [album or grouped media](https://core.telegram.org/api/files/#albums-grouped-media) |
-| [messages.sendPaidReaction](/method/messages.sendPaidReaction/) | Sends one or more [paid Telegram Star reactions »](https://core.telegram.org/api/reactions#paid-reactions), transferring [Telegram Stars »](https://core.telegram.org/api/stars) to a channel's balance. |
-| [messages.sendQuickReplyMessages](/method/messages.sendQuickReplyMessages/) | Send a [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts). |
-| [messages.sendReaction](/method/messages.sendReaction/) | React to message. Starting from layer 159, the reaction will be sent from the peer specified using [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/). |
-| [messages.sendScheduledMessages](/method/messages.sendScheduledMessages/) | Send scheduled messages right away |
-| [messages.sendScreenshotNotification](/method/messages.sendScreenshotNotification/) | Notify the other user in a private chat that a screenshot of the chat was taken |
-| [messages.sendVote](/method/messages.sendVote/) | Vote in a [poll](/constructor/poll/) Starting from layer 159, the vote will be sent from the peer specified using [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/). Before voting, clients should check that the user is actually allowed to vote: voting is not possible if the poll is closed, if it is [subscriber-only »](https://core.telegram.org/api/poll#subscriber-only-polls) and the user is not an eligible subscriber, or if it is [country-restricted »](https://core.telegram.org/api/poll#country-restricted-polls) and the user's [`phone_country_iso2` »](https://core.telegram.org/api/config#phone-country-iso2) is not in the poll's allowed country list. See [vote restrictions »](https://core.telegram.org/api/poll#vote-restrictions) for the full list of conditions. |
-| [messages.sendWebViewData](/method/messages.sendWebViewData/) | Used by the user to relay data from an opened [reply keyboard bot mini app](https://core.telegram.org/api/bots/webapps) to the bot that owns it. |
-| [messages.sendWebViewResultMessage](/method/messages.sendWebViewResultMessage/) | Terminate webview interaction started with [messages.requestWebView](/method/messages.requestWebView/), sending the specified message to the chat on behalf of the user. |
-| [messages.setBotCallbackAnswer](/method/messages.setBotCallbackAnswer/) | Set the callback answer to a user button press (bots only) |
-| [messages.setBotPrecheckoutResults](/method/messages.setBotPrecheckoutResults/) | Once the user has confirmed their payment and shipping details, the bot receives an [updateBotPrecheckoutQuery](/constructor/updateBotPrecheckoutQuery/) update.   Use this method to respond to such pre-checkout queries.   **Note**: Telegram must receive an answer within 10 seconds after the pre-checkout query was sent. |
-| [messages.setBotShippingResults](/method/messages.setBotShippingResults/) | If you sent an invoice requesting a shipping address and the parameter is\_flexible was specified, the bot will receive an [updateBotShippingQuery](/constructor/updateBotShippingQuery/) update. Use this method to reply to shipping queries. |
-| [messages.setChatAvailableReactions](/method/messages.setChatAvailableReactions/) | Change the set of [message reactions »](https://core.telegram.org/api/reactions) that can be used in a certain group, supergroup or channel |
-| [messages.setChatTheme](/method/messages.setChatTheme/) | Change the chat theme of a certain chat, see [here »](https://core.telegram.org/api/themes#chat-themes) for more info. |
-| [messages.setChatWallPaper](/method/messages.setChatWallPaper/) | Set a custom [wallpaper »](https://core.telegram.org/api/wallpapers) in a specific private chat with another user. |
-| [messages.setDefaultHistoryTTL](/method/messages.setDefaultHistoryTTL/) | Changes the default value of the Time-To-Live setting, applied to all new chats. |
-| [messages.setDefaultReaction](/method/messages.setDefaultReaction/) | Change default emoji reaction to use in the quick reaction menu: the value is synced across devices and can be fetched using [help.getConfig, `reactions_default` field](/method/help.getConfig/). |
-| [messages.setEncryptedTyping](/method/messages.setEncryptedTyping/) | Send typing event by the current user to a secret chat. |
-| [messages.setGameScore](/method/messages.setGameScore/) | Use this method to set the score of the specified user in a game sent as a normal message (bots only). |
-| [messages.setHistoryTTL](/method/messages.setHistoryTTL/) | Set maximum Time-To-Live of all messages in the specified chat |
-| [messages.setInlineBotResults](/method/messages.setInlineBotResults/) | Answer an inline query, for bots only |
-| [messages.setInlineGameScore](/method/messages.setInlineGameScore/) | Use this method to set the score of the specified user in a game sent as an inline message (bots only). |
-| [messages.setTyping](/method/messages.setTyping/) | Sends a current user typing event (see [SendMessageAction](/type/SendMessageAction/) for all event types) to a conversation partner or group. |
-| [messages.startBot](/method/messages.startBot/) | Start a conversation with a bot using a [deep linking parameter](https://core.telegram.org/api/links#bot-links) |
-| [messages.startHistoryImport](/method/messages.startHistoryImport/) | Complete the [history import process](https://core.telegram.org/api/import), importing all messages into the chat.   To be called only after initializing the import with [messages.initHistoryImport](/method/messages.initHistoryImport/) and uploading all files using [messages.uploadImportedMedia](/method/messages.uploadImportedMedia/). |
-| [messages.summarizeText](/method/messages.summarizeText/) | Summarize the contents of a message with AI, see [here »](https://core.telegram.org/api/ai#summarize-messages) for more info. Clients should use [message](/constructor/message/).`summary_from_language` as a hint for showing a summarization button; its absence does not forbid invoking this method. |
-| [messages.toggleBotInAttachMenu](/method/messages.toggleBotInAttachMenu/) | Enable or disable [web bot attachment menu »](https://core.telegram.org/api/bots/attach) |
-| [messages.toggleDialogFilterTags](/method/messages.toggleDialogFilterTags/) | Enable or disable [folder tags »](https://core.telegram.org/api/folders#folder-tags). |
-| [messages.toggleDialogPin](/method/messages.toggleDialogPin/) | Pin/unpin a dialog |
-| [messages.toggleNoForwards](/method/messages.toggleNoForwards/) | Enable or disable [content protection](https://core.telegram.org/api/content-protection) on a channel, group or private chat. |
-| [messages.togglePaidReactionPrivacy](/method/messages.togglePaidReactionPrivacy/) | Changes the privacy of already sent [paid reactions](https://core.telegram.org/api/reactions#paid-reactions) on a specific message. |
-| [messages.togglePeerTranslations](/method/messages.togglePeerTranslations/) | Show or hide the [real-time chat translation popup](https://core.telegram.org/api/translation) for a certain chat |
-| [messages.toggleSavedDialogPin](/method/messages.toggleSavedDialogPin/) | Pin or unpin a [saved message dialog »](https://core.telegram.org/api/saved-messages). |
-| [messages.toggleStickerSets](/method/messages.toggleStickerSets/) | Apply changes to multiple stickersets |
-| [messages.toggleSuggestedPostApproval](/method/messages.toggleSuggestedPostApproval/) | Approve or reject a [suggested post »](https://core.telegram.org/api/suggested-posts). |
-| [messages.toggleTodoCompleted](/method/messages.toggleTodoCompleted/) | Mark one or more items of a [todo list »](https://core.telegram.org/api/todo) as completed or not completed. |
-| [messages.transcribeAudio](/method/messages.transcribeAudio/) | [Transcribe voice message](https://core.telegram.org/api/transcribe) |
-| [messages.translateText](/method/messages.translateText/) | Translate a given text. [Styled text entities](https://core.telegram.org/api/entities) will only be preserved for [Telegram Premium](https://core.telegram.org/api/premium) users. |
-| [messages.uninstallStickerSet](/method/messages.uninstallStickerSet/) | Uninstall a stickerset |
-| [messages.unpinAllMessages](/method/messages.unpinAllMessages/) | [Unpin](https://core.telegram.org/api/pin) all pinned messages |
-| [messages.updateDialogFilter](/method/messages.updateDialogFilter/) | Update [folder](https://core.telegram.org/api/folders) |
-| [messages.updateDialogFiltersOrder](/method/messages.updateDialogFiltersOrder/) | Reorder [folders](https://core.telegram.org/api/folders) |
-| [messages.updatePinnedForumTopic](/method/messages.updatePinnedForumTopic/) | Pin or unpin [forum topics](https://core.telegram.org/api/forum) |
-| [messages.updatePinnedMessage](/method/messages.updatePinnedMessage/) | Pin a message |
-| [messages.updateSavedReactionTag](/method/messages.updateSavedReactionTag/) | Update the [description of a saved message tag »](https://core.telegram.org/api/saved-messages#tags). |
-| [messages.uploadEncryptedFile](/method/messages.uploadEncryptedFile/) | Upload encrypted file and associate it to a secret chat (without actually sending it to the chat). |
-| [messages.uploadImportedMedia](/method/messages.uploadImportedMedia/) | Upload a media file associated with an [imported chat, click here for more info »](https://core.telegram.org/api/import). |
-| [messages.uploadMedia](/method/messages.uploadMedia/) | Upload a file and associate it to a chat (without actually sending it to the chat) May also be used in a [business connection](https://core.telegram.org/api/bots/connected-business-bots), _not_ by wrapping the query in [invokeWithBusinessConnection »](/method/invokeWithBusinessConnection/), but rather by specifying the business connection ID in the `business_connection_id` parameter. |
-| [messages.viewSponsoredMessage](/method/messages.viewSponsoredMessage/) | Mark a specific [sponsored message »](https://core.telegram.org/api/sponsored-messages) as read |
-| [payments.applyGiftCode](/method/payments.applyGiftCode/) | Apply a [Telegram Premium giftcode »](https://core.telegram.org/api/giveaways) |
-| [payments.assignAppStoreTransaction](/method/payments.assignAppStoreTransaction/) | Informs server about a purchase made through the App Store: for official applications only. |
-| [payments.assignPlayMarketTransaction](/method/payments.assignPlayMarketTransaction/) | Informs server about a purchase made through the Play Store: for official applications only. |
-| [payments.botCancelStarsSubscription](/method/payments.botCancelStarsSubscription/) | Cancel a [bot subscription](https://core.telegram.org/api/subscriptions#bot-subscriptions) |
-| [payments.canPurchaseStore](/method/payments.canPurchaseStore/) | Checks whether a purchase is possible. Must be called before in-store purchase, official apps only. |
-| [payments.changeStarsSubscription](/method/payments.changeStarsSubscription/) | Activate or deactivate a [Telegram Star subscription »](https://core.telegram.org/api/invites#paid-invite-links). |
-| [payments.checkCanSendGift](/method/payments.checkCanSendGift/) | Check if the specified [gift »](https://core.telegram.org/api/gifts) can be sent. |
-| [payments.checkGiftCode](/method/payments.checkGiftCode/) | Obtain information about a [Telegram Premium giftcode »](https://core.telegram.org/api/giveaways) |
-| [payments.clearSavedInfo](/method/payments.clearSavedInfo/) | Clear saved payment information |
-| [payments.connectStarRefBot](/method/payments.connectStarRefBot/) | Join a bot's [affiliate program, becoming an affiliate »](https://core.telegram.org/api/bots/referrals#becoming-an-affiliate) |
-| [payments.convertStarGift](/method/payments.convertStarGift/) | Convert a [received gift »](https://core.telegram.org/api/gifts) into Telegram Stars: this will permanently destroy the gift, converting it into [starGift](/constructor/starGift/).`convert_stars` [Telegram Stars](https://core.telegram.org/api/stars), added to the user's balance. Note that [starGift](/constructor/starGift/).`convert_stars` will be less than the buying price ([starGift](/constructor/starGift/).`stars`) of the gift if it was originally bought using Telegram Stars bought a long time ago. |
-| [payments.craftStarGift](/method/payments.craftStarGift/) | Craft a new [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) by combining 1 to 4 owned collectible gifts of the same base gift type. The passed gifts must all have the same [starGiftUnique](/constructor/starGiftUnique/).`gift_id`, must be usable for crafting, and must not be blocked by a future `can_craft_at` timestamp. The first passed gift must not be [located on the TON blockchain](https://core.telegram.org/api/gifts#hosted-collectible-gifts). |
-| [payments.createStarGiftCollection](/method/payments.createStarGiftCollection/) | Create a [star gift collection »](https://core.telegram.org/api/gifts#gift-collections). |
-| [payments.deleteStarGiftCollection](/method/payments.deleteStarGiftCollection/) | Delete a [star gift collection »](https://core.telegram.org/api/gifts#gift-collections). |
-| [payments.editConnectedStarRefBot](/method/payments.editConnectedStarRefBot/) | Leave a bot's [affiliate program »](https://core.telegram.org/api/bots/referrals#becoming-an-affiliate) |
-| [payments.exportInvoice](/method/payments.exportInvoice/) | Generate an [invoice deep link](https://core.telegram.org/api/links#invoice-links) |
-| [payments.fulfillStarsSubscription](/method/payments.fulfillStarsSubscription/) | Re-join a private channel associated to an active [Telegram Star subscription »](https://core.telegram.org/api/invites#paid-invite-links). |
-| [payments.getBankCardData](/method/payments.getBankCardData/) | Get info about a credit card |
-| [payments.getConnectedStarRefBot](/method/payments.getConnectedStarRefBot/) | Fetch info about a specific [bot affiliation »](https://core.telegram.org/api/bots/referrals) |
-| [payments.getConnectedStarRefBots](/method/payments.getConnectedStarRefBots/) | Fetch all affiliations we have created for a certain peer |
-| [payments.getCraftStarGifts](/method/payments.getCraftStarGifts/) | Obtain owned [collectible gifts »](https://core.telegram.org/api/gifts#collectible-gifts) of a specific type that can be used for [crafting »](https://core.telegram.org/api/gifts#crafting-collectible-gifts). |
-| [payments.getGiveawayInfo](/method/payments.getGiveawayInfo/) | Obtain information about a [Telegram Premium giveaway »](https://core.telegram.org/api/giveaways). |
-| [payments.getPaymentForm](/method/payments.getPaymentForm/) | Get a payment form |
-| [payments.getPaymentReceipt](/method/payments.getPaymentReceipt/) | Get payment receipt |
-| [payments.getPremiumGiftCodeOptions](/method/payments.getPremiumGiftCodeOptions/) | Obtain a list of Telegram Premium [giveaway/gift code »](https://core.telegram.org/api/giveaways) options. |
-| [payments.getResaleStarGifts](/method/payments.getResaleStarGifts/) | Get [collectible gifts](https://core.telegram.org/api/gifts#collectible-gifts) of a specific type currently on resale, see [here »](https://core.telegram.org/api/gifts#reselling-collectible-gifts) for more info. `sort_by_price` and `sort_by_num` are mutually exclusive, if neither are set results are sorted by the unixtime (descending) when their resell price was last changed. See [here »](https://core.telegram.org/api/gifts#sending-gifts) for detailed documentation on this method. |
-| [payments.getSavedInfo](/method/payments.getSavedInfo/) | Get saved payment information |
-| [payments.getSavedStarGift](/method/payments.getSavedStarGift/) | Fetch info about specific [gifts](https://core.telegram.org/api/gifts) owned by a peer we control. Note that unlike what the name suggests, the method can be used to fetch both "saved" and "unsaved" gifts (aka gifts both pinned and not pinned to the profile). |
-| [payments.getSavedStarGifts](/method/payments.getSavedStarGifts/) | Fetch the full list of [gifts »](https://core.telegram.org/api/gifts#list-all-received-gifts) owned, received or [hosted »](https://core.telegram.org/api/gifts#hosted-collectible-gifts) by a peer. Note that unlike what the name suggests, the method can be used to fetch both "saved" and "unsaved" gifts (aka gifts both pinned and not pinned) to the profile, depending on the passed flags. |
-| [payments.getStarGiftActiveAuctions](/method/payments.getStarGiftActiveAuctions/) | Fetches all currently active [gift auctions](https://core.telegram.org/api/auctions) **the user has ever bid on** (including auctions where the user was outbid and their bid was returned), as long as the auction hasn't ended yet. This method is primarily used to display an auction badge in the chat list immediately on app startup, without waiting for real-time [updateStarGiftAuctionState](/constructor/updateStarGiftAuctionState/) updates to arrive: the client calls it to discover which auctions the user is participating in and show the badge proactively. To instead fetch the full state of a single auction, subscribe to its real-time updates and render the detailed auction UI (typically when the user opens a specific auction), use [payments.getStarGiftAuctionState](/method/payments.getStarGiftAuctionState/). |
-| [payments.getStarGiftAuctionAcquiredGifts](/method/payments.getStarGiftAuctionAcquiredGifts/) | Fetches all the gifts that the current user won in an [auction](https://core.telegram.org/api/auctions). |
-| [payments.getStarGiftAuctionState](/method/payments.getStarGiftAuctionState/) | Returns info about a [collectible gift auction »](https://core.telegram.org/api/auctions); also subscribes the user to auction updates, see [here »](https://core.telegram.org/api/auctions) for more info on the full flow. |
-| [payments.getStarGiftCollections](/method/payments.getStarGiftCollections/) | Fetches all [star gift collections »](https://core.telegram.org/api/gifts#gift-collections) of a peer. |
-| [payments.getStarGifts](/method/payments.getStarGifts/) | Get a list of available [gifts, see here »](https://core.telegram.org/api/gifts) for more info. |
-| [payments.getStarGiftUpgradeAttributes](/method/payments.getStarGiftUpgradeAttributes/) | Obtains the **full** list of just the collectible attributes that may appear for a gift type once it's upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). The result may also include [starGiftAttributeModel](/constructor/starGiftAttributeModel/) constructors with the `crafted` flag set: these models are reserved for [crafting »](https://core.telegram.org/api/gifts#crafting-collectible-gifts) and should be filtered out from regular upgrade previews (and vice versa). |
-| [payments.getStarGiftUpgradePreview](/method/payments.getStarGiftUpgradePreview/) | Obtain a preview of the possible attributes (chosen randomly) a [gift »](https://core.telegram.org/api/gifts) can receive after upgrading it to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts), see [here »](https://core.telegram.org/api/gifts#collectible-gifts) for more info. |
-| [payments.getStarGiftWithdrawalUrl](/method/payments.getStarGiftWithdrawalUrl/) | Convert a [collectible gift »](https://core.telegram.org/api/gifts) to an NFT on the TON blockchain. |
-| [payments.getStarsGiftOptions](/method/payments.getStarsGiftOptions/) | Obtain a list of [Telegram Stars gift options »](https://core.telegram.org/api/stars#buying-or-gifting-stars) as [starsGiftOption](/constructor/starsGiftOption/) constructors. |
-| [payments.getStarsGiveawayOptions](/method/payments.getStarsGiveawayOptions/) | Fetch a list of [star giveaway options »](https://core.telegram.org/api/giveaways#star-giveaways). |
-| [payments.getStarsRevenueAdsAccountUrl](/method/payments.getStarsRevenueAdsAccountUrl/) | Returns a URL for a Telegram Ad platform account that can be used to set up advertisements for channel/bot in `peer`, paid using the Telegram Stars owned by the specified `peer`, see [here »](https://core.telegram.org/api/stars#paying-for-ads) for more info. |
-| [payments.getStarsRevenueStats](/method/payments.getStarsRevenueStats/) | Get [Telegram Star revenue statistics »](https://core.telegram.org/api/stars). |
-| [payments.getStarsRevenueWithdrawalUrl](/method/payments.getStarsRevenueWithdrawalUrl/) | Withdraw funds from a channel or bot's [star balance »](https://core.telegram.org/api/stars#withdrawing-revenue). |
-| [payments.getStarsStatus](/method/payments.getStarsStatus/) | Get the current [Telegram Stars balance](https://core.telegram.org/api/stars) of the current account (with peer=[inputPeerSelf](/constructor/inputPeerSelf/)), or the stars balance of the bot or channel specified in `peer`. |
-| [payments.getStarsSubscriptions](/method/payments.getStarsSubscriptions/) | Obtain a list of active, expired or cancelled [Telegram Star subscriptions »](https://core.telegram.org/api/invites#paid-invite-links). |
-| [payments.getStarsTopupOptions](/method/payments.getStarsTopupOptions/) | Obtain a list of [Telegram Stars topup options »](https://core.telegram.org/api/stars#buying-or-gifting-stars) as [starsTopupOption](/constructor/starsTopupOption/) constructors. |
-| [payments.getStarsTransactions](/method/payments.getStarsTransactions/) | Fetch [Telegram Stars transactions](https://core.telegram.org/api/stars#balance-and-transaction-history). The `inbound` and `outbound` flags are mutually exclusive: if none of the two are set, both incoming and outgoing transactions are fetched. |
-| [payments.getStarsTransactionsByID](/method/payments.getStarsTransactionsByID/) | Obtain info about [Telegram Star transactions »](https://core.telegram.org/api/stars#balance-and-transaction-history) using specific transaction IDs. |
-| [payments.getSuggestedStarRefBots](/method/payments.getSuggestedStarRefBots/) | Obtain a list of suggested [mini apps](https://core.telegram.org/api/bots/webapps) with available [affiliate programs](https://core.telegram.org/api/bots/referrals) `order_by_revenue` and `order_by_date` are mutually exclusive: if neither is set, results are sorted by profitability. |
-| [payments.getUniqueStarGift](/method/payments.getUniqueStarGift/) | Obtain info about a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) using a slug obtained from a [collectible gift link »](https://core.telegram.org/api/links#collectible-gift-link). |
-| [payments.getUniqueStarGiftValueInfo](/method/payments.getUniqueStarGiftValueInfo/) | Get information about the value of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| [payments.launchPrepaidGiveaway](/method/payments.launchPrepaidGiveaway/) | Launch a [prepaid giveaway »](https://core.telegram.org/api/giveaways). |
-| [payments.refundStarsCharge](/method/payments.refundStarsCharge/) | Refund a [Telegram Stars](https://core.telegram.org/api/stars) transaction, see [here »](https://core.telegram.org/api/payments#6-refunds) for more info. |
-| [payments.reorderStarGiftCollections](/method/payments.reorderStarGiftCollections/) | Reorder the [star gift collections »](https://core.telegram.org/api/gifts#gift-collections) on an owned peer's profile. |
-| [payments.resolveStarGiftOffer](/method/payments.resolveStarGiftOffer/) | Accept or decline a previously received [collectible gift purchase offer »](https://core.telegram.org/api/gifts#collectible-gift-purchase-offers), see [here »](https://core.telegram.org/api/gifts#collectible-gift-purchase-offers) for the full flow. |
-| [payments.saveStarGift](/method/payments.saveStarGift/) | Display or remove a [received or hosted gift »](https://core.telegram.org/api/gifts#hosted-collectible-gifts) from our profile. |
-| [payments.sendPaymentForm](/method/payments.sendPaymentForm/) | Send compiled payment form |
-| [payments.sendStarGiftOffer](/method/payments.sendStarGiftOffer/) | Send an offer to purchase a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gift-purchase-offers), see [here »](https://core.telegram.org/api/gifts#collectible-gift-purchase-offers) for the full flow. |
-| [payments.sendStarsForm](/method/payments.sendStarsForm/) | Make a payment using [Telegram Stars, see here »](https://core.telegram.org/api/stars#using-stars) for more info. |
-| [payments.toggleChatStarGiftNotifications](/method/payments.toggleChatStarGiftNotifications/) | Enables or disables the reception of notifications every time a [gift »](https://core.telegram.org/api/gifts) is received by the specified channel, can only be invoked by admins with `post_messages` [admin rights](/constructor/chatAdminRights/). |
-| [payments.toggleStarGiftsPinnedToTop](/method/payments.toggleStarGiftsPinnedToTop/) | Pins a received gift on top of the profile of the user or owned channels by using [payments.toggleStarGiftsPinnedToTop](/method/payments.toggleStarGiftsPinnedToTop/). |
-| [payments.transferStarGift](/method/payments.transferStarGift/) | Transfer a [collectible gift](https://core.telegram.org/api/gifts#collectible-gifts) to another user or channel: can only be used if transfer is free (i.e. [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/).`transfer_stars` is not set); see [here »](https://core.telegram.org/api/gifts#transferring-collectible-gifts) for more info on the full flow (including the different flow to use in case the transfer isn't free). |
-| [payments.updateStarGiftCollection](/method/payments.updateStarGiftCollection/) | Add or remove gifts from a [star gift collection »](https://core.telegram.org/api/gifts#gift-collections), or rename the collection. |
-| [payments.updateStarGiftPrice](/method/payments.updateStarGiftPrice/) | A [collectible gift we own »](https://core.telegram.org/api/gifts#collectible-gifts) can be put up for sale on the [gift marketplace »](https://telegram.org/blog/gift-marketplace-and-more) with this method, see [here »](https://core.telegram.org/api/gifts#reselling-collectible-gifts) for more info. |
-| [payments.upgradeStarGift](/method/payments.upgradeStarGift/) | Upgrade a [gift](https://core.telegram.org/api/gifts) to a [collectible gift](https://core.telegram.org/api/gifts#collectible-gifts): can only be used if the upgrade was already paid by the gift sender; see [here »](https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift) for more info on the full flow (including the different flow to use in case the upgrade was not paid by the gift sender). |
-| [payments.validateRequestedInfo](/method/payments.validateRequestedInfo/) | Submit requested order information for validation |
-| [phone.acceptCall](/method/phone.acceptCall/) | Accept incoming call, see [here »](https://core.telegram.org/api/calls#one-to-one-calls) for more info on the full flow. |
-| [phone.checkGroupCall](/method/phone.checkGroupCall/) | Check which of the specified source IDs the server still recognizes as joined to a group call. This method can be used with all group call types, see [here »](https://core.telegram.org/api/group-calls#maintaining-group-call-connections) for more info. After joining the main connection with [phone.joinGroupCall](/method/phone.joinGroupCall/), pass its non-zero SSRC/source ID to this method periodically. If a presentation connection is also active, include the separate source registered using [phone.joinGroupCallPresentation](/method/phone.joinGroupCallPresentation/). The method returns the subset of the supplied sources that are still joined. A missing source means that the corresponding connection must be recreated and joined again; it does not indicate whether media packets are currently flowing. If the method returns `GROUPCALL_JOIN_MISSING`, the main connection must be rejoined. |
-| [phone.confirmCall](/method/phone.confirmCall/) | [Complete phone call E2E encryption key exchange »](https://core.telegram.org/api/end-to-end/voice-calls), see [here »](https://core.telegram.org/api/calls#one-to-one-calls) for more info on the full flow. |
-| [phone.createConferenceCall](/method/phone.createConferenceCall/) | Create and optionally join a new [conference call »](https://core.telegram.org/api/group-calls#conference-calls). |
-| [phone.createGroupCall](/method/phone.createGroupCall/) | Create a video chat or livestream, see [here »](https://core.telegram.org/api/group-calls#video-chats-livestreams) for the full flow. |
-| [phone.declineConferenceCallInvite](/method/phone.declineConferenceCallInvite/) | Decline a [conference call](https://core.telegram.org/api/group-calls#conference-calls) invite. |
-| [phone.deleteConferenceCallParticipants](/method/phone.deleteConferenceCallParticipants/) | Remove participants from a [conference call »](https://core.telegram.org/api/end-to-end/group-calls#removing-a-participant). Exactly one of the `only_left` and `kick` flags must be set. |
-| [phone.deleteGroupCallMessages](/method/phone.deleteGroupCallMessages/) | Delete specific messages from the [in-call message overlay »](https://core.telegram.org/api/group-calls#in-call-messages) of a video chat/livestream or live story, including in RTMP mode. Non-admin participants may delete messages they sent; admins may delete any message. |
-| [phone.deleteGroupCallParticipantMessages](/method/phone.deleteGroupCallParticipantMessages/) | As an admin, delete all messages from a specific participant in the [in-call message overlay »](https://core.telegram.org/api/group-calls#in-call-messages) of a video chat/livestream or live story, including in RTMP mode. |
-| [phone.discardCall](/method/phone.discardCall/) | Refuse or end running call, see [here »](https://core.telegram.org/api/calls#one-to-one-calls) for more info on the full flow. |
-| [phone.discardGroupCall](/method/phone.discardGroupCall/) | Terminate a group call, ending the room for all participants. This method can be used with all group call types, see [here »](https://core.telegram.org/api/group-calls#managing-an-active-group-call) for more info. |
-| [phone.editGroupCallParticipant](/method/phone.editGroupCallParticipant/) | Edit information about a participant of a non-RTMP video chat/livestream or conference. The `raise_hand` field is only supported in video chats/livestreams, see [here »](https://core.telegram.org/api/group-calls#managing-an-active-group-call) for more info. Note: [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).N?[Bool](/type/Bool/) parameters can have three possible values: -   If the [TL flag](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) is not set, the previous value will not be changed. -   If the [TL flag](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) is set and contains a [boolTrue](/constructor/boolTrue/), the previous value will be overwritten to `true`. -   If the [TL flag](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) is set and contains a [boolFalse](/constructor/boolFalse/), the previous value will be overwritten to `false`. |
-| [phone.editGroupCallTitle](/method/phone.editGroupCallTitle/) | Edit the title of a video chat or livestream. This method cannot be used with live stories or conferences, see [here »](https://core.telegram.org/api/group-calls#video-chats-livestreams) for more info. |
-| [phone.exportGroupCallInvite](/method/phone.exportGroupCallInvite/) | Get an invite link for a public [video chat/livestream »](https://core.telegram.org/api/group-calls#video-chats-livestreams). Non-admin members or subscribers may export a link with `can_self_unmute` omitted. Only group call admins may set `can_self_unmute` to export a link that allows users to speak. Cannot be used for video chats/livestreams associated with private groups/channels, [conference calls »](https://core.telegram.org/api/group-calls#conference-calls) or [live stories »](https://core.telegram.org/api/group-calls#live-stories). |
-| [phone.getCallConfig](/method/phone.getCallConfig/) | DEPRECATED: Get phone call configuration to be passed to the libtgvoip (deprecated) shared config. |
-| [phone.getGroupCall](/method/phone.getGroupCall/) | Get info about a [group call](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call) and its participants. |
-| [phone.getGroupCallChainBlocks](/method/phone.getGroupCallChainBlocks/) | Fetch blocks from a conference call [subchain »](https://core.telegram.org/api/end-to-end/group-calls#subchains); handle the returned [updateGroupCallChainBlocks](/constructor/updateGroupCallChainBlocks/) as [specified here »](https://core.telegram.org/api/end-to-end/group-calls#handling-updates). If the number of blocks returned by _any_ call to this method is equal to `limit`, this method must be re-invoked immediately after processing the returned [updateGroupCallChainBlocks](/constructor/updateGroupCallChainBlocks/), with the newly committed `offset` (usually equal to the returned `next_offset`). |
-| [phone.getGroupCallJoinAs](/method/phone.getGroupCallJoinAs/) | Get a list of peers that can be used to join a [video chat or livestream »](https://core.telegram.org/api/group-calls#joining-a-group-call-on-behalf-of-owned-channels), presenting yourself as a specific user/channel. This method cannot be used for live stories or conference calls. To comment or react in a live story as another peer, use [channels.getSendAs](/method/channels.getSendAs/) with `for_live_stories` set and pass one of the returned peers to [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/).`send_as`. |
-| [phone.getGroupCallStars](/method/phone.getGroupCallStars/) | Fetch a live story's total donations and top donors, see [paid live story donations »](https://core.telegram.org/api/group-calls#paid-live-story-donations). |
-| [phone.getGroupCallStreamChannels](/method/phone.getGroupCallStreamChannels/) | Get the available stream channels and current playback timestamp of an RTMP-mode video chat, livestream or live story, see [here »](https://core.telegram.org/api/group-calls#rtmp-mode) for the full flow.   The group call must be joined before invoking this method. Send the request to the media DC specified by [groupCall](/constructor/groupCall/).`stream_dc_id`. |
-| [phone.getGroupCallStreamRtmpUrl](/method/phone.getGroupCallStreamRtmpUrl/) | Get the RTMP URL and stream key used by the single external streamer that publishes all audio and video for an RTMP-mode video chat, livestream or live story. See [here »](https://core.telegram.org/api/group-calls#creating-and-publishing-an-rtmp-livestream) for the full flow. |
-| [phone.getGroupParticipants](/method/phone.getGroupParticipants/) | Get [group call](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call) participants. |
-| [phone.inviteConferenceCallParticipant](/method/phone.inviteConferenceCallParticipant/) | Invite a user to a [conference call](https://core.telegram.org/api/group-calls#conference-calls). |
-| [phone.inviteToGroupCall](/method/phone.inviteToGroupCall/) | Invite a set of users to a [video chat/livestream »](https://core.telegram.org/api/group-calls#video-chats-livestreams); cannot be used for [live stories »](https://core.telegram.org/api/group-calls#live-stories) or [conference calls »](https://core.telegram.org/api/group-calls#conference-calls). |
-| [phone.joinGroupCall](/method/phone.joinGroupCall/) | Join any [group call type »](https://core.telegram.org/api/group-calls#group-call-types). Conference calls additionally require the [E2E joining flow »](https://core.telegram.org/api/end-to-end/group-calls#joining-a-call). The `params` field must contain a join payload generated by the local tgcalls group-call engine. It contains a random non-zero audio `ssrc`, ICE `ufrag` and `pwd`, DTLS `fingerprints`, and, when publishing video, `ssrc-groups`. For example, a join payload without published video has the following shape: ``` {   "ssrc": 123456789,   "ufrag": "...",   "pwd": "...",   "fingerprints": [{     "hash": "sha-256",     "fingerprint": "...",     "setup": "passive"   }] } ``` When joining an RTMP-mode call, generate the payload without published video source groups. |
-| [phone.joinGroupCallPresentation](/method/phone.joinGroupCallPresentation/) | Start screen sharing in a non-RTMP video chat/livestream or conference. Presentations are not supported in live stories or RTMP-mode video chats/livestreams, see [here »](https://core.telegram.org/api/group-calls#presentations) for more info. |
-| [phone.leaveGroupCall](/method/phone.leaveGroupCall/) | Leave a group call without ending it for other participants. This method can be used with all group call types, see [here »](https://core.telegram.org/api/group-calls#managing-an-active-group-call) for more info. |
-| [phone.leaveGroupCallPresentation](/method/phone.leaveGroupCallPresentation/) | Stop screen sharing in a non-RTMP video chat/livestream or conference. Presentations are not supported in live stories or RTMP-mode video chats/livestreams, see [here »](https://core.telegram.org/api/group-calls#presentations) for more info. |
-| [phone.receivedCall](/method/phone.receivedCall/) | Optional: notify the server that the user is currently busy in a call: this will automatically refuse all incoming phone calls until the current phone call is ended, see [here »](https://core.telegram.org/api/calls#one-to-one-calls) for more info on the full flow. |
-| [phone.requestCall](/method/phone.requestCall/) | Start a telegram phone call, see [here »](https://core.telegram.org/api/calls#one-to-one-calls) for more info on the full flow. |
-| [phone.saveCallDebug](/method/phone.saveCallDebug/) | Send [phone call](https://core.telegram.org/api/calls#call-debug) debug data to server. |
-| [phone.saveCallLog](/method/phone.saveCallLog/) | Deprecated: send libtgvoip phone call debug information |
-| [phone.saveDefaultGroupCallJoinAs](/method/phone.saveDefaultGroupCallJoinAs/) | Set the default peer used to join a [video chat/livestream »](https://core.telegram.org/api/group-calls#joining-a-group-call-on-behalf-of-owned-channels) associated with a specific dialog. |
-| [phone.saveDefaultSendAs](/method/phone.saveDefaultSendAs/) | Save the default peer displayed as the author of live story comments and reactions, see [in-call messages »](https://core.telegram.org/api/group-calls#in-call-messages). It cannot be used for normal video chats/livestreams, where in-call messages are sent as the peer used to join the call (`join_as`). |
-| [phone.sendConferenceCallBroadcast](/method/phone.sendConferenceCallBroadcast/) | Submit a verification message to conference call subchain `1`, see [subchains »](https://core.telegram.org/api/end-to-end/group-calls#subchains). |
-| [phone.sendGroupCallEncryptedMessage](/method/phone.sendGroupCallEncryptedMessage/) | Send an E2E-encrypted message or emoji reaction to all participants of a conference call. This method can only be used with conferences; see [here »](https://core.telegram.org/api/end-to-end/group-calls#conference-in-call-messages) for the serialization and encryption process. |
-| [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/) | Send an in-call message to all participants of a video chat/livestream or live story, including in RTMP mode, see [here »](https://core.telegram.org/api/group-calls#in-call-messages) for more info. The `send_as` field can only be populated for live stories, where it optionally selects the displayed author. If omitted, the server automatically selects the appropriate author. Do not populate it for video chats/livestreams. Video chats/livestreams and live stories support [animated emoji reactions »](https://core.telegram.org/api/group-calls#in-call-reactions), encoded as messages containing only a standard available reaction emoji or a single custom emoji entity. For a paid live story comment, pass the user-confirmed donation amount in `allow_paid_stars`. For commenters other than the live story owner, this amount must be at least the current [groupCall](/constructor/groupCall/).`send_paid_messages_stars` minimum. A higher amount may be donated to highlight the comment. The live story owner may comment without populating `allow_paid_stars`. To send a standalone paid live story donation, pass a positive `allow_paid_stars` value and an empty `message`, see [here »](https://core.telegram.org/api/group-calls#paid-live-story-donations) for the full flow. |
-| [phone.sendSignalingData](/method/phone.sendSignalingData/) | Send VoIP [signaling data](https://core.telegram.org/api/calls#signaling-data) for an ongoing phone call. |
-| [phone.setCallRating](/method/phone.setCallRating/) | Rate a call, returns info about the rating message sent to the official VoIP bot, see [here »](https://core.telegram.org/api/calls#call-rating) for more info on the full flow. |
-| [phone.startScheduledGroupCall](/method/phone.startScheduledGroupCall/) | Start a scheduled [group call](https://core.telegram.org/api/group-calls#video-chats-livestreams). |
-| [phone.toggleGroupCallRecord](/method/phone.toggleGroupCallRecord/) | Start or stop recording a video chat/livestream, see [here »](https://core.telegram.org/api/group-calls#video-chats-livestreams) for more info. The recorded audio and video streams will be automatically sent to Saved Messages (the chat with ourselves). |
-| [phone.toggleGroupCallSettings](/method/phone.toggleGroupCallSettings/) | Change group call settings. Each setting supports different group call types, see [here »](https://core.telegram.org/api/group-calls#managing-an-active-group-call) for more info. |
-| [phone.toggleGroupCallStartSubscription](/method/phone.toggleGroupCallStartSubscription/) | Subscribe or unsubscribe to a scheduled [group call](https://core.telegram.org/api/group-calls#video-chats-livestreams). |
-| [photos.deletePhotos](/method/photos.deletePhotos/) | Deletes profile photos. The method returns a list of successfully deleted photo IDs. |
-| [photos.getUserPhotos](/method/photos.getUserPhotos/) | Returns the list of user photos. |
-| [photos.updateProfilePhoto](/method/photos.updateProfilePhoto/) | Installs a previously uploaded photo as a profile photo. |
-| [photos.uploadContactProfilePhoto](/method/photos.uploadContactProfilePhoto/) | Upload a custom profile picture for a contact, or suggest a new profile picture to a contact. The `file`, `video` and `video_emoji_markup` flags are mutually exclusive. |
-| [photos.uploadProfilePhoto](/method/photos.uploadProfilePhoto/) | Updates current user profile photo. The `file`, `video` and `video_emoji_markup` flags are mutually exclusive. |
-| [premium.applyBoost](/method/premium.applyBoost/) | Apply one or more [boosts »](https://core.telegram.org/api/boost) to a peer. |
-| [premium.getBoostsList](/method/premium.getBoostsList/) | Obtains info about the boosts that were applied to a certain channel or supergroup (admins only) |
-| [premium.getBoostsStatus](/method/premium.getBoostsStatus/) | Gets the current [number of boosts](https://core.telegram.org/api/boost) of a channel/supergroup. |
-| [premium.getMyBoosts](/method/premium.getMyBoosts/) | Obtain which peers are we currently [boosting](https://core.telegram.org/api/boost), and how many [boost slots](https://core.telegram.org/api/boost) we have left. |
-| [premium.getUserBoosts](/method/premium.getUserBoosts/) | Returns the lists of boost that were applied to a channel/supergroup by a specific user (admins only) |
-| [smsjobs.finishJob](/method/smsjobs.finishJob/) | Finish an SMS job (official clients only). |
-| [smsjobs.getSmsJob](/method/smsjobs.getSmsJob/) | Get info about an SMS job (official clients only). |
-| [smsjobs.getStatus](/method/smsjobs.getStatus/) | Get SMS jobs status (official clients only). |
-| [smsjobs.isEligibleToJoin](/method/smsjobs.isEligibleToJoin/) | Check if we can process SMS jobs (official clients only). |
-| [smsjobs.join](/method/smsjobs.join/) | Enable SMS jobs (official clients only). |
-| [smsjobs.leave](/method/smsjobs.leave/) | Disable SMS jobs (official clients only). |
-| [smsjobs.updateSettings](/method/smsjobs.updateSettings/) | Update SMS job settings (official clients only). |
-| [stats.getBroadcastStats](/method/stats.getBroadcastStats/) | Get [channel statistics](https://core.telegram.org/api/stats) |
-| [stats.getMegagroupStats](/method/stats.getMegagroupStats/) | Get [supergroup statistics](https://core.telegram.org/api/stats) |
-| [stats.getMessagePublicForwards](/method/stats.getMessagePublicForwards/) | Obtains a list of messages, indicating to which other public channels was a channel message forwarded.   Will return a list of [messages](/constructor/message/) with `peer_id` equal to the public channel to which this message was forwarded. |
-| [stats.getMessageStats](/method/stats.getMessageStats/) | Get [message statistics](https://core.telegram.org/api/stats) |
-| [stats.getStoryPublicForwards](/method/stats.getStoryPublicForwards/) | Obtain forwards of a [story](https://core.telegram.org/api/stories) as a message to public chats and reposts by public channels. |
-| [stats.getStoryStats](/method/stats.getStoryStats/) | Get [statistics](https://core.telegram.org/api/stats) for a certain [story](https://core.telegram.org/api/stories). |
-| [stats.loadAsyncGraph](/method/stats.loadAsyncGraph/) | Load [channel statistics graph](https://core.telegram.org/api/stats) asynchronously |
-| [stickers.addStickerToSet](/method/stickers.addStickerToSet/) | Add a sticker to a stickerset. The sticker set must have been created by the current user/bot. |
-| [stickers.changeSticker](/method/stickers.changeSticker/) | Update the keywords, emojis or [mask coordinates](https://core.telegram.org/api/stickers#mask-stickers) of a sticker. |
-| [stickers.changeStickerPosition](/method/stickers.changeStickerPosition/) | Changes the absolute position of a sticker in the set to which it belongs. The sticker set must have been created by the current user/bot. |
-| [stickers.checkShortName](/method/stickers.checkShortName/) | Check whether the given short name is available |
-| [stickers.createStickerSet](/method/stickers.createStickerSet/) | Create a stickerset. |
-| [stickers.deleteStickerSet](/method/stickers.deleteStickerSet/) | Deletes a stickerset we created. |
-| [stickers.removeStickerFromSet](/method/stickers.removeStickerFromSet/) | Remove a sticker from the set where it belongs. The sticker set must have been created by the current user/bot. |
-| [stickers.renameStickerSet](/method/stickers.renameStickerSet/) | Renames a stickerset. |
-| [stickers.replaceSticker](/method/stickers.replaceSticker/) | Replace a sticker in a [stickerset »](https://core.telegram.org/api/stickers). |
-| [stickers.setStickerSetThumb](/method/stickers.setStickerSetThumb/) | Set stickerset thumbnail |
-| [stickers.suggestShortName](/method/stickers.suggestShortName/) | Suggests a short name for a given stickerpack name |
-| [stories.activateStealthMode](/method/stories.activateStealthMode/) | Activates [stories stealth mode](https://core.telegram.org/api/stories#stealth-mode), see [here »](https://core.telegram.org/api/stories#stealth-mode) for more info. Will return an [updateStoriesStealthMode](/constructor/updateStoriesStealthMode/). |
-| [stories.canSendStory](/method/stories.canSendStory/) | Check whether we can post stories as the specified peer. |
-| [stories.createAlbum](/method/stories.createAlbum/) | Creates a [story album](https://core.telegram.org/api/stories#story-albums). |
-| [stories.deleteAlbum](/method/stories.deleteAlbum/) | Delete a [story album](https://core.telegram.org/api/stories#story-albums). |
-| [stories.deleteStories](/method/stories.deleteStories/) | Deletes some posted [stories](https://core.telegram.org/api/stories). |
-| [stories.editStory](/method/stories.editStory/) | Edit an uploaded [story](https://core.telegram.org/api/stories) May also be used in a [business connection](https://core.telegram.org/api/bots/connected-business-bots), _not_ by wrapping the query in [invokeWithBusinessConnection »](/method/invokeWithBusinessConnection/), but rather by specifying the ID of a controlled business user in `peer`: in this context, the method can only be used to edit stories posted by the same business bot on behalf of the user with [stories.sendStory](/method/stories.sendStory/). |
-| [stories.exportStoryLink](/method/stories.exportStoryLink/) | Generate a [story deep link](https://core.telegram.org/api/links#story-links) for a specific story |
-| [stories.getAlbums](/method/stories.getAlbums/) | Get [story albums](https://core.telegram.org/api/stories#story-albums) created by a peer. |
-| [stories.getAlbumStories](/method/stories.getAlbumStories/) | Get stories in a [story album »](https://core.telegram.org/api/stories#story-albums). |
-| [stories.getAllReadPeerStories](/method/stories.getAllReadPeerStories/) | Obtain the latest read story ID for all peers when first logging in, returned as a list of [updateReadStories](/constructor/updateReadStories/) updates, see [here »](https://core.telegram.org/api/stories#watching-stories) for more info. |
-| [stories.getAllStories](/method/stories.getAllStories/) | Fetch the List of active (or active and hidden) stories, see [here »](https://core.telegram.org/api/stories#watching-stories) for more info on watching stories. |
-| [stories.getChatsToSend](/method/stories.getChatsToSend/) | Obtain a list of channels where the user can post [stories](https://core.telegram.org/api/stories) |
-| [stories.getPeerMaxIDs](/method/stories.getPeerMaxIDs/) | Get compact [active story summaries »](https://core.telegram.org/api/stories#recent-story-summaries) for a set of peers. |
-| [stories.getPeerStories](/method/stories.getPeerStories/) | Fetch the full active [story list](https://core.telegram.org/api/stories#watching-stories) of a specific peer. |
-| [stories.getPinnedStories](/method/stories.getPinnedStories/) | Fetch the [stories](https://core.telegram.org/api/stories#pinned-or-archived-stories) pinned on a peer's profile. |
-| [stories.getStoriesArchive](/method/stories.getStoriesArchive/) | Fetch the [story archive »](https://core.telegram.org/api/stories#pinned-or-archived-stories) of a peer we control. |
-| [stories.getStoriesByID](/method/stories.getStoriesByID/) | Obtain full info about a set of [stories](https://core.telegram.org/api/stories) by their IDs. |
-| [stories.getStoriesViews](/method/stories.getStoriesViews/) | Obtain info about the view count, forward count, reactions and recent viewers of one or more [stories](https://core.telegram.org/api/stories). |
-| [stories.getStoryReactionsList](/method/stories.getStoryReactionsList/) | Get the [reaction](https://core.telegram.org/api/reactions) and interaction list of a [story](https://core.telegram.org/api/stories) posted to a channel, along with the sender of each reaction. Can only be used by channel admins. |
-| [stories.getStoryViewsList](/method/stories.getStoryViewsList/) | Obtain the list of users that have viewed a specific [story we posted](https://core.telegram.org/api/stories) |
-| [stories.incrementStoryViews](/method/stories.incrementStoryViews/) | Increment the view counter of one or more stories. |
-| [stories.readStories](/method/stories.readStories/) | Mark all stories up to a certain ID as read, for a given peer; will emit an [updateReadStories](/constructor/updateReadStories/) update to all logged-in sessions. |
-| [stories.reorderAlbums](/method/stories.reorderAlbums/) | Reorder [story albums on a profile »](https://core.telegram.org/api/stories#story-albums). |
-| [stories.report](/method/stories.report/) | Report a story. |
-| [stories.searchPosts](/method/stories.searchPosts/) | Globally search for [stories](https://core.telegram.org/api/stories) using a hashtag or a [location media area](https://core.telegram.org/api/stories#location-tags), see [here »](https://core.telegram.org/api/stories#searching-stories) for more info on the full flow. Either `hashtag` **or** `area` **must** be set when invoking the method. |
-| [stories.sendReaction](/method/stories.sendReaction/) | React to a story. |
-| [stories.sendStory](/method/stories.sendStory/) | Uploads a [Telegram Story](https://core.telegram.org/api/stories). May also be used in a [business connection](https://core.telegram.org/api/bots/connected-business-bots), _not_ by wrapping the query in [invokeWithBusinessConnection »](/method/invokeWithBusinessConnection/), but rather by specifying the ID of a controlled business user in `peer`. |
-| [stories.startLive](/method/stories.startLive/) | Start a live story, optionally using RTMP livestream mode, see [here »](https://core.telegram.org/api/group-calls#live-stories) for the full flow. |
-| [stories.toggleAllStoriesHidden](/method/stories.toggleAllStoriesHidden/) | Hide the active stories of a specific peer, preventing them from being displayed on the action bar on the homescreen. |
-| [stories.togglePeerStoriesHidden](/method/stories.togglePeerStoriesHidden/) | Hide the active stories of a user, preventing them from being displayed on the action bar on the homescreen, see [here »](https://core.telegram.org/api/stories#hiding-stories-of-other-users) for more info. |
-| [stories.togglePinned](/method/stories.togglePinned/) | Pin or unpin one or more stories |
-| [stories.togglePinnedToTop](/method/stories.togglePinnedToTop/) | Pin some stories to the top of the profile, see [here »](https://core.telegram.org/api/stories#pinned-or-archived-stories) for more info. |
-| [stories.updateAlbum](/method/stories.updateAlbum/) | Rename a [story albums »](https://core.telegram.org/api/stories#story-albums), or add, delete or reorder stories in it. |
-| [updates.getChannelDifference](/method/updates.getChannelDifference/) | Returns the difference between the current state of updates of a certain channel and transmitted. |
-| [updates.getDifference](/method/updates.getDifference/) | Get new [updates](/api/updates/). |
-| [updates.getState](/method/updates.getState/) | Returns a current state of updates. |
-| [upload.getCdnFile](/method/upload.getCdnFile/) | Download a [CDN](https://core.telegram.org/cdn) file. |
-| [upload.getCdnFileHashes](/method/upload.getCdnFileHashes/) | Get SHA256 hashes for verifying downloaded [CDN](https://core.telegram.org/cdn) files |
-| [upload.getFile](/method/upload.getFile/) | Returns content of a whole file or its part. |
-| [upload.getFileHashes](/method/upload.getFileHashes/) | Get SHA256 hashes for verifying downloaded files |
-| [upload.getWebfile](/method/upload.getWebFile/) | Returns content of a web file, by proxying the request through telegram, see the [webfile docs for more info](https://core.telegram.org/api/files/#downloading-webfiles). **Note**: the query must be sent to the DC specified in the `webfile_dc_id` [MTProto configuration field](https://core.telegram.org/api/config#mtproto-configuration). |
-| [upload.reuploadCdnFile](/method/upload.reuploadCdnFile/) | Request a reupload of a certain file to a [CDN DC](https://core.telegram.org/cdn). |
-| [upload.saveBigFilePart](/method/upload.saveBigFilePart/) | Saves a part of a large file (over 10 MB in size) to be later passed to one of the methods. |
-| [upload.saveFilePart](/method/upload.saveFilePart/) | Saves a part of file for further sending to one of the methods. |
-| [users.getFullUser](/method/users.getFullUser/) | Returns extended user info by ID. |
-| [users.getRequirementsToContact](/method/users.getRequirementsToContact/) | Check whether we can write to the specified users, used to implement bulk checks for [Premium-only messages »](https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users) and [paid messages »](https://core.telegram.org/api/paid-messages). For each input user, returns a [RequirementToContact](/type/RequirementToContact/) constructor (at the same offset in the vector) containing requirements to contact them. |
-| [users.getSavedMusic](/method/users.getSavedMusic/) | Get songs [pinned to the user's profile, see here »](https://core.telegram.org/api/profile#music) for more info. |
-| [users.getSavedMusicByID](/method/users.getSavedMusicByID/) | Check if the passed songs are still pinned to the user's profile, or refresh the file references of songs pinned on a user's profile [see here »](https://core.telegram.org/api/profile#music) for more info. |
-| [users.getUsers](/method/users.getUsers/) | Returns basic user info according to their identifiers. |
-| [users.setSecureValueErrors](/method/users.setSecureValueErrors/) | Notify the user that the sent [passport](https://core.telegram.org/passport) data contains some errors The user will not be able to re-submit their Passport data to you until the errors are fixed (the contents of the field for which you returned the error must change). Use this if the data submitted by the user doesn't satisfy the standards your service requires for any reason. For example, if a birthday date seems invalid, a submitted document is blurry, a scan shows evidence of tampering, etc. Supply some details in the error message to make sure the user knows how to correct the issues. |
-| [users.suggestBirthday](/method/users.suggestBirthday/) | Suggest a birthday to another user, see [here »](https://core.telegram.org/api/profile#birthday) for more info on birthdays in the API. |
+| [account.acceptAuthorization](/method/account.acceptAuthorization/) | Отправляет форму авторизации Telegram Passport, тем самым передавая данные сервису |
+| [account.addNoPaidMessagesException](/method/account.addNoPaidMessagesException/) | Разрешить пользователю отправлять нам сообщения без оплаты, если включены [платные сообщения »](/api/paid-messages/). |
+| [account.cancelPasswordEmail](/method/account.cancelPasswordEmail/) | Отменить код, отправленный для подтверждения адреса электронной почты, используемого как [способ восстановления 2FA](/api/srp/). |
+| [account.changeAuthorizationSettings](/method/account.changeAuthorizationSettings/) | Изменить настройки, связанные с сессией. |
+| [account.changePhone](/method/account.changePhone/) | Изменить номер телефона текущего аккаунта |
+| [account.checkUsername](/method/account.checkUsername/) | Проверяет корректность имени пользователя и его доступность. |
+| [account.clearRecentEmojiStatuses](/method/account.clearRecentEmojiStatuses/) | Очищает список недавно использованных [эмодзи-статусов](/api/emoji-status/) |
+| [account.confirmPasswordEmail](/method/account.confirmPasswordEmail/) | Подтвердить адрес электронной почты для использования в качестве [способа восстановления двухфакторной аутентификации](/api/srp/). |
+| [account.confirmPhone](/method/account.confirmPhone/) | Подтвердить номер телефона, чтобы отменить удаление аккаунта; подробнее [см. здесь »](/api/account-deletion/) |
+| [account.createBusinessChatLink](/method/account.createBusinessChatLink/) | Создать [глубокую ссылку на бизнес-чат »](/api/business/#business-chat-links). |
+| [account.createTheme](/method/account.createTheme/) | Создать тему оформления |
+| [account.declinePasswordReset](/method/account.declinePasswordReset/) | Отменить незавершённый сброс пароля двухфакторной аутентификации, [подробнее см. здесь »](/api/srp/#password-reset) |
+| [account.deleteAccount](/method/account.deleteAccount/) | Удалить аккаунт пользователя с серверов Telegram. |
+| [account.deleteAutoSaveExceptions](/method/account.deleteAutoSaveExceptions/) | Удалить все настройки автосохранения для отдельных пиров. |
+| [account.deleteBusinessChatLink](/method/account.deleteBusinessChatLink/) | Удалить [глубокую ссылку на бизнес-чат »](/api/business/#business-chat-links). |
+| [account.deletePasskey](/method/account.deletePasskey/) | Удалить ключ доступа, привязанный к текущему аккаунту; подробнее см. [здесь »](/api/passkeys/#delete-passkeys). |
+| [account.deleteSecureValue](/method/account.deleteSecureValue/) | Удалить сохранённые документы [Telegram Passport](https://core.telegram.org/passport), [подробнее см. в документации по Passport »](https://core.telegram.org/passport/encryption#encryption) |
+| [account.disablePeerConnectedBot](/method/account.disablePeerConnectedBot/) | Безвозвратно отключить конкретный чат от всех [бизнес-ботов »](/api/bots/connected-business-bots/) (равнозначно указанию его в `recipients.exclude_users` при первоначальной настройке через [account.updateConnectedBot »](/method/account.updateConnectedBot/)); чтобы снова подключить чат, отключённый этим методом, пользователь обязан заново подключить бота целиком, вызвав [account.updateConnectedBot »](/method/account.updateConnectedBot/). |
+| [account.editBusinessChatLink](/method/account.editBusinessChatLink/) | Изменить созданную [глубокую ссылку на бизнес-чат »](/api/business/#business-chat-links). |
+| [account.finishTakeoutSession](/method/account.finishTakeoutSession/) | Завершить [сессию выгрузки данных, подробнее см. здесь »](/api/takeout/). |
+| [account.getAccountTTL](/method/account.getAccountTTL/) | Получить срок жизни аккаунта в днях |
+| [account.getAllSecureValues](/method/account.getAllSecureValues/) | Получить все сохранённые документы [Telegram Passport](https://core.telegram.org/passport), [подробнее см. в документации по Passport »](https://core.telegram.org/passport/encryption#encryption) |
+| [account.getAuthorizationForm](/method/account.getAuthorizationForm/) | Возвращает форму авторизации Telegram Passport для передачи данных сервису |
+| [account.getAuthorizations](/method/account.getAuthorizations/) | Получить список активных сессий |
+| [account.getAutoDownloadSettings](/method/account.getAutoDownloadSettings/) | Получить настройки автозагрузки медиафайлов |
+| [account.getAutoSaveSettings](/method/account.getAutoSaveSettings/) | Получить настройки автосохранения |
+| [account.getBotBusinessConnection](/method/account.getBotBusinessConnection/) | Боты могут вызывать этот метод, чтобы заново получить конструктор [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/), связанный с конкретным [бизнес-подключением `connection_id`, подробнее о подключённых бизнес-ботах см. здесь »](/api/bots/connected-business-bots/). |
+| [account.getBusinessChatLinks](/method/account.getBusinessChatLinks/) | Перечислить все созданные [глубокие ссылки на бизнес-чат »](/api/business/#business-chat-links). |
+| [account.getChannelDefaultEmojiStatuses](/method/account.getChannelDefaultEmojiStatuses/) | Получить список предлагаемых по умолчанию [эмодзи-статусов канала](/api/emoji-status/). |
+| [account.getChannelRestrictedStatusEmojis](/method/account.getChannelRestrictedStatusEmojis/) | Возвращает полный список [идентификаторов пользовательских эмодзи »](/api/custom-emoji/), которые нельзя использовать в [эмодзи-статусах каналов »](/api/emoji-status/). |
+| [account.getChatThemes](/method/account.getChatThemes/) | Получить все доступные [темы оформления чатов »](/api/themes/). |
+| [account.getCollectibleEmojiStatuses](/method/account.getCollectibleEmojiStatuses/) | Получить список [эмодзи-статусов »](/api/emoji-status/) для принадлежащих вам или [размещённых коллекционных подарков »](/api/gifts/#hosted-collectible-gifts). |
+| [account.getConnectedBots](/method/account.getConnectedBots/) | Перечислить все подключённые в данный момент [бизнес-боты »](/api/bots/connected-business-bots/) |
+| [account.getContactSignUpNotification](/method/account.getContactSignUpNotification/) | Будет ли пользователь получать уведомления о регистрации контактов |
+| [account.getContentSettings](/method/account.getContentSettings/) | Получить настройки материалов деликатного характера |
+| [account.getDefaultBackgroundEmojis](/method/account.getDefaultBackgroundEmojis/) | Получить набор рекомендуемых [стикеров пользовательских эмодзи](/api/custom-emoji/), которые можно использовать в [узоре акцентного цвета](/api/colors/). |
+| [account.getDefaultEmojiStatuses](/method/account.getDefaultEmojiStatuses/) | Получить список предлагаемых по умолчанию [эмодзи-статусов](/api/emoji-status/) |
+| [account.getDefaultGroupPhotoEmojis](/method/account.getDefaultGroupPhotoEmojis/) | Получить набор рекомендуемых [стикеров пользовательских эмодзи](/api/custom-emoji/), которые можно [использовать в качестве изображения группы](/api/files/#sticker-profile-pictures) |
+| [account.getDefaultProfilePhotoEmojis](/method/account.getDefaultProfilePhotoEmojis/) | Получить набор рекомендуемых [стикеров пользовательских эмодзи](/api/custom-emoji/), которые можно [использовать в качестве фотографии профиля](/api/files/#sticker-profile-pictures) |
+| [account.getGlobalPrivacySettings](/method/account.getGlobalPrivacySettings/) | Получить глобальные настройки приватности |
+| [account.getMultiWallPapers](/method/account.getMultiWallPapers/) | Получить информацию о нескольких [обоях](/api/wallpapers/) |
+| [account.getNotifyExceptions](/method/account.getNotifyExceptions/) | Возвращает список чатов с настройками уведомлений, отличными от стандартных |
+| [account.getNotifySettings](/method/account.getNotifySettings/) | Возвращает текущие настройки уведомлений для заданного пользователя или группы либо для всех пользователей или всех групп. |
+| [account.getPaidMessagesRevenue](/method/account.getPaidMessagesRevenue/) | Получить количество звёзд, полученных нами от указанного пользователя благодаря [платным сообщениям »](/api/paid-messages/); полученная сумма равна отправленной сумме, умноженной на [stars\_paid\_message\_commission\_permille](/api/config/#stars-paid-message-commission-permille) и делённой на 1000. |
+| [account.getPasskeys](/method/account.getPasskeys/) | Получить список ключей доступа, привязанных к текущему аккаунту и пригодных для входа; подробнее о ключах доступа [см. здесь »](/api/passkeys/#list-passkeys). |
+| [account.getPassword](/method/account.getPassword/) | Получить настройки двухфакторной авторизации с паролем |
+| [account.getPasswordSettings](/method/account.getPasswordSettings/) | Получить личные данные, связанные с настройками пароля (резервный адрес электронной почты, данные telegram [passport](https://core.telegram.org/passport) и т. д.) |
+| [account.getPrivacy](/method/account.getPrivacy/) | Получить настройки приватности текущего аккаунта |
+| [account.getReactionsNotifySettings](/method/account.getReactionsNotifySettings/) | Получить текущие [настройки уведомлений о реакциях »](/api/reactions/#notifications-about-reactions). |
+| [account.getRecentEmojiStatuses](/method/account.getRecentEmojiStatuses/) | Получить недавно использованные [эмодзи-статусы](/api/emoji-status/) |
+| [account.getSavedMusicIds](/method/account.getSavedMusicIds/) | Получить полный список, содержащий только идентификаторы [композиций, добавленных в профиль в данный момент; подробнее см. здесь »](/api/profile/#music). |
+| [account.getSavedRingtones](/method/account.getSavedRingtones/) | Получить сохранённые звуки уведомлений |
+| [account.getSecureValue](/method/account.getSecureValue/) | Получить сохранённый документ [Telegram Passport](https://core.telegram.org/passport), [подробнее см. в документации по Passport »](https://core.telegram.org/passport/encryption#encryption) |
+| [account.getTheme](/method/account.getTheme/) | Получить информацию о теме оформления |
+| [account.getThemes](/method/account.getThemes/) | Получить установленные темы оформления |
+| [account.getTmpPassword](/method/account.getTmpPassword/) | Получить временный платёжный пароль |
+| [account.getUniqueGiftChatThemes](/method/account.getUniqueGiftChatThemes/) | Получить все [темы оформления чатов »](/api/themes/#chat-themes), связанные с принадлежащими вам или [размещёнными коллекционными подарками »](/api/gifts/#hosted-collectible-gifts). |
+| [account.getWallPaper](/method/account.getWallPaper/) | Получить информацию об определённых [обоях](/api/wallpapers/) |
+| [account.getWallPapers](/method/account.getWallPapers/) | Возвращает список доступных [обоев](/api/wallpapers/). |
+| [account.getWebAuthorizations](/method/account.getWebAuthorizations/) | Получить авторизации через веб-[виджет входа](https://core.telegram.org/widgets/login) |
+| [account.initPasskeyRegistration](/method/account.initPasskeyRegistration/) | Начать регистрацию ключа доступа для текущего аккаунта; подробнее о полном процессе см. [здесь »](/api/passkeys/#creating-a-passkey). |
+| [account.initTakeoutSession](/method/account.initTakeoutSession/) | Инициализировать [сессию выгрузки данных, подробнее см. здесь »](/api/takeout/). |
+| [account.installTheme](/method/account.installTheme/) | Установить тему оформления |
+| [account.installWallPaper](/method/account.installWallPaper/) | Установить [обои](/api/wallpapers/) |
+| [account.invalidateSignInCodes](/method/account.invalidateSignInCodes/) | Аннулировать указанные коды входа; подробнее см. [здесь »](/api/auth/#invalidating-login-codes). |
+| [account.registerDevice](/method/account.registerDevice/) | Зарегистрировать устройство для получения [PUSH-уведомлений](/api/push-updates/) |
+| [account.registerPasskey](/method/account.registerPasskey/) | Завершить регистрацию ключа доступа для текущего аккаунта; подробнее о полном порядке действий см. [здесь »](/api/passkeys/#creating-a-passkey). |
+| [account.reorderUsernames](/method/account.reorderUsernames/) | Изменить порядок имён пользователя, связанных с текущим авторизованным пользователем. |
+| [account.reportPeer](/method/account.reportPeer/) | Пожаловаться на пира за нарушение условий использования Telegram |
+| [account.reportProfilePhoto](/method/account.reportProfilePhoto/) | Пожаловаться на фотографию профиля диалога |
+| [account.resendPasswordEmail](/method/account.resendPasswordEmail/) | Повторно отправить код для подтверждения адреса электронной почты, используемого как [способ восстановления 2FA](/api/srp/). |
+| [account.resetAuthorization](/method/account.resetAuthorization/) | Завершить активную [авторизованную сессию](/api/auth/) по её хешу |
+| [account.resetNotifySettings](/method/account.resetNotifySettings/) | Сбрасывает все настройки уведомлений от пользователей и групп. |
+| [account.resetPassword](/method/account.resetPassword/) | Начать сброс пароля двухфакторной аутентификации: может использоваться, только если пользователь уже вошёл в аккаунт, [подробнее см. здесь »](/api/srp/#password-reset) |
+| [account.resetWallPapers](/method/account.resetWallPapers/) | Удалить все установленные [обои](/api/wallpapers/), вернувшись к стандартному набору обоев. |
+| [account.resetWebAuthorization](/method/account.resetWebAuthorization/) | Завершить активную веб-сессию [telegram login](https://core.telegram.org/widgets/login) |
+| [account.resetWebAuthorizations](/method/account.resetWebAuthorizations/) | Завершить все активные веб-сессии [telegram login](https://core.telegram.org/widgets/login) |
+| [account.resolveBusinessChatLink](/method/account.resolveBusinessChatLink/) | Разрешить [глубокую ссылку на бизнес-чат »](/api/business/#business-chat-links). |
+| [account.saveAutoDownloadSettings](/method/account.saveAutoDownloadSettings/) | Изменить настройки автозагрузки медиафайлов |
+| [account.saveAutoSaveSettings](/method/account.saveAutoSaveSettings/) | Изменить настройки автосохранения |
+| [account.saveMusic](/method/account.saveMusic/) | Добавляет или удаляет композицию из профиля текущего пользователя; подробнее о вкладке с музыкой на странице профиля [см. здесь »](/api/profile/#music). |
+| [account.saveRingtone](/method/account.saveRingtone/) | Сохранить или удалить сохранённый звук уведомления. |
+| [account.saveSecureValue](/method/account.saveSecureValue/) | Безопасно сохранить документ [Telegram Passport](https://core.telegram.org/passport), [подробнее см. в документации по Passport »](https://core.telegram.org/passport/encryption#encryption) |
+| [account.saveTheme](/method/account.saveTheme/) | Сохранить тему оформления |
+| [account.saveWallPaper](/method/account.saveWallPaper/) | Установить или удалить [обои](/api/wallpapers/) |
+| [account.sendChangePhoneCode](/method/account.sendChangePhoneCode/) | Подтвердить новый номер телефона для привязки к текущему аккаунту |
+| [account.sendConfirmPhoneCode](/method/account.sendConfirmPhoneCode/) | Отправить код подтверждения для отмены удаления аккаунта; подробнее [см. здесь »](/api/account-deletion/) |
+| [account.sendVerifyEmailCode](/method/account.sendVerifyEmailCode/) | Отправить код подтверждения по электронной почте. |
+| [account.sendVerifyPhoneCode](/method/account.sendVerifyPhoneCode/) | Отправить код подтверждения по телефону для Telegram [Passport](https://core.telegram.org/passport). |
+| [account.setAccountTTL](/method/account.setAccountTTL/) | Задать срок самоуничтожения аккаунта |
+| [account.setAuthorizationTTL](/method/account.setAuthorizationTTL/) | Задать время жизни текущей сессии |
+| [account.setContactSignUpNotification](/method/account.setContactSignUpNotification/) | Включить или отключить уведомления о регистрации контактов |
+| [account.setContentSettings](/method/account.setContentSettings/) | Задать настройки материалов деликатного характера (для показа или скрытия контента NSFW) |
+| [account.setGlobalPrivacySettings](/method/account.setGlobalPrivacySettings/) | Задать глобальные настройки приватности |
+| [account.setMainProfileTab](/method/account.setMainProfileTab/) | Изменяет основную вкладку профиля текущего пользователя, подробнее [здесь »](/api/profile/#tabs). |
+| [account.setPrivacy](/method/account.setPrivacy/) | Изменить настройки приватности текущего аккаунта |
+| [account.setReactionsNotifySettings](/method/account.setReactionsNotifySettings/) | Изменить [настройки уведомлений о реакциях »](/api/reactions/#notifications-about-reactions). |
+| [account.toggleConnectedBotPaused](/method/account.toggleConnectedBotPaused/) | Приостановить или возобновить конкретный чат, временно отключив его от всех [бизнес-ботов »](/api/bots/connected-business-bots/). |
+| [account.toggleNoPaidMessagesException](/method/account.toggleNoPaidMessagesException/) | Разрешить пользователю отправлять нам сообщения без оплаты, если включены [платные сообщения »](/api/paid-messages/). |
+| [account.toggleSponsoredMessages](/method/account.toggleSponsoredMessages/) | Отключить или снова включить рекламу Telegram для текущего аккаунта [Premium](/api/premium/). |
+| [account.toggleUsername](/method/account.toggleUsername/) | Активировать или деактивировать купленное на [fragment.com](https://fragment.com) имя пользователя, связанное с текущим авторизованным пользователем. |
+| [account.unregisterDevice](/method/account.unregisterDevice/) | Удаляет устройство по его токену и прекращает отправку на него PUSH-уведомлений. |
+| [account.updateBirthday](/method/account.updateBirthday/) | Обновить нашу дату рождения, [подробнее см. здесь »](/api/profile/#birthday). |
+| [account.updateBusinessAwayMessage](/method/account.updateBusinessAwayMessage/) | Задать список [сообщений об отсутствии Telegram Business](/api/business/#away-messages). |
+| [account.updateBusinessGreetingMessage](/method/account.updateBusinessGreetingMessage/) | Задать список [приветственных сообщений Telegram Business](/api/business/#greeting-messages). |
+| [account.updateBusinessIntro](/method/account.updateBusinessIntro/) | Задать или удалить [приветствие Telegram Business »](/api/business/#business-introduction). |
+| [account.updateBusinessLocation](/method/account.updateBusinessLocation/) | [Бизнес-аккаунты »](/api/business/#location) могут указывать своё местоположение с помощью этого метода, подробнее см. [здесь »](/api/business/#location). |
+| [account.updateBusinessWorkHours](/method/account.updateBusinessWorkHours/) | Задать [часы работы Telegram Business](/api/business/#opening-hours). |
+| [account.updateColor](/method/account.updateColor/) | Обновить [акцентный цвет и фоновый пользовательский эмодзи »](/api/colors/) текущей учётной записи. |
+| [account.updateConnectedBot](/method/account.updateConnectedBot/) | Подключить [бизнес-бота »](/api/bots/connected-business-bots/) к текущему аккаунту либо изменить текущие настройки подключения. |
+| [account.updateDeviceLocked](/method/account.updateDeviceLocked/) | Если на стороне клиента включена блокировка кодом-паролем, тексты сообщений не будут показываться во входящих [PUSH-уведомлениях](/api/push-updates/). |
+| [account.updateEmojiStatus](/method/account.updateEmojiStatus/) | Установить [эмодзи-статус](/api/emoji-status/) |
+| [account.updateNotifySettings](/method/account.updateNotifySettings/) | Изменяет настройки уведомлений для заданного пользователя или группы, для всех пользователей или всех групп. |
+| [account.updatePasswordSettings](/method/account.updatePasswordSettings/) | Задать новый пароль двухфакторной аутентификации |
+| [account.updatePersonalChannel](/method/account.updatePersonalChannel/) | Привязать (или отвязать) личный [канал »](/api/channel/), который будет показан на нашей личной [странице профиля »](/api/profile/#personal-channel). |
+| [account.updateProfile](/method/account.updateProfile/) | Обновляет профиль пользователя. |
+| [account.updateStatus](/method/account.updateStatus/) | Обновляет статус присутствия пользователя в сети. |
+| [account.updateTheme](/method/account.updateTheme/) | Обновить тему оформления |
+| [account.updateUsername](/method/account.updateUsername/) | Изменяет имя пользователя текущего аккаунта. |
+| [account.uploadRingtone](/method/account.uploadRingtone/) | Загрузить звук уведомления; для его преобразования и добавления в список сохранённых звуков уведомлений используйте [account.saveRingtone](/method/account.saveRingtone/). |
+| [account.uploadTheme](/method/account.uploadTheme/) | Загрузить тему оформления |
+| [account.uploadWallPaper](/method/account.uploadWallPaper/) | Создать и загрузить новые [обои](/api/wallpapers/) |
+| [account.verifyEmail](/method/account.verifyEmail/) | Подтвердить адрес электронной почты. |
+| [account.verifyPhone](/method/account.verifyPhone/) | Подтвердить номер телефона для [passport](https://core.telegram.org/passport) в Telegram. |
+| [aicompose.createTone](/method/aicompose.createTone/) | Создать новую пользовательскую [тональность AI-редактора »](/api/ai/#ai-compose-tones). |
+| [aicompose.deleteTone](/method/aicompose.deleteTone/) | Безвозвратно удалить пользовательский [тон AI-редактора »](/api/ai/#ai-compose-tones), созданный текущим пользователем. |
+| [aicompose.getTone](/method/aicompose.getTone/) | Получить сведения об одном [тоне ИИ-редактора »](/api/ai/#ai-compose-tones), например чтобы разрешить общедоступную ссылку на тон. |
+| [aicompose.getToneExample](/method/aicompose.getToneExample/) | Получить пример того, как [тон ИИ-редактора »](/api/ai/#ai-compose-tones) перефразирует образец сообщения; используется для предпросмотра в списке выбора тона. |
+| [aicompose.getTones](/method/aicompose.getTones/) | Получить список сохранённых [тонов ИИ-редактора »](/api/ai/#ai-compose-tones) текущего пользователя. |
+| [aicompose.saveTone](/method/aicompose.saveTone/) | Установить или удалить [тон ИИ-редактора »](/api/ai/#ai-compose-tones), добавив его в список сохранённых тонов текущего пользователя или удалив из него. |
+| [aicompose.updateTone](/method/aicompose.updateTone/) | Изменить пользовательский [тон ИИ-редактора »](/api/ai/#ai-compose-tones), ранее созданный текущим пользователем. Будут изменены только те поля, для которых установлен флаг. |
+| [auth.acceptLoginToken](/method/auth.acceptLoginToken/) | Принять токен входа по QR-коду, выполнив вход в приложении, которое его сгенерировало. |
+| [auth.bindTempAuthKey](/method/auth.bindTempAuthKey/) | Привязывает временный авторизационный ключ `temp_auth_key_id` к постоянному авторизационному ключу `perm_auth_key_id`. |
+| [auth.cancelCode](/method/auth.cancelCode/) | Отменить код подтверждения входа |
+| [auth.checkPaidAuth](/method/auth.checkPaidAuth/) | Проверяет состояние [платежа за вход](/api/auth/#paid-auth). |
+| [auth.checkPassword](/method/auth.checkPassword/) | Попытаться войти в аккаунт, защищённый [паролем двухфакторной аутентификации](/api/srp/). |
+| [auth.checkRecoveryPassword](/method/auth.checkRecoveryPassword/) | Проверить, действителен ли [код восстановления двухфакторной аутентификации](/api/srp/), отправленный методом [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/), прежде чем передавать его в [auth.recoverPassword](/method/auth.recoverPassword/). |
+| [auth.dropTempAuthKeys](/method/auth.dropTempAuthKeys/) | Удалить все временные авторизационные ключи, **кроме** указанных |
+| [auth.exportAuthorization](/method/auth.exportAuthorization/) | Возвращает данные для копирования авторизации в другой дата-центр. |
+| [auth.exportLoginToken](/method/auth.exportLoginToken/) | Сгенерировать токен входа для [входа по QR-коду](/api/qr-login/). |
+| [auth.finishPasskeyLogin](/method/auth.finishPasskeyLogin/) | Завершить вход по ключу доступа через неавторизованное подключение; подробнее см. [здесь »](/api/passkeys/#logging-in-with-a-passkey). |
+| [auth.importAuthorization](/method/auth.importAuthorization/) | Выполняет вход пользователя с помощью ключа, переданного из его родного дата-центра. |
+| [auth.importBotAuthorization](/method/auth.importBotAuthorization/) | Вход как бот |
+| [auth.importLoginToken](/method/auth.importLoginToken/) | Вход с использованием перенаправленного токена входа, который формируется при несовпадении DC во время [входа по QR-коду](/api/qr-login/). |
+| [auth.importWebTokenAuthorization](/method/auth.importWebTokenAuthorization/) | Вход путём импорта токена авторизации |
+| [auth.initPasskeyLogin](/method/auth.initPasskeyLogin/) | Начать вход по ключу доступа через неавторизованное подключение; подробнее см. [здесь »](/api/passkeys/#logging-in-with-a-passkey). |
+| [auth.logOut](/method/auth.logOut/) | Выполняет выход пользователя. |
+| [auth.recoverPassword](/method/auth.recoverPassword/) | Сбросить [пароль двухфакторной аутентификации](/api/srp/) с помощью кода восстановления, отправленного методом [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/). |
+| [auth.reportMissingCode](/method/auth.reportMissingCode/) | Только для официальных приложений: сообщает, что SMS с кодом авторизации не было доставлено. |
+| [auth.requestFirebaseSms](/method/auth.requestFirebaseSms/) | Запросить SMS с кодом через Firebase. |
+| [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/) | Запросить код восстановления [пароля двухфакторной аутентификации](/api/srp/); доступно только для аккаунтов с [настроенной почтой для восстановления](/api/srp/#email-verification). |
+| [auth.resendCode](/method/auth.resendCode/) | Повторно отправить код входа другим способом; тип кода определяется значением, возвращённым предыдущим вызовом auth.sendCode/auth.resendCode: подробнее см. [вход](/api/auth/). |
+| [auth.resetAuthorizations](/method/auth.resetAuthorizations/) | Завершает все авторизованные сессии пользователя, кроме текущей. |
+| [auth.resetLoginEmail](/method/auth.resetLoginEmail/) | Сбросить [почту для входа »](/api/auth/#email-verification). |
+| [auth.sendCode](/method/auth.sendCode/) | Отправить код подтверждения для входа |
+| [auth.signIn](/method/auth.signIn/) | Выполняет вход пользователя с подтверждённым номером телефона. |
+| [auth.signUp](/method/auth.signUp/) | Регистрирует в системе подтверждённый номер телефона. |
+| [bots.addPreviewMedia](/method/bots.addPreviewMedia/) | Добавить [превью Main Mini App, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews). |
+| [bots.allowSendMessage](/method/bots.allowSendMessage/) | Разрешить указанному боту отправлять нам сообщения |
+| [bots.answerWebhookJSONQuery](/method/bots.answerWebhookJSONQuery/) | Отвечает на пользовательский запрос; только для ботов |
+| [bots.canSendMessage](/method/bots.canSendMessage/) | Проверить, может ли указанный бот отправлять нам сообщения |
+| [bots.checkDownloadFileParams](/method/bots.checkDownloadFileParams/) | Проверить, может ли [Mini App](/api/bots/webapps/) запросить скачивание конкретного файла: вызывается при обработке [событий web\_app\_request\_file\_download »](/api/web-events/#web-app-request-file-download) |
+| [bots.checkUsername](/method/bots.checkUsername/) | Проверить, доступно ли имя пользователя и подходит ли оно для использования при [создании управляемого бота »](/api/bots/managed-bots/#creating-a-managed-bot). |
+| [bots.createBot](/method/bots.createBot/) | Создать [управляемого бота »](/api/bots/managed-bots/#creating-a-managed-bot), принадлежащего текущему пользователю и управляемого указанным ботом-менеджером. |
+| [bots.deletePreviewMedia](/method/bots.deletePreviewMedia/) | Удалить [предпросмотр главного Mini App, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews). |
+| [bots.editAccessSettings](/method/bots.editAccessSettings/) | Изменить [настройки ограничения доступа »](/api/bots/managed-bots/#managing-a-managed-bot) управляемого бота; может вызываться только ботом-менеджером. |
+| [bots.editPreviewMedia](/method/bots.editPreviewMedia/) | Изменить [превью Main Mini App, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews). |
+| [bots.exportBotToken](/method/bots.exportBotToken/) | Экспортировать токен [управляемого бота »](/api/bots/managed-bots/#managing-a-managed-bot); может вызываться только ботом-менеджером. |
+| [bots.getAccessSettings](/method/bots.getAccessSettings/) | Получить [настройки ограничения доступа »](/api/bots/managed-bots/#managing-a-managed-bot) управляемого бота; может вызываться только ботом-менеджером. |
+| [bots.getAdminedBots](/method/bots.getAdminedBots/) | Получить список ботов, принадлежащих текущему пользователю |
+| [bots.getBotCommands](/method/bots.getBotCommands/) | Получить список команд бота для указанной области видимости и кода языка |
+| [bots.getBotInfo](/method/bots.getBotInfo/) | Получить локализованное имя, текст «о себе» и описание бота (или текущего аккаунта, если метод вызван ботом). |
+| [bots.getBotMenuButton](/method/bots.getBotMenuButton/) | Получает действие кнопки меню для указанного пользователя или для всех пользователей, ранее заданное с помощью [bots.setBotMenuButton](/method/bots.setBotMenuButton/); пользователи видят эту информацию в конструкторе [botInfo](/constructor/botInfo/). |
+| [bots.getBotRecommendations](/method/bots.getBotRecommendations/) | Получить список ботов схожей тематики, отобранных по сходству их аудитории подписчиков; подробнее см. [здесь »](/api/recommend/). |
+| [bots.getPopularAppBots](/method/bots.getPopularAppBots/) | Получить популярные [Main Mini Apps](/api/bots/webapps/#main-mini-apps) для использования во [вкладке приложений в глобальном поиске »](/api/search/#apps-tab). |
+| [bots.getPreviewInfo](/method/bots.getPreviewInfo/) | Только для владельцев ботов: получить [сведения о предпросмотре главного mini app, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews). |
+| [bots.getPreviewMedias](/method/bots.getPreviewMedias/) | Получить [превью Main Mini App, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews). |
+| [bots.getRequestedWebViewButton](/method/bots.getRequestedWebViewButton/) | Получить кнопку запроса пира, подготовленную ботом для [Mini App](/api/bots/webapps/) с помощью [bots.requestWebViewButton](/method/bots.requestWebViewButton/); вызывается, когда Mini App генерирует событие [`web_app_request_chat`](/api/web-events/#web-app-request-chat); подробнее см. [здесь »](/api/bots/buttons/#requesting-peers-via-mini-apps). |
+| [bots.invokeWebViewCustomMethod](/method/bots.invokeWebViewCustomMethod/) | Отправить произвольный запрос от [mini bot app](/api/bots/webapps/), инициированный [событием web\_app\_invoke\_custom\_method »](/api/web-events/#web-app-invoke-custom-method). |
+| [bots.reorderPreviewMedias](/method/bots.reorderPreviewMedias/) | Изменить порядок [превью главного mini app, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews). |
+| [bots.reorderUsernames](/method/bots.reorderUsernames/) | Изменить порядок имён пользователя, связанных с принадлежащим нам ботом. |
+| [bots.requestWebViewButton](/method/bots.requestWebViewButton/) | Боты могут использовать этот метод, чтобы подготовить кнопку запроса пира для [Mini App](/api/bots/webapps/); подробнее см. [здесь »](/api/bots/buttons/#requesting-peers-via-mini-apps). |
+| [bots.resetBotCommands](/method/bots.resetBotCommands/) | Удалить команды бота для указанной области видимости и кода языка |
+| [bots.sendCustomRequest](/method/bots.sendCustomRequest/) | Отправляет произвольный запрос; только для ботов |
+| [bots.setBotBroadcastDefaultAdminRights](/method/bots.setBotBroadcastDefaultAdminRights/) | Задать [рекомендуемые права администратора](/api/rights/#suggested-bot-rights) по умолчанию для ботов, добавляемых администраторами в каналы; [подробнее о том, как их обрабатывать »](/api/rights/#suggested-bot-rights). |
+| [bots.setBotCommands](/method/bots.setBotCommands/) | Задать список команд бота |
+| [bots.setBotGroupDefaultAdminRights](/method/bots.setBotGroupDefaultAdminRights/) | Задать [рекомендуемые права администратора](/api/rights/#suggested-bot-rights) по умолчанию для ботов, добавляемых администраторами в группы; [подробнее о том, как их обрабатывать »](/api/rights/#suggested-bot-rights). |
+| [bots.setBotInfo](/method/bots.setBotInfo/) | Задать локализованные имя, текст «о себе» и описание бота (или текущего аккаунта, если метод вызывается ботом). |
+| [bots.setBotMenuButton](/method/bots.setBotMenuButton/) | Задаёт [действие кнопки меню »](/api/bots/menu/) для указанного пользователя или для всех пользователей |
+| [bots.setCustomVerification](/method/bots.setCustomVerification/) | Верифицировать пользователя или чат [от имени организации »](/api/bots/verification/). |
+| [bots.toggleUserEmojiStatusPermission](/method/bots.toggleUserEmojiStatusPermission/) | Разрешить или запретить боту [изменять наш эмодзи-статус »](/api/emoji-status/#setting-an-emoji-status-from-a-bot) |
+| [bots.toggleUsername](/method/bots.toggleUsername/) | Активировать или деактивировать купленное на [fragment.com](https://fragment.com) имя пользователя, связанное с принадлежащим нам ботом. |
+| [bots.updateStarRefProgram](/method/bots.updateStarRefProgram/) | Создать, изменить или удалить [партнёрскую программу](/api/bots/referrals/) принадлежащего нам бота |
+| [bots.updateUserEmojiStatus](/method/bots.updateUserEmojiStatus/) | Изменить эмодзи-статус пользователя (вызывается ботами, подробнее о полном порядке действий [здесь »](/api/emoji-status/#setting-an-emoji-status-from-a-bot)) |
+| [channels.checkSearchPostsFlood](/method/channels.checkSearchPostsFlood/) | Проверить, требует ли оплаты указанный [глобальный поиск по публикациям »](/api/search/#posts-tab). |
+| [channels.checkUsername](/method/channels.checkUsername/) | Проверить, свободно ли имя пользователя и можно ли назначить его каналу или супергруппе |
+| [channels.convertToGigagroup](/method/channels.convertToGigagroup/) | Преобразовать [супергруппу](/api/channel/) в [гигагруппу](/api/channel/) по запросу от [подсказок для канала](/api/config/#channel-suggestions). |
+| [channels.createChannel](/method/channels.createChannel/) | Создать [супергруппу или канал](/api/channel/). |
+| [channels.deactivateAllUsernames](/method/channels.deactivateAllUsernames/) | Отключить все купленные имена пользователя супергруппы или канала |
+| [channels.deleteChannel](/method/channels.deleteChannel/) | Удалить [канал/супергруппу](/api/channel/) |
+| [channels.deleteHistory](/method/channels.deleteHistory/) | Удалить историю [супергруппы](/api/channel/) |
+| [channels.deleteMessages](/method/channels.deleteMessages/) | Удалить сообщения в [канале/супергруппе](/api/channel/) |
+| [channels.deleteParticipantHistory](/method/channels.deleteParticipantHistory/) | Удалить все сообщения, отправленные определённым участником заданной супергруппы |
+| [channels.editAdmin](/method/channels.editAdmin/) | Изменить права администратора пользователя в [супергруппе или канале](/api/channel/). |
+| [channels.editBanned](/method/channels.editBanned/) | Заблокировать, разблокировать или исключить пользователя в [супергруппе или канале](/api/channel/). |
+| [channels.editLocation](/method/channels.editLocation/) | Изменить местоположение геогруппы; подробнее о геогруппах см. [здесь »](/api/nearby/). |
+| [channels.editPhoto](/method/channels.editPhoto/) | Изменить фотографию [канала/супергруппы](/api/channel/) |
+| [channels.editTitle](/method/channels.editTitle/) | Изменить название [канала или супергруппы](/api/channel/) |
+| [channels.exportMessageLink](/method/channels.exportMessageLink/) | Получить ссылку и данные для встраивания сообщения в [канале или супергруппе](/api/channel/) |
+| [channels.getAdminedPublicChannels](/method/channels.getAdminedPublicChannels/) | Получить [каналы, супергруппы и геогруппы](/api/channel/), в которых мы являемся администратором. Обычно вызывается, когда пользователь превышает [ограничение](/constructor/config/) на число принадлежащих ему публичных [каналов, супергрупп и геогрупп](/api/channel/) и ему предлагается удалить один из его каналов, супергрупп или геогрупп. |
+| [channels.getAdminLog](/method/channels.getAdminLog/) | Получить журнал администратора [канала или супергруппы](/api/channel/) |
+| [channels.getChannelRecommendations](/method/channels.getChannelRecommendations/) | Получить список публичных каналов схожей тематики, отобранных по сходству их **аудитории подписчиков**. |
+| [channels.getChannels](/method/channels.getChannels/) | Получить информацию о [каналах и супергруппах](/api/channel/) |
+| [channels.getForumTopics](/method/channels.getForumTopics/) | Получить [темы форума](/api/forum/) |
+| [channels.getForumTopicsByID](/method/channels.getForumTopicsByID/) | Получить темы форума по их идентификаторам |
+| [channels.getFullChannel](/method/channels.getFullChannel/) | Получить полную информацию о [супергруппе](/api/channel/#supergroups), [гигагруппе](/api/channel/#gigagroups) или [канале](/api/channel/#channels) |
+| [channels.getFutureCreatorAfterLeave](/method/channels.getFutureCreatorAfterLeave/) | Только для владельцев групп и каналов: возвращает идентификатор пользователя, который станет новым владельцем группы, если мы решим её покинуть; подробнее о полном порядке действий см. [здесь »](/api/channel/#leaving-groups-channels). |
+| [channels.getGroupsForDiscussion](/method/channels.getGroupsForDiscussion/) | Получить все группы, которые можно использовать в качестве [групп обсуждения](/api/discussion/). |
+| [channels.getInactiveChannels](/method/channels.getInactiveChannels/) | Получить неактивные каналы и супергруппы |
+| [channels.getLeftChannels](/method/channels.getLeftChannels/) | Получить список [каналов и супергрупп](/api/channel/), которые мы покинули; требуется [сессия выгрузки данных, подробнее см. здесь »](/api/takeout/). |
+| [channels.getMessageAuthor](/method/channels.getMessageAuthor/) | Может быть вызван только администраторами [монофорума »](/api/monoforum/), не являющимися ботами; возвращает исходного отправителя сообщения, отправленного в монофорум другими администраторами монофорума от имени канала, связанного с этим монофорумом. |
+| [channels.getMessages](/method/channels.getMessages/) | Получить сообщения [канала или супергруппы](/api/channel/) |
+| [channels.getParticipant](/method/channels.getParticipant/) | Получить информацию об участнике [канала или супергруппы](/api/channel/) |
+| [channels.getParticipants](/method/channels.getParticipants/) | Получить участников [супергруппы или канала](/api/channel/) |
+| [channels.getSendAs](/method/channels.getSendAs/) | Получает список пиров, которые могут отображаться в качестве отправителя в определённом контексте. С флагом `for_live_stories` возвращает пиров, которые могут быть авторами [сообщений во время прямого эфира »](/api/group-calls/#in-call-messages). |
+| [channels.inviteToChannel](/method/channels.inviteToChannel/) | Пригласить пользователей в канал или супергруппу |
+| [channels.joinChannel](/method/channels.joinChannel/) | Вступить в канал или супергруппу |
+| [channels.leaveChannel](/method/channels.leaveChannel/) | Покинуть [канал или супергруппу](/api/channel/) |
+| [channels.readHistory](/method/channels.readHistory/) | Отметить историю [канала или супергруппы](/api/channel/) как прочитанную |
+| [channels.readMessageContents](/method/channels.readMessageContents/) | Отметить содержимое сообщений [канала/супергруппы](/api/channel/) как прочитанное, порождая [updateChannelReadMessagesContents](/constructor/updateChannelReadMessagesContents/). |
+| [channels.reorderUsernames](/method/channels.reorderUsernames/) | Изменить порядок активных имён пользователя |
+| [channels.reportAntiSpamFalsePositive](/method/channels.reportAntiSpamFalsePositive/) | Сообщить о ложном срабатывании [встроенной защиты от спама](/api/antispam/) |
+| [channels.reportSpam](/method/channels.reportSpam/) | Пожаловаться на несколько сообщений пользователя в супергруппе как на спам; требуются права администратора в супергруппе |
+| [channels.restrictSponsoredMessages](/method/channels.restrictSponsoredMessages/) | Отключить рекламу в указанном канале для всех пользователей. |
+| [channels.searchPosts](/method/channels.searchPosts/) | Глобальный поиск постов в публичных [каналах »](/api/channel/) (_в том числе_ в тех, участниками которых мы не являемся) по определённому хештегу _или_ по полнотекстовому запросу. |
+| [channels.setBoostsToUnblockRestrictions](/method/channels.setBoostsToUnblockRestrictions/) | Администраторы с [правами администратора ban\_users »](/constructor/chatAdminRights/) могут разрешить пользователям, отдавшим группе определённое количество [бустов »](/api/boost/), обходить [медленный режим »](/method/channels.toggleSlowMode/) и [другие »](/api/rights/#default-rights) ограничения супергруппы; подробнее [см. здесь »](/api/boost/#bypass-slowmode-and-chat-restrictions). |
+| [channels.setDiscussionGroup](/method/channels.setDiscussionGroup/) | Привязать группу к каналу в качестве [группы обсуждения](/api/discussion/) для этого канала |
+| [channels.setEmojiStickers](/method/channels.setEmojiStickers/) | Задать [набор пользовательских эмодзи](/api/custom-emoji/) для супергрупп. Использовать можно только после достижения как минимум [уровня буста »](/api/boost/), указанного в параметре конфигурации [`group_emoji_stickers_level_min` »](/api/config/#group-emoji-stickers-level-min). |
+| [channels.setMainProfileTab](/method/channels.setMainProfileTab/) | Изменяет основную вкладку профиля канала, подробнее [здесь »](/api/profile/#tabs). |
+| [channels.setStickers](/method/channels.setStickers/) | Привязать набор стикеров к супергруппе |
+| [channels.toggleAntiSpam](/method/channels.toggleAntiSpam/) | Включить или отключить [встроенную защиту от спама](/api/antispam/). |
+| [channels.toggleAutotranslation](/method/channels.toggleAutotranslation/) | Включить или отключить автоперевод в канале для всех пользователей: подробнее см. [здесь »](/api/translation/#autotranslation-for-channels). |
+| [channels.toggleForum](/method/channels.toggleForum/) | Включить или отключить [функциональность форума](/api/forum/) в супергруппе. |
+| [channels.toggleJoinRequest](/method/channels.toggleJoinRequest/) | Задать, должны ли все пользователи [запрашивать одобрение администратора для вступления в группу »](/api/invites/#join-requests). |
+| [channels.toggleJoinToSend](/method/channels.toggleJoinToSend/) | Задать, должны ли все пользователи [вступать в группу обсуждения, чтобы комментировать пост »](/api/discussion/#requiring-users-to-join-the-group) |
+| [channels.toggleParticipantsHidden](/method/channels.toggleParticipantsHidden/) | Скрыть или показать список участников [супергруппы](/api/channel/). |
+| [channels.togglePreHistoryHidden](/method/channels.togglePreHistoryHidden/) | Скрыть или показать историю сообщений для новых участников канала или супергруппы |
+| [channels.toggleSignatures](/method/channels.toggleSignatures/) | Включить или отключить подписи авторов под сообщениями в каналах |
+| [channels.toggleSlowMode](/method/channels.toggleSlowMode/) | Переключить медленный режим в супергруппе: если он включён, пользователи смогут отправлять только одно сообщение каждые `seconds` секунд |
+| [channels.toggleUsername](/method/channels.toggleUsername/) | Активировать или деактивировать купленное на [fragment.com](https://fragment.com) имя пользователя, связанное с принадлежащими нам [супергруппой или каналом](/api/channel/). |
+| [channels.toggleViewForumAsMessages](/method/channels.toggleViewForumAsMessages/) | Пользователи также могут отображать сообщения из всех тем [форума](/api/forum/) так, как если бы они были отправлены в обычную группу, — с помощью настройки «Показывать как сообщения» в локальном клиенте: эта настройка влияет только на текущий аккаунт и синхронизируется с другими активными сессиями с помощью этого метода. |
+| [channels.updateColor](/method/channels.updateColor/) | Обновить [акцентный цвет и фоновый пользовательский эмодзи »](/api/colors/) канала. |
+| [channels.updateEmojiStatus](/method/channels.updateEmojiStatus/) | Установить [эмодзи-статус](/api/emoji-status/) для канала или супергруппы. |
+| [channels.updatePaidMessagesPrice](/method/channels.updatePaidMessagesPrice/) | Включить или отключить [платные сообщения »](/api/paid-messages/) в этой [супергруппе](/api/channel/) или [монофоруме](/api/monoforum/). |
+| [channels.updateUsername](/method/channels.updateUsername/) | Изменить или удалить имя пользователя супергруппы или канала |
+| [chatlists.checkChatlistInvite](/method/chatlists.checkChatlistInvite/) | Получить сведения о [глубокой ссылке на папку чатов »](/api/links/#chat-folder-links). |
+| [chatlists.deleteExportedInvite](/method/chatlists.deleteExportedInvite/) | Удалить ранее созданную [глубокую ссылку на папку чатов »](/api/links/#chat-folder-links). |
+| [chatlists.editExportedInvite](/method/chatlists.editExportedInvite/) | Изменить [глубокую ссылку на папку чатов »](/api/links/#chat-folder-links). |
+| [chatlists.exportChatlistInvite](/method/chatlists.exportChatlistInvite/) | Экспортировать [папку »](/api/folders/), создав [глубокую ссылку на папку чатов »](/api/links/#chat-folder-links). |
+| [chatlists.getChatlistUpdates](/method/chatlists.getChatlistUpdates/) | Получить новые чаты, связанные с импортированной [глубокой ссылкой на папку чатов »](/api/links/#chat-folder-links). Вызывается не чаще одного раза в `chatlist_update_period` секунд (согласно соответствующему [параметру конфигурации клиента »](/api/config/#chatlist-update-period)). |
+| [chatlists.getExportedInvites](/method/chatlists.getExportedInvites/) | Перечислить все [глубокие ссылки на папку чатов »](/api/links/#chat-folder-links), связанные с папкой |
+| [chatlists.getLeaveChatlistSuggestions](/method/chatlists.getLeaveChatlistSuggestions/) | Возвращает идентификаторы закреплённых или всегда включённых чатов из папки чатов, импортированной по [глубокой ссылке на папку чатов »](/api/links/#chat-folder-links), которые предлагается покинуть при удалении папки. |
+| [chatlists.hideChatlistUpdates](/method/chatlists.hideChatlistUpdates/) | Отклонить новых ожидающих пиров, недавно добавленных по [глубокой ссылке на папку чатов »](/api/links/#chat-folder-links). |
+| [chatlists.joinChatlistInvite](/method/chatlists.joinChatlistInvite/) | Импортировать [глубокую ссылку на папку чатов »](/api/links/#chat-folder-links), вступив в некоторые или во все чаты папки. |
+| [chatlists.joinChatlistUpdates](/method/chatlists.joinChatlistUpdates/) | Присоединиться к каналам и супергруппам, недавно добавленным в [глубокую ссылку на папку чатов »](/api/links/#chat-folder-links). |
+| [chatlists.leaveChatlist](/method/chatlists.leaveChatlist/) | Удалить папку, импортированную с помощью [глубокой ссылки на папку чатов »](/api/links/#chat-folder-links) |
+| [contacts.acceptContact](/method/contacts.acceptContact/) | Если [активна панель действий «добавить контакт»](/api/action-bar/#add-contact), добавить этого пользователя в контакты |
+| [contacts.addContact](/method/contacts.addContact/) | Добавить существующего пользователя Telegram в контакты. |
+| [contacts.block](/method/contacts.block/) | Добавляет пира в список заблокированных; подробнее [см. здесь »](/api/block/). |
+| [contacts.blockFromReplies](/method/contacts.blockFromReplies/) | Прекратить получать уведомления об [ответах в обсуждении](/api/discussion/) от определённого пользователя в `@replies` |
+| [contacts.deleteByPhones](/method/contacts.deleteByPhones/) | Удалить контакты по номеру телефона |
+| [contacts.deleteContacts](/method/contacts.deleteContacts/) | Удаляет несколько контактов из списка. |
+| [contacts.editCloseFriends](/method/contacts.editCloseFriends/) | Изменить [список близких друзей, подробнее см. здесь »](/api/privacy/). |
+| [contacts.exportContactToken](/method/contacts.exportContactToken/) | Создаёт [временную ссылку на профиль](/api/links/#temporary-profile-links) для текущего авторизованного пользователя. |
+| [contacts.getBirthdays](/method/contacts.getBirthdays/) | Получить всех пользователей, у которых день рождения приходится на промежуток ±1 день относительно текущего дня. Клиентам следует вызывать этот метод каждые 6–8 часов, и если результат непустой, использовать его для соответствующего обновления локально сохранённых сведений о дне рождения в [user](/constructor/user/).`birthday`. |
+| [contacts.getBlocked](/method/contacts.getBlocked/) | Возвращает список заблокированных пользователей. |
+| [contacts.getContactIDs](/method/contacts.getContactIDs/) | Получить идентификаторы Telegram всех контактов. |
+| [contacts.getContacts](/method/contacts.getContacts/) | Возвращает список контактов текущего пользователя. |
+| [contacts.getLocated](/method/contacts.getLocated/) | Получить пользователей и геочаты поблизости; подробнее см. [здесь »](/api/nearby/). |
+| [contacts.getSaved](/method/contacts.getSaved/) | Получить все контакты; требуется [сессия выгрузки данных, подробнее см. здесь »](/api/takeout/). |
+| [contacts.getSponsoredPeers](/method/contacts.getSponsoredPeers/) | Получить список рекламных результатов поиска пиров по заданному запросу |
+| [contacts.getStatuses](/method/contacts.getStatuses/) | Этот метод позволяет получить сетевой статус всех контактов, у которых есть доступный аккаунт Telegram. |
+| [contacts.getTopPeers](/method/contacts.getTopPeers/) | Получить наиболее используемые пиры |
+| [contacts.importContacts](/method/contacts.importContacts/) | Импортирует контакты: сохраняет полный список на сервере, добавляет уже зарегистрированных контактов в список контактов, возвращает добавленные контакты и сведения о них. |
+| [contacts.importContactToken](/method/contacts.importContactToken/) | Получить сведения о пользователе по [временной ссылке на профиль](/api/links/#temporary-profile-links). |
+| [contacts.resetSaved](/method/contacts.resetSaved/) | Удаляет все контакты, у которых нет связанного аккаунта Telegram. |
+| [contacts.resetTopPeerRating](/method/contacts.resetTopPeerRating/) | Сбросить [рейтинг](/api/top-rating/) популярного пира |
+| [contacts.resolvePhone](/method/contacts.resolvePhone/) | Разрешить номер телефона, чтобы получить сведения о пользователе, если это допускают его настройки конфиденциальности. |
+| [contacts.resolveUsername](/method/contacts.resolveUsername/) | Разрешить @username, чтобы получить сведения о пире |
+| [contacts.search](/method/contacts.search/) | Возвращает пользователей, найденных по подстроке имени пользователя. |
+| [contacts.setBlocked](/method/contacts.setBlocked/) | Заменить содержимое всего [списка заблокированных, подробнее см. здесь »](/api/block/). |
+| [contacts.toggleTopPeers](/method/contacts.toggleTopPeers/) | Включить или отключить [наиболее используемые пиры](/api/top-rating/) |
+| [contacts.unblock](/method/contacts.unblock/) | Удаляет пира из списка заблокированных; подробнее [см. здесь »](/api/block/). |
+| [contacts.updateContactNote](/method/contacts.updateContactNote/) | Обновить личную заметку, связанную с контактом; подробнее [см. здесь »](/api/contacts/#private-notes-for-contacts). |
+| [folders.editPeerFolders](/method/folders.editPeerFolders/) | Изменить пиров в [папке пиров](/api/folders/#peer-folders) |
+| [fragment.getCollectibleInfo](/method/fragment.getCollectibleInfo/) | Получить сведения о [коллекционном объекте Fragment; подробнее о полном сценарии см. здесь »](/api/fragment/#fetching-info-about-fragment-collectibles). |
+| [help.acceptTermsOfService](/method/help.acceptTermsOfService/) | Принять новые условия обслуживания |
+| [help.dismissSuggestion](/method/help.dismissSuggestion/) | Отклонить [подсказку, подробнее см. здесь »](/api/config/#suggestions). |
+| [help.editUserInfo](/method/help.editUserInfo/) | Для внутреннего использования |
+| [help.getAppConfig](/method/help.getAppConfig/) | Получить конфигурацию, специфичную для приложения; подробнее о результате см. [клиентскую конфигурацию](/api/config/#client-configuration). |
+| [help.getAppUpdate](/method/help.getAppUpdate/) | Возвращает информацию о доступности обновления для текущего приложения. |
+| [help.getCdnConfig](/method/help.getCdnConfig/) | Получить конфигурацию для скачивания файлов через [CDN](https://core.telegram.org/cdn). |
+| [help.getConfig](/method/help.getConfig/) | Возвращает текущую конфигурацию, включая конфигурацию дата-центров. |
+| [help.getCountriesList](/method/help.getCountriesList/) | Получить название, код ISO, локализованное название и телефонные коды/шаблоны всех доступных стран |
+| [help.getDeepLinkInfo](/method/help.getDeepLinkInfo/) | Получить информацию о неподдерживаемой глубокой ссылке, [подробнее см. здесь »](/api/links/#unsupported-links). |
+| [help.getInviteText](/method/help.getInviteText/) | Возвращает локализованный текст сообщения с приглашением. |
+| [help.getNearestDc](/method/help.getNearestDc/) | Возвращает сведения о ближайшем к пользователю дата-центре. |
+| [help.getPassportConfig](/method/help.getPassportConfig/) | Получить конфигурацию [passport](https://core.telegram.org/passport) |
+| [help.getPeerColors](/method/help.getPeerColors/) | Получить набор [палитр акцентных цветов »](/api/colors/), которые можно использовать для акцентов в сообщениях. |
+| [help.getPeerProfileColors](/method/help.getPeerProfileColors/) | Получить набор [палитр акцентных цветов »](/api/colors/), которые можно использовать для фона страницы профиля. |
+| [help.getPremiumPromo](/method/help.getPremiumPromo/) | Получить сведения о рекламной кампании Telegram Premium |
+| [help.getPromoData](/method/help.getPromoData/) | Возвращает набор полезных подсказок и рекламные пиры PSA/MTProxy; подробнее см. [здесь »](/api/config/#suggestions). |
+| [help.getRecentMeUrls](/method/help.getRecentMeUrls/) | Получить недавно использованные ссылки `t.me`. |
+| [help.getSupport](/method/help.getSupport/) | Возвращает пользователя службы поддержки для функции «задать вопрос». |
+| [help.getSupportName](/method/help.getSupportName/) | Получить локализованное имя пользователя службы поддержки Telegram |
+| [help.getTermsOfServiceUpdate](/method/help.getTermsOfServiceUpdate/) | Проверить наличие обновлений условий использования Telegram |
+| [help.getTimezonesList](/method/help.getTimezonesList/) | Возвращает сведения о часовых поясах, которые могут использоваться в других частях API — например, для указания [часов работы Telegram Business »](/api/business/#opening-hours). |
+| [help.getUserInfo](/method/help.getUserInfo/) | Может использоваться только участниками TSF для получения внутренней информации. |
+| [help.hidePromoData](/method/help.hidePromoData/) | Скрыть сведения об MTProxy или общественном объявлении |
+| [help.saveAppLog](/method/help.saveAppLog/) | Сохраняет журналы работы приложения на сервере. |
+| [help.setBotUpdatesStatus](/method/help.setBotUpdatesStatus/) | Сообщает серверу количество необработанных обновлений бота, если они долго не обрабатывались; только для ботов |
+| [initConnection](/method/initConnection/) | Инициализировать подключение |
+| [invokeAfterMsg](/method/invokeAfterMsg/) | Выполняет запрос после успешного завершения одного из предыдущих запросов. |
+| [invokeAfterMsgs](/method/invokeAfterMsgs/) | Выполняет запрос после успешного завершения предыдущих запросов |
+| [invokeWithApnsSecret](/method/invokeWithApnsSecret/) | Только для официальных клиентов: вызвать с проверкой push-уведомления Apple. |
+| [invokeWithBusinessConnection](/method/invokeWithBusinessConnection/) | Вызвать метод через [подключение Telegram Business Bot; подробнее, включая список методов, которые можно обернуть в этот конструктор, см. здесь »](/api/bots/connected-business-bots/). |
+| [invokeWithGooglePlayIntegrity](/method/invokeWithGooglePlayIntegrity/) | Только для официальных клиентов: вызвать с токеном Google Play Integrity. |
+| [invokeWithLayer](/method/invokeWithLayer/) | Выполнить указанный запрос с использованием указанного [слоя](/api/invoking/#layers) API |
+| [invokeWithMessagesRange](/method/invokeWithMessagesRange/) | Выполнить с указанным диапазоном сообщений |
+| [invokeWithoutUpdates](/method/invokeWithoutUpdates/) | Выполнить запрос, не подписывая используемое соединение на [обновления](/api/updates/) (для [файловых запросов](/api/files/) это включено по умолчанию). |
+| [invokeWithReCaptcha](/method/invokeWithReCaptcha/) | Только для официальных клиентов: повторно выполнить вызов метода, потребовавший проверки reCAPTCHA через `RECAPTCHA_CHECK_%s__%s`, где первая подстановка — это `action`, а вторая — идентификатор ключа reCAPTCHA. |
+| [invokeWithTakeout](/method/invokeWithTakeout/) | Вызвать метод в рамках [сессии выгрузки данных, подробнее см. здесь »](/api/takeout/). |
+| [langpack.getDifference](/method/langpack.getDifference/) | Получить новые строки языкового пакета |
+| [langpack.getLangPack](/method/langpack.getLangPack/) | Получить строки пакета локализации |
+| [langpack.getLanguage](/method/langpack.getLanguage/) | Получить информацию о языке из пакета локализации |
+| [langpack.getLanguages](/method/langpack.getLanguages/) | Получить информацию обо всех языках в пакете локализации |
+| [langpack.getStrings](/method/langpack.getStrings/) | Получить строки языкового пакета |
+| [messages.acceptEncryption](/method/messages.acceptEncryption/) | Подтверждает создание секретного чата |
+| [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/) | Используйте этот метод, чтобы подтвердить запрос авторизации Seamless Telegram Login; подробнее [см. здесь »](/api/url-authorization/) |
+| [messages.addChatUser](/method/messages.addChatUser/) | Добавляет пользователя в чат и отправляет в нём сервисное сообщение. |
+| [messages.addPollAnswer](/method/messages.addPollAnswer/) | Добавить вариант ответа в [опрос со свободным ответом »](/api/poll/#open-answer-polls) |
+| [messages.appendTodoList](/method/messages.appendTodoList/) | Добавляет один или несколько пунктов в [список задач »](/api/todo/). |
+| [messages.checkChatInvite](/method/messages.checkChatInvite/) | Проверить действительность пригласительной ссылки на чат и получить основные сведения о ней |
+| [messages.checkHistoryImport](/method/messages.checkHistoryImport/) | Получает информацию о файле экспорта чата, выгруженном из стороннего мессенджера; [подробнее об импортированных чатах см. здесь »](/api/import/). |
+| [messages.checkHistoryImportPeer](/method/messages.checkHistoryImportPeer/) | Проверить, можно ли [импортировать в определённый чат Telegram историю переписки, экспортированную из другого мессенджера; подробнее см. здесь »](/api/import/). |
+| [messages.checkQuickReplyShortcut](/method/messages.checkQuickReplyShortcut/) | Перед тем как предложить пользователю добавить сообщение в [шаблон быстрого ответа](/api/business/#quick-reply-shortcuts), чтобы убедиться, что ни одно из ограничений, указанных [здесь »](/api/business/#quick-reply-shortcuts), не достигнуто. |
+| [messages.checkUrlAuthMatchCode](/method/messages.checkUrlAuthMatchCode/) | Сверить выбранный пользователем код соответствия с кодом, показанным на странице входа, в рамках [процесса авторизации OAuth »](/api/url-authorization/#oauth-authorization). |
+| [messages.clearAllDrafts](/method/messages.clearAllDrafts/) | Удалить все [черновики](/api/drafts/). |
+| [messages.clearRecentReactions](/method/messages.clearRecentReactions/) | Очистить список недавно использованных [реакций на сообщения](/api/reactions/) |
+| [messages.clearRecentStickers](/method/messages.clearRecentStickers/) | Очистить недавние стикеры |
+| [messages.clickSponsoredMessage](/method/messages.clickSponsoredMessage/) | Сообщает серверу, что пользователь взаимодействовал с рекламным сообщением [одним из перечисленных здесь способов »](/api/sponsored-messages/#clicking-on-sponsored-messages). |
+| [messages.composeMessageWithAI](/method/messages.composeMessageWithAI/) | Вызывает ИИ-редактор Telegram, который может множеством разных способов перевести ваше сообщение, преобразовать его, исправить в нём ошибки и (или) добавить эмодзи; всё это приватно работает на [Cocoon](https://cocoon.org), подробнее см. [здесь »](/api/ai/#compose-messages)! |
+| [messages.createChat](/method/messages.createChat/) | Создаёт новый чат. |
+| [messages.createForumTopic](/method/messages.createForumTopic/) | Создать [тему форума](/api/forum/). |
+| [messages.declineUrlAuth](/method/messages.declineUrlAuth/) | Отклонить входящий [запрос авторизации OAuth »](/api/url-authorization/#oauth-authorization), сообщив серверу, что пользователь отказал в запросе на вход. |
+| [messages.deleteChat](/method/messages.deleteChat/) | Удалить [чат](/api/channel/) |
+| [messages.deleteChatUser](/method/messages.deleteChatUser/) | Удаляет пользователя из чата и отправляет об этом сервисное сообщение. |
+| [messages.deleteExportedChatInvite](/method/messages.deleteExportedChatInvite/) | Удалить приглашение в чат |
+| [messages.deleteFactCheck](/method/messages.deleteFactCheck/) | Удалить [проверку фактов](/api/factcheck/) из сообщения. |
+| [messages.deleteHistory](/method/messages.deleteHistory/) | Удаляет историю переписки. |
+| [messages.deleteMessages](/method/messages.deleteMessages/) | Удаляет сообщения по их идентификаторам. |
+| [messages.deleteParticipantReaction](/method/messages.deleteParticipantReaction/) | Будучи администратором, удалить все [реакции](/api/reactions/) определённого участника с одного сообщения. |
+| [messages.deleteParticipantReactions](/method/messages.deleteParticipantReactions/) | Будучи администратором, удалить все [реакции](/api/reactions/) определённого участника со всех сообщений в группе или канале. |
+| [messages.deletePhoneCallHistory](/method/messages.deletePhoneCallHistory/) | Удалить всю историю звонков. |
+| [messages.deletePollAnswer](/method/messages.deletePollAnswer/) | Удалить вариант ответа из [опроса со свободным ответом »](/api/poll/#open-answer-polls) |
+| [messages.deleteQuickReplyMessages](/method/messages.deleteQuickReplyMessages/) | Удалить одно или несколько сообщений из [шаблона быстрого ответа](/api/business/#quick-reply-shortcuts). При этом также отправляется обновление [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/). |
+| [messages.deleteQuickReplyShortcut](/method/messages.deleteQuickReplyShortcut/) | Полностью удалить [ярлык быстрого ответа](/api/business/#quick-reply-shortcuts). |
+| [messages.deleteRevokedExportedChatInvites](/method/messages.deleteRevokedExportedChatInvites/) | Удалить все отозванные приглашения в чат |
+| [messages.deleteSavedHistory](/method/messages.deleteSavedHistory/) | Удаляет сообщения из [темы монофорума »](/api/monoforum/) либо удаляет сообщения, пересланные от определённого пира в [избранное »](/api/saved-messages/). |
+| [messages.deleteScheduledMessages](/method/messages.deleteScheduledMessages/) | Удалить отложенные сообщения |
+| [messages.deleteTopicHistory](/method/messages.deleteTopicHistory/) | Удалить историю сообщений [темы форума](/api/forum/) |
+| [messages.discardEncryption](/method/messages.discardEncryption/) | Отменяет запрос на создание секретного чата и/или удаляет информацию о нём. |
+| [messages.editChatAbout](/method/messages.editChatAbout/) | Изменить описание [группы, супергруппы или канала](/api/channel/). |
+| [messages.editChatAdmin](/method/messages.editChatAdmin/) | Назначить пользователя администратором [обычной группы](/api/channel/#basic-groups). |
+| [messages.editChatCreator](/method/messages.editChatCreator/) | Передать права владельца обычной группы, супергруппы или канала другому пользователю; полное описание процесса см. [здесь »](/api/channel/#transferring-ownership-of-a-group-channel). |
+| [messages.editChatDefaultBannedRights](/method/messages.editChatDefaultBannedRights/) | Изменить права по умолчанию для заблокированных пользователей [канала, супергруппы или группы](/api/channel/). |
+| [messages.editChatParticipantRank](/method/messages.editChatParticipantRank/) | Изменить [звание »](/api/rank/) участника группы. |
+| [messages.editChatPhoto](/method/messages.editChatPhoto/) | Изменяет фотографию чата и отправляет в него сервисное сообщение |
+| [messages.editChatTitle](/method/messages.editChatTitle/) | Изменяет название чата и отправляет в него сервисное сообщение. |
+| [messages.editExportedChatInvite](/method/messages.editExportedChatInvite/) | Изменить экспортированное приглашение в чат |
+| [messages.editFactCheck](/method/messages.editFactCheck/) | Изменить или создать [проверку фактов](/api/factcheck/) для сообщения. |
+| [messages.editForumTopic](/method/messages.editForumTopic/) | Изменить [тему форума](/api/forum/). |
+| [messages.editInlineBotMessage](/method/messages.editInlineBotMessage/) | Изменить сообщение инлайн-бота |
+| [messages.editMessage](/method/messages.editMessage/) | Изменить сообщение |
+| [messages.editQuickReplyShortcut](/method/messages.editQuickReplyShortcut/) | Переименовать [быстрый ответ](/api/business/#quick-reply-shortcuts). |
+| [messages.exportChatInvite](/method/messages.exportChatInvite/) | Экспортировать пригласительную ссылку для чата |
+| [messages.faveSticker](/method/messages.faveSticker/) | Добавить стикер в избранное или удалить его оттуда |
+| [messages.forwardMessages](/method/messages.forwardMessages/) | Пересылает сообщения по их идентификаторам. |
+| [messages.getAdminsWithInvites](/method/messages.getAdminsWithInvites/) | Получить информацию о приглашениях в чат, созданных администраторами. |
+| [messages.getAllDrafts](/method/messages.getAllDrafts/) | Вернуть все [черновики](/api/drafts/) сообщений. |
+| [messages.getAllStickers](/method/messages.getAllStickers/) | Получить все установленные стикеры |
+| [messages.getArchivedStickers](/method/messages.getArchivedStickers/) | Получить все архивированные стикеры |
+| [messages.getAttachedStickers](/method/messages.getAttachedStickers/) | Получить стикеры, прикреплённые к фотографии или видео |
+| [messages.getAttachMenuBot](/method/messages.getAttachMenuBot/) | Возвращает запись меню вложений для [mini app бота, который можно запустить из меню вложений »](/api/bots/attach/) |
+| [messages.getAttachMenuBots](/method/messages.getAttachMenuBots/) | Возвращает установленные в меню вложений [mini app ботов »](/api/bots/attach/) |
+| [messages.getAvailableEffects](/method/messages.getAvailableEffects/) | Получить полный список доступных [анимированных эффектов для сообщений »](/api/effects/). |
+| [messages.getAvailableReactions](/method/messages.getAvailableReactions/) | Получить доступные [реакции на сообщения »](/api/reactions/) |
+| [messages.getBotApp](/method/messages.getBotApp/) | Получить сведения о [Mini App с прямой ссылкой](/api/bots/webapps/#direct-link-mini-apps) |
+| [messages.getBotCallbackAnswer](/method/messages.getBotCallbackAnswer/) | Нажать инлайн-кнопку обратного вызова и получить ответ от бота |
+| [messages.getChatInviteImporters](/method/messages.getChatInviteImporters/) | Получить информацию о пользователях, вступивших в чат по определённой пригласительной ссылке |
+| [messages.getChats](/method/messages.getChats/) | Возвращает основные сведения о чатах по их идентификаторам. |
+| [messages.getCommonChats](/method/messages.getCommonChats/) | Получить общие с пользователем чаты |
+| [messages.getCustomEmojiDocuments](/method/messages.getCustomEmojiDocuments/) | Получить [стикеры с пользовательскими эмодзи »](/api/custom-emoji/). |
+| [messages.getDefaultHistoryTTL](/method/messages.getDefaultHistoryTTL/) | Возвращает значение по умолчанию настройки времени жизни сообщений (Time-To-Live), применяемое ко всем новым чатам. |
+| [messages.getDefaultTagReactions](/method/messages.getDefaultTagReactions/) | Получить рекомендуемый список [реакций-тегов для сохранённых сообщений](/api/saved-messages/#tags) по умолчанию. |
+| [messages.getDhConfig](/method/messages.getDhConfig/) | Возвращает параметры конфигурации для генерации ключа по схеме Диффи — Хеллмана. Может также вернуть случайную последовательность байтов требуемой длины. |
+| [messages.getDialogFilters](/method/messages.getDialogFilters/) | Получить [папки](/api/folders/) |
+| [messages.getDialogs](/method/messages.getDialogs/) | Возвращает список диалогов текущего пользователя. |
+| [messages.getDialogUnreadMarks](/method/messages.getDialogUnreadMarks/) | Получить диалоги, вручную отмеченные как непрочитанные |
+| [messages.getDiscussionMessage](/method/messages.getDiscussionMessage/) | Получить [сообщение обсуждения](/api/threads/) из [связанной группы обсуждения](/api/discussion/) канала, чтобы показать его над разделом комментариев, не вступая при этом в группу |
+| [messages.getDocumentByHash](/method/messages.getDocumentByHash/) | Получить документ по его хешу SHA256; метод используется в основном для GIF |
+| [messages.getEmojiGameInfo](/method/messages.getEmojiGameInfo/) | Получить информацию об игре в кости. |
+| [messages.getEmojiGroups](/method/messages.getEmojiGroups/) | Представляет список [категорий эмодзи](/api/emoji-categories/). |
+| [messages.getEmojiKeywords](/method/messages.getEmojiKeywords/) | Получить локализованные [ключевые слова эмодзи »](/api/custom-emoji/#emoji-keywords). |
+| [messages.getEmojiKeywordsDifference](/method/messages.getEmojiKeywordsDifference/) | Получить изменённые [ключевые слова эмодзи »](/api/custom-emoji/#emoji-keywords). |
+| [messages.getEmojiKeywordsLanguages](/method/messages.getEmojiKeywordsLanguages/) | Получить список родственных языков, которые необходимо использовать при загрузке [списков ключевых слов эмодзи »](/api/custom-emoji/#emoji-keywords). |
+| [messages.getEmojiProfilePhotoGroups](/method/messages.getEmojiProfilePhotoGroups/) | Представляет список [категорий эмодзи](/api/emoji-categories/), используемый при выборе пользовательских эмодзи для установки в качестве [фотографии профиля](/api/files/#sticker-profile-pictures). |
+| [messages.getEmojiStatusGroups](/method/messages.getEmojiStatusGroups/) | Представляет список [категорий эмодзи](/api/emoji-categories/), используемый при выборе пользовательских эмодзи для установки в качестве [эмодзи-статуса](/api/). |
+| [messages.getEmojiStickerGroups](/method/messages.getEmojiStickerGroups/) | Представляет список [категорий эмодзи](/api/emoji-categories/), используемый при выборе стикера. |
+| [messages.getEmojiStickers](/method/messages.getEmojiStickers/) | Получает список установленных на данный момент [наборов стикеров с пользовательскими эмодзи](/api/custom-emoji/). |
+| [messages.getEmojiURL](/method/messages.getEmojiURL/) | Возвращает HTTP-адрес, по которому можно автоматически войти на платформу переводов и предложить новые [ключевые слова эмодзи »](/api/custom-emoji/#emoji-keywords). Адрес действителен в течение 30 секунд после создания. |
+| [messages.getExportedChatInvite](/method/messages.getExportedChatInvite/) | Получить информацию о приглашении в чат |
+| [messages.getExportedChatInvites](/method/messages.getExportedChatInvites/) | Получить информацию о приглашениях конкретного чата |
+| [messages.getExtendedMedia](/method/messages.getExtendedMedia/) | Получить обновлённую информацию о [платном медиа; полное описание процесса см. здесь »](/api/paid-media/). |
+| [messages.getFactCheck](/method/messages.getFactCheck/) | Получить одну или несколько [проверок фактов; полное описание процесса см. здесь »](/api/factcheck/). |
+| [messages.getFavedStickers](/method/messages.getFavedStickers/) | Получить избранные стикеры |
+| [messages.getFeaturedEmojiStickers](/method/messages.getFeaturedEmojiStickers/) | Получает рекомендуемые наборы стикеров с пользовательскими эмодзи. |
+| [messages.getFeaturedStickers](/method/messages.getFeaturedStickers/) | Получить рекомендуемые стикеры |
+| [messages.getForumTopics](/method/messages.getForumTopics/) | Получить [темы форума](/api/forum/) |
+| [messages.getForumTopicsByID](/method/messages.getForumTopicsByID/) | Получить темы форума по их идентификаторам |
+| [messages.getFullChat](/method/messages.getFullChat/) | Получить полную информацию об [обычной группе](/api/channel/#basic-groups). |
+| [messages.getFutureChatCreatorAfterLeave](/method/messages.getFutureChatCreatorAfterLeave/) | Только для владельцев групп и каналов: возвращает идентификатор пользователя, который станет новым владельцем группы, если мы решим её покинуть; подробнее о полном порядке действий см. [здесь »](/api/channel/#leaving-groups-channels). |
+| [messages.getGameHighScores](/method/messages.getGameHighScores/) | Получить рекорды в игре |
+| [messages.getHistory](/method/messages.getHistory/) | Возвращает историю сообщений в пире. |
+| [messages.getInlineBotResults](/method/messages.getInlineBotResults/) | Запрос к инлайн-боту |
+| [messages.getInlineGameHighScores](/method/messages.getInlineGameHighScores/) | Получить рекорды в игре, отправленной через инлайн-бота |
+| [messages.getMaskStickers](/method/messages.getMaskStickers/) | Получить установленные стикеры-маски |
+| [messages.getMessageEditData](/method/messages.getMessageEditData/) | Узнать, можно ли изменить подпись к медиасообщению |
+| [messages.getMessageReactionsList](/method/messages.getMessageReactionsList/) | Получить список [реакций на сообщение](/api/reactions/) вместе с отправителем каждой реакции. |
+| [messages.getMessageReadParticipants](/method/messages.getMessageReadParticipants/) | Получить список пользователей, прочитавших определённое сообщение: доступно только для групп и супергрупп, где менее [`chat_read_mark_size_threshold` участников](/api/config/#chat-read-mark-size-threshold); сведения о прочтении хранятся в течение [`chat_read_mark_expire_period` секунд после отправки сообщения](/api/config/#chat-read-mark-expire-period), подробнее см. [конфигурацию клиента »](/api/config/#client-configuration). |
+| [messages.getMessages](/method/messages.getMessages/) | Возвращает список сообщений по их идентификаторам. |
+| [messages.getMessagesReactions](/method/messages.getMessagesReactions/) | Получить [реакции на сообщения »](/api/reactions/) |
+| [messages.getMessagesViews](/method/messages.getMessagesViews/) | Получить и увеличить счётчик просмотров сообщения, отправленного или пересланного из [канала](/api/channel/) |
+| [messages.getMyStickers](/method/messages.getMyStickers/) | Получить все [наборы стикеров »](/api/stickers/), принадлежащие текущему пользователю. |
+| [messages.getOldFeaturedStickers](/method/messages.getOldFeaturedStickers/) | Метод для получения ранее рекомендуемых стикеров |
+| [messages.getOnlines](/method/messages.getOnlines/) | Получить количество пользователей чата, находящихся в сети |
+| [messages.getOutboxReadDate](/method/messages.getOutboxReadDate/) | Получить точную дату прочтения одного из наших сообщений, отправленных в личный чат с другим пользователем. |
+| [messages.getPaidReactionPrivacy](/method/messages.getPaidReactionPrivacy/) | Получает обновление [updatePaidReactionPrivacy](/constructor/updatePaidReactionPrivacy/) с текущей [настройкой приватности платных реакций по умолчанию, подробнее см. здесь »](/api/reactions/#paid-reactions). |
+| [messages.getPeerDialogs](/method/messages.getPeerDialogs/) | Получить сведения о диалогах указанных пиров |
+| [messages.getPeerSettings](/method/messages.getPeerSettings/) | Получить настройки пира |
+| [messages.getPersonalChannelHistory](/method/messages.getPersonalChannelHistory/) | Получить историю сообщений [персонального канала »](/api/profile/#personal-channel) пользователя. |
+| [messages.getPinnedDialogs](/method/messages.getPinnedDialogs/) | Получить закреплённые диалоги |
+| [messages.getPinnedSavedDialogs](/method/messages.getPinnedSavedDialogs/) | Получить закреплённые [сохранённые диалоги, подробнее см. здесь »](/api/saved-messages/). |
+| [messages.getPollResults](/method/messages.getPollResults/) | Получить результаты опроса |
+| [messages.getPollVotes](/method/messages.getPollVotes/) | Получить результаты неанонимных опросов |
+| [messages.getPreparedInlineMessage](/method/messages.getPreparedInlineMessage/) | Получить [заранее подготовленное инлайн-сообщение](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message), созданное [mini app](/api/bots/webapps/): вызывается при обработке [событий web\_app\_send\_prepared\_message](/api/web-events/#web-app-send-prepared-message) |
+| [messages.getQuickReplies](/method/messages.getQuickReplies/) | Получить основные сведения обо всех существующих [шаблонах быстрых ответов](/api/business/#quick-reply-shortcuts). |
+| [messages.getQuickReplyMessages](/method/messages.getQuickReplyMessages/) | Получить сообщения (все или их часть) в [шаблоне быстрого ответа »](/api/business/#quick-reply-shortcuts). |
+| [messages.getRecentLocations](/method/messages.getRecentLocations/) | Получить все недавние [трансляции геопозиции](/api/live-location/), отправленные в определённый чат: возвращает не более одного сообщения с геопозицией ([messageMediaGeoLive](/constructor/messageMediaGeoLive/)) на каждого участника чата. |
+| [messages.getRecentReactions](/method/messages.getRecentReactions/) | Получить недавно использованные [реакции на сообщения](/api/reactions/) |
+| [messages.getRecentStickers](/method/messages.getRecentStickers/) | Получить недавние стикеры |
+| [messages.getReplies](/method/messages.getReplies/) | Получить сообщения из ветки обсуждения |
+| [messages.getSavedDialogs](/method/messages.getSavedDialogs/) | Возвращает текущий [список избранных диалогов »](/api/saved-messages/) или [список тем монофорума »](/api/monoforum/). |
+| [messages.getSavedDialogsByID](/method/messages.getSavedDialogsByID/) | Получить информацию о конкретных [диалогах сохранённых сообщений »](/api/saved-messages/#saved-message-dialogs) или [темах монофорума »](/api/monoforum/). |
+| [messages.getSavedGifs](/method/messages.getSavedGifs/) | Получить сохранённые GIF. |
+| [messages.getSavedHistory](/method/messages.getSavedHistory/) | Получить [сохранённые сообщения »](/api/saved-messages/), пересланные от определённого пира, либо сообщения из [темы монофорума »](/api/monoforum/). |
+| [messages.getSavedReactionTags](/method/messages.getSavedReactionTags/) | Получить полный список [тегов сохранённых сообщений](/api/saved-messages/#tags), созданных пользователем. |
+| [messages.getScheduledHistory](/method/messages.getScheduledHistory/) | Получить отложенные сообщения |
+| [messages.getScheduledMessages](/method/messages.getScheduledMessages/) | Получить отложенные сообщения |
+| [messages.getSearchCounters](/method/messages.getSearchCounters/) | Получить количество результатов, которые вернул бы вызов [messages.search](/method/messages.search/) с теми же параметрами |
+| [messages.getSearchResultsCalendar](/method/messages.getSearchResultsCalendar/) | Возвращает информацию о следующих сообщениях указанного типа в чате с разбивкой по дням. |
+| [messages.getSearchResultsPositions](/method/messages.getSearchResultsPositions/) | Возвращает разреженные позиции сообщений указанного типа в чате для реализации прокрутки общих медиа. |
+| [messages.getSplitRanges](/method/messages.getSplitRanges/) | Получить диапазоны сообщений для сохранения истории чатов пользователя |
+| [messages.getSponsoredMessages](/method/messages.getSponsoredMessages/) | Получить список [рекламных сообщений для пира, подробнее см. здесь »](/api/sponsored-messages/). |
+| [messages.getStickers](/method/messages.getStickers/) | Получить стикеры по эмодзи |
+| [messages.getStickerSet](/method/messages.getStickerSet/) | Получить информацию о наборе стикеров |
+| [messages.getSuggestedDialogFilters](/method/messages.getSuggestedDialogFilters/) | Получить [рекомендуемые папки](/api/folders/) |
+| [messages.getTopReactions](/method/messages.getTopReactions/) | Получены популярные [реакции на сообщения](/api/reactions/) |
+| [messages.getUnreadMentions](/method/messages.getUnreadMentions/) | Получить непрочитанные сообщения, в которых нас упомянули |
+| [messages.getUnreadPollVotes](/method/messages.getUnreadPollVotes/) | Получить сообщения с опросами, в которых есть [непрочитанные голоса »](/api/poll/#unread-poll-votes) |
+| [messages.getUnreadReactions](/method/messages.getUnreadReactions/) | Получить непрочитанные реакции на отправленные вами сообщения |
+| [messages.getWebPage](/method/messages.getWebPage/) | Получить страницу [instant view](https://instantview.telegram.org) |
+| [messages.getWebPagePreview](/method/messages.getWebPagePreview/) | Получить предпросмотр веб-страницы |
+| [messages.hideAllChatJoinRequests](/method/messages.hideAllChatJoinRequests/) | Отклонить или одобрить все [заявки на вступление](/api/invites/#join-requests) в определённый чат или канал. |
+| [messages.hideChatJoinRequest](/method/messages.hideChatJoinRequest/) | Отклонить или одобрить [заявку на вступление](/api/invites/#join-requests) в определённый чат или канал. |
+| [messages.hidePeerSettingsBar](/method/messages.hidePeerSettingsBar/) | Должен вызываться после того, как пользователь скрыл [панель «пожаловаться на спам / добавить в контакты»](/api/action-bar/) нового чата; фактически запрещает пользователю выполнять действия, указанные в [панели действий »](/api/action-bar/). |
+| [messages.importChatInvite](/method/messages.importChatInvite/) | Применить приглашение в чат и вступить в личный чат/супергруппу/канал |
+| [messages.initHistoryImport](/method/messages.initHistoryImport/) | Импортировать историю переписки из стороннего мессенджера в определённый чат Telegram; [подробнее об импортированных чатах см. здесь »](/api/import/). |
+| [messages.installStickerSet](/method/messages.installStickerSet/) | Установить набор стикеров |
+| [messages.markDialogUnread](/method/messages.markDialogUnread/) | Вручную отметить диалог как непрочитанный |
+| [messages.migrateChat](/method/messages.migrateChat/) | Превратить [обычную группу в супергруппу](/api/channel/#migration) |
+| [messages.prolongWebView](/method/messages.prolongWebView/) | Сообщить серверу (со стороны пользователя), что пользователь всё ещё работает с веб-приложением. |
+| [messages.rateTranscribedAudio](/method/messages.rateTranscribedAudio/) | Оценить [расшифровку голосового сообщения](/api/transcribe/) |
+| [messages.readDiscussion](/method/messages.readDiscussion/) | Отметить [ветку](/api/threads/) как прочитанную |
+| [messages.readEncryptedHistory](/method/messages.readEncryptedHistory/) | Отмечает историю сообщений в секретном чате как прочитанную. |
+| [messages.readFeaturedStickers](/method/messages.readFeaturedStickers/) | Отметить новые рекомендуемые стикеры как просмотренные |
+| [messages.readHistory](/method/messages.readHistory/) | Отмечает историю сообщений как прочитанную. |
+| [messages.readMentions](/method/messages.readMentions/) | Отметить упоминания как прочитанные; может использоваться в [форумах](/api/forum/), но **не может** использоваться в [монофорумах](/api/monoforum/). |
+| [messages.readMessageContents](/method/messages.readMessageContents/) | Уведомляет отправителя о том, что получатель прослушал голосовое сообщение или посмотрел видео, порождая [updateReadMessagesContents](/constructor/updateReadMessagesContents/). |
+| [messages.readPollVotes](/method/messages.readPollVotes/) | Отметить все [непрочитанные голоса в опросах »](/api/poll/#unread-poll-votes) в чате как прочитанные |
+| [messages.readReactions](/method/messages.readReactions/) | Отметить [реакции на сообщения »](/api/reactions/) как прочитанные |
+| [messages.readSavedHistory](/method/messages.readSavedHistory/) | Отметить сообщения в [теме монофорума »](/api/monoforum/) как прочитанные. |
+| [messages.receivedMessages](/method/messages.receivedMessages/) | Подтверждает получение сообщений клиентом, отменяет отправку PUSH-уведомлений. |
+| [messages.receivedQueue](/method/messages.receivedQueue/) | Подтверждает получение сообщений в секретном чате клиентом, отменяет push-уведомления. |
+| [messages.reorderPinnedDialogs](/method/messages.reorderPinnedDialogs/) | Изменить порядок закреплённых диалогов |
+| [messages.reorderPinnedForumTopics](/method/messages.reorderPinnedForumTopics/) | Изменить порядок закреплённых тем форума |
+| [messages.reorderPinnedSavedDialogs](/method/messages.reorderPinnedSavedDialogs/) | Изменить порядок закреплённых [диалогов из сохранённых сообщений »](/api/saved-messages/). |
+| [messages.reorderQuickReplies](/method/messages.reorderQuickReplies/) | Изменить порядок [быстрых ответов](/api/business/#quick-reply-shortcuts). |
+| [messages.reorderStickerSets](/method/messages.reorderStickerSets/) | Изменить порядок установленных наборов стикеров |
+| [messages.report](/method/messages.report/) | Пожаловаться на сообщение в чате за нарушение условий использования Telegram |
+| [messages.reportEncryptedSpam](/method/messages.reportEncryptedSpam/) | Пожаловаться на секретный чат за спам |
+| [messages.reportMessagesDelivery](/method/messages.reportMessagesDelivery/) | Используется для [проверочных сообщений Telegram Gateway »](https://telegram.org/blog/star-messages-gateway-2-0-and-more#save-even-more-on-user-verification): сообщает серверу, что одно или несколько [сообщений](/constructor/message/) были получены клиентом, если этого требует флаг [message](/constructor/message/).**report\_delivery\_until\_date** или равнозначный флаг в [push-уведомлениях](/api/push-updates/). |
+| [messages.reportMusicListen](/method/messages.reportMusicListen/) | Сообщить о длительности прослушивания музыкального трека (аудиодокумента без флага `voice`); подробнее обо всём процессе см. [здесь »](/api/views/#music-listens). |
+| [messages.reportReaction](/method/messages.reportReaction/) | Пожаловаться на [реакцию на сообщение](/api/reactions/) |
+| [messages.reportReadMetrics](/method/messages.reportReadMetrics/) | Передать метрики просмотра для видимых сообщений, указывающие, как долго каждое сообщение оставалось в области просмотра чата; подробнее обо всём процессе см. [здесь »](/api/views/#read-metrics). |
+| [messages.reportSpam](/method/messages.reportSpam/) | Пожаловаться на новый входящий чат за спам, если [настройки пира](/constructor/peerSettings/) этого чата позволяют это сделать |
+| [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/) | Пожаловаться на [рекламное сообщение »](/api/sponsored-messages/); подробнее обо всём процессе см. [здесь »](/api/sponsored-messages/#reporting-sponsored-messages). |
+| [messages.requestAppWebView](/method/messages.requestAppWebView/) | Открыть [mini app бота](https://core.telegram.org/bots/webapps) по [прямой ссылке на Mini App](/api/links/#direct-mini-app-links), передав сведения о пользователе после его подтверждения. |
+| [messages.requestEncryption](/method/messages.requestEncryption/) | Отправляет пользователю запрос на создание секретного чата. |
+| [messages.requestMainWebView](/method/messages.requestMainWebView/) | Открыть [Main Mini App](/api/bots/webapps/#main-mini-apps). |
+| [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/) | Открыть [mini app бота](/api/bots/webapps/). |
+| [messages.requestUrlAuth](/method/messages.requestUrlAuth/) | Получить дополнительную информацию о запросе авторизации Seamless Telegram Login; подробнее [см. здесь »](/api/url-authorization/) |
+| [messages.requestWebView](/method/messages.requestWebView/) | Открыть [mini app бота](https://core.telegram.org/bots/webapps), передав сведения о пользователе после его подтверждения. |
+| [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/) | Изменить пир по умолчанию, используемый при отправке сообщений, реакций и голосов в опросах в определённую группу |
+| [messages.saveDraft](/method/messages.saveDraft/) | Сохранить [черновик](/api/drafts/) сообщения, связанный с чатом. |
+| [messages.saveGif](/method/messages.saveGif/) | Добавить GIF в список сохранённых GIF |
+| [messages.savePreparedInlineMessage](/method/messages.savePreparedInlineMessage/) | Сохранить [заранее подготовленное инлайн-сообщение](https://core.telegram.org/api/bots/inline#21-using-a-prepared-inline-message) для отправки пользователем mini app через [событие web\_app\_send\_prepared\_message](/api/web-events/#web-app-send-prepared-message) |
+| [messages.saveRecentSticker](/method/messages.saveRecentSticker/) | Добавить стикер в список недавних стикеров или удалить его оттуда |
+| [messages.search](/method/messages.search/) | Поиск сообщений. |
+| [messages.searchCustomEmoji](/method/messages.searchCustomEmoji/) | Искать [пользовательские эмодзи](/api/custom-emoji/), связанные с UTF8-эмодзи |
+| [messages.searchEmojiStickerSets](/method/messages.searchEmojiStickerSets/) | Поиск [наборов стикеров с пользовательскими эмодзи »](/api/custom-emoji/) |
+| [messages.searchGlobal](/method/messages.searchGlobal/) | Глобальный поиск сообщений и пиров |
+| [messages.searchSentMedia](/method/messages.searchSentMedia/) | Просмотр и поиск среди недавно отправленных медиафайлов. |
+| [messages.searchStickers](/method/messages.searchStickers/) | Поиск стикеров по ключевым словам с использованием ИИ |
+| [messages.searchStickerSets](/method/messages.searchStickerSets/) | Поиск наборов стикеров |
+| [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/) | Отправить один или несколько выбранных пиров по запросу кнопки [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/). |
+| [messages.sendEncrypted](/method/messages.sendEncrypted/) | Отправляет текстовое сообщение в секретный чат. |
+| [messages.sendEncryptedFile](/method/messages.sendEncryptedFile/) | Отправляет в секретный чат сообщение с вложенным файлом |
+| [messages.sendEncryptedService](/method/messages.sendEncryptedService/) | Отправляет сервисное сообщение в секретный чат. |
+| [messages.sendInlineBotResult](/method/messages.sendInlineBotResult/) | Отправить результат, полученный с помощью [messages.getInlineBotResults](/method/messages.getInlineBotResults/). |
+| [messages.sendMedia](/method/messages.sendMedia/) | Отправить медиа |
+| [messages.sendMessage](/method/messages.sendMessage/) | Отправляет сообщение в чат |
+| [messages.sendMultiMedia](/method/messages.sendMultiMedia/) | Отправить [альбом или сгруппированные медиафайлы](/api/files/#albums-grouped-media) |
+| [messages.sendPaidReaction](/method/messages.sendPaidReaction/) | Отправляет одну или несколько [платных реакций Telegram Stars »](/api/reactions/#paid-reactions), переводя [Telegram Stars »](/api/stars/) на баланс канала. |
+| [messages.sendQuickReplyMessages](/method/messages.sendQuickReplyMessages/) | Отправить [шаблон быстрого ответа »](/api/business/#quick-reply-shortcuts). |
+| [messages.sendReaction](/method/messages.sendReaction/) | Поставить реакцию на сообщение. |
+| [messages.sendScheduledMessages](/method/messages.sendScheduledMessages/) | Немедленно отправить отложенные сообщения |
+| [messages.sendScreenshotNotification](/method/messages.sendScreenshotNotification/) | Уведомить собеседника в личном чате о том, что сделан снимок экрана чата |
+| [messages.sendVote](/method/messages.sendVote/) | Проголосовать в [опросе](/constructor/poll/) |
+| [messages.sendWebViewData](/method/messages.sendWebViewData/) | Используется пользователем для передачи данных из открытого [бот-мини-приложения на клавиатуре ответа](/api/bots/webapps/) боту, которому оно принадлежит. |
+| [messages.sendWebViewResultMessage](/method/messages.sendWebViewResultMessage/) | Завершить взаимодействие с веб-представлением, начатое через [messages.requestWebView](/method/messages.requestWebView/), отправив указанное сообщение в чат от имени пользователя. |
+| [messages.setBotCallbackAnswer](/method/messages.setBotCallbackAnswer/) | Задать ответ обратного вызова на нажатие кнопки пользователем (только для ботов) |
+| [messages.setBotGuestChatResult](/method/messages.setBotGuestChatResult/) | Боты могут использовать этот метод, чтобы ответить на запрос [гостевого режима »](/api/bots/guest-mode/), полученный через обновление [updateBotGuestChatQuery](/constructor/updateBotGuestChatQuery/), передав сообщение для публикации в чате в качестве гостя; подробнее [см. здесь »](/api/bots/guest-mode/#handling-guest-queries-bot-side). |
+| [messages.setBotPrecheckoutResults](/method/messages.setBotPrecheckoutResults/) | После того как пользователь подтвердил платёж и данные доставки, бот получает обновление [updateBotPrecheckoutQuery](/constructor/updateBotPrecheckoutQuery/). |
+| [messages.setBotShippingResults](/method/messages.setBotShippingResults/) | Если вы отправили счёт, запрашивающий адрес доставки, и был указан параметр is\_flexible, бот получит обновление [updateBotShippingQuery](/constructor/updateBotShippingQuery/). Используйте этот метод, чтобы ответить на запросы доставки. |
+| [messages.setChatAvailableReactions](/method/messages.setChatAvailableReactions/) | Изменить набор [реакций на сообщения »](/api/reactions/), которые можно использовать в определённой группе, супергруппе или канале |
+| [messages.setChatTheme](/method/messages.setChatTheme/) | Изменить тему оформления определённого чата, подробнее [здесь »](/api/themes/#chat-themes). |
+| [messages.setChatWallPaper](/method/messages.setChatWallPaper/) | Установить пользовательские [обои »](/api/wallpapers/) в конкретном личном чате с другим пользователем. |
+| [messages.setDefaultHistoryTTL](/method/messages.setDefaultHistoryTTL/) | Изменяет значение по умолчанию настройки времени жизни сообщений (Time-To-Live), применяемое ко всем новым чатам. |
+| [messages.setDefaultReaction](/method/messages.setDefaultReaction/) | Изменить эмодзи-реакцию по умолчанию, используемую в меню быстрых реакций: значение синхронизируется между устройствами и может быть получено через [help.getConfig, поле `reactions_default`](/method/help.getConfig/). |
+| [messages.setEncryptedTyping](/method/messages.setEncryptedTyping/) | Отправить событие набора текста текущим пользователем в секретный чат. |
+| [messages.setGameScore](/method/messages.setGameScore/) | Этот метод позволяет задать счёт указанного пользователя в игре, отправленной обычным сообщением (только для ботов). |
+| [messages.setHistoryTTL](/method/messages.setHistoryTTL/) | Задать максимальное время жизни (TTL) всех сообщений в указанном чате |
+| [messages.setInlineBotResults](/method/messages.setInlineBotResults/) | Ответить на инлайн-запрос, только для ботов |
+| [messages.setInlineGameScore](/method/messages.setInlineGameScore/) | Этот метод позволяет задать счёт указанного пользователя в игре, отправленной инлайн-сообщением (только для ботов). |
+| [messages.setTyping](/method/messages.setTyping/) | Отправляет событие набора текста текущим пользователем (все типы событий см. в [SendMessageAction](/type/SendMessageAction/)) собеседнику или в группу. |
+| [messages.startBot](/method/messages.startBot/) | Начать переписку с ботом, используя [параметр глубокой ссылки](/api/links/#bot-links) |
+| [messages.startHistoryImport](/method/messages.startHistoryImport/) | Завершить [процесс импорта истории](/api/import/), импортировав все сообщения в чат. |
+| [messages.summarizeText](/method/messages.summarizeText/) | Составить краткое содержание сообщения с помощью ИИ; подробнее см. [здесь »](/api/ai/#summarize-messages). |
+| [messages.toggleBotInAttachMenu](/method/messages.toggleBotInAttachMenu/) | Включить или отключить [меню вложений веб-бота »](/api/bots/attach/) |
+| [messages.toggleDialogFilterTags](/method/messages.toggleDialogFilterTags/) | Включить или отключить [теги папок »](/api/folders/#folder-tags). |
+| [messages.toggleDialogPin](/method/messages.toggleDialogPin/) | Закрепить или открепить диалог |
+| [messages.toggleNoForwards](/method/messages.toggleNoForwards/) | Включить или отключить [защиту контента](/api/content-protection/) в канале, группе или личном чате. |
+| [messages.togglePaidReactionPrivacy](/method/messages.togglePaidReactionPrivacy/) | Изменяет приватность уже отправленных [платных реакций](/api/reactions/#paid-reactions) на конкретное сообщение. |
+| [messages.togglePeerTranslations](/method/messages.togglePeerTranslations/) | Показать или скрыть [всплывающее окно перевода чата в реальном времени](/api/translation/) для определённого чата |
+| [messages.toggleSavedDialogPin](/method/messages.toggleSavedDialogPin/) | Закрепить или открепить [диалог сохранённых сообщений »](/api/saved-messages/). |
+| [messages.toggleStickerSets](/method/messages.toggleStickerSets/) | Применить изменения к нескольким наборам стикеров |
+| [messages.toggleSuggestedPostApproval](/method/messages.toggleSuggestedPostApproval/) | Одобрить или отклонить [предлагаемый пост »](/api/suggested-posts/). |
+| [messages.toggleTodoCompleted](/method/messages.toggleTodoCompleted/) | Отметить один или несколько пунктов [списка задач »](/api/todo/) как выполненные или невыполненные. |
+| [messages.transcribeAudio](/method/messages.transcribeAudio/) | [Расшифровка голосовых сообщений](/api/transcribe/) |
+| [messages.translateText](/method/messages.translateText/) | Перевести заданный текст. |
+| [messages.uninstallStickerSet](/method/messages.uninstallStickerSet/) | Удалить набор стикеров |
+| [messages.unpinAllMessages](/method/messages.unpinAllMessages/) | [Открепить](/api/pin/) все закреплённые сообщения |
+| [messages.updateDialogFilter](/method/messages.updateDialogFilter/) | Обновить [папку](/api/folders/) |
+| [messages.updateDialogFiltersOrder](/method/messages.updateDialogFiltersOrder/) | Изменить порядок [папок](/api/folders/) |
+| [messages.updatePinnedForumTopic](/method/messages.updatePinnedForumTopic/) | Закрепить или открепить [темы форума](/api/forum/) |
+| [messages.updatePinnedMessage](/method/messages.updatePinnedMessage/) | Закрепить сообщение |
+| [messages.updateSavedReactionTag](/method/messages.updateSavedReactionTag/) | Обновить [описание тега сохранённого сообщения »](/api/saved-messages/#tags). |
+| [messages.uploadEncryptedFile](/method/messages.uploadEncryptedFile/) | Загрузить зашифрованный файл и связать его с секретным чатом (без отправки в сам чат). |
+| [messages.uploadImportedMedia](/method/messages.uploadImportedMedia/) | Загрузить медиафайл, связанный с [импортированным чатом; подробнее см. здесь »](/api/import/). |
+| [messages.uploadMedia](/method/messages.uploadMedia/) | Загрузить файл и связать его с чатом (не отправляя его в чат) |
+| [messages.viewSponsoredMessage](/method/messages.viewSponsoredMessage/) | Отметить конкретное [рекламное сообщение »](/api/sponsored-messages/) как прочитанное |
+| [payments.applyGiftCode](/method/payments.applyGiftCode/) | Активировать [подарочный код Telegram Premium »](/api/giveaways/) |
+| [payments.assignAppStoreTransaction](/method/payments.assignAppStoreTransaction/) | Сообщает серверу о покупке, совершённой через App Store: только для официальных приложений. |
+| [payments.assignPlayMarketTransaction](/method/payments.assignPlayMarketTransaction/) | Сообщает серверу о покупке, совершённой через Play Store: только для официальных приложений. |
+| [payments.botCancelStarsSubscription](/method/payments.botCancelStarsSubscription/) | Отменить [подписку на бота](/api/subscriptions/#bot-subscriptions) |
+| [payments.canPurchaseStore](/method/payments.canPurchaseStore/) | Проверяет, возможна ли покупка. Обязан вызываться перед покупкой во внутреннем магазине, только для официальных клиентов. |
+| [payments.changeStarsSubscription](/method/payments.changeStarsSubscription/) | Активировать или деактивировать [подписку за Telegram Stars »](/api/invites/#paid-invite-links). |
+| [payments.checkCanSendGift](/method/payments.checkCanSendGift/) | Проверить, можно ли отправить указанный [подарок »](/api/gifts/). |
+| [payments.checkGiftCode](/method/payments.checkGiftCode/) | Получить сведения о [подарочном коде Telegram Premium »](/api/giveaways/) |
+| [payments.clearSavedInfo](/method/payments.clearSavedInfo/) | Удалить сохранённые платёжные данные |
+| [payments.connectStarRefBot](/method/payments.connectStarRefBot/) | Присоединиться к [партнёрской программе бота, став партнёром »](/api/bots/referrals/#becoming-an-affiliate) |
+| [payments.convertStarGift](/method/payments.convertStarGift/) | Преобразовать [полученный подарок »](/api/gifts/) в Telegram Stars: подарок будет безвозвратно уничтожен и превращён в [starGift](/constructor/starGift/).`convert_stars` [Telegram Stars](/api/stars/), которые будут зачислены на баланс пользователя. |
+| [payments.craftStarGift](/method/payments.craftStarGift/) | Создать новый [коллекционный подарок »](/api/gifts/#collectible-gifts), объединив от 1 до 4 принадлежащих вам коллекционных подарков одного и того же базового типа. |
+| [payments.createStarGiftCollection](/method/payments.createStarGiftCollection/) | Создать [коллекцию звёздных подарков »](/api/gifts/#gift-collections). |
+| [payments.deleteStarGiftCollection](/method/payments.deleteStarGiftCollection/) | Удалить [коллекцию звёздных подарков »](/api/gifts/#gift-collections). |
+| [payments.editConnectedStarRefBot](/method/payments.editConnectedStarRefBot/) | Выйти из [партнёрской программы »](/api/bots/referrals/#becoming-an-affiliate) бота |
+| [payments.exportInvoice](/method/payments.exportInvoice/) | Создать [глубокую ссылку на счёт](/api/links/#invoice-links) |
+| [payments.fulfillStarsSubscription](/method/payments.fulfillStarsSubscription/) | Повторно вступить в приватный канал, связанный с активной [подпиской за Telegram Stars »](/api/invites/#paid-invite-links). |
+| [payments.getBankCardData](/method/payments.getBankCardData/) | Получить сведения о банковской карте |
+| [payments.getConnectedStarRefBot](/method/payments.getConnectedStarRefBot/) | Получить сведения о конкретном [партнёрстве с ботом »](/api/bots/referrals/) |
+| [payments.getConnectedStarRefBots](/method/payments.getConnectedStarRefBots/) | Получить все партнёрства, созданные нами для определённого пира |
+| [payments.getCraftStarGifts](/method/payments.getCraftStarGifts/) | Получить принадлежащие пользователю [коллекционные подарки »](/api/gifts/#collectible-gifts) определённого типа, которые можно использовать для [создания »](/api/gifts/#crafting-collectible-gifts). |
+| [payments.getGiveawayInfo](/method/payments.getGiveawayInfo/) | Получить сведения о [розыгрыше Telegram Premium »](/api/giveaways/). |
+| [payments.getPaymentForm](/method/payments.getPaymentForm/) | Получить форму оплаты |
+| [payments.getPaymentReceipt](/method/payments.getPaymentReceipt/) | Получить чек об оплате |
+| [payments.getPremiumGiftCodeOptions](/method/payments.getPremiumGiftCodeOptions/) | Получить список вариантов [розыгрыша или подарочного кода »](/api/giveaways/) Telegram Premium. |
+| [payments.getResaleStarGifts](/method/payments.getResaleStarGifts/) | Получить [коллекционные подарки](/api/gifts/#collectible-gifts) определённого типа, выставленные на перепродажу; подробнее [см. здесь »](/api/gifts/#reselling-collectible-gifts). |
+| [payments.getSavedInfo](/method/payments.getSavedInfo/) | Получить сохранённые платёжные данные |
+| [payments.getSavedStarGift](/method/payments.getSavedStarGift/) | Получить сведения о конкретных [подарках](/api/gifts/), принадлежащих подконтрольному нам пиру. |
+| [payments.getSavedStarGifts](/method/payments.getSavedStarGifts/) | Получить полный список [подарков »](/api/gifts/#list-all-received-gifts), которыми пир владеет, которые он получил или [размещает »](/api/gifts/#hosted-collectible-gifts). |
+| [payments.getStarGiftActiveAuctions](/method/payments.getStarGiftActiveAuctions/) | Получает все текущие активные [аукционы подарков](/api/auctions/), **на которых пользователь когда-либо делал ставку** (включая аукционы, где ставку пользователя перебили и она была возвращена), при условии что аукцион ещё не завершился. |
+| [payments.getStarGiftAuctionAcquiredGifts](/method/payments.getStarGiftAuctionAcquiredGifts/) | Получает все подарки, которые текущий пользователь выиграл на [аукционе](/api/auctions/). |
+| [payments.getStarGiftAuctionState](/method/payments.getStarGiftAuctionState/) | Возвращает сведения об [аукционе коллекционных подарков »](/api/auctions/); также подписывает пользователя на обновления аукциона, подробнее обо всём процессе см. [здесь »](/api/auctions/). |
+| [payments.getStarGiftCollections](/method/payments.getStarGiftCollections/) | Получает все [коллекции звёздных подарков »](/api/gifts/#gift-collections) пира. |
+| [payments.getStarGifts](/method/payments.getStarGifts/) | Получить список доступных [подарков, подробнее см. здесь »](/api/gifts/). |
+| [payments.getStarGiftUpgradeAttributes](/method/payments.getStarGiftUpgradeAttributes/) | Получает **полный** список только тех коллекционных атрибутов, которые могут появиться у типа подарка после его превращения в [коллекционный подарок »](/api/gifts/#collectible-gifts). |
+| [payments.getStarGiftUpgradePreview](/method/payments.getStarGiftUpgradePreview/) | Получить предпросмотр возможных атрибутов (выбираемых случайно), которые [подарок »](/api/gifts/) может получить после улучшения до [коллекционного подарка »](/api/gifts/#collectible-gifts); подробнее см. [здесь »](/api/gifts/#collectible-gifts). |
+| [payments.getStarGiftWithdrawalUrl](/method/payments.getStarGiftWithdrawalUrl/) | Преобразовать [коллекционный подарок »](/api/gifts/) в NFT в блокчейне TON. |
+| [payments.getStarsGiftOptions](/method/payments.getStarsGiftOptions/) | Получить список [вариантов подарка за Telegram Stars »](/api/stars/#buying-or-gifting-stars) в виде конструкторов [starsGiftOption](/constructor/starsGiftOption/). |
+| [payments.getStarsGiveawayOptions](/method/payments.getStarsGiveawayOptions/) | Получить список [вариантов розыгрыша звёзд »](/api/giveaways/#star-giveaways). |
+| [payments.getStarsRevenueAdsAccountUrl](/method/payments.getStarsRevenueAdsAccountUrl/) | Возвращает URL аккаунта рекламной платформы Telegram, который можно использовать для настройки рекламы канала или бота в `peer` с оплатой звёздами Telegram Stars, принадлежащими указанному `peer`; подробнее см. [здесь »](/api/stars/#paying-for-ads). |
+| [payments.getStarsRevenueStats](/method/payments.getStarsRevenueStats/) | Получить [статистику доходов в Telegram Stars »](/api/stars/). |
+| [payments.getStarsRevenueWithdrawalUrl](/method/payments.getStarsRevenueWithdrawalUrl/) | Вывести средства с [баланса Stars »](/api/stars/#withdrawing-revenue) канала или бота. |
+| [payments.getStarsStatus](/method/payments.getStarsStatus/) | Получить текущий [баланс Telegram Stars](/api/stars/) текущего аккаунта (при peer=[inputPeerSelf](/constructor/inputPeerSelf/)) либо баланс звёзд бота или канала, указанного в `peer`. |
+| [payments.getStarsSubscriptions](/method/payments.getStarsSubscriptions/) | Получить список активных, истёкших или отменённых [подписок за Telegram Stars »](/api/invites/#paid-invite-links). |
+| [payments.getStarsTopupOptions](/method/payments.getStarsTopupOptions/) | Получить список [вариантов пополнения баланса Telegram Stars »](/api/stars/#buying-or-gifting-stars) в виде конструкторов [starsTopupOption](/constructor/starsTopupOption/). |
+| [payments.getStarsTransactions](/method/payments.getStarsTransactions/) | Получить [транзакции Telegram Stars](/api/stars/#balance-and-transaction-history). |
+| [payments.getStarsTransactionsByID](/method/payments.getStarsTransactionsByID/) | Получить информацию о [транзакциях Telegram Stars »](/api/stars/#balance-and-transaction-history) по конкретным идентификаторам транзакций. |
+| [payments.getSuggestedStarRefBots](/method/payments.getSuggestedStarRefBots/) | Получить список рекомендуемых [mini apps](/api/bots/webapps/) с доступными [партнёрскими программами](/api/bots/referrals/) |
+| [payments.getUniqueStarGift](/method/payments.getUniqueStarGift/) | Получить сведения о [коллекционном подарке »](/api/gifts/#collectible-gifts) по слагу, полученному из [ссылки на коллекционный подарок »](/api/links/#collectible-gift-link). |
+| [payments.getUniqueStarGiftValueInfo](/method/payments.getUniqueStarGiftValueInfo/) | Получить информацию о стоимости [коллекционного подарка »](/api/gifts/#collectible-gifts). |
+| [payments.launchPrepaidGiveaway](/method/payments.launchPrepaidGiveaway/) | Запустить [предоплаченный розыгрыш »](/api/giveaways/). |
+| [payments.refundStarsCharge](/method/payments.refundStarsCharge/) | Вернуть средства по транзакции [Telegram Stars](/api/stars/); подробнее см. [здесь »](/api/payments/#6-refunds). |
+| [payments.reorderStarGiftCollections](/method/payments.reorderStarGiftCollections/) | Изменить порядок [коллекций звёздных подарков »](/api/gifts/#gift-collections) в профиле принадлежащего нам пира. |
+| [payments.resolveStarGiftOffer](/method/payments.resolveStarGiftOffer/) | Принять или отклонить полученное ранее [предложение о покупке коллекционного подарка »](/api/gifts/#collectible-gift-purchase-offers); полный порядок действий описан [здесь »](/api/gifts/#collectible-gift-purchase-offers). |
+| [payments.saveStarGift](/method/payments.saveStarGift/) | Показать в нашем профиле или убрать из него [полученный или размещённый подарок »](/api/gifts/#hosted-collectible-gifts). |
+| [payments.sendPaymentForm](/method/payments.sendPaymentForm/) | Отправить заполненную форму оплаты |
+| [payments.sendStarGiftOffer](/method/payments.sendStarGiftOffer/) | Отправить предложение о покупке [коллекционного подарка »](/api/gifts/#collectible-gift-purchase-offers); полный порядок действий см. [здесь »](/api/gifts/#collectible-gift-purchase-offers). |
+| [payments.sendStarsForm](/method/payments.sendStarsForm/) | Произвести оплату с помощью [Telegram Stars, подробнее »](/api/stars/#using-stars). |
+| [payments.toggleChatStarGiftNotifications](/method/payments.toggleChatStarGiftNotifications/) | Включает или отключает получение уведомлений при каждом получении [подарка »](/api/gifts/) указанным каналом; может вызываться только администраторами с [правом администратора](/constructor/chatAdminRights/) `post_messages`. |
+| [payments.toggleStarGiftsPinnedToTop](/method/payments.toggleStarGiftsPinnedToTop/) | Закрепляет полученный подарок в верхней части профиля пользователя или принадлежащих ему каналов с помощью [payments.toggleStarGiftsPinnedToTop](/method/payments.toggleStarGiftsPinnedToTop/). |
+| [payments.transferStarGift](/method/payments.transferStarGift/) | Передать [коллекционный подарок](/api/gifts/#collectible-gifts) другому пользователю или каналу: можно использовать, только если передача бесплатна (то есть поле [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/).`transfer_stars` не установлено); подробнее обо всём процессе (включая другой порядок действий на случай, когда передача платная) см. [здесь »](/api/gifts/#transferring-collectible-gifts). |
+| [payments.updateStarGiftCollection](/method/payments.updateStarGiftCollection/) | Добавить подарки в [коллекцию звёздных подарков »](/api/gifts/#gift-collections) или удалить их оттуда, либо переименовать коллекцию. |
+| [payments.updateStarGiftPrice](/method/payments.updateStarGiftPrice/) | [Принадлежащий нам коллекционный подарок »](/api/gifts/#collectible-gifts) можно выставить на продажу на [торговой площадке подарков »](https://telegram.org/blog/gift-marketplace-and-more) с помощью этого метода; подробнее [см. здесь »](/api/gifts/#reselling-collectible-gifts). |
+| [payments.upgradeStarGift](/method/payments.upgradeStarGift/) | Улучшить [подарок](/api/gifts/) до [коллекционного подарка](/api/gifts/#collectible-gifts): может использоваться, только если улучшение уже оплачено отправителем подарка; подробнее о полном порядке действий (включая другой порядок на случай, когда улучшение не было оплачено отправителем подарка) [см. здесь »](/api/gifts/#upgrade-a-gift-to-a-collectible-gift). |
+| [payments.validateRequestedInfo](/method/payments.validateRequestedInfo/) | Отправить запрошенные сведения о заказе на проверку |
+| [phone.acceptCall](/method/phone.acceptCall/) | Принять входящий звонок; подробнее о полном процессе см. [здесь »](/api/calls/#one-to-one-calls). |
+| [phone.checkGroupCall](/method/phone.checkGroupCall/) | Проверить, какие из указанных идентификаторов источников сервер по-прежнему считает подключёнными к групповому звонку. Этот метод применим ко всем типам групповых звонков, подробнее см. [здесь »](/api/group-calls/#maintaining-group-call-connections). |
+| [phone.confirmCall](/method/phone.confirmCall/) | [Завершить обмен ключами сквозного шифрования для звонка »](/api/end-to-end/voice-calls/); подробнее о полном порядке действий см. [здесь »](/api/calls/#one-to-one-calls). |
+| [phone.createConferenceCall](/method/phone.createConferenceCall/) | Создать новый [конференц-звонок »](/api/group-calls/#conference-calls) и при желании присоединиться к нему. |
+| [phone.createGroupCall](/method/phone.createGroupCall/) | Создать видеочат или трансляцию; полный порядок действий см. [здесь »](/api/group-calls/#video-chats-livestreams). |
+| [phone.declineConferenceCallInvite](/method/phone.declineConferenceCallInvite/) | Отклонить приглашение на [конференц-звонок](/api/group-calls/#conference-calls). |
+| [phone.deleteConferenceCallParticipants](/method/phone.deleteConferenceCallParticipants/) | Удалить участников из [конференц-звонка »](/api/end-to-end/group-calls/#removing-a-participant). |
+| [phone.deleteGroupCallMessages](/method/phone.deleteGroupCallMessages/) | Удалить определённые сообщения из [наложения сообщений во время звонка »](/api/group-calls/#in-call-messages) видеочата, трансляции или прямой истории, в том числе в режиме RTMP. |
+| [phone.deleteGroupCallParticipantMessages](/method/phone.deleteGroupCallParticipantMessages/) | Будучи администратором, удалить все сообщения определённого участника в [наложении сообщений во время звонка »](/api/group-calls/#in-call-messages) видеочата, трансляции или прямого эфира в историях, в том числе в режиме RTMP. |
+| [phone.discardCall](/method/phone.discardCall/) | Отклонить или завершить текущий звонок; подробнее о полном порядке действий см. [здесь »](/api/calls/#one-to-one-calls). |
+| [phone.discardGroupCall](/method/phone.discardGroupCall/) | Завершить групповой звонок, закрыв комнату для всех участников. Этот метод можно использовать с групповыми звонками любого типа, подробнее см. [здесь »](/api/group-calls/#managing-an-active-group-call). |
+| [phone.editGroupCallParticipant](/method/phone.editGroupCallParticipant/) | Изменить сведения об участнике видеочата, трансляции или конференции без RTMP. Поле `raise_hand` поддерживается только в видеочатах и трансляциях; подробнее см. [здесь »](/api/group-calls/#managing-an-active-group-call). |
+| [phone.editGroupCallTitle](/method/phone.editGroupCallTitle/) | Изменить название видеочата или трансляции. Этот метод нельзя использовать с прямыми историями и конференциями; подробнее см. [здесь »](/api/group-calls/#video-chats-livestreams). |
+| [phone.exportGroupCallInvite](/method/phone.exportGroupCallInvite/) | Получить пригласительную ссылку на публичный [видеочат или трансляцию »](/api/group-calls/#video-chats-livestreams). |
+| [phone.getCallConfig](/method/phone.getCallConfig/) | УСТАРЕЛО: получить конфигурацию звонков для передачи в общую конфигурацию libtgvoip (устаревшей библиотеки). |
+| [phone.getGroupCall](/method/phone.getGroupCall/) | Получить информацию о [групповом звонке](/api/group-calls/#getting-info-about-a-group-call) и его участниках. |
+| [phone.getGroupCallChainBlocks](/method/phone.getGroupCallChainBlocks/) | Получить блоки из [подцепочки »](/api/end-to-end/group-calls/#subchains) группового звонка-конференции; возвращённое обновление [updateGroupCallChainBlocks](/constructor/updateGroupCallChainBlocks/) следует обрабатывать [как описано здесь »](/api/end-to-end/group-calls/#handling-updates). |
+| [phone.getGroupCallJoinAs](/method/phone.getGroupCallJoinAs/) | Получить список пиров, от имени которых можно присоединиться к [видеочату или трансляции »](/api/group-calls/#joining-a-group-call-on-behalf-of-owned-channels), представившись определённым пользователем или каналом. |
+| [phone.getGroupCallStars](/method/phone.getGroupCallStars/) | Получить общую сумму пожертвований для прямой истории и список крупнейших жертвователей, см. [платные пожертвования в прямых историях »](/api/group-calls/#paid-live-story-donations). |
+| [phone.getGroupCallStreamChannels](/method/phone.getGroupCallStreamChannels/) | Получить доступные каналы потока и текущую позицию воспроизведения видеочата, трансляции или прямой истории в режиме RTMP; полный порядок действий описан [здесь »](/api/group-calls/#rtmp-mode). |
+| [phone.getGroupCallStreamRtmpUrl](/method/phone.getGroupCallStreamRtmpUrl/) | Получить URL для RTMP и ключ потока, используемые единственным внешним вещателем, который публикует весь звук и видео для видеочата, трансляции или прямой истории в режиме RTMP. |
+| [phone.getGroupParticipants](/method/phone.getGroupParticipants/) | Получить участников [группового звонка](/api/group-calls/#getting-info-about-a-group-call). |
+| [phone.inviteConferenceCallParticipant](/method/phone.inviteConferenceCallParticipant/) | Пригласить пользователя в [конференц-звонок](/api/group-calls/#conference-calls). |
+| [phone.inviteToGroupCall](/method/phone.inviteToGroupCall/) | Пригласить группу пользователей в [видеочат или трансляцию »](/api/group-calls/#video-chats-livestreams); нельзя использовать для [прямых историй »](/api/group-calls/#live-stories) и [конференц-звонков »](/api/group-calls/#conference-calls). |
+| [phone.joinGroupCall](/method/phone.joinGroupCall/) | Присоединиться к групповому звонку [любого типа »](/api/group-calls/#group-call-types). Для конференций дополнительно требуется [сквозной сценарий подключения »](/api/end-to-end/group-calls/#joining-a-call). |
+| [phone.joinGroupCallPresentation](/method/phone.joinGroupCallPresentation/) | Начать демонстрацию экрана в видеочате, трансляции или конференции без RTMP. Презентации не поддерживаются в прямых историях и в видеочатах или трансляциях в режиме RTMP; подробнее см. [здесь »](/api/group-calls/#presentations). |
+| [phone.leaveGroupCall](/method/phone.leaveGroupCall/) | Покинуть групповой звонок, не завершая его для остальных участников. Этот метод можно использовать со всеми типами групповых звонков, подробнее [см. здесь »](/api/group-calls/#managing-an-active-group-call). |
+| [phone.leaveGroupCallPresentation](/method/phone.leaveGroupCallPresentation/) | Прекратить демонстрацию экрана в видеочате, трансляции или конференции без RTMP. Презентации не поддерживаются в прямых историях и в видеочатах или трансляциях в режиме RTMP; подробнее см. [здесь »](/api/group-calls/#presentations). |
+| [phone.receivedCall](/method/phone.receivedCall/) | Необязательно: уведомить сервер о том, что пользователь сейчас занят в звонке — это приведёт к автоматическому отклонению всех входящих звонков до завершения текущего; подробнее обо всём процессе см. [здесь »](/api/calls/#one-to-one-calls). |
+| [phone.requestCall](/method/phone.requestCall/) | Начать телефонный звонок Telegram; подробнее о полном сценарии см. [здесь »](/api/calls/#one-to-one-calls). |
+| [phone.saveCallDebug](/method/phone.saveCallDebug/) | Отправить на сервер отладочные данные [звонка](/api/calls/#call-debug). |
+| [phone.saveCallLog](/method/phone.saveCallLog/) | Устарело: отправить отладочную информацию о звонке libtgvoip |
+| [phone.saveDefaultGroupCallJoinAs](/method/phone.saveDefaultGroupCallJoinAs/) | Задать пир по умолчанию, используемый для присоединения к [видеочату или трансляции »](/api/group-calls/#joining-a-group-call-on-behalf-of-owned-channels), связанным с конкретным диалогом. |
+| [phone.saveDefaultSendAs](/method/phone.saveDefaultSendAs/) | Сохранить пир, отображаемый по умолчанию как автор комментариев и реакций в прямых историях, см. [сообщения во время звонка »](/api/group-calls/#in-call-messages). |
+| [phone.sendConferenceCallBroadcast](/method/phone.sendConferenceCallBroadcast/) | Отправить сообщение проверки в подцепочку `1` конференц-звонка, см. [подцепочки »](/api/end-to-end/group-calls/#subchains). |
+| [phone.sendGroupCallEncryptedMessage](/method/phone.sendGroupCallEncryptedMessage/) | Отправить сообщение или эмодзи-реакцию со сквозным шифрованием всем участникам конференц-звонка. Этот метод можно использовать только с конференциями; о процессе сериализации и шифрования см. [здесь »](/api/end-to-end/group-calls/#conference-in-call-messages). |
+| [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/) | Отправить сообщение внутри звонка всем участникам видеочата, трансляции или прямой истории, в том числе в режиме RTMP; подробнее см. [здесь »](/api/group-calls/#in-call-messages). |
+| [phone.sendSignalingData](/method/phone.sendSignalingData/) | Отправить [сигнальные данные](/api/calls/#signaling-data) VoIP для текущего звонка. |
+| [phone.setCallRating](/method/phone.setCallRating/) | Оценить звонок; возвращает сведения о сообщении с оценкой, отправленном официальному VoIP-боту; подробнее обо всём процессе см. [здесь »](/api/calls/#call-rating). |
+| [phone.startScheduledGroupCall](/method/phone.startScheduledGroupCall/) | Начать запланированный [групповой звонок](/api/group-calls/#video-chats-livestreams). |
+| [phone.toggleGroupCallRecord](/method/phone.toggleGroupCallRecord/) | Начать или остановить запись видеочата или трансляции; подробнее см. [здесь »](/api/group-calls/#video-chats-livestreams). Записанные аудио- и видеопотоки будут автоматически отправлены в «Избранное» (чат с самим собой). |
+| [phone.toggleGroupCallSettings](/method/phone.toggleGroupCallSettings/) | Изменить настройки группового звонка. Каждая настройка поддерживает разные типы групповых звонков, подробнее см. [здесь »](/api/group-calls/#managing-an-active-group-call). |
+| [phone.toggleGroupCallStartSubscription](/method/phone.toggleGroupCallStartSubscription/) | Подписаться на запланированный [групповой звонок](/api/group-calls/#video-chats-livestreams) или отписаться от него. |
+| [photos.deletePhotos](/method/photos.deletePhotos/) | Удаляет фотографии профиля. Метод возвращает список идентификаторов успешно удалённых фотографий. |
+| [photos.getUserPhotos](/method/photos.getUserPhotos/) | Возвращает список фотографий пользователя. |
+| [photos.updateProfilePhoto](/method/photos.updateProfilePhoto/) | Устанавливает ранее загруженную фотографию в качестве фотографии профиля. |
+| [photos.uploadContactProfilePhoto](/method/photos.uploadContactProfilePhoto/) | Загрузить собственную фотографию профиля для контакта или предложить контакту новую фотографию профиля. |
+| [photos.uploadProfilePhoto](/method/photos.uploadProfilePhoto/) | Обновляет фотографию профиля текущего пользователя. |
+| [premium.applyBoost](/method/premium.applyBoost/) | Применить один или несколько [бустов »](/api/boost/) к пиру. |
+| [premium.getBoostsList](/method/premium.getBoostsList/) | Получает сведения о бустах, выданных определённому каналу или супергруппе (только для администраторов) |
+| [premium.getBoostsStatus](/method/premium.getBoostsStatus/) | Получает текущее [количество бустов](/api/boost/) канала или супергруппы. |
+| [premium.getMyBoosts](/method/premium.getMyBoosts/) | Получить список пиров, которых мы сейчас [бустим](/api/boost/), и количество оставшихся у нас [слотов буста](/api/boost/). |
+| [premium.getUserBoosts](/method/premium.getUserBoosts/) | Возвращает списки бустов, применённых к каналу/супергруппе определённым пользователем (только для администраторов) |
+| [smsjobs.finishJob](/method/smsjobs.finishJob/) | Завершить задание на отправку SMS (только для официальных клиентов). |
+| [smsjobs.getSmsJob](/method/smsjobs.getSmsJob/) | Получить информацию о задании на отправку SMS (только для официальных клиентов). |
+| [smsjobs.getStatus](/method/smsjobs.getStatus/) | Получить статус заданий на отправку SMS (только для официальных клиентов). |
+| [smsjobs.isEligibleToJoin](/method/smsjobs.isEligibleToJoin/) | Проверить, можем ли мы обрабатывать задания на отправку SMS (только для официальных клиентов). |
+| [smsjobs.join](/method/smsjobs.join/) | Включить задания на отправку SMS (только для официальных клиентов). |
+| [smsjobs.leave](/method/smsjobs.leave/) | Отключить SMS-задания (только для официальных клиентов). |
+| [smsjobs.updateSettings](/method/smsjobs.updateSettings/) | Обновить настройки заданий SMS (только для официальных клиентов). |
+| [stats.getBroadcastStats](/method/stats.getBroadcastStats/) | Получить [статистику канала](/api/stats/) |
+| [stats.getMegagroupStats](/method/stats.getMegagroupStats/) | Получить [статистику супергруппы](/api/stats/) |
+| [stats.getMessagePublicForwards](/method/stats.getMessagePublicForwards/) | Получает список сообщений, показывающий, в какие другие публичные каналы было переслано сообщение канала. |
+| [stats.getMessageStats](/method/stats.getMessageStats/) | Получить [статистику сообщения](/api/stats/) |
+| [stats.getPollStats](/method/stats.getPollStats/) | Получить [статистику](/api/stats/#poll-statistics) опроса, отправленного в сообщении. |
+| [stats.getStoryPublicForwards](/method/stats.getStoryPublicForwards/) | Получить пересылки [истории](/api/stories/) в виде сообщения в публичные чаты и репосты публичными каналами. |
+| [stats.getStoryStats](/method/stats.getStoryStats/) | Получить [статистику](/api/stats/) по определённой [истории](/api/stories/). |
+| [stats.loadAsyncGraph](/method/stats.loadAsyncGraph/) | Асинхронно загрузить [график статистики канала](/api/stats/) |
+| [stickers.addStickerToSet](/method/stickers.addStickerToSet/) | Добавить стикер в набор стикеров. Набор стикеров должен быть создан текущим пользователем или ботом. |
+| [stickers.changeSticker](/method/stickers.changeSticker/) | Обновить ключевые слова, эмодзи или [координаты маски](/api/stickers/#mask-stickers) стикера. |
+| [stickers.changeStickerPosition](/method/stickers.changeStickerPosition/) | Изменяет абсолютную позицию стикера в наборе, которому он принадлежит. Набор стикеров должен быть создан текущим пользователем или ботом. |
+| [stickers.checkShortName](/method/stickers.checkShortName/) | Проверить, свободно ли указанное короткое имя |
+| [stickers.createStickerSet](/method/stickers.createStickerSet/) | Создать набор стикеров. |
+| [stickers.deleteStickerSet](/method/stickers.deleteStickerSet/) | Удаляет созданный нами набор стикеров. |
+| [stickers.removeStickerFromSet](/method/stickers.removeStickerFromSet/) | Удалить стикер из набора, которому он принадлежит. Набор стикеров должен быть создан текущим пользователем или ботом. |
+| [stickers.renameStickerSet](/method/stickers.renameStickerSet/) | Переименовывает набор стикеров. |
+| [stickers.replaceSticker](/method/stickers.replaceSticker/) | Заменить стикер в [наборе стикеров »](/api/stickers/). |
+| [stickers.setStickerSetThumb](/method/stickers.setStickerSetThumb/) | Задать миниатюру набора стикеров |
+| [stickers.suggestShortName](/method/stickers.suggestShortName/) | Предлагает краткое имя для заданного названия стикерпака |
+| [stories.activateStealthMode](/method/stories.activateStealthMode/) | Включает [режим невидимки для историй](/api/stories/#stealth-mode), подробнее см. [здесь »](/api/stories/#stealth-mode). |
+| [stories.canSendStory](/method/stories.canSendStory/) | Проверить, можем ли мы публиковать истории от имени указанного пира. |
+| [stories.createAlbum](/method/stories.createAlbum/) | Создаёт [альбом историй](/api/stories/#story-albums). |
+| [stories.deleteAlbum](/method/stories.deleteAlbum/) | Удалить [альбом историй](/api/stories/#story-albums). |
+| [stories.deleteStories](/method/stories.deleteStories/) | Удаляет несколько опубликованных [историй](/api/stories/). |
+| [stories.editStory](/method/stories.editStory/) | Изменить загруженную [историю](/api/stories/) |
+| [stories.exportStoryLink](/method/stories.exportStoryLink/) | Создать [глубокую ссылку на историю](/api/links/#story-links) для конкретной истории |
+| [stories.getAlbums](/method/stories.getAlbums/) | Получить [альбомы историй](/api/stories/#story-albums), созданные пиром. |
+| [stories.getAlbumStories](/method/stories.getAlbumStories/) | Получить истории из [альбома историй »](/api/stories/#story-albums). |
+| [stories.getAllReadPeerStories](/method/stories.getAllReadPeerStories/) | Получить идентификатор последней прочитанной истории для всех пиров при первом входе в систему; возвращается в виде списка обновлений [updateReadStories](/constructor/updateReadStories/); подробнее см. [здесь »](/api/stories/#watching-stories). |
+| [stories.getAllStories](/method/stories.getAllStories/) | Получить список активных (или активных и скрытых) историй; подробнее о просмотре историй см. [здесь »](/api/stories/#watching-stories). |
+| [stories.getChatsToSend](/method/stories.getChatsToSend/) | Получить список каналов, в которых пользователь может публиковать [истории](/api/stories/) |
+| [stories.getPeerMaxIDs](/method/stories.getPeerMaxIDs/) | Получить компактные [сводки активных историй »](/api/stories/#recent-story-summaries) для набора пиров. |
+| [stories.getPeerStories](/method/stories.getPeerStories/) | Получить полный [список активных историй](/api/stories/#watching-stories) конкретного пира. |
+| [stories.getPinnedStories](/method/stories.getPinnedStories/) | Получить [истории](/api/stories/#pinned-or-archived-stories), закреплённые в профиле пира. |
+| [stories.getStoriesArchive](/method/stories.getStoriesArchive/) | Получить [архив историй »](/api/stories/#pinned-or-archived-stories) подконтрольного нам пира. |
+| [stories.getStoriesByID](/method/stories.getStoriesByID/) | Получить полные сведения о наборе [историй](/api/stories/) по их идентификаторам. |
+| [stories.getStoriesViews](/method/stories.getStoriesViews/) | Получить информацию о количестве просмотров, количестве пересылок, реакциях и недавних зрителях одной или нескольких [историй](/api/stories/). |
+| [stories.getStoryReactionsList](/method/stories.getStoryReactionsList/) | Получить список [реакций](/api/reactions/) и взаимодействий с [историей](/api/stories/), опубликованной в канале, вместе с отправителем каждой реакции. |
+| [stories.getStoryViewsList](/method/stories.getStoryViewsList/) | Получить список пользователей, просмотревших конкретную [опубликованную нами историю](/api/stories/) |
+| [stories.incrementStoryViews](/method/stories.incrementStoryViews/) | Увеличить счётчик просмотров одной или нескольких историй. |
+| [stories.readStories](/method/stories.readStories/) | Отметить все истории указанного пира вплоть до определённого ID как прочитанные; всем авторизованным сессиям будет отправлено обновление [updateReadStories](/constructor/updateReadStories/). |
+| [stories.reorderAlbums](/method/stories.reorderAlbums/) | Изменить порядок [альбомов историй в профиле »](/api/stories/#story-albums). |
+| [stories.report](/method/stories.report/) | Пожаловаться на историю. |
+| [stories.searchPosts](/method/stories.searchPosts/) | Глобальный поиск [историй](/api/stories/) по хештегу или [медиазоне с местоположением](/api/stories/#location-tags); подробнее о полном порядке действий см. [здесь »](/api/stories/#searching-stories). |
+| [stories.sendReaction](/method/stories.sendReaction/) | Поставить реакцию на историю. |
+| [stories.sendStory](/method/stories.sendStory/) | Загружает [историю Telegram](/api/stories/). |
+| [stories.startLive](/method/stories.startLive/) | Начать прямую историю, при необходимости в режиме трансляции RTMP; полный сценарий см. [здесь »](/api/group-calls/#live-stories). |
+| [stories.toggleAllStoriesHidden](/method/stories.toggleAllStoriesHidden/) | Скрыть активные истории указанного пира, чтобы они не отображались на панели действий на главном экране. |
+| [stories.togglePeerStoriesHidden](/method/stories.togglePeerStoriesHidden/) | Скрыть активные истории пользователя, чтобы они не отображались на панели действий на главном экране; подробнее см. [здесь »](/api/stories/#hiding-stories-of-other-users). |
+| [stories.togglePinned](/method/stories.togglePinned/) | Закрепить или открепить одну или несколько историй |
+| [stories.togglePinnedToTop](/method/stories.togglePinnedToTop/) | Закрепить несколько историй вверху профиля, подробнее см. [здесь »](/api/stories/#pinned-or-archived-stories). |
+| [stories.updateAlbum](/method/stories.updateAlbum/) | Переименовать [альбом историй »](/api/stories/#story-albums), либо добавить, удалить или переупорядочить истории в нём. |
+| [updates.getChannelDifference](/method/updates.getChannelDifference/) | Возвращает разницу между текущим состоянием обновлений определённого канала и переданным состоянием. |
+| [updates.getDifference](/method/updates.getDifference/) | Получить новые [обновления](/api/updates/). |
+| [updates.getState](/method/updates.getState/) | Возвращает текущее состояние обновлений. |
+| [upload.getCdnFile](/method/upload.getCdnFile/) | Скачать файл из [CDN](https://core.telegram.org/cdn). |
+| [upload.getCdnFileHashes](/method/upload.getCdnFileHashes/) | Получить хеши SHA256 для проверки скачанных файлов [CDN](https://core.telegram.org/cdn) |
+| [upload.getFile](/method/upload.getFile/) | Возвращает содержимое файла целиком или его части. |
+| [upload.getFileHashes](/method/upload.getFileHashes/) | Получить хеши SHA256 для проверки скачанных файлов |
+| [upload.getWebFile](/method/upload.getWebFile/) | Возвращает содержимое веб-файла, проксируя запрос через Telegram; подробнее см. [документацию по веб-файлам](/api/files/#downloading-webfiles). |
+| [upload.reuploadCdnFile](/method/upload.reuploadCdnFile/) | Запросить повторную загрузку определённого файла в [CDN DC](https://core.telegram.org/cdn). |
+| [upload.saveBigFilePart](/method/upload.saveBigFilePart/) | Сохраняет часть большого файла (размером свыше 10 МБ) для последующей передачи в один из методов. |
+| [upload.saveFilePart](/method/upload.saveFilePart/) | Сохраняет часть файла для дальнейшей передачи в один из методов. |
+| [users.getFullUser](/method/users.getFullUser/) | Возвращает расширенную информацию о пользователе по идентификатору. |
+| [users.getRequirementsToContact](/method/users.getRequirementsToContact/) | Проверить, можем ли мы писать указанным пользователям; используется для массовых проверок [сообщений только для Premium »](/api/privacy/#require-premium-for-new-non-contact-users) и [платных сообщений »](/api/paid-messages/). |
+| [users.getSavedMusic](/method/users.getSavedMusic/) | Получить композиции, [закреплённые в профиле пользователя; подробнее см. здесь »](/api/profile/#music). |
+| [users.getSavedMusicByID](/method/users.getSavedMusicByID/) | Проверить, закреплены ли ещё указанные композиции в профиле пользователя, либо обновить ссылки на файлы композиций, закреплённых в профиле пользователя; подробнее [см. здесь »](/api/profile/#music). |
+| [users.getUsers](/method/users.getUsers/) | Возвращает основные сведения о пользователях по их идентификаторам. |
+| [users.setSecureValueErrors](/method/users.setSecureValueErrors/) | Уведомить пользователя о том, что отправленные данные [passport](https://core.telegram.org/passport) содержат ошибки. Пользователь не сможет повторно отправить вам данные Passport, пока ошибки не будут исправлены (содержимое поля, для которого возвращена ошибка, должно измениться). |
+| [users.suggestBirthday](/method/users.suggestBirthday/) | Предложить другому пользователю дату рождения; подробнее о датах рождения в API см. [здесь »](/api/profile/#birthday). |

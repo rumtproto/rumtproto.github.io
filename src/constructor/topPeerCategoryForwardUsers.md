@@ -1,27 +1,24 @@
 ---
-title: "topPeerCategoryForwardUsers (конструктор)"
+title: "topPeerCategoryForwardUsers"
 original: "https://core.telegram.org/constructor/topPeerCategoryForwardUsers"
 section: ref
 kind: constructor
+description: "Пользователи, которым пользователь часто пересылает сообщения"
 layout: layout.njk
 ---
 
 # topPeerCategoryForwardUsers
 
-*Конструктор из схемы TL.*
-
-> Users to which the users often forwards messages to
-
-## Определение TL
+Пользователи, которым пользователь часто пересылает сообщения
 
 ```
 topPeerCategoryForwardUsers#a8406ca9 = TopPeerCategory;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [TopPeerCategory](/type/TopPeerCategory/)

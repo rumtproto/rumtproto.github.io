@@ -1,35 +1,30 @@
 ---
-title: "publicForwardMessage (конструктор)"
+title: "publicForwardMessage"
 original: "https://core.telegram.org/constructor/publicForwardMessage"
 section: ref
 kind: constructor
+description: "Содержит информацию о пересылке истории в виде сообщения."
 layout: layout.njk
 ---
 
 # publicForwardMessage
 
-*Конструктор из схемы TL.*
-
-> Contains info about a forward of a [story](https://core.telegram.org/api/stories) as a message.
-
-## Определение TL
+Содержит информацию о пересылке [истории](/api/stories/) в виде сообщения.
 
 ```
 publicForwardMessage#1f2bf4a message:Message = PublicForward;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| message | [Message](/type/Message/) | Info about the message with the reposted story. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message">Message</a></td><td>Информация о сообщении с перепощенной историей.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PublicForward](/type/PublicForward/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

@@ -1,18 +1,15 @@
 ---
-title: "stats.loadAsyncGraph (метод)"
+title: "stats.loadAsyncGraph"
 original: "https://core.telegram.org/method/stats.loadAsyncGraph"
 section: ref
 kind: method
+description: "Асинхронно загрузить график статистики канала"
 layout: layout.njk
 ---
 
 # stats.loadAsyncGraph
 
-*Метод из схемы TL.*
-
-> Load [channel statistics graph](https://core.telegram.org/api/stats) asynchronously
-
-## Определение TL
+Асинхронно загрузить [график статистики канала](/api/stats/)
 
 ```
 statsGraphAsync#4a27eb2d token:string = StatsGraph;
@@ -22,34 +19,26 @@ statsGraph#8ea464b6 flags:# json:DataJSON zoom_token:flags.0?string = StatsGraph
 stats.loadAsyncGraph#621d5fa0 flags:# token:string x:flags.0?long = StatsGraph;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| token | [string](/type/string/) | Graph token from [statsGraphAsync](/constructor/statsGraphAsync/) constructor |
-| x | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | Zoom value, if required |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Токен графика из конструктора <a href="/constructor/statsGraphAsync">statsGraphAsync</a></td></tr><tr><td><strong>x</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Значение масштабирования, если требуется</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [StatsGraph](/type/StatsGraph/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GRAPH_EXPIRED_RELOAD | This graph has expired, please obtain a new graph token. |
-| 400 | GRAPH_INVALID_RELOAD | Invalid graph token provided, please reload the stats and provide the updated token. |
-| 400 | GRAPH_OUTDATED_RELOAD | The graph is outdated, please get a new async token using stats.getBroadcastStats. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GRAPH_EXPIRED_RELOAD</td><td>Срок действия этого графика истёк, получите новый токен графика.</td></tr><tr><td>400</td><td>GRAPH_INVALID_RELOAD</td><td>Указан недействительный токен графика; перезагрузите статистику и передайте обновлённый токен.</td></tr><tr><td>400</td><td>GRAPH_OUTDATED_RELOAD</td><td>График устарел, получите новый асинхронный токен с помощью stats.getBroadcastStats.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [statsGraphAsync](/constructor/statsGraphAsync/)
 
-This [channel statistics graph](https://core.telegram.org/api/stats) must be generated asynchronously using [stats.loadAsyncGraph](/method/stats.loadAsyncGraph/) to reduce server load
+Этот [график статистики канала](/api/stats/) должен формироваться асинхронно с помощью [stats.loadAsyncGraph](/method/stats.loadAsyncGraph/), чтобы снизить нагрузку на сервер
 
-#### [Channel statistics](https://core.telegram.org/api/stats)
+#### [Статистика каналов](/api/stats/)
 
-Telegram offers detailed channel statistics for channels and supergroups.
+Telegram предоставляет подробную статистику для каналов и супергрупп.

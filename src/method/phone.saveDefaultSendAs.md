@@ -1,19 +1,17 @@
 ---
-title: "phone.saveDefaultSendAs (метод)"
+title: "phone.saveDefaultSendAs"
 original: "https://core.telegram.org/method/phone.saveDefaultSendAs"
 section: ref
 kind: method
+description: "Сохранить пир, отображаемый по умолчанию как автор комментариев и реакций в прямых историях, см. сообщения во время звонка »."
 layout: layout.njk
 ---
 
 # phone.saveDefaultSendAs
 
-*Метод из схемы TL.*
+Сохранить пир, отображаемый по умолчанию как автор комментариев и реакций в прямых историях, см. [сообщения во время звонка »](/api/group-calls/#in-call-messages).
 
-> Save the default peer displayed as the author of live story comments and reactions, see [in-call messages »](https://core.telegram.org/api/group-calls#in-call-messages).
-> It cannot be used for normal video chats/livestreams, where in-call messages are sent as the peer used to join the call (`join_as`).
-
-## Определение TL
+Его нельзя использовать для обычных видеочатов и трансляций, где сообщения во время звонка отправляются от имени пира, использованного для присоединения (`join_as`).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,27 +20,22 @@ boolTrue#997275b5 = Bool;
 phone.saveDefaultSendAs#4167add1 call:InputGroupCall send_as:InputPeer = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Live story group call |
-| send_as | [InputPeer](/type/InputPeer/) | Peer to display as the author of subsequent comments and reactions |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Групповой звонок прямой истории</td></tr><tr><td><strong>send_as</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Пир, который будет отображаться как автор последующих комментариев и реакций</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

@@ -1,35 +1,30 @@
 ---
-title: "updateWebViewResultSent (конструктор)"
+title: "updateWebViewResultSent"
 original: "https://core.telegram.org/constructor/updateWebViewResultSent"
 section: ref
 kind: constructor
+description: "Сообщает боту, что веб-представление было закрыто и от имени пользователя было отправлено инлайн-сообщение с помощью messages.sendWebViewResultMessage"
 layout: layout.njk
 ---
 
 # updateWebViewResultSent
 
-*Конструктор из схемы TL.*
-
-> Indicates to a bot that a webview was closed and an inline message was sent on behalf of the user using [messages.sendWebViewResultMessage](/method/messages.sendWebViewResultMessage/)
-
-## Определение TL
+Сообщает боту, что веб-представление было закрыто и от имени пользователя было отправлено инлайн-сообщение с помощью [messages.sendWebViewResultMessage](/method/messages.sendWebViewResultMessage/)
 
 ```
 updateWebViewResultSent#1592b79d query_id:long = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| query_id | [long](/type/long/) | Web app interaction ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>query_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор взаимодействия с веб-приложением</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.sendWebViewResultMessage](/method/messages.sendWebViewResultMessage/)
 
-Terminate webview interaction started with [messages.requestWebView](/method/messages.requestWebView/), sending the specified message to the chat on behalf of the user.
+Завершить взаимодействие с веб-представлением, начатое через [messages.requestWebView](/method/messages.requestWebView/), отправив указанное сообщение в чат от имени пользователя.

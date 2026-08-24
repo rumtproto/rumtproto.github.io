@@ -1,18 +1,15 @@
 ---
-title: "messages.getAttachMenuBots (метод)"
+title: "messages.getAttachMenuBots"
 original: "https://core.telegram.org/method/messages.getAttachMenuBots"
 section: ref
 kind: method
+description: "Возвращает установленные в меню вложений mini app ботов »"
 layout: layout.njk
 ---
 
 # messages.getAttachMenuBots
 
-*Метод из схемы TL.*
-
-> Returns installed attachment menu [bot mini apps »](https://core.telegram.org/api/bots/attach)
-
-## Определение TL
+[@term:Mini App] Возвращает установленные в меню вложений [mini app ботов »](/api/bots/attach/)
 
 ```
 attachMenuBotsNotModified#f1d88a5c = AttachMenuBots;
@@ -21,24 +18,22 @@ attachMenuBots#3c4301c0 hash:long bots:Vector<AttachMenuBot> users:Vector<User> 
 messages.getAttachMenuBots#16fcc2cb hash:long = AttachMenuBots;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [AttachMenuBots](/type/AttachMenuBots/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Bot attachment menu and side menu entries](https://core.telegram.org/api/bots/attach)
+#### [Пункты меню вложений и бокового меню для ботов](/api/bots/attach/)
 
-Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile web apps.
+Боты могут добавлять пункты в меню вложений и в боковое меню, предлагая легкодоступные многофункциональные веб-приложения.

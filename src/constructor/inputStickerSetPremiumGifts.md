@@ -1,27 +1,24 @@
 ---
-title: "inputStickerSetPremiumGifts (конструктор)"
+title: "inputStickerSetPremiumGifts"
 original: "https://core.telegram.org/constructor/inputStickerSetPremiumGifts"
 section: ref
 kind: constructor
+description: "Стикеры, показываемые при получении подписки Telegram Premium в подарок"
 layout: layout.njk
 ---
 
 # inputStickerSetPremiumGifts
 
-*Конструктор из схемы TL.*
-
-> Stickers to show when receiving a gifted Telegram Premium subscription
-
-## Определение TL
+Стикеры, показываемые при получении подписки Telegram Premium в подарок
 
 ```
 inputStickerSetPremiumGifts#c88b3b02 = InputStickerSet;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputStickerSet](/type/InputStickerSet/)

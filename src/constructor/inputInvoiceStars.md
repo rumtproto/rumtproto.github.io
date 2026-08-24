@@ -1,51 +1,46 @@
 ---
-title: "inputInvoiceStars (конструктор)"
+title: "inputInvoiceStars"
 original: "https://core.telegram.org/constructor/inputInvoiceStars"
 section: ref
 kind: constructor
+description: "Используется для пополнения баланса Telegram Stars текущего или чужого аккаунта, а также для запуска розыгрыша Telegram Stars »."
 layout: layout.njk
 ---
 
 # inputInvoiceStars
 
-*Конструктор из схемы TL.*
-
-> Used to top up the [Telegram Stars](https://core.telegram.org/api/stars) balance of the current account or someone else's account, or to start a [Telegram Star giveaway »](https://core.telegram.org/api/giveaways#star-giveaways).
-
-## Определение TL
+Используется для пополнения баланса [Telegram Stars](/api/stars/) текущего или чужого аккаунта, а также для запуска [розыгрыша Telegram Stars »](/api/giveaways/#star-giveaways).
 
 ```
 inputInvoiceStars#65f00ce3 purpose:InputStorePaymentPurpose = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| purpose | [InputStorePaymentPurpose](/type/InputStorePaymentPurpose/) | An [inputStorePaymentStarsGiveaway](/constructor/inputStorePaymentStarsGiveaway/), [inputStorePaymentStarsTopup](/constructor/inputStorePaymentStarsTopup/) or [inputStorePaymentStarsGift](/constructor/inputStorePaymentStarsGift/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose">InputStorePaymentPurpose</a></td><td><a href="/constructor/inputStorePaymentStarsGiveaway">inputStorePaymentStarsGiveaway</a>, <a href="/constructor/inputStorePaymentStarsTopup">inputStorePaymentStarsTopup</a> или <a href="/constructor/inputStorePaymentStarsGift">inputStorePaymentStarsGift</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
 #### [inputStorePaymentStarsGiveaway](/constructor/inputStorePaymentStarsGiveaway/)
 
-Used to pay for a [star giveaway, see here »](https://core.telegram.org/api/giveaways#star-giveaways) for more info.
+Используется для оплаты [розыгрыша звёзд; подробнее см. здесь »](/api/giveaways/#star-giveaways).
 
 #### [inputStorePaymentStarsTopup](/constructor/inputStorePaymentStarsTopup/)
 
-Used to top up the [Telegram Stars balance](https://core.telegram.org/api/stars) of the current account.
+Используется для пополнения [баланса Telegram Stars](/api/stars/) текущего аккаунта.
 
 #### [inputStorePaymentStarsGift](/constructor/inputStorePaymentStarsGift/)
 
-Used to gift [Telegram Stars](https://core.telegram.org/api/stars) to a friend.
+Используется, чтобы подарить другу [Telegram Stars](/api/stars/).
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

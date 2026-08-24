@@ -1,36 +1,30 @@
 ---
-title: "starGiftUpgradePrice (конструктор)"
+title: "starGiftUpgradePrice"
 original: "https://core.telegram.org/constructor/starGiftUpgradePrice"
 section: ref
 kind: constructor
+description: "Указывает цену улучшения подарка », действующую начиная с определённого момента времени."
 layout: layout.njk
 ---
 
 # starGiftUpgradePrice
 
-*Конструктор из схемы TL.*
-
-> Indicates the price for a [gift upgrade »](https://core.telegram.org/api/gifts#collectible-gifts) starting from a specific point in time.
-
-## Определение TL
+Указывает цену [улучшения подарка »](/api/gifts/#collectible-gifts), действующую начиная с определённого момента времени.
 
 ```
 starGiftUpgradePrice#99ea331d date:int upgrade_stars:long = StarGiftUpgradePrice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| date | [int](/type/int/) | UNIX timestamp indicating when the price will be in effect. |
-| upgrade_stars | [long](/type/long/) | Upgrade price. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Метка времени UNIX, указывающая, когда цена вступит в силу.</td></tr><tr><td><strong>upgrade_stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Цена улучшения.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftUpgradePrice](/type/StarGiftUpgradePrice/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

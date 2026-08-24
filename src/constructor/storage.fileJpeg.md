@@ -1,27 +1,24 @@
 ---
-title: "storage.fileJpeg (конструктор)"
+title: "storage.fileJpeg"
 original: "https://core.telegram.org/constructor/storage.fileJpeg"
 section: ref
 kind: constructor
+description: "Изображение JPEG. MIME-тип: image/jpeg."
 layout: layout.njk
 ---
 
 # storage.fileJpeg
 
-*Конструктор из схемы TL.*
-
-> JPEG image. MIME type: `image/jpeg`.
-
-## Определение TL
+Изображение JPEG. MIME-тип: `image/jpeg`.
 
 ```
 storage.fileJpeg#7efe0e = storage.FileType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [storage.FileType](/type/storage.FileType/)

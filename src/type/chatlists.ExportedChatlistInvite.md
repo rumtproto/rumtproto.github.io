@@ -1,18 +1,15 @@
 ---
-title: "chatlists.ExportedChatlistInvite (тип)"
+title: "chatlists.ExportedChatlistInvite"
 original: "https://core.telegram.org/type/chatlists.ExportedChatlistInvite"
 section: ref
 kind: type
+description: "Экспортированная глубокая ссылка на папку с чатами »."
 layout: layout.njk
 ---
 
 # chatlists.ExportedChatlistInvite
 
-*Тип из схемы TL.*
-
-> Exported [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links).
-
-## Определение TL
+Экспортированная [глубокая ссылка на папку с чатами »](/api/links/#chat-folder-links).
 
 ```
 chatlists.exportedChatlistInvite#10e6e3a6 filter:DialogFilter invite:ExportedChatlistInvite = chatlists.ExportedChatlistInvite;
@@ -22,20 +19,16 @@ chatlists.exportedChatlistInvite#10e6e3a6 filter:DialogFilter invite:ExportedCha
 chatlists.exportChatlistInvite#8472478e chatlist:InputChatlist title:string peers:Vector<InputPeer> = chatlists.ExportedChatlistInvite;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [chatlists.exportedChatlistInvite](/constructor/chatlists.exportedChatlistInvite/) | Info about an exported [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/chatlists.exportedChatlistInvite">chatlists.exportedChatlistInvite</a></td><td>Информация об экспортированной <a href="/api/links#chat-folder-links">глубокой ссылке на папку с чатами »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [chatlists.exportChatlistInvite](/method/chatlists.exportChatlistInvite/) | Export a [folder »](https://core.telegram.org/api/folders), creating a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/chatlists.exportChatlistInvite">chatlists.exportChatlistInvite</a></td><td>Экспортировать <a href="/api/folders">папку »</a>, создав <a href="/api/links#chat-folder-links">глубокую ссылку на папку чатов »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

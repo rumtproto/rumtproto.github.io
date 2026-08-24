@@ -1,27 +1,24 @@
 ---
-title: "inputReportReasonPornography (конструктор)"
+title: "inputReportReasonPornography"
 original: "https://core.telegram.org/constructor/inputReportReasonPornography"
 section: ref
 kind: constructor
+description: "Жалоба на порнографию"
 layout: layout.njk
 ---
 
 # inputReportReasonPornography
 
-*Конструктор из схемы TL.*
-
-> Report for pornography
-
-## Определение TL
+Жалоба на порнографию
 
 ```
 inputReportReasonPornography#2e59d922 = ReportReason;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReportReason](/type/ReportReason/)

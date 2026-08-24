@@ -1,18 +1,15 @@
 ---
-title: "messages.forwardMessages (метод)"
+title: "messages.forwardMessages"
 original: "https://core.telegram.org/method/messages.forwardMessages"
 section: ref
 kind: method
+description: "Пересылает сообщения по их идентификаторам."
 layout: layout.njk
 ---
 
 # messages.forwardMessages
 
-*Метод из схемы TL.*
-
-> Forwards messages by their IDs.
-
-## Определение TL
+Пересылает сообщения по их идентификаторам.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,157 +23,76 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.forwardMessages#13704a7c flags:# silent:flags.5?true background:flags.6?true with_my_score:flags.8?true drop_author:flags.11?true drop_media_captions:flags.12?true noforwards:flags.14?true allow_paid_floodskip:flags.19?true from_peer:InputPeer id:Vector<int> random_id:Vector<long> to_peer:InputPeer top_msg_id:flags.9?int reply_to:flags.22?InputReplyTo schedule_date:flags.10?int schedule_repeat_period:flags.24?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut effect:flags.18?long video_timestamp:flags.20?int allow_paid_stars:flags.21?long suggested_post:flags.23?SuggestedPost = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| silent | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether to send messages silently (no notification will be triggered on the destination clients) |
-| background | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | Whether to send the message in background |
-| with_my_score | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[true](/constructor/true/) | When forwarding games, whether to include your score in the game |
-| drop_author | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[true](/constructor/true/) | Whether to forward messages without quoting the original author |
-| drop_media_captions | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[true](/constructor/true/) | Whether to strip captions from media |
-| noforwards | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[true](/constructor/true/) | Only for bots, disallows further re-forwarding and saving of the messages, even if the destination chat doesn't have [content protection](https://telegram.org/blog/content-protection-delete-by-date-and-more) enabled |
-| allow_paid_floodskip | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).19?[true](/constructor/true/) | Bots only: if set, allows sending up to 1000 messages per second, ignoring [broadcasting limits](https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once) for a fee of 0.1 Telegram Stars per message. The relevant Stars will be withdrawn from the bot's balance. |
-| from_peer | [InputPeer](/type/InputPeer/) | Source of messages |
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | IDs of messages |
-| random_id | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | Random ID to prevent resending of messages. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| to_peer | [InputPeer](/type/InputPeer/) | Destination peer |
-| top_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[int](/type/int/) | Destination [forum topic](https://core.telegram.org/api/forum#forum-topics) |
-| reply_to | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).22?[InputReplyTo](/type/InputReplyTo/) | Can only contain an [inputReplyToMonoForum](/constructor/inputReplyToMonoForum/), to forward messages to a [monoforum topic](https://core.telegram.org/api/monoforum) (mutually exclusive with top_msg_id). |
-| schedule_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[int](/type/int/) | Scheduled message date for scheduled messages |
-| schedule_repeat_period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).24?[int](/type/int/) | Once sent, this message will be automatically re-scheduled to be re-sent again this many seconds in the future, see [here »](https://core.telegram.org/api/scheduled-messages#repeating-scheduled-messages) for more info on repeating scheduled messages. |
-| send_as | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[InputPeer](/type/InputPeer/) | Forward the messages as the specified peer |
-| quick_reply_shortcut | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[InputQuickReplyShortcut](/type/InputQuickReplyShortcut/) | Add the messages to the specified [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts), instead. |
-| effect | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[long](/type/long/) | Specifies a [message effect »](https://core.telegram.org/api/effects) to use for the message. |
-| video_timestamp | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).20?[int](/type/int/) | Start playing the video at the specified timestamp (seconds). |
-| allow_paid_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).21?[long](/type/long/) | For [paid messages »](https://core.telegram.org/api/paid-messages), specifies the amount of [Telegram Stars](https://core.telegram.org/api/stars) the user has agreed to pay in order to send the message. |
-| suggested_post | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).23?[SuggestedPost](/type/SuggestedPost/) | Used to [suggest a post to a channel, see here »](https://core.telegram.org/api/suggested-posts) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>silent</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Отправлять ли сообщения без звука (на клиентах получателей не будет уведомления)</td></tr><tr><td><strong>background</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Отправлять ли сообщение в фоновом режиме</td></tr><tr><td><strong>with_my_score</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true">true</a></td><td>При пересылке игр — включать ли в игру ваш счёт</td></tr><tr><td><strong>drop_author</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true">true</a></td><td>Пересылать ли сообщения без указания исходного автора</td></tr><tr><td><strong>drop_media_captions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true">true</a></td><td>Следует ли удалять подписи из медиафайлов</td></tr><tr><td><strong>noforwards</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true">true</a></td><td>Только для ботов: запрещает дальнейшую пересылку и сохранение сообщений, даже если в чате назначения не включена <a href="https://telegram.org/blog/content-protection-delete-by-date-and-more">защита контента</a></td></tr><tr><td><strong>allow_paid_floodskip</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/constructor/true">true</a></td><td>Только для ботов: если установлено, разрешает отправлять до 1000 сообщений в секунду, игнорируя <a href="/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once">ограничения на рассылку</a>, за плату 0,1 Telegram Stars за сообщение. Соответствующие Stars будут списаны с баланса бота.</td></tr><tr><td><strong>from_peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Источник сообщений</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы сообщений</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>[@term:random_id] Случайный идентификатор, предотвращающий повторную отправку сообщений. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>to_peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Пир назначения</td></tr><tr><td><strong>top_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/int">int</a></td><td>Целевая <a href="/api/forum#forum-topics">тема форума</a></td></tr><tr><td><strong>reply_to</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/type/InputReplyTo">InputReplyTo</a></td><td>Может содержать только <a href="/constructor/inputReplyToMonoForum">inputReplyToMonoForum</a> — для пересылки сообщений в <a href="/api/monoforum">тему монофорума</a> (взаимоисключающе с <code>top_msg_id</code>).</td></tr><tr><td><strong>schedule_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/int">int</a></td><td>Дата отправки для отложенных сообщений</td></tr><tr><td><strong>schedule_repeat_period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/type/int">int</a></td><td>После отправки это сообщение будет автоматически запланировано на повторную отправку через указанное число секунд; подробнее о повторяющихся отложенных сообщениях см. <a href="/api/scheduled-messages#repeating-scheduled-messages">здесь »</a>.</td></tr><tr><td><strong>send_as</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/InputPeer">InputPeer</a></td><td>Переслать сообщения от имени указанного пира</td></tr><tr><td><strong>quick_reply_shortcut</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/InputQuickReplyShortcut">InputQuickReplyShortcut</a></td><td>Вместо этого добавить сообщения в указанный <a href="/api/business#quick-reply-shortcuts">шаблон быстрого ответа »</a>.</td></tr><tr><td><strong>effect</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/long">long</a></td><td>Задаёт <a href="/api/effects">эффект сообщения »</a>, применяемый к сообщению.</td></tr><tr><td><strong>video_timestamp</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/type/int">int</a></td><td>Начать воспроизведение видео с указанной отметки времени (в секундах).</td></tr><tr><td><strong>allow_paid_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/type/long">long</a></td><td>Для <a href="/api/paid-messages">платных сообщений »</a> указывает количество <a href="/api/stars">Telegram Stars</a>, которое пользователь согласился заплатить за отправку сообщения.</td></tr><tr><td><strong>suggested_post</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/type/SuggestedPost">SuggestedPost</a></td><td>Используется, чтобы <a href="/api/suggested-posts">предложить пост каналу; подробнее о полном сценарии см. здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 406 | ALLOW_PAYMENT_REQUIRED | This peer only accepts [paid messages »](https://core.telegram.org/api/paid-messages): this error is only emitted for older layers without paid messages support, so the client must be updated in order to use paid messages. . |
-| 403 | ALLOW_PAYMENT_REQUIRED_%d | This peer charges %d [Telegram Stars](https://core.telegram.org/api/stars) per message, but the allow_paid_stars was not set or its value is smaller than %d. |
-| 400 | BROADCAST_PUBLIC_VOTERS_FORBIDDEN | You can't forward polls with public voters. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 403 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 406 | CHAT_FORWARDS_RESTRICTED | You can't forward messages from a protected chat. |
-| 403 | CHAT_GUEST_SEND_FORBIDDEN | You join the discussion group before commenting, see [here »](https://core.telegram.org/api/discussion#requiring-users-to-join-the-group) for more info. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | CHAT_RESTRICTED | You can't send messages in this chat, you were restricted. |
-| 403 | CHAT_SEND_AUDIOS_FORBIDDEN | You can't send audio messages in this chat. |
-| 403 | CHAT_SEND_DOCS_FORBIDDEN | You can't send documents in this chat. |
-| 403 | CHAT_SEND_GAME_FORBIDDEN | You can't send a game to this chat. |
-| 403 | CHAT_SEND_GIFS_FORBIDDEN | You can't send gifs in this chat. |
-| 403 | CHAT_SEND_INLINE_FORBIDDEN | You can't send inline messages in this group. |
-| 403 | CHAT_SEND_MEDIA_FORBIDDEN | You can't send media in this chat. |
-| 403 | CHAT_SEND_PHOTOS_FORBIDDEN | You can't send photos in this chat. |
-| 403 | CHAT_SEND_PLAIN_FORBIDDEN | You can't send non-media (text) messages in this chat. |
-| 403 | CHAT_SEND_POLL_FORBIDDEN | You can't send polls in this chat. |
-| 403 | CHAT_SEND_STICKERS_FORBIDDEN | You can't send stickers in this chat. |
-| 403 | CHAT_SEND_VIDEOS_FORBIDDEN | You can't send videos in this chat. |
-| 403 | CHAT_SEND_VOICES_FORBIDDEN | You can't send voice recordings in this chat. |
-| 403 | CHAT_SEND_WEBPAGE_FORBIDDEN | You can't send webpage previews to this chat. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | GROUPED_MEDIA_INVALID | Invalid grouped media. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | MEDIA_EMPTY | The provided media object is invalid. |
-| 400 | MEDIA_FILE_INVALID | The specified media file is invalid. |
-| 400 | MESSAGE_IDS_EMPTY | No message ids were provided. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 406 | PAYMENT_UNSUPPORTED | A detailed description of the error will be received separately as described [here »](https://core.telegram.org/api/errors/#406-not-acceptable). |
-| 406 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 403 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
-| 406 | PRIVACY_PREMIUM_REQUIRED | You need a [Telegram Premium subscription](https://core.telegram.org/api/premium) to send a message to this user. |
-| 400 | QUICK_REPLIES_BOT_NOT_ALLOWED | [Quick replies](https://core.telegram.org/api/business#quick-reply-shortcuts) cannot be used by bots. |
-| 400 | QUICK_REPLIES_TOO_MUCH | A maximum of [appConfig.quick_replies_limit](https://core.telegram.org/api/config#quick-replies-limit) shortcuts may be created, the limit was reached. |
-| 400 | QUIZ_ANSWER_MISSING | You can forward a quiz while hiding the original author only after choosing an option in the quiz. |
-| 500 | RANDOM_ID_DUPLICATE | You provided a random ID that was already used. |
-| 400 | RANDOM_ID_INVALID | A provided random ID is invalid. |
-| 400 | REPLY_MESSAGES_TOO_MUCH | Each shortcut can contain a maximum of [appConfig.quick_reply_messages_limit](https://core.telegram.org/api/config#quick-reply-messages-limit) messages, the limit was reached. |
-| 400 | REPLY_TO_MONOFORUM_PEER_INVALID | The specified inputReplyToMonoForum.monoforum_peer_id is invalid. |
-| 400 | SCHEDULE_BOT_NOT_ALLOWED | Bots cannot schedule messages. |
-| 400 | SCHEDULE_DATE_TOO_LATE | You can't schedule a message this far in the future. |
-| 400 | SCHEDULE_TOO_MUCH | There are too many scheduled messages. |
-| 400 | SEND_AS_PEER_INVALID | You can't send messages as the specified peer. |
-| 400 | SLOWMODE_MULTI_MSGS_DISABLED | Slowmode is enabled, you cannot forward multiple messages to this group. |
-| 420 | SLOWMODE_WAIT_%d | Slowmode is enabled in this chat: wait %d seconds before sending another message to this chat. |
-| 400 | SUGGESTED_POST_PEER_INVALID | You cannot send suggested posts to non-[monoforum](https://core.telegram.org/api/monoforum) peers. |
-| 406 | TOPIC_CLOSED | This topic was closed, you can't send messages to it anymore. |
-| 406 | TOPIC_DELETED | The specified topic was deleted. |
-| 400 | USER_BANNED_IN_CHANNEL | You're banned from sending messages in supergroups/channels. |
-| 400 | USER_BOT_TO_BOT_DISABLED | Bot-to-bot messaging is disabled because one of the two bots hasn't enabled the Bot to Bot setting in @BotFather. |
-| 403 | USER_IS_BLOCKED | You were blocked by this user. |
-| 400 | USER_IS_BOT | Bots can't send messages to other bots. |
-| 403 | VOICE_MESSAGES_FORBIDDEN | This user's privacy settings forbid you from sending voice messages. |
-| 400 | YOU_BLOCKED_USER | You blocked this user. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>406</td><td>ALLOW_PAYMENT_REQUIRED</td><td>Этот пир принимает только <a href="/api/paid-messages">платные сообщения&nbsp;»</a>: эта ошибка возвращается только для старых слоёв без поддержки платных сообщений, поэтому для работы с платными сообщениями клиент необходимо обновить. .</td></tr><tr><td>403</td><td>ALLOW_PAYMENT_REQUIRED_%d</td><td>Этот пир взимает %d <a href="/api/stars">Telegram Stars</a> за сообщение, но параметр <code>allow_paid_stars</code> не был задан либо его значение меньше %d.</td></tr><tr><td>400</td><td>BROADCAST_PUBLIC_VOTERS_FORBIDDEN</td><td>Нельзя пересылать опросы с открытым списком проголосовавших.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>403</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>406</td><td>CHAT_FORWARDS_RESTRICTED</td><td>Нельзя пересылать сообщения из защищённого чата.</td></tr><tr><td>403</td><td>CHAT_GUEST_SEND_FORBIDDEN</td><td>Прежде чем комментировать, необходимо вступить в группу обсуждения; подробнее см. <a href="/api/discussion#requiring-users-to-join-the-group">здесь&nbsp;»</a>.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>CHAT_RESTRICTED</td><td>Вы не можете отправлять сообщения в этот чат: на вас наложены ограничения.</td></tr><tr><td>403</td><td>CHAT_SEND_AUDIOS_FORBIDDEN</td><td>В этом чате нельзя отправлять аудиосообщения.</td></tr><tr><td>403</td><td>CHAT_SEND_DOCS_FORBIDDEN</td><td>В этом чате нельзя отправлять документы.</td></tr><tr><td>403</td><td>CHAT_SEND_GAME_FORBIDDEN</td><td>Нельзя отправить игру в этот чат.</td></tr><tr><td>403</td><td>CHAT_SEND_GIFS_FORBIDDEN</td><td>В этом чате нельзя отправлять GIF.</td></tr><tr><td>403</td><td>CHAT_SEND_INLINE_FORBIDDEN</td><td>В этой группе нельзя отправлять инлайн-сообщения.</td></tr><tr><td>403</td><td>CHAT_SEND_MEDIA_FORBIDDEN</td><td>В этом чате нельзя отправлять медиа.</td></tr><tr><td>403</td><td>CHAT_SEND_PHOTOS_FORBIDDEN</td><td>В этом чате нельзя отправлять фотографии.</td></tr><tr><td>403</td><td>CHAT_SEND_PLAIN_FORBIDDEN</td><td>В этом чате нельзя отправлять сообщения без медиа (текстовые).</td></tr><tr><td>403</td><td>CHAT_SEND_POLL_FORBIDDEN</td><td>В этом чате нельзя отправлять опросы.</td></tr><tr><td>403</td><td>CHAT_SEND_STICKERS_FORBIDDEN</td><td>В этом чате нельзя отправлять стикеры.</td></tr><tr><td>403</td><td>CHAT_SEND_VIDEOS_FORBIDDEN</td><td>В этом чате нельзя отправлять видео.</td></tr><tr><td>403</td><td>CHAT_SEND_VOICES_FORBIDDEN</td><td>В этом чате нельзя отправлять голосовые сообщения.</td></tr><tr><td>403</td><td>CHAT_SEND_WEBPAGE_FORBIDDEN</td><td>Вы не можете отправлять предпросмотры веб-страниц в этот чат.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>GROUPED_MEDIA_INVALID</td><td>Недопустимые сгруппированные медиафайлы.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>MEDIA_EMPTY</td><td>Указанный объект медиа недействителен.</td></tr><tr><td>400</td><td>MEDIA_FILE_INVALID</td><td>Указанный медиафайл недействителен.</td></tr><tr><td>400</td><td>MESSAGE_IDS_EMPTY</td><td>Не указаны идентификаторы сообщений.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>406</td><td>PAYMENT_UNSUPPORTED</td><td>Подробное описание ошибки будет получено отдельно, как описано <a href="/api/errors#406-not-acceptable">здесь&nbsp;»</a>.</td></tr><tr><td>406</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>403</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr><tr><td>406</td><td>PRIVACY_PREMIUM_REQUIRED</td><td>Чтобы отправить сообщение этому пользователю, нужна <a href="/api/premium">подписка Telegram Premium</a>.</td></tr><tr><td>400</td><td>QUICK_REPLIES_BOT_NOT_ALLOWED</td><td><a href="/api/business#quick-reply-shortcuts">Быстрые ответы</a> недоступны ботам.</td></tr><tr><td>400</td><td>QUICK_REPLIES_TOO_MUCH</td><td>Можно создать не более <a href="/api/config#quick-replies-limit">appConfig.<code>quick_replies_limit</code></a> шаблонов быстрых ответов, лимит достигнут.</td></tr><tr><td>400</td><td>QUIZ_ANSWER_MISSING</td><td>Переслать викторину, скрыв исходного автора, можно только после выбора одного из вариантов ответа.</td></tr><tr><td>500</td><td>RANDOM_ID_DUPLICATE</td><td>Вы передали случайный идентификатор, который уже использовался.</td></tr><tr><td>400</td><td>RANDOM_ID_INVALID</td><td>Один из переданных случайных идентификаторов недействителен.</td></tr><tr><td>400</td><td>REPLY_MESSAGES_TOO_MUCH</td><td>Каждый шаблон быстрого ответа может содержать не более <a href="/api/config#quick-reply-messages-limit">appConfig.<code>quick_reply_messages_limit</code></a> сообщений, лимит достигнут.</td></tr><tr><td>400</td><td>REPLY_TO_MONOFORUM_PEER_INVALID</td><td>Указанное значение inputReplyToMonoForum.monoforum_peer_id недействительно.</td></tr><tr><td>400</td><td>SCHEDULE_BOT_NOT_ALLOWED</td><td>Боты не могут планировать отправку сообщений.</td></tr><tr><td>400</td><td>SCHEDULE_DATE_TOO_LATE</td><td>Нельзя запланировать сообщение так далеко в будущем.</td></tr><tr><td>400</td><td>SCHEDULE_TOO_MUCH</td><td>Слишком много отложенных сообщений.</td></tr><tr><td>400</td><td>SEND_AS_PEER_INVALID</td><td>Вы не можете отправлять сообщения от имени указанного пира.</td></tr><tr><td>400</td><td>SLOWMODE_MULTI_MSGS_DISABLED</td><td>Включён медленный режим, вы не можете переслать несколько сообщений в эту группу.</td></tr><tr><td>420</td><td>SLOWMODE_WAIT_%d</td><td>В этом чате включён медленный режим: подождите %d секунд перед отправкой следующего сообщения в этот чат.</td></tr><tr><td>400</td><td>SUGGESTED_POST_PEER_INVALID</td><td>Нельзя отправлять предлагаемые посты пирам, которые не являются <a href="/api/monoforum">монофорумами</a>.</td></tr><tr><td>406</td><td>TOPIC_CLOSED</td><td>Эта тема закрыта, отправлять в неё сообщения больше нельзя.</td></tr><tr><td>406</td><td>TOPIC_DELETED</td><td>Указанная тема была удалена.</td></tr><tr><td>400</td><td>USER_BANNED_IN_CHANNEL</td><td>Вам запрещено отправлять сообщения в супергруппах и каналах.</td></tr><tr><td>400</td><td>USER_BOT_TO_BOT_DISABLED</td><td>Обмен сообщениями между ботами отключён, поскольку один из двух ботов не включил настройку Bot to Bot в @BotFather.</td></tr><tr><td>403</td><td>USER_IS_BLOCKED</td><td>Этот пользователь вас заблокировал.</td></tr><tr><td>400</td><td>USER_IS_BOT</td><td>Боты не могут отправлять сообщения другим ботам.</td></tr><tr><td>403</td><td>VOICE_MESSAGES_FORBIDDEN</td><td>Настройки приватности этого пользователя запрещают вам отправлять ему голосовые сообщения.</td></tr><tr><td>400</td><td>YOU_BLOCKED_USER</td><td>Вы заблокировали этого пользователя.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Bots FAQ](https://core.telegram.org/bots/faq)
+#### [Bots FAQ — частые вопросы о ботах](https://core.telegram.org/bots/faq)
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.
 
 #### [inputReplyToMonoForum](/constructor/inputReplyToMonoForum/)
 
-Used to send messages to a [monoforum topic](https://core.telegram.org/api/monoforum).
+Используется для отправки сообщений в [тему монофорума](/api/monoforum/).
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
-#### [Scheduled messages](https://core.telegram.org/api/scheduled-messages)
+#### [Отложенные сообщения](/api/scheduled-messages/)
 
-Telegram allows scheduling messages
+Telegram позволяет планировать отправку сообщений
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.
 
-#### [Animated message effects](https://core.telegram.org/api/effects)
+#### [Анимированные эффекты для сообщений](/api/effects/)
 
-Telegram allows adding spectacular animated effects to messages you send.
+Telegram позволяет добавлять к отправляемым сообщениям зрелищные анимированные эффекты.
 
-#### [Paid messages](https://core.telegram.org/api/paid-messages)
+#### [Платные сообщения](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.
+Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Suggested posts](https://core.telegram.org/api/suggested-posts)
+#### [Предлагаемые посты](/api/suggested-posts/)
 
-Telegram offers a powerful monetization feature to channel administrators: suggested posts.
+Telegram предлагает администраторам каналов мощный инструмент монетизации — предлагаемые посты.
 
-#### [Discussion groups](https://core.telegram.org/api/discussion)
+#### [Группы обсуждения](/api/discussion/)
 
-Groups can be associated to a channel as a discussion group, to allow users to discuss about posts.
+Группы можно связать с каналом в качестве группы обсуждения, чтобы пользователи могли обсуждать посты.
 
-#### [Error handling](/api/errors/)
+#### [Обработка ошибок](/api/errors/)
 
-How to handle API return errors correctly.
+Как правильно обрабатывать ошибки, возвращаемые API.
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

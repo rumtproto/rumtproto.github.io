@@ -1,31 +1,24 @@
 ---
-title: "updateEncryptedMessagesRead (конструктор)"
+title: "updateEncryptedMessagesRead"
 original: "https://core.telegram.org/constructor/updateEncryptedMessagesRead"
 section: ref
 kind: constructor
+description: "История переписки в зашифрованном чате была отмечена как прочитанная."
 layout: layout.njk
 ---
 
 # updateEncryptedMessagesRead
 
-*Конструктор из схемы TL.*
-
-> Communication history in an encrypted chat was marked as read.
-
-## Определение TL
+История переписки в зашифрованном чате была отмечена как прочитанная.
 
 ```
 updateEncryptedMessagesRead#38fe25b7 chat_id:int max_date:int date:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chat_id | [int](/type/int/) | Chat ID |
-| max_date | [int](/type/int/) | Maximum value of data for read messages |
-| date | [int](/type/int/) | Time when messages were read |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор чата</td></tr><tr><td><strong>max_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное значение даты для прочитанных сообщений</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Время прочтения сообщений</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

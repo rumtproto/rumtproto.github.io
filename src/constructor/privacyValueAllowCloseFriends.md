@@ -1,33 +1,30 @@
 ---
-title: "privacyValueAllowCloseFriends (конструктор)"
+title: "privacyValueAllowCloseFriends"
 original: "https://core.telegram.org/constructor/privacyValueAllowCloseFriends"
 section: ref
 kind: constructor
+description: "Разрешить только близким друзьям »"
 layout: layout.njk
 ---
 
 # privacyValueAllowCloseFriends
 
-*Конструктор из схемы TL.*
-
-> Allow only [close friends »](https://core.telegram.org/api/privacy)
-
-## Определение TL
+Разрешить только [близким друзьям »](/api/privacy/)
 
 ```
 privacyValueAllowCloseFriends#f7e8d89b = PrivacyRule;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyRule](/type/PrivacyRule/)
 
-## Related pages
+### Связанные страницы
 
-#### [Privacy settings](https://core.telegram.org/api/privacy)
+#### [Настройки приватности](/api/privacy/)
 
-Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.
+Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным способом.

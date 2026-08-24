@@ -1,40 +1,30 @@
 ---
-title: "account.authorizationForm (конструктор)"
+title: "account.authorizationForm"
 original: "https://core.telegram.org/constructor/account.authorizationForm"
 section: ref
 kind: constructor
+description: "Форма авторизации Telegram Passport"
 layout: layout.njk
 ---
 
 # account.authorizationForm
 
-*Конструктор из схемы TL.*
-
-> [Telegram Passport](https://core.telegram.org/passport) authorization form
-
-## Определение TL
+Форма авторизации [Telegram Passport](https://core.telegram.org/passport)
 
 ```
 account.authorizationForm#ad2e1cd8 flags:# required_types:Vector<SecureRequiredType> values:Vector<SecureValue> errors:Vector<SecureValueError> users:Vector<User> privacy_policy_url:flags.0?string = account.AuthorizationForm;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| required_types | [Vector](https://core.telegram.org/type/Vector%20t)<[SecureRequiredType](/type/SecureRequiredType/)> | Required [Telegram Passport](https://core.telegram.org/passport) documents |
-| values | [Vector](https://core.telegram.org/type/Vector%20t)<[SecureValue](/type/SecureValue/)> | Already submitted [Telegram Passport](https://core.telegram.org/passport) documents |
-| errors | [Vector](https://core.telegram.org/type/Vector%20t)<[SecureValueError](/type/SecureValueError/)> | [Telegram Passport](https://core.telegram.org/passport) errors |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Info about the bot to which the form will be submitted |
-| privacy_policy_url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | URL of the service's privacy policy |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>required_types</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SecureRequiredType">SecureRequiredType</a>&gt;</td><td>Требуемые документы <a href="/passport">Telegram Passport</a></td></tr><tr><td><strong>values</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SecureValue">SecureValue</a>&gt;</td><td>Уже отправленные документы <a href="/passport">Telegram Passport</a></td></tr><tr><td><strong>errors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SecureValueError">SecureValueError</a>&gt;</td><td>Ошибки <a href="/passport">Telegram Passport</a></td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Информация о боте, которому будет отправлена форма</td></tr><tr><td><strong>privacy_policy_url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>URL политики конфиденциальности сервиса</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.AuthorizationForm](/type/account.AuthorizationForm/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

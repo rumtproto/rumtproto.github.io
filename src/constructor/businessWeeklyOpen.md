@@ -1,37 +1,32 @@
 ---
-title: "businessWeeklyOpen (конструктор)"
+title: "businessWeeklyOpen"
 original: "https://core.telegram.org/constructor/businessWeeklyOpen"
 section: ref
 kind: constructor
+description: "Интервал времени, задающий часы работы компании."
 layout: layout.njk
 ---
 
 # businessWeeklyOpen
 
-*Конструктор из схемы TL.*
+Интервал времени, задающий часы работы компании.
 
-> A time interval, indicating the opening hours of a business.
-> Note that opening hours specified by the user must be appropriately validated and transformed before uploading them to the server, as specified [here »](https://core.telegram.org/api/business#opening-hours).
-
-## Определение TL
+Обратите внимание, что указанные пользователем часы работы необходимо соответствующим образом проверить и преобразовать перед их отправкой на сервер, как описано [здесь »](/api/business/#opening-hours).
 
 ```
 businessWeeklyOpen#120b1ab9 start_minute:int end_minute:int = BusinessWeeklyOpen;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| start_minute | [int](/type/int/) | Start minute in minutes of the week, 0 to 7*24*60 inclusively. |
-| end_minute | [int](/type/int/) | End minute in minutes of the week, 1 to 8*24*60 inclusively (8 and not 7 because this allows to specify intervals that, for example, start on Sunday 21:00 and end on Monday 04:00 (6*24*60+21*60 to 7*24*60+4*60) without passing an invalid end_minute < start_minute). See [here »](https://core.telegram.org/api/business#opening-hours) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>start_minute</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Минута начала в минутах недели, от <code>0</code> до <code>7*24*60</code> включительно.</td></tr><tr><td><strong>end_minute</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Минута окончания в минутах недели, от <code>1</code> до <code>8*24*60</code> включительно (<code>8</code>, а не <code>7</code>, поскольку это позволяет задавать интервалы, которые, например, начинаются в <code>Sunday 21:00</code> и заканчиваются в <code>Monday 04:00</code> (от <code>6*24*60+21*60</code> до <code>7*24*60+4*60</code>), не передавая недопустимое значение <code>end_minute &lt; start_minute</code>). Подробнее см. <a href="/api/business#opening-hours">здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BusinessWeeklyOpen](/type/BusinessWeeklyOpen/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

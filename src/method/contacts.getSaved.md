@@ -1,43 +1,37 @@
 ---
-title: "contacts.getSaved (метод)"
+title: "contacts.getSaved"
 original: "https://core.telegram.org/method/contacts.getSaved"
 section: ref
 kind: method
+description: "Получить все контакты; требуется сессия выгрузки данных, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # contacts.getSaved
 
-*Метод из схемы TL.*
-
-> Get all contacts, requires a [takeout session, see here » for more info](https://core.telegram.org/api/takeout).
-
-## Определение TL
+Получить все контакты; требуется [сессия выгрузки данных, подробнее см. здесь »](/api/takeout/).
 
 ```
 ---functions---
 contacts.getSaved#82f1e39f = Vector<SavedContact>;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[SavedContact](/type/SavedContact/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | TAKEOUT_INVALID | The specified takeout ID is invalid. |
-| 403 | TAKEOUT_REQUIRED | A [takeout](https://core.telegram.org/api/takeout) session needs to be initialized first, [see here » for more info](https://core.telegram.org/api/takeout). |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>TAKEOUT_INVALID</td><td>Указанный идентификатор выгрузки данных недействителен.</td></tr><tr><td>403</td><td>TAKEOUT_REQUIRED</td><td>Сначала необходимо инициализировать сессию <a href="/api/takeout">выгрузки данных</a>, <a href="/api/takeout">подробнее см. здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Takeout API](https://core.telegram.org/api/takeout)
+#### [Takeout API](/api/takeout/)
 
-Telegram's API allows users to export all of their information through the takeout API.
+API Telegram позволяет пользователям экспортировать все свои данные через API выгрузки данных.

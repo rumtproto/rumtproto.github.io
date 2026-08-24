@@ -1,18 +1,15 @@
 ---
-title: "payments.UniqueStarGift (тип)"
+title: "payments.UniqueStarGift"
 original: "https://core.telegram.org/type/payments.UniqueStarGift"
 section: ref
 kind: type
+description: "Представляет коллекционный подарок »."
 layout: layout.njk
 ---
 
 # payments.UniqueStarGift
 
-*Тип из схемы TL.*
-
-> Represents a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
-
-## Определение TL
+Представляет [коллекционный подарок »](/api/gifts/#collectible-gifts).
 
 ```
 payments.uniqueStarGift#416c56e8 gift:StarGift chats:Vector<Chat> users:Vector<User> = payments.UniqueStarGift;
@@ -22,20 +19,16 @@ payments.uniqueStarGift#416c56e8 gift:StarGift chats:Vector<Chat> users:Vector<U
 payments.getUniqueStarGift#a1974d72 slug:string = payments.UniqueStarGift;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.uniqueStarGift](/constructor/payments.uniqueStarGift/) | Represents a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.uniqueStarGift">payments.uniqueStarGift</a></td><td>Представляет <a href="/api/gifts#collectible-gifts">коллекционный подарок »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getUniqueStarGift](/method/payments.getUniqueStarGift/) | Obtain info about a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) using a slug obtained from a [collectible gift link »](https://core.telegram.org/api/links#collectible-gift-link). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getUniqueStarGift">payments.getUniqueStarGift</a></td><td>Получить сведения о <a href="/api/gifts#collectible-gifts">коллекционном подарке »</a> по слагу, полученному из <a href="/api/links#collectible-gift-link">ссылки на коллекционный подарок »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

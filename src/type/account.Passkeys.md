@@ -1,18 +1,15 @@
 ---
-title: "Account.Passkeys (тип)"
+title: "account.Passkeys"
 original: "https://core.telegram.org/type/account.Passkeys"
 section: ref
 kind: type
+description: "Список ключей доступа », привязанных к текущему аккаунту."
 layout: layout.njk
 ---
 
 # Account.Passkeys
 
-*Тип из схемы TL.*
-
-> List of [passkeys »](https://core.telegram.org/api/passkeys#list-passkeys) associated to the current account.
-
-## Определение TL
+Список [ключей доступа »](/api/passkeys/#list-passkeys), привязанных к текущему аккаунту.
 
 ```
 account.passkeys#f8e0aa1c passkeys:Vector<Passkey> = account.Passkeys;
@@ -22,20 +19,16 @@ account.passkeys#f8e0aa1c passkeys:Vector<Passkey> = account.Passkeys;
 account.getPasskeys#ea1f0c52 = account.Passkeys;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.passkeys](/constructor/account.passkeys/) | List of [passkeys »](https://core.telegram.org/api/passkeys#list-passkeys) associated to the current account. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.passkeys">account.passkeys</a></td><td>Список <a href="/api/passkeys#list-passkeys">ключей доступа »</a>, привязанных к текущему аккаунту.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getPasskeys](/method/account.getPasskeys/) | List the passkeys associated to the current account that can be used to log in, see [here »](https://core.telegram.org/api/passkeys#list-passkeys) for more info on passkeys. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getPasskeys">account.getPasskeys</a></td><td>Список ключей доступа, связанных с текущим аккаунтом и пригодных для входа; подробнее о ключах доступа см. <a href="/api/passkeys#list-passkeys">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

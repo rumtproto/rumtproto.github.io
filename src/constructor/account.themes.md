@@ -1,36 +1,30 @@
 ---
-title: "account.themes (конструктор)"
+title: "account.themes"
 original: "https://core.telegram.org/constructor/account.themes"
 section: ref
 kind: constructor
+description: "Установленные темы оформления"
 layout: layout.njk
 ---
 
 # account.themes
 
-*Конструктор из схемы TL.*
-
-> Installed themes
-
-## Определение TL
+Установленные темы оформления
 
 ```
 account.themes#9a3d8c6d hash:long themes:Vector<Theme> = account.Themes;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| themes | [Vector](https://core.telegram.org/type/Vector%20t)<[Theme](/type/Theme/)> | Themes |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>themes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Theme">Theme</a>&gt;</td><td>Темы оформления</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.Themes](/type/account.Themes/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

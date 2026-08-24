@@ -1,35 +1,24 @@
 ---
-title: "messages.botCallbackAnswer (конструктор)"
+title: "messages.botCallbackAnswer"
 original: "https://core.telegram.org/constructor/messages.botCallbackAnswer"
 section: ref
 kind: constructor
+description: "Ответ на callback-запрос, отправленный ботом в ответ на нажатие кнопки"
 layout: layout.njk
 ---
 
 # messages.botCallbackAnswer
 
-*Конструктор из схемы TL.*
-
-> Callback answer sent by the bot in response to a button press
-
-## Определение TL
+Ответ на callback-запрос, отправленный ботом в ответ на нажатие кнопки
 
 ```
 messages.botCallbackAnswer#36585ea4 flags:# alert:flags.1?true has_url:flags.3?true native_ui:flags.4?true message:flags.0?string url:flags.2?string cache_time:int = messages.BotCallbackAnswer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| alert | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether an alert should be shown to the user instead of a toast notification |
-| has_url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether an URL is present |
-| native_ui | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Whether to show games in WebView or in native UI. |
-| message | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Alert to show |
-| url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | URL to open |
-| cache_time | [int](/type/int/) | For how long should this answer be cached |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>alert</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Следует ли показать пользователю диалоговое окно вместо всплывающего уведомления</td></tr><tr><td><strong>has_url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Присутствует ли URL</td></tr><tr><td><strong>native_ui</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Следует ли показывать игры в WebView или в нативном интерфейсе.</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Уведомление, которое нужно показать</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>URL для открытия</td></tr><tr><td><strong>cache_time</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Как долго следует хранить этот ответ в кеше</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.BotCallbackAnswer](/type/messages.BotCallbackAnswer/)

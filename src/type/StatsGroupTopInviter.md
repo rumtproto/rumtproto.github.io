@@ -1,31 +1,26 @@
 ---
-title: "StatsGroupTopInviter (тип)"
+title: "StatsGroupTopInviter"
 original: "https://core.telegram.org/type/StatsGroupTopInviter"
 section: ref
 kind: type
+description: "Самый активный приглашающий в супергруппе"
 layout: layout.njk
 ---
 
 # StatsGroupTopInviter
 
-*Тип из схемы TL.*
-
-> Most active inviter in a [supergroup](https://core.telegram.org/api/channel)
-
-## Определение TL
+Самый активный приглашающий в [супергруппе](/api/channel/)
 
 ```
 statsGroupTopInviter#535f779d user_id:long invitations:int = StatsGroupTopInviter;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [statsGroupTopInviter](/constructor/statsGroupTopInviter/) | Information about an active supergroup inviter |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/statsGroupTopInviter">statsGroupTopInviter</a></td><td>Информация об активно приглашающем участнике супергруппы</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

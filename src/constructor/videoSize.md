@@ -1,40 +1,30 @@
 ---
-title: "videoSize (конструктор)"
+title: "videoSize"
 original: "https://core.telegram.org/constructor/videoSize"
 section: ref
 kind: constructor
+description: "Анимированная фотография профиля в формате MPEG4"
 layout: layout.njk
 ---
 
 # videoSize
 
-*Конструктор из схемы TL.*
-
-> An [animated profile picture](https://core.telegram.org/api/files/#animated-profile-pictures) in MPEG4 format
-
-## Определение TL
+[Анимированная фотография профиля](/api/files/#animated-profile-pictures) в формате MPEG4
 
 ```
 videoSize#de33b094 flags:# type:string w:int h:int size:int video_start_ts:flags.0?double = VideoSize;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| type | [string](/type/string/) | [videoSize.type value »](https://core.telegram.org/api/files/#videosizetype-values) |
-| w | [int](/type/int/) | Video width |
-| h | [int](/type/int/) | Video height |
-| size | [int](/type/int/) | File size |
-| video_start_ts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[double](/type/double/) | Timestamp that should be shown as static preview to the user (seconds) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/files#videosizetype-values">Значение videoSize.type »</a></td></tr><tr><td><strong>w</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Ширина видео</td></tr><tr><td><strong>h</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Высота видео</td></tr><tr><td><strong>size</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Размер файла</td></tr><tr><td><strong>video_start_ts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/double">double</a></td><td>Отметка времени, которую следует показывать пользователю как статичный предпросмотр (в секундах)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [VideoSize](/type/VideoSize/)
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

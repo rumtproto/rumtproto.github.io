@@ -1,30 +1,27 @@
 ---
-title: "bots.getAdminedBots (метод)"
+title: "bots.getAdminedBots"
 original: "https://core.telegram.org/method/bots.getAdminedBots"
 section: ref
 kind: method
+description: "Получить список ботов, принадлежащих текущему пользователю"
 layout: layout.njk
 ---
 
 # bots.getAdminedBots
 
-*Метод из схемы TL.*
-
-> Get a list of bots owned by the current user
-
-## Определение TL
+Получить список ботов, принадлежащих текущему пользователю
 
 ```
 ---functions---
 bots.getAdminedBots#b0711d83 = Vector<User>;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям

@@ -1,27 +1,24 @@
 ---
-title: "profileTabFiles (конструктор)"
+title: "profileTabFiles"
 original: "https://core.telegram.org/constructor/profileTabFiles"
 section: ref
 kind: constructor
+description: "Представляет вкладку общих файлов профиля."
 layout: layout.njk
 ---
 
 # profileTabFiles
 
-*Конструктор из схемы TL.*
-
-> Represents the shared files tab of a profile.
-
-## Определение TL
+Представляет вкладку общих файлов профиля.
 
 ```
 profileTabFiles#ab339c00 = ProfileTab;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ProfileTab](/type/ProfileTab/)

@@ -1,46 +1,38 @@
 ---
-title: "businessIntro (конструктор)"
+title: "businessIntro"
 original: "https://core.telegram.org/constructor/businessIntro"
 section: ref
 kind: constructor
+description: "Введение в Telegram Business »."
 layout: layout.njk
 ---
 
 # businessIntro
 
-*Конструктор из схемы TL.*
-
-> [Telegram Business introduction »](https://core.telegram.org/api/business#business-introduction).
-
-## Определение TL
+[Введение в Telegram Business »](/api/business/#business-introduction).
 
 ```
 businessIntro#5a0a066d flags:# title:string description:string sticker:flags.0?Document = BusinessIntro;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| title | [string](/type/string/) | Title of the introduction message (max [intro_title_length_limit »](https://core.telegram.org/api/config#intro-title-length-limit) UTF-8 characters). |
-| description | [string](/type/string/) | Profile introduction (max [intro_description_length_limit »](https://core.telegram.org/api/config#intro-description-length-limit) UTF-8 characters). |
-| sticker | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Document](/type/Document/) | Optional introduction [sticker](https://core.telegram.org/api/stickers). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Заголовок приветственного сообщения (не более <a href="/api/config#intro-title-length-limit">intro_title_length_limit »</a> символов UTF-8).</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Описание профиля (не более <a href="/api/config#intro-description-length-limit">intro_description_length_limit »</a> символов UTF-8).</td></tr><tr><td><strong>sticker</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Document">Document</a></td><td>Необязательный приветственный <a href="/api/stickers">стикер</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BusinessIntro](/type/BusinessIntro/)
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

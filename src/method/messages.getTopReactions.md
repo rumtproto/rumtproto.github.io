@@ -1,18 +1,15 @@
 ---
-title: "messages.getTopReactions (метод)"
+title: "messages.getTopReactions"
 original: "https://core.telegram.org/method/messages.getTopReactions"
 section: ref
 kind: method
+description: "Получены популярные реакции на сообщения"
 layout: layout.njk
 ---
 
 # messages.getTopReactions
 
-*Метод из схемы TL.*
-
-> Got popular [message reactions](https://core.telegram.org/api/reactions)
-
-## Определение TL
+Получены популярные [реакции на сообщения](/api/reactions/)
 
 ```
 messages.reactionsNotModified#b06fdbdf = messages.Reactions;
@@ -21,25 +18,22 @@ messages.reactions#eafdf716 hash:long reactions:Vector<Reaction> = messages.Reac
 messages.getTopReactions#bb8125ba limit:int hash:long = messages.Reactions;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Reactions](/type/messages.Reactions/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

@@ -1,18 +1,15 @@
 ---
-title: "help.TimezonesList (тип)"
+title: "help.TimezonesList"
 original: "https://core.telegram.org/type/help.TimezonesList"
 section: ref
 kind: type
+description: "Сведения о часовых поясах, которые могут использоваться в других частях API — например, для указания часов работы Telegram Business »."
 layout: layout.njk
 ---
 
 # help.TimezonesList
 
-*Тип из схемы TL.*
-
-> Timezone information that may be used elsewhere in the API, such as to set [Telegram Business opening hours »](https://core.telegram.org/api/business#opening-hours).
-
-## Определение TL
+Сведения о часовых поясах, которые могут использоваться в других частях API — например, для указания [часов работы Telegram Business »](/api/business/#opening-hours).
 
 ```
 help.timezonesListNotModified#970708cc = help.TimezonesList;
@@ -23,21 +20,16 @@ help.timezonesList#7b74ed71 timezones:Vector<Timezone> hash:int = help.Timezones
 help.getTimezonesList#49b30240 hash:int = help.TimezonesList;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [help.timezonesListNotModified](/constructor/help.timezonesListNotModified/) | The timezone list has not changed. |
-| [help.timezonesList](/constructor/help.timezonesList/) | Timezone information that may be used elsewhere in the API, such as to set [Telegram Business opening hours »](https://core.telegram.org/api/business#opening-hours). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/help.timezonesListNotModified">help.timezonesListNotModified</a></td><td>Список часовых поясов не изменился.</td></tr><tr><td><a href="/constructor/help.timezonesList">help.timezonesList</a></td><td>Сведения о часовых поясах, которые могут использоваться в других частях API — например, для указания <a href="/api/business#opening-hours">часов работы Telegram Business »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [help.getTimezonesList](/method/help.getTimezonesList/) | Returns timezone information that may be used elsewhere in the API, such as to set [Telegram Business opening hours »](https://core.telegram.org/api/business#opening-hours). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/help.getTimezonesList">help.getTimezonesList</a></td><td>Возвращает сведения о часовых поясах, которые могут использоваться в других частях API — например, для указания <a href="/api/business#opening-hours">часов работы Telegram Business »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

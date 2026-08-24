@@ -1,40 +1,30 @@
 ---
-title: "account.autoSaveSettings (конструктор)"
+title: "account.autoSaveSettings"
 original: "https://core.telegram.org/constructor/account.autoSaveSettings"
 section: ref
 kind: constructor
+description: "Содержит настройки автосохранения медиафайлов"
 layout: layout.njk
 ---
 
 # account.autoSaveSettings
 
-*Конструктор из схемы TL.*
-
-> Contains media autosave settings
-
-## Определение TL
+Содержит настройки автосохранения медиафайлов
 
 ```
 account.autoSaveSettings#4c3e069d users_settings:AutoSaveSettings chats_settings:AutoSaveSettings broadcasts_settings:AutoSaveSettings exceptions:Vector<AutoSaveException> chats:Vector<Chat> users:Vector<User> = account.AutoSaveSettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| users_settings | [AutoSaveSettings](/type/AutoSaveSettings/) | Default media autosave settings for private chats |
-| chats_settings | [AutoSaveSettings](/type/AutoSaveSettings/) | Default media autosave settings for [groups and supergroups](https://core.telegram.org/api/channel) |
-| broadcasts_settings | [AutoSaveSettings](/type/AutoSaveSettings/) | Default media autosave settings for [channels](https://core.telegram.org/api/channel) |
-| exceptions | [Vector](https://core.telegram.org/type/Vector%20t)<[AutoSaveException](/type/AutoSaveException/)> | Peer-specific granular autosave settings |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Chats mentioned in the peer-specific granular autosave settings |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users mentioned in the peer-specific granular autosave settings |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>users_settings</strong></td><td style="text-align: center;"><a href="/type/AutoSaveSettings">AutoSaveSettings</a></td><td>Настройки автосохранения медиафайлов по умолчанию для личных чатов</td></tr><tr><td><strong>chats_settings</strong></td><td style="text-align: center;"><a href="/type/AutoSaveSettings">AutoSaveSettings</a></td><td>Настройки автосохранения медиафайлов по умолчанию для <a href="/api/channel">групп и супергрупп</a></td></tr><tr><td><strong>broadcasts_settings</strong></td><td style="text-align: center;"><a href="/type/AutoSaveSettings">AutoSaveSettings</a></td><td>Настройки автосохранения медиафайлов по умолчанию для <a href="/api/channel">каналов</a></td></tr><tr><td><strong>exceptions</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/AutoSaveException">AutoSaveException</a>&gt;</td><td>Детальные настройки автосохранения для конкретного пира</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Чаты, упомянутые в настройках автосохранения для отдельных пиров</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи, упомянутые в детальных настройках автосохранения для отдельных пиров</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.AutoSaveSettings](/type/account.AutoSaveSettings/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

@@ -1,39 +1,34 @@
 ---
-title: "updateQuickReplyMessage (конструктор)"
+title: "updateQuickReplyMessage"
 original: "https://core.telegram.org/constructor/updateQuickReplyMessage"
 section: ref
 kind: constructor
+description: "В шаблон быстрого ответа » было добавлено новое сообщение."
 layout: layout.njk
 ---
 
 # updateQuickReplyMessage
 
-*Конструктор из схемы TL.*
-
-> A new message was added to a [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts).
-
-## Определение TL
+В [шаблон быстрого ответа »](/api/business/#quick-reply-shortcuts) было добавлено новое сообщение.
 
 ```
 updateQuickReplyMessage#3e050d0f message:Message = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| message | [Message](/type/Message/) | The message that was added (the [message](/constructor/message/).quick_reply_shortcut_id field will contain the shortcut ID). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message">Message</a></td><td>Добавленное сообщение (поле <a href="/constructor/message">message</a>.<code>quick_reply_shortcut_id</code> будет содержать идентификатор быстрого ответа).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [message](/constructor/message/)
 
-A message
+Сообщение
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

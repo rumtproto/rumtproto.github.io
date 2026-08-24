@@ -1,31 +1,26 @@
 ---
-title: "BusinessGreetingMessage (тип)"
+title: "BusinessGreetingMessage"
 original: "https://core.telegram.org/type/BusinessGreetingMessage"
 section: ref
 kind: type
+description: "Описывает приветственное сообщение Telegram Business, автоматически отправляемое новым пользователям, которые пишут нам в личные сообщения впервые или после определённого периода…"
 layout: layout.njk
 ---
 
 # BusinessGreetingMessage
 
-*Тип из схемы TL.*
-
-> Describes a [Telegram Business greeting](https://core.telegram.org/api/business#greeting-messages), automatically sent to new users writing to us in private for the first time, or after a certain inactivity period.
-
-## Определение TL
+Описывает [приветственное сообщение Telegram Business](/api/business/#greeting-messages), автоматически отправляемое новым пользователям, которые пишут нам в личные сообщения впервые или после определённого периода бездействия.
 
 ```
 businessGreetingMessage#e519abab shortcut_id:int recipients:BusinessRecipients no_activity_days:int = BusinessGreetingMessage;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [businessGreetingMessage](/constructor/businessGreetingMessage/) | Describes a [Telegram Business greeting](https://core.telegram.org/api/business#greeting-messages), automatically sent to new users writing to us in private for the first time, or after a certain inactivity period. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/businessGreetingMessage">businessGreetingMessage</a></td><td>Описывает <a href="/api/business#greeting-messages">приветственное сообщение Telegram Business</a>, автоматически отправляемое новым пользователям, которые пишут нам в личные сообщения впервые или после определённого периода бездействия.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

@@ -1,27 +1,24 @@
 ---
-title: "notificationSoundDefault (конструктор)"
+title: "notificationSoundDefault"
 original: "https://core.telegram.org/constructor/notificationSoundDefault"
 section: ref
 kind: constructor
+description: "Указывает, что следует использовать звук уведомления по умолчанию"
 layout: layout.njk
 ---
 
 # notificationSoundDefault
 
-*Конструктор из схемы TL.*
-
-> Indicates the default notification sound should be used
-
-## Определение TL
+Указывает, что следует использовать звук уведомления по умолчанию
 
 ```
 notificationSoundDefault#97e8bebe = NotificationSound;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [NotificationSound](/type/NotificationSound/)

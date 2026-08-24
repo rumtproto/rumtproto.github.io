@@ -1,28 +1,25 @@
 ---
-title: "decryptedMessageMediaEmpty (конструктор)"
+title: "decryptedMessageMediaEmpty"
 original: "https://core.telegram.org/constructor/decryptedMessageMediaEmpty"
 section: ref
 kind: constructor
+description: "Пустой конструктор, медиасодержимое отсутствует."
 layout: layout.njk
 ---
 
 # decryptedMessageMediaEmpty
 
-*Конструктор из схемы TL.*
-
-> Empty constructor, no media content.
-
-## Определение TL
+Пустой конструктор, медиасодержимое отсутствует.
 
 ```
 ===8===
 decryptedMessageMediaEmpty#89f5c4a = DecryptedMessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [DecryptedMessageMedia](/type/DecryptedMessageMedia/)

@@ -1,20 +1,18 @@
 ---
-title: "account.saveRingtone (метод)"
+title: "account.saveRingtone"
 original: "https://core.telegram.org/method/account.saveRingtone"
 section: ref
 kind: method
+description: "Сохранить или удалить сохранённый звук уведомления."
 layout: layout.njk
 ---
 
 # account.saveRingtone
 
-*Метод из схемы TL.*
+Сохранить или удалить сохранённый звук уведомления.
 
-> Save or remove saved notification sound.
-> If the notification sound is already in MP3 format, [account.savedRingtone](/constructor/account.savedRingtone/) will be returned.  
-> Otherwise, it will be automatically converted and a [account.savedRingtoneConverted](/constructor/account.savedRingtoneConverted/) will be returned, containing a new [document](/constructor/document/) object that should be used to refer to the ringtone from now on (ie when deleting it using the `unsave` parameter, or when downloading it).
-
-## Определение TL
+Если звук уведомления уже в формате MP3, будет возвращён [account.savedRingtone](/constructor/account.savedRingtone/).  
+Иначе он будет автоматически преобразован и будет возвращён [account.savedRingtoneConverted](/constructor/account.savedRingtoneConverted/), содержащий новый объект [document](/constructor/document/), который следует использовать для обращения к звуку впредь (то есть при его удалении с помощью параметра `unsave` или при скачивании).
 
 ```
 account.savedRingtone#b7263f6d = account.SavedRingtone;
@@ -23,39 +21,34 @@ account.savedRingtoneConverted#1f307eb7 document:Document = account.SavedRington
 account.saveRingtone#3dea5b03 id:InputDocument unsave:Bool = account.SavedRingtone;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [InputDocument](/type/InputDocument/) | Notification sound uploaded using [account.uploadRingtone](/method/account.uploadRingtone/) |
-| unsave | [Bool](/type/Bool/) | Whether to add or delete the notification sound |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputDocument">InputDocument</a></td><td>Звук уведомления, загруженный с помощью <a href="/method/account.uploadRingtone">account.uploadRingtone</a></td></tr><tr><td><strong>unsave</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Добавить или удалить звук уведомления</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.SavedRingtone](/type/account.SavedRingtone/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | RINGTONE_INVALID | The specified ringtone is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>RINGTONE_INVALID</td><td>Указанный звук уведомления недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [account.uploadRingtone](/method/account.uploadRingtone/)
 
-Upload notification sound, use [account.saveRingtone](/method/account.saveRingtone/) to convert it and add it to the list of saved notification sounds.
+Загрузить звук уведомления; для его преобразования и добавления в список сохранённых звуков уведомлений используйте [account.saveRingtone](/method/account.saveRingtone/).
 
 #### [account.savedRingtone](/constructor/account.savedRingtone/)
 
-The notification sound was already in MP3 format and was saved without any modification
+Звук уведомления уже был в формате MP3 и был сохранён без изменений
 
 #### [account.savedRingtoneConverted](/constructor/account.savedRingtoneConverted/)
 
-The notification sound was not in MP3 format and was successfully converted and saved, use the returned [Document](/type/Document/) to refer to the notification sound from now on
+Звук уведомления был не в формате MP3, он был успешно преобразован и сохранён; далее используйте возвращённый [Document](/type/Document/) для обращения к этому звуку уведомления
 
 #### [document](/constructor/document/)
 
-Document
+Документ

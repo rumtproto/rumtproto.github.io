@@ -1,20 +1,18 @@
 ---
-title: "help.getRecentMeUrls (метод)"
+title: "help.getRecentMeUrls"
 original: "https://core.telegram.org/method/help.getRecentMeUrls"
 section: ref
 kind: method
+description: "Получить недавно использованные ссылки t.me."
 layout: layout.njk
 ---
 
 # help.getRecentMeUrls
 
-*Метод из схемы TL.*
+Получить недавно использованные ссылки `t.me`.
 
-> Get recently used `t.me` links.
-> When installing official applications from "Download Telegram" buttons present in [t.me](https://t.me) pages, a referral parameter is passed to applications after installation.  
-> If, after downloading the application, the user creates a new account (instead of logging into an existing one), the referral parameter should be imported using this method, which returns the [t.me](https://t.me) pages the user recently opened, before installing Telegram.
-
-## Определение TL
+При установке официальных приложений по кнопкам «Download Telegram», размещённым на страницах [t.me](https://t.me), после установки в приложение передаётся реферальный параметр.  
+Если после загрузки приложения пользователь создаёт новую учётную запись (вместо входа в существующую), реферальный параметр следует импортировать этим методом, который возвращает страницы [t.me](https://t.me), недавно открывавшиеся пользователем до установки Telegram.
 
 ```
 help.recentMeUrls#e0310d7 urls:Vector<RecentMeUrl> chats:Vector<Chat> users:Vector<User> = help.RecentMeUrls;
@@ -22,14 +20,12 @@ help.recentMeUrls#e0310d7 urls:Vector<RecentMeUrl> chats:Vector<Chat> users:Vect
 help.getRecentMeUrls#3dc0f114 referer:string = help.RecentMeUrls;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| referer | [string](/type/string/) | Referrer |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>referer</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Источник перехода</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [help.RecentMeUrls](/type/help.RecentMeUrls/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

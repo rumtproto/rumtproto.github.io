@@ -1,40 +1,30 @@
 ---
-title: "messageReactor (конструктор)"
+title: "messageReactor"
 original: "https://core.telegram.org/constructor/messageReactor"
 section: ref
 kind: constructor
+description: "Информация о пользователе в таблице лидеров платных реакций за Telegram Stars для сообщения."
 layout: layout.njk
 ---
 
 # messageReactor
 
-*Конструктор из схемы TL.*
-
-> Info about a user in the [paid Star reactions leaderboard](https://core.telegram.org/api/reactions#paid-reactions) for a message.
-
-## Определение TL
+Информация о пользователе в [таблице лидеров платных реакций за Telegram Stars](/api/reactions/#paid-reactions) для сообщения.
 
 ```
 messageReactor#4ba3a95a flags:# top:flags.0?true my:flags.1?true anonymous:flags.2?true peer_id:flags.3?Peer count:int = MessageReactor;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| top | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, the reactor is one of the most active reactors; may be unset if the reactor is the current user. |
-| my | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, this reactor is the current user. |
-| anonymous | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | If set, the reactor is anonymous. |
-| peer_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Peer](/type/Peer/) | Identifier of the peer that reacted: may be unset for anonymous reactors different from the current user (i.e. if the current user sent an anonymous reaction anonymous will be set but this field will also be set). |
-| count | [int](/type/int/) | The number of sent Telegram Stars. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>top</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, автор реакции входит в число самых активных; может быть не установлено, если автор реакции — текущий пользователь.</td></tr><tr><td><strong>my</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, автор этой реакции — текущий пользователь.</td></tr><tr><td><strong>anonymous</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Если установлено, автор реакции анонимен.</td></tr><tr><td><strong>peer_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Peer">Peer</a></td><td>Идентификатор пира, поставившего реакцию: может быть не задан для анонимных авторов реакций, отличных от текущего пользователя (то есть если анонимную реакцию отправил текущий пользователь, будет установлен флаг <code>anonymous</code>, но это поле тоже будет заполнено).</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество отправленных Telegram Stars.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageReactor](/type/MessageReactor/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

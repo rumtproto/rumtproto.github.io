@@ -1,27 +1,24 @@
 ---
-title: "messageActionHistoryClear (конструктор)"
+title: "messageActionHistoryClear"
 original: "https://core.telegram.org/constructor/messageActionHistoryClear"
 section: ref
 kind: constructor
+description: "История переписки была очищена"
 layout: layout.njk
 ---
 
 # messageActionHistoryClear
 
-*Конструктор из схемы TL.*
-
-> Chat history was cleared
-
-## Определение TL
+История переписки была очищена
 
 ```
 messageActionHistoryClear#9fbab604 = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)

@@ -1,18 +1,15 @@
 ---
-title: "stories.CanSendStoryCount (тип)"
+title: "stories.CanSendStoryCount"
 original: "https://core.telegram.org/type/stories.CanSendStoryCount"
 section: ref
 kind: type
+description: "Содержит количество доступных слотов для активных историй (равно значению параметра клиентской конфигурации story_expiring_limit_* за вычетом числа активных на данный момент…"
 layout: layout.njk
 ---
 
 # stories.CanSendStoryCount
 
-*Тип из схемы TL.*
-
-> Contains the number of available active story slots (equal to the value of the [`story_expiring_limit_*` client configuration parameter](https://core.telegram.org/api/config#story-expiring-limit-default) minus the number of currently active stories).
-
-## Определение TL
+Содержит количество доступных слотов для активных историй (равно значению [параметра клиентской конфигурации `story_expiring_limit_*`](/api/config/#story-expiring-limit-default) за вычетом числа активных на данный момент историй).
 
 ```
 stories.canSendStoryCount#c387c04e count_remains:int = stories.CanSendStoryCount;
@@ -22,20 +19,16 @@ stories.canSendStoryCount#c387c04e count_remains:int = stories.CanSendStoryCount
 stories.canSendStory#30eb63f0 peer:InputPeer = stories.CanSendStoryCount;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [stories.canSendStoryCount](/constructor/stories.canSendStoryCount/) | Contains the number of available active story slots (equal to the value of the [story_expiring_limit_* client configuration parameter](https://core.telegram.org/api/config#story-expiring-limit-default) minus the number of currently active stories). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/stories.canSendStoryCount">stories.canSendStoryCount</a></td><td>Содержит количество доступных слотов для активных историй (равно значению <a href="/api/config#story-expiring-limit-default">параметра клиентской конфигурации <code>story_expiring_limit_*</code></a> за вычетом числа активных на данный момент историй).</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stories.canSendStory](/method/stories.canSendStory/) | Check whether we can post stories as the specified peer. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stories.canSendStory">stories.canSendStory</a></td><td>Проверить, можем ли мы публиковать истории от имени указанного пира.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

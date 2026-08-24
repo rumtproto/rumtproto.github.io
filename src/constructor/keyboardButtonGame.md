@@ -1,59 +1,54 @@
 ---
-title: "keyboardButtonGame (конструктор)"
+title: "keyboardButtonGame"
 original: "https://core.telegram.org/constructor/keyboardButtonGame"
 section: ref
 kind: constructor
+description: "Кнопка для запуска игры"
 layout: layout.njk
 ---
 
 # keyboardButtonGame
 
-*Конструктор из схемы TL.*
+Кнопка для запуска игры
 
-> Button to start a game
-> Available only in [inline keyboards](/constructor/replyInlineMarkup/).
-> When pressed, clients must open the [game](/constructor/game/) from the attached [messageMediaGame](/constructor/messageMediaGame/) constructor by invoking [messages.getBotCallbackAnswer](/method/messages.getBotCallbackAnswer/) with the `game` flag set, as described in [Starting a game](https://core.telegram.org/api/bots/games#starting-a-game).
+Доступно только в [инлайн-клавиатурах](/constructor/replyInlineMarkup/).
 
-## Определение TL
+При нажатии клиенты обязаны открыть [игру](/constructor/game/) из приложенного конструктора [messageMediaGame](/constructor/messageMediaGame/), вызвав [messages.getBotCallbackAnswer](/method/messages.getBotCallbackAnswer/) с установленным флагом `game`, как описано в разделе [Запуск игры](/api/bots/games/#starting-a-game).
 
 ```
 keyboardButtonGame#89c590f9 flags:# style:flags.10?KeyboardButtonStyle text:string = KeyboardButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| style | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[KeyboardButtonStyle](/type/KeyboardButtonStyle/) | Button style, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info on button styles. |
-| text | [string](/type/string/) | Button text |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>style</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/KeyboardButtonStyle">KeyboardButtonStyle</a></td><td>Стиль кнопки; подробнее о стилях кнопок см. <a href="/api/bots/buttons#button-styles">здесь »</a>.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст кнопки</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [KeyboardButton](/type/KeyboardButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.
 
 #### [replyInlineMarkup](/constructor/replyInlineMarkup/)
 
-Represents an inline keyboard
+Представляет инлайн-клавиатуру
 
 #### [game](/constructor/game/)
 
-Indicates an already sent game
+Указывает на уже отправленную игру
 
 #### [messageMediaGame](/constructor/messageMediaGame/)
 
-Telegram game
+Игра Telegram
 
 #### [messages.getBotCallbackAnswer](/method/messages.getBotCallbackAnswer/)
 
-Press an inline callback button and get a callback answer from the bot
+Нажать инлайн-кнопку обратного вызова и получить ответ от бота
 
-#### [HTML5 games](https://core.telegram.org/api/bots/games)
+#### [HTML5-игры](/api/bots/games/)
 
-Bots can offer users HTML5 games to play solo or to compete against each other in groups and one-on-one chats.
+Боты могут предлагать пользователям HTML5-игры для одиночной игры или для соревнования друг с другом в группах и личных чатах.

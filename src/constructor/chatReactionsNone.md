@@ -1,27 +1,24 @@
 ---
-title: "chatReactionsNone (конструктор)"
+title: "chatReactionsNone"
 original: "https://core.telegram.org/constructor/chatReactionsNone"
 section: ref
 kind: constructor
+description: "Реакции не разрешены"
 layout: layout.njk
 ---
 
 # chatReactionsNone
 
-*Конструктор из схемы TL.*
-
-> No reactions are allowed
-
-## Определение TL
+Реакции не разрешены
 
 ```
 chatReactionsNone#eafc32bc = ChatReactions;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ChatReactions](/type/ChatReactions/)

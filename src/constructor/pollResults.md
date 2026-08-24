@@ -1,60 +1,46 @@
 ---
-title: "pollResults (конструктор)"
+title: "pollResults"
 original: "https://core.telegram.org/constructor/pollResults"
 section: ref
 kind: constructor
+description: "Результаты опроса"
 layout: layout.njk
 ---
 
 # pollResults
 
-*Конструктор из схемы TL.*
-
-> Results of poll
-
-## Определение TL
+Результаты опроса
 
 ```
 pollResults#7adf2420 flags:# min:flags.0?true results:flags.1?Vector<PollAnswerVoters> total_voters:flags.2?int recent_voters:flags.3?Vector<Peer> solution:flags.4?string solution_entities:flags.4?Vector<MessageEntity> = PollResults;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| min | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Similar to [min](https://core.telegram.org/api/min) objects, used for poll constructors that are the same for all users so they don't have the option chosen by the current user (you can use [messages.getPollResults](/method/messages.getPollResults/) to get the full poll results). |
-| has_unread_votes | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | Whether there are unread votes in this non-anonymous poll, see [polls »](https://core.telegram.org/api/poll#unread-poll-votes) |
-| can_view_stats | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | Whether the current user can view detailed [poll statistics »](https://core.telegram.org/api/stats#poll-statistics) |
-| results | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[PollAnswerVoters](/type/PollAnswerVoters/)> | Poll results |
-| total_voters | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Total number of people that voted in the poll |
-| recent_voters | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[Peer](/type/Peer/)> | IDs of the last users that recently voted in the poll |
-| solution | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[string](/type/string/) | Explanation of quiz solution |
-| solution_entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text in quiz solution](https://core.telegram.org/api/entities) |
-| solution_media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[MessageMedia](/type/MessageMedia/) | Optional media attachment shown alongside the quiz solution explanation |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>min</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>[@term:min] Аналогично <a href="/api/min">min</a>-объектам, используется для конструкторов опросов, одинаковых для всех пользователей, поэтому в них нет варианта, выбранного текущим пользователем (получить полные результаты опроса можно с помощью <a href="/method/messages.getPollResults">messages.getPollResults</a>).</td></tr><tr><td><strong>has_unread_votes</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Есть ли в этом неанонимном опросе непрочитанные голоса, см. <a href="/api/poll#unread-poll-votes">опросы »</a></td></tr><tr><td><strong>can_view_stats</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Может ли текущий пользователь просматривать подробную <a href="/api/stats#poll-statistics">статистику опроса »</a></td></tr><tr><td><strong>results</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/PollAnswerVoters">PollAnswerVoters</a>&gt;</td><td>Результаты опроса</td></tr><tr><td><strong>total_voters</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Общее число людей, проголосовавших в опросе</td></tr><tr><td><strong>recent_voters</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Peer">Peer</a>&gt;</td><td>Идентификаторы последних пользователей, недавно проголосовавших в опросе</td></tr><tr><td><strong>solution</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string">string</a></td><td>Пояснение к ответу на викторину</td></tr><tr><td><strong>solution_entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления для форматированного текста в пояснении к ответу на викторину</a></td></tr><tr><td><strong>solution_media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/MessageMedia">MessageMedia</a></td><td>Необязательное медиавложение, показываемое рядом с пояснением к ответу на викторину</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PollResults](/type/PollResults/)
 
-## Related pages
+### Связанные страницы
 
-#### [Min constructors](https://core.telegram.org/api/min)
+#### [Конструкторы min](/api/min/)
 
-In some situations user and channel constructors have reduced set of fields present (although id is always there) and min flag set.
+В некоторых случаях в конструкторах пользователя и канала присутствует сокращённый набор полей (хотя id есть всегда) и установлен флаг min.
 
 #### [messages.getPollResults](/method/messages.getPollResults/)
 
-Get poll results
+Получить результаты опроса
 
-#### [Polls and quizzes](https://core.telegram.org/api/poll)
+#### [Опросы и викторины](/api/poll/)
 
-Telegram allows sending polls and quizzes, that can be voted on by thousands, if not millions of users in chats and channels.
+Telegram позволяет отправлять опросы и викторины, в которых могут проголосовать тысячи, если не миллионы пользователей в чатах и каналах.
 
-#### [Channel statistics](https://core.telegram.org/api/stats)
+#### [Статистика каналов](/api/stats/)
 
-Telegram offers detailed channel statistics for channels and supergroups.
+Telegram предоставляет подробную статистику для каналов и супергрупп.
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

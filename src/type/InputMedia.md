@@ -1,18 +1,15 @@
 ---
-title: "InputMedia (тип)"
+title: "InputMedia"
 original: "https://core.telegram.org/type/InputMedia"
 section: ref
 kind: type
+description: "Определяет медиасодержимое сообщения."
 layout: layout.njk
 ---
 
 # InputMedia
 
-*Тип из схемы TL.*
-
-> Defines media content of a message.
-
-## Определение TL
+Определяет медиасодержимое сообщения.
 
 ```
 inputMediaEmpty#9664f57f = InputMedia;
@@ -37,27 +34,6 @@ inputMediaTodo#9fc55fde todo:TodoList = InputMedia;
 inputMediaStakeDice#f3a9244a game_hash:string ton_amount:long client_seed:bytes = InputMedia;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputMediaEmpty](/constructor/inputMediaEmpty/) | Empty media content of a message. |
-| [inputMediaUploadedPhoto](/constructor/inputMediaUploadedPhoto/) | Photo |
-| [inputMediaPhoto](/constructor/inputMediaPhoto/) | Forwarded photo |
-| [inputMediaGeoPoint](/constructor/inputMediaGeoPoint/) | Map. |
-| [inputMediaContact](/constructor/inputMediaContact/) | Phone book contact |
-| [inputMediaUploadedDocument](/constructor/inputMediaUploadedDocument/) | New document |
-| [inputMediaDocument](/constructor/inputMediaDocument/) | Forwarded document |
-| [inputMediaVenue](/constructor/inputMediaVenue/) | Can be used to send a venue geolocation. |
-| [inputMediaPhotoExternal](/constructor/inputMediaPhotoExternal/) | New photo that will be uploaded by the server using the specified URL |
-| [inputMediaDocumentExternal](/constructor/inputMediaDocumentExternal/) | Document that will be downloaded by the telegram servers |
-| [inputMediaGame](/constructor/inputMediaGame/) | A game |
-| [inputMediaInvoice](/constructor/inputMediaInvoice/) | Generated invoice of a [bot payment](https://core.telegram.org/bots/payments) |
-| [inputMediaGeoLive](/constructor/inputMediaGeoLive/) | [Live geolocation](https://core.telegram.org/api/live-location) |
-| [inputMediaPoll](/constructor/inputMediaPoll/) | A poll |
-| [inputMediaDice](/constructor/inputMediaDice/) | Send a [dice-based animated sticker](https://core.telegram.org/api/dice) |
-| [inputMediaStory](/constructor/inputMediaStory/) | Forwarded story |
-| [inputMediaWebPage](/constructor/inputMediaWebPage/) | Specifies options that will be used to generate the link preview for the caption, or even a standalone link preview without an attached message. |
-| [inputMediaPaidMedia](/constructor/inputMediaPaidMedia/) | [Paid media, see here »](https://core.telegram.org/api/paid-media) for more info. |
-| [inputMediaTodo](/constructor/inputMediaTodo/) | Creates a [todo list »](https://core.telegram.org/api/todo). |
-| [inputMediaStakeDice](/constructor/inputMediaStakeDice/) | Dice game media. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputMediaEmpty">inputMediaEmpty</a></td><td>Пустое медиасодержимое сообщения.</td></tr><tr><td><a href="/constructor/inputMediaUploadedPhoto">inputMediaUploadedPhoto</a></td><td>Фотография</td></tr><tr><td><a href="/constructor/inputMediaPhoto">inputMediaPhoto</a></td><td>Пересланная фотография</td></tr><tr><td><a href="/constructor/inputMediaGeoPoint">inputMediaGeoPoint</a></td><td>Карта.</td></tr><tr><td><a href="/constructor/inputMediaContact">inputMediaContact</a></td><td>Контакт из телефонной книги</td></tr><tr><td><a href="/constructor/inputMediaUploadedDocument">inputMediaUploadedDocument</a></td><td>Новый документ</td></tr><tr><td><a href="/constructor/inputMediaDocument">inputMediaDocument</a></td><td>Пересланный документ</td></tr><tr><td><a href="/constructor/inputMediaVenue">inputMediaVenue</a></td><td>Может использоваться для отправки геопозиции заведения.</td></tr><tr><td><a href="/constructor/inputMediaPhotoExternal">inputMediaPhotoExternal</a></td><td>Новая фотография, которая будет загружена сервером по указанному URL</td></tr><tr><td><a href="/constructor/inputMediaDocumentExternal">inputMediaDocumentExternal</a></td><td>Документ, который будет загружен серверами Telegram</td></tr><tr><td><a href="/constructor/inputMediaGame">inputMediaGame</a></td><td>Игра</td></tr><tr><td><a href="/constructor/inputMediaInvoice">inputMediaInvoice</a></td><td>Сформированный счёт <a href="/bots/payments">платежа через бота</a></td></tr><tr><td><a href="/constructor/inputMediaGeoLive">inputMediaGeoLive</a></td><td><a href="/api/live-location">Геолокация в реальном времени</a></td></tr><tr><td><a href="/constructor/inputMediaPoll">inputMediaPoll</a></td><td>Опрос</td></tr><tr><td><a href="/constructor/inputMediaDice">inputMediaDice</a></td><td>Отправить <a href="/api/dice">анимированный стикер с игральной костью</a></td></tr><tr><td><a href="/constructor/inputMediaStory">inputMediaStory</a></td><td>Пересланная история</td></tr><tr><td><a href="/constructor/inputMediaWebPage">inputMediaWebPage</a></td><td>Задаёт параметры, которые будут использованы для создания предпросмотра ссылки в подписи, либо даже отдельного предпросмотра ссылки без прикреплённого сообщения.</td></tr><tr><td><a href="/constructor/inputMediaPaidMedia">inputMediaPaidMedia</a></td><td><a href="/api/paid-media">Платное медиа, подробнее см. здесь »</a>.</td></tr><tr><td><a href="/constructor/inputMediaTodo">inputMediaTodo</a></td><td>Создаёт <a href="/api/todo">список задач »</a>.</td></tr><tr><td><a href="/constructor/inputMediaStakeDice">inputMediaStakeDice</a></td><td>Медиа игры в кости.</td></tr></tbody></table>

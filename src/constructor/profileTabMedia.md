@@ -1,27 +1,24 @@
 ---
-title: "profileTabMedia (конструктор)"
+title: "profileTabMedia"
 original: "https://core.telegram.org/constructor/profileTabMedia"
 section: ref
 kind: constructor
+description: "Представляет вкладку медиафайлов на странице профиля."
 layout: layout.njk
 ---
 
 # profileTabMedia
 
-*Конструктор из схемы TL.*
-
-> Represents the media tab of a profile page.
-
-## Определение TL
+Представляет вкладку медиафайлов на странице профиля.
 
 ```
 profileTabMedia#72c64955 = ProfileTab;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ProfileTab](/type/ProfileTab/)

@@ -1,18 +1,15 @@
 ---
-title: "messages.setChatWallPaper (метод)"
+title: "messages.setChatWallPaper"
 original: "https://core.telegram.org/method/messages.setChatWallPaper"
 section: ref
 kind: method
+description: "Установить пользовательские обои » в конкретном личном чате с другим пользователем."
 layout: layout.njk
 ---
 
 # messages.setChatWallPaper
 
-*Метод из схемы TL.*
-
-> Set a custom [wallpaper »](https://core.telegram.org/api/wallpapers) in a specific private chat with another user.
-
-## Определение TL
+Установить пользовательские [обои »](/api/wallpapers/) в конкретном личном чате с другим пользователем.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,42 +23,30 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.setChatWallPaper#8ffacae1 flags:# for_both:flags.3?true revert:flags.4?true peer:InputPeer wallpaper:flags.0?InputWallPaper settings:flags.2?WallPaperSettings id:flags.1?int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| for_both | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Only for [Premium](https://core.telegram.org/api/premium) users, sets the specified wallpaper for both users of the chat, without requiring confirmation from the other user. |
-| revert | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | If we don't like the new wallpaper the other user of the chat has chosen for us using the for_both flag, we can re-set our previous wallpaper just on our side using this flag. |
-| peer | [InputPeer](/type/InputPeer/) | The private chat where the wallpaper will be set |
-| wallpaper | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputWallPaper](/type/InputWallPaper/) | The [wallpaper »](https://core.telegram.org/api/wallpapers), obtained as described in the [wallpaper documentation »](https://core.telegram.org/api/wallpapers#uploading-wallpapers); must not be provided when installing a wallpaper obtained from a [messageActionSetChatWallPaper](/constructor/messageActionSetChatWallPaper/) service message (id must be provided, instead). |
-| settings | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[WallPaperSettings](/type/WallPaperSettings/) | Wallpaper settings, obtained as described in the [wallpaper documentation »](https://core.telegram.org/api/wallpapers#uploading-wallpapers) or from [messageActionSetChatWallPaper](/constructor/messageActionSetChatWallPaper/).wallpaper.settings. |
-| id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | If the wallpaper was obtained from a [messageActionSetChatWallPaper](/constructor/messageActionSetChatWallPaper/) service message, must contain the ID of that message. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>for_both</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Только для пользователей <a href="/api/premium">Premium</a>: устанавливает указанные обои для обоих участников чата, не требуя подтверждения от другого пользователя.</td></tr><tr><td><strong>revert</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Если нам не нравятся новые обои, выбранные для нас другим пользователем чата с помощью флага <code>for_both</code>, с помощью этого флага можно вернуть прежние обои только на своей стороне.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Личный чат, в котором будут установлены обои</td></tr><tr><td><strong>wallpaper</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputWallPaper">InputWallPaper</a></td><td><a href="/api/wallpapers">Обои »</a>, полученные так, как описано в <a href="/api/wallpapers#uploading-wallpapers">документации по обоям »</a>; <strong>не</strong> должны передаваться при установке обоев, полученных из сервисного сообщения <a href="/constructor/messageActionSetChatWallPaper">messageActionSetChatWallPaper</a> (вместо этого следует передать <code>id</code>).</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/WallPaperSettings">WallPaperSettings</a></td><td>Настройки обоев, полученные так, как описано в <a href="/api/wallpapers#uploading-wallpapers">документации по обоям »</a>, или из поля <a href="/constructor/messageActionSetChatWallPaper">messageActionSetChatWallPaper</a>.<code>wallpaper</code>.<code>settings</code>.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Если обои были получены из сервисного сообщения <a href="/constructor/messageActionSetChatWallPaper">messageActionSetChatWallPaper</a>, должно содержать идентификатор этого сообщения.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | WALLPAPER_INVALID | The specified wallpaper is invalid. |
-| 400 | WALLPAPER_NOT_FOUND | The specified wallpaper could not be found. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>WALLPAPER_INVALID</td><td>Указанные обои недействительны.</td></tr><tr><td>400</td><td>WALLPAPER_NOT_FOUND</td><td>Указанные обои не найдены.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.
 
 #### [messageActionSetChatWallPaper](/constructor/messageActionSetChatWallPaper/)
 
-The [wallpaper »](https://core.telegram.org/api/wallpapers) of the current chat was changed.
+[Обои »](/api/wallpapers/) текущего чата были изменены.

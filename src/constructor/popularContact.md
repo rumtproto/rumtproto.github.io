@@ -1,30 +1,24 @@
 ---
-title: "popularContact (конструктор)"
+title: "popularContact"
 original: "https://core.telegram.org/constructor/popularContact"
 section: ref
 kind: constructor
+description: "Популярный контакт"
 layout: layout.njk
 ---
 
 # popularContact
 
-*Конструктор из схемы TL.*
-
-> Popular contact
-
-## Определение TL
+Популярный контакт
 
 ```
 popularContact#5ce14175 client_id:long importers:int = PopularContact;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| client_id | [long](/type/long/) | Contact identifier |
-| importers | [int](/type/int/) | How many people imported this contact |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>client_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор контакта</td></tr><tr><td><strong>importers</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Сколько человек импортировали этот контакт</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PopularContact](/type/PopularContact/)

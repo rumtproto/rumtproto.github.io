@@ -1,18 +1,15 @@
 ---
-title: "premium.applyBoost (метод)"
+title: "premium.applyBoost"
 original: "https://core.telegram.org/method/premium.applyBoost"
 section: ref
 kind: method
+description: "Применить один или несколько бустов » к пиру."
 layout: layout.njk
 ---
 
 # premium.applyBoost
 
-*Метод из схемы TL.*
-
-> Apply one or more [boosts »](https://core.telegram.org/api/boost) to a peer.
-
-## Определение TL
+Применить один или несколько [бустов »](/api/boost/) к пиру.
 
 ```
 premium.myBoosts#9ae228e2 my_boosts:Vector<MyBoost> chats:Vector<Chat> users:Vector<User> = premium.MyBoosts;
@@ -20,30 +17,22 @@ premium.myBoosts#9ae228e2 my_boosts:Vector<MyBoost> chats:Vector<Chat> users:Vec
 premium.applyBoost#6b7da746 flags:# slots:flags.0?Vector<int> peer:InputPeer = premium.MyBoosts;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| slots | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Which [boost slots](https://core.telegram.org/api/boost) to assign to this peer. |
-| peer | [InputPeer](/type/InputPeer/) | The peer to boost. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>slots</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Какие <a href="/api/boost">слоты буста</a> назначить этому пиру.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, которому нужно отдать буст.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [premium.MyBoosts](/type/premium.MyBoosts/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOOSTS_EMPTY | No boost slots were specified. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | SLOTS_EMPTY | The specified slot list is empty. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOOSTS_EMPTY</td><td>Не указаны слоты бустов.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>SLOTS_EMPTY</td><td>Указанный список слотов пуст.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.

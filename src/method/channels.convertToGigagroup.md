@@ -1,18 +1,15 @@
 ---
-title: "channels.convertToGigagroup (метод)"
+title: "channels.convertToGigagroup"
 original: "https://core.telegram.org/method/channels.convertToGigagroup"
 section: ref
 kind: method
+description: "Преобразовать супергруппу в гигагруппу по запросу от подсказок для канала."
 layout: layout.njk
 ---
 
 # channels.convertToGigagroup
 
-*Метод из схемы TL.*
-
-> Convert a [supergroup](https://core.telegram.org/api/channel) to a [gigagroup](https://core.telegram.org/api/channel), when requested by [channel suggestions](https://core.telegram.org/api/config#channel-suggestions).
-
-## Определение TL
+Преобразовать [супергруппу](/api/channel/) в [гигагруппу](/api/channel/) по запросу от [подсказок для канала](/api/config/#channel-suggestions).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,39 +23,30 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.convertToGigagroup#b290c69 channel:InputChannel = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The [supergroup](https://core.telegram.org/api/channel) to convert |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Супергруппа</a>, которую нужно преобразовать</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_ID_INVALID | The specified supergroup ID is invalid. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | FORUM_ENABLED | You can't execute the specified action because the group is a [forum](https://core.telegram.org/api/forum), disable forum functionality to continue. |
-| 400 | PARTICIPANTS_TOO_FEW | Not enough participants. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_ID_INVALID</td><td>Указанный идентификатор супергруппы недействителен.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>FORUM_ENABLED</td><td>Нельзя выполнить указанное действие, так как группа является <a href="/api/forum">форумом</a>; отключите функциональность форума, чтобы продолжить.</td></tr><tr><td>400</td><td>PARTICIPANTS_TOO_FEW</td><td>Недостаточно участников.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

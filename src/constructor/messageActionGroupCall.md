@@ -1,37 +1,30 @@
 ---
-title: "messageActionGroupCall (конструктор)"
+title: "messageActionGroupCall"
 original: "https://core.telegram.org/constructor/messageActionGroupCall"
 section: ref
 kind: constructor
+description: "Видеочат или трансляция были начаты или завершены."
 layout: layout.njk
 ---
 
 # messageActionGroupCall
 
-*Конструктор из схемы TL.*
-
-> A [video chat/livestream](https://core.telegram.org/api/group-calls#video-chats-livestreams) was started or terminated.
-
-## Определение TL
+[Видеочат или трансляция](/api/group-calls/#video-chats-livestreams) были начаты или завершены.
 
 ```
 messageActionGroupCall#7a0d7f42 flags:# call:InputGroupCall duration:flags.0?int = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| call | [InputGroupCall](/type/InputGroupCall/) | Video chat/livestream that started or ended |
-| duration | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Duration of the group call in seconds, for terminated calls. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Видеочат или трансляция, которые начались или завершились</td></tr><tr><td><strong>duration</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Длительность группового звонка в секундах, для завершённых звонков.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

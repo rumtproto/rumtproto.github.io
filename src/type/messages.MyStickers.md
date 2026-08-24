@@ -1,18 +1,15 @@
 ---
-title: "messages.MyStickers (тип)"
+title: "messages.MyStickers"
 original: "https://core.telegram.org/type/messages.MyStickers"
 section: ref
 kind: type
+description: "Список наборов стикеров, принадлежащих текущему аккаунту »."
 layout: layout.njk
 ---
 
 # messages.MyStickers
 
-*Тип из схемы TL.*
-
-> The list of [stickersets owned by the current account »](https://core.telegram.org/api/stickers).
-
-## Определение TL
+Список [наборов стикеров, принадлежащих текущему аккаунту »](/api/stickers/).
 
 ```
 messages.myStickers#faff629d count:int sets:Vector<StickerSetCovered> = messages.MyStickers;
@@ -22,20 +19,16 @@ messages.myStickers#faff629d count:int sets:Vector<StickerSetCovered> = messages
 messages.getMyStickers#d0b5e1fc offset_id:long limit:int = messages.MyStickers;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.myStickers](/constructor/messages.myStickers/) | The list of [stickersets owned by the current account »](https://core.telegram.org/api/stickers). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.myStickers">messages.myStickers</a></td><td>Список <a href="/api/stickers">наборов стикеров, принадлежащих текущему аккаунту »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getMyStickers](/method/messages.getMyStickers/) | Fetch all [stickersets »](https://core.telegram.org/api/stickers) owned by the current user. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getMyStickers">messages.getMyStickers</a></td><td>Получить все <a href="/api/stickers">наборы стикеров »</a>, принадлежащие текущему пользователю.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.

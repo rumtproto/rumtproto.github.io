@@ -1,18 +1,15 @@
 ---
-title: "EncryptedChat (тип)"
+title: "EncryptedChat"
 original: "https://core.telegram.org/type/EncryptedChat"
 section: ref
 kind: type
+description: "Объект содержит информацию о секретном чате."
 layout: layout.njk
 ---
 
 # EncryptedChat
 
-*Тип из схемы TL.*
-
-> Object contains info on an encrypted chat.
-
-## Определение TL
+Объект содержит информацию о секретном чате.
 
 ```
 encryptedChatEmpty#ab7ec0a0 id:int = EncryptedChat;
@@ -27,19 +24,10 @@ messages.requestEncryption#f64daf43 user_id:InputUser random_id:int g_a:bytes = 
 messages.acceptEncryption#3dbc0415 peer:InputEncryptedChat g_b:bytes key_fingerprint:long = EncryptedChat;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [encryptedChatEmpty](/constructor/encryptedChatEmpty/) | Empty constructor. |
-| [encryptedChatWaiting](/constructor/encryptedChatWaiting/) | Chat waiting for approval of second participant. |
-| [encryptedChatRequested](/constructor/encryptedChatRequested/) | Request to create an encrypted chat. |
-| [encryptedChat](/constructor/encryptedChat/) | Encrypted chat |
-| [encryptedChatDiscarded](/constructor/encryptedChatDiscarded/) | Discarded or deleted chat. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/encryptedChatEmpty">encryptedChatEmpty</a></td><td>Пустой конструктор.</td></tr><tr><td><a href="/constructor/encryptedChatWaiting">encryptedChatWaiting</a></td><td>Чат ожидает подтверждения от второго участника.</td></tr><tr><td><a href="/constructor/encryptedChatRequested">encryptedChatRequested</a></td><td>Запрос на создание секретного чата.</td></tr><tr><td><a href="/constructor/encryptedChat">encryptedChat</a></td><td>Зашифрованный чат</td></tr><tr><td><a href="/constructor/encryptedChatDiscarded">encryptedChatDiscarded</a></td><td>Отменённый или удалённый чат.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.requestEncryption](/method/messages.requestEncryption/) | Sends a request to start a secret chat to the user. |
-| [messages.acceptEncryption](/method/messages.acceptEncryption/) | Confirms creation of a secret chat |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.requestEncryption">messages.requestEncryption</a></td><td>Отправляет пользователю запрос на создание секретного чата.</td></tr><tr><td><a href="/method/messages.acceptEncryption">messages.acceptEncryption</a></td><td>Подтверждает создание секретного чата</td></tr></tbody></table>

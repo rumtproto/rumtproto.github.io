@@ -1,25 +1,20 @@
 ---
-title: "ContactStatus (тип)"
+title: "ContactStatus"
 original: "https://core.telegram.org/type/ContactStatus"
 section: ref
 kind: type
+description: "Статус контакта: в сети / не в сети."
 layout: layout.njk
 ---
 
 # ContactStatus
 
-*Тип из схемы TL.*
-
-> Contact status: online / offline.
-
-## Определение TL
+Статус контакта: в сети / не в сети.
 
 ```
 contactStatus#16d9703b user_id:long status:UserStatus = ContactStatus;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [contactStatus](/constructor/contactStatus/) | Contact status: online / offline. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/contactStatus">contactStatus</a></td><td>Статус контакта: в сети / не в сети.</td></tr></tbody></table>

@@ -1,27 +1,24 @@
 ---
-title: "inputCheckPasswordEmpty (конструктор)"
+title: "inputCheckPasswordEmpty"
 original: "https://core.telegram.org/constructor/inputCheckPasswordEmpty"
 section: ref
 kind: constructor
+description: "Пароль не задан"
 layout: layout.njk
 ---
 
 # inputCheckPasswordEmpty
 
-*Конструктор из схемы TL.*
-
-> There is no password
-
-## Определение TL
+Пароль не задан
 
 ```
 inputCheckPasswordEmpty#9880f658 = InputCheckPasswordSRP;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputCheckPasswordSRP](/type/InputCheckPasswordSRP/)

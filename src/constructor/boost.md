@@ -1,54 +1,38 @@
 ---
-title: "boost (конструктор)"
+title: "boost"
 original: "https://core.telegram.org/constructor/boost"
 section: ref
 kind: constructor
+description: "Информация об одном или нескольких бустах, применённых определённым пользователем."
 layout: layout.njk
 ---
 
 # boost
 
-*Конструктор из схемы TL.*
-
-> Info about one or more [boosts](https://core.telegram.org/api/boost) applied by a specific user.
-
-## Определение TL
+Информация об одном или нескольких [бустах](/api/boost/), применённых определённым пользователем.
 
 ```
 boost#4b3e14d6 flags:# gift:flags.1?true giveaway:flags.2?true unclaimed:flags.3?true id:string user_id:flags.0?long giveaway_msg_id:flags.2?int date:int expires:int used_gift_slug:flags.4?string multiplier:flags.5?int stars:flags.6?long = Boost;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| gift | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether this boost was applied because the channel/supergroup [directly gifted a subscription to the user](https://core.telegram.org/api/giveaways). |
-| giveaway | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether this boost was applied because the user was chosen in a [giveaway started by the channel/supergroup](https://core.telegram.org/api/giveaways). |
-| unclaimed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | If set, the user hasn't yet invoked [payments.applyGiftCode](/method/payments.applyGiftCode/) to claim a subscription gifted [directly or in a giveaway by the channel](https://core.telegram.org/api/giveaways). |
-| id | [string](/type/string/) | Unique ID for this set of boosts. |
-| user_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | ID of the user that applied the boost. |
-| giveaway_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | The message ID of the [giveaway](https://core.telegram.org/api/giveaways) |
-| date | [int](/type/int/) | When was the boost applied |
-| expires | [int](/type/int/) | When does the boost expire |
-| used_gift_slug | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[string](/type/string/) | The created Telegram Premium gift code, only set if either gift or giveaway are set AND it is either a gift code for the currently logged in user or if it was already claimed. |
-| multiplier | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[int](/type/int/) | If set, this boost counts as multiplier boosts, otherwise it counts as a single boost. |
-| stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[long](/type/long/) | Number of Telegram Stars distributed among the winners of the giveaway. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Был ли этот буст начислен потому, что канал или супергруппа <a href="/api/giveaways">напрямую подарили пользователю подписку</a>.</td></tr><tr><td><strong>giveaway</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Был ли этот буст начислен потому, что пользователь был выбран в <a href="/api/giveaways">розыгрыше, запущенном каналом или супергруппой</a>.</td></tr><tr><td><strong>unclaimed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Если установлено, пользователь ещё не вызвал <a href="/method/payments.applyGiftCode">payments.applyGiftCode</a>, чтобы получить подписку, подаренную <a href="/api/giveaways">каналом напрямую или в розыгрыше</a>.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Уникальный идентификатор этого набора бустов.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Идентификатор пользователя, применившего буст.</td></tr><tr><td><strong>giveaway_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Идентификатор сообщения с <a href="/api/giveaways">розыгрышем</a></td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда был применён буст</td></tr><tr><td><strong>expires</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда истекает срок действия буста</td></tr><tr><td><strong>used_gift_slug</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string">string</a></td><td>Созданный код подарочной подписки Telegram Premium; задаётся только в том случае, если задано поле <code>gift</code> или <code>giveaway</code> И при этом код предназначен текущему авторизованному пользователю либо уже был активирован.</td></tr><tr><td><strong>multiplier</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/int">int</a></td><td>Если установлено, этот буст считается за <code>multiplier</code> бустов, иначе он считается за один буст.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/long">long</a></td><td>Количество Telegram Stars, распределённых между победителями розыгрыша.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Boost](/type/Boost/)
 
-## Related pages
+### Связанные страницы
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.
 
 #### [payments.applyGiftCode](/method/payments.applyGiftCode/)
 
-Apply a [Telegram Premium giftcode »](https://core.telegram.org/api/giveaways)
+Активировать [подарочный код Telegram Premium »](/api/giveaways/)
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.

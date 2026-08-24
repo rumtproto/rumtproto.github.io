@@ -1,30 +1,24 @@
 ---
-title: "pageBlockCollage (конструктор)"
+title: "pageBlockCollage"
 original: "https://core.telegram.org/constructor/pageBlockCollage"
 section: ref
 kind: constructor
+description: "Коллаж из медиа"
 layout: layout.njk
 ---
 
 # pageBlockCollage
 
-*Конструктор из схемы TL.*
-
-> Collage of media
-
-## Определение TL
+Коллаж из медиа
 
 ```
 pageBlockCollage#65a0fa4d items:Vector<PageBlock> caption:PageCaption = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| items | [Vector](https://core.telegram.org/type/Vector%20t)<[PageBlock](/type/PageBlock/)> | Media elements |
-| caption | [PageCaption](/type/PageCaption/) | Caption |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>items</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/PageBlock">PageBlock</a>&gt;</td><td>Медиаэлементы</td></tr><tr><td><strong>caption</strong></td><td style="text-align: center;"><a href="/type/PageCaption">PageCaption</a></td><td>Подпись</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

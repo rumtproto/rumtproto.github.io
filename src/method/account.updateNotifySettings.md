@@ -1,18 +1,15 @@
 ---
-title: "account.updateNotifySettings (метод)"
+title: "account.updateNotifySettings"
 original: "https://core.telegram.org/method/account.updateNotifySettings"
 section: ref
 kind: method
+description: "Изменяет настройки уведомлений для заданного пользователя или группы, для всех пользователей или всех групп."
 layout: layout.njk
 ---
 
 # account.updateNotifySettings
 
-*Метод из схемы TL.*
-
-> Edits notification settings from a given user/group, from all users/all groups.
-
-## Определение TL
+Изменяет настройки уведомлений для заданного пользователя или группы, для всех пользователей или всех групп.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,25 +18,16 @@ boolTrue#997275b5 = Bool;
 account.updateNotifySettings#84be5b93 peer:InputNotifyPeer settings:InputPeerNotifySettings = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputNotifyPeer](/type/InputNotifyPeer/) | Notification source |
-| settings | [InputPeerNotifySettings](/type/InputPeerNotifySettings/) | Notification settings |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputNotifyPeer">InputNotifyPeer</a></td><td>[@term:peer] Источник уведомления</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/InputPeerNotifySettings">InputPeerNotifySettings</a></td><td>Настройки уведомлений</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | SETTINGS_INVALID | Invalid settings were provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>SETTINGS_INVALID</td><td>Указаны недопустимые настройки.</td></tr></tbody></table>

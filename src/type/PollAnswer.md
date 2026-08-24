@@ -1,32 +1,26 @@
 ---
-title: "PollAnswer (тип)"
+title: "PollAnswer"
 original: "https://core.telegram.org/type/PollAnswer"
 section: ref
 kind: type
+description: "Обозначает один из вариантов ответа в опросе."
 layout: layout.njk
 ---
 
 # PollAnswer
 
-*Тип из схемы TL.*
-
-> Indicates a possible answer to a [poll](/type/Poll/).
-
-## Определение TL
+Обозначает один из вариантов ответа в [опросе](/type/Poll/).
 
 ```
 pollAnswer#ff16e2ca text:TextWithEntities option:bytes = PollAnswer;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [pollAnswer](/constructor/pollAnswer/) | A possible answer of a poll |
-| [inputPollAnswer](https://core.telegram.org/constructor/inputPollAnswer) | An answer option to add to an [open-answer poll »](https://core.telegram.org/api/poll#open-answer-polls) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/pollAnswer">pollAnswer</a></td><td>Возможный вариант ответа в опросе</td></tr><tr><td><a href="/constructor/inputPollAnswer">inputPollAnswer</a></td><td>Вариант ответа, добавляемый в <a href="/api/poll#open-answer-polls">опрос с открытым ответом »</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [Poll](/type/Poll/)
 
-Indicates a poll message
+Обозначает сообщение с опросом

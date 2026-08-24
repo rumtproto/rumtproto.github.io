@@ -1,35 +1,30 @@
 ---
-title: "messages.checkedHistoryImportPeer (конструктор)"
+title: "messages.checkedHistoryImportPeer"
 original: "https://core.telegram.org/constructor/messages.checkedHistoryImportPeer"
 section: ref
 kind: constructor
+description: "Содержит текст подтверждения, который следует показать пользователю при импорте истории переписки, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # messages.checkedHistoryImportPeer
 
-*Конструктор из схемы TL.*
-
-> Contains a confirmation text to be shown to the user, upon [importing chat history, click here for more info »](https://core.telegram.org/api/import).
-
-## Определение TL
+Содержит текст подтверждения, который следует показать пользователю при [импорте истории переписки, подробнее см. здесь »](/api/import/).
 
 ```
 messages.checkedHistoryImportPeer#a24de717 confirm_text:string = messages.CheckedHistoryImportPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| confirm_text | [string](/type/string/) | A confirmation text to be shown to the user, upon [importing chat history »](https://core.telegram.org/api/import). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>confirm_text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст подтверждения, который следует показать пользователю при <a href="/api/import">импорте истории переписки »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.CheckedHistoryImportPeer](/type/messages.CheckedHistoryImportPeer/)
 
-## Related pages
+### Связанные страницы
 
-#### [Imported messages](https://core.telegram.org/api/import)
+#### [Импортированные сообщения](/api/import/)
 
-Telegram allows importing messages and media from foreign chat apps.
+Telegram позволяет импортировать сообщения и медиа из сторонних мессенджеров.

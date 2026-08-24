@@ -1,35 +1,30 @@
 ---
-title: "SecureData (тип)"
+title: "SecureData"
 original: "https://core.telegram.org/type/SecureData"
 section: ref
 kind: type
+description: "Защищённые данные passport; подробнее см. документацию по Telegram Passport »"
 layout: layout.njk
 ---
 
 # SecureData
 
-*Тип из схемы TL.*
-
-> Secure [passport](https://core.telegram.org/passport) data, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#securedata)
-
-## Определение TL
+Защищённые данные [passport](https://core.telegram.org/passport); подробнее [см. документацию по Telegram Passport »](https://core.telegram.org/passport/encryption#securedata)
 
 ```
 secureData#8aeabec3 data:bytes data_hash:bytes secret:bytes = SecureData;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [secureData](/constructor/secureData/) | Secure [passport](https://core.telegram.org/passport) data, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#securedata) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/secureData">secureData</a></td><td>Защищённые данные <a href="/passport">passport</a>; подробнее <a href="/passport/encryption#securedata">см. документацию по Passport »</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport: детали шифрования](https://core.telegram.org/passport/encryption)
 
-How Telegram Passport data is stored and encrypted end-to-end.
+Как данные Telegram Passport хранятся и шифруются сквозным шифрованием.

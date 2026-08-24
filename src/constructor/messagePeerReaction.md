@@ -1,51 +1,40 @@
 ---
-title: "messagePeerReaction (конструктор)"
+title: "messagePeerReaction"
 original: "https://core.telegram.org/constructor/messagePeerReaction"
 section: ref
 kind: constructor
+description: "Как определённый пир отреагировал на сообщение"
 layout: layout.njk
 ---
 
 # messagePeerReaction
 
-*Конструктор из схемы TL.*
-
-> How a certain peer reacted to the message
-
-## Определение TL
+Как определённый пир отреагировал на сообщение
 
 ```
 messagePeerReaction#8c79b63c flags:# big:flags.0?true unread:flags.1?true my:flags.2?true peer_id:Peer date:int reaction:Reaction = MessagePeerReaction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| big | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the specified [message reaction »](https://core.telegram.org/api/reactions) should elicit a bigger and longer reaction |
-| unread | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the reaction wasn't yet marked as read by the current user |
-| my | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Starting from layer 159, [messages.sendReaction](/method/messages.sendReaction/) will send reactions from the peer (user or channel) specified using [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/). If set, this flag indicates that this reaction was sent by us, even if the peer doesn't point to the current account. |
-| peer_id | [Peer](/type/Peer/) | Peer that reacted to the message |
-| date | [int](/type/int/) | When was this reaction added |
-| reaction | [Reaction](/type/Reaction/) | Reaction emoji |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>big</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Должна ли указанная <a href="/api/reactions">реакция на сообщение »</a> вызывать более крупную и длительную анимацию</td></tr><tr><td><strong>unread</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Не была ли реакция ещё отмечена текущим пользователем как прочитанная</td></tr><tr><td><strong>my</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>[@term:peer] Начиная со слоя 159 метод <a href="/method/messages.sendReaction">messages.sendReaction</a> отправляет реакции от имени пира (пользователя или канала), указанного через <a href="/method/messages.saveDefaultSendAs">messages.saveDefaultSendAs</a>.<br>Если флаг установлен, он означает, что эта реакция отправлена нами, даже если <code>peer</code> не указывает на текущую учётную запись.</td></tr><tr><td><strong>peer_id</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>Пир, отреагировавший на сообщение</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда была добавлена эта реакция</td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/type/Reaction">Reaction</a></td><td>Эмодзи реакции</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessagePeerReaction](/type/MessagePeerReaction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.
 
 #### [messages.sendReaction](/method/messages.sendReaction/)
 
-React to message.
+Поставить реакцию на сообщение.
 
-Starting from layer 159, the reaction will be sent from the peer specified using [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/).
+Начиная со слоя 159 реакция отправляется от имени пира, указанного через [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/).
 
 #### [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/)
 
-Change the default peer that should be used when sending messages, reactions, poll votes to a specific group
+Изменить пир по умолчанию, используемый при отправке сообщений, реакций и голосов в опросах в определённую группу

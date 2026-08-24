@@ -1,18 +1,15 @@
 ---
-title: "account.getWebAuthorizations (метод)"
+title: "account.getWebAuthorizations"
 original: "https://core.telegram.org/method/account.getWebAuthorizations"
 section: ref
 kind: method
+description: "Получить авторизации через веб-виджет входа"
 layout: layout.njk
 ---
 
 # account.getWebAuthorizations
 
-*Метод из схемы TL.*
-
-> Get web [login widget](https://core.telegram.org/widgets/login) authorizations
-
-## Определение TL
+Получить авторизации через веб-[виджет входа](https://core.telegram.org/widgets/login)
 
 ```
 account.webAuthorizations#ed56c9fc authorizations:Vector<WebAuthorization> users:Vector<User> = account.WebAuthorizations;
@@ -20,16 +17,16 @@ account.webAuthorizations#ed56c9fc authorizations:Vector<WebAuthorization> users
 account.getWebAuthorizations#182e6d6f = account.WebAuthorizations;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [account.WebAuthorizations](/type/account.WebAuthorizations/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Login Widget](https://core.telegram.org/widgets/login)
+#### [Виджет входа через Telegram](https://core.telegram.org/widgets/login)

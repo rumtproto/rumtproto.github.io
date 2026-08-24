@@ -1,37 +1,24 @@
 ---
-title: "pageTableCell (конструктор)"
+title: "pageTableCell"
 original: "https://core.telegram.org/constructor/pageTableCell"
 section: ref
 kind: constructor
+description: "Ячейка таблицы"
 layout: layout.njk
 ---
 
 # pageTableCell
 
-*Конструктор из схемы TL.*
-
-> Table cell
-
-## Определение TL
+Ячейка таблицы
 
 ```
 pageTableCell#34566b6a flags:# header:flags.0?true align_center:flags.3?true align_right:flags.4?true valign_middle:flags.5?true valign_bottom:flags.6?true text:flags.7?RichText colspan:flags.1?int rowspan:flags.2?int = PageTableCell;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| header | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Is this element part of the column header |
-| align_center | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Horizontally centered block |
-| align_right | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Right-aligned block |
-| valign_middle | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Vertically centered block |
-| valign_bottom | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | Block vertically-aligned to the bottom |
-| text | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[RichText](/type/RichText/) | Content |
-| colspan | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | For how many columns should this cell extend |
-| rowspan | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | For how many rows should this cell extend |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>header</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Является ли этот элемент частью заголовка столбца</td></tr><tr><td><strong>align_center</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Блок, выровненный по центру по горизонтали</td></tr><tr><td><strong>align_right</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Блок с выравниванием по правому краю</td></tr><tr><td><strong>valign_middle</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Блок, выровненный по вертикали по центру</td></tr><tr><td><strong>valign_bottom</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Блок, выровненный по нижнему краю</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/RichText">RichText</a></td><td>Содержимое</td></tr><tr><td><strong>colspan</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>На сколько столбцов должна распространяться эта ячейка</td></tr><tr><td><strong>rowspan</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>На сколько строк должна распространяться эта ячейка</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageTableCell](/type/PageTableCell/)

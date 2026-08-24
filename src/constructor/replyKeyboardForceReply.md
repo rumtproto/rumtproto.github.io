@@ -1,32 +1,24 @@
 ---
-title: "replyKeyboardForceReply (конструктор)"
+title: "replyKeyboardForceReply"
 original: "https://core.telegram.org/constructor/replyKeyboardForceReply"
 section: ref
 kind: constructor
+description: "Заставить пользователя отправить ответ"
 layout: layout.njk
 ---
 
 # replyKeyboardForceReply
 
-*Конструктор из схемы TL.*
-
-> Force the user to send a reply
-
-## Определение TL
+Заставить пользователя отправить ответ
 
 ```
 replyKeyboardForceReply#86b40b08 flags:# single_use:flags.1?true selective:flags.2?true placeholder:flags.3?string = ReplyMarkup;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| single_use | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Requests clients to hide the keyboard as soon as it's been used. The keyboard will still be available, but clients will automatically display the usual letter-keyboard in the chat – the user can press a special button in the input field to see the custom keyboard again. |
-| selective | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message. Example: A user requests to change the bot's language, bot replies to the request with a keyboard to select the new language. Other users in the group don't see the keyboard. |
-| placeholder | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[string](/type/string/) | The placeholder to be shown in the input field when the keyboard is active; 1-64 characters. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>single_use</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Требует от клиентов скрыть клавиатуру сразу после её использования. Клавиатура останется доступной, но клиенты автоматически покажут в чате обычную буквенную клавиатуру — пользователь может нажать специальную кнопку в поле ввода, чтобы снова увидеть пользовательскую клавиатуру.</td></tr><tr><td><strong>selective</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Используйте этот параметр, если хотите показать клавиатуру только определённым пользователям. Адресаты: 1) пользователи, упомянутые через @ в тексте объекта Message; 2) если сообщение бота является ответом (задано reply_to_message_id) — отправитель исходного сообщения.<br>Пример: пользователь просит сменить язык бота, бот отвечает на запрос клавиатурой для выбора нового языка. Остальные участники группы клавиатуру не видят.</td></tr><tr><td><strong>placeholder</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string">string</a></td><td>Замещающий текст, отображаемый в поле ввода при активной клавиатуре; 1–64 символа.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ReplyMarkup](/type/ReplyMarkup/)

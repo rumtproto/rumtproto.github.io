@@ -1,45 +1,34 @@
 ---
-title: "storyViews (конструктор)"
+title: "storyViews"
 original: "https://core.telegram.org/constructor/storyViews"
 section: ref
 kind: constructor
+description: "Сводные сведения о просмотрах и реакциях истории."
 layout: layout.njk
 ---
 
 # storyViews
 
-*Конструктор из схемы TL.*
-
-> Aggregated view and reaction information of a [story](https://core.telegram.org/api/stories).
-
-## Определение TL
+Сводные сведения о просмотрах и реакциях [истории](/api/stories/).
 
 ```
 storyViews#8d595cd6 flags:# has_viewers:flags.1?true views_count:int forwards_count:flags.2?int reactions:flags.3?Vector<ReactionCount> reactions_count:flags.4?int recent_viewers:flags.0?Vector<long> = StoryViews;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| has_viewers | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, indicates that the viewers list is currently viewable, and was not yet deleted because the story has expired while the user didn't have a [Premium](https://core.telegram.org/api/premium) account. |
-| views_count | [int](/type/int/) | View counter of the story |
-| forwards_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Forward counter of the story |
-| reactions | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[ReactionCount](/type/ReactionCount/)> | All reactions sent to this story |
-| reactions_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[int](/type/int/) | Number of reactions added to the story |
-| recent_viewers | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | User IDs of some recent viewers of the story |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>has_viewers</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, указывает, что список просмотревших сейчас доступен для просмотра и ещё не был удалён из-за того, что история истекла, пока у пользователя не было аккаунта <a href="/api/premium">Premium</a>.</td></tr><tr><td><strong>views_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Счётчик просмотров истории</td></tr><tr><td><strong>forwards_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Счётчик пересылок истории</td></tr><tr><td><strong>reactions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ReactionCount">ReactionCount</a>&gt;</td><td>Все реакции, отправленные на эту историю</td></tr><tr><td><strong>reactions_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int">int</a></td><td>Количество реакций, добавленных к истории</td></tr><tr><td><strong>recent_viewers</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Идентификаторы пользователей из числа недавних зрителей истории</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StoryViews](/type/StoryViews/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

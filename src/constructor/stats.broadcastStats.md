@@ -1,56 +1,30 @@
 ---
-title: "stats.broadcastStats (конструктор)"
+title: "stats.broadcastStats"
 original: "https://core.telegram.org/constructor/stats.broadcastStats"
 section: ref
 kind: constructor
+description: "Статистика канала."
 layout: layout.njk
 ---
 
 # stats.broadcastStats
 
-*Конструктор из схемы TL.*
-
-> [Channel statistics](https://core.telegram.org/api/stats).
-
-## Определение TL
+[Статистика канала](/api/stats/).
 
 ```
 stats.broadcastStats#396ca5fc period:StatsDateRangeDays followers:StatsAbsValueAndPrev views_per_post:StatsAbsValueAndPrev shares_per_post:StatsAbsValueAndPrev reactions_per_post:StatsAbsValueAndPrev views_per_story:StatsAbsValueAndPrev shares_per_story:StatsAbsValueAndPrev reactions_per_story:StatsAbsValueAndPrev enabled_notifications:StatsPercentValue growth_graph:StatsGraph followers_graph:StatsGraph mute_graph:StatsGraph top_hours_graph:StatsGraph interactions_graph:StatsGraph iv_interactions_graph:StatsGraph views_by_source_graph:StatsGraph new_followers_by_source_graph:StatsGraph languages_graph:StatsGraph reactions_by_emotion_graph:StatsGraph story_interactions_graph:StatsGraph story_reactions_by_emotion_graph:StatsGraph recent_posts_interactions:Vector<PostInteractionCounters> = stats.BroadcastStats;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| period | [StatsDateRangeDays](/type/StatsDateRangeDays/) | Period in consideration |
-| followers | [StatsAbsValueAndPrev](/type/StatsAbsValueAndPrev/) | Follower count change for period in consideration |
-| views_per_post | [StatsAbsValueAndPrev](/type/StatsAbsValueAndPrev/) | total_viewcount/postcount, for posts posted during the period in consideration. Note that in this case, current refers to the period in consideration (min_date till max_date), and prev refers to the previous period ((min_date - (max_date - min_date)) till min_date). |
-| shares_per_post | [StatsAbsValueAndPrev](/type/StatsAbsValueAndPrev/) | total_sharecount/postcount, for posts posted during the period in consideration. Note that in this case, current refers to the period in consideration (min_date till max_date), and prev refers to the previous period ((min_date - (max_date - min_date)) till min_date) |
-| reactions_per_post | [StatsAbsValueAndPrev](/type/StatsAbsValueAndPrev/) | total_reactions/postcount, for posts posted during the period in consideration. Note that in this case, current refers to the period in consideration (min_date till max_date), and prev refers to the previous period ((min_date - (max_date - min_date)) till min_date) |
-| views_per_story | [StatsAbsValueAndPrev](/type/StatsAbsValueAndPrev/) | total_views/storycount, for posts posted during the period in consideration. Note that in this case, current refers to the period in consideration (min_date till max_date), and prev refers to the previous period ((min_date - (max_date - min_date)) till min_date) |
-| shares_per_story | [StatsAbsValueAndPrev](/type/StatsAbsValueAndPrev/) | total_shares/storycount, for posts posted during the period in consideration. Note that in this case, current refers to the period in consideration (min_date till max_date), and prev refers to the previous period ((min_date - (max_date - min_date)) till min_date) |
-| reactions_per_story | [StatsAbsValueAndPrev](/type/StatsAbsValueAndPrev/) | total_reactions/storycount, for posts posted during the period in consideration. Note that in this case, current refers to the period in consideration (min_date till max_date), and prev refers to the previous period ((min_date - (max_date - min_date)) till min_date) |
-| enabled_notifications | [StatsPercentValue](/type/StatsPercentValue/) | Percentage of subscribers with enabled notifications |
-| growth_graph | [StatsGraph](/type/StatsGraph/) | Channel growth graph (absolute subscriber count) |
-| followers_graph | [StatsGraph](/type/StatsGraph/) | Followers growth graph (relative subscriber count) |
-| mute_graph | [StatsGraph](/type/StatsGraph/) | Muted users graph (relative) |
-| top_hours_graph | [StatsGraph](/type/StatsGraph/) | Views per hour graph (absolute) |
-| interactions_graph | [StatsGraph](/type/StatsGraph/) | Interactions graph (absolute) |
-| iv_interactions_graph | [StatsGraph](/type/StatsGraph/) | IV interactions graph (absolute) |
-| views_by_source_graph | [StatsGraph](/type/StatsGraph/) | Views by source graph (absolute) |
-| new_followers_by_source_graph | [StatsGraph](/type/StatsGraph/) | New followers by source graph (absolute) |
-| languages_graph | [StatsGraph](/type/StatsGraph/) | Subscriber language graph (pie chart) |
-| reactions_by_emotion_graph | [StatsGraph](/type/StatsGraph/) | A graph containing the number of reactions on posts categorized by emotion |
-| story_interactions_graph | [StatsGraph](/type/StatsGraph/) | A graph containing the number of story views and shares |
-| story_reactions_by_emotion_graph | [StatsGraph](/type/StatsGraph/) | A graph containing the number of reactions on stories categorized by emotion |
-| recent_posts_interactions | [Vector](https://core.telegram.org/type/Vector%20t)<[PostInteractionCounters](/type/PostInteractionCounters/)> | Detailed statistics about number of views and shares of recently sent messages and stories |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/type/StatsDateRangeDays">StatsDateRangeDays</a></td><td>Рассматриваемый период</td></tr><tr><td><strong>followers</strong></td><td style="text-align: center;"><a href="/type/StatsAbsValueAndPrev">StatsAbsValueAndPrev</a></td><td>Изменение числа подписчиков за рассматриваемый период</td></tr><tr><td><strong>views_per_post</strong></td><td style="text-align: center;"><a href="/type/StatsAbsValueAndPrev">StatsAbsValueAndPrev</a></td><td><code>total_viewcount/postcount</code> для публикаций, размещённых за рассматриваемый период.<br>Обратите внимание, что в этом случае <code>current</code> относится к рассматриваемому периоду <code>period</code> (с <code>min_date</code> по <code>max_date</code>), а <code>prev</code> — к предыдущему периоду (с <code>(min_date - (max_date - min_date))</code> по <code>min_date</code>).</td></tr><tr><td><strong>shares_per_post</strong></td><td style="text-align: center;"><a href="/type/StatsAbsValueAndPrev">StatsAbsValueAndPrev</a></td><td><code>total_sharecount/postcount</code> для публикаций, размещённых за рассматриваемый период.<br>Обратите внимание, что в этом случае <code>current</code> относится к рассматриваемому периоду <code>period</code> (с <code>min_date</code> по <code>max_date</code>), а <code>prev</code> — к предыдущему периоду (с <code>(min_date - (max_date - min_date))</code> по <code>min_date</code>)</td></tr><tr><td><strong>reactions_per_post</strong></td><td style="text-align: center;"><a href="/type/StatsAbsValueAndPrev">StatsAbsValueAndPrev</a></td><td><code>total_reactions/postcount</code> для публикаций, размещённых за рассматриваемый период.<br>Обратите внимание, что в этом случае <code>current</code> относится к рассматриваемому периоду <code>period</code> (с <code>min_date</code> по <code>max_date</code>), а <code>prev</code> — к предыдущему периоду (с <code>(min_date - (max_date - min_date))</code> по <code>min_date</code>)</td></tr><tr><td><strong>views_per_story</strong></td><td style="text-align: center;"><a href="/type/StatsAbsValueAndPrev">StatsAbsValueAndPrev</a></td><td><code>total_views/storycount</code> для публикаций, размещённых за рассматриваемый период.<br>Обратите внимание, что в этом случае <code>current</code> относится к рассматриваемому периоду <code>period</code> (с <code>min_date</code> по <code>max_date</code>), а <code>prev</code> — к предыдущему периоду (с <code>(min_date - (max_date - min_date))</code> по <code>min_date</code>)</td></tr><tr><td><strong>shares_per_story</strong></td><td style="text-align: center;"><a href="/type/StatsAbsValueAndPrev">StatsAbsValueAndPrev</a></td><td><code>total_shares/storycount</code> для публикаций, размещённых за рассматриваемый период.<br>Обратите внимание, что в этом случае <code>current</code> относится к рассматриваемому периоду <code>period</code> (с <code>min_date</code> по <code>max_date</code>), а <code>prev</code> — к предыдущему периоду (с <code>(min_date - (max_date - min_date))</code> по <code>min_date</code>)</td></tr><tr><td><strong>reactions_per_story</strong></td><td style="text-align: center;"><a href="/type/StatsAbsValueAndPrev">StatsAbsValueAndPrev</a></td><td><code>total_reactions/storycount</code> для публикаций, размещённых за рассматриваемый период.<br>Обратите внимание, что в этом случае <code>current</code> относится к рассматриваемому периоду <code>period</code> (с <code>min_date</code> по <code>max_date</code>), а <code>prev</code> — к предыдущему периоду (с <code>(min_date - (max_date - min_date))</code> по <code>min_date</code>)</td></tr><tr><td><strong>enabled_notifications</strong></td><td style="text-align: center;"><a href="/type/StatsPercentValue">StatsPercentValue</a></td><td>Доля подписчиков с включёнными уведомлениями, в процентах</td></tr><tr><td><strong>growth_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График роста канала (абсолютное число подписчиков)</td></tr><tr><td><strong>followers_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График роста числа подписчиков (относительное число подписчиков)</td></tr><tr><td><strong>mute_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График пользователей, отключивших уведомления (относительный)</td></tr><tr><td><strong>top_hours_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График просмотров по часам (абсолютные значения)</td></tr><tr><td><strong>interactions_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График взаимодействий (абсолютные значения)</td></tr><tr><td><strong>iv_interactions_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График взаимодействий с Instant View (абсолютные значения)</td></tr><tr><td><strong>views_by_source_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График просмотров по источникам (абсолютные значения)</td></tr><tr><td><strong>new_followers_by_source_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График новых подписчиков по источникам (абсолютные значения)</td></tr><tr><td><strong>languages_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График языков подписчиков (круговая диаграмма)</td></tr><tr><td><strong>reactions_by_emotion_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График с количеством реакций на посты, сгруппированных по эмоциям</td></tr><tr><td><strong>story_interactions_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График количества просмотров и репостов историй</td></tr><tr><td><strong>story_reactions_by_emotion_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График количества реакций на истории с разбивкой по эмоциям</td></tr><tr><td><strong>recent_posts_interactions</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/PostInteractionCounters">PostInteractionCounters</a>&gt;</td><td>Подробная статистика по количеству просмотров и репостов недавно отправленных сообщений и историй</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [stats.BroadcastStats](/type/stats.BroadcastStats/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channel statistics](https://core.telegram.org/api/stats)
+#### [Статистика каналов](/api/stats/)
 
-Telegram offers detailed channel statistics for channels and supergroups.
+Telegram предоставляет подробную статистику для каналов и супергрупп.

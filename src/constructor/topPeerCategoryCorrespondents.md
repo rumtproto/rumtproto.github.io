@@ -1,27 +1,24 @@
 ---
-title: "topPeerCategoryCorrespondents (конструктор)"
+title: "topPeerCategoryCorrespondents"
 original: "https://core.telegram.org/constructor/topPeerCategoryCorrespondents"
 section: ref
 kind: constructor
+description: "Пользователи, с которыми мы переписываемся чаще всего"
 layout: layout.njk
 ---
 
 # topPeerCategoryCorrespondents
 
-*Конструктор из схемы TL.*
-
-> Users we've chatted most frequently with
-
-## Определение TL
+Пользователи, с которыми мы переписываемся чаще всего
 
 ```
 topPeerCategoryCorrespondents#637b7ed = TopPeerCategory;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [TopPeerCategory](/type/TopPeerCategory/)

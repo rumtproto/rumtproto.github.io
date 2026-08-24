@@ -1,45 +1,34 @@
 ---
-title: "auth.sentCodeTypeFirebaseSms (конструктор)"
+title: "auth.sentCodeTypeFirebaseSms"
 original: "https://core.telegram.org/constructor/auth.sentCodeTypeFirebaseSms"
 section: ref
 kind: constructor
+description: "Код аутентификации должен быть доставлен по SMS после аттестации Firebase, как описано в документации по авторизации »."
 layout: layout.njk
 ---
 
 # auth.sentCodeTypeFirebaseSms
 
-*Конструктор из схемы TL.*
-
-> An authentication code should be delivered via SMS after Firebase attestation, as described in the [auth documentation »](/api/auth/).
-
-## Определение TL
+Код аутентификации должен быть доставлен по SMS после аттестации Firebase, как описано в [документации по авторизации »](/api/auth/).
 
 ```
 auth.sentCodeTypeFirebaseSms#9fd736 flags:# nonce:flags.0?bytes play_integrity_project_id:flags.2?long play_integrity_nonce:flags.2?bytes receipt:flags.1?string push_timeout:flags.1?int length:int = auth.SentCodeType;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| nonce | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[bytes](/type/bytes/) | On Android, the nonce to be used as described in the [auth documentation »](/api/auth/) |
-| play_integrity_project_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[long](/type/long/) | Google Play Integrity project ID |
-| play_integrity_nonce | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[bytes](/type/bytes/) | Play Integrity API nonce |
-| receipt | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | On iOS, must be compared with the receipt extracted from the received push notification. |
-| push_timeout | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | On iOS: if a push notification with the ios_push_secret isn't received within push_timeout seconds, the next_type authentication method must be used, with [auth.resendCode](/method/auth.resendCode/). |
-| length | [int](/type/int/) | Length of the code that will be delivered. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>nonce</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/bytes">bytes</a></td><td>На Android — одноразовое значение (nonce), которое следует использовать так, как описано в <a href="/api/auth">документации по авторизации »</a></td></tr><tr><td><strong>play_integrity_project_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/long">long</a></td><td>Идентификатор проекта Google Play Integrity</td></tr><tr><td><strong>play_integrity_nonce</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/bytes">bytes</a></td><td>Одноразовое значение (nonce) для Play Integrity API</td></tr><tr><td><strong>receipt</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>На iOS должно сравниваться со значением <code>receipt</code>, извлечённым из полученного push-уведомления.</td></tr><tr><td><strong>push_timeout</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>На iOS: если push-уведомление с полем <code>ios_push_secret</code> не получено в течение <code>push_timeout</code> секунд, следует использовать метод аутентификации <code>next_type</code> с помощью <a href="/method/auth.resendCode">auth.resendCode</a>.</td></tr><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Длина кода, который будет доставлен.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [auth.SentCodeType](/type/auth.SentCodeType/)
 
-## Related pages
+### Связанные страницы
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.
 
 #### [auth.resendCode](/method/auth.resendCode/)
 
-Resend the login code via another medium, the phone code type is determined by the return value of the previous auth.sendCode/auth.resendCode: see [login](/api/auth/) for more info.
+Повторно отправить код входа другим способом; тип кода определяется значением, возвращённым предыдущим вызовом auth.sendCode/auth.resendCode: подробнее см. [вход](/api/auth/).

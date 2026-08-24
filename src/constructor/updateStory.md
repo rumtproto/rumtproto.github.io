@@ -1,30 +1,24 @@
 ---
-title: "updateStory (конструктор)"
+title: "updateStory"
 original: "https://core.telegram.org/constructor/updateStory"
 section: ref
 kind: constructor
+description: "Опубликована новая история."
 layout: layout.njk
 ---
 
 # updateStory
 
-*Конструктор из схемы TL.*
-
-> A new story was posted.
-
-## Определение TL
+Опубликована новая история.
 
 ```
 updateStory#75b3b798 peer:Peer story:StoryItem = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | ID of the poster. |
-| story | [StoryItem](/type/StoryItem/) | The story that was posted. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Идентификатор автора публикации.</td></tr><tr><td><strong>story</strong></td><td style="text-align: center;"><a href="/type/StoryItem">StoryItem</a></td><td>Опубликованная история.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

@@ -1,18 +1,15 @@
 ---
-title: "phone.discardGroupCall (метод)"
+title: "phone.discardGroupCall"
 original: "https://core.telegram.org/method/phone.discardGroupCall"
 section: ref
 kind: method
+description: "Завершить групповой звонок, закрыв комнату для всех участников. Этот метод можно использовать с групповыми звонками любого типа, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # phone.discardGroupCall
 
-*Метод из схемы TL.*
-
-> Terminate a group call, ending the room for all participants. This method can be used with all group call types, see [here »](https://core.telegram.org/api/group-calls#managing-an-active-group-call) for more info.
-
-## Определение TL
+Завершить групповой звонок, закрыв комнату для всех участников. Этот метод можно использовать с групповыми звонками любого типа, подробнее см. [здесь »](/api/group-calls/#managing-an-active-group-call).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,28 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.discardGroupCall#7a777135 call:InputGroupCall = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | The group call to terminate |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Групповой звонок, который нужно завершить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_ALREADY_DISCARDED | The group call was already discarded. |
-| 403 | GROUPCALL_FORBIDDEN | The specified group call cannot be used in this context. |
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_ALREADY_DISCARDED</td><td>Групповой звонок уже был завершён.</td></tr><tr><td>403</td><td>GROUPCALL_FORBIDDEN</td><td>Указанный групповой звонок нельзя использовать в этом контексте.</td></tr><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

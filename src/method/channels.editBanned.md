@@ -1,18 +1,15 @@
 ---
-title: "channels.editBanned (метод)"
+title: "channels.editBanned"
 original: "https://core.telegram.org/method/channels.editBanned"
 section: ref
 kind: method
+description: "Заблокировать, разблокировать или исключить пользователя в супергруппе или канале."
 layout: layout.njk
 ---
 
 # channels.editBanned
 
-*Метод из схемы TL.*
-
-> Ban/unban/kick a user in a [supergroup/channel](https://core.telegram.org/api/channel).
-
-## Определение TL
+Заблокировать, разблокировать или исключить пользователя в [супергруппе или канале](/api/channel/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,38 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.editBanned#96e6cd81 channel:InputChannel participant:InputPeer banned_rights:ChatBannedRights = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The [supergroup/channel](https://core.telegram.org/api/channel). |
-| participant | [InputPeer](/type/InputPeer/) | Participant to ban |
-| banned_rights | [ChatBannedRights](/type/ChatBannedRights/) | The banned rights |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Супергруппа или канал</a>.</td></tr><tr><td><strong>participant</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Участник, которого нужно заблокировать</td></tr><tr><td><strong>banned_rights</strong></td><td style="text-align: center;"><a href="/type/ChatBannedRights">ChatBannedRights</a></td><td>Права заблокированного пользователя</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 406 | BANNED_RIGHTS_INVALID | You provided some invalid flags in the banned rights. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 406 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 403 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PARTICIPANT_ID_INVALID | The specified participant ID is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | USER_ADMIN_INVALID | You're not an admin. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>406</td><td>BANNED_RIGHTS_INVALID</td><td>Вы указали недопустимые флаги в правах заблокированного пользователя.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>406</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>403</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PARTICIPANT_ID_INVALID</td><td>Указанный идентификатор участника недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>USER_ADMIN_INVALID</td><td>Вы не администратор.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

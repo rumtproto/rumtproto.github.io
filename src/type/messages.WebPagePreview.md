@@ -1,18 +1,15 @@
 ---
-title: "messages.WebPagePreview (тип)"
+title: "messages.WebPagePreview"
 original: "https://core.telegram.org/type/messages.WebPagePreview"
 section: ref
 kind: type
+description: "Представляет предпросмотр веб-страницы."
 layout: layout.njk
 ---
 
 # messages.WebPagePreview
 
-*Тип из схемы TL.*
-
-> Represents a webpage preview.
-
-## Определение TL
+Представляет предпросмотр веб-страницы.
 
 ```
 messages.webPagePreview#8c9a88ac media:MessageMedia chats:Vector<Chat> users:Vector<User> = messages.WebPagePreview;
@@ -22,14 +19,10 @@ messages.webPagePreview#8c9a88ac media:MessageMedia chats:Vector<Chat> users:Vec
 messages.getWebPagePreview#570d6f6f flags:# message:string entities:flags.3?Vector<MessageEntity> = messages.WebPagePreview;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.webPagePreview](/constructor/messages.webPagePreview/) | Represents a webpage preview. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.webPagePreview">messages.webPagePreview</a></td><td>Представляет предпросмотр веб-страницы.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getWebPagePreview](/method/messages.getWebPagePreview/) | Get preview of webpage |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getWebPagePreview">messages.getWebPagePreview</a></td><td>Получить предпросмотр веб-страницы</td></tr></tbody></table>

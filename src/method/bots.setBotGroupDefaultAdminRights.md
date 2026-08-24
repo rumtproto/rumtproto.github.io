@@ -1,18 +1,15 @@
 ---
-title: "bots.setBotGroupDefaultAdminRights (метод)"
+title: "bots.setBotGroupDefaultAdminRights"
 original: "https://core.telegram.org/method/bots.setBotGroupDefaultAdminRights"
 section: ref
 kind: method
+description: "Задать рекомендуемые права администратора по умолчанию для ботов, добавляемых администраторами в группы; подробнее о том, как их обрабатывать »."
 layout: layout.njk
 ---
 
 # bots.setBotGroupDefaultAdminRights
 
-*Метод из схемы TL.*
-
-> Set the default [suggested admin rights](https://core.telegram.org/api/rights#suggested-bot-rights) for bots being added as admins to groups, see [here for more info on how to handle them »](https://core.telegram.org/api/rights#suggested-bot-rights).
-
-## Определение TL
+Задать [рекомендуемые права администратора](/api/rights/#suggested-bot-rights) по умолчанию для ботов, добавляемых администраторами в группы; [подробнее о том, как их обрабатывать »](/api/rights/#suggested-bot-rights).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,27 +18,22 @@ boolTrue#997275b5 = Bool;
 bots.setBotGroupDefaultAdminRights#925ec9ea admin_rights:ChatAdminRights = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| admin_rights | [ChatAdminRights](/type/ChatAdminRights/) | Admin rights |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>admin_rights</strong></td><td style="text-align: center;"><a href="/type/ChatAdminRights">ChatAdminRights</a></td><td>Права администратора</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only bots can use this method
+### Этот метод доступен только ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | RIGHTS_NOT_MODIFIED | The new admin rights are equal to the old rights, no change was made. |
-| 400 | USER_BOT_REQUIRED | This method can only be called by a bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>RIGHTS_NOT_MODIFIED</td><td>Новые права администратора совпадают со старыми, изменений не произошло.</td></tr><tr><td>400</td><td>USER_BOT_REQUIRED</td><td>Этот метод может вызывать только бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Admin, banned, default rights](https://core.telegram.org/api/rights)
+#### [Права администраторов, ограничения и права по умолчанию](/api/rights/)
 
-How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.
+Как работать с правами администраторов, детальными ограничениями и общими правами в каналах, группах и супергруппах.

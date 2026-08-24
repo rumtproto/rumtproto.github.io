@@ -1,48 +1,38 @@
 ---
-title: "updateTranscribedAudio (конструктор)"
+title: "updateTranscribedAudio"
 original: "https://core.telegram.org/constructor/updateTranscribedAudio"
 section: ref
 kind: constructor
+description: "Обновилась ожидающая расшифровка голосового сообщения », запущенная методом messages.transcribeAudio."
 layout: layout.njk
 ---
 
 # updateTranscribedAudio
 
-*Конструктор из схемы TL.*
-
-> A pending [voice message transcription »](https://core.telegram.org/api/transcribe) initiated with [messages.transcribeAudio](/method/messages.transcribeAudio/) was updated.
-
-## Определение TL
+Обновилась ожидающая [расшифровка голосового сообщения »](/api/transcribe/), запущенная методом [messages.transcribeAudio](/method/messages.transcribeAudio/).
 
 ```
 updateTranscribedAudio#84cd5a flags:# pending:flags.0?true peer:Peer msg_id:int transcription_id:long text:string = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| pending | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether this transcription is still pending and further [updateTranscribedAudio](/constructor/updateTranscribedAudio/) about it will be sent in the future. |
-| peer | [Peer](/type/Peer/) | Peer of the transcribed message |
-| msg_id | [int](/type/int/) | Transcribed message ID |
-| transcription_id | [long](/type/long/) | Transcription ID |
-| text | [string](/type/string/) | Transcribed text |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>pending</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Не завершена ли ещё эта расшифровка и будут ли в дальнейшем присылаться обновления <a href="/constructor/updateTranscribedAudio">updateTranscribedAudio</a> о ней.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир расшифрованного сообщения</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор расшифрованного сообщения</td></tr><tr><td><strong>transcription_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор расшифровки</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Расшифрованный текст</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [updateTranscribedAudio](/constructor/updateTranscribedAudio/)
 
-A pending [voice message transcription »](https://core.telegram.org/api/transcribe) initiated with [messages.transcribeAudio](/method/messages.transcribeAudio/) was updated.
+Обновилась ожидающая [расшифровка голосового сообщения »](/api/transcribe/), запущенная методом [messages.transcribeAudio](/method/messages.transcribeAudio/).
 
-#### [Voice message transcription](https://core.telegram.org/api/transcribe)
+#### [Расшифровка голосовых сообщений](/api/transcribe/)
 
-How to transcribe voice messages.
+Как расшифровывать голосовые сообщения.
 
 #### [messages.transcribeAudio](/method/messages.transcribeAudio/)
 
-[Transcribe voice message](https://core.telegram.org/api/transcribe)
+[Расшифровка голосовых сообщений](/api/transcribe/)

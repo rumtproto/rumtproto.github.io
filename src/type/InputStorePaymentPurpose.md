@@ -1,18 +1,15 @@
 ---
-title: "InputStorePaymentPurpose (тип)"
+title: "InputStorePaymentPurpose"
 original: "https://core.telegram.org/type/InputStorePaymentPurpose"
 section: ref
 kind: type
+description: "Информация о покупке Telegram Premium"
 layout: layout.njk
 ---
 
 # InputStorePaymentPurpose
 
-*Тип из схемы TL.*
-
-> Info about a Telegram Premium purchase
-
-## Определение TL
+Информация о покупке Telegram Premium
 
 ```
 inputStorePaymentPremiumSubscription#a6751e66 flags:# restore:flags.0?true upgrade:flags.1?true = InputStorePaymentPurpose;
@@ -25,15 +22,6 @@ inputStorePaymentStarsGiveaway#751f08fa flags:# only_new_subscribers:flags.0?tru
 inputStorePaymentAuthCode#9bb2636d flags:# restore:flags.0?true phone_number:string phone_code_hash:string currency:string amount:long = InputStorePaymentPurpose;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputStorePaymentPremiumSubscription](/constructor/inputStorePaymentPremiumSubscription/) | Info about a Telegram Premium purchase |
-| [inputStorePaymentGiftPremium](/constructor/inputStorePaymentGiftPremium/) | Info about a gifted Telegram Premium purchase |
-| [inputStorePaymentPremiumGiftCode](/constructor/inputStorePaymentPremiumGiftCode/) | Used to gift [Telegram Premium](https://core.telegram.org/api/premium) subscriptions only to some specific subscribers of a channel/supergroup or to some of our contacts, see [here »](https://core.telegram.org/api/giveaways) for more info on giveaways and gifts. |
-| [inputStorePaymentPremiumGiveaway](/constructor/inputStorePaymentPremiumGiveaway/) | Used to pay for a [giveaway, see here »](https://core.telegram.org/api/giveaways) for more info. |
-| [inputStorePaymentStarsTopup](/constructor/inputStorePaymentStarsTopup/) | Used to top up the [Telegram Stars balance](https://core.telegram.org/api/stars) of the current account. |
-| [inputStorePaymentStarsGift](/constructor/inputStorePaymentStarsGift/) | Used to gift [Telegram Stars](https://core.telegram.org/api/stars) to a friend. |
-| [inputStorePaymentStarsGiveaway](/constructor/inputStorePaymentStarsGiveaway/) | Used to pay for a [star giveaway, see here »](https://core.telegram.org/api/giveaways#star-giveaways) for more info. |
-| [inputStorePaymentAuthCode](/constructor/inputStorePaymentAuthCode/) | Indicates payment for a login code. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputStorePaymentPremiumSubscription">inputStorePaymentPremiumSubscription</a></td><td>Информация о покупке Telegram Premium</td></tr><tr><td><a href="/constructor/inputStorePaymentGiftPremium">inputStorePaymentGiftPremium</a></td><td>Информация о покупке Telegram Premium в подарок</td></tr><tr><td><a href="/constructor/inputStorePaymentPremiumGiftCode">inputStorePaymentPremiumGiftCode</a></td><td>Используется, чтобы подарить подписки <a href="/api/premium">Telegram Premium</a> только определённым подписчикам канала или супергруппы либо некоторым из наших контактов; подробнее о розыгрышах и подарках см. <a href="/api/giveaways">здесь »</a>.</td></tr><tr><td><a href="/constructor/inputStorePaymentPremiumGiveaway">inputStorePaymentPremiumGiveaway</a></td><td>Используется для оплаты <a href="/api/giveaways">розыгрыша; подробнее см. здесь »</a>.</td></tr><tr><td><a href="/constructor/inputStorePaymentStarsTopup">inputStorePaymentStarsTopup</a></td><td>Используется для пополнения <a href="/api/stars">баланса Telegram Stars</a> текущего аккаунта.</td></tr><tr><td><a href="/constructor/inputStorePaymentStarsGift">inputStorePaymentStarsGift</a></td><td>Используется, чтобы подарить другу <a href="/api/stars">Telegram Stars</a>.</td></tr><tr><td><a href="/constructor/inputStorePaymentStarsGiveaway">inputStorePaymentStarsGiveaway</a></td><td>Используется для оплаты <a href="/api/giveaways#star-giveaways">розыгрыша звёзд; подробнее см. здесь »</a>.</td></tr><tr><td><a href="/constructor/inputStorePaymentAuthCode">inputStorePaymentAuthCode</a></td><td>Обозначает оплату кода для входа.</td></tr></tbody></table>

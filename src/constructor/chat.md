@@ -1,60 +1,42 @@
 ---
-title: "chat (конструктор)"
+title: "chat"
 original: "https://core.telegram.org/constructor/chat"
 section: ref
 kind: constructor
+description: "Информация о группе."
 layout: layout.njk
 ---
 
 # chat
 
-*Конструктор из схемы TL.*
+Информация о группе.
 
-> Info about a group.
-> When updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
-> See [here »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L5679) for an implementation of the logic to use when updating the [local chat peer database](https://core.telegram.org/api/peers).
+При обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-## Определение TL
+См. [здесь »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L5679) реализацию логики, которую следует применять при обновлении [локальной базы чатов-пиров](/api/peers/).
 
 ```
 chat#41cbf256 flags:# creator:flags.0?true left:flags.2?true deactivated:flags.5?true call_active:flags.23?true call_not_empty:flags.24?true noforwards:flags.25?true id:long title:string photo:ChatPhoto participants_count:int date:int version:int migrated_to:flags.6?InputChannel admin_rights:flags.14?ChatAdminRights default_banned_rights:flags.18?ChatBannedRights = Chat;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| creator | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the current user is the creator of the group |
-| left | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether the current user has left the group |
-| deactivated | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether the group was [migrated](https://core.telegram.org/api/channel) |
-| call_active | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).23?[true](/constructor/true/) | Whether a group call is currently active |
-| call_not_empty | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).24?[true](/constructor/true/) | Whether there's anyone in the group call |
-| noforwards | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).25?[true](/constructor/true/) | Whether this group is [protected](https://telegram.org/blog/content-protection-delete-by-date-and-more), thus does not allow forwarding messages from it |
-| id | [long](/type/long/) | ID of the group, see [here »](https://core.telegram.org/api/peers#peer-id) for more info and the available ID range. |
-| title | [string](/type/string/) | Title |
-| photo | [ChatPhoto](/type/ChatPhoto/) | Chat photo |
-| participants_count | [int](/type/int/) | Participant count |
-| date | [int](/type/int/) | Date of creation of the group |
-| version | [int](/type/int/) | Used in basic groups to reorder updates and make sure that all of them were received. |
-| migrated_to | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[InputChannel](/type/InputChannel/) | Means this chat was [upgraded](https://core.telegram.org/api/channel) to a supergroup |
-| admin_rights | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[ChatAdminRights](/type/ChatAdminRights/) | [Admin rights](https://core.telegram.org/api/rights) of the user in the group |
-| default_banned_rights | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[ChatBannedRights](/type/ChatBannedRights/) | [Default banned rights](https://core.telegram.org/api/rights) of all users in the group |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>creator</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Является ли текущий пользователь создателем группы</td></tr><tr><td><strong>left</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Покинул ли текущий пользователь группу</td></tr><tr><td><strong>deactivated</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Была ли группа <a href="/api/channel">мигрирована</a></td></tr><tr><td><strong>call_active</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/constructor/true">true</a></td><td>Идёт ли сейчас групповой звонок</td></tr><tr><td><strong>call_not_empty</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/constructor/true">true</a></td><td>Есть ли кто-нибудь в групповом звонке</td></tr><tr><td><strong>noforwards</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/constructor/true">true</a></td><td>Является ли эта группа <a href="https://telegram.org/blog/content-protection-delete-by-date-and-more">защищённой</a>, из-за чего пересылка сообщений оттуда запрещена</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор группы; подробнее о доступном диапазоне идентификаторов см. <a href="/api/peers#peer-id">здесь »</a>.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/type/ChatPhoto">ChatPhoto</a></td><td>Фотография чата</td></tr><tr><td><strong>participants_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество участников</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата создания группы</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Используется в обычных группах, чтобы упорядочить обновления и убедиться, что все они были получены.</td></tr><tr><td><strong>migrated_to</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/InputChannel">InputChannel</a></td><td>Означает, что этот чат был <a href="/api/channel">преобразован</a> в супергруппу</td></tr><tr><td><strong>admin_rights</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/ChatAdminRights">ChatAdminRights</a></td><td><a href="/api/rights">Права администратора</a>, которыми пользователь обладает в группе</td></tr><tr><td><strong>default_banned_rights</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/ChatBannedRights">ChatBannedRights</a></td><td><a href="/api/rights">Права по умолчанию для заблокированных пользователей</a> для всех участников группы</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Chat](/type/Chat/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Peer database](https://core.telegram.org/api/peers)
+#### [База данных пиров](/api/peers/)
 
-Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.
+Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.
 
-#### [Admin, banned, default rights](https://core.telegram.org/api/rights)
+#### [Права администраторов, ограничения и права по умолчанию](/api/rights/)
 
-How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.
+Как работать с правами администраторов, детальными ограничениями и общими правами в каналах, группах и супергруппах.

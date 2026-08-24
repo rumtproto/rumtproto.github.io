@@ -1,50 +1,42 @@
 ---
-title: "messageActionBotAllowed (конструктор)"
+title: "messageActionBotAllowed"
 original: "https://core.telegram.org/constructor/messageActionBotAllowed"
 section: ref
 kind: constructor
+description: "Мы разрешили боту отправлять нам личные сообщения."
 layout: layout.njk
 ---
 
 # messageActionBotAllowed
 
-*Конструктор из схемы TL.*
+Мы разрешили боту отправлять нам личные сообщения.
 
-> We have given the bot permission to send us direct messages.
-> The optional fields specify how did we authorize the bot to send us messages.
-
-## Определение TL
+Необязательные поля указывают, каким образом мы разрешили боту отправлять нам сообщения.
 
 ```
 messageActionBotAllowed#c516d679 flags:# attach_menu:flags.1?true from_request:flags.3?true domain:flags.0?string app:flags.2?BotApp = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| attach_menu | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | We have authorized the bot to send us messages by installing the bot's [attachment menu](https://core.telegram.org/api/bots/attach). |
-| from_request | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | We have allowed the bot to send us messages using [bots.allowSendMessage »](/method/bots.allowSendMessage/). |
-| domain | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | We have authorized the bot to send us messages by logging into a website via [Telegram Login »](https://core.telegram.org/widgets/login); this field contains the domain name of the website on which the user has logged in. |
-| app | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[BotApp](/type/BotApp/) | We have authorized the bot to send us messages by opening the specified [bot mini app](https://core.telegram.org/api/bots/webapps). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>attach_menu</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Мы разрешили боту отправлять нам сообщения, установив <a href="/api/bots/attach">меню вложений</a> этого бота.</td></tr><tr><td><strong>from_request</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Мы разрешили боту отправлять нам сообщения с помощью <a href="/method/bots.allowSendMessage">bots.allowSendMessage »</a>.</td></tr><tr><td><strong>domain</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Мы разрешили боту отправлять нам сообщения, войдя на сайт через <a href="/widgets/login">Telegram Login »</a>; это поле содержит доменное имя сайта, на котором пользователь выполнил вход.</td></tr><tr><td><strong>app</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/BotApp">BotApp</a></td><td>[@term:Mini App] Мы разрешили боту отправлять нам сообщения, открыв указанный <a href="/api/bots/webapps">mini app бота</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot attachment menu and side menu entries](https://core.telegram.org/api/bots/attach)
+#### [Пункты меню вложений и бокового меню для ботов](/api/bots/attach/)
 
-Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile web apps.
+Боты могут добавлять пункты в меню вложений и в боковое меню, предлагая легкодоступные многофункциональные веб-приложения.
 
 #### [bots.allowSendMessage](/method/bots.allowSendMessage/)
 
-Allow the specified bot to send us messages
+Разрешить указанному боту отправлять нам сообщения
 
-#### [Telegram Login Widget](https://core.telegram.org/widgets/login)
+#### [Виджет входа через Telegram](https://core.telegram.org/widgets/login)
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

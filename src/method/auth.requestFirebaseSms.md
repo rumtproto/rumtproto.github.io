@@ -1,18 +1,15 @@
 ---
-title: "auth.requestFirebaseSms (метод)"
+title: "auth.requestFirebaseSms"
 original: "https://core.telegram.org/method/auth.requestFirebaseSms"
 section: ref
 kind: method
+description: "Запросить SMS с кодом через Firebase."
 layout: layout.njk
 ---
 
 # auth.requestFirebaseSms
 
-*Метод из схемы TL.*
-
-> Request an SMS code via Firebase.
-
-## Определение TL
+Запросить SMS с кодом через Firebase.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,38 +18,28 @@ boolTrue#997275b5 = Bool;
 auth.requestFirebaseSms#8e39261e flags:# phone_number:string phone_code_hash:string safety_net_token:flags.0?string play_integrity_token:flags.2?string ios_push_secret:flags.1?string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| phone_number | [string](/type/string/) | Phone number |
-| phone_code_hash | [string](/type/string/) | Phone code hash returned by [auth.sendCode](/method/auth.sendCode/) |
-| safety_net_token | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | On Android, a JWS object obtained as described in the [auth documentation »](/api/auth/) |
-| play_integrity_token | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | On Android, an object obtained as described in the [auth documentation »](/api/auth/) |
-| ios_push_secret | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Secret token received via an apple push notification |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш телефонного кода, возвращённый методом <a href="/method/auth.sendCode">auth.sendCode</a></td></tr><tr><td><strong>safety_net_token</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>На Android — объект JWS, полученный так, как описано в <a href="/api/auth">документации по авторизации »</a></td></tr><tr><td><strong>play_integrity_token</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>На Android — объект, полученный так, как описано в <a href="/api/auth">документации по авторизации »</a></td></tr><tr><td><strong>ios_push_secret</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Секретный токен, полученный через apple push notification</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PHONE_CODE_EMPTY | phone_code is missing. |
-| 400 | PHONE_NUMBER_INVALID | The phone number is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PHONE_CODE_EMPTY</td><td>Отсутствует phone_code.</td></tr><tr><td>400</td><td>PHONE_NUMBER_INVALID</td><td>Недействительный номер телефона.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [auth.sendCode](/method/auth.sendCode/)
 
-Send the verification code for login
+Отправить код подтверждения для входа
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

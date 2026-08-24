@@ -1,37 +1,30 @@
 ---
-title: "requestPeerTypeUser (конструктор)"
+title: "requestPeerTypeUser"
 original: "https://core.telegram.org/constructor/requestPeerTypeUser"
 section: ref
 kind: constructor
+description: "Выбрать пользователя."
 layout: layout.njk
 ---
 
 # requestPeerTypeUser
 
-*Конструктор из схемы TL.*
-
-> Choose a user.
-
-## Определение TL
+Выбрать пользователя.
 
 ```
 requestPeerTypeUser#5f3b8a00 flags:# bot:flags.0?Bool premium:flags.1?Bool = RequestPeerType;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| bot | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Bool](/type/Bool/) | Whether to allow choosing only bots. |
-| premium | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Bool](/type/Bool/) | Whether to allow choosing only [Premium](https://core.telegram.org/api/premium) users. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Bool">Bool</a></td><td>Разрешать ли выбор только ботов.</td></tr><tr><td><strong>premium</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Bool">Bool</a></td><td>Разрешать ли выбор только пользователей <a href="/api/premium">Premium</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [RequestPeerType](/type/RequestPeerType/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.

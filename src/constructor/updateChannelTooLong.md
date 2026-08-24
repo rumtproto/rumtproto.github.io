@@ -1,43 +1,38 @@
 ---
-title: "updateChannelTooLong (конструктор)"
+title: "updateChannelTooLong"
 original: "https://core.telegram.org/constructor/updateChannelTooLong"
 section: ref
 kind: constructor
+description: "В указанном канале появились новые обновления; клиент обязан получить их вручную, вызвав updates.getChannelDifference, как описано в документации »."
 layout: layout.njk
 ---
 
 # updateChannelTooLong
 
-*Конструктор из схемы TL.*
+В указанном канале появились новые обновления; клиент обязан получить их вручную, вызвав [updates.getChannelDifference](/method/updates.getChannelDifference/), как описано в [документации »](/api/updates/).
 
-> There are new updates in the specified channel, the client must fetch them manually by invoking [updates.getChannelDifference](/method/updates.getChannelDifference/) as specified in the [documentation »](/api/updates/).
-> If the channel's PTS isn't currently stored in the database (i.e. we joined this channel on another client while the current client was offline), start fetching from the specified pts.
-> Does **not** necessarily indicate the [channel message box size limit was reached](https://core.telegram.org/api/updates/#recovering-gaps-for-very-old-messages), it simply indicates that the number of queued updates in a message box is too large to be delivered passively through the socket.
+Если PTS канала в настоящий момент не сохранён в базе данных (то есть мы вступили в этот канал с другого клиента, пока текущий клиент был не в сети), начать получение с указанного pts.
 
-## Определение TL
+**Не** обязательно означает, что [достигнут предел размера ящика сообщений канала](/api/updates/#recovering-gaps-for-very-old-messages); это лишь означает, что число обновлений в очереди ящика сообщений слишком велико, чтобы доставить их пассивно через сокет.
 
 ```
 updateChannelTooLong#108d941f flags:# channel_id:long pts:flags.0?int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| channel_id | [long](/type/long/) | The channel |
-| pts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | The [PTS](/api/updates/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Канал</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>[@term:pts] <a href="/api/updates">PTS</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
 #### [updates.getChannelDifference](/method/updates.getChannelDifference/)
 
-Returns the difference between the current state of updates of a certain channel and transmitted.
+Возвращает разницу между текущим состоянием обновлений определённого канала и переданным состоянием.

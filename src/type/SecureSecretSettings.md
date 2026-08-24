@@ -1,31 +1,26 @@
 ---
-title: "SecureSecretSettings (тип)"
+title: "SecureSecretSettings"
 original: "https://core.telegram.org/type/SecureSecretSettings"
 section: ref
 kind: type
+description: "Настройки Telegram Passport"
 layout: layout.njk
 ---
 
 # SecureSecretSettings
 
-*Тип из схемы TL.*
-
-> Telegram [passport](https://core.telegram.org/passport) settings
-
-## Определение TL
+Настройки [Telegram Passport](https://core.telegram.org/passport)
 
 ```
 secureSecretSettings#1527bcac secure_algo:SecurePasswordKdfAlgo secure_secret:bytes secure_secret_id:long = SecureSecretSettings;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [secureSecretSettings](/constructor/secureSecretSettings/) | Secure settings |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/secureSecretSettings">secureSecretSettings</a></td><td>Настройки безопасности</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

@@ -1,27 +1,24 @@
 ---
-title: "documentAttributeHasStickers (конструктор)"
+title: "documentAttributeHasStickers"
 original: "https://core.telegram.org/constructor/documentAttributeHasStickers"
 section: ref
 kind: constructor
+description: "Есть ли у текущего документа прикреплённые стикеры"
 layout: layout.njk
 ---
 
 # documentAttributeHasStickers
 
-*Конструктор из схемы TL.*
-
-> Whether the current document has stickers attached
-
-## Определение TL
+Есть ли у текущего документа прикреплённые стикеры
 
 ```
 documentAttributeHasStickers#9801d2f7 = DocumentAttribute;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [DocumentAttribute](/type/DocumentAttribute/)

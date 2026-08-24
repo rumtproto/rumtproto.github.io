@@ -1,18 +1,15 @@
 ---
-title: "account.finishTakeoutSession (метод)"
+title: "account.finishTakeoutSession"
 original: "https://core.telegram.org/method/account.finishTakeoutSession"
 section: ref
 kind: method
+description: "Завершить сессию выгрузки данных, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # account.finishTakeoutSession
 
-*Метод из схемы TL.*
-
-> Terminate a [takeout session, see here » for more info](https://core.telegram.org/api/takeout).
-
-## Определение TL
+Завершить [сессию выгрузки данных, подробнее см. здесь »](/api/takeout/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,27 +18,22 @@ boolTrue#997275b5 = Bool;
 account.finishTakeoutSession#1d2652ee flags:# success:flags.0?true = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| success | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Data exported successfully |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>success</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Данные успешно выгружены</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | TAKEOUT_REQUIRED | A [takeout](https://core.telegram.org/api/takeout) session needs to be initialized first, [see here » for more info](https://core.telegram.org/api/takeout). |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>TAKEOUT_REQUIRED</td><td>Сначала необходимо инициализировать сессию <a href="/api/takeout">выгрузки данных</a>, <a href="/api/takeout">подробнее см. здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Takeout API](https://core.telegram.org/api/takeout)
+#### [Takeout API](/api/takeout/)
 
-Telegram's API allows users to export all of their information through the takeout API.
+API Telegram позволяет пользователям экспортировать все свои данные через API выгрузки данных.

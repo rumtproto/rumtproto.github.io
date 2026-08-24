@@ -1,18 +1,15 @@
 ---
-title: "messages.toggleDialogFilterTags (метод)"
+title: "messages.toggleDialogFilterTags"
 original: "https://core.telegram.org/method/messages.toggleDialogFilterTags"
 section: ref
 kind: method
+description: "Включить или отключить теги папок »."
 layout: layout.njk
 ---
 
 # messages.toggleDialogFilterTags
 
-*Метод из схемы TL.*
-
-> Enable or disable [folder tags »](https://core.telegram.org/api/folders#folder-tags).
-
-## Определение TL
+Включить или отключить [теги папок »](/api/folders/#folder-tags).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,26 +18,22 @@ boolTrue#997275b5 = Bool;
 messages.toggleDialogFilterTags#fd2dda49 enabled:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| enabled | [Bool](/type/Bool/) | Enable or disable folder tags. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Включить или отключить теги папок.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.

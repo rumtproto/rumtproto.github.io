@@ -1,27 +1,24 @@
 ---
-title: "secureValueTypeEmail (конструктор)"
+title: "secureValueTypeEmail"
 original: "https://core.telegram.org/constructor/secureValueTypeEmail"
 section: ref
 kind: constructor
+description: "Электронная почта"
 layout: layout.njk
 ---
 
 # secureValueTypeEmail
 
-*Конструктор из схемы TL.*
-
-> Email
-
-## Определение TL
+Электронная почта
 
 ```
 secureValueTypeEmail#8e3ca7ee = SecureValueType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureValueType](/type/SecureValueType/)

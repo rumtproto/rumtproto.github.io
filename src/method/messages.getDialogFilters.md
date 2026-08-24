@@ -1,18 +1,15 @@
 ---
-title: "messages.getDialogFilters (метод)"
+title: "messages.getDialogFilters"
 original: "https://core.telegram.org/method/messages.getDialogFilters"
 section: ref
 kind: method
+description: "Получить папки"
 layout: layout.njk
 ---
 
 # messages.getDialogFilters
 
-*Метод из схемы TL.*
-
-> Get [folders](https://core.telegram.org/api/folders)
-
-## Определение TL
+Получить [папки](/api/folders/)
 
 ```
 messages.dialogFilters#2ad93719 flags:# tags_enabled:flags.0?true filters:Vector<DialogFilter> = messages.DialogFilters;
@@ -20,18 +17,18 @@ messages.dialogFilters#2ad93719 flags:# tags_enabled:flags.0?true filters:Vector
 messages.getDialogFilters#efd48c89 = messages.DialogFilters;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [messages.DialogFilters](/type/messages.DialogFilters/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.

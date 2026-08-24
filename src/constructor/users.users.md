@@ -1,29 +1,24 @@
 ---
-title: "users.users (конструктор)"
+title: "users.users"
 original: "https://core.telegram.org/constructor/users.users"
 section: ref
 kind: constructor
+description: "Описывает список пользователей (или ботов)."
 layout: layout.njk
 ---
 
 # users.users
 
-*Конструктор из схемы TL.*
-
-> Describes a list of users (or bots).
-
-## Определение TL
+Описывает список пользователей (или ботов).
 
 ```
 users.users#62d706b8 users:Vector<User> = users.Users;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [users.Users](/type/users.Users/)

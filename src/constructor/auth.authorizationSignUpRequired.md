@@ -1,36 +1,30 @@
 ---
-title: "auth.authorizationSignUpRequired (конструктор)"
+title: "auth.authorizationSignUpRequired"
 original: "https://core.telegram.org/constructor/auth.authorizationSignUpRequired"
 section: ref
 kind: constructor
+description: "Учётной записи с этим номером телефона в Telegram не существует: пользователю необходимо ввести основные сведения и зарегистрироваться"
 layout: layout.njk
 ---
 
 # auth.authorizationSignUpRequired
 
-*Конструктор из схемы TL.*
-
-> An account with this phone number doesn't exist on telegram: the user has to [enter basic information and sign up](/api/auth/)
-
-## Определение TL
+Учётной записи с этим номером телефона в Telegram не существует: пользователю необходимо [ввести основные сведения и зарегистрироваться](/api/auth/)
 
 ```
 auth.authorizationSignUpRequired#44747e9a flags:# terms_of_service:flags.0?help.TermsOfService = auth.Authorization;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| terms_of_service | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[help.TermsOfService](/type/help.TermsOfService/) | Telegram's terms of service: the user must read and accept the terms of service before signing up to telegram |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>terms_of_service</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/help.TermsOfService">help.TermsOfService</a></td><td>Условия использования Telegram: пользователь обязан прочитать и принять условия использования перед регистрацией в Telegram</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [auth.Authorization](/type/auth.Authorization/)
 
-## Related pages
+### Связанные страницы
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

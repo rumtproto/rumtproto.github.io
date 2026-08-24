@@ -1,27 +1,24 @@
 ---
-title: "storage.fileGif (конструктор)"
+title: "storage.fileGif"
 original: "https://core.telegram.org/constructor/storage.fileGif"
 section: ref
 kind: constructor
+description: "Изображение GIF. MIME-тип: image/gif."
 layout: layout.njk
 ---
 
 # storage.fileGif
 
-*Конструктор из схемы TL.*
-
-> GIF image. MIME type: `image/gif`.
-
-## Определение TL
+Изображение GIF. MIME-тип: `image/gif`.
 
 ```
 storage.fileGif#cae1aadf = storage.FileType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [storage.FileType](/type/storage.FileType/)

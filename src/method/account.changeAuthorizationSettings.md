@@ -1,18 +1,15 @@
 ---
-title: "account.changeAuthorizationSettings (метод)"
+title: "account.changeAuthorizationSettings"
 original: "https://core.telegram.org/method/account.changeAuthorizationSettings"
 section: ref
 kind: method
+description: "Изменить настройки, связанные с сессией."
 layout: layout.njk
 ---
 
 # account.changeAuthorizationSettings
 
-*Метод из схемы TL.*
-
-> Change settings related to a session.
-
-## Определение TL
+Изменить настройки, связанные с сессией.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,38 +18,30 @@ boolTrue#997275b5 = Bool;
 account.changeAuthorizationSettings#40f48462 flags:# confirmed:flags.3?true hash:long encrypted_requests_disabled:flags.0?Bool call_requests_disabled:flags.1?Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| confirmed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | If set, [confirms a newly logged in session »](https://core.telegram.org/api/auth/#confirming-login). |
-| hash | [long](/type/long/) | Session ID from the [authorization](/constructor/authorization/) constructor, fetchable using [account.getAuthorizations](/method/account.getAuthorizations/) |
-| encrypted_requests_disabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Bool](/type/Bool/) | Whether to enable or disable receiving encrypted chats: if the flag is not set, the previous setting is not changed |
-| call_requests_disabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Bool](/type/Bool/) | Whether to enable or disable receiving calls: if the flag is not set, the previous setting is not changed |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>confirmed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Если установлено, <a href="/api/auth#confirming-login">подтверждает только что созданную сессию входа »</a>.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] Идентификатор сессии из конструктора <a href="/constructor/authorization">authorization</a>, который можно получить с помощью <a href="/method/account.getAuthorizations">account.getAuthorizations</a></td></tr><tr><td><strong>encrypted_requests_disabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Bool">Bool</a></td><td>Включить или отключить приём зашифрованных чатов: если флаг не установлен, прежняя настройка не меняется</td></tr><tr><td><strong>call_requests_disabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Bool">Bool</a></td><td>Включить или отключить приём звонков: если флаг не установлен, прежняя настройка не меняется</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | HASH_INVALID | The provided hash is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>HASH_INVALID</td><td>Указанный хеш недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.
 
 #### [authorization](/constructor/authorization/)
 
-Logged-in session
+Активная сессия
 
 #### [account.getAuthorizations](/method/account.getAuthorizations/)
 
-Get logged-in sessions
+Получить список активных сессий

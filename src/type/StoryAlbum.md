@@ -1,18 +1,15 @@
 ---
-title: "StoryAlbum (тип)"
+title: "StoryAlbum"
 original: "https://core.telegram.org/type/StoryAlbum"
 section: ref
 kind: type
+description: "Представляет альбом историй »."
 layout: layout.njk
 ---
 
 # StoryAlbum
 
-*Тип из схемы TL.*
-
-> Represents a [story album »](https://core.telegram.org/api/stories#story-albums).
-
-## Определение TL
+Представляет [альбом историй »](/api/stories/#story-albums).
 
 ```
 storyAlbum#9325705a flags:# album_id:int title:string icon_photo:flags.0?Photo icon_video:flags.1?Document = StoryAlbum;
@@ -23,21 +20,16 @@ stories.createAlbum#a36396e5 peer:InputPeer title:string stories:Vector<int> = S
 stories.updateAlbum#5e5259b6 flags:# peer:InputPeer album_id:int title:flags.0?string delete_stories:flags.1?Vector<int> add_stories:flags.2?Vector<int> order:flags.3?Vector<int> = StoryAlbum;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [storyAlbum](/constructor/storyAlbum/) | Represents a [story album »](https://core.telegram.org/api/stories#story-albums). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/storyAlbum">storyAlbum</a></td><td>Представляет <a href="/api/stories#story-albums">альбом историй »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stories.createAlbum](/method/stories.createAlbum/) | Creates a [story album](https://core.telegram.org/api/stories#story-albums). |
-| [stories.updateAlbum](/method/stories.updateAlbum/) | Rename a [story albums »](https://core.telegram.org/api/stories#story-albums), or add, delete or reorder stories in it. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stories.createAlbum">stories.createAlbum</a></td><td>Создаёт <a href="/api/stories#story-albums">альбом историй</a>.</td></tr><tr><td><a href="/method/stories.updateAlbum">stories.updateAlbum</a></td><td>Переименовать <a href="/api/stories#story-albums">альбом историй »</a>, либо добавить, удалить или переупорядочить истории в нём.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

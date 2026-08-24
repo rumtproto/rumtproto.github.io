@@ -1,18 +1,15 @@
 ---
-title: "InputBotInlineMessage (тип)"
+title: "InputBotInlineMessage"
 original: "https://core.telegram.org/type/InputBotInlineMessage"
 section: ref
 kind: type
+description: "Представляет отправленное инлайн-сообщение с точки зрения бота"
 layout: layout.njk
 ---
 
 # InputBotInlineMessage
 
-*Тип из схемы TL.*
-
-> Represents a sent inline message from the perspective of a bot
-
-## Определение TL
+Представляет отправленное инлайн-сообщение с точки зрения бота
 
 ```
 inputBotInlineMessageMediaAuto#3380c786 flags:# invert_media:flags.3?true message:string entities:flags.1?Vector<MessageEntity> reply_markup:flags.2?ReplyMarkup = InputBotInlineMessage;
@@ -25,15 +22,6 @@ inputBotInlineMessageMediaInvoice#d7e78225 flags:# title:string description:stri
 inputBotInlineMessageMediaWebPage#bddcc510 flags:# invert_media:flags.3?true force_large_media:flags.4?true force_small_media:flags.5?true optional:flags.6?true message:string entities:flags.1?Vector<MessageEntity> url:string reply_markup:flags.2?ReplyMarkup = InputBotInlineMessage;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputBotInlineMessageMediaAuto](/constructor/inputBotInlineMessageMediaAuto/) | A media |
-| [inputBotInlineMessageText](/constructor/inputBotInlineMessageText/) | Simple text message |
-| [inputBotInlineMessageMediaGeo](/constructor/inputBotInlineMessageMediaGeo/) | Geolocation |
-| [inputBotInlineMessageMediaVenue](/constructor/inputBotInlineMessageMediaVenue/) | Venue |
-| [inputBotInlineMessageMediaContact](/constructor/inputBotInlineMessageMediaContact/) | A contact |
-| [inputBotInlineMessageGame](/constructor/inputBotInlineMessageGame/) | A game |
-| [inputBotInlineMessageMediaInvoice](/constructor/inputBotInlineMessageMediaInvoice/) | An invoice |
-| [inputBotInlineMessageMediaWebPage](/constructor/inputBotInlineMessageMediaWebPage/) | Specifies options that will be used to generate the link preview for the message, or even a standalone link preview without an attached message. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputBotInlineMessageMediaAuto">inputBotInlineMessageMediaAuto</a></td><td>Медиафайл</td></tr><tr><td><a href="/constructor/inputBotInlineMessageText">inputBotInlineMessageText</a></td><td>Простое текстовое сообщение</td></tr><tr><td><a href="/constructor/inputBotInlineMessageMediaGeo">inputBotInlineMessageMediaGeo</a></td><td>Геопозиция</td></tr><tr><td><a href="/constructor/inputBotInlineMessageMediaVenue">inputBotInlineMessageMediaVenue</a></td><td>Заведение</td></tr><tr><td><a href="/constructor/inputBotInlineMessageMediaContact">inputBotInlineMessageMediaContact</a></td><td>Контакт</td></tr><tr><td><a href="/constructor/inputBotInlineMessageGame">inputBotInlineMessageGame</a></td><td>Игра</td></tr><tr><td><a href="/constructor/inputBotInlineMessageMediaInvoice">inputBotInlineMessageMediaInvoice</a></td><td>Счёт</td></tr><tr><td><a href="/constructor/inputBotInlineMessageMediaWebPage">inputBotInlineMessageMediaWebPage</a></td><td>Задаёт параметры, которые будут использованы для создания предпросмотра ссылки в сообщении, либо даже отдельного предпросмотра ссылки без прикреплённого сообщения.</td></tr></tbody></table>

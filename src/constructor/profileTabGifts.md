@@ -1,33 +1,30 @@
 ---
-title: "profileTabGifts (конструктор)"
+title: "profileTabGifts"
 original: "https://core.telegram.org/constructor/profileTabGifts"
 section: ref
 kind: constructor
+description: "Представляет вкладку подарков на странице профиля."
 layout: layout.njk
 ---
 
 # profileTabGifts
 
-*Конструктор из схемы TL.*
-
-> Represents the [gifts](https://core.telegram.org/api/gifts) tab of a profile page.
-
-## Определение TL
+Представляет вкладку [подарков](/api/gifts/) на странице профиля.
 
 ```
 profileTabGifts#4d4bd46a = ProfileTab;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ProfileTab](/type/ProfileTab/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

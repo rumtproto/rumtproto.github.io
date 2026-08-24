@@ -1,18 +1,15 @@
 ---
-title: "help.getSupportName (метод)"
+title: "help.getSupportName"
 original: "https://core.telegram.org/method/help.getSupportName"
 section: ref
 kind: method
+description: "Получить локализованное имя пользователя службы поддержки Telegram"
 layout: layout.njk
 ---
 
 # help.getSupportName
 
-*Метод из схемы TL.*
-
-> Get localized name of the telegram support user
-
-## Определение TL
+Получить локализованное имя пользователя службы поддержки Telegram
 
 ```
 help.supportName#8c05f1c9 name:string = help.SupportName;
@@ -20,18 +17,16 @@ help.supportName#8c05f1c9 name:string = help.SupportName;
 help.getSupportName#d360e72c = help.SupportName;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [help.SupportName](/type/help.SupportName/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | USER_INVALID | Invalid user provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>USER_INVALID</td><td>Указан недействительный пользователь.</td></tr></tbody></table>

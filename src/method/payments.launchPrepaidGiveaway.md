@@ -1,18 +1,15 @@
 ---
-title: "payments.launchPrepaidGiveaway (метод)"
+title: "payments.launchPrepaidGiveaway"
 original: "https://core.telegram.org/method/payments.launchPrepaidGiveaway"
 section: ref
 kind: method
+description: "Запустить предоплаченный розыгрыш »."
 layout: layout.njk
 ---
 
 # payments.launchPrepaidGiveaway
 
-*Метод из схемы TL.*
-
-> Launch a [prepaid giveaway »](https://core.telegram.org/api/giveaways).
-
-## Определение TL
+Запустить [предоплаченный розыгрыш »](/api/giveaways/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,28 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 payments.launchPrepaidGiveaway#5ff58f20 peer:InputPeer giveaway_id:long purpose:InputStorePaymentPurpose = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The peer where to launch the giveaway. |
-| giveaway_id | [long](/type/long/) | The prepaid giveaway ID. |
-| purpose | [InputStorePaymentPurpose](/type/InputStorePaymentPurpose/) | Giveway parameters |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в котором нужно запустить розыгрыш.</td></tr><tr><td><strong>giveaway_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор предоплаченного розыгрыша.</td></tr><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose">InputStorePaymentPurpose</a></td><td>Параметры розыгрыша</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

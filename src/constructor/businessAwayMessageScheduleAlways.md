@@ -1,33 +1,30 @@
 ---
-title: "businessAwayMessageScheduleAlways (конструктор)"
+title: "businessAwayMessageScheduleAlways"
 original: "https://core.telegram.org/constructor/businessAwayMessageScheduleAlways"
 section: ref
 kind: constructor
+description: "Всегда отправлять сообщения об отсутствии Telegram Business пользователям, которые пишут нам в личные сообщения."
 layout: layout.njk
 ---
 
 # businessAwayMessageScheduleAlways
 
-*Конструктор из схемы TL.*
-
-> Always send [Telegram Business away messages](https://core.telegram.org/api/business#away-messages) to users writing to us in private.
-
-## Определение TL
+Всегда отправлять [сообщения об отсутствии Telegram Business](/api/business/#away-messages) пользователям, которые пишут нам в личные сообщения.
 
 ```
 businessAwayMessageScheduleAlways#c9b9e2b9 = BusinessAwayMessageSchedule;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [BusinessAwayMessageSchedule](/type/BusinessAwayMessageSchedule/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

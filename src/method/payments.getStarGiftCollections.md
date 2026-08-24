@@ -1,18 +1,15 @@
 ---
-title: "payments.getStarGiftCollections (метод)"
+title: "payments.getStarGiftCollections"
 original: "https://core.telegram.org/method/payments.getStarGiftCollections"
 section: ref
 kind: method
+description: "Получает все коллекции звёздных подарков » пира."
 layout: layout.njk
 ---
 
 # payments.getStarGiftCollections
 
-*Метод из схемы TL.*
-
-> Fetches all [star gift collections »](https://core.telegram.org/api/gifts#gift-collections) of a peer.
-
-## Определение TL
+Получает все [коллекции звёздных подарков »](/api/gifts/#gift-collections) пира.
 
 ```
 payments.starGiftCollectionsNotModified#a0ba4f17 = payments.StarGiftCollections;
@@ -21,35 +18,30 @@ payments.starGiftCollections#8a2932f3 collections:Vector<StarGiftCollection> = p
 payments.getStarGiftCollections#981b91dd peer:InputPeer hash:long = payments.StarGiftCollections;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The peer. |
-| hash | [long](/type/long/) | Hash ([generated as specified here »](https://core.telegram.org/api/offsets#hash-generation)) using the [starGiftCollection](/constructor/starGiftCollection/).hash field (not the collection_id field) of all collections returned by a previous method call, to avoid refetching the result if it hasn't changed. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] Хеш (<a href="/api/offsets#hash-generation">вычисленный так, как указано здесь »</a>) по полям <a href="/constructor/starGiftCollection">starGiftCollection</a>.<code>hash</code> (<strong>не</strong> по полям <code>collection_id</code>) всех коллекций, возвращённых предыдущим вызовом метода; позволяет не запрашивать результат повторно, если он не изменился.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.StarGiftCollections](/type/payments.StarGiftCollections/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
 #### [starGiftCollection](/constructor/starGiftCollection/)
 
-Represents a [star gift collection »](https://core.telegram.org/api/gifts#gift-collections).
+Представляет [коллекцию звёздных подарков »](/api/gifts/#gift-collections).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

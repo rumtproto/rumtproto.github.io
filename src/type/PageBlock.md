@@ -1,18 +1,15 @@
 ---
-title: "PageBlock (тип)"
+title: "PageBlock"
 original: "https://core.telegram.org/type/PageBlock"
 section: ref
 kind: type
+description: "Представляет элемент страницы instant view"
 layout: layout.njk
 ---
 
 # PageBlock
 
-*Тип из схемы TL.*
-
-> Represents an [instant view page element](https://instantview.telegram.org)
-
-## Определение TL
+Представляет [элемент страницы instant view](https://instantview.telegram.org)
 
 ```
 pageBlockUnsupported#13567e8a = PageBlock;
@@ -46,36 +43,6 @@ pageBlockRelatedArticles#16115a96 title:RichText articles:Vector<PageRelatedArti
 pageBlockMap#a44f3ef6 geo:GeoPoint zoom:int w:int h:int caption:PageCaption = PageBlock;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [pageBlockUnsupported](/constructor/pageBlockUnsupported/) | Unsupported IV element |
-| [pageBlockTitle](/constructor/pageBlockTitle/) | Title |
-| [pageBlockSubtitle](/constructor/pageBlockSubtitle/) | Subtitle |
-| [pageBlockAuthorDate](/constructor/pageBlockAuthorDate/) | Author and date of creation of article |
-| [pageBlockHeader](/constructor/pageBlockHeader/) | Page header |
-| [pageBlockSubheader](/constructor/pageBlockSubheader/) | Subheader |
-| [pageBlockParagraph](/constructor/pageBlockParagraph/) | A paragraph |
-| [pageBlockPreformatted](/constructor/pageBlockPreformatted/) | Preformatted (<pre> text) |
-| [pageBlockFooter](/constructor/pageBlockFooter/) | Page footer |
-| [pageBlockDivider](/constructor/pageBlockDivider/) | An empty block separating a page |
-| [pageBlockAnchor](/constructor/pageBlockAnchor/) | Link to section within the page itself (like <a href="#target">anchor</a>) |
-| [pageBlockList](/constructor/pageBlockList/) | Unordered list of IV blocks |
-| [pageBlockBlockquote](/constructor/pageBlockBlockquote/) | Quote (equivalent to the HTML <blockquote>) |
-| [pageBlockPullquote](/constructor/pageBlockPullquote/) | Pullquote |
-| [pageBlockPhoto](/constructor/pageBlockPhoto/) | A photo |
-| [pageBlockVideo](/constructor/pageBlockVideo/) | Video |
-| [pageBlockCover](/constructor/pageBlockCover/) | A page cover |
-| [pageBlockEmbed](/constructor/pageBlockEmbed/) | An embedded webpage |
-| [pageBlockEmbedPost](/constructor/pageBlockEmbedPost/) | An embedded post |
-| [pageBlockCollage](/constructor/pageBlockCollage/) | Collage of media |
-| [pageBlockSlideshow](/constructor/pageBlockSlideshow/) | Slideshow |
-| [pageBlockChannel](/constructor/pageBlockChannel/) | Reference to a telegram channel |
-| [pageBlockAudio](/constructor/pageBlockAudio/) | Audio |
-| [pageBlockKicker](/constructor/pageBlockKicker/) | Kicker |
-| [pageBlockTable](/constructor/pageBlockTable/) | Table |
-| [pageBlockOrderedList](/constructor/pageBlockOrderedList/) | Ordered list of IV blocks |
-| [pageBlockDetails](/constructor/pageBlockDetails/) | A collapsible details block |
-| [pageBlockRelatedArticles](/constructor/pageBlockRelatedArticles/) | Related articles |
-| [pageBlockMap](/constructor/pageBlockMap/) | A map |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/pageBlockUnsupported">pageBlockUnsupported</a></td><td>Неподдерживаемый элемент IV</td></tr><tr><td><a href="/constructor/pageBlockTitle">pageBlockTitle</a></td><td>Название</td></tr><tr><td><a href="/constructor/pageBlockSubtitle">pageBlockSubtitle</a></td><td>Подзаголовок</td></tr><tr><td><a href="/constructor/pageBlockAuthorDate">pageBlockAuthorDate</a></td><td>Автор и дата создания статьи</td></tr><tr><td><a href="/constructor/pageBlockHeader">pageBlockHeader</a></td><td>Верхний колонтитул страницы</td></tr><tr><td><a href="/constructor/pageBlockSubheader">pageBlockSubheader</a></td><td>Подзаголовок</td></tr><tr><td><a href="/constructor/pageBlockParagraph">pageBlockParagraph</a></td><td>Абзац</td></tr><tr><td><a href="/constructor/pageBlockPreformatted">pageBlockPreformatted</a></td><td>Форматированный текст (<code>&lt;pre&gt;</code>)</td></tr><tr><td><a href="/constructor/pageBlockFooter">pageBlockFooter</a></td><td>Нижний колонтитул страницы</td></tr><tr><td><a href="/constructor/pageBlockDivider">pageBlockDivider</a></td><td>Пустой блок, разделяющий страницу</td></tr><tr><td><a href="/constructor/pageBlockAnchor">pageBlockAnchor</a></td><td>Ссылка на раздел внутри самой страницы (вида <code>&lt;a href="#target"&gt;anchor&lt;/a&gt;</code>)</td></tr><tr><td><a href="/constructor/pageBlockList">pageBlockList</a></td><td>Неупорядоченный список блоков IV</td></tr><tr><td><a href="/constructor/pageBlockBlockquote">pageBlockBlockquote</a></td><td>Цитата (эквивалент HTML-тега <code>&lt;blockquote&gt;</code>)</td></tr><tr><td><a href="/constructor/pageBlockPullquote">pageBlockPullquote</a></td><td>Врезка с цитатой</td></tr><tr><td><a href="/constructor/pageBlockPhoto">pageBlockPhoto</a></td><td>Фотография</td></tr><tr><td><a href="/constructor/pageBlockVideo">pageBlockVideo</a></td><td>Видео</td></tr><tr><td><a href="/constructor/pageBlockCover">pageBlockCover</a></td><td>Обложка страницы</td></tr><tr><td><a href="/constructor/pageBlockEmbed">pageBlockEmbed</a></td><td>Встроенная веб-страница</td></tr><tr><td><a href="/constructor/pageBlockEmbedPost">pageBlockEmbedPost</a></td><td>Встроенный пост</td></tr><tr><td><a href="/constructor/pageBlockCollage">pageBlockCollage</a></td><td>Коллаж из медиа</td></tr><tr><td><a href="/constructor/pageBlockSlideshow">pageBlockSlideshow</a></td><td>Слайд-шоу</td></tr><tr><td><a href="/constructor/pageBlockChannel">pageBlockChannel</a></td><td>Ссылка на канал Telegram</td></tr><tr><td><a href="/constructor/pageBlockAudio">pageBlockAudio</a></td><td>Аудио</td></tr><tr><td><a href="/constructor/pageBlockKicker">pageBlockKicker</a></td><td>Надзаголовок</td></tr><tr><td><a href="/constructor/pageBlockTable">pageBlockTable</a></td><td>Таблица</td></tr><tr><td><a href="/constructor/pageBlockOrderedList">pageBlockOrderedList</a></td><td>Упорядоченный список блоков IV</td></tr><tr><td><a href="/constructor/pageBlockDetails">pageBlockDetails</a></td><td>Сворачиваемый блок подробностей</td></tr><tr><td><a href="/constructor/pageBlockRelatedArticles">pageBlockRelatedArticles</a></td><td>Связанные статьи</td></tr><tr><td><a href="/constructor/pageBlockMap">pageBlockMap</a></td><td>Карта</td></tr></tbody></table>

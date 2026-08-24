@@ -1,33 +1,25 @@
 ---
-title: "InputBotInlineMessageID (тип)"
+title: "InputBotInlineMessageID"
 original: "https://core.telegram.org/type/InputBotInlineMessageID"
 section: ref
 kind: type
+description: "Представляет отправленное инлайн-сообщение с точки зрения бота"
 layout: layout.njk
 ---
 
 # InputBotInlineMessageID
 
-*Тип из схемы TL.*
-
-> Represents a sent inline message from the perspective of a bot
-
-## Определение TL
+Представляет отправленное инлайн-сообщение с точки зрения бота
 
 ```
 inputBotInlineMessageID#890c3d89 dc_id:int id:long access_hash:long = InputBotInlineMessageID;
 inputBotInlineMessageID64#b6d915d7 dc_id:int owner_id:long id:int access_hash:long = InputBotInlineMessageID;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputBotInlineMessageID](/constructor/inputBotInlineMessageID/) | Represents a sent inline message from the perspective of a bot (legacy constructor) |
-| [inputBotInlineMessageID64](/constructor/inputBotInlineMessageID64/) | Represents a sent inline message from the perspective of a bot |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputBotInlineMessageID">inputBotInlineMessageID</a></td><td>Представляет отправленное инлайн-сообщение с точки зрения бота (устаревший конструктор)</td></tr><tr><td><a href="/constructor/inputBotInlineMessageID64">inputBotInlineMessageID64</a></td><td>Представляет отправленное инлайн-сообщение с точки зрения бота</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.setBotGuestChatResult](https://core.telegram.org/method/messages.setBotGuestChatResult) | Bots may use this method to answer a [guest mode »](https://core.telegram.org/api/bots/guest-mode) query received via an [updateBotGuestChatQuery](https://core.telegram.org/constructor/updateBotGuestChatQuery) update, providing the message to post into the chat as a guest, see [here »](https://core.telegram.org/api/bots/guest-mode#handling-guest-queries-bot-side) for more info. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.setBotGuestChatResult">messages.setBotGuestChatResult</a></td><td>Боты могут использовать этот метод, чтобы ответить на запрос <a href="/api/bots/guest-mode">гостевого режима »</a>, полученный через обновление <a href="/constructor/updateBotGuestChatQuery">updateBotGuestChatQuery</a>, передав сообщение для публикации в чате в качестве гостя; подробнее <a href="/api/bots/guest-mode#handling-guest-queries-bot-side">см. здесь »</a>.</td></tr></tbody></table>

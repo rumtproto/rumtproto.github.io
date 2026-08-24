@@ -1,18 +1,15 @@
 ---
-title: "users.getSavedMusicByID (метод)"
+title: "users.getSavedMusicByID"
 original: "https://core.telegram.org/method/users.getSavedMusicByID"
 section: ref
 kind: method
+description: "Проверить, закреплены ли ещё указанные композиции в профиле пользователя, либо обновить ссылки на файлы композиций, закреплённых в профиле пользователя; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # users.getSavedMusicByID
 
-*Метод из схемы TL.*
-
-> Check if the passed songs are still pinned to the user's profile, or refresh the file references of songs pinned on a user's profile [see here »](https://core.telegram.org/api/profile#music) for more info.
-
-## Определение TL
+Проверить, закреплены ли ещё указанные композиции в профиле пользователя, либо обновить ссылки на файлы композиций, закреплённых в профиле пользователя; подробнее [см. здесь »](/api/profile/#music).
 
 ```
 users.savedMusicNotModified#e3878aa4 count:int = users.SavedMusic;
@@ -21,27 +18,22 @@ users.savedMusic#34a2f297 count:int documents:Vector<Document> = users.SavedMusi
 users.getSavedMusicByID#7573a4e9 id:InputUser documents:Vector<InputDocument> = users.SavedMusic;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [InputUser](/type/InputUser/) | The ID of the user. |
-| documents | [Vector](https://core.telegram.org/type/Vector%20t)<[InputDocument](/type/InputDocument/)> | The songs (here, file_reference can be empty to refresh file references). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор пользователя.</td></tr><tr><td><strong>documents</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputDocument">InputDocument</a>&gt;</td><td>[@term:file_reference] Композиции (здесь <code>file_reference</code> может быть пустым для обновления ссылок на файлы).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [users.SavedMusic](/type/users.SavedMusic/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

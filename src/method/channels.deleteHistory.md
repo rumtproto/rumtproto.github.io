@@ -1,18 +1,15 @@
 ---
-title: "channels.deleteHistory (метод)"
+title: "channels.deleteHistory"
 original: "https://core.telegram.org/method/channels.deleteHistory"
 section: ref
 kind: method
+description: "Удалить историю супергруппы"
 layout: layout.njk
 ---
 
 # channels.deleteHistory
 
-*Метод из схемы TL.*
-
-> Delete the history of a [supergroup](https://core.telegram.org/api/channel)
-
-## Определение TL
+Удалить историю [супергруппы](/api/channel/)
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,33 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.deleteHistory#9baa9647 flags:# for_everyone:flags.0?true channel:InputChannel max_id:int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| for_everyone | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the history should be deleted for everyone |
-| channel | [InputChannel](/type/InputChannel/) | [Supergroup](https://core.telegram.org/api/channel) whose history must be deleted |
-| max_id | [int](/type/int/) | ID of message up to which the history must be deleted |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>for_everyone</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Следует ли удалить историю сообщений для всех</td></tr><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Супергруппа</a>, историю которой нужно удалить</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения, <strong>до которого</strong> следует удалить историю</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PARICIPANT_MISSING | The current user is not in the channel. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHANNEL_TOO_BIG | This channel has too many participants (>1000) to be deleted. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PARICIPANT_MISSING</td><td>Текущий пользователь не состоит в канале.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHANNEL_TOO_BIG</td><td>В этом канале слишком много участников (&gt;1000), чтобы его можно было удалить.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

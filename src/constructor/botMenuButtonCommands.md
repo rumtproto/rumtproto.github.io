@@ -1,33 +1,30 @@
 ---
-title: "botMenuButtonCommands (конструктор)"
+title: "botMenuButtonCommands"
 original: "https://core.telegram.org/constructor/botMenuButtonCommands"
 section: ref
 kind: constructor
+description: "Кнопка меню бота, открывающая при нажатии список команд бота."
 layout: layout.njk
 ---
 
 # botMenuButtonCommands
 
-*Конструктор из схемы TL.*
-
-> [Bot menu button](https://core.telegram.org/api/bots/menu) that opens the bot command list when clicked.
-
-## Определение TL
+[Кнопка меню бота](/api/bots/menu/), открывающая при нажатии список команд бота.
 
 ```
 botMenuButtonCommands#4258c205 = BotMenuButton;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [BotMenuButton](/type/BotMenuButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot menu button](https://core.telegram.org/api/bots/menu)
+#### [Кнопка меню бота](/api/bots/menu/)
 
-Bots can choose the behavior of the menu button shown next to the text input field.
+Боты могут выбирать поведение кнопки меню, отображаемой рядом с полем ввода текста.

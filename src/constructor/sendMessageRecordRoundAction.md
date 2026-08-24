@@ -1,33 +1,33 @@
 ---
-title: "sendMessageRecordRoundAction (конструктор)"
+title: "sendMessageRecordRoundAction"
 original: "https://core.telegram.org/constructor/sendMessageRecordRoundAction"
 section: ref
 kind: constructor
+description: "Пользователь записывает видеосообщение для отправки"
 layout: layout.njk
 ---
 
 # sendMessageRecordRoundAction
 
-*Конструктор из схемы TL.*
+Пользователь записывает видеосообщение для отправки
 
-> User is recording a round video to share
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===66===
-> sendMessageRecordRoundAction#88f27fbc = SendMessageAction;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===66===
+sendMessageRecordRoundAction#88f27fbc = SendMessageAction;
+```
+
+#### Схема API
 
 ```
 sendMessageRecordRoundAction#88f27fbc = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)

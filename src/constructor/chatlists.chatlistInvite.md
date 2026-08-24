@@ -1,41 +1,30 @@
 ---
-title: "chatlists.chatlistInvite (конструктор)"
+title: "chatlists.chatlistInvite"
 original: "https://core.telegram.org/constructor/chatlists.chatlistInvite"
 section: ref
 kind: constructor
+description: "Информация о глубокой ссылке на папку с чатами »."
 layout: layout.njk
 ---
 
 # chatlists.chatlistInvite
 
-*Конструктор из схемы TL.*
-
-> Info about a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links).
-
-## Определение TL
+Информация о [глубокой ссылке на папку с чатами »](/api/links/#chat-folder-links).
 
 ```
 chatlists.chatlistInvite#f10ece2f flags:# title_noanimate:flags.1?true title:TextWithEntities emoticon:flags.0?string peers:Vector<Peer> chats:Vector<Chat> users:Vector<User> = chatlists.ChatlistInvite;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| title_noanimate | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, any animated emojis present in title should not be animated and should be instead frozen on the first frame. |
-| title | [TextWithEntities](/type/TextWithEntities/) | Name of the link |
-| emoticon | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Emoji to use as icon for the folder. |
-| peers | [Vector](https://core.telegram.org/type/Vector%20t)<[Peer](/type/Peer/)> | Supergroups and channels to join |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Related chat information |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Related user information |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>title_noanimate</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, анимированные эмодзи в поле <code>title</code> не следует анимировать — их нужно остановить на первом кадре.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Название ссылки</td></tr><tr><td><strong>emoticon</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>[@term:emoticon] Эмодзи, используемый как значок папки.</td></tr><tr><td><strong>peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Peer">Peer</a>&gt;</td><td>Супергруппы и каналы, в которые нужно вступить</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Сведения о связанном чате</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Сведения о связанном пользователе</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [chatlists.ChatlistInvite](/type/chatlists.ChatlistInvite/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

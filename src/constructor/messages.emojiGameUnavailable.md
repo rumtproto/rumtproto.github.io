@@ -1,27 +1,24 @@
 ---
-title: "messages.emojiGameUnavailable (конструктор)"
+title: "messages.emojiGameUnavailable"
 original: "https://core.telegram.org/constructor/messages.emojiGameUnavailable"
 section: ref
 kind: constructor
+description: "Информация об игре в кости."
 layout: layout.njk
 ---
 
 # messages.emojiGameUnavailable
 
-*Конструктор из схемы TL.*
-
-> Dice game information.
-
-## Определение TL
+Информация об игре в кости.
 
 ```
 messages.emojiGameUnavailable#59e65335 = messages.EmojiGameInfo;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.EmojiGameInfo](/type/messages.EmojiGameInfo/)

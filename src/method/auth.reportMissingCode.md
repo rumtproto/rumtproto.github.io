@@ -1,18 +1,15 @@
 ---
-title: "auth.reportMissingCode (метод)"
+title: "auth.reportMissingCode"
 original: "https://core.telegram.org/method/auth.reportMissingCode"
 section: ref
 kind: method
+description: "Только для официальных приложений: сообщает, что SMS с кодом авторизации не было доставлено."
 layout: layout.njk
 ---
 
 # auth.reportMissingCode
 
-*Метод из схемы TL.*
-
-> Official apps only, reports that the SMS authentication code wasn't delivered.
-
-## Определение TL
+Только для официальных приложений: сообщает, что SMS с кодом авторизации не было доставлено.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,30 +18,24 @@ boolTrue#997275b5 = Bool;
 auth.reportMissingCode#cb9deff6 phone_number:string phone_code_hash:string mnc:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_number | [string](/type/string/) | Phone number where we were supposed to receive the code |
-| phone_code_hash | [string](/type/string/) | The phone code hash obtained from [auth.sendCode](/method/auth.sendCode/) |
-| mnc | [string](/type/string/) | [MNC](https://en.wikipedia.org/wiki/Mobile_country_code) of the current network operator. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона, на который должен был прийти код</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш телефонного кода, полученный от <a href="/method/auth.sendCode">auth.sendCode</a></td></tr><tr><td><strong>mnc</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="https://en.wikipedia.org/wiki/Mobile_country_code">MNC</a> текущего оператора связи.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PHONE_NUMBER_INVALID | The phone number is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PHONE_NUMBER_INVALID</td><td>Недействительный номер телефона.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [auth.sendCode](/method/auth.sendCode/)
 
-Send the verification code for login
+Отправить код подтверждения для входа

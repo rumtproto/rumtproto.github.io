@@ -1,18 +1,15 @@
 ---
-title: "messages.setBotShippingResults (метод)"
+title: "messages.setBotShippingResults"
 original: "https://core.telegram.org/method/messages.setBotShippingResults"
 section: ref
 kind: method
+description: "Если вы отправили счёт, запрашивающий адрес доставки, и был указан параметр is\\_flexible, бот получит обновление updateBotShippingQuery. Используйте этот метод, чтобы ответить на…"
 layout: layout.njk
 ---
 
 # messages.setBotShippingResults
 
-*Метод из схемы TL.*
-
-> If you sent an invoice requesting a shipping address and the parameter is\_flexible was specified, the bot will receive an [updateBotShippingQuery](/constructor/updateBotShippingQuery/) update. Use this method to reply to shipping queries.
-
-## Определение TL
+Если вы отправили счёт, запрашивающий адрес доставки, и был указан параметр is\_flexible, бот получит обновление [updateBotShippingQuery](/constructor/updateBotShippingQuery/). Используйте этот метод, чтобы ответить на запросы доставки.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,30 +18,22 @@ boolTrue#997275b5 = Bool;
 messages.setBotShippingResults#e5f672fa flags:# query_id:long error:flags.0?string shipping_options:flags.1?Vector<ShippingOption> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| query_id | [long](/type/long/) | Unique identifier for the query to be answered |
-| error | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Error message in human readable form that explains why it is impossible to complete the order (e.g. "Sorry, delivery to your desired address is unavailable"). Telegram will display this message to the user. |
-| shipping_options | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[ShippingOption](/type/ShippingOption/)> | A vector of available shipping options. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>query_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Уникальный идентификатор запроса, на который нужно ответить</td></tr><tr><td><strong>error</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Сообщение об ошибке в понятной человеку форме, объясняющее, почему невозможно выполнить заказ (например, «Извините, доставка по указанному вами адресу недоступна»). Telegram покажет это сообщение пользователю.</td></tr><tr><td><strong>shipping_options</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ShippingOption">ShippingOption</a>&gt;</td><td>Вектор доступных вариантов доставки.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only bots can use this method
+### Этот метод доступен только ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | QUERY_ID_INVALID | The query ID is invalid. |
-| 400 | USER_BOT_REQUIRED | This method can only be called by a bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>QUERY_ID_INVALID</td><td>Указанный идентификатор запроса недействителен.</td></tr><tr><td>400</td><td>USER_BOT_REQUIRED</td><td>Этот метод может вызывать только бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [updateBotShippingQuery](/constructor/updateBotShippingQuery/)
 
-This object contains information about an incoming shipping query.
+Этот объект содержит информацию о входящем запросе доставки.

@@ -1,27 +1,24 @@
 ---
-title: "updateLoginToken (конструктор)"
+title: "updateLoginToken"
 original: "https://core.telegram.org/constructor/updateLoginToken"
 section: ref
 kind: constructor
+description: "Токен входа (для входа по QR-коду) принят."
 layout: layout.njk
 ---
 
 # updateLoginToken
 
-*Конструктор из схемы TL.*
-
-> A login token (for login via QR code) was accepted.
-
-## Определение TL
+Токен входа (для входа по QR-коду) принят.
 
 ```
 updateLoginToken#564fe691 = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

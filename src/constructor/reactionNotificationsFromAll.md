@@ -1,27 +1,24 @@
 ---
-title: "reactionNotificationsFromAll (конструктор)"
+title: "reactionNotificationsFromAll"
 original: "https://core.telegram.org/constructor/reactionNotificationsFromAll"
 section: ref
 kind: constructor
+description: "Получать уведомления о реакциях от любых пользователей."
 layout: layout.njk
 ---
 
 # reactionNotificationsFromAll
 
-*Конструктор из схемы TL.*
-
-> Receive notifications about reactions made by any user.
-
-## Определение TL
+Получать уведомления о реакциях от любых пользователей.
 
 ```
 reactionNotificationsFromAll#4b9e22a0 = ReactionNotificationsFrom;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReactionNotificationsFrom](/type/ReactionNotificationsFrom/)

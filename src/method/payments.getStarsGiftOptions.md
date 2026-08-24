@@ -1,55 +1,45 @@
 ---
-title: "payments.getStarsGiftOptions (метод)"
+title: "payments.getStarsGiftOptions"
 original: "https://core.telegram.org/method/payments.getStarsGiftOptions"
 section: ref
 kind: method
+description: "Получить список вариантов подарка за Telegram Stars » в виде конструкторов starsGiftOption."
 layout: layout.njk
 ---
 
 # payments.getStarsGiftOptions
 
-*Метод из схемы TL.*
-
-> Obtain a list of [Telegram Stars gift options »](https://core.telegram.org/api/stars#buying-or-gifting-stars) as [starsGiftOption](/constructor/starsGiftOption/) constructors.
-
-## Определение TL
+Получить список [вариантов подарка за Telegram Stars »](/api/stars/#buying-or-gifting-stars) в виде конструкторов [starsGiftOption](/constructor/starsGiftOption/).
 
 ```
 ---functions---
 payments.getStarsGiftOptions#d3c96bc8 flags:# user_id:flags.0?InputUser = Vector<StarsGiftOption>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| user_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputUser](/type/InputUser/) | Receiver of the gift (optional). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputUser">InputUser</a></td><td>Получатель подарка (необязательно).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[StarsGiftOption](/type/StarsGiftOption/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | USER_GIFT_UNAVAILABLE | Gifts are not available in the current region ([stars_gifts_enabled](https://core.telegram.org/api/config#stars-gifts-enabled) is equal to false). |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>USER_GIFT_UNAVAILABLE</td><td>Подарки недоступны в текущем регионе (<a href="/api/config#stars-gifts-enabled">stars_gifts_enabled</a> равен false).</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
 #### [starsGiftOption](/constructor/starsGiftOption/)
 
-[Telegram Stars gift option](https://core.telegram.org/api/stars#buying-or-gifting-stars).
+[Вариант подарка за Telegram Stars](/api/stars/#buying-or-gifting-stars).
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

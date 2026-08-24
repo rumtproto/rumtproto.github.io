@@ -1,18 +1,15 @@
 ---
-title: "channels.getLeftChannels (метод)"
+title: "channels.getLeftChannels"
 original: "https://core.telegram.org/method/channels.getLeftChannels"
 section: ref
 kind: method
+description: "Получить список каналов и супергрупп, которые мы покинули; требуется сессия выгрузки данных, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # channels.getLeftChannels
 
-*Метод из схемы TL.*
-
-> Get a list of [channels/supergroups](https://core.telegram.org/api/channel) we left, requires a [takeout session, see here » for more info](https://core.telegram.org/api/takeout).
-
-## Определение TL
+Получить список [каналов и супергрупп](/api/channel/), которые мы покинули; требуется [сессия выгрузки данных, подробнее см. здесь »](/api/takeout/).
 
 ```
 messages.chats#64ff9fd5 chats:Vector<Chat> = messages.Chats;
@@ -21,35 +18,30 @@ messages.chatsSlice#9cd81144 count:int chats:Vector<Chat> = messages.Chats;
 channels.getLeftChannels#8341ecc0 offset:int = messages.Chats;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| offset | [int](/type/int/) | Offset for [pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Смещение для <a href="/api/offsets">постраничной выборки</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Chats](/type/messages.Chats/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | TAKEOUT_INVALID | The specified takeout ID is invalid. |
-| 403 | TAKEOUT_REQUIRED | A [takeout](https://core.telegram.org/api/takeout) session needs to be initialized first, [see here » for more info](https://core.telegram.org/api/takeout). |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>TAKEOUT_INVALID</td><td>Указанный идентификатор выгрузки данных недействителен.</td></tr><tr><td>403</td><td>TAKEOUT_REQUIRED</td><td>Сначала необходимо инициализировать сессию <a href="/api/takeout">выгрузки данных</a>, <a href="/api/takeout">подробнее см. здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Takeout API](https://core.telegram.org/api/takeout)
+#### [Takeout API](/api/takeout/)
 
-Telegram's API allows users to export all of their information through the takeout API.
+API Telegram позволяет пользователям экспортировать все свои данные через API выгрузки данных.

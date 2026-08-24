@@ -1,18 +1,15 @@
 ---
-title: "RecentMeUrl (тип)"
+title: "RecentMeUrl"
 original: "https://core.telegram.org/type/RecentMeUrl"
 section: ref
 kind: type
+description: "Недавние ссылки t.me"
 layout: layout.njk
 ---
 
 # RecentMeUrl
 
-*Тип из схемы TL.*
-
-> Recent t.me urls
-
-## Определение TL
+Недавние ссылки t.me
 
 ```
 recentMeUrlUnknown#46e1d13d url:string = RecentMeUrl;
@@ -22,12 +19,6 @@ recentMeUrlChatInvite#eb49081d url:string chat_invite:ChatInvite = RecentMeUrl;
 recentMeUrlStickerSet#bc0a57dc url:string set:StickerSetCovered = RecentMeUrl;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [recentMeUrlUnknown](/constructor/recentMeUrlUnknown/) | Unknown t.me url |
-| [recentMeUrlUser](/constructor/recentMeUrlUser/) | Recent t.me link to a user |
-| [recentMeUrlChat](/constructor/recentMeUrlChat/) | Recent t.me link to a chat |
-| [recentMeUrlChatInvite](/constructor/recentMeUrlChatInvite/) | Recent t.me invite link to a chat |
-| [recentMeUrlStickerSet](/constructor/recentMeUrlStickerSet/) | Recent t.me stickerset installation URL |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/recentMeUrlUnknown">recentMeUrlUnknown</a></td><td>Неизвестный адрес t.me</td></tr><tr><td><a href="/constructor/recentMeUrlUser">recentMeUrlUser</a></td><td>Недавняя ссылка t.me на пользователя</td></tr><tr><td><a href="/constructor/recentMeUrlChat">recentMeUrlChat</a></td><td>Недавняя ссылка t.me на чат</td></tr><tr><td><a href="/constructor/recentMeUrlChatInvite">recentMeUrlChatInvite</a></td><td>Недавняя пригласительная ссылка t.me на чат</td></tr><tr><td><a href="/constructor/recentMeUrlStickerSet">recentMeUrlStickerSet</a></td><td>Недавняя ссылка t.me для установки набора стикеров</td></tr></tbody></table>

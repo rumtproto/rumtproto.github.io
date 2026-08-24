@@ -1,20 +1,19 @@
 ---
-title: "channels.updatePaidMessagesPrice (метод)"
+title: "channels.updatePaidMessagesPrice"
 original: "https://core.telegram.org/method/channels.updatePaidMessagesPrice"
 section: ref
 kind: method
+description: "Включить или отключить платные сообщения » в этой супергруппе или монофоруме."
 layout: layout.njk
 ---
 
 # channels.updatePaidMessagesPrice
 
-*Метод из схемы TL.*
+Включить или отключить [платные сообщения »](/api/paid-messages/) в этой [супергруппе](/api/channel/) или [монофоруме](/api/monoforum/).
 
-> Enable or disable [paid messages »](https://core.telegram.org/api/paid-messages) in this [supergroup](https://core.telegram.org/api/channel) or [monoforum](https://core.telegram.org/api/monoforum).
-> Also used to [enable or disable monoforums aka direct messages in a channel](https://core.telegram.org/api/monoforum).
-> Note that passing the ID of the monoforum itself to `channel` will return a `CHANNEL_MONOFORUM_UNSUPPORTED` error: pass the ID of the associated channel to edit the settings of the associated monoforum, instead.
+Также используется, чтобы [включить или отключить моноформумы, то есть личные сообщения в канале](/api/monoforum/).
 
-## Определение TL
+Обратите внимание, что передача идентификатора самого монофорума в `channel` приведёт к ошибке `CHANNEL_MONOFORUM_UNSUPPORTED`: чтобы изменить настройки связанного монофорума, передавайте идентификатор связанного канала.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -28,44 +27,34 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.updatePaidMessagesPrice#4b12327b flags:# broadcast_messages_allowed:flags.0?true channel:InputChannel send_paid_messages_stars:long = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| broadcast_messages_allowed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Only usable for channels, enables or disables the associated [monoforum aka direct messages](https://core.telegram.org/api/monoforum). |
-| channel | [InputChannel](/type/InputChannel/) | Pass the supergroup ID for supergroups and the ID of the [channel](https://core.telegram.org/api/channel) to modify the setting in the associated monoforum. |
-| send_paid_messages_stars | [long](/type/long/) | Specifies the required amount of [Telegram Stars](https://core.telegram.org/api/stars) users must pay to send messages to the supergroup or monoforum. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>broadcast_messages_allowed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Применимо только к каналам: включает или отключает связанный <a href="/api/monoforum">монофорум, он же личные сообщения</a>.</td></tr><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Передайте идентификатор супергруппы — для супергрупп, либо идентификатор <a href="/api/channel">канала</a> — чтобы изменить настройку в связанном с ним монофоруме.</td></tr><tr><td><strong>send_paid_messages_stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Задаёт количество <a href="/api/stars">Telegram Stars</a>, которое пользователи обязаны заплатить за отправку сообщений в супергруппу или монофорум.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_MONOFORUM_UNSUPPORTED | [Monoforums](https://core.telegram.org/api/channel#monoforums) do not support this feature. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | STARS_AMOUNT_INVALID | The specified amount in stars is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_MONOFORUM_UNSUPPORTED</td><td><a href="/api/channel#monoforums">Монофорумы</a> не поддерживают эту возможность.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>STARS_AMOUNT_INVALID</td><td>Указанная сумма в звёздах недействительна.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Paid messages](https://core.telegram.org/api/paid-messages)
+#### [Платные сообщения](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.
+Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.

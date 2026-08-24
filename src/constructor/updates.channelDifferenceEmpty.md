@@ -1,38 +1,30 @@
 ---
-title: "updates.channelDifferenceEmpty (конструктор)"
+title: "updates.channelDifferenceEmpty"
 original: "https://core.telegram.org/constructor/updates.channelDifferenceEmpty"
 section: ref
 kind: constructor
+description: "Новых обновлений нет"
 layout: layout.njk
 ---
 
 # updates.channelDifferenceEmpty
 
-*Конструктор из схемы TL.*
-
-> There are no new updates
-
-## Определение TL
+Новых обновлений нет
 
 ```
 updates.channelDifferenceEmpty#3e11affb flags:# final:flags.0?true pts:int timeout:flags.1?int = updates.ChannelDifference;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| final | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether there are more updates that must be fetched (always false) |
-| pts | [int](/type/int/) | The latest [PTS](/api/updates/) |
-| timeout | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | Clients are supposed to refetch the channel difference after timeout seconds have elapsed, if the user is [currently viewing the chat, see here »](https://core.telegram.org/api/updates/#subscribing-to-updates-of-channels-supergroups) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>final</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Есть ли ещё обновления, которые нужно получить (всегда false)</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] Последнее значение <a href="/api/updates">PTS</a></td></tr><tr><td><strong>timeout</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Клиенты должны повторно запросить разницу канала по истечении timeout секунд, если пользователь <a href="/api/updates#subscribing-to-updates-of-channels-supergroups">в данный момент просматривает чат, подробнее см. здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [updates.ChannelDifference](/type/updates.ChannelDifference/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

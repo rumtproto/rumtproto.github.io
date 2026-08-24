@@ -1,19 +1,17 @@
 ---
-title: "bots.deletePreviewMedia (метод)"
+title: "bots.deletePreviewMedia"
 original: "https://core.telegram.org/method/bots.deletePreviewMedia"
 section: ref
 kind: method
+description: "Удалить предпросмотр главного Mini App, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # bots.deletePreviewMedia
 
-*Метод из схемы TL.*
+[@term:Mini App] Удалить [предпросмотр главного Mini App, подробнее см. здесь »](/api/bots/webapps/#main-mini-app-previews).
 
-> Delete a [main mini app preview, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info.
-> Only owners of bots with a configured Main Mini App can use this method, see [see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info on how to check if you can invoke this method.
-
-## Определение TL
+Этот метод могут использовать только владельцы ботов с настроенным Main Mini App; о том, как проверить, доступен ли вам вызов этого метода, [см. здесь »](/api/bots/webapps/#main-mini-app-previews).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,28 +20,22 @@ boolTrue#997275b5 = Bool;
 bots.deletePreviewMedia#2d0135b3 bot:InputUser lang_code:string media:Vector<InputMedia> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot | [InputUser](/type/InputUser/) | The bot that owns the Main Mini App. |
-| lang_code | [string](/type/string/) | ISO 639-1 language code, indicating the localization of the preview to delete. |
-| media | [Vector](https://core.telegram.org/type/Vector%20t)<[InputMedia](/type/InputMedia/)> | The photo/video preview to delete, previously fetched as specified [here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот, которому принадлежит Main Mini App.</td></tr><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код языка по ISO 639-1, указывающий локализацию удаляемого предпросмотра.</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputMedia">InputMedia</a>&gt;</td><td>Предпросмотр в виде фото или видео, который нужно удалить; ранее получен так, как указано <a href="/api/bots/webapps#main-mini-app-previews">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

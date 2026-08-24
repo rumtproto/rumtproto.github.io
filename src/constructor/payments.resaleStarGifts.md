@@ -1,51 +1,38 @@
 ---
-title: "payments.resaleStarGifts (конструктор)"
+title: "payments.resaleStarGifts"
 original: "https://core.telegram.org/constructor/payments.resaleStarGifts"
 section: ref
 kind: constructor
+description: "Список подарков, выставленных на перепродажу »."
 layout: layout.njk
 ---
 
 # payments.resaleStarGifts
 
-*Конструктор из схемы TL.*
-
-> List of gifts currently on [resale »](https://core.telegram.org/api/gifts#reselling-collectible-gifts).
-
-## Определение TL
+Список подарков, выставленных на [перепродажу »](/api/gifts/#reselling-collectible-gifts).
 
 ```
 payments.resaleStarGifts#947a12df flags:# count:int gifts:Vector<StarGift> next_offset:flags.0?string attributes:flags.1?Vector<StarGiftAttribute> attributes_hash:flags.1?long chats:Vector<Chat> counters:flags.2?Vector<StarGiftAttributeCounter> users:Vector<User> = payments.ResaleStarGifts;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| count | [int](/type/int/) | Total number of results. |
-| gifts | [Vector](https://core.telegram.org/type/Vector%20t)<[StarGift](/type/StarGift/)> | Collectible gifts on resale (may be less than count, in which case next_offset will be set). |
-| next_offset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Offset for pagination, pass this to [payments.getResaleStarGifts](/method/payments.getResaleStarGifts/).offset to fetch the next results. |
-| attributes | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftAttribute](/type/StarGiftAttribute/)> | Possible gift attributes, only set if [payments.getResaleStarGifts](/method/payments.getResaleStarGifts/).attributes_hash is set (on the first call, it must be equal to 0). |
-| attributes_hash | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[long](/type/long/) | Hash of the attributes field, pass this to [payments.getResaleStarGifts](/method/payments.getResaleStarGifts/).attributes_hash to avoid returning any attributes (flag not set) if they haven't changed. |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Chats mentioned in the attributes. |
-| counters | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftAttributeCounter](/type/StarGiftAttributeCounter/)> | Indicates the total number of gifts that have a specific attribute, only set if [payments.getResaleStarGifts](/method/payments.getResaleStarGifts/).offset is empty (since this field is not related to the current result page but to all of them, it's only returned on the first page). |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users mentioned in the attributes. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число результатов.</td></tr><tr><td><strong>gifts</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGift">StarGift</a>&gt;</td><td>[@term:next_offset] Коллекционные подарки, выставленные на перепродажу (может быть меньше, чем <code>count</code>, — в этом случае будет установлено поле <code>next_offset</code>).</td></tr><tr><td><strong>next_offset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Смещение для постраничной выборки; передайте его в <a href="/method/payments.getResaleStarGifts">payments.getResaleStarGifts</a>.<code>offset</code>, чтобы получить следующие результаты.</td></tr><tr><td><strong>attributes</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftAttribute">StarGiftAttribute</a>&gt;</td><td>Возможные атрибуты подарка; задаётся только в том случае, если задано поле <a href="/method/payments.getResaleStarGifts">payments.getResaleStarGifts</a>.<code>attributes_hash</code> (при первом вызове оно должно быть равно <code>0</code>).</td></tr><tr><td><strong>attributes_hash</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/long">long</a></td><td>Хеш поля <code>attributes</code>; передайте его в <a href="/method/payments.getResaleStarGifts">payments.getResaleStarGifts</a>.<code>attributes_hash</code>, чтобы не возвращать атрибуты (флаг не установлен), если они не изменились.</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Чаты, упомянутые в атрибутах.</td></tr><tr><td><strong>counters</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftAttributeCounter">StarGiftAttributeCounter</a>&gt;</td><td>Указывает общее количество подарков, обладающих определённым атрибутом; задаётся, только если <a href="/method/payments.getResaleStarGifts">payments.getResaleStarGifts</a>.<code>offset</code> пуст (поскольку это поле относится не к текущей странице результатов, а ко всем сразу, оно возвращается только на первой странице).</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи, упомянутые в атрибутах.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.ResaleStarGifts](/type/payments.ResaleStarGifts/)
 
-## Related pages
+### Связанные страницы
 
 #### [payments.getResaleStarGifts](/method/payments.getResaleStarGifts/)
 
-Get [collectible gifts](https://core.telegram.org/api/gifts#collectible-gifts) of a specific type currently on resale, see [here »](https://core.telegram.org/api/gifts#reselling-collectible-gifts) for more info.
+Получить [коллекционные подарки](/api/gifts/#collectible-gifts) определённого типа, выставленные на перепродажу; подробнее [см. здесь »](/api/gifts/#reselling-collectible-gifts).
 
-`sort_by_price` and `sort_by_num` are mutually exclusive, if neither are set results are sorted by the unixtime (descending) when their resell price was last changed.
+Параметры `sort_by_price` и `sort_by_num` взаимно исключают друг друга; если не задан ни один из них, результаты сортируются по времени последнего изменения цены перепродажи (unixtime, по убыванию).
 
-See [here »](https://core.telegram.org/api/gifts#sending-gifts) for detailed documentation on this method.
+Подробную документацию по этому методу см. [здесь »](/api/gifts/#sending-gifts).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

@@ -1,42 +1,34 @@
 ---
-title: "inputBusinessIntro (конструктор)"
+title: "inputBusinessIntro"
 original: "https://core.telegram.org/constructor/inputBusinessIntro"
 section: ref
 kind: constructor
+description: "Введение в Telegram Business »."
 layout: layout.njk
 ---
 
 # inputBusinessIntro
 
-*Конструктор из схемы TL.*
-
-> [Telegram Business introduction »](https://core.telegram.org/api/business#business-introduction).
-
-## Определение TL
+[Введение в Telegram Business »](/api/business/#business-introduction).
 
 ```
 inputBusinessIntro#9c469cd flags:# title:string description:string sticker:flags.0?InputDocument = InputBusinessIntro;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| title | [string](/type/string/) | Title of the introduction message |
-| description | [string](/type/string/) | Profile introduction |
-| sticker | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputDocument](/type/InputDocument/) | Optional introduction [sticker](https://core.telegram.org/api/stickers). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Заголовок приветственного сообщения</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Описание профиля</td></tr><tr><td><strong>sticker</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputDocument">InputDocument</a></td><td>Необязательный приветственный <a href="/api/stickers">стикер</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputBusinessIntro](/type/InputBusinessIntro/)
 
-## Related pages
+### Связанные страницы
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

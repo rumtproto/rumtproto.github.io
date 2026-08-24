@@ -1,18 +1,15 @@
 ---
-title: "contacts.editCloseFriends (метод)"
+title: "contacts.editCloseFriends"
 original: "https://core.telegram.org/method/contacts.editCloseFriends"
 section: ref
 kind: method
+description: "Изменить список близких друзей, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # contacts.editCloseFriends
 
-*Метод из схемы TL.*
-
-> Edit the [close friends list, see here »](https://core.telegram.org/api/privacy) for more info.
-
-## Определение TL
+Изменить [список близких друзей, подробнее см. здесь »](/api/privacy/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,20 +18,18 @@ boolTrue#997275b5 = Bool;
 contacts.editCloseFriends#ba6705f0 id:Vector<long> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | Full list of user IDs of close friends, see [here](https://core.telegram.org/api/privacy) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Полный список идентификаторов пользователей из числа близких друзей, подробнее см. <a href="/api/privacy">здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Privacy settings](https://core.telegram.org/api/privacy)
+#### [Настройки приватности](/api/privacy/)
 
-Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.
+Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным способом.

@@ -1,18 +1,15 @@
 ---
-title: "account.declinePasswordReset (метод)"
+title: "account.declinePasswordReset"
 original: "https://core.telegram.org/method/account.declinePasswordReset"
 section: ref
 kind: method
+description: "Отменить незавершённый сброс пароля двухфакторной аутентификации, подробнее см. здесь »"
 layout: layout.njk
 ---
 
 # account.declinePasswordReset
 
-*Метод из схемы TL.*
-
-> Abort a pending 2FA password reset, [see here for more info »](https://core.telegram.org/api/srp/#password-reset)
-
-## Определение TL
+Отменить незавершённый сброс пароля двухфакторной аутентификации, [подробнее см. здесь »](/api/srp/#password-reset)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,24 +18,22 @@ boolTrue#997275b5 = Bool;
 account.declinePasswordReset#4c9409f6 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | RESET_REQUEST_MISSING | No password reset is in progress. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>RESET_REQUEST_MISSING</td><td>Сброс пароля не выполняется.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.

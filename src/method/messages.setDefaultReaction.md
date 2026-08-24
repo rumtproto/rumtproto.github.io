@@ -1,18 +1,15 @@
 ---
-title: "messages.setDefaultReaction (метод)"
+title: "messages.setDefaultReaction"
 original: "https://core.telegram.org/method/messages.setDefaultReaction"
 section: ref
 kind: method
+description: "Изменить эмодзи-реакцию по умолчанию, используемую в меню быстрых реакций: значение синхронизируется между устройствами и может быть получено через help.getConfig, поле…"
 layout: layout.njk
 ---
 
 # messages.setDefaultReaction
 
-*Метод из схемы TL.*
-
-> Change default emoji reaction to use in the quick reaction menu: the value is synced across devices and can be fetched using [help.getConfig, `reactions_default` field](/method/help.getConfig/).
-
-## Определение TL
+Изменить эмодзи-реакцию по умолчанию, используемую в меню быстрых реакций: значение синхронизируется между устройствами и может быть получено через [help.getConfig, поле `reactions_default`](/method/help.getConfig/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,26 +18,22 @@ boolTrue#997275b5 = Bool;
 messages.setDefaultReaction#4f47a016 reaction:Reaction = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| reaction | [Reaction](/type/Reaction/) | New emoji reaction |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/type/Reaction">Reaction</a></td><td>Новая реакция эмодзи</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | REACTION_INVALID | The specified reaction is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>REACTION_INVALID</td><td>Указанная реакция недействительна.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [help.getConfig](/method/help.getConfig/)
 
-Returns current configuration, including data center configuration.
+Возвращает текущую конфигурацию, включая конфигурацию дата-центров.

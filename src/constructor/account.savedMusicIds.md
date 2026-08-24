@@ -1,39 +1,34 @@
 ---
-title: "account.savedMusicIds (конструктор)"
+title: "account.savedMusicIds"
 original: "https://core.telegram.org/constructor/account.savedMusicIds"
 section: ref
 kind: constructor
+description: "Список идентификаторов композиций (полей id конструктора document), закреплённых сейчас в нашем профиле, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # account.savedMusicIds
 
-*Конструктор из схемы TL.*
-
-> List of IDs of songs ([document](/constructor/document/).`id`s) currently pinned on our profile, see [here »](https://core.telegram.org/api/profile#music) for more info.
-
-## Определение TL
+Список идентификаторов композиций (полей `id` конструктора [document](/constructor/document/)), закреплённых сейчас в нашем профиле, подробнее [см. здесь »](/api/profile/#music).
 
 ```
 account.savedMusicIds#998d6636 ids:Vector<long> = account.SavedMusicIds;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| ids | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | Full list of [document](/constructor/document/).ids |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>ids</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Полный список значений <a href="/constructor/document">document</a>.<code>id</code></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.SavedMusicIds](/type/account.SavedMusicIds/)
 
-## Related pages
+### Связанные страницы
 
 #### [document](/constructor/document/)
 
-Document
+Документ
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

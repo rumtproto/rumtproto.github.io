@@ -1,55 +1,34 @@
 ---
-title: "messageService (конструктор)"
+title: "messageService"
 original: "https://core.telegram.org/constructor/messageService"
 section: ref
 kind: constructor
+description: "Обозначает сервисное сообщение"
 layout: layout.njk
 ---
 
 # messageService
 
-*Конструктор из схемы TL.*
-
-> Indicates a service message
-
-## Определение TL
+Обозначает сервисное сообщение
 
 ```
 messageService#7a800e0a flags:# out:flags.1?true mentioned:flags.4?true media_unread:flags.5?true reactions_are_possible:flags.9?true silent:flags.13?true post:flags.14?true legacy:flags.19?true id:int from_id:flags.8?Peer peer_id:Peer saved_peer_id:flags.28?Peer reply_to:flags.3?MessageReplyHeader date:int action:MessageAction reactions:flags.20?MessageReactions ttl_period:flags.25?int = Message;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| out | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the message is outgoing |
-| mentioned | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Whether we were mentioned in the message |
-| media_unread | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether the message contains unread media |
-| reactions_are_possible | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[true](/constructor/true/) | Whether you can [react to this message »](https://core.telegram.org/api/reactions). |
-| silent | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[true](/constructor/true/) | Whether the message is silent |
-| post | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[true](/constructor/true/) | Whether it's a channel post |
-| legacy | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).19?[true](/constructor/true/) | This is a legacy message: it has to be refetched with the new layer |
-| id | [int](/type/int/) | Message ID |
-| from_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[Peer](/type/Peer/) | ID of the sender of this message |
-| peer_id | [Peer](/type/Peer/) | Sender of service message |
-| saved_peer_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).28?[Peer](/type/Peer/) | Will only be set for service messages within a [monoforum topic »](https://core.telegram.org/api/monoforum): peer will be equal to the ID of the monoforum and the saved_peer_id flag will be set to the ID of a topic. |
-| reply_to | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[MessageReplyHeader](/type/MessageReplyHeader/) | Reply (thread) information |
-| date | [int](/type/int/) | Message date |
-| action | [MessageAction](/type/MessageAction/) | Event connected with the service message |
-| reactions | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).20?[MessageReactions](/type/MessageReactions/) | [Reactions »](https://core.telegram.org/api/reactions). |
-| ttl_period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).25?[int](/type/int/) | Time To Live of the message, once message.date+message.ttl_period === time(), the message will be deleted on the server, and must be deleted locally as well. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>out</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Является ли сообщение исходящим</td></tr><tr><td><strong>mentioned</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Были ли мы упомянуты в сообщении</td></tr><tr><td><strong>media_unread</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Содержит ли сообщение непрочитанные медиа</td></tr><tr><td><strong>reactions_are_possible</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/constructor/true">true</a></td><td>Можете ли вы <a href="/api/reactions">поставить реакцию на это сообщение »</a>.</td></tr><tr><td><strong>silent</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true">true</a></td><td>Является ли сообщение беззвучным</td></tr><tr><td><strong>post</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true">true</a></td><td>Является ли это постом в канале</td></tr><tr><td><strong>legacy</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/constructor/true">true</a></td><td>Это устаревшее сообщение: его необходимо запросить заново на новом слое</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения</td></tr><tr><td><strong>from_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/Peer">Peer</a></td><td>Идентификатор отправителя этого сообщения</td></tr><tr><td><strong>peer_id</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>Отправитель сервисного сообщения</td></tr><tr><td><strong>saved_peer_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.28?<a href="/type/Peer">Peer</a></td><td>[@term:peer] Устанавливается только для сервисных сообщений внутри <a href="/api/monoforum">темы монофорума »</a>: <code>peer</code> будет равен идентификатору монофорума, а флаг <code>saved_peer_id</code> будет установлен в идентификатор темы.</td></tr><tr><td><strong>reply_to</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/MessageReplyHeader">MessageReplyHeader</a></td><td>Сведения об ответах (обсуждении)</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата сообщения</td></tr><tr><td><strong>action</strong></td><td style="text-align: center;"><a href="/type/MessageAction">MessageAction</a></td><td>Событие, связанное с сервисным сообщением</td></tr><tr><td><strong>reactions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/type/MessageReactions">MessageReactions</a></td><td><a href="/api/reactions">Реакции »</a>.</td></tr><tr><td><strong>ttl_period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/type/int">int</a></td><td>Время жизни сообщения: как только message.date+message.ttl_period === time(), сообщение будет удалено на сервере, и его также необходимо удалить локально.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Message](/type/Message/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.

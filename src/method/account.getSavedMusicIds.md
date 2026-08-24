@@ -1,18 +1,15 @@
 ---
-title: "account.getSavedMusicIds (метод)"
+title: "account.getSavedMusicIds"
 original: "https://core.telegram.org/method/account.getSavedMusicIds"
 section: ref
 kind: method
+description: "Получить полный список, содержащий только идентификаторы композиций, добавленных в профиль в данный момент; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # account.getSavedMusicIds
 
-*Метод из схемы TL.*
-
-> Fetch the full list of only the IDs of [songs currently added to the profile, see here »](https://core.telegram.org/api/profile#music) for more info.
-
-## Определение TL
+Получить полный список, содержащий только идентификаторы [композиций, добавленных в профиль в данный момент; подробнее см. здесь »](/api/profile/#music).
 
 ```
 account.savedMusicIdsNotModified#4fc81d6e = account.SavedMusicIds;
@@ -21,24 +18,22 @@ account.savedMusicIds#998d6636 ids:Vector<long> = account.SavedMusicIds;
 account.getSavedMusicIds#e09d5faf hash:long = account.SavedMusicIds;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | Hash [generated »](https://core.telegram.org/api/offsets#hash-generation) from the previously returned list of IDs. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] Хеш, <a href="/api/offsets#hash-generation">вычисленный »</a> по ранее возвращённому списку идентификаторов.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.SavedMusicIds](/type/account.SavedMusicIds/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

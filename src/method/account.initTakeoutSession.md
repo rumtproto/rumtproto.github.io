@@ -1,18 +1,15 @@
 ---
-title: "account.initTakeoutSession (метод)"
+title: "account.initTakeoutSession"
 original: "https://core.telegram.org/method/account.initTakeoutSession"
 section: ref
 kind: method
+description: "Инициализировать сессию выгрузки данных, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # account.initTakeoutSession
 
-*Метод из схемы TL.*
-
-> Initialize a [takeout session, see here » for more info](https://core.telegram.org/api/takeout).
-
-## Определение TL
+Инициализировать [сессию выгрузки данных, подробнее см. здесь »](/api/takeout/).
 
 ```
 account.takeout#4dba4501 id:long = account.Takeout;
@@ -20,37 +17,26 @@ account.takeout#4dba4501 id:long = account.Takeout;
 account.initTakeoutSession#8ef3eab0 flags:# contacts:flags.0?true message_users:flags.1?true message_chats:flags.2?true message_megagroups:flags.3?true message_channels:flags.4?true files:flags.5?true file_max_size:flags.5?long = account.Takeout;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| contacts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to export contacts |
-| message_users | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether to export messages in private chats |
-| message_chats | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether to export messages in [basic groups](https://core.telegram.org/api/channel#basic-groups) |
-| message_megagroups | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether to export messages in [supergroups](https://core.telegram.org/api/channel#supergroups) |
-| message_channels | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Whether to export messages in [channels](https://core.telegram.org/api/channel#channels) |
-| files | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether to export files |
-| file_max_size | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[long](/type/long/) | Maximum size of files to export |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>contacts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Выгружать ли контакты</td></tr><tr><td><strong>message_users</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Выгружать ли сообщения из личных чатов</td></tr><tr><td><strong>message_chats</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Выгружать ли сообщения из <a href="/api/channel#basic-groups">обычных групп</a></td></tr><tr><td><strong>message_megagroups</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Выгружать ли сообщения из <a href="/api/channel#supergroups">супергрупп</a></td></tr><tr><td><strong>message_channels</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Выгружать ли сообщения из <a href="/api/channel#channels">каналов</a></td></tr><tr><td><strong>files</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Выгружать ли файлы</td></tr><tr><td><strong>file_max_size</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/long">long</a></td><td>Максимальный размер экспортируемых файлов</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.Takeout](/type/account.Takeout/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 420 | TAKEOUT_INIT_DELAY_%d | Sorry, for security reasons, you will be able to begin downloading your data in %d seconds. We have notified all your devices about the export request to make sure it's authorized and to give you time to react if it's not. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>420</td><td>TAKEOUT_INIT_DELAY_%d</td><td>К сожалению, из соображений безопасности вы сможете начать загрузку своих данных через %d секунд. Мы уведомили все ваши устройства о запросе на экспорт, чтобы убедиться, что он санкционирован, и дать вам время отреагировать, если это не так.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Takeout API](https://core.telegram.org/api/takeout)
+#### [Takeout API](/api/takeout/)
 
-Telegram's API allows users to export all of their information through the takeout API.
+API Telegram позволяет пользователям экспортировать все свои данные через API выгрузки данных.

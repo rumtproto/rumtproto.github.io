@@ -1,18 +1,15 @@
 ---
-title: "account.getChannelRestrictedStatusEmojis (метод)"
+title: "account.getChannelRestrictedStatusEmojis"
 original: "https://core.telegram.org/method/account.getChannelRestrictedStatusEmojis"
 section: ref
 kind: method
+description: "Возвращает полный список идентификаторов пользовательских эмодзи », которые нельзя использовать в эмодзи-статусах каналов »."
 layout: layout.njk
 ---
 
 # account.getChannelRestrictedStatusEmojis
 
-*Метод из схемы TL.*
-
-> Returns fetch the full list of [custom emoji IDs »](https://core.telegram.org/api/custom-emoji) that cannot be used in [channel emoji statuses »](https://core.telegram.org/api/emoji-status).
-
-## Определение TL
+Возвращает полный список [идентификаторов пользовательских эмодзи »](/api/custom-emoji/), которые нельзя использовать в [эмодзи-статусах каналов »](/api/emoji-status/).
 
 ```
 emojiListNotModified#481eadfa = EmojiList;
@@ -21,28 +18,26 @@ emojiList#7a1e11d1 hash:long document_id:Vector<long> = EmojiList;
 account.getChannelRestrictedStatusEmojis#35a9e0d5 hash:long = EmojiList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [EmojiList](/type/EmojiList/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

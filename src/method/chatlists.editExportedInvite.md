@@ -1,18 +1,15 @@
 ---
-title: "chatlists.editExportedInvite (метод)"
+title: "chatlists.editExportedInvite"
 original: "https://core.telegram.org/method/chatlists.editExportedInvite"
 section: ref
 kind: method
+description: "Изменить глубокую ссылку на папку чатов »."
 layout: layout.njk
 ---
 
 # chatlists.editExportedInvite
 
-*Метод из схемы TL.*
-
-> Edit a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links).
-
-## Определение TL
+Изменить [глубокую ссылку на папку чатов »](/api/links/#chat-folder-links).
 
 ```
 exportedChatlistInvite#c5181ac flags:# title:string url:string peers:Vector<Peer> = ExportedChatlistInvite;
@@ -20,35 +17,22 @@ exportedChatlistInvite#c5181ac flags:# title:string url:string peers:Vector<Peer
 chatlists.editExportedInvite#653db63d flags:# chatlist:InputChatlist slug:string title:flags.1?string peers:flags.2?Vector<InputPeer> = ExportedChatlistInvite;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| chatlist | [InputChatlist](/type/InputChatlist/) | Folder ID |
-| slug | [string](/type/string/) | slug obtained from the [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links). |
-| title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | If set, sets a new name for the link |
-| peers | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[Vector](https://core.telegram.org/type/Vector%20t)<[InputPeer](/type/InputPeer/)> | If set, changes the list of peers shared with the link |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>chatlist</strong></td><td style="text-align: center;"><a href="/type/InputChatlist">InputChatlist</a></td><td>Идентификатор папки</td></tr><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] <code>slug</code>, полученный из <a href="/api/links#chat-folder-links">глубокой ссылки на папку чатов »</a>.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Если установлено, задаёт новое имя для ссылки</td></tr><tr><td><strong>peers</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPeer">InputPeer</a>&gt;</td><td>Если установлено, изменяет список пиров, доступных по ссылке</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [ExportedChatlistInvite](/type/ExportedChatlistInvite/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | FILTER_ID_INVALID | The specified filter ID is invalid. |
-| 400 | FILTER_NOT_SUPPORTED | The specified filter cannot be used in this context. |
-| 400 | INVITE_SLUG_EMPTY | The specified invite slug is empty. |
-| 400 | INVITE_SLUG_EXPIRED | The specified chat folder link has expired. |
-| 400 | PEERS_LIST_EMPTY | The specified list of peers is empty. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>FILTER_ID_INVALID</td><td>Указанный идентификатор фильтра недействителен.</td></tr><tr><td>400</td><td>FILTER_NOT_SUPPORTED</td><td>Указанный фильтр нельзя использовать в этом контексте.</td></tr><tr><td>400</td><td>INVITE_SLUG_EMPTY</td><td>Указанный слаг приглашения пуст.</td></tr><tr><td>400</td><td>INVITE_SLUG_EXPIRED</td><td>Срок действия указанной ссылки на папку чатов истёк.</td></tr><tr><td>400</td><td>PEERS_LIST_EMPTY</td><td>Указанный список пиров пуст.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

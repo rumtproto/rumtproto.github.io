@@ -1,37 +1,34 @@
 ---
-title: "updateAttachMenuBots (конструктор)"
+title: "updateAttachMenuBots"
 original: "https://core.telegram.org/constructor/updateAttachMenuBots"
 section: ref
 kind: constructor
+description: "Список установленных пунктов меню вложений » изменился; используйте messages.getAttachMenuBots, чтобы получить обновлённый список."
 layout: layout.njk
 ---
 
 # updateAttachMenuBots
 
-*Конструктор из схемы TL.*
-
-> The list of installed [attachment menu entries »](https://core.telegram.org/api/bots/attach) has changed, use [messages.getAttachMenuBots](/method/messages.getAttachMenuBots/) to fetch the updated list.
-
-## Определение TL
+Список установленных [пунктов меню вложений »](/api/bots/attach/) изменился; используйте [messages.getAttachMenuBots](/method/messages.getAttachMenuBots/), чтобы получить обновлённый список.
 
 ```
 updateAttachMenuBots#17b7a20b = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot attachment menu and side menu entries](https://core.telegram.org/api/bots/attach)
+#### [Пункты меню вложений и бокового меню для ботов](/api/bots/attach/)
 
-Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile web apps.
+Боты могут добавлять пункты в меню вложений и в боковое меню, предлагая легкодоступные многофункциональные веб-приложения.
 
 #### [messages.getAttachMenuBots](/method/messages.getAttachMenuBots/)
 
-Returns installed attachment menu [bot mini apps »](https://core.telegram.org/api/bots/attach)
+[@term:Mini App] Возвращает установленные в меню вложений [mini app ботов »](/api/bots/attach/)

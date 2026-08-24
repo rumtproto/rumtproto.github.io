@@ -1,42 +1,34 @@
 ---
-title: "mediaAreaWeather (конструктор)"
+title: "mediaAreaWeather"
 original: "https://core.telegram.org/constructor/mediaAreaWeather"
 section: ref
 kind: constructor
+description: "Представляет виджет погоды »."
 layout: layout.njk
 ---
 
 # mediaAreaWeather
 
-*Конструктор из схемы TL.*
-
-> Represents a [weather widget »](https://core.telegram.org/api/stories#weather).
-
-## Определение TL
+Представляет [виджет погоды »](/api/stories/#weather).
 
 ```
 mediaAreaWeather#49a6549c coordinates:MediaAreaCoordinates emoji:string temperature_c:double color:int = MediaArea;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| coordinates | [MediaAreaCoordinates](/type/MediaAreaCoordinates/) | The size and location of the media area corresponding to the widget on top of the story media. |
-| emoji | [string](/type/string/) | Weather emoji, should be rendered as an [animated emoji](https://core.telegram.org/api/animated-emojis). |
-| temperature_c | [double](/type/double/) | Temperature in degrees Celsius. |
-| color | [int](/type/int/) | ARGB background color. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>coordinates</strong></td><td style="text-align: center;"><a href="/type/MediaAreaCoordinates">MediaAreaCoordinates</a></td><td>Размер и расположение области медиа, соответствующей виджету поверх медиа истории.</td></tr><tr><td><strong>emoji</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Эмодзи погоды; должен отображаться как <a href="/api/animated-emojis">анимированный эмодзи</a>.</td></tr><tr><td><strong>temperature_c</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Температура в градусах Цельсия.</td></tr><tr><td><strong>color</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Цвет фона в формате ARGB.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MediaArea](/type/MediaArea/)
 
-## Related pages
+### Связанные страницы
 
-#### [Animated Emojis](https://core.telegram.org/api/animated-emojis)
+#### [Анимированные эмодзи](/api/animated-emojis/)
 
-Graphical telegram clients should transform emojis into their respective animated version.
+Графические клиенты Telegram должны заменять эмодзи соответствующей анимированной версией.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

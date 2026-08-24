@@ -1,36 +1,30 @@
 ---
-title: "messages.chatsSlice (конструктор)"
+title: "messages.chatsSlice"
 original: "https://core.telegram.org/constructor/messages.chatsSlice"
 section: ref
 kind: constructor
+description: "Неполный список чатов; остальные придётся получить с помощью постраничной выборки"
 layout: layout.njk
 ---
 
 # messages.chatsSlice
 
-*Конструктор из схемы TL.*
-
-> Partial list of chats, more would have to be fetched with [pagination](https://core.telegram.org/api/offsets)
-
-## Определение TL
+Неполный список чатов; остальные придётся получить с помощью [постраничной выборки](/api/offsets/)
 
 ```
 messages.chatsSlice#9cd81144 count:int chats:Vector<Chat> = messages.Chats;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| count | [int](/type/int/) | Total number of results that were found server-side (not all are included in chats) |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Chats |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число результатов, найденных на стороне сервера (не все из них включены в <code>chats</code>)</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Чаты</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.Chats](/type/messages.Chats/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

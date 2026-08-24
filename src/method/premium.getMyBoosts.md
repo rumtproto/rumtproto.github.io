@@ -1,18 +1,15 @@
 ---
-title: "premium.getMyBoosts (метод)"
+title: "premium.getMyBoosts"
 original: "https://core.telegram.org/method/premium.getMyBoosts"
 section: ref
 kind: method
+description: "Получить список пиров, которых мы сейчас бустим, и количество оставшихся у нас слотов буста."
 layout: layout.njk
 ---
 
 # premium.getMyBoosts
 
-*Метод из схемы TL.*
-
-> Obtain which peers are we currently [boosting](https://core.telegram.org/api/boost), and how many [boost slots](https://core.telegram.org/api/boost) we have left.
-
-## Определение TL
+Получить список пиров, которых мы сейчас [бустим](/api/boost/), и количество оставшихся у нас [слотов буста](/api/boost/).
 
 ```
 premium.myBoosts#9ae228e2 my_boosts:Vector<MyBoost> chats:Vector<Chat> users:Vector<User> = premium.MyBoosts;
@@ -20,18 +17,18 @@ premium.myBoosts#9ae228e2 my_boosts:Vector<MyBoost> chats:Vector<Chat> users:Vec
 premium.getMyBoosts#be77b4a = premium.MyBoosts;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [premium.MyBoosts](/type/premium.MyBoosts/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.

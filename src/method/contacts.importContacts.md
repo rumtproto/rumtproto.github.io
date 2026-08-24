@@ -1,19 +1,17 @@
 ---
-title: "contacts.importContacts (метод)"
+title: "contacts.importContacts"
 original: "https://core.telegram.org/method/contacts.importContacts"
 section: ref
 kind: method
+description: "Импортирует контакты: сохраняет полный список на сервере, добавляет уже зарегистрированных контактов в список контактов, возвращает добавленные контакты и сведения о них."
 layout: layout.njk
 ---
 
 # contacts.importContacts
 
-*Метод из схемы TL.*
+Импортирует контакты: сохраняет полный список на сервере, добавляет уже зарегистрированных контактов в список контактов, возвращает добавленные контакты и сведения о них.
 
-> Imports contacts: saves a full list on the server, adds already registered contacts to the contact list, returns added contacts and their info.
-> Use [contacts.addContact](/method/contacts.addContact/) to add Telegram contacts without actually using their phone number.
-
-## Определение TL
+Используйте [contacts.addContact](/method/contacts.addContact/), чтобы добавлять контакты Telegram, не используя их номер телефона.
 
 ```
 contacts.importedContacts#77d01c3b imported:Vector<ImportedContact> popular_invites:Vector<PopularContact> retry_contacts:Vector<long> users:Vector<User> = contacts.ImportedContacts;
@@ -21,22 +19,20 @@ contacts.importedContacts#77d01c3b imported:Vector<ImportedContact> popular_invi
 contacts.importContacts#2c800be5 contacts:Vector<InputContact> = contacts.ImportedContacts;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| contacts | [Vector](https://core.telegram.org/type/Vector%20t)<[InputContact](/type/InputContact/)> | List of contacts to import |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>contacts</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputContact">InputContact</a>&gt;</td><td>Список контактов для импорта</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [contacts.ImportedContacts](/type/contacts.ImportedContacts/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
 #### [contacts.addContact](/method/contacts.addContact/)
 
-Add an existing telegram user as contact.
+Добавить существующего пользователя Telegram в контакты.
 
-Use [contacts.importContacts](/method/contacts.importContacts/) to add contacts by phone number, without knowing their Telegram ID.
+Чтобы добавить контакты по номеру телефона, не зная их идентификатора в Telegram, используйте [contacts.importContacts](/method/contacts.importContacts/).

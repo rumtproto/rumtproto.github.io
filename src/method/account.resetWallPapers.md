@@ -1,18 +1,15 @@
 ---
-title: "account.resetWallPapers (метод)"
+title: "account.resetWallPapers"
 original: "https://core.telegram.org/method/account.resetWallPapers"
 section: ref
 kind: method
+description: "Удалить все установленные обои, вернувшись к стандартному набору обоев."
 layout: layout.njk
 ---
 
 # account.resetWallPapers
 
-*Метод из схемы TL.*
-
-> Delete all installed [wallpapers](https://core.telegram.org/api/wallpapers), reverting to the default wallpaper set.
-
-## Определение TL
+Удалить все установленные [обои](/api/wallpapers/), вернувшись к стандартному набору обоев.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,18 +18,18 @@ boolTrue#997275b5 = Bool;
 account.resetWallPapers#bb3b9804 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.

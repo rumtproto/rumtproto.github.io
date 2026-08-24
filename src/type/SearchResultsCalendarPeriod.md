@@ -1,31 +1,26 @@
 ---
-title: "SearchResultsCalendarPeriod (тип)"
+title: "SearchResultsCalendarPeriod"
 original: "https://core.telegram.org/type/SearchResultsCalendarPeriod"
 section: ref
 kind: type
+description: "Информация о найденных сообщениях, отправленных в определённый день; используется для разбивки поля messages в конструкторах messages.searchResultsCalendar по дням."
 layout: layout.njk
 ---
 
 # SearchResultsCalendarPeriod
 
-*Тип из схемы TL.*
-
-> Information about found messages sent on a specific day, used to split the `messages` in [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/) constructors by days.
-
-## Определение TL
+Информация о найденных сообщениях, отправленных в определённый день; используется для разбивки поля `messages` в конструкторах [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/) по дням.
 
 ```
 searchResultsCalendarPeriod#c9b0539f date:int min_msg_id:int max_msg_id:int count:int = SearchResultsCalendarPeriod;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [searchResultsCalendarPeriod](/constructor/searchResultsCalendarPeriod/) | Information about found messages sent on a specific day, used to split the messages in [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/) constructors by days. Multiple searchResultsCalendarPeriod constructors are returned in [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/), each containing information about the first, last and total number of messages matching the filter that were sent on a specific day. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/searchResultsCalendarPeriod">searchResultsCalendarPeriod</a></td><td>Информация о найденных сообщениях, отправленных в определённый день; используется для разбивки поля <code>messages</code> в конструкторах <a href="/constructor/messages.searchResultsCalendar">messages.searchResultsCalendar</a> по дням.<br><br>В <a href="/constructor/messages.searchResultsCalendar">messages.searchResultsCalendar</a> возвращается несколько конструкторов searchResultsCalendarPeriod, каждый из которых содержит сведения о первом, последнем и общем числе сообщений, соответствующих фильтру и отправленных в определённый день.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/)
 
-Information about found messages sent on a specific day
+Информация о найденных сообщениях, отправленных в определённый день

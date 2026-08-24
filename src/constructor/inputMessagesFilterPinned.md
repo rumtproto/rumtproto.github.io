@@ -1,27 +1,24 @@
 ---
-title: "inputMessagesFilterPinned (конструктор)"
+title: "inputMessagesFilterPinned"
 original: "https://core.telegram.org/constructor/inputMessagesFilterPinned"
 section: ref
 kind: constructor
+description: "Получить только закреплённые сообщения"
 layout: layout.njk
 ---
 
 # inputMessagesFilterPinned
 
-*Конструктор из схемы TL.*
-
-> Fetch only pinned messages
-
-## Определение TL
+Получить только закреплённые сообщения
 
 ```
 inputMessagesFilterPinned#1bb00451 = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)

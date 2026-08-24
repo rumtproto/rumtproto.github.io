@@ -1,27 +1,24 @@
 ---
-title: "textEmpty (конструктор)"
+title: "textEmpty"
 original: "https://core.telegram.org/constructor/textEmpty"
 section: ref
 kind: constructor
+description: "Пустой элемент форматированного текста"
 layout: layout.njk
 ---
 
 # textEmpty
 
-*Конструктор из схемы TL.*
-
-> Empty rich text element
-
-## Определение TL
+Пустой элемент форматированного текста
 
 ```
 textEmpty#dc3d824f = RichText;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [RichText](/type/RichText/)

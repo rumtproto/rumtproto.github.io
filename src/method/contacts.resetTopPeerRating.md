@@ -1,18 +1,15 @@
 ---
-title: "contacts.resetTopPeerRating (метод)"
+title: "contacts.resetTopPeerRating"
 original: "https://core.telegram.org/method/contacts.resetTopPeerRating"
 section: ref
 kind: method
+description: "Сбросить рейтинг популярного пира"
 layout: layout.njk
 ---
 
 # contacts.resetTopPeerRating
 
-*Метод из схемы TL.*
-
-> Reset [rating](https://core.telegram.org/api/top-rating) of top peer
-
-## Определение TL
+Сбросить [рейтинг](/api/top-rating/) популярного пира
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,27 +18,22 @@ boolTrue#997275b5 = Bool;
 contacts.resetTopPeerRating#1ae373ac category:TopPeerCategory peer:InputPeer = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| category | [TopPeerCategory](/type/TopPeerCategory/) | Top peer category |
-| peer | [InputPeer](/type/InputPeer/) | Peer whose rating should be reset |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>category</strong></td><td style="text-align: center;"><a href="/type/TopPeerCategory">TopPeerCategory</a></td><td>Категория популярных пиров</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, рейтинг которого следует сбросить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Top peer rating](https://core.telegram.org/api/top-rating)
+#### [Рейтинг популярных пиров](/api/top-rating/)
 
-If enabled, the rating of top peers indicates the relevance of a frequently used peer in a certain category (frequently messaged users, frequently used bots, inline bots, frequently visited channels and so on).
+Если включено, рейтинг наиболее используемых пиров отражает значимость часто используемого пира в определённой категории (пользователи, которым часто пишут, часто используемые боты, инлайн-боты, часто посещаемые каналы и так далее).

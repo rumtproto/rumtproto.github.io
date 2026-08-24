@@ -1,27 +1,24 @@
 ---
-title: "inputReportReasonGeoIrrelevant (конструктор)"
+title: "inputReportReasonGeoIrrelevant"
 original: "https://core.telegram.org/constructor/inputReportReasonGeoIrrelevant"
 section: ref
 kind: constructor
+description: "Пожаловаться на нерелевантную геогруппу"
 layout: layout.njk
 ---
 
 # inputReportReasonGeoIrrelevant
 
-*Конструктор из схемы TL.*
-
-> Report an irrelevant geogroup
-
-## Определение TL
+Пожаловаться на нерелевантную геогруппу
 
 ```
 inputReportReasonGeoIrrelevant#dbd4feed = ReportReason;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReportReason](/type/ReportReason/)

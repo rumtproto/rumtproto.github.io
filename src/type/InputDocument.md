@@ -1,27 +1,21 @@
 ---
-title: "InputDocument (тип)"
+title: "InputDocument"
 original: "https://core.telegram.org/type/InputDocument"
 section: ref
 kind: type
+description: "Определяет документ для дальнейшего взаимодействия."
 layout: layout.njk
 ---
 
 # InputDocument
 
-*Тип из схемы TL.*
-
-> Defines a document for subsequent interaction.
-
-## Определение TL
+Определяет документ для дальнейшего взаимодействия.
 
 ```
 inputDocumentEmpty#72f0eaae = InputDocument;
 inputDocument#1abfb575 id:long access_hash:long file_reference:bytes = InputDocument;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputDocumentEmpty](/constructor/inputDocumentEmpty/) | Empty constructor. |
-| [inputDocument](/constructor/inputDocument/) | Defines a document for subsequent interaction. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputDocumentEmpty">inputDocumentEmpty</a></td><td>Пустой конструктор.</td></tr><tr><td><a href="/constructor/inputDocument">inputDocument</a></td><td>Определяет документ для дальнейшего взаимодействия.</td></tr></tbody></table>

@@ -1,33 +1,30 @@
 ---
-title: "inputMessagesFilterMyMentions (конструктор)"
+title: "inputMessagesFilterMyMentions"
 original: "https://core.telegram.org/constructor/inputMessagesFilterMyMentions"
 section: ref
 kind: constructor
+description: "Возвращать только сообщения, в которых упомянут текущий пользователь."
 layout: layout.njk
 ---
 
 # inputMessagesFilterMyMentions
 
-*Конструктор из схемы TL.*
-
-> Return only messages where the current user was [mentioned](https://core.telegram.org/api/mentions).
-
-## Определение TL
+Возвращать только сообщения, в которых [упомянут](/api/mentions/) текущий пользователь.
 
 ```
 inputMessagesFilterMyMentions#c1f8e69a = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)
 
-## Related pages
+### Связанные страницы
 
-#### [Mentions and replies](https://core.telegram.org/api/mentions)
+#### [Упоминания и ответы](/api/mentions/)
 
-Telegram allows mentioning other users in case of urgent duckling matters, and quickly navigating to those mentions in order to read them as swiftly as possible.
+Telegram позволяет упоминать других пользователей по срочным утиным вопросам и быстро переходить к этим упоминаниям, чтобы прочитать их как можно скорее.

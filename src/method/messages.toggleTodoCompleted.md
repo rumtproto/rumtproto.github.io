@@ -1,18 +1,15 @@
 ---
-title: "messages.toggleTodoCompleted (метод)"
+title: "messages.toggleTodoCompleted"
 original: "https://core.telegram.org/method/messages.toggleTodoCompleted"
 section: ref
 kind: method
+description: "Отметить один или несколько пунктов списка задач » как выполненные или невыполненные."
 layout: layout.njk
 ---
 
 # messages.toggleTodoCompleted
 
-*Метод из схемы TL.*
-
-> Mark one or more items of a [todo list »](https://core.telegram.org/api/todo) as completed or not completed.
-
-## Определение TL
+Отметить один или несколько пунктов [списка задач »](/api/todo/) как выполненные или невыполненные.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,29 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.toggleTodoCompleted#d3e03124 peer:InputPeer msg_id:int completed:Vector<int> incompleted:Vector<int> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer where the todo list was posted. |
-| msg_id | [int](/type/int/) | ID of the message with the todo list. |
-| completed | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Items to mark as completed. |
-| incompleted | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Items to mark as not completed. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в котором был опубликован список задач.</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения со списком задач.</td></tr><tr><td><strong>completed</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Пункты, которые нужно отметить как выполненные.</td></tr><tr><td><strong>incompleted</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Пункты, которые нужно отметить как невыполненные.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Checklists and to-do lists](https://core.telegram.org/api/todo)
+#### [Чек-листы и списки задач](/api/todo/)
 
-Premium users can now create collaborative checklists in any chat to track tasks and coordinate teams — or manage shopping and to-do lists.
+Пользователи Premium теперь могут создавать совместные чек-листы в любом чате, чтобы отслеживать задачи и координировать команды — или вести списки покупок и дел.

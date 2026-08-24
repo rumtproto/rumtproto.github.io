@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyKeyBirthday (конструктор)"
+title: "inputPrivacyKeyBirthday"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyBirthday"
 section: ref
 kind: constructor
+description: "Может ли пользователь видеть наш день рождения."
 layout: layout.njk
 ---
 
 # inputPrivacyKeyBirthday
 
-*Конструктор из схемы TL.*
-
-> Whether the user can see our birthday.
-
-## Определение TL
+Может ли пользователь видеть наш день рождения.
 
 ```
 inputPrivacyKeyBirthday#d65a11cc = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)

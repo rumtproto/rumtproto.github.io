@@ -1,35 +1,30 @@
 ---
-title: "messageActionSuggestedPostSuccess (конструктор)"
+title: "messageActionSuggestedPostSuccess"
 original: "https://core.telegram.org/constructor/messageActionSuggestedPostSuccess"
 section: ref
 kind: constructor
+description: "Предлагаемый пост » был успешно опубликован, и оплата за него успешно получена."
 layout: layout.njk
 ---
 
 # messageActionSuggestedPostSuccess
 
-*Конструктор из схемы TL.*
-
-> A [suggested post »](https://core.telegram.org/api/suggested-posts) was successfully posted, and payment for it was successfully received.
-
-## Определение TL
+[Предлагаемый пост »](/api/suggested-posts/) был успешно опубликован, и оплата за него успешно получена.
 
 ```
 messageActionSuggestedPostSuccess#95ddcf69 price:StarsAmount = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| price | [StarsAmount](/type/StarsAmount/) | The price. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>price</strong></td><td style="text-align: center;"><a href="/type/StarsAmount">StarsAmount</a></td><td>Цена.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Suggested posts](https://core.telegram.org/api/suggested-posts)
+#### [Предлагаемые посты](/api/suggested-posts/)
 
-Telegram offers a powerful monetization feature to channel administrators: suggested posts.
+Telegram предлагает администраторам каналов мощный инструмент монетизации — предлагаемые посты.

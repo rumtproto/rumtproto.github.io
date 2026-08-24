@@ -1,27 +1,24 @@
 ---
-title: "messages.availableReactionsNotModified (конструктор)"
+title: "messages.availableReactionsNotModified"
 original: "https://core.telegram.org/constructor/messages.availableReactionsNotModified"
 section: ref
 kind: constructor
+description: "Новых реакций нет"
 layout: layout.njk
 ---
 
 # messages.availableReactionsNotModified
 
-*Конструктор из схемы TL.*
-
-> No new reactions are available
-
-## Определение TL
+Новых реакций нет
 
 ```
 messages.availableReactionsNotModified#9f071957 = messages.AvailableReactions;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.AvailableReactions](/type/messages.AvailableReactions/)

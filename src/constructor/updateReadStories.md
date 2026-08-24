@@ -1,30 +1,24 @@
 ---
-title: "updateReadStories (конструктор)"
+title: "updateReadStories"
 original: "https://core.telegram.org/constructor/updateReadStories"
 section: ref
 kind: constructor
+description: "Истории определённого пира были отмечены как прочитанные."
 layout: layout.njk
 ---
 
 # updateReadStories
 
-*Конструктор из схемы TL.*
-
-> Stories of a specific peer were marked as read.
-
-## Определение TL
+Истории определённого пира были отмечены как прочитанные.
 
 ```
 updateReadStories#f74e932b peer:Peer max_id:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | The peer |
-| max_id | [int](/type/int/) | ID of the last story that was marked as read |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор последней истории, отмеченной как прочитанная</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

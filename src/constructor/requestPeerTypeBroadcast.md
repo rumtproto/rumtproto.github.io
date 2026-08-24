@@ -1,39 +1,30 @@
 ---
-title: "requestPeerTypeBroadcast (конструктор)"
+title: "requestPeerTypeBroadcast"
 original: "https://core.telegram.org/constructor/requestPeerTypeBroadcast"
 section: ref
 kind: constructor
+description: "Выбрать канал"
 layout: layout.njk
 ---
 
 # requestPeerTypeBroadcast
 
-*Конструктор из схемы TL.*
-
-> Choose a channel
-
-## Определение TL
+Выбрать канал
 
 ```
 requestPeerTypeBroadcast#339bef6c flags:# creator:flags.0?true has_username:flags.3?Bool user_admin_rights:flags.1?ChatAdminRights bot_admin_rights:flags.2?ChatAdminRights = RequestPeerType;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| creator | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to allow only choosing channels that were created by the current user. |
-| has_username | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Bool](/type/Bool/) | If specified, allows only choosing channels with or without a username, according to the value of [Bool](/type/Bool/). |
-| user_admin_rights | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[ChatAdminRights](/type/ChatAdminRights/) | If specified, allows only choosing channels where the current user is an admin with at least the specified admin rights. |
-| bot_admin_rights | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[ChatAdminRights](/type/ChatAdminRights/) | If specified, allows only choosing channels where the bot is an admin with at least the specified admin rights. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>creator</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Разрешать ли выбор только тех каналов, которые созданы текущим пользователем.</td></tr><tr><td><strong>has_username</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Bool">Bool</a></td><td>Если указано, разрешает выбирать только каналы с именем пользователя или только каналы без него — в зависимости от значения <a href="/type/Bool">Bool</a>.</td></tr><tr><td><strong>user_admin_rights</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/ChatAdminRights">ChatAdminRights</a></td><td>Если указано, разрешает выбирать только каналы, в которых текущий пользователь является администратором как минимум с указанными правами администратора.</td></tr><tr><td><strong>bot_admin_rights</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/ChatAdminRights">ChatAdminRights</a></td><td>Если указано, разрешает выбирать только каналы, в которых бот является администратором как минимум с указанными правами администратора.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [RequestPeerType](/type/RequestPeerType/)
 
-## Related pages
+### Связанные страницы
 
 #### [Bool](/type/Bool/)
 
-Boolean type.
+Логический тип.

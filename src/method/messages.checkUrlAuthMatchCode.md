@@ -1,20 +1,18 @@
 ---
-title: "messages.checkUrlAuthMatchCode (метод)"
+title: "messages.checkUrlAuthMatchCode"
 original: "https://core.telegram.org/method/messages.checkUrlAuthMatchCode"
 section: ref
 kind: method
+description: "Сверить выбранный пользователем код соответствия с кодом, показанным на странице входа, в рамках процесса авторизации OAuth »."
 layout: layout.njk
 ---
 
 # messages.checkUrlAuthMatchCode
 
-*Метод из схемы TL.*
+Сверить выбранный пользователем код соответствия с кодом, показанным на странице входа, в рамках [процесса авторизации OAuth »](/api/url-authorization/#oauth-authorization).
 
-> Validate the match code selected by the user against the code shown on the login page, as part of the [OAuth authorization flow »](https://core.telegram.org/api/url-authorization#oauth-authorization).
-> Only usable when both `match_codes` and `match_codes_first` are set in the [urlAuthResultRequest](/constructor/urlAuthResultRequest/) returned by [messages.requestUrlAuth](/method/messages.requestUrlAuth/).  
-> If [boolTrue](/constructor/boolTrue/) is returned, proceed with the login flow and pass the verified code to [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/).`match_code`.
-
-## Определение TL
+Используется только тогда, когда в конструкторе [urlAuthResultRequest](/constructor/urlAuthResultRequest/), возвращённом методом [messages.requestUrlAuth](/method/messages.requestUrlAuth/), установлены оба флага `match_codes` и `match_codes_first`.  
+Если возвращается [boolTrue](/constructor/boolTrue/), продолжите процедуру входа и передайте проверенный код в [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/).`match_code`.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -23,43 +21,38 @@ boolTrue#997275b5 = Bool;
 messages.checkUrlAuthMatchCode#c9a47b0b url:string match_code:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| url | [string](/type/string/) | The OAuth deep link |
-| match_code | [string](/type/string/) | The emoji or code selected by the user from the list in [urlAuthResultRequest](/constructor/urlAuthResultRequest/).match_codes |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Глубокая ссылка OAuth</td></tr><tr><td><strong>match_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Эмодзи или код, выбранный пользователем из списка в <a href="/constructor/urlAuthResultRequest">urlAuthResultRequest</a>.<code>match_codes</code></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | URL_INVALID | Invalid URL provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>URL_INVALID</td><td>Указан недействительный URL.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [urlAuthResultRequest](/constructor/urlAuthResultRequest/)
 
-Details about the authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
+Сведения о запросе авторизации; подробнее [см. здесь »](/api/url-authorization/)
 
-#### [Seamless Telegram Login](https://core.telegram.org/api/url-authorization)
+#### [Бесшовный вход через Telegram](/api/url-authorization/)
 
-Handle Seamless Telegram Login URL authorization requests.
+Обработка запросов авторизации по URL через Seamless Telegram Login.
 
 #### [messages.requestUrlAuth](/method/messages.requestUrlAuth/)
 
-Get more info about a Seamless Telegram Login authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
+Получить дополнительную информацию о запросе авторизации Seamless Telegram Login; подробнее [см. здесь »](/api/url-authorization/)
 
 #### [boolTrue](/constructor/boolTrue/)
 
-The constructor can be interpreted as a **boolean**`true` value.
+Конструктор можно трактовать как **логическое** значение `true`.
 
 #### [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/)
 
-Use this to accept a Seamless Telegram Login authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
+Используйте этот метод, чтобы подтвердить запрос авторизации Seamless Telegram Login; подробнее [см. здесь »](/api/url-authorization/)

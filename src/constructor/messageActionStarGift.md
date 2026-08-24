@@ -1,82 +1,56 @@
 ---
-title: "messageActionStarGift (конструктор)"
+title: "messageActionStarGift"
 original: "https://core.telegram.org/constructor/messageActionStarGift"
 section: ref
 kind: constructor
+description: "Вы получили подарок, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # messageActionStarGift
 
-*Конструктор из схемы TL.*
-
-> You received a [gift, see here »](https://core.telegram.org/api/gifts) for more info.
-
-## Определение TL
+Вы получили [подарок, подробнее см. здесь »](/api/gifts/).
 
 ```
 messageActionStarGift#ea2c31d3 flags:# name_hidden:flags.0?true saved:flags.2?true converted:flags.3?true upgraded:flags.5?true refunded:flags.9?true can_upgrade:flags.10?true prepaid_upgrade:flags.13?true upgrade_separate:flags.16?true auction_acquired:flags.17?true gift:StarGift message:flags.1?TextWithEntities convert_stars:flags.4?long upgrade_msg_id:flags.5?int upgrade_stars:flags.8?long from_id:flags.11?Peer peer:flags.12?Peer saved_id:flags.12?long prepaid_upgrade_hash:flags.14?string gift_msg_id:flags.15?int to_id:flags.18?Peer gift_num:flags.19?int = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| name_hidden | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, the name of the sender of the gift will be hidden if the destination user decides to display the gift on their profile |
-| saved | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether this gift was added to the destination user's profile (may be toggled using [payments.saveStarGift](/method/payments.saveStarGift/) and fetched using [payments.getSavedStarGifts](/method/payments.getSavedStarGifts/)) |
-| converted | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether this gift was converted to [Telegram Stars](https://core.telegram.org/api/stars) and cannot be displayed on the profile anymore. |
-| upgraded | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | This gift was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| refunded | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[true](/constructor/true/) | This gift is not available anymore because a request to refund the payment related to this gift was made, and the money was returned. |
-| can_upgrade | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[true](/constructor/true/) | If set, this gift can be [upgraded to a collectible gift](https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift); can only be set for the receiver of a gift. |
-| prepaid_upgrade | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[true](/constructor/true/) | The sender has already pre-paid for the upgrade of this gift to a collectible gift. |
-| upgrade_separate | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).16?[true](/constructor/true/) | This service message is the notification of a [separate pre-payment for the upgrade of a gift we own](https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade). |
-| auction_acquired | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[true](/constructor/true/) | If set, this gift was acquired in a [collectible gifts auction »](https://core.telegram.org/api/auctions). |
-| gift | [StarGift](/type/StarGift/) | Info about the gift |
-| message | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[TextWithEntities](/type/TextWithEntities/) | Additional message from the sender of the gift |
-| convert_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[long](/type/long/) | The receiver of this gift may convert it to this many Telegram Stars, instead of displaying it on their profile page. convert_stars will be equal to stars only if the gift was bought using recently bought Telegram Stars, otherwise it will be less than stars. |
-| upgrade_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[int](/type/int/) | If set, this gift was [upgraded to a collectible gift](https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift), and the corresponding [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/) is available at the specified message ID. |
-| upgrade_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[long](/type/long/) | The number of Telegram Stars the user can pay to [convert the gift into a collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| from_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[Peer](/type/Peer/) | Sender of the gift (unset for anonymous gifts). |
-| peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[Peer](/type/Peer/) | Receiver of the gift. |
-| saved_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[long](/type/long/) | For channel gifts, ID to use in [inputSavedStarGiftChat](/constructor/inputSavedStarGiftChat/) constructors. |
-| prepaid_upgrade_hash | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[string](/type/string/) | [Hash to prepay for a gift upgrade separately »](https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade). |
-| gift_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[int](/type/int/) | For [separate upgrades](https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade), the identifier of the message with the gift whose upgrade was prepaid (only valid for the receiver of the service message). |
-| to_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[Peer](/type/Peer/) | For gifts acquired in an [auction »](https://core.telegram.org/api/auctions) (i.e. when auction_acquired is set), the peer the gift was assigned to; only present if the target peer is different from the bidder, in which case it will only be present to the messageActionStarGift sent to the bidder, not to the messageActionStarGift sent to the target peer. |
-| gift_num | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).19?[int](/type/int/) | For gifts acquired in an [auction »](https://core.telegram.org/api/auctions), the collectible number of the won [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts); this field is disjoint from auction_acquired because only auction collectibles won before this field was introduced in the API will not have this flag set. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>name_hidden</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, имя отправителя подарка будет скрыто, если пользователь-получатель решит показать подарок в своём профиле</td></tr><tr><td><strong>saved</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Был ли этот подарок добавлен в профиль пользователя-получателя (можно переключить с помощью <a href="/method/payments.saveStarGift">payments.saveStarGift</a> и получить с помощью <a href="/method/payments.getSavedStarGifts">payments.getSavedStarGifts</a>)</td></tr><tr><td><strong>converted</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Был ли этот подарок обменян на <a href="/api/stars">Telegram Stars</a>, из-за чего его больше нельзя показывать в профиле.</td></tr><tr><td><strong>upgraded</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Этот подарок был улучшен до <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>.</td></tr><tr><td><strong>refunded</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/constructor/true">true</a></td><td>Этот подарок больше недоступен, поскольку был запрошен возврат платежа, связанного с этим подарком, и деньги были возвращены.</td></tr><tr><td><strong>can_upgrade</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true">true</a></td><td>Если установлено, этот подарок можно <a href="/api/gifts#upgrade-a-gift-to-a-collectible-gift">улучшить до коллекционного подарка</a>; может быть установлено только для получателя подарка.</td></tr><tr><td><strong>prepaid_upgrade</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true">true</a></td><td>Отправитель уже заранее оплатил улучшение этого подарка до коллекционного.</td></tr><tr><td><strong>upgrade_separate</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true">true</a></td><td>Это сервисное сообщение — уведомление об <a href="/api/gifts#prepaying-for-someone-elses-upgrade">отдельной предоплате улучшения принадлежащего нам подарка</a>.</td></tr><tr><td><strong>auction_acquired</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/constructor/true">true</a></td><td>Если установлено, этот подарок был приобретён на <a href="/api/auctions">аукционе коллекционных подарков »</a>.</td></tr><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/type/StarGift">StarGift</a></td><td>Информация о подарке</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/TextWithEntities">TextWithEntities</a></td><td>Дополнительное сообщение от отправителя подарка</td></tr><tr><td><strong>convert_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/long">long</a></td><td>Получатель этого подарка может обменять его на указанное количество Telegram Stars вместо того, чтобы показывать подарок в своём профиле.<br>Значение <code>convert_stars</code> будет равно <code>stars</code>, только если подарок был куплен за недавно приобретённые Telegram Stars, иначе оно будет меньше <code>stars</code>.</td></tr><tr><td><strong>upgrade_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/int">int</a></td><td>Если установлено, этот подарок был <a href="/api/gifts#upgrade-a-gift-to-a-collectible-gift">улучшен до коллекционного подарка</a>, и соответствующий <a href="/constructor/messageActionStarGiftUnique">messageActionStarGiftUnique</a> доступен по указанному идентификатору сообщения.</td></tr><tr><td><strong>upgrade_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/long">long</a></td><td>Количество Telegram Stars, которое пользователь может заплатить, чтобы <a href="/api/gifts#collectible-gifts">превратить подарок в коллекционный »</a>.</td></tr><tr><td><strong>from_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/Peer">Peer</a></td><td>Отправитель подарка (не задан для анонимных подарков).</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/Peer">Peer</a></td><td>[@term:peer] Получатель подарка.</td></tr><tr><td><strong>saved_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/long">long</a></td><td>Для подарков каналам — идентификатор, который следует использовать в конструкторах <a href="/constructor/inputSavedStarGiftChat">inputSavedStarGiftChat</a>.</td></tr><tr><td><strong>prepaid_upgrade_hash</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/string">string</a></td><td><a href="/api/gifts#prepaying-for-someone-elses-upgrade">Хеш для отдельной предоплаты улучшения подарка »</a>.</td></tr><tr><td><strong>gift_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/int">int</a></td><td>Для <a href="/api/gifts#prepaying-for-someone-elses-upgrade">отдельных улучшений</a> — идентификатор сообщения с подарком, улучшение которого было оплачено заранее (действителен только для получателя сервисного сообщения).</td></tr><tr><td><strong>to_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/Peer">Peer</a></td><td>Для подарков, полученных на <a href="/api/auctions">аукционе »</a> (то есть когда установлен флаг <code>auction_acquired</code>), — пир, которому был назначен подарок; присутствует, только если целевой пир отличается от участника торгов, и в этом случае присутствует лишь в messageActionStarGift, отправленном участнику торгов, но не в messageActionStarGift, отправленном целевому пиру.</td></tr><tr><td><strong>gift_num</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/type/int">int</a></td><td>Для подарков, полученных на <a href="/api/auctions">аукционе »</a>, — коллекционный номер выигранного <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>; это поле не связано с <code>auction_acquired</code>, поскольку флаг не будет установлен <strong>только</strong> у аукционных коллекционных подарков, выигранных до появления этого поля в API.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
 #### [payments.saveStarGift](/method/payments.saveStarGift/)
 
-Display or remove a [received or hosted gift »](https://core.telegram.org/api/gifts#hosted-collectible-gifts) from our profile.
+Показать в нашем профиле или убрать из него [полученный или размещённый подарок »](/api/gifts/#hosted-collectible-gifts).
 
 #### [payments.getSavedStarGifts](/method/payments.getSavedStarGifts/)
 
-Fetch the full list of [gifts »](https://core.telegram.org/api/gifts#list-all-received-gifts) owned, received or [hosted »](https://core.telegram.org/api/gifts#hosted-collectible-gifts) by a peer.
+Получить полный список [подарков »](/api/gifts/#list-all-received-gifts), которыми пир владеет, которые он получил или [размещает »](/api/gifts/#hosted-collectible-gifts).
 
-Note that unlike what the name suggests, the method can be used to fetch both "saved" and "unsaved" gifts (aka gifts both pinned and not pinned) to the profile, depending on the passed flags.
+Обратите внимание: вопреки названию, метод может использоваться для получения как «сохранённых», так и «несохранённых» подарков (то есть как закреплённых, так и не закреплённых в профиле) — в зависимости от переданных флагов.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.
 
 #### [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/)
 
-A [gift »](https://core.telegram.org/api/gifts) was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+[Подарок »](/api/gifts/) был улучшен до [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
 #### [inputSavedStarGiftChat](/constructor/inputSavedStarGiftChat/)
 
-A gift received by a channel we own.
+Подарок, полученный каналом, которым мы владеем.

@@ -1,18 +1,15 @@
 ---
-title: "messages.deleteSavedHistory (метод)"
+title: "messages.deleteSavedHistory"
 original: "https://core.telegram.org/method/messages.deleteSavedHistory"
 section: ref
 kind: method
+description: "Удаляет сообщения из темы монофорума » либо удаляет сообщения, пересланные от определённого пира в избранное »."
 layout: layout.njk
 ---
 
 # messages.deleteSavedHistory
 
-*Метод из схемы TL.*
-
-> Deletes messages from a [monoforum topic »](https://core.telegram.org/api/monoforum), or deletes messages forwarded from a specific peer to [saved messages »](https://core.telegram.org/api/saved-messages).
-
-## Определение TL
+Удаляет сообщения из [темы монофорума »](/api/monoforum/) либо удаляет сообщения, пересланные от определённого пира в [избранное »](/api/saved-messages/).
 
 ```
 messages.affectedHistory#b45c69d1 pts:int pts_count:int offset:int = messages.AffectedHistory;
@@ -20,35 +17,26 @@ messages.affectedHistory#b45c69d1 pts:int pts_count:int offset:int = messages.Af
 messages.deleteSavedHistory#4dc5085f flags:# parent_peer:flags.0?InputPeer peer:InputPeer max_id:int min_date:flags.2?int max_date:flags.3?int = messages.AffectedHistory;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| parent_peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputPeer](/type/InputPeer/) | If set, affects the messages of the passed [monoforum topic »](https://core.telegram.org/api/monoforum), otherwise affects [saved messages »](https://core.telegram.org/api/saved-messages). |
-| peer | [InputPeer](/type/InputPeer/) | Peer, whose messages will be deleted from [saved messages »](https://core.telegram.org/api/saved-messages), or the ID of the topic. |
-| max_id | [int](/type/int/) | Maximum ID of message to delete |
-| min_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Delete all messages newer than this UNIX timestamp |
-| max_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[int](/type/int/) | Delete all messages older than this UNIX timestamp |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>parent_peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputPeer">InputPeer</a></td><td>Если установлено, затрагивает сообщения переданной <a href="/api/monoforum">темы монофорума »</a>, иначе затрагивает <a href="/api/saved-messages">сохранённые сообщения »</a>.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, чьи сообщения будут удалены из <a href="/api/saved-messages">сохранённых сообщений »</a>, либо идентификатор темы.</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальный идентификатор удаляемого сообщения</td></tr><tr><td><strong>min_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Удалить все сообщения новее этой временной метки UNIX</td></tr><tr><td><strong>max_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/int">int</a></td><td>Удалить все сообщения старше этой временной метки UNIX</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.AffectedHistory](/type/messages.AffectedHistory/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.

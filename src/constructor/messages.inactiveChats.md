@@ -1,31 +1,24 @@
 ---
-title: "messages.inactiveChats (конструктор)"
+title: "messages.inactiveChats"
 original: "https://core.telegram.org/constructor/messages.inactiveChats"
 section: ref
 kind: constructor
+description: "Список неактивных чатов"
 layout: layout.njk
 ---
 
 # messages.inactiveChats
 
-*Конструктор из схемы TL.*
-
-> Inactive chat list
-
-## Определение TL
+Список неактивных чатов
 
 ```
 messages.inactiveChats#a927fec5 dates:Vector<int> chats:Vector<Chat> users:Vector<User> = messages.InactiveChats;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| dates | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | When was the chat last active |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Chat list |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users mentioned in the chat list |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>dates</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Когда чат был активен в последний раз</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Список чатов</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи, упомянутые в списке чатов</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.InactiveChats](/type/messages.InactiveChats/)

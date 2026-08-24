@@ -1,35 +1,30 @@
 ---
-title: "updateDialogFilterOrder (конструктор)"
+title: "updateDialogFilterOrder"
 original: "https://core.telegram.org/constructor/updateDialogFilterOrder"
 section: ref
 kind: constructor
+description: "Новый порядок папок"
 layout: layout.njk
 ---
 
 # updateDialogFilterOrder
 
-*Конструктор из схемы TL.*
-
-> New [folder](https://core.telegram.org/api/folders) order
-
-## Определение TL
+Новый порядок [папок](/api/folders/)
 
 ```
 updateDialogFilterOrder#a5d72105 order:Vector<int> = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| order | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Ordered [folder IDs](https://core.telegram.org/api/folders) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>order</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Упорядоченные <a href="/api/folders">идентификаторы папок</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.

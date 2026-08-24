@@ -1,18 +1,15 @@
 ---
-title: "account.getReactionsNotifySettings (метод)"
+title: "account.getReactionsNotifySettings"
 original: "https://core.telegram.org/method/account.getReactionsNotifySettings"
 section: ref
 kind: method
+description: "Получить текущие настройки уведомлений о реакциях »."
 layout: layout.njk
 ---
 
 # account.getReactionsNotifySettings
 
-*Метод из схемы TL.*
-
-> Get the current [reaction notification settings »](https://core.telegram.org/api/reactions#notifications-about-reactions).
-
-## Определение TL
+Получить текущие [настройки уведомлений о реакциях »](/api/reactions/#notifications-about-reactions).
 
 ```
 reactionsNotifySettings#56e34970 flags:# messages_notify_from:flags.0?ReactionNotificationsFrom stories_notify_from:flags.1?ReactionNotificationsFrom sound:NotificationSound show_previews:Bool = ReactionsNotifySettings;
@@ -20,18 +17,18 @@ reactionsNotifySettings#56e34970 flags:# messages_notify_from:flags.0?ReactionNo
 account.getReactionsNotifySettings#6dd654c = ReactionsNotifySettings;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [ReactionsNotifySettings](/type/ReactionsNotifySettings/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

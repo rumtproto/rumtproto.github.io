@@ -1,42 +1,34 @@
 ---
-title: "encryptedMessageService (конструктор)"
+title: "encryptedMessageService"
 original: "https://core.telegram.org/constructor/encryptedMessageService"
 section: ref
 kind: constructor
+description: "Зашифрованное сервисное сообщение"
 layout: layout.njk
 ---
 
 # encryptedMessageService
 
-*Конструктор из схемы TL.*
-
-> Encrypted service message
-
-## Определение TL
+Зашифрованное сервисное сообщение
 
 ```
 encryptedMessageService#23734b06 random_id:long chat_id:int date:int bytes:bytes = EncryptedMessage;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| random_id | [long](/type/long/) | Random message ID, assigned by the author of message. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| chat_id | [int](/type/int/) | ID of encrypted chat |
-| date | [int](/type/int/) | Date of sending |
-| bytes | [bytes](/type/bytes/) | TL-serialization of the [DecryptedMessage](/type/DecryptedMessage/) type, encrypted with the key created at chat initialization |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:random_id] Случайный идентификатор сообщения, назначенный его автором. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор зашифрованного чата</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата отправки</td></tr><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>TL-сериализация типа <a href="/type/DecryptedMessage">DecryptedMessage</a>, зашифрованная ключом, созданным при создании чата</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [EncryptedMessage](/type/EncryptedMessage/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
 #### [DecryptedMessage](/type/DecryptedMessage/)
 
-Object describes the contents of an encrypted message.
+Объект описывает содержимое зашифрованного сообщения.

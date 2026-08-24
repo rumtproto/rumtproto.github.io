@@ -1,42 +1,36 @@
 ---
-title: "chatThemeUniqueGift (конструктор)"
+title: "chatThemeUniqueGift"
 original: "https://core.telegram.org/constructor/chatThemeUniqueGift"
 section: ref
 kind: constructor
+description: "Тема оформления чата на основе коллекционного подарка »."
 layout: layout.njk
 ---
 
 # chatThemeUniqueGift
 
-*Конструктор из схемы TL.*
-
-> A chat theme based on a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
-
-## Определение TL
+Тема оформления чата на основе [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
 ```
 chatThemeUniqueGift#3458f9c8 gift:StarGift theme_settings:Vector<ThemeSettings> = ChatTheme;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| gift | [StarGift](/type/StarGift/) | The owned or [hosted collectible gift »](https://core.telegram.org/api/gifts#hosted-collectible-gifts) on which this theme is based, as a [starGiftUnique](/constructor/starGiftUnique/) constructor. |
-| theme_settings | [Vector](https://core.telegram.org/type/Vector%20t)<[ThemeSettings](/type/ThemeSettings/)> | Theme settings. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/type/StarGift">StarGift</a></td><td>Принадлежащий пользователю или <a href="/api/gifts#hosted-collectible-gifts">размещённый коллекционный подарок »</a>, на котором основана эта тема, в виде конструктора <a href="/constructor/starGiftUnique">starGiftUnique</a>.</td></tr><tr><td><strong>theme_settings</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ThemeSettings">ThemeSettings</a>&gt;</td><td>Параметры темы оформления.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatTheme](/type/ChatTheme/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [starGiftUnique](/constructor/starGiftUnique/)
 
-Represents a [collectible star gift, see here »](https://core.telegram.org/api/gifts#collectible-gifts) for more info.
+Представляет коллекционный звёздный подарок, [подробнее см. здесь »](/api/gifts/#collectible-gifts).
 
-The sticker that represents the gift is contained in a [starGiftAttributeModel](/constructor/starGiftAttributeModel/) object in `attributes`.
+Стикер, представляющий подарок, содержится в объекте [starGiftAttributeModel](/constructor/starGiftAttributeModel/) в поле `attributes`.

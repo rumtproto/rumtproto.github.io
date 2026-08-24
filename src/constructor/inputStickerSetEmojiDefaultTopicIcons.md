@@ -1,37 +1,34 @@
 ---
-title: "inputStickerSetEmojiDefaultTopicIcons (конструктор)"
+title: "inputStickerSetEmojiDefaultTopicIcons"
 original: "https://core.telegram.org/constructor/inputStickerSetEmojiDefaultTopicIcons"
 section: ref
 kind: constructor
+description: "Набор пользовательских эмодзи по умолчанию для значков тем форума"
 layout: layout.njk
 ---
 
 # inputStickerSetEmojiDefaultTopicIcons
 
-*Конструктор из схемы TL.*
-
-> Default [custom emoji](https://core.telegram.org/api/custom-emoji) stickerset for [forum topic icons](https://core.telegram.org/api/forum#forum-topics)
-
-## Определение TL
+Набор [пользовательских эмодзи](/api/custom-emoji/) по умолчанию для [значков тем форума](/api/forum/#forum-topics)
 
 ```
 inputStickerSetEmojiDefaultTopicIcons#44c1f8e9 = InputStickerSet;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputStickerSet](/type/InputStickerSet/)
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

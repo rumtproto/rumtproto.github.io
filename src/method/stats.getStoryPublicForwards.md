@@ -1,18 +1,15 @@
 ---
-title: "stats.getStoryPublicForwards (метод)"
+title: "stats.getStoryPublicForwards"
 original: "https://core.telegram.org/method/stats.getStoryPublicForwards"
 section: ref
 kind: method
+description: "Получить пересылки истории в виде сообщения в публичные чаты и репосты публичными каналами."
 layout: layout.njk
 ---
 
 # stats.getStoryPublicForwards
 
-*Метод из схемы TL.*
-
-> Obtain forwards of a [story](https://core.telegram.org/api/stories) as a message to public chats and reposts by public channels.
-
-## Определение TL
+Получить пересылки [истории](/api/stories/) в виде сообщения в публичные чаты и репосты публичными каналами.
 
 ```
 stats.publicForwards#93037e20 flags:# count:int forwards:Vector<PublicForward> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = stats.PublicForwards;
@@ -20,37 +17,30 @@ stats.publicForwards#93037e20 flags:# count:int forwards:Vector<PublicForward> n
 stats.getStoryPublicForwards#a6437ef6 peer:InputPeer id:int offset:string limit:int = stats.PublicForwards;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer where the story was originally posted |
-| id | [int](/type/int/) | [Story](https://core.telegram.org/api/stories) ID |
-| offset | [string](/type/string/) | Offset for pagination, from [stats.PublicForwards](/constructor/stats.publicForwards/).next_offset. |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в котором изначально была опубликована история</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор <a href="/api/stories">истории</a></td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:next_offset] Смещение для постраничной выборки, из <a href="/constructor/stats.publicForwards">stats.PublicForwards</a>.<code>next_offset</code>.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [stats.PublicForwards](/type/stats.PublicForwards/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.
 
 #### [stats.publicForwards](/constructor/stats.publicForwards/)
 
-Contains info about the forwards of a [story](https://core.telegram.org/api/stories) as a message to public chats and reposts by public channels.
+Содержит информацию о пересылках [истории](/api/stories/) в виде сообщения в публичные чаты и о репостах публичными каналами.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

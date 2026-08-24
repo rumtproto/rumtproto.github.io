@@ -1,42 +1,34 @@
 ---
-title: "savedReactionTag (конструктор)"
+title: "savedReactionTag"
 original: "https://core.telegram.org/constructor/savedReactionTag"
 section: ref
 kind: constructor
+description: "Информация о теге реакции в избранном »."
 layout: layout.njk
 ---
 
 # savedReactionTag
 
-*Конструктор из схемы TL.*
-
-> Info about a [saved message reaction tag »](https://core.telegram.org/api/saved-messages#tags).
-
-## Определение TL
+Информация о [теге реакции в избранном »](/api/saved-messages/#tags).
 
 ```
 savedReactionTag#cb6ff828 flags:# reaction:Reaction title:flags.0?string count:int = SavedReactionTag;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| reaction | [Reaction](/type/Reaction/) | [Reaction](https://core.telegram.org/api/reactions) associated to the tag. |
-| title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Custom tag name assigned by the user (max 12 UTF-8 chars). |
-| count | [int](/type/int/) | Number of messages tagged with this tag. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/type/Reaction">Reaction</a></td><td><a href="/api/reactions">Реакция</a>, связанная с тегом.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Тег, заданный пользователем (не более 12 символов UTF-8).</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество сообщений, помеченных этим тегом.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SavedReactionTag](/type/SavedReactionTag/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.

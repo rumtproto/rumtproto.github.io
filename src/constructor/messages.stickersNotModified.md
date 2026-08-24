@@ -1,27 +1,24 @@
 ---
-title: "messages.stickersNotModified (конструктор)"
+title: "messages.stickersNotModified"
 original: "https://core.telegram.org/constructor/messages.stickersNotModified"
 section: ref
 kind: constructor
+description: "По данному запросу новых стикеров не найдено"
 layout: layout.njk
 ---
 
 # messages.stickersNotModified
 
-*Конструктор из схемы TL.*
-
-> No new stickers were found for the given query
-
-## Определение TL
+По данному запросу новых стикеров не найдено
 
 ```
 messages.stickersNotModified#f1749a22 = messages.Stickers;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.Stickers](/type/messages.Stickers/)

@@ -1,18 +1,15 @@
 ---
-title: "help.getPeerColors (метод)"
+title: "help.getPeerColors"
 original: "https://core.telegram.org/method/help.getPeerColors"
 section: ref
 kind: method
+description: "Получить набор палитр акцентных цветов », которые можно использовать для акцентов в сообщениях."
 layout: layout.njk
 ---
 
 # help.getPeerColors
 
-*Метод из схемы TL.*
-
-> Get the set of [accent color palettes »](https://core.telegram.org/api/colors) that can be used for message accents.
-
-## Определение TL
+Получить набор [палитр акцентных цветов »](/api/colors/), которые можно использовать для акцентов в сообщениях.
 
 ```
 help.peerColorsNotModified#2ba1f5ce = help.PeerColors;
@@ -21,24 +18,22 @@ help.peerColors#f8ed08 hash:int colors:Vector<help.PeerColorOption> = help.PeerC
 help.getPeerColors#da80f42f hash:int = help.PeerColors;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [help.PeerColors](/type/help.PeerColors/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!

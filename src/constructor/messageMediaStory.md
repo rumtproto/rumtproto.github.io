@@ -1,43 +1,34 @@
 ---
-title: "messageMediaStory (конструктор)"
+title: "messageMediaStory"
 original: "https://core.telegram.org/constructor/messageMediaStory"
 section: ref
 kind: constructor
+description: "Представляет пересланную историю или упоминание истории."
 layout: layout.njk
 ---
 
 # messageMediaStory
 
-*Конструктор из схемы TL.*
-
-> Represents a forwarded [story](https://core.telegram.org/api/stories) or a story mention.
-
-## Определение TL
+Представляет пересланную [историю](/api/stories/) или упоминание истории.
 
 ```
 messageMediaStory#68cb6283 flags:# via_mention:flags.1?true peer:Peer id:int story:flags.0?StoryItem = MessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| via_mention | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, indicates that this someone has mentioned us in this story (i.e. by tagging us in the description) or vice versa, we have mentioned the other peer (if the message is outgoing). |
-| peer | [Peer](/type/Peer/) | Peer that posted the story. |
-| id | [int](/type/int/) | Story ID |
-| story | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[StoryItem](/type/StoryItem/) | The story itself, if absent fetch it using [stories.getStoriesByID](/method/stories.getStoriesByID/) and the peer/id parameters specified above. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>via_mention</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, указывает, что кто-то упомянул нас в этой истории (например, отметив нас в описании) или, наоборот, мы упомянули другого пира (если сообщение исходящее).</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир, опубликовавший историю.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор истории</td></tr><tr><td><strong>story</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/StoryItem">StoryItem</a></td><td>Сама история; если отсутствует, получите её с помощью <a href="/method/stories.getStoriesByID">stories.getStoriesByID</a> и указанных выше параметров <code>peer</code>/<code>id</code>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageMedia](/type/MessageMedia/)
 
-## Related pages
+### Связанные страницы
 
 #### [stories.getStoriesByID](/method/stories.getStoriesByID/)
 
-Obtain full info about a set of [stories](https://core.telegram.org/api/stories) by their IDs.
+Получить полные сведения о наборе [историй](/api/stories/) по их идентификаторам.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

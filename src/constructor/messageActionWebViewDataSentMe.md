@@ -1,44 +1,38 @@
 ---
-title: "messageActionWebViewDataSentMe (конструктор)"
+title: "messageActionWebViewDataSentMe"
 original: "https://core.telegram.org/constructor/messageActionWebViewDataSentMe"
 section: ref
 kind: constructor
+description: "Данные из открытого мини-приложения бота в клавиатуре ответов были переданы боту, которому оно принадлежит (сервисное сообщение на стороне бота)."
 layout: layout.njk
 ---
 
 # messageActionWebViewDataSentMe
 
-*Конструктор из схемы TL.*
-
-> Data from an opened [reply keyboard bot mini app](https://core.telegram.org/api/bots/webapps) was relayed to the bot that owns it (bot side service message).
-
-## Определение TL
+Данные из открытого [мини-приложения бота в клавиатуре ответов](/api/bots/webapps/) были переданы боту, которому оно принадлежит (сервисное сообщение на стороне бота).
 
 ```
 messageActionWebViewDataSentMe#47dd8079 text:string data:string = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [string](/type/string/) | Text of the [keyboardButtonSimpleWebView](/constructor/keyboardButtonSimpleWebView/) that was pressed to open the web app. |
-| data | [string](/type/string/) | Relayed data. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст кнопки <a href="/constructor/keyboardButtonSimpleWebView">keyboardButtonSimpleWebView</a>, нажатием которой было открыто веб-приложение.</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Передаваемые данные.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
 #### [keyboardButtonSimpleWebView](/constructor/keyboardButtonSimpleWebView/)
 
-Button to open a [bot mini app](https://core.telegram.org/api/bots/webapps) using [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/), without sending user information to the web app.
+[@term:Mini App] Кнопка для открытия [mini app бота](/api/bots/webapps/) с помощью [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/) без передачи сведений о пользователе веб-приложению.
 
-Can only be sent or received as part of a reply keyboard, use [keyboardButtonWebView](/constructor/keyboardButtonWebView/) for inline keyboards.
+Может отправляться или приниматься только в составе клавиатуры ответа; для инлайн-клавиатур используйте [keyboardButtonWebView](/constructor/keyboardButtonWebView/).
 
-When pressed, clients must open a [Keyboard Button Mini App](https://core.telegram.org/api/bots/webapps#keyboard-button-mini-apps) using [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/), passing `url` to [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/).`url`.
+При нажатии клиенты обязаны открыть [Mini App из кнопки клавиатуры](/api/bots/webapps/#keyboard-button-mini-apps) с помощью [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/), передав `url` в поле [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/).`url`.
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

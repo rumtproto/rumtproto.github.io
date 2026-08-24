@@ -1,27 +1,24 @@
 ---
-title: "messages.sponsoredMessagesEmpty (конструктор)"
+title: "messages.sponsoredMessagesEmpty"
 original: "https://core.telegram.org/constructor/messages.sponsoredMessagesEmpty"
 section: ref
 kind: constructor
+description: "Рекламные сообщения недоступны."
 layout: layout.njk
 ---
 
 # messages.sponsoredMessagesEmpty
 
-*Конструктор из схемы TL.*
-
-> No sponsored messages are available.
-
-## Определение TL
+Рекламные сообщения недоступны.
 
 ```
 messages.sponsoredMessagesEmpty#1839490f = messages.SponsoredMessages;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.SponsoredMessages](/type/messages.SponsoredMessages/)

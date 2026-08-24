@@ -1,18 +1,15 @@
 ---
-title: "messages.clearRecentReactions (метод)"
+title: "messages.clearRecentReactions"
 original: "https://core.telegram.org/method/messages.clearRecentReactions"
 section: ref
 kind: method
+description: "Очистить список недавно использованных реакций на сообщения"
 layout: layout.njk
 ---
 
 # messages.clearRecentReactions
 
-*Метод из схемы TL.*
-
-> Clear recently used [message reactions](https://core.telegram.org/api/reactions)
-
-## Определение TL
+Очистить список недавно использованных [реакций на сообщения](/api/reactions/)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,18 +18,18 @@ boolTrue#997275b5 = Bool;
 messages.clearRecentReactions#9dfeefb4 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

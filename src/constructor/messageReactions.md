@@ -1,57 +1,46 @@
 ---
-title: "messageReactions (конструктор)"
+title: "messageReactions"
 original: "https://core.telegram.org/constructor/messageReactions"
 section: ref
 kind: constructor
+description: "Реакции на сообщения »"
 layout: layout.njk
 ---
 
 # messageReactions
 
-*Конструктор из схемы TL.*
-
-> [Message reactions »](https://core.telegram.org/api/reactions)
-
-## Определение TL
+[Реакции на сообщения »](/api/reactions/)
 
 ```
 messageReactions#a339f0b flags:# min:flags.0?true can_see_list:flags.2?true reactions_as_tags:flags.3?true results:Vector<ReactionCount> recent_reactions:flags.1?Vector<MessagePeerReaction> top_reactors:flags.4?Vector<MessageReactor> = MessageReactions;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| min | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Similar to [min](https://core.telegram.org/api/min) objects, used for [message reaction »](https://core.telegram.org/api/reactions) constructors that are the same for all users so they don't have the reactions sent by the current user (you can use [messages.getMessagesReactions](/method/messages.getMessagesReactions/) to get the full reaction info). |
-| can_see_list | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether [messages.getMessageReactionsList](/method/messages.getMessageReactionsList/) can be used to see how each specific peer reacted to the message |
-| reactions_as_tags | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | If set or if there are no reactions, all present and future reactions should be treated as [message tags, see here » for more info](https://core.telegram.org/api/saved-messages#tags). |
-| results | [Vector](https://core.telegram.org/type/Vector%20t)<[ReactionCount](/type/ReactionCount/)> | Reactions |
-| recent_reactions | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[MessagePeerReaction](/type/MessagePeerReaction/)> | List of recent peers and their reactions |
-| top_reactors | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageReactor](/type/MessageReactor/)> | [Paid Telegram Star reactions leaderboard »](https://core.telegram.org/api/reactions#paid-reactions) for this message. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>min</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>[@term:min] Аналогично <a href="/api/min">min</a>-объектам, используется для конструкторов <a href="/api/reactions">реакций на сообщения »</a>, одинаковых для всех пользователей, поэтому в них нет реакций, отправленных текущим пользователем (получить полную информацию о реакциях можно с помощью <a href="/method/messages.getMessagesReactions">messages.getMessagesReactions</a>).</td></tr><tr><td><strong>can_see_list</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Можно ли с помощью <a href="/method/messages.getMessageReactionsList">messages.getMessageReactionsList</a> узнать, как на сообщение отреагировал каждый конкретный пир</td></tr><tr><td><strong>reactions_as_tags</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Если установлено или если реакций нет, все текущие и будущие реакции следует рассматривать как <a href="/api/saved-messages#tags">теги сообщений, подробнее см. здесь »</a>.</td></tr><tr><td><strong>results</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ReactionCount">ReactionCount</a>&gt;</td><td>Реакции</td></tr><tr><td><strong>recent_reactions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessagePeerReaction">MessagePeerReaction</a>&gt;</td><td>Список недавних пиров и их реакций</td></tr><tr><td><strong>top_reactors</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageReactor">MessageReactor</a>&gt;</td><td><a href="/api/reactions#paid-reactions">Таблица лидеров платных реакций за Telegram Stars »</a> для этого сообщения.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageReactions](/type/MessageReactions/)
 
-## Related pages
+### Связанные страницы
 
-#### [Min constructors](https://core.telegram.org/api/min)
+#### [Конструкторы min](/api/min/)
 
-In some situations user and channel constructors have reduced set of fields present (although id is always there) and min flag set.
+В некоторых случаях в конструкторах пользователя и канала присутствует сокращённый набор полей (хотя id есть всегда) и установлен флаг min.
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.
 
 #### [messages.getMessagesReactions](/method/messages.getMessagesReactions/)
 
-Get [message reactions »](https://core.telegram.org/api/reactions)
+Получить [реакции на сообщения »](/api/reactions/)
 
 #### [messages.getMessageReactionsList](/method/messages.getMessageReactionsList/)
 
-Get [message reaction](https://core.telegram.org/api/reactions) list, along with the sender of each reaction.
+Получить список [реакций на сообщение](/api/reactions/) вместе с отправителем каждой реакции.
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.

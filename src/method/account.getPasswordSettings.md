@@ -1,18 +1,15 @@
 ---
-title: "account.getPasswordSettings (метод)"
+title: "account.getPasswordSettings"
 original: "https://core.telegram.org/method/account.getPasswordSettings"
 section: ref
 kind: method
+description: "Получить личные данные, связанные с настройками пароля (резервный адрес электронной почты, данные telegram passport и т. д.)"
 layout: layout.njk
 ---
 
 # account.getPasswordSettings
 
-*Метод из схемы TL.*
-
-> Get private info associated to the password info (recovery email, telegram [passport](https://core.telegram.org/passport) info & so on)
-
-## Определение TL
+Получить личные данные, связанные с настройками пароля (резервный адрес электронной почты, данные telegram [passport](https://core.telegram.org/passport) и т. д.)
 
 ```
 account.passwordSettings#9a5c33e5 flags:# email:flags.0?string secure_settings:flags.1?SecureSecretSettings = account.PasswordSettings;
@@ -20,30 +17,26 @@ account.passwordSettings#9a5c33e5 flags:# email:flags.0?string secure_settings:f
 account.getPasswordSettings#9cd4eaf9 password:InputCheckPasswordSRP = account.PasswordSettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| password | [InputCheckPasswordSRP](/type/InputCheckPasswordSRP/) | The password (see [SRP](/api/srp/)) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>password</strong></td><td style="text-align: center;"><a href="/type/InputCheckPasswordSRP">InputCheckPasswordSRP</a></td><td>Пароль (см. <a href="/api/srp">SRP</a>)</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.PasswordSettings](/type/account.PasswordSettings/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PASSWORD_HASH_INVALID | The provided password hash is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PASSWORD_HASH_INVALID</td><td>Указанный хеш пароля недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

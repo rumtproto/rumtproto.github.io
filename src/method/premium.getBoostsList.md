@@ -1,18 +1,15 @@
 ---
-title: "premium.getBoostsList (метод)"
+title: "premium.getBoostsList"
 original: "https://core.telegram.org/method/premium.getBoostsList"
 section: ref
 kind: method
+description: "Получает сведения о бустах, выданных определённому каналу или супергруппе (только для администраторов)"
 layout: layout.njk
 ---
 
 # premium.getBoostsList
 
-*Метод из схемы TL.*
-
-> Obtains info about the boosts that were applied to a certain channel or supergroup (admins only)
-
-## Определение TL
+Получает сведения о бустах, выданных определённому каналу или супергруппе (только для администраторов)
 
 ```
 premium.boostsList#86f8613c flags:# count:int boosts:Vector<Boost> next_offset:flags.0?string users:Vector<User> = premium.BoostsList;
@@ -20,39 +17,30 @@ premium.boostsList#86f8613c flags:# count:int boosts:Vector<Boost> next_offset:f
 premium.getBoostsList#60f67660 flags:# gifts:flags.0?true peer:InputPeer offset:string limit:int = premium.BoostsList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| gifts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to return only info about boosts received from [gift codes and giveaways created by the channel/supergroup »](https://core.telegram.org/api/giveaways) |
-| peer | [InputPeer](/type/InputPeer/) | The channel/supergroup |
-| offset | [string](/type/string/) | Offset for pagination, obtained from [premium.boostsList](/constructor/premium.boostsList/).next_offset |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>gifts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Возвращать ли только сведения о бустах, полученных от <a href="/api/giveaways">подарочных кодов и розыгрышей, созданных каналом или супергруппой »</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Канал или супергруппа</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:next_offset] Смещение для постраничной выборки, берётся из <a href="/constructor/premium.boostsList">premium.boostsList</a>.<code>next_offset</code></td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [premium.BoostsList](/type/premium.BoostsList/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.
 
 #### [premium.boostsList](/constructor/premium.boostsList/)
 
-List of [boosts](https://core.telegram.org/api/boost) that were applied to a peer by multiple users.
+Список [бустов](/api/boost/), применённых к пиру несколькими пользователями.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

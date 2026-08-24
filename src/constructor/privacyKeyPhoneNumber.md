@@ -1,27 +1,24 @@
 ---
-title: "privacyKeyPhoneNumber (конструктор)"
+title: "privacyKeyPhoneNumber"
 original: "https://core.telegram.org/constructor/privacyKeyPhoneNumber"
 section: ref
 kind: constructor
+description: "Разрешает ли пользователь нам видеть его номер телефона"
 layout: layout.njk
 ---
 
 # privacyKeyPhoneNumber
 
-*Конструктор из схемы TL.*
-
-> Whether the user allows us to see his phone number
-
-## Определение TL
+Разрешает ли пользователь нам видеть его номер телефона
 
 ```
 privacyKeyPhoneNumber#d19ae46d = PrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyKey](/type/PrivacyKey/)

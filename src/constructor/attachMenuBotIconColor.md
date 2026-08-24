@@ -1,36 +1,30 @@
 ---
-title: "attachMenuBotIconColor (конструктор)"
+title: "attachMenuBotIconColor"
 original: "https://core.telegram.org/constructor/attachMenuBotIconColor"
 section: ref
 kind: constructor
+description: "Представляет цвет значка в меню вложений для mini app ботов »"
 layout: layout.njk
 ---
 
 # attachMenuBotIconColor
 
-*Конструктор из схемы TL.*
-
-> Represents an attachment menu icon color for [bot mini apps »](https://core.telegram.org/api/bots/attach)
-
-## Определение TL
+[@term:Mini App] Представляет цвет значка в меню вложений для [mini app ботов »](/api/bots/attach/)
 
 ```
 attachMenuBotIconColor#4576f3f0 name:string color:int = AttachMenuBotIconColor;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| name | [string](/type/string/) | One of the following values: light_icon - Color of the attachment menu icon (light mode) light_text - Color of the attachment menu label, once selected (light mode) dark_icon - Color of the attachment menu icon (dark mode) dark_text - Color of the attachment menu label, once selected (dark mode) |
-| color | [int](/type/int/) | Color in RGB24 format |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Одно из следующих значений:<br><code>light_icon</code> - Цвет значка меню вложений (светлая тема)<br><code>light_text</code> - Цвет подписи меню вложений после выбора (светлая тема)<br><code>dark_icon</code> - Цвет значка меню вложений (тёмная тема)<br><code>dark_text</code> - Цвет подписи меню вложений после выбора (тёмная тема)</td></tr><tr><td><strong>color</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Цвет в формате RGB24</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [AttachMenuBotIconColor](/type/AttachMenuBotIconColor/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot attachment menu and side menu entries](https://core.telegram.org/api/bots/attach)
+#### [Пункты меню вложений и бокового меню для ботов](/api/bots/attach/)
 
-Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile web apps.
+Боты могут добавлять пункты в меню вложений и в боковое меню, предлагая легкодоступные многофункциональные веб-приложения.

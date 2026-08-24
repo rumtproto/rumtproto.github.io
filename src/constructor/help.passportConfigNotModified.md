@@ -1,27 +1,24 @@
 ---
-title: "help.passportConfigNotModified (конструктор)"
+title: "help.passportConfigNotModified"
 original: "https://core.telegram.org/constructor/help.passportConfigNotModified"
 section: ref
 kind: constructor
+description: "Настройки пароля не изменены"
 layout: layout.njk
 ---
 
 # help.passportConfigNotModified
 
-*Конструктор из схемы TL.*
-
-> Password configuration not modified
-
-## Определение TL
+Настройки пароля не изменены
 
 ```
 help.passportConfigNotModified#bfb9f457 = help.PassportConfig;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [help.PassportConfig](/type/help.PassportConfig/)

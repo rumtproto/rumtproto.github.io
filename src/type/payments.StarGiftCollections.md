@@ -1,18 +1,15 @@
 ---
-title: "payments.StarGiftCollections (тип)"
+title: "payments.StarGiftCollections"
 original: "https://core.telegram.org/type/payments.StarGiftCollections"
 section: ref
 kind: type
+description: "Представляет список коллекций подарков »."
 layout: layout.njk
 ---
 
 # payments.StarGiftCollections
 
-*Тип из схемы TL.*
-
-> Represents a list of [star gift collections »](https://core.telegram.org/api/gifts#gift-collections).
-
-## Определение TL
+Представляет список [коллекций подарков »](/api/gifts/#gift-collections).
 
 ```
 payments.starGiftCollectionsNotModified#a0ba4f17 = payments.StarGiftCollections;
@@ -23,21 +20,16 @@ payments.starGiftCollections#8a2932f3 collections:Vector<StarGiftCollection> = p
 payments.getStarGiftCollections#981b91dd peer:InputPeer hash:long = payments.StarGiftCollections;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.starGiftCollectionsNotModified](/constructor/payments.starGiftCollectionsNotModified/) | The list of [star gift collections »](https://core.telegram.org/api/gifts#gift-collections) hasn't changed. |
-| [payments.starGiftCollections](/constructor/payments.starGiftCollections/) | Represents a list of [star gift collections »](https://core.telegram.org/api/gifts#gift-collections). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starGiftCollectionsNotModified">payments.starGiftCollectionsNotModified</a></td><td>Список <a href="/api/gifts#gift-collections">коллекций звёздных подарков »</a> не изменился.</td></tr><tr><td><a href="/constructor/payments.starGiftCollections">payments.starGiftCollections</a></td><td>Представляет список <a href="/api/gifts#gift-collections">коллекций звёздных подарков »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getStarGiftCollections](/method/payments.getStarGiftCollections/) | Fetches all [star gift collections »](https://core.telegram.org/api/gifts#gift-collections) of a peer. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarGiftCollections">payments.getStarGiftCollections</a></td><td>Получает все <a href="/api/gifts#gift-collections">коллекции звёздных подарков »</a> пира.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

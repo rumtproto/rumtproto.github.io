@@ -1,18 +1,15 @@
 ---
-title: "Messages.FoundStickerSets (тип)"
+title: "messages.FoundStickerSets"
 original: "https://core.telegram.org/type/messages.FoundStickerSets"
 section: ref
 kind: type
+description: "Найденные наборы стикеров"
 layout: layout.njk
 ---
 
 # Messages.FoundStickerSets
 
-*Тип из схемы TL.*
-
-> Found stickersets
-
-## Определение TL
+Найденные наборы стикеров
 
 ```
 messages.foundStickerSetsNotModified#d54b65d = messages.FoundStickerSets;
@@ -24,16 +21,10 @@ messages.searchStickerSets#35705b8a flags:# exclude_featured:flags.0?true q:stri
 messages.searchEmojiStickerSets#92b4494c flags:# exclude_featured:flags.0?true q:string hash:long = messages.FoundStickerSets;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.foundStickerSetsNotModified](/constructor/messages.foundStickerSetsNotModified/) | No further results were found |
-| [messages.foundStickerSets](/constructor/messages.foundStickerSets/) | Found stickersets |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.foundStickerSetsNotModified">messages.foundStickerSetsNotModified</a></td><td>Больше результатов не найдено</td></tr><tr><td><a href="/constructor/messages.foundStickerSets">messages.foundStickerSets</a></td><td>Найденные наборы стикеров</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.searchStickerSets](/method/messages.searchStickerSets/) | Search for stickersets |
-| [messages.searchEmojiStickerSets](/method/messages.searchEmojiStickerSets/) | Search for [custom emoji stickersets »](https://core.telegram.org/api/custom-emoji) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.searchStickerSets">messages.searchStickerSets</a></td><td>Поиск наборов стикеров</td></tr><tr><td><a href="/method/messages.searchEmojiStickerSets">messages.searchEmojiStickerSets</a></td><td>Поиск <a href="/api/custom-emoji">наборов стикеров с пользовательскими эмодзи »</a></td></tr></tbody></table>

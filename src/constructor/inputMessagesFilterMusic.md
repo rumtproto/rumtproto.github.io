@@ -1,27 +1,24 @@
 ---
-title: "inputMessagesFilterMusic (конструктор)"
+title: "inputMessagesFilterMusic"
 original: "https://core.telegram.org/constructor/inputMessagesFilterMusic"
 section: ref
 kind: constructor
+description: "Возвращать только сообщения с аудиофайлами"
 layout: layout.njk
 ---
 
 # inputMessagesFilterMusic
 
-*Конструктор из схемы TL.*
-
-> Return only messages containing audio files
-
-## Определение TL
+Возвращать только сообщения с аудиофайлами
 
 ```
 inputMessagesFilterMusic#3751b49e = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)

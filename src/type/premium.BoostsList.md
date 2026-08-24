@@ -1,18 +1,15 @@
 ---
-title: "Premium.BoostsList (тип)"
+title: "premium.BoostsList"
 original: "https://core.telegram.org/type/premium.BoostsList"
 section: ref
 kind: type
+description: "Список бустов, применённых к пиру несколькими пользователями."
 layout: layout.njk
 ---
 
 # Premium.BoostsList
 
-*Тип из схемы TL.*
-
-> List of [boosts](https://core.telegram.org/api/boost) that were applied to a peer by multiple users.
-
-## Определение TL
+Список [бустов](/api/boost/), применённых к пиру несколькими пользователями.
 
 ```
 premium.boostsList#86f8613c flags:# count:int boosts:Vector<Boost> next_offset:flags.0?string users:Vector<User> = premium.BoostsList;
@@ -23,21 +20,16 @@ premium.getBoostsList#60f67660 flags:# gifts:flags.0?true peer:InputPeer offset:
 premium.getUserBoosts#39854d1f peer:InputPeer user_id:InputUser = premium.BoostsList;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [premium.boostsList](/constructor/premium.boostsList/) | List of [boosts](https://core.telegram.org/api/boost) that were applied to a peer by multiple users. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/premium.boostsList">premium.boostsList</a></td><td>Список <a href="/api/boost">бустов</a>, применённых к пиру несколькими пользователями.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [premium.getBoostsList](/method/premium.getBoostsList/) | Obtains info about the boosts that were applied to a certain channel or supergroup (admins only) |
-| [premium.getUserBoosts](/method/premium.getUserBoosts/) | Returns the lists of boost that were applied to a channel/supergroup by a specific user (admins only) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/premium.getBoostsList">premium.getBoostsList</a></td><td>Получает сведения о бустах, выданных определённому каналу или супергруппе (только для администраторов)</td></tr><tr><td><a href="/method/premium.getUserBoosts">premium.getUserBoosts</a></td><td>Возвращает списки бустов, применённых к каналу/супергруппе определённым пользователем (только для администраторов)</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.

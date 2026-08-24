@@ -1,18 +1,15 @@
 ---
-title: "phone.createGroupCall (метод)"
+title: "phone.createGroupCall"
 original: "https://core.telegram.org/method/phone.createGroupCall"
 section: ref
 kind: method
+description: "Создать видеочат или трансляцию; полный порядок действий см. здесь »."
 layout: layout.njk
 ---
 
 # phone.createGroupCall
 
-*Метод из схемы TL.*
-
-> Create a video chat or livestream, see [here »](https://core.telegram.org/api/group-calls#video-chats-livestreams) for the full flow.
-
-## Определение TL
+Создать видеочат или трансляцию; полный порядок действий см. [здесь »](/api/group-calls/#video-chats-livestreams).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,48 +23,34 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.createGroupCall#48cdc6d8 flags:# rtmp_stream:flags.2?true peer:InputPeer random_id:int title:flags.0?string schedule_date:flags.1?int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| rtmp_stream | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Create the call in [RTMP livestream mode »](https://core.telegram.org/api/group-calls#stream-mode), where one external streamer publishes all audio and video |
-| peer | [InputPeer](/type/InputPeer/) | Associate the group call or livestream to the provided [group/supergroup/channel](https://core.telegram.org/api/channel) |
-| random_id | [int](/type/int/) | Unique client message ID required to prevent creation of duplicate group calls. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Call title, if not set defaults to the group/channel's name. |
-| schedule_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | Schedule date, at least 10 seconds and at most 8 days in the future; the call must still be manually started using [phone.startScheduledGroupCall](/method/phone.startScheduledGroupCall/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>rtmp_stream</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Создать звонок в <a href="/api/group-calls#stream-mode">режиме RTMP-трансляции »</a>, когда весь звук и видео публикует один внешний вещатель</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Привязать групповой звонок или трансляцию к указанной <a href="/api/channel">группе, супергруппе или каналу</a></td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:random_id] Уникальный идентификатор сообщения на стороне клиента, необходимый для предотвращения создания дублирующихся групповых звонков. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Название звонка; если не задано, по умолчанию используется название группы или канала.</td></tr><tr><td><strong>schedule_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Дата назначения: не раньше чем через 10 секунд и не позже чем через 8 дней; звонок всё равно должен быть запущен вручную с помощью <a href="/method/phone.startScheduledGroupCall">phone.startScheduledGroupCall</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CREATE_CALL_FAILED | An error occurred while creating the call. |
-| 400 | GROUPCALL_ALREADY_DISCARDED | The group call was already discarded. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | SCHEDULE_DATE_INVALID | Invalid schedule date provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CREATE_CALL_FAILED</td><td>При создании звонка произошла ошибка.</td></tr><tr><td>400</td><td>GROUPCALL_ALREADY_DISCARDED</td><td>Групповой звонок уже был завершён.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>SCHEDULE_DATE_INVALID</td><td>Указана недопустимая дата отложенной отправки.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
 #### [phone.startScheduledGroupCall](/method/phone.startScheduledGroupCall/)
 
-Start a scheduled [group call](https://core.telegram.org/api/group-calls#video-chats-livestreams).
+Начать запланированный [групповой звонок](/api/group-calls/#video-chats-livestreams).

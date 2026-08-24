@@ -1,29 +1,24 @@
 ---
-title: "textSuperscript (конструктор)"
+title: "textSuperscript"
 original: "https://core.telegram.org/constructor/textSuperscript"
 section: ref
 kind: constructor
+description: "Надстрочный текст"
 layout: layout.njk
 ---
 
 # textSuperscript
 
-*Конструктор из схемы TL.*
-
-> Superscript text
-
-## Определение TL
+Надстрочный текст
 
 ```
 textSuperscript#c7fb5e01 text:RichText = RichText;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [RichText](/type/RichText/) | Text |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Текст</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [RichText](/type/RichText/)

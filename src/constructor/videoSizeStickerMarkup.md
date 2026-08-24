@@ -1,45 +1,38 @@
 ---
-title: "videoSizeStickerMarkup (конструктор)"
+title: "videoSizeStickerMarkup"
 original: "https://core.telegram.org/constructor/videoSizeStickerMarkup"
 section: ref
 kind: constructor
+description: "Анимированная фотография профиля на основе стикера."
 layout: layout.njk
 ---
 
 # videoSizeStickerMarkup
 
-*Конструктор из схемы TL.*
-
-> An [animated profile picture](https://core.telegram.org/api/files/#animated-profile-pictures) based on a [sticker](https://core.telegram.org/api/stickers).
-
-## Определение TL
+[Анимированная фотография профиля](/api/files/#animated-profile-pictures) на основе [стикера](/api/stickers/).
 
 ```
 videoSizeStickerMarkup#da082fe stickerset:InputStickerSet sticker_id:long background_colors:Vector<int> = VideoSize;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| stickerset | [InputStickerSet](/type/InputStickerSet/) | Stickerset |
-| sticker_id | [long](/type/long/) | Sticker ID |
-| background_colors | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | 1, 2, 3 or 4 RBG-24 colors used to generate a solid (1), gradient (2) or freeform gradient (3, 4) background, similar to how [fill wallpapers](https://core.telegram.org/api/wallpapers#fill-types) are generated. The rotation angle for gradient backgrounds is 0. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>stickerset</strong></td><td style="text-align: center;"><a href="/type/InputStickerSet">InputStickerSet</a></td><td>Набор стикеров</td></tr><tr><td><strong>sticker_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор стикера</td></tr><tr><td><strong>background_colors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>1, 2, 3 или 4 цвета RBG-24, используемые для построения сплошного (1), градиентного (2) или свободного градиентного (3, 4) фона — аналогично тому, как формируются <a href="/api/wallpapers#fill-types">заливочные обои</a>. Угол поворота для градиентных фонов равен 0.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [VideoSize](/type/VideoSize/)
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.

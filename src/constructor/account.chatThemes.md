@@ -1,40 +1,30 @@
 ---
-title: "account.chatThemes (конструктор)"
+title: "account.chatThemes"
 original: "https://core.telegram.org/constructor/account.chatThemes"
 section: ref
 kind: constructor
+description: "Доступные темы оформления чатов"
 layout: layout.njk
 ---
 
 # account.chatThemes
 
-*Конструктор из схемы TL.*
-
-> Available [chat themes](https://core.telegram.org/api/themes#chat-themes)
-
-## Определение TL
+Доступные [темы оформления чатов](/api/themes/#chat-themes)
 
 ```
 account.chatThemes#be098173 flags:# hash:long themes:Vector<ChatTheme> chats:Vector<Chat> users:Vector<User> next_offset:flags.0?string = account.ChatThemes;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| hash | [long](/type/long/) | Hash to pass to the method that returned this constructor, to avoid refetching the result if it hasn't changed. |
-| themes | [Vector](https://core.telegram.org/type/Vector%20t)<[ChatTheme](/type/ChatTheme/)> | Themes. |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Chats mentioned in the themes field. |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users mentioned in the themes field. |
-| next_offset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Next offset for pagination. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] Хеш, который нужно передать методу, вернувшему этот конструктор, чтобы не запрашивать результат повторно, если он не изменился.</td></tr><tr><td><strong>themes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ChatTheme">ChatTheme</a>&gt;</td><td>Темы оформления.</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Чаты, упомянутые в поле <code>themes</code>.</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи, упомянутые в поле <code>themes</code>.</td></tr><tr><td><strong>next_offset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>[@term:next_offset] Следующее смещение для постраничной выборки.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.ChatThemes](/type/account.ChatThemes/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram themes](https://core.telegram.org/api/themes)
+#### [Темы оформления Telegram](/api/themes/)
 
-Telegram apps support generating, sharing and synchronizing app themes.
+Приложения Telegram умеют создавать, отправлять и синхронизировать темы оформления.

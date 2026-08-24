@@ -1,39 +1,30 @@
 ---
-title: "starsRating (конструктор)"
+title: "starsRating"
 original: "https://core.telegram.org/constructor/starsRating"
 section: ref
 kind: constructor
+description: "Представляет звёздный рейтинг профиля, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # starsRating
 
-*Конструктор из схемы TL.*
-
-> Represents the profile's [star rating, see here »](https://core.telegram.org/api/stars#star-rating) for more info.
-
-## Определение TL
+Представляет [звёздный рейтинг профиля, подробнее см. здесь »](/api/stars/#star-rating).
 
 ```
 starsRating#1b0e4f07 flags:# level:int current_level_stars:long stars:long next_level_stars:flags.0?long = StarsRating;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| level | [int](/type/int/) | The current level, may be negative. |
-| current_level_stars | [long](/type/long/) | The numerical value of the rating required for the current level. |
-| stars | [long](/type/long/) | Numerical value of the current rating. |
-| next_level_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | The numerical value of the rating required for the next level. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>level</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Текущий уровень, может быть отрицательным.</td></tr><tr><td><strong>current_level_stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Числовое значение рейтинга, необходимое для текущего уровня.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Числовое значение текущего рейтинга.</td></tr><tr><td><strong>next_level_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Числовое значение рейтинга, необходимое для следующего уровня.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarsRating](/type/StarsRating/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

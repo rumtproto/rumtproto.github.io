@@ -1,35 +1,30 @@
 ---
-title: "channelAdminLogEventActionToggleAntiSpam (конструктор)"
+title: "channelAdminLogEventActionToggleAntiSpam"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionToggleAntiSpam"
 section: ref
 kind: constructor
+description: "Встроенная защита от спама была включена или отключена."
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionToggleAntiSpam
 
-*Конструктор из схемы TL.*
-
-> [Native antispam](https://core.telegram.org/api/antispam) functionality was enabled or disabled.
-
-## Определение TL
+[Встроенная защита от спама](/api/antispam/) была включена или отключена.
 
 ```
 channelAdminLogEventActionToggleAntiSpam#64f36dfc new_value:Bool = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| new_value | [Bool](/type/Bool/) | Whether antispam functionality was enabled or disabled. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Была ли включена или отключена защита от спама.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Native antispam system](https://core.telegram.org/api/antispam)
+#### [Встроенная система антиспама](/api/antispam/)
 
-Admins of supergroups with a certain number of members can choose to unleash the full proactive power of Telegram's own antispam algorithms – turning on the new Aggressive mode for the automated spam filters.
+Администраторы супергрупп с определённым числом участников могут задействовать всю упреждающую мощь собственных антиспам-алгоритмов Telegram — включить новый агрессивный режим автоматических спам-фильтров.

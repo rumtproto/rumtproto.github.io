@@ -1,18 +1,15 @@
 ---
-title: "messages.getSavedGifs (метод)"
+title: "messages.getSavedGifs"
 original: "https://core.telegram.org/method/messages.getSavedGifs"
 section: ref
 kind: method
+description: "Получить сохранённые GIF."
 layout: layout.njk
 ---
 
 # messages.getSavedGifs
 
-*Метод из схемы TL.*
-
-> Get saved GIFs.
-
-## Определение TL
+Получить сохранённые GIF.
 
 ```
 messages.savedGifsNotModified#e8025ca2 = messages.SavedGifs;
@@ -21,20 +18,18 @@ messages.savedGifs#84a02a0d hash:long gifs:Vector<Document> = messages.SavedGifs
 messages.getSavedGifs#5cf09635 hash:long = messages.SavedGifs;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.SavedGifs](/type/messages.SavedGifs/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

@@ -1,18 +1,15 @@
 ---
-title: "phone.GroupCall (тип)"
+title: "phone.GroupCall"
 original: "https://core.telegram.org/type/phone.GroupCall"
 section: ref
 kind: type
+description: "Содержит информацию о групповом звонке и частичную информацию о его участниках."
 layout: layout.njk
 ---
 
 # phone.GroupCall
 
-*Тип из схемы TL.*
-
-> Contains info about a group call, and partial info about its participants.
-
-## Определение TL
+Содержит информацию о групповом звонке и частичную информацию о его участниках.
 
 ```
 phone.groupCall#9e727aad call:GroupCall participants:Vector<GroupCallParticipant> participants_next_offset:string chats:Vector<Chat> users:Vector<User> = phone.GroupCall;
@@ -22,14 +19,10 @@ phone.groupCall#9e727aad call:GroupCall participants:Vector<GroupCallParticipant
 phone.getGroupCall#41845db call:InputGroupCall limit:int = phone.GroupCall;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [phone.groupCall](/constructor/phone.groupCall/) | Contains group call information and an initial participant page, see [getting info about a group call »](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/phone.groupCall">phone.groupCall</a></td><td>Содержит информацию о групповом звонке и первую страницу списка участников, см. <a href="/api/group-calls#getting-info-about-a-group-call">получение информации о групповом звонке »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [phone.getGroupCall](/method/phone.getGroupCall/) | Get info about a [group call](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call) and its participants. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/phone.getGroupCall">phone.getGroupCall</a></td><td>Получить информацию о <a href="/api/group-calls#getting-info-about-a-group-call">групповом звонке</a> и его участниках.</td></tr></tbody></table>

@@ -1,18 +1,15 @@
 ---
-title: "phone.requestCall (метод)"
+title: "phone.requestCall"
 original: "https://core.telegram.org/method/phone.requestCall"
 section: ref
 kind: method
+description: "Начать телефонный звонок Telegram; подробнее о полном сценарии см. здесь »."
 layout: layout.njk
 ---
 
 # phone.requestCall
 
-*Метод из схемы TL.*
-
-> Start a telegram phone call, see [here »](https://core.telegram.org/api/calls#one-to-one-calls) for more info on the full flow.
-
-## Определение TL
+Начать телефонный звонок Telegram; подробнее о полном сценарии см. [здесь »](/api/calls/#one-to-one-calls).
 
 ```
 phone.phoneCall#ec82e140 phone_call:PhoneCall users:Vector<User> = phone.PhoneCall;
@@ -20,46 +17,30 @@ phone.phoneCall#ec82e140 phone_call:PhoneCall users:Vector<User> = phone.PhoneCa
 phone.requestCall#42ff96ed flags:# video:flags.0?true user_id:InputUser random_id:int g_a_hash:bytes protocol:PhoneCallProtocol = phone.PhoneCall;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| video | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to start a video call |
-| user_id | [InputUser](/type/InputUser/) | Destination of the phone call |
-| random_id | [int](/type/int/) | Random ID to avoid resending the same object. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| g_a_hash | [bytes](/type/bytes/) | [Parameter for E2E encryption key exchange »](https://core.telegram.org/api/end-to-end/voice-calls) |
-| protocol | [PhoneCallProtocol](/type/PhoneCallProtocol/) | Phone call settings |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>video</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Следует ли начать видеозвонок</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Назначение телефонного звонка</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:random_id] Случайный идентификатор, позволяющий избежать повторной отправки того же объекта. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>g_a_hash</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td><a href="/api/end-to-end/voice-calls">Параметр для обмена ключами сквозного шифрования »</a></td></tr><tr><td><strong>protocol</strong></td><td style="text-align: center;"><a href="/type/PhoneCallProtocol">PhoneCallProtocol</a></td><td>Настройки телефонного звонка</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [phone.PhoneCall](/type/phone.PhoneCall/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CALL_PROTOCOL_FLAGS_INVALID | Call protocol flags invalid. |
-| 400 | CALL_PROTOCOL_LAYER_INVALID | The specified protocol layer version range is invalid. |
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | PARTICIPANT_VERSION_OUTDATED | The other participant does not use an up to date telegram client with support for calls. |
-| 500 | RANDOM_ID_DUPLICATE | You provided a random ID that was already used. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
-| 403 | USER_IS_BLOCKED | You were blocked by this user. |
-| 403 | USER_PRIVACY_RESTRICTED | The user's privacy settings do not allow you to do this. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CALL_PROTOCOL_FLAGS_INVALID</td><td>Недействительные флаги протокола звонка.</td></tr><tr><td>400</td><td>CALL_PROTOCOL_LAYER_INVALID</td><td>Указанный диапазон версий слоя протокола недействителен.</td></tr><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>PARTICIPANT_VERSION_OUTDATED</td><td>У другого участника установлен устаревший клиент Telegram без поддержки звонков.</td></tr><tr><td>500</td><td>RANDOM_ID_DUPLICATE</td><td>Вы передали случайный идентификатор, который уже использовался.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr><tr><td>403</td><td>USER_IS_BLOCKED</td><td>Этот пользователь вас заблокировал.</td></tr><tr><td>403</td><td>USER_PRIVACY_RESTRICTED</td><td>Настройки приватности пользователя не позволяют вам это сделать.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [End-to-End Encrypted Voice Calls](https://core.telegram.org/api/end-to-end/voice-calls)
+#### [Сквозное шифрование голосовых звонков](/api/end-to-end/voice-calls/)
 
-Deprecated description of encryption in voice calls as implemented in Telegram apps older than version 7.0.
+Устаревшее описание шифрования в голосовых звонках, как оно было реализовано в приложениях Telegram до версии 7.0.
 
-#### [Phone calls](https://core.telegram.org/api/calls)
+#### [Звонки](/api/calls/)
 
-Telegram supports end-to-end-encrypted one-to-one voice and video calls.
+Telegram поддерживает голосовые и видеозвонки один на один со сквозным шифрованием.

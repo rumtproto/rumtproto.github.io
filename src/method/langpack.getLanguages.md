@@ -1,40 +1,33 @@
 ---
-title: "langpack.getLanguages (метод)"
+title: "langpack.getLanguages"
 original: "https://core.telegram.org/method/langpack.getLanguages"
 section: ref
 kind: method
+description: "Получить информацию обо всех языках в пакете локализации"
 layout: layout.njk
 ---
 
 # langpack.getLanguages
 
-*Метод из схемы TL.*
-
-> Get information about all languages in a localization pack
-
-## Определение TL
+Получить информацию обо всех языках в пакете локализации
 
 ```
 ---functions---
 langpack.getLanguages#42c6978f lang_pack:string = Vector<LangPackLanguage>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| lang_pack | [string](/type/string/) | Platform identifier (i.e. android, tdesktop, etc). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>lang_pack</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор платформы (например, <code>android</code>, <code>tdesktop</code> и т. п.).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[LangPackLanguage](/type/LangPackLanguage/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | LANG_PACK_INVALID | The provided language pack is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>LANG_PACK_INVALID</td><td>Указанный языковой пакет недействителен.</td></tr></tbody></table>

@@ -1,49 +1,30 @@
 ---
-title: "chatInviteExported (конструктор)"
+title: "chatInviteExported"
 original: "https://core.telegram.org/constructor/chatInviteExported"
 section: ref
 kind: constructor
+description: "Экспортированное приглашение в чат"
 layout: layout.njk
 ---
 
 # chatInviteExported
 
-*Конструктор из схемы TL.*
-
-> Exported chat invite
-
-## Определение TL
+Экспортированное приглашение в чат
 
 ```
 chatInviteExported#a22cbd96 flags:# revoked:flags.0?true permanent:flags.5?true request_needed:flags.6?true link:string admin_id:long date:int start_date:flags.4?int expire_date:flags.1?int usage_limit:flags.2?int usage:flags.3?int requested:flags.7?int subscription_expired:flags.10?int title:flags.8?string subscription_pricing:flags.9?StarsSubscriptionPricing = ExportedChatInvite;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| revoked | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether this chat invite was revoked |
-| permanent | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether this chat invite has no expiration |
-| request_needed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | Whether users importing this invite link will have to be approved to join the channel or group |
-| link | [string](/type/string/) | Chat invitation link |
-| admin_id | [long](/type/long/) | ID of the admin that created this chat invite |
-| date | [int](/type/int/) | When was this chat invite created |
-| start_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[int](/type/int/) | When was this chat invite last modified |
-| expire_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | When does this chat invite expire |
-| usage_limit | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Maximum number of users that can join using this link |
-| usage | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[int](/type/int/) | How many users joined using this link |
-| requested | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[int](/type/int/) | Number of users that have already used this link to join |
-| subscription_expired | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[int](/type/int/) | For [Telegram Star subscriptions »](https://core.telegram.org/api/stars#star-subscriptions), contains the number of chat members which have already joined the chat using the link, but have already left due to expiration of their subscription. |
-| title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[string](/type/string/) | Custom description for the invite link, visible only to admins |
-| subscription_pricing | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[StarsSubscriptionPricing](/type/StarsSubscriptionPricing/) | For [Telegram Star subscriptions »](https://core.telegram.org/api/stars#star-subscriptions), contains the pricing of the subscription the user must activate to join the private channel. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>revoked</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Было ли это приглашение в чат отозвано</td></tr><tr><td><strong>permanent</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Бессрочно ли это приглашение в чат</td></tr><tr><td><strong>request_needed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Потребуется ли одобрение для пользователей, вступающих в канал или группу по этой пригласительной ссылке</td></tr><tr><td><strong>link</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Пригласительная ссылка на чат</td></tr><tr><td><strong>admin_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор администратора, создавшего эту пригласительную ссылку</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда была создана эта пригласительная ссылка</td></tr><tr><td><strong>start_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/int">int</a></td><td>Когда эта пригласительная ссылка изменялась в последний раз</td></tr><tr><td><strong>expire_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Когда истекает срок действия этого приглашения в чат</td></tr><tr><td><strong>usage_limit</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Максимальное число пользователей, которые могут присоединиться по этой ссылке</td></tr><tr><td><strong>usage</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/int">int</a></td><td>Сколько пользователей вступило по этой ссылке</td></tr><tr><td><strong>requested</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/int">int</a></td><td>Количество пользователей, уже воспользовавшихся этой ссылкой для вступления</td></tr><tr><td><strong>subscription_expired</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/int">int</a></td><td>Для <a href="/api/stars#star-subscriptions">подписок за Telegram Stars »</a> содержит число участников чата, которые ранее вступили в чат по этой ссылке, но уже покинули его из-за окончания срока подписки.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/string">string</a></td><td>Произвольное описание пригласительной ссылки, видимое только администраторам</td></tr><tr><td><strong>subscription_pricing</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/StarsSubscriptionPricing">StarsSubscriptionPricing</a></td><td>Для <a href="/api/stars#star-subscriptions">подписок за Telegram Stars »</a> содержит стоимость подписки, которую пользователь должен активировать, чтобы вступить в закрытый канал.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ExportedChatInvite](/type/ExportedChatInvite/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

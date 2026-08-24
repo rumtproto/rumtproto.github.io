@@ -1,18 +1,15 @@
 ---
-title: "Account.PasskeyRegistrationOptions (тип)"
+title: "account.PasskeyRegistrationOptions"
 original: "https://core.telegram.org/type/account.PasskeyRegistrationOptions"
 section: ref
 kind: type
+description: "Параметры регистрации passkey; подробнее о полном процессе см. здесь »."
 layout: layout.njk
 ---
 
 # Account.PasskeyRegistrationOptions
 
-*Тип из схемы TL.*
-
-> Passkey registration options, see [here »](https://core.telegram.org/api/passkeys#creating-a-passkey) for more info on the full flow.
-
-## Определение TL
+Параметры регистрации passkey; подробнее о полном процессе см. [здесь »](/api/passkeys/#creating-a-passkey).
 
 ```
 account.passkeyRegistrationOptions#e16b5ce1 options:DataJSON = account.PasskeyRegistrationOptions;
@@ -22,20 +19,16 @@ account.passkeyRegistrationOptions#e16b5ce1 options:DataJSON = account.PasskeyRe
 account.initPasskeyRegistration#429547e8 = account.PasskeyRegistrationOptions;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.passkeyRegistrationOptions](/constructor/account.passkeyRegistrationOptions/) | Passkey registration options, see [here »](https://core.telegram.org/api/passkeys#creating-a-passkey) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.passkeyRegistrationOptions">account.passkeyRegistrationOptions</a></td><td>Параметры регистрации ключа доступа; подробнее о полном процессе см. <a href="/api/passkeys#creating-a-passkey">здесь »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.initPasskeyRegistration](/method/account.initPasskeyRegistration/) | Initialize passkey registration for the current account, see [here »](https://core.telegram.org/api/passkeys#creating-a-passkey) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.initPasskeyRegistration">account.initPasskeyRegistration</a></td><td>Начать регистрацию ключа доступа для текущего аккаунта; подробнее о полном процессе см. <a href="/api/passkeys#creating-a-passkey">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

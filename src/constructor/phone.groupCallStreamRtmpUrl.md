@@ -1,36 +1,30 @@
 ---
-title: "phone.groupCallStreamRtmpUrl (конструктор)"
+title: "phone.groupCallStreamRtmpUrl"
 original: "https://core.telegram.org/constructor/phone.groupCallStreamRtmpUrl"
 section: ref
 kind: constructor
+description: "Содержит URL для публикации по RTMP и секретный ключ потока, см. создание и публикация RTMP-трансляции »."
 layout: layout.njk
 ---
 
 # phone.groupCallStreamRtmpUrl
 
-*Конструктор из схемы TL.*
-
-> Contains the RTMP publishing URL and secret stream key, see [creating and publishing an RTMP livestream »](https://core.telegram.org/api/group-calls#creating-and-publishing-an-rtmp-livestream).
-
-## Определение TL
+Содержит URL для публикации по RTMP и секретный ключ потока, см. [создание и публикация RTMP-трансляции »](/api/group-calls/#creating-and-publishing-an-rtmp-livestream).
 
 ```
 phone.groupCallStreamRtmpUrl#2dbf3432 url:string key:string = phone.GroupCallStreamRtmpUrl;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| url | [string](/type/string/) | RTMP URL |
-| key | [string](/type/string/) | Secret stream key |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>URL для RTMP</td></tr><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Секретный ключ потока</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [phone.GroupCallStreamRtmpUrl](/type/phone.GroupCallStreamRtmpUrl/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

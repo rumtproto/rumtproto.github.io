@@ -1,18 +1,15 @@
 ---
-title: "smsjobs.updateSettings (метод)"
+title: "smsjobs.updateSettings"
 original: "https://core.telegram.org/method/smsjobs.updateSettings"
 section: ref
 kind: method
+description: "Обновить настройки заданий SMS (только для официальных клиентов)."
 layout: layout.njk
 ---
 
 # smsjobs.updateSettings
 
-*Метод из схемы TL.*
-
-> Update SMS job settings (official clients only).
-
-## Определение TL
+Обновить настройки заданий SMS (только для официальных клиентов).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,21 +18,16 @@ boolTrue#997275b5 = Bool;
 smsjobs.updateSettings#93fa0bf flags:# allow_international:flags.0?true = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| allow_international | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Allow international numbers? |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>allow_international</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Разрешить международные номера?</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | NOT_JOINED | The current user hasn't joined the Peer-to-Peer Login Program. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>NOT_JOINED</td><td>Текущий пользователь не присоединился к Peer-to-Peer Login Program.</td></tr></tbody></table>

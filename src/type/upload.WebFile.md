@@ -1,18 +1,15 @@
 ---
-title: "Upload.WebFile (тип)"
+title: "upload.WebFile"
 original: "https://core.telegram.org/type/upload.WebFile"
 section: ref
 kind: type
+description: "Удалённый файл"
 layout: layout.njk
 ---
 
 # Upload.WebFile
 
-*Тип из схемы TL.*
-
-> Remote file
-
-## Определение TL
+Удалённый файл
 
 ```
 upload.webFile#21e753bc size:int mime_type:string file_type:storage.FileType mtime:int bytes:bytes = upload.WebFile;
@@ -22,14 +19,10 @@ upload.webFile#21e753bc size:int mime_type:string file_type:storage.FileType mti
 upload.getWebFile#24e6818d location:InputWebFileLocation offset:int limit:int = upload.WebFile;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [upload.webFile](/constructor/upload.webFile/) | Represents a chunk of an [HTTP webfile](/api/files/) downloaded through telegram's secure MTProto servers |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/upload.webFile">upload.webFile</a></td><td>Представляет фрагмент <a href="/api/files">веб-файла HTTP</a>, загружаемого через защищённые серверы MTProto Telegram</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [upload.getWebFile](/method/upload.getWebFile/) | Returns content of a web file, by proxying the request through telegram, see the [webfile docs for more info](https://core.telegram.org/api/files/#downloading-webfiles). Note: the query must be sent to the DC specified in the webfile_dc_id [MTProto configuration field](https://core.telegram.org/api/config#mtproto-configuration). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/upload.getWebFile">upload.getWebFile</a></td><td>Возвращает содержимое веб-файла, проксируя запрос через Telegram; подробнее см. <a href="/api/files#downloading-webfiles">документацию по веб-файлам</a>.<br><br><strong>Примечание</strong>: запрос должен отправляться в дата-центр, указанный в поле <code>webfile_dc_id</code> <a href="/api/config#mtproto-configuration">конфигурации MTProto</a>.</td></tr></tbody></table>

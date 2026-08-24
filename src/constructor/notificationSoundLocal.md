@@ -1,30 +1,24 @@
 ---
-title: "notificationSoundLocal (конструктор)"
+title: "notificationSoundLocal"
 original: "https://core.telegram.org/constructor/notificationSoundLocal"
 section: ref
 kind: constructor
+description: "Указывает, что следует использовать определённый локальный звук уведомления"
 layout: layout.njk
 ---
 
 # notificationSoundLocal
 
-*Конструктор из схемы TL.*
-
-> Indicates a specific local notification sound should be used
-
-## Определение TL
+Указывает, что следует использовать определённый локальный звук уведомления
 
 ```
 notificationSoundLocal#830b9ae4 title:string data:string = NotificationSound;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| title | [string](/type/string/) | Notification sound title |
-| data | [string](/type/string/) | Notification sound identifier (arbitrary data used by the client to identify a specific local notification sound) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название звука уведомления</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор звука уведомления (произвольные данные, по которым клиент определяет конкретный локальный звук уведомления)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [NotificationSound](/type/NotificationSound/)

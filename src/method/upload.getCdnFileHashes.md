@@ -1,47 +1,37 @@
 ---
-title: "upload.getCdnFileHashes (метод)"
+title: "upload.getCdnFileHashes"
 original: "https://core.telegram.org/method/upload.getCdnFileHashes"
 section: ref
 kind: method
+description: "Получить хеши SHA256 для проверки скачанных файлов CDN"
 layout: layout.njk
 ---
 
 # upload.getCdnFileHashes
 
-*Метод из схемы TL.*
-
-> Get SHA256 hashes for verifying downloaded [CDN](https://core.telegram.org/cdn) files
-
-## Определение TL
+Получить хеши SHA256 для проверки скачанных файлов [CDN](https://core.telegram.org/cdn)
 
 ```
 ---functions---
 upload.getCdnFileHashes#91dc3f31 file_token:bytes offset:long = Vector<FileHash>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| file_token | [bytes](/type/bytes/) | File |
-| offset | [long](/type/long/) | Offset from which to start getting hashes |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>file_token</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Файл</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Смещение, начиная с которого следует получать хеши</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[FileHash](/type/FileHash/)\>
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CDN_METHOD_INVALID | You can't call this method in a CDN DC. |
-| 400 | FILE_TOKEN_INVALID | The master DC did not accept the file_token (e.g., the token has expired). Continue downloading the file from the master DC using upload.getFile. |
-| 400 | RSA_DECRYPT_FAILED | Internal RSA decryption failed. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CDN_METHOD_INVALID</td><td>Этот метод нельзя вызывать в CDN DC.</td></tr><tr><td>400</td><td>FILE_TOKEN_INVALID</td><td>Основной DC не принял <code>file_token</code> (например, срок действия токена истёк). Продолжите скачивание файла с основного DC с помощью upload.getFile.</td></tr><tr><td>400</td><td>RSA_DECRYPT_FAILED</td><td>Внутренняя ошибка расшифровки RSA.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Шифрованные CDN: скорость и безопасность](https://core.telegram.org/cdn)
 
-How client apps download popular public files from secondary CDN data centers.
+Как клиентские приложения скачивают популярные публичные файлы из вспомогательных CDN-дата-центров.

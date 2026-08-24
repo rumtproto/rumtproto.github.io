@@ -1,44 +1,38 @@
 ---
-title: "updateBotBusinessConnect (конструктор)"
+title: "updateBotBusinessConnect"
 original: "https://core.telegram.org/constructor/updateBotBusinessConnect"
 section: ref
 kind: constructor
+description: "Подключение или отключение бизнес-бота, а также изменение настроек подключения отправляет боту обновление updateBotBusinessConnect с новыми настройками и идентификатором…"
 layout: layout.njk
 ---
 
 # updateBotBusinessConnect
 
-*Конструктор из схемы TL.*
-
-> Connecting or disconnecting a [business bot](https://core.telegram.org/api/bots/connected-business-bots) or changing the connection settings will emit an [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) update to the bot, with the new settings and a `connection_id` that will be used by the bot to handle updates from and send messages as the user.
-
-## Определение TL
+Подключение или отключение [бизнес-бота](/api/bots/connected-business-bots/), а также изменение настроек подключения отправляет боту обновление [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) с новыми настройками и идентификатором `connection_id`, который бот будет использовать, чтобы обрабатывать обновления от пользователя и отправлять сообщения от его имени.
 
 ```
 updateBotBusinessConnect#8ae5c97a connection:BotBusinessConnection qts:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| connection | [BotBusinessConnection](/type/BotBusinessConnection/) | Business connection settings |
-| qts | [int](/type/int/) | New qts value, see [updates »](/api/updates/) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>connection</strong></td><td style="text-align: center;"><a href="/type/BotBusinessConnection">BotBusinessConnection</a></td><td>Настройки бизнес-подключения</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] Новое значение <strong>qts</strong>, подробнее см. <a href="/api/updates">обновления »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
 #### [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/)
 
-Connecting or disconnecting a [business bot](https://core.telegram.org/api/bots/connected-business-bots) or changing the connection settings will emit an [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) update to the bot, with the new settings and a `connection_id` that will be used by the bot to handle updates from and send messages as the user.
+Подключение или отключение [бизнес-бота](/api/bots/connected-business-bots/), а также изменение настроек подключения отправляет боту обновление [updateBotBusinessConnect](/constructor/updateBotBusinessConnect/) с новыми настройками и идентификатором `connection_id`, который бот будет использовать, чтобы обрабатывать обновления от пользователя и отправлять сообщения от его имени.

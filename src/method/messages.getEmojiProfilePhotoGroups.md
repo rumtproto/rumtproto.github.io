@@ -1,18 +1,15 @@
 ---
-title: "messages.getEmojiProfilePhotoGroups (метод)"
+title: "messages.getEmojiProfilePhotoGroups"
 original: "https://core.telegram.org/method/messages.getEmojiProfilePhotoGroups"
 section: ref
 kind: method
+description: "Представляет список категорий эмодзи, используемый при выборе пользовательских эмодзи для установки в качестве фотографии профиля."
 layout: layout.njk
 ---
 
 # messages.getEmojiProfilePhotoGroups
 
-*Метод из схемы TL.*
-
-> Represents a list of [emoji categories](https://core.telegram.org/api/emoji-categories), to be used when selecting custom emojis to set as [profile picture](https://core.telegram.org/api/files/#sticker-profile-pictures).
-
-## Определение TL
+Представляет список [категорий эмодзи](/api/emoji-categories/), используемый при выборе пользовательских эмодзи для установки в качестве [фотографии профиля](/api/files/#sticker-profile-pictures).
 
 ```
 messages.emojiGroupsNotModified#6fb4ad87 = messages.EmojiGroups;
@@ -21,28 +18,26 @@ messages.emojiGroups#881fb94b hash:int groups:Vector<EmojiGroup> = messages.Emoj
 messages.getEmojiProfilePhotoGroups#21a548f3 hash:int = messages.EmojiGroups;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.EmojiGroups](/type/messages.EmojiGroups/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Emoji categories](https://core.telegram.org/api/emoji-categories)
+#### [Категории эмодзи](/api/emoji-categories/)
 
-Sticker, custom emoji and GIF selection UIs should offer a list of categories to quickly filter results by a (list of) emojis, or by some other criteria.
+Интерфейсы выбора стикеров, пользовательских эмодзи и GIF должны предлагать список категорий для быстрой фильтрации результатов по эмодзи (или набору эмодзи) либо по иным критериям.
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

@@ -1,18 +1,15 @@
 ---
-title: "account.EmojiStatuses (тип)"
+title: "account.EmojiStatuses"
 original: "https://core.telegram.org/type/account.EmojiStatuses"
 section: ref
 kind: type
+description: "Список эмодзи-статусов"
 layout: layout.njk
 ---
 
 # account.EmojiStatuses
 
-*Тип из схемы TL.*
-
-> A list of [emoji statuses](https://core.telegram.org/api/emoji-status)
-
-## Определение TL
+Список [эмодзи-статусов](/api/emoji-status/)
 
 ```
 account.emojiStatusesNotModified#d08ce645 = account.EmojiStatuses;
@@ -26,24 +23,16 @@ account.getChannelDefaultEmojiStatuses#7727a7d5 hash:long = account.EmojiStatuse
 account.getCollectibleEmojiStatuses#2e7b4543 hash:long = account.EmojiStatuses;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.emojiStatusesNotModified](/constructor/account.emojiStatusesNotModified/) | The server-side list of [emoji statuses](https://core.telegram.org/api/emoji-status) hasn't changed |
-| [account.emojiStatuses](/constructor/account.emojiStatuses/) | A list of [emoji statuses](https://core.telegram.org/api/emoji-status) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.emojiStatusesNotModified">account.emojiStatusesNotModified</a></td><td>Серверный список <a href="/api/emoji-status">эмодзи-статусов</a> не изменился</td></tr><tr><td><a href="/constructor/account.emojiStatuses">account.emojiStatuses</a></td><td>Список <a href="/api/emoji-status">эмодзи-статусов</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getDefaultEmojiStatuses](/method/account.getDefaultEmojiStatuses/) | Get a list of default suggested [emoji statuses](https://core.telegram.org/api/emoji-status) |
-| [account.getRecentEmojiStatuses](/method/account.getRecentEmojiStatuses/) | Get recently used [emoji statuses](https://core.telegram.org/api/emoji-status) |
-| [account.getChannelDefaultEmojiStatuses](/method/account.getChannelDefaultEmojiStatuses/) | Get a list of default suggested [channel emoji statuses](https://core.telegram.org/api/emoji-status). |
-| [account.getCollectibleEmojiStatuses](/method/account.getCollectibleEmojiStatuses/) | Obtain a list of [emoji statuses »](https://core.telegram.org/api/emoji-status) for owned or [hosted collectible gifts »](https://core.telegram.org/api/gifts#hosted-collectible-gifts). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getDefaultEmojiStatuses">account.getDefaultEmojiStatuses</a></td><td>Получить список предлагаемых по умолчанию <a href="/api/emoji-status">эмодзи-статусов</a></td></tr><tr><td><a href="/method/account.getRecentEmojiStatuses">account.getRecentEmojiStatuses</a></td><td>Получить недавно использованные <a href="/api/emoji-status">эмодзи-статусы</a></td></tr><tr><td><a href="/method/account.getChannelDefaultEmojiStatuses">account.getChannelDefaultEmojiStatuses</a></td><td>Получить список предлагаемых по умолчанию <a href="/api/emoji-status">эмодзи-статусов канала</a>.</td></tr><tr><td><a href="/method/account.getCollectibleEmojiStatuses">account.getCollectibleEmojiStatuses</a></td><td>Получить список <a href="/api/emoji-status">эмодзи-статусов »</a> для принадлежащих вам или <a href="/api/gifts#hosted-collectible-gifts">размещённых коллекционных подарков »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

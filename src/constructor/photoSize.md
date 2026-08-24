@@ -1,48 +1,43 @@
 ---
-title: "photoSize (конструктор)"
+title: "photoSize"
 original: "https://core.telegram.org/constructor/photoSize"
 section: ref
 kind: constructor
+description: "Описание изображения."
 layout: layout.njk
 ---
 
 # photoSize
 
-*Конструктор из схемы TL.*
+Описание изображения.
 
-> Image description.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===23===
-> photoSize#77bfb61b type:string location:FileLocation w:int h:int size:int = PhotoSize;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===23===
+photoSize#77bfb61b type:string location:FileLocation w:int h:int size:int = PhotoSize;
+```
+
+#### Схема API
 
 ```
 photoSize#75c78e60 type:string w:int h:int size:int = PhotoSize;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| type | [string](/type/string/) | [PhotoSize.type value »](https://core.telegram.org/api/files/#photosizetype-values) |
-| w | [int](/type/int/) | Image width |
-| h | [int](/type/int/) | Image height |
-| size | [int](/type/int/) | File size |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/files#photosizetype-values">Значение PhotoSize.type »</a></td></tr><tr><td><strong>w</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Ширина изображения</td></tr><tr><td><strong>h</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Высота изображения</td></tr><tr><td><strong>size</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Размер файла</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PhotoSize](/type/PhotoSize/)
 
-## Photosize.type values
+### Значения Photosize.type
 
-See [PhotoSize.type values »](https://core.telegram.org/api/files/#photosizetype-values).
+См. [значения PhotoSize.type »](https://core.telegram.org/api/files#photosizetype-values).
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

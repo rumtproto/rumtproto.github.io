@@ -1,18 +1,15 @@
 ---
-title: "messages.requestSimpleWebView (метод)"
+title: "messages.requestSimpleWebView"
 original: "https://core.telegram.org/method/messages.requestSimpleWebView"
 section: ref
 kind: method
+description: "Открыть mini app бота."
 layout: layout.njk
 ---
 
 # messages.requestSimpleWebView
 
-*Метод из схемы TL.*
-
-> Open a [bot mini app](https://core.telegram.org/api/bots/webapps).
-
-## Определение TL
+[@term:Mini App] Открыть [mini app бота](/api/bots/webapps/).
 
 ```
 webViewResultUrl#4d22ff98 flags:# fullsize:flags.1?true fullscreen:flags.2?true query_id:flags.0?long url:string = WebViewResult;
@@ -20,44 +17,30 @@ webViewResultUrl#4d22ff98 flags:# fullsize:flags.1?true fullscreen:flags.2?true 
 messages.requestSimpleWebView#413a3e73 flags:# from_switch_webview:flags.1?true from_side_menu:flags.2?true compact:flags.7?true fullscreen:flags.8?true bot:InputUser url:flags.3?string start_param:flags.4?string theme_params:flags.0?DataJSON platform:string = WebViewResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| from_switch_webview | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the webapp was opened by clicking on the switch_webview button shown on top of the inline results list returned by [messages.getInlineBotResults](/method/messages.getInlineBotResults/). |
-| from_side_menu | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Set this flag if opening the Mini App from the installed [side menu entry »](https://core.telegram.org/api/bots/attach). |
-| compact | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | Deprecated. |
-| fullscreen | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[true](/constructor/true/) | Requests to open the app in fullscreen mode. |
-| bot | [InputUser](/type/InputUser/) | Bot that owns the mini app |
-| url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[string](/type/string/) | Web app URL, if opening from a keyboard button or inline result |
-| start_param | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[string](/type/string/) | Deprecated. |
-| theme_params | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[DataJSON](/type/DataJSON/) | [Theme parameters »](https://core.telegram.org/api/bots/webapps#theme-parameters) |
-| platform | [string](/type/string/) | Short name of the application; 0-64 English letters, digits, and underscores |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>from_switch_webview</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Было ли веб-приложение открыто нажатием кнопки <code>switch_webview</code>, отображаемой над списком инлайн-результатов, которые возвращает <a href="/method/messages.getInlineBotResults">messages.getInlineBotResults</a>.</td></tr><tr><td><strong>from_side_menu</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Установите этот флаг, если Mini App открывается из установленного <a href="/api/bots/attach">пункта бокового меню »</a>.</td></tr><tr><td><strong>compact</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Устарело.</td></tr><tr><td><strong>fullscreen</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true">true</a></td><td>Запрашивает открытие приложения в полноэкранном режиме.</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот, которому принадлежит mini app</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string">string</a></td><td>URL веб-приложения, если оно открывается из кнопки клавиатуры или инлайн-результата</td></tr><tr><td><strong>start_param</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string">string</a></td><td>Устарело.</td></tr><tr><td><strong>theme_params</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/DataJSON">DataJSON</a></td><td><a href="/api/bots/webapps#theme-parameters">Параметры темы оформления »</a></td></tr><tr><td><strong>platform</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Краткое имя приложения; 0–64 латинские буквы, цифры и подчёркивания</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [WebViewResult](/type/WebViewResult/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
-| 400 | URL_INVALID | Invalid URL provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr><tr><td>400</td><td>URL_INVALID</td><td>Указан недействительный URL.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [messages.getInlineBotResults](/method/messages.getInlineBotResults/)
 
-Query an inline bot
+Запрос к инлайн-боту
 
-#### [Bot attachment menu and side menu entries](https://core.telegram.org/api/bots/attach)
+#### [Пункты меню вложений и бокового меню для ботов](/api/bots/attach/)
 
-Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile web apps.
+Боты могут добавлять пункты в меню вложений и в боковое меню, предлагая легкодоступные многофункциональные веб-приложения.
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

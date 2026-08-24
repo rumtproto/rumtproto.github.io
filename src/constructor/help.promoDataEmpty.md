@@ -1,29 +1,24 @@
 ---
-title: "help.promoDataEmpty (конструктор)"
+title: "help.promoDataEmpty"
 original: "https://core.telegram.org/constructor/help.promoDataEmpty"
 section: ref
 kind: constructor
+description: "Сведения о PSA/MTProxy недоступны"
 layout: layout.njk
 ---
 
 # help.promoDataEmpty
 
-*Конструктор из схемы TL.*
-
-> No PSA/MTProxy info is available
-
-## Определение TL
+Сведения о PSA/MTProxy недоступны
 
 ```
 help.promoDataEmpty#98f6ac75 expires:int = help.PromoData;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| expires | [int](/type/int/) | Re-fetch PSA/MTProxy info after the specified number of seconds |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>expires</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Повторно запросить сведения о PSA/MTProxy через указанное число секунд</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [help.PromoData](/type/help.PromoData/)

@@ -1,47 +1,38 @@
 ---
-title: "updateDraftMessage (конструктор)"
+title: "updateDraftMessage"
 original: "https://core.telegram.org/constructor/updateDraftMessage"
 section: ref
 kind: constructor
+description: "Сообщает об изменении черновика сообщения."
 layout: layout.njk
 ---
 
 # updateDraftMessage
 
-*Конструктор из схемы TL.*
-
-> Notifies a change of a message [draft](https://core.telegram.org/api/drafts).
-
-## Определение TL
+Сообщает об изменении [черновика](/api/drafts/) сообщения.
 
 ```
 updateDraftMessage#edfc111e flags:# peer:Peer top_msg_id:flags.0?int saved_peer_id:flags.1?Peer draft:DraftMessage = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [Peer](/type/Peer/) | The peer to which the draft is associated |
-| top_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | ID of the [forum topic](https://core.telegram.org/api/forum#forum-topics) to which the draft is associated |
-| saved_peer_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Peer](/type/Peer/) | If set, the draft is related to the specified [monoforum topic ID »](https://core.telegram.org/api/monoforum). |
-| draft | [DraftMessage](/type/DraftMessage/) | The draft |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир, с которым связан черновик</td></tr><tr><td><strong>top_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Идентификатор <a href="/api/forum#forum-topics">темы форума</a>, с которой связан черновик</td></tr><tr><td><strong>saved_peer_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Peer">Peer</a></td><td>Если установлено, черновик относится к указанному <a href="/api/monoforum">идентификатору темы монофорума »</a>.</td></tr><tr><td><strong>draft</strong></td><td style="text-align: center;"><a href="/type/DraftMessage">DraftMessage</a></td><td>Черновик</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
-#### [Message drafts](https://core.telegram.org/api/drafts)
+#### [Черновики сообщений](/api/drafts/)
 
-How to handle message drafts
+Как работать с черновиками сообщений

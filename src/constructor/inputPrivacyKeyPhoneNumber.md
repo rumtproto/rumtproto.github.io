@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyKeyPhoneNumber (конструктор)"
+title: "inputPrivacyKeyPhoneNumber"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyPhoneNumber"
 section: ref
 kind: constructor
+description: "Смогут ли другие видеть ваш номер телефона"
 layout: layout.njk
 ---
 
 # inputPrivacyKeyPhoneNumber
 
-*Конструктор из схемы TL.*
-
-> Whether people will be able to see your phone number
-
-## Определение TL
+Смогут ли другие видеть ваш номер телефона
 
 ```
 inputPrivacyKeyPhoneNumber#352dafa = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)

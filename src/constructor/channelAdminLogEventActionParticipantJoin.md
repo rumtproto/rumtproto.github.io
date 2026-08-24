@@ -1,27 +1,24 @@
 ---
-title: "channelAdminLogEventActionParticipantJoin (конструктор)"
+title: "channelAdminLogEventActionParticipantJoin"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantJoin"
 section: ref
 kind: constructor
+description: "Пользователь вступил в группу (для больших групп сведения о вступившем пользователе не показываются)"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionParticipantJoin
 
-*Конструктор из схемы TL.*
-
-> A user has joined the group (in the case of big groups, info of the user that has joined isn't shown)
-
-## Определение TL
+Пользователь вступил в группу (для больших групп сведения о вступившем пользователе не показываются)
 
 ```
 channelAdminLogEventActionParticipantJoin#183040d3 = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)

@@ -1,19 +1,17 @@
 ---
-title: "channels.restrictSponsoredMessages (метод)"
+title: "channels.restrictSponsoredMessages"
 original: "https://core.telegram.org/method/channels.restrictSponsoredMessages"
 section: ref
 kind: method
+description: "Отключить рекламу в указанном канале для всех пользователей."
 layout: layout.njk
 ---
 
 # channels.restrictSponsoredMessages
 
-*Метод из схемы TL.*
+Отключить рекламу в указанном канале для всех пользователей.
 
-> Disable ads on the specified channel, for all users.
-> Available only after reaching at least the [boost level »](https://core.telegram.org/api/boost) specified in the [`channel_restrict_sponsored_level_min` »](https://core.telegram.org/api/config#channel-restrict-sponsored-level-min) config parameter.
-
-## Определение TL
+Доступно только по достижении как минимум того [уровня буста »](/api/boost/), который указан в параметре конфигурации [`channel_restrict_sponsored_level_min` »](/api/config/#channel-restrict-sponsored-level-min).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -27,31 +25,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.restrictSponsoredMessages#9ae91519 channel:InputChannel restricted:Bool = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The channel. |
-| restricted | [Bool](/type/Bool/) | Whether to disable or re-enable ads. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал.</td></tr><tr><td><strong>restricted</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Отключить рекламу или снова включить её.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

@@ -1,18 +1,15 @@
 ---
-title: "messages.getRecentLocations (метод)"
+title: "messages.getRecentLocations"
 original: "https://core.telegram.org/method/messages.getRecentLocations"
 section: ref
 kind: method
+description: "Получить все недавние трансляции геопозиции, отправленные в определённый чат: возвращает не более одного сообщения с геопозицией (messageMediaGeoLive) на каждого участника чата."
 layout: layout.njk
 ---
 
 # messages.getRecentLocations
 
-*Метод из схемы TL.*
-
-> Get all recent [live locations](https://core.telegram.org/api/live-location) sent to a specific chat: returns up to 1 location message ([messageMediaGeoLive](/constructor/messageMediaGeoLive/)) per chat participant.
-
-## Определение TL
+Получить все недавние [трансляции геопозиции](/api/live-location/), отправленные в определённый чат: возвращает не более одного сообщения с геопозицией ([messageMediaGeoLive](/constructor/messageMediaGeoLive/)) на каждого участника чата.
 
 ```
 messages.messages#1d73e7ea messages:Vector<Message> topics:Vector<ForumTopic> chats:Vector<Chat> users:Vector<User> = messages.Messages;
@@ -23,30 +20,26 @@ messages.messagesNotModified#74535f21 count:int = messages.Messages;
 messages.getRecentLocations#702a40e0 peer:InputPeer limit:int hash:long = messages.Messages;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Target group or private chat. |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Целевая группа или личный чат.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Messages](/type/messages.Messages/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Live geolocation](https://core.telegram.org/api/live-location)
+#### [Трансляция геопозиции](/api/live-location/)
 
-Telegram allows sending the live geolocation of a user in a chat, optionally setting a proximity alert.
+Telegram позволяет отправлять в чат геопозицию пользователя в реальном времени, при желании задавая оповещение о приближении.
 
 #### [messageMediaGeoLive](/constructor/messageMediaGeoLive/)
 
-Indicates a [live geolocation](https://core.telegram.org/api/live-location)
+Обозначает [геопозицию в реальном времени](/api/live-location/)

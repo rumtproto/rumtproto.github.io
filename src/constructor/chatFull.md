@@ -1,92 +1,68 @@
 ---
-title: "chatFull (конструктор)"
+title: "chatFull"
 original: "https://core.telegram.org/constructor/chatFull"
 section: ref
 kind: constructor
+description: "Полная информация об обычной группе."
 layout: layout.njk
 ---
 
 # chatFull
 
-*Конструктор из схемы TL.*
+Полная информация об [обычной группе](/api/channel/#basic-groups).
 
-> Full info about a [basic group](https://core.telegram.org/api/channel#basic-groups).
-> When updating the [local peer database »](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
-
-## Определение TL
+При обновлении [локальной базы пиров »](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).
 
 ```
 chatFull#2633421b flags:# can_set_username:flags.7?true has_scheduled:flags.8?true translations_disabled:flags.19?true id:long about:string participants:ChatParticipants chat_photo:flags.2?Photo notify_settings:PeerNotifySettings exported_invite:flags.13?ExportedChatInvite bot_info:flags.3?Vector<BotInfo> pinned_msg_id:flags.6?int folder_id:flags.11?int call:flags.12?InputGroupCall ttl_period:flags.14?int groupcall_default_join_as:flags.15?Peer theme_emoticon:flags.16?string requests_pending:flags.17?int recent_requesters:flags.17?Vector<long> available_reactions:flags.18?ChatReactions reactions_limit:flags.20?int = ChatFull;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| can_set_username | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | Can we change the username of this chat |
-| has_scheduled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[true](/constructor/true/) | Whether [scheduled messages](https://core.telegram.org/api/scheduled-messages) are available |
-| translations_disabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).19?[true](/constructor/true/) | Whether the [real-time chat translation popup](https://core.telegram.org/api/translation) should be hidden. |
-| id | [long](/type/long/) | ID of the chat |
-| about | [string](/type/string/) | About string for this chat |
-| participants | [ChatParticipants](/type/ChatParticipants/) | Participant list |
-| chat_photo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[Photo](/type/Photo/) | Chat photo |
-| notify_settings | [PeerNotifySettings](/type/PeerNotifySettings/) | Notification settings |
-| exported_invite | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[ExportedChatInvite](/type/ExportedChatInvite/) | Chat invite |
-| bot_info | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[BotInfo](/type/BotInfo/)> | Info about bots that are in this chat |
-| pinned_msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[int](/type/int/) | Message ID of the last [pinned message](https://core.telegram.org/api/pin) |
-| folder_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[int](/type/int/) | [Peer folder ID, for more info click here](https://core.telegram.org/api/folders#peer-folders) |
-| call | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[InputGroupCall](/type/InputGroupCall/) | Active or scheduled [video chat »](https://core.telegram.org/api/group-calls#video-chats-livestreams) associated with this basic group |
-| ttl_period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[int](/type/int/) | Time-To-Live of messages sent by the current user to this chat |
-| groupcall_default_join_as | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[Peer](/type/Peer/) | Explicitly saved default peer used to join this group's [video chat »](https://core.telegram.org/api/group-calls#video-chats-livestreams); if absent, the current user is used |
-| theme_emoticon | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).16?[string](/type/string/) | Emoji representing a specific chat theme |
-| requests_pending | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[int](/type/int/) | Pending [join requests »](https://core.telegram.org/api/invites#join-requests) |
-| recent_requesters | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | IDs of users who requested to join recently |
-| available_reactions | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[ChatReactions](/type/ChatReactions/) | Allowed [message reactions »](https://core.telegram.org/api/reactions) |
-| reactions_limit | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).20?[int](/type/int/) | This flag may be used to impose a custom limit of unique reactions (i.e. a customizable version of [appConfig.reactions_uniq_max](https://core.telegram.org/api/config#reactions-uniq-max)). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>can_set_username</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Можем ли мы изменить имя пользователя этого чата</td></tr><tr><td><strong>has_scheduled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true">true</a></td><td>Доступны ли <a href="/api/scheduled-messages">отложенные сообщения</a></td></tr><tr><td><strong>translations_disabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/constructor/true">true</a></td><td>Следует ли скрыть <a href="/api/translation">всплывающее окно перевода чата в реальном времени</a>.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор чата</td></tr><tr><td><strong>about</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Строка «о себе» для этого чата</td></tr><tr><td><strong>participants</strong></td><td style="text-align: center;"><a href="/type/ChatParticipants">ChatParticipants</a></td><td>Список участников</td></tr><tr><td><strong>chat_photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Photo">Photo</a></td><td>Фотография чата</td></tr><tr><td><strong>notify_settings</strong></td><td style="text-align: center;"><a href="/type/PeerNotifySettings">PeerNotifySettings</a></td><td>Настройки уведомлений</td></tr><tr><td><strong>exported_invite</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/ExportedChatInvite">ExportedChatInvite</a></td><td>Приглашение в чат</td></tr><tr><td><strong>bot_info</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/BotInfo">BotInfo</a>&gt;</td><td>Информация о ботах, состоящих в этом чате</td></tr><tr><td><strong>pinned_msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/int">int</a></td><td>Идентификатор последнего <a href="/api/pin">закреплённого сообщения</a></td></tr><tr><td><strong>folder_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/int">int</a></td><td><a href="/api/folders#peer-folders">Идентификатор папки пира, подробнее см. здесь</a></td></tr><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/InputGroupCall">InputGroupCall</a></td><td>Активный или запланированный <a href="/api/group-calls#video-chats-livestreams">видеочат »</a>, связанный с этой обычной группой</td></tr><tr><td><strong>ttl_period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/int">int</a></td><td>Время жизни сообщений, отправляемых текущим пользователем в этот чат</td></tr><tr><td><strong>groupcall_default_join_as</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/Peer">Peer</a></td><td>Явно сохранённый пир по умолчанию, от имени которого выполняется вход в <a href="/api/group-calls#video-chats-livestreams">видеочат »</a> этой группы; если не задан, используется текущий пользователь</td></tr><tr><td><strong>theme_emoticon</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/type/string">string</a></td><td>Эмодзи, обозначающий определённую тему оформления чата</td></tr><tr><td><strong>requests_pending</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/int">int</a></td><td>Ожидающие рассмотрения <a href="/api/invites#join-requests">заявки на вступление »</a></td></tr><tr><td><strong>recent_requesters</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Идентификаторы пользователей, недавно подавших заявку на вступление</td></tr><tr><td><strong>available_reactions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/ChatReactions">ChatReactions</a></td><td>Разрешённые <a href="/api/reactions">реакции на сообщения »</a></td></tr><tr><td><strong>reactions_limit</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/type/int">int</a></td><td>Этот флаг позволяет задать собственное ограничение на число уникальных реакций (то есть настраиваемый аналог <a href="/api/config#reactions-uniq-max">appConfig.reactions_uniq_max</a>).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatFull](/type/ChatFull/)
 
-## Related pages
+### Связанные страницы
 
-#### [Scheduled messages](https://core.telegram.org/api/scheduled-messages)
+#### [Отложенные сообщения](/api/scheduled-messages/)
 
-Telegram allows scheduling messages
+Telegram позволяет планировать отправку сообщений
 
-#### [Message translation](https://core.telegram.org/api/translation)
+#### [Перевод сообщений](/api/translation/)
 
-Telegram allows translating chat messages: Telegram Premium users may even enable real-time chat translation.
+Telegram позволяет переводить сообщения в чатах: пользователи Telegram Premium могут даже включить перевод чата в реальном времени.
 
-#### [Pinned messages](https://core.telegram.org/api/pin)
+#### [Закреплённые сообщения](/api/pin/)
 
-Telegram allows pinning multiple messages on top of a specific chat.
+Telegram позволяет закреплять несколько сообщений вверху конкретного чата.
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Peer database](https://core.telegram.org/api/peers)
+#### [База данных пиров](/api/peers/)
 
-Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.
+Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.

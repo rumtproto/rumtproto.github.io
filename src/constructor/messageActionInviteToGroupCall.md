@@ -1,36 +1,30 @@
 ---
-title: "messageActionInviteToGroupCall (конструктор)"
+title: "messageActionInviteToGroupCall"
 original: "https://core.telegram.org/constructor/messageActionInviteToGroupCall"
 section: ref
 kind: constructor
+description: "Группа пользователей была приглашена в видеочат или трансляцию »."
 layout: layout.njk
 ---
 
 # messageActionInviteToGroupCall
 
-*Конструктор из схемы TL.*
-
-> A set of users was invited to a [video chat/livestream »](https://core.telegram.org/api/group-calls#video-chats-livestreams).
-
-## Определение TL
+Группа пользователей была приглашена в [видеочат или трансляцию »](/api/group-calls/#video-chats-livestreams).
 
 ```
 messageActionInviteToGroupCall#502f92f7 call:InputGroupCall users:Vector<long> = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Video chat/livestream to which the users were invited |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | The invited users |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Видеочат или трансляция, в которые были приглашены пользователи</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Приглашённые пользователи</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

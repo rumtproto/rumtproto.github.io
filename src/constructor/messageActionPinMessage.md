@@ -1,27 +1,24 @@
 ---
-title: "messageActionPinMessage (конструктор)"
+title: "messageActionPinMessage"
 original: "https://core.telegram.org/constructor/messageActionPinMessage"
 section: ref
 kind: constructor
+description: "Сообщение было закреплено"
 layout: layout.njk
 ---
 
 # messageActionPinMessage
 
-*Конструктор из схемы TL.*
-
-> A message was pinned
-
-## Определение TL
+Сообщение было закреплено
 
 ```
 messageActionPinMessage#94bd38ed = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)

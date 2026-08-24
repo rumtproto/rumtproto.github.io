@@ -1,18 +1,15 @@
 ---
-title: "help.saveAppLog (метод)"
+title: "help.saveAppLog"
 original: "https://core.telegram.org/method/help.saveAppLog"
 section: ref
 kind: method
+description: "Сохраняет журналы работы приложения на сервере."
 layout: layout.njk
 ---
 
 # help.saveAppLog
 
-*Метод из схемы TL.*
-
-> Saves logs of application on the server.
-
-## Определение TL
+Сохраняет журналы работы приложения на сервере.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,16 +18,14 @@ boolTrue#997275b5 = Bool;
 help.saveAppLog#6f02f748 events:Vector<InputAppEvent> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| events | [Vector](https://core.telegram.org/type/Vector%20t)<[InputAppEvent](/type/InputAppEvent/)> | List of input events |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>events</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputAppEvent">InputAppEvent</a>&gt;</td><td>Список входных событий</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)

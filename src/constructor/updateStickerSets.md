@@ -1,41 +1,34 @@
 ---
-title: "updateStickerSets (конструктор)"
+title: "updateStickerSets"
 original: "https://core.telegram.org/constructor/updateStickerSets"
 section: ref
 kind: constructor
+description: "Установленные наборы стикеров изменились, клиенту следует запросить их заново, как описано в документации."
 layout: layout.njk
 ---
 
 # updateStickerSets
 
-*Конструктор из схемы TL.*
-
-> Installed stickersets have changed, the client should refetch them as [described in the docs](https://core.telegram.org/api/stickers#installing-stickersets).
-
-## Определение TL
+Установленные наборы стикеров изменились, клиенту следует запросить их заново, как [описано в документации](/api/stickers/#installing-stickersets).
 
 ```
 updateStickerSets#31c24808 flags:# masks:flags.0?true emojis:flags.1?true = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| masks | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether mask stickersets have changed |
-| emojis | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the list of installed [custom emoji stickersets](https://core.telegram.org/api/custom-emoji) has changed |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>masks</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Изменились ли наборы стикеров-масок</td></tr><tr><td><strong>emojis</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Изменился ли список установленных <a href="/api/custom-emoji">наборов пользовательских эмодзи</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.

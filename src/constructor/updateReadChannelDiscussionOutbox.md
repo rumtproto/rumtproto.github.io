@@ -1,41 +1,34 @@
 ---
-title: "updateReadChannelDiscussionOutbox (конструктор)"
+title: "updateReadChannelDiscussionOutbox"
 original: "https://core.telegram.org/constructor/updateReadChannelDiscussionOutbox"
 section: ref
 kind: constructor
+description: "Исходящие комментарии в ветке обсуждения были отмечены как прочитанные"
 layout: layout.njk
 ---
 
 # updateReadChannelDiscussionOutbox
 
-*Конструктор из схемы TL.*
-
-> Outgoing comments in a [discussion thread](https://core.telegram.org/api/threads) were marked as read
-
-## Определение TL
+Исходящие комментарии в [ветке обсуждения](/api/threads/) были отмечены как прочитанные
 
 ```
 updateReadChannelDiscussionOutbox#695c9e7c channel_id:long top_msg_id:int read_max_id:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel_id | [long](/type/long/) | [Supergroup ID](https://core.telegram.org/api/channel) |
-| top_msg_id | [int](/type/int/) | ID of the group message that started the [thread](https://core.telegram.org/api/threads) |
-| read_max_id | [int](/type/int/) | Message ID of latest read outgoing message for this [thread](https://core.telegram.org/api/threads) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/channel">Идентификатор супергруппы</a></td></tr><tr><td><strong>top_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения в группе, с которого началась <a href="/api/threads">ветка</a></td></tr><tr><td><strong>read_max_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор последнего прочитанного исходящего сообщения для этой <a href="/api/threads">ветки</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Message threads](https://core.telegram.org/api/threads)
+#### [Треды сообщений](/api/threads/)
 
-Telegram allows commenting on a channel post or on a generic supergroup message, thanks to message threads.
+Благодаря веткам обсуждения Telegram позволяет комментировать пост канала или обычное сообщение супергруппы.

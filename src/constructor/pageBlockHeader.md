@@ -1,29 +1,24 @@
 ---
-title: "pageBlockHeader (конструктор)"
+title: "pageBlockHeader"
 original: "https://core.telegram.org/constructor/pageBlockHeader"
 section: ref
 kind: constructor
+description: "Верхний колонтитул страницы"
 layout: layout.njk
 ---
 
 # pageBlockHeader
 
-*Конструктор из схемы TL.*
-
-> Page header
-
-## Определение TL
+Верхний колонтитул страницы
 
 ```
 pageBlockHeader#bfd064ec text:RichText = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [RichText](/type/RichText/) | Contents |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Содержимое</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

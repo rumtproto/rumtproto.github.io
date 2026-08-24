@@ -1,40 +1,34 @@
 ---
-title: "photoStrippedSize (конструктор)"
+title: "photoStrippedSize"
 original: "https://core.telegram.org/constructor/photoStrippedSize"
 section: ref
 kind: constructor
+description: "Сжатые JPG-данные низкого разрешения"
 layout: layout.njk
 ---
 
 # photoStrippedSize
 
-*Конструктор из схемы TL.*
-
-> A low-resolution compressed JPG payload
-
-## Определение TL
+Сжатые JPG-данные низкого разрешения
 
 ```
 photoStrippedSize#e0b0bc2e type:string bytes:bytes = PhotoSize;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| type | [string](/type/string/) | [PhotoSize.type value »](https://core.telegram.org/api/files/#photosizetype-values) |
-| bytes | [bytes](/type/bytes/) | Thumbnail data, see [stripped thumbnails »](https://core.telegram.org/api/files/#stripped-thumbnails) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/files#photosizetype-values">Значение PhotoSize.type »</a></td></tr><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Данные миниатюры, см. <a href="/api/files#stripped-thumbnails">урезанные миниатюры »</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PhotoSize](/type/PhotoSize/)
 
-## Photosize.type values
+### Значения Photosize.type
 
-See [PhotoSize.type values »](https://core.telegram.org/api/files/#photosizetype-values).
+См. [значения PhotoSize.type »](https://core.telegram.org/api/files#photosizetype-values).
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

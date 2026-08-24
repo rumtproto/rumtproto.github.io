@@ -1,18 +1,15 @@
 ---
-title: "account.initPasskeyRegistration (метод)"
+title: "account.initPasskeyRegistration"
 original: "https://core.telegram.org/method/account.initPasskeyRegistration"
 section: ref
 kind: method
+description: "Начать регистрацию ключа доступа для текущего аккаунта; подробнее о полном процессе см. здесь »."
 layout: layout.njk
 ---
 
 # account.initPasskeyRegistration
 
-*Метод из схемы TL.*
-
-> Initialize passkey registration for the current account, see [here »](https://core.telegram.org/api/passkeys#creating-a-passkey) for more info on the full flow.
-
-## Определение TL
+Начать регистрацию ключа доступа для текущего аккаунта; подробнее о полном процессе см. [здесь »](/api/passkeys/#creating-a-passkey).
 
 ```
 account.passkeyRegistrationOptions#e16b5ce1 options:DataJSON = account.PasskeyRegistrationOptions;
@@ -20,25 +17,22 @@ account.passkeyRegistrationOptions#e16b5ce1 options:DataJSON = account.PasskeyRe
 account.initPasskeyRegistration#429547e8 = account.PasskeyRegistrationOptions;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [account.PasskeyRegistrationOptions](/type/account.PasskeyRegistrationOptions/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | ACCESS_DENIED | The account was deactivated, or is a bot/service account. |
-| 406 | FRESH_RESET_AUTHORISATION_FORBIDDEN | You can't logout other sessions if less than 24 hours have passed since you logged on the current session. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>ACCESS_DENIED</td><td>Аккаунт деактивирован либо является ботом или служебным аккаунтом.</td></tr><tr><td>406</td><td>FRESH_RESET_AUTHORISATION_FORBIDDEN</td><td>Нельзя завершить другие сессии, если с момента входа в текущую сессию прошло менее 24 часов.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

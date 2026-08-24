@@ -1,36 +1,33 @@
 ---
-title: "documentAttributeImageSize (конструктор)"
+title: "documentAttributeImageSize"
 original: "https://core.telegram.org/constructor/documentAttributeImageSize"
 section: ref
 kind: constructor
+description: "Определяет ширину и высоту изображения, загруженного как документ"
 layout: layout.njk
 ---
 
 # documentAttributeImageSize
 
-*Конструктор из схемы TL.*
+Определяет ширину и высоту изображения, загруженного как документ
 
-> Defines the width and height of an image uploaded as document
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===23===
-> documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===23===
+documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute;
+```
+
+#### Схема API
 
 ```
 documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| w | [int](/type/int/) | Width of image |
-| h | [int](/type/int/) | Height of image |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>w</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Ширина изображения</td></tr><tr><td><strong>h</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Высота изображения</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DocumentAttribute](/type/DocumentAttribute/)

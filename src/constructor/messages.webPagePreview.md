@@ -1,41 +1,34 @@
 ---
-title: "messages.webPagePreview (конструктор)"
+title: "messages.webPagePreview"
 original: "https://core.telegram.org/constructor/messages.webPagePreview"
 section: ref
 kind: constructor
+description: "Представляет предпросмотр веб-страницы."
 layout: layout.njk
 ---
 
 # messages.webPagePreview
 
-*Конструктор из схемы TL.*
-
-> Represents a webpage preview.
-
-## Определение TL
+Представляет предпросмотр веб-страницы.
 
 ```
 messages.webPagePreview#8c9a88ac media:MessageMedia chats:Vector<Chat> users:Vector<User> = messages.WebPagePreview;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| media | [MessageMedia](/type/MessageMedia/) | The [messageMediaWebPage](/constructor/messageMediaWebPage/) or a [messageMediaEmpty](/constructor/messageMediaEmpty/) if there is no preview. |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Chats mentioned in the gift field. |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users mentioned within the media object. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/MessageMedia">MessageMedia</a></td><td><a href="/constructor/messageMediaWebPage">messageMediaWebPage</a> или <a href="/constructor/messageMediaEmpty">messageMediaEmpty</a>, если предпросмотра нет.</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Чаты, упомянутые в поле <code>gift</code>.</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи, упомянутые в объекте <code>media</code>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.WebPagePreview](/type/messages.WebPagePreview/)
 
-## Related pages
+### Связанные страницы
 
 #### [messageMediaWebPage](/constructor/messageMediaWebPage/)
 
-Preview of webpage
+Предпросмотр веб-страницы
 
 #### [messageMediaEmpty](/constructor/messageMediaEmpty/)
 
-Empty constructor.
+Пустой конструктор.

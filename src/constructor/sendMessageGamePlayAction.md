@@ -1,27 +1,24 @@
 ---
-title: "sendMessageGamePlayAction (конструктор)"
+title: "sendMessageGamePlayAction"
 original: "https://core.telegram.org/constructor/sendMessageGamePlayAction"
 section: ref
 kind: constructor
+description: "Пользователь играет в игру"
 layout: layout.njk
 ---
 
 # sendMessageGamePlayAction
 
-*Конструктор из схемы TL.*
-
-> User is playing a game
-
-## Определение TL
+Пользователь играет в игру
 
 ```
 sendMessageGamePlayAction#dd6a8f48 = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)

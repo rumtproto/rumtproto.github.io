@@ -1,44 +1,38 @@
 ---
-title: "inputInvoiceBusinessBotTransferStars (конструктор)"
+title: "inputInvoiceBusinessBotTransferStars"
 original: "https://core.telegram.org/constructor/inputInvoiceBusinessBotTransferStars"
 section: ref
 kind: constructor
+description: "Перевести stars с баланса учётной записи пользователя, подключённой к бизнес-боту, на баланс бизнес-бота; подробнее обо всём процессе см. здесь »."
 layout: layout.njk
 ---
 
 # inputInvoiceBusinessBotTransferStars
 
-*Конструктор из схемы TL.*
-
-> Transfer stars from the balance of a user account [connected to a business bot](https://core.telegram.org/api/bots/connected-business-bots), to the balance of the [business bot](https://core.telegram.org/api/bots/connected-business-bots), see [here »](https://core.telegram.org/api/stars#transferring-stars-from-a-business-account-to-the-business-bot) for more info on the full flow.
-
-## Определение TL
+Перевести stars с баланса учётной записи пользователя, [подключённой к бизнес-боту](/api/bots/connected-business-bots/), на баланс [бизнес-бота](/api/bots/connected-business-bots/); подробнее обо всём процессе см. [здесь »](/api/stars/#transferring-stars-from-a-business-account-to-the-business-bot).
 
 ```
 inputInvoiceBusinessBotTransferStars#f4997e42 bot:InputUser stars:long = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot | [InputUser](/type/InputUser/) | Always [inputUserSelf](/constructor/inputUserSelf/). |
-| stars | [long](/type/long/) | The number of stars to transfer. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Всегда <a href="/constructor/inputUserSelf">inputUserSelf</a>.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Количество звёзд для перевода.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
 #### [inputUserSelf](/constructor/inputUserSelf/)
 
-Defines the current user.
+Определяет текущего пользователя.
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

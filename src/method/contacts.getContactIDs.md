@@ -1,39 +1,34 @@
 ---
-title: "contacts.getContactIDs (метод)"
+title: "contacts.getContactIDs"
 original: "https://core.telegram.org/method/contacts.getContactIDs"
 section: ref
 kind: method
+description: "Получить идентификаторы Telegram всех контактов."
 layout: layout.njk
 ---
 
 # contacts.getContactIDs
 
-*Метод из схемы TL.*
-
-> Get the telegram IDs of all contacts.  
-> Returns an array of Telegram user IDs for all contacts (0 if a contact does not have an associated Telegram account or have hidden their account using privacy settings).
-
-## Определение TL
+Получить идентификаторы Telegram всех контактов.  
+Возвращает массив идентификаторов пользователей Telegram для всех контактов (0, если у контакта нет связанного аккаунта Telegram или он скрыл свой аккаунт с помощью настроек приватности).
 
 ```
 ---functions---
 contacts.getContactIDs#7adc669d hash:long = Vector<int>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

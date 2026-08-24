@@ -1,18 +1,15 @@
 ---
-title: "BusinessAwayMessageSchedule (тип)"
+title: "BusinessAwayMessageSchedule"
 original: "https://core.telegram.org/type/BusinessAwayMessageSchedule"
 section: ref
 kind: type
+description: "Указывает, когда следует отправлять сообщения об отсутствии Telegram Business."
 layout: layout.njk
 ---
 
 # BusinessAwayMessageSchedule
 
-*Тип из схемы TL.*
-
-> Specifies when should the [Telegram Business away messages](https://core.telegram.org/api/business#away-messages) be sent.
-
-## Определение TL
+Указывает, когда следует отправлять [сообщения об отсутствии Telegram Business](/api/business/#away-messages).
 
 ```
 businessAwayMessageScheduleAlways#c9b9e2b9 = BusinessAwayMessageSchedule;
@@ -20,16 +17,12 @@ businessAwayMessageScheduleOutsideWorkHours#c3f2f501 = BusinessAwayMessageSchedu
 businessAwayMessageScheduleCustom#cc4d9ecc start_date:int end_date:int = BusinessAwayMessageSchedule;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [businessAwayMessageScheduleAlways](/constructor/businessAwayMessageScheduleAlways/) | Always send [Telegram Business away messages](https://core.telegram.org/api/business#away-messages) to users writing to us in private. |
-| [businessAwayMessageScheduleOutsideWorkHours](/constructor/businessAwayMessageScheduleOutsideWorkHours/) | Send [Telegram Business away messages](https://core.telegram.org/api/business#away-messages) to users writing to us in private outside of the configured [Telegram Business working hours](https://core.telegram.org/api/business#opening-hours). |
-| [businessAwayMessageScheduleCustom](/constructor/businessAwayMessageScheduleCustom/) | Send [Telegram Business away messages](https://core.telegram.org/api/business#away-messages) to users writing to us in private in the specified time span. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/businessAwayMessageScheduleAlways">businessAwayMessageScheduleAlways</a></td><td>Всегда отправлять <a href="/api/business#away-messages">сообщения об отсутствии Telegram Business</a> пользователям, которые пишут нам в личные сообщения.</td></tr><tr><td><a href="/constructor/businessAwayMessageScheduleOutsideWorkHours">businessAwayMessageScheduleOutsideWorkHours</a></td><td>Отправлять <a href="/api/business#away-messages">сообщения об отсутствии Telegram Business</a> пользователям, которые пишут нам в личные сообщения вне заданных <a href="/api/business#opening-hours">рабочих часов Telegram Business</a>.</td></tr><tr><td><a href="/constructor/businessAwayMessageScheduleCustom">businessAwayMessageScheduleCustom</a></td><td>Отправлять <a href="/api/business#away-messages">сообщения об отсутствии Telegram Business</a> пользователям, которые пишут нам в личные сообщения в указанный промежуток времени.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

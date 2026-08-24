@@ -1,39 +1,35 @@
 ---
-title: "messages.getEmojiKeywordsLanguages (метод)"
+title: "messages.getEmojiKeywordsLanguages"
 original: "https://core.telegram.org/method/messages.getEmojiKeywordsLanguages"
 section: ref
 kind: method
+description: "Получить список родственных языков, которые необходимо использовать при загрузке списков ключевых слов эмодзи »."
 layout: layout.njk
 ---
 
 # messages.getEmojiKeywordsLanguages
 
-*Метод из схемы TL.*
+Получить список родственных языков, которые необходимо использовать при загрузке [списков ключевых слов эмодзи »](/api/custom-emoji/#emoji-keywords).
 
-> Obtain a list of related languages that must be used when fetching [emoji keyword lists »](https://core.telegram.org/api/custom-emoji#emoji-keywords).
-> Usually the method will return the passed language codes (if localized) + `en` + some language codes for similar languages (if applicable).
-
-## Определение TL
+Обычно метод возвращает переданные коды языков (если для них есть локализация) + `en` + несколько кодов языков для схожих языков (если применимо).
 
 ```
 ---functions---
 messages.getEmojiKeywordsLanguages#4e9963b2 lang_codes:Vector<string> = Vector<EmojiLanguage>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| lang_codes | [Vector](https://core.telegram.org/type/Vector%20t)<[string](/type/string/)> | The user's language codes |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>lang_codes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/string">string</a>&gt;</td><td>Коды языков пользователя</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[EmojiLanguage](/type/EmojiLanguage/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.

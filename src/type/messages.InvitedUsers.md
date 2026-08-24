@@ -1,18 +1,15 @@
 ---
-title: "messages.InvitedUsers (тип)"
+title: "messages.InvitedUsers"
 original: "https://core.telegram.org/type/messages.InvitedUsers"
 section: ref
 kind: type
+description: "Содержит информацию об успешно и неуспешно приглашённых » пользователях."
 layout: layout.njk
 ---
 
 # messages.InvitedUsers
 
-*Тип из схемы TL.*
-
-> Contains info about successfully or unsuccessfully [invited »](https://core.telegram.org/api/invites#direct-invites) users.
-
-## Определение TL
+Содержит информацию об успешно и неуспешно [приглашённых »](/api/invites/#direct-invites) пользователях.
 
 ```
 messages.invitedUsers#7f5defa6 updates:Updates missing_invitees:Vector<MissingInvitee> = messages.InvitedUsers;
@@ -25,22 +22,16 @@ messages.createChat#92ceddd4 flags:# users:Vector<InputUser> title:string ttl_pe
 channels.inviteToChannel#c9e33d54 channel:InputChannel users:Vector<InputUser> = messages.InvitedUsers;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.invitedUsers](/constructor/messages.invitedUsers/) | Contains info about successfully or unsuccessfully [invited »](https://core.telegram.org/api/invites#direct-invites) users. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.invitedUsers">messages.invitedUsers</a></td><td>Содержит информацию об успешно и неуспешно <a href="/api/invites#direct-invites">приглашённых »</a> пользователях.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.addChatUser](/method/messages.addChatUser/) | Adds a user to a chat and sends a service message on it. |
-| [messages.createChat](/method/messages.createChat/) | Creates a new chat. |
-| [channels.inviteToChannel](/method/channels.inviteToChannel/) | Invite users to a channel/supergroup |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.addChatUser">messages.addChatUser</a></td><td>Добавляет пользователя в чат и отправляет в нём сервисное сообщение.</td></tr><tr><td><a href="/method/messages.createChat">messages.createChat</a></td><td>Создаёт новый чат.</td></tr><tr><td><a href="/method/channels.inviteToChannel">channels.inviteToChannel</a></td><td>Пригласить пользователей в канал или супергруппу</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.

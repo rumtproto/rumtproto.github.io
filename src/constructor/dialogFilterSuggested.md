@@ -1,36 +1,30 @@
 ---
-title: "dialogFilterSuggested (конструктор)"
+title: "dialogFilterSuggested"
 original: "https://core.telegram.org/constructor/dialogFilterSuggested"
 section: ref
 kind: constructor
+description: "Рекомендуемые папки"
 layout: layout.njk
 ---
 
 # dialogFilterSuggested
 
-*Конструктор из схемы TL.*
-
-> Suggested [folders](https://core.telegram.org/api/folders)
-
-## Определение TL
+Рекомендуемые [папки](/api/folders/)
 
 ```
 dialogFilterSuggested#77744d4a filter:DialogFilter description:string = DialogFilterSuggested;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| filter | [DialogFilter](/type/DialogFilter/) | [Folder info](https://core.telegram.org/api/folders) |
-| description | [string](/type/string/) | [Folder](https://core.telegram.org/api/folders) description |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>filter</strong></td><td style="text-align: center;"><a href="/type/DialogFilter">DialogFilter</a></td><td><a href="/api/folders">Информация о папке</a></td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Описание <a href="/api/folders">папки</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DialogFilterSuggested](/type/DialogFilterSuggested/)
 
-## Related pages
+### Связанные страницы
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.

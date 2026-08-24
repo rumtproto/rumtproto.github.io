@@ -1,35 +1,30 @@
 ---
-title: "messages.translateResult (конструктор)"
+title: "messages.translateResult"
 original: "https://core.telegram.org/constructor/messages.translateResult"
 section: ref
 kind: constructor
+description: "Переведённый текст с сущностями оформления"
 layout: layout.njk
 ---
 
 # messages.translateResult
 
-*Конструктор из схемы TL.*
-
-> Translated text with [entities](https://core.telegram.org/api/entities)
-
-## Определение TL
+Переведённый текст с [сущностями оформления](/api/entities/)
 
 ```
 messages.translateResult#33db32f8 result:Vector<TextWithEntities> = messages.TranslatedText;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| result | [Vector](https://core.telegram.org/type/Vector%20t)<[TextWithEntities](/type/TextWithEntities/)> | Text+[entities](https://core.telegram.org/api/entities), for each input message. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>result</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/TextWithEntities">TextWithEntities</a>&gt;</td><td>Текст и <a href="/api/entities">сущности оформления</a> для каждого входящего сообщения.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.TranslatedText](/type/messages.TranslatedText/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

@@ -1,41 +1,34 @@
 ---
-title: "attachMenuBots (конструктор)"
+title: "attachMenuBots"
 original: "https://core.telegram.org/constructor/attachMenuBots"
 section: ref
 kind: constructor
+description: "Представляет список mini app ботов, которые можно запустить из меню вложений »"
 layout: layout.njk
 ---
 
 # attachMenuBots
 
-*Конструктор из схемы TL.*
-
-> Represents a list of [bot mini apps that can be launched from the attachment menu »](https://core.telegram.org/api/bots/attach)
-
-## Определение TL
+[@term:Mini App] Представляет список [mini app ботов, которые можно запустить из меню вложений »](/api/bots/attach/)
 
 ```
 attachMenuBots#3c4301c0 hash:long bots:Vector<AttachMenuBot> users:Vector<User> = AttachMenuBots;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| bots | [Vector](https://core.telegram.org/type/Vector%20t)<[AttachMenuBot](/type/AttachMenuBot/)> | List of [bot mini apps that can be launched from the attachment menu »](https://core.telegram.org/api/bots/attach) |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Info about related users/bots |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>bots</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/AttachMenuBot">AttachMenuBot</a>&gt;</td><td>Список <a href="/api/bots/attach">mini app ботов, которые можно запустить из меню вложений »</a></td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Информация о связанных пользователях и ботах</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [AttachMenuBots](/type/AttachMenuBots/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Bot attachment menu and side menu entries](https://core.telegram.org/api/bots/attach)
+#### [Пункты меню вложений и бокового меню для ботов](/api/bots/attach/)
 
-Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile web apps.
+Боты могут добавлять пункты в меню вложений и в боковое меню, предлагая легкодоступные многофункциональные веб-приложения.

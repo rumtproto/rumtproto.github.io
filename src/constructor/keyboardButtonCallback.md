@@ -1,53 +1,46 @@
 ---
-title: "keyboardButtonCallback (конструктор)"
+title: "keyboardButtonCallback"
 original: "https://core.telegram.org/constructor/keyboardButtonCallback"
 section: ref
 kind: constructor
+description: "Callback-кнопка"
 layout: layout.njk
 ---
 
 # keyboardButtonCallback
 
-*Конструктор из схемы TL.*
+Callback-кнопка
 
-> Callback button
-> Available only in [inline keyboards](/constructor/replyInlineMarkup/).
-> When pressed, clients send `data` to the bot, optionally providing the user's [2FA SRP parameters](/api/srp/) for identity verification, as described in [callback queries](https://core.telegram.org/api/bots/buttons#callback-queries).
+Доступно только в [инлайн-клавиатурах](/constructor/replyInlineMarkup/).
 
-## Определение TL
+При нажатии клиенты отправляют боту `data`, при необходимости передавая [параметры 2FA SRP](/api/srp/) пользователя для подтверждения личности, как описано в разделе [callback-запросов](/api/bots/buttons/#callback-queries).
 
 ```
 keyboardButtonCallback#e62bc960 flags:# requires_password:flags.0?true style:flags.10?KeyboardButtonStyle text:string data:bytes = KeyboardButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| requires_password | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the user should verify his identity by entering his [2FA SRP parameters](/api/srp/) to the [messages.getBotCallbackAnswer](/method/messages.getBotCallbackAnswer/) method. NOTE: telegram and the bot WILL NOT have access to the plaintext password, thanks to [SRP](/api/srp/). This button is mainly used by the official [@botfather](https://t.me/botfather) bot, for verifying the user's identity before transferring ownership of a bot to another user. |
-| style | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[KeyboardButtonStyle](/type/KeyboardButtonStyle/) | Button style, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info on button styles. |
-| text | [string](/type/string/) | Button text |
-| data | [bytes](/type/bytes/) | Callback data |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>requires_password</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Должен ли пользователь подтвердить свою личность, передав <a href="/api/srp">параметры 2FA SRP</a> методу <a href="/method/messages.getBotCallbackAnswer">messages.getBotCallbackAnswer</a>. ПРИМЕЧАНИЕ: благодаря <a href="/api/srp">SRP</a> ни Telegram, ни бот НЕ получают доступа к паролю в открытом виде. Эта кнопка используется в основном официальным ботом <a href="https://t.me/botfather">@botfather</a> для подтверждения личности пользователя перед передачей прав на бота другому пользователю.</td></tr><tr><td><strong>style</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/KeyboardButtonStyle">KeyboardButtonStyle</a></td><td>Стиль кнопки; подробнее о стилях кнопок см. <a href="/api/bots/buttons#button-styles">здесь »</a>.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст кнопки</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Данные для callback-запроса</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [KeyboardButton](/type/KeyboardButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.
 
 #### [messages.getBotCallbackAnswer](/method/messages.getBotCallbackAnswer/)
 
-Press an inline callback button and get a callback answer from the bot
+Нажать инлайн-кнопку обратного вызова и получить ответ от бота
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.
 
 #### [replyInlineMarkup](/constructor/replyInlineMarkup/)
 
-Represents an inline keyboard
+Представляет инлайн-клавиатуру

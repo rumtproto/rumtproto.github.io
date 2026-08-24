@@ -1,18 +1,15 @@
 ---
-title: "account.getWallPaper (метод)"
+title: "account.getWallPaper"
 original: "https://core.telegram.org/method/account.getWallPaper"
 section: ref
 kind: method
+description: "Получить информацию об определённых обоях"
 layout: layout.njk
 ---
 
 # account.getWallPaper
 
-*Метод из схемы TL.*
-
-> Get info about a certain [wallpaper](https://core.telegram.org/api/wallpapers)
-
-## Определение TL
+Получить информацию об определённых [обоях](/api/wallpapers/)
 
 ```
 wallPaper#a437c3ed id:long flags:# creator:flags.0?true default:flags.1?true pattern:flags.3?true dark:flags.4?true access_hash:long slug:string document:Document settings:flags.2?WallPaperSettings = WallPaper;
@@ -21,26 +18,22 @@ wallPaperNoFile#e0804116 id:long flags:# default:flags.1?true dark:flags.4?true 
 account.getWallPaper#fc8ddbea wallpaper:InputWallPaper = WallPaper;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| wallpaper | [InputWallPaper](/type/InputWallPaper/) | The [wallpaper](https://core.telegram.org/api/wallpapers) to get info about |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>wallpaper</strong></td><td style="text-align: center;"><a href="/type/InputWallPaper">InputWallPaper</a></td><td><a href="/api/wallpapers">Обои</a>, о которых нужно получить сведения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [WallPaper](/type/WallPaper/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | WALLPAPER_INVALID | The specified wallpaper is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>WALLPAPER_INVALID</td><td>Указанные обои недействительны.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.

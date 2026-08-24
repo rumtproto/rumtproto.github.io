@@ -1,40 +1,34 @@
 ---
-title: "updateStarGiftAuctionState (конструктор)"
+title: "updateStarGiftAuctionState"
 original: "https://core.telegram.org/constructor/updateStarGiftAuctionState"
 section: ref
 kind: constructor
+description: "Содержит обновления состояния аукциона; подробнее о том, как включить эти обновления, см. здесь »."
 layout: layout.njk
 ---
 
 # updateStarGiftAuctionState
 
-*Конструктор из схемы TL.*
-
-> Contains updates to [auction state, see here »](https://core.telegram.org/api/auctions) for more info on how to enable these updates.
-
-## Определение TL
+Содержит обновления [состояния аукциона; подробнее о том, как включить эти обновления, см. здесь »](/api/auctions/).
 
 ```
 updateStarGiftAuctionState#48e246c2 gift_id:long state:StarGiftAuctionState = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| gift_id | [long](/type/long/) | ID of the [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) currently being distributed in the auction. |
-| state | [StarGiftAuctionState](/type/StarGiftAuctionState/) | Auction state. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>, который сейчас распределяется на аукционе.</td></tr><tr><td><strong>state</strong></td><td style="text-align: center;"><a href="/type/StarGiftAuctionState">StarGiftAuctionState</a></td><td>Состояние аукциона.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

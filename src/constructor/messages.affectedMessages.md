@@ -1,36 +1,30 @@
 ---
-title: "messages.affectedMessages (конструктор)"
+title: "messages.affectedMessages"
 original: "https://core.telegram.org/constructor/messages.affectedMessages"
 section: ref
 kind: constructor
+description: "События, затронутые операцией"
 layout: layout.njk
 ---
 
 # messages.affectedMessages
 
-*Конструктор из схемы TL.*
-
-> Events affected by operation
-
-## Определение TL
+События, затронутые операцией
 
 ```
 messages.affectedMessages#84d19185 pts:int pts_count:int = messages.AffectedMessages;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| pts | [int](/type/int/) | [Event count after generation](/api/updates/) |
-| pts_count | [int](/type/int/) | [Number of events that were generated](/api/updates/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] <a href="/api/updates">Число событий после генерации</a></td></tr><tr><td><strong>pts_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/updates">Число сгенерированных событий</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.AffectedMessages](/type/messages.AffectedMessages/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

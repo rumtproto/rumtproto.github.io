@@ -1,30 +1,24 @@
 ---
-title: "channelAdminLogEventActionParticipantJoinByRequest (конструктор)"
+title: "channelAdminLogEventActionParticipantJoinByRequest"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantJoinByRequest"
 section: ref
 kind: constructor
+description: "Администратор принял в чат нового участника"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionParticipantJoinByRequest
 
-*Конструктор из схемы TL.*
-
-> A new member was accepted to the chat by an admin
-
-## Определение TL
+Администратор принял в чат нового участника
 
 ```
 channelAdminLogEventActionParticipantJoinByRequest#afb6144a invite:ExportedChatInvite approved_by:long = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| invite | [ExportedChatInvite](/type/ExportedChatInvite/) | The invite link that was used to join the chat |
-| approved_by | [long](/type/long/) | ID of the admin that approved the invite |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>invite</strong></td><td style="text-align: center;"><a href="/type/ExportedChatInvite">ExportedChatInvite</a></td><td>Пригласительная ссылка, по которой был выполнен вход в чат</td></tr><tr><td><strong>approved_by</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор администратора, одобрившего заявку</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)

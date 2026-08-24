@@ -1,18 +1,15 @@
 ---
-title: "auth.signIn (метод)"
+title: "auth.signIn"
 original: "https://core.telegram.org/method/auth.signIn"
 section: ref
 kind: method
+description: "Выполняет вход пользователя с подтверждённым номером телефона."
 layout: layout.njk
 ---
 
 # auth.signIn
 
-*Метод из схемы TL.*
-
-> Signs in a user with a validated phone number.
-
-## Определение TL
+Выполняет вход пользователя с подтверждённым номером телефона.
 
 ```
 auth.authorization#2ea2c0d4 flags:# setup_password_required:flags.1?true otherwise_relogin_days:flags.1?int tmp_sessions:flags.0?int future_auth_token:flags.2?bytes user:User = auth.Authorization;
@@ -21,39 +18,24 @@ auth.authorizationSignUpRequired#44747e9a flags:# terms_of_service:flags.0?help.
 auth.signIn#8d52a951 flags:# phone_number:string phone_code_hash:string phone_code:flags.0?string email_verification:flags.1?EmailVerification = auth.Authorization;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| phone_number | [string](/type/string/) | Phone number in the international format |
-| phone_code_hash | [string](/type/string/) | SMS-message ID, obtained from [auth.sendCode](/method/auth.sendCode/) |
-| phone_code | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Valid numerical code from the SMS-message |
-| email_verification | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[EmailVerification](/type/EmailVerification/) | Email verification code or token |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона в международном формате</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор SMS-сообщения, полученный от <a href="/method/auth.sendCode">auth.sendCode</a></td></tr><tr><td><strong>phone_code</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Корректный цифровой код из SMS-сообщения</td></tr><tr><td><strong>email_verification</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/EmailVerification">EmailVerification</a></td><td>Код подтверждения или токен электронной почты</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.Authorization](/type/auth.Authorization/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 500 | AUTH_RESTART | Restart the authorization process. |
-| 400 | PHONE_CODE_EMPTY | phone_code is missing. |
-| 400 | PHONE_CODE_EXPIRED | The phone code you provided has expired. |
-| 400 | PHONE_CODE_INVALID | The provided phone code is invalid. |
-| 406 | PHONE_NUMBER_INVALID | The phone number is invalid. |
-| 400 | PHONE_NUMBER_UNOCCUPIED | The phone number is not yet being used. |
-| 500 | SIGN_IN_FAILED | Failure while signing in. |
-| 406 | UPDATE_APP_TO_LOGIN | Please update your client to login. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>500</td><td>AUTH_RESTART</td><td>Начать процесс авторизации заново.</td></tr><tr><td>400</td><td>PHONE_CODE_EMPTY</td><td>Отсутствует phone_code.</td></tr><tr><td>400</td><td>PHONE_CODE_EXPIRED</td><td>Срок действия указанного вами кода подтверждения истёк.</td></tr><tr><td>400</td><td>PHONE_CODE_INVALID</td><td>Указан недействительный телефонный код.</td></tr><tr><td>406</td><td>PHONE_NUMBER_INVALID</td><td>Недействительный номер телефона.</td></tr><tr><td>400</td><td>PHONE_NUMBER_UNOCCUPIED</td><td>Этот номер телефона ещё не используется.</td></tr><tr><td>500</td><td>SIGN_IN_FAILED</td><td>Сбой при входе в аккаунт.</td></tr><tr><td>406</td><td>UPDATE_APP_TO_LOGIN</td><td>Обновите клиент, чтобы выполнить вход.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [auth.sendCode](/method/auth.sendCode/)
 
-Send the verification code for login
+Отправить код подтверждения для входа

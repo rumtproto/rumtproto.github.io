@@ -1,18 +1,15 @@
 ---
-title: "payments.BankCardData (тип)"
+title: "payments.BankCardData"
 original: "https://core.telegram.org/type/payments.BankCardData"
 section: ref
 kind: type
+description: "Сведения о банковской карте, предоставленные банком (или банками) карты"
 layout: layout.njk
 ---
 
 # payments.BankCardData
 
-*Тип из схемы TL.*
-
-> Credit card info, provided by the card's bank(s)
-
-## Определение TL
+Сведения о банковской карте, предоставленные банком (или банками) карты
 
 ```
 payments.bankCardData#3e24e573 title:string open_urls:Vector<BankCardOpenUrl> = payments.BankCardData;
@@ -22,14 +19,10 @@ payments.bankCardData#3e24e573 title:string open_urls:Vector<BankCardOpenUrl> = 
 payments.getBankCardData#2e79d779 number:string = payments.BankCardData;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.bankCardData](/constructor/payments.bankCardData/) | Credit card info, provided by the card's bank(s) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.bankCardData">payments.bankCardData</a></td><td>Сведения о банковской карте, предоставленные банком (или банками) карты</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getBankCardData](/method/payments.getBankCardData/) | Get info about a credit card |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getBankCardData">payments.getBankCardData</a></td><td>Получить сведения о банковской карте</td></tr></tbody></table>

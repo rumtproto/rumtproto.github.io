@@ -1,18 +1,15 @@
 ---
-title: "SecureValueError (тип)"
+title: "SecureValueError"
 original: "https://core.telegram.org/type/SecureValueError"
 section: ref
 kind: type
+description: "Ошибка защищённого значения"
 layout: layout.njk
 ---
 
 # SecureValueError
 
-*Тип из схемы TL.*
-
-> Secure value error
-
-## Определение TL
+Ошибка защищённого значения
 
 ```
 secureValueErrorData#e8a40bd9 type:SecureValueType data_hash:bytes field:string text:string = SecureValueError;
@@ -26,16 +23,6 @@ secureValueErrorTranslationFile#a1144770 type:SecureValueType file_hash:bytes te
 secureValueErrorTranslationFiles#34636dd8 type:SecureValueType file_hash:Vector<bytes> text:string = SecureValueError;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [secureValueErrorData](/constructor/secureValueErrorData/) | Represents an issue in one of the data fields that was provided by the user. The error is considered resolved when the field's value changes. |
-| [secureValueErrorFrontSide](/constructor/secureValueErrorFrontSide/) | Represents an issue with the front side of a document. The error is considered resolved when the file with the front side of the document changes. |
-| [secureValueErrorReverseSide](/constructor/secureValueErrorReverseSide/) | Represents an issue with the reverse side of a document. The error is considered resolved when the file with reverse side of the document changes. |
-| [secureValueErrorSelfie](/constructor/secureValueErrorSelfie/) | Represents an issue with the selfie with a document. The error is considered resolved when the file with the selfie changes. |
-| [secureValueErrorFile](/constructor/secureValueErrorFile/) | Represents an issue with a document scan. The error is considered resolved when the file with the document scan changes. |
-| [secureValueErrorFiles](/constructor/secureValueErrorFiles/) | Represents an issue with a list of scans. The error is considered resolved when the list of files containing the scans changes. |
-| [secureValueError](/constructor/secureValueError/) | Secure value error |
-| [secureValueErrorTranslationFile](/constructor/secureValueErrorTranslationFile/) | Represents an issue with one of the files that constitute the translation of a document. The error is considered resolved when the file changes. |
-| [secureValueErrorTranslationFiles](/constructor/secureValueErrorTranslationFiles/) | Represents an issue with the translated version of a document. The error is considered resolved when a file with the document translation changes. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/secureValueErrorData">secureValueErrorData</a></td><td>Представляет проблему в одном из полей данных, предоставленных пользователем. Ошибка считается устранённой, когда значение поля меняется.</td></tr><tr><td><a href="/constructor/secureValueErrorFrontSide">secureValueErrorFrontSide</a></td><td>Представляет проблему с лицевой стороной документа. Ошибка считается устранённой, когда файл с лицевой стороной документа меняется.</td></tr><tr><td><a href="/constructor/secureValueErrorReverseSide">secureValueErrorReverseSide</a></td><td>Представляет проблему с обратной стороной документа. Ошибка считается устранённой, когда файл с обратной стороной документа меняется.</td></tr><tr><td><a href="/constructor/secureValueErrorSelfie">secureValueErrorSelfie</a></td><td>Представляет проблему с селфи с документом. Ошибка считается устранённой, когда файл с селфи меняется.</td></tr><tr><td><a href="/constructor/secureValueErrorFile">secureValueErrorFile</a></td><td>Представляет проблему со сканом документа. Ошибка считается устранённой, когда файл со сканом документа меняется.</td></tr><tr><td><a href="/constructor/secureValueErrorFiles">secureValueErrorFiles</a></td><td>Представляет проблему со списком сканов. Ошибка считается устранённой, когда список файлов со сканами меняется.</td></tr><tr><td><a href="/constructor/secureValueError">secureValueError</a></td><td>Ошибка защищённого значения</td></tr><tr><td><a href="/constructor/secureValueErrorTranslationFile">secureValueErrorTranslationFile</a></td><td>Представляет проблему с одним из файлов, составляющих перевод документа. Ошибка считается устранённой, когда файл меняется.</td></tr><tr><td><a href="/constructor/secureValueErrorTranslationFiles">secureValueErrorTranslationFiles</a></td><td>Представляет проблему с переведённой версией документа. Ошибка считается устранённой, когда файл с переводом документа меняется.</td></tr></tbody></table>

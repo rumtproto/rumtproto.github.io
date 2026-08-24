@@ -1,29 +1,24 @@
 ---
-title: "channelAdminLogEventActionToggleGroupCallSetting (конструктор)"
+title: "channelAdminLogEventActionToggleGroupCallSetting"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionToggleGroupCallSetting"
 section: ref
 kind: constructor
+description: "Настройки группового звонка были изменены"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionToggleGroupCallSetting
 
-*Конструктор из схемы TL.*
-
-> Group call settings were changed
-
-## Определение TL
+Настройки группового звонка были изменены
 
 ```
 channelAdminLogEventActionToggleGroupCallSetting#56d6a247 join_muted:Bool = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| join_muted | [Bool](/type/Bool/) | Whether all users are muted by default upon joining |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>join_muted</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Отключается ли звук у всех пользователей по умолчанию при подключении</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)

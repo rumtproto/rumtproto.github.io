@@ -1,18 +1,15 @@
 ---
-title: "MessagesFilter (тип)"
+title: "MessagesFilter"
 original: "https://core.telegram.org/type/MessagesFilter"
 section: ref
 kind: type
+description: "Объект описывает фильтр сообщений."
 layout: layout.njk
 ---
 
 # MessagesFilter
 
-*Тип из схемы TL.*
-
-> Object describes message filter.
-
-## Определение TL
+Объект описывает фильтр сообщений.
 
 ```
 inputMessagesFilterEmpty#57e2f66c = MessagesFilter;
@@ -34,25 +31,6 @@ inputMessagesFilterContacts#e062db83 = MessagesFilter;
 inputMessagesFilterPinned#1bb00451 = MessagesFilter;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputMessagesFilterEmpty](/constructor/inputMessagesFilterEmpty/) | Filter is absent. |
-| [inputMessagesFilterPhotos](/constructor/inputMessagesFilterPhotos/) | Filter for messages containing photos. |
-| [inputMessagesFilterVideo](/constructor/inputMessagesFilterVideo/) | Filter for messages containing videos. |
-| [inputMessagesFilterPhotoVideo](/constructor/inputMessagesFilterPhotoVideo/) | Filter for messages containing photos or videos. |
-| [inputMessagesFilterDocument](/constructor/inputMessagesFilterDocument/) | Filter for messages containing documents. |
-| [inputMessagesFilterUrl](/constructor/inputMessagesFilterUrl/) | Return only messages containing URLs |
-| [inputMessagesFilterGif](/constructor/inputMessagesFilterGif/) | Return only messages containing gifs |
-| [inputMessagesFilterVoice](/constructor/inputMessagesFilterVoice/) | Return only messages containing voice notes |
-| [inputMessagesFilterMusic](/constructor/inputMessagesFilterMusic/) | Return only messages containing audio files |
-| [inputMessagesFilterChatPhotos](/constructor/inputMessagesFilterChatPhotos/) | Return only chat photo changes |
-| [inputMessagesFilterPhoneCalls](/constructor/inputMessagesFilterPhoneCalls/) | Return only phone calls |
-| [inputMessagesFilterRoundVoice](/constructor/inputMessagesFilterRoundVoice/) | Return only round videos and voice notes |
-| [inputMessagesFilterRoundVideo](/constructor/inputMessagesFilterRoundVideo/) | Return only round videos |
-| [inputMessagesFilterMyMentions](/constructor/inputMessagesFilterMyMentions/) | Return only messages where the current user was [mentioned](https://core.telegram.org/api/mentions). |
-| [inputMessagesFilterGeo](/constructor/inputMessagesFilterGeo/) | Return only messages containing geolocations |
-| [inputMessagesFilterContacts](/constructor/inputMessagesFilterContacts/) | Return only messages containing contacts |
-| [inputMessagesFilterPinned](/constructor/inputMessagesFilterPinned/) | Fetch only pinned messages |
-| [inputMessagesFilterPoll](https://core.telegram.org/constructor/inputMessagesFilterPoll) | Filter for poll messages, see [searching for polls »](https://core.telegram.org/api/poll#searching-for-polls) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputMessagesFilterEmpty">inputMessagesFilterEmpty</a></td><td>Фильтр отсутствует.</td></tr><tr><td><a href="/constructor/inputMessagesFilterPhotos">inputMessagesFilterPhotos</a></td><td>Фильтр для сообщений, содержащих фотографии.</td></tr><tr><td><a href="/constructor/inputMessagesFilterVideo">inputMessagesFilterVideo</a></td><td>Фильтр для сообщений, содержащих видео.</td></tr><tr><td><a href="/constructor/inputMessagesFilterPhotoVideo">inputMessagesFilterPhotoVideo</a></td><td>Фильтр для сообщений, содержащих фотографии или видео.</td></tr><tr><td><a href="/constructor/inputMessagesFilterDocument">inputMessagesFilterDocument</a></td><td>Фильтр для сообщений, содержащих документы.</td></tr><tr><td><a href="/constructor/inputMessagesFilterUrl">inputMessagesFilterUrl</a></td><td>Возвращать только сообщения со ссылками</td></tr><tr><td><a href="/constructor/inputMessagesFilterGif">inputMessagesFilterGif</a></td><td>Возвращать только сообщения с GIF</td></tr><tr><td><a href="/constructor/inputMessagesFilterVoice">inputMessagesFilterVoice</a></td><td>Возвращать только сообщения с голосовыми сообщениями</td></tr><tr><td><a href="/constructor/inputMessagesFilterMusic">inputMessagesFilterMusic</a></td><td>Возвращать только сообщения с аудиофайлами</td></tr><tr><td><a href="/constructor/inputMessagesFilterChatPhotos">inputMessagesFilterChatPhotos</a></td><td>Возвращать только изменения фотографии чата</td></tr><tr><td><a href="/constructor/inputMessagesFilterPhoneCalls">inputMessagesFilterPhoneCalls</a></td><td>Возвращать только телефонные звонки</td></tr><tr><td><a href="/constructor/inputMessagesFilterRoundVoice">inputMessagesFilterRoundVoice</a></td><td>Возвращать только видеосообщения и голосовые сообщения</td></tr><tr><td><a href="/constructor/inputMessagesFilterRoundVideo">inputMessagesFilterRoundVideo</a></td><td>Возвращать только видеосообщения</td></tr><tr><td><a href="/constructor/inputMessagesFilterMyMentions">inputMessagesFilterMyMentions</a></td><td>Возвращать только сообщения, в которых <a href="/api/mentions">упомянут</a> текущий пользователь.</td></tr><tr><td><a href="/constructor/inputMessagesFilterGeo">inputMessagesFilterGeo</a></td><td>Возвращать только сообщения с геолокациями</td></tr><tr><td><a href="/constructor/inputMessagesFilterContacts">inputMessagesFilterContacts</a></td><td>Возвращать только сообщения с контактами</td></tr><tr><td><a href="/constructor/inputMessagesFilterPinned">inputMessagesFilterPinned</a></td><td>Получить только закреплённые сообщения</td></tr><tr><td><a href="/constructor/inputMessagesFilterPoll">inputMessagesFilterPoll</a></td><td>Фильтр для сообщений с опросами, см. <a href="/api/poll#searching-for-polls">поиск опросов »</a></td></tr></tbody></table>

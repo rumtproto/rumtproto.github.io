@@ -1,27 +1,24 @@
 ---
-title: "updateContactsReset (конструктор)"
+title: "updateContactsReset"
 original: "https://core.telegram.org/constructor/updateContactsReset"
 section: ref
 kind: constructor
+description: "Все контакты удалены"
 layout: layout.njk
 ---
 
 # updateContactsReset
 
-*Конструктор из схемы TL.*
-
-> All contacts were deleted
-
-## Определение TL
+Все контакты удалены
 
 ```
 updateContactsReset#7084a7be = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

@@ -1,40 +1,32 @@
 ---
-title: "payments.starsRevenueStats (конструктор)"
+title: "payments.starsRevenueStats"
 original: "https://core.telegram.org/constructor/payments.starsRevenueStats"
 section: ref
 kind: constructor
+description: "Статистика доходов в Stars; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # payments.starsRevenueStats
 
-*Конструктор из схемы TL.*
+[Статистика доходов в Stars; подробнее см. здесь »](/api/stars/).
 
-> [Star revenue statistics, see here »](https://core.telegram.org/api/stars) for more info.
-> Note that all balances and currency amounts and graph values are in Stars.
-
-## Определение TL
+Обратите внимание, что все балансы, денежные суммы и значения графиков указаны в Stars.
 
 ```
 payments.starsRevenueStats#6c207376 flags:# top_hours_graph:flags.0?StatsGraph revenue_graph:StatsGraph status:StarsRevenueStatus usd_rate:double = payments.StarsRevenueStats;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| top_hours_graph | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[StatsGraph](/type/StatsGraph/) | For ad revenue statistics, ad impressions graph |
-| revenue_graph | [StatsGraph](/type/StatsGraph/) | Star revenue graph (number of earned stars) |
-| status | [StarsRevenueStatus](/type/StarsRevenueStatus/) | Current balance, current withdrawable balance and overall earned Telegram Stars |
-| usd_rate | [double](/type/double/) | Current conversion rate of Telegram Stars to USD |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>top_hours_graph</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/StatsGraph">StatsGraph</a></td><td>Для статистики доходов от рекламы — график показов рекламы</td></tr><tr><td><strong>revenue_graph</strong></td><td style="text-align: center;"><a href="/type/StatsGraph">StatsGraph</a></td><td>График доходов в Stars (число заработанных Stars)</td></tr><tr><td><strong>status</strong></td><td style="text-align: center;"><a href="/type/StarsRevenueStatus">StarsRevenueStatus</a></td><td>Текущий баланс, текущий баланс, доступный для вывода, и общее количество заработанных Telegram Stars</td></tr><tr><td><strong>usd_rate</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Текущий курс пересчёта Telegram Stars в USD</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.StarsRevenueStats](/type/payments.StarsRevenueStats/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

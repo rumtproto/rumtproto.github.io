@@ -1,18 +1,15 @@
 ---
-title: "contacts.exportContactToken (метод)"
+title: "contacts.exportContactToken"
 original: "https://core.telegram.org/method/contacts.exportContactToken"
 section: ref
 kind: method
+description: "Создаёт временную ссылку на профиль для текущего авторизованного пользователя."
 layout: layout.njk
 ---
 
 # contacts.exportContactToken
 
-*Метод из схемы TL.*
-
-> Generates a [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links) for the currently logged-in user.
-
-## Определение TL
+Создаёт [временную ссылку на профиль](/api/links/#temporary-profile-links) для текущего авторизованного пользователя.
 
 ```
 exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
@@ -20,18 +17,18 @@ exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
 contacts.exportContactToken#f8654027 = ExportedContactToken;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [ExportedContactToken](/type/ExportedContactToken/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

@@ -1,36 +1,30 @@
 ---
-title: "foundStory (конструктор)"
+title: "foundStory"
 original: "https://core.telegram.org/constructor/foundStory"
 section: ref
 kind: constructor
+description: "История, найденная через глобальный поиск историй »."
 layout: layout.njk
 ---
 
 # foundStory
 
-*Конструктор из схемы TL.*
-
-> A story found using [global story search »](https://core.telegram.org/api/stories#searching-stories).
-
-## Определение TL
+История, найденная через [глобальный поиск историй »](/api/stories/#searching-stories).
 
 ```
 foundStory#e87acbc0 peer:Peer story:StoryItem = FoundStory;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | The peer that posted the story. |
-| story | [StoryItem](/type/StoryItem/) | The story. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир, опубликовавший историю.</td></tr><tr><td><strong>story</strong></td><td style="text-align: center;"><a href="/type/StoryItem">StoryItem</a></td><td>История.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [FoundStory](/type/FoundStory/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

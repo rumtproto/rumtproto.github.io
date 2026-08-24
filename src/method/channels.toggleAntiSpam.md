@@ -1,18 +1,15 @@
 ---
-title: "channels.toggleAntiSpam (метод)"
+title: "channels.toggleAntiSpam"
 original: "https://core.telegram.org/method/channels.toggleAntiSpam"
 section: ref
 kind: method
+description: "Включить или отключить встроенную защиту от спама."
 layout: layout.njk
 ---
 
 # channels.toggleAntiSpam
 
-*Метод из схемы TL.*
-
-> Enable or disable the [native antispam system](https://core.telegram.org/api/antispam).
-
-## Определение TL
+Включить или отключить [встроенную защиту от спама](/api/antispam/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,32 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.toggleAntiSpam#68f3e4eb channel:InputChannel enabled:Bool = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | Supergroup ID. The specified supergroup must have at least telegram_antispam_group_size_min members to enable antispam functionality, as specified by the [client configuration parameters](https://core.telegram.org/api/config#client-configuration). |
-| enabled | [Bool](/type/Bool/) | Enable or disable the native antispam system. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Идентификатор супергруппы. Чтобы включить защиту от спама, в указанной супергруппе должно быть не менее <code>telegram_antispam_group_size_min</code> участников, как задано <a href="/api/config#client-configuration">параметрами клиентской конфигурации</a>.</td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Включить или отключить встроенную защиту от спама.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Native antispam system](https://core.telegram.org/api/antispam)
+#### [Встроенная система антиспама](/api/antispam/)
 
-Admins of supergroups with a certain number of members can choose to unleash the full proactive power of Telegram's own antispam algorithms – turning on the new Aggressive mode for the automated spam filters.
+Администраторы супергрупп с определённым числом участников могут задействовать всю упреждающую мощь собственных антиспам-алгоритмов Telegram — включить новый агрессивный режим автоматических спам-фильтров.

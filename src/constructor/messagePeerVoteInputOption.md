@@ -1,36 +1,30 @@
 ---
-title: "messagePeerVoteInputOption (конструктор)"
+title: "messagePeerVoteInputOption"
 original: "https://core.telegram.org/constructor/messagePeerVoteInputOption"
 section: ref
 kind: constructor
+description: "Как пир проголосовал в опросе (сокращённый конструктор, возвращается, если параметр option был передан в messages.getPollVotes)"
 layout: layout.njk
 ---
 
 # messagePeerVoteInputOption
 
-*Конструктор из схемы TL.*
-
-> How a peer voted in a poll (reduced constructor, returned if an `option` was provided to [messages.getPollVotes](/method/messages.getPollVotes/))
-
-## Определение TL
+Как пир проголосовал в опросе (сокращённый конструктор, возвращается, если параметр `option` был передан в [messages.getPollVotes](/method/messages.getPollVotes/))
 
 ```
 messagePeerVoteInputOption#74cda504 peer:Peer date:int = MessagePeerVote;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | The peer that voted for the queried option |
-| date | [int](/type/int/) | When did the peer cast the vote |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир, проголосовавший за запрошенный вариант <code>option</code></td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда пир проголосовал</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessagePeerVote](/type/MessagePeerVote/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.getPollVotes](/method/messages.getPollVotes/)
 
-Get poll results for non-anonymous polls
+Получить результаты неанонимных опросов

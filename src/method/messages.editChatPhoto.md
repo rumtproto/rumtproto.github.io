@@ -1,18 +1,15 @@
 ---
-title: "messages.editChatPhoto (метод)"
+title: "messages.editChatPhoto"
 original: "https://core.telegram.org/method/messages.editChatPhoto"
 section: ref
 kind: method
+description: "Изменяет фотографию чата и отправляет в него сервисное сообщение"
 layout: layout.njk
 ---
 
 # messages.editChatPhoto
 
-*Метод из схемы TL.*
-
-> Changes chat photo and sends a service message on it
-
-## Определение TL
+Изменяет фотографию чата и отправляет в него сервисное сообщение
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,27 +23,16 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.editChatPhoto#35ddd674 chat_id:long photo:InputChatPhoto = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chat_id | [long](/type/long/) | Chat ID |
-| photo | [InputChatPhoto](/type/InputChatPhoto/) | Photo to be set |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор чата</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/type/InputChatPhoto">InputChatPhoto</a></td><td>Фотография, которую нужно установить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | IMAGE_PROCESS_FAILED | Failure while processing image. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | PHOTO_CROP_SIZE_SMALL | Photo is too small. |
-| 400 | PHOTO_EXT_INVALID | The extension of the photo is invalid. |
-| 400 | PHOTO_INVALID | Photo invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>IMAGE_PROCESS_FAILED</td><td>Сбой при обработке изображения.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>PHOTO_CROP_SIZE_SMALL</td><td>Фотография слишком мала.</td></tr><tr><td>400</td><td>PHOTO_EXT_INVALID</td><td>Недопустимое расширение фотографии.</td></tr><tr><td>400</td><td>PHOTO_INVALID</td><td>Недействительная фотография.</td></tr></tbody></table>

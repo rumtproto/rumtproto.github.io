@@ -1,31 +1,24 @@
 ---
-title: "messageEmpty (конструктор)"
+title: "messageEmpty"
 original: "https://core.telegram.org/constructor/messageEmpty"
 section: ref
 kind: constructor
+description: "Пустой конструктор, несуществующее сообщение."
 layout: layout.njk
 ---
 
 # messageEmpty
 
-*Конструктор из схемы TL.*
-
-> Empty constructor, non-existent message.
-
-## Определение TL
+Пустой конструктор, несуществующее сообщение.
 
 ```
 messageEmpty#90a6ca84 flags:# id:int peer_id:flags.0?Peer = Message;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| id | [int](/type/int/) | Message identifier |
-| peer_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Peer](/type/Peer/) | Peer ID, the chat where this message was sent |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения</td></tr><tr><td><strong>peer_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Peer">Peer</a></td><td>Идентификатор пира — чата, в который было отправлено это сообщение</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Message](/type/Message/)

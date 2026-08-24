@@ -1,56 +1,50 @@
 ---
-title: "keyboardButtonSimpleWebView (конструктор)"
+title: "keyboardButtonSimpleWebView"
 original: "https://core.telegram.org/constructor/keyboardButtonSimpleWebView"
 section: ref
 kind: constructor
+description: "Кнопка для открытия mini app бота с помощью messages.requestSimpleWebView без передачи сведений о пользователе веб-приложению."
 layout: layout.njk
 ---
 
 # keyboardButtonSimpleWebView
 
-*Конструктор из схемы TL.*
+[@term:Mini App] Кнопка для открытия [mini app бота](/api/bots/webapps/) с помощью [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/) без передачи сведений о пользователе веб-приложению.
 
-> Button to open a [bot mini app](https://core.telegram.org/api/bots/webapps) using [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/), without sending user information to the web app.
-> Can only be sent or received as part of a reply keyboard, use [keyboardButtonWebView](/constructor/keyboardButtonWebView/) for inline keyboards.
-> When pressed, clients must open a [Keyboard Button Mini App](https://core.telegram.org/api/bots/webapps#keyboard-button-mini-apps) using [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/), passing `url` to [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/).`url`.
+Может отправляться или приниматься только в составе клавиатуры ответа; для инлайн-клавиатур используйте [keyboardButtonWebView](/constructor/keyboardButtonWebView/).
 
-## Определение TL
+При нажатии клиенты обязаны открыть [Mini App из кнопки клавиатуры](/api/bots/webapps/#keyboard-button-mini-apps) с помощью [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/), передав `url` в поле [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/).`url`.
 
 ```
 keyboardButtonSimpleWebView#e15c4370 flags:# style:flags.10?KeyboardButtonStyle text:string url:string = KeyboardButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| style | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[KeyboardButtonStyle](/type/KeyboardButtonStyle/) | Button style, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info on button styles. |
-| text | [string](/type/string/) | Button text |
-| url | [string](/type/string/) | [Web app URL](https://core.telegram.org/api/bots/webapps) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>style</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/KeyboardButtonStyle">KeyboardButtonStyle</a></td><td>Стиль кнопки; подробнее о стилях кнопок см. <a href="/api/bots/buttons#button-styles">здесь »</a>.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст кнопки</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/bots/webapps">URL веб-приложения</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [KeyboardButton](/type/KeyboardButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
 #### [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/)
 
-Open a [bot mini app](https://core.telegram.org/api/bots/webapps).
+Открыть [mini app бота](/api/bots/webapps/).
 
 #### [keyboardButtonWebView](/constructor/keyboardButtonWebView/)
 
-Button to open a [bot mini app](https://core.telegram.org/api/bots/webapps) using [messages.requestWebView](/method/messages.requestWebView/), sending over user information after user confirmation.
+Кнопка для открытия [mini app бота](/api/bots/webapps/) с помощью [messages.requestWebView](/method/messages.requestWebView/) с передачей сведений о пользователе после его подтверждения.
 
-Can only be sent or received as part of an inline keyboard, use [keyboardButtonSimpleWebView](/constructor/keyboardButtonSimpleWebView/) for reply keyboards.
+Может отправляться или приниматься только в составе инлайн-клавиатуры; для клавиатур ответа используйте [keyboardButtonSimpleWebView](/constructor/keyboardButtonSimpleWebView/).
 
-When pressed, clients must open an [Inline Button Mini App](https://core.telegram.org/api/bots/webapps#inline-button-mini-apps) using [messages.requestWebView](/method/messages.requestWebView/), passing `url` to [messages.requestWebView](/method/messages.requestWebView/).`url`.
+При нажатии клиенты обязаны открыть [Mini App из инлайн-кнопки](/api/bots/webapps/#inline-button-mini-apps) с помощью [messages.requestWebView](/method/messages.requestWebView/), передав `url` в [messages.requestWebView](/method/messages.requestWebView/).`url`.

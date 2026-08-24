@@ -1,80 +1,75 @@
 ---
-title: "webPageAttributeStarGiftCollection (конструктор)"
+title: "webPageAttributeStarGiftCollection"
 original: "https://core.telegram.org/constructor/webPageAttributeStarGiftCollection"
 section: ref
 kind: constructor
+description: "Содержит информацию о коллекции подарков » для предпросмотра webPage коллекции подарков » (у webPage поле type будет равно telegram_collection)."
 layout: layout.njk
 ---
 
 # webPageAttributeStarGiftCollection
 
-*Конструктор из схемы TL.*
-
-> Contains info about a [gift collection »](https://core.telegram.org/api/gifts#gift-collections) for a [webPage](/constructor/webPage/) preview of a [gift collection »](https://core.telegram.org/api/gifts#gift-collections) (the [webPage](/constructor/webPage/) will have a `type` of `telegram_collection`).
-
-## Определение TL
+Содержит информацию о [коллекции подарков »](/api/gifts/#gift-collections) для предпросмотра [webPage](/constructor/webPage/) [коллекции подарков »](/api/gifts/#gift-collections) (у [webPage](/constructor/webPage/) поле `type` будет равно `telegram_collection`).
 
 ```
 webPageAttributeStarGiftCollection#31cad303 icons:Vector<Document> = WebPageAttribute;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| icons | [Vector](https://core.telegram.org/type/Vector%20t)<[Document](/type/Document/)> | Gifts in the collection. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>icons</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Document">Document</a>&gt;</td><td>Подарки в коллекции.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [WebPageAttribute](/type/WebPageAttribute/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [webPage](/constructor/webPage/)
 
-Webpage preview
+Предпросмотр веб-страницы
 
-The `type` field indicates the type of the web page, which influences how the preview is rendered (i.e. which extra action button is offered, where the media is taken from, and which [WebPageAttribute](/type/WebPageAttribute/) is present in the `attributes` field). It can be one of the following:
+Поле `type` указывает тип веб-страницы, который влияет на отображение предпросмотра (то есть какая дополнительная кнопка действия предлагается, откуда берётся медиафайл и какой [WebPageAttribute](/type/WebPageAttribute/) присутствует в поле `attributes`). Оно может принимать одно из следующих значений:
 
--   `app` - Preview of a [Mini App link »](https://core.telegram.org/api/links#main-mini-app-links): the `photo` is the app icon, and clients render a button that launches the [Mini App »](https://core.telegram.org/api/bots/webapps).
--   `article` - Preview of a generic external article or webpage. If `cached_page` is set, clients render an [instant view](https://instantview.telegram.org) button.
--   `document` - Preview of an external document or file, contained in the `document` field.
--   `gif` - Preview of an external animated GIF. If `embed_url`+`embed_type` are set the GIF is rendered using an embedded player, otherwise the animation is contained in the `document` field.
--   `photo` - Preview of an external photo, contained in the `photo` field.
--   `profile` - Preview of an external author or profile page; clients typically render this with a small thumbnail (forced small media).
--   `telegram_aicomposetone` - Preview of an [AI compose tone link »](https://core.telegram.org/api/links#ai-compose-tone-links), shared when previewing a [custom AI composer tone »](https://core.telegram.org/api/ai#ai-compose-tones). The `attributes` field contains a [webPageAttributeAiComposeTone](https://core.telegram.org/constructor/webPageAttributeAiComposeTone) with the [custom emoji »](https://core.telegram.org/api/custom-emoji) representing the tone; clients render a button that applies the shared tone.
--   `telegram_album` - Preview of a [message link »](https://core.telegram.org/api/links#message-links) pointing to a group of messages (album), rendered as a grouped media album rather than as a single-media preview. For this type the album media is **not** taken from the top-level `photo`/`document` fields: instead, a [cached\_page](#) ([instant view](https://instantview.telegram.org)) must be present, and clients render the items of its first [pageBlockCollage](/constructor/pageBlockCollage/) or [pageBlockSlideshow](/constructor/pageBlockSlideshow/) block. Each [pageBlockPhoto](/constructor/pageBlockPhoto/)/[pageBlockVideo](/constructor/pageBlockVideo/) item in that block references a photo or video by ID, resolved against the `photos` and `documents` of the `cached_page`. The instant view itself is not offered as a button (the album media replaces it).
--   `telegram_auction` - Preview of an [auction link »](https://core.telegram.org/api/links#auction-links) to a [collectible gift auction »](https://core.telegram.org/api/auctions). The `attributes` field contains a [webPageAttributeStarGiftAuction](/constructor/webPageAttributeStarGiftAuction/) with the auctioned gift and the auction end date; clients render a button to join the auction, or to view the results once the auction has ended.
--   `telegram_background` - Preview of a [wallpaper deep link »](https://core.telegram.org/api/links#wallpaper-links) to a [chat wallpaper »](https://core.telegram.org/api/wallpapers). The wallpaper settings (background colors, gradient rotation, pattern intensity, blur/motion, etc.) are parsed from the deep link in the `url`, not from dedicated fields. Image wallpapers carry the wallpaper image in the `document` field. Pattern wallpapers also use the `document` field, with `application/x-tgwallpattern` or `image/png` as the pattern MIME type; the colors from the `url` are rendered as the pattern background and tint. Solid-color and gradient wallpapers carry no media and are rendered from the colors encoded in the `url`. No `photo` is present. Clients render a button to apply the background.
--   `telegram_bot` - Preview of a [bot link »](https://core.telegram.org/api/links#bot-links), rendered like a profile preview using the bot's avatar in the `photo` field.
--   `telegram_botapp` - Preview of a [direct Mini App link »](https://core.telegram.org/api/links#direct-mini-app-links) to a named bot Mini App: the `photo` is the app preview, and clients render a button that opens the Mini App.
--   `telegram_call` - Preview of a [conference link »](https://core.telegram.org/api/links#conference-links) to a [group call/conference call »](https://core.telegram.org/api/group-calls); clients render a button to join the call (no `photo`/`document` is present).
--   `telegram_channel` - Preview of a [public username link »](https://core.telegram.org/api/links#public-username-links) to a channel, using the channel's avatar in the `photo` field; clients render a button to open/join the channel.
--   `telegram_channel_boost` - Preview of a [boost link »](https://core.telegram.org/api/links#boost-links) to [boost a channel »](https://core.telegram.org/api/boost), using the channel avatar in the `photo` field; clients render a button to boost the channel.
--   `telegram_channel_direct` - Preview of a [monoforum link »](https://core.telegram.org/api/links#monoforum-links) to the direct messages of a channel, using the channel avatar in the `photo` field.
--   `telegram_channel_request` - Preview of a [chat invite link »](https://core.telegram.org/api/links#chat-invite-links) to a channel that has [join requests »](https://core.telegram.org/api/invites#join-requests) enabled; clients render a "Request to join" button.
--   `telegram_chat` - Preview of a [public username link »](https://core.telegram.org/api/links#public-username-links) to a basic group, using the group avatar in the `photo` field; clients render a button to open/join the group.
--   `telegram_chat_request` - Preview of a [chat invite link »](https://core.telegram.org/api/links#chat-invite-links) to a group that has [join requests »](https://core.telegram.org/api/invites#join-requests) enabled; clients render a "Request to join" button.
--   `telegram_chatlist` - Preview of a [chat folder link »](https://core.telegram.org/api/links#chat-folder-links) to a [shareable chat folder »](https://core.telegram.org/api/folders#shared-folders) (no `photo`/`document` is present): clients use the `site_name`, `title` and `description` fields for the preview text, no [WebPageAttribute](/type/WebPageAttribute/) is required, and the action button opens the deep link in `url` to import the folder.
--   `telegram_collection` - Preview of a [gift collection link »](https://core.telegram.org/api/links#gift-collection-links) to a [gift collection »](https://core.telegram.org/api/gifts#gift-collections). The `attributes` field contains a [webPageAttributeStarGiftCollection](/constructor/webPageAttributeStarGiftCollection/) with the collection's icon stickers; clients render a button to view the collection.
--   `telegram_community` - Preview of a [chat folder link »](https://core.telegram.org/api/links#chat-folder-links) to a [shareable chat folder »](https://core.telegram.org/api/folders#shared-folders), rendered like `telegram_chatlist`.
--   `telegram_giftcode` - Preview of a [premium giftcode link »](https://core.telegram.org/api/links#premium-giftcode-links) to a [Telegram Premium gift code »](https://core.telegram.org/api/giveaways); clients render a button to view/redeem the gift code (no `photo`/`document` is present).
--   `telegram_group_boost` - Preview of a [boost link »](https://core.telegram.org/api/links#boost-links) to [boost a supergroup »](https://core.telegram.org/api/boost), using the supergroup avatar in the `photo` field; clients render a button to boost the supergroup.
--   `telegram_livestream` - Preview of a [video chat/livestream link »](https://core.telegram.org/api/links#video-chat-livestream-links) to a [live video stream »](https://core.telegram.org/api/group-calls), rendered as a video chat preview marked as a livestream; clients render a button to watch the stream.
--   `telegram_megagroup` - Preview of a [public username link »](https://core.telegram.org/api/links#public-username-links) to a supergroup, using the supergroup avatar in the `photo` field; clients render a button to open/join the supergroup.
--   `telegram_megagroup_request` - Preview of a [chat invite link »](https://core.telegram.org/api/links#chat-invite-links) to a supergroup that has [join requests »](https://core.telegram.org/api/invites#join-requests) enabled; clients render a "Request to join" button.
--   `telegram_message` - Preview of a [message link »](https://core.telegram.org/api/links#message-links) to a single message; clients render a button to open the message. Any `cached_page` instant view is ignored for this type.
--   `telegram_newbot` - Preview of a [managed bot creation request link »](https://core.telegram.org/api/links#managed-bot-creation-request-links) used to create a new bot; clients render a button to create/register the managed bot.
--   `telegram_nft` - Preview of a [collectible gift link »](https://core.telegram.org/api/links#collectible-gift-link) to a [collectible (unique) gift »](https://core.telegram.org/api/gifts#collectible-gifts). The `attributes` field contains a [webPageAttributeUniqueStarGift](/constructor/webPageAttributeUniqueStarGift/) with the unique gift; clients render a button to view the collectible.
--   `telegram_stickerset` - Preview of a [stickerset link »](https://core.telegram.org/api/links#stickerset-links) to a [sticker or custom emoji set »](https://core.telegram.org/api/stickers). The `attributes` field contains a [webPageAttributeStickerSet](/constructor/webPageAttributeStickerSet/) with a few preview stickers and the `emojis`/`text_color` flags; clients display the preview stickers and render a button to view the sticker set (or custom emoji set, if the `emojis` flag is set).
--   `telegram_story` - Preview of a [story link »](https://core.telegram.org/api/links#story-links) to a [story »](https://core.telegram.org/api/stories). The `attributes` field contains a [webPageAttributeStory](/constructor/webPageAttributeStory/) with the story's peer and ID (and optionally the embedded [storyItem](/constructor/storyItem/)); the preview media and caption are taken from the story, and clients render a button to view it.
--   `telegram_story_album` - Preview of a [story album link »](https://core.telegram.org/api/links#story-album-links) to a [story album »](https://core.telegram.org/api/stories): a `photo` (and optional video `document`) cover is present, and clients render a button to view the story album.
--   `telegram_theme` - Preview of a [theme link »](https://core.telegram.org/api/links#theme-links) to a [theme »](https://core.telegram.org/api/themes). The `attributes` field contains a [webPageAttributeTheme](/constructor/webPageAttributeTheme/) with the theme file(s) and theme settings; clients render a button to apply the theme.
--   `telegram_user` - Preview of a [public username link »](https://core.telegram.org/api/links#public-username-links) to a user, rendered like a profile preview using the user's avatar in the `photo` field.
--   `telegram_videochat` - Preview of a [video chat/livestream link »](https://core.telegram.org/api/links#video-chat-livestream-links) to a [video chat »](https://core.telegram.org/api/group-calls), rendered as a video chat preview.
--   `telegram_voicechat` - Preview of a [video chat/livestream link »](https://core.telegram.org/api/links#video-chat-livestream-links) to a [voice chat »](https://core.telegram.org/api/group-calls), rendered as a (non-video) video chat preview; clients render a button to join the voice chat.
--   `video` - Preview of an external video. If `embed_url`+`embed_type` are set the video is rendered using an embedded player, otherwise the video is contained in the `document` field.
+-   [@term:Mini App] `app` - Предпросмотр [ссылки на Mini App »](/api/links/#main-mini-app-links): в поле `photo` находится значок приложения, а клиенты отображают кнопку, запускающую [Mini App »](/api/bots/webapps/).
+-   `article` - Предпросмотр произвольной внешней статьи или веб-страницы. Если задано поле `cached_page`, клиенты отображают кнопку [instant view](https://instantview.telegram.org).
+-   `document` - Предпросмотр внешнего документа или файла, содержащегося в поле `document`.
+-   `gif` - Предпросмотр внешней анимации GIF. Если заданы `embed_url`+`embed_type`, GIF воспроизводится встроенным проигрывателем, иначе анимация содержится в поле `document`.
+-   `photo` - Предпросмотр внешнего изображения, содержащегося в поле `photo`.
+-   `profile` - Предпросмотр внешнего автора или страницы профиля; клиенты обычно отображают его с маленькой миниатюрой (принудительно уменьшенное медиа).
+-   `telegram_aicomposetone` - Предпросмотр [ссылки на тон ИИ-редактора »](/api/links/#ai-compose-tone-links), которая передаётся при предпросмотре [пользовательского тона ИИ-редактора »](/api/ai/#ai-compose-tones). Поле `attributes` содержит [webPageAttributeAiComposeTone](/constructor/webPageAttributeAiComposeTone/) с [пользовательским эмодзи »](/api/custom-emoji/), обозначающим тон; клиенты отображают кнопку, применяющую переданный тон.
+-   `telegram_album` - Предпросмотр [ссылки на сообщение »](/api/links/#message-links), указывающей на группу сообщений (альбом); отображается как сгруппированный медиаальбом, а не как предпросмотр с одним медиафайлом. Для этого типа медиафайлы альбома берутся **не** из полей `photo`/`document` верхнего уровня: вместо этого обязательно присутствует [cached\_page](#) ([instant view](https://instantview.telegram.org)), и клиенты отображают элементы его первого блока [pageBlockCollage](/constructor/pageBlockCollage/) или [pageBlockSlideshow](/constructor/pageBlockSlideshow/). Каждый элемент [pageBlockPhoto](/constructor/pageBlockPhoto/)/[pageBlockVideo](/constructor/pageBlockVideo/) в этом блоке ссылается на фотографию или видео по идентификатору, который разрешается по полям `photos` и `documents` объекта `cached_page`. Сам instant view кнопкой не предлагается (его заменяют медиафайлы альбома).
+-   `telegram_auction` - Предпросмотр [ссылки на аукцион »](/api/links/#auction-links), ведущей на [аукцион коллекционных подарков »](/api/auctions/). Поле `attributes` содержит [webPageAttributeStarGiftAuction](/constructor/webPageAttributeStarGiftAuction/) с выставленным на аукцион подарком и датой окончания аукциона; клиенты отображают кнопку для участия в аукционе либо для просмотра результатов, если аукцион уже завершён.
+-   `telegram_background` - Предпросмотр [глубокой ссылки на обои »](/api/links/#wallpaper-links), ведущей на [обои чата »](/api/wallpapers/). Параметры обоев (цвета фона, поворот градиента, интенсивность узора, размытие/движение и т. д.) разбираются из глубокой ссылки в поле `url`, а не из отдельных полей. Обои-изображения содержат изображение обоев в поле `document`. Обои с узором также используют поле `document`, при этом MIME-типом узора служит `application/x-tgwallpattern` или `image/png`; цвета из `url` отображаются как фон и оттенок узора. Одноцветные и градиентные обои не содержат медиафайлов и отрисовываются по цветам, закодированным в `url`. Поле `photo` отсутствует. Клиенты отображают кнопку для применения фона.
+-   `telegram_bot` - Предпросмотр [ссылки на бота »](/api/links/#bot-links); отображается как предпросмотр профиля с аватаром бота в поле `photo`.
+-   `telegram_botapp` - Предпросмотр [прямой ссылки на Mini App »](/api/links/#direct-mini-app-links), ведущей на именованный Mini App бота: в поле `photo` находится изображение предпросмотра приложения, а клиенты отображают кнопку, открывающую Mini App.
+-   `telegram_call` - Предпросмотр [ссылки на конференцию »](/api/links/#conference-links), ведущей на [групповой звонок/конференцию »](/api/group-calls/); клиенты отображают кнопку для присоединения к звонку (поля `photo`/`document` отсутствуют).
+-   `telegram_channel` - Предпросмотр [ссылки на публичное имя пользователя »](/api/links/#public-username-links), ведущей на канал; используется аватар канала в поле `photo`; клиенты отображают кнопку для открытия канала или подписки на него.
+-   `telegram_channel_boost` - Предпросмотр [ссылки на буст »](/api/links/#boost-links), позволяющей [забустить канал »](/api/boost/); используется аватар канала в поле `photo`; клиенты отображают кнопку для буста канала.
+-   `telegram_channel_direct` - Предпросмотр [ссылки на монофорум »](/api/links/#monoforum-links), ведущей в личные сообщения канала; используется аватар канала в поле `photo`.
+-   `telegram_channel_request` - Предпросмотр [пригласительной ссылки на чат »](/api/links/#chat-invite-links), ведущей на канал, в котором включены [заявки на вступление »](/api/invites/#join-requests); клиенты отображают кнопку «Подать заявку».
+-   `telegram_chat` - Предпросмотр [ссылки на публичное имя пользователя »](/api/links/#public-username-links), ведущей на обычную группу; используется аватар группы в поле `photo`; клиенты отображают кнопку для открытия группы или вступления в неё.
+-   `telegram_chat_request` - Предпросмотр [пригласительной ссылки на чат »](/api/links/#chat-invite-links), ведущей на группу, в которой включены [заявки на вступление »](/api/invites/#join-requests); клиенты отображают кнопку «Подать заявку».
+-   `telegram_chatlist` - Предпросмотр [ссылки на папку с чатами »](/api/links/#chat-folder-links), ведущей на [папку, которой можно поделиться »](/api/folders/#shared-folders) (поля `photo`/`document` отсутствуют): для текста предпросмотра клиенты используют поля `site_name`, `title` и `description`, объект [WebPageAttribute](/type/WebPageAttribute/) не требуется, а кнопка действия открывает глубокую ссылку из `url` для импорта папки.
+-   `telegram_collection` - Предпросмотр [ссылки на коллекцию подарков »](/api/links/#gift-collection-links), ведущей на [коллекцию подарков »](/api/gifts/#gift-collections). Поле `attributes` содержит [webPageAttributeStarGiftCollection](/constructor/webPageAttributeStarGiftCollection/) со стикерами-значками коллекции; клиенты отображают кнопку для просмотра коллекции.
+-   `telegram_community` - Предпросмотр [ссылки на папку с чатами »](/api/links/#chat-folder-links), ведущей на [папку, которой можно поделиться »](/api/folders/#shared-folders); отображается так же, как `telegram_chatlist`.
+-   `telegram_giftcode` - Предпросмотр [ссылки на подарочный код Premium »](/api/links/#premium-giftcode-links), ведущей на [подарочный код Telegram Premium »](/api/giveaways/); клиенты отображают кнопку для просмотра или активации подарочного кода (поля `photo`/`document` отсутствуют).
+-   `telegram_group_boost` - Предпросмотр [ссылки на буст »](/api/links/#boost-links), позволяющей [забустить супергруппу »](/api/boost/); используется аватар супергруппы в поле `photo`; клиенты отображают кнопку для буста супергруппы.
+-   `telegram_livestream` - Предпросмотр [ссылки на видеочат/трансляцию »](/api/links/#video-chat-livestream-links), ведущей на [прямую видеотрансляцию »](/api/group-calls/); отображается как предпросмотр видеочата, помеченного как трансляция; клиенты отображают кнопку для просмотра трансляции.
+-   `telegram_megagroup` - Предпросмотр [ссылки на публичное имя пользователя »](/api/links/#public-username-links), ведущей на супергруппу; используется аватар супергруппы в поле `photo`; клиенты отображают кнопку для открытия супергруппы или вступления в неё.
+-   `telegram_megagroup_request` - Предпросмотр [пригласительной ссылки на чат »](/api/links/#chat-invite-links), ведущей на супергруппу, в которой включены [заявки на вступление »](/api/invites/#join-requests); клиенты отображают кнопку «Подать заявку».
+-   `telegram_message` - Предпросмотр [ссылки на сообщение »](/api/links/#message-links), ведущей на одно сообщение; клиенты отображают кнопку для открытия сообщения. Для этого типа instant view из `cached_page` игнорируется.
+-   `telegram_newbot` - Предпросмотр [ссылки на запрос создания управляемого бота »](/api/links/#managed-bot-creation-request-links), используемой для создания нового бота; клиенты отображают кнопку для создания и регистрации управляемого бота.
+-   `telegram_nft` - Предпросмотр [ссылки на коллекционный подарок »](/api/links/#collectible-gift-link), ведущей на [коллекционный (уникальный) подарок »](/api/gifts/#collectible-gifts). Поле `attributes` содержит [webPageAttributeUniqueStarGift](/constructor/webPageAttributeUniqueStarGift/) с уникальным подарком; клиенты отображают кнопку для просмотра коллекционного подарка.
+-   `telegram_stickerset` - Предпросмотр [ссылки на набор стикеров »](/api/links/#stickerset-links), ведущей на [набор стикеров или пользовательских эмодзи »](/api/stickers/). Поле `attributes` содержит [webPageAttributeStickerSet](/constructor/webPageAttributeStickerSet/) с несколькими стикерами для предпросмотра и флагами `emojis`/`text_color`; клиенты показывают стикеры предпросмотра и отображают кнопку для просмотра набора стикеров (или набора пользовательских эмодзи, если установлен флаг `emojis`).
+-   `telegram_story` - Предпросмотр [ссылки на историю »](/api/links/#story-links), ведущей на [историю »](/api/stories/). Поле `attributes` содержит [webPageAttributeStory](/constructor/webPageAttributeStory/) с пиром и идентификатором истории (и, возможно, со вложенным объектом [storyItem](/constructor/storyItem/)); медиафайл предпросмотра и подпись берутся из истории, а клиенты отображают кнопку для её просмотра.
+-   `telegram_story_album` - Предпросмотр [ссылки на альбом историй »](/api/links/#story-album-links), ведущей на [альбом историй »](/api/stories/): присутствует обложка в поле `photo` (и, возможно, видео в поле `document`), а клиенты отображают кнопку для просмотра альбома историй.
+-   `telegram_theme` - Предпросмотр [ссылки на тему »](/api/links/#theme-links), ведущей на [тему »](/api/themes/). Поле `attributes` содержит [webPageAttributeTheme](/constructor/webPageAttributeTheme/) с файлом (или файлами) темы и её параметрами; клиенты отображают кнопку для применения темы.
+-   `telegram_user` - Предпросмотр [ссылки на публичное имя пользователя »](/api/links/#public-username-links), ведущей на пользователя; отображается как предпросмотр профиля с аватаром пользователя в поле `photo`.
+-   `telegram_videochat` - Предпросмотр [ссылки на видеочат/трансляцию »](/api/links/#video-chat-livestream-links), ведущей на [видеочат »](/api/group-calls/); отображается как предпросмотр видеочата.
+-   `telegram_voicechat` - Предпросмотр [ссылки на видеочат/трансляцию »](/api/links/#video-chat-livestream-links), ведущей на [голосовой чат »](/api/group-calls/); отображается как предпросмотр видеочата без видео; клиенты отображают кнопку для присоединения к голосовому чату.
+-   `video` - Предпросмотр внешнего видео. Если заданы `embed_url`+`embed_type`, видео воспроизводится встроенным проигрывателем, иначе видео содержится в поле `document`.

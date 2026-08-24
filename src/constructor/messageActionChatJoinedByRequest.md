@@ -1,27 +1,24 @@
 ---
-title: "messageActionChatJoinedByRequest (конструктор)"
+title: "messageActionChatJoinedByRequest"
 original: "https://core.telegram.org/constructor/messageActionChatJoinedByRequest"
 section: ref
 kind: constructor
+description: "Администратор принял пользователя в группу"
 layout: layout.njk
 ---
 
 # messageActionChatJoinedByRequest
 
-*Конструктор из схемы TL.*
-
-> A user was accepted into the group by an admin
-
-## Определение TL
+Администратор принял пользователя в группу
 
 ```
 messageActionChatJoinedByRequest#ebbca3cb = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)

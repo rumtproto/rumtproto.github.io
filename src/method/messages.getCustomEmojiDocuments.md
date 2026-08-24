@@ -1,52 +1,48 @@
 ---
-title: "messages.getCustomEmojiDocuments (метод)"
+title: "messages.getCustomEmojiDocuments"
 original: "https://core.telegram.org/method/messages.getCustomEmojiDocuments"
 section: ref
 kind: method
+description: "Получить стикеры с пользовательскими эмодзи »."
 layout: layout.njk
 ---
 
 # messages.getCustomEmojiDocuments
 
-*Метод из схемы TL.*
+Получить [стикеры с пользовательскими эмодзи »](/api/custom-emoji/).
 
-> Fetch [custom emoji stickers »](https://core.telegram.org/api/custom-emoji).
-> Returns a list of [documents](/constructor/document/) with the animated custom emoji in TGS format, and a [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/) attribute with the original emoji and info about the emoji stickerset this custom emoji belongs to.
-
-## Определение TL
+Возвращает список [документов](/constructor/document/) с анимированным пользовательским эмодзи в формате TGS и атрибутом [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/) с исходным эмодзи и сведениями о наборе эмодзи, которому принадлежит этот пользовательский эмодзи.
 
 ```
 ---functions---
 messages.getCustomEmojiDocuments#d9ab0f54 document_id:Vector<long> = Vector<Document>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| document_id | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | [Custom emoji](https://core.telegram.org/api/custom-emoji) IDs from a [messageEntityCustomEmoji](/constructor/messageEntityCustomEmoji/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Идентификаторы <a href="/api/custom-emoji">пользовательских эмодзи</a> из сущности <a href="/constructor/messageEntityCustomEmoji">messageEntityCustomEmoji</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[Document](/type/Document/)\>
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
 #### [messageEntityCustomEmoji](/constructor/messageEntityCustomEmoji/)
 
-Represents a custom emoji.  
-Note that this entity must wrap exactly one regular emoji (the one contained in [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/).`alt`) in the related text, otherwise the server will ignore it.
+Представляет пользовательский эмодзи.  
+Учтите, что эта сущность обязана охватывать ровно один обычный эмодзи (тот, который содержится в [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/).`alt`) в соответствующем тексте, иначе сервер её проигнорирует.
 
 #### [document](/constructor/document/)
 
-Document
+Документ
 
 #### [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/)
 
-Info about a custom emoji
+Информация о пользовательском эмодзи

@@ -1,36 +1,30 @@
 ---
-title: "inputGameID (конструктор)"
+title: "inputGameID"
 original: "https://core.telegram.org/constructor/inputGameID"
 section: ref
 kind: constructor
+description: "Указывает на уже отправленную игру"
 layout: layout.njk
 ---
 
 # inputGameID
 
-*Конструктор из схемы TL.*
-
-> Indicates an already sent game
-
-## Определение TL
+Указывает на уже отправленную игру
 
 ```
 inputGameID#32c3e77 id:long access_hash:long = InputGame;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | game ID from [Game](/type/Game/) constructor |
-| access_hash | [long](/type/long/) | access hash from [Game](/type/Game/) constructor |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>идентификатор игры из конструктора <a href="/type/Game">Game</a></td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:access_hash] хеш доступа из конструктора <a href="/type/Game">Game</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputGame](/type/InputGame/)
 
-## Related pages
+### Связанные страницы
 
 #### [Game](/type/Game/)
 
-Indicates an already sent game
+Указывает на уже отправленную игру

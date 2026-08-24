@@ -1,27 +1,24 @@
 ---
-title: "secureValueTypeDriverLicense (конструктор)"
+title: "secureValueTypeDriverLicense"
 original: "https://core.telegram.org/constructor/secureValueTypeDriverLicense"
 section: ref
 kind: constructor
+description: "Водительское удостоверение"
 layout: layout.njk
 ---
 
 # secureValueTypeDriverLicense
 
-*Конструктор из схемы TL.*
-
-> Driver's license
-
-## Определение TL
+Водительское удостоверение
 
 ```
 secureValueTypeDriverLicense#6e425c4 = SecureValueType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureValueType](/type/SecureValueType/)

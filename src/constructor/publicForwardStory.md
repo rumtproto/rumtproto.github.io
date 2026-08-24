@@ -1,36 +1,30 @@
 ---
-title: "publicForwardStory (конструктор)"
+title: "publicForwardStory"
 original: "https://core.telegram.org/constructor/publicForwardStory"
 section: ref
 kind: constructor
+description: "Содержит информацию о пересылке истории в виде репоста публичным каналом."
 layout: layout.njk
 ---
 
 # publicForwardStory
 
-*Конструктор из схемы TL.*
-
-> Contains info about a forward of a [story](https://core.telegram.org/api/stories) as a repost by a public channel.
-
-## Определение TL
+Содержит информацию о пересылке [истории](/api/stories/) в виде репоста публичным каналом.
 
 ```
 publicForwardStory#edf3add0 peer:Peer story:StoryItem = PublicForward;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | The channel that reposted the story. |
-| story | [StoryItem](/type/StoryItem/) | The reposted story (may be different from the original story). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Канал, который переопубликовал историю.</td></tr><tr><td><strong>story</strong></td><td style="text-align: center;"><a href="/type/StoryItem">StoryItem</a></td><td>Перепощенная история (может отличаться от исходной истории).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PublicForward](/type/PublicForward/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

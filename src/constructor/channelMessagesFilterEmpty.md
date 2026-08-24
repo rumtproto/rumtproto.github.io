@@ -1,27 +1,24 @@
 ---
-title: "channelMessagesFilterEmpty (конструктор)"
+title: "channelMessagesFilterEmpty"
 original: "https://core.telegram.org/constructor/channelMessagesFilterEmpty"
 section: ref
 kind: constructor
+description: "Без фильтра"
 layout: layout.njk
 ---
 
 # channelMessagesFilterEmpty
 
-*Конструктор из схемы TL.*
-
-> No filter
-
-## Определение TL
+Без фильтра
 
 ```
 channelMessagesFilterEmpty#94d42ee7 = ChannelMessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ChannelMessagesFilter](/type/ChannelMessagesFilter/)

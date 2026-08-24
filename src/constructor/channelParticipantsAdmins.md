@@ -1,27 +1,24 @@
 ---
-title: "channelParticipantsAdmins (конструктор)"
+title: "channelParticipantsAdmins"
 original: "https://core.telegram.org/constructor/channelParticipantsAdmins"
 section: ref
 kind: constructor
+description: "Получить только участников-администраторов"
 layout: layout.njk
 ---
 
 # channelParticipantsAdmins
 
-*Конструктор из схемы TL.*
-
-> Fetch only admin participants
-
-## Определение TL
+Получить только участников-администраторов
 
 ```
 channelParticipantsAdmins#b4608969 = ChannelParticipantsFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ChannelParticipantsFilter](/type/ChannelParticipantsFilter/)

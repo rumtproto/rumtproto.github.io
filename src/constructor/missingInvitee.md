@@ -1,42 +1,34 @@
 ---
-title: "missingInvitee (конструктор)"
+title: "missingInvitee"
 original: "https://core.telegram.org/constructor/missingInvitee"
 section: ref
 kind: constructor
+description: "Информация о том, почему определённого пользователя не удалось пригласить »."
 layout: layout.njk
 ---
 
 # missingInvitee
 
-*Конструктор из схемы TL.*
-
-> Info about why a specific user could not be [invited »](https://core.telegram.org/api/invites#direct-invites).
-
-## Определение TL
+Информация о том, почему определённого пользователя не удалось [пригласить »](/api/invites/#direct-invites).
 
 ```
 missingInvitee#628c9224 flags:# premium_would_allow_invite:flags.0?true premium_required_for_pm:flags.1?true user_id:long = MissingInvitee;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| premium_would_allow_invite | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, we could not add the user only because the current account needs to purchase a [Telegram Premium](https://core.telegram.org/api/premium) subscription to complete the operation. |
-| premium_required_for_pm | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, we could not add the user because of their privacy settings, and additionally, the current account needs to purchase a [Telegram Premium](https://core.telegram.org/api/premium) subscription to directly share an invite link with the user via a private message. |
-| user_id | [long](/type/long/) | ID of the user. If neither of the flags below are set, we could not add the user because of their privacy settings, and we can create and directly share an [invite link](https://core.telegram.org/api/invites#invite-links) with them using a normal message, instead. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>premium_would_allow_invite</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, мы не смогли добавить пользователя <em>только потому</em>, что для завершения операции текущему аккаунту необходимо приобрести подписку <a href="/api/premium">Telegram Premium</a>.</td></tr><tr><td><strong>premium_required_for_pm</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, мы не смогли добавить пользователя из-за его настроек приватности, и, кроме того, текущему аккаунту необходимо приобрести подписку <a href="/api/premium">Telegram Premium</a>, чтобы отправить пользователю пригласительную ссылку напрямую личным сообщением.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя. Если ни один из приведённых ниже флагов не установлен, добавить пользователя не удалось из-за его настроек приватности, и вместо этого мы можем создать <a href="/api/invites#invite-links">пригласительную ссылку</a> и отправить её ему обычным сообщением.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MissingInvitee](/type/MissingInvitee/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.

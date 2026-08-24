@@ -1,18 +1,15 @@
 ---
-title: "payments.assignPlayMarketTransaction (метод)"
+title: "payments.assignPlayMarketTransaction"
 original: "https://core.telegram.org/method/payments.assignPlayMarketTransaction"
 section: ref
 kind: method
+description: "Сообщает серверу о покупке, совершённой через Play Store: только для официальных приложений."
 layout: layout.njk
 ---
 
 # payments.assignPlayMarketTransaction
 
-*Метод из схемы TL.*
-
-> Informs server about a purchase made through the Play Store: for official applications only.
-
-## Определение TL
+Сообщает серверу о покупке, совершённой через Play Store: только для официальных приложений.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,23 +23,18 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 payments.assignPlayMarketTransaction#dffd50d3 receipt:DataJSON purpose:InputStorePaymentPurpose = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| receipt | [DataJSON](/type/DataJSON/) | Receipt |
-| purpose | [InputStorePaymentPurpose](/type/InputStorePaymentPurpose/) | Payment purpose |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>receipt</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Чек</td></tr><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose">InputStorePaymentPurpose</a></td><td>Назначение платежа</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | DATA_JSON_INVALID | The provided JSON data is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>DATA_JSON_INVALID</td><td>Указанные данные JSON недействительны.</td></tr></tbody></table>

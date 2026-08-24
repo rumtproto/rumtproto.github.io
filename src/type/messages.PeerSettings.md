@@ -1,18 +1,15 @@
 ---
-title: "messages.PeerSettings (тип)"
+title: "messages.PeerSettings"
 original: "https://core.telegram.org/type/messages.PeerSettings"
 section: ref
 kind: type
+description: "Настройки пира"
 layout: layout.njk
 ---
 
 # messages.PeerSettings
 
-*Тип из схемы TL.*
-
-> Peer settings
-
-## Определение TL
+Настройки пира
 
 ```
 messages.peerSettings#6880b94d settings:PeerSettings chats:Vector<Chat> users:Vector<User> = messages.PeerSettings;
@@ -22,14 +19,10 @@ messages.peerSettings#6880b94d settings:PeerSettings chats:Vector<Chat> users:Ve
 messages.getPeerSettings#efd9a6a2 peer:InputPeer = messages.PeerSettings;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.peerSettings](/constructor/messages.peerSettings/) | Peer settings |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.peerSettings">messages.peerSettings</a></td><td>Настройки пира</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getPeerSettings](/method/messages.getPeerSettings/) | Get peer settings |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getPeerSettings">messages.getPeerSettings</a></td><td>Получить настройки пира</td></tr></tbody></table>

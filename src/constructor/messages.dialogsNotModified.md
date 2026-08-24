@@ -1,29 +1,24 @@
 ---
-title: "messages.dialogsNotModified (конструктор)"
+title: "messages.dialogsNotModified"
 original: "https://core.telegram.org/constructor/messages.dialogsNotModified"
 section: ref
 kind: constructor
+description: "Диалоги не изменились"
 layout: layout.njk
 ---
 
 # messages.dialogsNotModified
 
-*Конструктор из схемы TL.*
-
-> Dialogs haven't changed
-
-## Определение TL
+Диалоги не изменились
 
 ```
 messages.dialogsNotModified#f0e3e596 count:int = messages.Dialogs;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| count | [int](/type/int/) | Number of dialogs found server-side by the query |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество диалогов, найденных по запросу на стороне сервера</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.Dialogs](/type/messages.Dialogs/)

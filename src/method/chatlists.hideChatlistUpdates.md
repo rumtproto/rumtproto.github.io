@@ -1,18 +1,15 @@
 ---
-title: "chatlists.hideChatlistUpdates (метод)"
+title: "chatlists.hideChatlistUpdates"
 original: "https://core.telegram.org/method/chatlists.hideChatlistUpdates"
 section: ref
 kind: method
+description: "Отклонить новых ожидающих пиров, недавно добавленных по глубокой ссылке на папку чатов »."
 layout: layout.njk
 ---
 
 # chatlists.hideChatlistUpdates
 
-*Метод из схемы TL.*
-
-> Dismiss new pending peers recently added to a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links).
-
-## Определение TL
+Отклонить новых ожидающих пиров, недавно добавленных по [глубокой ссылке на папку чатов »](/api/links/#chat-folder-links).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,27 +18,22 @@ boolTrue#997275b5 = Bool;
 chatlists.hideChatlistUpdates#66e486fb chatlist:InputChatlist = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chatlist | [InputChatlist](/type/InputChatlist/) | The folder |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chatlist</strong></td><td style="text-align: center;"><a href="/type/InputChatlist">InputChatlist</a></td><td>Папка</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | FILTER_ID_INVALID | The specified filter ID is invalid. |
-| 400 | FILTER_NOT_SUPPORTED | The specified filter cannot be used in this context. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>FILTER_ID_INVALID</td><td>Указанный идентификатор фильтра недействителен.</td></tr><tr><td>400</td><td>FILTER_NOT_SUPPORTED</td><td>Указанный фильтр нельзя использовать в этом контексте.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

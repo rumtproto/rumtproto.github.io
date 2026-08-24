@@ -1,18 +1,15 @@
 ---
-title: "bots.PopularAppBots (тип)"
+title: "bots.PopularAppBots"
 original: "https://core.telegram.org/type/bots.PopularAppBots"
 section: ref
 kind: type
+description: "Популярные Main Mini Apps, предназначенные для вкладки приложений в глобальном поиске »."
 layout: layout.njk
 ---
 
 # bots.PopularAppBots
 
-*Тип из схемы TL.*
-
-> Popular [Main Mini Apps](https://core.telegram.org/api/bots/webapps#main-mini-apps), to be used in the [apps tab of global search »](https://core.telegram.org/api/search#apps-tab).
-
-## Определение TL
+Популярные [Main Mini Apps](/api/bots/webapps/#main-mini-apps), предназначенные для [вкладки приложений в глобальном поиске »](/api/search/#apps-tab).
 
 ```
 bots.popularAppBots#1991b13b flags:# next_offset:flags.0?string users:Vector<User> = bots.PopularAppBots;
@@ -22,24 +19,20 @@ bots.popularAppBots#1991b13b flags:# next_offset:flags.0?string users:Vector<Use
 bots.getPopularAppBots#c2510192 offset:string limit:int = bots.PopularAppBots;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [bots.popularAppBots](/constructor/bots.popularAppBots/) | Popular [Main Mini Apps](https://core.telegram.org/api/bots/webapps#main-mini-apps), to be used in the [apps tab of global search »](https://core.telegram.org/api/search#apps-tab). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/bots.popularAppBots">bots.popularAppBots</a></td><td>Популярные <a href="/api/bots/webapps#main-mini-apps">Main Mini Apps</a>, предназначенные для <a href="/api/search#apps-tab">вкладки приложений в глобальном поиске »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [bots.getPopularAppBots](/method/bots.getPopularAppBots/) | Fetch popular [Main Mini Apps](https://core.telegram.org/api/bots/webapps#main-mini-apps), to be used in the [apps tab of global search »](https://core.telegram.org/api/search#apps-tab). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/bots.getPopularAppBots">bots.getPopularAppBots</a></td><td>Получить популярные <a href="/api/bots/webapps#main-mini-apps">Main Mini Apps</a> для использования во <a href="/api/search#apps-tab">вкладке приложений в глобальном поиске »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
-#### [Search and filters](https://core.telegram.org/api/search)
+#### [Поиск и фильтры](/api/search/)
 
-Telegram allows applying detailed message filters while looking for messages in chats.
+Telegram позволяет применять подробные фильтры сообщений при поиске в чатах.

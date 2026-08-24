@@ -1,35 +1,30 @@
 ---
-title: "inputCollectiblePhone (конструктор)"
+title: "inputCollectiblePhone"
 original: "https://core.telegram.org/constructor/inputCollectiblePhone"
 section: ref
 kind: constructor
+description: "Представляет коллекционный номер телефона fragment"
 layout: layout.njk
 ---
 
 # inputCollectiblePhone
 
-*Конструктор из схемы TL.*
-
-> Represents a [phone number fragment collectible](https://core.telegram.org/api/fragment)
-
-## Определение TL
+Представляет [коллекционный номер телефона fragment](/api/fragment/)
 
 ```
 inputCollectiblePhone#a2e214a4 phone:string = InputCollectible;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone | [string](/type/string/) | Phone number |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputCollectible](/type/InputCollectible/)
 
-## Related pages
+### Связанные страницы
 
-#### [Fragment collectibles](https://core.telegram.org/api/fragment)
+#### [Коллекционные объекты Fragment](/api/fragment/)
 
-Telegram users can make it easy for others to contact them or find their public groups and channels via usernames: clients can also assign multiple Fragment » collectible usernames to accounts, supergroups and channels they own; Fragment » also allows purchasing phone number collectibles that can be used to register Telegram accounts.
+Пользователи Telegram могут упростить связь с собой и поиск своих публичных групп и каналов с помощью имён пользователей: клиенты также могут назначать несколько коллекционных имён пользователей с Fragment » принадлежащим им аккаунтам, супергруппам и каналам; кроме того, Fragment » позволяет покупать коллекционные номера телефонов, на которые можно регистрировать аккаунты Telegram.

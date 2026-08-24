@@ -1,19 +1,17 @@
 ---
-title: "users.setSecureValueErrors (метод)"
+title: "users.setSecureValueErrors"
 original: "https://core.telegram.org/method/users.setSecureValueErrors"
 section: ref
 kind: method
+description: "Уведомить пользователя о том, что отправленные данные passport содержат ошибки. Пользователь не сможет повторно отправить вам данные Passport, пока ошибки не будут исправлены…"
 layout: layout.njk
 ---
 
 # users.setSecureValueErrors
 
-*Метод из схемы TL.*
+Уведомить пользователя о том, что отправленные данные [passport](https://core.telegram.org/passport) содержат ошибки. Пользователь не сможет повторно отправить вам данные Passport, пока ошибки не будут исправлены (содержимое поля, для которого возвращена ошибка, должно измениться).
 
-> Notify the user that the sent [passport](https://core.telegram.org/passport) data contains some errors The user will not be able to re-submit their Passport data to you until the errors are fixed (the contents of the field for which you returned the error must change).
-> Use this if the data submitted by the user doesn't satisfy the standards your service requires for any reason. For example, if a birthday date seems invalid, a submitted document is blurry, a scan shows evidence of tampering, etc. Supply some details in the error message to make sure the user knows how to correct the issues.
-
-## Определение TL
+Используйте это, если присланные пользователем данные по какой-либо причине не соответствуют требованиям вашего сервиса. Например, если дата рождения выглядит недостоверной, присланный документ размыт, скан содержит следы подделки и т. п. Укажите подробности в сообщении об ошибке, чтобы пользователь понял, как исправить недочёты.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,30 +20,22 @@ boolTrue#997275b5 = Bool;
 users.setSecureValueErrors#90c894b5 id:InputUser errors:Vector<SecureValueError> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [InputUser](/type/InputUser/) | The user |
-| errors | [Vector](https://core.telegram.org/type/Vector%20t)<[SecureValueError](/type/SecureValueError/)> | Errors |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Пользователь</td></tr><tr><td><strong>errors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SecureValueError">SecureValueError</a>&gt;</td><td>Ошибки</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only bots can use this method
+### Этот метод доступен только ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | DATA_HASH_SIZE_INVALID | The size of the specified secureValueErrorData.data_hash is invalid. |
-| 400 | HASH_SIZE_INVALID | The size of the specified secureValueError.hash is invalid. |
-| 400 | USER_BOT_REQUIRED | This method can only be called by a bot. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>DATA_HASH_SIZE_INVALID</td><td>Недопустимый размер указанного значения secureValueErrorData.data_hash.</td></tr><tr><td>400</td><td>HASH_SIZE_INVALID</td><td>Недопустимый размер указанного значения secureValueError.hash.</td></tr><tr><td>400</td><td>USER_BOT_REQUIRED</td><td>Этот метод может вызывать только бот.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

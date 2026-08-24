@@ -1,44 +1,39 @@
 ---
-title: "invokeWithBusinessConnection (метод)"
+title: "invokeWithBusinessConnection"
 original: "https://core.telegram.org/method/invokeWithBusinessConnection"
 section: ref
 kind: method
+description: "Вызвать метод через подключение Telegram Business Bot; подробнее, включая список методов, которые можно обернуть в этот конструктор, см. здесь »."
 layout: layout.njk
 ---
 
 # invokeWithBusinessConnection
 
-*Метод из схемы TL.*
+Вызвать метод через [подключение Telegram Business Bot; подробнее, включая список методов, которые можно обернуть в этот конструктор, см. здесь »](/api/bots/connected-business-bots/).
 
-> Invoke a method using a [Telegram Business Bot connection, see here » for more info, including a list of the methods that can be wrapped in this constructor](https://core.telegram.org/api/bots/connected-business-bots).
-> Make sure to always send queries wrapped in a `invokeWithBusinessConnection` to the datacenter ID, specified in the `dc_id` field of the [botBusinessConnection](/constructor/botBusinessConnection/) that is being used.
-
-## Определение TL
+Всегда отправляйте запросы, обёрнутые в `invokeWithBusinessConnection`, в дата-центр с идентификатором, указанным в поле `dc_id` используемого [botBusinessConnection](/constructor/botBusinessConnection/).
 
 ```
 ---functions---
 invokeWithBusinessConnection#dd289f8e {X:Type} connection_id:string query:!X = X;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| connection_id | [string](/type/string/) | Business connection ID. |
-| query | !X | The actual query. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>connection_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор бизнес-подключения.</td></tr><tr><td><strong>query</strong></td><td style="text-align: center;">!X</td><td>Сам запрос.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
-Returns the type returned by the invoked method.
+Возвращает тип, возвращаемый вызванным методом.
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Related pages
+### Связанные страницы
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
 #### [botBusinessConnection](/constructor/botBusinessConnection/)
 
-Contains info about a [bot business connection](https://core.telegram.org/api/bots/connected-business-bots).
+Содержит информацию о [бизнес-подключении бота](/api/bots/connected-business-bots/).

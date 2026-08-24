@@ -1,18 +1,15 @@
 ---
-title: "messages.toggleBotInAttachMenu (метод)"
+title: "messages.toggleBotInAttachMenu"
 original: "https://core.telegram.org/method/messages.toggleBotInAttachMenu"
 section: ref
 kind: method
+description: "Включить или отключить меню вложений веб-бота »"
 layout: layout.njk
 ---
 
 # messages.toggleBotInAttachMenu
 
-*Метод из схемы TL.*
-
-> Enable or disable [web bot attachment menu »](https://core.telegram.org/api/bots/attach)
-
-## Определение TL
+Включить или отключить [меню вложений веб-бота »](/api/bots/attach/)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,35 +18,28 @@ boolTrue#997275b5 = Bool;
 messages.toggleBotInAttachMenu#69f59d69 flags:# write_allowed:flags.0?true bot:InputUser enabled:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| write_allowed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the user authorizes the bot to write messages to them, if requested by [attachMenuBot](/constructor/attachMenuBot/).request_write_access |
-| bot | [InputUser](/type/InputUser/) | Bot ID |
-| enabled | [Bool](/type/Bool/) | Toggle |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>write_allowed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Разрешает ли пользователь боту писать ему сообщения, если это запрошено в <a href="/constructor/attachMenuBot">attachMenuBot</a>.<code>request_write_access</code></td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор бота</td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Переключатель</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [attachMenuBot](/constructor/attachMenuBot/)
 
-Represents a [bot mini app that can be launched from the attachment/side menu »](https://core.telegram.org/api/bots/attach)
+[@term:Mini App] Представляет [mini app бота, который можно запустить из меню вложений или бокового меню »](/api/bots/attach/)
 
-At least one of the `show_in_attach_menu` or the `show_in_side_menu` flags will always be set.
+Хотя бы один из флагов `show_in_attach_menu` или `show_in_side_menu` всегда будет установлен.
 
-#### [Bot attachment menu and side menu entries](https://core.telegram.org/api/bots/attach)
+#### [Пункты меню вложений и бокового меню для ботов](/api/bots/attach/)
 
-Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile web apps.
+Боты могут добавлять пункты в меню вложений и в боковое меню, предлагая легкодоступные многофункциональные веб-приложения.

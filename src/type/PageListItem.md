@@ -1,27 +1,21 @@
 ---
-title: "PageListItem (тип)"
+title: "PageListItem"
 original: "https://core.telegram.org/type/PageListItem"
 section: ref
 kind: type
+description: "Запись в списке заблокированных"
 layout: layout.njk
 ---
 
 # PageListItem
 
-*Тип из схемы TL.*
-
-> Item in block list
-
-## Определение TL
+Запись в списке заблокированных
 
 ```
 pageListItemText#b92fb6cd text:RichText = PageListItem;
 pageListItemBlocks#25e073fc blocks:Vector<PageBlock> = PageListItem;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [pageListItemText](/constructor/pageListItemText/) | List item |
-| [pageListItemBlocks](/constructor/pageListItemBlocks/) | List item |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/pageListItemText">pageListItemText</a></td><td>Элемент списка</td></tr><tr><td><a href="/constructor/pageListItemBlocks">pageListItemBlocks</a></td><td>Элемент списка</td></tr></tbody></table>

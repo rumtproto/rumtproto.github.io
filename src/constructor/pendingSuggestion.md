@@ -1,42 +1,34 @@
 ---
-title: "pendingSuggestion (конструктор)"
+title: "pendingSuggestion"
 original: "https://core.telegram.org/constructor/pendingSuggestion"
 section: ref
 kind: constructor
+description: "Представляет пользовательскую ожидающую рекомендацию »."
 layout: layout.njk
 ---
 
 # pendingSuggestion
 
-*Конструктор из схемы TL.*
-
-> Represents a [custom pending suggestion »](https://core.telegram.org/api/config#custom-suggestions).
-
-## Определение TL
+Представляет [пользовательскую ожидающую рекомендацию »](/api/config/#custom-suggestions).
 
 ```
 pendingSuggestion#e7e82e12 suggestion:string title:TextWithEntities description:TextWithEntities url:string = PendingSuggestion;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| suggestion | [string](/type/string/) | The suggestion ID, can be passed to [help.dismissSuggestion](/method/help.dismissSuggestion/). |
-| title | [TextWithEntities](/type/TextWithEntities/) | Title of the suggestion. |
-| description | [TextWithEntities](/type/TextWithEntities/) | Body of the suggestion. |
-| url | [string](/type/string/) | URL to open when the user clicks on the suggestion. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>suggestion</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор подсказки, который можно передать в <a href="/method/help.dismissSuggestion">help.dismissSuggestion</a>.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Заголовок предложения.</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Текст рекомендации.</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>URL, который нужно открыть при нажатии пользователем на подсказку.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PendingSuggestion](/type/PendingSuggestion/)
 
-## Related pages
+### Связанные страницы
 
 #### [help.dismissSuggestion](/method/help.dismissSuggestion/)
 
-Dismiss a [suggestion, see here for more info »](https://core.telegram.org/api/config#suggestions).
+Отклонить [подсказку, подробнее см. здесь »](/api/config/#suggestions).
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

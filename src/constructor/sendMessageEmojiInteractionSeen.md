@@ -1,35 +1,30 @@
 ---
-title: "sendMessageEmojiInteractionSeen (конструктор)"
+title: "sendMessageEmojiInteractionSeen"
 original: "https://core.telegram.org/constructor/sendMessageEmojiInteractionSeen"
 section: ref
 kind: constructor
+description: "Пользователь наблюдает за реакцией анимированным эмодзи, вызванной другим пользователем; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # sendMessageEmojiInteractionSeen
 
-*Конструктор из схемы TL.*
-
-> User is watching an animated emoji reaction triggered by another user, [click here for more info »](https://core.telegram.org/api/animated-emojis#emoji-reactions).
-
-## Определение TL
+Пользователь наблюдает за реакцией анимированным эмодзи, вызванной другим пользователем; [подробнее см. здесь »](/api/animated-emojis/#emoji-reactions).
 
 ```
 sendMessageEmojiInteractionSeen#b665902e emoticon:string = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| emoticon | [string](/type/string/) | Emoji |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>emoticon</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:emoticon] Эмодзи</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Animated Emojis](https://core.telegram.org/api/animated-emojis)
+#### [Анимированные эмодзи](/api/animated-emojis/)
 
-Graphical telegram clients should transform emojis into their respective animated version.
+Графические клиенты Telegram должны заменять эмодзи соответствующей анимированной версией.

@@ -1,18 +1,15 @@
 ---
-title: "messages.getBotCallbackAnswer (метод)"
+title: "messages.getBotCallbackAnswer"
 original: "https://core.telegram.org/method/messages.getBotCallbackAnswer"
 section: ref
 kind: method
+description: "Нажать инлайн-кнопку обратного вызова и получить ответ от бота"
 layout: layout.njk
 ---
 
 # messages.getBotCallbackAnswer
 
-*Метод из схемы TL.*
-
-> Press an inline callback button and get a callback answer from the bot
-
-## Определение TL
+Нажать инлайн-кнопку обратного вызова и получить ответ от бота
 
 ```
 messages.botCallbackAnswer#36585ea4 flags:# alert:flags.1?true has_url:flags.3?true native_ui:flags.4?true message:flags.0?string url:flags.2?string cache_time:int = messages.BotCallbackAnswer;
@@ -20,47 +17,30 @@ messages.botCallbackAnswer#36585ea4 flags:# alert:flags.1?true has_url:flags.3?t
 messages.getBotCallbackAnswer#9342ca07 flags:# game:flags.1?true peer:InputPeer msg_id:int data:flags.0?bytes password:flags.2?InputCheckPasswordSRP = messages.BotCallbackAnswer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| game | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether this is a "play game" button |
-| peer | [InputPeer](/type/InputPeer/) | Where was the inline keyboard sent |
-| msg_id | [int](/type/int/) | ID of the Message with the inline keyboard |
-| data | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[bytes](/type/bytes/) | Callback data |
-| password | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[InputCheckPasswordSRP](/type/InputCheckPasswordSRP/) | For buttons [requiring you to verify your identity with your 2FA password](/constructor/keyboardButtonCallback/), the SRP payload generated using [SRP](/api/srp/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>game</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Является ли это кнопкой «играть в игру»</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Куда была отправлена инлайн-клавиатура</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения с инлайн-клавиатурой</td></tr><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/bytes">bytes</a></td><td>Данные для callback-запроса</td></tr><tr><td><strong>password</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/InputCheckPasswordSRP">InputCheckPasswordSRP</a></td><td>Для кнопок, <a href="/constructor/keyboardButtonCallback">требующих подтверждения личности паролем двухфакторной аутентификации</a>, — полезная нагрузка SRP, сформированная с помощью <a href="/api/srp">SRP</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.BotCallbackAnswer](/type/messages.BotCallbackAnswer/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_RESPONSE_TIMEOUT | A timeout occurred while fetching data from the bot. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | DATA_INVALID | Encrypted data invalid. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | PASSWORD_MISSING | You must [enable 2FA](/api/srp/) before executing this operation. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| -503 | Timeout | Timeout while fetching data. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_RESPONSE_TIMEOUT</td><td>При получении данных от бота истекло время ожидания.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>DATA_INVALID</td><td>Зашифрованные данные недействительны.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>PASSWORD_MISSING</td><td>Перед выполнением этой операции вы обязаны <a href="/api/srp">включить двухфакторную аутентификацию</a>.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>-503</td><td>Timeout</td><td>Тайм-аут при получении данных.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [keyboardButtonCallback](/constructor/keyboardButtonCallback/)
 
-Callback button
+Callback-кнопка
 
-Available only in [inline keyboards](/constructor/replyInlineMarkup/).
+Доступно только в [инлайн-клавиатурах](/constructor/replyInlineMarkup/).
 
-When pressed, clients send `data` to the bot, optionally providing the user's [2FA SRP parameters](/api/srp/) for identity verification, as described in [callback queries](https://core.telegram.org/api/bots/buttons#callback-queries).
+При нажатии клиенты отправляют боту `data`, при необходимости передавая [параметры 2FA SRP](/api/srp/) пользователя для подтверждения личности, как описано в разделе [callback-запросов](/api/bots/buttons/#callback-queries).
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.

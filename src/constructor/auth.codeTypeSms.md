@@ -1,27 +1,24 @@
 ---
-title: "auth.codeTypeSms (конструктор)"
+title: "auth.codeTypeSms"
 original: "https://core.telegram.org/constructor/auth.codeTypeSms"
 section: ref
 kind: constructor
+description: "В следующий раз код аутентификации будет доставлен через немедленно сброшенный входящий звонок."
 layout: layout.njk
 ---
 
 # auth.codeTypeSms
 
-*Конструктор из схемы TL.*
-
-> The next time, the authentication code will be delivered via an immediately canceled incoming call.
-
-## Определение TL
+В следующий раз код аутентификации будет доставлен через немедленно сброшенный входящий звонок.
 
 ```
 auth.codeTypeSms#72a3158c = auth.CodeType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [auth.CodeType](/type/auth.CodeType/)

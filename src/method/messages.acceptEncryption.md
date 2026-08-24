@@ -1,18 +1,15 @@
 ---
-title: "messages.acceptEncryption (метод)"
+title: "messages.acceptEncryption"
 original: "https://core.telegram.org/method/messages.acceptEncryption"
 section: ref
 kind: method
+description: "Подтверждает создание секретного чата"
 layout: layout.njk
 ---
 
 # messages.acceptEncryption
 
-*Метод из схемы TL.*
-
-> Confirms creation of a secret chat
-
-## Определение TL
+Подтверждает создание секретного чата
 
 ```
 encryptedChatEmpty#ab7ec0a0 id:int = EncryptedChat;
@@ -24,24 +21,16 @@ encryptedChatDiscarded#1e1c7c45 flags:# history_deleted:flags.0?true id:int = En
 messages.acceptEncryption#3dbc0415 peer:InputEncryptedChat g_b:bytes key_fingerprint:long = EncryptedChat;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputEncryptedChat](/type/InputEncryptedChat/) | Secret chat ID |
-| g_b | [bytes](/type/bytes/) | B = g ^ b mod p, see [Wikipedia](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) |
-| key_fingerprint | [long](/type/long/) | 64-bit fingerprint of the received key |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputEncryptedChat">InputEncryptedChat</a></td><td>[@term:peer] Идентификатор секретного чата</td></tr><tr><td><strong>g_b</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td><code>B = g ^ b mod p</code>, см. <a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange">Википедию</a></td></tr><tr><td><strong>key_fingerprint</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>64-битный отпечаток полученного ключа</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [EncryptedChat](/type/EncryptedChat/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | ENCRYPTION_ALREADY_ACCEPTED | Secret chat already accepted. |
-| 400 | ENCRYPTION_ALREADY_DECLINED | The secret chat was already declined. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>ENCRYPTION_ALREADY_ACCEPTED</td><td>Секретный чат уже принят.</td></tr><tr><td>400</td><td>ENCRYPTION_ALREADY_DECLINED</td><td>Секретный чат уже был отклонён.</td></tr></tbody></table>

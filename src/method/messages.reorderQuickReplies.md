@@ -1,19 +1,17 @@
 ---
-title: "messages.reorderQuickReplies (метод)"
+title: "messages.reorderQuickReplies"
 original: "https://core.telegram.org/method/messages.reorderQuickReplies"
 section: ref
 kind: method
+description: "Изменить порядок быстрых ответов."
 layout: layout.njk
 ---
 
 # messages.reorderQuickReplies
 
-*Метод из схемы TL.*
+Изменить порядок [быстрых ответов](/api/business/#quick-reply-shortcuts).
 
-> Reorder [quick reply shortcuts](https://core.telegram.org/api/business#quick-reply-shortcuts).
-> This will emit an [updateQuickReplies](/constructor/updateQuickReplies/) update to other logged-in sessions.
-
-## Определение TL
+Это отправит обновление [updateQuickReplies](/constructor/updateQuickReplies/) в другие активные сессии.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,30 +20,26 @@ boolTrue#997275b5 = Bool;
 messages.reorderQuickReplies#60331907 order:Vector<int> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| order | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | IDs of all created [quick reply shortcuts](https://core.telegram.org/api/business#quick-reply-shortcuts), in the desired order. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>order</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы всех созданных <a href="/api/business#quick-reply-shortcuts">шаблонов быстрых ответов</a> в нужном порядке.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.
 
 #### [updateQuickReplies](/constructor/updateQuickReplies/)
 
-Info about or the order of [quick reply shortcuts »](https://core.telegram.org/api/business#quick-reply-shortcuts) was changed.
+Изменились сведения о [шаблонах быстрых ответов »](/api/business/#quick-reply-shortcuts) или их порядок.

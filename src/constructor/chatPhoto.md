@@ -1,39 +1,30 @@
 ---
-title: "chatPhoto (конструктор)"
+title: "chatPhoto"
 original: "https://core.telegram.org/constructor/chatPhoto"
 section: ref
 kind: constructor
+description: "Фотография профиля группы."
 layout: layout.njk
 ---
 
 # chatPhoto
 
-*Конструктор из схемы TL.*
-
-> Group profile photo.
-
-## Определение TL
+Фотография профиля группы.
 
 ```
 chatPhoto#1c6e1c11 flags:# has_video:flags.0?true photo_id:long stripped_thumb:flags.1?bytes dc_id:int = ChatPhoto;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| has_video | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the user has an animated profile picture |
-| photo_id | [long](/type/long/) | Photo ID |
-| stripped_thumb | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[bytes](/type/bytes/) | [Stripped thumbnail](https://core.telegram.org/api/files/#stripped-thumbnails) |
-| dc_id | [int](/type/int/) | DC where this photo is stored |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>has_video</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Есть ли у пользователя анимированная фотография профиля</td></tr><tr><td><strong>photo_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор фотографии</td></tr><tr><td><strong>stripped_thumb</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/bytes">bytes</a></td><td><a href="/api/files#stripped-thumbnails">Урезанная миниатюра</a></td></tr><tr><td><strong>dc_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>DC, где хранится эта фотография</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatPhoto](/type/ChatPhoto/)
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

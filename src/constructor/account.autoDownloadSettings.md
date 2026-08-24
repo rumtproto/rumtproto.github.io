@@ -1,31 +1,24 @@
 ---
-title: "account.autoDownloadSettings (конструктор)"
+title: "account.autoDownloadSettings"
 original: "https://core.telegram.org/constructor/account.autoDownloadSettings"
 section: ref
 kind: constructor
+description: "Настройки автозагрузки медиафайлов"
 layout: layout.njk
 ---
 
 # account.autoDownloadSettings
 
-*Конструктор из схемы TL.*
-
-> Media autodownload settings
-
-## Определение TL
+Настройки автозагрузки медиафайлов
 
 ```
 account.autoDownloadSettings#63cacf26 low:AutoDownloadSettings medium:AutoDownloadSettings high:AutoDownloadSettings = account.AutoDownloadSettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| low | [AutoDownloadSettings](/type/AutoDownloadSettings/) | Low data usage preset |
-| medium | [AutoDownloadSettings](/type/AutoDownloadSettings/) | Medium data usage preset |
-| high | [AutoDownloadSettings](/type/AutoDownloadSettings/) | High data usage preset |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>low</strong></td><td style="text-align: center;"><a href="/type/AutoDownloadSettings">AutoDownloadSettings</a></td><td>Профиль с низким расходом трафика</td></tr><tr><td><strong>medium</strong></td><td style="text-align: center;"><a href="/type/AutoDownloadSettings">AutoDownloadSettings</a></td><td>Профиль среднего потребления трафика</td></tr><tr><td><strong>high</strong></td><td style="text-align: center;"><a href="/type/AutoDownloadSettings">AutoDownloadSettings</a></td><td>Профиль высокого потребления трафика</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.AutoDownloadSettings](/type/account.AutoDownloadSettings/)

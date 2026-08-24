@@ -1,477 +1,59 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>user (конструктор) — MTProto по-русски</title>
-<link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a>
-    <nav class="top-nav">
-      <a href="/mtproto/">MTProto</a>
-      <a href="/api/">API</a>
-      <a href="/schema/">Схема</a>
-      <a href="/glossary/">Глоссарий</a>
-    </nav>
-  </div>
-</header>
-<div class="layout">
-  <aside class="sidebar">
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Протокол MTProto</div>
-        <ul>
-          
-            <li><a href="/mtproto/">MTProto — обзор протокола</a></li>
-          
-            <li><a href="/mtproto_v1/">MTProto версии 1.0 (устаревшая)</a></li>
-          
-            <li><a href="/mtproto/auth_key/">Создание авторизационного ключа (auth_key)</a></li>
-          
-            <li><a href="/mtproto/description/">Подробное описание MTProto</a></li>
-          
-            <li><a href="/mtproto/mtproto-transports/">MTProto-транспорты: форматы кадров и обфускация</a></li>
-          
-            <li><a href="/mtproto/samples-auth_key/">Пример создания авторизационного ключа</a></li>
-          
-            <li><a href="/mtproto/security_guidelines/">Рекомендации по безопасности клиентских реализаций</a></li>
-          
-            <li><a href="/mtproto/serialize/">Сериализация данных (язык TL)</a></li>
-          
-            <li><a href="/mtproto/service_messages_about_messages/">Сообщения о сообщениях</a></li>
-          
-            <li><a href="/mtproto/service_messages/">Сервисные сообщения</a></li>
-          
-            <li><a href="/mtproto/TL/">Язык TL</a></li>
-          
-            <li><a href="/mtproto/transports/">Транспорты</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Telegram API</div>
-        <ul>
-          
-            <li><a href="/api/">Telegram API</a></li>
-          
-            <li><a href="/api/auth/">Авторизация пользователя</a></li>
-          
-            <li><a href="/api/end-to-end/">Секретные чаты (сквозное шифрование)</a></li>
-          
-            <li><a href="/api/errors/">Ошибки</a></li>
-          
-            <li><a href="/api/files/">Работа с файлами</a></li>
-          
-            <li><a href="/api/invoking/">Вызов методов</a></li>
-          
-            <li><a href="/api/layers/">Слои схемы</a></li>
-          
-            <li><a href="/api/pfs/">Perfect Forward Secrecy (PFS)</a></li>
-          
-            <li><a href="/api/srp/">SRP: проверка облачного пароля (2FA)</a></li>
-          
-            <li><a href="/api/updates/">Получение обновлений</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Схема TL</div>
-        <ul>
-          
-            <li><a href="/end-to-end-json/">Схема секретных чатов (end-to-end) в формате JSON</a></li>
-          
-            <li><a href="/json/">Схема TL в формате JSON (API)</a></li>
-          
-            <li><a href="/methods/">Методы по категориям</a></li>
-          
-            <li><a href="/mtproto-json/">Схема MTProto в формате JSON</a></li>
-          
-            <li><a href="/schema/">Схема TL (TL-schema)</a></li>
-          
-            <li><a href="/schema/end-to-end/">Схема слоя секретных чатов (end-to-end)</a></li>
-          
-            <li><a href="/schema/mtproto/">Схема слоя MTProto</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Другое</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-            <li><a href="/techfaq/">Технический FAQ</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Справочник схемы</div>
-        <ul>
-          
-            <li><a href="/constructor/">Конструкторы (справочник)</a></li>
-          
-            <li><a href="/method/">Методы (справочник)</a></li>
-          
-            <li><a href="/type/">Типы (справочник)</a></li>
-          
-        </ul>
-      </div>
-    
-      <div class="nav-group">
-        <div class="nav-group-title">Приложение</div>
-        <ul>
-          
-            <li><a href="/glossary/">Глоссарий терминов</a></li>
-          
-        </ul>
-      </div>
-    
-  </aside>
-  <main class="content">
-    <article>
-      <h1 id="user" tabindex="-1">user</h1>
-<p><em>Конструктор из схемы TL.</em></p>
-<blockquote>
-<p>Indicates info about a certain user.
-Unless specified otherwise, when updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
-See <a href="https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106">here »</a> for an implementation of the logic to use when updating the <a href="https://core.telegram.org/api/peers">local user peer database</a>.</p>
-</blockquote>
-<h2 id="определение-tl" tabindex="-1">Определение TL</h2>
-<pre><code>user#31774388 flags:# self:flags.10?true contact:flags.11?true mutual_contact:flags.12?true deleted:flags.13?true bot:flags.14?true bot_chat_history:flags.15?true bot_nochats:flags.16?true verified:flags.17?true restricted:flags.18?true min:flags.20?true bot_inline_geo:flags.21?true support:flags.23?true scam:flags.24?true apply_min_photo:flags.25?true fake:flags.26?true bot_attach_menu:flags.27?true premium:flags.28?true attach_menu_enabled:flags.29?true flags2:# bot_can_edit:flags2.1?true close_friend:flags2.2?true stories_hidden:flags2.3?true stories_unavailable:flags2.4?true contact_require_premium:flags2.10?true bot_business:flags2.11?true bot_has_main_app:flags2.13?true bot_forum_view:flags2.16?true bot_forum_can_manage_topics:flags2.17?true id:long access_hash:flags.0?long first_name:flags.1?string last_name:flags.2?string username:flags.3?string phone:flags.4?string photo:flags.5?UserProfilePhoto status:flags.6?UserStatus bot_info_version:flags.14?int restriction_reason:flags.18?Vector&lt;RestrictionReason&gt; bot_inline_placeholder:flags.19?string lang_code:flags.22?string emoji_status:flags.30?EmojiStatus usernames:flags2.0?Vector&lt;Username&gt; stories_max_id:flags2.5?RecentStory color:flags2.8?PeerColor profile_color:flags2.9?PeerColor bot_active_users:flags2.12?int bot_verification_icon:flags2.14?long send_paid_messages_stars:flags2.15?long = User;
-</code></pre>
-<h2 id="параметры" tabindex="-1">Параметры</h2>
-<table>
-<thead>
-<tr>
-<th>Имя</th>
-<th>Тип</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>flags</td>
-<td><a href="https://core.telegram.org/type/%23">#</a></td>
-<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
-</tr>
-<tr>
-<td>self</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true/">true</a></td>
-<td>Whether this user indicates the currently logged in user</td>
-</tr>
-<tr>
-<td>contact</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true/">true</a></td>
-<td>Whether this user is a contact When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, do not apply changes to this field if the min flag is set.</td>
-</tr>
-<tr>
-<td>mutual_contact</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true/">true</a></td>
-<td>Whether this user is a mutual contact. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, do not apply changes to this field if the min flag is set.</td>
-</tr>
-<tr>
-<td>deleted</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true/">true</a></td>
-<td>Whether the account of this user was deleted. Changes to this flag should invalidate the local <a href="/constructor/userFull/">userFull</a> cache for this user ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
-</tr>
-<tr>
-<td>bot</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true/">true</a></td>
-<td>Is this user a bot? Changes to this flag should invalidate the local <a href="/constructor/userFull/">userFull</a> cache for this user ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
-</tr>
-<tr>
-<td>bot_chat_history</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/constructor/true/">true</a></td>
-<td>Can the bot see all messages in groups?</td>
-</tr>
-<tr>
-<td>bot_nochats</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true/">true</a></td>
-<td>Can the bot be added to groups?</td>
-</tr>
-<tr>
-<td>verified</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/constructor/true/">true</a></td>
-<td>Whether this user is verified</td>
-</tr>
-<tr>
-<td>restricted</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/constructor/true/">true</a></td>
-<td>Access to this user must be restricted for the reason specified in restriction_reason</td>
-</tr>
-<tr>
-<td>min</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/constructor/true/">true</a></td>
-<td>See <a href="https://core.telegram.org/api/min">min</a></td>
-</tr>
-<tr>
-<td>bot_inline_geo</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/constructor/true/">true</a></td>
-<td>Whether the bot can request our geolocation in inline mode</td>
-</tr>
-<tr>
-<td>support</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/constructor/true/">true</a></td>
-<td>Whether this is an official support user</td>
-</tr>
-<tr>
-<td>scam</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/constructor/true/">true</a></td>
-<td>This may be a scam user</td>
-</tr>
-<tr>
-<td>apply_min_photo</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/constructor/true/">true</a></td>
-<td>If set and min is set, the value of photo can be used to update the local database, see the documentation of that flag for more info.</td>
-</tr>
-<tr>
-<td>fake</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.26?<a href="/constructor/true/">true</a></td>
-<td>If set, this user was reported by many users as a fake or scam user: be careful when interacting with them.</td>
-</tr>
-<tr>
-<td>bot_attach_menu</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.27?<a href="/constructor/true/">true</a></td>
-<td>Whether this bot offers an <a href="https://core.telegram.org/api/bots/attach">attachment menu web app</a></td>
-</tr>
-<tr>
-<td>premium</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.28?<a href="/constructor/true/">true</a></td>
-<td>Whether this user is a Telegram Premium user Changes to this flag should invalidate the local <a href="/constructor/userFull/">userFull</a> cache for this user ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info. Changes to this flag if the self flag is set should also trigger the following calls, to refresh the respective caches: - The <a href="/method/help.getConfig/">help.getConfig</a> cache - The <a href="/method/messages.getTopReactions/">messages.getTopReactions</a> cache if the bot flag is not set</td>
-</tr>
-<tr>
-<td>attach_menu_enabled</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.29?<a href="/constructor/true/">true</a></td>
-<td>Whether we installed the <a href="https://core.telegram.org/api/bots/attach">attachment menu web app</a> offered by this bot. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, do not apply changes to this field if the min flag is set.</td>
-</tr>
-<tr>
-<td>flags2</td>
-<td><a href="https://core.telegram.org/type/%23">#</a></td>
-<td>Flags, see <a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">TL conditional fields</a></td>
-</tr>
-<tr>
-<td>bot_can_edit</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.1?<a href="/constructor/true/">true</a></td>
-<td>Whether we can edit the profile picture, name, about text and description of this bot because we own it. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, do not apply changes to this field if the min flag is set. Changes to this flag (if min is not set) should invalidate the local <a href="/constructor/userFull/">userFull</a> cache for this user ID.</td>
-</tr>
-<tr>
-<td>close_friend</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.2?<a href="/constructor/true/">true</a></td>
-<td>Whether we marked this user as a <a href="https://core.telegram.org/api/privacy">close friend, see here » for more info</a>. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, do not apply changes to this field if the min flag is set.</td>
-</tr>
-<tr>
-<td>stories_hidden</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.3?<a href="/constructor/true/">true</a></td>
-<td>Whether we have <a href="https://core.telegram.org/api/stories#hiding-stories-of-other-users">hidden »</a> all active stories of this user. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, do not apply changes to this field if the min flag is set.</td>
-</tr>
-<tr>
-<td>stories_unavailable</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.4?<a href="/constructor/true/">true</a></td>
-<td>No stories from this user are visible.</td>
-</tr>
-<tr>
-<td>contact_require_premium</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.10?<a href="/constructor/true/">true</a></td>
-<td>See <a href="https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users">here for more info on this flag »</a>.</td>
-</tr>
-<tr>
-<td>bot_business</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.11?<a href="/constructor/true/">true</a></td>
-<td>Whether this bot can be <a href="https://core.telegram.org/api/bots/connected-business-bots">connected to a user as specified here »</a>.</td>
-</tr>
-<tr>
-<td>bot_has_main_app</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.13?<a href="/constructor/true/">true</a></td>
-<td>If set, this bot has configured a <a href="https://core.telegram.org/api/bots/webapps#main-mini-apps">Main Mini App »</a>.</td>
-</tr>
-<tr>
-<td>bot_forum_view</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.16?<a href="/constructor/true/">true</a></td>
-<td>If set, this bot supports <a href="https://core.telegram.org/api/forum#bot-forums">bot forum topics »</a>.</td>
-</tr>
-<tr>
-<td>bot_forum_can_manage_topics</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.17?<a href="/constructor/true/">true</a></td>
-<td>If set, this bot supports <a href="https://core.telegram.org/api/forum#bot-forums">bot forum topics »</a>, and users (not just the bot!) are allowed to create and manage bot forum topics in their private chat with the bot.</td>
-</tr>
-<tr>
-<td>bot_can_manage_bots</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.18?<a href="/constructor/true/">true</a></td>
-<td>If set, this bot is a <a href="https://core.telegram.org/api/bots/managed-bots">manager bot</a> that can create and manage <a href="https://core.telegram.org/api/bots/managed-bots">managed bots »</a> on behalf of the user.</td>
-</tr>
-<tr>
-<td>bot_guestchat</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.19?<a href="/constructor/true/">true</a></td>
-<td>If set, this bot can be invoked as a <a href="https://core.telegram.org/api/bots/guest-mode">guest in chats »</a>.</td>
-</tr>
-<tr>
-<td>id</td>
-<td><a href="/type/long/">long</a></td>
-<td>ID of the user, see <a href="https://core.telegram.org/api/peers#peer-id">here »</a> for more info and the available ID range.</td>
-</tr>
-<tr>
-<td>access_hash</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long/">long</a></td>
-<td>Access hash of the user, see <a href="https://core.telegram.org/api/peers#access-hash">here »</a> for more info. If this flag is set, when updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, generate a virtual flag called min_access_hash, which is: - Set to true if min is set AND -- The phone flag is not set OR -- The phone flag is set and the associated phone number string is non-empty - Set to false otherwise. Then, apply both access_hash and min_access_hash to the local database if: - min_access_hash is false OR - min_access_hash is true AND -- There is no locally cached object for this user OR -- There is no access_hash in the local cache OR -- The cached object's min_access_hash is also true If the final merged object stored to the database has the min_access_hash field set to true, the related access_hash is only suitable to use in <a href="/constructor/inputPeerPhotoFileLocation/">inputPeerPhotoFileLocation »</a>, to directly <a href="/api/files/">download the profile pictures</a> of users, everywhere else a inputPeer*FromMessage constructor will have to be generated as specified <a href="https://core.telegram.org/api/min">here »</a>. Bots can also use min access hashes in some conditions, by passing 0 instead of the min access hash.</td>
-</tr>
-<tr>
-<td>first_name</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string/">string</a></td>
-<td>First name. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set.</td>
-</tr>
-<tr>
-<td>last_name</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string/">string</a></td>
-<td>Last name. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set.</td>
-</tr>
-<tr>
-<td>username</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string/">string</a></td>
-<td>Main active username. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set. Changes to this flag should invalidate the local <a href="/constructor/userFull/">userFull</a> cache for this user ID if the above conditions are respected and the bot_can_edit flag is also set.</td>
-</tr>
-<tr>
-<td>phone</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string/">string</a></td>
-<td>Phone number. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set.</td>
-</tr>
-<tr>
-<td>photo</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/UserProfilePhoto/">UserProfilePhoto</a></td>
-<td>Profile picture of user. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The apply_min_photo flag is set OR -- The min flag of the locally cached user entry is set.</td>
-</tr>
-<tr>
-<td>status</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/UserStatus/">UserStatus</a></td>
-<td>Online status of user. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set OR -- The locally cached user entry is equal to <a href="/constructor/userStatusEmpty/">userStatusEmpty</a>.</td>
-</tr>
-<tr>
-<td>bot_info_version</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/int/">int</a></td>
-<td>Version of the <a href="/constructor/userFull/">bot_info field in userFull</a>, incremented every time it changes. Changes to this flag should invalidate the local <a href="/constructor/userFull/">userFull</a> cache for this user ID, see <a href="https://core.telegram.org/api/peers#full-info-database">here »</a> for more info.</td>
-</tr>
-<tr>
-<td>restriction_reason</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="https://core.telegram.org/type/Vector%20t">Vector</a>&lt;<a href="/type/RestrictionReason/">RestrictionReason</a>&gt;</td>
-<td>Contains the reason why access to this user must be restricted.</td>
-</tr>
-<tr>
-<td>bot_inline_placeholder</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/type/string/">string</a></td>
-<td>Inline placeholder for this inline bot</td>
-</tr>
-<tr>
-<td>lang_code</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/type/string/">string</a></td>
-<td>Language code of the user</td>
-</tr>
-<tr>
-<td>emoji_status</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags</a>.30?<a href="/type/EmojiStatus/">EmojiStatus</a></td>
-<td><a href="https://core.telegram.org/api/emoji-status">Emoji status</a></td>
-</tr>
-<tr>
-<td>usernames</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.0?<a href="https://core.telegram.org/type/Vector%20t">Vector</a>&lt;<a href="/type/Username/">Username</a>&gt;</td>
-<td>Additional usernames. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, apply changes to this field only if: - The min flag is not set OR - The min flag is set AND -- The min flag of the locally cached user entry is set. Changes to this flag (if the above conditions are respected) should invalidate the local <a href="/constructor/userFull/">userFull</a> cache for this user ID.</td>
-</tr>
-<tr>
-<td>stories_max_id</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.5?<a href="/type/RecentStory/">RecentStory</a></td>
-<td>Summary of the user's <a href="https://core.telegram.org/api/stories#recent-story-summaries">active stories »</a>. When updating the <a href="https://core.telegram.org/api/peers">local peer database</a>, do not apply changes to this field if the min flag of the incoming constructor is set.</td>
-</tr>
-<tr>
-<td>color</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.8?<a href="/type/PeerColor/">PeerColor</a></td>
-<td>The user's <a href="https://core.telegram.org/api/colors">accent color</a>.</td>
-</tr>
-<tr>
-<td>profile_color</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.9?<a href="/type/PeerColor/">PeerColor</a></td>
-<td>The user's <a href="https://core.telegram.org/api/colors">profile color</a>.</td>
-</tr>
-<tr>
-<td>bot_active_users</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.12?<a href="/type/int/">int</a></td>
-<td>Monthly Active Users (MAU) of this bot (may be absent for small bots).</td>
-</tr>
-<tr>
-<td>bot_verification_icon</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.14?<a href="/type/long/">long</a></td>
-<td>Describes a <a href="https://core.telegram.org/api/bots/verification">bot verification icon »</a>.</td>
-</tr>
-<tr>
-<td>send_paid_messages_stars</td>
-<td><a href="https://core.telegram.org/mtproto/TL-combinators#conditional-fields">flags2</a>.15?<a href="/type/long/">long</a></td>
-<td>If set, the user has enabled <a href="https://core.telegram.org/api/paid-messages">paid messages »</a>, we might need to pay the specified amount of <a href="https://core.telegram.org/api/stars">Stars</a> to send them messages, depending on the configured exceptions: check <a href="/constructor/userFull/">userFull</a>.send_paid_messages_stars or <a href="/method/users.getRequirementsToContact/">users.getRequirementsToContact</a> to see if the currently logged in user actually has to pay or not, see <a href="https://core.telegram.org/api/paid-messages">here »</a> for the full flow.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="тип" tabindex="-1">Тип</h2>
-<p><a href="/type/User/">User</a></p>
-<h2 id="related-pages" tabindex="-1">Related pages</h2>
-<h4 id="peer-database" tabindex="-1"><a href="https://core.telegram.org/api/peers">Peer database</a></h4>
-<p>Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.</p>
-<h4 id="userfull" tabindex="-1"><a href="/constructor/userFull/">userFull</a></h4>
-<p>Extended user info</p>
-<p>When updating the <a href="https://core.telegram.org/api/peers">local peer database »</a>, all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).</p>
-<h4 id="min-constructors" tabindex="-1"><a href="https://core.telegram.org/api/min">Min constructors</a></h4>
-<p>In some situations user and channel constructors have reduced set of fields present (although id is always there) and min flag set.</p>
-<h4 id="bot-attachment-menu-and-side-menu-entries" tabindex="-1"><a href="https://core.telegram.org/api/bots/attach">Bot attachment menu and side menu entries</a></h4>
-<p>Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile web apps.</p>
-<h4 id="help.getconfig" tabindex="-1"><a href="/method/help.getConfig/">help.getConfig</a></h4>
-<p>Returns current configuration, including data center configuration.</p>
-<h4 id="messages.gettopreactions" tabindex="-1"><a href="/method/messages.getTopReactions/">messages.getTopReactions</a></h4>
-<p>Got popular <a href="https://core.telegram.org/api/reactions">message reactions</a></p>
-<h4 id="privacy-settings" tabindex="-1"><a href="https://core.telegram.org/api/privacy">Privacy settings</a></h4>
-<p>Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.</p>
-<h4 id="telegram-stories" tabindex="-1"><a href="https://core.telegram.org/api/stories">Telegram Stories</a></h4>
-<p>Telegram users and channels can easily post and view stories through the API.</p>
-<h4 id="connected-business-bots" tabindex="-1"><a href="https://core.telegram.org/api/bots/connected-business-bots">Connected business bots</a></h4>
-<p>Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.</p>
-<h4 id="mini-apps-on-telegram" tabindex="-1"><a href="https://core.telegram.org/api/bots/webapps">Mini Apps on Telegram</a></h4>
-<p>Bots can offer users interactive HTML5 web apps to completely replace any website.</p>
-<h4 id="forum-topics" tabindex="-1"><a href="https://core.telegram.org/api/forum">Forum topics</a></h4>
-<p>Telegram allows creating forums with multiple distinct topics.</p>
-<h4 id="managed-bots" tabindex="-1"><a href="https://core.telegram.org/api/bots/managed-bots">Managed bots</a></h4>
-<p>Users can create <strong>managed</strong> bots (which are controlled by a specific manager bot) directly through the MTProto API, without interacting with <a href="https://t.me/botfather">@BotFather</a>.</p>
-<h4 id="guest-mode-for-bots" tabindex="-1"><a href="https://core.telegram.org/api/bots/guest-mode">Guest mode for bots</a></h4>
-<p>Guest bots can be queried by username from <strong>any</strong> non-secret private chat, group and supergroup (except for groups/supergroups with <a href="https://core.telegram.org/api/content-protection#for-groups-and-channels">content protection »</a> enabled), posting their results directly into the chat, even if they're not a member.</p>
-<h4 id="inputpeerphotofilelocation" tabindex="-1"><a href="/constructor/inputPeerPhotoFileLocation/">inputPeerPhotoFileLocation</a></h4>
-<p>Location of profile photo of channel/group/supergroup/user</p>
-<h4 id="uploading-and-downloading-files" tabindex="-1"><a href="/api/files/">Uploading and Downloading Files</a></h4>
-<p>How to transfer large data batches correctly.</p>
-<h4 id="userstatusempty" tabindex="-1"><a href="/constructor/userStatusEmpty/">userStatusEmpty</a></h4>
-<p>User status has not been set yet.</p>
-<h4 id="emoji-status" tabindex="-1"><a href="https://core.telegram.org/api/emoji-status">Emoji status</a></h4>
-<p>Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.</p>
-<h4 id="accent-colors" tabindex="-1"><a href="https://core.telegram.org/api/colors">Accent colors</a></h4>
-<p>Telegram users and channels can change the accent color and background pattern of their profile page and their messages!</p>
-<h4 id="third-party-verification" tabindex="-1"><a href="https://core.telegram.org/api/bots/verification">Third-party verification</a></h4>
-<p>To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and reduce misinformation.</p>
-<h4 id="paid-messages" tabindex="-1"><a href="https://core.telegram.org/api/paid-messages">Paid messages</a></h4>
-<p>Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.</p>
-<h4 id="telegram-stars" tabindex="-1"><a href="https://core.telegram.org/api/stars">Telegram Stars</a></h4>
-<p>Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.</p>
-<h4 id="users.getrequirementstocontact" tabindex="-1"><a href="/method/users.getRequirementsToContact/">users.getRequirementsToContact</a></h4>
-<p>Check whether we can write to the specified users, used to implement bulk checks for <a href="https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users">Premium-only messages »</a> and <a href="https://core.telegram.org/api/paid-messages">paid messages »</a>.</p>
-<p>For each input user, returns a <a href="/type/RequirementToContact/">RequirementToContact</a> constructor (at the same offset in the vector) containing requirements to contact them.</p>
-
-      <div class="source-note">
-        Оригинал: <a href="https://core.telegram.org/constructor/user" rel="noopener">https://core.telegram.org/constructor/user</a>
-      </div>
-    </article>
-  </main>
-</div>
-<footer class="site-footer">
-  Неофициальный перевод документации <a href="https://core.telegram.org/mtproto">core.telegram.org</a>.
-  Термины сохранены на языке оригинала; права на оригинальные тексты принадлежат Telegram FZ-LLC.
-</footer>
-</body>
-</html>
+<!doctype html> <html lang="ru"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script> <title>user — MTProto по-русски</title> <meta name="description" content="Содержит сведения об определённом пользователе."> <meta property="og:title" content="user"> <meta property="og:description" content="Содержит сведения об определённом пользователе."> <meta property="og:type" content="article"> <meta property="og:site_name" content="MTProto по-русски"> <meta property="og:locale" content="ru_RU"> <meta property="og:url" content="https://rumtproto.github.io/constructor/user/"> <meta property="og:image" content="https://rumtproto.github.io/apple-touch-icon.png"> <meta name="twitter:card" content="summary"> <link rel="canonical" href="https://rumtproto.github.io/constructor/user/"> <link rel="alternate" hreflang="en" href="https://mirrortproto.github.io/constructor/user/"> <link rel="alternate" hreflang="ru" href="https://rumtproto.github.io/constructor/user/"> <link rel="manifest" href="/manifest.webmanifest"> <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"> <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)"> <link rel="icon" href="/favicon.svg" type="image/svg+xml"> <link rel="icon" href="/icon-64.png" type="image/png" sizes="64x64"> <link rel="apple-touch-icon" href="/apple-touch-icon.png"> <link rel="stylesheet" href="/css/style.css"> <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Схема","item":"https://rumtproto.github.io/schema/"},{"@type":"ListItem","position":2,"name":"Конструкторы","item":"https://rumtproto.github.io/constructor/"}]}
+</script> </head> <body data-pagefind-filter="Раздел:Схема"> <a class="skip-link" href="#content">К содержанию</a> <header class="site-header"> <div class="header-inner"> <a class="brand" href="/">MTProto&nbsp;<span>документация на русском</span></a> <nav class="top-nav" aria-label="Разделы"> <a href="/api/" >API</a> <a href="/mtproto/" >MTProto</a> <a href="/schema/" class="active" aria-current="section">Схема</a> <a href="/techfaq/" >FAQ</a> </nav> <form class="site-search" action="/search/" method="get" role="search"> <span class="search-field"> <input type="search" name="q" placeholder="Поиск" aria-label="Поиск (нажмите / для фокуса)"> <kbd class="search-kbd" aria-hidden="true">/</kbd> </span> </form> <a class="search-button" href="/search/" aria-label="Поиск"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg> </a> <a class="source-link" href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener"> <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="source-link-text">Исходный код</span> </a> <div class="theme-switch" role="group" aria-label="Цветовая тема"> <div class="theme-seg"> <button type="button" data-mode="auto" aria-pressed="false" title="Системная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="light" aria-pressed="false" title="Светлая тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> </button> <button type="button" data-mode="dark" aria-pressed="false" title="Тёмная тема"> <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> <button class="theme-toggle" type="button" data-mode="auto" title="Цветовая тема: auto"> <svg class="icon-auto" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-light" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg> <svg class="icon-dark" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg> </button> </div> </div> </header> <div class="layout"> <aside class="sidebar" aria-label="Страницы раздела"> <div class="nav-group"> <div class="nav-group-title">Схема</div> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </div> </aside> <main class="content" id="content"> <nav class="crumbs" aria-label="Хлебные крошки"> <a href="/schema/">Схема</a> <span class="crumb-sep">›</span> <a href="/constructor/">Конструкторы</a> <span class="crumb-sep">›</span> <span class="crumb-current">user</span> </nav> <div class="mobile-nav" role="navigation" aria-label="Страницы раздела"> <details class="mobile-nav-group"> <summary>Схема</summary> <ul> <li><a href="/schema/">Схема</a></li> <li><a href="/schema/mtproto/">Актуальная TL-схема MTProto</a></li> <li><a href="/schema/end-to-end/">Актуальная TL-схема сквозного шифрования</a></li> <li><a href="/methods/">Доступные методы</a></li> <li><a href="/schema/json/">json</a></li> <li><a href="/schema/mtproto-json/">mtproto-json</a></li> <li><a href="/schema/end-to-end-json/">end-to-end-json</a></li> <li><a href="/constructor/">Конструкторы (справочник)</a></li> <li><a href="/method/">Методы (справочник)</a></li> <li><a href="/type/">Типы (справочник)</a></li> </ul> </details> </div> <article> <h1 id="user" tabindex="-1">user <a class="header-anchor" href="#user" aria-hidden="true">#</a></h1> <p id="p-1"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-1" rel="noopener" title="Перевод абзаца 1" data-tip="Перевод: абзац 1 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Содержит сведения об определённом пользователе.<a class="p-anchor" href="#p-1" aria-label="Ссылка на этот абзац">¶</a></p> <p id="p-2"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-2" rel="noopener" title="Перевод абзаца 2" data-tip="Перевод: абзац 2 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Если не указано иное, при обновлении <a href="/api/peers/">локальной базы пиров</a> все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).<a class="p-anchor" href="#p-2" aria-label="Ссылка на этот абзац">¶</a></p> <p id="p-3"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-3" rel="noopener" title="Перевод абзаца 3" data-tip="Перевод: абзац 3 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> См. <a href="https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106">здесь »</a> реализацию логики, которую следует применять при обновлении <a href="/api/peers/">локальной базы пиров-пользователей</a>.<a class="p-anchor" href="#p-3" aria-label="Ссылка на этот абзац">¶</a></p> <pre><code>user#31774388 flags:# self:flags.10?true contact:flags.11?true mutual_contact:flags.12?true deleted:flags.13?true bot:flags.14?true bot_chat_history:flags.15?true bot_nochats:flags.16?true verified:flags.17?true restricted:flags.18?true min:flags.20?true bot_inline_geo:flags.21?true support:flags.23?true scam:flags.24?true apply_min_photo:flags.25?true fake:flags.26?true bot_attach_menu:flags.27?true premium:flags.28?true attach_menu_enabled:flags.29?true flags2:# bot_can_edit:flags2.1?true close_friend:flags2.2?true stories_hidden:flags2.3?true stories_unavailable:flags2.4?true contact_require_premium:flags2.10?true bot_business:flags2.11?true bot_has_main_app:flags2.13?true bot_forum_view:flags2.16?true bot_forum_can_manage_topics:flags2.17?true id:long access_hash:flags.0?long first_name:flags.1?string last_name:flags.2?string username:flags.3?string phone:flags.4?string photo:flags.5?UserProfilePhoto status:flags.6?UserStatus bot_info_version:flags.14?int restriction_reason:flags.18?Vector&lt;RestrictionReason&gt; bot_inline_placeholder:flags.19?string lang_code:flags.22?string emoji_status:flags.30?EmojiStatus usernames:flags2.0?Vector&lt;Username&gt; stories_max_id:flags2.5?RecentStory color:flags2.8?PeerColor profile_color:flags2.9?PeerColor bot_active_users:flags2.12?int bot_verification_icon:flags2.14?long send_paid_messages_stars:flags2.15?long = User;
+</code></pre> <span class="heading-alias" id="параметры"></span><h3 id="parameters" tabindex="-1">Параметры <a class="header-anchor" href="#parameters" aria-hidden="true">#</a></h3> <table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td><span class="para-labels"><span class="para-label para-term" tabindex="0" role="note" title="Термин: flags" data-tip="Термин: flags — битовое поле: каждый бит отмечает наличие соответствующего необязательного параметра конструктора"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h10v13l-5-3.5-5 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span></span> Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>self</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true">true</a></td><td>Обозначает ли этот пользователь текущего авторизованного пользователя</td></tr><tr><td><strong>contact</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true">true</a></td><td><span class="para-labels"><span class="para-label para-term" tabindex="0" role="note" title="Термин: min" data-tip="Термин: min — «урезанный» конструктор: объект приходит с неполным набором полей и флагом min; его access_hash годится не для всех операций"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h10v13l-5-3.5-5 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span></span> Является ли этот пользователь контактом<br>При обновлении <a href="/api/peers">локальной базы пиров</a> не применяйте изменения этого поля, если установлен флаг <code>min</code>.</td></tr><tr><td><strong>mutual_contact</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/constructor/true">true</a></td><td>Является ли этот пользователь взаимным контактом.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> не применяйте изменения этого поля, если установлен флаг <code>min</code>.</td></tr><tr><td><strong>deleted</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true">true</a></td><td>Удалён ли аккаунт этого пользователя.<br>При изменении этого флага следует сбросить локальный кеш <a href="/constructor/userFull">userFull</a> для этого идентификатора пользователя, подробнее см. <a href="/api/peers#full-info-database">здесь »</a>.</td></tr><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/constructor/true">true</a></td><td>Является ли этот пользователь ботом?<br>При изменении этого флага следует признать недействительным локальный кеш <a href="/constructor/userFull">userFull</a> для этого идентификатора пользователя, подробнее см. <a href="/api/peers#full-info-database">здесь »</a>.</td></tr><tr><td><strong>bot_chat_history</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/constructor/true">true</a></td><td>Видит ли бот все сообщения в группах?</td></tr><tr><td><strong>bot_nochats</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/constructor/true">true</a></td><td>Можно ли добавлять бота в группы?</td></tr><tr><td><strong>verified</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/constructor/true">true</a></td><td>Верифицирован ли этот пользователь</td></tr><tr><td><strong>restricted</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/constructor/true">true</a></td><td>Доступ к этому пользователю должен быть ограничен по причине, указанной в <code>restriction_reason</code></td></tr><tr><td><strong>min</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/constructor/true">true</a></td><td>См. <a href="/api/min">min</a></td></tr><tr><td><strong>bot_inline_geo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/constructor/true">true</a></td><td>Может ли бот запрашивать нашу геопозицию в инлайн-режиме</td></tr><tr><td><strong>support</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/constructor/true">true</a></td><td>Является ли это официальным пользователем службы поддержки</td></tr><tr><td><strong>scam</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/constructor/true">true</a></td><td>Возможно, это мошенник</td></tr><tr><td><strong>apply_min_photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/constructor/true">true</a></td><td>Если установлено и при этом установлен флаг <code>min</code>, значение поля <code>photo</code> можно использовать для обновления локальной базы данных; подробнее см. описание этого флага.</td></tr><tr><td><strong>fake</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.26?<a href="/constructor/true">true</a></td><td>Если установлено, на этого пользователя многие пожаловались как на фальшивого или мошенника: будьте осторожны при взаимодействии с ним.</td></tr><tr><td><strong>bot_attach_menu</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.27?<a href="/constructor/true">true</a></td><td>Предлагает ли этот бот <a href="/api/bots/attach">веб-приложение для меню вложений</a></td></tr><tr><td><strong>premium</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.28?<a href="/constructor/true">true</a></td><td>Является ли этот пользователь пользователем Telegram Premium<br>При изменении этого флага следует сбросить локальный кеш <a href="/constructor/userFull">userFull</a> для этого идентификатора пользователя, подробнее см. <a href="/api/peers#full-info-database">здесь »</a>.<br>Если установлен флаг <code>self</code>, изменение этого флага должно также приводить к следующим вызовам для обновления соответствующих кешей:<br>- Кеш <a href="/method/help.getConfig">help.getConfig</a><br>- Кеш <a href="/method/messages.getTopReactions">messages.getTopReactions</a>, если флаг <code>bot</code> <strong>не</strong> установлен</td></tr><tr><td><strong>attach_menu_enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.29?<a href="/constructor/true">true</a></td><td>Установили ли мы <a href="/api/bots/attach">веб-приложение из меню вложений</a>, предлагаемое этим ботом.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> не применяйте изменения этого поля, если установлен флаг <code>min</code>.</td></tr><tr><td><strong>flags2</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>bot_can_edit</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.1?<a href="/constructor/true">true</a></td><td>Можем ли мы изменять фотографию профиля, имя, текст «о себе» и описание этого бота, поскольку он принадлежит нам.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> не применяйте изменения этого поля, если установлен флаг <code>min</code>.<br>При изменении этого флага (если <code>min</code> не установлен) следует сбросить локальный кеш <a href="/constructor/userFull">userFull</a> для этого идентификатора пользователя.</td></tr><tr><td><strong>close_friend</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.2?<a href="/constructor/true">true</a></td><td>Отметили ли мы этого пользователя как <a href="/api/privacy">близкого друга, подробнее см. здесь »</a>.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> не применяйте изменения этого поля, если установлен флаг <code>min</code>.</td></tr><tr><td><strong>stories_hidden</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.3?<a href="/constructor/true">true</a></td><td><a href="/api/stories#hiding-stories-of-other-users">Скрыли »</a> ли мы все активные истории этого пользователя.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> не применяйте изменения этого поля, если установлен флаг <code>min</code>.</td></tr><tr><td><strong>stories_unavailable</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.4?<a href="/constructor/true">true</a></td><td>Ни одна история этого пользователя не видна.</td></tr><tr><td><strong>contact_require_premium</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.10?<a href="/constructor/true">true</a></td><td>См. <a href="/api/privacy#require-premium-for-new-non-contact-users">подробнее об этом флаге »</a>.</td></tr><tr><td><strong>bot_business</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.11?<a href="/constructor/true">true</a></td><td>Можно ли <a href="/api/bots/connected-business-bots">подключить этого бота к пользователю, как описано здесь »</a>.</td></tr><tr><td><strong>bot_has_main_app</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.13?<a href="/constructor/true">true</a></td><td><span class="para-labels"><span class="para-label para-term" tabindex="0" role="note" title="Термин: Mini App" data-tip="Термин: Mini App — Mini App: веб-приложение, открываемое внутри Telegram и получающее данные о пользователе от клиента"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h10v13l-5-3.5-5 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span></span> Если установлено, у этого бота настроен <a href="/api/bots/webapps#main-mini-apps">Main Mini App »</a>.</td></tr><tr><td><strong>bot_forum_view</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.16?<a href="/constructor/true">true</a></td><td>Если установлено, этот бот поддерживает <a href="/api/forum#bot-forums">темы форума бота »</a>.</td></tr><tr><td><strong>bot_forum_can_manage_topics</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.17?<a href="/constructor/true">true</a></td><td>Если установлено, этот бот поддерживает <a href="/api/forum#bot-forums">темы форума бота »</a>, и пользователям (а не только боту!) разрешено создавать темы форума бота в личном чате с ботом и управлять ими.</td></tr><tr><td><strong>bot_can_manage_bots</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.18?<a href="/constructor/true">true</a></td><td>Если установлено, этот бот является <a href="/api/bots/managed-bots">ботом-менеджером</a>, который может создавать <a href="/api/bots/managed-bots">управляемых ботов »</a> от имени пользователя и управлять ими.</td></tr><tr><td><strong>bot_guestchat</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.19?<a href="/constructor/true">true</a></td><td>Если установлено, этого бота можно вызвать как <a href="/api/bots/guest-mode">гостя в чатах »</a>.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя; подробнее о нём и о допустимом диапазоне значений см. <a href="/api/peers#peer-id">здесь »</a>.</td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td><span class="para-labels"><span class="para-label para-term" tabindex="0" role="note" title="Термин: access_hash" data-tip="Термин: access_hash — хеш доступа: число, которое сервер выдаёт вместе с идентификатором объекта; без него обратиться к объекту нельзя, и у разных пользователей оно разное"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5h10v13l-5-3.5-5 3.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span></span> Хеш доступа пользователя, подробнее см. <a href="/api/peers#access-hash">здесь »</a>.<br>Если этот флаг установлен, то при обновлении <a href="/api/peers">локальной базы пиров</a> следует сформировать виртуальный флаг <code>min_access_hash</code>, который:<br>- Устанавливается в <code>true</code>, если установлен <code>min</code> И<br>-- Флаг <code>phone</code> <strong>не</strong> установлен ИЛИ<br>-- Флаг <code>phone</code> установлен, а связанная строка с номером телефона непуста<br>- В остальных случаях устанавливается в <code>false</code>.<br><br>Затем <code>access_hash</code> и <code>min_access_hash</code> применяются к локальной базе, если:<br>- <code>min_access_hash</code> равен false ИЛИ<br>- <code>min_access_hash</code> равен true И<br>-- Локально закешированного объекта для этого пользователя нет ИЛИ<br>-- В локальном кеше нет <code>access_hash</code> ИЛИ<br>-- У закешированного объекта <code>min_access_hash</code> тоже равен true<br><br>Если у итогового объединённого объекта, сохранённого в базе, поле <code>min_access_hash</code> равно true, то соответствующий <code>access_hash</code> пригоден <strong>только</strong> для использования в <a href="/constructor/inputPeerPhotoFileLocation"><code>inputPeerPhotoFileLocation</code> »</a> — для непосредственной <a href="/api/files">загрузки фотографий профиля</a> пользователей; во всех остальных случаях потребуется сформировать конструктор <code>inputPeer*FromMessage</code>, как описано <a href="/api/min">здесь »</a>.<br>Боты при некоторых условиях также могут использовать min-хеши доступа, передавая <code>0</code> вместо min-хеша доступа.</td></tr><tr><td><strong>first_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Имя.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> изменяйте это поле только в следующих случаях:<br>- Флаг <code>min</code> не установлен ИЛИ<br>- Флаг <code>min</code> установлен И<br>-- Флаг <code>min</code> установлен и у локально сохранённой записи пользователя.</td></tr><tr><td><strong>last_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Фамилия.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> изменения применяются к этому полю, только если:<br>- флаг <code>min</code> не установлен ЛИБО<br>- флаг <code>min</code> установлен И<br>-- у локально сохранённой записи пользователя флаг <code>min</code> тоже установлен.</td></tr><tr><td><strong>username</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string">string</a></td><td>Основное активное имя пользователя.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> применяйте изменения к этому полю, только если:<br>- Флаг <code>min</code> не установлен ЛИБО<br>- Флаг <code>min</code> установлен И<br>-- Флаг <code>min</code> установлен у локально закешированной записи пользователя.<br>Изменения этого флага должны сбрасывать локальный кеш <a href="/constructor/userFull">userFull</a> для этого ID пользователя, если соблюдены перечисленные выше условия и при этом установлен флаг <code>bot_can_edit</code>.</td></tr><tr><td><strong>phone</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string">string</a></td><td>Номер телефона.<br>При обновлении <a href="/api/peers">локальной базы данных пиров</a> применяйте изменения к этому полю только в том случае, если:<br>- Флаг <code>min</code> не установлен ИЛИ<br>- Флаг <code>min</code> установлен И<br>-- Флаг <code>min</code> локально закешированной записи пользователя установлен.</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/UserProfilePhoto">UserProfilePhoto</a></td><td>Фотография профиля пользователя.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> применяйте изменения этого поля только если:<br>- флаг <code>min</code> не установлен ЛИБО<br>- флаг <code>min</code> установлен И<br>-- установлен флаг <code>apply_min_photo</code> ЛИБО<br>-- флаг <code>min</code> установлен у локально сохранённой записи пользователя.</td></tr><tr><td><strong>status</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/UserStatus">UserStatus</a></td><td>Статус пользователя в сети.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> применяйте изменения этого поля только если:<br>- флаг <code>min</code> не установлен ЛИБО<br>- флаг <code>min</code> установлен И<br>-- флаг <code>min</code> установлен у локально сохранённой записи пользователя ЛИБО<br>-- локально сохранённая запись пользователя равна <a href="/constructor/userStatusEmpty">userStatusEmpty</a>.</td></tr><tr><td><strong>bot_info_version</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/int">int</a></td><td>Версия <a href="/constructor/userFull">поля bot_info в userFull</a>, увеличивается при каждом его изменении.<br>Изменение этого флага должно приводить к сбросу локального кеша <a href="/constructor/userFull">userFull</a> для данного идентификатора пользователя; подробнее см. <a href="/api/peers#full-info-database">здесь »</a>.</td></tr><tr><td><strong>restriction_reason</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/RestrictionReason">RestrictionReason</a>&gt;</td><td>Содержит причину, по которой доступ к этому пользователю должен быть ограничен.</td></tr><tr><td><strong>bot_inline_placeholder</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/type/string">string</a></td><td>Замещающий текст в поле ввода для этого инлайн-бота</td></tr><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/type/string">string</a></td><td>Код языка пользователя</td></tr><tr><td><strong>emoji_status</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.30?<a href="/type/EmojiStatus">EmojiStatus</a></td><td><a href="/api/emoji-status">Эмодзи-статус</a></td></tr><tr><td><strong>usernames</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.0?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Username">Username</a>&gt;</td><td>Дополнительные имена пользователя.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> применяйте изменения этого поля только если:<br>- флаг <code>min</code> не установлен ЛИБО<br>- флаг <code>min</code> установлен И<br>-- флаг <code>min</code> установлен у локально сохранённой записи пользователя.<br>При изменении этого флага (если соблюдены указанные выше условия) следует сбросить локальный кеш <a href="/constructor/userFull">userFull</a> для этого идентификатора пользователя.</td></tr><tr><td><strong>stories_max_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.5?<a href="/type/RecentStory">RecentStory</a></td><td>Сводка <a href="/api/stories#recent-story-summaries">активных историй »</a> пользователя.<br>При обновлении <a href="/api/peers">локальной базы пиров</a> не применяйте изменения этого поля, если у входящего конструктора установлен флаг <code>min</code>.</td></tr><tr><td><strong>color</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.8?<a href="/type/PeerColor">PeerColor</a></td><td><a href="/api/colors">Акцентный цвет</a> пользователя.</td></tr><tr><td><strong>profile_color</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.9?<a href="/type/PeerColor">PeerColor</a></td><td><a href="/api/colors">Цвет профиля</a> пользователя.</td></tr><tr><td><strong>bot_active_users</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.12?<a href="/type/int">int</a></td><td>Число активных пользователей этого бота за месяц (MAU); может отсутствовать у небольших ботов.</td></tr><tr><td><strong>bot_verification_icon</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.14?<a href="/type/long">long</a></td><td>Описывает <a href="/api/bots/verification">значок верификации бота »</a>.</td></tr><tr><td><strong>send_paid_messages_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags2</a>.15?<a href="/type/long">long</a></td><td>Если установлено, пользователь включил <a href="/api/paid-messages">платные сообщения »</a>, и за отправку ему сообщений нам <em>может</em> потребоваться заплатить указанное количество <a href="/api/stars">Stars</a> — в зависимости от настроенных исключений: чтобы узнать, должен ли текущий авторизованный пользователь платить, проверьте <a href="/constructor/userFull">userFull</a>.<code>send_paid_messages_stars</code> или <a href="/method/users.getRequirementsToContact">users.getRequirementsToContact</a>; описание всего процесса см. <a href="/api/paid-messages">здесь »</a>.</td></tr></tbody></table> <span class="heading-alias" id="тип"></span><h3 id="type" tabindex="-1">Тип <a class="header-anchor" href="#type" aria-hidden="true">#</a></h3> <p id="p-4"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-4" rel="noopener" title="Перевод абзаца 4" data-tip="Перевод: абзац 4 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> <a href="/type/User/">User</a><a class="p-anchor" href="#p-4" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="связанные-страницы"></span><h3 id="related-pages" tabindex="-1">Связанные страницы <a class="header-anchor" href="#related-pages" aria-hidden="true">#</a></h3> <span class="heading-alias" id="база-данных-пиров"></span><h4 id="peer-database" tabindex="-1"><a href="/api/peers/">База данных пиров</a> <a class="header-anchor" href="#peer-database" aria-hidden="true">#</a></h4> <p id="p-5"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-5" rel="noopener" title="Перевод абзаца 5" data-tip="Перевод: абзац 5 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.<a class="p-anchor" href="#p-5" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="userfull" tabindex="-1"><a href="/constructor/userFull/">userFull</a> <a class="header-anchor" href="#userfull" aria-hidden="true">#</a></h4> <p id="p-6"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-6" rel="noopener" title="Перевод абзаца 6" data-tip="Перевод: абзац 6 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Расширенные сведения о пользователе<a class="p-anchor" href="#p-6" aria-label="Ссылка на этот абзац">¶</a></p> <p id="p-7"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-7" rel="noopener" title="Перевод абзаца 7" data-tip="Перевод: абзац 7 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> При обновлении <a href="/api/peers/">локальной базы пиров »</a> все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).<a class="p-anchor" href="#p-7" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="конструкторы-min"></span><h4 id="min-constructors" tabindex="-1"><a href="/api/min/">Конструкторы min</a> <a class="header-anchor" href="#min-constructors" aria-hidden="true">#</a></h4> <p id="p-8"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-8" rel="noopener" title="Перевод абзаца 8" data-tip="Перевод: абзац 8 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> В некоторых случаях в конструкторах пользователя и канала присутствует сокращённый набор полей (хотя id есть всегда) и установлен флаг min.<a class="p-anchor" href="#p-8" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="пункты-меню-вложений-и-бокового-меню-для-ботов"></span><h4 id="bot-attachment-menu-and-side-menu-entries" tabindex="-1"><a href="/api/bots/attach/">Пункты меню вложений и бокового меню для ботов</a> <a class="header-anchor" href="#bot-attachment-menu-and-side-menu-entries" aria-hidden="true">#</a></h4> <p id="p-9"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-9" rel="noopener" title="Перевод абзаца 9" data-tip="Перевод: абзац 9 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Боты могут добавлять пункты в меню вложений и в боковое меню, предлагая легкодоступные многофункциональные веб-приложения.<a class="p-anchor" href="#p-9" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="helpgetconfig"></span><h4 id="help-getconfig" tabindex="-1"><a href="/method/help.getConfig/">help.getConfig</a> <a class="header-anchor" href="#help-getconfig" aria-hidden="true">#</a></h4> <p id="p-10"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-10" rel="noopener" title="Перевод абзаца 10" data-tip="Перевод: абзац 10 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Возвращает текущую конфигурацию, включая конфигурацию дата-центров.<a class="p-anchor" href="#p-10" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="messagesgettopreactions"></span><h4 id="messages-gettopreactions" tabindex="-1"><a href="/method/messages.getTopReactions/">messages.getTopReactions</a> <a class="header-anchor" href="#messages-gettopreactions" aria-hidden="true">#</a></h4> <p id="p-11"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-11" rel="noopener" title="Перевод абзаца 11" data-tip="Перевод: абзац 11 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Получены популярные <a href="/api/reactions/">реакции на сообщения</a><a class="p-anchor" href="#p-11" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="настройки-приватности"></span><h4 id="privacy-settings" tabindex="-1"><a href="/api/privacy/">Настройки приватности</a> <a class="header-anchor" href="#privacy-settings" aria-hidden="true">#</a></h4> <p id="p-12"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-12" rel="noopener" title="Перевод абзаца 12" data-tip="Перевод: абзац 12 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным способом.<a class="p-anchor" href="#p-12" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="telegram-stories" tabindex="-1"><a href="/api/stories/">Telegram Stories</a> <a class="header-anchor" href="#telegram-stories" aria-hidden="true">#</a></h4> <p id="p-13"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-13" rel="noopener" title="Перевод абзаца 13" data-tip="Перевод: абзац 13 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.<a class="p-anchor" href="#p-13" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="подключённые-бизнес-боты"></span><h4 id="connected-business-bots" tabindex="-1"><a href="/api/bots/connected-business-bots/">Подключённые бизнес-боты</a> <a class="header-anchor" href="#connected-business-bots" aria-hidden="true">#</a></h4> <p id="p-14"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-14" rel="noopener" title="Перевод абзаца 14" data-tip="Перевод: абзац 14 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.<a class="p-anchor" href="#p-14" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="mini-apps-в-telegram"></span><h4 id="mini-apps-on-telegram" tabindex="-1"><a href="/api/bots/webapps/">Mini Apps в Telegram</a> <a class="header-anchor" href="#mini-apps-on-telegram" aria-hidden="true">#</a></h4> <p id="p-15"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-15" rel="noopener" title="Перевод абзаца 15" data-tip="Перевод: абзац 15 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.<a class="p-anchor" href="#p-15" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="темы-форума"></span><h4 id="forum-topics" tabindex="-1"><a href="/api/forum/">Темы форума</a> <a class="header-anchor" href="#forum-topics" aria-hidden="true">#</a></h4> <p id="p-16"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-16" rel="noopener" title="Перевод абзаца 16" data-tip="Перевод: абзац 16 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram позволяет создавать форумы с несколькими самостоятельными темами.<a class="p-anchor" href="#p-16" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="управляемые-боты"></span><h4 id="managed-bots" tabindex="-1"><a href="/api/bots/managed-bots/">Управляемые боты</a> <a class="header-anchor" href="#managed-bots" aria-hidden="true">#</a></h4> <p id="p-17"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-17" rel="noopener" title="Перевод абзаца 17" data-tip="Перевод: абзац 17 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Пользователи могут создавать <strong>управляемых</strong> ботов (которыми управляет определённый бот-менеджер) прямо через MTProto API, не обращаясь к <a href="https://t.me/botfather">@BotFather</a>.<a class="p-anchor" href="#p-17" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="гостевой-режим-для-ботов"></span><h4 id="guest-mode-for-bots" tabindex="-1"><a href="/api/bots/guest-mode/">Гостевой режим для ботов</a> <a class="header-anchor" href="#guest-mode-for-bots" aria-hidden="true">#</a></h4> <p id="p-18"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-18" rel="noopener" title="Перевод абзаца 18" data-tip="Перевод: абзац 18 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Гостевых ботов можно вызывать по имени пользователя из <strong>любого</strong> несекретного личного чата, группы и супергруппы (кроме групп и супергрупп с включённой <a href="/api/content-protection/#for-groups-and-channels">защитой контента »</a>); они публикуют свои результаты прямо в чат, даже если не состоят в нём.<a class="p-anchor" href="#p-18" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="inputpeerphotofilelocation" tabindex="-1"><a href="/constructor/inputPeerPhotoFileLocation/">inputPeerPhotoFileLocation</a> <a class="header-anchor" href="#inputpeerphotofilelocation" aria-hidden="true">#</a></h4> <p id="p-19"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-19" rel="noopener" title="Перевод абзаца 19" data-tip="Перевод: абзац 19 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Расположение фотографии профиля канала, группы, супергруппы или пользователя<a class="p-anchor" href="#p-19" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="загрузка-и-скачивание-файлов"></span><h4 id="uploading-and-downloading-files" tabindex="-1"><a href="/api/files/">Загрузка и скачивание файлов</a> <a class="header-anchor" href="#uploading-and-downloading-files" aria-hidden="true">#</a></h4> <p id="p-20"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-20" rel="noopener" title="Перевод абзаца 20" data-tip="Перевод: абзац 20 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Как правильно передавать большие объёмы данных.<a class="p-anchor" href="#p-20" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="userstatusempty" tabindex="-1"><a href="/constructor/userStatusEmpty/">userStatusEmpty</a> <a class="header-anchor" href="#userstatusempty" aria-hidden="true">#</a></h4> <p id="p-21"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-21" rel="noopener" title="Перевод абзаца 21" data-tip="Перевод: абзац 21 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Статус пользователя ещё не установлен.<a class="p-anchor" href="#p-21" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="эмодзи-статус"></span><h4 id="emoji-status" tabindex="-1"><a href="/api/emoji-status/">Эмодзи-статус</a> <a class="header-anchor" href="#emoji-status" aria-hidden="true">#</a></h4> <p id="p-22"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-22" rel="noopener" title="Перевод абзаца 22" data-tip="Перевод: абзац 22 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.<a class="p-anchor" href="#p-22" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="акцентные-цвета"></span><h4 id="accent-colors" tabindex="-1"><a href="/api/colors/">Акцентные цвета</a> <a class="header-anchor" href="#accent-colors" aria-hidden="true">#</a></h4> <p id="p-23"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-23" rel="noopener" title="Перевод абзаца 23" data-tip="Перевод: абзац 23 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!<a class="p-anchor" href="#p-23" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="сторонняя-верификация"></span><h4 id="third-party-verification" tabindex="-1"><a href="/api/bots/verification/">Сторонняя верификация</a> <a class="header-anchor" href="#third-party-verification" aria-hidden="true">#</a></h4> <p id="p-24"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-24" rel="noopener" title="Перевод абзаца 24" data-tip="Перевод: абзац 24 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Чтобы ещё повысить прозрачность в Telegram, официальные сторонние сервисы могут присваивать аккаунтам пользователей и чатам дополнительные значки верификации — чтобы предотвратить мошенничество и снизить распространение недостоверной информации.<a class="p-anchor" href="#p-24" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="платные-сообщения"></span><h4 id="paid-messages" tabindex="-1"><a href="/api/paid-messages/">Платные сообщения</a> <a class="header-anchor" href="#paid-messages" aria-hidden="true">#</a></h4> <p id="p-25"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-25" rel="noopener" title="Перевод абзаца 25" data-tip="Перевод: абзац 25 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.<a class="p-anchor" href="#p-25" aria-label="Ссылка на этот абзац">¶</a></p> <h4 id="telegram-stars" tabindex="-1"><a href="/api/stars/">Telegram Stars</a> <a class="header-anchor" href="#telegram-stars" aria-hidden="true">#</a></h4> <p id="p-26"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-26" rel="noopener" title="Перевод абзаца 26" data-tip="Перевод: абзац 26 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.<a class="p-anchor" href="#p-26" aria-label="Ссылка на этот абзац">¶</a></p> <span class="heading-alias" id="usersgetrequirementstocontact"></span><h4 id="users-getrequirementstocontact" tabindex="-1"><a href="/method/users.getRequirementsToContact/">users.getRequirementsToContact</a> <a class="header-anchor" href="#users-getrequirementstocontact" aria-hidden="true">#</a></h4> <p id="p-27"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-27" rel="noopener" title="Перевод абзаца 27" data-tip="Перевод: абзац 27 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Проверить, можем ли мы писать указанным пользователям; используется для массовых проверок <a href="/api/privacy/#require-premium-for-new-non-contact-users">сообщений только для Premium »</a> и <a href="/api/paid-messages/">платных сообщений »</a>.<a class="p-anchor" href="#p-27" aria-label="Ссылка на этот абзац">¶</a></p> <p id="p-28"><span class="para-labels"><a class="para-label para-trans" href="https://mirrortproto.github.io/constructor/user/#p-28" rel="noopener" title="Перевод абзаца 28" data-tip="Перевод: абзац 28 оригинала. Нажмите, чтобы открыть исходный текст на mirrortproto.github.io"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M3 8l3-3M3 8l3 3M13 8l-3-3M13 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></span> Для каждого переданного пользователя возвращает конструктор <a href="/type/RequirementToContact/">RequirementToContact</a> (на той же позиции в векторе), содержащий требования для связи с ним.<a class="p-anchor" href="#p-28" aria-label="Ссылка на этот абзац">¶</a></p> <div class="source-note"> Оригинал: <a href="https://core.telegram.org/constructor/user" rel="noopener">https://core.telegram.org/constructor/user</a> · Английская версия: <a href="https://mirrortproto.github.io/constructor/user/" rel="noopener">mirrortproto.github.io</a> </div> </article> </main> </div> <footer class="site-footer"> Неофициальный русскоязычный перевод документации <a href="https://core.telegram.org/mtproto" rel="noopener">core.telegram.org</a>. Снимок контента: 2026-08-23. Исходники сайта — <a href="https://github.com/rumtproto/rumtproto.github.io" rel="noopener">rumtproto/rumtproto.github.io</a>. </footer> <script src="/pagefind/pagefind-ui.js"></script> <script>
+  (function () {
+    var btn = document.querySelector('.theme-toggle');
+    var seg = Array.prototype.slice.call(document.querySelectorAll('.theme-seg button'));
+    if (!btn && !seg.length) return;
+    var order = ['auto', 'light', 'dark'];
+    function current() { try { return localStorage.getItem('theme') || 'auto'; } catch (e) { return 'auto'; } }
+    function set(mode) {
+      try { mode === 'auto' ? localStorage.removeItem('theme') : localStorage.setItem('theme', mode); } catch (e) {}
+      apply(mode);
+    }
+    function apply(mode) {
+      if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', mode);
+      if (btn) {
+        btn.dataset.mode = mode;
+        btn.title = 'Цветовая тема: ' + mode;
+        btn.setAttribute('aria-label', 'Цветовая тема: ' + mode + '. Нажмите для переключения.');
+      }
+      seg.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.mode === mode)); });
+      var dark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+        if ((m.media || '').indexOf('dark') !== -1) m.content = dark ? '#0d1117' : '#ffffff';
+      });
+    }
+    seg.forEach(function (b) { b.addEventListener('click', function () { set(b.dataset.mode); }); });
+    if (btn) btn.addEventListener('click', function () { set(order[(order.indexOf(current()) + 1) % order.length]); });
+    apply(current());
+  })();
+  (function () {
+    document.addEventListener('keydown', function (e) {
+      var tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (e.key === '/' && !/^(input|textarea|select)$/i.test(tag)) {
+        var q = document.querySelector('.site-search input') || document.querySelector('.pagefind-ui__search-input');
+        if (q) { e.preventDefault(); q.focus(); }
+      }
+    });
+  })();
+  (function () {
+    /* скрыть плейсхолдер после реальной загрузки медиа */
+    document.querySelectorAll('.img-box').forEach(function (box) {
+      var im = box.querySelector('img') || box.querySelector('video');
+      if (!im) return;
+      var ok = function () { box.classList.add('img-ok'); };
+      if (im.complete && im.naturalWidth > 0) ok();
+      else im.addEventListener('load', ok);
+    });
+  })();
+</script> </body> </html> 

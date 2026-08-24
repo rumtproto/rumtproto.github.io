@@ -1,18 +1,15 @@
 ---
-title: "auth.resendCode (метод)"
+title: "auth.resendCode"
 original: "https://core.telegram.org/method/auth.resendCode"
 section: ref
 kind: method
+description: "Повторно отправить код входа другим способом; тип кода определяется значением, возвращённым предыдущим вызовом auth.sendCode/auth.resendCode: подробнее см. вход."
 layout: layout.njk
 ---
 
 # auth.resendCode
 
-*Метод из схемы TL.*
-
-> Resend the login code via another medium, the phone code type is determined by the return value of the previous auth.sendCode/auth.resendCode: see [login](/api/auth/) for more info.
-
-## Определение TL
+Повторно отправить код входа другим способом; тип кода определяется значением, возвращённым предыдущим вызовом auth.sendCode/auth.resendCode: подробнее см. [вход](/api/auth/).
 
 ```
 auth.sentCode#5e002502 flags:# type:auth.SentCodeType phone_code_hash:string next_type:flags.1?auth.CodeType timeout:flags.2?int = auth.SentCode;
@@ -22,44 +19,32 @@ auth.sentCodePaymentRequired#e0955a3c store_product:string phone_code_hash:strin
 auth.resendCode#cae47523 flags:# phone_number:string phone_code_hash:string reason:flags.0?string = auth.SentCode;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| phone_number | [string](/type/string/) | The phone number |
-| phone_code_hash | [string](/type/string/) | The phone code hash obtained from [auth.sendCode](/method/auth.sendCode/) |
-| reason | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Official clients only, used if the device integrity verification failed, and no secret could be obtained to invoke [auth.requestFirebaseSms](/method/auth.requestFirebaseSms/): in this case, the device integrity verification failure reason must be passed here. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш телефонного кода, полученный от <a href="/method/auth.sendCode">auth.sendCode</a></td></tr><tr><td><strong>reason</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Только для официальных клиентов: используется, если проверка целостности устройства не удалась и не удалось получить секрет для вызова <a href="/method/auth.requestFirebaseSms">auth.requestFirebaseSms</a>: в этом случае здесь необходимо передать причину сбоя проверки целостности устройства.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.SentCode](/type/auth.SentCode/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | EMAIL_INSTALL_MISSING | Attempting to send a code to the recovery email, but no email is configured. |
-| 400 | PHONE_CODE_EMPTY | phone_code is missing. |
-| 400 | PHONE_CODE_EXPIRED | The phone code you provided has expired. |
-| 400 | PHONE_CODE_HASH_EMPTY | phone_code_hash is missing. |
-| 406 | PHONE_NUMBER_INVALID | The phone number is invalid. |
-| 406 | SEND_CODE_UNAVAILABLE | Returned when all available options for this type of number were already used (e.g. flash-call, then SMS, then this error might be returned to trigger a second resend). |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>EMAIL_INSTALL_MISSING</td><td>Попытка отправить код на почту для восстановления, но почта не настроена.</td></tr><tr><td>400</td><td>PHONE_CODE_EMPTY</td><td>Отсутствует phone_code.</td></tr><tr><td>400</td><td>PHONE_CODE_EXPIRED</td><td>Срок действия указанного вами кода подтверждения истёк.</td></tr><tr><td>400</td><td>PHONE_CODE_HASH_EMPTY</td><td>Отсутствует phone_code_hash.</td></tr><tr><td>406</td><td>PHONE_NUMBER_INVALID</td><td>Недействительный номер телефона.</td></tr><tr><td>406</td><td>SEND_CODE_UNAVAILABLE</td><td>Возвращается, когда все доступные для этого типа номера способы уже были использованы (например, сначала flash-звонок, затем SMS, после чего может быть возвращена эта ошибка при попытке отправить код повторно ещё раз).</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [auth.sendCode](/method/auth.sendCode/)
 
-Send the verification code for login
+Отправить код подтверждения для входа
 
 #### [auth.requestFirebaseSms](/method/auth.requestFirebaseSms/)
 
-Request an SMS code via Firebase.
+Запросить SMS с кодом через Firebase.
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

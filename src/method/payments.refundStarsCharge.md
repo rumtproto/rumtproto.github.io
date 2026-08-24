@@ -1,18 +1,15 @@
 ---
-title: "payments.refundStarsCharge (метод)"
+title: "payments.refundStarsCharge"
 original: "https://core.telegram.org/method/payments.refundStarsCharge"
 section: ref
 kind: method
+description: "Вернуть средства по транзакции Telegram Stars; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # payments.refundStarsCharge
 
-*Метод из схемы TL.*
-
-> Refund a [Telegram Stars](https://core.telegram.org/api/stars) transaction, see [here »](https://core.telegram.org/api/payments#6-refunds) for more info.
-
-## Определение TL
+Вернуть средства по транзакции [Telegram Stars](/api/stars/); подробнее см. [здесь »](/api/payments/#6-refunds).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,34 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 payments.refundStarsCharge#25ae8f4a user_id:InputUser charge_id:string = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [InputUser](/type/InputUser/) | User to refund. |
-| charge_id | [string](/type/string/) | Transaction ID. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Пользователь, которому возвращается платёж.</td></tr><tr><td><strong>charge_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор транзакции.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only bots can use this method
+### Этот метод доступен только ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHARGE_ALREADY_REFUNDED | The transaction was already refunded. |
-| 400 | CHARGE_ID_EMPTY | The specified charge_id is empty. |
-| 400 | USER_BOT_REQUIRED | This method can only be called by a bot. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHARGE_ALREADY_REFUNDED</td><td>Платёж по этой транзакции уже был возвращён.</td></tr><tr><td>400</td><td>CHARGE_ID_EMPTY</td><td>Указанный charge_id пуст.</td></tr><tr><td>400</td><td>USER_BOT_REQUIRED</td><td>Этот метод может вызывать только бот.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Payments API](https://core.telegram.org/api/payments)
+#### [API платежей](/api/payments/)
 
-You can accept payments from Telegram users via Telegram Bots.
+Вы можете принимать платежи от пользователей Telegram через ботов Telegram.

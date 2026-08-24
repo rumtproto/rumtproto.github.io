@@ -1,18 +1,15 @@
 ---
-title: "phone.leaveGroupCallPresentation (метод)"
+title: "phone.leaveGroupCallPresentation"
 original: "https://core.telegram.org/method/phone.leaveGroupCallPresentation"
 section: ref
 kind: method
+description: "Прекратить демонстрацию экрана в видеочате, трансляции или конференции без RTMP. Презентации не поддерживаются в прямых историях и в видеочатах или трансляциях в режиме RTMP;…"
 layout: layout.njk
 ---
 
 # phone.leaveGroupCallPresentation
 
-*Метод из схемы TL.*
-
-> Stop screen sharing in a non-RTMP video chat/livestream or conference. Presentations are not supported in live stories or RTMP-mode video chats/livestreams, see [here »](https://core.telegram.org/api/group-calls#presentations) for more info.
-
-## Определение TL
+Прекратить демонстрацию экрана в видеочате, трансляции или конференции без RTMP. Презентации не поддерживаются в прямых историях и в видеочатах или трансляциях в режиме RTMP; подробнее см. [здесь »](/api/group-calls/#presentations).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,26 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.leaveGroupCallPresentation#1c50d144 call:InputGroupCall = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Group call whose presentation connection should be stopped |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Групповой звонок, соединение презентации в котором нужно остановить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

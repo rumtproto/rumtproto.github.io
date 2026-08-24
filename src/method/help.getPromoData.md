@@ -1,18 +1,15 @@
 ---
-title: "help.getPromoData (метод)"
+title: "help.getPromoData"
 original: "https://core.telegram.org/method/help.getPromoData"
 section: ref
 kind: method
+description: "Возвращает набор полезных подсказок и рекламные пиры PSA/MTProxy; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # help.getPromoData
 
-*Метод из схемы TL.*
-
-> Returns a set of useful suggestions and PSA/MTProxy sponsored peers, see [here »](https://core.telegram.org/api/config#suggestions) for more info.
-
-## Определение TL
+Возвращает набор полезных подсказок и рекламные пиры PSA/MTProxy; подробнее см. [здесь »](/api/config/#suggestions).
 
 ```
 help.promoDataEmpty#98f6ac75 expires:int = help.PromoData;
@@ -21,18 +18,18 @@ help.promoData#8a4d87a flags:# proxy:flags.0?true expires:int peer:flags.3?Peer 
 help.getPromoData#c0977421 = help.PromoData;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [help.PromoData](/type/help.PromoData/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

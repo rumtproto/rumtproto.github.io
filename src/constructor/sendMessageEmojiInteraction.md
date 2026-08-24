@@ -1,37 +1,30 @@
 ---
-title: "sendMessageEmojiInteraction (конструктор)"
+title: "sendMessageEmojiInteraction"
 original: "https://core.telegram.org/constructor/sendMessageEmojiInteraction"
 section: ref
 kind: constructor
+description: "Пользователь нажал на анимированный эмодзи, вызвав реакцию; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # sendMessageEmojiInteraction
 
-*Конструктор из схемы TL.*
-
-> User has clicked on an animated emoji triggering a [reaction, click here for more info »](https://core.telegram.org/api/animated-emojis#emoji-reactions).
-
-## Определение TL
+Пользователь нажал на анимированный эмодзи, вызвав [реакцию; подробнее см. здесь »](/api/animated-emojis/#emoji-reactions).
 
 ```
 sendMessageEmojiInteraction#25972bcb emoticon:string msg_id:int interaction:DataJSON = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| emoticon | [string](/type/string/) | Emoji |
-| msg_id | [int](/type/int/) | Message ID of the animated emoji that was clicked |
-| interaction | [DataJSON](/type/DataJSON/) | A JSON object with interaction info, [click here for more info »](https://core.telegram.org/api/animated-emojis#emoji-reactions) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>emoticon</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:emoticon] Эмодзи</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения с анимированным эмодзи, по которому был выполнен щелчок</td></tr><tr><td><strong>interaction</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Объект JSON со сведениями о взаимодействии, <a href="/api/animated-emojis#emoji-reactions">подробнее см. здесь »</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Animated Emojis](https://core.telegram.org/api/animated-emojis)
+#### [Анимированные эмодзи](/api/animated-emojis/)
 
-Graphical telegram clients should transform emojis into their respective animated version.
+Графические клиенты Telegram должны заменять эмодзи соответствующей анимированной версией.

@@ -1,27 +1,24 @@
 ---
-title: "auth.codeTypeCall (конструктор)"
+title: "auth.codeTypeCall"
 original: "https://core.telegram.org/constructor/auth.codeTypeCall"
 section: ref
 kind: constructor
+description: "В следующий раз код аутентификации будет доставлен через исходящий телефонный звонок."
 layout: layout.njk
 ---
 
 # auth.codeTypeCall
 
-*Конструктор из схемы TL.*
-
-> The next time, the authentication code is to be delivered via an outgoing phone call.
-
-## Определение TL
+В следующий раз код аутентификации будет доставлен через исходящий телефонный звонок.
 
 ```
 auth.codeTypeCall#741cd3e3 = auth.CodeType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [auth.CodeType](/type/auth.CodeType/)

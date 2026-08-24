@@ -1,27 +1,24 @@
 ---
-title: "contacts.topPeersNotModified (конструктор)"
+title: "contacts.topPeersNotModified"
 original: "https://core.telegram.org/constructor/contacts.topPeersNotModified"
 section: ref
 kind: constructor
+description: "Сведения о популярных пирах не изменились"
 layout: layout.njk
 ---
 
 # contacts.topPeersNotModified
 
-*Конструктор из схемы TL.*
-
-> Top peer info hasn't changed
-
-## Определение TL
+Сведения о популярных пирах не изменились
 
 ```
 contacts.topPeersNotModified#de266ef5 = contacts.TopPeers;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [contacts.TopPeers](/type/contacts.TopPeers/)

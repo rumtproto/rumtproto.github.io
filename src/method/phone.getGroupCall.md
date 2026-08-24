@@ -1,18 +1,15 @@
 ---
-title: "phone.getGroupCall (метод)"
+title: "phone.getGroupCall"
 original: "https://core.telegram.org/method/phone.getGroupCall"
 section: ref
 kind: method
+description: "Получить информацию о групповом звонке и его участниках."
 layout: layout.njk
 ---
 
 # phone.getGroupCall
 
-*Метод из схемы TL.*
-
-> Get info about a [group call](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call) and its participants.
-
-## Определение TL
+Получить информацию о [групповом звонке](/api/group-calls/#getting-info-about-a-group-call) и его участниках.
 
 ```
 phone.groupCall#9e727aad call:GroupCall participants:Vector<GroupCallParticipant> participants_next_offset:string chats:Vector<Chat> users:Vector<User> = phone.GroupCall;
@@ -20,46 +17,40 @@ phone.groupCall#9e727aad call:GroupCall participants:Vector<GroupCallParticipant
 phone.getGroupCall#41845db call:InputGroupCall limit:int = phone.GroupCall;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Group call of any type to fetch |
-| limit | [int](/type/int/) | Maximum number of participants to return in this call (0 to return a server-defined amount). If the number of returned participants is less than [groupCall](/constructor/groupCall/).participants_count, paginate through the remaining participants using [phone.getGroupParticipants](/method/phone.getGroupParticipants/), passing to offset the [phone.groupCall](/constructor/phone.groupCall/).participants_next_offset returned by this call. This parameter behaves in a different way compared to the limit of [phone.getGroupParticipants](/method/phone.getGroupParticipants/), see [here »](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Групповой звонок любого типа, который нужно получить</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное количество участников, возвращаемых этим вызовом (0 — вернуть количество, определяемое сервером).<br>Если количество возвращённых участников меньше <a href="/constructor/groupCall">groupCall</a>.<code>participants_count</code>, получайте остальных участников постранично с помощью <a href="/method/phone.getGroupParticipants">phone.getGroupParticipants</a>, передавая в <code>offset</code> значение <a href="/constructor/phone.groupCall">phone.groupCall</a>.<code>participants_next_offset</code>, возвращённое этим вызовом.<br>Этот параметр ведёт себя иначе, чем <code>limit</code> в <a href="/method/phone.getGroupParticipants">phone.getGroupParticipants</a>, подробнее <a href="/api/group-calls#getting-info-about-a-group-call">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [phone.GroupCall](/type/phone.GroupCall/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | GROUPCALL_FORBIDDEN | The specified group call cannot be used in this context. |
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>GROUPCALL_FORBIDDEN</td><td>Указанный групповой звонок нельзя использовать в этом контексте.</td></tr><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [groupCall](/constructor/groupCall/)
 
-Describes a [group call](https://core.telegram.org/api/group-calls).
+Описывает [групповой звонок](/api/group-calls/).
 
-If the `min` flag is set, this is a partial (`min`) constructor: only a subset of its fields contains up-to-date information, and it must be merged into a previously cached non-`min` constructor as described below. If no full (non-`min`) constructor for this call was cached previously, the `min` constructor must be discarded.
+[@term:min] Если установлен флаг `min`, это частичный (`min`) конструктор: только часть его полей содержит актуальные сведения, и его необходимо объединить с ранее закешированным не-`min` конструктором, как описано ниже. Если полный (не-`min`) конструктор для этого звонка ранее не был закеширован, `min`-конструктор следует отбросить.
 
-When `min` is set, the following mandatory fields may be used: `id`, `access_hash`, `participants_count` and `version`. In addition, **only** the following conditional fields may be used if present, subject to the usual `version` check:
+[@term:access_hash] Если установлен флаг `min`, допускается использовать следующие обязательные поля: `id`, `access_hash`, `participants_count` и `version`. Кроме того, **только** следующие условные поля допускается использовать при их наличии, с учётом обычной проверки `version`:
 
 -   `conference`
 -   `rtmp_stream`
 -   `listeners_hidden`
 -   `title`
 -   `messages_enabled`
--   `record_start_date` and `record_video_active`
+-   `record_start_date` и `record_video_active`
 -   `schedule_date`
 -   `send_paid_messages_stars`
 
-When `min` is set, the following fields **must be ignored**, keeping the values from the previously cached non-`min` constructor:
+Если установлен флаг `min`, следующие поля **обязательно игнорируются**, а их значения берутся из ранее закешированного не-`min` конструктора:
 
 -   `join_muted`
 -   `can_change_join_muted`
@@ -73,16 +64,16 @@ When `min` is set, the following fields **must be ignored**, keeping the values 
 -   `invite_link`
 -   `default_send_as`
 
-The `join_date_asc` flag is set only when the call is created and never changes afterwards, so it too is not applied from a `min` constructor.
+Флаг `join_date_asc` устанавливается только при создании звонка и в дальнейшем никогда не меняется, поэтому он тоже не применяется из `min`-конструктора.
 
 #### [phone.getGroupParticipants](/method/phone.getGroupParticipants/)
 
-Get [group call](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call) participants.
+Получить участников [группового звонка](/api/group-calls/#getting-info-about-a-group-call).
 
 #### [phone.groupCall](/constructor/phone.groupCall/)
 
-Contains group call information and an initial participant page, see [getting info about a group call »](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call).
+Содержит информацию о групповом звонке и первую страницу списка участников, см. [получение информации о групповом звонке »](/api/group-calls/#getting-info-about-a-group-call).
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

@@ -1,44 +1,34 @@
 ---
-title: "searchPostsFlood (конструктор)"
+title: "searchPostsFlood"
 original: "https://core.telegram.org/constructor/searchPostsFlood"
 section: ref
 kind: constructor
+description: "Указывает, требует ли оплаты указанный глобальный поиск по публикациям »."
 layout: layout.njk
 ---
 
 # searchPostsFlood
 
-*Конструктор из схемы TL.*
-
-> Indicates if the specified [global post search »](https://core.telegram.org/api/search#posts-tab) requires payment.
-
-## Определение TL
+Указывает, требует ли оплаты указанный [глобальный поиск по публикациям »](/api/search/#posts-tab).
 
 ```
 searchPostsFlood#3e0b5b6a flags:# query_is_free:flags.0?true total_daily:int remains:int wait_till:flags.1?int stars_amount:long = SearchPostsFlood;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| query_is_free | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | The specified query is free (and it will not use up free search slots). |
-| total_daily | [int](/type/int/) | Total number of daily free search slots. |
-| remains | [int](/type/int/) | Remaining number of free search slots. |
-| wait_till | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | If there are no more search slots, specifies the unixtime when more search slots will be available. |
-| stars_amount | [long](/type/long/) | The number of [Telegram Stars](https://core.telegram.org/api/stars) to pay for each non-free search. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>query_is_free</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Указанный запрос бесплатен (и он <strong>не расходует бесплатные слоты для поиска</strong>).</td></tr><tr><td><strong>total_daily</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число бесплатных слотов для поиска в день.</td></tr><tr><td><strong>remains</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Оставшееся число бесплатных слотов для поиска.</td></tr><tr><td><strong>wait_till</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Если свободных слотов для поиска больше нет, указывает unixtime, когда появятся новые слоты.</td></tr><tr><td><strong>stars_amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Количество <a href="/api/stars">Telegram Stars</a>, взимаемое за каждый платный поиск.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SearchPostsFlood](/type/SearchPostsFlood/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Search and filters](https://core.telegram.org/api/search)
+#### [Поиск и фильтры](/api/search/)
 
-Telegram allows applying detailed message filters while looking for messages in chats.
+Telegram позволяет применять подробные фильтры сообщений при поиске в чатах.

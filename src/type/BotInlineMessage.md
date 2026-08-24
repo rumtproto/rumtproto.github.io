@@ -1,18 +1,15 @@
 ---
-title: "BotInlineMessage (тип)"
+title: "BotInlineMessage"
 original: "https://core.telegram.org/type/BotInlineMessage"
 section: ref
 kind: type
+description: "Инлайн-сообщение"
 layout: layout.njk
 ---
 
 # BotInlineMessage
 
-*Тип из схемы TL.*
-
-> Inline message
-
-## Определение TL
+Инлайн-сообщение
 
 ```
 botInlineMessageMediaAuto#764cf810 flags:# invert_media:flags.3?true message:string entities:flags.1?Vector<MessageEntity> reply_markup:flags.2?ReplyMarkup = BotInlineMessage;
@@ -24,14 +21,6 @@ botInlineMessageMediaInvoice#354a9b09 flags:# shipping_address_requested:flags.1
 botInlineMessageMediaWebPage#809ad9a6 flags:# invert_media:flags.3?true force_large_media:flags.4?true force_small_media:flags.5?true manual:flags.7?true safe:flags.8?true message:string entities:flags.1?Vector<MessageEntity> url:string reply_markup:flags.2?ReplyMarkup = BotInlineMessage;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [botInlineMessageMediaAuto](/constructor/botInlineMessageMediaAuto/) | Send whatever media is attached to the [botInlineMediaResult](/constructor/botInlineMediaResult/) |
-| [botInlineMessageText](/constructor/botInlineMessageText/) | Send a simple text message |
-| [botInlineMessageMediaGeo](/constructor/botInlineMessageMediaGeo/) | Send a geolocation |
-| [botInlineMessageMediaVenue](/constructor/botInlineMessageMediaVenue/) | Send a venue |
-| [botInlineMessageMediaContact](/constructor/botInlineMessageMediaContact/) | Send a contact |
-| [botInlineMessageMediaInvoice](/constructor/botInlineMessageMediaInvoice/) | Send an invoice |
-| [botInlineMessageMediaWebPage](/constructor/botInlineMessageMediaWebPage/) | Specifies options that must be used to generate the link preview for the message, or even a standalone link preview without an attached message. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/botInlineMessageMediaAuto">botInlineMessageMediaAuto</a></td><td>Отправить медиа, приложенное к <a href="/constructor/botInlineMediaResult">botInlineMediaResult</a></td></tr><tr><td><a href="/constructor/botInlineMessageText">botInlineMessageText</a></td><td>Отправить простое текстовое сообщение</td></tr><tr><td><a href="/constructor/botInlineMessageMediaGeo">botInlineMessageMediaGeo</a></td><td>Отправить геопозицию</td></tr><tr><td><a href="/constructor/botInlineMessageMediaVenue">botInlineMessageMediaVenue</a></td><td>Отправить заведение</td></tr><tr><td><a href="/constructor/botInlineMessageMediaContact">botInlineMessageMediaContact</a></td><td>Отправить контакт</td></tr><tr><td><a href="/constructor/botInlineMessageMediaInvoice">botInlineMessageMediaInvoice</a></td><td>Отправить счёт</td></tr><tr><td><a href="/constructor/botInlineMessageMediaWebPage">botInlineMessageMediaWebPage</a></td><td>Задаёт параметры, которые должны использоваться для создания предпросмотра ссылки в сообщении, либо даже отдельного предпросмотра ссылки без прикреплённого сообщения.</td></tr></tbody></table>

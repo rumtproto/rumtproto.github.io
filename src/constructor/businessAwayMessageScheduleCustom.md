@@ -1,36 +1,30 @@
 ---
-title: "businessAwayMessageScheduleCustom (конструктор)"
+title: "businessAwayMessageScheduleCustom"
 original: "https://core.telegram.org/constructor/businessAwayMessageScheduleCustom"
 section: ref
 kind: constructor
+description: "Отправлять сообщения об отсутствии Telegram Business пользователям, которые пишут нам в личные сообщения в указанный промежуток времени."
 layout: layout.njk
 ---
 
 # businessAwayMessageScheduleCustom
 
-*Конструктор из схемы TL.*
-
-> Send [Telegram Business away messages](https://core.telegram.org/api/business#away-messages) to users writing to us in private in the specified time span.
-
-## Определение TL
+Отправлять [сообщения об отсутствии Telegram Business](/api/business/#away-messages) пользователям, которые пишут нам в личные сообщения в указанный промежуток времени.
 
 ```
 businessAwayMessageScheduleCustom#cc4d9ecc start_date:int end_date:int = BusinessAwayMessageSchedule;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| start_date | [int](/type/int/) | Start date (UNIX timestamp). |
-| end_date | [int](/type/int/) | End date (UNIX timestamp). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>start_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата начала (временная метка UNIX).</td></tr><tr><td><strong>end_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата окончания (временная метка UNIX).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BusinessAwayMessageSchedule](/type/BusinessAwayMessageSchedule/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

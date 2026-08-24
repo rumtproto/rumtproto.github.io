@@ -1,37 +1,30 @@
 ---
-title: "messages.dialogFilters (конструктор)"
+title: "messages.dialogFilters"
 original: "https://core.telegram.org/constructor/messages.dialogFilters"
 section: ref
 kind: constructor
+description: "Сведения о папке и тегах папок"
 layout: layout.njk
 ---
 
 # messages.dialogFilters
 
-*Конструктор из схемы TL.*
-
-> [Folder and folder tags](https://core.telegram.org/api/folders) information
-
-## Определение TL
+Сведения о [папке и тегах папок](/api/folders/)
 
 ```
 messages.dialogFilters#2ad93719 flags:# tags_enabled:flags.0?true filters:Vector<DialogFilter> = messages.DialogFilters;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| tags_enabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether [folder tags](https://core.telegram.org/api/folders#folder-tags) are enabled. |
-| filters | [Vector](https://core.telegram.org/type/Vector%20t)<[DialogFilter](/type/DialogFilter/)> | Folders. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>tags_enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Включены ли <a href="/api/folders#folder-tags">теги папок</a>.</td></tr><tr><td><strong>filters</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/DialogFilter">DialogFilter</a>&gt;</td><td>Папки.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.DialogFilters](/type/messages.DialogFilters/)
 
-## Related pages
+### Связанные страницы
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.

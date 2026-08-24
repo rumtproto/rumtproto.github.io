@@ -1,42 +1,34 @@
 ---
-title: "updateChannelWebPage (конструктор)"
+title: "updateChannelWebPage"
 original: "https://core.telegram.org/constructor/updateChannelWebPage"
 section: ref
 kind: constructor
+description: "Для ссылки в сообщении канала или супергруппы был сформирован предпросмотр веб-страницы"
 layout: layout.njk
 ---
 
 # updateChannelWebPage
 
-*Конструктор из схемы TL.*
-
-> A webpage preview of a link in a [channel/supergroup](https://core.telegram.org/api/channel) message was generated
-
-## Определение TL
+Для ссылки в сообщении [канала или супергруппы](/api/channel/) был сформирован предпросмотр веб-страницы
 
 ```
 updateChannelWebPage#2f2ba99f channel_id:long webpage:WebPage pts:int pts_count:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel_id | [long](/type/long/) | [Channel/supergroup](https://core.telegram.org/api/channel) ID |
-| webpage | [WebPage](/type/WebPage/) | Generated webpage preview |
-| pts | [int](/type/int/) | [Event count after generation](/api/updates/) |
-| pts_count | [int](/type/int/) | [Number of events that were generated](/api/updates/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор <a href="/api/channel">канала/супергруппы</a></td></tr><tr><td><strong>webpage</strong></td><td style="text-align: center;"><a href="/type/WebPage">WebPage</a></td><td>Сформированное превью веб-страницы</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] <a href="/api/updates">Число событий после генерации</a></td></tr><tr><td><strong>pts_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/updates">Число сгенерированных событий</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

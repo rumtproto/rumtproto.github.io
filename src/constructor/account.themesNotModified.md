@@ -1,27 +1,24 @@
 ---
-title: "account.themesNotModified (конструктор)"
+title: "account.themesNotModified"
 original: "https://core.telegram.org/constructor/account.themesNotModified"
 section: ref
 kind: constructor
+description: "Новые темы не установлены"
 layout: layout.njk
 ---
 
 # account.themesNotModified
 
-*Конструктор из схемы TL.*
-
-> No new themes were installed
-
-## Определение TL
+Новые темы не установлены
 
 ```
 account.themesNotModified#f41eb622 = account.Themes;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [account.Themes](/type/account.Themes/)

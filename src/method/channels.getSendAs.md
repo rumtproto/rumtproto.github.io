@@ -1,18 +1,15 @@
 ---
-title: "channels.getSendAs (метод)"
+title: "channels.getSendAs"
 original: "https://core.telegram.org/method/channels.getSendAs"
 section: ref
 kind: method
+description: "Получает список пиров, которые могут отображаться в качестве отправителя в определённом контексте. С флагом for_live_stories возвращает пиров, которые могут быть авторами…"
 layout: layout.njk
 ---
 
 # channels.getSendAs
 
-*Метод из схемы TL.*
-
-> Obtains a list of peers that can be displayed as the sender in a specific context. With `for_live_stories`, returns peers that may author [live story in-call messages »](https://core.telegram.org/api/group-calls#in-call-messages).
-
-## Определение TL
+Получает список пиров, которые могут отображаться в качестве отправителя в определённом контексте. С флагом `for_live_stories` возвращает пиров, которые могут быть авторами [сообщений во время прямого эфира »](/api/group-calls/#in-call-messages).
 
 ```
 channels.sendAsPeers#f496b0c6 peers:Vector<SendAsPeer> chats:Vector<Chat> users:Vector<User> = channels.SendAsPeers;
@@ -20,46 +17,36 @@ channels.sendAsPeers#f496b0c6 peers:Vector<SendAsPeer> chats:Vector<Chat> users:
 channels.getSendAs#e785a43f flags:# for_paid_reactions:flags.0?true for_live_stories:flags.1?true peer:InputPeer = channels.SendAsPeers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| for_paid_reactions | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, fetches the list of peers that can be used to send [paid reactions](https://core.telegram.org/api/reactions#paid-reactions) to messages of a specific peer. |
-| for_live_stories | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Fetch the peers that may be passed to [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/).send_as to comment or react in a [live story »](https://core.telegram.org/api/group-calls#in-call-messages). |
-| peer | [InputPeer](/type/InputPeer/) | The target peer; when for_live_stories is set, the peer that owns the live story. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>for_paid_reactions</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, получает список пиров, от имени которых можно отправлять <a href="/api/reactions#paid-reactions">платные реакции</a> на сообщения определённого пира.</td></tr><tr><td><strong>for_live_stories</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Получить пиров, которых можно передать в <a href="/method/phone.sendGroupCallMessage">phone.sendGroupCallMessage</a>.<code>send_as</code>, чтобы комментировать <a href="/api/group-calls#in-call-messages">прямую историю »</a> или ставить в ней реакции.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Целевой пир; если установлен флаг <code>for_live_stories</code> — пир, которому принадлежит прямая история.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [channels.SendAsPeers](/type/channels.SendAsPeers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.
 
 #### [phone.sendGroupCallMessage](/method/phone.sendGroupCallMessage/)
 
-Send an in-call message to all participants of a video chat/livestream or live story, including in RTMP mode, see [here »](https://core.telegram.org/api/group-calls#in-call-messages) for more info.
+Отправить сообщение внутри звонка всем участникам видеочата, трансляции или прямой истории, в том числе в режиме RTMP; подробнее см. [здесь »](/api/group-calls/#in-call-messages).
 
-The `send_as` field can only be populated for live stories, where it optionally selects the displayed author. If omitted, the server automatically selects the appropriate author. Do not populate it for video chats/livestreams.
+Поле `send_as` можно заполнять только для прямых историй, где оно необязательно задаёт отображаемого автора. Если оно не задано, сервер выбирает подходящего автора автоматически. Не заполняйте его для видеочатов и трансляций.
 
-Video chats/livestreams and live stories support [animated emoji reactions »](https://core.telegram.org/api/group-calls#in-call-reactions), encoded as messages containing only a standard available reaction emoji or a single custom emoji entity.
+Видеочаты, трансляции и прямые истории поддерживают [анимированные эмодзи-реакции »](/api/group-calls/#in-call-reactions), закодированные как сообщения, содержащие только стандартный доступный эмодзи реакции или одну сущность пользовательского эмодзи.
 
-For a paid live story comment, pass the user-confirmed donation amount in `allow_paid_stars`. For commenters other than the live story owner, this amount must be at least the current [groupCall](/constructor/groupCall/).`send_paid_messages_stars` minimum. A higher amount may be donated to highlight the comment. The live story owner may comment without populating `allow_paid_stars`. To send a standalone paid live story donation, pass a positive `allow_paid_stars` value and an empty `message`, see [here »](https://core.telegram.org/api/group-calls#paid-live-story-donations) for the full flow.
+Для платного комментария к прямой истории передайте подтверждённую пользователем сумму пожертвования в `allow_paid_stars`. Для всех комментаторов, кроме владельца прямой истории, эта сумма должна быть не меньше текущего минимума, заданного в [groupCall](/constructor/groupCall/).`send_paid_messages_stars`. Чтобы выделить комментарий, можно пожертвовать большую сумму. Владелец прямой истории может комментировать, не заполняя `allow_paid_stars`. Чтобы отправить отдельное платное пожертвование прямой истории, передайте положительное значение `allow_paid_stars` и пустое поле `message`; полный порядок действий см. [здесь »](/api/group-calls/#paid-live-story-donations).
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

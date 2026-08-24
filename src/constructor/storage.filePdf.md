@@ -1,27 +1,24 @@
 ---
-title: "storage.filePdf (конструктор)"
+title: "storage.filePdf"
 original: "https://core.telegram.org/constructor/storage.filePdf"
 section: ref
 kind: constructor
+description: "Изображение документа PDF. MIME-тип: application/pdf."
 layout: layout.njk
 ---
 
 # storage.filePdf
 
-*Конструктор из схемы TL.*
-
-> PDF document image. MIME type: `application/pdf`.
-
-## Определение TL
+Изображение документа PDF. MIME-тип: `application/pdf`.
 
 ```
 storage.filePdf#ae1e508d = storage.FileType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [storage.FileType](/type/storage.FileType/)

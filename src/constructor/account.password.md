@@ -1,56 +1,38 @@
 ---
-title: "account.password (конструктор)"
+title: "account.password"
 original: "https://core.telegram.org/constructor/account.password"
 section: ref
 kind: constructor
+description: "Настройки двухфакторной авторизации"
 layout: layout.njk
 ---
 
 # account.password
 
-*Конструктор из схемы TL.*
-
-> Configuration for two-factor authorization
-
-## Определение TL
+Настройки двухфакторной авторизации
 
 ```
 account.password#957b50fb flags:# has_recovery:flags.0?true has_secure_values:flags.1?true has_password:flags.2?true current_algo:flags.2?PasswordKdfAlgo srp_B:flags.2?bytes srp_id:flags.2?long hint:flags.3?string email_unconfirmed_pattern:flags.4?string new_algo:PasswordKdfAlgo new_secure_algo:SecurePasswordKdfAlgo secure_random:bytes pending_reset_date:flags.5?int login_email_pattern:flags.6?string = account.Password;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| has_recovery | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the user has a recovery method configured |
-| has_secure_values | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether telegram [passport](https://core.telegram.org/passport) is enabled |
-| has_password | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether the user has a password |
-| current_algo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[PasswordKdfAlgo](/type/PasswordKdfAlgo/) | The [KDF algorithm for SRP two-factor authentication](/api/srp/) of the current password |
-| srp_B | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[bytes](/type/bytes/) | Srp B param for [SRP authorization](/api/srp/) |
-| srp_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[long](/type/long/) | Srp ID param for [SRP authorization](/api/srp/) |
-| hint | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[string](/type/string/) | Text hint for the password |
-| email_unconfirmed_pattern | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[string](/type/string/) | A [password recovery email](https://core.telegram.org/api/srp/#email-verification) with the specified [pattern](https://core.telegram.org/api/pattern) is still awaiting verification |
-| new_algo | [PasswordKdfAlgo](/type/PasswordKdfAlgo/) | The [KDF algorithm for SRP two-factor authentication](/api/srp/) to use when creating new passwords |
-| new_secure_algo | [SecurePasswordKdfAlgo](/type/SecurePasswordKdfAlgo/) | The KDF algorithm for telegram [passport](https://core.telegram.org/passport) |
-| secure_random | [bytes](/type/bytes/) | Secure random string |
-| pending_reset_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[int](/type/int/) | The 2FA password will be automatically removed at this date, unless the user cancels the operation |
-| login_email_pattern | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[string](/type/string/) | A verified login email with the specified [pattern](https://core.telegram.org/api/pattern) is configured |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>has_recovery</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Настроен ли у пользователя способ восстановления</td></tr><tr><td><strong>has_secure_values</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Включён ли telegram <a href="/passport">passport</a></td></tr><tr><td><strong>has_password</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Установлен ли у пользователя пароль</td></tr><tr><td><strong>current_algo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/PasswordKdfAlgo">PasswordKdfAlgo</a></td><td><a href="/api/srp">Алгоритм KDF для двухфакторной аутентификации SRP</a> текущего пароля</td></tr><tr><td><strong>srp_B</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/bytes">bytes</a></td><td>Параметр B для <a href="/api/srp">авторизации по SRP</a></td></tr><tr><td><strong>srp_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/long">long</a></td><td>Параметр ID для <a href="/api/srp">авторизации по SRP</a></td></tr><tr><td><strong>hint</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string">string</a></td><td>Текстовая подсказка для пароля</td></tr><tr><td><strong>email_unconfirmed_pattern</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string">string</a></td><td><a href="/api/srp#email-verification">Почта для восстановления пароля</a> с указанным <a href="/api/pattern">шаблоном</a> всё ещё ожидает подтверждения</td></tr><tr><td><strong>new_algo</strong></td><td style="text-align: center;"><a href="/type/PasswordKdfAlgo">PasswordKdfAlgo</a></td><td><a href="/api/srp">Алгоритм KDF для двухфакторной аутентификации SRP</a>, используемый при создании новых паролей</td></tr><tr><td><strong>new_secure_algo</strong></td><td style="text-align: center;"><a href="/type/SecurePasswordKdfAlgo">SecurePasswordKdfAlgo</a></td><td>Алгоритм KDF для telegram <a href="/passport">passport</a></td></tr><tr><td><strong>secure_random</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Криптостойкая случайная строка</td></tr><tr><td><strong>pending_reset_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/int">int</a></td><td>Пароль двухфакторной аутентификации будет автоматически удалён в указанную дату, если пользователь не отменит операцию</td></tr><tr><td><strong>login_email_pattern</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/string">string</a></td><td>Настроена подтверждённая почта для входа с указанным <a href="/api/pattern">шаблоном</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.Password](/type/account.Password/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.
 
-#### [Pattern matching](https://core.telegram.org/api/pattern)
+#### [Сопоставление с шаблоном](/api/pattern/)
 
-Some methods require the client to verify if the data obtained from an external source matches a certain pattern.
+Некоторые методы требуют, чтобы клиент проверил, соответствуют ли данные, полученные из внешнего источника, определённому шаблону.

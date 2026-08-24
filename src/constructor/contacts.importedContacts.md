@@ -1,32 +1,24 @@
 ---
-title: "contacts.importedContacts (конструктор)"
+title: "contacts.importedContacts"
 original: "https://core.telegram.org/constructor/contacts.importedContacts"
 section: ref
 kind: constructor
+description: "Информация об успешно импортированных контактах."
 layout: layout.njk
 ---
 
 # contacts.importedContacts
 
-*Конструктор из схемы TL.*
-
-> Info on successfully imported contacts.
-
-## Определение TL
+Информация об успешно импортированных контактах.
 
 ```
 contacts.importedContacts#77d01c3b imported:Vector<ImportedContact> popular_invites:Vector<PopularContact> retry_contacts:Vector<long> users:Vector<User> = contacts.ImportedContacts;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| imported | [Vector](https://core.telegram.org/type/Vector%20t)<[ImportedContact](/type/ImportedContact/)> | List of successfully imported contacts |
-| popular_invites | [Vector](https://core.telegram.org/type/Vector%20t)<[PopularContact](/type/PopularContact/)> | Popular contacts |
-| retry_contacts | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | List of contact ids that could not be imported due to system limitation and will need to be imported at a later date. |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | List of users |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>imported</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ImportedContact">ImportedContact</a>&gt;</td><td>Список успешно импортированных контактов</td></tr><tr><td><strong>popular_invites</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/PopularContact">PopularContact</a>&gt;</td><td>Популярные контакты</td></tr><tr><td><strong>retry_contacts</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Список идентификаторов контактов, которые не удалось импортировать из-за системного ограничения; их потребуется импортировать позже.</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Список пользователей</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [contacts.ImportedContacts](/type/contacts.ImportedContacts/)

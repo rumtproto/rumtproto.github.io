@@ -1,18 +1,15 @@
 ---
-title: "stories.canSendStory (метод)"
+title: "stories.canSendStory"
 original: "https://core.telegram.org/method/stories.canSendStory"
 section: ref
 kind: method
+description: "Проверить, можем ли мы публиковать истории от имени указанного пира."
 layout: layout.njk
 ---
 
 # stories.canSendStory
 
-*Метод из схемы TL.*
-
-> Check whether we can post stories as the specified peer.
-
-## Определение TL
+Проверить, можем ли мы публиковать истории от имени указанного пира.
 
 ```
 stories.canSendStoryCount#c387c04e count_remains:int = stories.CanSendStoryCount;
@@ -20,41 +17,30 @@ stories.canSendStoryCount#c387c04e count_remains:int = stories.CanSendStoryCount
 stories.canSendStory#30eb63f0 peer:InputPeer = stories.CanSendStoryCount;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The peer from which we wish to post stories. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, от имени которого мы хотим публиковать истории.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [stories.CanSendStoryCount](/type/stories.CanSendStoryCount/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOOSTS_REQUIRED | The specified channel must first be [boosted by its users](https://core.telegram.org/api/boost) in order to perform this action. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
-| 400 | STORIES_TOO_MUCH | You have hit the maximum active stories limit as specified by the [story_expiring_limit_* client configuration parameters](https://core.telegram.org/api/config#story-expiring-limit-default): you should buy a [Premium](https://core.telegram.org/api/premium) subscription, delete an active story, or wait for the oldest story to expire. |
-| 400 | STORY_SEND_FLOOD_MONTHLY_%d | You've hit the monthly story limit as specified by the [stories_sent_monthly_limit_* client configuration parameters](https://core.telegram.org/api/config#stories-sent-monthly-limit-default): wait %d seconds before posting a new story. |
-| 400 | STORY_SEND_FLOOD_WEEKLY_%d | You've hit the weekly story limit as specified by the [stories_sent_weekly_limit_* client configuration parameters](https://core.telegram.org/api/config#stories-sent-weekly-limit-default): wait for %d seconds before posting a new story. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOOSTS_REQUIRED</td><td>Чтобы выполнить это действие, указанный канал должен быть сначала <a href="/api/boost">забустен своими пользователями</a>.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr><tr><td>400</td><td>STORIES_TOO_MUCH</td><td>Вы достигли предельного числа активных историй, заданного <a href="/api/config#story-expiring-limit-default">параметрами клиентской конфигурации <code>story_expiring_limit_*</code></a>: следует приобрести подписку <a href="/api/premium">Premium</a>, удалить одну из активных историй или дождаться истечения срока самой старой из них.</td></tr><tr><td>400</td><td>STORY_SEND_FLOOD_MONTHLY_%d</td><td>Вы достигли месячного лимита историй, заданного <a href="/api/config#stories-sent-monthly-limit-default">параметрами клиентской конфигурации <code>stories_sent_monthly_limit_*</code></a>: подождите %d секунд перед публикацией новой истории.</td></tr><tr><td>400</td><td>STORY_SEND_FLOOD_WEEKLY_%d</td><td>Вы достигли недельного лимита историй, заданного <a href="/api/config#stories-sent-weekly-limit-default">параметрами клиентской конфигурации <code>stories_sent_weekly_limit_*</code></a>: подождите %d секунд перед публикацией новой истории.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.

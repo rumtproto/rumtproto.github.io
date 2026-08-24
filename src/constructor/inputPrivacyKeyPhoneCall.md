@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyKeyPhoneCall (конструктор)"
+title: "inputPrivacyKeyPhoneCall"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyPhoneCall"
 section: ref
 kind: constructor
+description: "Будете ли вы принимать звонки"
 layout: layout.njk
 ---
 
 # inputPrivacyKeyPhoneCall
 
-*Конструктор из схемы TL.*
-
-> Whether you will accept phone calls
-
-## Определение TL
+Будете ли вы принимать звонки
 
 ```
 inputPrivacyKeyPhoneCall#fabadc5f = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)

@@ -1,30 +1,24 @@
 ---
-title: "channelAdminLogEventActionChangeUsername (конструктор)"
+title: "channelAdminLogEventActionChangeUsername"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionChangeUsername"
 section: ref
 kind: constructor
+description: "Имя пользователя канала/супергруппы было изменено"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionChangeUsername
 
-*Конструктор из схемы TL.*
-
-> Channel/supergroup username was changed
-
-## Определение TL
+Имя пользователя канала/супергруппы было изменено
 
 ```
 channelAdminLogEventActionChangeUsername#6a4afc38 prev_value:string new_value:string = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| prev_value | [string](/type/string/) | Old username |
-| new_value | [string](/type/string/) | New username |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>prev_value</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Прежнее имя пользователя</td></tr><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Новое имя пользователя</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)

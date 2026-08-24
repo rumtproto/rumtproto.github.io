@@ -1,25 +1,20 @@
 ---
-title: "InputWebDocument (тип)"
+title: "InputWebDocument"
 original: "https://core.telegram.org/type/InputWebDocument"
 section: ref
 kind: type
+description: "Задаёт документ, который серверы telegram должны будут загрузить по указанному адресу"
 layout: layout.njk
 ---
 
 # InputWebDocument
 
-*Тип из схемы TL.*
-
-> Specifies a document that will have to be downloaded from the URL by the telegram servers
-
-## Определение TL
+Задаёт документ, который серверы telegram должны будут загрузить по указанному адресу
 
 ```
 inputWebDocument#9bed434d url:string size:int mime_type:string attributes:Vector<DocumentAttribute> = InputWebDocument;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputWebDocument](/constructor/inputWebDocument/) | The document |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputWebDocument">inputWebDocument</a></td><td>Документ</td></tr></tbody></table>

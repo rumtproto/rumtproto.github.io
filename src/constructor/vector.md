@@ -1,31 +1,28 @@
 ---
-title: "vector (конструктор)"
+title: "vector"
 original: "https://core.telegram.org/constructor/vector"
 section: ref
 kind: constructor
+description: "Универсальный конструктор вектора."
 layout: layout.njk
 ---
 
 # vector
 
-*Конструктор из схемы TL.*
-
-> A universal vector constructor.
-
-## Определение TL
+Универсальный конструктор вектора.
 
 ```
 vector#1cb5c415 {t:Type} # [ t ] = Vector t;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Vector t](https://core.telegram.org/type/Vector%20t)
 
-## Params additional
+### Дополнительные параметры
 
-For serialization write the constructor id `0x1cb5c415`:**int**, then the number of vector elements - #:**int**, then, one after another, the # of the elements of the type **t**, that was implicitly passed to the constructor.
+Для сериализации запишите идентификатор конструктора `0x1cb5c415`:**int**, затем число элементов вектора — #:**int**, а затем, одно за другим, # элементов типа **t**, неявно переданного конструктору.

@@ -1,39 +1,32 @@
 ---
-title: "searchResultsCalendarPeriod (конструктор)"
+title: "searchResultsCalendarPeriod"
 original: "https://core.telegram.org/constructor/searchResultsCalendarPeriod"
 section: ref
 kind: constructor
+description: "Информация о найденных сообщениях, отправленных в определённый день; используется для разбивки поля messages в конструкторах messages.searchResultsCalendar по дням."
 layout: layout.njk
 ---
 
 # searchResultsCalendarPeriod
 
-*Конструктор из схемы TL.*
+Информация о найденных сообщениях, отправленных в определённый день; используется для разбивки поля `messages` в конструкторах [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/) по дням.
 
-> Information about found messages sent on a specific day, used to split the `messages` in [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/) constructors by days.
-> Multiple searchResultsCalendarPeriod constructors are returned in [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/), each containing information about the first, last and total number of messages matching the filter that were sent on a specific day.
-
-## Определение TL
+В [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/) возвращается несколько конструкторов searchResultsCalendarPeriod, каждый из которых содержит сведения о первом и последнем сообщении, подходящем под фильтр и отправленном в конкретный день, а также об их общем числе.
 
 ```
 searchResultsCalendarPeriod#c9b0539f date:int min_msg_id:int max_msg_id:int count:int = SearchResultsCalendarPeriod;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| date | [int](/type/int/) | The day this object is referring to. |
-| min_msg_id | [int](/type/int/) | First message ID that was sent on this day. |
-| max_msg_id | [int](/type/int/) | Last message ID that was sent on this day. |
-| count | [int](/type/int/) | All messages that were sent on this day. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>День, к которому относится этот объект.</td></tr><tr><td><strong>min_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор первого сообщения, отправленного в этот день.</td></tr><tr><td><strong>max_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор последнего сообщения, отправленного в этот день.</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Все сообщения, отправленные в этот день.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SearchResultsCalendarPeriod](/type/SearchResultsCalendarPeriod/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/)
 
-Information about found messages sent on a specific day
+Информация о найденных сообщениях, отправленных в определённый день

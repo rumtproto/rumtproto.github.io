@@ -1,27 +1,24 @@
 ---
-title: "inputMessagesFilterChatPhotos (конструктор)"
+title: "inputMessagesFilterChatPhotos"
 original: "https://core.telegram.org/constructor/inputMessagesFilterChatPhotos"
 section: ref
 kind: constructor
+description: "Возвращать только изменения фотографии чата"
 layout: layout.njk
 ---
 
 # inputMessagesFilterChatPhotos
 
-*Конструктор из схемы TL.*
-
-> Return only chat photo changes
-
-## Определение TL
+Возвращать только изменения фотографии чата
 
 ```
 inputMessagesFilterChatPhotos#3a20ecb8 = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)

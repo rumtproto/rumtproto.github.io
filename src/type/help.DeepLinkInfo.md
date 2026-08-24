@@ -1,18 +1,15 @@
 ---
-title: "Help.DeepLinkInfo (тип)"
+title: "help.DeepLinkInfo"
 original: "https://core.telegram.org/type/help.DeepLinkInfo"
 section: ref
 kind: type
+description: "Содержит информацию о неподдерживаемой глубокой ссылке »"
 layout: layout.njk
 ---
 
 # Help.DeepLinkInfo
 
-*Тип из схемы TL.*
-
-> Contains information about an unsupported [deep link »](https://core.telegram.org/api/links#unsupported-links)
-
-## Определение TL
+Содержит информацию о неподдерживаемой [глубокой ссылке »](/api/links/#unsupported-links)
 
 ```
 help.deepLinkInfoEmpty#66afa166 = help.DeepLinkInfo;
@@ -23,21 +20,16 @@ help.deepLinkInfo#6a4ee832 flags:# update_app:flags.0?true message:string entiti
 help.getDeepLinkInfo#3fedc75f path:string = help.DeepLinkInfo;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [help.deepLinkInfoEmpty](/constructor/help.deepLinkInfoEmpty/) | Deep link info empty |
-| [help.deepLinkInfo](/constructor/help.deepLinkInfo/) | Deep link info, see [the here for more details](https://core.telegram.org/api/links#unsupported-links) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/help.deepLinkInfoEmpty">help.deepLinkInfoEmpty</a></td><td>Информация о глубокой ссылке отсутствует</td></tr><tr><td><a href="/constructor/help.deepLinkInfo">help.deepLinkInfo</a></td><td>Информация о глубокой ссылке, <a href="/api/links#unsupported-links">подробнее см. здесь</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [help.getDeepLinkInfo](/method/help.getDeepLinkInfo/) | Get info about an unsupported deep link, see [here for more info »](https://core.telegram.org/api/links#unsupported-links). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/help.getDeepLinkInfo">help.getDeepLinkInfo</a></td><td>Получить информацию о неподдерживаемой глубокой ссылке, <a href="/api/links#unsupported-links">подробнее см. здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

@@ -1,39 +1,34 @@
 ---
-title: "inputPeerColorCollectible (конструктор)"
+title: "inputPeerColorCollectible"
 original: "https://core.telegram.org/constructor/inputPeerColorCollectible"
 section: ref
 kind: constructor
+description: "Представляет цветовую палитру », связанную с коллекционным подарком »; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # inputPeerColorCollectible
 
-*Конструктор из схемы TL.*
-
-> Represents a [color palette »](https://core.telegram.org/api/colors) associated to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts), see [here »](https://core.telegram.org/api/colors#collectible-gift-palettes) for more info.
-
-## Определение TL
+Представляет [цветовую палитру »](/api/colors/), связанную с [коллекционным подарком »](/api/gifts/#collectible-gifts); подробнее см. [здесь »](/api/colors/#collectible-gift-palettes).
 
 ```
 inputPeerColorCollectible#b8ea86a9 collectible_id:long = PeerColor;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| collectible_id | [long](/type/long/) | ID of the [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>collectible_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PeerColor](/type/PeerColor/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!

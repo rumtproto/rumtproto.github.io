@@ -1,29 +1,24 @@
 ---
-title: "messageActionChatAddUser (конструктор)"
+title: "messageActionChatAddUser"
 original: "https://core.telegram.org/constructor/messageActionChatAddUser"
 section: ref
 kind: constructor
+description: "Новый участник в группе"
 layout: layout.njk
 ---
 
 # messageActionChatAddUser
 
-*Конструктор из схемы TL.*
-
-> New member in the group
-
-## Определение TL
+Новый участник в группе
 
 ```
 messageActionChatAddUser#15cefd00 users:Vector<long> = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | Users that were invited to the chat |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Пользователи, которые были приглашены в чат</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)

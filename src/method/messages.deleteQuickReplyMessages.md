@@ -1,18 +1,15 @@
 ---
-title: "messages.deleteQuickReplyMessages (метод)"
+title: "messages.deleteQuickReplyMessages"
 original: "https://core.telegram.org/method/messages.deleteQuickReplyMessages"
 section: ref
 kind: method
+description: "Удалить одно или несколько сообщений из шаблона быстрого ответа. При этом также отправляется обновление updateDeleteQuickReplyMessages."
 layout: layout.njk
 ---
 
 # messages.deleteQuickReplyMessages
 
-*Метод из схемы TL.*
-
-> Delete one or more messages from a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts). This will also emit an [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/) update.
-
-## Определение TL
+Удалить одно или несколько сообщений из [шаблона быстрого ответа](/api/business/#quick-reply-shortcuts). При этом также отправляется обновление [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,31 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.deleteQuickReplyMessages#e105e910 shortcut_id:int id:Vector<int> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| shortcut_id | [int](/type/int/) | [Shortcut ID](https://core.telegram.org/api/business#quick-reply-shortcuts). |
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | IDs of shortcut messages to delete. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/business#quick-reply-shortcuts">Идентификатор шаблона</a>.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы сообщений быстрого ответа, которые нужно удалить.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | SHORTCUT_INVALID | The specified shortcut is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>SHORTCUT_INVALID</td><td>Указанный шаблон быстрого ответа недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.
 
 #### [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/)
 
-One or more messages in a [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts) were deleted.
+Одно или несколько сообщений в [шаблоне быстрого ответа »](/api/business/#quick-reply-shortcuts) были удалены.

@@ -1,40 +1,34 @@
 ---
-title: "help.appConfig (конструктор)"
+title: "help.appConfig"
 original: "https://core.telegram.org/constructor/help.appConfig"
 section: ref
 kind: constructor
+description: "Содержит различные параметры клиентской конфигурации"
 layout: layout.njk
 ---
 
 # help.appConfig
 
-*Конструктор из схемы TL.*
-
-> Contains various [client configuration parameters](https://core.telegram.org/api/config#client-configuration)
-
-## Определение TL
+Содержит различные [параметры клиентской конфигурации](/api/config/#client-configuration)
 
 ```
 help.appConfig#dd18782e hash:int config:JSONValue = help.AppConfig;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| config | [JSONValue](/type/JSONValue/) | [Client configuration parameters](https://core.telegram.org/api/config#client-configuration) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>config</strong></td><td style="text-align: center;"><a href="/type/JSONValue">JSONValue</a></td><td><a href="/api/config#client-configuration">Параметры конфигурации клиента</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [help.AppConfig](/type/help.AppConfig/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

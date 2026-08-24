@@ -1,18 +1,15 @@
 ---
-title: "messages.getQuickReplies (метод)"
+title: "messages.getQuickReplies"
 original: "https://core.telegram.org/method/messages.getQuickReplies"
 section: ref
 kind: method
+description: "Получить основные сведения обо всех существующих шаблонах быстрых ответов."
 layout: layout.njk
 ---
 
 # messages.getQuickReplies
 
-*Метод из схемы TL.*
-
-> Fetch basic info about all existing [quick reply shortcuts](https://core.telegram.org/api/business#quick-reply-shortcuts).
-
-## Определение TL
+Получить основные сведения обо всех существующих [шаблонах быстрых ответов](/api/business/#quick-reply-shortcuts).
 
 ```
 messages.quickReplies#c68d6695 quick_replies:Vector<QuickReply> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.QuickReplies;
@@ -21,20 +18,18 @@ messages.quickRepliesNotModified#5f91eb5b = messages.QuickReplies;
 messages.getQuickReplies#d483f2a8 hash:long = messages.QuickReplies;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | Hash for pagination, generated as specified [here »](https://core.telegram.org/api/business#quick-reply-shortcuts) (not the usual algorithm used for hash generation.) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] Хеш для постраничной выборки, вычисляемый так, как указано <a href="/api/business#quick-reply-shortcuts">здесь »</a> (не по обычному алгоритму вычисления хеша.)</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.QuickReplies](/type/messages.QuickReplies/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

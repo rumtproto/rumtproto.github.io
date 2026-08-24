@@ -1,35 +1,30 @@
 ---
-title: "auth.sentCodeSuccess (конструктор)"
+title: "auth.sentCodeSuccess"
 original: "https://core.telegram.org/constructor/auth.sentCodeSuccess"
 section: ref
 kind: constructor
+description: "Пользователь успешно авторизовался с помощью токенов будущей авторизации"
 layout: layout.njk
 ---
 
 # auth.sentCodeSuccess
 
-*Конструктор из схемы TL.*
-
-> The user successfully authorized using [future auth tokens](https://core.telegram.org/api/auth/#future-auth-tokens)
-
-## Определение TL
+Пользователь успешно авторизовался с помощью [токенов будущей авторизации](/api/auth/#future-auth-tokens)
 
 ```
 auth.sentCodeSuccess#2390fe44 authorization:auth.Authorization = auth.SentCode;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| authorization | [auth.Authorization](/type/auth.Authorization/) | Authorization info |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>authorization</strong></td><td style="text-align: center;"><a href="/type/auth.Authorization">auth.Authorization</a></td><td>Сведения об авторизации</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [auth.SentCode](/type/auth.SentCode/)
 
-## Related pages
+### Связанные страницы
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

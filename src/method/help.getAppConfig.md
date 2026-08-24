@@ -1,18 +1,15 @@
 ---
-title: "help.getAppConfig (метод)"
+title: "help.getAppConfig"
 original: "https://core.telegram.org/method/help.getAppConfig"
 section: ref
 kind: method
+description: "Получить конфигурацию, специфичную для приложения; подробнее о результате см. клиентскую конфигурацию."
 layout: layout.njk
 ---
 
 # help.getAppConfig
 
-*Метод из схемы TL.*
-
-> Get app-specific configuration, see [client configuration](https://core.telegram.org/api/config#client-configuration) for more info on the result.
-
-## Определение TL
+Получить конфигурацию, специфичную для приложения; подробнее о результате см. [клиентскую конфигурацию](/api/config/#client-configuration).
 
 ```
 help.appConfigNotModified#7cde641d = help.AppConfig;
@@ -21,26 +18,24 @@ help.appConfig#dd18782e hash:int config:JSONValue = help.AppConfig;
 help.getAppConfig#61e3f854 hash:int = help.AppConfig;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [help.AppConfig](/type/help.AppConfig/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

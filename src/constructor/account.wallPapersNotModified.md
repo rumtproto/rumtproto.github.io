@@ -1,33 +1,30 @@
 ---
-title: "account.wallPapersNotModified (конструктор)"
+title: "account.wallPapersNotModified"
 original: "https://core.telegram.org/constructor/account.wallPapersNotModified"
 section: ref
 kind: constructor
+description: "Новых обоев не найдено"
 layout: layout.njk
 ---
 
 # account.wallPapersNotModified
 
-*Конструктор из схемы TL.*
-
-> No new [wallpapers](https://core.telegram.org/api/wallpapers) were found
-
-## Определение TL
+Новых [обоев](/api/wallpapers/) не найдено
 
 ```
 account.wallPapersNotModified#1c199183 = account.WallPapers;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [account.WallPapers](/type/account.WallPapers/)
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.

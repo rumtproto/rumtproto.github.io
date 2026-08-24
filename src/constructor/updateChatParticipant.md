@@ -1,51 +1,38 @@
 ---
-title: "updateChatParticipant (конструктор)"
+title: "updateChatParticipant"
 original: "https://core.telegram.org/constructor/updateChatParticipant"
 section: ref
 kind: constructor
+description: "Пользователь вступил в определённую обычную группу » или вышел из неё: это обновление могут получать только боты; пользовательский вариант этого обновления описан здесь »."
 layout: layout.njk
 ---
 
 # updateChatParticipant
 
-*Конструктор из схемы TL.*
-
-> A user has joined or left a specific [basic group »](https://core.telegram.org/api/channel#basic-groups): this update can only be received by bots, see [here »](https://core.telegram.org/api/peers#basic-group-updates) for the user version of this update.
-
-## Определение TL
+Пользователь вступил в определённую [обычную группу »](/api/channel/#basic-groups) или вышел из неё: это обновление могут получать только боты; пользовательский вариант этого обновления описан [здесь »](/api/peers/#basic-group-updates).
 
 ```
 updateChatParticipant#d087663a flags:# chat_id:long date:int actor_id:long user_id:long prev_participant:flags.0?ChatParticipant new_participant:flags.1?ChatParticipant invite:flags.2?ExportedChatInvite qts:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| chat_id | [long](/type/long/) | [Chat](https://core.telegram.org/api/channel) ID |
-| date | [int](/type/int/) | When did this event occur |
-| actor_id | [long](/type/long/) | User that triggered the change (inviter, admin that kicked the user, or the even the user_id itself) |
-| user_id | [long](/type/long/) | User that was affected by the change |
-| prev_participant | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[ChatParticipant](/type/ChatParticipant/) | Previous participant info (empty if this participant just joined) |
-| new_participant | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[ChatParticipant](/type/ChatParticipant/) | New participant info (empty if this participant just left) |
-| invite | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[ExportedChatInvite](/type/ExportedChatInvite/) | The invite that was used to join the group |
-| qts | [int](/type/int/) | New qts value, see [updates »](/api/updates/) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор <a href="/api/channel">чата</a></td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда произошло это событие</td></tr><tr><td><strong>actor_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Пользователь, вызвавший изменение (пригласивший, администратор, исключивший пользователя, или даже сам <strong>user_id</strong>)</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Пользователь, которого затронуло изменение</td></tr><tr><td><strong>prev_participant</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/ChatParticipant">ChatParticipant</a></td><td>Сведения о предыдущем состоянии участника (пусто, если участник только что присоединился)</td></tr><tr><td><strong>new_participant</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/ChatParticipant">ChatParticipant</a></td><td>Сведения о новом участнике (пусто, если этот участник только что вышел)</td></tr><tr><td><strong>invite</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/ExportedChatInvite">ExportedChatInvite</a></td><td>Приглашение, по которому был выполнен вход в группу</td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] Новое значение <strong>qts</strong>, подробнее см. <a href="/api/updates">обновления »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Peer database](https://core.telegram.org/api/peers)
+#### [База данных пиров](/api/peers/)
 
-Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.
+Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.

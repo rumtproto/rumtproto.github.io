@@ -1,35 +1,30 @@
 ---
-title: "channelAdminLogEventActionToggleForum (конструктор)"
+title: "channelAdminLogEventActionToggleForum"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionToggleForum"
 section: ref
 kind: constructor
+description: "Функциональность форума была включена или отключена."
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionToggleForum
 
-*Конструктор из схемы TL.*
-
-> [Forum](https://core.telegram.org/api/forum) functionality was enabled or disabled.
-
-## Определение TL
+Функциональность [форума](/api/forum/) была включена или отключена.
 
 ```
 channelAdminLogEventActionToggleForum#2cc6383 new_value:Bool = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| new_value | [Bool](/type/Bool/) | Whether [forum](https://core.telegram.org/api/forum) functionality was enabled or disabled. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Была ли включена или отключена функциональность <a href="/api/forum">форума</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

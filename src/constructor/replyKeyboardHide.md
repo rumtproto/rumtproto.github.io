@@ -1,30 +1,24 @@
 ---
-title: "replyKeyboardHide (конструктор)"
+title: "replyKeyboardHide"
 original: "https://core.telegram.org/constructor/replyKeyboardHide"
 section: ref
 kind: constructor
+description: "Скрыть отправленную клавиатуру ответа"
 layout: layout.njk
 ---
 
 # replyKeyboardHide
 
-*Конструктор из схемы TL.*
-
-> Hide sent reply keyboard
-
-## Определение TL
+Скрыть отправленную клавиатуру ответа
 
 ```
 replyKeyboardHide#a03e5b85 flags:# selective:flags.2?true = ReplyMarkup;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| selective | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Use this flag if you want to remove the keyboard for specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message. Example: A user votes in a poll, bot returns confirmation message in reply to the vote and removes the keyboard for that user, while still showing the keyboard with poll options to users who haven't voted yet |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>selective</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Используйте этот флаг, если хотите убрать клавиатуру только для определённых пользователей. Адресаты: 1) пользователи, упомянутые через @ в тексте объекта Message; 2) если сообщение бота является ответом (задано reply_to_message_id) — отправитель исходного сообщения.<br><br>Пример: пользователь голосует в опросе, бот отправляет в ответ на голос подтверждающее сообщение и убирает клавиатуру для этого пользователя, продолжая показывать клавиатуру с вариантами ответа тем, кто ещё не проголосовал</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ReplyMarkup](/type/ReplyMarkup/)

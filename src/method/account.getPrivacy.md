@@ -1,18 +1,15 @@
 ---
-title: "account.getPrivacy (метод)"
+title: "account.getPrivacy"
 original: "https://core.telegram.org/method/account.getPrivacy"
 section: ref
 kind: method
+description: "Получить настройки приватности текущего аккаунта"
 layout: layout.njk
 ---
 
 # account.getPrivacy
 
-*Метод из схемы TL.*
-
-> Get privacy settings of current account
-
-## Определение TL
+Получить настройки приватности текущего аккаунта
 
 ```
 account.privacyRules#50a04e45 rules:Vector<PrivacyRule> chats:Vector<Chat> users:Vector<User> = account.PrivacyRules;
@@ -20,20 +17,16 @@ account.privacyRules#50a04e45 rules:Vector<PrivacyRule> chats:Vector<Chat> users
 account.getPrivacy#dadbc950 key:InputPrivacyKey = account.PrivacyRules;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| key | [InputPrivacyKey](/type/InputPrivacyKey/) | Peer category whose privacy settings should be fetched |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/InputPrivacyKey">InputPrivacyKey</a></td><td>Категория пиров, настройки приватности которой следует получить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.PrivacyRules](/type/account.PrivacyRules/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PRIVACY_KEY_INVALID | The privacy key is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PRIVACY_KEY_INVALID</td><td>Указанный ключ приватности недействителен.</td></tr></tbody></table>

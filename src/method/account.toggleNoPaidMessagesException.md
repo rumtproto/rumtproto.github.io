@@ -1,18 +1,15 @@
 ---
-title: "account.toggleNoPaidMessagesException (метод)"
+title: "account.toggleNoPaidMessagesException"
 original: "https://core.telegram.org/method/account.toggleNoPaidMessagesException"
 section: ref
 kind: method
+description: "Разрешить пользователю отправлять нам сообщения без оплаты, если включены платные сообщения »."
 layout: layout.njk
 ---
 
 # account.toggleNoPaidMessagesException
 
-*Метод из схемы TL.*
-
-> Allow a user to send us messages without paying if [paid messages »](https://core.telegram.org/api/paid-messages) are enabled.
-
-## Определение TL
+Разрешить пользователю отправлять нам сообщения без оплаты, если включены [платные сообщения »](/api/paid-messages/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,40 +18,30 @@ boolTrue#997275b5 = Bool;
 account.toggleNoPaidMessagesException#fe2eda76 flags:# refund_charged:flags.0?true require_payment:flags.2?true parent_peer:flags.1?InputPeer user_id:InputUser = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| refund_charged | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set and require_payment is not set, refunds the amounts the user has already paid us to send us messages (directly or via a monoforum). |
-| require_payment | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | If set, requires the user to pay in order to send us messages. Can only be set by monoforums, not users, i.e. parent_peer must be set if this flag is set; users must instead use the [inputPrivacyKeyNoPaidMessages](/constructor/inputPrivacyKeyNoPaidMessages/) privacy setting to remove a previously added exemption. If not set, allows the user to send us messages without paying (can be unset by both monoforums and users). |
-| parent_peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[InputPeer](/type/InputPeer/) | If set, applies the setting within the [monoforum aka direct messages »](https://core.telegram.org/api/monoforum) (pass the ID of the monoforum, not the ID of the associated channel). |
-| user_id | [InputUser](/type/InputUser/) | The user to exempt or unexempt. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>refund_charged</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, а флаг <code>require_payment</code> не установлен, возвращает суммы, которые пользователь уже заплатил нам за отправку нам сообщений (напрямую или через монофорум).</td></tr><tr><td><strong>require_payment</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Если установлено, требует от пользователя оплаты за отправку нам сообщений.<br><strong>Установить</strong> этот флаг могут только монофорумы, но не пользователи, то есть при установленном флаге должен быть задан <code>parent_peer</code>; пользователям следует вместо этого использовать настройку приватности <a href="/constructor/inputPrivacyKeyNoPaidMessages">inputPrivacyKeyNoPaidMessages</a>, чтобы убрать ранее добавленное исключение.<br>Если не установлено, разрешает пользователю отправлять нам сообщения без оплаты (<strong>снять</strong> флаг могут как монофорумы, так и пользователи).</td></tr><tr><td><strong>parent_peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/InputPeer">InputPeer</a></td><td>Если установлено, применяет настройку внутри <a href="/api/monoforum">монофорума, то есть личных сообщений »</a> (передавайте идентификатор монофорума, а <strong>не</strong> идентификатор связанного канала).</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Пользователь, которого нужно освободить от платы или лишить освобождения.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PARENT_PEER_INVALID | The specified parent_peer is invalid. |
-| 400 | UNSUPPORTED | require_payment cannot be set by users, only by monoforums: users must instead use the [inputPrivacyKeyNoPaidMessages](/constructor/inputPrivacyKeyNoPaidMessages/) privacy setting to remove a previously added exemption. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PARENT_PEER_INVALID</td><td>Указанный <code>parent_peer</code> недействителен.</td></tr><tr><td>400</td><td>UNSUPPORTED</td><td><code>require_payment</code> не может <em>устанавливаться</em> пользователями — только монофорумами: чтобы снять ранее добавленное исключение, пользователи должны воспользоваться настройкой приватности <a href="/constructor/inputPrivacyKeyNoPaidMessages">inputPrivacyKeyNoPaidMessages</a>.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [inputPrivacyKeyNoPaidMessages](/constructor/inputPrivacyKeyNoPaidMessages/)
 
-Who can send you messages without paying, if [paid messages »](https://core.telegram.org/api/paid-messages) are enabled.
+Кто может писать вам без оплаты, если включены [платные сообщения »](/api/paid-messages/).
 
-#### [Direct messages to channels](https://core.telegram.org/api/monoforum)
+#### [Личные сообщения в каналы](/api/monoforum/)
 
-Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.
+Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.
 
-#### [Paid messages](https://core.telegram.org/api/paid-messages)
+#### [Платные сообщения](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.
+Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.

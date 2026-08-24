@@ -1,18 +1,15 @@
 ---
-title: "PeerColor (тип)"
+title: "PeerColor"
 original: "https://core.telegram.org/type/PeerColor"
 section: ref
 kind: type
+description: "Представляет цветовую палитру »."
 layout: layout.njk
 ---
 
 # PeerColor
 
-*Тип из схемы TL.*
-
-> Represents a [color palette »](https://core.telegram.org/api/colors).
-
-## Определение TL
+Представляет [цветовую палитру »](/api/colors/).
 
 ```
 peerColor#b54b5acf flags:# color:flags.0?int background_emoji_id:flags.1?long = PeerColor;
@@ -20,16 +17,12 @@ peerColorCollectible#b9c0639a flags:# collectible_id:long gift_emoji_id:long bac
 inputPeerColorCollectible#b8ea86a9 collectible_id:long = PeerColor;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [peerColor](/constructor/peerColor/) | Represents a [color palette »](https://core.telegram.org/api/colors). |
-| [peerColorCollectible](/constructor/peerColorCollectible/) | Represents a [color palette »](https://core.telegram.org/api/colors) associated to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts), see [here »](https://core.telegram.org/api/colors#collectible-gift-palettes) for more info. |
-| [inputPeerColorCollectible](/constructor/inputPeerColorCollectible/) | Represents a [color palette »](https://core.telegram.org/api/colors) associated to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts), see [here »](https://core.telegram.org/api/colors#collectible-gift-palettes) for more info. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/peerColor">peerColor</a></td><td>Представляет <a href="/api/colors">цветовую палитру »</a>.</td></tr><tr><td><a href="/constructor/peerColorCollectible">peerColorCollectible</a></td><td>Представляет <a href="/api/colors">цветовую палитру »</a>, связанную с <a href="/api/gifts#collectible-gifts">коллекционным подарком »</a>; подробнее см. <a href="/api/colors#collectible-gift-palettes">здесь »</a>.</td></tr><tr><td><a href="/constructor/inputPeerColorCollectible">inputPeerColorCollectible</a></td><td>Представляет <a href="/api/colors">цветовую палитру »</a>, связанную с <a href="/api/gifts#collectible-gifts">коллекционным подарком »</a>; подробнее см. <a href="/api/colors#collectible-gift-palettes">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!

@@ -1,18 +1,15 @@
 ---
-title: "messages.viewSponsoredMessage (метод)"
+title: "messages.viewSponsoredMessage"
 original: "https://core.telegram.org/method/messages.viewSponsoredMessage"
 section: ref
 kind: method
+description: "Отметить конкретное рекламное сообщение » как прочитанное"
 layout: layout.njk
 ---
 
 # messages.viewSponsoredMessage
 
-*Метод из схемы TL.*
-
-> Mark a specific [sponsored message »](https://core.telegram.org/api/sponsored-messages) as read
-
-## Определение TL
+Отметить конкретное [рекламное сообщение »](/api/sponsored-messages/) как прочитанное
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,24 +18,22 @@ boolTrue#997275b5 = Bool;
 messages.viewSponsoredMessage#269e3643 random_id:bytes = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| random_id | [bytes](/type/bytes/) | The ad's unique ID. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>[@term:random_id] Уникальный идентификатор рекламного объявления. Подробнее о дедупликации по случайным идентификаторам и сопоставлении через updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Sponsored messages](https://core.telegram.org/api/sponsored-messages)
+#### [Спонсируемые сообщения](/api/sponsored-messages/)
 
-How clients should fetch, display and interact with sponsored messages.
+Как клиентам получать, показывать рекламные сообщения и взаимодействовать с ними.

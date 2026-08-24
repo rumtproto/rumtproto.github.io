@@ -1,41 +1,36 @@
 ---
-title: "inputGroupCallInviteMessage (конструктор)"
+title: "inputGroupCallInviteMessage"
 original: "https://core.telegram.org/constructor/inputGroupCallInviteMessage"
 section: ref
 kind: constructor
+description: "Определяет конференц-звонок » по его пригласительному сервисному сообщению messageActionConferenceCall."
 layout: layout.njk
 ---
 
 # inputGroupCallInviteMessage
 
-*Конструктор из схемы TL.*
-
-> Identifies a [conference call »](https://core.telegram.org/api/group-calls#conference-calls) using its [messageActionConferenceCall](/constructor/messageActionConferenceCall/) invitation service message.
-
-## Определение TL
+Определяет [конференц-звонок »](/api/group-calls/#conference-calls) по его пригласительному сервисному сообщению [messageActionConferenceCall](/constructor/messageActionConferenceCall/).
 
 ```
 inputGroupCallInviteMessage#8c10603f msg_id:int = InputGroupCall;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| msg_id | [int](/type/int/) | ID of the [messageActionConferenceCall](/constructor/messageActionConferenceCall/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор <a href="/constructor/messageActionConferenceCall">messageActionConferenceCall</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputGroupCall](/type/InputGroupCall/)
 
-## Related pages
+### Связанные страницы
 
 #### [messageActionConferenceCall](/constructor/messageActionConferenceCall/)
 
-Represents a [conference call »](https://core.telegram.org/api/group-calls#conference-calls), or an invitation to one if neither the `missed` nor `active` flags are set.
+Представляет [конференц-звонок »](/api/group-calls/#conference-calls) либо приглашение на него, если не установлен ни флаг `missed`, ни флаг `active`.
 
-If [call\_requests\_disabled](https://core.telegram.org/api/config#call-requests-disabled) is not set or false, an incoming [messageActionConferenceCall](/constructor/messageActionConferenceCall/) with the `missed` and `active` flags **not** set should trigger ringing and an incoming call screen, just like for one-on-one calls.
+Если [call\_requests\_disabled](/api/config/#call-requests-disabled) не установлен или равен false, входящий [messageActionConferenceCall](/constructor/messageActionConferenceCall/), у которого **не** установлены флаги `missed` и `active`, должен вызывать звонок и экран входящего вызова — так же, как при звонках один на один.
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

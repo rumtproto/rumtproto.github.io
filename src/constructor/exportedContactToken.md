@@ -1,36 +1,30 @@
 ---
-title: "exportedContactToken (конструктор)"
+title: "exportedContactToken"
 original: "https://core.telegram.org/constructor/exportedContactToken"
 section: ref
 kind: constructor
+description: "Описывает временную ссылку на профиль."
 layout: layout.njk
 ---
 
 # exportedContactToken
 
-*Конструктор из схемы TL.*
-
-> Describes a [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links).
-
-## Определение TL
+Описывает [временную ссылку на профиль](/api/links/#temporary-profile-links).
 
 ```
 exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| url | [string](/type/string/) | The [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links). |
-| expires | [int](/type/int/) | Its expiration date |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/links#temporary-profile-links">Временная ссылка на профиль</a>.</td></tr><tr><td><strong>expires</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Срок его действия</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ExportedContactToken](/type/ExportedContactToken/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

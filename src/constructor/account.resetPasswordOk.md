@@ -1,27 +1,24 @@
 ---
-title: "account.resetPasswordOk (конструктор)"
+title: "account.resetPasswordOk"
 original: "https://core.telegram.org/constructor/account.resetPasswordOk"
 section: ref
 kind: constructor
+description: "Пароль двухфакторной аутентификации успешно сброшен."
 layout: layout.njk
 ---
 
 # account.resetPasswordOk
 
-*Конструктор из схемы TL.*
-
-> The 2FA password was reset successfully.
-
-## Определение TL
+Пароль двухфакторной аутентификации успешно сброшен.
 
 ```
 account.resetPasswordOk#e926d63e = account.ResetPasswordResult;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [account.ResetPasswordResult](/type/account.ResetPasswordResult/)

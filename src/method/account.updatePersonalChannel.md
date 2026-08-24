@@ -1,19 +1,17 @@
 ---
-title: "account.updatePersonalChannel (метод)"
+title: "account.updatePersonalChannel"
 original: "https://core.telegram.org/method/account.updatePersonalChannel"
 section: ref
 kind: method
+description: "Привязать (или отвязать) личный канал », который будет показан на нашей личной странице профиля »."
 layout: layout.njk
 ---
 
 # account.updatePersonalChannel
 
-*Метод из схемы TL.*
+Привязать (или отвязать) личный [канал »](/api/channel/), который будет показан на нашей личной [странице профиля »](/api/profile/#personal-channel).
 
-> Associate (or remove) a personal [channel »](https://core.telegram.org/api/channel), that will be listed on our personal [profile page »](https://core.telegram.org/api/profile#personal-channel).
-> Changing it will emit an [updateUser](/constructor/updateUser/) update.
-
-## Определение TL
+Его изменение вызовет отправку обновления [updateUser](/constructor/updateUser/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,42 +20,38 @@ boolTrue#997275b5 = Bool;
 account.updatePersonalChannel#d94305e0 channel:InputChannel = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The channel, pass [inputChannelEmpty](/constructor/inputChannelEmpty/) to remove it. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал; передайте <a href="/constructor/inputChannelEmpty">inputChannelEmpty</a>, чтобы удалить его.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PUBLIC_BROADCAST_EXPECTED | channel only accepts a channel, but a supergroup was passed. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PUBLIC_BROADCAST_EXPECTED</td><td><code>channel</code> принимает только канал, но была передана супергруппа.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [inputChannelEmpty](/constructor/inputChannelEmpty/)
 
-Represents the absence of a channel
+Представляет отсутствие канала
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!
 
 #### [updateUser](/constructor/updateUser/)
 
-User ([user](/constructor/user/) and/or [userFull](/constructor/userFull/)) information was updated.
+Информация о пользователе ([user](/constructor/user/) и/или [userFull](/constructor/userFull/)) была обновлена.
 
-This update can only be received through getDifference or in [updates](/constructor/updates/)/[updatesCombined](/constructor/updatesCombined/) constructors, so it will **always** come bundled with the updated [user](/constructor/user/), that should be applied [as usual »](https://core.telegram.org/api/peers), **without** re-fetching the info manually.
+Это обновление можно получить только через getDifference либо в конструкторах [updates](/constructor/updates/)/[updatesCombined](/constructor/updatesCombined/), поэтому оно **всегда** приходит вместе с обновлёнными данными [user](/constructor/user/), которые следует применить [обычным образом »](/api/peers/), **без** повторного запроса сведений вручную.
 
-However, full peer information will not come bundled in updates, so the full peer cache ([userFull](/constructor/userFull/)) must be invalidated for `user_id` when receiving this update.
+Однако полные сведения о пире в обновлениях не передаются, поэтому при получении этого обновления кеш полных сведений о пире ([userFull](/constructor/userFull/)) для `user_id` необходимо считать недействительным.

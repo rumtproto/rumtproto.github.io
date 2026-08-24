@@ -1,47 +1,46 @@
 ---
-title: "privacyKeyStatusTimestamp (конструктор)"
+title: "privacyKeyStatusTimestamp"
 original: "https://core.telegram.org/constructor/privacyKeyStatusTimestamp"
 section: ref
 kind: constructor
+description: "Можем ли мы видеть время последнего пребывания этого пользователя в сети."
 layout: layout.njk
 ---
 
 # privacyKeyStatusTimestamp
 
-*Конструктор из схемы TL.*
+Можем ли мы видеть время последнего пребывания этого пользователя в сети.
 
-> Whether we can see the last online timestamp of this user.
-> Note that if _we_ decide to hide our exact last online timestamp to someone (i.e., users A, B, C, or all users) **and** we do not have a [Premium](https://core.telegram.org/api/premium) subscription, we won't be able to see the exact last online timestamp of those users (A, B, C, or all users), even if those users _do_ share it with us.
-> If those users _do_ share their exact online status with us, but we can't see it due to the reason mentioned above, the `by_me` flag of [userStatusRecently](/constructor/userStatusRecently/), [userStatusLastWeek](/constructor/userStatusLastWeek/), [userStatusLastMonth](/constructor/userStatusLastMonth/) will be set.
+Учтите: если _мы_ решили скрыть от кого-либо точное время последнего пребывания в сети (то есть от пользователей A, B, C или от всех пользователей) **и** у нас нет подписки [Premium](/api/premium/), мы не сможем видеть точное время последнего пребывания в сети этих пользователей (A, B, C или всех пользователей), даже если они _действительно_ показывают его нам.
 
-## Определение TL
+Если эти пользователи _всё же_ показывают нам точное время последнего пребывания в сети, но мы не видим его по указанной выше причине, будет установлен флаг `by_me` в конструкторах [userStatusRecently](/constructor/userStatusRecently/), [userStatusLastWeek](/constructor/userStatusLastWeek/), [userStatusLastMonth](/constructor/userStatusLastMonth/).
 
 ```
 privacyKeyStatusTimestamp#bc2eab30 = PrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyKey](/type/PrivacyKey/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
 #### [userStatusRecently](/constructor/userStatusRecently/)
 
-Online status: last seen recently
+Статус в сети: недавно был в сети
 
 #### [userStatusLastWeek](/constructor/userStatusLastWeek/)
 
-Online status: last seen last week
+Статус в сети: последний раз в сети на прошлой неделе
 
 #### [userStatusLastMonth](/constructor/userStatusLastMonth/)
 
-Online status: last seen last month
+Статус в сети: последний раз в сети в прошлом месяце

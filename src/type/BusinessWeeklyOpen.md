@@ -1,31 +1,26 @@
 ---
-title: "BusinessWeeklyOpen (тип)"
+title: "BusinessWeeklyOpen"
 original: "https://core.telegram.org/type/BusinessWeeklyOpen"
 section: ref
 kind: type
+description: "Интервал времени, задающий часы работы Telegram Business."
 layout: layout.njk
 ---
 
 # BusinessWeeklyOpen
 
-*Тип из схемы TL.*
-
-> A time interval, indicating the opening hours of a [Telegram Business](https://core.telegram.org/api/business#opening-hours).
-
-## Определение TL
+Интервал времени, задающий часы работы [Telegram Business](/api/business/#opening-hours).
 
 ```
 businessWeeklyOpen#120b1ab9 start_minute:int end_minute:int = BusinessWeeklyOpen;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [businessWeeklyOpen](/constructor/businessWeeklyOpen/) | A time interval, indicating the opening hours of a business. Note that opening hours specified by the user must be appropriately validated and transformed before uploading them to the server, as specified [here »](https://core.telegram.org/api/business#opening-hours). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/businessWeeklyOpen">businessWeeklyOpen</a></td><td>Интервал времени, задающий часы работы компании.<br><br>Обратите внимание, что указанные пользователем часы работы необходимо соответствующим образом проверить и преобразовать перед отправкой на сервер, как описано <a href="/api/business#opening-hours">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

@@ -1,55 +1,34 @@
 ---
-title: "updateShortChatMessage (конструктор)"
+title: "updateShortChatMessage"
 original: "https://core.telegram.org/constructor/updateShortChatMessage"
 section: ref
 kind: constructor
+description: "Сокращённый конструктор со сведениями об одном новом входящем текстовом сообщении из чата"
 layout: layout.njk
 ---
 
 # updateShortChatMessage
 
-*Конструктор из схемы TL.*
-
-> Shortened constructor containing info on one new incoming text message from a chat
-
-## Определение TL
+Сокращённый конструктор со сведениями об одном новом входящем текстовом сообщении из чата
 
 ```
 updateShortChatMessage#4d6deea5 flags:# out:flags.1?true mentioned:flags.4?true media_unread:flags.5?true silent:flags.13?true id:int from_id:long chat_id:long message:string pts:int pts_count:int date:int fwd_from:flags.2?MessageFwdHeader via_bot_id:flags.11?long reply_to:flags.3?MessageReplyHeader entities:flags.7?Vector<MessageEntity> ttl_period:flags.25?int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| out | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the message is outgoing |
-| mentioned | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Whether we were mentioned in this message |
-| media_unread | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether the message contains some unread mentions |
-| silent | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[true](/constructor/true/) | If true, the message is a silent message, no notifications should be triggered |
-| id | [int](/type/int/) | ID of the message |
-| from_id | [long](/type/long/) | ID of the sender of the message |
-| chat_id | [long](/type/long/) | ID of the chat where the message was sent |
-| message | [string](/type/string/) | Message |
-| pts | [int](/type/int/) | [PTS](/api/updates/) |
-| pts_count | [int](/type/int/) | [PTS count](/api/updates/) |
-| date | [int](/type/int/) | [date](/api/updates/) |
-| fwd_from | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[MessageFwdHeader](/type/MessageFwdHeader/) | Info about a forwarded message |
-| via_bot_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[long](/type/long/) | Info about the inline bot used to generate this message |
-| reply_to | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[MessageReplyHeader](/type/MessageReplyHeader/) | Reply (thread) information |
-| entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Entities](https://core.telegram.org/api/entities) for styled text |
-| ttl_period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).25?[int](/type/int/) | Time To Live of the message, once updateShortChatMessage.date+updateShortChatMessage.ttl_period === time(), the message will be deleted on the server, and must be deleted locally as well. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>out</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Является ли сообщение исходящим</td></tr><tr><td><strong>mentioned</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Были ли мы упомянуты в этом сообщении</td></tr><tr><td><strong>media_unread</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Содержит ли сообщение <strong>непрочитанные</strong> упоминания</td></tr><tr><td><strong>silent</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/constructor/true">true</a></td><td>Если истинно, сообщение отправлено без звука, уведомления не должны показываться</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения</td></tr><tr><td><strong>from_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор отправителя сообщения</td></tr><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор чата, в который было отправлено сообщение</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Сообщение</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] <a href="/api/updates">PTS</a></td></tr><tr><td><strong>pts_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/updates">Количество событий PTS</a></td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/updates">Дата</a></td></tr><tr><td><strong>fwd_from</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/MessageFwdHeader">MessageFwdHeader</a></td><td>Информация о пересланном сообщении</td></tr><tr><td><strong>via_bot_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/long">long</a></td><td>Информация об инлайн-боте, с помощью которого создано это сообщение</td></tr><tr><td><strong>reply_to</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/MessageReplyHeader">MessageReplyHeader</a></td><td>Сведения об ответах (обсуждении)</td></tr><tr><td><strong>entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления</a> для форматированного текста</td></tr><tr><td><strong>ttl_period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/type/int">int</a></td><td>Время жизни сообщения: как только updateShortChatMessage.date+updateShortChatMessage.ttl_period === time(), сообщение будет удалено на сервере, и его также необходимо удалить локально.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Updates](/type/Updates/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

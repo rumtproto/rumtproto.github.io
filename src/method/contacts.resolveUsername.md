@@ -1,18 +1,15 @@
 ---
-title: "contacts.resolveUsername (метод)"
+title: "contacts.resolveUsername"
 original: "https://core.telegram.org/method/contacts.resolveUsername"
 section: ref
 kind: method
+description: "Разрешить @username, чтобы получить сведения о пире"
 layout: layout.njk
 ---
 
 # contacts.resolveUsername
 
-*Метод из схемы TL.*
-
-> Resolve a @username to get peer info
-
-## Определение TL
+Разрешить @username, чтобы получить сведения о пире
 
 ```
 contacts.resolvedPeer#7f077ad9 peer:Peer chats:Vector<Chat> users:Vector<User> = contacts.ResolvedPeer;
@@ -20,31 +17,22 @@ contacts.resolvedPeer#7f077ad9 peer:Peer chats:Vector<Chat> users:Vector<User> =
 contacts.resolveUsername#725afbbc flags:# username:string referer:flags.0?string = contacts.ResolvedPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| username | [string](/type/string/) | @username to resolve |
-| referer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | [Referrer ID from referral links »](https://core.telegram.org/api/links#referral-links). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>username</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>@username, который нужно разрешить</td></tr><tr><td><strong>referer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td><a href="/api/links#referral-links">Идентификатор реферера из реферальных ссылок »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [contacts.ResolvedPeer](/type/contacts.ResolvedPeer/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CONNECTION_LAYER_INVALID | Layer invalid. |
-| 400 | STARREF_EXPIRED | The specified referral link is invalid. |
-| 400 | USERNAME_INVALID | The provided username is not valid. |
-| 400 | USERNAME_NOT_OCCUPIED | The provided username is not occupied. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CONNECTION_LAYER_INVALID</td><td>Недействительный слой.</td></tr><tr><td>400</td><td>STARREF_EXPIRED</td><td>Указанная реферальная ссылка недействительна.</td></tr><tr><td>400</td><td>USERNAME_INVALID</td><td>Указанное имя пользователя недействительно.</td></tr><tr><td>400</td><td>USERNAME_NOT_OCCUPIED</td><td>Указанное имя пользователя не занято.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

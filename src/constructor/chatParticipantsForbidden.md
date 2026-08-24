@@ -1,37 +1,30 @@
 ---
-title: "chatParticipantsForbidden (конструктор)"
+title: "chatParticipantsForbidden"
 original: "https://core.telegram.org/constructor/chatParticipantsForbidden"
 section: ref
 kind: constructor
+description: "Полный список участников обычных групп » вам недоступен, поскольку вы были заблокированы."
 layout: layout.njk
 ---
 
 # chatParticipantsForbidden
 
-*Конструктор из схемы TL.*
-
-> The full list of members of [basic groups »](https://core.telegram.org/api/channel#basic-groups) is not available to you, because you were banned.
-
-## Определение TL
+Полный список участников [обычных групп »](/api/channel/#basic-groups) вам недоступен, поскольку вы были заблокированы.
 
 ```
 chatParticipantsForbidden#8763d3e1 flags:# chat_id:long self_participant:flags.0?ChatParticipant = ChatParticipants;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| chat_id | [long](/type/long/) | Group ID |
-| self_participant | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[ChatParticipant](/type/ChatParticipant/) | Info about the group membership of the current user |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор группы</td></tr><tr><td><strong>self_participant</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/ChatParticipant">ChatParticipant</a></td><td>Информация об участии текущего пользователя в группе</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChatParticipants](/type/ChatParticipants/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

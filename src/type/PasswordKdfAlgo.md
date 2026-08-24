@@ -1,33 +1,27 @@
 ---
-title: "PasswordKdfAlgo (тип)"
+title: "PasswordKdfAlgo"
 original: "https://core.telegram.org/type/PasswordKdfAlgo"
 section: ref
 kind: type
+description: "Функция формирования ключа, используемая при вычислении хеша пароля для двухфакторной авторизации SRP"
 layout: layout.njk
 ---
 
 # PasswordKdfAlgo
 
-*Тип из схемы TL.*
-
-> Key derivation function to use when generating the [password hash for SRP two-factor authorization](/api/srp/)
-
-## Определение TL
+Функция формирования ключа, используемая при вычислении [хеша пароля для двухфакторной авторизации SRP](/api/srp/)
 
 ```
 passwordKdfAlgoUnknown#d45ab096 = PasswordKdfAlgo;
 passwordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow#3a912d4a salt1:bytes salt2:bytes g:int p:bytes = PasswordKdfAlgo;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [passwordKdfAlgoUnknown](/constructor/passwordKdfAlgoUnknown/) | Unknown KDF (most likely, the client is outdated and does not support the specified KDF algorithm) |
-| [passwordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow](/constructor/passwordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow/) | This key derivation algorithm defines that [SRP 2FA login](/api/srp/) must be used |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/passwordKdfAlgoUnknown">passwordKdfAlgoUnknown</a></td><td>Неизвестная KDF (скорее всего, клиент устарел и не поддерживает указанный алгоритм KDF)</td></tr><tr><td><a href="/constructor/passwordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow">passwordKdfAlgoSHA256SHA256PBKDF2HMACSHA512iter100000SHA256ModPow</a></td><td>Этот алгоритм формирования ключа определяет, что должен использоваться <a href="/api/srp">вход с двухфакторной аутентификацией по SRP</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.

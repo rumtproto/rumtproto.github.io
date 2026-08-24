@@ -1,25 +1,99 @@
 ---
-title: "Схема слоя MTProto"
+title: "Актуальная TL-схема MTProto"
 original: "https://core.telegram.org/schema/mtproto"
 section: schema
+description: "Ниже приведена актуальная TL-схема MTProto. Подробнее о TL »"
 layout: layout.njk
 ---
 
-# Схема слоя MTProto
+# Актуальная TL-схема MTProto
 
-Слой схемы, описывающий сам протокол обмена: сообщения, контейнеры, подтверждения, пинги, генерацию ключа. Эти конструкторы используются внутри зашифрованных сообщений, в отличие от «пользовательских» конструкторов основной схемы.
+Ниже приведена актуальная TL-схема MTProto. [Подробнее о TL »](/mtproto/TL/)
 
-Справочник сгенерирован из оригинала; определения сохранены без изменений.
+См. также [подробную схему в формате JSON »](/schema/mtproto-json/)
 
-Ключевые группы:
+```
+int ? = Int;
+long ? = Long;
+double ? = Double;
+string ? = String;
 
-- **Результаты запросов:** [`rpc_result`](https://core.telegram.org/constructor/rpc_result/), [`rpc_error`](https://core.telegram.org/constructor/rpc_error/), [`rpc_answer`](https://core.telegram.org/constructor/rpc_answer/).
-- **Доставка и подтверждения:** [`msgs_ack`](https://core.telegram.org/constructor/msgs_ack/), [`msg_resend_req`](https://core.telegram.org/constructor/msg_resend_req/), [`msg_detailed_info`](https://core.telegram.org/constructor/msg_detailed_info/), [`msgs_state_req`](https://core.telegram.org/constructor/msgs_state_req/), [`msgs_state_info`](https://core.telegram.org/constructor/msgs_state_info/), [`msgs_all_info`](https://core.telegram.org/constructor/msgs_all_info/).
-- **Упаковка:** [`msg_container`](https://core.telegram.org/constructor/msg_container/), [`msg_copy`](https://core.telegram.org/constructor/msg_copy/), [`gzip_packed`](https://core.telegram.org/constructor/gzip_packed/).
-- **Сессии и время:** [`new_session_created`](https://core.telegram.org/constructor/new_session_created/), [`future_salts`](https://core.telegram.org/constructor/future_salts/), [`get_future_salts`](https://core.telegram.org/constructor/get_future_salts/), [`ping`](https://core.telegram.org/constructor/ping/), [`pong`](https://core.telegram.org/constructor/pong/), [`ping_delay_disconnect`](https://core.telegram.org/constructor/ping_delay_disconnect/), [`http_wait`](https://core.telegram.org/constructor/http_wait/).
-- **Генерация ключа:** [`req_pq_multi`](https://core.telegram.org/constructor/req_pq_multi/), [`resPQ`](https://core.telegram.org/constructor/resPQ/), [`req_DH_params`](https://core.telegram.org/constructor/req_DH_params/), [`server_DH_params_ok`](https://core.telegram.org/constructor/server_DH_params_ok/), [`server_DH_params_fail`](https://core.telegram.org/constructor/server_DH_params_fail/), [`set_client_DH_params`](https://core.telegram.org/constructor/set_client_DH_params/), [`dh_gen_ok`](https://core.telegram.org/constructor/dh_gen_ok/), [`dh_gen_retry`](https://core.telegram.org/constructor/dh_gen_retry/), [`dh_gen_fail`](https://core.telegram.org/constructor/dh_gen_fail/).
-- **Управление ключами и сессиями:** [`destroy_session`](https://core.telegram.org/constructor/destroy_session/), [`destroy_sessions`](https://core.telegram.org/constructor/destroy_sessions/), [`destroy_auth_key`](https://core.telegram.org/constructor/destroy_auth_key/).
+vector {t:Type} # [ t ] = Vector t;
 
-Пояснения к каждому конструктору — по ссылкам; общий смысл обмена — в [подробном описании протокола](/mtproto/description/) и [сервисных сообщениях](/mtproto/service_messages/).
+int128 4*[ int ] = Int128;
+int256 8*[ int ] = Int256;
 
-Машиночитаемая версия слоя: [схема MTProto в JSON](/schema/mtproto-json/).
+resPQ#05162463 nonce:int128 server_nonce:int128 pq:bytes server_public_key_fingerprints:Vector<long> = ResPQ;
+
+p_q_inner_data_dc#a9f55f95 pq:bytes p:bytes q:bytes nonce:int128 server_nonce:int128 new_nonce:int256 dc:int = P_Q_inner_data;
+p_q_inner_data_temp_dc#56fddf88 pq:bytes p:bytes q:bytes nonce:int128 server_nonce:int128 new_nonce:int256 dc:int expires_in:int = P_Q_inner_data;
+
+server_DH_params_ok#d0e8075c nonce:int128 server_nonce:int128 encrypted_answer:bytes = Server_DH_Params;
+
+server_DH_inner_data#b5890dba nonce:int128 server_nonce:int128 g:int dh_prime:bytes g_a:bytes server_time:int = Server_DH_inner_data;
+
+client_DH_inner_data#6643b654 nonce:int128 server_nonce:int128 retry_id:long g_b:bytes = Client_DH_Inner_Data;
+
+dh_gen_ok#3bcbf734 nonce:int128 server_nonce:int128 new_nonce_hash1:int128 = Set_client_DH_params_answer;
+dh_gen_retry#46dc1fb9 nonce:int128 server_nonce:int128 new_nonce_hash2:int128 = Set_client_DH_params_answer;
+dh_gen_fail#a69dae02 nonce:int128 server_nonce:int128 new_nonce_hash3:int128 = Set_client_DH_params_answer;
+
+bind_auth_key_inner#75a3f765 nonce:long temp_auth_key_id:long perm_auth_key_id:long temp_session_id:long expires_at:int = BindAuthKeyInner;
+
+rpc_result#f35c6d01 req_msg_id:long result:Object = RpcResult;
+rpc_error#2144ca19 error_code:int error_message:string = RpcError;
+
+rpc_answer_unknown#5e2ad36e = RpcDropAnswer;
+rpc_answer_dropped_running#cd78e586 = RpcDropAnswer;
+rpc_answer_dropped#a43ad8b7 msg_id:long seq_no:int bytes:int = RpcDropAnswer;
+
+future_salt#0949d9dc valid_since:int valid_until:int salt:long = FutureSalt;
+future_salts#ae500895 req_msg_id:long now:int salts:vector<future_salt> = FutureSalts;
+
+pong#347773c5 msg_id:long ping_id:long = Pong;
+
+destroy_session_ok#e22045fc session_id:long = DestroySessionRes;
+destroy_session_none#62d350c9 session_id:long = DestroySessionRes;
+
+new_session_created#9ec20908 first_msg_id:long unique_id:long server_salt:long = NewSession;
+
+msg_container#73f1f8dc messages:vector<%Message> = MessageContainer;
+message msg_id:long seqno:int bytes:int body:Object = Message;
+msg_copy#e06046b2 orig_message:Message = MessageCopy;
+
+gzip_packed#3072cfa1 packed_data:bytes = Object;
+
+msgs_ack#62d6b459 msg_ids:Vector<long> = MsgsAck;
+
+bad_msg_notification#a7eff811 bad_msg_id:long bad_msg_seqno:int error_code:int = BadMsgNotification;
+bad_server_salt#edab447b bad_msg_id:long bad_msg_seqno:int error_code:int new_server_salt:long = BadMsgNotification;
+
+msg_resend_req#7d861a08 msg_ids:Vector<long> = MsgResendReq;
+msgs_state_req#da69fb52 msg_ids:Vector<long> = MsgsStateReq;
+msgs_state_info#04deb57d req_msg_id:long info:bytes = MsgsStateInfo;
+msgs_all_info#8cc0d131 msg_ids:Vector<long> info:bytes = MsgsAllInfo;
+msg_detailed_info#276d3ec6 msg_id:long answer_msg_id:long bytes:int status:int = MsgDetailedInfo;
+msg_new_detailed_info#809db6df answer_msg_id:long bytes:int status:int = MsgDetailedInfo;
+
+destroy_auth_key_ok#f660e1d4 = DestroyAuthKeyRes;
+destroy_auth_key_none#0a9f2259 = DestroyAuthKeyRes;
+destroy_auth_key_fail#ea109b13 = DestroyAuthKeyRes;
+
+http_wait#9299359f max_delay:int wait_after:int max_wait:int = HttpWait;
+
+---functions---
+
+req_pq_multi#be7e8ef1 nonce:int128 = ResPQ;
+
+req_DH_params#d712e4be nonce:int128 server_nonce:int128 p:bytes q:bytes public_key_fingerprint:long encrypted_data:bytes = Server_DH_Params;
+
+set_client_DH_params#f5045f1f nonce:int128 server_nonce:int128 encrypted_data:bytes = Set_client_DH_params_answer;
+
+rpc_drop_answer#58e4a740 req_msg_id:long = RpcDropAnswer;
+get_future_salts#b921bd04 num:int = FutureSalts;
+ping#7abe77ec ping_id:long = Pong;
+ping_delay_disconnect#f3427b8c ping_id:long disconnect_delay:int = Pong;
+destroy_session#e7512126 session_id:long = DestroySessionRes;
+
+destroy_auth_key#d1435160 = DestroyAuthKeyRes;
+```

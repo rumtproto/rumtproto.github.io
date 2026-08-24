@@ -1,35 +1,30 @@
 ---
-title: "exportedStoryLink (конструктор)"
+title: "exportedStoryLink"
 original: "https://core.telegram.org/constructor/exportedStoryLink"
 section: ref
 kind: constructor
+description: "Представляет глубокую ссылку на историю."
 layout: layout.njk
 ---
 
 # exportedStoryLink
 
-*Конструктор из схемы TL.*
-
-> Represents a [story deep link](https://core.telegram.org/api/stories#story-links).
-
-## Определение TL
+Представляет [глубокую ссылку на историю](/api/stories/#story-links).
 
 ```
 exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| link | [string](/type/string/) | The [story deep link](https://core.telegram.org/api/stories#story-links). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>link</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/stories#story-links">Глубокая ссылка на историю</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ExportedStoryLink](/type/ExportedStoryLink/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

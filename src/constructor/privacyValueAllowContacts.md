@@ -1,27 +1,24 @@
 ---
-title: "privacyValueAllowContacts (конструктор)"
+title: "privacyValueAllowContacts"
 original: "https://core.telegram.org/constructor/privacyValueAllowContacts"
 section: ref
 kind: constructor
+description: "Разрешить всем контактам"
 layout: layout.njk
 ---
 
 # privacyValueAllowContacts
 
-*Конструктор из схемы TL.*
-
-> Allow all contacts
-
-## Определение TL
+Разрешить всем контактам
 
 ```
 privacyValueAllowContacts#fffe1bac = PrivacyRule;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyRule](/type/PrivacyRule/)

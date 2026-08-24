@@ -1,18 +1,15 @@
 ---
-title: "stories.togglePeerStoriesHidden (метод)"
+title: "stories.togglePeerStoriesHidden"
 original: "https://core.telegram.org/method/stories.togglePeerStoriesHidden"
 section: ref
 kind: method
+description: "Скрыть активные истории пользователя, чтобы они не отображались на панели действий на главном экране; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # stories.togglePeerStoriesHidden
 
-*Метод из схемы TL.*
-
-> Hide the active stories of a user, preventing them from being displayed on the action bar on the homescreen, see [here »](https://core.telegram.org/api/stories#hiding-stories-of-other-users) for more info.
-
-## Определение TL
+Скрыть активные истории пользователя, чтобы они не отображались на панели действий на главном экране; подробнее см. [здесь »](/api/stories/#hiding-stories-of-other-users).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,27 +18,22 @@ boolTrue#997275b5 = Bool;
 stories.togglePeerStoriesHidden#bd0415c4 peer:InputPeer hidden:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer whose stories should be (un)hidden. |
-| hidden | [Bool](/type/Bool/) | Whether to hide or unhide stories. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, истории которого следует скрыть или показать.</td></tr><tr><td><strong>hidden</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Скрыть или показать истории.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

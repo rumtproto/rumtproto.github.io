@@ -1,27 +1,24 @@
 ---
-title: "inputPrivacyValueDisallowAll (конструктор)"
+title: "inputPrivacyValueDisallowAll"
 original: "https://core.telegram.org/constructor/inputPrivacyValueDisallowAll"
 section: ref
 kind: constructor
+description: "Запретить всем"
 layout: layout.njk
 ---
 
 # inputPrivacyValueDisallowAll
 
-*Конструктор из схемы TL.*
-
-> Disallow all
-
-## Определение TL
+Запретить всем
 
 ```
 inputPrivacyValueDisallowAll#d66b66c9 = InputPrivacyRule;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyRule](/type/InputPrivacyRule/)

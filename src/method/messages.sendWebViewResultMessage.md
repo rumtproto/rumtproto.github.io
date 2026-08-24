@@ -1,18 +1,15 @@
 ---
-title: "messages.sendWebViewResultMessage (метод)"
+title: "messages.sendWebViewResultMessage"
 original: "https://core.telegram.org/method/messages.sendWebViewResultMessage"
 section: ref
 kind: method
+description: "Завершить взаимодействие с веб-представлением, начатое через messages.requestWebView, отправив указанное сообщение в чат от имени пользователя."
 layout: layout.njk
 ---
 
 # messages.sendWebViewResultMessage
 
-*Метод из схемы TL.*
-
-> Terminate webview interaction started with [messages.requestWebView](/method/messages.requestWebView/), sending the specified message to the chat on behalf of the user.
-
-## Определение TL
+Завершить взаимодействие с веб-представлением, начатое через [messages.requestWebView](/method/messages.requestWebView/), отправив указанное сообщение в чат от имени пользователя.
 
 ```
 webViewMessageSent#c94511c flags:# msg_id:flags.0?InputBotInlineMessageID = WebViewMessageSent;
@@ -20,30 +17,24 @@ webViewMessageSent#c94511c flags:# msg_id:flags.0?InputBotInlineMessageID = WebV
 messages.sendWebViewResultMessage#a4314f5 bot_query_id:string result:InputBotInlineResult = WebViewMessageSent;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot_query_id | [string](/type/string/) | Webview interaction ID obtained from [messages.requestWebView](/method/messages.requestWebView/) |
-| result | [InputBotInlineResult](/type/InputBotInlineResult/) | Message to send |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot_query_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор взаимодействия с webview, полученный из <a href="/method/messages.requestWebView">messages.requestWebView</a></td></tr><tr><td><strong>result</strong></td><td style="text-align: center;"><a href="/type/InputBotInlineResult">InputBotInlineResult</a></td><td>Сообщение для отправки</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [WebViewMessageSent](/type/WebViewMessageSent/)
 
-## Only bots can use this method
+### Этот метод доступен только ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | QUERY_ID_INVALID | The query ID is invalid. |
-| 400 | USER_BOT_REQUIRED | This method can only be called by a bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>QUERY_ID_INVALID</td><td>Указанный идентификатор запроса недействителен.</td></tr><tr><td>400</td><td>USER_BOT_REQUIRED</td><td>Этот метод может вызывать только бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [messages.requestWebView](/method/messages.requestWebView/)
 
-Open a [bot mini app](https://core.telegram.org/bots/webapps), sending over user information after user confirmation.
+[@term:Mini App] Открыть [mini app бота](https://core.telegram.org/bots/webapps), передав сведения о пользователе после его подтверждения.
 
-After calling this method, until the user closes the webview, [messages.prolongWebView](/method/messages.prolongWebView/) must be called every 60 seconds.
+После вызова этого метода и до тех пор, пока пользователь не закроет webview, необходимо каждые 60 секунд вызывать [messages.prolongWebView](/method/messages.prolongWebView/).

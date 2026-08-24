@@ -1,38 +1,30 @@
 ---
-title: "quickReply (конструктор)"
+title: "quickReply"
 original: "https://core.telegram.org/constructor/quickReply"
 section: ref
 kind: constructor
+description: "Шаблон быстрого ответа."
 layout: layout.njk
 ---
 
 # quickReply
 
-*Конструктор из схемы TL.*
-
-> A [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts).
-
-## Определение TL
+[Шаблон быстрого ответа](/api/business/#quick-reply-shortcuts).
 
 ```
 quickReply#697102b shortcut_id:int shortcut:string top_message:int count:int = QuickReply;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| shortcut_id | [int](/type/int/) | Unique shortcut ID. |
-| shortcut | [string](/type/string/) | Shortcut name. |
-| top_message | [int](/type/int/) | ID of the last message in the shortcut. |
-| count | [int](/type/int/) | Total number of messages in the shortcut. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Уникальный идентификатор шаблона быстрого ответа.</td></tr><tr><td><strong>shortcut</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название быстрого ответа.</td></tr><tr><td><strong>top_message</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор последнего сообщения в шаблоне быстрого ответа.</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число сообщений в шаблоне быстрого ответа.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [QuickReply](/type/QuickReply/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

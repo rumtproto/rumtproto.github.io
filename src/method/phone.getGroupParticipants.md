@@ -1,18 +1,15 @@
 ---
-title: "phone.getGroupParticipants (метод)"
+title: "phone.getGroupParticipants"
 original: "https://core.telegram.org/method/phone.getGroupParticipants"
 section: ref
 kind: method
+description: "Получить участников группового звонка."
 layout: layout.njk
 ---
 
 # phone.getGroupParticipants
 
-*Метод из схемы TL.*
-
-> Get [group call](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call) participants.
-
-## Определение TL
+Получить участников [группового звонка](/api/group-calls/#getting-info-about-a-group-call).
 
 ```
 phone.groupParticipants#f47751b6 count:int participants:Vector<GroupCallParticipant> next_offset:string chats:Vector<Chat> users:Vector<User> version:int = phone.GroupParticipants;
@@ -20,42 +17,34 @@ phone.groupParticipants#f47751b6 count:int participants:Vector<GroupCallParticip
 phone.getGroupParticipants#c558d8ab call:InputGroupCall ids:Vector<InputPeer> sources:Vector<int> offset:string limit:int = phone.GroupParticipants;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Group call whose participants should be fetched |
-| ids | [Vector](https://core.telegram.org/type/Vector%20t)<[InputPeer](/type/InputPeer/)> | If specified, will fetch group participant info about the specified peers |
-| sources | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | If specified, will fetch group participant info about the specified WebRTC source IDs |
-| offset | [string](/type/string/) | Offset for results, taken from the next_offset field of [phone.groupParticipants](/constructor/phone.groupParticipants/) or the participants_next_offset field of [phone.groupCall](/constructor/phone.groupCall/), initially an empty string. Note: if no more results are available, the method call will return an empty next_offset; thus, avoid providing the next_offset returned in [phone.groupParticipants](/constructor/phone.groupParticipants/) if it is empty, to avoid an infinite loop. |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Групповой звонок, участников которого нужно получить</td></tr><tr><td><strong>ids</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPeer">InputPeer</a>&gt;</td><td>Если указано, будет получена информация об участниках группы для указанных пиров</td></tr><tr><td><strong>sources</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Если указано, будет получена информация об участниках группы для указанных идентификаторов источников WebRTC</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:next_offset] Смещение для результатов, берётся из поля <code>next_offset</code> конструктора <a href="/constructor/phone.groupParticipants">phone.groupParticipants</a> или из поля <code>participants_next_offset</code> конструктора <a href="/constructor/phone.groupCall">phone.groupCall</a>; изначально — пустая строка.<br>Примечание: если больше результатов нет, вызов метода вернёт пустое поле <code>next_offset</code>; поэтому не передавайте значение <code>next_offset</code>, возвращённое в <a href="/constructor/phone.groupParticipants">phone.groupParticipants</a>, если оно пустое, — иначе возникнет бесконечный цикл.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [phone.GroupParticipants](/type/phone.GroupParticipants/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [phone.groupParticipants](/constructor/phone.groupParticipants/)
 
-Contains a page of group call participants, see [getting info about a group call »](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call).
+Содержит страницу списка участников группового звонка, см. [получение сведений о групповом звонке »](/api/group-calls/#getting-info-about-a-group-call).
 
 #### [phone.groupCall](/constructor/phone.groupCall/)
 
-Contains group call information and an initial participant page, see [getting info about a group call »](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call).
+Содержит информацию о групповом звонке и первую страницу списка участников, см. [получение информации о групповом звонке »](/api/group-calls/#getting-info-about-a-group-call).
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

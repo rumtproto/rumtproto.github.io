@@ -1,33 +1,30 @@
 ---
-title: "profileTabMusic (конструктор)"
+title: "profileTabMusic"
 original: "https://core.telegram.org/constructor/profileTabMusic"
 section: ref
 kind: constructor
+description: "Представляет вкладку музыки на странице профиля."
 layout: layout.njk
 ---
 
 # profileTabMusic
 
-*Конструктор из схемы TL.*
-
-> Represents the [music](https://core.telegram.org/api/profile#music) tab of a profile page.
-
-## Определение TL
+Представляет вкладку [музыки](/api/profile/#music) на странице профиля.
 
 ```
 profileTabMusic#9f27d26e = ProfileTab;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ProfileTab](/type/ProfileTab/)
 
-## Related pages
+### Связанные страницы
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

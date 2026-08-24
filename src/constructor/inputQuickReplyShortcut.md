@@ -1,35 +1,30 @@
 ---
-title: "inputQuickReplyShortcut (конструктор)"
+title: "inputQuickReplyShortcut"
 original: "https://core.telegram.org/constructor/inputQuickReplyShortcut"
 section: ref
 kind: constructor
+description: "Выбирает шаблон быстрого ответа по названию."
 layout: layout.njk
 ---
 
 # inputQuickReplyShortcut
 
-*Конструктор из схемы TL.*
-
-> Selects a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts) by name.
-
-## Определение TL
+Выбирает [шаблон быстрого ответа](/api/business/#quick-reply-shortcuts) по названию.
 
 ```
 inputQuickReplyShortcut#24596d41 shortcut:string = InputQuickReplyShortcut;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| shortcut | [string](/type/string/) | Shortcut name. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>shortcut</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название быстрого ответа.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputQuickReplyShortcut](/type/InputQuickReplyShortcut/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

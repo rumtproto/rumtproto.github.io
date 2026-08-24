@@ -1,18 +1,15 @@
 ---
-title: "Messages.FeaturedStickers (тип)"
+title: "messages.FeaturedStickers"
 original: "https://core.telegram.org/type/messages.FeaturedStickers"
 section: ref
 kind: type
+description: "Новые наборы стикеров"
 layout: layout.njk
 ---
 
 # Messages.FeaturedStickers
 
-*Тип из схемы TL.*
-
-> Featured stickers
-
-## Определение TL
+Новые наборы стикеров
 
 ```
 messages.featuredStickersNotModified#c6dc0c66 count:int = messages.FeaturedStickers;
@@ -25,17 +22,10 @@ messages.getOldFeaturedStickers#7ed094a1 offset:int limit:int hash:long = messag
 messages.getFeaturedEmojiStickers#ecf6736 hash:long = messages.FeaturedStickers;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.featuredStickersNotModified](/constructor/messages.featuredStickersNotModified/) | Featured stickers haven't changed |
-| [messages.featuredStickers](/constructor/messages.featuredStickers/) | Featured stickersets |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.featuredStickersNotModified">messages.featuredStickersNotModified</a></td><td>Рекомендуемые стикеры не изменились</td></tr><tr><td><a href="/constructor/messages.featuredStickers">messages.featuredStickers</a></td><td>Рекомендуемые наборы стикеров</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getFeaturedStickers](/method/messages.getFeaturedStickers/) | Get featured stickers |
-| [messages.getOldFeaturedStickers](/method/messages.getOldFeaturedStickers/) | Method for fetching previously featured stickers |
-| [messages.getFeaturedEmojiStickers](/method/messages.getFeaturedEmojiStickers/) | Gets featured custom emoji stickersets. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getFeaturedStickers">messages.getFeaturedStickers</a></td><td>Получить рекомендуемые стикеры</td></tr><tr><td><a href="/method/messages.getOldFeaturedStickers">messages.getOldFeaturedStickers</a></td><td>Метод для получения ранее рекомендуемых стикеров</td></tr><tr><td><a href="/method/messages.getFeaturedEmojiStickers">messages.getFeaturedEmojiStickers</a></td><td>Получает рекомендуемые наборы стикеров с пользовательскими эмодзи.</td></tr></tbody></table>

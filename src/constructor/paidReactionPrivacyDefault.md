@@ -1,33 +1,30 @@
 ---
-title: "paidReactionPrivacyDefault (конструктор)"
+title: "paidReactionPrivacyDefault"
 original: "https://core.telegram.org/constructor/paidReactionPrivacyDefault"
 section: ref
 kind: constructor
+description: "Используется настройка приватности реакций по умолчанию, заданная методом messages.togglePaidReactionPrivacy."
 layout: layout.njk
 ---
 
 # paidReactionPrivacyDefault
 
-*Конструктор из схемы TL.*
-
-> Uses the default reaction privacy, set using [messages.togglePaidReactionPrivacy](/method/messages.togglePaidReactionPrivacy/).
-
-## Определение TL
+Используется настройка приватности реакций по умолчанию, заданная методом [messages.togglePaidReactionPrivacy](/method/messages.togglePaidReactionPrivacy/).
 
 ```
 paidReactionPrivacyDefault#206ad49e = PaidReactionPrivacy;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PaidReactionPrivacy](/type/PaidReactionPrivacy/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.togglePaidReactionPrivacy](/method/messages.togglePaidReactionPrivacy/)
 
-Changes the privacy of already sent [paid reactions](https://core.telegram.org/api/reactions#paid-reactions) on a specific message.
+Изменяет приватность уже отправленных [платных реакций](/api/reactions/#paid-reactions) на конкретное сообщение.

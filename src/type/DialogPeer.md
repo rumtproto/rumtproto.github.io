@@ -1,27 +1,21 @@
 ---
-title: "DialogPeer (тип)"
+title: "DialogPeer"
 original: "https://core.telegram.org/type/DialogPeer"
 section: ref
 kind: type
+description: "Пир или все пиры в папке"
 layout: layout.njk
 ---
 
 # DialogPeer
 
-*Тип из схемы TL.*
-
-> Peer, or all peers in a folder
-
-## Определение TL
+Пир или все пиры в папке
 
 ```
 dialogPeer#e56dbf05 peer:Peer = DialogPeer;
 dialogPeerFolder#514519e2 folder_id:int = DialogPeer;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [dialogPeer](/constructor/dialogPeer/) | Peer |
-| [dialogPeerFolder](/constructor/dialogPeerFolder/) | [Peer folder](https://core.telegram.org/api/folders#peer-folders) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/dialogPeer">dialogPeer</a></td><td>Пир</td></tr><tr><td><a href="/constructor/dialogPeerFolder">dialogPeerFolder</a></td><td><a href="/api/folders#peer-folders">Папка пира</a></td></tr></tbody></table>

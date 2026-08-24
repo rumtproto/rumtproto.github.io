@@ -1,37 +1,31 @@
 ---
-title: "stickerPack (конструктор)"
+title: "stickerPack"
 original: "https://core.telegram.org/constructor/stickerPack"
 section: ref
 kind: constructor
+description: "Стикерпак — это группа стикеров, связанных с одним и тем же эмодзи."
 layout: layout.njk
 ---
 
 # stickerPack
 
-*Конструктор из схемы TL.*
-
-> A stickerpack is a group of stickers associated to the same emoji.  
-> It is **not** a sticker pack the way it is usually intended, you may be looking for a [StickerSet](/type/StickerSet/).
-
-## Определение TL
+Стикерпак — это группа стикеров, связанных с одним и тем же эмодзи.  
+Это **не** набор стикеров в привычном смысле слова; возможно, вам нужен [StickerSet](/type/StickerSet/).
 
 ```
 stickerPack#12b299d4 emoticon:string documents:Vector<long> = StickerPack;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| emoticon | [string](/type/string/) | Emoji |
-| documents | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | Stickers |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>emoticon</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:emoticon] Эмодзи</td></tr><tr><td><strong>documents</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Стикеры</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StickerPack](/type/StickerPack/)
 
-## Related pages
+### Связанные страницы
 
 #### [StickerSet](/type/StickerSet/)
 
-Represents a stickerset (stickerpack)
+Представляет набор стикеров (стикерпак)

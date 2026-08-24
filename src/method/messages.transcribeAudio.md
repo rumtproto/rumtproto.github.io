@@ -1,18 +1,15 @@
 ---
-title: "messages.transcribeAudio (метод)"
+title: "messages.transcribeAudio"
 original: "https://core.telegram.org/method/messages.transcribeAudio"
 section: ref
 kind: method
+description: "Расшифровка голосовых сообщений"
 layout: layout.njk
 ---
 
 # messages.transcribeAudio
 
-*Метод из схемы TL.*
-
-> [Transcribe voice message](https://core.telegram.org/api/transcribe)
-
-## Определение TL
+[Расшифровка голосовых сообщений](/api/transcribe/)
 
 ```
 messages.transcribedAudio#cfb9d957 flags:# pending:flags.0?true transcription_id:long text:string trial_remains_num:flags.1?int trial_remains_until_date:flags.1?int = messages.TranscribedAudio;
@@ -20,32 +17,22 @@ messages.transcribedAudio#cfb9d957 flags:# pending:flags.0?true transcription_id
 messages.transcribeAudio#269e9a49 peer:InputPeer msg_id:int = messages.TranscribedAudio;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer ID where the voice message was sent |
-| msg_id | [int](/type/int/) | Voice message ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Идентификатор пира, в который было отправлено голосовое сообщение</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор голосового сообщения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.TranscribedAudio](/type/messages.TranscribedAudio/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | MSG_VOICE_MISSING | The specified message is not a voice message. |
-| 400 | MSG_VOICE_TOO_LONG | The specified voice message is too long to be transcribed. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 403 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
-| 400 | TRANSCRIPTION_FAILED | Audio transcription failed. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>MSG_VOICE_MISSING</td><td>Указанное сообщение не является голосовым.</td></tr><tr><td>400</td><td>MSG_VOICE_TOO_LONG</td><td>Указанное голосовое сообщение слишком длинное для расшифровки.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>403</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr><tr><td>400</td><td>TRANSCRIPTION_FAILED</td><td>Не удалось расшифровать аудио в текст.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Voice message transcription](https://core.telegram.org/api/transcribe)
+#### [Расшифровка голосовых сообщений](/api/transcribe/)
 
-How to transcribe voice messages.
+Как расшифровывать голосовые сообщения.

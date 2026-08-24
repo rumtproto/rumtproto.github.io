@@ -1,27 +1,24 @@
 ---
-title: "channelLocationEmpty (конструктор)"
+title: "channelLocationEmpty"
 original: "https://core.telegram.org/constructor/channelLocationEmpty"
 section: ref
 kind: constructor
+description: "Без местоположения (обычная супергруппа)"
 layout: layout.njk
 ---
 
 # channelLocationEmpty
 
-*Конструктор из схемы TL.*
-
-> No location (normal supergroup)
-
-## Определение TL
+Без местоположения (обычная супергруппа)
 
 ```
 channelLocationEmpty#bfb5ad8b = ChannelLocation;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ChannelLocation](/type/ChannelLocation/)

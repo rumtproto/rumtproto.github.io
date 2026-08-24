@@ -1,142 +1,100 @@
 ---
-title: "starsTransaction (конструктор)"
+title: "starsTransaction"
 original: "https://core.telegram.org/constructor/starsTransaction"
 section: ref
 kind: constructor
+description: "Представляет транзакцию Telegram Stars или TON »."
 layout: layout.njk
 ---
 
 # starsTransaction
 
-*Конструктор из схемы TL.*
-
-> Represents a [Telegram Stars or TON transaction »](https://core.telegram.org/api/stars).
-
-## Определение TL
+Представляет [транзакцию Telegram Stars или TON »](/api/stars/).
 
 ```
 starsTransaction#13659eb0 flags:# refund:flags.3?true pending:flags.4?true failed:flags.6?true gift:flags.10?true reaction:flags.11?true stargift_upgrade:flags.18?true business_transfer:flags.21?true stargift_resale:flags.22?true posts_search:flags.24?true stargift_prepaid_upgrade:flags.25?true stargift_drop_original_details:flags.26?true phonegroup_message:flags.27?true stargift_auction_bid:flags.28?true offer:flags.29?true id:string amount:StarsAmount date:int peer:StarsTransactionPeer title:flags.0?string description:flags.1?string photo:flags.2?WebDocument transaction_date:flags.5?int transaction_url:flags.5?string bot_payload:flags.7?bytes msg_id:flags.8?int extended_media:flags.9?Vector<MessageMedia> subscription_period:flags.12?int giveaway_post_id:flags.13?int stargift:flags.14?StarGift floodskip_number:flags.15?int starref_commission_permille:flags.16?int starref_peer:flags.17?Peer starref_amount:flags.17?StarsAmount paid_messages:flags.19?int premium_gift_months:flags.20?int ads_proceeds_from_date:flags.23?int ads_proceeds_to_date:flags.23?int = StarsTransaction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| refund | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether this transaction is a refund. |
-| pending | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | The transaction is currently pending. |
-| failed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | This transaction has failed. |
-| gift | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[true](/constructor/true/) | This transaction was a gift from the user in peer.peer. |
-| reaction | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[true](/constructor/true/) | This transaction is a [paid reaction »](https://core.telegram.org/api/reactions#paid-reactions). |
-| stargift_upgrade | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).18?[true](/constructor/true/) | This transaction pays for the upgrade of a gift to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| business_transfer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).21?[true](/constructor/true/) | This transaction transfers stars from the balance of a user account [connected to a business bot](https://core.telegram.org/api/bots/connected-business-bots), to the balance of the business bot, see [here »](https://core.telegram.org/api/stars#transferring-stars-from-a-business-account-to-the-business-bot) for more info. |
-| stargift_resale | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).22?[true](/constructor/true/) | This transaction is related to the [resale of a collectible gift »](https://core.telegram.org/api/gifts#reselling-collectible-gifts). |
-| posts_search | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).24?[true](/constructor/true/) | Represents payment for a [paid global post search »](https://core.telegram.org/api/search#posts-tab). |
-| stargift_prepaid_upgrade | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).25?[true](/constructor/true/) | Represents payment for a [separate prepaid upgrade of a gift](https://core.telegram.org/api/gifts#prepaying-for-someone-elses-upgrade). |
-| stargift_drop_original_details | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).26?[true](/constructor/true/) | Represents payment for the removal of the [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/) attribute from a gift, see [here »](https://core.telegram.org/api/gifts#dropping-the-original-details-of-an-upgraded-gift) for the full flow. |
-| phonegroup_message | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).27?[true](/constructor/true/) | Represents payment for a paid text message sent during a [group call or live video stream »](https://core.telegram.org/api/group-calls). |
-| stargift_auction_bid | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).28?[true](/constructor/true/) | Represents payment for placing a [collectible gift auction bid »](https://core.telegram.org/api/auctions). |
-| offer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).29?[true](/constructor/true/) | Represents payment for a [collectible gift purchase offer »](https://core.telegram.org/api/gifts#collectible-gift-purchase-offers). |
-| id | [string](/type/string/) | Transaction ID. |
-| amount | [StarsAmount](/type/StarsAmount/) | Amount of Telegram Stars or TON. |
-| date | [int](/type/int/) | Date of the transaction (unixtime). |
-| peer | [StarsTransactionPeer](/type/StarsTransactionPeer/) | Source of the incoming transaction, or its recipient for outgoing transactions. |
-| title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | For transactions with bots, title of the bought product. |
-| description | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | For transactions with bots, description of the bought product. |
-| photo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[WebDocument](/type/WebDocument/) | For transactions with bots, photo of the bought product. |
-| transaction_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[int](/type/int/) | If neither pending nor failed are set, the transaction was completed successfully, and this field will contain the point in time (Unix timestamp) when the withdrawal was completed successfully. |
-| transaction_url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[string](/type/string/) | If neither pending nor failed are set, the transaction was completed successfully, and this field will contain a URL where the withdrawal transaction can be viewed. |
-| bot_payload | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[bytes](/type/bytes/) | Bot specified invoice payload (i.e. the payload passed to [inputMediaInvoice](/constructor/inputMediaInvoice/) when [creating the invoice](https://core.telegram.org/api/payments)). |
-| msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[int](/type/int/) | For [paid media transactions »](https://core.telegram.org/api/paid-media), message ID of the paid media posted to peer.peer (can point to a deleted message; either way, extended_media will always contain the bought media). |
-| extended_media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageMedia](/type/MessageMedia/)> | The purchased [paid media »](https://core.telegram.org/api/paid-media). |
-| subscription_period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[int](/type/int/) | The number of seconds between consecutive Telegram Star debiting for [Telegram Star subscriptions »](https://core.telegram.org/api/stars#star-subscriptions). |
-| giveaway_post_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[int](/type/int/) | ID of the message containing the [messageMediaGiveaway](/constructor/messageMediaGiveaway/), for incoming [star giveaway prizes](https://core.telegram.org/api/giveaways#star-giveaways). |
-| stargift | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).14?[StarGift](/type/StarGift/) | This transaction indicates a purchase or a sale (conversion back to Stars) of a [gift »](https://core.telegram.org/api/stars). |
-| floodskip_number | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).15?[int](/type/int/) | This transaction is payment for [paid bot broadcasts](https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once). Paid broadcasts are only allowed if the allow_paid_floodskip parameter of [messages.sendMessage](/method/messages.sendMessage/) and other message sending methods is set while trying to broadcast more than 30 messages per second to bot users. The integer value returned by this flag indicates the number of billed API calls. |
-| starref_commission_permille | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).16?[int](/type/int/) | This transaction is the receival (or refund) of an [affiliate commission](https://core.telegram.org/api/bots/referrals) (i.e. this is the transaction received by the peer that created the [referral link](https://core.telegram.org/api/links#referral-links), flag 17 is for transactions made by users that imported the referral link). |
-| starref_peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[Peer](/type/Peer/) | For transactions made by [referred users](https://core.telegram.org/api/bots/referrals), the peer that received the affiliate commission. |
-| starref_amount | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).17?[StarsAmount](/type/StarsAmount/) | For transactions made by [referred users](https://core.telegram.org/api/bots/referrals), the amount of Telegram Stars received by the affiliate, can be negative for refunds. |
-| paid_messages | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).19?[int](/type/int/) | This transaction is related to the reception or transmission of a [paid message »](https://core.telegram.org/api/paid-messages). |
-| premium_gift_months | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).20?[int](/type/int/) | This transaction indicates the payment for a [gifted Telegram Premium subscription »](https://core.telegram.org/api/premium#gifting-telegram-premium). |
-| ads_proceeds_from_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).23?[int](/type/int/) | Indicates that this is payment for ad revenue from the specified unixtime (always set together with ads_proceeds_to_date). |
-| ads_proceeds_to_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).23?[int](/type/int/) | Indicates that this is payment for ad revenue to the specified unixtime. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>refund</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Является ли эта транзакция возвратом средств.</td></tr><tr><td><strong>pending</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Транзакция сейчас находится в обработке.</td></tr><tr><td><strong>failed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Эта транзакция завершилась неудачей.</td></tr><tr><td><strong>gift</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true">true</a></td><td>Эта транзакция была подарком от пользователя, указанного в <code>peer.peer</code>.</td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true">true</a></td><td>Эта транзакция является <a href="/api/reactions#paid-reactions">платной реакцией »</a>.</td></tr><tr><td><strong>stargift_upgrade</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.18?<a href="/constructor/true">true</a></td><td>Эта транзакция оплачивает улучшение подарка до <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a>.</td></tr><tr><td><strong>business_transfer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.21?<a href="/constructor/true">true</a></td><td>Эта транзакция переводит звёзды с баланса учётной записи пользователя, <a href="/api/bots/connected-business-bots">подключённой к бизнес-боту</a>, на баланс бизнес-бота; подробнее см. <a href="/api/stars#transferring-stars-from-a-business-account-to-the-business-bot">здесь »</a>.</td></tr><tr><td><strong>stargift_resale</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.22?<a href="/constructor/true">true</a></td><td>Эта транзакция связана с <a href="/api/gifts#reselling-collectible-gifts">перепродажей коллекционного подарка »</a>.</td></tr><tr><td><strong>posts_search</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.24?<a href="/constructor/true">true</a></td><td>Представляет оплату <a href="/api/search#posts-tab">платного глобального поиска по записям »</a>.</td></tr><tr><td><strong>stargift_prepaid_upgrade</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.25?<a href="/constructor/true">true</a></td><td>Представляет оплату <a href="/api/gifts#prepaying-for-someone-elses-upgrade">отдельного предоплаченного улучшения подарка</a>.</td></tr><tr><td><strong>stargift_drop_original_details</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.26?<a href="/constructor/true">true</a></td><td>Представляет оплату удаления атрибута <a href="/constructor/starGiftAttributeOriginalDetails">starGiftAttributeOriginalDetails</a> у подарка; полный порядок действий описан <a href="/api/gifts#dropping-the-original-details-of-an-upgraded-gift">здесь »</a>.</td></tr><tr><td><strong>phonegroup_message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.27?<a href="/constructor/true">true</a></td><td>Представляет оплату платного текстового сообщения, отправленного во время <a href="/api/group-calls">группового звонка или прямой видеотрансляции »</a>.</td></tr><tr><td><strong>stargift_auction_bid</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.28?<a href="/constructor/true">true</a></td><td>Представляет оплату размещения <a href="/api/auctions">ставки на аукционе коллекционных подарков »</a>.</td></tr><tr><td><strong>offer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.29?<a href="/constructor/true">true</a></td><td>Представляет оплату <a href="/api/gifts#collectible-gift-purchase-offers">предложения о покупке коллекционного подарка »</a>.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор транзакции.</td></tr><tr><td><strong>amount</strong></td><td style="text-align: center;"><a href="/type/StarsAmount">StarsAmount</a></td><td>Количество Telegram Stars или TON.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата транзакции (unixtime).</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/StarsTransactionPeer">StarsTransactionPeer</a></td><td>[@term:peer] Источник входящей транзакции либо получатель исходящей транзакции.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Для операций с ботами — название купленного товара.</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Для операций с ботами — описание купленного товара.</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/WebDocument">WebDocument</a></td><td>Для операций с ботами — фотография купленного товара.</td></tr><tr><td><strong>transaction_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/int">int</a></td><td>Если не заданы ни <code>pending</code>, ни <code>failed</code>, транзакция завершилась успешно, и это поле будет содержать момент времени (Unix timestamp), когда вывод средств был успешно завершён.</td></tr><tr><td><strong>transaction_url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/string">string</a></td><td>Если не заданы ни <code>pending</code>, ни <code>failed</code>, транзакция завершилась успешно, и это поле будет содержать URL, по которому можно посмотреть транзакцию вывода средств.</td></tr><tr><td><strong>bot_payload</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/bytes">bytes</a></td><td>Полезная нагрузка счёта, заданная ботом (то есть <code>payload</code>, переданный в <a href="/constructor/inputMediaInvoice">inputMediaInvoice</a> при <a href="/api/payments">создании счёта</a>).</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/int">int</a></td><td>[@term:msg_id] Для <a href="/api/paid-media">транзакций с платными медиа »</a> — идентификатор сообщения с платным медиа, опубликованного в <code>peer.peer</code> (может указывать на удалённое сообщение; в любом случае поле <code>extended_media</code> всегда будет содержать купленное медиа).</td></tr><tr><td><strong>extended_media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageMedia">MessageMedia</a>&gt;</td><td>Приобретённое <a href="/api/paid-media">платное медиа »</a>.</td></tr><tr><td><strong>subscription_period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/int">int</a></td><td>Количество секунд между последовательными списаниями Telegram Stars для <a href="/api/stars#star-subscriptions">подписок за Telegram Stars »</a>.</td></tr><tr><td><strong>giveaway_post_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/int">int</a></td><td>Идентификатор сообщения, содержащего <a href="/constructor/messageMediaGiveaway">messageMediaGiveaway</a>, — для входящих <a href="/api/giveaways#star-giveaways">призов розыгрыша звёзд</a>.</td></tr><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.14?<a href="/type/StarGift">StarGift</a></td><td>Эта транзакция обозначает покупку или продажу (обратный обмен на Stars) <a href="/api/stars">подарка »</a>.</td></tr><tr><td><strong>floodskip_number</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.15?<a href="/type/int">int</a></td><td>Эта транзакция является оплатой <a href="/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once">платных рассылок бота</a>.<br>Платные рассылки допускаются только в том случае, если при попытке отправить более 30 сообщений в секунду пользователям бота задан параметр <code>allow_paid_floodskip</code> метода <a href="/method/messages.sendMessage">messages.sendMessage</a> или других методов отправки сообщений.<br>Целочисленное значение, возвращаемое этим флагом, указывает количество тарифицированных вызовов API.</td></tr><tr><td><strong>starref_commission_permille</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.16?<a href="/type/int">int</a></td><td>Эта транзакция — получение (или возврат) <a href="/api/bots/referrals">партнёрской комиссии</a> (то есть это транзакция, полученная пиром, который создал <a href="/api/links#referral-links">реферальную ссылку</a>; флаг 17 относится к транзакциям пользователей, перешедших по реферальной ссылке).</td></tr><tr><td><strong>starref_peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/Peer">Peer</a></td><td>Для операций, совершённых <a href="/api/bots/referrals">приведёнными пользователями</a>, — пир, получивший партнёрскую комиссию.</td></tr><tr><td><strong>starref_amount</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.17?<a href="/type/StarsAmount">StarsAmount</a></td><td>Для операций, совершённых <a href="/api/bots/referrals">приведёнными пользователями</a>, — количество Telegram Stars, полученных партнёром; может быть отрицательным при возвратах.</td></tr><tr><td><strong>paid_messages</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.19?<a href="/type/int">int</a></td><td>Эта транзакция связана с получением или отправкой <a href="/api/paid-messages">платного сообщения »</a>.</td></tr><tr><td><strong>premium_gift_months</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.20?<a href="/type/int">int</a></td><td>Эта транзакция обозначает оплату <a href="/api/premium#gifting-telegram-premium">подаренной подписки Telegram Premium »</a>.</td></tr><tr><td><strong>ads_proceeds_from_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/type/int">int</a></td><td>Указывает, что это выплата дохода от рекламы начиная с указанного времени (unixtime) (всегда устанавливается вместе с <strong>ads_proceeds_to_date</strong>).</td></tr><tr><td><strong>ads_proceeds_to_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.23?<a href="/type/int">int</a></td><td>Указывает, что это выплата дохода от рекламы по указанное время (unixtime).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarsTransaction](/type/StarsTransaction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Search and filters](https://core.telegram.org/api/search)
+#### [Поиск и фильтры](/api/search/)
 
-Telegram allows applying detailed message filters while looking for messages in chats.
+Telegram позволяет применять подробные фильтры сообщений при поиске в чатах.
 
 #### [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/)
 
-Info about the sender, receiver and message attached to the original [gift »](https://core.telegram.org/api/gifts), before it was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+Сведения об отправителе, получателе и сообщении, приложенных к исходному [подарку »](/api/gifts/), до того как он был превращён в [коллекционный подарок »](/api/gifts/#collectible-gifts).
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.
 
 #### [inputMediaInvoice](/constructor/inputMediaInvoice/)
 
-Generated invoice of a [bot payment](https://core.telegram.org/bots/payments)
+Сформированный счёт [платежа через бота](https://core.telegram.org/bots/payments)
 
-#### [Payments API](https://core.telegram.org/api/payments)
+#### [API платежей](/api/payments/)
 
-You can accept payments from Telegram users via Telegram Bots.
+Вы можете принимать платежи от пользователей Telegram через ботов Telegram.
 
-#### [Paid media](https://core.telegram.org/api/paid-media)
+#### [Платные медиа](/api/paid-media/)
 
-Content creators can accept Stars by publishing paid photos or videos on their channels. Subscribers will be allowed to view such posts only after paying the author to unlock them.
+Авторы контента могут принимать Stars, публикуя в своих каналах платные фотографии и видео. Подписчики смогут просмотреть такие посты, только заплатив автору за их разблокировку.
 
 #### [messageMediaGiveaway](/constructor/messageMediaGiveaway/)
 
-Contains info about a [giveaway, see here »](https://core.telegram.org/api/giveaways) for more info.
+Содержит информацию о [розыгрыше, подробнее см. здесь »](/api/giveaways/).
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.
 
-#### [Bots FAQ](https://core.telegram.org/bots/faq)
+#### [Bots FAQ — частые вопросы о ботах](https://core.telegram.org/bots/faq)
 
 #### [messages.sendMessage](/method/messages.sendMessage/)
 
-Sends a message to a chat
+Отправляет сообщение в чат
 
-#### [Affiliate programs](https://core.telegram.org/api/bots/referrals)
+#### [Партнёрские программы](/api/bots/referrals/)
 
-Developers can open affiliate programs for their mini app – allowing content creators, other mini app developers and any Telegram user to promote it and earn commissions on purchases made by people they referred.
+[@term:Mini App] Разработчики могут открывать партнёрские программы для своих mini app — это позволяет авторам контента, другим разработчикам mini app и любому пользователю Telegram продвигать приложение и получать комиссию с покупок, совершённых приведёнными ими людьми.
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Paid messages](https://core.telegram.org/api/paid-messages)
+#### [Платные сообщения](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.
+Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.

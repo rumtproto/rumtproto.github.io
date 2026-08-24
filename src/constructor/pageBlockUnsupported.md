@@ -1,27 +1,24 @@
 ---
-title: "pageBlockUnsupported (конструктор)"
+title: "pageBlockUnsupported"
 original: "https://core.telegram.org/constructor/pageBlockUnsupported"
 section: ref
 kind: constructor
+description: "Неподдерживаемый элемент IV"
 layout: layout.njk
 ---
 
 # pageBlockUnsupported
 
-*Конструктор из схемы TL.*
-
-> Unsupported IV element
-
-## Определение TL
+Неподдерживаемый элемент IV
 
 ```
 pageBlockUnsupported#13567e8a = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

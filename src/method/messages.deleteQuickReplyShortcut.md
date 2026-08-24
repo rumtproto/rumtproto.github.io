@@ -1,19 +1,16 @@
 ---
-title: "messages.deleteQuickReplyShortcut (метод)"
+title: "messages.deleteQuickReplyShortcut"
 original: "https://core.telegram.org/method/messages.deleteQuickReplyShortcut"
 section: ref
 kind: method
+description: "Полностью удалить ярлык быстрого ответа."
 layout: layout.njk
 ---
 
 # messages.deleteQuickReplyShortcut
 
-*Метод из схемы TL.*
-
-> Completely delete a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts).  
-> This will also emit an [updateDeleteQuickReply](/constructor/updateDeleteQuickReply/) update to other logged-in sessions (and _no_ [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/) updates, even if all the messages in the shortcuts are also deleted by this method).
-
-## Определение TL
+Полностью удалить [ярлык быстрого ответа](/api/business/#quick-reply-shortcuts).  
+Это также отправит обновление [updateDeleteQuickReply](/constructor/updateDeleteQuickReply/) в другие активные сессии (и _ни одного_ обновления [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/), даже если этот метод удалит и все сообщения в ярлыках).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,34 +19,30 @@ boolTrue#997275b5 = Bool;
 messages.deleteQuickReplyShortcut#3cc04740 shortcut_id:int = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| shortcut_id | [int](/type/int/) | [Shortcut ID](https://core.telegram.org/api/business#quick-reply-shortcuts) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/business#quick-reply-shortcuts">Идентификатор шаблона</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | SHORTCUT_INVALID | The specified shortcut is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>SHORTCUT_INVALID</td><td>Указанный шаблон быстрого ответа недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.
 
 #### [updateDeleteQuickReply](/constructor/updateDeleteQuickReply/)
 
-A [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts) was deleted. This will **not** emit [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/) updates, even if all the messages in the shortcut are also deleted by this update.
+[Шаблон быстрого ответа »](/api/business/#quick-reply-shortcuts) был удалён. Это **не** вызовет обновлений [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/), даже если этим обновлением удаляются и все сообщения шаблона.
 
 #### [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/)
 
-One or more messages in a [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts) were deleted.
+Одно или несколько сообщений в [шаблоне быстрого ответа »](/api/business/#quick-reply-shortcuts) были удалены.

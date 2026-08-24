@@ -1,18 +1,15 @@
 ---
-title: "Message (тип)"
+title: "Message"
 original: "https://core.telegram.org/type/Message"
 section: ref
 kind: type
+description: "Объект, описывающий сообщение."
 layout: layout.njk
 ---
 
 # Message
 
-*Тип из схемы TL.*
-
-> Object describing a message.
-
-## Определение TL
+Объект, описывающий сообщение.
 
 ```
 messageEmpty#90a6ca84 flags:# id:int peer_id:flags.0?Peer = Message;
@@ -20,10 +17,6 @@ message#3ae56482 flags:# out:flags.1?true mentioned:flags.4?true media_unread:fl
 messageService#7a800e0a flags:# out:flags.1?true mentioned:flags.4?true media_unread:flags.5?true reactions_are_possible:flags.9?true silent:flags.13?true post:flags.14?true legacy:flags.19?true id:int from_id:flags.8?Peer peer_id:Peer saved_peer_id:flags.28?Peer reply_to:flags.3?MessageReplyHeader date:int action:MessageAction reactions:flags.20?MessageReactions ttl_period:flags.25?int = Message;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messageEmpty](/constructor/messageEmpty/) | Empty constructor, non-existent message. |
-| [message](/constructor/message/) | A message |
-| [messageService](/constructor/messageService/) | Indicates a service message |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messageEmpty">messageEmpty</a></td><td>Пустой конструктор, несуществующее сообщение.</td></tr><tr><td><a href="/constructor/message">message</a></td><td>Сообщение</td></tr><tr><td><a href="/constructor/messageService">messageService</a></td><td>Обозначает сервисное сообщение</td></tr></tbody></table>

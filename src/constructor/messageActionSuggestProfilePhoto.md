@@ -1,37 +1,32 @@
 ---
-title: "messageActionSuggestProfilePhoto (конструктор)"
+title: "messageActionSuggestProfilePhoto"
 original: "https://core.telegram.org/constructor/messageActionSuggestProfilePhoto"
 section: ref
 kind: constructor
+description: "Новая фотография профиля предложена с помощью photos.uploadContactProfilePhoto."
 layout: layout.njk
 ---
 
 # messageActionSuggestProfilePhoto
 
-*Конструктор из схемы TL.*
-
-> A new profile picture was suggested using [photos.uploadContactProfilePhoto](/method/photos.uploadContactProfilePhoto/).
-
-## Определение TL
+Новая фотография профиля предложена с помощью [photos.uploadContactProfilePhoto](/method/photos.uploadContactProfilePhoto/).
 
 ```
 messageActionSuggestProfilePhoto#57de635e photo:Photo = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| photo | [Photo](/type/Photo/) | The photo that the user suggested we set as profile picture. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/type/Photo">Photo</a></td><td>Фотография, которую пользователь предложил установить как фотографию профиля.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
 #### [photos.uploadContactProfilePhoto](/method/photos.uploadContactProfilePhoto/)
 
-Upload a custom profile picture for a contact, or suggest a new profile picture to a contact.
+Загрузить собственную фотографию профиля для контакта или предложить контакту новую фотографию профиля.
 
-The `file`, `video` and `video_emoji_markup` flags are mutually exclusive.
+Флаги `file`, `video` и `video_emoji_markup` взаимоисключающие.

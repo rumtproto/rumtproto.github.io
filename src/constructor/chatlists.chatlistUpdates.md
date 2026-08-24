@@ -1,37 +1,30 @@
 ---
-title: "chatlists.chatlistUpdates (конструктор)"
+title: "chatlists.chatlistUpdates"
 original: "https://core.telegram.org/constructor/chatlists.chatlistUpdates"
 section: ref
 kind: constructor
+description: "Обновлённая информация о глубокой ссылке на папку чатов »."
 layout: layout.njk
 ---
 
 # chatlists.chatlistUpdates
 
-*Конструктор из схемы TL.*
-
-> Updated information about a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links).
-
-## Определение TL
+Обновлённая информация о [глубокой ссылке на папку чатов »](/api/links/#chat-folder-links).
 
 ```
 chatlists.chatlistUpdates#93bd878d missing_peers:Vector<Peer> chats:Vector<Chat> users:Vector<User> = chatlists.ChatlistUpdates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| missing_peers | [Vector](https://core.telegram.org/type/Vector%20t)<[Peer](/type/Peer/)> | New peers to join |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Related chat information |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Related user information |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>missing_peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Peer">Peer</a>&gt;</td><td>Новые пиры для вступления</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Сведения о связанном чате</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Сведения о связанном пользователе</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [chatlists.ChatlistUpdates](/type/chatlists.ChatlistUpdates/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

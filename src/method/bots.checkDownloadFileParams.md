@@ -1,18 +1,15 @@
 ---
-title: "bots.checkDownloadFileParams (метод)"
+title: "bots.checkDownloadFileParams"
 original: "https://core.telegram.org/method/bots.checkDownloadFileParams"
 section: ref
 kind: method
+description: "Проверить, может ли Mini App запросить скачивание конкретного файла: вызывается при обработке событий web\\_app\\_request\\_file\\_download »"
 layout: layout.njk
 ---
 
 # bots.checkDownloadFileParams
 
-*Метод из схемы TL.*
-
-> Check if a [mini app](https://core.telegram.org/api/bots/webapps) can request the download of a specific file: called when handling [web\_app\_request\_file\_download events »](https://core.telegram.org/api/web-events#web-app-request-file-download)
-
-## Определение TL
+[@term:Mini App] Проверить, может ли [Mini App](/api/bots/webapps/) запросить скачивание конкретного файла: вызывается при обработке [событий web\_app\_request\_file\_download »](/api/web-events/#web-app-request-file-download)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,32 +18,26 @@ boolTrue#997275b5 = Bool;
 bots.checkDownloadFileParams#50077589 bot:InputUser file_name:string url:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot | [InputUser](/type/InputUser/) | The bot that owns the [mini app](https://core.telegram.org/api/bots/webapps) that requested the download |
-| file_name | [string](/type/string/) | The filename from the [web_app_request_file_download event »](https://core.telegram.org/api/web-events#web-app-request-file-download) |
-| url | [string](/type/string/) | The url from the [web_app_request_file_download event »](https://core.telegram.org/api/web-events#web-app-request-file-download) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Бот, которому принадлежит <a href="/api/bots/webapps">mini app</a>, запросивший загрузку</td></tr><tr><td><strong>file_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><code>filename</code> из <a href="/api/web-events#web-app-request-file-download">события web_app_request_file_download »</a></td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><code>url</code> из <a href="/api/web-events#web-app-request-file-download">события web_app_request_file_download »</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
-#### [Web events](https://core.telegram.org/api/web-events)
+#### [Веб-события](/api/web-events/)
 
-How telegram apps interact with webpages
+Как приложения Telegram взаимодействуют с веб-страницами

@@ -1,18 +1,15 @@
 ---
-title: "account.sendChangePhoneCode (метод)"
+title: "account.sendChangePhoneCode"
 original: "https://core.telegram.org/method/account.sendChangePhoneCode"
 section: ref
 kind: method
+description: "Подтвердить новый номер телефона для привязки к текущему аккаунту"
 layout: layout.njk
 ---
 
 # account.sendChangePhoneCode
 
-*Метод из схемы TL.*
-
-> Verify a new phone number to associate to the current account
-
-## Определение TL
+Подтвердить новый номер телефона для привязки к текущему аккаунту
 
 ```
 auth.sentCode#5e002502 flags:# type:auth.SentCodeType phone_code_hash:string next_type:flags.1?auth.CodeType timeout:flags.2?int = auth.SentCode;
@@ -22,24 +19,16 @@ auth.sentCodePaymentRequired#e0955a3c store_product:string phone_code_hash:strin
 account.sendChangePhoneCode#82574ae5 phone_number:string settings:CodeSettings = auth.SentCode;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_number | [string](/type/string/) | New phone number |
-| settings | [CodeSettings](/type/CodeSettings/) | Phone code settings |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Новый номер телефона</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/type/CodeSettings">CodeSettings</a></td><td>Настройки кода подтверждения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.SentCode](/type/auth.SentCode/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 406 | FRESH_CHANGE_PHONE_FORBIDDEN | You can't change phone number right after logging in, please wait at least 24 hours. |
-| 400 | PHONE_NUMBER_BANNED | The provided phone number is banned from telegram. |
-| 406 | PHONE_NUMBER_INVALID | The phone number is invalid. |
-| 400 | PHONE_NUMBER_OCCUPIED | The phone number is already in use. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>406</td><td>FRESH_CHANGE_PHONE_FORBIDDEN</td><td>Нельзя изменить номер телефона сразу после входа, подождите не менее 24 часов.</td></tr><tr><td>400</td><td>PHONE_NUMBER_BANNED</td><td>Указанный номер телефона заблокирован в Telegram.</td></tr><tr><td>406</td><td>PHONE_NUMBER_INVALID</td><td>Недействительный номер телефона.</td></tr><tr><td>400</td><td>PHONE_NUMBER_OCCUPIED</td><td>Этот номер телефона уже используется.</td></tr></tbody></table>

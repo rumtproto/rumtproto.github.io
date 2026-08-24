@@ -1,18 +1,15 @@
 ---
-title: "channels.togglePreHistoryHidden (метод)"
+title: "channels.togglePreHistoryHidden"
 original: "https://core.telegram.org/method/channels.togglePreHistoryHidden"
 section: ref
 kind: method
+description: "Скрыть или показать историю сообщений для новых участников канала или супергруппы"
 layout: layout.njk
 ---
 
 # channels.togglePreHistoryHidden
 
-*Метод из схемы TL.*
-
-> Hide/unhide message history for new channel/supergroup users
-
-## Определение TL
+Скрыть или показать историю сообщений для новых участников канала или супергруппы
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,33 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.togglePreHistoryHidden#eabbb94c channel:InputChannel enabled:Bool = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | Channel/supergroup |
-| enabled | [Bool](/type/Bool/) | Hide/unhide |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал или супергруппа</td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Скрыть или показать</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | CHAT_LINK_EXISTS | The chat is public, you can't hide the history to new users. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | FORUM_ENABLED | You can't execute the specified action because the group is a [forum](https://core.telegram.org/api/forum), disable forum functionality to continue. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>CHAT_LINK_EXISTS</td><td>Чат публичный, скрыть историю от новых пользователей нельзя.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>FORUM_ENABLED</td><td>Нельзя выполнить указанное действие, так как группа является <a href="/api/forum">форумом</a>; отключите функциональность форума, чтобы продолжить.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

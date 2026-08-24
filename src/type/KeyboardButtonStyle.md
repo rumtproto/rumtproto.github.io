@@ -1,31 +1,26 @@
 ---
-title: "KeyboardButtonStyle (тип)"
+title: "KeyboardButtonStyle"
 original: "https://core.telegram.org/type/KeyboardButtonStyle"
 section: ref
 kind: type
+description: "Этот конструктор позволяет задать для кнопки собственный цвет фона и подпись из пользовательского эмодзи, подробнее »."
 layout: layout.njk
 ---
 
 # KeyboardButtonStyle
 
-*Тип из схемы TL.*
-
-> This constructor allows setting a custom background color and custom emoji label for a button, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info.
-
-## Определение TL
+Этот конструктор позволяет задать для кнопки собственный цвет фона и подпись из пользовательского эмодзи, [подробнее »](/api/bots/buttons/#button-styles).
 
 ```
 keyboardButtonStyle#4fdd3430 flags:# bg_primary:flags.0?true bg_danger:flags.1?true bg_success:flags.2?true icon:flags.3?long = KeyboardButtonStyle;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [keyboardButtonStyle](/constructor/keyboardButtonStyle/) | This constructor allows setting a custom background color and custom emoji label for a button, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/keyboardButtonStyle">keyboardButtonStyle</a></td><td>Этот конструктор позволяет задать для кнопки пользовательский цвет фона и подпись из пользовательского эмодзи, подробнее <a href="/api/bots/buttons#button-styles">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.

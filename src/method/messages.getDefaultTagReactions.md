@@ -1,18 +1,15 @@
 ---
-title: "messages.getDefaultTagReactions (метод)"
+title: "messages.getDefaultTagReactions"
 original: "https://core.telegram.org/method/messages.getDefaultTagReactions"
 section: ref
 kind: method
+description: "Получить рекомендуемый список реакций-тегов для сохранённых сообщений по умолчанию."
 layout: layout.njk
 ---
 
 # messages.getDefaultTagReactions
 
-*Метод из схемы TL.*
-
-> Fetch a default recommended list of [saved message tag reactions](https://core.telegram.org/api/saved-messages#tags).
-
-## Определение TL
+Получить рекомендуемый список [реакций-тегов для сохранённых сообщений](/api/saved-messages/#tags) по умолчанию.
 
 ```
 messages.reactionsNotModified#b06fdbdf = messages.Reactions;
@@ -21,24 +18,22 @@ messages.reactions#eafdf716 hash:long reactions:Vector<Reaction> = messages.Reac
 messages.getDefaultTagReactions#bdf93428 hash:long = messages.Reactions;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Reactions](/type/messages.Reactions/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.

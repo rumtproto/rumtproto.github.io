@@ -1,27 +1,24 @@
 ---
-title: "privacyKeyPhoneCall (конструктор)"
+title: "privacyKeyPhoneCall"
 original: "https://core.telegram.org/constructor/privacyKeyPhoneCall"
 section: ref
 kind: constructor
+description: "Принимает ли пользователь звонки"
 layout: layout.njk
 ---
 
 # privacyKeyPhoneCall
 
-*Конструктор из схемы TL.*
-
-> Whether the user accepts phone calls
-
-## Определение TL
+Принимает ли пользователь звонки
 
 ```
 privacyKeyPhoneCall#3d662b7b = PrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyKey](/type/PrivacyKey/)

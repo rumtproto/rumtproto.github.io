@@ -1,18 +1,15 @@
 ---
-title: "messages.CheckedHistoryImportPeer (тип)"
+title: "messages.CheckedHistoryImportPeer"
 original: "https://core.telegram.org/type/messages.CheckedHistoryImportPeer"
 section: ref
 kind: type
+description: "Содержит текст подтверждения, который следует показать пользователю при импорте истории переписки, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # messages.CheckedHistoryImportPeer
 
-*Тип из схемы TL.*
-
-> Contains a confirmation text to be shown to the user, upon [importing chat history, click here for more info »](https://core.telegram.org/api/import).
-
-## Определение TL
+Содержит текст подтверждения, который следует показать пользователю при [импорте истории переписки, подробнее см. здесь »](/api/import/).
 
 ```
 messages.checkedHistoryImportPeer#a24de717 confirm_text:string = messages.CheckedHistoryImportPeer;
@@ -22,20 +19,16 @@ messages.checkedHistoryImportPeer#a24de717 confirm_text:string = messages.Checke
 messages.checkHistoryImportPeer#5dc60f03 peer:InputPeer = messages.CheckedHistoryImportPeer;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.checkedHistoryImportPeer](/constructor/messages.checkedHistoryImportPeer/) | Contains a confirmation text to be shown to the user, upon [importing chat history, click here for more info »](https://core.telegram.org/api/import). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.checkedHistoryImportPeer">messages.checkedHistoryImportPeer</a></td><td>Содержит текст подтверждения, который следует показать пользователю при <a href="/api/import">импорте истории чата, подробнее см. здесь »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.checkHistoryImportPeer](/method/messages.checkHistoryImportPeer/) | Check whether chat history exported from another chat app can be [imported into a specific Telegram chat, click here for more info »](https://core.telegram.org/api/import). If the check succeeds, and no RPC errors are returned, a [messages.CheckedHistoryImportPeer](/type/messages.CheckedHistoryImportPeer/) constructor will be returned, with a confirmation text to be shown to the user, before actually initializing the import. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.checkHistoryImportPeer">messages.checkHistoryImportPeer</a></td><td>Проверить, можно ли <a href="/api/import">импортировать в определённый чат Telegram историю переписки, экспортированную из другого мессенджера; подробнее см. здесь »</a>.<br><br>Если проверка прошла успешно и ошибок RPC не возвращено, будет возвращён конструктор <a href="/type/messages.CheckedHistoryImportPeer">messages.CheckedHistoryImportPeer</a> с текстом подтверждения, который следует показать пользователю перед фактическим запуском импорта.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Imported messages](https://core.telegram.org/api/import)
+#### [Импортированные сообщения](/api/import/)
 
-Telegram allows importing messages and media from foreign chat apps.
+Telegram позволяет импортировать сообщения и медиа из сторонних мессенджеров.

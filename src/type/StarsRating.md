@@ -1,31 +1,26 @@
 ---
-title: "StarsRating (тип)"
+title: "StarsRating"
 original: "https://core.telegram.org/type/StarsRating"
 section: ref
 kind: type
+description: "Представляет звёздный рейтинг профиля, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # StarsRating
 
-*Тип из схемы TL.*
-
-> Represents the profile's [star rating, see here »](https://core.telegram.org/api/stars#star-rating) for more info.
-
-## Определение TL
+Представляет [звёздный рейтинг профиля, подробнее см. здесь »](/api/stars/#star-rating).
 
 ```
 starsRating#1b0e4f07 flags:# level:int current_level_stars:long stars:long next_level_stars:flags.0?long = StarsRating;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starsRating](/constructor/starsRating/) | Represents the profile's [star rating, see here »](https://core.telegram.org/api/stars#star-rating) for more info. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starsRating">starsRating</a></td><td>Представляет <a href="/api/stars#star-rating">звёздный рейтинг профиля, подробнее см. здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

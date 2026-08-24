@@ -1,18 +1,15 @@
 ---
-title: "messages.ForumTopics (тип)"
+title: "messages.ForumTopics"
 original: "https://core.telegram.org/type/messages.ForumTopics"
 section: ref
 kind: type
+description: "Содержит информацию о нескольких темах форума"
 layout: layout.njk
 ---
 
 # messages.ForumTopics
 
-*Тип из схемы TL.*
-
-> Contains information about multiple [forum topics](https://core.telegram.org/api/forum#forum-topics)
-
-## Определение TL
+Содержит информацию о нескольких [темах форума](/api/forum/#forum-topics)
 
 ```
 messages.forumTopics#367617d3 flags:# order_by_create_date:flags.0?true count:int topics:Vector<ForumTopic> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> pts:int = messages.ForumTopics;
@@ -23,21 +20,16 @@ messages.getForumTopics#3ba47bff flags:# peer:InputPeer q:flags.0?string offset_
 messages.getForumTopicsByID#af0a4a08 peer:InputPeer topics:Vector<int> = messages.ForumTopics;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.forumTopics](/constructor/messages.forumTopics/) | Contains information about multiple [forum topics](https://core.telegram.org/api/forum#forum-topics) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.forumTopics">messages.forumTopics</a></td><td>Содержит информацию о нескольких <a href="/api/forum#forum-topics">темах форума</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getForumTopics](/method/messages.getForumTopics/) | Get [topics of a forum](https://core.telegram.org/api/forum) |
-| [messages.getForumTopicsByID](/method/messages.getForumTopicsByID/) | Get forum topics by their ID |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getForumTopics">messages.getForumTopics</a></td><td>Получить <a href="/api/forum">темы форума</a></td></tr><tr><td><a href="/method/messages.getForumTopicsByID">messages.getForumTopicsByID</a></td><td>Получить темы форума по их идентификаторам</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Forum topics](https://core.telegram.org/api/forum)
+#### [Темы форума](/api/forum/)
 
-Telegram allows creating forums with multiple distinct topics.
+Telegram позволяет создавать форумы с несколькими самостоятельными темами.

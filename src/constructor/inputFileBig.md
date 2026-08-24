@@ -1,37 +1,30 @@
 ---
-title: "inputFileBig (конструктор)"
+title: "inputFileBig"
 original: "https://core.telegram.org/constructor/inputFileBig"
 section: ref
 kind: constructor
+description: "Задаёт большой файл (размером более 10 МБ), сохранённый по частям с помощью метода upload.saveBigFilePart."
 layout: layout.njk
 ---
 
 # inputFileBig
 
-*Конструктор из схемы TL.*
-
-> Assigns a big file (over 10 MB in size), saved in part using the method [upload.saveBigFilePart](/method/upload.saveBigFilePart/).
-
-## Определение TL
+Задаёт большой файл (размером более 10 МБ), сохранённый по частям с помощью метода [upload.saveBigFilePart](/method/upload.saveBigFilePart/).
 
 ```
 inputFileBig#fa4f0bb5 id:long parts:int name:string = InputFile;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | Random file id, created by the client |
-| parts | [int](/type/int/) | Number of parts saved |
-| name | [string](/type/string/) | Full file name |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Случайный идентификатор файла, созданный клиентом</td></tr><tr><td><strong>parts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество сохранённых частей</td></tr><tr><td><strong>name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Полное имя файла</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputFile](/type/InputFile/)
 
-## Related pages
+### Связанные страницы
 
 #### [upload.saveBigFilePart](/method/upload.saveBigFilePart/)
 
-Saves a part of a large file (over 10 MB in size) to be later passed to one of the methods.
+Сохраняет часть большого файла (размером свыше 10 МБ) для последующей передачи в один из методов.

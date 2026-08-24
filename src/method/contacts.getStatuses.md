@@ -1,30 +1,27 @@
 ---
-title: "contacts.getStatuses (метод)"
+title: "contacts.getStatuses"
 original: "https://core.telegram.org/method/contacts.getStatuses"
 section: ref
 kind: method
+description: "Этот метод позволяет получить сетевой статус всех контактов, у которых есть доступный аккаунт Telegram."
 layout: layout.njk
 ---
 
 # contacts.getStatuses
 
-*Метод из схемы TL.*
-
-> Use this method to obtain the online statuses of all contacts with an accessible Telegram account.
-
-## Определение TL
+Этот метод позволяет получить сетевой статус всех контактов, у которых есть доступный аккаунт Telegram.
 
 ```
 ---functions---
 contacts.getStatuses#c4a353ee = Vector<ContactStatus>;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[ContactStatus](/type/ContactStatus/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям

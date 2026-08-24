@@ -1,18 +1,15 @@
 ---
-title: "contacts.ContactBirthdays (тип)"
+title: "contacts.ContactBirthdays"
 original: "https://core.telegram.org/type/contacts.ContactBirthdays"
 section: ref
 kind: type
+description: "Сведения о днях рождения наших контактов."
 layout: layout.njk
 ---
 
 # contacts.ContactBirthdays
 
-*Тип из схемы TL.*
-
-> Birthday information of our contacts.
-
-## Определение TL
+Сведения о днях рождения наших контактов.
 
 ```
 contacts.contactBirthdays#114ff30d contacts:Vector<ContactBirthday> users:Vector<User> = contacts.ContactBirthdays;
@@ -22,14 +19,10 @@ contacts.contactBirthdays#114ff30d contacts:Vector<ContactBirthday> users:Vector
 contacts.getBirthdays#daeda864 = contacts.ContactBirthdays;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [contacts.contactBirthdays](/constructor/contacts.contactBirthdays/) | Birthday information of our contacts. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/contacts.contactBirthdays">contacts.contactBirthdays</a></td><td>Сведения о днях рождения наших контактов.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [contacts.getBirthdays](/method/contacts.getBirthdays/) | Fetch all users with birthdays that fall within +1/-1 days, relative to the current day: this method should be invoked by clients every 6-8 hours, and if the result is non-empty, it should be used to appropriately update locally cached birthday information in [user](/constructor/user/).birthday. [See here »](https://core.telegram.org/api/profile#birthday) for more info. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/contacts.getBirthdays">contacts.getBirthdays</a></td><td>Получить всех пользователей, у которых день рождения приходится на промежуток ±1 день относительно текущего дня. Клиентам следует вызывать этот метод каждые 6–8 часов, и если результат непустой, использовать его для соответствующего обновления локально сохранённых сведений о дне рождения в <a href="/constructor/user">user</a>.<code>birthday</code>.<br><br>Подробнее <a href="/api/profile#birthday">см. здесь »</a>.</td></tr></tbody></table>

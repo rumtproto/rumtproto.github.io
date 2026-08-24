@@ -1,40 +1,34 @@
 ---
-title: "botMenuButton (конструктор)"
+title: "botMenuButton"
 original: "https://core.telegram.org/constructor/botMenuButton"
 section: ref
 kind: constructor
+description: "Кнопка меню бота, открывающая при нажатии веб-приложение."
 layout: layout.njk
 ---
 
 # botMenuButton
 
-*Конструктор из схемы TL.*
-
-> [Bot menu button](https://core.telegram.org/api/bots/menu) that opens a [web app](https://core.telegram.org/api/bots/webapps) when clicked.
-
-## Определение TL
+[Кнопка меню бота](/api/bots/menu/), открывающая при нажатии [веб-приложение](/api/bots/webapps/).
 
 ```
 botMenuButton#c7b57ce6 text:string url:string = BotMenuButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [string](/type/string/) | Title to be displayed on the menu button instead of 'Menu' |
-| url | [string](/type/string/) | URL of a [web app](https://core.telegram.org/api/bots/webapps) to open when the user clicks on the button |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Надпись, отображаемая на кнопке меню вместо «Menu»</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>URL <a href="/api/bots/webapps">веб-приложения</a>, которое нужно открыть при нажатии пользователем на кнопку</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BotMenuButton](/type/BotMenuButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
-#### [Bot menu button](https://core.telegram.org/api/bots/menu)
+#### [Кнопка меню бота](/api/bots/menu/)
 
-Bots can choose the behavior of the menu button shown next to the text input field.
+Боты могут выбирать поведение кнопки меню, отображаемой рядом с полем ввода текста.

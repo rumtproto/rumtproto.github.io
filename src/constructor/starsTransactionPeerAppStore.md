@@ -1,33 +1,30 @@
 ---
-title: "starsTransactionPeerAppStore (конструктор)"
+title: "starsTransactionPeerAppStore"
 original: "https://core.telegram.org/constructor/starsTransactionPeerAppStore"
 section: ref
 kind: constructor
+description: "Описывает транзакцию Telegram Star с App Store, используемую при покупке Telegram Stars через App Store."
 layout: layout.njk
 ---
 
 # starsTransactionPeerAppStore
 
-*Конструктор из схемы TL.*
-
-> Describes a [Telegram Star](https://core.telegram.org/api/stars) transaction with the App Store, used when purchasing Telegram Stars through the App Store.
-
-## Определение TL
+Описывает транзакцию [Telegram Star](/api/stars/) с App Store, используемую при покупке Telegram Stars через App Store.
 
 ```
 starsTransactionPeerAppStore#b457b375 = StarsTransactionPeer;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [StarsTransactionPeer](/type/StarsTransactionPeer/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

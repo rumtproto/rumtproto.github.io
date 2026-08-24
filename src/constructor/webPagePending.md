@@ -1,32 +1,24 @@
 ---
-title: "webPagePending (конструктор)"
+title: "webPagePending"
 original: "https://core.telegram.org/constructor/webPagePending"
 section: ref
 kind: constructor
+description: "Предпросмотр веб-страницы сейчас создаётся"
 layout: layout.njk
 ---
 
 # webPagePending
 
-*Конструктор из схемы TL.*
-
-> A preview of the webpage is currently being generated
-
-## Определение TL
+Предпросмотр веб-страницы сейчас создаётся
 
 ```
 webPagePending#b0d13e47 flags:# id:long url:flags.0?string date:int = WebPage;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| id | [long](/type/long/) | ID of preview |
-| url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | URL of the webpage |
-| date | [int](/type/int/) | When was the processing started |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор предпросмотра</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>URL веб-страницы</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда началась обработка</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [WebPage](/type/WebPage/)

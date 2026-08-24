@@ -1,18 +1,15 @@
 ---
-title: "help.getUserInfo (метод)"
+title: "help.getUserInfo"
 original: "https://core.telegram.org/method/help.getUserInfo"
 section: ref
 kind: method
+description: "Может использоваться только участниками TSF для получения внутренней информации."
 layout: layout.njk
 ---
 
 # help.getUserInfo
 
-*Метод из схемы TL.*
-
-> Can only be used by TSF members to obtain internal information.
-
-## Определение TL
+Может использоваться только участниками TSF для получения внутренней информации.
 
 ```
 help.userInfoEmpty#f3ae2eed = help.UserInfo;
@@ -21,20 +18,16 @@ help.userInfo#1eb3758 message:string entities:Vector<MessageEntity> author:strin
 help.getUserInfo#38a08d3 user_id:InputUser = help.UserInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [InputUser](/type/InputUser/) | User ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор пользователя</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [help.UserInfo](/type/help.UserInfo/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | USER_INVALID | Invalid user provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>USER_INVALID</td><td>Указан недействительный пользователь.</td></tr></tbody></table>

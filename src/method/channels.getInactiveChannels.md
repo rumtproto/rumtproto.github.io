@@ -1,18 +1,15 @@
 ---
-title: "channels.getInactiveChannels (метод)"
+title: "channels.getInactiveChannels"
 original: "https://core.telegram.org/method/channels.getInactiveChannels"
 section: ref
 kind: method
+description: "Получить неактивные каналы и супергруппы"
 layout: layout.njk
 ---
 
 # channels.getInactiveChannels
 
-*Метод из схемы TL.*
-
-> Get inactive channels and supergroups
-
-## Определение TL
+Получить неактивные каналы и супергруппы
 
 ```
 messages.inactiveChats#a927fec5 dates:Vector<int> chats:Vector<Chat> users:Vector<User> = messages.InactiveChats;
@@ -20,12 +17,12 @@ messages.inactiveChats#a927fec5 dates:Vector<int> chats:Vector<Chat> users:Vecto
 channels.getInactiveChannels#11e831ee = messages.InactiveChats;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [messages.InactiveChats](/type/messages.InactiveChats/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

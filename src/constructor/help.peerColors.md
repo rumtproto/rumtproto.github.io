@@ -1,40 +1,34 @@
 ---
-title: "help.peerColors (конструктор)"
+title: "help.peerColors"
 original: "https://core.telegram.org/constructor/help.peerColors"
 section: ref
 kind: constructor
+description: "Содержит информацию о нескольких цветовых палитрах »."
 layout: layout.njk
 ---
 
 # help.peerColors
 
-*Конструктор из схемы TL.*
-
-> Contains info about multiple [color palettes »](https://core.telegram.org/api/colors).
-
-## Определение TL
+Содержит информацию о нескольких [цветовых палитрах »](/api/colors/).
 
 ```
 help.peerColors#f8ed08 hash:int colors:Vector<help.PeerColorOption> = help.PeerColors;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| colors | [Vector](https://core.telegram.org/type/Vector%20t)<[help.PeerColorOption](/type/help.PeerColorOption/)> | Usable [color palettes](https://core.telegram.org/api/colors). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>colors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/help.PeerColorOption">help.PeerColorOption</a>&gt;</td><td>Доступные <a href="/api/colors">цветовые палитры</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [help.PeerColors](/type/help.PeerColors/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!

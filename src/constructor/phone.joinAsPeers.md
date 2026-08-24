@@ -1,37 +1,30 @@
 ---
-title: "phone.joinAsPeers (конструктор)"
+title: "phone.joinAsPeers"
 original: "https://core.telegram.org/constructor/phone.joinAsPeers"
 section: ref
 kind: constructor
+description: "Содержит пиры, которые могут использоваться для подключения к видеочату или трансляции, см. подключение от имени принадлежащих вам каналов »."
 layout: layout.njk
 ---
 
 # phone.joinAsPeers
 
-*Конструктор из схемы TL.*
-
-> Contains the peers that may be used to join a video chat/livestream, see [joining on behalf of owned channels »](https://core.telegram.org/api/group-calls#joining-a-group-call-on-behalf-of-owned-channels).
-
-## Определение TL
+Содержит пиры, которые могут использоваться для подключения к видеочату или трансляции, см. [подключение от имени принадлежащих вам каналов »](/api/group-calls/#joining-a-group-call-on-behalf-of-owned-channels).
 
 ```
 phone.joinAsPeers#afe5623f peers:Vector<Peer> chats:Vector<Chat> users:Vector<User> = phone.JoinAsPeers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peers | [Vector](https://core.telegram.org/type/Vector%20t)<[Peer](/type/Peer/)> | Peers |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Chats mentioned in the peers vector |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users mentioned in the peers vector |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Peer">Peer</a>&gt;</td><td>Пиры</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Чаты, упомянутые в векторе пиров</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи, упомянутые в векторе пиров</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [phone.JoinAsPeers](/type/phone.JoinAsPeers/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

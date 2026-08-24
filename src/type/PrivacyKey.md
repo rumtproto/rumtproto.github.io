@@ -1,19 +1,17 @@
 ---
-title: "PrivacyKey (тип)"
+title: "PrivacyKey"
 original: "https://core.telegram.org/type/PrivacyKey"
 section: ref
 kind: type
+description: "**Ключи** приватности вместе с правилами приватности » определяют, _что_ кому разрешено или запрещено делать; они задаются конструктором PrivacyKey и его входным аналогом…"
 layout: layout.njk
 ---
 
 # PrivacyKey
 
-*Тип из схемы TL.*
+**Ключи** приватности вместе с [правилами приватности »](/api/privacy/#privacy-rules) определяют, _что_ кому разрешено или запрещено делать; они задаются конструктором [PrivacyKey](/type/PrivacyKey/) и его входным аналогом [InputPrivacyKey](/type/InputPrivacyKey/).
 
-> Privacy **keys** together with [privacy rules »](https://core.telegram.org/api/privacy#privacy-rules) indicate _what_ can or can't someone do and are specified by a [PrivacyKey](/type/PrivacyKey/) constructor, and its input counterpart [InputPrivacyKey](/type/InputPrivacyKey/).
-> See the [privacy documentation »](https://core.telegram.org/api/privacy) for more info.
-
-## Определение TL
+Подробнее см. [документацию по приватности »](/api/privacy/).
 
 ```
 privacyKeyStatusTimestamp#bc2eab30 = PrivacyKey;
@@ -32,39 +30,24 @@ privacyKeyNoPaidMessages#17d348d2 = PrivacyKey;
 privacyKeySavedMusic#ff7a571b = PrivacyKey;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [privacyKeyStatusTimestamp](/constructor/privacyKeyStatusTimestamp/) | Whether we can see the last online timestamp of this user. Note that if we decide to hide our exact last online timestamp to someone (i.e., users A, B, C, or all users) and we do not have a [Premium](https://core.telegram.org/api/premium) subscription, we won't be able to see the exact last online timestamp of those users (A, B, C, or all users), even if those users do share it with us. If those users do share their exact online status with us, but we can't see it due to the reason mentioned above, the by_me flag of [userStatusRecently](/constructor/userStatusRecently/), [userStatusLastWeek](/constructor/userStatusLastWeek/), [userStatusLastMonth](/constructor/userStatusLastMonth/) will be set. |
-| [privacyKeyChatInvite](/constructor/privacyKeyChatInvite/) | Whether the user can be invited to chats |
-| [privacyKeyPhoneCall](/constructor/privacyKeyPhoneCall/) | Whether the user accepts phone calls |
-| [privacyKeyPhoneP2P](/constructor/privacyKeyPhoneP2P/) | Whether P2P connections in phone calls with this user are allowed |
-| [privacyKeyForwards](/constructor/privacyKeyForwards/) | Whether messages forwarded from the user will be [anonymously forwarded](https://telegram.org/blog/unsend-privacy-emoji#anonymous-forwarding) |
-| [privacyKeyProfilePhoto](/constructor/privacyKeyProfilePhoto/) | Whether the profile picture of the user is visible |
-| [privacyKeyPhoneNumber](/constructor/privacyKeyPhoneNumber/) | Whether the user allows us to see his phone number |
-| [privacyKeyAddedByPhone](/constructor/privacyKeyAddedByPhone/) | Whether this user can be added to our contact list by their phone number |
-| [privacyKeyVoiceMessages](/constructor/privacyKeyVoiceMessages/) | Whether the user accepts voice messages |
-| [privacyKeyAbout](/constructor/privacyKeyAbout/) | Whether people can see your bio |
-| [privacyKeyBirthday](/constructor/privacyKeyBirthday/) | Whether the user can see our birthday. |
-| [privacyKeyStarGiftsAutoSave](/constructor/privacyKeyStarGiftsAutoSave/) | Whether received [gifts](https://core.telegram.org/api/gifts) will be automatically displayed on our profile |
-| [privacyKeyNoPaidMessages](/constructor/privacyKeyNoPaidMessages/) | Who can send you messages without paying, if [paid messages »](https://core.telegram.org/api/paid-messages) are enabled. |
-| [privacyKeySavedMusic](/constructor/privacyKeySavedMusic/) | Whether the user can see the [songs we pinned to our profile »](https://core.telegram.org/api/profile#music). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/privacyKeyStatusTimestamp">privacyKeyStatusTimestamp</a></td><td>Можем ли мы видеть время последнего посещения этого пользователя.<br><br>Обратите внимание: если <em>мы</em> решили скрыть своё точное время последнего посещения от кого-либо (то есть от пользователей A, B, C или от всех пользователей) <strong>и</strong> у нас нет подписки <a href="/api/premium">Premium</a>, мы не сможем видеть точное время последнего посещения этих пользователей (A, B, C или всех пользователей), даже если эти пользователи <em>действительно</em> показывают его нам.<br><br>Если эти пользователи <em>действительно</em> показывают нам своё точное время последнего посещения, но мы не можем его видеть по указанной выше причине, то будет установлен флаг <code>by_me</code> у конструкторов <a href="/constructor/userStatusRecently">userStatusRecently</a>, <a href="/constructor/userStatusLastWeek">userStatusLastWeek</a>, <a href="/constructor/userStatusLastMonth">userStatusLastMonth</a>.</td></tr><tr><td><a href="/constructor/privacyKeyChatInvite">privacyKeyChatInvite</a></td><td>Можно ли приглашать пользователя в чаты</td></tr><tr><td><a href="/constructor/privacyKeyPhoneCall">privacyKeyPhoneCall</a></td><td>Принимает ли пользователь звонки</td></tr><tr><td><a href="/constructor/privacyKeyPhoneP2P">privacyKeyPhoneP2P</a></td><td>Разрешены ли P2P-соединения при звонках с этим пользователем</td></tr><tr><td><a href="/constructor/privacyKeyForwards">privacyKeyForwards</a></td><td>Будут ли сообщения, пересланные от этого пользователя, <a href="https://telegram.org/blog/unsend-privacy-emoji#anonymous-forwarding">пересылаться анонимно</a></td></tr><tr><td><a href="/constructor/privacyKeyProfilePhoto">privacyKeyProfilePhoto</a></td><td>Видна ли фотография профиля пользователя</td></tr><tr><td><a href="/constructor/privacyKeyPhoneNumber">privacyKeyPhoneNumber</a></td><td>Разрешает ли пользователь нам видеть его номер телефона</td></tr><tr><td><a href="/constructor/privacyKeyAddedByPhone">privacyKeyAddedByPhone</a></td><td>Можно ли добавить этого пользователя в наш список контактов по номеру телефона</td></tr><tr><td><a href="/constructor/privacyKeyVoiceMessages">privacyKeyVoiceMessages</a></td><td>Принимает ли пользователь голосовые сообщения</td></tr><tr><td><a href="/constructor/privacyKeyAbout">privacyKeyAbout</a></td><td>Могут ли другие видеть вашу биографию</td></tr><tr><td><a href="/constructor/privacyKeyBirthday">privacyKeyBirthday</a></td><td>Может ли пользователь видеть наш день рождения.</td></tr><tr><td><a href="/constructor/privacyKeyStarGiftsAutoSave">privacyKeyStarGiftsAutoSave</a></td><td>Будут ли полученные <a href="/api/gifts">подарки</a> автоматически отображаться в нашем профиле</td></tr><tr><td><a href="/constructor/privacyKeyNoPaidMessages">privacyKeyNoPaidMessages</a></td><td>Кто может писать вам без оплаты, если включены <a href="/api/paid-messages">платные сообщения »</a>.</td></tr><tr><td><a href="/constructor/privacyKeySavedMusic">privacyKeySavedMusic</a></td><td>Может ли пользователь видеть <a href="/api/profile#music">композиции, закреплённые в нашем профиле »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Privacy settings](https://core.telegram.org/api/privacy)
+#### [Настройки приватности](/api/privacy/)
 
-Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.
+Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным способом.
 
 #### [PrivacyKey](/type/PrivacyKey/)
 
-Privacy **keys** together with [privacy rules »](https://core.telegram.org/api/privacy#privacy-rules) indicate _what_ can or can't someone do and are specified by a [PrivacyKey](/type/PrivacyKey/) constructor, and its input counterpart [InputPrivacyKey](/type/InputPrivacyKey/).
+**Ключи** приватности вместе с [правилами приватности »](/api/privacy/#privacy-rules) определяют, _что_ кому разрешено или запрещено делать; они задаются конструктором [PrivacyKey](/type/PrivacyKey/) и его входным аналогом [InputPrivacyKey](/type/InputPrivacyKey/).
 
-See the [privacy documentation »](https://core.telegram.org/api/privacy) for more info.
+Подробнее см. [документацию по приватности »](/api/privacy/).
 
 #### [InputPrivacyKey](/type/InputPrivacyKey/)
 
-Privacy **keys** together with [privacy rules »](https://core.telegram.org/api/privacy#privacy-rules) indicate _what_ can or can't someone do and are specified by a [PrivacyKey](/type/PrivacyKey/) constructor, and its input counterpart [InputPrivacyKey](/type/InputPrivacyKey/).
+**Ключи** приватности вместе с [правилами приватности »](/api/privacy/#privacy-rules) определяют, _что_ кому разрешено или запрещено делать; они задаются конструктором [PrivacyKey](/type/PrivacyKey/) и его входным аналогом [InputPrivacyKey](/type/InputPrivacyKey/).
 
-See the [privacy documentation »](https://core.telegram.org/api/privacy) for more info.
+Подробнее см. [документацию по приватности »](/api/privacy/).

@@ -1,40 +1,34 @@
 ---
-title: "todoItem (конструктор)"
+title: "todoItem"
 original: "https://core.telegram.org/constructor/todoItem"
 section: ref
 kind: constructor
+description: "Пункт списка задач »."
 layout: layout.njk
 ---
 
 # todoItem
 
-*Конструктор из схемы TL.*
-
-> An item of a [todo list »](https://core.telegram.org/api/todo).
-
-## Определение TL
+Пункт [списка задач »](/api/todo/).
 
 ```
 todoItem#cba9a52f id:int title:TextWithEntities = TodoItem;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [int](/type/int/) | ID of the item, a positive (non-zero) integer unique within the current list. |
-| title | [TextWithEntities](/type/TextWithEntities/) | Text of the item, maximum length equal to [todo_item_length_max »](https://core.telegram.org/api/config#todo-item-length-max). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор элемента — положительное (ненулевое) целое число, уникальное в пределах текущего списка.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Текст пункта, максимальная длина равна <a href="/api/config#todo-item-length-max">todo_item_length_max »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [TodoItem](/type/TodoItem/)
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Checklists and to-do lists](https://core.telegram.org/api/todo)
+#### [Чек-листы и списки задач](/api/todo/)
 
-Premium users can now create collaborative checklists in any chat to track tasks and coordinate teams — or manage shopping and to-do lists.
+Пользователи Premium теперь могут создавать совместные чек-листы в любом чате, чтобы отслеживать задачи и координировать команды — или вести списки покупок и дел.

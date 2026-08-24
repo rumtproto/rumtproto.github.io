@@ -1,18 +1,15 @@
 ---
-title: "payments.checkCanSendGift (метод)"
+title: "payments.checkCanSendGift"
 original: "https://core.telegram.org/method/payments.checkCanSendGift"
 section: ref
 kind: method
+description: "Проверить, можно ли отправить указанный подарок »."
 layout: layout.njk
 ---
 
 # payments.checkCanSendGift
 
-*Метод из схемы TL.*
-
-> Check if the specified [gift »](https://core.telegram.org/api/gifts) can be sent.
-
-## Определение TL
+Проверить, можно ли отправить указанный [подарок »](/api/gifts/).
 
 ```
 payments.checkCanSendGiftResultOk#374fa7ad = payments.CheckCanSendGiftResult;
@@ -21,26 +18,22 @@ payments.checkCanSendGiftResultFail#d5e58274 reason:TextWithEntities = payments.
 payments.checkCanSendGift#c0c4edc9 gift_id:long = payments.CheckCanSendGiftResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| gift_id | [long](/type/long/) | Gift ID. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор подарка.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.CheckCanSendGiftResult](/type/payments.CheckCanSendGiftResult/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | STARGIFT_INVALID | The passed gift is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>STARGIFT_INVALID</td><td>Переданный подарок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

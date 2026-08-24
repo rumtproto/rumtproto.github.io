@@ -1,42 +1,34 @@
 ---
-title: "prepaidGiveaway (конструктор)"
+title: "prepaidGiveaway"
 original: "https://core.telegram.org/constructor/prepaidGiveaway"
 section: ref
 kind: constructor
+description: "Содержит информацию о предоплаченном розыгрыше »."
 layout: layout.njk
 ---
 
 # prepaidGiveaway
 
-*Конструктор из схемы TL.*
-
-> Contains info about a [prepaid giveaway »](https://core.telegram.org/api/giveaways).
-
-## Определение TL
+Содержит информацию о [предоплаченном розыгрыше »](/api/giveaways/).
 
 ```
 prepaidGiveaway#b2539d54 id:long months:int quantity:int date:int = PrepaidGiveaway;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | Prepaid giveaway ID. |
-| months | [int](/type/int/) | Duration in months of each gifted [Telegram Premium](https://core.telegram.org/api/premium) subscription. |
-| quantity | [int](/type/int/) | Number of given away [Telegram Premium](https://core.telegram.org/api/premium) subscriptions. |
-| date | [int](/type/int/) | Payment date. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор предоплаченного розыгрыша.</td></tr><tr><td><strong>months</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Длительность каждой подаренной подписки <a href="/api/premium">Telegram Premium</a>, в месяцах.</td></tr><tr><td><strong>quantity</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество разыгранных подписок <a href="/api/premium">Telegram Premium</a>.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата платежа.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PrepaidGiveaway](/type/PrepaidGiveaway/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

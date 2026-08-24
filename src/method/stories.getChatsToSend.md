@@ -1,18 +1,15 @@
 ---
-title: "stories.getChatsToSend (метод)"
+title: "stories.getChatsToSend"
 original: "https://core.telegram.org/method/stories.getChatsToSend"
 section: ref
 kind: method
+description: "Получить список каналов, в которых пользователь может публиковать истории"
 layout: layout.njk
 ---
 
 # stories.getChatsToSend
 
-*Метод из схемы TL.*
-
-> Obtain a list of channels where the user can post [stories](https://core.telegram.org/api/stories)
-
-## Определение TL
+Получить список каналов, в которых пользователь может публиковать [истории](/api/stories/)
 
 ```
 messages.chats#64ff9fd5 chats:Vector<Chat> = messages.Chats;
@@ -21,18 +18,18 @@ messages.chatsSlice#9cd81144 count:int chats:Vector<Chat> = messages.Chats;
 stories.getChatsToSend#a56a8b60 = messages.Chats;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [messages.Chats](/type/messages.Chats/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

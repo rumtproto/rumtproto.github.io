@@ -1,27 +1,24 @@
 ---
-title: "pageBlockDivider (конструктор)"
+title: "pageBlockDivider"
 original: "https://core.telegram.org/constructor/pageBlockDivider"
 section: ref
 kind: constructor
+description: "Пустой блок, разделяющий страницу"
 layout: layout.njk
 ---
 
 # pageBlockDivider
 
-*Конструктор из схемы TL.*
-
-> An empty block separating a page
-
-## Определение TL
+Пустой блок, разделяющий страницу
 
 ```
 pageBlockDivider#db20b188 = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

@@ -1,18 +1,15 @@
 ---
-title: "help.getDeepLinkInfo (метод)"
+title: "help.getDeepLinkInfo"
 original: "https://core.telegram.org/method/help.getDeepLinkInfo"
 section: ref
 kind: method
+description: "Получить информацию о неподдерживаемой глубокой ссылке, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # help.getDeepLinkInfo
 
-*Метод из схемы TL.*
-
-> Get info about an unsupported deep link, see [here for more info »](https://core.telegram.org/api/links#unsupported-links).
-
-## Определение TL
+Получить информацию о неподдерживаемой глубокой ссылке, [подробнее см. здесь »](/api/links/#unsupported-links).
 
 ```
 help.deepLinkInfoEmpty#66afa166 = help.DeepLinkInfo;
@@ -21,22 +18,20 @@ help.deepLinkInfo#6a4ee832 flags:# update_app:flags.0?true message:string entiti
 help.getDeepLinkInfo#3fedc75f path:string = help.DeepLinkInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| path | [string](/type/string/) | Path component of a tg: link |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>path</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Компонент пути ссылки <code>tg:</code></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [help.DeepLinkInfo](/type/help.DeepLinkInfo/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

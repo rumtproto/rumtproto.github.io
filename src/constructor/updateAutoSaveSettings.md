@@ -1,33 +1,30 @@
 ---
-title: "updateAutoSaveSettings (конструктор)"
+title: "updateAutoSaveSettings"
 original: "https://core.telegram.org/constructor/updateAutoSaveSettings"
 section: ref
 kind: constructor
+description: "Настройки автосохранения медиа изменились и должны быть перезапрошены с помощью account.getAutoSaveSettings."
 layout: layout.njk
 ---
 
 # updateAutoSaveSettings
 
-*Конструктор из схемы TL.*
-
-> Media autosave settings have changed and must be refetched using [account.getAutoSaveSettings](/method/account.getAutoSaveSettings/).
-
-## Определение TL
+Настройки автосохранения медиа изменились и должны быть перезапрошены с помощью [account.getAutoSaveSettings](/method/account.getAutoSaveSettings/).
 
 ```
 updateAutoSaveSettings#ec05b097 = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [account.getAutoSaveSettings](/method/account.getAutoSaveSettings/)
 
-Get autosave settings
+Получить настройки автосохранения

@@ -1,56 +1,46 @@
 ---
-title: "starGiftAuctionUserState (конструктор)"
+title: "starGiftAuctionUserState"
 original: "https://core.telegram.org/constructor/starGiftAuctionUserState"
 section: ref
 kind: constructor
+description: "Содержит информацию о состоянии текущего пользователя в аукционе »."
 layout: layout.njk
 ---
 
 # starGiftAuctionUserState
 
-*Конструктор из схемы TL.*
+Содержит информацию о состоянии текущего пользователя в [аукционе »](/api/auctions/).
 
-> Contains information about the current user's state in an [auction »](https://core.telegram.org/api/auctions).
-> The `bid_amount`, `bid_date`, `bid_peer` and `min_bid_amount` flags of [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) will all be set if the user placed a bid in the auction.
-
-## Определение TL
+Флаги `bid_amount`, `bid_date`, `bid_peer` и `min_bid_amount` конструктора [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) будут установлены все сразу, если пользователь сделал ставку на аукционе.
 
 ```
 starGiftAuctionUserState#2eeed1c4 flags:# returned:flags.1?true bid_amount:flags.0?long bid_date:flags.0?int min_bid_amount:flags.0?long bid_peer:flags.0?Peer acquired_count:int = StarGiftAuctionUserState;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| returned | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, the placed bid was returned to the user, because it was outbid so much that it fell out of the top [starGiftAuctionState](/constructor/starGiftAuctionState/).gifts_left positions, meaning that even if no new bids are placed, the user will never receive any gifts, so the bid was completely removed from the auction, and in order to participate again the user must manually make a new bid. |
-| bid_amount | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | Contains the amount of the placed bid in [Telegram Stars](https://core.telegram.org/api/stars). |
-| bid_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Contains a UNIX timestamp, indicating when the bid was placed. |
-| min_bid_amount | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | Contains the minumum allowed bid amount in [Telegram Stars](https://core.telegram.org/api/stars), if set overrides [starGiftAuctionState](/constructor/starGiftAuctionState/).min_bid_amount for the current user. |
-| bid_peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Peer](/type/Peer/) | Contains the peer that will receive the gift, if you end up winning this round |
-| acquired_count | [int](/type/int/) | Contains the number of gifts that were purchased so far in the auction by the current user. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>returned</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, сделанная ставка была возвращена пользователю, потому что её перебили настолько, что она выпала за пределы верхних <a href="/constructor/starGiftAuctionState">starGiftAuctionState</a>.<code>gifts_left</code> позиций: это означает, что пользователь не получит ни одного подарка, даже если новых ставок больше не будет, поэтому ставка была полностью снята с аукциона, и для повторного участия пользователь обязан вручную сделать новую ставку.</td></tr><tr><td><strong>bid_amount</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Содержит размер сделанной ставки в <a href="/api/stars">Telegram Stars</a>.</td></tr><tr><td><strong>bid_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Содержит метку времени UNIX, указывающую, когда была сделана ставка.</td></tr><tr><td><strong>min_bid_amount</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Содержит минимально допустимый размер ставки в <a href="/api/stars">Telegram Stars</a>; если задано, переопределяет <a href="/constructor/starGiftAuctionState">starGiftAuctionState</a>.<code>min_bid_amount</code> для текущего пользователя.</td></tr><tr><td><strong>bid_peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Peer">Peer</a></td><td>Содержит пир, который получит подарок, если вы в итоге выиграете этот раунд</td></tr><tr><td><strong>acquired_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Содержит количество подарков, приобретённых текущим пользователем на аукционе к настоящему моменту.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftAuctionUserState](/type/StarGiftAuctionUserState/)
 
-## Related pages
+### Связанные страницы
 
 #### [starGiftAuctionState](/constructor/starGiftAuctionState/)
 
-Represents an active or pending [auction »](https://core.telegram.org/api/auctions).
+Представляет активный или ожидающий [аукцион »](/api/auctions/).
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.
 
 #### [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/)
 
-Contains information about the current user's state in an [auction »](https://core.telegram.org/api/auctions).
+Содержит информацию о состоянии текущего пользователя в [аукционе »](/api/auctions/).
 
-The `bid_amount`, `bid_date`, `bid_peer` and `min_bid_amount` flags of [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) will all be set if the user placed a bid in the auction.
+Флаги `bid_amount`, `bid_date`, `bid_peer` и `min_bid_amount` конструктора [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) будут установлены все сразу, если пользователь сделал ставку на аукционе.

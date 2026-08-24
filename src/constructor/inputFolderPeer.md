@@ -1,36 +1,30 @@
 ---
-title: "inputFolderPeer (конструктор)"
+title: "inputFolderPeer"
 original: "https://core.telegram.org/constructor/inputFolderPeer"
 section: ref
 kind: constructor
+description: "Пир в папке"
 layout: layout.njk
 ---
 
 # inputFolderPeer
 
-*Конструктор из схемы TL.*
-
-> Peer in a folder
-
-## Определение TL
+Пир в папке
 
 ```
 inputFolderPeer#fbd2c296 peer:InputPeer folder_id:int = InputFolderPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer |
-| folder_id | [int](/type/int/) | [Peer folder ID, for more info click here](https://core.telegram.org/api/folders#peer-folders) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>folder_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/folders#peer-folders">Идентификатор папки пира, подробнее см. здесь</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputFolderPeer](/type/InputFolderPeer/)
 
-## Related pages
+### Связанные страницы
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.

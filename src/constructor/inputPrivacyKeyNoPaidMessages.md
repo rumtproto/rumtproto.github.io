@@ -1,33 +1,30 @@
 ---
-title: "inputPrivacyKeyNoPaidMessages (конструктор)"
+title: "inputPrivacyKeyNoPaidMessages"
 original: "https://core.telegram.org/constructor/inputPrivacyKeyNoPaidMessages"
 section: ref
 kind: constructor
+description: "Кто может писать вам без оплаты, если включены платные сообщения »."
 layout: layout.njk
 ---
 
 # inputPrivacyKeyNoPaidMessages
 
-*Конструктор из схемы TL.*
-
-> Who can send you messages without paying, if [paid messages »](https://core.telegram.org/api/paid-messages) are enabled.
-
-## Определение TL
+Кто может писать вам без оплаты, если включены [платные сообщения »](/api/paid-messages/).
 
 ```
 inputPrivacyKeyNoPaidMessages#bdc597b4 = InputPrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPrivacyKey](/type/InputPrivacyKey/)
 
-## Related pages
+### Связанные страницы
 
-#### [Paid messages](https://core.telegram.org/api/paid-messages)
+#### [Платные сообщения](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.
+Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.

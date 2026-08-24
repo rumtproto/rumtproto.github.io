@@ -1,35 +1,33 @@
 ---
-title: "jsonArray (конструктор)"
+title: "jsonArray"
 original: "https://core.telegram.org/constructor/jsonArray"
 section: ref
 kind: constructor
+description: "Массив JSON"
 layout: layout.njk
 ---
 
 # jsonArray
 
-*Конструктор из схемы TL.*
+Массив JSON
 
-> JSON array
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===216===
-> jsonArray#f7444763 value:Vector<JSONValue> = JSONValue;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===216===
+jsonArray#f7444763 value:Vector<JSONValue> = JSONValue;
+```
+
+#### Схема API
 
 ```
 jsonArray#f7444763 value:Vector<JSONValue> = JSONValue;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| value | [Vector](https://core.telegram.org/type/Vector%20t)<[JSONValue](/type/JSONValue/)> | JSON values |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/JSONValue">JSONValue</a>&gt;</td><td>Значения JSON</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [JSONValue](/type/JSONValue/)

@@ -1,37 +1,30 @@
 ---
-title: "updateWebPage (конструктор)"
+title: "updateWebPage"
 original: "https://core.telegram.org/constructor/updateWebPage"
 section: ref
 kind: constructor
+description: "Был сформирован предпросмотр веб-страницы instant view"
 layout: layout.njk
 ---
 
 # updateWebPage
 
-*Конструктор из схемы TL.*
-
-> An [instant view](https://instantview.telegram.org) webpage preview was generated
-
-## Определение TL
+Был сформирован предпросмотр веб-страницы [instant view](https://instantview.telegram.org)
 
 ```
 updateWebPage#7f891213 webpage:WebPage pts:int pts_count:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| webpage | [WebPage](/type/WebPage/) | Webpage preview |
-| pts | [int](/type/int/) | [Event count after generation](/api/updates/) |
-| pts_count | [int](/type/int/) | [Number of events that were generated](/api/updates/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>webpage</strong></td><td style="text-align: center;"><a href="/type/WebPage">WebPage</a></td><td>Предпросмотр веб-страницы</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] <a href="/api/updates">Число событий после генерации</a></td></tr><tr><td><strong>pts_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/updates">Число сгенерированных событий</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

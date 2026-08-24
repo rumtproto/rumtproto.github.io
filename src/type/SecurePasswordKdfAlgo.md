@@ -1,18 +1,15 @@
 ---
-title: "SecurePasswordKdfAlgo (тип)"
+title: "SecurePasswordKdfAlgo"
 original: "https://core.telegram.org/type/SecurePasswordKdfAlgo"
 section: ref
 kind: type
+description: "Алгоритм KDF, используемый для вычисления хеша telegram passport"
 layout: layout.njk
 ---
 
 # SecurePasswordKdfAlgo
 
-*Тип из схемы TL.*
-
-> KDF algorithm to use for computing telegram [passport](https://core.telegram.org/passport) hash
-
-## Определение TL
+Алгоритм KDF, используемый для вычисления хеша telegram [passport](https://core.telegram.org/passport)
 
 ```
 securePasswordKdfAlgoUnknown#4a8537 = SecurePasswordKdfAlgo;
@@ -20,16 +17,12 @@ securePasswordKdfAlgoPBKDF2HMACSHA512iter100000#bbf2dda0 salt:bytes = SecurePass
 securePasswordKdfAlgoSHA512#86471d92 salt:bytes = SecurePasswordKdfAlgo;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [securePasswordKdfAlgoUnknown](/constructor/securePasswordKdfAlgoUnknown/) | Unknown KDF algo (most likely the client has to be updated) |
-| [securePasswordKdfAlgoPBKDF2HMACSHA512iter100000](/constructor/securePasswordKdfAlgoPBKDF2HMACSHA512iter100000/) | PBKDF2 with SHA512 and 100000 iterations KDF algo |
-| [securePasswordKdfAlgoSHA512](/constructor/securePasswordKdfAlgoSHA512/) | SHA512 KDF algo |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/securePasswordKdfAlgoUnknown">securePasswordKdfAlgoUnknown</a></td><td>Неизвестный алгоритм KDF (скорее всего, клиент необходимо обновить)</td></tr><tr><td><a href="/constructor/securePasswordKdfAlgoPBKDF2HMACSHA512iter100000">securePasswordKdfAlgoPBKDF2HMACSHA512iter100000</a></td><td>Алгоритм KDF: PBKDF2 с SHA512 и 100000 итераций</td></tr><tr><td><a href="/constructor/securePasswordKdfAlgoSHA512">securePasswordKdfAlgoSHA512</a></td><td>Алгоритм KDF на основе SHA512</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

@@ -1,37 +1,30 @@
 ---
-title: "messageMediaVideoStream (конструктор)"
+title: "messageMediaVideoStream"
 original: "https://core.telegram.org/constructor/messageMediaVideoStream"
 section: ref
 kind: constructor
+description: "Определяет активный групповой звонок, связанный с прямой историей »."
 layout: layout.njk
 ---
 
 # messageMediaVideoStream
 
-*Конструктор из схемы TL.*
-
-> Identifies the active group call associated with a [live story »](https://core.telegram.org/api/group-calls#live-stories).
-
-## Определение TL
+Определяет активный групповой звонок, связанный с [прямой историей »](/api/group-calls/#live-stories).
 
 ```
 messageMediaVideoStream#ca5cab89 flags:# rtmp_stream:flags.0?true call:InputGroupCall = MessageMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| rtmp_stream | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the live story uses [RTMP livestream mode »](https://core.telegram.org/api/group-calls#stream-mode) |
-| call | [InputGroupCall](/type/InputGroupCall/) | Active live story group call |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>rtmp_stream</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Использует ли прямая история <a href="/api/group-calls#stream-mode">режим трансляции RTMP »</a></td></tr><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Активный групповой звонок прямого эфира истории</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageMedia](/type/MessageMedia/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

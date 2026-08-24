@@ -1,36 +1,39 @@
 ---
-title: "DocumentAttribute (тип)"
+title: "DocumentAttribute"
 original: "https://core.telegram.org/type/DocumentAttribute"
 section: ref
 kind: type
+description: "Различные возможные атрибуты документа (используются, чтобы определить, является ли он стикером, GIF-анимацией, видео, стикером-маской, изображением, аудиозаписью и так далее)"
 layout: layout.njk
 ---
 
 # DocumentAttribute
 
-*Тип из схемы TL.*
+Различные возможные атрибуты документа (используются, чтобы определить, является ли он стикером, GIF-анимацией, видео, стикером-маской, изображением, аудиозаписью и так далее)
 
-> Various possible attributes of a document (used to define if it's a sticker, a GIF, a video, a mask sticker, an image, an audio, and so on)
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===23===
-> documentAttributeAnimated#11b58939 = DocumentAttribute;
-> documentAttributeAudio#051448e5 duration:int = DocumentAttribute;
-> documentAttributeFilename#15590068 file_name:string = DocumentAttribute;
-> documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute;
-> documentAttributeSticker#fb0a5727 = DocumentAttribute;
-> documentAttributeVideo#5910cccb duration:int w:int h:int = DocumentAttribute;
-> ===45===
-> documentAttributeAudio#ded218e0 duration:int title:string performer:string = DocumentAttribute;
-> documentAttributeSticker#3a556302 alt:string stickerset:InputStickerSet = DocumentAttribute;
-> ===46===
-> documentAttributeAudio#9852f9c6 flags:# duration:int title:flags.0?string performer:flags.1?string waveform:flags.2?bytes = DocumentAttribute;
-> ===66===
-> documentAttributeVideo#0ef02ce6 flags:# duration:int w:int h:int = DocumentAttribute;
-> ```
-> API schema:
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===23===
+documentAttributeAnimated#11b58939 = DocumentAttribute;
+documentAttributeAudio#051448e5 duration:int = DocumentAttribute;
+documentAttributeFilename#15590068 file_name:string = DocumentAttribute;
+documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute;
+documentAttributeSticker#fb0a5727 = DocumentAttribute;
+documentAttributeVideo#5910cccb duration:int w:int h:int = DocumentAttribute;
+
+===45===
+documentAttributeAudio#ded218e0 duration:int title:string performer:string = DocumentAttribute;
+documentAttributeSticker#3a556302 alt:string stickerset:InputStickerSet = DocumentAttribute;
+
+===46===
+documentAttributeAudio#9852f9c6 flags:# duration:int title:flags.0?string performer:flags.1?string waveform:flags.2?bytes = DocumentAttribute;
+
+===66===
+documentAttributeVideo#0ef02ce6 flags:# duration:int w:int h:int = DocumentAttribute;
+```
+
+Схема API:
 
 ```
 documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute;
@@ -43,15 +46,6 @@ documentAttributeHasStickers#9801d2f7 = DocumentAttribute;
 documentAttributeCustomEmoji#fd149899 flags:# free:flags.0?true text_color:flags.1?true alt:string stickerset:InputStickerSet = DocumentAttribute;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [documentAttributeImageSize](/constructor/documentAttributeImageSize/) | Defines the width and height of an image uploaded as document |
-| [documentAttributeAnimated](/constructor/documentAttributeAnimated/) | Defines an animated GIF |
-| [documentAttributeSticker](/constructor/documentAttributeSticker/) | Defines a sticker |
-| [documentAttributeVideo](/constructor/documentAttributeVideo/) | Defines a video |
-| [documentAttributeAudio](/constructor/documentAttributeAudio/) | Represents an audio file |
-| [documentAttributeFilename](/constructor/documentAttributeFilename/) | A simple document with a file name |
-| [documentAttributeHasStickers](/constructor/documentAttributeHasStickers/) | Whether the current document has stickers attached |
-| [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/) | Info about a custom emoji |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/documentAttributeImageSize">documentAttributeImageSize</a></td><td>Определяет ширину и высоту изображения, загруженного как документ</td></tr><tr><td><a href="/constructor/documentAttributeAnimated">documentAttributeAnimated</a></td><td>Определяет анимированный GIF</td></tr><tr><td><a href="/constructor/documentAttributeSticker">documentAttributeSticker</a></td><td>Определяет стикер</td></tr><tr><td><a href="/constructor/documentAttributeVideo">documentAttributeVideo</a></td><td>Определяет видео</td></tr><tr><td><a href="/constructor/documentAttributeAudio">documentAttributeAudio</a></td><td>Представляет аудиофайл</td></tr><tr><td><a href="/constructor/documentAttributeFilename">documentAttributeFilename</a></td><td>Простой документ с именем файла</td></tr><tr><td><a href="/constructor/documentAttributeHasStickers">documentAttributeHasStickers</a></td><td>Есть ли у текущего документа прикреплённые стикеры</td></tr><tr><td><a href="/constructor/documentAttributeCustomEmoji">documentAttributeCustomEmoji</a></td><td>Информация о пользовательском эмодзи</td></tr></tbody></table>

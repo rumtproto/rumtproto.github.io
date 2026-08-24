@@ -1,46 +1,32 @@
 ---
-title: "inputMediaInvoice (конструктор)"
+title: "inputMediaInvoice"
 original: "https://core.telegram.org/constructor/inputMediaInvoice"
 section: ref
 kind: constructor
+description: "Сформированный счёт платежа через бота"
 layout: layout.njk
 ---
 
 # inputMediaInvoice
 
-*Конструктор из схемы TL.*
-
-> Generated invoice of a [bot payment](https://core.telegram.org/bots/payments)
-
-## Определение TL
+Сформированный счёт [платежа через бота](https://core.telegram.org/bots/payments)
 
 ```
 inputMediaInvoice#405fef0d flags:# title:string description:string photo:flags.0?InputWebDocument invoice:Invoice payload:bytes provider:flags.3?string provider_data:DataJSON start_param:flags.1?string extended_media:flags.2?InputMedia = InputMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| title | [string](/type/string/) | Product name, 1-32 characters |
-| description | [string](/type/string/) | Product description, 1-255 characters |
-| photo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputWebDocument](/type/InputWebDocument/) | URL of the product photo for the invoice. Can be a photo of the goods or a marketing image for a service. People like it better when they see what they are paying for. |
-| invoice | [Invoice](/type/Invoice/) | The actual invoice |
-| payload | [bytes](/type/bytes/) | Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use for your internal processes. |
-| provider | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[string](/type/string/) | Payments provider token, obtained via [Botfather](https://t.me/botfather) |
-| provider_data | [DataJSON](/type/DataJSON/) | JSON-encoded data about the invoice, which will be shared with the payment provider. A detailed description of required fields should be provided by the payment provider. |
-| start_param | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Unique [bot deep links start parameter](https://core.telegram.org/api/links#bot-links). If present, forwarded copies of the sent message will have a URL button with a [deep link](https://core.telegram.org/api/links#bot-links) to the bot (instead of a Pay button), with the value used as the start parameter. If absent, forwarded copies of the sent message will have a Pay button, allowing multiple users to pay directly from the forwarded message, using the same invoice. |
-| extended_media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[InputMedia](/type/InputMedia/) | Deprecated |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название товара, 1–32 символа</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Описание товара, 1–255 символов</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputWebDocument">InputWebDocument</a></td><td>URL фотографии товара для счёта. Это может быть фотография товара или рекламное изображение услуги. Людям больше нравится, когда они видят, за что платят.</td></tr><tr><td><strong>invoice</strong></td><td style="text-align: center;"><a href="/type/Invoice">Invoice</a></td><td>Сам счёт</td></tr><tr><td><strong>payload</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Полезная нагрузка счёта, заданная ботом, 1–128 байт. Она не показывается пользователю, используйте её для своих внутренних процессов.</td></tr><tr><td><strong>provider</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string">string</a></td><td>Токен платёжного провайдера, полученный через <a href="https://t.me/botfather">Botfather</a></td></tr><tr><td><strong>provider_data</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Закодированные в JSON данные о счёте, которые будут переданы платёжному провайдеру. Подробное описание обязательных полей должен предоставить платёжный провайдер.</td></tr><tr><td><strong>start_param</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Уникальный <a href="/api/links#bot-links">стартовый параметр глубокой ссылки на бота</a>. Если поле задано, у пересланных копий отправленного сообщения будет URL-кнопка с <a href="/api/links#bot-links">глубокой ссылкой</a> на бота (вместо кнопки оплаты), а это значение будет использовано как стартовый параметр. Если поле не задано, у пересланных копий отправленного сообщения будет кнопка оплаты, позволяющая нескольким пользователям платить прямо из пересланного сообщения по одному и тому же счёту.</td></tr><tr><td><strong>extended_media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/InputMedia">InputMedia</a></td><td>Устарело</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputMedia](/type/InputMedia/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Bot Payments API](https://core.telegram.org/bots/payments)
+#### [Bot Payments API — платежи в ботах](https://core.telegram.org/bots/payments)

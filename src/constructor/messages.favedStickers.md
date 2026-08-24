@@ -1,37 +1,30 @@
 ---
-title: "messages.favedStickers (конструктор)"
+title: "messages.favedStickers"
 original: "https://core.telegram.org/constructor/messages.favedStickers"
 section: ref
 kind: constructor
+description: "Избранные стикеры"
 layout: layout.njk
 ---
 
 # messages.favedStickers
 
-*Конструктор из схемы TL.*
-
-> Favorited stickers
-
-## Определение TL
+Избранные стикеры
 
 ```
 messages.favedStickers#2cb51097 hash:long packs:Vector<StickerPack> stickers:Vector<Document> = messages.FavedStickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| packs | [Vector](https://core.telegram.org/type/Vector%20t)<[StickerPack](/type/StickerPack/)> | Emojis associated to stickers |
-| stickers | [Vector](https://core.telegram.org/type/Vector%20t)<[Document](/type/Document/)> | Favorited stickers |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>packs</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StickerPack">StickerPack</a>&gt;</td><td>Эмодзи, связанные со стикерами</td></tr><tr><td><strong>stickers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Document">Document</a>&gt;</td><td>Избранные стикеры</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.FavedStickers](/type/messages.FavedStickers/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

@@ -1,48 +1,38 @@
 ---
-title: "inputInvoiceStarGift (конструктор)"
+title: "inputInvoiceStarGift"
 original: "https://core.telegram.org/constructor/inputInvoiceStarGift"
 section: ref
 kind: constructor
+description: "Используется для покупки звёздного подарка Telegram, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # inputInvoiceStarGift
 
-*Конструктор из схемы TL.*
-
-> Used to buy a [Telegram Star Gift, see here »](https://core.telegram.org/api/gifts) for more info.
-
-## Определение TL
+Используется для покупки [звёздного подарка Telegram, подробнее см. здесь »](/api/gifts/).
 
 ```
 inputInvoiceStarGift#e8625e92 flags:# hide_name:flags.0?true include_upgrade:flags.2?true peer:InputPeer gift_id:long message:flags.1?TextWithEntities = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| hide_name | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, your name will be hidden if the destination user decides to display the gift on their profile (they will still see that you sent the gift) |
-| include_upgrade | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Also pay for an eventual upgrade of the gift to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| peer | [InputPeer](/type/InputPeer/) | Receiver of the gift. |
-| gift_id | [long](/type/long/) | Identifier of the gift, from [starGift](/constructor/starGift/).id |
-| message | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[TextWithEntities](/type/TextWithEntities/) | Optional message, attached with the gift. The maximum length for this field is specified in the [stargifts_message_length_max client configuration value »](https://core.telegram.org/api/config#stargifts-message-length-max). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>hide_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, ваше имя будет скрыто, если пользователь-получатель решит показать подарок в своём профиле (он всё равно будет видеть, что подарок отправили вы)</td></tr><tr><td><strong>include_upgrade</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Также оплатить возможное превращение подарка в <a href="/api/gifts#collectible-gifts">коллекционный подарок »</a>.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Получатель подарка.</td></tr><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор подарка, из <a href="/constructor/starGift">starGift</a>.<code>id</code></td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/TextWithEntities">TextWithEntities</a></td><td>Необязательное сообщение, приложенное к подарку.<br>Максимальная длина этого поля указана в <a href="/api/config#stargifts-message-length-max">значении клиентской конфигурации stargifts_message_length_max »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [starGift](/constructor/starGift/)
 
-Represents a [star gift, see here »](https://core.telegram.org/api/gifts) for more info.
+Представляет [звёздный подарок, подробнее см. здесь »](/api/gifts/).
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

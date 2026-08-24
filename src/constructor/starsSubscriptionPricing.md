@@ -1,36 +1,30 @@
 ---
-title: "starsSubscriptionPricing (конструктор)"
+title: "starsSubscriptionPricing"
 original: "https://core.telegram.org/constructor/starsSubscriptionPricing"
 section: ref
 kind: constructor
+description: "Стоимость подписки за Telegram Stars »."
 layout: layout.njk
 ---
 
 # starsSubscriptionPricing
 
-*Конструктор из схемы TL.*
-
-> Pricing of a [Telegram Star subscription »](https://core.telegram.org/api/invites#paid-invite-links).
-
-## Определение TL
+Стоимость [подписки за Telegram Stars »](/api/invites/#paid-invite-links).
 
 ```
 starsSubscriptionPricing#5416d58 period:int amount:long = StarsSubscriptionPricing;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| period | [int](/type/int/) | The user should pay amount stars every period seconds to gain and maintain access to the channel. Currently the only allowed subscription period is 30*24*60*60, i.e. the user will be debited amount stars every month. |
-| amount | [long](/type/long/) | Price of the subscription in Telegram Stars. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Пользователь должен платить <code>amount</code> звёзд каждые <code>period</code> секунд, чтобы получить и сохранять доступ к каналу.<br>В настоящее время единственный допустимый период подписки — <code>30*24*60*60</code>, то есть с пользователя будет списываться указанное количество звёзд ежемесячно.</td></tr><tr><td><strong>amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Цена подписки в Telegram Stars.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarsSubscriptionPricing](/type/StarsSubscriptionPricing/)
 
-## Related pages
+### Связанные страницы
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.

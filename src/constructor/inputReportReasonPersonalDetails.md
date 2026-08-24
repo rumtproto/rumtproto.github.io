@@ -1,27 +1,24 @@
 ---
-title: "inputReportReasonPersonalDetails (конструктор)"
+title: "inputReportReasonPersonalDetails"
 original: "https://core.telegram.org/constructor/inputReportReasonPersonalDetails"
 section: ref
 kind: constructor
+description: "Жалоба на разглашение персональных данных"
 layout: layout.njk
 ---
 
 # inputReportReasonPersonalDetails
 
-*Конструктор из схемы TL.*
-
-> Report for divulgation of personal details
-
-## Определение TL
+Жалоба на разглашение персональных данных
 
 ```
 inputReportReasonPersonalDetails#9ec7863d = ReportReason;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReportReason](/type/ReportReason/)

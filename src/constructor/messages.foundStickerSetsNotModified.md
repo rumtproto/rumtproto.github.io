@@ -1,27 +1,24 @@
 ---
-title: "messages.foundStickerSetsNotModified (конструктор)"
+title: "messages.foundStickerSetsNotModified"
 original: "https://core.telegram.org/constructor/messages.foundStickerSetsNotModified"
 section: ref
 kind: constructor
+description: "Больше результатов не найдено"
 layout: layout.njk
 ---
 
 # messages.foundStickerSetsNotModified
 
-*Конструктор из схемы TL.*
-
-> No further results were found
-
-## Определение TL
+Больше результатов не найдено
 
 ```
 messages.foundStickerSetsNotModified#d54b65d = messages.FoundStickerSets;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.FoundStickerSets](/type/messages.FoundStickerSets/)

@@ -1,18 +1,15 @@
 ---
-title: "phone.ExportedGroupCallInvite (тип)"
+title: "phone.ExportedGroupCallInvite"
 original: "https://core.telegram.org/type/phone.ExportedGroupCallInvite"
 section: ref
 kind: type
+description: "Экспортированное приглашение в групповой звонок."
 layout: layout.njk
 ---
 
 # phone.ExportedGroupCallInvite
 
-*Тип из схемы TL.*
-
-> An exported group call invitation.
-
-## Определение TL
+Экспортированное приглашение в групповой звонок.
 
 ```
 phone.exportedGroupCallInvite#204bd158 link:string = phone.ExportedGroupCallInvite;
@@ -22,14 +19,10 @@ phone.exportedGroupCallInvite#204bd158 link:string = phone.ExportedGroupCallInvi
 phone.exportGroupCallInvite#e6aa647f flags:# can_self_unmute:flags.0?true call:InputGroupCall = phone.ExportedGroupCallInvite;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [phone.exportedGroupCallInvite](/constructor/phone.exportedGroupCallInvite/) | An invite to a group call or livestream |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/phone.exportedGroupCallInvite">phone.exportedGroupCallInvite</a></td><td>Приглашение в групповой звонок или на трансляцию</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [phone.exportGroupCallInvite](/method/phone.exportGroupCallInvite/) | Get an invite link for a public [video chat/livestream »](https://core.telegram.org/api/group-calls#video-chats-livestreams). Non-admin members or subscribers may export a link with can_self_unmute omitted. Only group call admins may set can_self_unmute to export a link that allows users to speak. Cannot be used for video chats/livestreams associated with private groups/channels, [conference calls »](https://core.telegram.org/api/group-calls#conference-calls) or [live stories »](https://core.telegram.org/api/group-calls#live-stories). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/phone.exportGroupCallInvite">phone.exportGroupCallInvite</a></td><td>Получить пригласительную ссылку на публичный <a href="/api/group-calls#video-chats-livestreams">видеочат или трансляцию »</a>.<br><br>Участники и подписчики, не являющиеся администраторами, могут экспортировать ссылку только без <code>can_self_unmute</code>. Задать <code>can_self_unmute</code> и экспортировать ссылку, позволяющую пользователям говорить, могут только администраторы группового звонка.<br><br>Нельзя использовать для видеочатов и трансляций, связанных с частными группами и каналами, для <a href="/api/group-calls#conference-calls">конференций »</a> или <a href="/api/group-calls#live-stories">прямых эфиров историй »</a>.</td></tr></tbody></table>

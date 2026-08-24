@@ -1,18 +1,15 @@
 ---
-title: "messages.checkQuickReplyShortcut (метод)"
+title: "messages.checkQuickReplyShortcut"
 original: "https://core.telegram.org/method/messages.checkQuickReplyShortcut"
 section: ref
 kind: method
+description: "Перед тем как предложить пользователю добавить сообщение в шаблон быстрого ответа, чтобы убедиться, что ни одно из ограничений, указанных здесь », не достигнуто."
 layout: layout.njk
 ---
 
 # messages.checkQuickReplyShortcut
 
-*Метод из схемы TL.*
-
-> Before offering the user the choice to add a message to a [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts), to make sure that none of the limits specified [here »](https://core.telegram.org/api/business#quick-reply-shortcuts) were reached.
-
-## Определение TL
+Перед тем как предложить пользователю добавить сообщение в [шаблон быстрого ответа](/api/business/#quick-reply-shortcuts), чтобы убедиться, что ни одно из ограничений, указанных [здесь »](/api/business/#quick-reply-shortcuts), не достигнуто.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,26 +18,22 @@ boolTrue#997275b5 = Bool;
 messages.checkQuickReplyShortcut#f1d0fbd3 shortcut:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| shortcut | [string](/type/string/) | Shorcut name (not ID!). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>shortcut</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Имя шаблона (не идентификатор!).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

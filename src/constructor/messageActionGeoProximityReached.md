@@ -1,37 +1,30 @@
 ---
-title: "messageActionGeoProximityReached (конструктор)"
+title: "messageActionGeoProximityReached"
 original: "https://core.telegram.org/constructor/messageActionGeoProximityReached"
 section: ref
 kind: constructor
+description: "Участник чата оказался рядом с другим пользователем"
 layout: layout.njk
 ---
 
 # messageActionGeoProximityReached
 
-*Конструктор из схемы TL.*
-
-> A user of the chat is now in proximity of another user
-
-## Определение TL
+Участник чата оказался рядом с другим пользователем
 
 ```
 messageActionGeoProximityReached#98e0d697 from_id:Peer to_id:Peer distance:int = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| from_id | [Peer](/type/Peer/) | The user or chat that is now in proximity of to_id |
-| to_id | [Peer](/type/Peer/) | The user or chat that subscribed to [live geolocation proximity alerts](https://core.telegram.org/api/live-location#proximity-alert) |
-| distance | [int](/type/int/) | Distance, in meters (0-100000) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>from_id</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>Пользователь или чат, который оказался рядом с <code>to_id</code></td></tr><tr><td><strong>to_id</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>Пользователь или чат, подписавшийся на <a href="/api/live-location#proximity-alert">оповещения о приближении по геопозиции в реальном времени</a></td></tr><tr><td><strong>distance</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Расстояние в метрах (0–100000)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Live geolocation](https://core.telegram.org/api/live-location)
+#### [Трансляция геопозиции](/api/live-location/)
 
-Telegram allows sending the live geolocation of a user in a chat, optionally setting a proximity alert.
+Telegram позволяет отправлять в чат геопозицию пользователя в реальном времени, при желании задавая оповещение о приближении.

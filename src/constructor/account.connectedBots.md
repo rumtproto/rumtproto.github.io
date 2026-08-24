@@ -1,36 +1,30 @@
 ---
-title: "account.connectedBots (конструктор)"
+title: "account.connectedBots"
 original: "https://core.telegram.org/constructor/account.connectedBots"
 section: ref
 kind: constructor
+description: "Информация о подключённых в данный момент бизнес-ботах."
 layout: layout.njk
 ---
 
 # account.connectedBots
 
-*Конструктор из схемы TL.*
-
-> Info about currently connected [business bots](https://core.telegram.org/api/bots/connected-business-bots).
-
-## Определение TL
+Информация о подключённых в данный момент [бизнес-ботах](/api/bots/connected-business-bots/).
 
 ```
 account.connectedBots#17d7f87b connected_bots:Vector<ConnectedBot> users:Vector<User> = account.ConnectedBots;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| connected_bots | [Vector](https://core.telegram.org/type/Vector%20t)<[ConnectedBot](/type/ConnectedBot/)> | Info about the connected bots |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Bot information |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>connected_bots</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ConnectedBot">ConnectedBot</a>&gt;</td><td>Информация о подключённых ботах</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Сведения о боте</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.ConnectedBots](/type/account.ConnectedBots/)
 
-## Related pages
+### Связанные страницы
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.

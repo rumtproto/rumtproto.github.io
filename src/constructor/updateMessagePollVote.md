@@ -1,39 +1,30 @@
 ---
-title: "updateMessagePollVote (конструктор)"
+title: "updateMessagePollVote"
 original: "https://core.telegram.org/constructor/updateMessagePollVote"
 section: ref
 kind: constructor
+description: "Конкретный пир проголосовал в опросе (это обновление может получить только бот)."
 layout: layout.njk
 ---
 
 # updateMessagePollVote
 
-*Конструктор из схемы TL.*
-
-> A specific peer has voted in a poll (this update can only be received by a bot).
-
-## Определение TL
+Конкретный пир проголосовал в опросе (это обновление может получить только бот).
 
 ```
 updateMessagePollVote#24f40e77 poll_id:long peer:Peer options:Vector<bytes> qts:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| poll_id | [long](/type/long/) | Poll ID |
-| peer | [Peer](/type/Peer/) | The peer that voted in the poll |
-| options | [Vector](https://core.telegram.org/type/Vector%20t)<[bytes](/type/bytes/)> | Chosen option(s) |
-| positions | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | 0-based indices of the voted options within the answers vector, corresponding element-by-element to options |
-| qts | [int](/type/int/) | New qts value, see [updates »](/api/updates/) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>poll_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор опроса</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир, проголосовавший в опросе</td></tr><tr><td><strong>options</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/bytes">bytes</a>&gt;</td><td>Выбранный вариант или варианты</td></tr><tr><td><strong>positions</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Отсчитываемые от нуля индексы выбранных вариантов в векторе <code>answers</code>, поэлементно соответствующие <code>options</code></td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] Новое значение <strong>qts</strong>, подробнее см. <a href="/api/updates">обновления »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

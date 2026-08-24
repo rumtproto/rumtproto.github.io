@@ -1,82 +1,68 @@
 ---
-title: "emojiStatusCollectible (конструктор)"
+title: "emojiStatusCollectible"
 original: "https://core.telegram.org/constructor/emojiStatusCollectible"
 section: ref
 kind: constructor
+description: "Принадлежащий вам или размещённый коллекционный подарок » в качестве эмодзи-статуса."
 layout: layout.njk
 ---
 
 # emojiStatusCollectible
 
-*Конструктор из схемы TL.*
+Принадлежащий вам или [размещённый коллекционный подарок »](/api/gifts/#hosted-collectible-gifts) в качестве эмодзи-статуса.
 
-> An owned or [hosted collectible gift »](https://core.telegram.org/api/gifts#hosted-collectible-gifts) as emoji status.
-> **Cannot** be passed to [account.updateEmojiStatus](/method/account.updateEmojiStatus/), must be converted to an [inputEmojiStatusCollectible](/constructor/inputEmojiStatusCollectible/) first before passing it to that method.
-
-## Определение TL
+**Нельзя** передать в [account.updateEmojiStatus](/method/account.updateEmojiStatus/): перед вызовом этого метода объект необходимо преобразовать в [inputEmojiStatusCollectible](/constructor/inputEmojiStatusCollectible/).
 
 ```
 emojiStatusCollectible#7184603b flags:# collectible_id:long document_id:long title:string slug:string pattern_document_id:long center_color:int edge_color:int pattern_color:int text_color:int until:flags.0?int = EmojiStatus;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| collectible_id | [long](/type/long/) | ID of the collectible (from [starGiftUnique](/constructor/starGiftUnique/).id). |
-| document_id | [long](/type/long/) | ID of the [custom emoji](https://core.telegram.org/api/custom-emoji) representing the status. |
-| title | [string](/type/string/) | Name of the collectible. |
-| slug | [string](/type/string/) | Unique identifier of the collectible that may be used to create a [collectible gift link »](https://core.telegram.org/api/links#collectible-gift-link) for the current collectible, or to fetch further info about the collectible using [payments.getUniqueStarGift](/method/payments.getUniqueStarGift/). |
-| pattern_document_id | [long](/type/long/) | The ID of a pattern to apply on the profile's backdrop, correlated to the [starGiftAttributePattern](/constructor/starGiftAttributePattern/) from the gift in slug. |
-| center_color | [int](/type/int/) | Color of the center of the profile backdrop in RGB24 format, from the gift's [starGiftAttributeBackdrop](/constructor/starGiftAttributeBackdrop/). |
-| edge_color | [int](/type/int/) | Color of the edges of the profile backdrop in RGB24 format, from the gift's [starGiftAttributeBackdrop](/constructor/starGiftAttributeBackdrop/). |
-| pattern_color | [int](/type/int/) | Color of the pattern_document_id applied on the profile backdrop in RGB24 format, from the gift's [starGiftAttributeBackdrop](/constructor/starGiftAttributeBackdrop/). |
-| text_color | [int](/type/int/) | Color of text on the profile backdrop in RGB24 format, from the gift's [starGiftAttributeBackdrop](/constructor/starGiftAttributeBackdrop/). |
-| until | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | If set, the emoji status will be active until the specified unixtime. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>collectible_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор коллекционного подарка (из <a href="/constructor/starGiftUnique">starGiftUnique</a>.<code>id</code>).</td></tr><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор <a href="/api/custom-emoji">пользовательского эмодзи</a>, обозначающего статус.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название коллекционного подарка.</td></tr><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Уникальный идентификатор коллекционного подарка, по которому можно построить <a href="/api/links#collectible-gift-link">ссылку на коллекционный подарок »</a> для текущего подарка либо получить о нём дополнительные сведения через <a href="/method/payments.getUniqueStarGift">payments.getUniqueStarGift</a>.</td></tr><tr><td><strong>pattern_document_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор узора, который следует наложить на подложку профиля; соответствует <a href="/constructor/starGiftAttributePattern">starGiftAttributePattern</a> подарка, указанного в <code>slug</code>.</td></tr><tr><td><strong>center_color</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Цвет центра подложки профиля в формате RGB24, из атрибута <a href="/constructor/starGiftAttributeBackdrop">starGiftAttributeBackdrop</a> подарка.</td></tr><tr><td><strong>edge_color</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Цвет краёв фона профиля в формате RGB24, из <a href="/constructor/starGiftAttributeBackdrop">starGiftAttributeBackdrop</a> подарка.</td></tr><tr><td><strong>pattern_color</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Цвет узора <code>pattern_document_id</code>, наложенного на подложку профиля, в формате RGB24, из атрибута <a href="/constructor/starGiftAttributeBackdrop">starGiftAttributeBackdrop</a> подарка.</td></tr><tr><td><strong>text_color</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Цвет текста на подложке профиля в формате RGB24, из атрибута <a href="/constructor/starGiftAttributeBackdrop">starGiftAttributeBackdrop</a> подарка.</td></tr><tr><td><strong>until</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Если установлено, эмодзи-статус будет активен до указанного unixtime.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [EmojiStatus](/type/EmojiStatus/)
 
-## Related pages
+### Связанные страницы
 
 #### [starGiftUnique](/constructor/starGiftUnique/)
 
-Represents a [collectible star gift, see here »](https://core.telegram.org/api/gifts#collectible-gifts) for more info.
+Представляет коллекционный звёздный подарок, [подробнее см. здесь »](/api/gifts/#collectible-gifts).
 
-The sticker that represents the gift is contained in a [starGiftAttributeModel](/constructor/starGiftAttributeModel/) object in `attributes`.
+Стикер, представляющий подарок, содержится в объекте [starGiftAttributeModel](/constructor/starGiftAttributeModel/) в поле `attributes`.
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
 #### [payments.getUniqueStarGift](/method/payments.getUniqueStarGift/)
 
-Obtain info about a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) using a slug obtained from a [collectible gift link »](https://core.telegram.org/api/links#collectible-gift-link).
+Получить сведения о [коллекционном подарке »](/api/gifts/#collectible-gifts) по слагу, полученному из [ссылки на коллекционный подарок »](/api/links/#collectible-gift-link).
 
 #### [starGiftAttributePattern](/constructor/starGiftAttributePattern/)
 
-A [sticker](https://core.telegram.org/api/stickers) applied on the backdrop of a [collectible gift »](https://core.telegram.org/api/gifts) using a repeating pattern.
+[Стикер](/api/stickers/), наложенный повторяющимся узором на подложку [коллекционного подарка »](/api/gifts/).
 
 #### [starGiftAttributeBackdrop](/constructor/starGiftAttributeBackdrop/)
 
-The backdrop of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+Подложка [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [account.updateEmojiStatus](/method/account.updateEmojiStatus/)
 
-Set an [emoji status](https://core.telegram.org/api/emoji-status)
+Установить [эмодзи-статус](/api/emoji-status/)
 
 #### [inputEmojiStatusCollectible](/constructor/inputEmojiStatusCollectible/)
 
-An owned or [hosted collectible gift »](https://core.telegram.org/api/gifts#hosted-collectible-gifts) as emoji status: can only be used in [account.updateEmojiStatus](/method/account.updateEmojiStatus/), is never returned by the API.
+Принадлежащий вам или [размещённый коллекционный подарок »](/api/gifts/#hosted-collectible-gifts) в качестве эмодзи-статуса: может использоваться только в [account.updateEmojiStatus](/method/account.updateEmojiStatus/), никогда не возвращается API.
 
-Note that once set, the status will be returned to users as a [emojiStatusCollectible](/constructor/emojiStatusCollectible/) constructor, instead (which **cannot** be passed to [account.updateEmojiStatus](/method/account.updateEmojiStatus/), and must be converted to an [inputEmojiStatusCollectible](/constructor/inputEmojiStatusCollectible/) first).
+Учтите, что после установки статус будет возвращаться пользователям в виде конструктора [emojiStatusCollectible](/constructor/emojiStatusCollectible/) (который **нельзя** передавать в [account.updateEmojiStatus](/method/account.updateEmojiStatus/) — его необходимо сначала преобразовать в [inputEmojiStatusCollectible](/constructor/inputEmojiStatusCollectible/)).

@@ -1,18 +1,15 @@
 ---
-title: "messages.SavedReactionTags (тип)"
+title: "messages.SavedReactionTags"
 original: "https://core.telegram.org/type/messages.SavedReactionTags"
 section: ref
 kind: type
+description: "Список имён тегов-реакций », назначенных пользователем."
 layout: layout.njk
 ---
 
 # messages.SavedReactionTags
 
-*Тип из схемы TL.*
-
-> List of [reaction tag »](https://core.telegram.org/api/saved-messages#tags) names assigned by the user.
-
-## Определение TL
+Список имён [тегов-реакций »](/api/saved-messages/#tags), назначенных пользователем.
 
 ```
 messages.savedReactionTagsNotModified#889b59ef = messages.SavedReactionTags;
@@ -23,21 +20,16 @@ messages.savedReactionTags#3259950a tags:Vector<SavedReactionTag> hash:long = me
 messages.getSavedReactionTags#3637e05b flags:# peer:flags.0?InputPeer hash:long = messages.SavedReactionTags;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.savedReactionTagsNotModified](/constructor/messages.savedReactionTagsNotModified/) | The list of [reaction tag »](https://core.telegram.org/api/saved-messages#tags) names assigned by the user hasn't changed. |
-| [messages.savedReactionTags](/constructor/messages.savedReactionTags/) | List of [reaction tag »](https://core.telegram.org/api/saved-messages#tags) names assigned by the user. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.savedReactionTagsNotModified">messages.savedReactionTagsNotModified</a></td><td>Список имён <a href="/api/saved-messages#tags">тегов-реакций »</a>, назначенных пользователем, не изменился.</td></tr><tr><td><a href="/constructor/messages.savedReactionTags">messages.savedReactionTags</a></td><td>Список имён <a href="/api/saved-messages#tags">тегов-реакций »</a>, назначенных пользователем.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getSavedReactionTags](/method/messages.getSavedReactionTags/) | Fetch the full list of [saved message tags](https://core.telegram.org/api/saved-messages#tags) created by the user. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getSavedReactionTags">messages.getSavedReactionTags</a></td><td>Получить полный список <a href="/api/saved-messages#tags">тегов сохранённых сообщений</a>, созданных пользователем.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.

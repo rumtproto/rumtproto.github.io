@@ -1,18 +1,15 @@
 ---
-title: "payments.exportInvoice (метод)"
+title: "payments.exportInvoice"
 original: "https://core.telegram.org/method/payments.exportInvoice"
 section: ref
 kind: method
+description: "Создать глубокую ссылку на счёт"
 layout: layout.njk
 ---
 
 # payments.exportInvoice
 
-*Метод из схемы TL.*
-
-> Generate an [invoice deep link](https://core.telegram.org/api/links#invoice-links)
-
-## Определение TL
+Создать [глубокую ссылку на счёт](/api/links/#invoice-links)
 
 ```
 payments.exportedInvoice#aed0cbd9 url:string = payments.ExportedInvoice;
@@ -20,40 +17,28 @@ payments.exportedInvoice#aed0cbd9 url:string = payments.ExportedInvoice;
 payments.exportInvoice#f91b065 invoice_media:InputMedia = payments.ExportedInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| invoice_media | [InputMedia](/type/InputMedia/) | Invoice |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>invoice_media</strong></td><td style="text-align: center;"><a href="/type/InputMedia">InputMedia</a></td><td>Счёт</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.ExportedInvoice](/type/payments.ExportedInvoice/)
 
-## Only bots can use this method
+### Этот метод доступен только ботам
 
-## This method can be invoked over a business connection »
+### Этот метод можно вызывать через [бизнес-подключение »](/api/bots/connected-business-bots/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BUSINESS_CONNECTION_INVALID | The connection_id passed to the wrapping [invokeWithBusinessConnection](https://core.telegram.org/api/business) call is invalid. |
-| 400 | CURRENCY_TOTAL_AMOUNT_INVALID | The total amount of all prices is invalid. |
-| 400 | INVOICE_PAYLOAD_INVALID | The specified invoice payload is invalid. |
-| 400 | MEDIA_INVALID | Media invalid. |
-| 400 | PAYMENT_PROVIDER_INVALID | The specified payment provider is invalid. |
-| 400 | STARS_INVOICE_INVALID | The specified Telegram Star invoice is invalid. |
-| 400 | USER_BOT_REQUIRED | This method can only be called by a bot. |
-| 400 | WEBDOCUMENT_MIME_INVALID | Invalid webdocument mime type provided. |
-| 400 | WEBDOCUMENT_URL_EMPTY | The passed web document URL is empty. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BUSINESS_CONNECTION_INVALID</td><td>Значение <code>connection_id</code>, переданное в объемлющем вызове <a href="/api/business">invokeWithBusinessConnection</a>, недействительно.</td></tr><tr><td>400</td><td>CURRENCY_TOTAL_AMOUNT_INVALID</td><td>Итоговая сумма всех цен недействительна.</td></tr><tr><td>400</td><td>INVOICE_PAYLOAD_INVALID</td><td>Указанная полезная нагрузка счёта недействительна.</td></tr><tr><td>400</td><td>MEDIA_INVALID</td><td>Медиа недействительно.</td></tr><tr><td>400</td><td>PAYMENT_PROVIDER_INVALID</td><td>Указанный платёжный провайдер недействителен.</td></tr><tr><td>400</td><td>STARS_INVOICE_INVALID</td><td>Указанный счёт Telegram Stars недействителен.</td></tr><tr><td>400</td><td>USER_BOT_REQUIRED</td><td>Этот метод может вызывать только бот.</td></tr><tr><td>400</td><td>WEBDOCUMENT_MIME_INVALID</td><td>Указан недействительный MIME-тип веб-документа.</td></tr><tr><td>400</td><td>WEBDOCUMENT_URL_EMPTY</td><td>Указанный URL веб-документа пуст.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

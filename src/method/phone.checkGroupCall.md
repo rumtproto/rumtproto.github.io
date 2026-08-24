@@ -1,59 +1,52 @@
 ---
-title: "phone.checkGroupCall (метод)"
+title: "phone.checkGroupCall"
 original: "https://core.telegram.org/method/phone.checkGroupCall"
 section: ref
 kind: method
+description: "Проверить, какие из указанных идентификаторов источников сервер по-прежнему считает подключёнными к групповому звонку. Этот метод применим ко всем типам групповых звонков,…"
 layout: layout.njk
 ---
 
 # phone.checkGroupCall
 
-*Метод из схемы TL.*
+Проверить, какие из указанных идентификаторов источников сервер по-прежнему считает подключёнными к групповому звонку. Этот метод применим ко всем типам групповых звонков, подробнее см. [здесь »](/api/group-calls/#maintaining-group-call-connections).
 
-> Check which of the specified source IDs the server still recognizes as joined to a group call. This method can be used with all group call types, see [here »](https://core.telegram.org/api/group-calls#maintaining-group-call-connections) for more info.
-> After joining the main connection with [phone.joinGroupCall](/method/phone.joinGroupCall/), pass its non-zero SSRC/source ID to this method periodically. If a presentation connection is also active, include the separate source registered using [phone.joinGroupCallPresentation](/method/phone.joinGroupCallPresentation/).
-> The method returns the subset of the supplied sources that are still joined. A missing source means that the corresponding connection must be recreated and joined again; it does not indicate whether media packets are currently flowing. If the method returns `GROUPCALL_JOIN_MISSING`, the main connection must be rejoined.
+После входа в основное соединение с помощью [phone.joinGroupCall](/method/phone.joinGroupCall/) периодически передавайте этому методу его ненулевой SSRC (идентификатор источника). Если активно также соединение для презентации, включите в вызов отдельный источник, зарегистрированный через [phone.joinGroupCallPresentation](/method/phone.joinGroupCallPresentation/).
 
-## Определение TL
+Метод возвращает подмножество переданных источников, которые всё ещё участвуют в звонке. Отсутствие источника означает, что соответствующее соединение необходимо создать заново и присоединиться повторно; оно не говорит о том, идёт ли сейчас передача медиапакетов. Если метод возвращает `GROUPCALL_JOIN_MISSING`, необходимо заново присоединиться по основному соединению.
 
 ```
 ---functions---
 phone.checkGroupCall#b59cf977 call:InputGroupCall sources:Vector<int> = Vector<int>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Group call whose WebRTC connections should be checked |
-| sources | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Non-zero SSRC/source IDs of the caller's main and presentation connections |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Групповой звонок, WebRTC-соединения которого нужно проверить</td></tr><tr><td><strong>sources</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Ненулевые SSRC (идентификаторы источников) основного соединения и соединения для презентации у звонящего</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
-| 400 | GROUPCALL_JOIN_MISSING | You haven't joined this group call. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr><tr><td>400</td><td>GROUPCALL_JOIN_MISSING</td><td>Вы не присоединились к этому групповому звонку.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.
 
 #### [phone.joinGroupCall](/method/phone.joinGroupCall/)
 
-Join any [group call type »](https://core.telegram.org/api/group-calls#group-call-types). Conference calls additionally require the [E2E joining flow »](https://core.telegram.org/api/end-to-end/group-calls#joining-a-call).
+Присоединиться к групповому звонку [любого типа »](/api/group-calls/#group-call-types). Для конференций дополнительно требуется [сквозной сценарий подключения »](/api/end-to-end/group-calls/#joining-a-call).
 
-The `params` field must contain a join payload generated by the local tgcalls group-call engine. It contains a random non-zero audio `ssrc`, ICE `ufrag` and `pwd`, DTLS `fingerprints`, and, when publishing video, `ssrc-groups`.
+Поле `params` должно содержать полезную нагрузку для входа, сформированную локальным движком групповых звонков tgcalls. Она содержит случайный ненулевой аудио-`ssrc`, ICE-значения `ufrag` и `pwd`, DTLS-`fingerprints`, а при публикации видео — ещё и `ssrc-groups`.
 
-For example, a join payload without published video has the following shape:
+Например, полезная нагрузка для входа без публикации видео имеет следующий вид:
 
 ```
 {
@@ -68,8 +61,8 @@ For example, a join payload without published video has the following shape:
 }
 ```
 
-When joining an RTMP-mode call, generate the payload without published video source groups.
+При подключении к звонку в режиме RTMP формируйте полезную нагрузку без групп публикуемых видеоисточников.
 
 #### [phone.joinGroupCallPresentation](/method/phone.joinGroupCallPresentation/)
 
-Start screen sharing in a non-RTMP video chat/livestream or conference. Presentations are not supported in live stories or RTMP-mode video chats/livestreams, see [here »](https://core.telegram.org/api/group-calls#presentations) for more info.
+Начать демонстрацию экрана в видеочате, трансляции или конференции без RTMP. Презентации не поддерживаются в прямых историях и в видеочатах или трансляциях в режиме RTMP; подробнее см. [здесь »](/api/group-calls/#presentations).

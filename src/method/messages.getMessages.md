@@ -1,18 +1,15 @@
 ---
-title: "messages.getMessages (метод)"
+title: "messages.getMessages"
 original: "https://core.telegram.org/method/messages.getMessages"
 section: ref
 kind: method
+description: "Возвращает список сообщений по их идентификаторам."
 layout: layout.njk
 ---
 
 # messages.getMessages
 
-*Метод из схемы TL.*
-
-> Returns the list of messages by their IDs.
-
-## Определение TL
+Возвращает список сообщений по их идентификаторам.
 
 ```
 messages.messages#1d73e7ea messages:Vector<Message> topics:Vector<ForumTopic> chats:Vector<Chat> users:Vector<User> = messages.Messages;
@@ -23,21 +20,16 @@ messages.messagesNotModified#74535f21 count:int = messages.Messages;
 messages.getMessages#63c66506 id:Vector<InputMessage> = messages.Messages;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[InputMessage](/type/InputMessage/)> | Message ID list |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputMessage">InputMessage</a>&gt;</td><td>Список идентификаторов сообщений</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Messages](/type/messages.Messages/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr></tbody></table>

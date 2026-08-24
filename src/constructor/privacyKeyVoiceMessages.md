@@ -1,27 +1,24 @@
 ---
-title: "privacyKeyVoiceMessages (конструктор)"
+title: "privacyKeyVoiceMessages"
 original: "https://core.telegram.org/constructor/privacyKeyVoiceMessages"
 section: ref
 kind: constructor
+description: "Принимает ли пользователь голосовые сообщения"
 layout: layout.njk
 ---
 
 # privacyKeyVoiceMessages
 
-*Конструктор из схемы TL.*
-
-> Whether the user accepts voice messages
-
-## Определение TL
+Принимает ли пользователь голосовые сообщения
 
 ```
 privacyKeyVoiceMessages#697f414 = PrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyKey](/type/PrivacyKey/)

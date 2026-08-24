@@ -1,18 +1,15 @@
 ---
-title: "account.getContactSignUpNotification (метод)"
+title: "account.getContactSignUpNotification"
 original: "https://core.telegram.org/method/account.getContactSignUpNotification"
 section: ref
 kind: method
+description: "Будет ли пользователь получать уведомления о регистрации контактов"
 layout: layout.njk
 ---
 
 # account.getContactSignUpNotification
 
-*Метод из схемы TL.*
-
-> Whether the user will receive notifications when contacts sign up
-
-## Определение TL
+Будет ли пользователь получать уведомления о регистрации контактов
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,12 +18,12 @@ boolTrue#997275b5 = Bool;
 account.getContactSignUpNotification#9f07c728 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

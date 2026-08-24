@@ -1,32 +1,24 @@
 ---
-title: "inputGeoPoint (конструктор)"
+title: "inputGeoPoint"
 original: "https://core.telegram.org/constructor/inputGeoPoint"
 section: ref
 kind: constructor
+description: "Определяет географическую точку по её координатам."
 layout: layout.njk
 ---
 
 # inputGeoPoint
 
-*Конструктор из схемы TL.*
-
-> Defines a GeoPoint by its coordinates.
-
-## Определение TL
+Определяет географическую точку по её координатам.
 
 ```
 inputGeoPoint#48222faf flags:# lat:double long:double accuracy_radius:flags.0?int = InputGeoPoint;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| lat | [double](/type/double/) | Latitude |
-| long | [double](/type/double/) | Longitude |
-| accuracy_radius | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | The estimated horizontal accuracy of the location, in meters; as defined by the sender. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>lat</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Широта</td></tr><tr><td><strong>long</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Долгота</td></tr><tr><td><strong>accuracy_radius</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Оценочная горизонтальная точность местоположения в метрах, как её указал отправитель.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputGeoPoint](/type/InputGeoPoint/)

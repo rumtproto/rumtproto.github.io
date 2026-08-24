@@ -1,18 +1,15 @@
 ---
-title: "smsjobs.leave (метод)"
+title: "smsjobs.leave"
 original: "https://core.telegram.org/method/smsjobs.leave"
 section: ref
 kind: method
+description: "Отключить SMS-задания (только для официальных клиентов)."
 layout: layout.njk
 ---
 
 # smsjobs.leave
 
-*Метод из схемы TL.*
-
-> Disable SMS jobs (official clients only).
-
-## Определение TL
+Отключить SMS-задания (только для официальных клиентов).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,18 +18,16 @@ boolTrue#997275b5 = Bool;
 smsjobs.leave#9898ad73 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | NOT_JOINED | The current user hasn't joined the Peer-to-Peer Login Program. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>NOT_JOINED</td><td>Текущий пользователь не присоединился к Peer-to-Peer Login Program.</td></tr></tbody></table>

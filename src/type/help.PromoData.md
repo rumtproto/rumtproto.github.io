@@ -1,18 +1,15 @@
 ---
-title: "help.PromoData (тип)"
+title: "help.PromoData"
 original: "https://core.telegram.org/type/help.PromoData"
 section: ref
 kind: type
+description: "Информация о закреплённых пирах MTProxy или общественных объявлений."
 layout: layout.njk
 ---
 
 # help.PromoData
 
-*Тип из схемы TL.*
-
-> Info about pinned MTProxy or Public Service Announcement peers.
-
-## Определение TL
+Информация о закреплённых пирах MTProxy или общественных объявлений.
 
 ```
 help.promoDataEmpty#98f6ac75 expires:int = help.PromoData;
@@ -23,15 +20,10 @@ help.promoData#8a4d87a flags:# proxy:flags.0?true expires:int peer:flags.3?Peer 
 help.getPromoData#c0977421 = help.PromoData;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [help.promoDataEmpty](/constructor/help.promoDataEmpty/) | No PSA/MTProxy info is available |
-| [help.promoData](/constructor/help.promoData/) | A set of useful suggestions and a PSA/MTProxy sponsored peer, see [here »](https://core.telegram.org/api/config#suggestions) for more info. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/help.promoDataEmpty">help.promoDataEmpty</a></td><td>Сведения о PSA/MTProxy недоступны</td></tr><tr><td><a href="/constructor/help.promoData">help.promoData</a></td><td>Набор полезных подсказок и рекламный пир PSA/MTProxy; подробнее см. <a href="/api/config#suggestions">здесь »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [help.getPromoData](/method/help.getPromoData/) | Returns a set of useful suggestions and PSA/MTProxy sponsored peers, see [here »](https://core.telegram.org/api/config#suggestions) for more info. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/help.getPromoData">help.getPromoData</a></td><td>Возвращает набор полезных рекомендаций, а также спонсорских пиров PSA и MTProxy; подробнее см. <a href="/api/config#suggestions">здесь »</a>.</td></tr></tbody></table>

@@ -1,36 +1,30 @@
 ---
-title: "topPeer (конструктор)"
+title: "topPeer"
 original: "https://core.telegram.org/constructor/topPeer"
 section: ref
 kind: constructor
+description: "Популярный пир"
 layout: layout.njk
 ---
 
 # topPeer
 
-*Конструктор из схемы TL.*
-
-> Top peer
-
-## Определение TL
+Популярный пир
 
 ```
 topPeer#edcdc05b peer:Peer rating:double = TopPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | Peer |
-| rating | [double](/type/double/) | Rating as computed in [top peer rating »](https://core.telegram.org/api/top-rating) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>rating</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Рейтинг, вычисленный согласно <a href="/api/top-rating">рейтингу популярных пиров »</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [TopPeer](/type/TopPeer/)
 
-## Related pages
+### Связанные страницы
 
-#### [Top peer rating](https://core.telegram.org/api/top-rating)
+#### [Рейтинг популярных пиров](/api/top-rating/)
 
-If enabled, the rating of top peers indicates the relevance of a frequently used peer in a certain category (frequently messaged users, frequently used bots, inline bots, frequently visited channels and so on).
+Если включено, рейтинг наиболее используемых пиров отражает значимость часто используемого пира в определённой категории (пользователи, которым часто пишут, часто используемые боты, инлайн-боты, часто посещаемые каналы и так далее).

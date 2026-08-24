@@ -1,27 +1,24 @@
 ---
-title: "notifyBroadcasts (конструктор)"
+title: "notifyBroadcasts"
 original: "https://core.telegram.org/constructor/notifyBroadcasts"
 section: ref
 kind: constructor
+description: "Настройки уведомлений канала"
 layout: layout.njk
 ---
 
 # notifyBroadcasts
 
-*Конструктор из схемы TL.*
-
-> Channel notification settings
-
-## Определение TL
+Настройки уведомлений канала
 
 ```
 notifyBroadcasts#d612e8ef = NotifyPeer;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [NotifyPeer](/type/NotifyPeer/)

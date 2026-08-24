@@ -1,41 +1,34 @@
 ---
-title: "messages.availableEffects (конструктор)"
+title: "messages.availableEffects"
 original: "https://core.telegram.org/constructor/messages.availableEffects"
 section: ref
 kind: constructor
+description: "Полный список доступных анимированных эффектов для сообщений »."
 layout: layout.njk
 ---
 
 # messages.availableEffects
 
-*Конструктор из схемы TL.*
-
-> The full list of usable [animated message effects »](https://core.telegram.org/api/effects).
-
-## Определение TL
+Полный список доступных [анимированных эффектов для сообщений »](/api/effects/).
 
 ```
 messages.availableEffects#bddb616e hash:int effects:Vector<AvailableEffect> documents:Vector<Document> = messages.AvailableEffects;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| effects | [Vector](https://core.telegram.org/type/Vector%20t)<[AvailableEffect](/type/AvailableEffect/)> | Message effects |
-| documents | [Vector](https://core.telegram.org/type/Vector%20t)<[Document](/type/Document/)> | Documents specified in the effects constructors. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>effects</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/AvailableEffect">AvailableEffect</a>&gt;</td><td>Эффекты сообщений</td></tr><tr><td><strong>documents</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Document">Document</a>&gt;</td><td>Документы, указанные в конструкторах <code>effects</code>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.AvailableEffects](/type/messages.AvailableEffects/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Animated message effects](https://core.telegram.org/api/effects)
+#### [Анимированные эффекты для сообщений](/api/effects/)
 
-Telegram allows adding spectacular animated effects to messages you send.
+Telegram позволяет добавлять к отправляемым сообщениям зрелищные анимированные эффекты.

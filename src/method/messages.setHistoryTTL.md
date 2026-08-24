@@ -1,18 +1,15 @@
 ---
-title: "messages.setHistoryTTL (метод)"
+title: "messages.setHistoryTTL"
 original: "https://core.telegram.org/method/messages.setHistoryTTL"
 section: ref
 kind: method
+description: "Задать максимальное время жизни (TTL) всех сообщений в указанном чате"
 layout: layout.njk
 ---
 
 # messages.setHistoryTTL
 
-*Метод из схемы TL.*
-
-> Set maximum Time-To-Live of all messages in the specified chat
-
-## Определение TL
+[@term:TTL] Задать максимальное время жизни (TTL) всех сообщений в указанном чате
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,24 +23,16 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.setHistoryTTL#b80e5fe4 peer:InputPeer period:int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The dialog |
-| period | [int](/type/int/) | Automatically delete all messages sent in the chat after this many seconds |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Диалог</td></tr><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Автоматически удалять все сообщения, отправленные в чате, по истечении указанного числа секунд</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | TTL_PERIOD_INVALID | The specified TTL period is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>TTL_PERIOD_INVALID</td><td>Указанный период TTL недействителен.</td></tr></tbody></table>

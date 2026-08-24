@@ -1,18 +1,15 @@
 ---
-title: "Authorization (тип)"
+title: "Authorization"
 original: "https://core.telegram.org/type/Authorization"
 section: ref
 kind: type
+description: "Представляет активную сессию"
 layout: layout.njk
 ---
 
 # Authorization
 
-*Тип из схемы TL.*
-
-> Represents a logged-in session
-
-## Определение TL
+Представляет активную сессию
 
 ```
 authorization#ad01d61d flags:# current:flags.0?true official_app:flags.1?true password_pending:flags.2?true encrypted_requests_disabled:flags.3?true call_requests_disabled:flags.4?true unconfirmed:flags.5?true hash:long device_model:string platform:string system_version:string api_id:int app_name:string app_version:string date_created:int date_active:int ip:string country:string region:string = Authorization;
@@ -22,14 +19,10 @@ authorization#ad01d61d flags:# current:flags.0?true official_app:flags.1?true pa
 auth.acceptLoginToken#e894ad4d token:bytes = Authorization;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [authorization](/constructor/authorization/) | Logged-in session |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/authorization">authorization</a></td><td>Активная сессия</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [auth.acceptLoginToken](/method/auth.acceptLoginToken/) | Accept QR code login token, logging in the app that generated it. Returns info about the new session. For more info, see [login via QR code](https://core.telegram.org/api/qr-login). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/auth.acceptLoginToken">auth.acceptLoginToken</a></td><td>Принять токен входа по QR-коду, выполнив вход в приложении, которое его сгенерировало.<br><br>Возвращает информацию о новой сессии.<br><br>Подробнее см. <a href="/api/qr-login">вход по QR-коду</a>.</td></tr></tbody></table>

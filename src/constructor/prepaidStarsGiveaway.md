@@ -1,43 +1,34 @@
 ---
-title: "prepaidStarsGiveaway (конструктор)"
+title: "prepaidStarsGiveaway"
 original: "https://core.telegram.org/constructor/prepaidStarsGiveaway"
 section: ref
 kind: constructor
+description: "Содержит информацию о предоплаченном розыгрыше Telegram Stars »."
 layout: layout.njk
 ---
 
 # prepaidStarsGiveaway
 
-*Конструктор из схемы TL.*
-
-> Contains info about a [prepaid Telegram Star giveaway »](https://core.telegram.org/api/giveaways#star-giveaways).
-
-## Определение TL
+Содержит информацию о [предоплаченном розыгрыше Telegram Stars »](/api/giveaways/#star-giveaways).
 
 ```
 prepaidStarsGiveaway#9a9d77e0 id:long stars:long quantity:int boosts:int date:int = PrepaidGiveaway;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | Prepaid giveaway ID. |
-| stars | [long](/type/long/) | Number of given away [Telegram Stars »](https://core.telegram.org/api/stars) |
-| quantity | [int](/type/int/) | Number of giveaway winners |
-| boosts | [int](/type/int/) | Number of boosts the channel will gain by launching the giveaway. |
-| date | [int](/type/int/) | When was the giveaway paid for |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор предоплаченного розыгрыша.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Количество разыгранных <a href="/api/stars">Telegram Stars »</a></td></tr><tr><td><strong>quantity</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество победителей розыгрыша</td></tr><tr><td><strong>boosts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество бустов, которые канал получит при запуске розыгрыша.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда розыгрыш был оплачен</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PrepaidGiveaway](/type/PrepaidGiveaway/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

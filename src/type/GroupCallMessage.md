@@ -1,37 +1,35 @@
 ---
-title: "GroupCallMessage (тип)"
+title: "GroupCallMessage"
 original: "https://core.telegram.org/type/GroupCallMessage"
 section: ref
 kind: type
+description: "Представляет сообщение во время звонка, реакцию эмодзи », платный комментарий к прямой трансляции истории или отдельное платное пожертвование в прямой трансляции истории."
 layout: layout.njk
 ---
 
 # GroupCallMessage
 
-*Тип из схемы TL.*
+Представляет сообщение во время звонка, [реакцию эмодзи »](/api/group-calls/#in-call-reactions), платный комментарий к прямой трансляции истории или отдельное платное пожертвование в прямой трансляции истории.
 
-> Represents an in-call message, [emoji reaction »](https://core.telegram.org/api/group-calls#in-call-reactions), paid live story comment or standalone paid live story donation.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===216===
-> groupCallMessage#907ce88e random_id:long message:TextWithEntities = GroupCallMessage;
-> ```
-> API schema:
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===216===
+groupCallMessage#907ce88e random_id:long message:TextWithEntities = GroupCallMessage;
+```
+
+Схема API:
 
 ```
 groupCallMessage#1a8afc7e flags:# from_admin:flags.1?true id:int from_id:Peer date:int message:TextWithEntities paid_message_stars:flags.0?long = GroupCallMessage;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [groupCallMessage](/constructor/groupCallMessage/) | Represents an [in-call message »](https://core.telegram.org/api/group-calls#in-call-messages), emoji reaction, paid live story comment or standalone paid live story donation. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/groupCallMessage">groupCallMessage</a></td><td>Представляет <a href="/api/group-calls#in-call-messages">сообщение во время звонка »</a>, реакцию эмодзи, платный комментарий к прямой трансляции истории или отдельное платное пожертвование в прямой трансляции истории.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

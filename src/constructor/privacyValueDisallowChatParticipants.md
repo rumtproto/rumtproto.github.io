@@ -1,50 +1,45 @@
 ---
-title: "privacyValueDisallowChatParticipants (конструктор)"
+title: "privacyValueDisallowChatParticipants"
 original: "https://core.telegram.org/constructor/privacyValueDisallowChatParticipants"
 section: ref
 kind: constructor
+description: "Запретить только участникам определённых чатов"
 layout: layout.njk
 ---
 
 # privacyValueDisallowChatParticipants
 
-*Конструктор из схемы TL.*
-
-> Disallow only participants of certain chats
-
-## Определение TL
+Запретить только участникам определённых чатов
 
 ```
 privacyValueDisallowChatParticipants#41c87565 chats:Vector<long> = PrivacyRule;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | Disallowed chats IDs (either a [chat](/constructor/chat/) or a [supergroup](/constructor/channel/) ID, verbatim the way it is received in the constructor (i.e. unlike with bot API IDs, here group and supergroup IDs should be treated in the same way)). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Запрещённые идентификаторы чатов (идентификатор <a href="/constructor/chat">чата</a> или <a href="/constructor/channel">супергруппы</a>, в точности в том виде, в каком он получен в конструкторе (то есть, в отличие от идентификаторов Bot API, здесь идентификаторы групп и супергрупп следует обрабатывать одинаково)).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PrivacyRule](/type/PrivacyRule/)
 
-## Related pages
+### Связанные страницы
 
 #### [chat](/constructor/chat/)
 
-Info about a group.
+Информация о группе.
 
-When updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-See [here »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L5679) for an implementation of the logic to use when updating the [local chat peer database](https://core.telegram.org/api/peers).
+См. [здесь »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L5679) реализацию логики, которую следует применять при обновлении [локальной базы чатов-пиров](/api/peers/).
 
 #### [channel](/constructor/channel/)
 
-Channel/supergroup info
+Информация о канале или супергруппе
 
-When updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-The only exception to the above rule is when the `min` flag is set, in which case **only** the following fields must be applied over any locally stored version:
+[@term:min] Единственное исключение из приведённого выше правила — установленный флаг `min`: в этом случае поверх локально сохранённой версии обязаны применяться **только** следующие поля:
 
 -   `title`
 -   `megagroup`
@@ -71,10 +66,10 @@ The only exception to the above rule is when the `min` flag is set, in which cas
 -   `signature_profiles`
 -   `autotranslation`
 -   `broadcast_messages_allowed`
--   `monoforum`
+-   [@term:monoforum] `monoforum`
 -   `forum_tabs`
 -   `linked_monoforum_id`
 -   `send_paid_messages_stars`
 -   `bot_verification_icon`
 
-See [here »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176) for an implementation of the logic to use when updating the [local channel peer database](https://core.telegram.org/api/peers).
+См. [здесь »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176) реализацию логики, которую следует применять при обновлении [локальной базы пиров-каналов](/api/peers/).

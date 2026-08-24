@@ -1,18 +1,15 @@
 ---
-title: "messages.getFullChat (метод)"
+title: "messages.getFullChat"
 original: "https://core.telegram.org/method/messages.getFullChat"
 section: ref
 kind: method
+description: "Получить полную информацию об обычной группе."
 layout: layout.njk
 ---
 
 # messages.getFullChat
 
-*Метод из схемы TL.*
-
-> Get full info about a [basic group](https://core.telegram.org/api/channel#basic-groups).
-
-## Определение TL
+Получить полную информацию об [обычной группе](/api/channel/#basic-groups).
 
 ```
 messages.chatFull#e5d7d19c full_chat:ChatFull chats:Vector<Chat> users:Vector<User> = messages.ChatFull;
@@ -20,27 +17,22 @@ messages.chatFull#e5d7d19c full_chat:ChatFull chats:Vector<Chat> users:Vector<Us
 messages.getFullChat#aeb00b34 chat_id:long = messages.ChatFull;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chat_id | [long](/type/long/) | [Basic group](https://core.telegram.org/api/channel#basic-groups) ID. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор <a href="/api/channel#basic-groups">обычной группы</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.ChatFull](/type/messages.ChatFull/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

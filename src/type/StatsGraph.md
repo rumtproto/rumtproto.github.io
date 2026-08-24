@@ -1,18 +1,15 @@
 ---
-title: "StatsGraph (тип)"
+title: "StatsGraph"
 original: "https://core.telegram.org/type/StatsGraph"
 section: ref
 kind: type
+description: "График статистики канала"
 layout: layout.njk
 ---
 
 # StatsGraph
 
-*Тип из схемы TL.*
-
-> Channel statistics graph
-
-## Определение TL
+График статистики канала
 
 ```
 statsGraphAsync#4a27eb2d token:string = StatsGraph;
@@ -24,16 +21,10 @@ statsGraph#8ea464b6 flags:# json:DataJSON zoom_token:flags.0?string = StatsGraph
 stats.loadAsyncGraph#621d5fa0 flags:# token:string x:flags.0?long = StatsGraph;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [statsGraphAsync](/constructor/statsGraphAsync/) | This [channel statistics graph](https://core.telegram.org/api/stats) must be generated asynchronously using [stats.loadAsyncGraph](/method/stats.loadAsyncGraph/) to reduce server load |
-| [statsGraphError](/constructor/statsGraphError/) | An error occurred while generating the [statistics graph](https://core.telegram.org/api/stats) |
-| [statsGraph](/constructor/statsGraph/) | [Channel statistics graph](https://core.telegram.org/api/stats) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/statsGraphAsync">statsGraphAsync</a></td><td>Этот <a href="/api/stats">график статистики канала</a> должен формироваться асинхронно с помощью <a href="/method/stats.loadAsyncGraph">stats.loadAsyncGraph</a>, чтобы снизить нагрузку на сервер</td></tr><tr><td><a href="/constructor/statsGraphError">statsGraphError</a></td><td>При построении <a href="/api/stats">графика статистики</a> произошла ошибка</td></tr><tr><td><a href="/constructor/statsGraph">statsGraph</a></td><td><a href="/api/stats">График статистики канала</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stats.loadAsyncGraph](/method/stats.loadAsyncGraph/) | Load [channel statistics graph](https://core.telegram.org/api/stats) asynchronously |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stats.loadAsyncGraph">stats.loadAsyncGraph</a></td><td>Загрузить <a href="/api/stats">график статистики канала</a> асинхронно</td></tr></tbody></table>

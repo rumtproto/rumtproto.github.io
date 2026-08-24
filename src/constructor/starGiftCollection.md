@@ -1,44 +1,34 @@
 ---
-title: "starGiftCollection (конструктор)"
+title: "starGiftCollection"
 original: "https://core.telegram.org/constructor/starGiftCollection"
 section: ref
 kind: constructor
+description: "Представляет коллекцию звёздных подарков »."
 layout: layout.njk
 ---
 
 # starGiftCollection
 
-*Конструктор из схемы TL.*
-
-> Represents a [star gift collection »](https://core.telegram.org/api/gifts#gift-collections).
-
-## Определение TL
+Представляет [коллекцию звёздных подарков »](/api/gifts/#gift-collections).
 
 ```
 starGiftCollection#9d6b13b0 flags:# collection_id:int title:string icon:flags.0?Document gifts_count:int hash:long = StarGiftCollection;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| collection_id | [int](/type/int/) | The ID of the collection. |
-| title | [string](/type/string/) | Title of the collection. |
-| icon | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Document](/type/Document/) | Optional icon for the collection, taken from the first gift in the collection. |
-| gifts_count | [int](/type/int/) | Number of gifts in the collection. |
-| hash | [long](/type/long/) | Field to use instead of collection_id when generating the hash to pass to [payments.getStarGiftCollections](/method/payments.getStarGiftCollections/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>collection_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор коллекции.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название коллекции.</td></tr><tr><td><strong>icon</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Document">Document</a></td><td>Необязательный значок коллекции, взятый у первого подарка в коллекции.</td></tr><tr><td><strong>gifts_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество подарков в коллекции.</td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] Поле, которое используется <strong>вместо <code>collection_id</code></strong> при вычислении хеша, передаваемого в <a href="/method/payments.getStarGiftCollections">payments.getStarGiftCollections</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftCollection](/type/StarGiftCollection/)
 
-## Related pages
+### Связанные страницы
 
 #### [payments.getStarGiftCollections](/method/payments.getStarGiftCollections/)
 
-Fetches all [star gift collections »](https://core.telegram.org/api/gifts#gift-collections) of a peer.
+Получает все [коллекции звёздных подарков »](/api/gifts/#gift-collections) пира.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

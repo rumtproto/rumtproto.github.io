@@ -1,39 +1,31 @@
 ---
-title: "bots.getBotCommands (метод)"
+title: "bots.getBotCommands"
 original: "https://core.telegram.org/method/bots.getBotCommands"
 section: ref
 kind: method
+description: "Получить список команд бота для указанной области видимости и кода языка"
 layout: layout.njk
 ---
 
 # bots.getBotCommands
 
-*Метод из схемы TL.*
-
-> Obtain a list of bot commands for the specified bot scope and language code
-
-## Определение TL
+Получить список команд бота для указанной области видимости и кода языка
 
 ```
 ---functions---
 bots.getBotCommands#e34c0dd6 scope:BotCommandScope lang_code:string = Vector<BotCommand>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| scope | [BotCommandScope](/type/BotCommandScope/) | Command scope |
-| lang_code | [string](/type/string/) | Language code |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>scope</strong></td><td style="text-align: center;"><a href="/type/BotCommandScope">BotCommandScope</a></td><td>Область действия команды</td></tr><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код языка</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[BotCommand](/type/BotCommand/)\>
 
-## Only bots can use this method
+### Этот метод доступен только ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | USER_BOT_REQUIRED | This method can only be called by a bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>USER_BOT_REQUIRED</td><td>Этот метод может вызывать только бот.</td></tr></tbody></table>

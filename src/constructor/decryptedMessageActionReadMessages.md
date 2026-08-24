@@ -1,30 +1,25 @@
 ---
-title: "decryptedMessageActionReadMessages (конструктор)"
+title: "decryptedMessageActionReadMessages"
 original: "https://core.telegram.org/constructor/decryptedMessageActionReadMessages"
 section: ref
 kind: constructor
+description: "Сообщения отмечены как прочитанные."
 layout: layout.njk
 ---
 
 # decryptedMessageActionReadMessages
 
-*Конструктор из схемы TL.*
-
-> Messages marked as read.
-
-## Определение TL
+Сообщения отмечены как прочитанные.
 
 ```
 ===8===
 decryptedMessageActionReadMessages#c4f40be random_ids:Vector<long> = DecryptedMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| random_ids | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | List of message IDs |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>random_ids</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Список идентификаторов сообщений</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DecryptedMessageAction](/type/DecryptedMessageAction/)

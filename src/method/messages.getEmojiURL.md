@@ -1,18 +1,15 @@
 ---
-title: "messages.getEmojiURL (метод)"
+title: "messages.getEmojiURL"
 original: "https://core.telegram.org/method/messages.getEmojiURL"
 section: ref
 kind: method
+description: "Возвращает HTTP-адрес, по которому можно автоматически войти на платформу переводов и предложить новые ключевые слова эмодзи ». Адрес действителен в течение 30 секунд после…"
 layout: layout.njk
 ---
 
 # messages.getEmojiURL
 
-*Метод из схемы TL.*
-
-> Returns an HTTP URL which can be used to automatically log in into translation platform and suggest new [emoji keywords »](https://core.telegram.org/api/custom-emoji#emoji-keywords). The URL will be valid for 30 seconds after generation.
-
-## Определение TL
+Возвращает HTTP-адрес, по которому можно автоматически войти на платформу переводов и предложить новые [ключевые слова эмодзи »](/api/custom-emoji/#emoji-keywords). Адрес действителен в течение 30 секунд после создания.
 
 ```
 emojiURL#a575739d url:string = EmojiURL;
@@ -20,20 +17,18 @@ emojiURL#a575739d url:string = EmojiURL;
 messages.getEmojiURL#d5b10c26 lang_code:string = EmojiURL;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| lang_code | [string](/type/string/) | Language code for which the emoji keywords will be suggested |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>lang_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код языка, для которого будут предложены ключевые слова эмодзи</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [EmojiURL](/type/EmojiURL/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.

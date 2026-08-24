@@ -1,18 +1,15 @@
 ---
-title: "Contacts.ResolvedPeer (тип)"
+title: "contacts.ResolvedPeer"
 original: "https://core.telegram.org/type/contacts.ResolvedPeer"
 section: ref
 kind: type
+description: "Пир, возвращённый после разрешения @username"
 layout: layout.njk
 ---
 
 # Contacts.ResolvedPeer
 
-*Тип из схемы TL.*
-
-> Peer returned after resolving a `@username`
-
-## Определение TL
+Пир, возвращённый после разрешения `@username`
 
 ```
 contacts.resolvedPeer#7f077ad9 peer:Peer chats:Vector<Chat> users:Vector<User> = contacts.ResolvedPeer;
@@ -23,15 +20,10 @@ contacts.resolveUsername#725afbbc flags:# username:string referer:flags.0?string
 contacts.resolvePhone#8af94344 phone:string = contacts.ResolvedPeer;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [contacts.resolvedPeer](/constructor/contacts.resolvedPeer/) | Resolved peer |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/contacts.resolvedPeer">contacts.resolvedPeer</a></td><td>Разрешённый пир</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [contacts.resolveUsername](/method/contacts.resolveUsername/) | Resolve a @username to get peer info |
-| [contacts.resolvePhone](/method/contacts.resolvePhone/) | Resolve a phone number to get user info, if their privacy settings allow it. Make sure to implement client-side ratelimiting/debounce for this method, allowing at most 1 call every 3 seconds. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/contacts.resolveUsername">contacts.resolveUsername</a></td><td>Разрешить @username, чтобы получить сведения о пире</td></tr><tr><td><a href="/method/contacts.resolvePhone">contacts.resolvePhone</a></td><td>Разрешить номер телефона, чтобы получить сведения о пользователе, если это допускают его настройки конфиденциальности.<br><br>Обязательно реализуйте на стороне клиента ограничение частоты вызовов и подавление дребезга для этого метода, допуская не более 1 вызова каждые 3 секунды.</td></tr></tbody></table>

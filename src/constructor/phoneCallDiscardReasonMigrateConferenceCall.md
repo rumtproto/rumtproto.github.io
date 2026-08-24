@@ -1,39 +1,34 @@
 ---
-title: "phoneCallDiscardReasonMigrateConferenceCall (конструктор)"
+title: "phoneCallDiscardReasonMigrateConferenceCall"
 original: "https://core.telegram.org/constructor/phoneCallDiscardReasonMigrateConferenceCall"
 section: ref
 kind: constructor
+description: "Этот звонок был переведён в конференц-звонок."
 layout: layout.njk
 ---
 
 # phoneCallDiscardReasonMigrateConferenceCall
 
-*Конструктор из схемы TL.*
-
-> This phone call was migrated to a [conference call](https://core.telegram.org/api/end-to-end/group-calls).
-
-## Определение TL
+Этот звонок был переведён в [конференц-звонок](/api/end-to-end/group-calls/).
 
 ```
 phoneCallDiscardReasonMigrateConferenceCall#9fbbf1f7 slug:string = PhoneCallDiscardReason;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| slug | [string](/type/string/) | [Conference link »](https://core.telegram.org/api/links#conference-links) slug. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Слаг <a href="/api/links#conference-links">ссылки на конференцию »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PhoneCallDiscardReason](/type/PhoneCallDiscardReason/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [E2E Group Calls](https://core.telegram.org/api/end-to-end/group-calls)
+#### [Групповые звонки с E2E-шифрованием](/api/end-to-end/group-calls/)
 
-End-to-end encryption used for Telegram group voice and video calls, using a blockchain for state management.
+Сквозное шифрование, применяемое в групповых голосовых и видеозвонках Telegram; состояние хранится в блокчейне.

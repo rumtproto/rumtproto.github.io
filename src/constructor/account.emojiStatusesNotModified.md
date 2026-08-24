@@ -1,33 +1,30 @@
 ---
-title: "account.emojiStatusesNotModified (конструктор)"
+title: "account.emojiStatusesNotModified"
 original: "https://core.telegram.org/constructor/account.emojiStatusesNotModified"
 section: ref
 kind: constructor
+description: "Серверный список эмодзи-статусов не изменился"
 layout: layout.njk
 ---
 
 # account.emojiStatusesNotModified
 
-*Конструктор из схемы TL.*
-
-> The server-side list of [emoji statuses](https://core.telegram.org/api/emoji-status) hasn't changed
-
-## Определение TL
+Серверный список [эмодзи-статусов](/api/emoji-status/) не изменился
 
 ```
 account.emojiStatusesNotModified#d08ce645 = account.EmojiStatuses;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [account.EmojiStatuses](/type/account.EmojiStatuses/)
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

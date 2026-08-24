@@ -1,18 +1,15 @@
 ---
-title: "phone.inviteToGroupCall (метод)"
+title: "phone.inviteToGroupCall"
 original: "https://core.telegram.org/method/phone.inviteToGroupCall"
 section: ref
 kind: method
+description: "Пригласить группу пользователей в видеочат или трансляцию »; нельзя использовать для прямых историй » и конференц-звонков »."
 layout: layout.njk
 ---
 
 # phone.inviteToGroupCall
 
-*Метод из схемы TL.*
-
-> Invite a set of users to a [video chat/livestream »](https://core.telegram.org/api/group-calls#video-chats-livestreams); cannot be used for [live stories »](https://core.telegram.org/api/group-calls#live-stories) or [conference calls »](https://core.telegram.org/api/group-calls#conference-calls).
-
-## Определение TL
+Пригласить группу пользователей в [видеочат или трансляцию »](/api/group-calls/#video-chats-livestreams); нельзя использовать для [прямых историй »](/api/group-calls/#live-stories) и [конференц-звонков »](/api/group-calls/#conference-calls).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,32 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.inviteToGroupCall#7b393160 call:InputGroupCall users:Vector<InputUser> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | The [video chat/livestream »](https://core.telegram.org/api/group-calls#video-chats-livestreams) |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[InputUser](/type/InputUser/)> | The users to invite. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td><a href="/api/group-calls#video-chats-livestreams">Видеочат или трансляция »</a></td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputUser">InputUser</a>&gt;</td><td>Пользователи, которых нужно пригласить.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | CHAT_TYPE_INVALID | The specified user type is invalid. |
-| 403 | GROUPCALL_FORBIDDEN | The specified group call cannot be used in this context. |
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
-| 400 | INVITE_FORBIDDEN_WITH_JOINAS | If the user has anonymously joined a group call as a channel, they can't invite other users to the group call because that would cause deanonymization, because the invite would be sent using the original user ID, not the anonymized channel ID. |
-| 400 | USER_ALREADY_INVITED | You have already invited this user. |
-| 403 | USER_NOT_PARTICIPANT | You're not a member of this supergroup/channel. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>CHAT_TYPE_INVALID</td><td>Указанный тип пользователя недействителен.</td></tr><tr><td>403</td><td>GROUPCALL_FORBIDDEN</td><td>Указанный групповой звонок нельзя использовать в этом контексте.</td></tr><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr><tr><td>400</td><td>INVITE_FORBIDDEN_WITH_JOINAS</td><td>Если пользователь присоединился к групповому звонку анонимно, от имени канала, он не может приглашать в звонок других пользователей, так как это привело бы к деанонимизации: приглашение было бы отправлено с исходным идентификатором пользователя, а не с анонимизированным идентификатором канала.</td></tr><tr><td>400</td><td>USER_ALREADY_INVITED</td><td>Вы уже пригласили этого пользователя.</td></tr><tr><td>403</td><td>USER_NOT_PARTICIPANT</td><td>Вы не состоите в этой супергруппе или канале.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

@@ -1,49 +1,38 @@
 ---
-title: "starGiftAuctionStateFinished (конструктор)"
+title: "starGiftAuctionStateFinished"
 original: "https://core.telegram.org/constructor/starGiftAuctionStateFinished"
 section: ref
 kind: constructor
+description: "Представляет завершившийся аукцион »."
 layout: layout.njk
 ---
 
 # starGiftAuctionStateFinished
 
-*Конструктор из схемы TL.*
-
-> Represents a finished [auction »](https://core.telegram.org/api/auctions).
-
-## Определение TL
+Представляет завершившийся [аукцион »](/api/auctions/).
 
 ```
 starGiftAuctionStateFinished#972dabbf flags:# start_date:int end_date:int average_price:long listed_count:flags.0?int fragment_listed_count:flags.1?int fragment_listed_url:flags.1?string = StarGiftAuctionState;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| start_date | [int](/type/int/) | UNIX timestamp indicating when the auction started. |
-| end_date | [int](/type/int/) | UNIX timestamp indicating when the auction ended. |
-| average_price | [long](/type/long/) | Average price of distributed gifts. |
-| listed_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Number of gifts from the auction currently being resold on Telegram: if set, when the corresponding element is clicked in graphical clients, [payments.getResaleStarGifts](/method/payments.getResaleStarGifts/) should be invoked with the ID of the gift associated to this auction, see [here »](https://core.telegram.org/api/auctions) for more info. |
-| fragment_listed_count | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | Number of gifts from the auction currently being resold on [Fragment](https://fragment.com). |
-| fragment_listed_url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Only set if fragment_listed_count is set. If set, when the corresponding element is clicked in graphical clients, this URL should be opened. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>start_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Метка времени UNIX, указывающая, когда начался аукцион.</td></tr><tr><td><strong>end_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Метка времени UNIX, указывающая, когда завершился аукцион.</td></tr><tr><td><strong>average_price</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Средняя стоимость распределённых подарков.</td></tr><tr><td><strong>listed_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Количество подарков с этого аукциона, которые сейчас перепродаются в Telegram: если установлено, при нажатии на соответствующий элемент в графических клиентах следует вызвать <a href="/method/payments.getResaleStarGifts">payments.getResaleStarGifts</a> с идентификатором подарка, связанного с этим аукционом; подробнее см. <a href="/api/auctions">здесь »</a>.</td></tr><tr><td><strong>fragment_listed_count</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Количество подарков с этого аукциона, которые сейчас перепродаются на <a href="https://fragment.com">Fragment</a>.</td></tr><tr><td><strong>fragment_listed_url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Устанавливается, только если установлено <code>fragment_listed_count</code>. Если установлено, при нажатии на соответствующий элемент в графических клиентах следует открыть этот URL.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftAuctionState](/type/StarGiftAuctionState/)
 
-## Related pages
+### Связанные страницы
 
 #### [payments.getResaleStarGifts](/method/payments.getResaleStarGifts/)
 
-Get [collectible gifts](https://core.telegram.org/api/gifts#collectible-gifts) of a specific type currently on resale, see [here »](https://core.telegram.org/api/gifts#reselling-collectible-gifts) for more info.
+Получить [коллекционные подарки](/api/gifts/#collectible-gifts) определённого типа, выставленные на перепродажу; подробнее [см. здесь »](/api/gifts/#reselling-collectible-gifts).
 
-`sort_by_price` and `sort_by_num` are mutually exclusive, if neither are set results are sorted by the unixtime (descending) when their resell price was last changed.
+Параметры `sort_by_price` и `sort_by_num` взаимно исключают друг друга; если не задан ни один из них, результаты сортируются по времени последнего изменения цены перепродажи (unixtime, по убыванию).
 
-See [here »](https://core.telegram.org/api/gifts#sending-gifts) for detailed documentation on this method.
+Подробную документацию по этому методу см. [здесь »](/api/gifts/#sending-gifts).
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

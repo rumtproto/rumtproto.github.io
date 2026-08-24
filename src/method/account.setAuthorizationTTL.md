@@ -1,18 +1,15 @@
 ---
-title: "account.setAuthorizationTTL (метод)"
+title: "account.setAuthorizationTTL"
 original: "https://core.telegram.org/method/account.setAuthorizationTTL"
 section: ref
 kind: method
+description: "Задать время жизни текущей сессии"
 layout: layout.njk
 ---
 
 # account.setAuthorizationTTL
 
-*Метод из схемы TL.*
-
-> Set time-to-live of current session
-
-## Определение TL
+Задать время жизни текущей сессии
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,21 +18,16 @@ boolTrue#997275b5 = Bool;
 account.setAuthorizationTTL#bf899aa0 authorization_ttl_days:int = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| authorization_ttl_days | [int](/type/int/) | Time-to-live of current session in days |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>authorization_ttl_days</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Время жизни текущей сессии в днях</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 406 | FRESH_RESET_AUTHORISATION_FORBIDDEN | You can't logout other sessions if less than 24 hours have passed since you logged on the current session. |
-| 400 | TTL_DAYS_INVALID | The provided TTL is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>406</td><td>FRESH_RESET_AUTHORISATION_FORBIDDEN</td><td>Нельзя завершить другие сессии, если с момента входа в текущую сессию прошло менее 24 часов.</td></tr><tr><td>400</td><td>TTL_DAYS_INVALID</td><td>[@term:TTL] Указанное значение TTL недействительно.</td></tr></tbody></table>

@@ -1,18 +1,15 @@
 ---
-title: "account.setContentSettings (метод)"
+title: "account.setContentSettings"
 original: "https://core.telegram.org/method/account.setContentSettings"
 section: ref
 kind: method
+description: "Задать настройки материалов деликатного характера (для показа или скрытия контента NSFW)"
 layout: layout.njk
 ---
 
 # account.setContentSettings
 
-*Метод из схемы TL.*
-
-> Set sensitive content settings (for viewing or hiding NSFW content)
-
-## Определение TL
+Задать настройки материалов деликатного характера (для показа или скрытия контента NSFW)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,21 +18,16 @@ boolTrue#997275b5 = Bool;
 account.setContentSettings#b574b16b flags:# sensitive_enabled:flags.0?true = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| sensitive_enabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Enable NSFW content |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>sensitive_enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Включить содержимое NSFW</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | SENSITIVE_CHANGE_FORBIDDEN | You can't change your sensitive content settings. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>SENSITIVE_CHANGE_FORBIDDEN</td><td>Вы не можете изменить свои настройки материалов деликатного характера.</td></tr></tbody></table>

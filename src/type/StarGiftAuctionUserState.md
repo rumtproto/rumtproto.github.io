@@ -1,38 +1,34 @@
 ---
-title: "StarGiftAuctionUserState (тип)"
+title: "StarGiftAuctionUserState"
 original: "https://core.telegram.org/type/StarGiftAuctionUserState"
 section: ref
 kind: type
+description: "Содержит информацию о состоянии текущего пользователя в аукционе »."
 layout: layout.njk
 ---
 
 # StarGiftAuctionUserState
 
-*Тип из схемы TL.*
+Содержит информацию о состоянии текущего пользователя в [аукционе »](/api/auctions/).
 
-> Contains information about the current user's state in an [auction »](https://core.telegram.org/api/auctions).
-> The `bid_amount`, `bid_date`, `bid_peer` and `min_bid_amount` flags of [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) will all be set if the user placed a bid in the auction.
-
-## Определение TL
+Флаги `bid_amount`, `bid_date`, `bid_peer` и `min_bid_amount` конструктора [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) будут установлены все сразу, если пользователь сделал ставку на аукционе.
 
 ```
 starGiftAuctionUserState#2eeed1c4 flags:# returned:flags.1?true bid_amount:flags.0?long bid_date:flags.0?int min_bid_amount:flags.0?long bid_peer:flags.0?Peer acquired_count:int = StarGiftAuctionUserState;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) | Contains information about the current user's state in an [auction »](https://core.telegram.org/api/auctions). The bid_amount, bid_date, bid_peer and min_bid_amount flags of [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) will all be set if the user placed a bid in the auction. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftAuctionUserState">starGiftAuctionUserState</a></td><td>Содержит информацию о состоянии текущего пользователя в <a href="/api/auctions">аукционе »</a>.<br><br>Флаги <code>bid_amount</code>, <code>bid_date</code>, <code>bid_peer</code> и <code>min_bid_amount</code> в <a href="/constructor/starGiftAuctionUserState">starGiftAuctionUserState</a> будут установлены все, если пользователь сделал ставку на аукционе.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.
 
 #### [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/)
 
-Contains information about the current user's state in an [auction »](https://core.telegram.org/api/auctions).
+Содержит информацию о состоянии текущего пользователя в [аукционе »](/api/auctions/).
 
-The `bid_amount`, `bid_date`, `bid_peer` and `min_bid_amount` flags of [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) will all be set if the user placed a bid in the auction.
+Флаги `bid_amount`, `bid_date`, `bid_peer` и `min_bid_amount` конструктора [starGiftAuctionUserState](/constructor/starGiftAuctionUserState/) будут установлены все сразу, если пользователь сделал ставку на аукционе.

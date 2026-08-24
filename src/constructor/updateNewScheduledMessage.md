@@ -1,35 +1,30 @@
 ---
-title: "updateNewScheduledMessage (конструктор)"
+title: "updateNewScheduledMessage"
 original: "https://core.telegram.org/constructor/updateNewScheduledMessage"
 section: ref
 kind: constructor
+description: "Сообщение добавлено в очередь отложенных сообщений чата"
 layout: layout.njk
 ---
 
 # updateNewScheduledMessage
 
-*Конструктор из схемы TL.*
-
-> A message was added to the [schedule queue of a chat](https://core.telegram.org/api/scheduled-messages)
-
-## Определение TL
+Сообщение добавлено в [очередь отложенных сообщений чата](/api/scheduled-messages/)
 
 ```
 updateNewScheduledMessage#39a51dfb message:Message = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| message | [Message](/type/Message/) | Message |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/Message">Message</a></td><td>Сообщение</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Scheduled messages](https://core.telegram.org/api/scheduled-messages)
+#### [Отложенные сообщения](/api/scheduled-messages/)
 
-Telegram allows scheduling messages
+Telegram позволяет планировать отправку сообщений

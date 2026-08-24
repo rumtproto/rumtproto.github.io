@@ -1,18 +1,15 @@
 ---
-title: "auth.signUp (метод)"
+title: "auth.signUp"
 original: "https://core.telegram.org/method/auth.signUp"
 section: ref
 kind: method
+description: "Регистрирует в системе подтверждённый номер телефона."
 layout: layout.njk
 ---
 
 # auth.signUp
 
-*Метод из схемы TL.*
-
-> Registers a validated phone number in the system.
-
-## Определение TL
+Регистрирует в системе подтверждённый номер телефона.
 
 ```
 auth.authorization#2ea2c0d4 flags:# setup_password_required:flags.1?true otherwise_relogin_days:flags.1?int tmp_sessions:flags.0?int future_auth_token:flags.2?bytes user:User = auth.Authorization;
@@ -21,34 +18,18 @@ auth.authorizationSignUpRequired#44747e9a flags:# terms_of_service:flags.0?help.
 auth.signUp#aac7b717 flags:# no_joined_notifications:flags.0?true phone_number:string phone_code_hash:string first_name:string last_name:string = auth.Authorization;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| no_joined_notifications | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, users on Telegram that have already added phone_number to their contacts will not receive signup notifications about this user. |
-| phone_number | [string](/type/string/) | Phone number in the international format |
-| phone_code_hash | [string](/type/string/) | SMS-message ID |
-| first_name | [string](/type/string/) | New user first name |
-| last_name | [string](/type/string/) | New user last name |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>no_joined_notifications</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, пользователи Telegram, у которых <code>phone_number</code> уже добавлен в контакты, <em>не</em> получат уведомление о регистрации этого пользователя.</td></tr><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона в международном формате</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор SMS-сообщения</td></tr><tr><td><strong>first_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Новое имя пользователя</td></tr><tr><td><strong>last_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Новая фамилия пользователя</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.Authorization](/type/auth.Authorization/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | FIRSTNAME_INVALID | The first name is invalid. |
-| 400 | LASTNAME_INVALID | The last name is invalid. |
-| 400 | PHONE_CODE_EMPTY | phone_code is missing. |
-| 400 | PHONE_CODE_EXPIRED | The phone code you provided has expired. |
-| 400 | PHONE_CODE_INVALID | The provided phone code is invalid. |
-| 400 | PHONE_NUMBER_FLOOD | You asked for the code too many times. |
-| 406 | PHONE_NUMBER_INVALID | The phone number is invalid. |
-| 400 | PHONE_NUMBER_OCCUPIED | The phone number is already in use. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>FIRSTNAME_INVALID</td><td>Имя недействительно.</td></tr><tr><td>400</td><td>LASTNAME_INVALID</td><td>Фамилия недействительна.</td></tr><tr><td>400</td><td>PHONE_CODE_EMPTY</td><td>Отсутствует phone_code.</td></tr><tr><td>400</td><td>PHONE_CODE_EXPIRED</td><td>Срок действия указанного вами кода подтверждения истёк.</td></tr><tr><td>400</td><td>PHONE_CODE_INVALID</td><td>Указан недействительный телефонный код.</td></tr><tr><td>400</td><td>PHONE_NUMBER_FLOOD</td><td>Вы запрашивали код слишком много раз.</td></tr><tr><td>406</td><td>PHONE_NUMBER_INVALID</td><td>Недействительный номер телефона.</td></tr><tr><td>400</td><td>PHONE_NUMBER_OCCUPIED</td><td>Этот номер телефона уже используется.</td></tr></tbody></table>

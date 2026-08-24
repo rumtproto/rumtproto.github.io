@@ -1,18 +1,15 @@
 ---
-title: "payments.getStarGiftAuctionState (метод)"
+title: "payments.getStarGiftAuctionState"
 original: "https://core.telegram.org/method/payments.getStarGiftAuctionState"
 section: ref
 kind: method
+description: "Возвращает сведения об аукционе коллекционных подарков »; также подписывает пользователя на обновления аукциона, подробнее обо всём процессе см. здесь »."
 layout: layout.njk
 ---
 
 # payments.getStarGiftAuctionState
 
-*Метод из схемы TL.*
-
-> Returns info about a [collectible gift auction »](https://core.telegram.org/api/auctions); also subscribes the user to auction updates, see [here »](https://core.telegram.org/api/auctions) for more info on the full flow.
-
-## Определение TL
+Возвращает сведения об [аукционе коллекционных подарков »](/api/auctions/); также подписывает пользователя на обновления аукциона, подробнее обо всём процессе см. [здесь »](/api/auctions/).
 
 ```
 payments.starGiftAuctionState#6b39f4ec gift:StarGift state:StarGiftAuctionState user_state:StarGiftAuctionUserState timeout:int users:Vector<User> chats:Vector<Chat> = payments.StarGiftAuctionState;
@@ -20,35 +17,30 @@ payments.starGiftAuctionState#6b39f4ec gift:StarGift state:StarGiftAuctionState 
 payments.getStarGiftAuctionState#5c9ff4d6 auction:InputStarGiftAuction version:int = payments.StarGiftAuctionState;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| auction | [InputStarGiftAuction](/type/InputStarGiftAuction/) | Either the ID of the gift linked to the auction, or an [auction deep link slug »](https://core.telegram.org/api/links#auction-links). |
-| version | [int](/type/int/) | Initially 0, then set to the returned [starGiftAuctionState](/constructor/starGiftAuctionState/).version, to avoid refetching results if they haven't changed. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>auction</strong></td><td style="text-align: center;"><a href="/type/InputStarGiftAuction">InputStarGiftAuction</a></td><td>Либо идентификатор подарка, связанного с аукционом, либо <a href="/api/links#auction-links">слаг глубокой ссылки на аукцион »</a>.</td></tr><tr><td><strong>version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Изначально <code>0</code>, затем устанавливается в возвращённое значение <a href="/constructor/starGiftAuctionState">starGiftAuctionState</a>.<code>version</code>, чтобы не запрашивать результаты повторно, если они не изменились.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.StarGiftAuctionState](/type/payments.StarGiftAuctionState/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | STARGIFT_INVALID | The passed gift is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>STARGIFT_INVALID</td><td>Переданный подарок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
 #### [starGiftAuctionState](/constructor/starGiftAuctionState/)
 
-Represents an active or pending [auction »](https://core.telegram.org/api/auctions).
+Представляет активный или ожидающий [аукцион »](/api/auctions/).
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

@@ -1,18 +1,15 @@
 ---
-title: "bots.BotInfo (тип)"
+title: "bots.BotInfo"
 original: "https://core.telegram.org/type/bots.BotInfo"
 section: ref
 kind: type
+description: "Локализованные имя, текст «О боте» и описание бота."
 layout: layout.njk
 ---
 
 # bots.BotInfo
 
-*Тип из схемы TL.*
-
-> Localized name, about text and description of a bot.
-
-## Определение TL
+Локализованные имя, текст «О боте» и описание бота.
 
 ```
 bots.botInfo#e8a775b0 name:string about:string description:string = bots.BotInfo;
@@ -22,14 +19,10 @@ bots.botInfo#e8a775b0 name:string about:string description:string = bots.BotInfo
 bots.getBotInfo#dcd914fd flags:# bot:flags.0?InputUser lang_code:string = bots.BotInfo;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [bots.botInfo](/constructor/bots.botInfo/) | Localized information about a bot. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/bots.botInfo">bots.botInfo</a></td><td>Локализованные сведения о боте.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [bots.getBotInfo](/method/bots.getBotInfo/) | Get localized name, about text and description of a bot (or of the current account, if called by a bot). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/bots.getBotInfo">bots.getBotInfo</a></td><td>Получить локализованное имя, текст «о себе» и описание бота (или текущего аккаунта, если метод вызван ботом).</td></tr></tbody></table>

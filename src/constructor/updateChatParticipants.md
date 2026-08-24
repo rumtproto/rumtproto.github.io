@@ -1,39 +1,34 @@
 ---
-title: "updateChatParticipants (конструктор)"
+title: "updateChatParticipants"
 original: "https://core.telegram.org/constructor/updateChatParticipants"
 section: ref
 kind: constructor
+description: "Изменился состав участников обычной группы »."
 layout: layout.njk
 ---
 
 # updateChatParticipants
 
-*Конструктор из схемы TL.*
-
-> The participants of a [basic group »](https://core.telegram.org/api/channel#basic-groups) changed.
-
-## Определение TL
+Изменился состав участников [обычной группы »](/api/channel/#basic-groups).
 
 ```
 updateChatParticipants#7761198 participants:ChatParticipants = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| participants | [ChatParticipants](/type/ChatParticipants/) | Updated chat participants (also contains the version used to deduplicate/update outdated chat information as specified [here »](https://core.telegram.org/api/peers#basic-group-updates)). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>participants</strong></td><td style="text-align: center;"><a href="/type/ChatParticipants">ChatParticipants</a></td><td>Обновлённый список участников чата (также содержит поле <code>version</code>, используемое для устранения дубликатов и обновления устаревшей информации о чате, как описано <a href="/api/peers#basic-group-updates">здесь »</a>).</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Peer database](https://core.telegram.org/api/peers)
+#### [База данных пиров](/api/peers/)
 
-Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.
+Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

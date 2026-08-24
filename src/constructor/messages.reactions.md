@@ -1,36 +1,30 @@
 ---
-title: "messages.reactions (конструктор)"
+title: "messages.reactions"
 original: "https://core.telegram.org/constructor/messages.reactions"
 section: ref
 kind: constructor
+description: "Список реакций на сообщения"
 layout: layout.njk
 ---
 
 # messages.reactions
 
-*Конструктор из схемы TL.*
-
-> List of [message reactions](https://core.telegram.org/api/reactions)
-
-## Определение TL
+Список [реакций на сообщения](/api/reactions/)
 
 ```
 messages.reactions#eafdf716 hash:long reactions:Vector<Reaction> = messages.Reactions;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | Hash used for caching, can also be locally regenerated using the algorithm specified [here »](https://core.telegram.org/api/reactions#recent-reactions). |
-| reactions | [Vector](https://core.telegram.org/type/Vector%20t)<[Reaction](/type/Reaction/)> | Reactions |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] Хеш, используемый для кеширования; его также можно заново вычислить локально по алгоритму, указанному <a href="/api/reactions#recent-reactions">здесь »</a>.</td></tr><tr><td><strong>reactions</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Reaction">Reaction</a>&gt;</td><td>Реакции</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.Reactions](/type/messages.Reactions/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

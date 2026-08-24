@@ -1,51 +1,44 @@
 ---
-title: "keyboardButtonSwitchInline (конструктор)"
+title: "keyboardButtonSwitchInline"
 original: "https://core.telegram.org/constructor/keyboardButtonSwitchInline"
 section: ref
 kind: constructor
+description: "Кнопка для переключения пользователя в инлайн-режим"
 layout: layout.njk
 ---
 
 # keyboardButtonSwitchInline
 
-*Конструктор из схемы TL.*
+Кнопка для переключения пользователя в инлайн-режим
 
-> Button to switch the user to inline mode
-> Available only in [inline keyboards](/constructor/replyInlineMarkup/).
-> When pressed, clients must insert the bot's username and `query` into the chat input field, triggering an [inline query](https://core.telegram.org/api/bots/inline).
-> If `same_peer` is set, clients use the current chat. Otherwise, clients prompt the user to select a chat, filtered by `peer_types` if specified.
+Доступно только в [инлайн-клавиатурах](/constructor/replyInlineMarkup/).
 
-## Определение TL
+При нажатии клиенты обязаны вставить имя пользователя бота и `query` в поле ввода чата, инициировав [инлайн-запрос](/api/bots/inline/).
+
+Если установлен `same_peer`, клиенты используют текущий чат. Иначе клиенты предлагают пользователю выбрать чат, отфильтрованный по `peer_types`, если он указан.
 
 ```
 keyboardButtonSwitchInline#991399fc flags:# same_peer:flags.0?true style:flags.10?KeyboardButtonStyle text:string query:string peer_types:flags.1?Vector<InlineQueryPeerType> = KeyboardButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| same_peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, pressing the button will insert the bot's username and the specified inline query in the current chat's input field. |
-| style | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[KeyboardButtonStyle](/type/KeyboardButtonStyle/) | Button style, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info on button styles. |
-| text | [string](/type/string/) | Button label |
-| query | [string](/type/string/) | The inline query to use |
-| peer_types | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[InlineQueryPeerType](/type/InlineQueryPeerType/)> | Filter to use when selecting chats. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>same_peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, нажатие кнопки вставит имя пользователя бота и указанный инлайн-запрос <code>query</code> в поле ввода текущего чата.</td></tr><tr><td><strong>style</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/KeyboardButtonStyle">KeyboardButtonStyle</a></td><td>Стиль кнопки; подробнее о стилях кнопок см. <a href="/api/bots/buttons#button-styles">здесь »</a>.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Подпись кнопки</td></tr><tr><td><strong>query</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Инлайн-запрос, который нужно использовать</td></tr><tr><td><strong>peer_types</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InlineQueryPeerType">InlineQueryPeerType</a>&gt;</td><td>Фильтр, применяемый при выборе чатов.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [KeyboardButton](/type/KeyboardButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.
 
 #### [replyInlineMarkup](/constructor/replyInlineMarkup/)
 
-Represents an inline keyboard
+Представляет инлайн-клавиатуру
 
-#### [Inline queries](https://core.telegram.org/api/bots/inline)
+#### [Инлайн-запросы](/api/bots/inline/)
 
-Users can interact with your bot via inline queries, straight from the text input field in any chat.
+Пользователи могут взаимодействовать с вашим ботом через инлайн-запросы прямо из поля ввода текста в любом чате.

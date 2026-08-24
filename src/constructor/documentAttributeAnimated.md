@@ -1,33 +1,33 @@
 ---
-title: "documentAttributeAnimated (конструктор)"
+title: "documentAttributeAnimated"
 original: "https://core.telegram.org/constructor/documentAttributeAnimated"
 section: ref
 kind: constructor
+description: "Определяет анимированный GIF"
 layout: layout.njk
 ---
 
 # documentAttributeAnimated
 
-*Конструктор из схемы TL.*
+Определяет анимированный GIF
 
-> Defines an animated GIF
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===23===
-> documentAttributeAnimated#11b58939 = DocumentAttribute;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===23===
+documentAttributeAnimated#11b58939 = DocumentAttribute;
+```
+
+#### Схема API
 
 ```
 documentAttributeAnimated#11b58939 = DocumentAttribute;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [DocumentAttribute](/type/DocumentAttribute/)

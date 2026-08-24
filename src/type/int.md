@@ -1,18 +1,18 @@
 ---
-title: "int (тип)"
+title: "int"
 original: "https://core.telegram.org/type/int"
 section: ref
 kind: type
+description: "Базовый голый тип, значения которого соответствуют одноэлементным последовательностям, то есть числам от -2^31 до 2^31-1, которые в этом случае представляют сами себя."
 layout: layout.njk
 ---
 
 # int
 
-*Тип из схемы TL.*
+[@term:bare] Базовый голый тип, значения которого соответствуют одноэлементным последовательностям, то есть числам от -2^31 до 2^31-1, которые в этом случае представляют сами себя.
 
-> A basic bare type, the values of which correspond to single-element sequences, i.e. numbers from -2^31 to 2^31-1 which in this case represent themselves.
-> [More on basic types »](/mtproto/serialize/)
+[Подробнее о базовых типах »](/mtproto/serialize/)
 
-## Related pages
+### Связанные страницы
 
-#### ﻿[Binary Data Serialization](/mtproto/serialize/)
+#### [Двоичная сериализация данных](/mtproto/serialize/)

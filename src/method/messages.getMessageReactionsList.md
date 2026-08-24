@@ -1,18 +1,15 @@
 ---
-title: "messages.getMessageReactionsList (метод)"
+title: "messages.getMessageReactionsList"
 original: "https://core.telegram.org/method/messages.getMessageReactionsList"
 section: ref
 kind: method
+description: "Получить список реакций на сообщение вместе с отправителем каждой реакции."
 layout: layout.njk
 ---
 
 # messages.getMessageReactionsList
 
-*Метод из схемы TL.*
-
-> Get [message reaction](https://core.telegram.org/api/reactions) list, along with the sender of each reaction.
-
-## Определение TL
+Получить список [реакций на сообщение](/api/reactions/) вместе с отправителем каждой реакции.
 
 ```
 messages.messageReactionsList#31bd492d flags:# count:int reactions:Vector<MessagePeerReaction> chats:Vector<Chat> users:Vector<User> next_offset:flags.0?string = messages.MessageReactionsList;
@@ -20,41 +17,30 @@ messages.messageReactionsList#31bd492d flags:# count:int reactions:Vector<Messag
 messages.getMessageReactionsList#461b3f48 flags:# peer:InputPeer id:int reaction:flags.0?Reaction offset:flags.1?string limit:int = messages.MessageReactionsList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [InputPeer](/type/InputPeer/) | Peer |
-| id | [int](/type/int/) | Message ID |
-| reaction | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Reaction](/type/Reaction/) | Get only reactions of this type |
-| offset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Offset for pagination (taken from the next_offset field of the returned [messages.MessageReactionsList](/type/messages.MessageReactionsList/)); empty in the first request. |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения</td></tr><tr><td><strong>reaction</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Reaction">Reaction</a></td><td>Получить только реакции этого типа</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>[@term:next_offset] Смещение для постраничной выборки (берётся из поля <code>next_offset</code> возвращённого <a href="/type/messages.MessageReactionsList">messages.MessageReactionsList</a>); в первом запросе — пустое.</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.MessageReactionsList](/type/messages.MessageReactionsList/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 403 | BROADCAST_FORBIDDEN | Channel poll voters and reactions cannot be fetched to prevent deanonymization. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>403</td><td>BROADCAST_FORBIDDEN</td><td>Список проголосовавших в опросах канала и реакции нельзя получить во избежание деанонимизации.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [messages.MessageReactionsList](/type/messages.MessageReactionsList/)
 
-List of peers that reacted to a specific message
+Список пиров, отреагировавших на конкретное сообщение
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

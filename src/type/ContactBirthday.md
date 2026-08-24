@@ -1,25 +1,20 @@
 ---
-title: "ContactBirthday (тип)"
+title: "ContactBirthday"
 original: "https://core.telegram.org/type/ContactBirthday"
 section: ref
 kind: type
+description: "Сведения о дне рождения контакта."
 layout: layout.njk
 ---
 
 # ContactBirthday
 
-*Тип из схемы TL.*
-
-> Birthday information of a contact.
-
-## Определение TL
+Сведения о дне рождения контакта.
 
 ```
 contactBirthday#1d998733 contact_id:long birthday:Birthday = ContactBirthday;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [contactBirthday](/constructor/contactBirthday/) | Birthday information of a contact. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/contactBirthday">contactBirthday</a></td><td>Сведения о дне рождения контакта.</td></tr></tbody></table>

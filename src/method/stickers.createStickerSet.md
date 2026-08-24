@@ -1,18 +1,15 @@
 ---
-title: "stickers.createStickerSet (метод)"
+title: "stickers.createStickerSet"
 original: "https://core.telegram.org/method/stickers.createStickerSet"
 section: ref
 kind: method
+description: "Создать набор стикеров."
 layout: layout.njk
 ---
 
 # stickers.createStickerSet
 
-*Метод из схемы TL.*
-
-> Create a stickerset.
-
-## Определение TL
+Создать набор стикеров.
 
 ```
 messages.stickerSet#6e153f16 set:StickerSet packs:Vector<StickerPack> keywords:Vector<StickerKeyword> documents:Vector<Document> = messages.StickerSet;
@@ -21,57 +18,26 @@ messages.stickerSetNotModified#d3f924eb = messages.StickerSet;
 stickers.createStickerSet#9021ab67 flags:# masks:flags.0?true emojis:flags.5?true text_color:flags.6?true user_id:InputUser title:string short_name:string thumb:flags.2?InputDocument stickers:Vector<InputStickerSetItem> software:flags.3?string = messages.StickerSet;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| masks | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether this is a mask stickerset |
-| emojis | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | Whether this is a [custom emoji](https://core.telegram.org/api/custom-emoji) stickerset. |
-| text_color | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | Whether the color of TGS custom emojis contained in this set should be changed to the text color when used in messages, the accent color if used as emoji status, white on chat photos, or another appropriate color based on context. For custom emoji stickersets only. |
-| user_id | [InputUser](/type/InputUser/) | Stickerset owner |
-| title | [string](/type/string/) | Stickerset name, 1-64 chars |
-| short_name | [string](/type/string/) | Short name of sticker set, to be used in [sticker deep links »](https://core.telegram.org/api/links#stickerset-links). Can contain only english letters, digits and underscores. Must begin with a letter, can't contain consecutive underscores and, if called by a bot, must end in "_by_<bot_username>". <bot_username> is case insensitive. 1-64 characters. |
-| thumb | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[InputDocument](/type/InputDocument/) | Thumbnail |
-| stickers | [Vector](https://core.telegram.org/type/Vector%20t)<[InputStickerSetItem](/type/InputStickerSetItem/)> | Stickers |
-| software | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[string](/type/string/) | Used when [importing stickers using the sticker import SDKs](https://core.telegram.org/import-stickers), specifies the name of the software that created the stickers |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>masks</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Является ли это набором стикеров-масок</td></tr><tr><td><strong>emojis</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Является ли это набором <a href="/api/custom-emoji">пользовательских эмодзи</a>.</td></tr><tr><td><strong>text_color</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>Следует ли менять цвет содержащихся в этом наборе пользовательских эмодзи в формате TGS на цвет текста при использовании в сообщениях, на акцентный цвет при использовании в качестве статуса эмодзи, на белый на фотографиях чатов либо на другой подходящий цвет в зависимости от контекста. Только для наборов пользовательских эмодзи.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Владелец набора стикеров</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название набора стикеров, <code>1-64</code> символов</td></tr><tr><td><strong>short_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:short_name] Краткое имя набора стикеров, используемое в <a href="/api/links#stickerset-links">глубоких ссылках на стикеры »</a>. Может содержать только латинские буквы, цифры и подчёркивания. Обязано начинаться с буквы, не может содержать идущие подряд подчёркивания и, <strong>если вызов выполняется ботом</strong>, обязано заканчиваться на <code>"_by_&lt;bot_username&gt;"</code>. <code>&lt;bot_username&gt;</code> нечувствительно к регистру. От 1 до 64 символов.</td></tr><tr><td><strong>thumb</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/InputDocument">InputDocument</a></td><td>Миниатюра</td></tr><tr><td><strong>stickers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputStickerSetItem">InputStickerSetItem</a>&gt;</td><td>Стикеры</td></tr><tr><td><strong>software</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/string">string</a></td><td>Используется при <a href="/import-stickers">импорте стикеров с помощью SDK для импорта стикеров</a>; задаёт название программы, создавшей стикеры</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.StickerSet](/type/messages.StickerSet/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PACK_SHORT_NAME_INVALID | Short pack name invalid. |
-| 400 | PACK_SHORT_NAME_OCCUPIED | A stickerpack with this name already exists. |
-| 400 | PACK_TITLE_INVALID | The stickerpack title is invalid. |
-| 400 | PACK_TYPE_INVALID | The masks and emojis flags are mutually exclusive. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | STICKERS_EMPTY | No sticker provided. |
-| 400 | STICKER_EMOJI_INVALID | Sticker emoji invalid. |
-| 400 | STICKER_FILE_INVALID | Sticker file invalid. |
-| 400 | STICKER_GIF_DIMENSIONS | The specified video sticker has invalid dimensions. |
-| 400 | STICKER_PNG_DIMENSIONS | Sticker png dimensions invalid. |
-| 400 | STICKER_PNG_NOPNG | One of the specified stickers is not a valid PNG file. |
-| 400 | STICKER_TGS_NODOC | You must send the animated sticker as a document. |
-| 400 | STICKER_TGS_NOTGS | Invalid TGS sticker provided. |
-| 400 | STICKER_THUMB_PNG_NOPNG | Incorrect stickerset thumb file provided, PNG / WEBP expected. |
-| 400 | STICKER_THUMB_TGS_NOTGS | Incorrect stickerset TGS thumb file provided. |
-| 400 | STICKER_VIDEO_BIG | The specified video sticker is too big. |
-| 400 | STICKER_VIDEO_NODOC | You must send the video sticker as a document. |
-| 400 | STICKER_VIDEO_NOWEBM | The specified video sticker is not in webm format. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PACK_SHORT_NAME_INVALID</td><td>Краткое имя набора недействительно.</td></tr><tr><td>400</td><td>PACK_SHORT_NAME_OCCUPIED</td><td>Стикерпак с таким именем уже существует.</td></tr><tr><td>400</td><td>PACK_TITLE_INVALID</td><td>Название стикерпака недействительно.</td></tr><tr><td>400</td><td>PACK_TYPE_INVALID</td><td>Флаги masks и emojis взаимно исключают друг друга.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>STICKERS_EMPTY</td><td>Стикер не передан.</td></tr><tr><td>400</td><td>STICKER_EMOJI_INVALID</td><td>Недопустимый эмодзи стикера.</td></tr><tr><td>400</td><td>STICKER_FILE_INVALID</td><td>Недопустимый файл стикера.</td></tr><tr><td>400</td><td>STICKER_GIF_DIMENSIONS</td><td>У указанного видеостикера недопустимые размеры.</td></tr><tr><td>400</td><td>STICKER_PNG_DIMENSIONS</td><td>Недопустимые размеры PNG-файла стикера.</td></tr><tr><td>400</td><td>STICKER_PNG_NOPNG</td><td>Один из указанных стикеров не является корректным файлом PNG.</td></tr><tr><td>400</td><td>STICKER_TGS_NODOC</td><td>Анимированный стикер необходимо отправлять как документ.</td></tr><tr><td>400</td><td>STICKER_TGS_NOTGS</td><td>Указан недопустимый стикер TGS.</td></tr><tr><td>400</td><td>STICKER_THUMB_PNG_NOPNG</td><td>Передан некорректный файл миниатюры для набора стикеров, ожидается PNG / WEBP.</td></tr><tr><td>400</td><td>STICKER_THUMB_TGS_NOTGS</td><td>Передан некорректный файл миниатюры TGS для набора стикеров.</td></tr><tr><td>400</td><td>STICKER_VIDEO_BIG</td><td>Указанный видеостикер слишком велик.</td></tr><tr><td>400</td><td>STICKER_VIDEO_NODOC</td><td>Видеостикер необходимо отправлять как документ.</td></tr><tr><td>400</td><td>STICKER_VIDEO_NOWEBM</td><td>Указанный видеостикер имеет формат, отличный от webm.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

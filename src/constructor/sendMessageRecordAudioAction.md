@@ -1,33 +1,33 @@
 ---
-title: "sendMessageRecordAudioAction (конструктор)"
+title: "sendMessageRecordAudioAction"
 original: "https://core.telegram.org/constructor/sendMessageRecordAudioAction"
 section: ref
 kind: constructor
+description: "Пользователь записывает голосовое сообщение."
 layout: layout.njk
 ---
 
 # sendMessageRecordAudioAction
 
-*Конструктор из схемы TL.*
+Пользователь записывает голосовое сообщение.
 
-> User is recording a voice message.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===17===
-> sendMessageRecordAudioAction#d52f73f7 = SendMessageAction;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===17===
+sendMessageRecordAudioAction#d52f73f7 = SendMessageAction;
+```
+
+#### Схема API
 
 ```
 sendMessageRecordAudioAction#d52f73f7 = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)

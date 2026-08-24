@@ -1,18 +1,15 @@
 ---
-title: "account.getDefaultBackgroundEmojis (метод)"
+title: "account.getDefaultBackgroundEmojis"
 original: "https://core.telegram.org/method/account.getDefaultBackgroundEmojis"
 section: ref
 kind: method
+description: "Получить набор рекомендуемых стикеров пользовательских эмодзи, которые можно использовать в узоре акцентного цвета."
 layout: layout.njk
 ---
 
 # account.getDefaultBackgroundEmojis
 
-*Метод из схемы TL.*
-
-> Get a set of suggested [custom emoji stickers](https://core.telegram.org/api/custom-emoji) that can be used in an [accent color pattern](https://core.telegram.org/api/colors).
-
-## Определение TL
+Получить набор рекомендуемых [стикеров пользовательских эмодзи](/api/custom-emoji/), которые можно использовать в [узоре акцентного цвета](/api/colors/).
 
 ```
 emojiListNotModified#481eadfa = EmojiList;
@@ -21,28 +18,26 @@ emojiList#7a1e11d1 hash:long document_id:Vector<long> = EmojiList;
 account.getDefaultBackgroundEmojis#a60ab9ce hash:long = EmojiList;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [EmojiList](/type/EmojiList/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!

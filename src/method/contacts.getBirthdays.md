@@ -1,19 +1,17 @@
 ---
-title: "contacts.getBirthdays (метод)"
+title: "contacts.getBirthdays"
 original: "https://core.telegram.org/method/contacts.getBirthdays"
 section: ref
 kind: method
+description: "Получить всех пользователей, у которых день рождения приходится на промежуток ±1 день относительно текущего дня. Клиентам следует вызывать этот метод каждые 6–8 часов, и если…"
 layout: layout.njk
 ---
 
 # contacts.getBirthdays
 
-*Метод из схемы TL.*
+Получить всех пользователей, у которых день рождения приходится на промежуток ±1 день относительно текущего дня. Клиентам следует вызывать этот метод каждые 6–8 часов, и если результат непустой, использовать его для соответствующего обновления локально сохранённых сведений о дне рождения в [user](/constructor/user/).`birthday`.
 
-> Fetch all users with birthdays that fall within +1/-1 days, relative to the current day: this method should be invoked by clients every 6-8 hours, and if the result is non-empty, it should be used to appropriately update locally cached birthday information in [user](/constructor/user/).`birthday`.
-> [See here »](https://core.telegram.org/api/profile#birthday) for more info.
-
-## Определение TL
+Подробнее см. [здесь »](/api/profile/#birthday).
 
 ```
 contacts.contactBirthdays#114ff30d contacts:Vector<ContactBirthday> users:Vector<User> = contacts.ContactBirthdays;
@@ -21,26 +19,26 @@ contacts.contactBirthdays#114ff30d contacts:Vector<ContactBirthday> users:Vector
 contacts.getBirthdays#daeda864 = contacts.ContactBirthdays;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [contacts.ContactBirthdays](/type/contacts.ContactBirthdays/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
 #### [user](/constructor/user/)
 
-Indicates info about a certain user.
+Содержит сведения об определённом пользователе.
 
-Unless specified otherwise, when updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+Если не указано иное, при обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-See [here »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) for an implementation of the logic to use when updating the [local user peer database](https://core.telegram.org/api/peers).
+См. [здесь »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) реализацию логики, которую следует применять при обновлении [локальной базы пиров-пользователей](/api/peers/).
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

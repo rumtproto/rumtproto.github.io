@@ -1,18 +1,15 @@
 ---
-title: "account.confirmPhone (метод)"
+title: "account.confirmPhone"
 original: "https://core.telegram.org/method/account.confirmPhone"
 section: ref
 kind: method
+description: "Подтвердить номер телефона, чтобы отменить удаление аккаунта; подробнее см. здесь »"
 layout: layout.njk
 ---
 
 # account.confirmPhone
 
-*Метод из схемы TL.*
-
-> Confirm a phone number to cancel account deletion, for more info [click here »](https://core.telegram.org/api/account-deletion)
-
-## Определение TL
+Подтвердить номер телефона, чтобы отменить удаление аккаунта; подробнее [см. здесь »](/api/account-deletion/)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,28 +18,22 @@ boolTrue#997275b5 = Bool;
 account.confirmPhone#5f2178c3 phone_code_hash:string phone_code:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_code_hash | [string](/type/string/) | Phone code hash, for more info [click here »](https://core.telegram.org/api/account-deletion) |
-| phone_code | [string](/type/string/) | SMS code, for more info [click here »](https://core.telegram.org/api/account-deletion) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш телефонного кода, подробнее <a href="/api/account-deletion">см. здесь »</a></td></tr><tr><td><strong>phone_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>SMS-код, подробнее <a href="/api/account-deletion">см. здесь »</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CODE_HASH_INVALID | Code hash invalid. |
-| 400 | PHONE_CODE_EMPTY | phone_code is missing. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CODE_HASH_INVALID</td><td>Недействительный хеш кода.</td></tr><tr><td>400</td><td>PHONE_CODE_EMPTY</td><td>Отсутствует phone_code.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Account deletion](https://core.telegram.org/api/account-deletion)
+#### [Удаление аккаунта](/api/account-deletion/)
 
-How to reset an account if the 2FA password was forgotten.
+Как сбросить аккаунт, если пароль двухфакторной аутентификации забыт.

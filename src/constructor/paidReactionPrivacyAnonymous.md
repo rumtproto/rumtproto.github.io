@@ -1,27 +1,24 @@
 ---
-title: "paidReactionPrivacyAnonymous (конструктор)"
+title: "paidReactionPrivacyAnonymous"
 original: "https://core.telegram.org/constructor/paidReactionPrivacyAnonymous"
 section: ref
 kind: constructor
+description: "Отправить платные реакции анонимно."
 layout: layout.njk
 ---
 
 # paidReactionPrivacyAnonymous
 
-*Конструктор из схемы TL.*
-
-> Send paid reactions anonymously.
-
-## Определение TL
+Отправить платные реакции анонимно.
 
 ```
 paidReactionPrivacyAnonymous#1f0c1ad9 = PaidReactionPrivacy;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PaidReactionPrivacy](/type/PaidReactionPrivacy/)

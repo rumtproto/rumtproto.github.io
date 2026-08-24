@@ -1,35 +1,30 @@
 ---
-title: "inputChatlistDialogFilter (конструктор)"
+title: "inputChatlistDialogFilter"
 original: "https://core.telegram.org/constructor/inputChatlistDialogFilter"
 section: ref
 kind: constructor
+description: "Идентификатор папки"
 layout: layout.njk
 ---
 
 # inputChatlistDialogFilter
 
-*Конструктор из схемы TL.*
-
-> Folder ID
-
-## Определение TL
+Идентификатор папки
 
 ```
 inputChatlistDialogFilter#f3e0da33 filter_id:int = InputChatlist;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| filter_id | [int](/type/int/) | [Folder](https://core.telegram.org/api/folders) ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>filter_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор <a href="/api/folders">папки</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputChatlist](/type/InputChatlist/)
 
-## Related pages
+### Связанные страницы
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.

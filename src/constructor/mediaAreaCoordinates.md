@@ -1,35 +1,24 @@
 ---
-title: "mediaAreaCoordinates (конструктор)"
+title: "mediaAreaCoordinates"
 original: "https://core.telegram.org/constructor/mediaAreaCoordinates"
 section: ref
 kind: constructor
+description: "Координаты и размер кликабельной прямоугольной области поверх истории."
 layout: layout.njk
 ---
 
 # mediaAreaCoordinates
 
-*Конструктор из схемы TL.*
-
-> Coordinates and size of a clickable rectangular area on top of a story.
-
-## Определение TL
+Координаты и размер кликабельной прямоугольной области поверх истории.
 
 ```
 mediaAreaCoordinates#cfc9e002 flags:# x:double y:double w:double h:double rotation:double radius:flags.0?double = MediaAreaCoordinates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| x | [double](/type/double/) | The abscissa of the rectangle's center, as a percentage of the media width (0-100). |
-| y | [double](/type/double/) | The ordinate of the rectangle's center, as a percentage of the media height (0-100). |
-| w | [double](/type/double/) | The width of the rectangle, as a percentage of the media width (0-100). |
-| h | [double](/type/double/) | The height of the rectangle, as a percentage of the media height (0-100). |
-| rotation | [double](/type/double/) | Clockwise rotation angle of the rectangle, in degrees (0-360). |
-| radius | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[double](/type/double/) | The radius of the rectangle corner rounding, as a percentage of the media width. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>x</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Абсцисса центра прямоугольника в процентах от ширины медиафайла (0-100).</td></tr><tr><td><strong>y</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Ордината центра прямоугольника в процентах от высоты медиафайла (0-100).</td></tr><tr><td><strong>w</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Ширина прямоугольника в процентах от ширины медиафайла (0-100).</td></tr><tr><td><strong>h</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Высота прямоугольника в процентах от высоты медиафайла (0-100).</td></tr><tr><td><strong>rotation</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Угол поворота прямоугольника по часовой стрелке в градусах (0-360).</td></tr><tr><td><strong>radius</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/double">double</a></td><td>Радиус скругления углов прямоугольника в процентах от ширины медиа.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MediaAreaCoordinates](/type/MediaAreaCoordinates/)

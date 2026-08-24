@@ -1,27 +1,24 @@
 ---
-title: "updateReadFeaturedStickers (конструктор)"
+title: "updateReadFeaturedStickers"
 original: "https://core.telegram.org/constructor/updateReadFeaturedStickers"
 section: ref
 kind: constructor
+description: "Некоторые рекомендуемые стикеры были отмечены как прочитанные"
 layout: layout.njk
 ---
 
 # updateReadFeaturedStickers
 
-*Конструктор из схемы TL.*
-
-> Some featured stickers were marked as read
-
-## Определение TL
+Некоторые рекомендуемые стикеры были отмечены как прочитанные
 
 ```
 updateReadFeaturedStickers#571d2742 = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

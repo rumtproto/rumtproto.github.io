@@ -1,35 +1,30 @@
 ---
-title: "inputInvoiceChatInviteSubscription (конструктор)"
+title: "inputInvoiceChatInviteSubscription"
 original: "https://core.telegram.org/constructor/inputInvoiceChatInviteSubscription"
 section: ref
 kind: constructor
+description: "Используется для оплаты подписки за Telegram Stars »."
 layout: layout.njk
 ---
 
 # inputInvoiceChatInviteSubscription
 
-*Конструктор из схемы TL.*
-
-> Used to pay for a [Telegram Star subscription »](https://core.telegram.org/api/stars#star-subscriptions).
-
-## Определение TL
+Используется для оплаты [подписки за Telegram Stars »](/api/stars/#star-subscriptions).
 
 ```
 inputInvoiceChatInviteSubscription#34e793f1 hash:string = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [string](/type/string/) | The [invitation link of the Telegram Star subscription »](https://core.telegram.org/api/stars#star-subscriptions) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:hash] <a href="/api/stars#star-subscriptions">Пригласительная ссылка подписки за Telegram Stars »</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

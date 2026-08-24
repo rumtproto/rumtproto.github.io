@@ -1,43 +1,37 @@
 ---
-title: "inputPeerChannel (конструктор)"
+title: "inputPeerChannel"
 original: "https://core.telegram.org/constructor/inputPeerChannel"
 section: ref
 kind: constructor
+description: "Определяет канал для дальнейшего взаимодействия."
 layout: layout.njk
 ---
 
 # inputPeerChannel
 
-*Конструктор из схемы TL.*
-
-> Defines a channel for further interaction.
-
-## Определение TL
+Определяет канал для дальнейшего взаимодействия.
 
 ```
 inputPeerChannel#27bcbbfc channel_id:long access_hash:long = InputPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel_id | [long](/type/long/) | Channel identifier |
-| access_hash | [long](/type/long/) | access_hash value from the [channel](/constructor/channel/) constructor |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор канала</td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:access_hash] Значение <strong>access_hash</strong> из конструктора <a href="/constructor/channel">channel</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputPeer](/type/InputPeer/)
 
-## Related pages
+### Связанные страницы
 
 #### [channel](/constructor/channel/)
 
-Channel/supergroup info
+Информация о канале или супергруппе
 
-When updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-The only exception to the above rule is when the `min` flag is set, in which case **only** the following fields must be applied over any locally stored version:
+[@term:min] Единственное исключение из приведённого выше правила — установленный флаг `min`: в этом случае поверх локально сохранённой версии обязаны применяться **только** следующие поля:
 
 -   `title`
 -   `megagroup`
@@ -64,10 +58,10 @@ The only exception to the above rule is when the `min` flag is set, in which cas
 -   `signature_profiles`
 -   `autotranslation`
 -   `broadcast_messages_allowed`
--   `monoforum`
+-   [@term:monoforum] `monoforum`
 -   `forum_tabs`
 -   `linked_monoforum_id`
 -   `send_paid_messages_stars`
 -   `bot_verification_icon`
 
-See [here »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176) for an implementation of the logic to use when updating the [local channel peer database](https://core.telegram.org/api/peers).
+См. [здесь »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176) реализацию логики, которую следует применять при обновлении [локальной базы пиров-каналов](/api/peers/).

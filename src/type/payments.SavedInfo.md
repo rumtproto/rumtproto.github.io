@@ -1,18 +1,15 @@
 ---
-title: "Payments.SavedInfo (тип)"
+title: "payments.SavedInfo"
 original: "https://core.telegram.org/type/payments.SavedInfo"
 section: ref
 kind: type
+description: "Сохранённые платёжные данные"
 layout: layout.njk
 ---
 
 # Payments.SavedInfo
 
-*Тип из схемы TL.*
-
-> Saved payment info
-
-## Определение TL
+Сохранённые платёжные данные
 
 ```
 payments.savedInfo#fb8fe43c flags:# has_saved_credentials:flags.1?true saved_info:flags.0?PaymentRequestedInfo = payments.SavedInfo;
@@ -22,14 +19,10 @@ payments.savedInfo#fb8fe43c flags:# has_saved_credentials:flags.1?true saved_inf
 payments.getSavedInfo#227d824b = payments.SavedInfo;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.savedInfo](/constructor/payments.savedInfo/) | Saved server-side order information |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.savedInfo">payments.savedInfo</a></td><td>Сохранённые на сервере сведения о заказе</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getSavedInfo](/method/payments.getSavedInfo/) | Get saved payment information |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getSavedInfo">payments.getSavedInfo</a></td><td>Получить сохранённые платёжные данные</td></tr></tbody></table>

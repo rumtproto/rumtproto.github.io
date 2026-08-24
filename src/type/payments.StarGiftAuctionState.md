@@ -1,18 +1,15 @@
 ---
-title: "Payments.StarGiftAuctionState (тип)"
+title: "payments.StarGiftAuctionState"
 original: "https://core.telegram.org/type/payments.StarGiftAuctionState"
 section: ref
 kind: type
+description: "Описывает аукцион коллекционных подарков »."
 layout: layout.njk
 ---
 
 # Payments.StarGiftAuctionState
 
-*Тип из схемы TL.*
-
-> Describes a [collectible gift auction »](https://core.telegram.org/api/auctions).
-
-## Определение TL
+Описывает [аукцион коллекционных подарков »](/api/auctions/).
 
 ```
 payments.starGiftAuctionState#6b39f4ec gift:StarGift state:StarGiftAuctionState user_state:StarGiftAuctionUserState timeout:int users:Vector<User> chats:Vector<Chat> = payments.StarGiftAuctionState;
@@ -22,20 +19,16 @@ payments.starGiftAuctionState#6b39f4ec gift:StarGift state:StarGiftAuctionState 
 payments.getStarGiftAuctionState#5c9ff4d6 auction:InputStarGiftAuction version:int = payments.StarGiftAuctionState;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.starGiftAuctionState](/constructor/payments.starGiftAuctionState/) | Describes a [collectible gift auction »](https://core.telegram.org/api/auctions). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.starGiftAuctionState">payments.starGiftAuctionState</a></td><td>Описывает <a href="/api/auctions">аукцион коллекционных подарков »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.getStarGiftAuctionState](/method/payments.getStarGiftAuctionState/) | Returns info about a [collectible gift auction »](https://core.telegram.org/api/auctions); also subscribes the user to auction updates, see [here »](https://core.telegram.org/api/auctions) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.getStarGiftAuctionState">payments.getStarGiftAuctionState</a></td><td>Возвращает информацию об <a href="/api/auctions">аукционе коллекционных подарков »</a>, а также подписывает пользователя на обновления аукциона; подробнее о полном процессе см. <a href="/api/auctions">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

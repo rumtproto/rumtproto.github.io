@@ -1,18 +1,15 @@
 ---
-title: "messages.ChatFull (тип)"
+title: "messages.ChatFull"
 original: "https://core.telegram.org/type/messages.ChatFull"
 section: ref
 kind: type
+description: "Полная информация о канале, супергруппе, гигагруппе или обычной группе."
 layout: layout.njk
 ---
 
 # messages.ChatFull
 
-*Тип из схемы TL.*
-
-> Full info about a [channel](https://core.telegram.org/api/channel#channels), [supergroup](https://core.telegram.org/api/channel#supergroups), [gigagroup](https://core.telegram.org/api/channel#gigagroups) or [basic group](https://core.telegram.org/api/channel#basic-groups).
-
-## Определение TL
+Полная информация о [канале](/api/channel/#channels), [супергруппе](/api/channel/#supergroups), [гигагруппе](/api/channel/#gigagroups) или [обычной группе](/api/channel/#basic-groups).
 
 ```
 messages.chatFull#e5d7d19c full_chat:ChatFull chats:Vector<Chat> users:Vector<User> = messages.ChatFull;
@@ -24,21 +21,16 @@ messages.getFullChat#aeb00b34 chat_id:long = messages.ChatFull;
 channels.getFullChannel#8736a09 channel:InputChannel = messages.ChatFull;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.chatFull](/constructor/messages.chatFull/) | Full info about a [channel](https://core.telegram.org/api/channel#channels), [supergroup](https://core.telegram.org/api/channel#supergroups), [gigagroup](https://core.telegram.org/api/channel#gigagroups) or [basic group](https://core.telegram.org/api/channel#basic-groups). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.chatFull">messages.chatFull</a></td><td>Полная информация о <a href="/api/channel#channels">канале</a>, <a href="/api/channel#supergroups">супергруппе</a>, <a href="/api/channel#gigagroups">гигагруппе</a> или <a href="/api/channel#basic-groups">обычной группе</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getFullChat](/method/messages.getFullChat/) | Get full info about a [basic group](https://core.telegram.org/api/channel#basic-groups). |
-| [channels.getFullChannel](/method/channels.getFullChannel/) | Get full info about a [supergroup](https://core.telegram.org/api/channel#supergroups), [gigagroup](https://core.telegram.org/api/channel#gigagroups) or [channel](https://core.telegram.org/api/channel#channels) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getFullChat">messages.getFullChat</a></td><td>Получить полную информацию об <a href="/api/channel#basic-groups">обычной группе</a>.</td></tr><tr><td><a href="/method/channels.getFullChannel">channels.getFullChannel</a></td><td>Получить полную информацию о <a href="/api/channel#supergroups">супергруппе</a>, <a href="/api/channel#gigagroups">гигагруппе</a> или <a href="/api/channel#channels">канале</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

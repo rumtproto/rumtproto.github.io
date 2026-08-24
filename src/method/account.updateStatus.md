@@ -1,18 +1,15 @@
 ---
-title: "account.updateStatus (метод)"
+title: "account.updateStatus"
 original: "https://core.telegram.org/method/account.updateStatus"
 section: ref
 kind: method
+description: "Обновляет статус присутствия пользователя в сети."
 layout: layout.njk
 ---
 
 # account.updateStatus
 
-*Метод из схемы TL.*
-
-> Updates online user status.
-
-## Определение TL
+Обновляет статус присутствия пользователя в сети.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,24 +18,22 @@ boolTrue#997275b5 = Bool;
 account.updateStatus#6628562c offline:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| offline | [Bool](/type/Bool/) | If [(boolTrue)](/constructor/boolTrue/) is transmitted, user status will change to [(userStatusOffline)](/constructor/userStatusOffline/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>offline</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Если передано <a href="/constructor/boolTrue">(boolTrue)</a>, статус пользователя изменится на <a href="/constructor/userStatusOffline">(userStatusOffline)</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
 #### [boolTrue](/constructor/boolTrue/)
 
-The constructor can be interpreted as a **boolean**`true` value.
+Конструктор можно трактовать как **логическое** значение `true`.
 
 #### [userStatusOffline](/constructor/userStatusOffline/)
 
-The user's offline status.
+Статус пользователя «не в сети».

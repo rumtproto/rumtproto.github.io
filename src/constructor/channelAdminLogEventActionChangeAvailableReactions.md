@@ -1,36 +1,30 @@
 ---
-title: "channelAdminLogEventActionChangeAvailableReactions (конструктор)"
+title: "channelAdminLogEventActionChangeAvailableReactions"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionChangeAvailableReactions"
 section: ref
 kind: constructor
+description: "Набор разрешённых реакций на сообщения » для этого канала изменился"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionChangeAvailableReactions
 
-*Конструктор из схемы TL.*
-
-> The set of allowed [message reactions »](https://core.telegram.org/api/reactions) for this channel has changed
-
-## Определение TL
+Набор разрешённых [реакций на сообщения »](/api/reactions/) для этого канала изменился
 
 ```
 channelAdminLogEventActionChangeAvailableReactions#be4e0ef8 prev_value:ChatReactions new_value:ChatReactions = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| prev_value | [ChatReactions](/type/ChatReactions/) | Previously allowed reaction emojis |
-| new_value | [ChatReactions](/type/ChatReactions/) | New allowed reaction emojis |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>prev_value</strong></td><td style="text-align: center;"><a href="/type/ChatReactions">ChatReactions</a></td><td>Ранее разрешённые эмодзи-реакции</td></tr><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/ChatReactions">ChatReactions</a></td><td>Новые разрешённые эмодзи реакций</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

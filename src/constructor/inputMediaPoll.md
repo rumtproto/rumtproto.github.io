@@ -1,41 +1,30 @@
 ---
-title: "inputMediaPoll (конструктор)"
+title: "inputMediaPoll"
 original: "https://core.telegram.org/constructor/inputMediaPoll"
 section: ref
 kind: constructor
+description: "Опрос"
 layout: layout.njk
 ---
 
 # inputMediaPoll
 
-*Конструктор из схемы TL.*
-
-> A poll
-
-## Определение TL
+Опрос
 
 ```
 inputMediaPoll#f94e5f1 flags:# poll:Poll correct_answers:flags.0?Vector<bytes> solution:flags.1?string solution_entities:flags.1?Vector<MessageEntity> = InputMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| poll | [Poll](/type/Poll/) | The poll to send |
-| correct_answers | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | 0-based indices of the correct answers in the answers vector (for quiz polls) |
-| attached_media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[InputMedia](/type/InputMedia/) | Optional media attachment to display alongside the poll |
-| solution | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Text that is shown when a user chooses an incorrect answer or taps on the lamp icon in a quiz-style poll, 0-200 characters with at most 2 line feeds. |
-| solution_entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Styled text message entities](https://core.telegram.org/api/entities) for the solution explanation. |
-| solution_media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[InputMedia](/type/InputMedia/) | Optional media attachment shown alongside the quiz solution explanation |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>poll</strong></td><td style="text-align: center;"><a href="/type/Poll">Poll</a></td><td>Опрос, который нужно отправить</td></tr><tr><td><strong>correct_answers</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Отсчитываемые от нуля индексы правильных ответов в векторе <code>answers</code> (для викторин)</td></tr><tr><td><strong>attached_media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/InputMedia">InputMedia</a></td><td>Необязательное вложение для отображения рядом с опросом</td></tr><tr><td><strong>solution</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Текст, который показывается, когда пользователь выбирает неверный ответ или нажимает на значок лампочки в опросе-викторине, 0–200 символов, не более 2 переводов строки.</td></tr><tr><td><strong>solution_entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления текста</a> для пояснения в поле <code>solution</code>.</td></tr><tr><td><strong>solution_media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/InputMedia">InputMedia</a></td><td>Необязательное медиавложение, показываемое рядом с пояснением к ответу на викторину</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputMedia](/type/InputMedia/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

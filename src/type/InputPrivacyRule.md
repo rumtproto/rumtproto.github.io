@@ -1,19 +1,17 @@
 ---
-title: "InputPrivacyRule (тип)"
+title: "InputPrivacyRule"
 original: "https://core.telegram.org/type/InputPrivacyRule"
 section: ref
 kind: type
+description: "**Правила** приватности указывают, _кто_ может и кто не может что-либо делать; они задаются типом PrivacyRule и его входным аналогом InputPrivacyRule."
 layout: layout.njk
 ---
 
 # InputPrivacyRule
 
-*Тип из схемы TL.*
+**Правила** приватности указывают, _кто_ может и кто не может что-либо делать; они задаются типом [PrivacyRule](/type/PrivacyRule/) и его входным аналогом [InputPrivacyRule](/type/InputPrivacyRule/).
 
-> Privacy **rules** indicate _who_ can or can't do something and are specified by a [PrivacyRule](/type/PrivacyRule/), and its input counterpart [InputPrivacyRule](/type/InputPrivacyRule/).
-> See the [privacy documentation »](https://core.telegram.org/api/privacy) for more info.
-
-## Определение TL
+Подробнее см. [документацию по приватности »](/api/privacy/).
 
 ```
 inputPrivacyValueAllowContacts#d09e07b = InputPrivacyRule;
@@ -30,37 +28,24 @@ inputPrivacyValueAllowBots#5a4fcce5 = InputPrivacyRule;
 inputPrivacyValueDisallowBots#c4e57915 = InputPrivacyRule;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputPrivacyValueAllowContacts](/constructor/inputPrivacyValueAllowContacts/) | Allow only contacts |
-| [inputPrivacyValueAllowAll](/constructor/inputPrivacyValueAllowAll/) | Allow all users |
-| [inputPrivacyValueAllowUsers](/constructor/inputPrivacyValueAllowUsers/) | Allow only certain users |
-| [inputPrivacyValueDisallowContacts](/constructor/inputPrivacyValueDisallowContacts/) | Disallow only contacts |
-| [inputPrivacyValueDisallowAll](/constructor/inputPrivacyValueDisallowAll/) | Disallow all |
-| [inputPrivacyValueDisallowUsers](/constructor/inputPrivacyValueDisallowUsers/) | Disallow only certain users |
-| [inputPrivacyValueAllowChatParticipants](/constructor/inputPrivacyValueAllowChatParticipants/) | Allow only participants of certain chats |
-| [inputPrivacyValueDisallowChatParticipants](/constructor/inputPrivacyValueDisallowChatParticipants/) | Disallow only participants of certain chats |
-| [inputPrivacyValueAllowCloseFriends](/constructor/inputPrivacyValueAllowCloseFriends/) | Allow only [close friends »](https://core.telegram.org/api/privacy) |
-| [inputPrivacyValueAllowPremium](/constructor/inputPrivacyValueAllowPremium/) | Allow only users with a [Premium subscription »](https://core.telegram.org/api/premium), currently only usable for [inputPrivacyKeyChatInvite](/constructor/inputPrivacyKeyChatInvite/). |
-| [inputPrivacyValueAllowBots](/constructor/inputPrivacyValueAllowBots/) | Allow bots and mini apps |
-| [inputPrivacyValueDisallowBots](/constructor/inputPrivacyValueDisallowBots/) | Disallow bots and mini apps |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputPrivacyValueAllowContacts">inputPrivacyValueAllowContacts</a></td><td>Разрешить только контактам</td></tr><tr><td><a href="/constructor/inputPrivacyValueAllowAll">inputPrivacyValueAllowAll</a></td><td>Разрешить всем пользователям</td></tr><tr><td><a href="/constructor/inputPrivacyValueAllowUsers">inputPrivacyValueAllowUsers</a></td><td>Разрешить только определённым пользователям</td></tr><tr><td><a href="/constructor/inputPrivacyValueDisallowContacts">inputPrivacyValueDisallowContacts</a></td><td>Запретить только контактам</td></tr><tr><td><a href="/constructor/inputPrivacyValueDisallowAll">inputPrivacyValueDisallowAll</a></td><td>Запретить всем</td></tr><tr><td><a href="/constructor/inputPrivacyValueDisallowUsers">inputPrivacyValueDisallowUsers</a></td><td>Запретить только определённым пользователям</td></tr><tr><td><a href="/constructor/inputPrivacyValueAllowChatParticipants">inputPrivacyValueAllowChatParticipants</a></td><td>Разрешить только участникам определённых чатов</td></tr><tr><td><a href="/constructor/inputPrivacyValueDisallowChatParticipants">inputPrivacyValueDisallowChatParticipants</a></td><td>Запретить только участникам определённых чатов</td></tr><tr><td><a href="/constructor/inputPrivacyValueAllowCloseFriends">inputPrivacyValueAllowCloseFriends</a></td><td>Разрешить только <a href="/api/privacy">близким друзьям »</a></td></tr><tr><td><a href="/constructor/inputPrivacyValueAllowPremium">inputPrivacyValueAllowPremium</a></td><td>Разрешить только пользователям с <a href="/api/premium">подпиской Premium »</a>; в настоящее время применимо только для <a href="/constructor/inputPrivacyKeyChatInvite">inputPrivacyKeyChatInvite</a>.</td></tr><tr><td><a href="/constructor/inputPrivacyValueAllowBots">inputPrivacyValueAllowBots</a></td><td>[@term:Mini App] Разрешить ботам и mini app</td></tr><tr><td><a href="/constructor/inputPrivacyValueDisallowBots">inputPrivacyValueDisallowBots</a></td><td>Запретить ботам и мини-приложениям</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [PrivacyRule](/type/PrivacyRule/)
 
-Privacy **rules** together with [privacy keys](https://core.telegram.org/api/privacy#privacy-keys) indicate _what_ can or can't someone do and are specified by a [PrivacyRule](/type/PrivacyRule/) constructor, and its input counterpart [InputPrivacyRule](/type/InputPrivacyRule/).
+**Правила** приватности вместе с [ключами приватности](/api/privacy/#privacy-keys) указывают, _что_ можно и что нельзя делать; они задаются конструктором [PrivacyRule](/type/PrivacyRule/) и его входным аналогом [InputPrivacyRule](/type/InputPrivacyRule/).
 
-See the [privacy documentation »](https://core.telegram.org/api/privacy) for more info.
+Подробнее см. [документацию по приватности »](/api/privacy/).
 
 #### [InputPrivacyRule](/type/InputPrivacyRule/)
 
-Privacy **rules** indicate _who_ can or can't do something and are specified by a [PrivacyRule](/type/PrivacyRule/), and its input counterpart [InputPrivacyRule](/type/InputPrivacyRule/).
+**Правила** приватности указывают, _кто_ может и кто не может что-либо делать; они задаются типом [PrivacyRule](/type/PrivacyRule/) и его входным аналогом [InputPrivacyRule](/type/InputPrivacyRule/).
 
-See the [privacy documentation »](https://core.telegram.org/api/privacy) for more info.
+Подробнее см. [документацию по приватности »](/api/privacy/).
 
-#### [Privacy settings](https://core.telegram.org/api/privacy)
+#### [Настройки приватности](/api/privacy/)
 
-Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.
+Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным способом.

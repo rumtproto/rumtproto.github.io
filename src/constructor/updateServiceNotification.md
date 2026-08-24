@@ -1,47 +1,36 @@
 ---
-title: "updateServiceNotification (конструктор)"
+title: "updateServiceNotification"
 original: "https://core.telegram.org/constructor/updateServiceNotification"
 section: ref
 kind: constructor
+description: "Сервисное сообщение для пользователя."
 layout: layout.njk
 ---
 
 # updateServiceNotification
 
-*Конструктор из схемы TL.*
+Сервисное сообщение для пользователя.
 
-> A service message for the user.
-> The app must show the message to the user upon receiving this update. In case the **popup** parameter was passed, the text message must be displayed in a popup alert immediately upon receipt. It is recommended to handle the text as you would an ordinary message in terms of highlighting links, etc. The message must also be stored locally as part of the message history with the user id `777000` (Telegram Notifications).
-
-## Определение TL
+При получении этого обновления приложение обязано показать сообщение пользователю. Если был передан параметр **popup**, текст сообщения необходимо сразу же вывести во всплывающем окне. Текст рекомендуется обрабатывать так же, как обычное сообщение: подсвечивать ссылки и т. п. Кроме того, сообщение необходимо сохранить локально в истории переписки с пользователем `777000` (Telegram Notifications).
 
 ```
 updateServiceNotification#ebe46819 flags:# popup:flags.0?true invert_media:flags.2?true inbox_date:flags.1?int type:string message:string media:MessageMedia entities:Vector<MessageEntity> = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| popup | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, the message must be displayed in a popup. |
-| invert_media | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | If set, any eventual webpage preview will be shown on top of the message instead of at the bottom. |
-| inbox_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | When was the notification received The message must also be stored locally as part of the message history with the user id 777000 (Telegram Notifications). |
-| type | [string](/type/string/) | String, identical in format and contents to the [type](https://core.telegram.org/api/errors/#error-type) field in API errors. Describes type of service message. It is acceptable to ignore repeated messages of the same type within a short period of time (15 minutes). |
-| message | [string](/type/string/) | Message text |
-| media | [MessageMedia](/type/MessageMedia/) | Media content (optional) |
-| entities | [Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text](https://core.telegram.org/api/entities) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>popup</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, сообщение должно быть показано во всплывающем окне.</td></tr><tr><td><strong>invert_media</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Если задано, предпросмотр веб-страницы, если он будет, показывается над сообщением, а не под ним.</td></tr><tr><td><strong>inbox_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Когда было получено уведомление<br>Сообщение также должно храниться локально как часть истории переписки с пользователем с идентификатором <code>777000</code> (Telegram Notifications).</td></tr><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Строка, по формату и содержимому совпадающая с полем <a href="/api/errors#error-type"><strong>type</strong></a> в ошибках API. Описывает тип сервисного сообщения. Допускается игнорировать повторяющиеся сообщения одного и того же <strong>типа</strong> в течение короткого промежутка времени (15 минут).</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст сообщения</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/MessageMedia">MessageMedia</a></td><td>Содержимое медиа (необязательно)</td></tr><tr><td><strong>entities</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления для форматированного текста</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Error handling](/api/errors/)
+#### [Обработка ошибок](/api/errors/)
 
-How to handle API return errors correctly.
+Как правильно обрабатывать ошибки, возвращаемые API.
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

@@ -1,35 +1,30 @@
 ---
-title: "messages.historyImport (конструктор)"
+title: "messages.historyImport"
 original: "https://core.telegram.org/constructor/messages.historyImport"
 section: ref
 kind: constructor
+description: "Идентификатор конкретного сеанса импорта чата, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # messages.historyImport
 
-*Конструктор из схемы TL.*
-
-> ID of a specific [chat import session, click here for more info »](https://core.telegram.org/api/import).
-
-## Определение TL
+Идентификатор конкретного [сеанса импорта чата, подробнее см. здесь »](/api/import/).
 
 ```
 messages.historyImport#1662af0b id:long = messages.HistoryImport;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | [History import ID](https://core.telegram.org/api/import) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/import">Идентификатор импорта истории</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.HistoryImport](/type/messages.HistoryImport/)
 
-## Related pages
+### Связанные страницы
 
-#### [Imported messages](https://core.telegram.org/api/import)
+#### [Импортированные сообщения](/api/import/)
 
-Telegram allows importing messages and media from foreign chat apps.
+Telegram позволяет импортировать сообщения и медиа из сторонних мессенджеров.

@@ -1,29 +1,24 @@
 ---
-title: "pageBlockParagraph (конструктор)"
+title: "pageBlockParagraph"
 original: "https://core.telegram.org/constructor/pageBlockParagraph"
 section: ref
 kind: constructor
+description: "Абзац"
 layout: layout.njk
 ---
 
 # pageBlockParagraph
 
-*Конструктор из схемы TL.*
-
-> A paragraph
-
-## Определение TL
+Абзац
 
 ```
 pageBlockParagraph#467a0766 text:RichText = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [RichText](/type/RichText/) | Text |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Текст</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

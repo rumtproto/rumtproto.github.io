@@ -1,40 +1,34 @@
 ---
-title: "messageActionRequestedPeer (конструктор)"
+title: "messageActionRequestedPeer"
 original: "https://core.telegram.org/constructor/messageActionRequestedPeer"
 section: ref
 kind: constructor
+description: "Содержит информацию об одном или нескольких пирах, которыми мы (пользователь) поделились с ботом после нажатия кнопки keyboardButtonRequestPeer (сервисное сообщение, отправленное…"
 layout: layout.njk
 ---
 
 # messageActionRequestedPeer
 
-*Конструктор из схемы TL.*
-
-> Contains info about one or more peers that the we (the user) shared with the bot after clicking on a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button (service message sent by the user).
-
-## Определение TL
+Содержит информацию об одном или нескольких пирах, которыми мы (пользователь) поделились с ботом после нажатия кнопки [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) (сервисное сообщение, отправленное пользователем).
 
 ```
 messageActionRequestedPeer#31518e9b button_id:int peers:Vector<Peer> = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| button_id | [int](/type/int/) | button_id contained in the [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) |
-| peers | [Vector](https://core.telegram.org/type/Vector%20t)<[Peer](/type/Peer/)> | The shared peers |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>button_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><code>button_id</code>, содержащийся в <a href="/constructor/keyboardButtonRequestPeer">keyboardButtonRequestPeer</a></td></tr><tr><td><strong>peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Peer">Peer</a>&gt;</td><td>Переданные пиры</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
 #### [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/)
 
-Prompts the user to select and share one or more peers with the bot using [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/)
+Предлагает пользователю выбрать одного или нескольких пиров и передать их боту с помощью [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/)
 
-Available only in private chats, in [reply keyboards](/constructor/replyKeyboardMarkup/).
+Доступно только в личных чатах, в [клавиатурах ответа](/constructor/replyKeyboardMarkup/).
 
-See [peer requests](https://core.telegram.org/api/bots/buttons#peer-requests) for the full flow.
+Полное описание процесса см. в разделе [запросы пиров](/api/bots/buttons/#peer-requests).

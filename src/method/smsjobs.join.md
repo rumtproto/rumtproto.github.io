@@ -1,18 +1,15 @@
 ---
-title: "smsjobs.join (метод)"
+title: "smsjobs.join"
 original: "https://core.telegram.org/method/smsjobs.join"
 section: ref
 kind: method
+description: "Включить задания на отправку SMS (только для официальных клиентов)."
 layout: layout.njk
 ---
 
 # smsjobs.join
 
-*Метод из схемы TL.*
-
-> Enable SMS jobs (official clients only).
-
-## Определение TL
+Включить задания на отправку SMS (только для официальных клиентов).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,18 +18,16 @@ boolTrue#997275b5 = Bool;
 smsjobs.join#a74ece2d = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | NOT_ELIGIBLE | The current user is not eligible to join the Peer-to-Peer Login Program. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>NOT_ELIGIBLE</td><td>Текущий пользователь не может присоединиться к Peer-to-Peer Login Program.</td></tr></tbody></table>

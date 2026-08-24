@@ -1,27 +1,24 @@
 ---
-title: "secureValueTypePersonalDetails (конструктор)"
+title: "secureValueTypePersonalDetails"
 original: "https://core.telegram.org/constructor/secureValueTypePersonalDetails"
 section: ref
 kind: constructor
+description: "Личные данные"
 layout: layout.njk
 ---
 
 # secureValueTypePersonalDetails
 
-*Конструктор из схемы TL.*
-
-> Personal details
-
-## Определение TL
+Личные данные
 
 ```
 secureValueTypePersonalDetails#9d2a81e3 = SecureValueType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureValueType](/type/SecureValueType/)

@@ -1,35 +1,30 @@
 ---
-title: "messageExtendedMedia (конструктор)"
+title: "messageExtendedMedia"
 original: "https://core.telegram.org/constructor/messageExtendedMedia"
 section: ref
 kind: constructor
+description: "Уже оплаченное платное медиа; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # messageExtendedMedia
 
-*Конструктор из схемы TL.*
-
-> Already purchased paid media, [see here »](https://core.telegram.org/api/paid-media) for more info.
-
-## Определение TL
+Уже оплаченное платное медиа; подробнее [см. здесь »](/api/paid-media/).
 
 ```
 messageExtendedMedia#ee479c64 media:MessageMedia = MessageExtendedMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| media | [MessageMedia](/type/MessageMedia/) | The media we purchased. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/MessageMedia">MessageMedia</a></td><td>Приобретённый нами медиафайл.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageExtendedMedia](/type/MessageExtendedMedia/)
 
-## Related pages
+### Связанные страницы
 
-#### [Paid media](https://core.telegram.org/api/paid-media)
+#### [Платные медиа](/api/paid-media/)
 
-Content creators can accept Stars by publishing paid photos or videos on their channels. Subscribers will be allowed to view such posts only after paying the author to unlock them.
+Авторы контента могут принимать Stars, публикуя в своих каналах платные фотографии и видео. Подписчики смогут просмотреть такие посты, только заплатив автору за их разблокировку.

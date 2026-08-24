@@ -1,42 +1,39 @@
 ---
-title: "messageEntityStrike (конструктор)"
+title: "messageEntityStrike"
 original: "https://core.telegram.org/constructor/messageEntityStrike"
 section: ref
 kind: constructor
+description: "Сущность оформления, представляющая зачёркнутый текст."
 layout: layout.njk
 ---
 
 # messageEntityStrike
 
-*Конструктор из схемы TL.*
+Сущность оформления, представляющая зачёркнутый текст.
 
-> Message entity representing strikethrough text.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===101===
-> messageEntityStrike#bf0693d4 offset:int length:int = MessageEntity;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===101===
+messageEntityStrike#bf0693d4 offset:int length:int = MessageEntity;
+```
+
+#### Схема API
 
 ```
 messageEntityStrike#bf0693d4 offset:int length:int = MessageEntity;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| offset | [int](/type/int/) | Offset of message entity within message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)) |
-| length | [int](/type/int/) | Length of message entity within message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Смещение сущности оформления в сообщении (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>)</td></tr><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Длина сущности оформления в сообщении (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageEntity](/type/MessageEntity/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

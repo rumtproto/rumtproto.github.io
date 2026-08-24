@@ -1,18 +1,15 @@
 ---
-title: "StarRefProgram (тип)"
+title: "StarRefProgram"
 original: "https://core.telegram.org/type/StarRefProgram"
 section: ref
 kind: type
+description: "Информация о партнёрской программе, предлагаемой ботом"
 layout: layout.njk
 ---
 
 # StarRefProgram
 
-*Тип из схемы TL.*
-
-> Indo about an [affiliate program offered by a bot](https://core.telegram.org/api/bots/referrals)
-
-## Определение TL
+Информация о [партнёрской программе, предлагаемой ботом](/api/bots/referrals/)
 
 ```
 starRefProgram#dd0c66f2 flags:# bot_id:long commission_permille:int duration_months:flags.0?int end_date:flags.1?int daily_revenue_per_user:flags.2?StarsAmount = StarRefProgram;
@@ -22,20 +19,16 @@ starRefProgram#dd0c66f2 flags:# bot_id:long commission_permille:int duration_mon
 bots.updateStarRefProgram#778b5ab3 flags:# bot:InputUser commission_permille:int duration_months:flags.0?int = StarRefProgram;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starRefProgram](/constructor/starRefProgram/) | Info about an [affiliate program offered by a bot](https://core.telegram.org/api/bots/referrals) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starRefProgram">starRefProgram</a></td><td>Информация о <a href="/api/bots/referrals">партнёрской программе, предлагаемой ботом</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [bots.updateStarRefProgram](/method/bots.updateStarRefProgram/) | Create, edit or delete the [affiliate program](https://core.telegram.org/api/bots/referrals) of a bot we own |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/bots.updateStarRefProgram">bots.updateStarRefProgram</a></td><td>Создать, изменить или удалить <a href="/api/bots/referrals">партнёрскую программу</a> принадлежащего нам бота</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Affiliate programs](https://core.telegram.org/api/bots/referrals)
+#### [Партнёрские программы](/api/bots/referrals/)
 
-Developers can open affiliate programs for their mini app – allowing content creators, other mini app developers and any Telegram user to promote it and earn commissions on purchases made by people they referred.
+[@term:Mini App] Разработчики могут открывать партнёрские программы для своих mini app — это позволяет авторам контента, другим разработчикам mini app и любому пользователю Telegram продвигать приложение и получать комиссию с покупок, совершённых приведёнными ими людьми.

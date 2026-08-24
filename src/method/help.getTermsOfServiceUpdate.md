@@ -1,18 +1,15 @@
 ---
-title: "help.getTermsOfServiceUpdate (метод)"
+title: "help.getTermsOfServiceUpdate"
 original: "https://core.telegram.org/method/help.getTermsOfServiceUpdate"
 section: ref
 kind: method
+description: "Проверить наличие обновлений условий использования Telegram"
 layout: layout.njk
 ---
 
 # help.getTermsOfServiceUpdate
 
-*Метод из схемы TL.*
-
-> Look for updates of telegram's terms of service
-
-## Определение TL
+Проверить наличие обновлений условий использования Telegram
 
 ```
 help.termsOfServiceUpdateEmpty#e3309f7f expires:int = help.TermsOfServiceUpdate;
@@ -21,12 +18,12 @@ help.termsOfServiceUpdate#28ecf961 expires:int terms_of_service:help.TermsOfServ
 help.getTermsOfServiceUpdate#2ca51fd1 = help.TermsOfServiceUpdate;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [help.TermsOfServiceUpdate](/type/help.TermsOfServiceUpdate/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

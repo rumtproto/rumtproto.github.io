@@ -1,41 +1,34 @@
 ---
-title: "secureValueErrorReverseSide (конструктор)"
+title: "secureValueErrorReverseSide"
 original: "https://core.telegram.org/constructor/secureValueErrorReverseSide"
 section: ref
 kind: constructor
+description: "Представляет проблему с обратной стороной документа. Ошибка считается устранённой, когда файл с обратной стороной документа меняется."
 layout: layout.njk
 ---
 
 # secureValueErrorReverseSide
 
-*Конструктор из схемы TL.*
-
-> Represents an issue with the reverse side of a document. The error is considered resolved when the file with reverse side of the document changes.
-
-## Определение TL
+Представляет проблему с обратной стороной документа. Ошибка считается устранённой, когда файл с обратной стороной документа меняется.
 
 ```
 secureValueErrorReverseSide#868a2aa5 type:SecureValueType file_hash:bytes text:string = SecureValueError;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| type | [SecureValueType](/type/SecureValueType/) | One of [secureValueTypeDriverLicense](/constructor/secureValueTypeDriverLicense/), [secureValueTypeIdentityCard](/constructor/secureValueTypeIdentityCard/) |
-| file_hash | [bytes](/type/bytes/) | File hash |
-| text | [string](/type/string/) | Error message |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/SecureValueType">SecureValueType</a></td><td>Одно из значений: <a href="/constructor/secureValueTypeDriverLicense">secureValueTypeDriverLicense</a>, <a href="/constructor/secureValueTypeIdentityCard">secureValueTypeIdentityCard</a></td></tr><tr><td><strong>file_hash</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Хеш файла</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст ошибки</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SecureValueError](/type/SecureValueError/)
 
-## Related pages
+### Связанные страницы
 
 #### [secureValueTypeDriverLicense](/constructor/secureValueTypeDriverLicense/)
 
-Driver's license
+Водительское удостоверение
 
 #### [secureValueTypeIdentityCard](/constructor/secureValueTypeIdentityCard/)
 
-Identity card
+Удостоверение личности

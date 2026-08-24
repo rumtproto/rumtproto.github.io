@@ -1,29 +1,24 @@
 ---
-title: "updatePhoneCall (конструктор)"
+title: "updatePhoneCall"
 original: "https://core.telegram.org/constructor/updatePhoneCall"
 section: ref
 kind: constructor
+description: "Входящий телефонный звонок"
 layout: layout.njk
 ---
 
 # updatePhoneCall
 
-*Конструктор из схемы TL.*
-
-> An incoming phone call
-
-## Определение TL
+Входящий телефонный звонок
 
 ```
 updatePhoneCall#ab0f6b1e phone_call:PhoneCall = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_call | [PhoneCall](/type/PhoneCall/) | Phone call |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_call</strong></td><td style="text-align: center;"><a href="/type/PhoneCall">PhoneCall</a></td><td>Телефонный звонок</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)

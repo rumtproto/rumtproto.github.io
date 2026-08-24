@@ -1,18 +1,15 @@
 ---
-title: "payments.applyGiftCode (метод)"
+title: "payments.applyGiftCode"
 original: "https://core.telegram.org/method/payments.applyGiftCode"
 section: ref
 kind: method
+description: "Активировать подарочный код Telegram Premium »"
 layout: layout.njk
 ---
 
 # payments.applyGiftCode
 
-*Метод из схемы TL.*
-
-> Apply a [Telegram Premium giftcode »](https://core.telegram.org/api/giveaways)
-
-## Определение TL
+Активировать [подарочный код Telegram Premium »](/api/giveaways/)
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,28 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 payments.applyGiftCode#f6e26854 slug:string = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| slug | [string](/type/string/) | The code to apply |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Код, который требуется применить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GIFT_SLUG_EXPIRED | The specified gift slug has expired. |
-| 400 | GIFT_SLUG_INVALID | The specified slug is invalid. |
-| 420 | PREMIUM_SUB_ACTIVE_UNTIL_%d | You already have a premium subscription active until unixtime %d . |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GIFT_SLUG_EXPIRED</td><td>Срок действия указанного слага подарка истёк.</td></tr><tr><td>400</td><td>GIFT_SLUG_INVALID</td><td>Указанный слаг недействителен.</td></tr><tr><td>420</td><td>PREMIUM_SUB_ACTIVE_UNTIL_%d</td><td>У вас уже есть подписка Premium, действующая до unixtime %d .</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

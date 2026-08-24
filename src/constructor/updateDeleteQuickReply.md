@@ -1,39 +1,34 @@
 ---
-title: "updateDeleteQuickReply (конструктор)"
+title: "updateDeleteQuickReply"
 original: "https://core.telegram.org/constructor/updateDeleteQuickReply"
 section: ref
 kind: constructor
+description: "Шаблон быстрого ответа » был удалён. Это **не** вызовет обновлений updateDeleteQuickReplyMessages, даже если этим обновлением удаляются и все сообщения шаблона."
 layout: layout.njk
 ---
 
 # updateDeleteQuickReply
 
-*Конструктор из схемы TL.*
-
-> A [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts) was deleted. This will **not** emit [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/) updates, even if all the messages in the shortcut are also deleted by this update.
-
-## Определение TL
+[Шаблон быстрого ответа »](/api/business/#quick-reply-shortcuts) был удалён. Это **не** вызовет обновлений [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/), даже если этим обновлением удаляются и все сообщения шаблона.
 
 ```
 updateDeleteQuickReply#53e6f1ec shortcut_id:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| shortcut_id | [int](/type/int/) | ID of the quick reply shortcut that was deleted. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор удалённого шаблона быстрого ответа.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.
 
 #### [updateDeleteQuickReplyMessages](/constructor/updateDeleteQuickReplyMessages/)
 
-One or more messages in a [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts) were deleted.
+Одно или несколько сообщений в [шаблоне быстрого ответа »](/api/business/#quick-reply-shortcuts) были удалены.

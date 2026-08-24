@@ -1,27 +1,24 @@
 ---
-title: "inputStickerSetTonGifts (конструктор)"
+title: "inputStickerSetTonGifts"
 original: "https://core.telegram.org/constructor/inputStickerSetTonGifts"
 section: ref
 kind: constructor
+description: "Набор стикеров для подарков TON."
 layout: layout.njk
 ---
 
 # inputStickerSetTonGifts
 
-*Конструктор из схемы TL.*
-
-> TON gifts stickerset.
-
-## Определение TL
+Набор стикеров для подарков TON.
 
 ```
 inputStickerSetTonGifts#1cf671a0 = InputStickerSet;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputStickerSet](/type/InputStickerSet/)

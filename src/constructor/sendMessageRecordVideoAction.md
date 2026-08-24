@@ -1,33 +1,33 @@
 ---
-title: "sendMessageRecordVideoAction (конструктор)"
+title: "sendMessageRecordVideoAction"
 original: "https://core.telegram.org/constructor/sendMessageRecordVideoAction"
 section: ref
 kind: constructor
+description: "Пользователь записывает видео."
 layout: layout.njk
 ---
 
 # sendMessageRecordVideoAction
 
-*Конструктор из схемы TL.*
+Пользователь записывает видео.
 
-> User is recording a video.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===17===
-> sendMessageRecordVideoAction#a187d66f = SendMessageAction;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===17===
+sendMessageRecordVideoAction#a187d66f = SendMessageAction;
+```
+
+#### Схема API
 
 ```
 sendMessageRecordVideoAction#a187d66f = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)

@@ -1,19 +1,17 @@
 ---
-title: "auth.importLoginToken (метод)"
+title: "auth.importLoginToken"
 original: "https://core.telegram.org/method/auth.importLoginToken"
 section: ref
 kind: method
+description: "Вход с использованием перенаправленного токена входа, который формируется при несовпадении DC во время входа по QR-коду."
 layout: layout.njk
 ---
 
 # auth.importLoginToken
 
-*Метод из схемы TL.*
+Вход с использованием перенаправленного токена входа, который формируется при несовпадении DC во время [входа по QR-коду](/api/qr-login/).
 
-> Login using a redirected login token, generated in case of DC mismatch during [QR code login](https://core.telegram.org/api/qr-login).
-> For more info, see [login via QR code](https://core.telegram.org/api/qr-login).
-
-## Определение TL
+Подробнее см. [вход по QR-коду](/api/qr-login/).
 
 ```
 auth.loginToken#629f1980 expires:int token:bytes = auth.LoginToken;
@@ -23,31 +21,24 @@ auth.loginTokenSuccess#390d5c5e authorization:auth.Authorization = auth.LoginTok
 auth.importLoginToken#95ac5ce4 token:bytes = auth.LoginToken;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| token | [bytes](/type/bytes/) | Login token |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Токен входа</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.LoginToken](/type/auth.LoginToken/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | AUTH_TOKEN_ALREADY_ACCEPTED | The specified auth token was already accepted. |
-| 400 | AUTH_TOKEN_EXPIRED | The authorization token has expired. |
-| 400 | AUTH_TOKEN_INVALID | The specified auth token is invalid. |
-| 400 | AUTH_TOKEN_INVALIDX | The specified auth token is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>AUTH_TOKEN_ALREADY_ACCEPTED</td><td>Указанный токен авторизации уже был принят.</td></tr><tr><td>400</td><td>AUTH_TOKEN_EXPIRED</td><td>Срок действия токена авторизации истёк.</td></tr><tr><td>400</td><td>AUTH_TOKEN_INVALID</td><td>Указанный токен авторизации недействителен.</td></tr><tr><td>400</td><td>AUTH_TOKEN_INVALIDX</td><td>Указанный токен авторизации недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Login via QR code](https://core.telegram.org/api/qr-login)
+#### [Вход по QR-коду](/api/qr-login/)
 
-QR code login flow
+Вход по QR-коду

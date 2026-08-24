@@ -1,18 +1,15 @@
 ---
-title: "auth.Authorization (тип)"
+title: "auth.Authorization"
 original: "https://core.telegram.org/type/auth.Authorization"
 section: ref
 kind: type
+description: "Объект содержит информацию об авторизации пользователя."
 layout: layout.njk
 ---
 
 # auth.Authorization
 
-*Тип из схемы TL.*
-
-> Object contains info on user authorization.
-
-## Определение TL
+Объект содержит информацию об авторизации пользователя.
 
 ```
 auth.authorization#2ea2c0d4 flags:# setup_password_required:flags.1?true otherwise_relogin_days:flags.1?int tmp_sessions:flags.0?int future_auth_token:flags.2?bytes user:User = auth.Authorization;
@@ -30,22 +27,10 @@ auth.importWebTokenAuthorization#2db873a9 api_id:int api_hash:string web_auth_to
 auth.finishPasskeyLogin#9857ad07 flags:# credential:InputPasskeyCredential from_dc_id:flags.0?int from_auth_key_id:flags.0?long = auth.Authorization;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [auth.authorization](/constructor/auth.authorization/) | Contains user authorization info. |
-| [auth.authorizationSignUpRequired](/constructor/auth.authorizationSignUpRequired/) | An account with this phone number doesn't exist on telegram: the user has to [enter basic information and sign up](/api/auth/) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/auth.authorization">auth.authorization</a></td><td>Содержит информацию об авторизации пользователя.</td></tr><tr><td><a href="/constructor/auth.authorizationSignUpRequired">auth.authorizationSignUpRequired</a></td><td>Учётной записи с этим номером телефона в Telegram не существует: пользователю необходимо <a href="/api/auth">ввести основные сведения и зарегистрироваться</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [auth.signUp](/method/auth.signUp/) | Registers a validated phone number in the system. |
-| [auth.signIn](/method/auth.signIn/) | Signs in a user with a validated phone number. |
-| [auth.importAuthorization](/method/auth.importAuthorization/) | Logs in a user using a key transmitted from his native data-center. |
-| [auth.importBotAuthorization](/method/auth.importBotAuthorization/) | Login as a bot |
-| [auth.checkPassword](/method/auth.checkPassword/) | Try logging to an account protected by a [2FA password](/api/srp/). |
-| [auth.recoverPassword](/method/auth.recoverPassword/) | Reset the [2FA password](/api/srp/) using the recovery code sent using [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/). |
-| [auth.importWebTokenAuthorization](/method/auth.importWebTokenAuthorization/) | Login by importing an authorization token |
-| [auth.finishPasskeyLogin](/method/auth.finishPasskeyLogin/) | Complete login with a passkey over an unauthenticated connection, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for more info. Must be sent to the user's native DC, as specified by the user_handle (dcId:userId) returned in the passkey assertion, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for the full flow. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/auth.signUp">auth.signUp</a></td><td>Регистрирует в системе подтверждённый номер телефона.</td></tr><tr><td><a href="/method/auth.signIn">auth.signIn</a></td><td>Выполняет вход пользователя с подтверждённым номером телефона.</td></tr><tr><td><a href="/method/auth.importAuthorization">auth.importAuthorization</a></td><td>Выполняет вход пользователя с помощью ключа, переданного из его родного дата-центра.</td></tr><tr><td><a href="/method/auth.importBotAuthorization">auth.importBotAuthorization</a></td><td>Вход как бот</td></tr><tr><td><a href="/method/auth.checkPassword">auth.checkPassword</a></td><td>Попытаться войти в аккаунт, защищённый <a href="/api/srp">паролем двухфакторной аутентификации</a>.</td></tr><tr><td><a href="/method/auth.recoverPassword">auth.recoverPassword</a></td><td>Сбросить <a href="/api/srp">пароль двухфакторной аутентификации</a> с помощью кода восстановления, отправленного методом <a href="/method/auth.requestPasswordRecovery">auth.requestPasswordRecovery</a>.</td></tr><tr><td><a href="/method/auth.importWebTokenAuthorization">auth.importWebTokenAuthorization</a></td><td>Вход путём импорта токена авторизации</td></tr><tr><td><a href="/method/auth.finishPasskeyLogin">auth.finishPasskeyLogin</a></td><td>Завершить вход по ключу доступа через неавторизованное подключение; подробнее см. <a href="/api/passkeys#logging-in-with-a-passkey">здесь »</a>.<br><br>Метод обязан отправляться в собственный дата-центр пользователя, указанный в поле <code>user_handle</code> (<code>dcId:userId</code>) из полученного подтверждения ключа доступа; полный порядок действий см. <a href="/api/passkeys#logging-in-with-a-passkey">здесь »</a>.</td></tr></tbody></table>

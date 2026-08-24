@@ -1,19 +1,17 @@
 ---
-title: "phone.getGroupCallStreamRtmpUrl (метод)"
+title: "phone.getGroupCallStreamRtmpUrl"
 original: "https://core.telegram.org/method/phone.getGroupCallStreamRtmpUrl"
 section: ref
 kind: method
+description: "Получить URL для RTMP и ключ потока, используемые единственным внешним вещателем, который публикует весь звук и видео для видеочата, трансляции или прямой истории в режиме RTMP."
 layout: layout.njk
 ---
 
 # phone.getGroupCallStreamRtmpUrl
 
-*Метод из схемы TL.*
+Получить URL для RTMP и ключ потока, используемые единственным внешним вещателем, который публикует весь звук и видео для видеочата, трансляции или прямой истории в режиме RTMP.
 
-> Get the RTMP URL and stream key used by the single external streamer that publishes all audio and video for an RTMP-mode video chat, livestream or live story.
-> See [here »](https://core.telegram.org/api/group-calls#creating-and-publishing-an-rtmp-livestream) for the full flow.
-
-## Определение TL
+Полный порядок действий см. [здесь »](/api/group-calls/#creating-and-publishing-an-rtmp-livestream).
 
 ```
 phone.groupCallStreamRtmpUrl#2dbf3432 url:string key:string = phone.GroupCallStreamRtmpUrl;
@@ -21,30 +19,22 @@ phone.groupCallStreamRtmpUrl#2dbf3432 url:string key:string = phone.GroupCallStr
 phone.getGroupCallStreamRtmpUrl#5af4c73a flags:# live_story:flags.0?true peer:InputPeer revoke:Bool = phone.GroupCallStreamRtmpUrl;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| live_story | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Obtain credentials for an RTMP live story instead of a video chat/livestream |
-| peer | [InputPeer](/type/InputPeer/) | Peer that will host the RTMP video chat, livestream or live story |
-| revoke | [Bool](/type/Bool/) | Whether to invalidate the previous stream key and generate a new one, instead of returning the existing key |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>live_story</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Получить учётные данные для прямой истории в режиме RTMP, а не для видеочата или трансляции</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, который будет вести видеочат, трансляцию или прямую историю в режиме RTMP</td></tr><tr><td><strong>revoke</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Аннулировать ли прежний ключ потока и создать новый вместо возврата существующего ключа</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [phone.GroupCallStreamRtmpUrl](/type/phone.GroupCallStreamRtmpUrl/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

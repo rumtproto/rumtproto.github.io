@@ -1,33 +1,30 @@
 ---
-title: "true (конструктор)"
+title: "true"
 original: "https://core.telegram.org/constructor/true"
 section: ref
 kind: constructor
+description: "См. предопределённые идентификаторы."
 layout: layout.njk
 ---
 
 # true
 
-*Конструктор из схемы TL.*
-
-> See [predefined identifiers](https://core.telegram.org/mtproto/TL-formal#predefined-identifiers).
-
-## Определение TL
+См. [предопределённые идентификаторы](/mtproto/TL-formal/#predefined-identifiers).
 
 ```
 true#3fedd339 = True;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [True](/type/True/)
 
-## Related pages
+### Связанные страницы
 
-#### [Formal TL declaration](https://core.telegram.org/mtproto/TL-formal)
+#### [Формальное описание TL](/mtproto/TL-formal/)
 
-Formal declaration of TL combinators and constructors.
+Формальное описание комбинаторов и конструкторов TL.

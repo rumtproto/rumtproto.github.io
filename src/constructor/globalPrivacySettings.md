@@ -1,87 +1,74 @@
 ---
-title: "globalPrivacySettings (конструктор)"
+title: "globalPrivacySettings"
 original: "https://core.telegram.org/constructor/globalPrivacySettings"
 section: ref
 kind: constructor
+description: "Глобальные настройки приватности"
 layout: layout.njk
 ---
 
 # globalPrivacySettings
 
-*Конструктор из схемы TL.*
-
-> Global privacy settings
-
-## Определение TL
+Глобальные настройки приватности
 
 ```
 globalPrivacySettings#fe41b34f flags:# archive_and_mute_new_noncontact_peers:flags.0?true keep_archived_unmuted:flags.1?true keep_archived_folders:flags.2?true hide_read_marks:flags.3?true new_noncontact_peers_require_premium:flags.4?true display_gifts_button:flags.7?true noncontact_peers_paid_stars:flags.5?long disallowed_gifts:flags.6?DisallowedGiftsSettings = GlobalPrivacySettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| archive_and_mute_new_noncontact_peers | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to archive and mute new chats from non-contacts |
-| keep_archived_unmuted | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether unmuted chats will be kept in the Archive chat list when they get a new message. |
-| keep_archived_folders | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether unmuted chats that are always included or pinned in a [folder](https://core.telegram.org/api/folders), will be kept in the Archive chat list when they get a new message. Ignored if keep_archived_unmuted is set. |
-| hide_read_marks | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | If this flag is set, the [inputPrivacyKeyStatusTimestamp](/constructor/inputPrivacyKeyStatusTimestamp/) key will also apply to the ability to use [messages.getOutboxReadDate](/method/messages.getOutboxReadDate/) on messages sent to us. Meaning, users that cannot see our exact last online date due to the current value of the [inputPrivacyKeyStatusTimestamp](/constructor/inputPrivacyKeyStatusTimestamp/) key will receive a 403 USER_PRIVACY_RESTRICTED error when invoking [messages.getOutboxReadDate](/method/messages.getOutboxReadDate/) to fetch the exact read date of a message they sent to us. The [userFull](/constructor/userFull/).read_dates_private flag will be set for users that have this flag enabled. |
-| new_noncontact_peers_require_premium | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | See [here for more info on this flag »](https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users). |
-| display_gifts_button | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | Enables or disables our [userFull](/constructor/userFull/).display_gifts_button flag: if the [userFull](/constructor/userFull/).display_gifts_button flag of both us and another user is set, a gift button should always be displayed in the text field in private chats with the other user: once clicked, the gift UI should be displayed, offering the user options to gift [Telegram Premium »](https://core.telegram.org/api/premium#gifting-telegram-premium) subscriptions or [Telegram Gifts »](https://core.telegram.org/api/gifts). |
-| noncontact_peers_paid_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[long](/type/long/) | If configured, specifies the number of [stars](https://core.telegram.org/api/stars) users must pay us to send us a message, see [here »](https://core.telegram.org/api/paid-messages) for more info on paid messages. |
-| disallowed_gifts | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[DisallowedGiftsSettings](/type/DisallowedGiftsSettings/) | Disallows the reception of specific gift types. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>archive_and_mute_new_noncontact_peers</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Архивировать ли новые чаты не с контактами и отключать ли для них уведомления</td></tr><tr><td><strong>keep_archived_unmuted</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Останутся ли в списке чатов «Архив» чаты с включёнными уведомлениями при получении нового сообщения.</td></tr><tr><td><strong>keep_archived_folders</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Останутся ли в списке чатов «Архив» чаты с включёнными уведомлениями, которые всегда включены в <a href="/api/folders">папку</a> или закреплены в ней, при получении нового сообщения. Игнорируется, если установлен <code>keep_archived_unmuted</code>.</td></tr><tr><td><strong>hide_read_marks</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Если этот флаг установлен, ключ <a href="/constructor/inputPrivacyKeyStatusTimestamp">inputPrivacyKeyStatusTimestamp</a> будет также распространяться на возможность вызывать <a href="/method/messages.getOutboxReadDate">messages.getOutboxReadDate</a> для отправленных нам сообщений.<br>Это означает, что пользователи, которые не могут видеть <em>нашу</em> точную дату последнего посещения из-за текущего значения ключа <a href="/constructor/inputPrivacyKeyStatusTimestamp">inputPrivacyKeyStatusTimestamp</a>, получат ошибку <code>403 USER_PRIVACY_RESTRICTED</code> при вызове <a href="/method/messages.getOutboxReadDate">messages.getOutboxReadDate</a> для получения точной даты прочтения отправленного нам сообщения.<br>Для пользователей, включивших этот флаг, будет установлен флаг <a href="/constructor/userFull">userFull</a>.<code>read_dates_private</code>.</td></tr><tr><td><strong>new_noncontact_peers_require_premium</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>См. <a href="/api/privacy#require-premium-for-new-non-contact-users">подробнее об этом флаге »</a>.</td></tr><tr><td><strong>display_gifts_button</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Включает или отключает наш флаг <a href="/constructor/userFull">userFull</a>.<code>display_gifts_button</code>: если флаг <a href="/constructor/userFull">userFull</a>.<code>display_gifts_button</code> установлен и у нас, и у другого пользователя, в текстовом поле личного чата с этим пользователем должна всегда отображаться кнопка подарка: при нажатии на неё должен открываться интерфейс подарков, предлагающий пользователю подарить подписку <a href="/api/premium#gifting-telegram-premium">Telegram Premium »</a> или <a href="/api/gifts">подарки Telegram »</a>.</td></tr><tr><td><strong>noncontact_peers_paid_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/long">long</a></td><td>Если настроено, указывает количество <a href="/api/stars">звёзд</a>, которое пользователи должны заплатить нам за отправку нам сообщения; подробнее о платных сообщениях см. <a href="/api/paid-messages">здесь »</a>.</td></tr><tr><td><strong>disallowed_gifts</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/DisallowedGiftsSettings">DisallowedGiftsSettings</a></td><td>Запрещает получение определённых типов подарков.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [GlobalPrivacySettings](/type/GlobalPrivacySettings/)
 
-## Related pages
+### Связанные страницы
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.
 
 #### [inputPrivacyKeyStatusTimestamp](/constructor/inputPrivacyKeyStatusTimestamp/)
 
-Whether people will be able to see our exact last online timestamp.
+Смогут ли другие видеть точное время нашего последнего пребывания в сети.
 
-Note that if _we_ decide to hide our exact last online timestamp to someone (i.e., users A, B, C, or all users) **and** we do not have a [Premium](https://core.telegram.org/api/premium) subscription, we won't be able to see the exact last online timestamp of those users (A, B, C, or all users), even if those users _do_ share it with us.
+Учтите: если _мы_ решили скрыть от кого-либо точное время последнего пребывания в сети (то есть от пользователей A, B, C или от всех пользователей) **и** у нас нет подписки [Premium](/api/premium/), мы не сможем видеть точное время последнего пребывания в сети этих пользователей (A, B, C или всех пользователей), даже если они _действительно_ показывают его нам.
 
-If those users _do_ share their exact online status with us, but we can't see it due to the reason mentioned above, the `by_me` flag of [userStatusRecently](/constructor/userStatusRecently/), [userStatusLastWeek](/constructor/userStatusLastWeek/), [userStatusLastMonth](/constructor/userStatusLastMonth/) will be set.
+Если эти пользователи _всё же_ показывают нам точное время последнего пребывания в сети, но мы не видим его по указанной выше причине, будет установлен флаг `by_me` в конструкторах [userStatusRecently](/constructor/userStatusRecently/), [userStatusLastWeek](/constructor/userStatusLastWeek/), [userStatusLastMonth](/constructor/userStatusLastMonth/).
 
 #### [messages.getOutboxReadDate](/method/messages.getOutboxReadDate/)
 
-Get the exact read date of one of our messages, sent to a private chat with another user.
+Получить точную дату прочтения одного из наших сообщений, отправленных в личный чат с другим пользователем.
 
-Can be only done for private outgoing messages not older than [appConfig.pm\_read\_date\_expire\_period »](https://core.telegram.org/api/config#pm-read-date-expire-period).
+Возможно только для исходящих личных сообщений не старше [appConfig.pm\_read\_date\_expire\_period »](/api/config/#pm-read-date-expire-period).
 
-If the `peer`'s [userFull](/constructor/userFull/).`read_dates_private` flag is set, we will not be able to fetch the exact read date of messages we send to them, and a `USER_PRIVACY_RESTRICTED` RPC error will be emitted.  
-The exact read date of messages might still be unavailable for other reasons, see [here »](/constructor/globalPrivacySettings/) for more info.  
-To set [userFull](/constructor/userFull/).`read_dates_private` for ourselves invoke [account.setGlobalPrivacySettings](/method/account.setGlobalPrivacySettings/), setting the `settings.hide_read_marks` flag.
+[@term:peer] Если у `peer` установлен флаг [userFull](/constructor/userFull/).`read_dates_private`, мы не сможем получить точную дату прочтения отправленных ему сообщений, и будет возвращена ошибка RPC `USER_PRIVACY_RESTRICTED`.  
+Точная дата прочтения сообщений может быть недоступна и по другим причинам, подробнее [см. здесь »](/constructor/globalPrivacySettings/).  
+Чтобы установить [userFull](/constructor/userFull/).`read_dates_private` для себя, вызовите [account.setGlobalPrivacySettings](/method/account.setGlobalPrivacySettings/), установив флаг `settings.hide_read_marks`.
 
 #### [userFull](/constructor/userFull/)
 
-Extended user info
+Расширенные сведения о пользователе
 
-When updating the [local peer database »](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров »](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).
 
-#### [Privacy settings](https://core.telegram.org/api/privacy)
+#### [Настройки приватности](/api/privacy/)
 
-Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.
+Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным способом.
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Paid messages](https://core.telegram.org/api/paid-messages)
+#### [Платные сообщения](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.
+Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.

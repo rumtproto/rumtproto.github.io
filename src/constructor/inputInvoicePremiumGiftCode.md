@@ -1,52 +1,46 @@
 ---
-title: "inputInvoicePremiumGiftCode (конструктор)"
+title: "inputInvoicePremiumGiftCode"
 original: "https://core.telegram.org/constructor/inputInvoicePremiumGiftCode"
 section: ref
 kind: constructor
+description: "Используется, если пользователь хочет запустить розыгрыш в канале или супергруппе либо отправить подарочные коды участникам канала или супергруппы в обмен на бусты."
 layout: layout.njk
 ---
 
 # inputInvoicePremiumGiftCode
 
-*Конструктор из схемы TL.*
-
-> Used if the user wishes to start a channel/supergroup [giveaway](https://core.telegram.org/api/giveaways) or send some [giftcodes](https://core.telegram.org/api/giveaways) to members of a channel/supergroup, in exchange for [boosts](https://core.telegram.org/api/boost).
-
-## Определение TL
+Используется, если пользователь хочет запустить [розыгрыш](/api/giveaways/) в канале или супергруппе либо отправить [подарочные коды](/api/giveaways/) участникам канала или супергруппы в обмен на [бусты](/api/boost/).
 
 ```
 inputInvoicePremiumGiftCode#98986c0d purpose:InputStorePaymentPurpose option:PremiumGiftCodeOption = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| purpose | [InputStorePaymentPurpose](/type/InputStorePaymentPurpose/) | Should be populated with [inputStorePaymentPremiumGiveaway](/constructor/inputStorePaymentPremiumGiveaway/) for [giveaways](https://core.telegram.org/api/giveaways) and [inputStorePaymentPremiumGiftCode](/constructor/inputStorePaymentPremiumGiftCode/) for [gifts](https://core.telegram.org/api/giveaways). |
-| option | [PremiumGiftCodeOption](/type/PremiumGiftCodeOption/) | Should be populated with one of the giveaway options returned by [payments.getPremiumGiftCodeOptions](/method/payments.getPremiumGiftCodeOptions/), see the [giveaways »](https://core.telegram.org/api/giveaways) documentation for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>purpose</strong></td><td style="text-align: center;"><a href="/type/InputStorePaymentPurpose">InputStorePaymentPurpose</a></td><td>Следует заполнить конструктором <a href="/constructor/inputStorePaymentPremiumGiveaway">inputStorePaymentPremiumGiveaway</a> для <a href="/api/giveaways">розыгрышей</a> и <a href="/constructor/inputStorePaymentPremiumGiftCode">inputStorePaymentPremiumGiftCode</a> для <a href="/api/giveaways">подарков</a>.</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/PremiumGiftCodeOption">PremiumGiftCodeOption</a></td><td>Следует заполнить одним из вариантов розыгрыша, возвращённых методом <a href="/method/payments.getPremiumGiftCodeOptions">payments.getPremiumGiftCodeOptions</a>; подробнее см. документацию по <a href="/api/giveaways">розыгрышам »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
 #### [inputStorePaymentPremiumGiveaway](/constructor/inputStorePaymentPremiumGiveaway/)
 
-Used to pay for a [giveaway, see here »](https://core.telegram.org/api/giveaways) for more info.
+Используется для оплаты [розыгрыша; подробнее см. здесь »](/api/giveaways/).
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.
 
 #### [inputStorePaymentPremiumGiftCode](/constructor/inputStorePaymentPremiumGiftCode/)
 
-Used to gift [Telegram Premium](https://core.telegram.org/api/premium) subscriptions only to some specific subscribers of a channel/supergroup or to some of our contacts, see [here »](https://core.telegram.org/api/giveaways) for more info on giveaways and gifts.
+Используется, чтобы подарить подписки [Telegram Premium](/api/premium/) только определённым подписчикам канала или супергруппы либо некоторым из наших контактов; подробнее о розыгрышах и подарках см. [здесь »](/api/giveaways/).
 
 #### [payments.getPremiumGiftCodeOptions](/method/payments.getPremiumGiftCodeOptions/)
 
-Obtain a list of Telegram Premium [giveaway/gift code »](https://core.telegram.org/api/giveaways) options.
+Получить список вариантов [розыгрыша или подарочного кода »](/api/giveaways/) Telegram Premium.
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.

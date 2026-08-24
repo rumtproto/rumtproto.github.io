@@ -1,18 +1,15 @@
 ---
-title: "ExportedContactToken (тип)"
+title: "ExportedContactToken"
 original: "https://core.telegram.org/type/ExportedContactToken"
 section: ref
 kind: type
+description: "Описывает временную ссылку на профиль."
 layout: layout.njk
 ---
 
 # ExportedContactToken
 
-*Тип из схемы TL.*
-
-> Describes a [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links).
-
-## Определение TL
+Описывает [временную ссылку на профиль](/api/links/#temporary-profile-links).
 
 ```
 exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
@@ -22,20 +19,16 @@ exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
 contacts.exportContactToken#f8654027 = ExportedContactToken;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [exportedContactToken](/constructor/exportedContactToken/) | Describes a [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/exportedContactToken">exportedContactToken</a></td><td>Описывает <a href="/api/links#temporary-profile-links">временную ссылку на профиль</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [contacts.exportContactToken](/method/contacts.exportContactToken/) | Generates a [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links) for the currently logged-in user. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/contacts.exportContactToken">contacts.exportContactToken</a></td><td>Создаёт <a href="/api/links#temporary-profile-links">временную ссылку на профиль</a> для текущего авторизованного пользователя.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

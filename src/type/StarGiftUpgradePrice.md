@@ -1,31 +1,26 @@
 ---
-title: "StarGiftUpgradePrice (тип)"
+title: "StarGiftUpgradePrice"
 original: "https://core.telegram.org/type/StarGiftUpgradePrice"
 section: ref
 kind: type
+description: "Указывает цену улучшения подарка », действующую начиная с определённого момента времени."
 layout: layout.njk
 ---
 
 # StarGiftUpgradePrice
 
-*Тип из схемы TL.*
-
-> Indicates the price for a [gift upgrade »](https://core.telegram.org/api/gifts#collectible-gifts) starting from a specific point in time.
-
-## Определение TL
+Указывает цену [улучшения подарка »](/api/gifts/#collectible-gifts), действующую начиная с определённого момента времени.
 
 ```
 starGiftUpgradePrice#99ea331d date:int upgrade_stars:long = StarGiftUpgradePrice;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starGiftUpgradePrice](/constructor/starGiftUpgradePrice/) | Indicates the price for a [gift upgrade »](https://core.telegram.org/api/gifts#collectible-gifts) starting from a specific point in time. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftUpgradePrice">starGiftUpgradePrice</a></td><td>Указывает цену <a href="/api/gifts#collectible-gifts">улучшения подарка »</a>, действующую начиная с определённого момента времени.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

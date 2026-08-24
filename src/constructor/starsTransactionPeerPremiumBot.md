@@ -1,37 +1,34 @@
 ---
-title: "starsTransactionPeerPremiumBot (конструктор)"
+title: "starsTransactionPeerPremiumBot"
 original: "https://core.telegram.org/constructor/starsTransactionPeerPremiumBot"
 section: ref
 kind: constructor
+description: "Описывает транзакцию Telegram Stars, совершённую через @PremiumBot (то есть по схеме inputInvoiceStars, описанной здесь »)."
 layout: layout.njk
 ---
 
 # starsTransactionPeerPremiumBot
 
-*Конструктор из схемы TL.*
-
-> Describes a [Telegram Star](https://core.telegram.org/api/stars) transaction made using [@PremiumBot](https://t.me/premiumbot) (i.e. using the [inputInvoiceStars](/constructor/inputInvoiceStars/) flow described [here »](https://core.telegram.org/api/stars#buying-or-gifting-stars)).
-
-## Определение TL
+Описывает транзакцию [Telegram Stars](/api/stars/), совершённую через [@PremiumBot](https://t.me/premiumbot) (то есть по схеме [inputInvoiceStars](/constructor/inputInvoiceStars/), описанной [здесь »](/api/stars/#buying-or-gifting-stars)).
 
 ```
 starsTransactionPeerPremiumBot#250dbaf8 = StarsTransactionPeer;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [StarsTransactionPeer](/type/StarsTransactionPeer/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
 #### [inputInvoiceStars](/constructor/inputInvoiceStars/)
 
-Used to top up the [Telegram Stars](https://core.telegram.org/api/stars) balance of the current account or someone else's account, or to start a [Telegram Star giveaway »](https://core.telegram.org/api/giveaways#star-giveaways).
+Используется для пополнения баланса [Telegram Stars](/api/stars/) текущего или чужого аккаунта, а также для запуска [розыгрыша Telegram Stars »](/api/giveaways/#star-giveaways).

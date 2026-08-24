@@ -1,33 +1,30 @@
 ---
-title: "emojiListNotModified (конструктор)"
+title: "emojiListNotModified"
 original: "https://core.telegram.org/constructor/emojiListNotModified"
 section: ref
 kind: constructor
+description: "Список пользовательских эмодзи не изменился."
 layout: layout.njk
 ---
 
 # emojiListNotModified
 
-*Конструктор из схемы TL.*
-
-> The list of [custom emojis](https://core.telegram.org/api/custom-emoji) hasn't changed.
-
-## Определение TL
+Список [пользовательских эмодзи](/api/custom-emoji/) не изменился.
 
 ```
 emojiListNotModified#481eadfa = EmojiList;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [EmojiList](/type/EmojiList/)
 
-## Related pages
+### Связанные страницы
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.

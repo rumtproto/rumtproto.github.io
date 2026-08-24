@@ -1,18 +1,15 @@
 ---
-title: "messages.readFeaturedStickers (метод)"
+title: "messages.readFeaturedStickers"
 original: "https://core.telegram.org/method/messages.readFeaturedStickers"
 section: ref
 kind: method
+description: "Отметить новые рекомендуемые стикеры как просмотренные"
 layout: layout.njk
 ---
 
 # messages.readFeaturedStickers
 
-*Метод из схемы TL.*
-
-> Mark new featured stickers as read
-
-## Определение TL
+Отметить новые рекомендуемые стикеры как просмотренные
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,14 +18,12 @@ boolTrue#997275b5 = Bool;
 messages.readFeaturedStickers#5b118126 id:Vector<long> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | IDs of stickersets to mark as read |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Идентификаторы наборов стикеров, которые нужно пометить как прочитанные</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

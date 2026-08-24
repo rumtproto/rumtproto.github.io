@@ -1,87 +1,54 @@
 ---
-title: "starGift (конструктор)"
+title: "starGift"
 original: "https://core.telegram.org/constructor/starGift"
 section: ref
 kind: constructor
+description: "Представляет звёздный подарок, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # starGift
 
-*Конструктор из схемы TL.*
-
-> Represents a [star gift, see here »](https://core.telegram.org/api/gifts) for more info.
-
-## Определение TL
+Представляет [звёздный подарок, подробнее см. здесь »](/api/gifts/).
 
 ```
 starGift#313a9547 flags:# limited:flags.0?true sold_out:flags.1?true birthday:flags.2?true require_premium:flags.7?true limited_per_user:flags.8?true peer_color_available:flags.10?true auction:flags.11?true id:long sticker:Document stars:long availability_remains:flags.0?int availability_total:flags.0?int availability_resale:flags.4?long convert_stars:long first_sale_date:flags.1?int last_sale_date:flags.1?int upgrade_stars:flags.3?long resell_min_stars:flags.4?long title:flags.5?string released_by:flags.6?Peer per_user_total:flags.8?int per_user_remains:flags.8?int locked_until_date:flags.9?int auction_slug:flags.11?string gifts_per_round:flags.11?int auction_start_date:flags.11?int upgrade_variants:flags.12?int background:flags.13?StarGiftBackground = StarGift;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| limited | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether this is a limited-supply gift. |
-| sold_out | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether this gift sold out and cannot be bought anymore. |
-| birthday | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether this is a birthday-themed gift |
-| require_premium | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | This gift can only be bought by users with a [Premium](https://core.telegram.org/api/premium) subscription. |
-| limited_per_user | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[true](/constructor/true/) | If set, the maximum number of gifts of this type that can be owned by a single user is limited and specified in per_user_total, and the remaining slots for the current user in per_user_remains. |
-| peer_color_available | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[true](/constructor/true/) | If set, collectible gifts of this type may be used to generate a [message color palette and pattern »](https://core.telegram.org/api/colors#collectible-message-palettes). |
-| auction | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[true](/constructor/true/) | If set, this is a collectible gift that can only be bought through a [collectible gift auction »](https://core.telegram.org/api/auctions). |
-| id | [long](/type/long/) | Identifier of the gift |
-| sticker | [Document](/type/Document/) | [Sticker](https://core.telegram.org/api/stickers) that represents the gift. |
-| stars | [long](/type/long/) | Price of the gift in [Telegram Stars](https://core.telegram.org/api/stars). |
-| availability_remains | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | For limited-supply gifts: the remaining number of gifts that may be bought. |
-| availability_total | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | For limited-supply gifts: the total number of gifts that was available in the initial supply. |
-| availability_resale | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[long](/type/long/) | The total number of (upgraded to [collectibles](https://core.telegram.org/api/gifts#collectible-gifts)) gifts of this type currently on [resale](https://core.telegram.org/api/gifts#reselling-collectible-gifts) |
-| convert_stars | [long](/type/long/) | The receiver of this gift may convert it to this many Telegram Stars, instead of displaying it on their profile page. convert_stars will be equal to stars only if the gift was bought using recently bought Telegram Stars, otherwise it will be less than stars. |
-| first_sale_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | For sold out gifts only: when was the gift first bought. |
-| last_sale_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | For sold out gifts only: when was the gift last bought. |
-| upgrade_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[long](/type/long/) | The number of Telegram Stars the user can pay to [convert the gift into a collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
-| resell_min_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[long](/type/long/) | The minimum price in [Stars](https://core.telegram.org/api/stars) for gifts of this type currently on [resale](https://core.telegram.org/api/gifts#reselling-collectible-gifts). |
-| title | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[string](/type/string/) | Title of the gift |
-| released_by | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[Peer](/type/Peer/) | This gift was released by the specified peer. |
-| per_user_total | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[int](/type/int/) | Maximum number of gifts of this type that can be owned by any user. |
-| per_user_remains | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[int](/type/int/) | Remaining number of gifts of this type that can be owned by the current user. |
-| locked_until_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[int](/type/int/) | If set, the specified gift possibly cannot be sent until the specified date, see [here »](https://core.telegram.org/api/gifts) for the full flow. |
-| auction_slug | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[string](/type/string/) | Always set for gifts that can be bought on [auctions »](https://core.telegram.org/api/auctions), contains the [auction deep link slug »](https://core.telegram.org/api/links#auction-links). |
-| gifts_per_round | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[int](/type/int/) | Always set for gifts that can be bought on [auctions »](https://core.telegram.org/api/auctions), contains the number of gifts of this kind that are distributed on every round. |
-| auction_start_date | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).11?[int](/type/int/) | Always set for gifts that can be bought on [auctions »](https://core.telegram.org/api/auctions), contains the UNIX timestamp indicating when will the auction start (or when the auction started, if it points to the past). |
-| upgrade_variants | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).12?[int](/type/int/) | Total number of possible [collectible variants »](https://core.telegram.org/api/gifts#listing-all-possible-collectible-variants) for this gift type. |
-| background | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).13?[StarGiftBackground](/type/StarGiftBackground/) | Default background palette for this gift type, used when rendering gift cards and previews before a specific collectible backdrop is chosen. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>limited</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Является ли это подарком ограниченного тиража.</td></tr><tr><td><strong>sold_out</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Распродан ли этот подарок, из-за чего купить его больше нельзя.</td></tr><tr><td><strong>birthday</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Является ли это подарком на день рождения</td></tr><tr><td><strong>require_premium</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Этот подарок могут купить только пользователи с подпиской <a href="/api/premium">Premium</a>.</td></tr><tr><td><strong>limited_per_user</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/constructor/true">true</a></td><td>Если установлено, максимальное число подарков этого типа, которыми может владеть один пользователь, ограничено и указано в <code>per_user_total</code>, а число оставшихся мест для текущего пользователя — в <code>per_user_remains</code>.</td></tr><tr><td><strong>peer_color_available</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/constructor/true">true</a></td><td>Если установлено, коллекционные подарки этого типа могут использоваться для создания <a href="/api/colors#collectible-message-palettes">цветовой палитры и узора сообщений »</a>.</td></tr><tr><td><strong>auction</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/constructor/true">true</a></td><td>Если установлено, это коллекционный подарок, который можно купить только на <a href="/api/auctions">аукционе коллекционных подарков »</a>.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор подарка</td></tr><tr><td><strong>sticker</strong></td><td style="text-align: center;"><a href="/type/Document">Document</a></td><td><a href="/api/stickers">Стикер</a>, представляющий подарок.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Цена подарка в <a href="/api/stars">Telegram Stars</a>.</td></tr><tr><td><strong>availability_remains</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Для подарков ограниченного тиража: оставшееся число подарков, которые можно купить.</td></tr><tr><td><strong>availability_total</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Для подарков ограниченного тиража: общее число подарков, доступных в начальном тираже.</td></tr><tr><td><strong>availability_resale</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/long">long</a></td><td>Общее число подарков этого типа (улучшенных до <a href="/api/gifts#collectible-gifts">коллекционных</a>), выставленных сейчас на <a href="/api/gifts#reselling-collectible-gifts">перепродажу</a></td></tr><tr><td><strong>convert_stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Получатель этого подарка может обменять его на указанное количество Telegram Stars вместо того, чтобы показывать подарок в своём профиле.<br>Значение <code>convert_stars</code> будет равно <code>stars</code>, только если подарок был куплен за недавно приобретённые Telegram Stars, иначе оно будет меньше <code>stars</code>.</td></tr><tr><td><strong>first_sale_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Только для распроданных подарков: когда подарок был куплен впервые.</td></tr><tr><td><strong>last_sale_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Только для распроданных подарков: когда подарок был куплен в последний раз.</td></tr><tr><td><strong>upgrade_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/long">long</a></td><td>Количество Telegram Stars, которое пользователь может заплатить, чтобы <a href="/api/gifts#collectible-gifts">превратить подарок в коллекционный »</a>.</td></tr><tr><td><strong>resell_min_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/long">long</a></td><td>Минимальная цена в <a href="/api/stars">Stars</a> для подарков этого типа, выставленных сейчас на <a href="/api/gifts#reselling-collectible-gifts">перепродажу</a>.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/string">string</a></td><td>Название подарка</td></tr><tr><td><strong>released_by</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/Peer">Peer</a></td><td>Этот подарок был выпущен указанным пиром.</td></tr><tr><td><strong>per_user_total</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/int">int</a></td><td>Максимальное количество подарков этого типа, которым может владеть один пользователь.</td></tr><tr><td><strong>per_user_remains</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/int">int</a></td><td>Оставшееся число подарков этого типа, которыми может владеть текущий пользователь.</td></tr><tr><td><strong>locked_until_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/int">int</a></td><td>Если установлено, указанный подарок <em>возможно</em> нельзя будет отправить до указанной даты; описание всего процесса см. <a href="/api/gifts">здесь »</a>.</td></tr><tr><td><strong>auction_slug</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/string">string</a></td><td>Всегда задаётся для подарков, которые можно купить на <a href="/api/auctions">аукционах »</a>; содержит <a href="/api/links#auction-links">слаг глубокой ссылки на аукцион »</a>.</td></tr><tr><td><strong>gifts_per_round</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/int">int</a></td><td>Всегда задаётся для подарков, которые можно купить на <a href="/api/auctions">аукционах »</a>; содержит количество подарков этого вида, распределяемых в каждом раунде.</td></tr><tr><td><strong>auction_start_date</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.11?<a href="/type/int">int</a></td><td>Всегда задаётся для подарков, которые можно купить на <a href="/api/auctions">аукционах »</a>; содержит отметку времени UNIX, указывающую, когда начнётся аукцион (или когда он начался, если она указывает на прошлое).</td></tr><tr><td><strong>upgrade_variants</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.12?<a href="/type/int">int</a></td><td>Общее число возможных <a href="/api/gifts#listing-all-possible-collectible-variants">коллекционных вариантов »</a> для этого типа подарка.</td></tr><tr><td><strong>background</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.13?<a href="/type/StarGiftBackground">StarGiftBackground</a></td><td>Фоновая палитра по умолчанию для этого типа подарка; используется при отрисовке карточек подарков и предпросмотров до того, как выбран конкретный коллекционный фон.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGift](/type/StarGift/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Accent colors](https://core.telegram.org/api/colors)
+#### [Акцентные цвета](/api/colors/)
 
-Telegram users and channels can change the accent color and background pattern of their profile page and their messages!
+Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

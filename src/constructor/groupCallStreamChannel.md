@@ -1,41 +1,34 @@
 ---
-title: "groupCallStreamChannel (конструктор)"
+title: "groupCallStreamChannel"
 original: "https://core.telegram.org/constructor/groupCallStreamChannel"
 section: ref
 kind: constructor
+description: "Описывает доступный канал RTMP-трансляции и его текущую позицию воспроизведения; см. воспроизведение RTMP-трансляции »."
 layout: layout.njk
 ---
 
 # groupCallStreamChannel
 
-*Конструктор из схемы TL.*
-
-> Describes an available RTMP stream channel and its current playback timestamp, see [playing an RTMP livestream »](https://core.telegram.org/api/group-calls#rtmp-mode).
-
-## Определение TL
+Описывает доступный канал RTMP-трансляции и его текущую позицию воспроизведения; см. [воспроизведение RTMP-трансляции »](/api/group-calls/#rtmp-mode).
 
 ```
 groupCallStreamChannel#80eb48af channel:int scale:int last_timestamp_ms:long = GroupCallStreamChannel;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [int](/type/int/) | Stream channel ID, used as a source of the synthetic unified video source group and as [inputGroupCallStream](/constructor/inputGroupCallStream/).video_channel when fetching the corresponding video segment |
-| scale | [int](/type/int/) | Deprecated, [ignored by clients »](https://core.telegram.org/api/group-calls#rtmp-mode): use the media segment duration hardcoded in clients (1000 milliseconds, i.e. scale = 0) instead. Historically, it specified the duration of the media segment to fetch, obtained in milliseconds by bitshifting 1000 to the right scale times: duration_ms := 1000 >> scale. |
-| last_timestamp_ms | [long](/type/long/) | Last seen timestamp to easily start fetching livestream chunks using [inputGroupCallStream](/constructor/inputGroupCallStream/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор канала потока; используется как источник синтетической группы видеоисточников <code>unified</code> и как <a href="/constructor/inputGroupCallStream">inputGroupCallStream</a>.<code>video_channel</code> при получении соответствующего сегмента видео</td></tr><tr><td><strong>scale</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><strong>Устарело</strong>, <a href="/api/group-calls#rtmp-mode">игнорируется клиентами »</a>: вместо этого следует использовать длительность медиасегмента, жёстко заданную в клиентах (1000 миллисекунд, то есть <code>scale = 0</code>).<br>Исторически это поле задавало длительность запрашиваемого медиасегмента, которая получалась в миллисекундах сдвигом <code>1000</code> вправо на <code>scale</code> разрядов: <code>duration_ms := 1000 &gt;&gt; scale</code>.</td></tr><tr><td><strong>last_timestamp_ms</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Отметка времени последнего просмотра, позволяющая без труда начать загрузку фрагментов трансляции с помощью <a href="/constructor/inputGroupCallStream">inputGroupCallStream</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [GroupCallStreamChannel](/type/GroupCallStreamChannel/)
 
-## Related pages
+### Связанные страницы
 
 #### [inputGroupCallStream](/constructor/inputGroupCallStream/)
 
-Identifies a media chunk of an RTMP-mode video chat, livestream or live story, see [playing an RTMP livestream »](https://core.telegram.org/api/group-calls#downloading-media-chunks).
+Определяет фрагмент медиа видеочата, трансляции или прямой истории в режиме RTMP, см. [воспроизведение RTMP-трансляции »](/api/group-calls/#downloading-media-chunks).
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

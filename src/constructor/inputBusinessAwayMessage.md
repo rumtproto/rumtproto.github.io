@@ -1,39 +1,30 @@
 ---
-title: "inputBusinessAwayMessage (конструктор)"
+title: "inputBusinessAwayMessage"
 original: "https://core.telegram.org/constructor/inputBusinessAwayMessage"
 section: ref
 kind: constructor
+description: "Описывает сообщение об отсутствии Telegram Business, автоматически отправляемое пользователям, которые пишут нам, когда мы не в сети, в нерабочие часы, во время отпуска или в…"
 layout: layout.njk
 ---
 
 # inputBusinessAwayMessage
 
-*Конструктор из схемы TL.*
-
-> Describes a [Telegram Business away message](https://core.telegram.org/api/business#away-messages), automatically sent to users writing to us when we're offline, during closing hours, while we're on vacation, or in some other custom time period when we cannot immediately answer to the user.
-
-## Определение TL
+Описывает [сообщение об отсутствии Telegram Business](/api/business/#away-messages), автоматически отправляемое пользователям, которые пишут нам, когда мы не в сети, в нерабочие часы, во время отпуска или в любой другой заданный период, когда мы не можем ответить сразу.
 
 ```
 inputBusinessAwayMessage#832175e0 flags:# offline_only:flags.0?true shortcut_id:int schedule:BusinessAwayMessageSchedule recipients:InputBusinessRecipients = InputBusinessAwayMessage;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| offline_only | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, the messages will not be sent if the account was online in the last 10 minutes. |
-| shortcut_id | [int](/type/int/) | ID of a [quick reply shorcut, containing the away messages to send, see here » for more info](https://core.telegram.org/api/business#quick-reply-shortcuts). |
-| schedule | [BusinessAwayMessageSchedule](/type/BusinessAwayMessageSchedule/) | Specifies when should the away messages be sent. |
-| recipients | [InputBusinessRecipients](/type/InputBusinessRecipients/) | Allowed recipients for the away messages. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>offline_only</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, сообщения не будут отправлены, если аккаунт был в сети в последние 10 минут.</td></tr><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор <a href="/api/business#quick-reply-shortcuts">шаблона быстрого ответа, содержащего сообщения об отсутствии, которые нужно отправить; подробнее см. здесь »</a>.</td></tr><tr><td><strong>schedule</strong></td><td style="text-align: center;"><a href="/type/BusinessAwayMessageSchedule">BusinessAwayMessageSchedule</a></td><td>Указывает, когда следует отправлять сообщения об отсутствии.</td></tr><tr><td><strong>recipients</strong></td><td style="text-align: center;"><a href="/type/InputBusinessRecipients">InputBusinessRecipients</a></td><td>Допустимые получатели сообщений об отсутствии.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputBusinessAwayMessage](/type/InputBusinessAwayMessage/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

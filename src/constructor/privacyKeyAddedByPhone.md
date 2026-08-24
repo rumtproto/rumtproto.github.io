@@ -1,27 +1,24 @@
 ---
-title: "privacyKeyAddedByPhone (конструктор)"
+title: "privacyKeyAddedByPhone"
 original: "https://core.telegram.org/constructor/privacyKeyAddedByPhone"
 section: ref
 kind: constructor
+description: "Можно ли добавить этого пользователя в наш список контактов по номеру телефона"
 layout: layout.njk
 ---
 
 # privacyKeyAddedByPhone
 
-*Конструктор из схемы TL.*
-
-> Whether this user can be added to our contact list by their phone number
-
-## Определение TL
+Можно ли добавить этого пользователя в наш список контактов по номеру телефона
 
 ```
 privacyKeyAddedByPhone#42ffd42b = PrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyKey](/type/PrivacyKey/)

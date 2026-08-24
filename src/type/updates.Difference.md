@@ -1,18 +1,15 @@
 ---
-title: "updates.Difference (тип)"
+title: "updates.Difference"
 original: "https://core.telegram.org/type/updates.Difference"
 section: ref
 kind: type
+description: "Произошедшие изменения."
 layout: layout.njk
 ---
 
 # updates.Difference
 
-*Тип из схемы TL.*
-
-> Occurred changes.
-
-## Определение TL
+Произошедшие изменения.
 
 ```
 updates.differenceEmpty#5d75a138 date:int seq:int = updates.Difference;
@@ -25,17 +22,10 @@ updates.differenceTooLong#4afe8f6d pts:int = updates.Difference;
 updates.getDifference#19c2f763 flags:# pts:int pts_limit:flags.1?int pts_total_limit:flags.0?int date:int qts:int qts_limit:flags.2?int = updates.Difference;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [updates.differenceEmpty](/constructor/updates.differenceEmpty/) | No events. |
-| [updates.difference](/constructor/updates.difference/) | Full list of occurred events. |
-| [updates.differenceSlice](/constructor/updates.differenceSlice/) | Incomplete list of occurred events. |
-| [updates.differenceTooLong](/constructor/updates.differenceTooLong/) | The difference is [too long](https://core.telegram.org/api/updates/#recovering-gaps), and the specified state must be used to refetch updates. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/updates.differenceEmpty">updates.differenceEmpty</a></td><td>Событий нет.</td></tr><tr><td><a href="/constructor/updates.difference">updates.difference</a></td><td>Полный список произошедших событий.</td></tr><tr><td><a href="/constructor/updates.differenceSlice">updates.differenceSlice</a></td><td>Неполный список произошедших событий.</td></tr><tr><td><a href="/constructor/updates.differenceTooLong">updates.differenceTooLong</a></td><td>Разница <a href="/api/updates#recovering-gaps">слишком велика</a>, и для повторного получения обновлений следует использовать указанное состояние.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [updates.getDifference](/method/updates.getDifference/) | Get new [updates](/api/updates/). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/updates.getDifference">updates.getDifference</a></td><td>Получить новые <a href="/api/updates">обновления</a>.</td></tr></tbody></table>

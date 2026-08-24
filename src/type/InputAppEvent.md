@@ -1,25 +1,20 @@
 ---
-title: "InputAppEvent (тип)"
+title: "InputAppEvent"
 original: "https://core.telegram.org/type/InputAppEvent"
 section: ref
 kind: type
+description: "Объект содержит информацию о событии, произошедшем в приложении."
 layout: layout.njk
 ---
 
 # InputAppEvent
 
-*Тип из схемы TL.*
-
-> Object contains info about an event that occurred in the application.
-
-## Определение TL
+Объект содержит информацию о событии, произошедшем в приложении.
 
 ```
 inputAppEvent#1d1b1245 time:double type:string peer:long data:JSONValue = InputAppEvent;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [inputAppEvent](/constructor/inputAppEvent/) | Event that occurred in the application. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/inputAppEvent">inputAppEvent</a></td><td>Событие, произошедшее в приложении.</td></tr></tbody></table>

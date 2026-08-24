@@ -1,18 +1,15 @@
 ---
-title: "WebPageAttribute (тип)"
+title: "WebPageAttribute"
 original: "https://core.telegram.org/type/WebPageAttribute"
 section: ref
 kind: type
+description: "Атрибуты веб-страницы"
 layout: layout.njk
 ---
 
 # WebPageAttribute
 
-*Тип из схемы TL.*
-
-> Webpage attributes
-
-## Определение TL
+Атрибуты веб-страницы
 
 ```
 webPageAttributeTheme#54b56617 flags:# documents:flags.0?Vector<Document> settings:flags.1?ThemeSettings = WebPageAttribute;
@@ -23,14 +20,6 @@ webPageAttributeStarGiftCollection#31cad303 icons:Vector<Document> = WebPageAttr
 webPageAttributeStarGiftAuction#1c641c2 gift:StarGift end_date:int = WebPageAttribute;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [webPageAttributeTheme](/constructor/webPageAttributeTheme/) | Page theme |
-| [webPageAttributeStory](/constructor/webPageAttributeStory/) | Webpage preview of a Telegram story |
-| [webPageAttributeStickerSet](/constructor/webPageAttributeStickerSet/) | Contains info about a [stickerset »](https://core.telegram.org/api/stickers), for a [webPage](/constructor/webPage/) preview of a [stickerset deep link »](https://core.telegram.org/api/links#stickerset-links) (the [webPage](/constructor/webPage/) will have a type of telegram_stickerset). |
-| [webPageAttributeUniqueStarGift](/constructor/webPageAttributeUniqueStarGift/) | Contains info about [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) for a [webPage](/constructor/webPage/) preview of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) (the [webPage](/constructor/webPage/) will have a type of telegram_nft). |
-| [webPageAttributeStarGiftCollection](/constructor/webPageAttributeStarGiftCollection/) | Contains info about a [gift collection »](https://core.telegram.org/api/gifts#gift-collections) for a [webPage](/constructor/webPage/) preview of a [gift collection »](https://core.telegram.org/api/gifts#gift-collections) (the [webPage](/constructor/webPage/) will have a type of telegram_collection). |
-| [webPageAttributeStarGiftAuction](/constructor/webPageAttributeStarGiftAuction/) | Contains info about a [collectible gift auction »](https://core.telegram.org/api/auctions) for a [webPage](/constructor/webPage/) preview of an [auction »](https://core.telegram.org/api/auctions) (the [webPage](/constructor/webPage/) will have a type of telegram_auction). |
-| [webPageAttributeAiComposeTone](https://core.telegram.org/constructor/webPageAttributeAiComposeTone) | [Webpage attribute](/type/WebPageAttribute/) attached to a [webPage](/constructor/webPage/) of type telegram_aicomposetone, generated when previewing a shared [AI composer tone »](https://core.telegram.org/api/ai#ai-compose-tones) via an [AI compose tone link »](https://core.telegram.org/api/links#ai-compose-tone-links). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/webPageAttributeTheme">webPageAttributeTheme</a></td><td>Тема оформления страницы</td></tr><tr><td><a href="/constructor/webPageAttributeStory">webPageAttributeStory</a></td><td>Предпросмотр веб-страницы для истории Telegram</td></tr><tr><td><a href="/constructor/webPageAttributeStickerSet">webPageAttributeStickerSet</a></td><td>Содержит информацию о <a href="/api/stickers">наборе стикеров »</a> для предпросмотра <a href="/constructor/webPage">webPage</a> <a href="/api/links#stickerset-links">глубокой ссылки на набор стикеров »</a> (у <a href="/constructor/webPage">webPage</a> поле <code>type</code> будет равно <code>telegram_stickerset</code>).</td></tr><tr><td><a href="/constructor/webPageAttributeUniqueStarGift">webPageAttributeUniqueStarGift</a></td><td>Содержит информацию о <a href="/api/gifts#collectible-gifts">коллекционном подарке »</a> для предпросмотра <a href="/constructor/webPage">webPage</a> <a href="/api/gifts#collectible-gifts">коллекционного подарка »</a> (у <a href="/constructor/webPage">webPage</a> поле <code>type</code> будет равно <code>telegram_nft</code>).</td></tr><tr><td><a href="/constructor/webPageAttributeStarGiftCollection">webPageAttributeStarGiftCollection</a></td><td>Содержит информацию о <a href="/api/gifts#gift-collections">коллекции подарков »</a> для предпросмотра <a href="/constructor/webPage">webPage</a> <a href="/api/gifts#gift-collections">коллекции подарков »</a> (у <a href="/constructor/webPage">webPage</a> поле <code>type</code> будет равно <code>telegram_collection</code>).</td></tr><tr><td><a href="/constructor/webPageAttributeStarGiftAuction">webPageAttributeStarGiftAuction</a></td><td>Содержит информацию об <a href="/api/auctions">аукционе коллекционного подарка »</a> для предпросмотра <a href="/constructor/webPage">webPage</a> <a href="/api/auctions">аукциона »</a> (у <a href="/constructor/webPage">webPage</a> поле <code>type</code> будет равно <code>telegram_auction</code>).</td></tr><tr><td><a href="/constructor/webPageAttributeAiComposeTone">webPageAttributeAiComposeTone</a></td><td><a href="/type/WebPageAttribute">Атрибут веб-страницы</a>, прикреплённый к <a href="/constructor/webPage">webPage</a> типа <code>telegram_aicomposetone</code>; создаётся при предпросмотре <a href="/api/ai#ai-compose-tones">тона ИИ-редактора »</a>, переданного через <a href="/api/links#ai-compose-tone-links">ссылку на тон ИИ-редактора »</a>.</td></tr></tbody></table>

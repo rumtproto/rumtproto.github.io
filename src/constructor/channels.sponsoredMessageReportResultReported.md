@@ -1,27 +1,24 @@
 ---
-title: "channels.sponsoredMessageReportResultReported (конструктор)"
+title: "channels.sponsoredMessageReportResultReported"
 original: "https://core.telegram.org/constructor/channels.sponsoredMessageReportResultReported"
 section: ref
 kind: constructor
+description: "Жалоба на рекламное сообщение успешно отправлена."
 layout: layout.njk
 ---
 
 # channels.sponsoredMessageReportResultReported
 
-*Конструктор из схемы TL.*
-
-> The sponsored message was reported successfully.
-
-## Определение TL
+Жалоба на рекламное сообщение успешно отправлена.
 
 ```
 channels.sponsoredMessageReportResultReported#ad798849 = channels.SponsoredMessageReportResult;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [channels.SponsoredMessageReportResult](/type/channels.SponsoredMessageReportResult/)

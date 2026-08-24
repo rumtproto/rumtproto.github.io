@@ -1,46 +1,28 @@
 ---
-title: "peerNotifySettings (конструктор)"
+title: "peerNotifySettings"
 original: "https://core.telegram.org/constructor/peerNotifySettings"
 section: ref
 kind: constructor
+description: "Настройки уведомлений."
 layout: layout.njk
 ---
 
 # peerNotifySettings
 
-*Конструктор из схемы TL.*
-
-> Notification settings.
-
-## Определение TL
+Настройки уведомлений.
 
 ```
 peerNotifySettings#99622c0c flags:# show_previews:flags.0?Bool silent:flags.1?Bool mute_until:flags.2?int ios_sound:flags.3?NotificationSound android_sound:flags.4?NotificationSound other_sound:flags.5?NotificationSound stories_muted:flags.6?Bool stories_hide_sender:flags.7?Bool stories_ios_sound:flags.8?NotificationSound stories_android_sound:flags.9?NotificationSound stories_other_sound:flags.10?NotificationSound = PeerNotifySettings;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| show_previews | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Bool](/type/Bool/) | (Ternary value) If set, indicates whether or not to display previews of messages in notifications; otherwise the default behavior should be used. |
-| silent | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Bool](/type/Bool/) | (Ternary value) If set, indicates whether to mute or unmute the peer; otherwise the default behavior should be used. |
-| mute_until | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Mute all notifications until this date |
-| ios_sound | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[NotificationSound](/type/NotificationSound/) | Notification sound for the official iOS application |
-| android_sound | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[NotificationSound](/type/NotificationSound/) | Notification sound for the official android application |
-| other_sound | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[NotificationSound](/type/NotificationSound/) | Notification sound for other applications |
-| stories_muted | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[Bool](/type/Bool/) | Whether story notifications should be disabled. |
-| stories_hide_sender | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[Bool](/type/Bool/) | Whether the sender name should be displayed in story notifications. |
-| stories_ios_sound | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[NotificationSound](/type/NotificationSound/) | Sound for story notifications on the official iOS application |
-| stories_android_sound | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[NotificationSound](/type/NotificationSound/) | Sound for story notifications on the official Android application |
-| stories_other_sound | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[NotificationSound](/type/NotificationSound/) | Sound for story notifications on other applications |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>show_previews</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Bool">Bool</a></td><td>(Троичное значение) Если установлено, указывает, показывать ли предпросмотр сообщений в уведомлениях; иначе следует использовать поведение по умолчанию.</td></tr><tr><td><strong>silent</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Bool">Bool</a></td><td>(Троичное значение) Если установлено, указывает, отключить или включить уведомления от пира; иначе следует использовать поведение по умолчанию.</td></tr><tr><td><strong>mute_until</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Отключить все уведомления до этой даты</td></tr><tr><td><strong>ios_sound</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/NotificationSound">NotificationSound</a></td><td>Звук уведомления для официального приложения для iOS</td></tr><tr><td><strong>android_sound</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/NotificationSound">NotificationSound</a></td><td>Звук уведомления для официального приложения для Android</td></tr><tr><td><strong>other_sound</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/NotificationSound">NotificationSound</a></td><td>Звук уведомления для прочих приложений</td></tr><tr><td><strong>stories_muted</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/Bool">Bool</a></td><td>Следует ли отключить уведомления об историях.</td></tr><tr><td><strong>stories_hide_sender</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/Bool">Bool</a></td><td>Следует ли показывать имя отправителя в уведомлениях об историях.</td></tr><tr><td><strong>stories_ios_sound</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/NotificationSound">NotificationSound</a></td><td>Звук уведомлений об историях в официальном приложении для iOS</td></tr><tr><td><strong>stories_android_sound</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/NotificationSound">NotificationSound</a></td><td>Звук уведомлений об историях в официальном приложении для Android</td></tr><tr><td><strong>stories_other_sound</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/NotificationSound">NotificationSound</a></td><td>Звук уведомлений об историях в остальных приложениях</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PeerNotifySettings](/type/PeerNotifySettings/)
 
-## Event flags (events_mask)
+### Флаги событий (events\_mask)
 
-|  |  |
-|---|---|
-| 0x00000001 | Profile photo update notification |
+<table class="table"><thead><tr><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td><code>0x00000001</code></td><td>Уведомление об обновлении фотографии профиля</td></tr></tbody></table>

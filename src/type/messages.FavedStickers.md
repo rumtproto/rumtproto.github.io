@@ -1,18 +1,15 @@
 ---
-title: "Messages.FavedStickers (тип)"
+title: "messages.FavedStickers"
 original: "https://core.telegram.org/type/messages.FavedStickers"
 section: ref
 kind: type
+description: "Избранные стикеры"
 layout: layout.njk
 ---
 
 # Messages.FavedStickers
 
-*Тип из схемы TL.*
-
-> Favorited stickers
-
-## Определение TL
+Избранные стикеры
 
 ```
 messages.favedStickersNotModified#9e8fa6d3 = messages.FavedStickers;
@@ -23,15 +20,10 @@ messages.favedStickers#2cb51097 hash:long packs:Vector<StickerPack> stickers:Vec
 messages.getFavedStickers#4f1aaa9 hash:long = messages.FavedStickers;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.favedStickersNotModified](/constructor/messages.favedStickersNotModified/) | No new favorited stickers were found |
-| [messages.favedStickers](/constructor/messages.favedStickers/) | Favorited stickers |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.favedStickersNotModified">messages.favedStickersNotModified</a></td><td>Новых избранных стикеров не найдено</td></tr><tr><td><a href="/constructor/messages.favedStickers">messages.favedStickers</a></td><td>Избранные стикеры</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getFavedStickers](/method/messages.getFavedStickers/) | Get faved stickers |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getFavedStickers">messages.getFavedStickers</a></td><td>Получить избранные стикеры</td></tr></tbody></table>

@@ -1,18 +1,15 @@
 ---
-title: "account.EmailVerified (тип)"
+title: "account.EmailVerified"
 original: "https://core.telegram.org/type/account.EmailVerified"
 section: ref
 kind: type
+description: "Статус подтверждения электронной почты"
 layout: layout.njk
 ---
 
 # account.EmailVerified
 
-*Тип из схемы TL.*
-
-> Email verification status
-
-## Определение TL
+Статус подтверждения электронной почты
 
 ```
 account.emailVerified#2b96cd1b email:string = account.EmailVerified;
@@ -23,15 +20,10 @@ account.emailVerifiedLogin#e1bb0d61 email:string sent_code:auth.SentCode = accou
 account.verifyEmail#32da4cf purpose:EmailVerifyPurpose verification:EmailVerification = account.EmailVerified;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.emailVerified](/constructor/account.emailVerified/) | The email was verified correctly. |
-| [account.emailVerifiedLogin](/constructor/account.emailVerifiedLogin/) | The email was verified correctly, and a login code was just sent to it. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.emailVerified">account.emailVerified</a></td><td>Адрес электронной почты подтверждён верно.</td></tr><tr><td><a href="/constructor/account.emailVerifiedLogin">account.emailVerifiedLogin</a></td><td>Адрес электронной почты подтверждён верно, и на него только что был отправлен код для входа.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.verifyEmail](/method/account.verifyEmail/) | Verify an email address. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.verifyEmail">account.verifyEmail</a></td><td>Подтвердить адрес электронной почты.</td></tr></tbody></table>

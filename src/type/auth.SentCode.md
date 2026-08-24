@@ -1,18 +1,15 @@
 ---
-title: "auth.SentCode (тип)"
+title: "auth.SentCode"
 original: "https://core.telegram.org/type/auth.SentCode"
 section: ref
 kind: type
+description: "Содержит информацию о сообщении с кодом подтверждения, отправленном по SMS, звонком или через Telegram."
 layout: layout.njk
 ---
 
 # auth.SentCode
 
-*Тип из схемы TL.*
-
-> Contains info on a confirmation code message sent via SMS, phone call or Telegram.
-
-## Определение TL
+Содержит информацию о сообщении с кодом подтверждения, отправленном по SMS, звонком или через Telegram.
 
 ```
 auth.sentCode#5e002502 flags:# type:auth.SentCodeType phone_code_hash:string next_type:flags.1?auth.CodeType timeout:flags.2?int = auth.SentCode;
@@ -31,22 +28,10 @@ account.sendConfirmPhoneCode#1b3faa88 hash:string settings:CodeSettings = auth.S
 account.sendVerifyPhoneCode#a5a356f9 phone_number:string settings:CodeSettings = auth.SentCode;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [auth.sentCode](/constructor/auth.sentCode/) | Contains info about a sent verification code. |
-| [auth.sentCodeSuccess](/constructor/auth.sentCodeSuccess/) | The user successfully authorized using [future auth tokens](https://core.telegram.org/api/auth/#future-auth-tokens) |
-| [auth.sentCodePaymentRequired](/constructor/auth.sentCodePaymentRequired/) | Official apps may receive this constructor, indicating that due to the high cost of SMS verification codes for the user's country/provider, the user must purchase a [Telegram Premium](https://core.telegram.org/api/premium) subscription in order to proceed with the login/signup, see [here »](https://core.telegram.org/api/auth/#paid-auth) for more info. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/auth.sentCode">auth.sentCode</a></td><td>Содержит информацию об отправленном коде подтверждения.</td></tr><tr><td><a href="/constructor/auth.sentCodeSuccess">auth.sentCodeSuccess</a></td><td>Пользователь успешно авторизовался с помощью <a href="/api/auth#future-auth-tokens">токенов будущей авторизации</a></td></tr><tr><td><a href="/constructor/auth.sentCodePaymentRequired">auth.sentCodePaymentRequired</a></td><td>Официальные приложения могут получить этот конструктор: он означает, что из-за высокой стоимости SMS с кодом подтверждения для страны или оператора пользователя для продолжения входа либо регистрации пользователь обязан приобрести подписку <a href="/api/premium">Telegram Premium</a>; подробнее см. <a href="/api/auth#paid-auth">здесь »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [auth.sendCode](/method/auth.sendCode/) | Send the verification code for login |
-| [auth.resendCode](/method/auth.resendCode/) | Resend the login code via another medium, the phone code type is determined by the return value of the previous auth.sendCode/auth.resendCode: see [login](/api/auth/) for more info. |
-| [auth.resetLoginEmail](/method/auth.resetLoginEmail/) | Reset the [login email »](https://core.telegram.org/api/auth#email-verification). |
-| [auth.checkPaidAuth](/method/auth.checkPaidAuth/) | Checks the status of a [login payment](https://core.telegram.org/api/auth/#paid-auth). |
-| [account.sendChangePhoneCode](/method/account.sendChangePhoneCode/) | Verify a new phone number to associate to the current account |
-| [account.sendConfirmPhoneCode](/method/account.sendConfirmPhoneCode/) | Send confirmation code to cancel account deletion, for more info [click here »](https://core.telegram.org/api/account-deletion) |
-| [account.sendVerifyPhoneCode](/method/account.sendVerifyPhoneCode/) | Send the verification phone code for telegram [passport](https://core.telegram.org/passport). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/auth.sendCode">auth.sendCode</a></td><td>Отправить код подтверждения для входа</td></tr><tr><td><a href="/method/auth.resendCode">auth.resendCode</a></td><td>Повторно отправить код входа другим способом; тип кода определяется значением, возвращённым предыдущим вызовом auth.sendCode/auth.resendCode: подробнее см. <a href="/api/auth">вход</a>.</td></tr><tr><td><a href="/method/auth.resetLoginEmail">auth.resetLoginEmail</a></td><td>Сбросить <a href="https://core.telegram.org/api/auth#email-verification">почту для входа »</a>.</td></tr><tr><td><a href="/method/auth.checkPaidAuth">auth.checkPaidAuth</a></td><td>Проверяет состояние <a href="/api/auth#paid-auth">платежа за вход</a>.</td></tr><tr><td><a href="/method/account.sendChangePhoneCode">account.sendChangePhoneCode</a></td><td>Подтвердить новый номер телефона для привязки к текущему аккаунту</td></tr><tr><td><a href="/method/account.sendConfirmPhoneCode">account.sendConfirmPhoneCode</a></td><td>Отправить код подтверждения для отмены удаления аккаунта; подробнее <a href="/api/account-deletion">см. здесь »</a></td></tr><tr><td><a href="/method/account.sendVerifyPhoneCode">account.sendVerifyPhoneCode</a></td><td>Отправить код подтверждения по телефону для Telegram <a href="/passport">Passport</a>.</td></tr></tbody></table>

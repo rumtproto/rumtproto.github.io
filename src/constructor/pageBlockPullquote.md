@@ -1,30 +1,24 @@
 ---
-title: "pageBlockPullquote (конструктор)"
+title: "pageBlockPullquote"
 original: "https://core.telegram.org/constructor/pageBlockPullquote"
 section: ref
 kind: constructor
+description: "Врезка с цитатой"
 layout: layout.njk
 ---
 
 # pageBlockPullquote
 
-*Конструктор из схемы TL.*
-
-> Pullquote
-
-## Определение TL
+Врезка с цитатой
 
 ```
 pageBlockPullquote#4f4456d3 text:RichText caption:RichText = PageBlock;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [RichText](/type/RichText/) | Text |
-| caption | [RichText](/type/RichText/) | Caption |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Текст</td></tr><tr><td><strong>caption</strong></td><td style="text-align: center;"><a href="/type/RichText">RichText</a></td><td>Подпись</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PageBlock](/type/PageBlock/)

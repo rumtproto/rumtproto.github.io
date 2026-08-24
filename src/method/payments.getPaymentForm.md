@@ -1,18 +1,15 @@
 ---
-title: "payments.getPaymentForm (метод)"
+title: "payments.getPaymentForm"
 original: "https://core.telegram.org/method/payments.getPaymentForm"
 section: ref
 kind: method
+description: "Получить форму оплаты"
 layout: layout.njk
 ---
 
 # payments.getPaymentForm
 
-*Метод из схемы TL.*
-
-> Get a payment form
-
-## Определение TL
+Получить форму оплаты
 
 ```
 payments.paymentForm#a0058751 flags:# can_save_credentials:flags.2?true password_missing:flags.3?true form_id:long bot_id:long title:string description:string photo:flags.5?WebDocument invoice:Invoice provider_id:long url:string native_provider:flags.4?string native_params:flags.4?DataJSON additional_methods:flags.6?Vector<PaymentFormMethod> saved_info:flags.0?PaymentRequestedInfo saved_credentials:flags.1?Vector<PaymentSavedCredentials> users:Vector<User> = payments.PaymentForm;
@@ -22,91 +19,50 @@ payments.paymentFormStarGift#b425cfe1 form_id:long invoice:Invoice = payments.Pa
 payments.getPaymentForm#37148dbb flags:# invoice:InputInvoice theme_params:flags.0?DataJSON = payments.PaymentForm;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| invoice | [InputInvoice](/type/InputInvoice/) | Invoice |
-| theme_params | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[DataJSON](/type/DataJSON/) | [Theme parameters »](https://core.telegram.org/api/bots/webapps#theme-parameters) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>invoice</strong></td><td style="text-align: center;"><a href="/type/InputInvoice">InputInvoice</a></td><td>Счёт</td></tr><tr><td><strong>theme_params</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/DataJSON">DataJSON</a></td><td><a href="/api/bots/webapps#theme-parameters">Параметры темы оформления »</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.PaymentForm](/type/payments.PaymentForm/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## This method can be invoked over a business connection »
+### Этот метод можно вызывать через [бизнес-подключение »](/api/bots/connected-business-bots/)
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 406 | API_GIFT_RESTRICTED_UPDATE_APP | Please update the app to access the gift API. |
-| 400 | BOOST_PEER_INVALID | The specified boost_peer is invalid. |
-| 403 | BOT_ACCESS_FORBIDDEN | The specified method can be used over a [business connection](https://core.telegram.org/api/bots/connected-business-bots) for some operations, but the specified query attempted an operation that is not allowed over a business connection. |
-| 400 | BOT_INVOICE_INVALID | The specified invoice is invalid. |
-| 400 | BUSINESS_CONNECTION_INVALID | The connection_id passed to the wrapping [invokeWithBusinessConnection](https://core.telegram.org/api/business) call is invalid. |
-| 400 | GIFT_MONTHS_INVALID | The value passed in invoice.inputInvoicePremiumGiftStars.months is invalid. |
-| 400 | GIFT_STARS_INVALID | The specified amount of stars is invalid. |
-| 400 | INVOICE_INVALID | The specified invoice is invalid. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | MESSAGE_TOO_LONG | The provided message is too long. |
-| 400 | MONTH_INVALID | The number of months specified in inputInvoicePremiumGiftStars.months is invalid. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | NO_PAYMENT_NEEDED | The upgrade/transfer of the specified gift was already paid for or is free. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | PREMIUM_PURPOSE_INVALID | The specified InputStorePaymentPurpose is invalid. |
-| 400 | SLUG_INVALID | The specified invoice slug is invalid. |
-| 400 | STARGIFT_ALREADY_CONVERTED | The specified star gift was already converted to Stars. |
-| 400 | STARGIFT_ALREADY_REFUNDED | The specified star gift was already refunded. |
-| 400 | STARGIFT_ALREADY_UPGRADED | The specified gift was already upgraded to a collectible gift. |
-| 406 | STARGIFT_EXPORT_IN_PROGRESS | A gift export is in progress, a detailed and localized description for the error will be emitted via an [updateServiceNotification as specified here »](https://core.telegram.org/api/errors/#406-not-acceptable). |
-| 400 | STARGIFT_INVALID | The passed gift is invalid. |
-| 400 | STARGIFT_MESSAGE_INVALID | The specified inputInvoiceStarGift.message is invalid. |
-| 400 | STARGIFT_NOT_FOUND | The specified gift was not found. |
-| 400 | STARGIFT_NOT_OWNER | You're not the owner of the gift you trying to transfer. |
-| 400 | STARGIFT_NOT_UNIQUE | You can't transfer a non-collectible gift. |
-| 400 | STARGIFT_OWNER_INVALID | You cannot transfer or sell a gift owned by another user. |
-| 400 | STARGIFT_PEER_INVALID | The specified inputSavedStarGiftChat.peer is invalid. |
-| 400 | STARGIFT_RESELL_CURRENCY_NOT_ALLOWED | You can't buy the gift using the specified currency (i.e. trying to pay in Stars for TON gifts). |
-| 400 | STARGIFT_RESELL_TOO_EARLY_%d | You will be able to resell this gift in %d seconds. |
-| 400 | STARGIFT_SLUG_INVALID | The specified gift slug is invalid. |
-| 400 | STARGIFT_TRANSFER_TOO_EARLY_%d | You cannot transfer this gift yet, wait %d seconds. |
-| 400 | STARGIFT_UPGRADE_UNAVAILABLE | A received gift can only be upgraded to a collectible gift if the [messageActionStarGift](/constructor/messageActionStarGift/)/[savedStarGift](/constructor/savedStarGift/).can_upgrade flag is set. |
-| 406 | STARS_FORM_AMOUNT_MISMATCH | The form amount has changed, please fetch the new form using [payments.getPaymentForm](/method/payments.getPaymentForm/) and restart the process. |
-| 400 | TO_ID_INVALID | The specified to_id of the passed inputInvoiceStarGiftResale or inputInvoiceStarGiftTransfer is invalid. |
-| 400 | UNTIL_DATE_INVALID | Invalid until date provided. |
-| 403 | USER_DISALLOWED_STARGIFTS | The recipient user has configured restrictions on which categories of star gifts they're willing to accept (unique, limited, or unlimited): the sender attempted to get a payment form for a gift that falls into a category the recipient has blocked. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>406</td><td>API_GIFT_RESTRICTED_UPDATE_APP</td><td>Обновите приложение, чтобы получить доступ к API подарков.</td></tr><tr><td>400</td><td>BOOST_PEER_INVALID</td><td>Указанный <code>boost_peer</code> недействителен.</td></tr><tr><td>403</td><td>BOT_ACCESS_FORBIDDEN</td><td>Указанный метод <em>можно</em> использовать через <a href="/api/bots/connected-business-bots">бизнес-подключение</a> для некоторых операций, но в данном запросе была предпринята операция, недопустимая через бизнес-подключение.</td></tr><tr><td>400</td><td>BOT_INVOICE_INVALID</td><td>Указанный счёт недействителен.</td></tr><tr><td>400</td><td>BUSINESS_CONNECTION_INVALID</td><td>Значение <code>connection_id</code>, переданное в объемлющем вызове <a href="/api/business">invokeWithBusinessConnection</a>, недействительно.</td></tr><tr><td>400</td><td>GIFT_MONTHS_INVALID</td><td>Значение, переданное в invoice.inputInvoicePremiumGiftStars.months, недействительно.</td></tr><tr><td>400</td><td>GIFT_STARS_INVALID</td><td>Указанное количество Stars недействительно.</td></tr><tr><td>400</td><td>INVOICE_INVALID</td><td>Указанный счёт недействителен.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>MESSAGE_TOO_LONG</td><td>Указанное сообщение слишком длинное.</td></tr><tr><td>400</td><td>MONTH_INVALID</td><td>Число месяцев, указанное в inputInvoicePremiumGiftStars.months, недействительно.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>NO_PAYMENT_NEEDED</td><td>Улучшение или передача указанного подарка уже оплачены либо бесплатны.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>PREMIUM_PURPOSE_INVALID</td><td>Указанный объект InputStorePaymentPurpose недействителен.</td></tr><tr><td>400</td><td>SLUG_INVALID</td><td>Указанный слаг счёта недействителен.</td></tr><tr><td>400</td><td>STARGIFT_ALREADY_CONVERTED</td><td>Указанный звёздный подарок уже обменян на Stars.</td></tr><tr><td>400</td><td>STARGIFT_ALREADY_REFUNDED</td><td>За указанный подарок уже был произведён возврат средств.</td></tr><tr><td>400</td><td>STARGIFT_ALREADY_UPGRADED</td><td>Указанный подарок уже был улучшен до коллекционного.</td></tr><tr><td>406</td><td>STARGIFT_EXPORT_IN_PROGRESS</td><td>Выполняется экспорт подарка; подробное локализованное описание ошибки будет отправлено через <a href="/api/errors#406-not-acceptable">updateServiceNotification, как описано здесь&nbsp;»</a>.</td></tr><tr><td>400</td><td>STARGIFT_INVALID</td><td>Переданный подарок недействителен.</td></tr><tr><td>400</td><td>STARGIFT_MESSAGE_INVALID</td><td>Указанное значение inputInvoiceStarGift.message недействительно.</td></tr><tr><td>400</td><td>STARGIFT_NOT_FOUND</td><td>Указанный подарок не найден.</td></tr><tr><td>400</td><td>STARGIFT_NOT_OWNER</td><td>Вы не владелец подарка, который пытаетесь передать.</td></tr><tr><td>400</td><td>STARGIFT_NOT_UNIQUE</td><td>Нельзя передать неколлекционный подарок.</td></tr><tr><td>400</td><td>STARGIFT_OWNER_INVALID</td><td>Нельзя передать или продать подарок, принадлежащий другому пользователю.</td></tr><tr><td>400</td><td>STARGIFT_PEER_INVALID</td><td>Указанное значение inputSavedStarGiftChat.peer недействительно.</td></tr><tr><td>400</td><td>STARGIFT_RESELL_CURRENCY_NOT_ALLOWED</td><td>Нельзя купить этот подарок за указанную валюту (например, при попытке оплатить подарки за TON звёздами Stars).</td></tr><tr><td>400</td><td>STARGIFT_RESELL_TOO_EARLY_%d</td><td>Вы сможете перепродать этот подарок через %d секунд.</td></tr><tr><td>400</td><td>STARGIFT_SLUG_INVALID</td><td>Указанный слаг подарка недействителен.</td></tr><tr><td>400</td><td>STARGIFT_TRANSFER_TOO_EARLY_%d</td><td>Этот подарок пока нельзя передать, подождите %d секунд.</td></tr><tr><td>400</td><td>STARGIFT_UPGRADE_UNAVAILABLE</td><td>Полученный подарок можно улучшить до коллекционного только в том случае, если установлен флаг <a href="/constructor/messageActionStarGift">messageActionStarGift</a>/<a href="/constructor/savedStarGift">savedStarGift</a>.<code>can_upgrade</code>.</td></tr><tr><td>406</td><td>STARS_FORM_AMOUNT_MISMATCH</td><td>Сумма в форме изменилась; получите новую форму с помощью <a href="/method/payments.getPaymentForm">payments.getPaymentForm</a> и начните процесс заново.</td></tr><tr><td>400</td><td>TO_ID_INVALID</td><td>Указанное поле <code>to_id</code> переданного inputInvoiceStarGiftResale или inputInvoiceStarGiftTransfer недействительно.</td></tr><tr><td>400</td><td>UNTIL_DATE_INVALID</td><td>Указана недопустимая дата окончания.</td></tr><tr><td>403</td><td>USER_DISALLOWED_STARGIFTS</td><td>Получатель настроил ограничения на то, какие категории звёздных подарков он готов принимать (уникальные, ограниченные или неограниченные): отправитель попытался получить форму оплаты для подарка из категории, которую получатель заблокировал.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.
 
-#### [Error handling](/api/errors/)
+#### [Обработка ошибок](/api/errors/)
 
-How to handle API return errors correctly.
+Как правильно обрабатывать ошибки, возвращаемые API.
 
 #### [messageActionStarGift](/constructor/messageActionStarGift/)
 
-You received a [gift, see here »](https://core.telegram.org/api/gifts) for more info.
+Вы получили [подарок, подробнее см. здесь »](/api/gifts/).
 
 #### [savedStarGift](/constructor/savedStarGift/)
 
-Represents a [gift](https://core.telegram.org/api/gifts) owned by a peer.
+Представляет [подарок](/api/gifts/), принадлежащий пиру.
 
 #### [payments.getPaymentForm](/method/payments.getPaymentForm/)
 
-Get a payment form
+Получить форму оплаты

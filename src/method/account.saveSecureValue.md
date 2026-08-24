@@ -1,18 +1,15 @@
 ---
-title: "account.saveSecureValue (метод)"
+title: "account.saveSecureValue"
 original: "https://core.telegram.org/method/account.saveSecureValue"
 section: ref
 kind: method
+description: "Безопасно сохранить документ Telegram Passport, подробнее см. в документации по Passport »"
 layout: layout.njk
 ---
 
 # account.saveSecureValue
 
-*Метод из схемы TL.*
-
-> Securely save [Telegram Passport](https://core.telegram.org/passport) document, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption)
-
-## Определение TL
+Безопасно сохранить документ [Telegram Passport](https://core.telegram.org/passport), [подробнее см. в документации по Passport »](https://core.telegram.org/passport/encryption#encryption)
 
 ```
 secureValue#187fa0ca flags:# type:SecureValueType data:flags.0?SecureData front_side:flags.1?SecureFile reverse_side:flags.2?SecureFile selfie:flags.3?SecureFile translation:flags.6?Vector<SecureFile> files:flags.4?Vector<SecureFile> plain_data:flags.5?SecurePlainData hash:bytes = SecureValue;
@@ -20,36 +17,30 @@ secureValue#187fa0ca flags:# type:SecureValueType data:flags.0?SecureData front_
 account.saveSecureValue#899fe31d value:InputSecureValue secure_secret_id:long = SecureValue;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| value | [InputSecureValue](/type/InputSecureValue/) | Secure value, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption) |
-| secure_secret_id | [long](/type/long/) | Passport secret hash, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/InputSecureValue">InputSecureValue</a></td><td>Защищённое значение, <a href="/passport/encryption#encryption">подробнее см. в документации по Passport »</a></td></tr><tr><td><strong>secure_secret_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Хеш секрета Telegram Passport, <a href="/passport/encryption#encryption">подробнее см. в документации по Telegram Passport »</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [SecureValue](/type/SecureValue/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PASSWORD_REQUIRED | A [2FA password](/api/srp/) must be configured to use Telegram Passport. |
-| 400 | SECURE_SECRET_REQUIRED | A secure secret is required. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PASSWORD_REQUIRED</td><td>Для использования Telegram Passport должен быть настроен <a href="/api/srp">пароль двухфакторной аутентификации</a>.</td></tr><tr><td>400</td><td>SECURE_SECRET_REQUIRED</td><td>Требуется защищённый секрет.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport: детали шифрования](https://core.telegram.org/passport/encryption)
 
-How Telegram Passport data is stored and encrypted end-to-end.
+Как данные Telegram Passport хранятся и шифруются сквозным шифрованием.
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.

@@ -1,31 +1,26 @@
 ---
-title: "StarGiftActiveAuctionState (тип)"
+title: "StarGiftActiveAuctionState"
 original: "https://core.telegram.org/type/StarGiftActiveAuctionState"
 section: ref
 kind: type
+description: "Содержит информацию об аукционе, на котором пользователь сделал ставку »."
 layout: layout.njk
 ---
 
 # StarGiftActiveAuctionState
 
-*Тип из схемы TL.*
-
-> Contains info about [an auction where the user has placed a bid »](https://core.telegram.org/api/auctions).
-
-## Определение TL
+Содержит информацию об [аукционе, на котором пользователь сделал ставку »](/api/auctions/).
 
 ```
 starGiftActiveAuctionState#d31bc45d gift:StarGift state:StarGiftAuctionState user_state:StarGiftAuctionUserState = StarGiftActiveAuctionState;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starGiftActiveAuctionState](/constructor/starGiftActiveAuctionState/) | Contains info about [an auction where the user has placed a bid »](https://core.telegram.org/api/auctions). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftActiveAuctionState">starGiftActiveAuctionState</a></td><td>Содержит информацию об <a href="/api/auctions">аукционе, на котором пользователь сделал ставку »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

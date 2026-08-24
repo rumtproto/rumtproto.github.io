@@ -1,38 +1,30 @@
 ---
-title: "mediaAreaGeoPoint (конструктор)"
+title: "mediaAreaGeoPoint"
 original: "https://core.telegram.org/constructor/mediaAreaGeoPoint"
 section: ref
 kind: constructor
+description: "Представляет геометку, прикреплённую к истории."
 layout: layout.njk
 ---
 
 # mediaAreaGeoPoint
 
-*Конструктор из схемы TL.*
-
-> Represents a geolocation tag attached to a [story](https://core.telegram.org/api/stories).
-
-## Определение TL
+Представляет геометку, прикреплённую к [истории](/api/stories/).
 
 ```
 mediaAreaGeoPoint#cad5452d flags:# coordinates:MediaAreaCoordinates geo:GeoPoint address:flags.0?GeoPointAddress = MediaArea;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| coordinates | [MediaAreaCoordinates](/type/MediaAreaCoordinates/) | The size and position of the media area corresponding to the location sticker on top of the story media. |
-| geo | [GeoPoint](/type/GeoPoint/) | Coordinates of the geolocation tag. |
-| address | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[GeoPointAddress](/type/GeoPointAddress/) | Optional textual representation of the address. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>coordinates</strong></td><td style="text-align: center;"><a href="/type/MediaAreaCoordinates">MediaAreaCoordinates</a></td><td>Размер и расположение области медиа, соответствующей стикеру с местоположением поверх медиа истории.</td></tr><tr><td><strong>geo</strong></td><td style="text-align: center;"><a href="/type/GeoPoint">GeoPoint</a></td><td>Координаты геометки.</td></tr><tr><td><strong>address</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/GeoPointAddress">GeoPointAddress</a></td><td>Необязательное текстовое представление адреса.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MediaArea](/type/MediaArea/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

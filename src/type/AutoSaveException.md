@@ -1,25 +1,20 @@
 ---
-title: "AutoSaveException (тип)"
+title: "AutoSaveException"
 original: "https://core.telegram.org/type/AutoSaveException"
 section: ref
 kind: type
+description: "Настройки автосохранения для конкретного пира"
 layout: layout.njk
 ---
 
 # AutoSaveException
 
-*Тип из схемы TL.*
-
-> Peer-specific autosave settings
-
-## Определение TL
+Настройки автосохранения для конкретного пира
 
 ```
 autoSaveException#81602d47 peer:Peer settings:AutoSaveSettings = AutoSaveException;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [autoSaveException](/constructor/autoSaveException/) | Peer-specific media autosave settings |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/autoSaveException">autoSaveException</a></td><td>Настройки автосохранения медиафайлов для конкретного пира</td></tr></tbody></table>

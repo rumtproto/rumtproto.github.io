@@ -1,18 +1,15 @@
 ---
-title: "account.ConnectedBots (тип)"
+title: "account.ConnectedBots"
 original: "https://core.telegram.org/type/account.ConnectedBots"
 section: ref
 kind: type
+description: "Информация о подключённых в данный момент бизнес-ботах."
 layout: layout.njk
 ---
 
 # account.ConnectedBots
 
-*Тип из схемы TL.*
-
-> Info about currently connected [business bots](https://core.telegram.org/api/bots/connected-business-bots).
-
-## Определение TL
+Информация о подключённых в данный момент [бизнес-ботах](/api/bots/connected-business-bots/).
 
 ```
 account.connectedBots#17d7f87b connected_bots:Vector<ConnectedBot> users:Vector<User> = account.ConnectedBots;
@@ -22,20 +19,16 @@ account.connectedBots#17d7f87b connected_bots:Vector<ConnectedBot> users:Vector<
 account.getConnectedBots#4ea4c80f = account.ConnectedBots;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.connectedBots](/constructor/account.connectedBots/) | Info about currently connected [business bots](https://core.telegram.org/api/bots/connected-business-bots). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.connectedBots">account.connectedBots</a></td><td>Информация о подключённых в данный момент <a href="/api/bots/connected-business-bots">бизнес-ботах</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getConnectedBots](/method/account.getConnectedBots/) | List all currently connected [business bots »](https://core.telegram.org/api/bots/connected-business-bots) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getConnectedBots">account.getConnectedBots</a></td><td>Перечислить все подключённые в данный момент <a href="/api/bots/connected-business-bots">бизнес-боты »</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.

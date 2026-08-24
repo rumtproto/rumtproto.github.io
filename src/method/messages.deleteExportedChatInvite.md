@@ -1,18 +1,15 @@
 ---
-title: "messages.deleteExportedChatInvite (метод)"
+title: "messages.deleteExportedChatInvite"
 original: "https://core.telegram.org/method/messages.deleteExportedChatInvite"
 section: ref
 kind: method
+description: "Удалить приглашение в чат"
 layout: layout.njk
 ---
 
 # messages.deleteExportedChatInvite
 
-*Метод из схемы TL.*
-
-> Delete a chat invite
-
-## Определение TL
+Удалить приглашение в чат
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,24 +18,16 @@ boolTrue#997275b5 = Bool;
 messages.deleteExportedChatInvite#d464a42b peer:InputPeer link:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer |
-| link | [string](/type/string/) | Invite link |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир</td></tr><tr><td><strong>link</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Пригласительная ссылка</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | INVITE_HASH_EXPIRED | The invite link has expired. |
-| 400 | INVITE_REVOKED_MISSING | The specified invite link was already revoked or is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>INVITE_HASH_EXPIRED</td><td>Срок действия пригласительной ссылки истёк.</td></tr><tr><td>400</td><td>INVITE_REVOKED_MISSING</td><td>Указанная пригласительная ссылка уже отозвана или недействительна.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>

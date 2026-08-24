@@ -1,20 +1,17 @@
 ---
-title: "messages.setBotPrecheckoutResults (метод)"
+title: "messages.setBotPrecheckoutResults"
 original: "https://core.telegram.org/method/messages.setBotPrecheckoutResults"
 section: ref
 kind: method
+description: "После того как пользователь подтвердил платёж и данные доставки, бот получает обновление updateBotPrecheckoutQuery."
 layout: layout.njk
 ---
 
 # messages.setBotPrecheckoutResults
 
-*Метод из схемы TL.*
-
-> Once the user has confirmed their payment and shipping details, the bot receives an [updateBotPrecheckoutQuery](/constructor/updateBotPrecheckoutQuery/) update.  
-> Use this method to respond to such pre-checkout queries.  
-> **Note**: Telegram must receive an answer within 10 seconds after the pre-checkout query was sent.
-
-## Определение TL
+После того как пользователь подтвердил платёж и данные доставки, бот получает обновление [updateBotPrecheckoutQuery](/constructor/updateBotPrecheckoutQuery/).  
+Используйте этот метод, чтобы ответить на такие запросы предварительной проверки заказа.  
+**Примечание**: Telegram должен получить ответ в течение 10 секунд после отправки запроса предварительной проверки заказа.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -23,30 +20,22 @@ boolTrue#997275b5 = Bool;
 messages.setBotPrecheckoutResults#9c2dd95 flags:# success:flags.1?true query_id:long error:flags.0?string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| success | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Set this flag if everything is alright (goods are available, etc.) and the bot is ready to proceed with the order, otherwise do not set it, and set the error field, instead |
-| query_id | [long](/type/long/) | Unique identifier for the query to be answered |
-| error | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Required if the success isn't set. Error message in human readable form that explains the reason for failure to proceed with the checkout (e.g. "Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!"). Telegram will display this message to the user. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>success</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Установите этот флаг, если всё в порядке (товары в наличии и т. п.) и бот готов продолжить оформление заказа; иначе не устанавливайте его, а вместо этого заполните поле <code>error</code></td></tr><tr><td><strong>query_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Уникальный идентификатор запроса, на который нужно ответить</td></tr><tr><td><strong>error</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Обязательно, если не установлено поле <code>success</code>. Сообщение об ошибке в понятной человеку форме, объясняющее причину, по которой оформление заказа не может быть продолжено (например: «Извините, пока вы вводили платёжные данные, кто-то купил последнюю из наших замечательных чёрных футболок. Пожалуйста, выберите другой цвет или другую вещь!»). Telegram покажет это сообщение пользователю.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only bots can use this method
+### Этот метод доступен только ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | ERROR_TEXT_EMPTY | The provided error message is empty. |
-| 400 | USER_BOT_REQUIRED | This method can only be called by a bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>ERROR_TEXT_EMPTY</td><td>Указанный текст ошибки пуст.</td></tr><tr><td>400</td><td>USER_BOT_REQUIRED</td><td>Этот метод может вызывать только бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [updateBotPrecheckoutQuery](/constructor/updateBotPrecheckoutQuery/)
 
-This object contains information about an incoming pre-checkout query.
+Этот объект содержит информацию о входящем запросе предварительной проверки заказа.

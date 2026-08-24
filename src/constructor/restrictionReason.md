@@ -1,42 +1,36 @@
 ---
-title: "restrictionReason (конструктор)"
+title: "restrictionReason"
 original: "https://core.telegram.org/constructor/restrictionReason"
 section: ref
 kind: constructor
+description: "Причина ограничения."
 layout: layout.njk
 ---
 
 # restrictionReason
 
-*Конструктор из схемы TL.*
+Причина ограничения.
 
-> Restriction reason.
-> See [here »](https://core.telegram.org/api/age-verification) for the full flow to use for restricted or age-gated content.
-
-## Определение TL
+Полный порядок действий для контента с ограничениями или возрастным ограничением см. [здесь »](/api/age-verification/).
 
 ```
 restrictionReason#d072acb4 platform:string reason:string text:string = RestrictionReason;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| platform | [string](/type/string/) | Platform identifier (ios, android, wp, all, etc.), can be concatenated with a dash as separator (android-ios, ios-wp, etc) |
-| reason | [string](/type/string/) | Restriction reason (porno, terms, etc.). Ignore this restriction reason if it is contained in the [ignore_restriction_reasons »](https://core.telegram.org/api/config#ignore-restriction-reasons) client configuration parameter. |
-| text | [string](/type/string/) | Error message to be shown to the user |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>platform</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор платформы (ios, android, wp, all и т. п.); значения можно объединять через дефис (<code>android-ios</code>, <code>ios-wp</code> и т. п.)</td></tr><tr><td><strong>reason</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Причина ограничения (<code>porno</code>, <code>terms</code> и так далее). Игнорируйте эту причину ограничения, если она содержится в параметре клиентской конфигурации <a href="/api/config#ignore-restriction-reasons">ignore_restriction_reasons »</a>.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Сообщение об ошибке, которое нужно показать пользователю</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [RestrictionReason](/type/RestrictionReason/)
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Age verification](https://core.telegram.org/api/age-verification)
+#### [Проверка возраста](/api/age-verification/)
 
-Some legislations require age verification to view restricted content: Telegram implements this through the Main Mini App of a special bot.
+[@term:Mini App] Законодательство некоторых стран требует проверки возраста для просмотра контента с ограничениями: Telegram реализует её через Main Mini App специального бота.

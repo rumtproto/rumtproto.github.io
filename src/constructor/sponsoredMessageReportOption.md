@@ -1,40 +1,34 @@
 ---
-title: "sponsoredMessageReportOption (конструктор)"
+title: "sponsoredMessageReportOption"
 original: "https://core.telegram.org/constructor/sponsoredMessageReportOption"
 section: ref
 kind: constructor
+description: "Вариант жалобы на рекламное сообщение »."
 layout: layout.njk
 ---
 
 # sponsoredMessageReportOption
 
-*Конструктор из схемы TL.*
-
-> A [report option for a sponsored message »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages).
-
-## Определение TL
+[Вариант жалобы на рекламное сообщение »](/api/sponsored-messages/#reporting-sponsored-messages).
 
 ```
 sponsoredMessageReportOption#430d3150 text:string option:bytes = SponsoredMessageReportOption;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| text | [string](/type/string/) | Localized description of the option. |
-| option | [bytes](/type/bytes/) | Option identifier to pass to [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Локализованное описание варианта.</td></tr><tr><td><strong>option</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Идентификатор варианта, передаваемый в <a href="/method/messages.reportSponsoredMessage">messages.reportSponsoredMessage</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SponsoredMessageReportOption](/type/SponsoredMessageReportOption/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.reportSponsoredMessage](/method/messages.reportSponsoredMessage/)
 
-Report a [sponsored message »](https://core.telegram.org/api/sponsored-messages), see [here »](https://core.telegram.org/api/sponsored-messages#reporting-sponsored-messages) for more info on the full flow.
+Пожаловаться на [рекламное сообщение »](/api/sponsored-messages/); подробнее обо всём процессе см. [здесь »](/api/sponsored-messages/#reporting-sponsored-messages).
 
-#### [Sponsored messages](https://core.telegram.org/api/sponsored-messages)
+#### [Спонсируемые сообщения](/api/sponsored-messages/)
 
-How clients should fetch, display and interact with sponsored messages.
+Как клиентам получать, показывать рекламные сообщения и взаимодействовать с ними.

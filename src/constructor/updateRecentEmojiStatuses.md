@@ -1,33 +1,30 @@
 ---
-title: "updateRecentEmojiStatuses (конструктор)"
+title: "updateRecentEmojiStatuses"
 original: "https://core.telegram.org/constructor/updateRecentEmojiStatuses"
 section: ref
 kind: constructor
+description: "Список недавних эмодзи-статусов изменился"
 layout: layout.njk
 ---
 
 # updateRecentEmojiStatuses
 
-*Конструктор из схемы TL.*
-
-> The list of recent [emoji statuses](https://core.telegram.org/api/emoji-status) has changed
-
-## Определение TL
+Список недавних [эмодзи-статусов](/api/emoji-status/) изменился
 
 ```
 updateRecentEmojiStatuses#30f443db = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

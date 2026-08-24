@@ -1,18 +1,15 @@
 ---
-title: "payments.toggleChatStarGiftNotifications (метод)"
+title: "payments.toggleChatStarGiftNotifications"
 original: "https://core.telegram.org/method/payments.toggleChatStarGiftNotifications"
 section: ref
 kind: method
+description: "Включает или отключает получение уведомлений при каждом получении подарка » указанным каналом; может вызываться только администраторами с правом администратора post_messages."
 layout: layout.njk
 ---
 
 # payments.toggleChatStarGiftNotifications
 
-*Метод из схемы TL.*
-
-> Enables or disables the reception of notifications every time a [gift »](https://core.telegram.org/api/gifts) is received by the specified channel, can only be invoked by admins with `post_messages` [admin rights](/constructor/chatAdminRights/).
-
-## Определение TL
+Включает или отключает получение уведомлений при каждом получении [подарка »](/api/gifts/) указанным каналом; может вызываться только администраторами с [правом администратора](/constructor/chatAdminRights/) `post_messages`.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,40 +18,34 @@ boolTrue#997275b5 = Bool;
 payments.toggleChatStarGiftNotifications#60eaefa1 flags:# enabled:flags.0?true peer:InputPeer = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| enabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to enable or disable reception of notifications in the form of [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/) and [messageActionStarGift](/constructor/messageActionStarGift/) service messages from the channel. |
-| peer | [InputPeer](/type/InputPeer/) | The channel for which to receive or not receive notifications. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Включить или отключить получение уведомлений в виде сервисных сообщений <a href="/constructor/messageActionStarGiftUnique">messageActionStarGiftUnique</a> и <a href="/constructor/messageActionStarGift">messageActionStarGift</a> от канала.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Канал, для которого следует включить или отключить уведомления.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/)
 
-A [gift »](https://core.telegram.org/api/gifts) was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+[Подарок »](/api/gifts/) был улучшен до [коллекционного подарка »](/api/gifts/#collectible-gifts).
 
 #### [messageActionStarGift](/constructor/messageActionStarGift/)
 
-You received a [gift, see here »](https://core.telegram.org/api/gifts) for more info.
+Вы получили [подарок, подробнее см. здесь »](/api/gifts/).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.
 
 #### [chatAdminRights](/constructor/chatAdminRights/)
 
-Represents the rights of an admin in a [channel/supergroup](https://core.telegram.org/api/channel).
+Представляет права администратора в [канале или супергруппе](/api/channel/).

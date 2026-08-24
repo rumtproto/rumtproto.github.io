@@ -1,27 +1,24 @@
 ---
-title: "requirementToContactEmpty (конструктор)"
+title: "requirementToContactEmpty"
 original: "https://core.telegram.org/constructor/requirementToContactEmpty"
 section: ref
 kind: constructor
+description: "С этим пользователем можно свободно связаться."
 layout: layout.njk
 ---
 
 # requirementToContactEmpty
 
-*Конструктор из схемы TL.*
-
-> This user can be freely contacted.
-
-## Определение TL
+С этим пользователем можно свободно связаться.
 
 ```
 requirementToContactEmpty#50a9839 = RequirementToContact;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [RequirementToContact](/type/RequirementToContact/)

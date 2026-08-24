@@ -1,18 +1,15 @@
 ---
-title: "Account.PrivacyRules (тип)"
+title: "account.PrivacyRules"
 original: "https://core.telegram.org/type/account.PrivacyRules"
 section: ref
 kind: type
+description: "Правила приватности"
 layout: layout.njk
 ---
 
 # Account.PrivacyRules
 
-*Тип из схемы TL.*
-
-> Privacy rules
-
-## Определение TL
+Правила приватности
 
 ```
 account.privacyRules#50a04e45 rules:Vector<PrivacyRule> chats:Vector<Chat> users:Vector<User> = account.PrivacyRules;
@@ -23,15 +20,10 @@ account.getPrivacy#dadbc950 key:InputPrivacyKey = account.PrivacyRules;
 account.setPrivacy#c9f81ce8 key:InputPrivacyKey rules:Vector<InputPrivacyRule> = account.PrivacyRules;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.privacyRules](/constructor/account.privacyRules/) | Privacy rules |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.privacyRules">account.privacyRules</a></td><td>Правила приватности</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getPrivacy](/method/account.getPrivacy/) | Get privacy settings of current account |
-| [account.setPrivacy](/method/account.setPrivacy/) | Change privacy settings of current account |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getPrivacy">account.getPrivacy</a></td><td>Получить настройки приватности текущего аккаунта</td></tr><tr><td><a href="/method/account.setPrivacy">account.setPrivacy</a></td><td>Изменить настройки приватности текущего аккаунта</td></tr></tbody></table>

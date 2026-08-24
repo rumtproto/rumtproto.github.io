@@ -1,36 +1,30 @@
 ---
-title: "channelAdminLogEventActionChangeEmojiStickerSet (конструктор)"
+title: "channelAdminLogEventActionChangeEmojiStickerSet"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionChangeEmojiStickerSet"
 section: ref
 kind: constructor
+description: "Изменён набор пользовательских эмодзи супергруппы."
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionChangeEmojiStickerSet
 
-*Конструктор из схемы TL.*
-
-> The supergroup's [custom emoji stickerset](https://core.telegram.org/api/boost#setting-a-custom-emoji-stickerset-for-supergroups) was changed.
-
-## Определение TL
+Изменён [набор пользовательских эмодзи](/api/boost/#setting-a-custom-emoji-stickerset-for-supergroups) супергруппы.
 
 ```
 channelAdminLogEventActionChangeEmojiStickerSet#46d840ab prev_stickerset:InputStickerSet new_stickerset:InputStickerSet = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| prev_stickerset | [InputStickerSet](/type/InputStickerSet/) | Old value |
-| new_stickerset | [InputStickerSet](/type/InputStickerSet/) | New value |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>prev_stickerset</strong></td><td style="text-align: center;"><a href="/type/InputStickerSet">InputStickerSet</a></td><td>Старое значение</td></tr><tr><td><strong>new_stickerset</strong></td><td style="text-align: center;"><a href="/type/InputStickerSet">InputStickerSet</a></td><td>Новое значение</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.

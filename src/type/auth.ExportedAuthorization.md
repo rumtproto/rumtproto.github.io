@@ -1,18 +1,15 @@
 ---
-title: "Auth.ExportedAuthorization (тип)"
+title: "auth.ExportedAuthorization"
 original: "https://core.telegram.org/type/auth.ExportedAuthorization"
 section: ref
 kind: type
+description: "Экспортированная авторизация"
 layout: layout.njk
 ---
 
 # Auth.ExportedAuthorization
 
-*Тип из схемы TL.*
-
-> Exported authorization
-
-## Определение TL
+Экспортированная авторизация
 
 ```
 auth.exportedAuthorization#b434e2b8 id:long bytes:bytes = auth.ExportedAuthorization;
@@ -22,14 +19,10 @@ auth.exportedAuthorization#b434e2b8 id:long bytes:bytes = auth.ExportedAuthoriza
 auth.exportAuthorization#e5bfffcd dc_id:int = auth.ExportedAuthorization;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [auth.exportedAuthorization](/constructor/auth.exportedAuthorization/) | Data for copying of authorization between data centers. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/auth.exportedAuthorization">auth.exportedAuthorization</a></td><td>Данные для копирования авторизации между дата-центрами.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [auth.exportAuthorization](/method/auth.exportAuthorization/) | Returns data for copying authorization to another data-center. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/auth.exportAuthorization">auth.exportAuthorization</a></td><td>Возвращает данные для копирования авторизации в другой дата-центр.</td></tr></tbody></table>

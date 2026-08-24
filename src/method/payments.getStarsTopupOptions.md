@@ -1,40 +1,37 @@
 ---
-title: "payments.getStarsTopupOptions (метод)"
+title: "payments.getStarsTopupOptions"
 original: "https://core.telegram.org/method/payments.getStarsTopupOptions"
 section: ref
 kind: method
+description: "Получить список вариантов пополнения баланса Telegram Stars » в виде конструкторов starsTopupOption."
 layout: layout.njk
 ---
 
 # payments.getStarsTopupOptions
 
-*Метод из схемы TL.*
-
-> Obtain a list of [Telegram Stars topup options »](https://core.telegram.org/api/stars#buying-or-gifting-stars) as [starsTopupOption](/constructor/starsTopupOption/) constructors.
-
-## Определение TL
+Получить список [вариантов пополнения баланса Telegram Stars »](/api/stars/#buying-or-gifting-stars) в виде конструкторов [starsTopupOption](/constructor/starsTopupOption/).
 
 ```
 ---functions---
 payments.getStarsTopupOptions#c00ec7d3 = Vector<StarsTopupOption>;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[StarsTopupOption](/type/StarsTopupOption/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
 #### [starsTopupOption](/constructor/starsTopupOption/)
 
-[Telegram Stars topup option](https://core.telegram.org/api/stars).
+[Вариант пополнения баланса Telegram Stars](/api/stars/).

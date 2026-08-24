@@ -1,27 +1,24 @@
 ---
-title: "contacts.topPeersDisabled (конструктор)"
+title: "contacts.topPeersDisabled"
 original: "https://core.telegram.org/constructor/contacts.topPeersDisabled"
 section: ref
 kind: constructor
+description: "Популярные пиры отключены"
 layout: layout.njk
 ---
 
 # contacts.topPeersDisabled
 
-*Конструктор из схемы TL.*
-
-> Top peers disabled
-
-## Определение TL
+Популярные пиры отключены
 
 ```
 contacts.topPeersDisabled#b52c939d = contacts.TopPeers;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [contacts.TopPeers](/type/contacts.TopPeers/)

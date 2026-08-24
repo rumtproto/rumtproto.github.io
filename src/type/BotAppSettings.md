@@ -1,31 +1,26 @@
 ---
-title: "BotAppSettings (тип)"
+title: "BotAppSettings"
 original: "https://core.telegram.org/type/BotAppSettings"
 section: ref
 kind: type
+description: "Настройки Mini App »"
 layout: layout.njk
 ---
 
 # BotAppSettings
 
-*Тип из схемы TL.*
-
-> [Mini app »](https://core.telegram.org/api/bots/webapps) settings
-
-## Определение TL
+[@term:Mini App] Настройки [Mini App »](/api/bots/webapps/)
 
 ```
 botAppSettings#c99b1950 flags:# placeholder_path:flags.0?bytes background_color:flags.1?int background_dark_color:flags.2?int header_color:flags.3?int header_dark_color:flags.4?int = BotAppSettings;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [botAppSettings](/constructor/botAppSettings/) | [Mini app »](https://core.telegram.org/api/bots/webapps) settings |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/botAppSettings">botAppSettings</a></td><td>Настройки <a href="/api/bots/webapps">Mini App »</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

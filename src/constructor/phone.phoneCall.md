@@ -1,30 +1,24 @@
 ---
-title: "phone.phoneCall (конструктор)"
+title: "phone.phoneCall"
 original: "https://core.telegram.org/constructor/phone.phoneCall"
 section: ref
 kind: constructor
+description: "Телефонный звонок VoIP"
 layout: layout.njk
 ---
 
 # phone.phoneCall
 
-*Конструктор из схемы TL.*
-
-> A VoIP phone call
-
-## Определение TL
+Телефонный звонок VoIP
 
 ```
 phone.phoneCall#ec82e140 phone_call:PhoneCall users:Vector<User> = phone.PhoneCall;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_call | [PhoneCall](/type/PhoneCall/) | The VoIP phone call |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | VoIP phone call participants |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_call</strong></td><td style="text-align: center;"><a href="/type/PhoneCall">PhoneCall</a></td><td>Телефонный звонок VoIP</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Участники телефонного звонка VoIP</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [phone.PhoneCall](/type/phone.PhoneCall/)

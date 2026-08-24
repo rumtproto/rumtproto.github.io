@@ -1,27 +1,24 @@
 ---
-title: "contacts.sponsoredPeersEmpty (конструктор)"
+title: "contacts.sponsoredPeersEmpty"
 original: "https://core.telegram.org/constructor/contacts.sponsoredPeersEmpty"
 section: ref
 kind: constructor
+description: "Для этого запроса нет рекламируемых пиров."
 layout: layout.njk
 ---
 
 # contacts.sponsoredPeersEmpty
 
-*Конструктор из схемы TL.*
-
-> There are no sponsored peers for this query.
-
-## Определение TL
+Для этого запроса нет рекламируемых пиров.
 
 ```
 contacts.sponsoredPeersEmpty#ea32b4b1 = contacts.SponsoredPeers;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [contacts.SponsoredPeers](/type/contacts.SponsoredPeers/)

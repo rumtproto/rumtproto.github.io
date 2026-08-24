@@ -1,33 +1,30 @@
 ---
-title: "messages.savedReactionTagsNotModified (конструктор)"
+title: "messages.savedReactionTagsNotModified"
 original: "https://core.telegram.org/constructor/messages.savedReactionTagsNotModified"
 section: ref
 kind: constructor
+description: "Список имён тегов-реакций », назначенных пользователем, не изменился."
 layout: layout.njk
 ---
 
 # messages.savedReactionTagsNotModified
 
-*Конструктор из схемы TL.*
-
-> The list of [reaction tag »](https://core.telegram.org/api/saved-messages#tags) names assigned by the user hasn't changed.
-
-## Определение TL
+Список имён [тегов-реакций »](/api/saved-messages/#tags), назначенных пользователем, не изменился.
 
 ```
 messages.savedReactionTagsNotModified#889b59ef = messages.SavedReactionTags;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.SavedReactionTags](/type/messages.SavedReactionTags/)
 
-## Related pages
+### Связанные страницы
 
-#### [Saved messages](https://core.telegram.org/api/saved-messages)
+#### [Избранные сообщения](/api/saved-messages/)
 
-The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.
+Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.

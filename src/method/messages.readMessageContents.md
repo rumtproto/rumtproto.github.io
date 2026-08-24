@@ -1,18 +1,15 @@
 ---
-title: "messages.readMessageContents (метод)"
+title: "messages.readMessageContents"
 original: "https://core.telegram.org/method/messages.readMessageContents"
 section: ref
 kind: method
+description: "Уведомляет отправителя о том, что получатель прослушал голосовое сообщение или посмотрел видео, порождая updateReadMessagesContents."
 layout: layout.njk
 ---
 
 # messages.readMessageContents
 
-*Метод из схемы TL.*
-
-> Notifies the sender about the recipient having listened a voice message or watched a video, emitting an [updateReadMessagesContents](/constructor/updateReadMessagesContents/).
-
-## Определение TL
+Уведомляет отправителя о том, что получатель прослушал голосовое сообщение или посмотрел видео, порождая [updateReadMessagesContents](/constructor/updateReadMessagesContents/).
 
 ```
 messages.affectedMessages#84d19185 pts:int pts_count:int = messages.AffectedMessages;
@@ -20,20 +17,18 @@ messages.affectedMessages#84d19185 pts:int pts_count:int = messages.AffectedMess
 messages.readMessageContents#36a73f77 id:Vector<int> = messages.AffectedMessages;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Message ID list |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Список идентификаторов сообщений</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.AffectedMessages](/type/messages.AffectedMessages/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
 #### [updateReadMessagesContents](/constructor/updateReadMessagesContents/)
 
-Contents of messages in the common [message box](/api/updates/) were read (emitted specifically for messages like voice messages or video, only once the media is watched and marked as read using [messages.readMessageContents](/method/messages.readMessageContents/)).
+Содержимое сообщений в общем [ящике сообщений](/api/updates/) было прочитано (генерируется специально для таких сообщений, как голосовые сообщения или видео, только после того, как медиафайл просмотрен и отмечен как прочитанный с помощью [messages.readMessageContents](/method/messages.readMessageContents/)).

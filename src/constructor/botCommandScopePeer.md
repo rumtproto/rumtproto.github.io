@@ -1,29 +1,24 @@
 ---
-title: "botCommandScopePeer (конструктор)"
+title: "botCommandScopePeer"
 original: "https://core.telegram.org/constructor/botCommandScopePeer"
 section: ref
 kind: constructor
+description: "Указанные команды бота будут действовать только в конкретном диалоге."
 layout: layout.njk
 ---
 
 # botCommandScopePeer
 
-*Конструктор из схемы TL.*
-
-> The specified bot commands will be valid only in a specific dialog.
-
-## Определение TL
+Указанные команды бота будут действовать только в конкретном диалоге.
 
 ```
 botCommandScopePeer#db9d897d peer:InputPeer = BotCommandScope;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The dialog |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Диалог</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BotCommandScope](/type/BotCommandScope/)

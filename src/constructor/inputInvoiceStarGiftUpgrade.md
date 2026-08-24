@@ -1,41 +1,34 @@
 ---
-title: "inputInvoiceStarGiftUpgrade (конструктор)"
+title: "inputInvoiceStarGiftUpgrade"
 original: "https://core.telegram.org/constructor/inputInvoiceStarGiftUpgrade"
 section: ref
 kind: constructor
+description: "Используется, чтобы оплатить улучшение подарка до коллекционного; подробнее обо всём процессе см. документацию по коллекционным подаркам »."
 layout: layout.njk
 ---
 
 # inputInvoiceStarGiftUpgrade
 
-*Конструктор из схемы TL.*
-
-> Used to [pay to upgrade a Gift to a collectible gift](https://core.telegram.org/api/gifts#upgrade-a-gift-to-a-collectible-gift), see the [collectible gifts »](https://core.telegram.org/api/gifts#collectible-gifts) documentation for more info on the full flow.
-
-## Определение TL
+Используется, чтобы [оплатить улучшение подарка до коллекционного](/api/gifts/#upgrade-a-gift-to-a-collectible-gift); подробнее обо всём процессе см. документацию по [коллекционным подаркам »](/api/gifts/#collectible-gifts).
 
 ```
 inputInvoiceStarGiftUpgrade#4d818d5d flags:# keep_original_details:flags.0?true stargift:InputSavedStarGift = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| keep_original_details | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Set this flag to keep the original gift text, sender and receiver in the upgraded gift as a [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/) attribute. |
-| stargift | [InputSavedStarGift](/type/InputSavedStarGift/) | The identifier of the received gift to upgrade. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>keep_original_details</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Установите этот флаг, чтобы сохранить исходный текст подарка, отправителя и получателя в улучшенном подарке в виде атрибута <a href="/constructor/starGiftAttributeOriginalDetails">starGiftAttributeOriginalDetails</a>.</td></tr><tr><td><strong>stargift</strong></td><td style="text-align: center;"><a href="/type/InputSavedStarGift">InputSavedStarGift</a></td><td>Идентификатор полученного подарка, который нужно превратить в коллекционный.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
 #### [starGiftAttributeOriginalDetails](/constructor/starGiftAttributeOriginalDetails/)
 
-Info about the sender, receiver and message attached to the original [gift »](https://core.telegram.org/api/gifts), before it was upgraded to a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts).
+Сведения об отправителе, получателе и сообщении, приложенных к исходному [подарку »](/api/gifts/), до того как он был превращён в [коллекционный подарок »](/api/gifts/#collectible-gifts).
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

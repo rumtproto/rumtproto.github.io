@@ -1,18 +1,15 @@
 ---
-title: "Stats.StoryStats (тип)"
+title: "stats.StoryStats"
 original: "https://core.telegram.org/type/stats.StoryStats"
 section: ref
 kind: type
+description: "Содержит статистику по истории."
 layout: layout.njk
 ---
 
 # Stats.StoryStats
 
-*Тип из схемы TL.*
-
-> Contains [statistics](https://core.telegram.org/api/stats) about a [story](https://core.telegram.org/api/stories).
-
-## Определение TL
+Содержит [статистику](/api/stats/) по [истории](/api/stories/).
 
 ```
 stats.storyStats#50cd067c views_graph:StatsGraph reactions_by_emotion_graph:StatsGraph = stats.StoryStats;
@@ -22,24 +19,20 @@ stats.storyStats#50cd067c views_graph:StatsGraph reactions_by_emotion_graph:Stat
 stats.getStoryStats#374fef40 flags:# dark:flags.0?true peer:InputPeer id:int = stats.StoryStats;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [stats.storyStats](/constructor/stats.storyStats/) | Contains [statistics](https://core.telegram.org/api/stats) about a [story](https://core.telegram.org/api/stories). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/stats.storyStats">stats.storyStats</a></td><td>Содержит <a href="/api/stats">статистику</a> по <a href="/api/stories">истории</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stats.getStoryStats](/method/stats.getStoryStats/) | Get [statistics](https://core.telegram.org/api/stats) for a certain [story](https://core.telegram.org/api/stories). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stats.getStoryStats">stats.getStoryStats</a></td><td>Получить <a href="/api/stats">статистику</a> по определённой <a href="/api/stories">истории</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channel statistics](https://core.telegram.org/api/stats)
+#### [Статистика каналов](/api/stats/)
 
-Telegram offers detailed channel statistics for channels and supergroups.
+Telegram предоставляет подробную статистику для каналов и супергрупп.
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

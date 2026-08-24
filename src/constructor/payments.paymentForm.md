@@ -1,51 +1,30 @@
 ---
-title: "payments.paymentForm (конструктор)"
+title: "payments.paymentForm"
 original: "https://core.telegram.org/constructor/payments.paymentForm"
 section: ref
 kind: constructor
+description: "Форма оплаты"
 layout: layout.njk
 ---
 
 # payments.paymentForm
 
-*Конструктор из схемы TL.*
-
-> Payment form
-
-## Определение TL
+Форма оплаты
 
 ```
 payments.paymentForm#a0058751 flags:# can_save_credentials:flags.2?true password_missing:flags.3?true form_id:long bot_id:long title:string description:string photo:flags.5?WebDocument invoice:Invoice provider_id:long url:string native_provider:flags.4?string native_params:flags.4?DataJSON additional_methods:flags.6?Vector<PaymentFormMethod> saved_info:flags.0?PaymentRequestedInfo saved_credentials:flags.1?Vector<PaymentSavedCredentials> users:Vector<User> = payments.PaymentForm;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| can_save_credentials | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether the user can choose to save credentials. |
-| password_missing | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Indicates that the user can save payment credentials, but only after setting up a [2FA password](/api/srp/) (currently the account doesn't have a [2FA password](/api/srp/)) |
-| form_id | [long](/type/long/) | Form ID |
-| bot_id | [long](/type/long/) | Bot ID |
-| title | [string](/type/string/) | Form title |
-| description | [string](/type/string/) | Description |
-| photo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[WebDocument](/type/WebDocument/) | Product photo |
-| invoice | [Invoice](/type/Invoice/) | Invoice |
-| provider_id | [long](/type/long/) | Payment provider ID. |
-| url | [string](/type/string/) | Payment form URL |
-| native_provider | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[string](/type/string/) | Payment provider name. One of the following: - stripe |
-| native_params | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[DataJSON](/type/DataJSON/) | Contains information about the payment provider, if available, to support it natively without the need for opening the URL. A JSON object that can contain the following fields: - apple_pay_merchant_id: Apple Pay merchant ID - google_pay_public_key: Google Pay public key - need_country: True, if the user country must be provided, - need_zip: True, if the user ZIP/postal code must be provided, - need_cardholder_name: True, if the cardholder name must be provided |
-| additional_methods | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[Vector](https://core.telegram.org/type/Vector%20t)<[PaymentFormMethod](/type/PaymentFormMethod/)> | Additional payment methods |
-| saved_info | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[PaymentRequestedInfo](/type/PaymentRequestedInfo/) | Saved server-side order information |
-| saved_credentials | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[PaymentSavedCredentials](/type/PaymentSavedCredentials/)> | Contains information about saved card credentials |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>can_save_credentials</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Может ли пользователь выбрать сохранение платёжных реквизитов.</td></tr><tr><td><strong>password_missing</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Указывает, что пользователь может сохранить платёжные данные, но только после настройки <a href="/api/srp">пароля двухфакторной аутентификации</a> (сейчас у аккаунта нет <a href="/api/srp">пароля двухфакторной аутентификации</a>)</td></tr><tr><td><strong>form_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор формы</td></tr><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор бота</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название формы</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Описание</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/WebDocument">WebDocument</a></td><td>Фотография товара</td></tr><tr><td><strong>invoice</strong></td><td style="text-align: center;"><a href="/type/Invoice">Invoice</a></td><td>Счёт</td></tr><tr><td><strong>provider_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор платёжного провайдера.</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>URL формы оплаты</td></tr><tr><td><strong>native_provider</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string">string</a></td><td>Название платёжного провайдера.<br>Одно из следующих значений:<br>- <code>stripe</code></td></tr><tr><td><strong>native_params</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/DataJSON">DataJSON</a></td><td>Содержит информацию о платёжном провайдере, если она доступна, чтобы поддержать его нативно, без необходимости открывать URL.<br>Объект JSON, который может содержать следующие поля:<br><br>- <code>apple_pay_merchant_id</code>: идентификатор продавца Apple Pay<br>- <code>google_pay_public_key</code>: открытый ключ Google Pay<br>- <code>need_country</code>: True, если требуется указать страну пользователя,<br>- <code>need_zip</code>: True, если требуется указать почтовый индекс пользователя,<br>- <code>need_cardholder_name</code>: True, если требуется указать имя держателя карты<br></td></tr><tr><td><strong>additional_methods</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/PaymentFormMethod">PaymentFormMethod</a>&gt;</td><td>Дополнительные способы оплаты</td></tr><tr><td><strong>saved_info</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/PaymentRequestedInfo">PaymentRequestedInfo</a></td><td>Сохранённые на сервере сведения о заказе</td></tr><tr><td><strong>saved_credentials</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/PaymentSavedCredentials">PaymentSavedCredentials</a>&gt;</td><td>Содержит информацию о сохранённых данных карты</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.PaymentForm](/type/payments.PaymentForm/)
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.

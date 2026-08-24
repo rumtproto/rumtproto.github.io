@@ -1,18 +1,15 @@
 ---
-title: "contacts.toggleTopPeers (метод)"
+title: "contacts.toggleTopPeers"
 original: "https://core.telegram.org/method/contacts.toggleTopPeers"
 section: ref
 kind: method
+description: "Включить или отключить наиболее используемые пиры"
 layout: layout.njk
 ---
 
 # contacts.toggleTopPeers
 
-*Метод из схемы TL.*
-
-> Enable/disable [top peers](https://core.telegram.org/api/top-rating)
-
-## Определение TL
+Включить или отключить [наиболее используемые пиры](/api/top-rating/)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,20 +18,18 @@ boolTrue#997275b5 = Bool;
 contacts.toggleTopPeers#8514bdda enabled:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| enabled | [Bool](/type/Bool/) | Enable/disable |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>enabled</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Включить или отключить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Top peer rating](https://core.telegram.org/api/top-rating)
+#### [Рейтинг популярных пиров](/api/top-rating/)
 
-If enabled, the rating of top peers indicates the relevance of a frequently used peer in a certain category (frequently messaged users, frequently used bots, inline bots, frequently visited channels and so on).
+Если включено, рейтинг наиболее используемых пиров отражает значимость часто используемого пира в определённой категории (пользователи, которым часто пишут, часто используемые боты, инлайн-боты, часто посещаемые каналы и так далее).

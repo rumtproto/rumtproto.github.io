@@ -1,19 +1,17 @@
 ---
-title: "contacts.resolvePhone (метод)"
+title: "contacts.resolvePhone"
 original: "https://core.telegram.org/method/contacts.resolvePhone"
 section: ref
 kind: method
+description: "Разрешить номер телефона, чтобы получить сведения о пользователе, если это допускают его настройки конфиденциальности."
 layout: layout.njk
 ---
 
 # contacts.resolvePhone
 
-*Метод из схемы TL.*
+Разрешить номер телефона, чтобы получить сведения о пользователе, если это допускают его настройки конфиденциальности.
 
-> Resolve a phone number to get user info, if their privacy settings allow it.
-> Make sure to implement client-side ratelimiting/debounce for this method, allowing at most 1 call every 3 seconds.
-
-## Определение TL
+Обязательно реализуйте на стороне клиента ограничение частоты вызовов и подавление дребезга для этого метода, допуская не более 1 вызова каждые 3 секунды.
 
 ```
 contacts.resolvedPeer#7f077ad9 peer:Peer chats:Vector<Chat> users:Vector<User> = contacts.ResolvedPeer;
@@ -21,26 +19,22 @@ contacts.resolvedPeer#7f077ad9 peer:Peer chats:Vector<Chat> users:Vector<User> =
 contacts.resolvePhone#8af94344 phone:string = contacts.ResolvedPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone | [string](/type/string/) | Phone number in international format, possibly obtained from a [phone number deep link](https://core.telegram.org/api/links#phone-number-links). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона в международном формате, возможно полученный из <a href="/api/links#phone-number-links">глубокой ссылки на номер телефона</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [contacts.ResolvedPeer](/type/contacts.ResolvedPeer/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PHONE_NOT_OCCUPIED | No user is associated to the specified phone number. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PHONE_NOT_OCCUPIED</td><td>С указанным номером телефона не связан ни один пользователь.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

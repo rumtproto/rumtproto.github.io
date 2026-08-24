@@ -1,40 +1,32 @@
 ---
-title: "updateUserName (конструктор)"
+title: "updateUserName"
 original: "https://core.telegram.org/constructor/updateUserName"
 section: ref
 kind: constructor
+description: "Изменяет имя, фамилию и имя пользователя."
 layout: layout.njk
 ---
 
 # updateUserName
 
-*Конструктор из схемы TL.*
-
-> Changes the user's first name, last name and username.
-
-## Определение TL
+Изменяет имя, фамилию и имя пользователя.
 
 ```
 updateUserName#a7848924 user_id:long first_name:string last_name:string usernames:Vector<Username> = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [long](/type/long/) | User identifier |
-| first_name | [string](/type/string/) | New first name. Corresponds to the new value of real_first_name field of the [userFull](/constructor/userFull/) constructor. |
-| last_name | [string](/type/string/) | New last name. Corresponds to the new value of real_last_name field of the [userFull](/constructor/userFull/) constructor. |
-| usernames | [Vector](https://core.telegram.org/type/Vector%20t)<[Username](/type/Username/)> | Usernames. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя</td></tr><tr><td><strong>first_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Новое имя. Соответствует новому значению поля <strong>real_first_name</strong> конструктора <a href="/constructor/userFull">userFull</a>.</td></tr><tr><td><strong>last_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Новая фамилия. Соответствует новому значению поля <strong>real_last_name</strong> конструктора <a href="/constructor/userFull">userFull</a>.</td></tr><tr><td><strong>usernames</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Username">Username</a>&gt;</td><td>Имена пользователей.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [userFull](/constructor/userFull/)
 
-Extended user info
+Расширенные сведения о пользователе
 
-When updating the [local peer database »](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров »](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).

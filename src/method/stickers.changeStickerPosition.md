@@ -1,18 +1,15 @@
 ---
-title: "stickers.changeStickerPosition (метод)"
+title: "stickers.changeStickerPosition"
 original: "https://core.telegram.org/method/stickers.changeStickerPosition"
 section: ref
 kind: method
+description: "Изменяет абсолютную позицию стикера в наборе, которому он принадлежит. Набор стикеров должен быть создан текущим пользователем или ботом."
 layout: layout.njk
 ---
 
 # stickers.changeStickerPosition
 
-*Метод из схемы TL.*
-
-> Changes the absolute position of a sticker in the set to which it belongs. The sticker set must have been created by the current user/bot.
-
-## Определение TL
+Изменяет абсолютную позицию стикера в наборе, которому он принадлежит. Набор стикеров должен быть создан текущим пользователем или ботом.
 
 ```
 messages.stickerSet#6e153f16 set:StickerSet packs:Vector<StickerPack> keywords:Vector<StickerKeyword> documents:Vector<Document> = messages.StickerSet;
@@ -21,21 +18,16 @@ messages.stickerSetNotModified#d3f924eb = messages.StickerSet;
 stickers.changeStickerPosition#ffb6d4ca sticker:InputDocument position:int = messages.StickerSet;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| sticker | [InputDocument](/type/InputDocument/) | The sticker |
-| position | [int](/type/int/) | The new position of the sticker, zero-based |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>sticker</strong></td><td style="text-align: center;"><a href="/type/InputDocument">InputDocument</a></td><td>Стикер</td></tr><tr><td><strong>position</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Новая позиция стикера, отсчёт с нуля</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.StickerSet](/type/messages.StickerSet/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | STICKER_INVALID | The provided sticker is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>STICKER_INVALID</td><td>Указанный стикер недействителен.</td></tr></tbody></table>

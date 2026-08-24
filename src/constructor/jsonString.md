@@ -1,35 +1,33 @@
 ---
-title: "jsonString (конструктор)"
+title: "jsonString"
 original: "https://core.telegram.org/constructor/jsonString"
 section: ref
 kind: constructor
+description: "Строка JSON"
 layout: layout.njk
 ---
 
 # jsonString
 
-*Конструктор из схемы TL.*
+Строка JSON
 
-> JSON string
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===216===
-> jsonString#b71e767a value:string = JSONValue;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===216===
+jsonString#b71e767a value:string = JSONValue;
+```
+
+#### Схема API
 
 ```
 jsonString#b71e767a value:string = JSONValue;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| value | [string](/type/string/) | Value |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Значение</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [JSONValue](/type/JSONValue/)

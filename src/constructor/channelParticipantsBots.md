@@ -1,27 +1,24 @@
 ---
-title: "channelParticipantsBots (конструктор)"
+title: "channelParticipantsBots"
 original: "https://core.telegram.org/constructor/channelParticipantsBots"
 section: ref
 kind: constructor
+description: "Получить только участников-ботов"
 layout: layout.njk
 ---
 
 # channelParticipantsBots
 
-*Конструктор из схемы TL.*
-
-> Fetch only bot participants
-
-## Определение TL
+Получить только участников-ботов
 
 ```
 channelParticipantsBots#b0d1865b = ChannelParticipantsFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ChannelParticipantsFilter](/type/ChannelParticipantsFilter/)

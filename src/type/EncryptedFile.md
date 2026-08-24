@@ -1,18 +1,15 @@
 ---
-title: "EncryptedFile (тип)"
+title: "EncryptedFile"
 original: "https://core.telegram.org/type/EncryptedFile"
 section: ref
 kind: type
+description: "Задаёт зашифрованный файл."
 layout: layout.njk
 ---
 
 # EncryptedFile
 
-*Тип из схемы TL.*
-
-> Seta an encrypted file.
-
-## Определение TL
+Задаёт зашифрованный файл.
 
 ```
 encryptedFileEmpty#c21f497e = EncryptedFile;
@@ -23,15 +20,10 @@ encryptedFile#a8008cd8 id:long access_hash:long size:long dc_id:int key_fingerpr
 messages.uploadEncryptedFile#5057c497 peer:InputEncryptedChat file:InputEncryptedFile = EncryptedFile;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [encryptedFileEmpty](/constructor/encryptedFileEmpty/) | Empty constructor, non-existing file. |
-| [encryptedFile](/constructor/encryptedFile/) | Encrypted file. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/encryptedFileEmpty">encryptedFileEmpty</a></td><td>Пустой конструктор, несуществующий файл.</td></tr><tr><td><a href="/constructor/encryptedFile">encryptedFile</a></td><td>Зашифрованный файл.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.uploadEncryptedFile](/method/messages.uploadEncryptedFile/) | Upload encrypted file and associate it to a secret chat (without actually sending it to the chat). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.uploadEncryptedFile">messages.uploadEncryptedFile</a></td><td>Загрузить зашифрованный файл и связать его с секретным чатом (без отправки в сам чат).</td></tr></tbody></table>

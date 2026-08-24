@@ -1,36 +1,30 @@
 ---
-title: "cdnPublicKey (конструктор)"
+title: "cdnPublicKey"
 original: "https://core.telegram.org/constructor/cdnPublicKey"
 section: ref
 kind: constructor
+description: "Открытый ключ, используемый **только** при рукопожатиях с дата-центрами CDN."
 layout: layout.njk
 ---
 
 # cdnPublicKey
 
-*Конструктор из схемы TL.*
-
-> Public key to use **only** during handshakes to [CDN](https://core.telegram.org/cdn) DCs.
-
-## Определение TL
+Открытый ключ, используемый **только** при рукопожатиях с дата-центрами [CDN](https://core.telegram.org/cdn).
 
 ```
 cdnPublicKey#c982eaba dc_id:int public_key:string = CdnPublicKey;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| dc_id | [int](/type/int/) | [CDN DC](https://core.telegram.org/cdn) ID |
-| public_key | [string](/type/string/) | RSA public key |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>dc_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор <a href="/cdn">CDN DC</a></td></tr><tr><td><strong>public_key</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Открытый ключ RSA</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [CdnPublicKey](/type/CdnPublicKey/)
 
-## Related pages
+### Связанные страницы
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Шифрованные CDN: скорость и безопасность](https://core.telegram.org/cdn)
 
-How client apps download popular public files from secondary CDN data centers.
+Как клиентские приложения скачивают популярные публичные файлы из вспомогательных CDN-дата-центров.

@@ -1,20 +1,19 @@
 ---
-title: "phone.exportGroupCallInvite (метод)"
+title: "phone.exportGroupCallInvite"
 original: "https://core.telegram.org/method/phone.exportGroupCallInvite"
 section: ref
 kind: method
+description: "Получить пригласительную ссылку на публичный видеочат или трансляцию »."
 layout: layout.njk
 ---
 
 # phone.exportGroupCallInvite
 
-*Метод из схемы TL.*
+Получить пригласительную ссылку на публичный [видеочат или трансляцию »](/api/group-calls/#video-chats-livestreams).
 
-> Get an invite link for a public [video chat/livestream »](https://core.telegram.org/api/group-calls#video-chats-livestreams).
-> Non-admin members or subscribers may export a link with `can_self_unmute` omitted. Only group call admins may set `can_self_unmute` to export a link that allows users to speak.
-> Cannot be used for video chats/livestreams associated with private groups/channels, [conference calls »](https://core.telegram.org/api/group-calls#conference-calls) or [live stories »](https://core.telegram.org/api/group-calls#live-stories).
+Участники и подписчики, не являющиеся администраторами, могут экспортировать ссылку без указания `can_self_unmute`. Только администраторы группового звонка могут задать `can_self_unmute`, чтобы экспортировать ссылку, разрешающую пользователям говорить.
 
-## Определение TL
+Нельзя использовать для видеочатов/трансляций, связанных с приватными группами/каналами, для [конференц-звонков »](/api/group-calls/#conference-calls) или [прямых эфиров в историях »](/api/group-calls/#live-stories).
 
 ```
 phone.exportedGroupCallInvite#204bd158 link:string = phone.ExportedGroupCallInvite;
@@ -22,29 +21,22 @@ phone.exportedGroupCallInvite#204bd158 link:string = phone.ExportedGroupCallInvi
 phone.exportGroupCallInvite#e6aa647f flags:# can_self_unmute:flags.0?true call:InputGroupCall = phone.ExportedGroupCallInvite;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| can_self_unmute | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | For public video chats/livestreams, group call admins only: allow users that join using this link to speak without explicitly requesting permission, for example by raising their hand. |
-| call | [InputGroupCall](/type/InputGroupCall/) | The public [video chat/livestream »](https://core.telegram.org/api/group-calls#video-chats-livestreams) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>can_self_unmute</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Только для публичных видеочатов/трансляций и только для администраторов группового звонка: разрешить пользователям, вошедшим по этой ссылке, говорить без явного запроса разрешения, например без поднятия руки.</td></tr><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Публичный <a href="/api/group-calls#video-chats-livestreams">видеочат или трансляция »</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [phone.ExportedGroupCallInvite](/type/phone.ExportedGroupCallInvite/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
-| 403 | PUBLIC_CHANNEL_MISSING | You can only export group call invite links for public chats or channels. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr><tr><td>403</td><td>PUBLIC_CHANNEL_MISSING</td><td>Экспортировать пригласительные ссылки на групповой звонок можно только для публичных чатов или каналов.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

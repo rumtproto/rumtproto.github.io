@@ -1,18 +1,15 @@
 ---
-title: "account.invalidateSignInCodes (метод)"
+title: "account.invalidateSignInCodes"
 original: "https://core.telegram.org/method/account.invalidateSignInCodes"
 section: ref
 kind: method
+description: "Аннулировать указанные коды входа; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # account.invalidateSignInCodes
 
-*Метод из схемы TL.*
-
-> Invalidate the specified login codes, see [here »](https://core.telegram.org/api/auth/#invalidating-login-codes) for more info.
-
-## Определение TL
+Аннулировать указанные коды входа; подробнее см. [здесь »](/api/auth/#invalidating-login-codes).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,20 +18,18 @@ boolTrue#997275b5 = Bool;
 account.invalidateSignInCodes#ca8ae8ba codes:Vector<string> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| codes | [Vector](https://core.telegram.org/type/Vector%20t)<[string](/type/string/)> | The login codes to invalidate. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>codes</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/string">string</a>&gt;</td><td>Коды входа, которые нужно аннулировать.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

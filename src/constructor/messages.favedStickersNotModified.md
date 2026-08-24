@@ -1,27 +1,24 @@
 ---
-title: "messages.favedStickersNotModified (конструктор)"
+title: "messages.favedStickersNotModified"
 original: "https://core.telegram.org/constructor/messages.favedStickersNotModified"
 section: ref
 kind: constructor
+description: "Новых избранных стикеров не найдено"
 layout: layout.njk
 ---
 
 # messages.favedStickersNotModified
 
-*Конструктор из схемы TL.*
-
-> No new favorited stickers were found
-
-## Определение TL
+Новых избранных стикеров не найдено
 
 ```
 messages.favedStickersNotModified#9e8fa6d3 = messages.FavedStickers;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.FavedStickers](/type/messages.FavedStickers/)

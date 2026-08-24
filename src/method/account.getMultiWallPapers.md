@@ -1,44 +1,37 @@
 ---
-title: "account.getMultiWallPapers (метод)"
+title: "account.getMultiWallPapers"
 original: "https://core.telegram.org/method/account.getMultiWallPapers"
 section: ref
 kind: method
+description: "Получить информацию о нескольких обоях"
 layout: layout.njk
 ---
 
 # account.getMultiWallPapers
 
-*Метод из схемы TL.*
-
-> Get info about multiple [wallpapers](https://core.telegram.org/api/wallpapers)
-
-## Определение TL
+Получить информацию о нескольких [обоях](/api/wallpapers/)
 
 ```
 ---functions---
 account.getMultiWallPapers#65ad71dc wallpapers:Vector<InputWallPaper> = Vector<WallPaper>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| wallpapers | [Vector](https://core.telegram.org/type/Vector%20t)<[InputWallPaper](/type/InputWallPaper/)> | [Wallpapers](https://core.telegram.org/api/wallpapers) to fetch info about |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>wallpapers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputWallPaper">InputWallPaper</a>&gt;</td><td><a href="/api/wallpapers">Обои</a>, информацию о которых нужно получить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[WallPaper](/type/WallPaper/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | WALLPAPER_INVALID | The specified wallpaper is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>WALLPAPER_INVALID</td><td>Указанные обои недействительны.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.

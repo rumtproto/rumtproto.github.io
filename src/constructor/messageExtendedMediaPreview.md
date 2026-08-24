@@ -1,43 +1,34 @@
 ---
-title: "messageExtendedMediaPreview (конструктор)"
+title: "messageExtendedMediaPreview"
 original: "https://core.telegram.org/constructor/messageExtendedMediaPreview"
 section: ref
 kind: constructor
+description: "Предпросмотр платных медиа, которые ещё не куплены, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # messageExtendedMediaPreview
 
-*Конструктор из схемы TL.*
-
-> Paid media preview for not yet purchased paid media, [see here »](https://core.telegram.org/api/paid-media) for more info.
-
-## Определение TL
+Предпросмотр платных медиа, которые ещё не куплены, подробнее [см. здесь »](/api/paid-media/).
 
 ```
 messageExtendedMediaPreview#ad628cc8 flags:# w:flags.0?int h:flags.0?int thumb:flags.1?PhotoSize video_duration:flags.2?int = MessageExtendedMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| w | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Width |
-| h | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Height |
-| thumb | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[PhotoSize](/type/PhotoSize/) | [Extremely low resolution thumbnail](https://core.telegram.org/api/files/#stripped-thumbnails). |
-| video_duration | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | Video duration for videos. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>w</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Ширина</td></tr><tr><td><strong>h</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Высота</td></tr><tr><td><strong>thumb</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/PhotoSize">PhotoSize</a></td><td><a href="/api/files#stripped-thumbnails">Миниатюра крайне низкого разрешения</a>.</td></tr><tr><td><strong>video_duration</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Длительность видео, для видеозаписей.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageExtendedMedia](/type/MessageExtendedMedia/)
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.
 
-#### [Paid media](https://core.telegram.org/api/paid-media)
+#### [Платные медиа](/api/paid-media/)
 
-Content creators can accept Stars by publishing paid photos or videos on their channels. Subscribers will be allowed to view such posts only after paying the author to unlock them.
+Авторы контента могут принимать Stars, публикуя в своих каналах платные фотографии и видео. Подписчики смогут просмотреть такие посты, только заплатив автору за их разблокировку.

@@ -1,41 +1,34 @@
 ---
-title: "updateMessageExtendedMedia (конструктор)"
+title: "updateMessageExtendedMedia"
 original: "https://core.telegram.org/constructor/updateMessageExtendedMedia"
 section: ref
 kind: constructor
+description: "Вы купили платное медиа »: это обновление содержит раскрытое медиа."
 layout: layout.njk
 ---
 
 # updateMessageExtendedMedia
 
-*Конструктор из схемы TL.*
-
-> You [bought a paid media »](https://core.telegram.org/api/paid-media): this update contains the revealed media.
-
-## Определение TL
+Вы [купили платное медиа »](/api/paid-media/): это обновление содержит раскрытое медиа.
 
 ```
 updateMessageExtendedMedia#d5a41724 peer:Peer msg_id:int extended_media:Vector<MessageExtendedMedia> = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | Peer where the paid media was posted |
-| msg_id | [int](/type/int/) | ID of the message containing the paid media |
-| extended_media | [Vector](https://core.telegram.org/type/Vector%20t)<[MessageExtendedMedia](/type/MessageExtendedMedia/)> | Revealed media, contains only [messageExtendedMedia](/constructor/messageExtendedMedia/) constructors. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Пир, в котором было опубликовано платное медиа</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения, содержащего платное медиа</td></tr><tr><td><strong>extended_media</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageExtendedMedia">MessageExtendedMedia</a>&gt;</td><td>Раскрытое медиа, содержит только конструкторы <a href="/constructor/messageExtendedMedia">messageExtendedMedia</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [messageExtendedMedia](/constructor/messageExtendedMedia/)
 
-Already purchased paid media, [see here »](https://core.telegram.org/api/paid-media) for more info.
+Уже оплаченное платное медиа; подробнее [см. здесь »](/api/paid-media/).
 
-#### [Paid media](https://core.telegram.org/api/paid-media)
+#### [Платные медиа](/api/paid-media/)
 
-Content creators can accept Stars by publishing paid photos or videos on their channels. Subscribers will be allowed to view such posts only after paying the author to unlock them.
+Авторы контента могут принимать Stars, публикуя в своих каналах платные фотографии и видео. Подписчики смогут просмотреть такие посты, только заплатив автору за их разблокировку.

@@ -1,47 +1,28 @@
 ---
-title: "payments.paymentReceipt (конструктор)"
+title: "payments.paymentReceipt"
 original: "https://core.telegram.org/constructor/payments.paymentReceipt"
 section: ref
 kind: constructor
+description: "Чек"
 layout: layout.njk
 ---
 
 # payments.paymentReceipt
 
-*Конструктор из схемы TL.*
-
-> Receipt
-
-## Определение TL
+Чек
 
 ```
 payments.paymentReceipt#70c4fe03 flags:# date:int bot_id:long provider_id:long title:string description:string photo:flags.2?WebDocument invoice:Invoice info:flags.0?PaymentRequestedInfo shipping:flags.1?ShippingOption tip_amount:flags.3?long currency:string total_amount:long credentials_title:string users:Vector<User> = payments.PaymentReceipt;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| date | [int](/type/int/) | Date of generation |
-| bot_id | [long](/type/long/) | Bot ID |
-| provider_id | [long](/type/long/) | Provider ID |
-| title | [string](/type/string/) | Title |
-| description | [string](/type/string/) | Description |
-| photo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[WebDocument](/type/WebDocument/) | Photo |
-| invoice | [Invoice](/type/Invoice/) | Invoice |
-| info | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[PaymentRequestedInfo](/type/PaymentRequestedInfo/) | Info |
-| shipping | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[ShippingOption](/type/ShippingOption/) | Selected shipping option |
-| tip_amount | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[long](/type/long/) | Tipped amount |
-| currency | [string](/type/string/) | Three-letter ISO 4217 [currency](https://core.telegram.org/bots/payments#supported-currencies) code |
-| total_amount | [long](/type/long/) | Total amount in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in [currencies.json](https://core.telegram.org/bots/payments/currencies.json), it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). |
-| credentials_title | [string](/type/string/) | Payment credential name |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата генерации</td></tr><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор бота</td></tr><tr><td><strong>provider_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор провайдера</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Описание</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/WebDocument">WebDocument</a></td><td>Фотография</td></tr><tr><td><strong>invoice</strong></td><td style="text-align: center;"><a href="/type/Invoice">Invoice</a></td><td>Счёт</td></tr><tr><td><strong>info</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/PaymentRequestedInfo">PaymentRequestedInfo</a></td><td>Сведения</td></tr><tr><td><strong>shipping</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/ShippingOption">ShippingOption</a></td><td>Выбранный вариант доставки</td></tr><tr><td><strong>tip_amount</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/long">long</a></td><td>Сумма чаевых</td></tr><tr><td><strong>currency</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Трёхбуквенный код <a href="/bots/payments#supported-currencies">валюты</a> по ISO 4217</td></tr><tr><td><strong>total_amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Итоговая сумма в наименьших единицах валюты (целое число, не float/double). Например, для цены <code>US$ 1.45</code> следует передать <code>amount = 145</code>. См. параметр exp в <a href="/bots/payments/currencies.json">currencies.json</a>: он указывает число знаков после запятой для каждой валюты (2 для большинства валют).</td></tr><tr><td><strong>credentials_title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название платёжных данных</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.PaymentReceipt](/type/payments.PaymentReceipt/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot Payments API](https://core.telegram.org/bots/payments)
+#### [Bot Payments API — платежи в ботах](https://core.telegram.org/bots/payments)

@@ -1,40 +1,34 @@
 ---
-title: "messageActionSuggestedPostRefund (конструктор)"
+title: "messageActionSuggestedPostRefund"
 original: "https://core.telegram.org/constructor/messageActionSuggestedPostRefund"
 section: ref
 kind: constructor
+description: "Предлагаемый пост » был принят и опубликован или запланирован, но либо канал удалил опубликованный/запланированный пост до того, как прошло stars\\_suggested\\_post\\_age\\_min…"
 layout: layout.njk
 ---
 
 # messageActionSuggestedPostRefund
 
-*Конструктор из схемы TL.*
-
-> A [suggested post »](https://core.telegram.org/api/suggested-posts) was accepted and posted or scheduled, but either the channel deleted the posted/scheduled post before [stars\_suggested\_post\_age\_min](https://core.telegram.org/api/config#stars-suggested-post-age-min) seconds have elapsed, or the user refunded the payment for the stars used to pay for the suggested post.
-
-## Определение TL
+[Предлагаемый пост »](/api/suggested-posts/) был принят и опубликован или запланирован, но либо канал удалил опубликованный/запланированный пост до того, как прошло [stars\_suggested\_post\_age\_min](/api/config/#stars-suggested-post-age-min) секунд, либо пользователь вернул платёж за звёзды, которыми был оплачен предлагаемый пост.
 
 ```
 messageActionSuggestedPostRefund#69f916f8 flags:# payer_initiated:flags.0?true = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| payer_initiated | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, the user refunded the payment for the stars used to pay for the suggested post. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>payer_initiated</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, пользователь вернул платёж за stars, использованные для оплаты предлагаемого поста.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Suggested posts](https://core.telegram.org/api/suggested-posts)
+#### [Предлагаемые посты](/api/suggested-posts/)
 
-Telegram offers a powerful monetization feature to channel administrators: suggested posts.
+Telegram предлагает администраторам каналов мощный инструмент монетизации — предлагаемые посты.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

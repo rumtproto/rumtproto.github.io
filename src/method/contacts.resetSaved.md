@@ -1,18 +1,15 @@
 ---
-title: "contacts.resetSaved (метод)"
+title: "contacts.resetSaved"
 original: "https://core.telegram.org/method/contacts.resetSaved"
 section: ref
 kind: method
+description: "Удаляет все контакты, у которых нет связанного аккаунта Telegram."
 layout: layout.njk
 ---
 
 # contacts.resetSaved
 
-*Метод из схемы TL.*
-
-> Removes all contacts without an associated Telegram account.
-
-## Определение TL
+Удаляет все контакты, у которых нет связанного аккаунта Telegram.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,12 +18,12 @@ boolTrue#997275b5 = Bool;
 contacts.resetSaved#879537f1 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

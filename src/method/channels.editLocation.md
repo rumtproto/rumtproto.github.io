@@ -1,18 +1,15 @@
 ---
-title: "channels.editLocation (метод)"
+title: "channels.editLocation"
 original: "https://core.telegram.org/method/channels.editLocation"
 section: ref
 kind: method
+description: "Изменить местоположение геогруппы; подробнее о геогруппах см. здесь »."
 layout: layout.njk
 ---
 
 # channels.editLocation
 
-*Метод из схемы TL.*
-
-> Edit location of geogroup, see [here »](https://core.telegram.org/api/nearby) for more info on geogroups.
-
-## Определение TL
+Изменить местоположение геогруппы; подробнее о геогруппах см. [здесь »](/api/nearby/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,36 +18,26 @@ boolTrue#997275b5 = Bool;
 channels.editLocation#58e63f6d channel:InputChannel geo_point:InputGeoPoint address:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | [Geogroup](https://core.telegram.org/api/channel) |
-| geo_point | [InputGeoPoint](/type/InputGeoPoint/) | New geolocation |
-| address | [string](/type/string/) | Address string |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Геогруппа</a></td></tr><tr><td><strong>geo_point</strong></td><td style="text-align: center;"><a href="/type/InputGeoPoint">InputGeoPoint</a></td><td>Новая геопозиция</td></tr><tr><td><strong>address</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Строка адреса</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | MEGAGROUP_GEO_REQUIRED | This method can only be invoked on a geogroup. |
-| 400 | MEGAGROUP_REQUIRED | You can only use this method on a supergroup. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>MEGAGROUP_GEO_REQUIRED</td><td>Этот метод можно вызывать только для геогруппы.</td></tr><tr><td>400</td><td>MEGAGROUP_REQUIRED</td><td>Этот метод можно использовать только в супергруппе.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Nearby users&chats](https://core.telegram.org/api/nearby)
+#### [Пользователи и чаты поблизости](/api/nearby/)
 
-How to work with geolocation-based features like geochats and the nearby users feature.
+Как работать с возможностями на основе геолокации, такими как геочаты и поиск пользователей поблизости.

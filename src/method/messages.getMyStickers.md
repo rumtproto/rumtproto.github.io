@@ -1,18 +1,15 @@
 ---
-title: "messages.getMyStickers (метод)"
+title: "messages.getMyStickers"
 original: "https://core.telegram.org/method/messages.getMyStickers"
 section: ref
 kind: method
+description: "Получить все наборы стикеров », принадлежащие текущему пользователю."
 layout: layout.njk
 ---
 
 # messages.getMyStickers
 
-*Метод из схемы TL.*
-
-> Fetch all [stickersets »](https://core.telegram.org/api/stickers) owned by the current user.
-
-## Определение TL
+Получить все [наборы стикеров »](/api/stickers/), принадлежащие текущему пользователю.
 
 ```
 messages.myStickers#faff629d count:int sets:Vector<StickerSetCovered> = messages.MyStickers;
@@ -20,25 +17,22 @@ messages.myStickers#faff629d count:int sets:Vector<StickerSetCovered> = messages
 messages.getMyStickers#d0b5e1fc offset_id:long limit:int = messages.MyStickers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| offset_id | [long](/type/long/) | [Offsets for pagination, for more info click here](https://core.telegram.org/api/offsets) |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>offset_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><a href="/api/offsets">Смещения для постраничной выборки, подробнее см. здесь</a></td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.MyStickers](/type/messages.MyStickers/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.

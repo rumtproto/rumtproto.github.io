@@ -1,18 +1,15 @@
 ---
-title: "messages.sendQuickReplyMessages (метод)"
+title: "messages.sendQuickReplyMessages"
 original: "https://core.telegram.org/method/messages.sendQuickReplyMessages"
 section: ref
 kind: method
+description: "Отправить шаблон быстрого ответа »."
 layout: layout.njk
 ---
 
 # messages.sendQuickReplyMessages
 
-*Метод из схемы TL.*
-
-> Send a [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts).
-
-## Определение TL
+Отправить [шаблон быстрого ответа »](/api/business/#quick-reply-shortcuts).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,34 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.sendQuickReplyMessages#6c750de1 peer:InputPeer shortcut_id:int id:Vector<int> random_id:Vector<long> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The peer where to send the shortcut (users only, for now). |
-| shortcut_id | [int](/type/int/) | The ID of the quick reply shortcut to send. |
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Specify a subset of messages from the shortcut to send; if empty, defaults to all of them. |
-| random_id | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | Unique client IDs required to prevent message resending, one for each message we're sending, may be empty (but not recommended). See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, которому нужно отправить быстрый ответ (пока только пользователи).</td></tr><tr><td><strong>shortcut_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор шаблона быстрого ответа, который нужно отправить.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Задаёт подмножество сообщений из шаблона, которые нужно отправить; если пусто, по умолчанию отправляются все.</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>[@term:random_id] Уникальные клиентские идентификаторы, необходимые для предотвращения повторной отправки сообщений, по одному на каждое отправляемое сообщение; поле может быть пустым (но так делать не рекомендуется). Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 403 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>403</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

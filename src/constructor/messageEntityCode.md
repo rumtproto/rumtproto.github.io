@@ -1,42 +1,39 @@
 ---
-title: "messageEntityCode (конструктор)"
+title: "messageEntityCode"
 original: "https://core.telegram.org/constructor/messageEntityCode"
 section: ref
 kind: constructor
+description: "Сущность оформления, представляющая codeblock."
 layout: layout.njk
 ---
 
 # messageEntityCode
 
-*Конструктор из схемы TL.*
+Сущность оформления, представляющая `codeblock`.
 
-> Message entity representing a `codeblock`.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===45===
-> messageEntityCode#28a20571 offset:int length:int = MessageEntity;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===45===
+messageEntityCode#28a20571 offset:int length:int = MessageEntity;
+```
+
+#### Схема API
 
 ```
 messageEntityCode#28a20571 offset:int length:int = MessageEntity;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| offset | [int](/type/int/) | Offset of message entity within message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)) |
-| length | [int](/type/int/) | Length of message entity within message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Смещение сущности оформления в сообщении (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>)</td></tr><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Длина сущности оформления в сообщении (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageEntity](/type/MessageEntity/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления

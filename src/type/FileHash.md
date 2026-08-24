@@ -1,25 +1,20 @@
 ---
-title: "FileHash (тип)"
+title: "FileHash"
 original: "https://core.telegram.org/type/FileHash"
 section: ref
 kind: type
+description: "Хеш загруженного файла, который следует проверить после скачивания"
 layout: layout.njk
 ---
 
 # FileHash
 
-*Тип из схемы TL.*
-
-> Hash of an uploaded file, to be checked for validity after download
-
-## Определение TL
+Хеш загруженного файла, который следует проверить после скачивания
 
 ```
 fileHash#f39b035c offset:long limit:int hash:bytes = FileHash;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [fileHash](/constructor/fileHash/) | SHA256 Hash of an uploaded file, to be checked for validity after download |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/fileHash">fileHash</a></td><td>Хеш SHA256 загруженного файла — для проверки целостности после скачивания</td></tr></tbody></table>

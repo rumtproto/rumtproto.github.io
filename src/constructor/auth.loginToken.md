@@ -1,36 +1,30 @@
 ---
-title: "auth.loginToken (конструктор)"
+title: "auth.loginToken"
 original: "https://core.telegram.org/constructor/auth.loginToken"
 section: ref
 kind: constructor
+description: "Токен входа (для входа по QR-коду)"
 layout: layout.njk
 ---
 
 # auth.loginToken
 
-*Конструктор из схемы TL.*
-
-> Login token (for [QR code login](https://core.telegram.org/api/qr-login))
-
-## Определение TL
+Токен входа (для [входа по QR-коду](/api/qr-login/))
 
 ```
 auth.loginToken#629f1980 expires:int token:bytes = auth.LoginToken;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| expires | [int](/type/int/) | Expiration date of QR code |
-| token | [bytes](/type/bytes/) | Token to render in QR code |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>expires</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Срок действия QR-кода</td></tr><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Токен для отображения в QR-коде</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [auth.LoginToken](/type/auth.LoginToken/)
 
-## Related pages
+### Связанные страницы
 
-#### [Login via QR code](https://core.telegram.org/api/qr-login)
+#### [Вход по QR-коду](/api/qr-login/)
 
-QR code login flow
+Вход по QR-коду

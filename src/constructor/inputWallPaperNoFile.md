@@ -1,39 +1,34 @@
 ---
-title: "inputWallPaperNoFile (конструктор)"
+title: "inputWallPaperNoFile"
 original: "https://core.telegram.org/constructor/inputWallPaperNoFile"
 section: ref
 kind: constructor
+description: "Обои без хеша доступа к файлу; используются, например, при удалении обоев (unsave=true) методом account.saveWallPaper, когда передаётся только идентификатор обоев."
 layout: layout.njk
 ---
 
 # inputWallPaperNoFile
 
-*Конструктор из схемы TL.*
-
-> [Wallpaper](https://core.telegram.org/api/wallpapers) with no file access hash, used for example when deleting (`unsave=true`) wallpapers using [account.saveWallPaper](/method/account.saveWallPaper/), specifying just the wallpaper ID.
-
-## Определение TL
+[Обои](/api/wallpapers/) без хеша доступа к файлу; используются, например, при удалении обоев (`unsave=true`) методом [account.saveWallPaper](/method/account.saveWallPaper/), когда передаётся только идентификатор обоев.
 
 ```
 inputWallPaperNoFile#967a462e id:long = InputWallPaper;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [long](/type/long/) | Wallpaper ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор обоев</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputWallPaper](/type/InputWallPaper/)
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.
 
 #### [account.saveWallPaper](/method/account.saveWallPaper/)
 
-Install/uninstall [wallpaper](https://core.telegram.org/api/wallpapers)
+Установить или удалить [обои](/api/wallpapers/)

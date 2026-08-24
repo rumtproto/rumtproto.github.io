@@ -1,40 +1,30 @@
 ---
-title: "inputMediaGeoLive (конструктор)"
+title: "inputMediaGeoLive"
 original: "https://core.telegram.org/constructor/inputMediaGeoLive"
 section: ref
 kind: constructor
+description: "Геолокация в реальном времени"
 layout: layout.njk
 ---
 
 # inputMediaGeoLive
 
-*Конструктор из схемы TL.*
-
-> [Live geolocation](https://core.telegram.org/api/live-location)
-
-## Определение TL
+[Геолокация в реальном времени](/api/live-location/)
 
 ```
 inputMediaGeoLive#971fa843 flags:# stopped:flags.0?true geo_point:InputGeoPoint heading:flags.2?int period:flags.1?int proximity_notification_radius:flags.3?int = InputMedia;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| stopped | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether sending of the geolocation was stopped |
-| geo_point | [InputGeoPoint](/type/InputGeoPoint/) | Current geolocation |
-| heading | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[int](/type/int/) | For [live locations](https://core.telegram.org/api/live-location), a direction in which the location moves, in degrees; 1-360. |
-| period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | Validity period of the current location |
-| proximity_notification_radius | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[int](/type/int/) | For [live locations](https://core.telegram.org/api/live-location), a maximum distance to another chat member for proximity alerts, in meters (0-100000) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>stopped</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Была ли остановлена передача геопозиции</td></tr><tr><td><strong>geo_point</strong></td><td style="text-align: center;"><a href="/type/InputGeoPoint">InputGeoPoint</a></td><td>Текущая геопозиция</td></tr><tr><td><strong>heading</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/int">int</a></td><td>Для <a href="/api/live-location">геопозиций в реальном времени</a> — направление, в котором перемещается геопозиция, в градусах; 1–360.</td></tr><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Срок действия текущего местоположения</td></tr><tr><td><strong>proximity_notification_radius</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/int">int</a></td><td>Для <a href="/api/live-location">геопозиций в реальном времени</a> — максимальное расстояние до другого участника чата для оповещений о приближении, в метрах (0–100000)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputMedia](/type/InputMedia/)
 
-## Related pages
+### Связанные страницы
 
-#### [Live geolocation](https://core.telegram.org/api/live-location)
+#### [Трансляция геопозиции](/api/live-location/)
 
-Telegram allows sending the live geolocation of a user in a chat, optionally setting a proximity alert.
+Telegram позволяет отправлять в чат геопозицию пользователя в реальном времени, при желании задавая оповещение о приближении.

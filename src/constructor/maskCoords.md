@@ -1,43 +1,37 @@
 ---
-title: "maskCoords (конструктор)"
+title: "maskCoords"
 original: "https://core.telegram.org/constructor/maskCoords"
 section: ref
 kind: constructor
+description: "Место на фотографии, куда следует поместить маску при прикреплении стикеров к медиафайлам »"
 layout: layout.njk
 ---
 
 # maskCoords
 
-*Конструктор из схемы TL.*
+Место на фотографии, куда следует поместить маску при [прикреплении стикеров к медиафайлам »](/api/stickers/#attached-stickers)
 
-> Position on a photo where a mask should be placed when [attaching stickers to media »](https://core.telegram.org/api/stickers#attached-stickers)
-> The `n` position indicates where the mask should be placed:
-> -   0 => Relative to the forehead
-> -   1 => Relative to the eyes
-> -   2 => Relative to the mouth
-> -   3 => Relative to the chin
+Позиция `n` указывает, куда следует поместить маску:
 
-## Определение TL
+-   0 => Относительно лба
+-   1 => Относительно глаз
+-   2 => Относительно рта
+-   3 => Относительно подбородка
 
 ```
 maskCoords#aed6dbb2 n:int x:double y:double zoom:double = MaskCoords;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| n | [int](/type/int/) | Part of the face, relative to which the mask should be placed |
-| x | [double](/type/double/) | Shift by X-axis measured in widths of the mask scaled to the face size, from left to right. (For example, -1.0 will place the mask just to the left of the default mask position) |
-| y | [double](/type/double/) | Shift by Y-axis measured in widths of the mask scaled to the face size, from left to right. (For example, -1.0 will place the mask just below the default mask position) |
-| zoom | [double](/type/double/) | Mask scaling coefficient. (For example, 2.0 means a doubled size) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>n</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Часть лица, относительно которой следует размещать маску</td></tr><tr><td><strong>x</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Сдвиг по оси X, измеряемый в ширинах маски, отмасштабированной под размер лица, слева направо. (Например, значение -1.0 поместит маску слева от её положения по умолчанию)</td></tr><tr><td><strong>y</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Сдвиг по оси Y, измеряемый в ширинах маски, отмасштабированной под размер лица, слева направо. (Например, значение -1.0 поместит маску сразу под её положением по умолчанию)</td></tr><tr><td><strong>zoom</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Коэффициент масштабирования маски. (Например, 2.0 означает удвоенный размер)</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MaskCoords](/type/MaskCoords/)
 
-## Related pages
+### Связанные страницы
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.

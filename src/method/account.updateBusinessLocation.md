@@ -1,19 +1,17 @@
 ---
-title: "account.updateBusinessLocation (метод)"
+title: "account.updateBusinessLocation"
 original: "https://core.telegram.org/method/account.updateBusinessLocation"
 section: ref
 kind: method
+description: "Бизнес-аккаунты » могут указывать своё местоположение с помощью этого метода, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # account.updateBusinessLocation
 
-*Метод из схемы TL.*
+[Бизнес-аккаунты »](/api/business/#location) могут указывать своё местоположение с помощью этого метода, подробнее см. [здесь »](/api/business/#location).
 
-> [Businesses »](https://core.telegram.org/api/business#location) may advertise their location using this method, see [here »](https://core.telegram.org/api/business#location) for more info.
-> To remove business location information invoke the method without setting any of the parameters.
-
-## Определение TL
+Чтобы удалить сведения о местоположении компании, вызовите метод, не задавая ни одного из параметров.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,22 +20,18 @@ boolTrue#997275b5 = Bool;
 account.updateBusinessLocation#9e6b131a flags:# geo_point:flags.1?InputGeoPoint address:flags.0?string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| geo_point | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[InputGeoPoint](/type/InputGeoPoint/) | Optional, contains a set of geographical coordinates. |
-| address | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Mandatory when setting/updating the location, contains a textual description of the address (max 96 UTF-8 chars). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>geo_point</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/InputGeoPoint">InputGeoPoint</a></td><td>Необязательное поле, содержит набор географических координат.</td></tr><tr><td><strong>address</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Обязательно при установке или изменении местоположения, содержит текстовое описание адреса (не более 96 символов UTF-8).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

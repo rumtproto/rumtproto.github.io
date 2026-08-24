@@ -1,40 +1,34 @@
 ---
-title: "inputInvoiceMessage (конструктор)"
+title: "inputInvoiceMessage"
 original: "https://core.telegram.org/constructor/inputInvoiceMessage"
 section: ref
 kind: constructor
+description: "Счёт, содержащийся в сообщении messageMediaInvoice или в платном медиа »."
 layout: layout.njk
 ---
 
 # inputInvoiceMessage
 
-*Конструктор из схемы TL.*
-
-> An invoice contained in a [messageMediaInvoice](/constructor/messageMediaInvoice/) message or [paid media »](https://core.telegram.org/api/paid-media).
-
-## Определение TL
+Счёт, содержащийся в сообщении [messageMediaInvoice](/constructor/messageMediaInvoice/) или в [платном медиа »](/api/paid-media/).
 
 ```
 inputInvoiceMessage#c5b56859 peer:InputPeer msg_id:int = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Chat where the invoice/paid media was sent |
-| msg_id | [int](/type/int/) | Message ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат, в который были отправлены счёт или платные медиафайлы</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
 #### [messageMediaInvoice](/constructor/messageMediaInvoice/)
 
-Invoice
+Счёт
 
-#### [Paid media](https://core.telegram.org/api/paid-media)
+#### [Платные медиа](/api/paid-media/)
 
-Content creators can accept Stars by publishing paid photos or videos on their channels. Subscribers will be allowed to view such posts only after paying the author to unlock them.
+Авторы контента могут принимать Stars, публикуя в своих каналах платные фотографии и видео. Подписчики смогут просмотреть такие посты, только заплатив автору за их разблокировку.

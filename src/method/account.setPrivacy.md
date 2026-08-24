@@ -1,18 +1,15 @@
 ---
-title: "account.setPrivacy (метод)"
+title: "account.setPrivacy"
 original: "https://core.telegram.org/method/account.setPrivacy"
 section: ref
 kind: method
+description: "Изменить настройки приватности текущего аккаунта"
 layout: layout.njk
 ---
 
 # account.setPrivacy
 
-*Метод из схемы TL.*
-
-> Change privacy settings of current account
-
-## Определение TL
+Изменить настройки приватности текущего аккаунта
 
 ```
 account.privacyRules#50a04e45 rules:Vector<PrivacyRule> chats:Vector<Chat> users:Vector<User> = account.PrivacyRules;
@@ -20,23 +17,16 @@ account.privacyRules#50a04e45 rules:Vector<PrivacyRule> chats:Vector<Chat> users
 account.setPrivacy#c9f81ce8 key:InputPrivacyKey rules:Vector<InputPrivacyRule> = account.PrivacyRules;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| key | [InputPrivacyKey](/type/InputPrivacyKey/) | New privacy rule |
-| rules | [Vector](https://core.telegram.org/type/Vector%20t)<[InputPrivacyRule](/type/InputPrivacyRule/)> | Peers to which the privacy rule will apply. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>key</strong></td><td style="text-align: center;"><a href="/type/InputPrivacyKey">InputPrivacyKey</a></td><td>Новое правило приватности</td></tr><tr><td><strong>rules</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPrivacyRule">InputPrivacyRule</a>&gt;</td><td>Пиры, к которым будет применяться правило приватности.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.PrivacyRules](/type/account.PrivacyRules/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PRIVACY_KEY_INVALID | The privacy key is invalid. |
-| 400 | PRIVACY_TOO_LONG | Too many privacy rules were specified, the current limit is 1000. |
-| 400 | PRIVACY_VALUE_INVALID | The specified privacy rule combination is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PRIVACY_KEY_INVALID</td><td>Указанный ключ приватности недействителен.</td></tr><tr><td>400</td><td>PRIVACY_TOO_LONG</td><td>Указано слишком много правил приватности, текущий предел — 1000.</td></tr><tr><td>400</td><td>PRIVACY_VALUE_INVALID</td><td>Указанное сочетание правил приватности недопустимо.</td></tr></tbody></table>

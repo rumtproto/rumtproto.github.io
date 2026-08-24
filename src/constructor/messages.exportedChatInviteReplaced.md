@@ -1,31 +1,24 @@
 ---
-title: "messages.exportedChatInviteReplaced (конструктор)"
+title: "messages.exportedChatInviteReplaced"
 original: "https://core.telegram.org/constructor/messages.exportedChatInviteReplaced"
 section: ref
 kind: constructor
+description: "Указанная пригласительная ссылка на чат была заменена другой"
 layout: layout.njk
 ---
 
 # messages.exportedChatInviteReplaced
 
-*Конструктор из схемы TL.*
-
-> The specified chat invite was replaced with another one
-
-## Определение TL
+Указанная пригласительная ссылка на чат была заменена другой
 
 ```
 messages.exportedChatInviteReplaced#222600ef invite:ExportedChatInvite new_invite:ExportedChatInvite users:Vector<User> = messages.ExportedChatInvite;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| invite | [ExportedChatInvite](/type/ExportedChatInvite/) | The replaced chat invite |
-| new_invite | [ExportedChatInvite](/type/ExportedChatInvite/) | The invite that replaces the previous invite |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Mentioned users |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>invite</strong></td><td style="text-align: center;"><a href="/type/ExportedChatInvite">ExportedChatInvite</a></td><td>Заменённая пригласительная ссылка на чат</td></tr><tr><td><strong>new_invite</strong></td><td style="text-align: center;"><a href="/type/ExportedChatInvite">ExportedChatInvite</a></td><td>Приглашение, которое заменяет предыдущее</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Упомянутые пользователи</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.ExportedChatInvite](/type/messages.ExportedChatInvite/)

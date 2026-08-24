@@ -1,18 +1,15 @@
 ---
-title: "messages.getCommonChats (метод)"
+title: "messages.getCommonChats"
 original: "https://core.telegram.org/method/messages.getCommonChats"
 section: ref
 kind: method
+description: "Получить общие с пользователем чаты"
 layout: layout.njk
 ---
 
 # messages.getCommonChats
 
-*Метод из схемы TL.*
-
-> Get chats in common with a user
-
-## Определение TL
+Получить общие с пользователем чаты
 
 ```
 messages.chats#64ff9fd5 chats:Vector<Chat> = messages.Chats;
@@ -21,30 +18,22 @@ messages.chatsSlice#9cd81144 count:int chats:Vector<Chat> = messages.Chats;
 messages.getCommonChats#e40ca104 user_id:InputUser max_id:long limit:int = messages.Chats;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [InputUser](/type/InputUser/) | User ID |
-| max_id | [long](/type/long/) | Maximum ID of chat to return (see [pagination](https://core.telegram.org/api/offsets)) |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор пользователя</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Максимальный идентификатор возвращаемого чата (см. <a href="/api/offsets">постраничную выборку</a>)</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Chats](/type/messages.Chats/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.

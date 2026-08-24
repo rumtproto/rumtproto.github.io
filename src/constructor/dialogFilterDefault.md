@@ -1,27 +1,24 @@
 ---
-title: "dialogFilterDefault (конструктор)"
+title: "dialogFilterDefault"
 original: "https://core.telegram.org/constructor/dialogFilterDefault"
 section: ref
 kind: constructor
+description: "Используется только при изменении порядка папок для обозначения папки по умолчанию (все чаты)."
 layout: layout.njk
 ---
 
 # dialogFilterDefault
 
-*Конструктор из схемы TL.*
-
-> Used only when reordering folders to indicate the default (all chats) folder.
-
-## Определение TL
+Используется только при изменении порядка папок для обозначения папки по умолчанию (все чаты).
 
 ```
 dialogFilterDefault#363293ae = DialogFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [DialogFilter](/type/DialogFilter/)

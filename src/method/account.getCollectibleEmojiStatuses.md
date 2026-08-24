@@ -1,18 +1,15 @@
 ---
-title: "account.getCollectibleEmojiStatuses (метод)"
+title: "account.getCollectibleEmojiStatuses"
 original: "https://core.telegram.org/method/account.getCollectibleEmojiStatuses"
 section: ref
 kind: method
+description: "Получить список эмодзи-статусов » для принадлежащих вам или размещённых коллекционных подарков »."
 layout: layout.njk
 ---
 
 # account.getCollectibleEmojiStatuses
 
-*Метод из схемы TL.*
-
-> Obtain a list of [emoji statuses »](https://core.telegram.org/api/emoji-status) for owned or [hosted collectible gifts »](https://core.telegram.org/api/gifts#hosted-collectible-gifts).
-
-## Определение TL
+Получить список [эмодзи-статусов »](/api/emoji-status/) для принадлежащих вам или [размещённых коллекционных подарков »](/api/gifts/#hosted-collectible-gifts).
 
 ```
 account.emojiStatusesNotModified#d08ce645 = account.EmojiStatuses;
@@ -21,28 +18,26 @@ account.emojiStatuses#90c467d1 hash:long statuses:Vector<EmojiStatus> = account.
 account.getCollectibleEmojiStatuses#2e7b4543 hash:long = account.EmojiStatuses;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash for pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets">Хеш для постраничной выборки</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.EmojiStatuses](/type/account.EmojiStatuses/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

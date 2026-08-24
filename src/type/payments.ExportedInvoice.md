@@ -1,18 +1,15 @@
 ---
-title: "payments.ExportedInvoice (тип)"
+title: "payments.ExportedInvoice"
 original: "https://core.telegram.org/type/payments.ExportedInvoice"
 section: ref
 kind: type
+description: "Экспортированный счёт"
 layout: layout.njk
 ---
 
 # payments.ExportedInvoice
 
-*Тип из схемы TL.*
-
-> Exported invoice
-
-## Определение TL
+Экспортированный счёт
 
 ```
 payments.exportedInvoice#aed0cbd9 url:string = payments.ExportedInvoice;
@@ -22,14 +19,10 @@ payments.exportedInvoice#aed0cbd9 url:string = payments.ExportedInvoice;
 payments.exportInvoice#f91b065 invoice_media:InputMedia = payments.ExportedInvoice;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [payments.exportedInvoice](/constructor/payments.exportedInvoice/) | Exported [invoice deep link](https://core.telegram.org/api/links#invoice-links) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/payments.exportedInvoice">payments.exportedInvoice</a></td><td>Экспортированная <a href="/api/links#invoice-links">глубокая ссылка на счёт</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [payments.exportInvoice](/method/payments.exportInvoice/) | Generate an [invoice deep link](https://core.telegram.org/api/links#invoice-links) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/payments.exportInvoice">payments.exportInvoice</a></td><td>Создать <a href="/api/links#invoice-links">глубокую ссылку на счёт</a></td></tr></tbody></table>

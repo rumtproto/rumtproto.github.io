@@ -1,18 +1,15 @@
 ---
-title: "messages.InactiveChats (тип)"
+title: "messages.InactiveChats"
 original: "https://core.telegram.org/type/messages.InactiveChats"
 section: ref
 kind: type
+description: "Список неактивных чатов"
 layout: layout.njk
 ---
 
 # messages.InactiveChats
 
-*Тип из схемы TL.*
-
-> Inactive chat list
-
-## Определение TL
+Список неактивных чатов
 
 ```
 messages.inactiveChats#a927fec5 dates:Vector<int> chats:Vector<Chat> users:Vector<User> = messages.InactiveChats;
@@ -22,14 +19,10 @@ messages.inactiveChats#a927fec5 dates:Vector<int> chats:Vector<Chat> users:Vecto
 channels.getInactiveChannels#11e831ee = messages.InactiveChats;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.inactiveChats](/constructor/messages.inactiveChats/) | Inactive chat list |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.inactiveChats">messages.inactiveChats</a></td><td>Список неактивных чатов</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [channels.getInactiveChannels](/method/channels.getInactiveChannels/) | Get inactive channels and supergroups |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/channels.getInactiveChannels">channels.getInactiveChannels</a></td><td>Получить неактивные каналы и супергруппы</td></tr></tbody></table>

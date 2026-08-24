@@ -1,27 +1,24 @@
 ---
-title: "channelAdminLogEventActionParticipantLeave (конструктор)"
+title: "channelAdminLogEventActionParticipantLeave"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantLeave"
 section: ref
 kind: constructor
+description: "Пользователь покинул канал/супергруппу (для больших групп сведения о вступившем пользователе не показываются)"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionParticipantLeave
 
-*Конструктор из схемы TL.*
-
-> A user left the channel/supergroup (in the case of big groups, info of the user that has joined isn't shown)
-
-## Определение TL
+Пользователь покинул канал/супергруппу (для больших групп сведения о вступившем пользователе не показываются)
 
 ```
 channelAdminLogEventActionParticipantLeave#f89777f2 = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)

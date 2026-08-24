@@ -1,30 +1,27 @@
 ---
-title: "messages.getSplitRanges (метод)"
+title: "messages.getSplitRanges"
 original: "https://core.telegram.org/method/messages.getSplitRanges"
 section: ref
 kind: method
+description: "Получить диапазоны сообщений для сохранения истории чатов пользователя"
 layout: layout.njk
 ---
 
 # messages.getSplitRanges
 
-*Метод из схемы TL.*
-
-> Get message ranges for saving the user's chat history
-
-## Определение TL
+Получить диапазоны сообщений для сохранения истории чатов пользователя
 
 ```
 ---functions---
 messages.getSplitRanges#1cff7e08 = Vector<MessageRange>;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[MessageRange](/type/MessageRange/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям

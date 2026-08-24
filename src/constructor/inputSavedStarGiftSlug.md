@@ -1,35 +1,30 @@
 ---
-title: "inputSavedStarGiftSlug (конструктор)"
+title: "inputSavedStarGiftSlug"
 original: "https://core.telegram.org/constructor/inputSavedStarGiftSlug"
 section: ref
 kind: constructor
+description: "Указывает на коллекционный подарок, полученный по ссылке на коллекционный подарок »."
 layout: layout.njk
 ---
 
 # inputSavedStarGiftSlug
 
-*Конструктор из схемы TL.*
-
-> Points to a [collectible gift obtained from a collectible gift link »](https://core.telegram.org/api/links#collectible-gift-link).
-
-## Определение TL
+Указывает на [коллекционный подарок, полученный по ссылке на коллекционный подарок »](/api/links/#collectible-gift-link).
 
 ```
 inputSavedStarGiftSlug#2085c238 slug:string = InputSavedStarGift;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| slug | [string](/type/string/) | Slug from the link. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Слаг из ссылки.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputSavedStarGift](/type/InputSavedStarGift/)
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

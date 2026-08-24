@@ -1,46 +1,38 @@
 ---
-title: "inputInvoicePremiumGiftStars (конструктор)"
+title: "inputInvoicePremiumGiftStars"
 original: "https://core.telegram.org/constructor/inputInvoicePremiumGiftStars"
 section: ref
 kind: constructor
+description: "Используется, чтобы подарить другому пользователю подписку Telegram Premium с оплатой Telegram Stars."
 layout: layout.njk
 ---
 
 # inputInvoicePremiumGiftStars
 
-*Конструктор из схемы TL.*
-
-> Used to gift a [Telegram Premium](https://core.telegram.org/api/premium) subscription to another user, paying with [Telegram Stars](https://core.telegram.org/api/stars).
-
-## Определение TL
+Используется, чтобы подарить другому пользователю подписку [Telegram Premium](/api/premium/) с оплатой [Telegram Stars](/api/stars/).
 
 ```
 inputInvoicePremiumGiftStars#dabab2ef flags:# user_id:InputUser months:int message:flags.0?TextWithEntities = InputInvoice;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| user_id | [InputUser](/type/InputUser/) | Who will receive the gifted subscription. |
-| months | [int](/type/int/) | Duration of the subscription in months, must be one of the options with currency == "XTR" returned by [payments.getPremiumGiftCodeOptions](/method/payments.getPremiumGiftCodeOptions/). |
-| message | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[TextWithEntities](/type/TextWithEntities/) | Message attached with the gift. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Кто получит подаренную подписку.</td></tr><tr><td><strong>months</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Срок действия подписки в месяцах; должен быть равен одному из вариантов с <code>currency == "XTR"</code>, возвращаемых методом <a href="/method/payments.getPremiumGiftCodeOptions">payments.getPremiumGiftCodeOptions</a>.</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/TextWithEntities">TextWithEntities</a></td><td>Сообщение, приложенное к подарку.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputInvoice](/type/InputInvoice/)
 
-## Related pages
+### Связанные страницы
 
 #### [payments.getPremiumGiftCodeOptions](/method/payments.getPremiumGiftCodeOptions/)
 
-Obtain a list of Telegram Premium [giveaway/gift code »](https://core.telegram.org/api/giveaways) options.
+Получить список вариантов [розыгрыша или подарочного кода »](/api/giveaways/) Telegram Premium.
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

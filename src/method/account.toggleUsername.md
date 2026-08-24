@@ -1,18 +1,15 @@
 ---
-title: "account.toggleUsername (метод)"
+title: "account.toggleUsername"
 original: "https://core.telegram.org/method/account.toggleUsername"
 section: ref
 kind: method
+description: "Активировать или деактивировать купленное на fragment.com имя пользователя, связанное с текущим авторизованным пользователем."
 layout: layout.njk
 ---
 
 # account.toggleUsername
 
-*Метод из схемы TL.*
-
-> Activate or deactivate a purchased [fragment.com](https://fragment.com) username associated to the currently logged-in user.
-
-## Определение TL
+Активировать или деактивировать купленное на [fragment.com](https://fragment.com) имя пользователя, связанное с текущим авторизованным пользователем.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,23 +18,16 @@ boolTrue#997275b5 = Bool;
 account.toggleUsername#58d6b376 username:string active:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| username | [string](/type/string/) | Username |
-| active | [Bool](/type/Bool/) | Whether to activate or deactivate it |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>username</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Имя пользователя</td></tr><tr><td><strong>active</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Включить или отключить его</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | USERNAMES_ACTIVE_TOO_MUCH | The maximum number of active usernames was reached. |
-| 400 | USERNAME_INVALID | The provided username is not valid. |
-| 400 | USERNAME_NOT_MODIFIED | The username was not modified. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>USERNAMES_ACTIVE_TOO_MUCH</td><td>Достигнуто максимальное количество активных имён пользователя.</td></tr><tr><td>400</td><td>USERNAME_INVALID</td><td>Указанное имя пользователя недействительно.</td></tr><tr><td>400</td><td>USERNAME_NOT_MODIFIED</td><td>Имя пользователя не было изменено.</td></tr></tbody></table>

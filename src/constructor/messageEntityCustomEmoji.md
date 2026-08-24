@@ -1,58 +1,54 @@
 ---
-title: "messageEntityCustomEmoji (конструктор)"
+title: "messageEntityCustomEmoji"
 original: "https://core.telegram.org/constructor/messageEntityCustomEmoji"
 section: ref
 kind: constructor
+description: "Представляет пользовательский эмодзи."
 layout: layout.njk
 ---
 
 # messageEntityCustomEmoji
 
-*Конструктор из схемы TL.*
+Представляет пользовательский эмодзи.  
+Учтите, что эта сущность обязана охватывать ровно один обычный эмодзи (тот, который содержится в [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/).`alt`) в соответствующем тексте, иначе сервер её проигнорирует.
 
-> Represents a custom emoji.  
-> Note that this entity must wrap exactly one regular emoji (the one contained in [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/).`alt`) in the related text, otherwise the server will ignore it.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===144===
-> messageEntityCustomEmoji#c8cf05f8 offset:int length:int document_id:long = MessageEntity;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===144===
+messageEntityCustomEmoji#c8cf05f8 offset:int length:int document_id:long = MessageEntity;
+```
+
+#### Схема API
 
 ```
 messageEntityCustomEmoji#c8cf05f8 offset:int length:int document_id:long = MessageEntity;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| offset | [int](/type/int/) | Offset of message entity within message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)) |
-| length | [int](/type/int/) | Length of message entity within message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)) |
-| document_id | [long](/type/long/) | Document ID of the [custom emoji](https://core.telegram.org/api/custom-emoji), use [messages.getCustomEmojiDocuments](/method/messages.getCustomEmojiDocuments/) to fetch the emoji animation and the actual emoji it represents. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Смещение сущности оформления в сообщении (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>)</td></tr><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Длина сущности оформления в сообщении (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>)</td></tr><tr><td><strong>document_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор документа <a href="/api/custom-emoji">пользовательского эмодзи</a>; используйте <a href="/method/messages.getCustomEmojiDocuments">messages.getCustomEmojiDocuments</a>, чтобы получить анимацию эмодзи и сам эмодзи, который он представляет.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageEntity](/type/MessageEntity/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Custom emojis](https://core.telegram.org/api/custom-emoji)
+#### [Пользовательские эмодзи](/api/custom-emoji/)
 
-Telegram allows including animated and static custom emojis inside of messages.
+Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.
 
 #### [messages.getCustomEmojiDocuments](/method/messages.getCustomEmojiDocuments/)
 
-Fetch [custom emoji stickers »](https://core.telegram.org/api/custom-emoji).
+Получить [стикеры с пользовательскими эмодзи »](/api/custom-emoji/).
 
-Returns a list of [documents](/constructor/document/) with the animated custom emoji in TGS format, and a [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/) attribute with the original emoji and info about the emoji stickerset this custom emoji belongs to.
+Возвращает список [документов](/constructor/document/) с анимированным пользовательским эмодзи в формате TGS и атрибутом [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/) с исходным эмодзи и сведениями о наборе эмодзи, которому принадлежит этот пользовательский эмодзи.
 
 #### [documentAttributeCustomEmoji](/constructor/documentAttributeCustomEmoji/)
 
-Info about a custom emoji
+Информация о пользовательском эмодзи

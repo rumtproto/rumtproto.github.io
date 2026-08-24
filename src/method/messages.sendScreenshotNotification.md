@@ -1,18 +1,15 @@
 ---
-title: "messages.sendScreenshotNotification (метод)"
+title: "messages.sendScreenshotNotification"
 original: "https://core.telegram.org/method/messages.sendScreenshotNotification"
 section: ref
 kind: method
+description: "Уведомить собеседника в личном чате о том, что сделан снимок экрана чата"
 layout: layout.njk
 ---
 
 # messages.sendScreenshotNotification
 
-*Метод из схемы TL.*
-
-> Notify the other user in a private chat that a screenshot of the chat was taken
-
-## Определение TL
+Уведомить собеседника в личном чате о том, что сделан снимок экрана чата
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,32 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.sendScreenshotNotification#a1405817 peer:InputPeer reply_to:InputReplyTo random_id:long = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Other user |
-| reply_to | [InputReplyTo](/type/InputReplyTo/) | Indicates the message that was screenshotted (the specified message ID can also be 0 to avoid indicating any specific message). |
-| random_id | [long](/type/long/) | Random ID to avoid message resending. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Другой пользователь</td></tr><tr><td><strong>reply_to</strong></td><td style="text-align: center;"><a href="/type/InputReplyTo">InputReplyTo</a></td><td>Указывает сообщение, снимок экрана которого был сделан (указанный идентификатор сообщения также может быть равен <code>0</code>, чтобы не указывать конкретное сообщение).</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:random_id] Случайный идентификатор, позволяющий избежать повторной отправки сообщения. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | INPUT_USER_DEACTIVATED | The specified user was deleted. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | REPLY_MESSAGE_ID_INVALID | The specified reply-to message ID is invalid. |
-| 400 | STORY_ID_INVALID | The specified story ID is invalid. |
-| 400 | YOU_BLOCKED_USER | You blocked this user. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>INPUT_USER_DEACTIVATED</td><td>Указанный пользователь был удалён.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>REPLY_MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения, на которое даётся ответ, недействителен.</td></tr><tr><td>400</td><td>STORY_ID_INVALID</td><td>Указанный идентификатор истории недействителен.</td></tr><tr><td>400</td><td>YOU_BLOCKED_USER</td><td>Вы заблокировали этого пользователя.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.

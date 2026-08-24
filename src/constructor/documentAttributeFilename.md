@@ -1,35 +1,33 @@
 ---
-title: "documentAttributeFilename (конструктор)"
+title: "documentAttributeFilename"
 original: "https://core.telegram.org/constructor/documentAttributeFilename"
 section: ref
 kind: constructor
+description: "Простой документ с именем файла"
 layout: layout.njk
 ---
 
 # documentAttributeFilename
 
-*Конструктор из схемы TL.*
+Простой документ с именем файла
 
-> A simple document with a file name
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===23===
-> documentAttributeFilename#15590068 file_name:string = DocumentAttribute;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===23===
+documentAttributeFilename#15590068 file_name:string = DocumentAttribute;
+```
+
+#### Схема API
 
 ```
 documentAttributeFilename#15590068 file_name:string = DocumentAttribute;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| file_name | [string](/type/string/) | The file name |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>file_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Имя файла</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [DocumentAttribute](/type/DocumentAttribute/)

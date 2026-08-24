@@ -1,41 +1,33 @@
 ---
-title: "secureValueErrorData (конструктор)"
+title: "secureValueErrorData"
 original: "https://core.telegram.org/constructor/secureValueErrorData"
 section: ref
 kind: constructor
+description: "Представляет проблему в одном из полей данных, предоставленных пользователем. Ошибка считается устранённой, когда значение поля меняется."
 layout: layout.njk
 ---
 
 # secureValueErrorData
 
-*Конструктор из схемы TL.*
-
-> Represents an issue in one of the data fields that was provided by the user. The error is considered resolved when the field's value changes.
-
-## Определение TL
+Представляет проблему в одном из полей данных, предоставленных пользователем. Ошибка считается устранённой, когда значение поля меняется.
 
 ```
 secureValueErrorData#e8a40bd9 type:SecureValueType data_hash:bytes field:string text:string = SecureValueError;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| type | [SecureValueType](/type/SecureValueType/) | The section of the user's Telegram Passport which has the error, one of [secureValueTypePersonalDetails](/constructor/secureValueTypePersonalDetails/), [secureValueTypePassport](/constructor/secureValueTypePassport/), [secureValueTypeDriverLicense](/constructor/secureValueTypeDriverLicense/), [secureValueTypeIdentityCard](/constructor/secureValueTypeIdentityCard/), [secureValueTypeInternalPassport](/constructor/secureValueTypeInternalPassport/), [secureValueTypeAddress](/constructor/secureValueTypeAddress/) |
-| data_hash | [bytes](/type/bytes/) | Data hash |
-| field | [string](/type/string/) | Name of the data field which has the error |
-| text | [string](/type/string/) | Error message |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/SecureValueType">SecureValueType</a></td><td>Раздел Telegram Passport пользователя, в котором произошла ошибка, — один из <a href="/constructor/secureValueTypePersonalDetails">secureValueTypePersonalDetails</a>, <a href="/constructor/secureValueTypePassport">secureValueTypePassport</a>, <a href="/constructor/secureValueTypeDriverLicense">secureValueTypeDriverLicense</a>, <a href="/constructor/secureValueTypeIdentityCard">secureValueTypeIdentityCard</a>, <a href="/constructor/secureValueTypeInternalPassport">secureValueTypeInternalPassport</a>, <a href="/constructor/secureValueTypeAddress">secureValueTypeAddress</a></td></tr><tr><td><strong>data_hash</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Хеш данных</td></tr><tr><td><strong>field</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название поля данных, в котором обнаружена ошибка</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст ошибки</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SecureValueError](/type/SecureValueError/)
 
-## Related pages
+### Связанные страницы
 
 #### [secureValueTypePersonalDetails](/constructor/secureValueTypePersonalDetails/)
 
-Personal details
+Личные данные
 
 #### [secureValueTypePassport](/constructor/secureValueTypePassport/)
 
@@ -43,16 +35,16 @@ Passport
 
 #### [secureValueTypeDriverLicense](/constructor/secureValueTypeDriverLicense/)
 
-Driver's license
+Водительское удостоверение
 
 #### [secureValueTypeIdentityCard](/constructor/secureValueTypeIdentityCard/)
 
-Identity card
+Удостоверение личности
 
 #### [secureValueTypeInternalPassport](/constructor/secureValueTypeInternalPassport/)
 
-Internal [passport](https://core.telegram.org/passport)
+Внутренний [passport](https://core.telegram.org/passport)
 
 #### [secureValueTypeAddress](/constructor/secureValueTypeAddress/)
 
-Address
+Адрес

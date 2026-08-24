@@ -1,56 +1,49 @@
 ---
-title: "recentStory (конструктор)"
+title: "recentStory"
 original: "https://core.telegram.org/constructor/recentStory"
 section: ref
 kind: constructor
+description: "Сводка активных историй » пира, встроенная в user.stories_max_id и channel.stories_max_id и возвращаемая методом stories.getPeerMaxIDs."
 layout: layout.njk
 ---
 
 # recentStory
 
-*Конструктор из схемы TL.*
-
-> Summary of a peer's [active stories »](https://core.telegram.org/api/stories#recent-story-summaries), embedded in [user](/constructor/user/).`stories_max_id` and [channel](/constructor/channel/).`stories_max_id` and returned by [stories.getPeerMaxIDs](/method/stories.getPeerMaxIDs/).
-
-## Определение TL
+Сводка [активных историй »](/api/stories/#recent-story-summaries) пира, встроенная в [user](/constructor/user/).`stories_max_id` и [channel](/constructor/channel/).`stories_max_id` и возвращаемая методом [stories.getPeerMaxIDs](/method/stories.getPeerMaxIDs/).
 
 ```
 recentStory#711d692d flags:# live:flags.0?true max_id:flags.1?int = RecentStory;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| live | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether the peer is currently broadcasting a [live story »](https://core.telegram.org/api/stories#live-stories). |
-| max_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | If live is set, ID of the peer's active [live story »](https://core.telegram.org/api/stories#live-stories); otherwise, ID of the peer's maximum active story. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>live</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Ведёт ли пир сейчас <a href="/api/stories#live-stories">прямой эфир в историях »</a>.</td></tr><tr><td><strong>max_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Если задан флаг <code>live</code> — идентификатор активной <a href="/api/stories#live-stories">прямой истории »</a> пира; иначе — идентификатор максимальной активной истории пира.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [RecentStory](/type/RecentStory/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.
 
 #### [user](/constructor/user/)
 
-Indicates info about a certain user.
+Содержит сведения об определённом пользователе.
 
-Unless specified otherwise, when updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+Если не указано иное, при обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-See [here »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) for an implementation of the logic to use when updating the [local user peer database](https://core.telegram.org/api/peers).
+См. [здесь »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) реализацию логики, которую следует применять при обновлении [локальной базы пиров-пользователей](/api/peers/).
 
 #### [channel](/constructor/channel/)
 
-Channel/supergroup info
+Информация о канале или супергруппе
 
-When updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).
 
-The only exception to the above rule is when the `min` flag is set, in which case **only** the following fields must be applied over any locally stored version:
+[@term:min] Единственное исключение из приведённого выше правила — установленный флаг `min`: в этом случае поверх локально сохранённой версии обязаны применяться **только** следующие поля:
 
 -   `title`
 -   `megagroup`
@@ -77,14 +70,14 @@ The only exception to the above rule is when the `min` flag is set, in which cas
 -   `signature_profiles`
 -   `autotranslation`
 -   `broadcast_messages_allowed`
--   `monoforum`
+-   [@term:monoforum] `monoforum`
 -   `forum_tabs`
 -   `linked_monoforum_id`
 -   `send_paid_messages_stars`
 -   `bot_verification_icon`
 
-See [here »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176) for an implementation of the logic to use when updating the [local channel peer database](https://core.telegram.org/api/peers).
+См. [здесь »](https://github.com/tdlib/td/blob/077f71addad9db5d1a5692cc1255438793e75636/td/telegram/ChatManager.cpp#L9176) реализацию логики, которую следует применять при обновлении [локальной базы пиров-каналов](/api/peers/).
 
 #### [stories.getPeerMaxIDs](/method/stories.getPeerMaxIDs/)
 
-Get compact [active story summaries »](https://core.telegram.org/api/stories#recent-story-summaries) for a set of peers.
+Получить компактные [сводки активных историй »](/api/stories/#recent-story-summaries) для набора пиров.

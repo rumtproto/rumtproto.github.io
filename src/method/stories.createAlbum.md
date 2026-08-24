@@ -1,18 +1,15 @@
 ---
-title: "stories.createAlbum (метод)"
+title: "stories.createAlbum"
 original: "https://core.telegram.org/method/stories.createAlbum"
 section: ref
 kind: method
+description: "Создаёт альбом историй."
 layout: layout.njk
 ---
 
 # stories.createAlbum
 
-*Метод из схемы TL.*
-
-> Creates a [story album](https://core.telegram.org/api/stories#story-albums).
-
-## Определение TL
+Создаёт [альбом историй](/api/stories/#story-albums).
 
 ```
 storyAlbum#9325705a flags:# album_id:int title:string icon_photo:flags.0?Photo icon_video:flags.1?Document = StoryAlbum;
@@ -20,28 +17,22 @@ storyAlbum#9325705a flags:# album_id:int title:string icon_photo:flags.0?Photo i
 stories.createAlbum#a36396e5 peer:InputPeer title:string stories:Vector<int> = StoryAlbum;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The owned peer where to create the album. |
-| title | [string](/type/string/) | Album name. |
-| stories | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | Stories to add to the album. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Принадлежащий пользователю пир, в котором нужно создать альбом.</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название альбома.</td></tr><tr><td><strong>stories</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Истории, которые нужно добавить в альбом.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [StoryAlbum](/type/StoryAlbum/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

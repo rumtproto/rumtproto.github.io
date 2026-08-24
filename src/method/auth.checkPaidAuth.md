@@ -1,18 +1,15 @@
 ---
-title: "auth.checkPaidAuth (метод)"
+title: "auth.checkPaidAuth"
 original: "https://core.telegram.org/method/auth.checkPaidAuth"
 section: ref
 kind: method
+description: "Проверяет состояние платежа за вход."
 layout: layout.njk
 ---
 
 # auth.checkPaidAuth
 
-*Метод из схемы TL.*
-
-> Checks the status of a [login payment](https://core.telegram.org/api/auth/#paid-auth).
-
-## Определение TL
+Проверяет состояние [платежа за вход](/api/auth/#paid-auth).
 
 ```
 auth.sentCode#5e002502 flags:# type:auth.SentCodeType phone_code_hash:string next_type:flags.1?auth.CodeType timeout:flags.2?int = auth.SentCode;
@@ -22,38 +19,32 @@ auth.sentCodePaymentRequired#e0955a3c store_product:string phone_code_hash:strin
 auth.checkPaidAuth#56e59f9c phone_number:string phone_code_hash:string form_id:long = auth.SentCode;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_number | [string](/type/string/) | Phone number |
-| phone_code_hash | [string](/type/string/) | The phone code hash obtained from [auth.sendCode](/method/auth.sendCode/) |
-| form_id | [long](/type/long/) | The payment form ID passed to [payments.sendPaymentForm](/method/payments.sendPaymentForm/). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш телефонного кода, полученный от <a href="/method/auth.sendCode">auth.sendCode</a></td></tr><tr><td><strong>form_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор формы оплаты, переданный в <a href="/method/payments.sendPaymentForm">payments.sendPaymentForm</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.SentCode](/type/auth.SentCode/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PHONE_NUMBER_INVALID | The phone number is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PHONE_NUMBER_INVALID</td><td>Недействительный номер телефона.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [auth.sendCode](/method/auth.sendCode/)
 
-Send the verification code for login
+Отправить код подтверждения для входа
 
 #### [payments.sendPaymentForm](/method/payments.sendPaymentForm/)
 
-Send compiled payment form
+Отправить заполненную форму оплаты
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

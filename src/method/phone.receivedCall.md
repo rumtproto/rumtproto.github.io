@@ -1,18 +1,15 @@
 ---
-title: "phone.receivedCall (метод)"
+title: "phone.receivedCall"
 original: "https://core.telegram.org/method/phone.receivedCall"
 section: ref
 kind: method
+description: "Необязательно: уведомить сервер о том, что пользователь сейчас занят в звонке — это приведёт к автоматическому отклонению всех входящих звонков до завершения текущего; подробнее…"
 layout: layout.njk
 ---
 
 # phone.receivedCall
 
-*Метод из схемы TL.*
-
-> Optional: notify the server that the user is currently busy in a call: this will automatically refuse all incoming phone calls until the current phone call is ended, see [here »](https://core.telegram.org/api/calls#one-to-one-calls) for more info on the full flow.
-
-## Определение TL
+Необязательно: уведомить сервер о том, что пользователь сейчас занят в звонке — это приведёт к автоматическому отклонению всех входящих звонков до завершения текущего; подробнее обо всём процессе см. [здесь »](/api/calls/#one-to-one-calls).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,27 +18,22 @@ boolTrue#997275b5 = Bool;
 phone.receivedCall#17d54f61 peer:InputPhoneCall = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPhoneCall](/type/InputPhoneCall/) | The phone call we're currently in |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPhoneCall">InputPhoneCall</a></td><td>[@term:peer] Звонок, в котором мы сейчас находимся</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CALL_ALREADY_DECLINED | The call was already declined. |
-| 400 | CALL_PEER_INVALID | The provided call peer object is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CALL_ALREADY_DECLINED</td><td>Звонок уже был отклонён.</td></tr><tr><td>400</td><td>CALL_PEER_INVALID</td><td>Указанный объект пира звонка недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Phone calls](https://core.telegram.org/api/calls)
+#### [Звонки](/api/calls/)
 
-Telegram supports end-to-end-encrypted one-to-one voice and video calls.
+Telegram поддерживает голосовые и видеозвонки один на один со сквозным шифрованием.

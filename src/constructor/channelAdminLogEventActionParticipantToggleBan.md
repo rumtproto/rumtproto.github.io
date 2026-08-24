@@ -1,36 +1,30 @@
 ---
-title: "channelAdminLogEventActionParticipantToggleBan (конструктор)"
+title: "channelAdminLogEventActionParticipantToggleBan"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionParticipantToggleBan"
 section: ref
 kind: constructor
+description: "Права заблокированного пользователя были изменены"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionParticipantToggleBan
 
-*Конструктор из схемы TL.*
-
-> The banned [rights](https://core.telegram.org/api/rights) of a user were changed
-
-## Определение TL
+[Права](/api/rights/) заблокированного пользователя были изменены
 
 ```
 channelAdminLogEventActionParticipantToggleBan#e6d83d7e prev_participant:ChannelParticipant new_participant:ChannelParticipant = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| prev_participant | [ChannelParticipant](/type/ChannelParticipant/) | Old banned rights of user |
-| new_participant | [ChannelParticipant](/type/ChannelParticipant/) | New banned rights of user |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>prev_participant</strong></td><td style="text-align: center;"><a href="/type/ChannelParticipant">ChannelParticipant</a></td><td>Прежние права заблокированного пользователя</td></tr><tr><td><strong>new_participant</strong></td><td style="text-align: center;"><a href="/type/ChannelParticipant">ChannelParticipant</a></td><td>Новые права заблокированного пользователя</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Admin, banned, default rights](https://core.telegram.org/api/rights)
+#### [Права администраторов, ограничения и права по умолчанию](/api/rights/)
 
-How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.
+Как работать с правами администраторов, детальными ограничениями и общими правами в каналах, группах и супергруппах.

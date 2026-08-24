@@ -1,27 +1,24 @@
 ---
-title: "auth.codeTypeFragmentSms (конструктор)"
+title: "auth.codeTypeFragmentSms"
 original: "https://core.telegram.org/constructor/auth.codeTypeFragmentSms"
 section: ref
 kind: constructor
+description: "В следующий раз код аутентификации будет доставлен через fragment.com"
 layout: layout.njk
 ---
 
 # auth.codeTypeFragmentSms
 
-*Конструктор из схемы TL.*
-
-> The next time, the authentication code will be delivered via [fragment.com](https://fragment.com)
-
-## Определение TL
+В следующий раз код аутентификации будет доставлен через [fragment.com](https://fragment.com)
 
 ```
 auth.codeTypeFragmentSms#6ed998c = auth.CodeType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [auth.CodeType](/type/auth.CodeType/)

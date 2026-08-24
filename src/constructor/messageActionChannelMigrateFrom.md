@@ -1,36 +1,30 @@
 ---
-title: "messageActionChannelMigrateFrom (конструктор)"
+title: "messageActionChannelMigrateFrom"
 original: "https://core.telegram.org/constructor/messageActionChannelMigrateFrom"
 section: ref
 kind: constructor
+description: "Указывает, что канал был перенесён из указанного чата"
 layout: layout.njk
 ---
 
 # messageActionChannelMigrateFrom
 
-*Конструктор из схемы TL.*
-
-> Indicates the channel was [migrated](https://core.telegram.org/api/channel) from the specified chat
-
-## Определение TL
+Указывает, что канал был [перенесён](/api/channel/) из указанного чата
 
 ```
 messageActionChannelMigrateFrom#ea3948e9 title:string chat_id:long = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| title | [string](/type/string/) | The old chat title |
-| chat_id | [long](/type/long/) | The old chat ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Прежнее название чата</td></tr><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Прежний идентификатор чата</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

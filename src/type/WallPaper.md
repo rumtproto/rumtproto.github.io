@@ -1,18 +1,15 @@
 ---
-title: "WallPaper (тип)"
+title: "WallPaper"
 original: "https://core.telegram.org/type/WallPaper"
 section: ref
 kind: type
+description: "Объект содержит информацию об обоях."
 layout: layout.njk
 ---
 
 # WallPaper
 
-*Тип из схемы TL.*
-
-> Object contains info on a [wallpaper](https://core.telegram.org/api/wallpapers).
-
-## Определение TL
+Объект содержит информацию об [обоях](/api/wallpapers/).
 
 ```
 wallPaper#a437c3ed id:long flags:# creator:flags.0?true default:flags.1?true pattern:flags.3?true dark:flags.4?true access_hash:long slug:string document:Document settings:flags.2?WallPaperSettings = WallPaper;
@@ -24,22 +21,16 @@ account.getWallPaper#fc8ddbea wallpaper:InputWallPaper = WallPaper;
 account.uploadWallPaper#e39a8f03 flags:# for_chat:flags.0?true file:InputFile mime_type:string settings:WallPaperSettings = WallPaper;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [wallPaper](/constructor/wallPaper/) | Represents a [wallpaper](https://core.telegram.org/api/wallpapers) based on an image. |
-| [wallPaperNoFile](/constructor/wallPaperNoFile/) | Represents a [wallpaper](https://core.telegram.org/api/wallpapers) only based on colors/gradients. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/wallPaper">wallPaper</a></td><td>Представляет <a href="/api/wallpapers">обои</a> на основе изображения.</td></tr><tr><td><a href="/constructor/wallPaperNoFile">wallPaperNoFile</a></td><td>Представляет <a href="/api/wallpapers">обои</a> только на основе цветов или градиентов.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.getWallPaper](/method/account.getWallPaper/) | Get info about a certain [wallpaper](https://core.telegram.org/api/wallpapers) |
-| [account.uploadWallPaper](/method/account.uploadWallPaper/) | Create and upload a new [wallpaper](https://core.telegram.org/api/wallpapers) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.getWallPaper">account.getWallPaper</a></td><td>Получить информацию об определённых <a href="/api/wallpapers">обоях</a></td></tr><tr><td><a href="/method/account.uploadWallPaper">account.uploadWallPaper</a></td><td>Создать и загрузить новые <a href="/api/wallpapers">обои</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.

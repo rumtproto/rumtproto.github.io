@@ -1,50 +1,36 @@
 ---
-title: "attachMenuBot (конструктор)"
+title: "attachMenuBot"
 original: "https://core.telegram.org/constructor/attachMenuBot"
 section: ref
 kind: constructor
+description: "Представляет mini app бота, который можно запустить из меню вложений или бокового меню »"
 layout: layout.njk
 ---
 
 # attachMenuBot
 
-*Конструктор из схемы TL.*
+[@term:Mini App] Представляет [mini app бота, который можно запустить из меню вложений или бокового меню »](/api/bots/attach/)
 
-> Represents a [bot mini app that can be launched from the attachment/side menu »](https://core.telegram.org/api/bots/attach)
-> At least one of the `show_in_attach_menu` or the `show_in_side_menu` flags will always be set.
-
-## Определение TL
+Хотя бы один из флагов `show_in_attach_menu` или `show_in_side_menu` всегда будет установлен.
 
 ```
 attachMenuBot#d90d8dfe flags:# inactive:flags.0?true has_settings:flags.1?true request_write_access:flags.2?true show_in_attach_menu:flags.3?true show_in_side_menu:flags.4?true side_menu_disclaimer_needed:flags.5?true bot_id:long short_name:string peer_types:flags.3?Vector<AttachMenuPeerType> icons:Vector<AttachMenuBotIcon> = AttachMenuBot;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| inactive | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, before launching the mini app the client should ask the user to add the mini app to the attachment/side menu, and only if the user accepts, after invoking [messages.toggleBotInAttachMenu](/method/messages.toggleBotInAttachMenu/) the app should be opened. |
-| has_settings | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Deprecated flag, can be ignored. |
-| request_write_access | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether the bot would like to send messages to the user. |
-| show_in_attach_menu | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Whether, when installed, an attachment menu entry should be shown for the Mini App. |
-| show_in_side_menu | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | Whether, when installed, an entry in the main view side menu should be shown for the Mini App. |
-| side_menu_disclaimer_needed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[true](/constructor/true/) | If inactive if set and the user hasn't previously accepted the third-party mini apps [Terms of Service](https://telegram.org/tos/mini-apps) for this bot, when showing the mini app installation prompt, an additional mandatory checkbox to accept the [mini apps TOS](https://telegram.org/tos/mini-apps) and a disclaimer indicating that this Mini App is not affiliated to Telegram should be shown. |
-| bot_id | [long](/type/long/) | Bot ID |
-| short_name | [string](/type/string/) | Attachment menu item name |
-| peer_types | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[Vector](https://core.telegram.org/type/Vector%20t)<[AttachMenuPeerType](/type/AttachMenuPeerType/)> | List of dialog types where this attachment menu entry should be shown |
-| icons | [Vector](https://core.telegram.org/type/Vector%20t)<[AttachMenuBotIcon](/type/AttachMenuBotIcon/)> | List of platform-specific static icons and animations to use for the attachment menu button |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>inactive</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, перед запуском mini app клиенту следует предложить пользователю добавить mini app в меню вложений или боковое меню, и только если пользователь согласится, приложение открывается после вызова <a href="/method/messages.toggleBotInAttachMenu">messages.toggleBotInAttachMenu</a>.</td></tr><tr><td><strong>has_settings</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Устаревший флаг, можно игнорировать.</td></tr><tr><td><strong>request_write_access</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Хочет ли бот отправлять сообщения пользователю.</td></tr><tr><td><strong>show_in_attach_menu</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Следует ли после установки показывать для этого Mini App пункт в меню вложений.</td></tr><tr><td><strong>show_in_side_menu</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Следует ли после установки показывать для этого Mini App пункт в боковом меню главного экрана.</td></tr><tr><td><strong>side_menu_disclaimer_needed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/constructor/true">true</a></td><td>Если задано <code>inactive</code> и пользователь ранее не принял <a href="https://telegram.org/tos/mini-apps">Условия использования</a> сторонних Mini App для этого бота, то при показе запроса на установку Mini App следует дополнительно показать обязательный флажок принятия <a href="https://telegram.org/tos/mini-apps">Условий использования Mini App</a> и предупреждение о том, что этот Mini App не связан с Telegram.</td></tr><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор бота</td></tr><tr><td><strong>short_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:short_name] Название пункта меню вложений</td></tr><tr><td><strong>peer_types</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/AttachMenuPeerType">AttachMenuPeerType</a>&gt;</td><td>Список типов диалогов, в которых следует показывать этот пункт меню вложений</td></tr><tr><td><strong>icons</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/AttachMenuBotIcon">AttachMenuBotIcon</a>&gt;</td><td>Список статичных значков и анимаций для конкретных платформ, используемых для кнопки меню вложений</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [AttachMenuBot](/type/AttachMenuBot/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.toggleBotInAttachMenu](/method/messages.toggleBotInAttachMenu/)
 
-Enable or disable [web bot attachment menu »](https://core.telegram.org/api/bots/attach)
+Включить или отключить [меню вложений веб-бота »](/api/bots/attach/)
 
-#### [Bot attachment menu and side menu entries](https://core.telegram.org/api/bots/attach)
+#### [Пункты меню вложений и бокового меню для ботов](/api/bots/attach/)
 
-Bots can install attachment menu and side menu entries, offering conveniently accessible, versatile web apps.
+Боты могут добавлять пункты в меню вложений и в боковое меню, предлагая легкодоступные многофункциональные веб-приложения.

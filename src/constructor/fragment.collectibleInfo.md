@@ -1,42 +1,32 @@
 ---
-title: "fragment.collectibleInfo (конструктор)"
+title: "fragment.collectibleInfo"
 original: "https://core.telegram.org/constructor/fragment.collectibleInfo"
 section: ref
 kind: constructor
+description: "Информация о коллекционном объекте fragment."
 layout: layout.njk
 ---
 
 # fragment.collectibleInfo
 
-*Конструктор из схемы TL.*
-
-> Info about a [fragment collectible](https://core.telegram.org/api/fragment).
-
-## Определение TL
+Информация о [коллекционном объекте fragment](/api/fragment/).
 
 ```
 fragment.collectibleInfo#6ebdff91 purchase_date:int currency:string amount:long crypto_currency:string crypto_amount:long url:string = fragment.CollectibleInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| purchase_date | [int](/type/int/) | Purchase date (unixtime) |
-| currency | [string](/type/string/) | Three-letter ISO 4217 [currency](https://core.telegram.org/bots/payments#supported-currencies) code for amount |
-| amount | [long](/type/long/) | Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in [currencies.json](https://core.telegram.org/bots/payments/currencies.json), it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). |
-| crypto_currency | [string](/type/string/) | Cryptocurrency name. |
-| crypto_amount | [long](/type/long/) | Price, in the smallest units of the cryptocurrency. |
-| url | [string](/type/string/) | [Fragment](https://fragment.com) URL with more info about the collectible |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>purchase_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата покупки (unixtime)</td></tr><tr><td><strong>currency</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Трёхбуквенный код <a href="/bots/payments#supported-currencies">валюты</a> по ISO 4217 для <code>amount</code></td></tr><tr><td><strong>amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Итоговая цена в наименьших единицах валюты (целое число, не float/double). Например, для цены <code>US$ 1.45</code> следует передать <code>amount = 145</code>. См. параметр exp в <a href="/bots/payments/currencies.json">currencies.json</a>: он указывает число знаков после запятой для каждой валюты (2 для большинства валют).</td></tr><tr><td><strong>crypto_currency</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Название криптовалюты.</td></tr><tr><td><strong>crypto_amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Цена в наименьших единицах криптовалюты.</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Адрес <a href="https://fragment.com">Fragment</a> с дополнительной информацией о коллекционном объекте</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [fragment.CollectibleInfo](/type/fragment.CollectibleInfo/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot Payments API](https://core.telegram.org/bots/payments)
+#### [Bot Payments API — платежи в ботах](https://core.telegram.org/bots/payments)
 
-#### [Fragment collectibles](https://core.telegram.org/api/fragment)
+#### [Коллекционные объекты Fragment](/api/fragment/)
 
-Telegram users can make it easy for others to contact them or find their public groups and channels via usernames: clients can also assign multiple Fragment » collectible usernames to accounts, supergroups and channels they own; Fragment » also allows purchasing phone number collectibles that can be used to register Telegram accounts.
+Пользователи Telegram могут упростить связь с собой и поиск своих публичных групп и каналов с помощью имён пользователей: клиенты также могут назначать несколько коллекционных имён пользователей с Fragment » принадлежащим им аккаунтам, супергруппам и каналам; кроме того, Fragment » позволяет покупать коллекционные номера телефонов, на которые можно регистрировать аккаунты Telegram.

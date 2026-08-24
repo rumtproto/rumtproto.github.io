@@ -1,51 +1,43 @@
 ---
-title: "groupCallMessage (конструктор)"
+title: "groupCallMessage"
 original: "https://core.telegram.org/constructor/groupCallMessage"
 section: ref
 kind: constructor
+description: "Представляет сообщение во время звонка », реакцию эмодзи, платный комментарий к прямой трансляции истории или отдельное платное пожертвование в прямой трансляции истории."
 layout: layout.njk
 ---
 
 # groupCallMessage
 
-*Конструктор из схемы TL.*
+Представляет [сообщение во время звонка »](/api/group-calls/#in-call-messages), реакцию эмодзи, платный комментарий к прямой трансляции истории или отдельное платное пожертвование в прямой трансляции истории.
 
-> Represents an [in-call message »](https://core.telegram.org/api/group-calls#in-call-messages), emoji reaction, paid live story comment or standalone paid live story donation.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===216===
-> groupCallMessage#907ce88e random_id:long message:TextWithEntities = GroupCallMessage;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===216===
+groupCallMessage#907ce88e random_id:long message:TextWithEntities = GroupCallMessage;
+```
+
+#### Схема API
 
 ```
 groupCallMessage#1a8afc7e flags:# from_admin:flags.1?true id:int from_id:Peer date:int message:TextWithEntities paid_message_stars:flags.0?long = GroupCallMessage;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| from_admin | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether the message was sent by a group call admin |
-| id | [int](/type/int/) | Message ID |
-| from_id | [Peer](/type/Peer/) | Displayed message author |
-| date | [int](/type/int/) | Message date |
-| message | [TextWithEntities](/type/TextWithEntities/) | Message text or emoji reaction; empty for standalone paid live story donations. Must be at most [group_call_message_length_limit »](https://core.telegram.org/api/config#group-call-message-length-limit) UTF-8 characters long. For paid chats, use [stars_groupcall_message_limits »](https://core.telegram.org/api/config#stars-groupcall-message-limits) to source limits according to the passed value of paid_message_stars, instead. |
-| paid_message_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | Number of Telegram Stars donated with the message or standalone donation |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>from_admin</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Было ли сообщение отправлено администратором группового звонка</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения</td></tr><tr><td><strong>from_id</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>Отображаемый автор сообщения</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата сообщения</td></tr><tr><td><strong>message</strong></td><td style="text-align: center;"><a href="/type/TextWithEntities">TextWithEntities</a></td><td>Текст сообщения или эмодзи реакции; пустой для отдельных платных пожертвований прямым историям.<br>Длина не должна превышать <a href="/api/config#group-call-message-length-limit"><code>group_call_message_length_limit</code> »</a> символов UTF-8.<br>Для платных чатов вместо этого используйте <a href="/api/config#stars-groupcall-message-limits"><code>stars_groupcall_message_limits</code> »</a>, чтобы получить ограничения, соответствующие переданному значению <code>paid_message_stars</code>.</td></tr><tr><td><strong>paid_message_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Количество Telegram Stars, отправленных вместе с сообщением или отдельным пожертвованием</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [GroupCallMessage](/type/GroupCallMessage/)
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

@@ -1,41 +1,34 @@
 ---
-title: "updateFolderPeers (конструктор)"
+title: "updateFolderPeers"
 original: "https://core.telegram.org/constructor/updateFolderPeers"
 section: ref
 kind: constructor
+description: "Обновлён список пиров в папке пиров"
 layout: layout.njk
 ---
 
 # updateFolderPeers
 
-*Конструктор из схемы TL.*
-
-> The peer list of a [peer folder](https://core.telegram.org/api/folders#peer-folders) was updated
-
-## Определение TL
+Обновлён список пиров в [папке пиров](/api/folders/#peer-folders)
 
 ```
 updateFolderPeers#19360dc0 folder_peers:Vector<FolderPeer> pts:int pts_count:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| folder_peers | [Vector](https://core.telegram.org/type/Vector%20t)<[FolderPeer](/type/FolderPeer/)> | New peer list |
-| pts | [int](/type/int/) | [Event count after generation](/api/updates/) |
-| pts_count | [int](/type/int/) | [Number of events that were generated](/api/updates/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>folder_peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/FolderPeer">FolderPeer</a>&gt;</td><td>Новый список пиров</td></tr><tr><td><strong>pts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:pts] <a href="/api/updates">Число событий после генерации</a></td></tr><tr><td><strong>pts_count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/updates">Число сгенерированных событий</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.

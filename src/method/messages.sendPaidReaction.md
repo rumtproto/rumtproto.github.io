@@ -1,18 +1,15 @@
 ---
-title: "messages.sendPaidReaction (метод)"
+title: "messages.sendPaidReaction"
 original: "https://core.telegram.org/method/messages.sendPaidReaction"
 section: ref
 kind: method
+description: "Отправляет одну или несколько платных реакций Telegram Stars », переводя Telegram Stars » на баланс канала."
 layout: layout.njk
 ---
 
 # messages.sendPaidReaction
 
-*Метод из схемы TL.*
-
-> Sends one or more [paid Telegram Star reactions »](https://core.telegram.org/api/reactions#paid-reactions), transferring [Telegram Stars »](https://core.telegram.org/api/stars) to a channel's balance.
-
-## Определение TL
+Отправляет одну или несколько [платных реакций Telegram Stars »](/api/reactions/#paid-reactions), переводя [Telegram Stars »](/api/stars/) на баланс канала.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,54 +23,36 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.sendPaidReaction#58bbcb50 flags:# peer:InputPeer msg_id:int count:int random_id:long private:flags.0?PaidReactionPrivacy = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| peer | [InputPeer](/type/InputPeer/) | The channel |
-| msg_id | [int](/type/int/) | The message to react to |
-| count | [int](/type/int/) | The number of [stars](https://core.telegram.org/api/stars) to send (each will increment the reaction counter by one). |
-| random_id | [long](/type/long/) | Unique client message ID required to prevent message resending. Note: this argument must be composed of a 64-bit integer where the lower 32 bits are random, and the higher 32 bits are equal to the current unixtime, i.e. `uint64_t random_id = (time() << 32). See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| private | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[PaidReactionPrivacy](/type/PaidReactionPrivacy/) | Each post with star reactions has a leaderboard with the top senders, but users can opt out of appearing there if they prefer more privacy. Not populating this field will use the default reaction privacy, stored on the server and synced to clients using [updatePaidReactionPrivacy](/constructor/updatePaidReactionPrivacy/) (see [here](https://core.telegram.org/api/reactions#paid-reaction-privacy) for more info). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Канал</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Сообщение, на которое нужно отреагировать</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество <a href="/api/stars">звёзд</a> для отправки (каждая увеличивает счётчик реакции на единицу).</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:random_id] Уникальный идентификатор сообщения на стороне клиента, необходимый для предотвращения повторной отправки сообщения. <strong>Примечание</strong>: этот аргумент <strong>обязан</strong> быть 64-битным целым числом, младшие 32 бита которого случайны, а старшие 32 бита <strong>равны текущему unixtime</strong>, то есть `uint64_t random_id = (time() &lt;&lt; 32). Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>private</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/PaidReactionPrivacy">PaidReactionPrivacy</a></td><td>У каждой публикации с реакциями за звёзды есть таблица лидеров с самыми щедрыми отправителями, но пользователи могут отказаться от появления в ней, если предпочитают большую приватность. Если это поле не заполнено, будет использована приватность реакций по умолчанию, которая хранится на сервере и синхронизируется с клиентами через <a href="/constructor/updatePaidReactionPrivacy">updatePaidReactionPrivacy</a> (подробнее см. <a href="/api/reactions#paid-reaction-privacy">здесь</a>).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BALANCE_TOO_LOW | The transaction cannot be completed because the current [Telegram Stars balance](https://core.telegram.org/api/stars) is too low. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | RANDOM_ID_EMPTY | Random ID empty. |
-| 400 | RANDOM_ID_EXPIRED | The specified random_id was expired (most likely it didn't follow the required `uint64_t random_id = (time() << 32) |
-| 400 | REACTIONS_COUNT_INVALID | The specified number of reactions is invalid. |
-| 400 | SEND_AS_PEER_INVALID | You can't send messages as the specified peer. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BALANCE_TOO_LOW</td><td>Транзакцию невозможно завершить, так как текущий <a href="/api/stars">баланс Telegram Stars</a> слишком мал.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>RANDOM_ID_EMPTY</td><td>Пустой случайный идентификатор.</td></tr><tr><td>400</td><td>RANDOM_ID_EXPIRED</td><td>Срок действия указанного <code>random_id</code> истёк (скорее всего, он не соответствовал требуемой формуле `uint64_t random_id = (time() &lt;&lt; 32)</td></tr><tr><td>400</td><td>REACTIONS_COUNT_INVALID</td><td>Указанное количество реакций недопустимо.</td></tr><tr><td>400</td><td>SEND_AS_PEER_INVALID</td><td>Вы не можете отправлять сообщения от имени указанного пира.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
 #### [updatePaidReactionPrivacy](/constructor/updatePaidReactionPrivacy/)
 
-Contains the current [default paid reaction privacy, see here »](https://core.telegram.org/api/reactions#paid-reactions) for more info.
+Содержит текущую [настройку приватности платных реакций по умолчанию, подробнее см. здесь »](/api/reactions/#paid-reactions).
 
-Clients should invoke [messages.getPaidReactionPrivacy](/method/messages.getPaidReactionPrivacy/) on startup to fetch the current default reaction privacy because this update is only sent to currently online sessions and cannot be fetched using getDifference on client startup.
+При запуске клиентам следует вызывать [messages.getPaidReactionPrivacy](/method/messages.getPaidReactionPrivacy/), чтобы получить текущую настройку приватности реакций по умолчанию, поскольку это обновление отправляется только сессиям, находящимся в сети в данный момент, и его нельзя получить через getDifference при запуске клиента.
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

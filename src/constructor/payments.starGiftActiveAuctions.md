@@ -1,37 +1,30 @@
 ---
-title: "payments.starGiftActiveAuctions (конструктор)"
+title: "payments.starGiftActiveAuctions"
 original: "https://core.telegram.org/constructor/payments.starGiftActiveAuctions"
 section: ref
 kind: constructor
+description: "Описывает все текущие активные аукционы подарков, **на которых пользователь сделал ставку**."
 layout: layout.njk
 ---
 
 # payments.starGiftActiveAuctions
 
-*Конструктор из схемы TL.*
-
-> Describes all currently active [gift auctions](https://core.telegram.org/api/auctions) **where the user has placed a bid**.
-
-## Определение TL
+Описывает все текущие активные [аукционы подарков](/api/auctions/), **на которых пользователь сделал ставку**.
 
 ```
 payments.starGiftActiveAuctions#aef6abbc auctions:Vector<StarGiftActiveAuctionState> users:Vector<User> chats:Vector<Chat> = payments.StarGiftActiveAuctions;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| auctions | [Vector](https://core.telegram.org/type/Vector%20t)<[StarGiftActiveAuctionState](/type/StarGiftActiveAuctionState/)> | Auctions where the user has placed a bid |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Mentioned users |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Mentioned chats |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>auctions</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarGiftActiveAuctionState">StarGiftActiveAuctionState</a>&gt;</td><td>Аукционы, на которых пользователь сделал ставку</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Упомянутые пользователи</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Упомянутые чаты</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [payments.StarGiftActiveAuctions](/type/payments.StarGiftActiveAuctions/)
 
-## Related pages
+### Связанные страницы
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

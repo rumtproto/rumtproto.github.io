@@ -1,47 +1,36 @@
 ---
-title: "botBusinessConnection (конструктор)"
+title: "botBusinessConnection"
 original: "https://core.telegram.org/constructor/botBusinessConnection"
 section: ref
 kind: constructor
+description: "Содержит информацию о бизнес-подключении бота."
 layout: layout.njk
 ---
 
 # botBusinessConnection
 
-*Конструктор из схемы TL.*
-
-> Contains info about a [bot business connection](https://core.telegram.org/api/bots/connected-business-bots).
-
-## Определение TL
+Содержит информацию о [бизнес-подключении бота](/api/bots/connected-business-bots/).
 
 ```
 botBusinessConnection#8f34b2f5 flags:# disabled:flags.1?true connection_id:string user_id:long dc_id:int date:int rights:flags.2?BusinessBotRights = BotBusinessConnection;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| disabled | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Whether this business connection is currently disabled |
-| connection_id | [string](/type/string/) | Business connection ID, used to identify messages coming from the connection and to reply to them as specified [here »](https://core.telegram.org/api/bots/connected-business-bots). |
-| user_id | [long](/type/long/) | ID of the user that the bot is connected to via this connection. |
-| dc_id | [int](/type/int/) | ID of the datacenter where to send queries wrapped in a [invokeWithBusinessConnection](/method/invokeWithBusinessConnection/) as specified [here »](https://core.telegram.org/api/bots/connected-business-bots). |
-| date | [int](/type/int/) | When was the connection created. |
-| rights | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[BusinessBotRights](/type/BusinessBotRights/) | Business bot rights. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>disabled</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Отключено ли сейчас это бизнес-подключение</td></tr><tr><td><strong>connection_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор бизнес-подключения, используемый для распознавания сообщений, приходящих через это подключение, и для ответа на них, как описано <a href="/api/bots/connected-business-bots">здесь »</a>.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя, с которым бот связан через это подключение.</td></tr><tr><td><strong>dc_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор дата-центра, в который следует отправлять запросы, обёрнутые в <a href="/method/invokeWithBusinessConnection">invokeWithBusinessConnection</a>, как описано <a href="/api/bots/connected-business-bots">здесь »</a>.</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда было создано подключение.</td></tr><tr><td><strong>rights</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/BusinessBotRights">BusinessBotRights</a></td><td>Права бизнес-бота.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BotBusinessConnection](/type/BotBusinessConnection/)
 
-## Related pages
+### Связанные страницы
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
 #### [invokeWithBusinessConnection](/method/invokeWithBusinessConnection/)
 
-Invoke a method using a [Telegram Business Bot connection, see here » for more info, including a list of the methods that can be wrapped in this constructor](https://core.telegram.org/api/bots/connected-business-bots).
+Вызвать метод через [подключение Telegram Business Bot; подробнее, включая список методов, которые можно обернуть в этот конструктор, см. здесь »](/api/bots/connected-business-bots/).
 
-Make sure to always send queries wrapped in a `invokeWithBusinessConnection` to the datacenter ID, specified in the `dc_id` field of the [botBusinessConnection](/constructor/botBusinessConnection/) that is being used.
+Всегда отправляйте запросы, обёрнутые в `invokeWithBusinessConnection`, в дата-центр с идентификатором, указанным в поле `dc_id` используемого [botBusinessConnection](/constructor/botBusinessConnection/).

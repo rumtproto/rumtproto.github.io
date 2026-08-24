@@ -1,36 +1,30 @@
 ---
-title: "inputStickerSetThumb (конструктор)"
+title: "inputStickerSetThumb"
 original: "https://core.telegram.org/constructor/inputStickerSetThumb"
 section: ref
 kind: constructor
+description: "Расположение миниатюры набора стикеров (см. файлы)"
 layout: layout.njk
 ---
 
 # inputStickerSetThumb
 
-*Конструктор из схемы TL.*
-
-> Location of stickerset thumbnail (see [files](/api/files/))
-
-## Определение TL
+Расположение миниатюры набора стикеров (см. [файлы](/api/files/))
 
 ```
 inputStickerSetThumb#9d84f3db stickerset:InputStickerSet thumb_version:int = InputFileLocation;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| stickerset | [InputStickerSet](/type/InputStickerSet/) | Sticker set |
-| thumb_version | [int](/type/int/) | Thumbnail version |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>stickerset</strong></td><td style="text-align: center;"><a href="/type/InputStickerSet">InputStickerSet</a></td><td>Набор стикеров</td></tr><tr><td><strong>thumb_version</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Версия миниатюры</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputFileLocation](/type/InputFileLocation/)
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

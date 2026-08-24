@@ -1,27 +1,24 @@
 ---
-title: "inputPeerEmpty (конструктор)"
+title: "inputPeerEmpty"
 original: "https://core.telegram.org/constructor/inputPeerEmpty"
 section: ref
 kind: constructor
+description: "Пустой конструктор, не задан ни пользователь, ни чат."
 layout: layout.njk
 ---
 
 # inputPeerEmpty
 
-*Конструктор из схемы TL.*
-
-> An empty constructor, no user or chat is defined.
-
-## Определение TL
+Пустой конструктор, не задан ни пользователь, ни чат.
 
 ```
 inputPeerEmpty#7f3b18ea = InputPeer;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPeer](/type/InputPeer/)

@@ -1,27 +1,24 @@
 ---
-title: "secureValueTypeAddress (конструктор)"
+title: "secureValueTypeAddress"
 original: "https://core.telegram.org/constructor/secureValueTypeAddress"
 section: ref
 kind: constructor
+description: "Адрес"
 layout: layout.njk
 ---
 
 # secureValueTypeAddress
 
-*Конструктор из схемы TL.*
-
-> Address
-
-## Определение TL
+Адрес
 
 ```
 secureValueTypeAddress#cbe31e26 = SecureValueType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureValueType](/type/SecureValueType/)

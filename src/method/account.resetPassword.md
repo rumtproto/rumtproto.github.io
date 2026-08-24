@@ -1,18 +1,15 @@
 ---
-title: "account.resetPassword (метод)"
+title: "account.resetPassword"
 original: "https://core.telegram.org/method/account.resetPassword"
 section: ref
 kind: method
+description: "Начать сброс пароля двухфакторной аутентификации: может использоваться, только если пользователь уже вошёл в аккаунт, подробнее см. здесь »"
 layout: layout.njk
 ---
 
 # account.resetPassword
 
-*Метод из схемы TL.*
-
-> Initiate a 2FA password reset: can only be used if the user is already logged-in, [see here for more info »](https://core.telegram.org/api/srp/#password-reset)
-
-## Определение TL
+Начать сброс пароля двухфакторной аутентификации: может использоваться, только если пользователь уже вошёл в аккаунт, [подробнее см. здесь »](/api/srp/#password-reset)
 
 ```
 account.resetPasswordFailedWait#e3779861 retry_date:int = account.ResetPasswordResult;
@@ -22,24 +19,22 @@ account.resetPasswordOk#e926d63e = account.ResetPasswordResult;
 account.resetPassword#9308ce1b = account.ResetPasswordResult;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [account.ResetPasswordResult](/type/account.ResetPasswordResult/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PASSWORD_EMPTY | The provided password is empty. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PASSWORD_EMPTY</td><td>Указанный пароль пуст.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.

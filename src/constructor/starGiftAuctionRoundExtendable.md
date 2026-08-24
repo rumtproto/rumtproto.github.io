@@ -1,42 +1,34 @@
 ---
-title: "starGiftAuctionRoundExtendable (конструктор)"
+title: "starGiftAuctionRoundExtendable"
 original: "https://core.telegram.org/constructor/starGiftAuctionRoundExtendable"
 section: ref
 kind: constructor
+description: "Описывает один или несколько продлеваемых раундов аукциона коллекционных подарков »."
 layout: layout.njk
 ---
 
 # starGiftAuctionRoundExtendable
 
-*Конструктор из схемы TL.*
-
-> Describes one or more extendable [collectible gift auction rounds »](https://core.telegram.org/api/auctions).
-
-## Определение TL
+Описывает один или несколько продлеваемых [раундов аукциона коллекционных подарков »](/api/auctions/).
 
 ```
 starGiftAuctionRoundExtendable#aa021e5 num:int duration:int extend_top:int extend_window:int = StarGiftAuctionRound;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| num | [int](/type/int/) | This object describes all rounds starting from num up until next.num-1 inclusively (next is the next [StarGiftAuctionRound](/type/StarGiftAuctionRound/)). |
-| duration | [int](/type/int/) | Duration in seconds of the round(s). |
-| extend_top | [int](/type/int/) | The round(s) will be extended by extend_window if a bid changes the composition/order of the top extend_top bidders. |
-| extend_window | [int](/type/int/) | The round(s) will be extended by this many seconds if a bid changes the composition/order of the top extend_top bidders. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>num</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Этот объект описывает все раунды, начиная с <code>num</code> и заканчивая <code>next.num-1</code> включительно (<code>next</code> — следующий <a href="/type/StarGiftAuctionRound">StarGiftAuctionRound</a>).</td></tr><tr><td><strong>duration</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Длительность раунда (раундов) в секундах.</td></tr><tr><td><strong>extend_top</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Раунд (раунды) будет продлён на <code>extend_window</code>, если ставка изменит состав или порядок первых <code>extend_top</code> участников.</td></tr><tr><td><strong>extend_window</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Раунд (раунды) будет продлён на указанное число секунд, если ставка изменит состав или порядок первых <code>extend_top</code> участников.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarGiftAuctionRound](/type/StarGiftAuctionRound/)
 
-## Related pages
+### Связанные страницы
 
 #### [StarGiftAuctionRound](/type/StarGiftAuctionRound/)
 
-Describes one or more rounds of a [collectible gift auction »](https://core.telegram.org/api/auctions), optionally extendable.
+Описывает один или несколько раундов [аукциона коллекционных подарков »](/api/auctions/) с возможностью продления.
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

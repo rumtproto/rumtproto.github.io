@@ -1,18 +1,15 @@
 ---
-title: "upload.saveBigFilePart (метод)"
+title: "upload.saveBigFilePart"
 original: "https://core.telegram.org/method/upload.saveBigFilePart"
 section: ref
 kind: method
+description: "Сохраняет часть большого файла (размером свыше 10 МБ) для последующей передачи в один из методов."
 layout: layout.njk
 ---
 
 # upload.saveBigFilePart
 
-*Метод из схемы TL.*
-
-> Saves a part of a large file (over 10 MB in size) to be later passed to one of the methods.
-
-## Определение TL
+Сохраняет часть большого файла (размером свыше 10 МБ) для последующей передачи в один из методов.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,29 +18,16 @@ boolTrue#997275b5 = Bool;
 upload.saveBigFilePart#de7b673d file_id:long file_part:int file_total_parts:int bytes:bytes = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| file_id | [long](/type/long/) | Random file id, created by the client |
-| file_part | [int](/type/int/) | Part sequence number |
-| file_total_parts | [int](/type/int/) | Total number of parts |
-| bytes | [bytes](/type/bytes/) | Binary data, part contents |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>file_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Случайный идентификатор файла, созданный клиентом</td></tr><tr><td><strong>file_part</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Порядковый номер части</td></tr><tr><td><strong>file_total_parts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число частей</td></tr><tr><td><strong>bytes</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Двоичные данные, содержимое части</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | FILE_PARTS_INVALID | The number of file parts is invalid. |
-| 400 | FILE_PART_EMPTY | The provided file part is empty. |
-| 400 | FILE_PART_INVALID | The file part number is invalid. |
-| 400 | FILE_PART_SIZE_CHANGED | Provided file part size has changed. |
-| 400 | FILE_PART_SIZE_INVALID | The provided file part size is invalid. |
-| 400 | FILE_PART_TOO_BIG | The uploaded file part is too big. |
-| 400 | FILE_PART_TOO_SMALL | The size of the uploaded file part is too small, please see the documentation for the allowed sizes. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>FILE_PARTS_INVALID</td><td>Недопустимое число частей файла.</td></tr><tr><td>400</td><td>FILE_PART_EMPTY</td><td>Указанная часть файла пуста.</td></tr><tr><td>400</td><td>FILE_PART_INVALID</td><td>Недействительный номер части файла.</td></tr><tr><td>400</td><td>FILE_PART_SIZE_CHANGED</td><td>Указанный размер части файла изменился.</td></tr><tr><td>400</td><td>FILE_PART_SIZE_INVALID</td><td>Указанный размер части файла недопустим.</td></tr><tr><td>400</td><td>FILE_PART_TOO_BIG</td><td>Загружаемая часть файла слишком велика.</td></tr><tr><td>400</td><td>FILE_PART_TOO_SMALL</td><td>Размер загружаемой части файла слишком мал, допустимые размеры см. в документации.</td></tr></tbody></table>

@@ -1,18 +1,15 @@
 ---
-title: "payments.getGiveawayInfo (метод)"
+title: "payments.getGiveawayInfo"
 original: "https://core.telegram.org/method/payments.getGiveawayInfo"
 section: ref
 kind: method
+description: "Получить сведения о розыгрыше Telegram Premium »."
 layout: layout.njk
 ---
 
 # payments.getGiveawayInfo
 
-*Метод из схемы TL.*
-
-> Obtain information about a [Telegram Premium giveaway »](https://core.telegram.org/api/giveaways).
-
-## Определение TL
+Получить сведения о [розыгрыше Telegram Premium »](/api/giveaways/).
 
 ```
 payments.giveawayInfo#4367daa0 flags:# participating:flags.0?true preparing_results:flags.3?true start_date:int joined_too_early_date:flags.1?int admin_disallowed_chat_id:flags.2?long disallowed_country:flags.4?string = payments.GiveawayInfo;
@@ -21,32 +18,26 @@ payments.giveawayInfoResults#e175e66f flags:# winner:flags.0?true refunded:flags
 payments.getGiveawayInfo#f4239425 peer:InputPeer msg_id:int = payments.GiveawayInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The peer where the giveaway was posted. |
-| msg_id | [int](/type/int/) | Message ID of the [messageActionGiveawayLaunch](/constructor/messageActionGiveawayLaunch/) service message |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в котором был опубликован розыгрыш.</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сервисного сообщения <a href="/constructor/messageActionGiveawayLaunch">messageActionGiveawayLaunch</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.GiveawayInfo](/type/payments.GiveawayInfo/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [messageActionGiveawayLaunch](/constructor/messageActionGiveawayLaunch/)
 
-A [giveaway](https://core.telegram.org/api/giveaways) was started.
+[Розыгрыш](/api/giveaways/) начат.
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

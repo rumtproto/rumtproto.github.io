@@ -1,39 +1,34 @@
 ---
-title: "inputWallPaperSlug (конструктор)"
+title: "inputWallPaperSlug"
 original: "https://core.telegram.org/constructor/inputWallPaperSlug"
 section: ref
 kind: constructor
+description: "Обои по слагу (уникальному идентификатору, полученному из ссылки на обои »)"
 layout: layout.njk
 ---
 
 # inputWallPaperSlug
 
-*Конструктор из схемы TL.*
-
-> [Wallpaper](https://core.telegram.org/api/wallpapers) by slug (a unique ID, obtained from a [wallpaper link »](https://core.telegram.org/api/links#wallpaper-links))
-
-## Определение TL
+[Обои](/api/wallpapers/) по слагу (уникальному идентификатору, полученному из [ссылки на обои »](/api/links/#wallpaper-links))
 
 ```
 inputWallPaperSlug#72091c80 slug:string = InputWallPaper;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| slug | [string](/type/string/) | Unique wallpaper ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>slug</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>[@term:slug] Уникальный идентификатор обоев</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputWallPaper](/type/InputWallPaper/)
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

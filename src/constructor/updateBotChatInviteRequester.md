@@ -1,48 +1,38 @@
 ---
-title: "updateBotChatInviteRequester (конструктор)"
+title: "updateBotChatInviteRequester"
 original: "https://core.telegram.org/constructor/updateBotChatInviteRequester"
 section: ref
 kind: constructor
+description: "Кто-то подал заявку на вступление в чат или канал (только для ботов; пользователи вместо этого получат updatePendingJoinRequests)"
 layout: layout.njk
 ---
 
 # updateBotChatInviteRequester
 
-*Конструктор из схемы TL.*
-
-> Someone has requested to join a chat or channel (bots only, users will receive an [updatePendingJoinRequests](/constructor/updatePendingJoinRequests/), instead)
-
-## Определение TL
+Кто-то подал заявку на вступление в чат или канал (только для ботов; пользователи вместо этого получат [updatePendingJoinRequests](/constructor/updatePendingJoinRequests/))
 
 ```
 updateBotChatInviteRequester#11dfa986 peer:Peer date:int user_id:long about:string invite:ExportedChatInvite qts:int = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [Peer](/type/Peer/) | The chat or channel in question |
-| date | [int](/type/int/) | When was the [join request »](https://core.telegram.org/api/invites#join-requests) made |
-| user_id | [long](/type/long/) | The user ID that is asking to join the chat or channel |
-| about | [string](/type/string/) | Bio of the user |
-| invite | [ExportedChatInvite](/type/ExportedChatInvite/) | Chat invite link that was used by the user to send the [join request »](https://core.telegram.org/api/invites#join-requests) |
-| qts | [int](/type/int/) | [QTS](/api/updates/) event sequence identifier |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>[@term:peer] Требуемый чат или канал</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда была подана <a href="/api/invites#join-requests">заявка на вступление »</a></td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя, который просит принять его в чат или канал</td></tr><tr><td><strong>about</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Биография пользователя</td></tr><tr><td><strong>invite</strong></td><td style="text-align: center;"><a href="/type/ExportedChatInvite">ExportedChatInvite</a></td><td>Пригласительная ссылка на чат, по которой пользователь отправил <a href="/api/invites#join-requests">заявку на вступление »</a></td></tr><tr><td><strong>qts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:qts] Идентификатор последовательности событий <a href="/api/updates">QTS</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Invite links](https://core.telegram.org/api/invites)
+#### [Пригласительные ссылки](/api/invites/)
 
-Chats and channels may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.
+У чатов и каналов может быть публичное имя пользователя или закрытая пригласительная ссылка; закрытые пригласительные ссылки дополнительно могут требовать заявку на вступление от каждого пользователя.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
 #### [updatePendingJoinRequests](/constructor/updatePendingJoinRequests/)
 
-Someone has requested to join a chat or channel
+Кто-то подал заявку на вступление в чат или канал

@@ -1,35 +1,30 @@
 ---
-title: "stories.canSendStoryCount (конструктор)"
+title: "stories.canSendStoryCount"
 original: "https://core.telegram.org/constructor/stories.canSendStoryCount"
 section: ref
 kind: constructor
+description: "Содержит количество доступных слотов для активных историй (равно значению параметра клиентской конфигурации story_expiring_limit_* за вычетом числа активных на данный момент…"
 layout: layout.njk
 ---
 
 # stories.canSendStoryCount
 
-*Конструктор из схемы TL.*
-
-> Contains the number of available active story slots (equal to the value of the [`story_expiring_limit_*` client configuration parameter](https://core.telegram.org/api/config#story-expiring-limit-default) minus the number of currently active stories).
-
-## Определение TL
+Содержит количество доступных слотов для активных историй (равно значению [параметра клиентской конфигурации `story_expiring_limit_*`](/api/config/#story-expiring-limit-default) за вычетом числа активных на данный момент историй).
 
 ```
 stories.canSendStoryCount#c387c04e count_remains:int = stories.CanSendStoryCount;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| count_remains | [int](/type/int/) | Remaining active story slots. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>count_remains</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Оставшееся число слотов для активных историй.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [stories.CanSendStoryCount](/type/stories.CanSendStoryCount/)
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

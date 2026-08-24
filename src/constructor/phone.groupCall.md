@@ -1,43 +1,34 @@
 ---
-title: "phone.groupCall (конструктор)"
+title: "phone.groupCall"
 original: "https://core.telegram.org/constructor/phone.groupCall"
 section: ref
 kind: constructor
+description: "Содержит информацию о групповом звонке и первую страницу списка участников, см. получение информации о групповом звонке »."
 layout: layout.njk
 ---
 
 # phone.groupCall
 
-*Конструктор из схемы TL.*
-
-> Contains group call information and an initial participant page, see [getting info about a group call »](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call).
-
-## Определение TL
+Содержит информацию о групповом звонке и первую страницу списка участников, см. [получение информации о групповом звонке »](/api/group-calls/#getting-info-about-a-group-call).
 
 ```
 phone.groupCall#9e727aad call:GroupCall participants:Vector<GroupCallParticipant> participants_next_offset:string chats:Vector<Chat> users:Vector<User> = phone.GroupCall;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [GroupCall](/type/GroupCall/) | Info about the group call |
-| participants | [Vector](https://core.telegram.org/type/Vector%20t)<[GroupCallParticipant](/type/GroupCallParticipant/)> | A partial list of participants. |
-| participants_next_offset | [string](/type/string/) | Next offset to use when fetching the remaining participants using [phone.getGroupParticipants](/method/phone.getGroupParticipants/) |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Chats mentioned in the participants vector |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Users mentioned in the participants vector |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/GroupCall">GroupCall</a></td><td>Информация о групповом звонке</td></tr><tr><td><strong>participants</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/GroupCallParticipant">GroupCallParticipant</a>&gt;</td><td>Неполный список участников.</td></tr><tr><td><strong>participants_next_offset</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Следующее смещение, которое следует использовать при загрузке остальных участников методом <a href="/method/phone.getGroupParticipants">phone.getGroupParticipants</a></td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Чаты, упомянутые в векторе участников</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Пользователи, упомянутые в векторе участников</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [phone.GroupCall](/type/phone.GroupCall/)
 
-## Related pages
+### Связанные страницы
 
 #### [phone.getGroupParticipants](/method/phone.getGroupParticipants/)
 
-Get [group call](https://core.telegram.org/api/group-calls#getting-info-about-a-group-call) participants.
+Получить участников [группового звонка](/api/group-calls/#getting-info-about-a-group-call).
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

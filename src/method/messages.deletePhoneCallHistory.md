@@ -1,18 +1,15 @@
 ---
-title: "messages.deletePhoneCallHistory (метод)"
+title: "messages.deletePhoneCallHistory"
 original: "https://core.telegram.org/method/messages.deletePhoneCallHistory"
 section: ref
 kind: method
+description: "Удалить всю историю звонков."
 layout: layout.njk
 ---
 
 # messages.deletePhoneCallHistory
 
-*Метод из схемы TL.*
-
-> Delete the entire phone call history.
-
-## Определение TL
+Удалить всю историю звонков.
 
 ```
 messages.affectedFoundMessages#ef8d3e6c pts:int pts_count:int offset:int messages:Vector<int> = messages.AffectedFoundMessages;
@@ -20,15 +17,12 @@ messages.affectedFoundMessages#ef8d3e6c pts:int pts_count:int offset:int message
 messages.deletePhoneCallHistory#f9cbe409 flags:# revoke:flags.0?true = messages.AffectedFoundMessages;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| revoke | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether to remove phone call history for participants as well |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>revoke</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Удалять ли историю звонков также и у участников</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.AffectedFoundMessages](/type/messages.AffectedFoundMessages/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

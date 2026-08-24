@@ -1,40 +1,37 @@
 ---
-title: "account.getAllSecureValues (метод)"
+title: "account.getAllSecureValues"
 original: "https://core.telegram.org/method/account.getAllSecureValues"
 section: ref
 kind: method
+description: "Получить все сохранённые документы Telegram Passport, подробнее см. в документации по Passport »"
 layout: layout.njk
 ---
 
 # account.getAllSecureValues
 
-*Метод из схемы TL.*
-
-> Get all saved [Telegram Passport](https://core.telegram.org/passport) documents, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption)
-
-## Определение TL
+Получить все сохранённые документы [Telegram Passport](https://core.telegram.org/passport), [подробнее см. в документации по Passport »](https://core.telegram.org/passport/encryption#encryption)
 
 ```
 ---functions---
 account.getAllSecureValues#b288bc7d = Vector<SecureValue>;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[SecureValue](/type/SecureValue/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport: детали шифрования](https://core.telegram.org/passport/encryption)
 
-How Telegram Passport data is stored and encrypted end-to-end.
+Как данные Telegram Passport хранятся и шифруются сквозным шифрованием.

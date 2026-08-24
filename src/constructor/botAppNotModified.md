@@ -1,27 +1,24 @@
 ---
-title: "botAppNotModified (конструктор)"
+title: "botAppNotModified"
 original: "https://core.telegram.org/constructor/botAppNotModified"
 section: ref
 kind: constructor
+description: "Сведения о приложении бота не изменились."
 layout: layout.njk
 ---
 
 # botAppNotModified
 
-*Конструктор из схемы TL.*
-
-> Bot app info hasn't changed.
-
-## Определение TL
+Сведения о приложении бота не изменились.
 
 ```
 botAppNotModified#5da674b7 = BotApp;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [BotApp](/type/BotApp/)

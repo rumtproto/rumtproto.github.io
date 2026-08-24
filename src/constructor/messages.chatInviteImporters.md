@@ -1,31 +1,24 @@
 ---
-title: "messages.chatInviteImporters (конструктор)"
+title: "messages.chatInviteImporters"
 original: "https://core.telegram.org/constructor/messages.chatInviteImporters"
 section: ref
 kind: constructor
+description: "Информация о пользователях, вступивших в чат по определённой пригласительной ссылке"
 layout: layout.njk
 ---
 
 # messages.chatInviteImporters
 
-*Конструктор из схемы TL.*
-
-> Info about the users that joined the chat using a specific chat invite
-
-## Определение TL
+Информация о пользователях, вступивших в чат по определённой пригласительной ссылке
 
 ```
 messages.chatInviteImporters#81b6b00a count:int importers:Vector<ChatInviteImporter> users:Vector<User> = messages.ChatInviteImporters;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| count | [int](/type/int/) | Number of users that joined |
-| importers | [Vector](https://core.telegram.org/type/Vector%20t)<[ChatInviteImporter](/type/ChatInviteImporter/)> | The users that joined |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | The users that joined |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество вступивших пользователей</td></tr><tr><td><strong>importers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/ChatInviteImporter">ChatInviteImporter</a>&gt;</td><td>Вступившие пользователи</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Вступившие пользователи</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.ChatInviteImporters](/type/messages.ChatInviteImporters/)

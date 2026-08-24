@@ -1,33 +1,30 @@
 ---
-title: "messages.emojiGroupsNotModified (конструктор)"
+title: "messages.emojiGroupsNotModified"
 original: "https://core.telegram.org/constructor/messages.emojiGroupsNotModified"
 section: ref
 kind: constructor
+description: "Список категорий эмодзи не изменился."
 layout: layout.njk
 ---
 
 # messages.emojiGroupsNotModified
 
-*Конструктор из схемы TL.*
-
-> The list of [emoji categories](https://core.telegram.org/api/emoji-categories) hasn't changed.
-
-## Определение TL
+Список [категорий эмодзи](/api/emoji-categories/) не изменился.
 
 ```
 messages.emojiGroupsNotModified#6fb4ad87 = messages.EmojiGroups;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [messages.EmojiGroups](/type/messages.EmojiGroups/)
 
-## Related pages
+### Связанные страницы
 
-#### [Emoji categories](https://core.telegram.org/api/emoji-categories)
+#### [Категории эмодзи](/api/emoji-categories/)
 
-Sticker, custom emoji and GIF selection UIs should offer a list of categories to quickly filter results by a (list of) emojis, or by some other criteria.
+Интерфейсы выбора стикеров, пользовательских эмодзи и GIF должны предлагать список категорий для быстрой фильтрации результатов по эмодзи (или набору эмодзи) либо по иным критериям.

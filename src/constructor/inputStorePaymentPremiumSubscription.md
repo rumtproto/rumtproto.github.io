@@ -1,31 +1,24 @@
 ---
-title: "inputStorePaymentPremiumSubscription (конструктор)"
+title: "inputStorePaymentPremiumSubscription"
 original: "https://core.telegram.org/constructor/inputStorePaymentPremiumSubscription"
 section: ref
 kind: constructor
+description: "Информация о покупке Telegram Premium"
 layout: layout.njk
 ---
 
 # inputStorePaymentPremiumSubscription
 
-*Конструктор из схемы TL.*
-
-> Info about a Telegram Premium purchase
-
-## Определение TL
+Информация о покупке Telegram Premium
 
 ```
 inputStorePaymentPremiumSubscription#a6751e66 flags:# restore:flags.0?true upgrade:flags.1?true = InputStorePaymentPurpose;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| restore | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Pass true if this is a restore of a Telegram Premium purchase; only for the App Store |
-| upgrade | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | Pass true if this is an upgrade from a monthly subscription to a yearly subscription; only for App Store |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>restore</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Передайте true, если это восстановление покупки Telegram Premium; только для App Store</td></tr><tr><td><strong>upgrade</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Передайте true, если это переход с месячной подписки на годовую; только для App Store</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputStorePaymentPurpose](/type/InputStorePaymentPurpose/)

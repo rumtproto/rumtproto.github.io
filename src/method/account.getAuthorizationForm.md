@@ -1,18 +1,15 @@
 ---
-title: "account.getAuthorizationForm (метод)"
+title: "account.getAuthorizationForm"
 original: "https://core.telegram.org/method/account.getAuthorizationForm"
 section: ref
 kind: method
+description: "Возвращает форму авторизации Telegram Passport для передачи данных сервису"
 layout: layout.njk
 ---
 
 # account.getAuthorizationForm
 
-*Метод из схемы TL.*
-
-> Returns a Telegram Passport authorization form for sharing data with a service
-
-## Определение TL
+Возвращает форму авторизации Telegram Passport для передачи данных сервису
 
 ```
 account.authorizationForm#ad2e1cd8 flags:# required_types:Vector<SecureRequiredType> values:Vector<SecureValue> errors:Vector<SecureValueError> users:Vector<User> privacy_policy_url:flags.0?string = account.AuthorizationForm;
@@ -20,23 +17,16 @@ account.authorizationForm#ad2e1cd8 flags:# required_types:Vector<SecureRequiredT
 account.getAuthorizationForm#a929597a bot_id:long scope:string public_key:string = account.AuthorizationForm;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| bot_id | [long](/type/long/) | User identifier of the service's bot |
-| scope | [string](/type/string/) | Telegram Passport element types requested by the service |
-| public_key | [string](/type/string/) | Service's public key |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя, соответствующий боту сервиса</td></tr><tr><td><strong>scope</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Типы элементов Telegram Passport, запрошенные сервисом</td></tr><tr><td><strong>public_key</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Открытый ключ сервиса</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [account.AuthorizationForm](/type/account.AuthorizationForm/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOT_INVALID | This is not a valid bot. |
-| 400 | PUBLIC_KEY_REQUIRED | A public key is required. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOT_INVALID</td><td>Это не бот.</td></tr><tr><td>400</td><td>PUBLIC_KEY_REQUIRED</td><td>Требуется открытый ключ.</td></tr></tbody></table>

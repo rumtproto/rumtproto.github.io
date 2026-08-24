@@ -1,25 +1,20 @@
 ---
-title: "SecureCredentialsEncrypted (тип)"
+title: "SecureCredentialsEncrypted"
 original: "https://core.telegram.org/type/SecureCredentialsEncrypted"
 section: ref
 kind: type
+description: "Зашифрованные защищённые учётные данные"
 layout: layout.njk
 ---
 
 # SecureCredentialsEncrypted
 
-*Тип из схемы TL.*
-
-> Encrypted secure credentials
-
-## Определение TL
+Зашифрованные защищённые учётные данные
 
 ```
 secureCredentialsEncrypted#33f0ea47 data:bytes hash:bytes secret:bytes = SecureCredentialsEncrypted;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [secureCredentialsEncrypted](/constructor/secureCredentialsEncrypted/) | Encrypted credentials required to decrypt [telegram passport](https://core.telegram.org/passport) data. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/secureCredentialsEncrypted">secureCredentialsEncrypted</a></td><td>Зашифрованные учётные данные, необходимые для расшифровки данных <a href="/passport">telegram passport</a>.</td></tr></tbody></table>

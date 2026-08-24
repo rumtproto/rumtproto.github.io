@@ -1,18 +1,15 @@
 ---
-title: "account.deleteSecureValue (метод)"
+title: "account.deleteSecureValue"
 original: "https://core.telegram.org/method/account.deleteSecureValue"
 section: ref
 kind: method
+description: "Удалить сохранённые документы Telegram Passport, подробнее см. в документации по Passport »"
 layout: layout.njk
 ---
 
 # account.deleteSecureValue
 
-*Метод из схемы TL.*
-
-> Delete stored [Telegram Passport](https://core.telegram.org/passport) documents, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption)
-
-## Определение TL
+Удалить сохранённые документы [Telegram Passport](https://core.telegram.org/passport), [подробнее см. в документации по Passport »](https://core.telegram.org/passport/encryption#encryption)
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,24 +18,22 @@ boolTrue#997275b5 = Bool;
 account.deleteSecureValue#b880bc4b types:Vector<SecureValueType> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| types | [Vector](https://core.telegram.org/type/Vector%20t)<[SecureValueType](/type/SecureValueType/)> | Document types to delete |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>types</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SecureValueType">SecureValueType</a>&gt;</td><td>Типы документов для удаления</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport: детали шифрования](https://core.telegram.org/passport/encryption)
 
-How Telegram Passport data is stored and encrypted end-to-end.
+Как данные Telegram Passport хранятся и шифруются сквозным шифрованием.

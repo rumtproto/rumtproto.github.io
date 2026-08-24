@@ -1,18 +1,15 @@
 ---
-title: "account.unregisterDevice (метод)"
+title: "account.unregisterDevice"
 original: "https://core.telegram.org/method/account.unregisterDevice"
 section: ref
 kind: method
+description: "Удаляет устройство по его токену и прекращает отправку на него PUSH-уведомлений."
 layout: layout.njk
 ---
 
 # account.unregisterDevice
 
-*Метод из схемы TL.*
-
-> Deletes a device by its token, stops sending PUSH-notifications to it.
-
-## Определение TL
+Удаляет устройство по его токену и прекращает отправку на него PUSH-уведомлений.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,28 +18,22 @@ boolTrue#997275b5 = Bool;
 account.unregisterDevice#6a0d3206 token_type:int token:string other_uids:Vector<long> = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| token_type | [int](/type/int/) | Device token type, see [PUSH updates](https://core.telegram.org/api/push-updates#subscribing-to-notifications) for the possible values. |
-| token | [string](/type/string/) | Device token, see [PUSH updates](https://core.telegram.org/api/push-updates#subscribing-to-notifications) for the possible values. |
-| other_uids | [Vector](https://core.telegram.org/type/Vector%20t)<[long](/type/long/)> | List of user identifiers of other users currently using the client |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>token_type</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Тип токена устройства; возможные значения см. в разделе <a href="/api/push-updates#subscribing-to-notifications">PUSH-обновления</a>.</td></tr><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Токен устройства; возможные значения см. в разделе <a href="/api/push-updates#subscribing-to-notifications">PUSH-обновления</a>.</td></tr><tr><td><strong>other_uids</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/long">long</a>&gt;</td><td>Список идентификаторов других пользователей, работающих с клиентом в данный момент</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | TOKEN_INVALID | The provided token is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>TOKEN_INVALID</td><td>Указанный токен недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Handling PUSH-notifications](https://core.telegram.org/api/push-updates)
+#### [Обработка PUSH-уведомлений](/api/push-updates/)
 
-How to subscribe to and handle PUSH notifications
+Как подписаться на PUSH-уведомления и обрабатывать их

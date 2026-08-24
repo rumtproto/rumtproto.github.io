@@ -1,37 +1,30 @@
 ---
-title: "inputStarsTransaction (конструктор)"
+title: "inputStarsTransaction"
 original: "https://core.telegram.org/constructor/inputStarsTransaction"
 section: ref
 kind: constructor
+description: "Используется для получения информации о транзакции с Telegram Stars »."
 layout: layout.njk
 ---
 
 # inputStarsTransaction
 
-*Конструктор из схемы TL.*
-
-> Used to fetch info about a [Telegram Star transaction »](https://core.telegram.org/api/stars#balance-and-transaction-history).
-
-## Определение TL
+Используется для получения информации о [транзакции с Telegram Stars »](/api/stars/#balance-and-transaction-history).
 
 ```
 inputStarsTransaction#206ae6d1 flags:# refund:flags.0?true id:string = InputStarsTransaction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| refund | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, fetches info about the refund transaction for this transaction. |
-| id | [string](/type/string/) | Transaction ID. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>refund</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, получает сведения о транзакции возврата средств для этой транзакции.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Идентификатор транзакции.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputStarsTransaction](/type/InputStarsTransaction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

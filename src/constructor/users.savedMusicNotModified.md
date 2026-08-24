@@ -1,35 +1,30 @@
 ---
-title: "users.savedMusicNotModified (конструктор)"
+title: "users.savedMusicNotModified"
 original: "https://core.telegram.org/constructor/users.savedMusicNotModified"
 section: ref
 kind: constructor
+description: "Это подмножество композиций, закреплённых в профиле пользователя, не изменилось; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # users.savedMusicNotModified
 
-*Конструктор из схемы TL.*
-
-> This subset of the songs currently pinned on a user's profile hasn't changed, see [here »](https://core.telegram.org/api/profile#music) for more info.
-
-## Определение TL
+Это подмножество композиций, закреплённых в профиле пользователя, не изменилось; подробнее см. [здесь »](/api/profile/#music).
 
 ```
 users.savedMusicNotModified#e3878aa4 count:int = users.SavedMusic;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| count | [int](/type/int/) | Total number of songs on the user's profile. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число композиций в профиле пользователя.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [users.SavedMusic](/type/users.SavedMusic/)
 
-## Related pages
+### Связанные страницы
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

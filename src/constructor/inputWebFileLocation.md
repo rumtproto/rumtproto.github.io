@@ -1,30 +1,24 @@
 ---
-title: "inputWebFileLocation (конструктор)"
+title: "inputWebFileLocation"
 original: "https://core.telegram.org/constructor/inputWebFileLocation"
 section: ref
 kind: constructor
+description: "Расположение удалённого файла HTTP(s)"
 layout: layout.njk
 ---
 
 # inputWebFileLocation
 
-*Конструктор из схемы TL.*
-
-> Location of a remote HTTP(s) file
-
-## Определение TL
+Расположение удалённого файла HTTP(s)
 
 ```
 inputWebFileLocation#c239d686 url:string access_hash:long = InputWebFileLocation;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| url | [string](/type/string/) | HTTP URL of file |
-| access_hash | [long](/type/long/) | Access hash |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>HTTP-адрес файла</td></tr><tr><td><strong>access_hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:access_hash] Хеш доступа</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputWebFileLocation](/type/InputWebFileLocation/)

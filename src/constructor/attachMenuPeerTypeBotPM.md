@@ -1,27 +1,24 @@
 ---
-title: "attachMenuPeerTypeBotPM (конструктор)"
+title: "attachMenuPeerTypeBotPM"
 original: "https://core.telegram.org/constructor/attachMenuPeerTypeBotPM"
 section: ref
 kind: constructor
+description: "Пункт меню вложений бота доступен в личных чатах с другими ботами (кроме бота, который предлагает текущее меню вложений)"
 layout: layout.njk
 ---
 
 # attachMenuPeerTypeBotPM
 
-*Конструктор из схемы TL.*
-
-> The bot attachment menu entry is available in private chats with other bots (excluding the bot that offers the current attachment menu)
-
-## Определение TL
+Пункт меню вложений бота доступен в личных чатах с другими ботами (кроме бота, который предлагает текущее меню вложений)
 
 ```
 attachMenuPeerTypeBotPM#c32bfa1a = AttachMenuPeerType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [AttachMenuPeerType](/type/AttachMenuPeerType/)

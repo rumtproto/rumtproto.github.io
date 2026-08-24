@@ -1,33 +1,30 @@
 ---
-title: "secureValueTypeInternalPassport (конструктор)"
+title: "secureValueTypeInternalPassport"
 original: "https://core.telegram.org/constructor/secureValueTypeInternalPassport"
 section: ref
 kind: constructor
+description: "Внутренний passport"
 layout: layout.njk
 ---
 
 # secureValueTypeInternalPassport
 
-*Конструктор из схемы TL.*
-
-> Internal [passport](https://core.telegram.org/passport)
-
-## Определение TL
+Внутренний [passport](https://core.telegram.org/passport)
 
 ```
 secureValueTypeInternalPassport#99a48f23 = SecureValueType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecureValueType](/type/SecureValueType/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

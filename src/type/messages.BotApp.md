@@ -1,18 +1,15 @@
 ---
-title: "messages.BotApp (тип)"
+title: "messages.BotApp"
 original: "https://core.telegram.org/type/messages.BotApp"
 section: ref
 kind: type
+description: "Содержит информацию о Mini App с прямой ссылкой"
 layout: layout.njk
 ---
 
 # messages.BotApp
 
-*Тип из схемы TL.*
-
-> Contains information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps)
-
-## Определение TL
+[@term:Mini App] Содержит информацию о [Mini App с прямой ссылкой](/api/bots/webapps/#direct-link-mini-apps)
 
 ```
 messages.botApp#eb50adf5 flags:# inactive:flags.0?true request_write_access:flags.1?true has_settings:flags.2?true app:BotApp = messages.BotApp;
@@ -22,20 +19,16 @@ messages.botApp#eb50adf5 flags:# inactive:flags.0?true request_write_access:flag
 messages.getBotApp#34fdc5c3 app:InputBotApp hash:long = messages.BotApp;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.botApp](/constructor/messages.botApp/) | Contains information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.botApp">messages.botApp</a></td><td>Содержит информацию о <a href="/api/bots/webapps#direct-link-mini-apps">Mini App с прямой ссылкой</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getBotApp](/method/messages.getBotApp/) | Obtain information about a [direct link Mini App](https://core.telegram.org/api/bots/webapps#direct-link-mini-apps) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getBotApp">messages.getBotApp</a></td><td>Получить сведения о <a href="/api/bots/webapps#direct-link-mini-apps">Mini App с прямой ссылкой</a></td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.

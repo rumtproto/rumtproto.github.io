@@ -1,18 +1,15 @@
 ---
-title: "NearestDc (тип)"
+title: "NearestDc"
 original: "https://core.telegram.org/type/NearestDc"
 section: ref
 kind: type
+description: "Объект содержит информацию о ближайшем дата-центре."
 layout: layout.njk
 ---
 
 # NearestDc
 
-*Тип из схемы TL.*
-
-> Object contains info on nearest data center.
-
-## Определение TL
+Объект содержит информацию о ближайшем дата-центре.
 
 ```
 nearestDc#8e1a1775 country:string this_dc:int nearest_dc:int = NearestDc;
@@ -22,14 +19,10 @@ nearestDc#8e1a1775 country:string this_dc:int nearest_dc:int = NearestDc;
 help.getNearestDc#1fb33026 = NearestDc;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [nearestDc](/constructor/nearestDc/) | Nearest data center, according to geo-ip. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/nearestDc">nearestDc</a></td><td>Ближайший дата-центр, определённый по geo-ip.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [help.getNearestDc](/method/help.getNearestDc/) | Returns info on data center nearest to the user. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/help.getNearestDc">help.getNearestDc</a></td><td>Возвращает сведения о ближайшем к пользователю дата-центре.</td></tr></tbody></table>

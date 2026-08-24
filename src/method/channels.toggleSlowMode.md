@@ -1,18 +1,15 @@
 ---
-title: "channels.toggleSlowMode (метод)"
+title: "channels.toggleSlowMode"
 original: "https://core.telegram.org/method/channels.toggleSlowMode"
 section: ref
 kind: method
+description: "Переключить медленный режим в супергруппе: если он включён, пользователи смогут отправлять только одно сообщение каждые seconds секунд"
 layout: layout.njk
 ---
 
 # channels.toggleSlowMode
 
-*Метод из схемы TL.*
-
-> Toggle supergroup slow mode: if enabled, users will only be able to send one message every `seconds` seconds
-
-## Определение TL
+Переключить медленный режим в супергруппе: если он включён, пользователи смогут отправлять только одно сообщение каждые `seconds` секунд
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,31 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.toggleSlowMode#edd49ef0 channel:InputChannel seconds:int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The [supergroup](https://core.telegram.org/api/channel) |
-| seconds | [int](/type/int/) | Users will only be able to send one message every seconds seconds, 0 to disable the limitation |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td><a href="/api/channel">Супергруппа</a></td></tr><tr><td><strong>seconds</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Пользователи смогут отправлять только одно сообщение каждые <code>seconds</code> секунд, <code>0</code> — отключить ограничение</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | CHAT_NOT_MODIFIED | No changes were made to chat information because the new information you passed is identical to the current information. |
-| 400 | SECONDS_INVALID | Invalid duration provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>CHAT_NOT_MODIFIED</td><td>Информация о чате не изменена, потому что переданные вами новые данные совпадают с текущими.</td></tr><tr><td>400</td><td>SECONDS_INVALID</td><td>Указана недействительная длительность.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

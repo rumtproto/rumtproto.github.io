@@ -1,18 +1,15 @@
 ---
-title: "contacts.importContactToken (метод)"
+title: "contacts.importContactToken"
 original: "https://core.telegram.org/method/contacts.importContactToken"
 section: ref
 kind: method
+description: "Получить сведения о пользователе по временной ссылке на профиль."
 layout: layout.njk
 ---
 
 # contacts.importContactToken
 
-*Метод из схемы TL.*
-
-> Obtain user info from a [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links).
-
-## Определение TL
+Получить сведения о пользователе по [временной ссылке на профиль](/api/links/#temporary-profile-links).
 
 ```
 userEmpty#d3bc4b7a id:long = User;
@@ -21,26 +18,22 @@ user#31774388 flags:# self:flags.10?true contact:flags.11?true mutual_contact:fl
 contacts.importContactToken#13005788 token:string = User;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| token | [string](/type/string/) | The token extracted from the [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>token</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Токен, извлечённый из <a href="/api/links#temporary-profile-links">временной ссылки на профиль</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [User](/type/User/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | IMPORT_TOKEN_INVALID | The specified token is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>IMPORT_TOKEN_INVALID</td><td>Указанный токен недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.

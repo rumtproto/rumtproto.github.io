@@ -1,33 +1,30 @@
 ---
-title: "privacyKeySavedMusic (конструктор)"
+title: "privacyKeySavedMusic"
 original: "https://core.telegram.org/constructor/privacyKeySavedMusic"
 section: ref
 kind: constructor
+description: "Может ли пользователь видеть композиции, закреплённые в нашем профиле »."
 layout: layout.njk
 ---
 
 # privacyKeySavedMusic
 
-*Конструктор из схемы TL.*
-
-> Whether the user can see the [songs we pinned to our profile »](https://core.telegram.org/api/profile#music).
-
-## Определение TL
+Может ли пользователь видеть [композиции, закреплённые в нашем профиле »](/api/profile/#music).
 
 ```
 privacyKeySavedMusic#ff7a571b = PrivacyKey;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PrivacyKey](/type/PrivacyKey/)
 
-## Related pages
+### Связанные страницы
 
-#### [User profiles](https://core.telegram.org/api/profile)
+#### [Профили пользователей](/api/profile/)
 
-Telegram offers many customization options for your profile!
+Telegram предлагает множество вариантов настройки вашего профиля!

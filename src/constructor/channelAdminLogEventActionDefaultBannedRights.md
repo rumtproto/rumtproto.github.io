@@ -1,36 +1,30 @@
 ---
-title: "channelAdminLogEventActionDefaultBannedRights (конструктор)"
+title: "channelAdminLogEventActionDefaultBannedRights"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionDefaultBannedRights"
 section: ref
 kind: constructor
+description: "Права по умолчанию для заблокированных пользователей были изменены"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionDefaultBannedRights
 
-*Конструктор из схемы TL.*
-
-> The default banned rights were modified
-
-## Определение TL
+Права по умолчанию для заблокированных пользователей были изменены
 
 ```
 channelAdminLogEventActionDefaultBannedRights#2df5fc0a prev_banned_rights:ChatBannedRights new_banned_rights:ChatBannedRights = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| prev_banned_rights | [ChatBannedRights](/type/ChatBannedRights/) | Previous global [banned rights](https://core.telegram.org/api/rights) |
-| new_banned_rights | [ChatBannedRights](/type/ChatBannedRights/) | New global [banned rights](https://core.telegram.org/api/rights). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>prev_banned_rights</strong></td><td style="text-align: center;"><a href="/type/ChatBannedRights">ChatBannedRights</a></td><td>Предыдущие глобальные <a href="/api/rights">права заблокированного пользователя</a></td></tr><tr><td><strong>new_banned_rights</strong></td><td style="text-align: center;"><a href="/type/ChatBannedRights">ChatBannedRights</a></td><td>Новые глобальные <a href="/api/rights">права заблокированного пользователя</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Admin, banned, default rights](https://core.telegram.org/api/rights)
+#### [Права администраторов, ограничения и права по умолчанию](/api/rights/)
 
-How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.
+Как работать с правами администраторов, детальными ограничениями и общими правами в каналах, группах и супергруппах.

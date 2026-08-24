@@ -1,18 +1,15 @@
 ---
-title: "messages.getDefaultHistoryTTL (метод)"
+title: "messages.getDefaultHistoryTTL"
 original: "https://core.telegram.org/method/messages.getDefaultHistoryTTL"
 section: ref
 kind: method
+description: "Возвращает значение по умолчанию настройки времени жизни сообщений (Time-To-Live), применяемое ко всем новым чатам."
 layout: layout.njk
 ---
 
 # messages.getDefaultHistoryTTL
 
-*Метод из схемы TL.*
-
-> Gets the default value of the Time-To-Live setting, applied to all new chats.
-
-## Определение TL
+Возвращает значение по умолчанию настройки времени жизни сообщений (Time-To-Live), применяемое ко всем новым чатам.
 
 ```
 defaultHistoryTTL#43b46b20 period:int = DefaultHistoryTTL;
@@ -20,12 +17,12 @@ defaultHistoryTTL#43b46b20 period:int = DefaultHistoryTTL;
 messages.getDefaultHistoryTTL#658b7188 = DefaultHistoryTTL;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [DefaultHistoryTTL](/type/DefaultHistoryTTL/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

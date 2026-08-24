@@ -1,31 +1,26 @@
 ---
-title: "QuickReply (тип)"
+title: "QuickReply"
 original: "https://core.telegram.org/type/QuickReply"
 section: ref
 kind: type
+description: "Шаблон быстрого ответа."
 layout: layout.njk
 ---
 
 # QuickReply
 
-*Тип из схемы TL.*
-
-> A [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts).
-
-## Определение TL
+[Шаблон быстрого ответа](/api/business/#quick-reply-shortcuts).
 
 ```
 quickReply#697102b shortcut_id:int shortcut:string top_message:int count:int = QuickReply;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [quickReply](/constructor/quickReply/) | A [quick reply shortcut](https://core.telegram.org/api/business#quick-reply-shortcuts). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/quickReply">quickReply</a></td><td><a href="/api/business#quick-reply-shortcuts">Шаблон быстрого ответа</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

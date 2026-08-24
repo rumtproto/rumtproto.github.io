@@ -1,19 +1,17 @@
 ---
-title: "channels.searchPosts (метод)"
+title: "channels.searchPosts"
 original: "https://core.telegram.org/method/channels.searchPosts"
 section: ref
 kind: method
+description: "Глобальный поиск постов в публичных каналах » (_в том числе_ в тех, участниками которых мы не являемся) по определённому хештегу _или_ по полнотекстовому запросу."
 layout: layout.njk
 ---
 
 # channels.searchPosts
 
-*Метод из схемы TL.*
+Глобальный поиск постов в публичных [каналах »](/api/channel/) (_в том числе_ в тех, участниками которых мы не являемся) по определённому хештегу _или_ по полнотекстовому запросу.
 
-> Globally search for posts from public [channels »](https://core.telegram.org/api/channel) (_including_ those we aren't a member of) containing either a specific hashtag, _or_ a full text query.
-> Exactly one of `query` and `hashtag` must be set.
-
-## Определение TL
+Должно быть задано ровно одно из полей `query` и `hashtag`.
 
 ```
 messages.messages#1d73e7ea messages:Vector<Message> topics:Vector<ForumTopic> chats:Vector<Chat> users:Vector<User> = messages.Messages;
@@ -24,51 +22,38 @@ messages.messagesNotModified#74535f21 count:int = messages.Messages;
 channels.searchPosts#f2c4f24d flags:# hashtag:flags.0?string query:flags.1?string offset_rate:int offset_peer:InputPeer offset_id:int limit:int allow_paid_stars:flags.2?long = messages.Messages;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| hashtag | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | The hashtag to search, without the # character. |
-| query | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | The full text query: each user has a limited amount of free full text search slots, after which payment is required, see [here »](https://core.telegram.org/api/search#posts-tab) for more info on the full flow. |
-| offset_rate | [int](/type/int/) | Initially 0, then set to the [next_rate parameter of messages.messagesSlice](/constructor/messages.messagesSlice/), or if that is absent, the date of the last returned message. |
-| offset_peer | [InputPeer](/type/InputPeer/) | [Offsets for pagination, for more info click here](https://core.telegram.org/api/offsets) |
-| offset_id | [int](/type/int/) | [Offsets for pagination, for more info click here](https://core.telegram.org/api/offsets) |
-| limit | [int](/type/int/) | Maximum number of results to return, [see pagination](https://core.telegram.org/api/offsets) |
-| allow_paid_stars | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[long](/type/long/) | For full text post searches (query), allows payment of the specified amount of Stars for the search, see [here »](https://core.telegram.org/api/search#posts-tab) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>hashtag</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Хештег для поиска, без символа <code>#</code>.</td></tr><tr><td><strong>query</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Полнотекстовый запрос: каждому пользователю доступно ограниченное число бесплатных полнотекстовых поисков, после чего требуется оплата; подробнее обо всём процессе см. <a href="/api/search#posts-tab">здесь »</a>.</td></tr><tr><td><strong>offset_rate</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Изначально 0, затем устанавливается в <a href="/constructor/messages.messagesSlice">параметр <code>next_rate</code> конструктора messages.messagesSlice</a>, а если он отсутствует — в <code>date</code> последнего возвращённого сообщения.</td></tr><tr><td><strong>offset_peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td><a href="/api/offsets">Смещения для постраничной выборки, подробнее см. здесь</a></td></tr><tr><td><strong>offset_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td><a href="/api/offsets">Смещения для постраничной выборки, подробнее см. здесь</a></td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное число возвращаемых результатов, <a href="/api/offsets">см. постраничную выборку</a></td></tr><tr><td><strong>allow_paid_stars</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/long">long</a></td><td>Для полнотекстового поиска по постам (<code>query</code>) разрешает оплатить поиск указанным количеством Stars; подробнее обо всём процессе см. <a href="/api/search#posts-tab">здесь »</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.Messages](/type/messages.Messages/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 420 | FROZEN_METHOD_INVALID | The current account is [frozen](https://core.telegram.org/api/auth/#frozen-accounts), and thus cannot execute the specified action. |
-| 400 | OFFSET_PEER_ID_INVALID | The provided offset peer is invalid. |
-| 403 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>420</td><td>FROZEN_METHOD_INVALID</td><td>Текущий аккаунт <a href="/api/auth#frozen-accounts">заморожен</a> и поэтому не может выполнить указанное действие.</td></tr><tr><td>400</td><td>OFFSET_PEER_ID_INVALID</td><td>Указанный пир смещения недействителен.</td></tr><tr><td>403</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Search and filters](https://core.telegram.org/api/search)
+#### [Поиск и фильтры](/api/search/)
 
-Telegram allows applying detailed message filters while looking for messages in chats.
+Telegram позволяет применять подробные фильтры сообщений при поиске в чатах.
 
 #### [messages.messagesSlice](/constructor/messages.messagesSlice/)
 
-Incomplete list of messages and auxiliary data.
+Неполный список сообщений и вспомогательных данных.
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

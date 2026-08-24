@@ -1,18 +1,15 @@
 ---
-title: "stories.Stories (тип)"
+title: "stories.Stories"
 original: "https://core.telegram.org/type/stories.Stories"
 section: ref
 kind: type
+description: "Список историй"
 layout: layout.njk
 ---
 
 # stories.Stories
 
-*Тип из схемы TL.*
-
-> List of [stories](https://core.telegram.org/api/stories#pinned-or-archived-stories)
-
-## Определение TL
+Список [историй](/api/stories/#pinned-or-archived-stories)
 
 ```
 stories.stories#63c3dd0a flags:# count:int stories:Vector<StoryItem> pinned_to_top:flags.0?Vector<int> chats:Vector<Chat> users:Vector<User> = stories.Stories;
@@ -25,23 +22,16 @@ stories.getStoriesByID#5774ca74 peer:InputPeer id:Vector<int> = stories.Stories;
 stories.getAlbumStories#ac806d61 peer:InputPeer album_id:int offset:int limit:int = stories.Stories;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [stories.stories](/constructor/stories.stories/) | List of [stories](https://core.telegram.org/api/stories#pinned-or-archived-stories) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/stories.stories">stories.stories</a></td><td>Список <a href="/api/stories#pinned-or-archived-stories">историй</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stories.getPinnedStories](/method/stories.getPinnedStories/) | Fetch the [stories](https://core.telegram.org/api/stories#pinned-or-archived-stories) pinned on a peer's profile. |
-| [stories.getStoriesArchive](/method/stories.getStoriesArchive/) | Fetch the [story archive »](https://core.telegram.org/api/stories#pinned-or-archived-stories) of a peer we control. |
-| [stories.getStoriesByID](/method/stories.getStoriesByID/) | Obtain full info about a set of [stories](https://core.telegram.org/api/stories) by their IDs. |
-| [stories.getAlbumStories](/method/stories.getAlbumStories/) | Get stories in a [story album »](https://core.telegram.org/api/stories#story-albums). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stories.getPinnedStories">stories.getPinnedStories</a></td><td>Получить <a href="/api/stories#pinned-or-archived-stories">истории</a>, закреплённые в профиле пира.</td></tr><tr><td><a href="/method/stories.getStoriesArchive">stories.getStoriesArchive</a></td><td>Получить <a href="/api/stories#pinned-or-archived-stories">архив историй »</a> подконтрольного нам пира.</td></tr><tr><td><a href="/method/stories.getStoriesByID">stories.getStoriesByID</a></td><td>Получить полные сведения о наборе <a href="/api/stories">историй</a> по их идентификаторам.</td></tr><tr><td><a href="/method/stories.getAlbumStories">stories.getAlbumStories</a></td><td>Получить истории из <a href="/api/stories#story-albums">альбома историй »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

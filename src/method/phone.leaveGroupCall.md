@@ -1,18 +1,15 @@
 ---
-title: "phone.leaveGroupCall (метод)"
+title: "phone.leaveGroupCall"
 original: "https://core.telegram.org/method/phone.leaveGroupCall"
 section: ref
 kind: method
+description: "Покинуть групповой звонок, не завершая его для остальных участников. Этот метод можно использовать со всеми типами групповых звонков, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # phone.leaveGroupCall
 
-*Метод из схемы TL.*
-
-> Leave a group call without ending it for other participants. This method can be used with all group call types, see [here »](https://core.telegram.org/api/group-calls#managing-an-active-group-call) for more info.
-
-## Определение TL
+Покинуть групповой звонок, не завершая его для остальных участников. Этот метод можно использовать со всеми типами групповых звонков, подробнее [см. здесь »](/api/group-calls/#managing-an-active-group-call).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,27 +23,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 phone.leaveGroupCall#500377f9 call:InputGroupCall source:int = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| call | [InputGroupCall](/type/InputGroupCall/) | Group call to leave |
-| source | [int](/type/int/) | Source ID of the main group call stream |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>call</strong></td><td style="text-align: center;"><a href="/type/InputGroupCall">InputGroupCall</a></td><td>Групповой звонок, который нужно покинуть</td></tr><tr><td><strong>source</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор источника основного потока группового звонка</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | GROUPCALL_INVALID | The specified group call is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>GROUPCALL_INVALID</td><td>Указанный групповой звонок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Group calls](https://core.telegram.org/api/group-calls)
+#### [Групповые звонки](/api/group-calls/)
 
-How to start, join and manage group calls and video chats.
+Как начинать групповые звонки и видеочаты, присоединяться к ним и управлять ими.

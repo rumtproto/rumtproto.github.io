@@ -1,18 +1,15 @@
 ---
-title: "ChatOnlines (тип)"
+title: "ChatOnlines"
 original: "https://core.telegram.org/type/ChatOnlines"
 section: ref
 kind: type
+description: "Количество пользователей чата, находящихся в сети"
 layout: layout.njk
 ---
 
 # ChatOnlines
 
-*Тип из схемы TL.*
-
-> Number of online users in a chat
-
-## Определение TL
+Количество пользователей чата, находящихся в сети
 
 ```
 chatOnlines#f041e250 onlines:int = ChatOnlines;
@@ -22,14 +19,10 @@ chatOnlines#f041e250 onlines:int = ChatOnlines;
 messages.getOnlines#6e2be050 peer:InputPeer = ChatOnlines;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [chatOnlines](/constructor/chatOnlines/) | Number of online users in a chat |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/chatOnlines">chatOnlines</a></td><td>Количество пользователей чата, находящихся в сети</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getOnlines](/method/messages.getOnlines/) | Get count of online users in a chat |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getOnlines">messages.getOnlines</a></td><td>Получить количество пользователей чата, находящихся в сети</td></tr></tbody></table>

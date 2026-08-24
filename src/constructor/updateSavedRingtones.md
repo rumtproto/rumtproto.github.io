@@ -1,33 +1,30 @@
 ---
-title: "updateSavedRingtones (конструктор)"
+title: "updateSavedRingtones"
 original: "https://core.telegram.org/constructor/updateSavedRingtones"
 section: ref
 kind: constructor
+description: "Список сохранённых звуков уведомлений изменился; используйте account.getSavedRingtones, чтобы получить новый список."
 layout: layout.njk
 ---
 
 # updateSavedRingtones
 
-*Конструктор из схемы TL.*
-
-> The list of saved notification sounds has changed, use [account.getSavedRingtones](/method/account.getSavedRingtones/) to fetch the new list.
-
-## Определение TL
+Список сохранённых звуков уведомлений изменился; используйте [account.getSavedRingtones](/method/account.getSavedRingtones/), чтобы получить новый список.
 
 ```
 updateSavedRingtones#74d8be99 = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [account.getSavedRingtones](/method/account.getSavedRingtones/)
 
-Fetch saved notification sounds
+Получить сохранённые звуки уведомлений

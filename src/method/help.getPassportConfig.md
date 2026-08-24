@@ -1,18 +1,15 @@
 ---
-title: "help.getPassportConfig (метод)"
+title: "help.getPassportConfig"
 original: "https://core.telegram.org/method/help.getPassportConfig"
 section: ref
 kind: method
+description: "Получить конфигурацию passport"
 layout: layout.njk
 ---
 
 # help.getPassportConfig
 
-*Метод из схемы TL.*
-
-> Get [passport](https://core.telegram.org/passport) configuration
-
-## Определение TL
+Получить конфигурацию [passport](https://core.telegram.org/passport)
 
 ```
 help.passportConfigNotModified#bfb9f457 = help.PassportConfig;
@@ -21,24 +18,22 @@ help.passportConfig#a098d6af hash:int countries_langs:DataJSON = help.PassportCo
 help.getPassportConfig#c661ad08 hash:int = help.PassportConfig;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [int](/type/int/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [help.PassportConfig](/type/help.PassportConfig/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

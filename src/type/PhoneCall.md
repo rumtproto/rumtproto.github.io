@@ -1,18 +1,15 @@
 ---
-title: "PhoneCall (тип)"
+title: "PhoneCall"
 original: "https://core.telegram.org/type/PhoneCall"
 section: ref
 kind: type
+description: "Телефонный звонок"
 layout: layout.njk
 ---
 
 # PhoneCall
 
-*Тип из схемы TL.*
-
-> Phone call
-
-## Определение TL
+Телефонный звонок
 
 ```
 phoneCallEmpty#5366c915 id:long = PhoneCall;
@@ -23,13 +20,6 @@ phoneCall#30535af5 flags:# p2p_allowed:flags.5?true video:flags.6?true conferenc
 phoneCallDiscarded#50ca4de1 flags:# need_rating:flags.2?true need_debug:flags.3?true video:flags.6?true id:long reason:flags.0?PhoneCallDiscardReason duration:flags.1?int = PhoneCall;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [phoneCallEmpty](/constructor/phoneCallEmpty/) | Empty constructor |
-| [phoneCallWaiting](/constructor/phoneCallWaiting/) | Incoming phone call, see [here »](https://core.telegram.org/api/calls) for more info on the full flow. |
-| [phoneCallRequested](/constructor/phoneCallRequested/) | Requested phone call, see [here »](https://core.telegram.org/api/calls) for more info on the full flow. |
-| [phoneCallAccepted](/constructor/phoneCallAccepted/) | An accepted phone call, see [here »](https://core.telegram.org/api/calls) for more info on the full flow. |
-| [phoneCall](/constructor/phoneCall/) | Phone call, see [here »](https://core.telegram.org/api/calls) for more info on the full flow. |
-| [phoneCallDiscarded](/constructor/phoneCallDiscarded/) | Indicates a discarded phone call, see [here »](https://core.telegram.org/api/calls) for more info on the full flow. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/phoneCallEmpty">phoneCallEmpty</a></td><td>Пустой конструктор</td></tr><tr><td><a href="/constructor/phoneCallWaiting">phoneCallWaiting</a></td><td>Входящий телефонный звонок; подробнее о полном процессе см. <a href="/api/calls">здесь »</a>.</td></tr><tr><td><a href="/constructor/phoneCallRequested">phoneCallRequested</a></td><td>Запрошенный телефонный звонок; подробнее о полном порядке действий см. <a href="/api/calls">здесь »</a>.</td></tr><tr><td><a href="/constructor/phoneCallAccepted">phoneCallAccepted</a></td><td>Принятый телефонный звонок; подробнее о полном порядке действий см. <a href="/api/calls">здесь »</a>.</td></tr><tr><td><a href="/constructor/phoneCall">phoneCall</a></td><td>Телефонный звонок, подробнее о полной последовательности действий см. <a href="/api/calls">здесь »</a>.</td></tr><tr><td><a href="/constructor/phoneCallDiscarded">phoneCallDiscarded</a></td><td>Обозначает завершённый звонок; подробнее о полном процессе см. <a href="/api/calls">здесь »</a>.</td></tr></tbody></table>

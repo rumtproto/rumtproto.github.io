@@ -1,31 +1,26 @@
 ---
-title: "BotVerification (тип)"
+title: "BotVerification"
 original: "https://core.telegram.org/type/BotVerification"
 section: ref
 kind: type
+description: "Описывает значок верификации бота »."
 layout: layout.njk
 ---
 
 # BotVerification
 
-*Тип из схемы TL.*
-
-> Describes a [bot verification icon »](https://core.telegram.org/api/bots/verification).
-
-## Определение TL
+Описывает [значок верификации бота »](/api/bots/verification/).
 
 ```
 botVerification#f93cd45c bot_id:long icon:long description:string = BotVerification;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [botVerification](/constructor/botVerification/) | Describes a [bot verification icon »](https://core.telegram.org/api/bots/verification). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/botVerification">botVerification</a></td><td>Описывает <a href="/api/bots/verification">значок верификации бота »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Third-party verification](https://core.telegram.org/api/bots/verification)
+#### [Сторонняя верификация](/api/bots/verification/)
 
-To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and reduce misinformation.
+Чтобы ещё повысить прозрачность в Telegram, официальные сторонние сервисы могут присваивать аккаунтам пользователей и чатам дополнительные значки верификации — чтобы предотвратить мошенничество и снизить распространение недостоверной информации.

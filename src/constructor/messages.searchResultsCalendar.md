@@ -1,44 +1,30 @@
 ---
-title: "messages.searchResultsCalendar (конструктор)"
+title: "messages.searchResultsCalendar"
 original: "https://core.telegram.org/constructor/messages.searchResultsCalendar"
 section: ref
 kind: constructor
+description: "Информация о найденных сообщениях, отправленных в определённый день"
 layout: layout.njk
 ---
 
 # messages.searchResultsCalendar
 
-*Конструктор из схемы TL.*
-
-> Information about found messages sent on a specific day
-
-## Определение TL
+Информация о найденных сообщениях, отправленных в определённый день
 
 ```
 messages.searchResultsCalendar#147ee23c flags:# inexact:flags.0?true count:int min_date:int min_msg_id:int offset_id_offset:flags.1?int periods:Vector<SearchResultsCalendarPeriod> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.SearchResultsCalendar;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| inexact | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, indicates that the results may be inexact |
-| count | [int](/type/int/) | Total number of results matching query |
-| min_date | [int](/type/int/) | Starting timestamp of attached messages |
-| min_msg_id | [int](/type/int/) | Ending timestamp of attached messages |
-| offset_id_offset | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | Indicates the absolute position of messages[0] within the total result set with count count. This is useful, for example, if we need to display a progress/total counter (like photo 134 of 200, for all media in a chat, we could simply use photo ${offset_id_offset} of ${count}. |
-| periods | [Vector](https://core.telegram.org/type/Vector%20t)<[SearchResultsCalendarPeriod](/type/SearchResultsCalendarPeriod/)> | Used to split the messages by days: multiple [SearchResultsCalendarPeriod](/type/SearchResultsCalendarPeriod/) constructors are returned, each containing information about the first, last and total number of messages matching the filter that were sent on a specific day. This information can be easily used to split the returned messages by day. |
-| messages | [Vector](https://core.telegram.org/type/Vector%20t)<[Message](/type/Message/)> | Messages |
-| chats | [Vector](https://core.telegram.org/type/Vector%20t)<[Chat](/type/Chat/)> | Mentioned chats |
-| users | [Vector](https://core.telegram.org/type/Vector%20t)<[User](/type/User/)> | Mentioned users |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>inexact</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, указывает, что результаты могут быть неточными</td></tr><tr><td><strong>count</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Общее число результатов, соответствующих запросу</td></tr><tr><td><strong>min_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Начальная временная метка прикреплённых сообщений</td></tr><tr><td><strong>min_msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Конечная временная метка прикреплённых сообщений</td></tr><tr><td><strong>offset_id_offset</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Указывает абсолютную позицию <code>messages[0]</code> в полном наборе результатов размером <code>count</code>.<br>Это полезно, например, если требуется показать счётчик вида <code>progress/total</code> (например, <code>photo 134 of 200</code> для всех медиафайлов в чате — мы можем просто использовать <code>photo ${offset_id_offset} of ${count}</code>.</td></tr><tr><td><strong>periods</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SearchResultsCalendarPeriod">SearchResultsCalendarPeriod</a>&gt;</td><td>Используется для разбивки поля <code>messages</code> по дням: возвращается несколько конструкторов <a href="/type/SearchResultsCalendarPeriod">SearchResultsCalendarPeriod</a>, каждый из которых содержит сведения о первом и последнем сообщении, а также об общем количестве сообщений, соответствующих фильтру и отправленных в конкретный день.<br>Эти сведения позволяют легко разбить возвращённое поле <code>messages</code> по дням.</td></tr><tr><td><strong>messages</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Message">Message</a>&gt;</td><td>Сообщения</td></tr><tr><td><strong>chats</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Chat">Chat</a>&gt;</td><td>Упомянутые чаты</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/User">User</a>&gt;</td><td>Упомянутые пользователи</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [messages.SearchResultsCalendar](/type/messages.SearchResultsCalendar/)
 
-## Related pages
+### Связанные страницы
 
 #### [SearchResultsCalendarPeriod](/type/SearchResultsCalendarPeriod/)
 
-Information about found messages sent on a specific day, used to split the `messages` in [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/) constructors by days.
+Информация о найденных сообщениях, отправленных в определённый день; используется для разбивки поля `messages` в конструкторах [messages.searchResultsCalendar](/constructor/messages.searchResultsCalendar/) по дням.

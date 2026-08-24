@@ -1,18 +1,15 @@
 ---
-title: "payments.getStarGiftAuctionAcquiredGifts (метод)"
+title: "payments.getStarGiftAuctionAcquiredGifts"
 original: "https://core.telegram.org/method/payments.getStarGiftAuctionAcquiredGifts"
 section: ref
 kind: method
+description: "Получает все подарки, которые текущий пользователь выиграл на аукционе."
 layout: layout.njk
 ---
 
 # payments.getStarGiftAuctionAcquiredGifts
 
-*Метод из схемы TL.*
-
-> Fetches all the gifts that the current user won in an [auction](https://core.telegram.org/api/auctions).
-
-## Определение TL
+Получает все подарки, которые текущий пользователь выиграл на [аукционе](/api/auctions/).
 
 ```
 payments.starGiftAuctionAcquiredGifts#7d5bd1f0 gifts:Vector<StarGiftAuctionAcquiredGift> users:Vector<User> chats:Vector<Chat> = payments.StarGiftAuctionAcquiredGifts;
@@ -20,26 +17,22 @@ payments.starGiftAuctionAcquiredGifts#7d5bd1f0 gifts:Vector<StarGiftAuctionAcqui
 payments.getStarGiftAuctionAcquiredGifts#6ba2cbec gift_id:long = payments.StarGiftAuctionAcquiredGifts;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| gift_id | [long](/type/long/) | The gift ID linked to the auction. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>gift_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор подарка, связанного с аукционом.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [payments.StarGiftAuctionAcquiredGifts](/type/payments.StarGiftAuctionAcquiredGifts/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | STARGIFT_INVALID | The passed gift is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>STARGIFT_INVALID</td><td>Переданный подарок недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Collectible gift auctions](https://core.telegram.org/api/auctions)
+#### [Аукционы коллекционных подарков](/api/auctions/)
 
-New collectible gift releases are distributed through Stars auctions held over several rounds.
+Новые выпуски коллекционных подарков распространяются через аукционы за Stars, которые проходят в несколько раундов.

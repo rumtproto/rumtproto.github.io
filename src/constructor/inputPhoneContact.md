@@ -1,50 +1,40 @@
 ---
-title: "inputPhoneContact (конструктор)"
+title: "inputPhoneContact"
 original: "https://core.telegram.org/constructor/inputPhoneContact"
 section: ref
 kind: constructor
+description: "Телефонный контакт."
 layout: layout.njk
 ---
 
 # inputPhoneContact
 
-*Конструктор из схемы TL.*
-
-> Phone contact.
-
-## Определение TL
+Телефонный контакт.
 
 ```
 inputPhoneContact#6a1dc4be flags:# client_id:long phone:string first_name:string last_name:string note:flags.0?TextWithEntities = InputContact;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| client_id | [long](/type/long/) | An arbitrary 64-bit integer: it should be set, for example, to an incremental number when using [contacts.importContacts](/method/contacts.importContacts/), in order to retry importing only the contacts that weren't imported successfully, according to the client_ids returned in [contacts.importedContacts](/constructor/contacts.importedContacts/).retry_contacts. |
-| phone | [string](/type/string/) | Phone number |
-| first_name | [string](/type/string/) | Contact's first name |
-| last_name | [string](/type/string/) | Contact's last name |
-| note | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[TextWithEntities](/type/TextWithEntities/) | A private note for this contact, only visible to us; see [here »](https://core.telegram.org/api/contacts#private-notes-for-contacts) for more info on contact notes. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>client_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Произвольное 64-битное целое число: его следует задавать, например, последовательно возрастающим числом при использовании <a href="/method/contacts.importContacts">contacts.importContacts</a>, чтобы повторно импортировать только те контакты, которые не были импортированы успешно, ориентируясь на client_ids, возвращённые в <a href="/constructor/contacts.importedContacts">contacts.importedContacts</a>.<code>retry_contacts</code>.</td></tr><tr><td><strong>phone</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона</td></tr><tr><td><strong>first_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Имя контакта</td></tr><tr><td><strong>last_name</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Фамилия контакта</td></tr><tr><td><strong>note</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/TextWithEntities">TextWithEntities</a></td><td>Личная заметка об этом контакте, видимая только нам; подробнее о заметках о контактах см. <a href="/api/contacts#private-notes-for-contacts">здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputContact](/type/InputContact/)
 
-## Related pages
+### Связанные страницы
 
 #### [contacts.importContacts](/method/contacts.importContacts/)
 
-Imports contacts: saves a full list on the server, adds already registered contacts to the contact list, returns added contacts and their info.
+Импортирует контакты: сохраняет полный список на сервере, добавляет уже зарегистрированных контактов в список контактов, возвращает добавленные контакты и сведения о них.
 
-Use [contacts.addContact](/method/contacts.addContact/) to add Telegram contacts without actually using their phone number.
+Используйте [contacts.addContact](/method/contacts.addContact/), чтобы добавлять контакты Telegram, не используя их номер телефона.
 
 #### [contacts.importedContacts](/constructor/contacts.importedContacts/)
 
-Info on successfully imported contacts.
+Информация об успешно импортированных контактах.
 
-#### [Contact list](https://core.telegram.org/api/contacts)
+#### [Список контактов](/api/contacts/)
 
-Working with contacts.
+Работа с контактами.

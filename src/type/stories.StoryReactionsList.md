@@ -1,18 +1,15 @@
 ---
-title: "stories.StoryReactionsList (тип)"
+title: "stories.StoryReactionsList"
 original: "https://core.telegram.org/type/stories.StoryReactionsList"
 section: ref
 kind: type
+description: "Список пиров, отреагировавших на конкретную историю"
 layout: layout.njk
 ---
 
 # stories.StoryReactionsList
 
-*Тип из схемы TL.*
-
-> List of peers that reacted to a specific [story](https://core.telegram.org/api/stories)
-
-## Определение TL
+Список пиров, отреагировавших на конкретную [историю](/api/stories/)
 
 ```
 stories.storyReactionsList#aa5f789c flags:# count:int reactions:Vector<StoryReaction> chats:Vector<Chat> users:Vector<User> next_offset:flags.0?string = stories.StoryReactionsList;
@@ -22,20 +19,16 @@ stories.storyReactionsList#aa5f789c flags:# count:int reactions:Vector<StoryReac
 stories.getStoryReactionsList#b9b2881f flags:# forwards_first:flags.2?true peer:InputPeer id:int reaction:flags.0?Reaction offset:flags.1?string limit:int = stories.StoryReactionsList;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [stories.storyReactionsList](/constructor/stories.storyReactionsList/) | List of peers that reacted to or intercated with a specific [story](https://core.telegram.org/api/stories) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/stories.storyReactionsList">stories.storyReactionsList</a></td><td>Список пиров, отреагировавших на конкретную <a href="/api/stories">историю</a> или иначе взаимодействовавших с ней</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stories.getStoryReactionsList](/method/stories.getStoryReactionsList/) | Get the [reaction](https://core.telegram.org/api/reactions) and interaction list of a [story](https://core.telegram.org/api/stories) posted to a channel, along with the sender of each reaction. Can only be used by channel admins. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stories.getStoryReactionsList">stories.getStoryReactionsList</a></td><td>Получить список <a href="/api/reactions">реакций</a> и взаимодействий с <a href="/api/stories">историей</a>, опубликованной в канале, вместе с отправителем каждой реакции.<br><br>Доступно только администраторам канала.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

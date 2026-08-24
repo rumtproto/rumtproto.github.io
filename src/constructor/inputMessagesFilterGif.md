@@ -1,27 +1,24 @@
 ---
-title: "inputMessagesFilterGif (конструктор)"
+title: "inputMessagesFilterGif"
 original: "https://core.telegram.org/constructor/inputMessagesFilterGif"
 section: ref
 kind: constructor
+description: "Возвращать только сообщения с GIF"
 layout: layout.njk
 ---
 
 # inputMessagesFilterGif
 
-*Конструктор из схемы TL.*
-
-> Return only messages containing gifs
-
-## Определение TL
+Возвращать только сообщения с GIF
 
 ```
 inputMessagesFilterGif#ffc86587 = MessagesFilter;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [MessagesFilter](/type/MessagesFilter/)

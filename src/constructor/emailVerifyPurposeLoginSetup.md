@@ -1,36 +1,30 @@
 ---
-title: "emailVerifyPurposeLoginSetup (конструктор)"
+title: "emailVerifyPurposeLoginSetup"
 original: "https://core.telegram.org/constructor/emailVerifyPurposeLoginSetup"
 section: ref
 kind: constructor
+description: "Назначение подтверждения электронной почты: настройка почты для входа"
 layout: layout.njk
 ---
 
 # emailVerifyPurposeLoginSetup
 
-*Конструктор из схемы TL.*
-
-> Email verification purpose: setup login email
-
-## Определение TL
+Назначение подтверждения электронной почты: настройка почты для входа
 
 ```
 emailVerifyPurposeLoginSetup#4345be73 phone_number:string phone_code_hash:string = EmailVerifyPurpose;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_number | [string](/type/string/) | Phone number |
-| phone_code_hash | [string](/type/string/) | Phone code hash as specified by the [documentation](https://core.telegram.org/api/auth/#email-verification) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш телефонного кода, как указано в <a href="/api/auth#email-verification">документации</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [EmailVerifyPurpose](/type/EmailVerifyPurpose/)
 
-## Related pages
+### Связанные страницы
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

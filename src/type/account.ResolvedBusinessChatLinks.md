@@ -1,18 +1,15 @@
 ---
-title: "account.ResolvedBusinessChatLinks (тип)"
+title: "account.ResolvedBusinessChatLinks"
 original: "https://core.telegram.org/type/account.ResolvedBusinessChatLinks"
 section: ref
 kind: type
+description: "Содержит информацию об одной разрешённой глубокой ссылке на бизнес-чат »."
 layout: layout.njk
 ---
 
 # account.ResolvedBusinessChatLinks
 
-*Тип из схемы TL.*
-
-> Contains info about a single resolved [business chat deep link »](https://core.telegram.org/api/business#business-chat-links).
-
-## Определение TL
+Содержит информацию об одной разрешённой [глубокой ссылке на бизнес-чат »](/api/business/#business-chat-links).
 
 ```
 account.resolvedBusinessChatLinks#9a23af21 flags:# peer:Peer message:string entities:flags.0?Vector<MessageEntity> chats:Vector<Chat> users:Vector<User> = account.ResolvedBusinessChatLinks;
@@ -22,20 +19,16 @@ account.resolvedBusinessChatLinks#9a23af21 flags:# peer:Peer message:string enti
 account.resolveBusinessChatLink#5492e5ee slug:string = account.ResolvedBusinessChatLinks;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [account.resolvedBusinessChatLinks](/constructor/account.resolvedBusinessChatLinks/) | Contains info about a single resolved [business chat deep link »](https://core.telegram.org/api/business#business-chat-links). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/account.resolvedBusinessChatLinks">account.resolvedBusinessChatLinks</a></td><td>Содержит информацию об одной разрешённой <a href="/api/business#business-chat-links">глубокой ссылке на бизнес-чат »</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.resolveBusinessChatLink](/method/account.resolveBusinessChatLink/) | Resolve a [business chat deep link »](https://core.telegram.org/api/business#business-chat-links). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.resolveBusinessChatLink">account.resolveBusinessChatLink</a></td><td>Разрешить <a href="/api/business#business-chat-links">глубокую ссылку на бизнес-чат »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.

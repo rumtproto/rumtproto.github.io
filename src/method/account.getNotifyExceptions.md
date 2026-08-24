@@ -1,18 +1,15 @@
 ---
-title: "account.getNotifyExceptions (метод)"
+title: "account.getNotifyExceptions"
 original: "https://core.telegram.org/method/account.getNotifyExceptions"
 section: ref
 kind: method
+description: "Возвращает список чатов с настройками уведомлений, отличными от стандартных"
 layout: layout.njk
 ---
 
 # account.getNotifyExceptions
 
-*Метод из схемы TL.*
-
-> Returns list of chats with non-default notification settings
-
-## Определение TL
+Возвращает список чатов с настройками уведомлений, отличными от стандартных
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,17 +23,12 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 account.getNotifyExceptions#53577479 flags:# compare_sound:flags.1?true compare_stories:flags.2?true peer:flags.0?InputNotifyPeer = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| compare_sound | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, chats with non-default sound will be returned |
-| compare_stories | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | If set, chats with non-default notification settings for stories will be returned |
-| peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[InputNotifyPeer](/type/InputNotifyPeer/) | If specified, only chats of the specified category will be returned |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>compare_sound</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, будут возвращены чаты с недефолтным звуком</td></tr><tr><td><strong>compare_stories</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Если установлено, будут возвращены чаты с недефолтными настройками уведомлений об историях</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/InputNotifyPeer">InputNotifyPeer</a></td><td>[@term:peer] Если указано, будут возвращены только чаты указанной категории</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

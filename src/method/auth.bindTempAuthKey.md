@@ -1,19 +1,17 @@
 ---
-title: "auth.bindTempAuthKey (метод)"
+title: "auth.bindTempAuthKey"
 original: "https://core.telegram.org/method/auth.bindTempAuthKey"
 section: ref
 kind: method
+description: "Привязывает временный авторизационный ключ temp_auth_key_id к постоянному авторизационному ключу perm_auth_key_id."
 layout: layout.njk
 ---
 
 # auth.bindTempAuthKey
 
-*Метод из схемы TL.*
+Привязывает временный авторизационный ключ `temp_auth_key_id` к постоянному авторизационному ключу `perm_auth_key_id`.
 
-> Binds a temporary authorization key `temp_auth_key_id` to the permanent authorization key `perm_auth_key_id`.
-> For more information, see [Perfect Forward Secrecy](/api/pfs/).
-
-## Определение TL
+Подробнее см. [Perfect Forward Secrecy](/api/pfs/).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -22,80 +20,64 @@ boolTrue#997275b5 = Bool;
 auth.bindTempAuthKey#cdd42a05 perm_auth_key_id:long nonce:long expires_at:int encrypted_message:bytes = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| perm_auth_key_id | [long](/type/long/) | Permanent auth_key_id to bind to |
-| nonce | [long](/type/long/) | Random long from [Binding message contents](#binding-message-contents) |
-| expires_at | [int](/type/int/) | Unix timestamp to invalidate temporary key, see [Binding message contents](#binding-message-contents) |
-| encrypted_message | [bytes](/type/bytes/) | See [Generating encrypted_message](#generating-encrypted-message) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>perm_auth_key_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Постоянный auth_key_id, к которому выполняется привязка</td></tr><tr><td><strong>nonce</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Случайное значение типа long из раздела <a href="#binding-message-contents">Содержимое связывающего сообщения</a></td></tr><tr><td><strong>expires_at</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Метка времени UNIX, до которой действует временный ключ, см. <a href="#binding-message-contents">Содержимое привязывающего сообщения</a></td></tr><tr><td><strong>encrypted_message</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>См. <a href="#generating-encrypted-message">Формирование encrypted_message</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Generating encrypted_message
+### Формирование encrypted\_message
 
-The client begins by creating a special binding message:
+Клиент начинает с создания специального связывающего сообщения:
 
-## Binding message contents
+### Содержимое сообщения привязки
 
 ```
 bind_auth_key_inner#75a3f765 nonce:long temp_auth_key_id:long perm_auth_key_id:long temp_session_id:long expires_at:int = BindAuthKeyInner;
 ```
 
-|  |  |  |
-|---|---|---|
-| nonce | [long](/type/long/) | Random long |
-| temp_auth_key_id | [long](/type/long/) | Temporary auth_key_id |
-| perm_auth_key_id | [long](/type/long/) | Permanent auth_key_id to bind to |
-| temp_session_id | [long](/type/long/) | Session id, which will be used to invoke auth.bindTempAuthKey method |
-| expires_at | [int](/type/int/) | Unix timestamp to invalidate temporary key |
+<table class="table"><thead><tr><th scope="col"></th><th scope="col"></th><th scope="col"></th></tr></thead><tbody><tr><td><strong>nonce</strong></td><td><a href="/type/long">long</a></td><td>Случайное значение типа long</td></tr><tr><td><strong>temp_auth_key_id</strong></td><td><a href="/type/long">long</a></td><td>Временный auth_key_id</td></tr><tr><td><strong>perm_auth_key_id</strong></td><td><a href="/type/long">long</a></td><td>Постоянный auth_key_id, к которому выполняется привязка</td></tr><tr><td><strong>temp_session_id</strong></td><td><a href="/type/long">long</a></td><td>Идентификатор сессии, который будет использован при вызове метода <strong>auth.bindTempAuthKey</strong></td></tr><tr><td><strong>expires_at</strong></td><td><a href="/type/int">int</a></td><td>Метка времени UNIX, до которой действует временный ключ</td></tr></tbody></table>
 
-## Encrypting the binding message
+### Шифрование связывающего сообщения
 
-This binding message is encrypted in [the usual way, but with MTProto v1](/mtproto/description/) using the `perm_auth_key`. In other words, one has to prepend `random:int128` (it replaces the customary `session_id:long` and `salt:long` that are irrelevant in this case), then append the same `msg_id` that will be used for the request, a `seqno` equal to zero, and the correct `msg_len` (40 bytes in this case); after that, one computes the `msg_key:int128` as SHA1 of the resulting string, appends padding necessary for a 16-byte alignment, encrypts the resulting string using the key derived from `perm_auth_key` and `msg_key`, and prepends `perm_auth_key_id` and `msg_key` to the encrypted data as usual.
+[@term:msg_id] Это привязочное сообщение шифруется [обычным способом, но по MTProto v1](/mtproto/description/) с использованием `perm_auth_key`. Иными словами, нужно поставить в начало `random:int128` (он заменяет привычные `session_id:long` и `salt:long`, которые в данном случае не имеют значения), затем добавить тот же `msg_id`, который будет использован для запроса, `seqno`, равный нулю, и правильный `msg_len` (в данном случае 40 байт); после этого вычисляется `msg_key:int128` как SHA1 полученной строки, добавляется дополнение, необходимое для выравнивания по 16 байт, полученная строка шифруется ключом, выведенным из `perm_auth_key` и `msg_key`, а к зашифрованным данным, как обычно, дописываются в начало `perm_auth_key_id` и `msg_key`.
 
-## Binding
+### Привязка
 
-Once **encrypted\_message** is ready, an **auth.bindTempAuthKey** request is sent to the server using `temp_auth_key` and `temp_session_id`. Don't forget to [rewrite client info](https://core.telegram.org/api/invoking/#saving-client-info) using [initConnection](/method/initConnection/) when the binding is completed.
+Когда **encrypted\_message** готово, серверу отправляется запрос **auth.bindTempAuthKey** с использованием `temp_auth_key` и `temp_session_id`. Не забудьте [перезаписать информацию о клиенте](/api/invoking/#saving-client-info) с помощью [initConnection](/method/initConnection/) после завершения привязки.
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## This method can be invoked over an unauthenticated connection »
+### Этот метод можно вызывать по [неавторизованному соединению »](/api/auth/)
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | ENCRYPTED_MESSAGE_INVALID | Encrypted message invalid. |
-| 400 | EXPIRES_AT_INVALID | The specified expires_at timestamp is invalid. |
-| 400 | TEMP_AUTH_KEY_ALREADY_BOUND | The passed temporary key is already bound to another perm_auth_key_id. |
-| 400 | TEMP_AUTH_KEY_EMPTY | No temporary auth key provided. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>ENCRYPTED_MESSAGE_INVALID</td><td>Зашифрованное сообщение недействительно.</td></tr><tr><td>400</td><td>EXPIRES_AT_INVALID</td><td>Указанная временная метка <code>expires_at</code> недействительна.</td></tr><tr><td>400</td><td>TEMP_AUTH_KEY_ALREADY_BOUND</td><td>Переданный временный ключ уже привязан к другому <strong>perm_auth_key_id</strong>.</td></tr><tr><td>400</td><td>TEMP_AUTH_KEY_EMPTY</td><td>Временный авторизационный ключ не передан.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [Perfect Forward Secrecy](/api/pfs/)
 
-Binding temporary authorization key to permanent ones.
+Привязка временного авторизационного ключа к постоянным.
 
 #### [long](/type/long/)
 
-A basic bare type, elements of which correspond to two-element sequences, representing 64-bit signed numbers (little-endian).
+[@term:bare] Базовый голый тип, значения которого соответствуют последовательностям из двух элементов, представляющим 64-битные знаковые числа (в порядке little-endian).
 
 #### [int](/type/int/)
 
-A basic bare type, the values of which correspond to single-element sequences, i.e. numbers from -2^31 to 2^31-1 which in this case represent themselves.
+Базовый голый тип, значения которого соответствуют одноэлементным последовательностям, то есть числам от -2^31 до 2^31-1, которые в этом случае представляют сами себя.
 
-#### ﻿[Mobile Protocol: Detailed Description](/mtproto/description/)
+#### [Мобильный протокол: подробное описание](/mtproto/description/)
 
-A description of MTProto 2.0, used by major Telegram clients as of version 4.6.
+Описание MTProto 2.0, используемого основными клиентами Telegram начиная с версии 4.6.
 
-#### [Calling API Methods](/api/invoking/)
+#### [Вызов методов API](/api/invoking/)
 
-Additional options for calling methods.
+Дополнительные параметры вызова методов.
 
 #### [initConnection](/method/initConnection/)
 
-Initialize connection
+Инициализировать подключение

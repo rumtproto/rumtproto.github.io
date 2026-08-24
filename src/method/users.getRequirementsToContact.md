@@ -1,47 +1,43 @@
 ---
-title: "users.getRequirementsToContact (метод)"
+title: "users.getRequirementsToContact"
 original: "https://core.telegram.org/method/users.getRequirementsToContact"
 section: ref
 kind: method
+description: "Проверить, можем ли мы писать указанным пользователям; используется для массовых проверок сообщений только для Premium » и платных сообщений »."
 layout: layout.njk
 ---
 
 # users.getRequirementsToContact
 
-*Метод из схемы TL.*
+Проверить, можем ли мы писать указанным пользователям; используется для массовых проверок [сообщений только для Premium »](/api/privacy/#require-premium-for-new-non-contact-users) и [платных сообщений »](/api/paid-messages/).
 
-> Check whether we can write to the specified users, used to implement bulk checks for [Premium-only messages »](https://core.telegram.org/api/privacy#require-premium-for-new-non-contact-users) and [paid messages »](https://core.telegram.org/api/paid-messages).
-> For each input user, returns a [RequirementToContact](/type/RequirementToContact/) constructor (at the same offset in the vector) containing requirements to contact them.
-
-## Определение TL
+Для каждого переданного пользователя возвращает конструктор [RequirementToContact](/type/RequirementToContact/) (на той же позиции в векторе), содержащий требования для связи с ним.
 
 ```
 ---functions---
 users.getRequirementsToContact#d89a83a3 id:Vector<InputUser> = Vector<RequirementToContact>;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[InputUser](/type/InputUser/)> | Users to check. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputUser">InputUser</a>&gt;</td><td>Пользователи для проверки.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Vector](https://core.telegram.org/type/Vector%20t)<[RequirementToContact](/type/RequirementToContact/)\>
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Privacy settings](https://core.telegram.org/api/privacy)
+#### [Настройки приватности](/api/privacy/)
 
-Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.
+Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным способом.
 
-#### [Paid messages](https://core.telegram.org/api/paid-messages)
+#### [Платные сообщения](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured paid messages, requiring a payment for every message sent to them.
+Telegram Stars можно использовать для оплаты сообщений пользователям, супергруппам и каналам, в которых настроены платные сообщения: за каждое отправленное им сообщение взимается плата.
 
 #### [RequirementToContact](/type/RequirementToContact/)
 
-Specifies a requirement that must be satisfied in order to contact a user.
+Задаёт требование, которое должно быть выполнено, чтобы связаться с пользователем.

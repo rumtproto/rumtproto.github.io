@@ -1,31 +1,24 @@
 ---
-title: "webPageAttributeTheme (конструктор)"
+title: "webPageAttributeTheme"
 original: "https://core.telegram.org/constructor/webPageAttributeTheme"
 section: ref
 kind: constructor
+description: "Тема оформления страницы"
 layout: layout.njk
 ---
 
 # webPageAttributeTheme
 
-*Конструктор из схемы TL.*
-
-> Page theme
-
-## Определение TL
+Тема оформления страницы
 
 ```
 webPageAttributeTheme#54b56617 flags:# documents:flags.0?Vector<Document> settings:flags.1?ThemeSettings = WebPageAttribute;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| documents | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[Vector](https://core.telegram.org/type/Vector%20t)<[Document](/type/Document/)> | Theme files |
-| settings | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[ThemeSettings](/type/ThemeSettings/) | Theme settings |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>documents</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/Document">Document</a>&gt;</td><td>Файлы темы оформления</td></tr><tr><td><strong>settings</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/ThemeSettings">ThemeSettings</a></td><td>Параметры темы оформления</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [WebPageAttribute](/type/WebPageAttribute/)

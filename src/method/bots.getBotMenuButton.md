@@ -1,18 +1,15 @@
 ---
-title: "bots.getBotMenuButton (метод)"
+title: "bots.getBotMenuButton"
 original: "https://core.telegram.org/method/bots.getBotMenuButton"
 section: ref
 kind: method
+description: "Получает действие кнопки меню для указанного пользователя или для всех пользователей, ранее заданное с помощью bots.setBotMenuButton; пользователи видят эту информацию в…"
 layout: layout.njk
 ---
 
 # bots.getBotMenuButton
 
-*Метод из схемы TL.*
-
-> Gets the menu button action for a given user or for all users, previously set using [bots.setBotMenuButton](/method/bots.setBotMenuButton/); users can see this information in the [botInfo](/constructor/botInfo/) constructor.
-
-## Определение TL
+Получает действие кнопки меню для указанного пользователя или для всех пользователей, ранее заданное с помощью [bots.setBotMenuButton](/method/bots.setBotMenuButton/); пользователи видят эту информацию в конструкторе [botInfo](/constructor/botInfo/).
 
 ```
 botMenuButtonDefault#7533a588 = BotMenuButton;
@@ -22,30 +19,26 @@ botMenuButton#c7b57ce6 text:string url:string = BotMenuButton;
 bots.getBotMenuButton#9c60eb28 user_id:InputUser = BotMenuButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| user_id | [InputUser](/type/InputUser/) | User ID or empty for the default menu button. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор пользователя либо пусто для кнопки меню по умолчанию.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [BotMenuButton](/type/BotMenuButton/)
 
-## Only bots can use this method
+### Этот метод доступен только ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | USER_BOT_REQUIRED | This method can only be called by a bot. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>USER_BOT_REQUIRED</td><td>Этот метод может вызывать только бот.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [bots.setBotMenuButton](/method/bots.setBotMenuButton/)
 
-Sets the [menu button action »](https://core.telegram.org/api/bots/menu) for a given user or for all users
+Задаёт [действие кнопки меню »](/api/bots/menu/) для указанного пользователя или для всех пользователей
 
 #### [botInfo](/constructor/botInfo/)
 
-Info about bots (available bot commands, etc)
+Информация о ботах (доступные команды бота и прочее)

@@ -1,33 +1,30 @@
 ---
-title: "phoneCallDiscardReasonMissed (конструктор)"
+title: "phoneCallDiscardReasonMissed"
 original: "https://core.telegram.org/constructor/phoneCallDiscardReasonMissed"
 section: ref
 kind: constructor
+description: "Звонок был пропущен; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # phoneCallDiscardReasonMissed
 
-*Конструктор из схемы TL.*
-
-> The phone call was missed, see [here »](https://core.telegram.org/api/calls) for more info.
-
-## Определение TL
+Звонок был пропущен; подробнее см. [здесь »](/api/calls/).
 
 ```
 phoneCallDiscardReasonMissed#85e42301 = PhoneCallDiscardReason;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [PhoneCallDiscardReason](/type/PhoneCallDiscardReason/)
 
-## Related pages
+### Связанные страницы
 
-#### [Phone calls](https://core.telegram.org/api/calls)
+#### [Звонки](/api/calls/)
 
-Telegram supports end-to-end-encrypted one-to-one voice and video calls.
+Telegram поддерживает голосовые и видеозвонки один на один со сквозным шифрованием.

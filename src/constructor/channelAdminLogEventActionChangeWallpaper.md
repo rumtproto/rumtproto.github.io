@@ -1,36 +1,30 @@
 ---
-title: "channelAdminLogEventActionChangeWallpaper (конструктор)"
+title: "channelAdminLogEventActionChangeWallpaper"
 original: "https://core.telegram.org/constructor/channelAdminLogEventActionChangeWallpaper"
 section: ref
 kind: constructor
+description: "Изменились обои"
 layout: layout.njk
 ---
 
 # channelAdminLogEventActionChangeWallpaper
 
-*Конструктор из схемы TL.*
-
-> The [wallpaper](https://core.telegram.org/api/wallpapers) was changed
-
-## Определение TL
+Изменились [обои](/api/wallpapers/)
 
 ```
 channelAdminLogEventActionChangeWallpaper#31bb5d52 prev_value:WallPaper new_value:WallPaper = ChannelAdminLogEventAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| prev_value | [WallPaper](/type/WallPaper/) | Previous wallpaper |
-| new_value | [WallPaper](/type/WallPaper/) | New wallpaper |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>prev_value</strong></td><td style="text-align: center;"><a href="/type/WallPaper">WallPaper</a></td><td>Предыдущие обои</td></tr><tr><td><strong>new_value</strong></td><td style="text-align: center;"><a href="/type/WallPaper">WallPaper</a></td><td>Новые обои</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelAdminLogEventAction](/type/ChannelAdminLogEventAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.

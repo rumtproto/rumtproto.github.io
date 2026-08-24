@@ -1,20 +1,19 @@
 ---
-title: "messages.sendVote (метод)"
+title: "messages.sendVote"
 original: "https://core.telegram.org/method/messages.sendVote"
 section: ref
 kind: method
+description: "Проголосовать в опросе"
 layout: layout.njk
 ---
 
 # messages.sendVote
 
-*Метод из схемы TL.*
+Проголосовать в [опросе](/constructor/poll/)
 
-> Vote in a [poll](/constructor/poll/)
-> Starting from layer 159, the vote will be sent from the peer specified using [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/).
-> Before voting, clients should check that the user is actually allowed to vote: voting is not possible if the poll is closed, if it is [subscriber-only »](https://core.telegram.org/api/poll#subscriber-only-polls) and the user is not an eligible subscriber, or if it is [country-restricted »](https://core.telegram.org/api/poll#country-restricted-polls) and the user's [`phone_country_iso2` »](https://core.telegram.org/api/config#phone-country-iso2) is not in the poll's allowed country list. See [vote restrictions »](https://core.telegram.org/api/poll#vote-restrictions) for the full list of conditions.
+Начиная со слоя 159 голос отправляется от имени пира, указанного через [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/).
 
-## Определение TL
+Перед голосованием клиентам следует проверить, что пользователю действительно разрешено голосовать: голосование невозможно, если опрос закрыт, если он [только для подписчиков »](/api/poll/#subscriber-only-polls), а у пользователя нет нужной подписки, либо если он [ограничен по странам »](/api/poll/#country-restricted-polls), а [`phone_country_iso2` »](/api/config/#phone-country-iso2) пользователя отсутствует в списке разрешённых стран опроса. Полный перечень условий см. в разделе [ограничения на голосование »](/api/poll/#vote-restrictions).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -28,50 +27,34 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.sendVote#10ea6184 peer:InputPeer msg_id:int options:Vector<bytes> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The chat where the poll was sent |
-| msg_id | [int](/type/int/) | The message ID of the poll |
-| options | [Vector](https://core.telegram.org/type/Vector%20t)<[bytes](/type/bytes/)> | The options that were chosen |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат, в котором был отправлен опрос</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения с опросом</td></tr><tr><td><strong>options</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/bytes">bytes</a>&gt;</td><td>Выбранные варианты</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | MESSAGE_POLL_CLOSED | Poll closed. |
-| 400 | MSG_ID_INVALID | Invalid message ID provided. |
-| 400 | OPTIONS_TOO_MUCH | Too many options provided. |
-| 400 | OPTION_INVALID | Invalid option selected. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 406 | POLL_COUNTRY_RESTRICTED | Users from the current user's country cannot vote in this [country-restricted poll »](https://core.telegram.org/api/poll#country-restricted-polls). |
-| 406 | POLL_MEMBER_RESTRICTED | Only channel subscribers can vote in this poll. |
-| 400 | REVOTE_NOT_ALLOWED | You cannot change your vote. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>MESSAGE_POLL_CLOSED</td><td>Опрос закрыт.</td></tr><tr><td>400</td><td>MSG_ID_INVALID</td><td>Указан недействительный идентификатор сообщения.</td></tr><tr><td>400</td><td>OPTIONS_TOO_MUCH</td><td>Указано слишком много вариантов.</td></tr><tr><td>400</td><td>OPTION_INVALID</td><td>Выбран недопустимый вариант.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>406</td><td>POLL_COUNTRY_RESTRICTED</td><td>Пользователи из страны текущего пользователя не могут голосовать в этом <a href="/api/poll#country-restricted-polls">опросе с ограничением по странам&nbsp;»</a>.</td></tr><tr><td>406</td><td>POLL_MEMBER_RESTRICTED</td><td>Голосовать в этом опросе могут только подписчики канала.</td></tr><tr><td>400</td><td>REVOTE_NOT_ALLOWED</td><td>Вы не можете изменить свой голос.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [poll](/constructor/poll/)
 
-Poll
+Опрос
 
 #### [messages.saveDefaultSendAs](/method/messages.saveDefaultSendAs/)
 
-Change the default peer that should be used when sending messages, reactions, poll votes to a specific group
+Изменить пир по умолчанию, используемый при отправке сообщений, реакций и голосов в опросах в определённую группу
 
-#### [Polls and quizzes](https://core.telegram.org/api/poll)
+#### [Опросы и викторины](/api/poll/)
 
-Telegram allows sending polls and quizzes, that can be voted on by thousands, if not millions of users in chats and channels.
+Telegram позволяет отправлять опросы и викторины, в которых могут проголосовать тысячи, если не миллионы пользователей в чатах и каналах.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

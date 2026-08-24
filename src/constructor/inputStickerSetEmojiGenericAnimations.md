@@ -1,33 +1,30 @@
 ---
-title: "inputStickerSetEmojiGenericAnimations (конструктор)"
+title: "inputStickerSetEmojiGenericAnimations"
 original: "https://core.telegram.org/constructor/inputStickerSetEmojiGenericAnimations"
 section: ref
 kind: constructor
+description: "Общий набор анимаций, содержащий анимации, которые проигрываются при реакции на сообщения обычным эмодзи без собственной анимации"
 layout: layout.njk
 ---
 
 # inputStickerSetEmojiGenericAnimations
 
-*Конструктор из схемы TL.*
-
-> Generic animation stickerset containing animations to play when [reacting to messages using a normal emoji without a custom animation](https://core.telegram.org/api/reactions)
-
-## Определение TL
+Общий набор анимаций, содержащий анимации, которые проигрываются при [реакции на сообщения обычным эмодзи без собственной анимации](/api/reactions/)
 
 ```
 inputStickerSetEmojiGenericAnimations#4c4d4ce = InputStickerSet;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputStickerSet](/type/InputStickerSet/)
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

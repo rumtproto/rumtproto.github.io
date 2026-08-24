@@ -1,18 +1,15 @@
 ---
-title: "channels.updateEmojiStatus (метод)"
+title: "channels.updateEmojiStatus"
 original: "https://core.telegram.org/method/channels.updateEmojiStatus"
 section: ref
 kind: method
+description: "Установить эмодзи-статус для канала или супергруппы."
 layout: layout.njk
 ---
 
 # channels.updateEmojiStatus
 
-*Метод из схемы TL.*
-
-> Set an [emoji status](https://core.telegram.org/api/emoji-status) for a channel or supergroup.
-
-## Определение TL
+Установить [эмодзи-статус](/api/emoji-status/) для канала или супергруппы.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,31 +23,26 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 channels.updateEmojiStatus#f0d3e6a8 channel:InputChannel emoji_status:EmojiStatus = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| channel | [InputChannel](/type/InputChannel/) | The channel/supergroup, must have at least [channel_emoji_status_level_min](https://core.telegram.org/api/config#channel-emoji-status-level-min)/[group_emoji_status_level_min](https://core.telegram.org/api/config#group-emoji-status-level-min) boosts. |
-| emoji_status | [EmojiStatus](/type/EmojiStatus/) | [Emoji status](https://core.telegram.org/api/emoji-status) to set |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>channel</strong></td><td style="text-align: center;"><a href="/type/InputChannel">InputChannel</a></td><td>Канал или супергруппа; должны иметь не менее <a href="/api/config#channel-emoji-status-level-min">channel_emoji_status_level_min</a>/<a href="/api/config#group-emoji-status-level-min">group_emoji_status_level_min</a> бустов.</td></tr><tr><td><strong>emoji_status</strong></td><td style="text-align: center;"><a href="/type/EmojiStatus">EmojiStatus</a></td><td><a href="/api/emoji-status">Эмодзи-статус</a>, который нужно установить</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Emoji status](https://core.telegram.org/api/emoji-status)
+#### [Эмодзи-статус](/api/emoji-status/)
 
-Telegram allows users to set an emoticon or a custom emoji as status, to show next to their name in chats and profiles.
+Telegram позволяет пользователям выбрать эмотикон или пользовательский эмодзи в качестве статуса, который отображается рядом с их именем в чатах и профилях.

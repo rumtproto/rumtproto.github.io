@@ -1,65 +1,48 @@
 ---
-title: "inputStorePaymentStarsGiveaway (конструктор)"
+title: "inputStorePaymentStarsGiveaway"
 original: "https://core.telegram.org/constructor/inputStorePaymentStarsGiveaway"
 section: ref
 kind: constructor
+description: "Используется для оплаты розыгрыша звёзд; подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # inputStorePaymentStarsGiveaway
 
-*Конструктор из схемы TL.*
-
-> Used to pay for a [star giveaway, see here »](https://core.telegram.org/api/giveaways#star-giveaways) for more info.
-
-## Определение TL
+Используется для оплаты [розыгрыша звёзд; подробнее см. здесь »](/api/giveaways/#star-giveaways).
 
 ```
 inputStorePaymentStarsGiveaway#751f08fa flags:# only_new_subscribers:flags.0?true winners_are_visible:flags.3?true stars:long boost_peer:InputPeer additional_peers:flags.1?Vector<InputPeer> countries_iso2:flags.2?Vector<string> prize_description:flags.4?string random_id:long until_date:int currency:string amount:long users:int = InputStorePaymentPurpose;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| only_new_subscribers | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, only new subscribers starting from the giveaway creation date will be able to participate to the giveaway. |
-| winners_are_visible | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | If set, giveaway winners are public and will be listed in a [messageMediaGiveawayResults](/constructor/messageMediaGiveawayResults/) message that will be automatically sent to the channel once the giveaway ends. |
-| stars | [long](/type/long/) | Total number of Telegram Stars being given away (each user will receive stars/users stars). |
-| boost_peer | [InputPeer](/type/InputPeer/) | The channel/supergroup starting the giveaway, that the user must join to participate, that will receive the giveaway [boosts](https://core.telegram.org/api/boost); see [here »](https://core.telegram.org/api/giveaways) for more info on giveaways. |
-| additional_peers | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[InputPeer](/type/InputPeer/)> | Additional channels that the user must join to participate to the giveaway can be specified here. |
-| countries_iso2 | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[Vector](https://core.telegram.org/type/Vector%20t)<[string](/type/string/)> | The set of users that can participate to the giveaway can be restricted by passing here an explicit whitelist of up to [giveaway_countries_max](https://core.telegram.org/api/config#giveaway-countries-max) countries, specified as two-letter ISO 3166-1 alpha-2 country codes. |
-| prize_description | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[string](/type/string/) | Can contain a textual description of additional giveaway prizes. |
-| random_id | [long](/type/long/) | Random ID to avoid resending the giveaway. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| until_date | [int](/type/int/) | The end date of the giveaway, must be at most [giveaway_period_max](https://core.telegram.org/api/config#giveaway-period-max) seconds in the future; see [here »](https://core.telegram.org/api/giveaways) for more info on giveaways. |
-| currency | [string](/type/string/) | Three-letter ISO 4217 [currency](https://core.telegram.org/bots/payments#supported-currencies) code |
-| amount | [long](/type/long/) | Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in [currencies.json](https://core.telegram.org/bots/payments/currencies.json), it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). |
-| users | [int](/type/int/) | Number of winners. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>only_new_subscribers</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, участвовать в розыгрыше смогут только новые подписчики, подписавшиеся не ранее даты создания розыгрыша.</td></tr><tr><td><strong>winners_are_visible</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Если установлено, победители розыгрыша публичны и будут перечислены в сообщении <a href="/constructor/messageMediaGiveawayResults">messageMediaGiveawayResults</a>, которое будет автоматически отправлено в канал по завершении розыгрыша.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Общее число разыгрываемых Telegram Stars (каждый пользователь получит <code>stars/users</code> stars).</td></tr><tr><td><strong>boost_peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Канал или супергруппа, запускающая розыгрыш, к которой пользователь должен присоединиться для участия и которая получит <a href="/api/boost">бусты</a> розыгрыша; подробнее о розыгрышах см. <a href="/api/giveaways">здесь »</a>.</td></tr><tr><td><strong>additional_peers</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPeer">InputPeer</a>&gt;</td><td>Здесь можно указать дополнительные каналы, на которые пользователь должен подписаться для участия в розыгрыше.</td></tr><tr><td><strong>countries_iso2</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/string">string</a>&gt;</td><td>Круг пользователей, которые могут участвовать в розыгрыше, можно ограничить, передав здесь явный белый список не более чем из <a href="/api/config#giveaway-countries-max">giveaway_countries_max</a> стран, заданных двухбуквенными кодами стран по ISO 3166-1 alpha-2.</td></tr><tr><td><strong>prize_description</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string">string</a></td><td>Может содержать текстовое описание дополнительных призов розыгрыша.</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:random_id] Случайный идентификатор, позволяющий избежать повторной отправки розыгрыша. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>until_date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Дата окончания розыгрыша; должна отстоять от текущего момента не более чем на <a href="/api/config#giveaway-period-max">giveaway_period_max</a> секунд; подробнее о розыгрышах см. <a href="/api/giveaways">здесь »</a>.</td></tr><tr><td><strong>currency</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Трёхбуквенный код <a href="/bots/payments#supported-currencies">валюты</a> по ISO 4217</td></tr><tr><td><strong>amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Итоговая цена в наименьших единицах валюты (целое число, не float/double). Например, для цены <code>US$ 1.45</code> следует передать <code>amount = 145</code>. См. параметр exp в <a href="/bots/payments/currencies.json">currencies.json</a>: он указывает число знаков после запятой для каждой валюты (2 для большинства валют).</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество победителей.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputStorePaymentPurpose](/type/InputStorePaymentPurpose/)
 
-## Related pages
+### Связанные страницы
 
 #### [messageMediaGiveawayResults](/constructor/messageMediaGiveawayResults/)
 
-A [giveaway](https://core.telegram.org/api/giveaways) with public winners has finished, this constructor contains info about the winners.
+[Розыгрыш](/api/giveaways/) с публичными победителями завершился; этот конструктор содержит сведения о победителях.
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Bot Payments API](https://core.telegram.org/bots/payments)
+#### [Bot Payments API — платежи в ботах](https://core.telegram.org/bots/payments)

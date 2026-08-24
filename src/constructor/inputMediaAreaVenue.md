@@ -1,41 +1,34 @@
 ---
-title: "inputMediaAreaVenue (конструктор)"
+title: "inputMediaAreaVenue"
 original: "https://core.telegram.org/constructor/inputMediaAreaVenue"
 section: ref
 kind: constructor
+description: "Представляет метку места, прикреплённую к истории, с дополнительными сведениями о заведении."
 layout: layout.njk
 ---
 
 # inputMediaAreaVenue
 
-*Конструктор из схемы TL.*
-
-> Represents a [location tag](https://core.telegram.org/api/stories#media-areas) attached to a [story](https://core.telegram.org/api/stories), with additional venue information.
-
-## Определение TL
+Представляет [метку места](/api/stories/#media-areas), прикреплённую к [истории](/api/stories/), с дополнительными сведениями о заведении.
 
 ```
 inputMediaAreaVenue#b282217f coordinates:MediaAreaCoordinates query_id:long result_id:string = MediaArea;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| coordinates | [MediaAreaCoordinates](/type/MediaAreaCoordinates/) | The size and location of the media area corresponding to the location sticker on top of the story media. |
-| query_id | [long](/type/long/) | The query_id from [messages.botResults](/constructor/messages.botResults/), see [here »](https://core.telegram.org/api/stories#media-areas) for more info. |
-| result_id | [string](/type/string/) | The id of the chosen result, see [here »](https://core.telegram.org/api/stories#media-areas) for more info. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>coordinates</strong></td><td style="text-align: center;"><a href="/type/MediaAreaCoordinates">MediaAreaCoordinates</a></td><td>Размер и расположение области медиа, соответствующей стикеру с местоположением поверх медиа истории.</td></tr><tr><td><strong>query_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td><code>query_id</code> из <a href="/constructor/messages.botResults">messages.botResults</a>; подробнее см. <a href="/api/stories#media-areas">здесь »</a>.</td></tr><tr><td><strong>result_id</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><code>id</code> выбранного результата; подробнее см. <a href="/api/stories#media-areas">здесь »</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MediaArea](/type/MediaArea/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.botResults](/constructor/messages.botResults/)
 
-Result of a query to an inline bot
+Результат запроса к инлайн-боту
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

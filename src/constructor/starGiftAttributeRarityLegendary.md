@@ -1,27 +1,24 @@
 ---
-title: "starGiftAttributeRarityLegendary (конструктор)"
+title: "starGiftAttributeRarityLegendary"
 original: "https://core.telegram.org/constructor/starGiftAttributeRarityLegendary"
 section: ref
 kind: constructor
+description: "Обозначает легендарную редкость атрибута коллекционного подарка."
 layout: layout.njk
 ---
 
 # starGiftAttributeRarityLegendary
 
-*Конструктор из схемы TL.*
-
-> Represents legendary collectible gift attribute rarity.
-
-## Определение TL
+Обозначает легендарную редкость атрибута коллекционного подарка.
 
 ```
 starGiftAttributeRarityLegendary#cef7e7a8 = StarGiftAttributeRarity;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [StarGiftAttributeRarity](/type/StarGiftAttributeRarity/)

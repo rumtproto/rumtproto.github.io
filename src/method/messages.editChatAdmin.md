@@ -1,18 +1,15 @@
 ---
-title: "messages.editChatAdmin (метод)"
+title: "messages.editChatAdmin"
 original: "https://core.telegram.org/method/messages.editChatAdmin"
 section: ref
 kind: method
+description: "Назначить пользователя администратором обычной группы."
 layout: layout.njk
 ---
 
 # messages.editChatAdmin
 
-*Метод из схемы TL.*
-
-> Make a user admin in a [basic group](https://core.telegram.org/api/channel#basic-groups).
-
-## Определение TL
+Назначить пользователя администратором [обычной группы](/api/channel/#basic-groups).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,31 +18,22 @@ boolTrue#997275b5 = Bool;
 messages.editChatAdmin#a85bd1c2 chat_id:long user_id:InputUser is_admin:Bool = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chat_id | [long](/type/long/) | The ID of the group |
-| user_id | [InputUser](/type/InputUser/) | The user to make admin |
-| is_admin | [Bool](/type/Bool/) | Whether to make them admin |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chat_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор группы</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Пользователь, которого нужно назначить администратором</td></tr><tr><td><strong>is_admin</strong></td><td style="text-align: center;"><a href="/type/Bool">Bool</a></td><td>Назначать ли их администратором</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ID_INVALID | The provided chat id is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | USER_ID_INVALID | The provided user ID is invalid. |
-| 400 | USER_NOT_PARTICIPANT | You're not a member of this supergroup/channel. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ID_INVALID</td><td>Указанный идентификатор чата недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>USER_ID_INVALID</td><td>Указанный идентификатор пользователя недействителен.</td></tr><tr><td>400</td><td>USER_NOT_PARTICIPANT</td><td>Вы не состоите в этой супергруппе или канале.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

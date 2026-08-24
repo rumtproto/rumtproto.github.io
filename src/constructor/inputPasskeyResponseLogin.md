@@ -1,43 +1,36 @@
 ---
-title: "inputPasskeyResponseLogin (конструктор)"
+title: "inputPasskeyResponseLogin"
 original: "https://core.telegram.org/constructor/inputPasskeyResponseLogin"
 section: ref
 kind: constructor
+description: "Ответ WebAuthn при аутентификации, используемый при входе по ключу доступа; подробнее о полном процессе см. здесь »."
 layout: layout.njk
 ---
 
 # inputPasskeyResponseLogin
 
-*Конструктор из схемы TL.*
+Ответ WebAuthn при аутентификации, используемый при входе по ключу доступа; подробнее о полном процессе см. [здесь »](/api/passkeys/#logging-in-with-a-passkey).
 
-> WebAuthn authentication response used when logging in with a passkey, see [here »](https://core.telegram.org/api/passkeys#logging-in-with-a-passkey) for more info on the full flow.
-> Generated from the [AuthenticatorAssertionResponse](https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse) object.
-
-## Определение TL
+Формируется из объекта [AuthenticatorAssertionResponse](https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse).
 
 ```
 inputPasskeyResponseLogin#c31fc14a client_data:DataJSON authenticator_data:bytes signature:bytes user_handle:string = InputPasskeyResponse;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| client_data | [DataJSON](/type/DataJSON/) | Base64url-decoded clientDataJSON field of an [AuthenticatorAssertionResponse](https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse), wrapped in [dataJSON](/constructor/dataJSON/) |
-| authenticator_data | [bytes](/type/bytes/) | Base64url-decoded authenticatorData field of an [AuthenticatorAssertionResponse](https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse) |
-| signature | [bytes](/type/bytes/) | Base64url-decoded signature field of an [AuthenticatorAssertionResponse](https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse) |
-| user_handle | [string](/type/string/) | Base64url-decoded userHandle field of an [AuthenticatorAssertionResponse](https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse). The user handle specified by the server is in <dc_id>:<user_id> format. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>client_data</strong></td><td style="text-align: center;"><a href="/type/DataJSON">DataJSON</a></td><td>Декодированное из base64url поле <code>clientDataJSON</code> объекта <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse">AuthenticatorAssertionResponse</a>, обёрнутое в <a href="/constructor/dataJSON">dataJSON</a></td></tr><tr><td><strong>authenticator_data</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Декодированное из base64url поле <code>authenticatorData</code> объекта <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse">AuthenticatorAssertionResponse</a></td></tr><tr><td><strong>signature</strong></td><td style="text-align: center;"><a href="/type/bytes">bytes</a></td><td>Декодированное из base64url поле <code>signature</code> объекта <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse">AuthenticatorAssertionResponse</a></td></tr><tr><td><strong>user_handle</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Декодированное из base64url поле <code>userHandle</code> объекта <a href="https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse">AuthenticatorAssertionResponse</a>. Идентификатор пользователя, задаваемый сервером, имеет формат <code>&lt;dc_id&gt;:&lt;user_id&gt;</code>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputPasskeyResponse](/type/InputPasskeyResponse/)
 
-## Related pages
+### Связанные страницы
 
 #### [dataJSON](/constructor/dataJSON/)
 
-Represents a json-encoded object
+Представляет объект в формате JSON
 
-#### [Passkey login](https://core.telegram.org/api/passkeys)
+#### [Вход по passkey](/api/passkeys/)
 
-Log in to Telegram instantly with a passkey using a PIN or biometrics instead of an SMS code.
+Мгновенный вход в Telegram с помощью passkey — по PIN-коду или биометрии вместо SMS-кода.

@@ -1,36 +1,30 @@
 ---
-title: "account.emailVerifiedLogin (конструктор)"
+title: "account.emailVerifiedLogin"
 original: "https://core.telegram.org/constructor/account.emailVerifiedLogin"
 section: ref
 kind: constructor
+description: "Адрес электронной почты подтверждён верно, и на него только что был отправлен код для входа."
 layout: layout.njk
 ---
 
 # account.emailVerifiedLogin
 
-*Конструктор из схемы TL.*
-
-> The email was verified correctly, and a login code was just sent to it.
-
-## Определение TL
+Адрес электронной почты подтверждён верно, и на него только что был отправлен код для входа.
 
 ```
 account.emailVerifiedLogin#e1bb0d61 email:string sent_code:auth.SentCode = account.EmailVerified;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| email | [string](/type/string/) | The verified email address. |
-| sent_code | [auth.SentCode](/type/auth.SentCode/) | Info about the sent [login code](/api/auth/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>email</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Подтверждённый адрес электронной почты.</td></tr><tr><td><strong>sent_code</strong></td><td style="text-align: center;"><a href="/type/auth.SentCode">auth.SentCode</a></td><td>Информация об отправленном <a href="/api/auth">коде для входа</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.EmailVerified](/type/account.EmailVerified/)
 
-## Related pages
+### Связанные страницы
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

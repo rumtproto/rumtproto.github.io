@@ -1,36 +1,30 @@
 ---
-title: "botCommandScopePeerUser (конструктор)"
+title: "botCommandScopePeerUser"
 original: "https://core.telegram.org/constructor/botCommandScopePeerUser"
 section: ref
 kind: constructor
+description: "Указанные команды бота будут действовать только для конкретного пользователя в указанной группе или супергруппе."
 layout: layout.njk
 ---
 
 # botCommandScopePeerUser
 
-*Конструктор из схемы TL.*
-
-> The specified bot commands will be valid only for a specific user in the specified [group or supergroup](https://core.telegram.org/api/channel).
-
-## Определение TL
+Указанные команды бота будут действовать только для конкретного пользователя в указанной [группе или супергруппе](/api/channel/).
 
 ```
 botCommandScopePeerUser#a1321f3 peer:InputPeer user_id:InputUser = BotCommandScope;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The chat |
-| user_id | [InputUser](/type/InputUser/) | The user |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Пользователь</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BotCommandScope](/type/BotCommandScope/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.

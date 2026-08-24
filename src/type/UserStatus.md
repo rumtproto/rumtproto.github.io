@@ -1,18 +1,15 @@
 ---
-title: "UserStatus (тип)"
+title: "UserStatus"
 original: "https://core.telegram.org/type/UserStatus"
 section: ref
 kind: type
+description: "Статус пользователя в сети"
 layout: layout.njk
 ---
 
 # UserStatus
 
-*Тип из схемы TL.*
-
-> User online status
-
-## Определение TL
+Статус пользователя в сети
 
 ```
 userStatusEmpty#9d05049 = UserStatus;
@@ -23,13 +20,6 @@ userStatusLastWeek#541a1d1a flags:# by_me:flags.0?true = UserStatus;
 userStatusLastMonth#65899777 flags:# by_me:flags.0?true = UserStatus;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [userStatusEmpty](/constructor/userStatusEmpty/) | User status has not been set yet. |
-| [userStatusOnline](/constructor/userStatusOnline/) | Online status of the user. |
-| [userStatusOffline](/constructor/userStatusOffline/) | The user's offline status. |
-| [userStatusRecently](/constructor/userStatusRecently/) | Online status: last seen recently |
-| [userStatusLastWeek](/constructor/userStatusLastWeek/) | Online status: last seen last week |
-| [userStatusLastMonth](/constructor/userStatusLastMonth/) | Online status: last seen last month |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/userStatusEmpty">userStatusEmpty</a></td><td>Статус пользователя ещё не установлен.</td></tr><tr><td><a href="/constructor/userStatusOnline">userStatusOnline</a></td><td>Статус пользователя в сети.</td></tr><tr><td><a href="/constructor/userStatusOffline">userStatusOffline</a></td><td>Статус пользователя «не в сети».</td></tr><tr><td><a href="/constructor/userStatusRecently">userStatusRecently</a></td><td>Статус в сети: недавно был в сети</td></tr><tr><td><a href="/constructor/userStatusLastWeek">userStatusLastWeek</a></td><td>Статус в сети: последний раз в сети на прошлой неделе</td></tr><tr><td><a href="/constructor/userStatusLastMonth">userStatusLastMonth</a></td><td>Статус в сети: последний раз в сети в прошлом месяце</td></tr></tbody></table>

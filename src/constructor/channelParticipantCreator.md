@@ -1,38 +1,30 @@
 ---
-title: "channelParticipantCreator (конструктор)"
+title: "channelParticipantCreator"
 original: "https://core.telegram.org/constructor/channelParticipantCreator"
 section: ref
 kind: constructor
+description: "Создатель канала или супергруппы"
 layout: layout.njk
 ---
 
 # channelParticipantCreator
 
-*Конструктор из схемы TL.*
-
-> Channel/supergroup creator
-
-## Определение TL
+Создатель канала или супергруппы
 
 ```
 channelParticipantCreator#2fe601d3 flags:# user_id:long admin_rights:ChatAdminRights rank:flags.0?string = ChannelParticipant;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| user_id | [long](/type/long/) | User ID |
-| admin_rights | [ChatAdminRights](/type/ChatAdminRights/) | Creator admin rights |
-| rank | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | The participant's [tag »](https://core.telegram.org/api/rank), defaults to "Owner" if not set. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя</td></tr><tr><td><strong>admin_rights</strong></td><td style="text-align: center;"><a href="/type/ChatAdminRights">ChatAdminRights</a></td><td>Права администратора для создателя</td></tr><tr><td><strong>rank</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td><a href="/api/rank">Звание »</a> участника; если не задано, по умолчанию используется «Owner».</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ChannelParticipant](/type/ChannelParticipant/)
 
-## Related pages
+### Связанные страницы
 
-#### [Group participant tags](https://core.telegram.org/api/rank)
+#### [Звание](/api/rank/)
 
-Members in group chats (both basic groups and supergroups) can add a tag next to their name — to show their role at work, what they study in school, and more.
+Участники групповых чатов (как обычных групп, так и супергрупп) могут добавить рядом со своим именем тег — чтобы указать свою роль на работе, что они изучают в учебном заведении и прочее.

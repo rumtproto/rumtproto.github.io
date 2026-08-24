@@ -1,18 +1,15 @@
 ---
-title: "EmailVerifyPurpose (тип)"
+title: "EmailVerifyPurpose"
 original: "https://core.telegram.org/type/EmailVerifyPurpose"
 section: ref
 kind: type
+description: "Назначение подтверждения электронной почты"
 layout: layout.njk
 ---
 
 # EmailVerifyPurpose
 
-*Тип из схемы TL.*
-
-> Email verification purpose
-
-## Определение TL
+Назначение подтверждения электронной почты
 
 ```
 emailVerifyPurposeLoginSetup#4345be73 phone_number:string phone_code_hash:string = EmailVerifyPurpose;
@@ -20,10 +17,6 @@ emailVerifyPurposeLoginChange#527d22eb = EmailVerifyPurpose;
 emailVerifyPurposePassport#bbf51685 = EmailVerifyPurpose;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [emailVerifyPurposeLoginSetup](/constructor/emailVerifyPurposeLoginSetup/) | Email verification purpose: setup login email |
-| [emailVerifyPurposeLoginChange](/constructor/emailVerifyPurposeLoginChange/) | Email verification purpose: change login email |
-| [emailVerifyPurposePassport](/constructor/emailVerifyPurposePassport/) | Verify an email for use in [telegram passport](https://core.telegram.org/api/passport) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/emailVerifyPurposeLoginSetup">emailVerifyPurposeLoginSetup</a></td><td>Назначение подтверждения электронной почты: настройка почты для входа</td></tr><tr><td><a href="/constructor/emailVerifyPurposeLoginChange">emailVerifyPurposeLoginChange</a></td><td>Назначение подтверждения электронной почты: смена почты для входа</td></tr><tr><td><a href="/constructor/emailVerifyPurposePassport">emailVerifyPurposePassport</a></td><td>Подтвердить адрес электронной почты для использования в <a href="/api/passport">telegram passport</a></td></tr></tbody></table>

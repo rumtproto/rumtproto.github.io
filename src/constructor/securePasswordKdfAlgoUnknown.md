@@ -1,27 +1,24 @@
 ---
-title: "securePasswordKdfAlgoUnknown (конструктор)"
+title: "securePasswordKdfAlgoUnknown"
 original: "https://core.telegram.org/constructor/securePasswordKdfAlgoUnknown"
 section: ref
 kind: constructor
+description: "Неизвестный алгоритм KDF (скорее всего, клиент необходимо обновить)"
 layout: layout.njk
 ---
 
 # securePasswordKdfAlgoUnknown
 
-*Конструктор из схемы TL.*
-
-> Unknown KDF algo (most likely the client has to be updated)
-
-## Определение TL
+Неизвестный алгоритм KDF (скорее всего, клиент необходимо обновить)
 
 ```
 securePasswordKdfAlgoUnknown#4a8537 = SecurePasswordKdfAlgo;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SecurePasswordKdfAlgo](/type/SecurePasswordKdfAlgo/)

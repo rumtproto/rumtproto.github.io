@@ -1,46 +1,36 @@
 ---
-title: "userProfilePhoto (конструктор)"
+title: "userProfilePhoto"
 original: "https://core.telegram.org/constructor/userProfilePhoto"
 section: ref
 kind: constructor
+description: "Фотография профиля пользователя."
 layout: layout.njk
 ---
 
 # userProfilePhoto
 
-*Конструктор из схемы TL.*
-
-> User profile photo.
-
-## Определение TL
+Фотография профиля пользователя.
 
 ```
 userProfilePhoto#82d1f706 flags:# has_video:flags.0?true personal:flags.2?true photo_id:long stripped_thumb:flags.1?bytes dc_id:int = UserProfilePhoto;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| has_video | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Whether an [animated profile picture](https://core.telegram.org/api/files/#animated-profile-pictures) is available for this user |
-| personal | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether this profile photo is only visible to us (i.e. it was set using [photos.uploadContactProfilePhoto](/method/photos.uploadContactProfilePhoto/)). |
-| photo_id | [long](/type/long/) | Identifier of the respective photo |
-| stripped_thumb | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[bytes](/type/bytes/) | [Stripped thumbnail](https://core.telegram.org/api/files/#stripped-thumbnails) |
-| dc_id | [int](/type/int/) | DC ID where the photo is stored |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>has_video</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Доступен ли для этого пользователя <a href="/api/files#animated-profile-pictures">анимированный аватар</a></td></tr><tr><td><strong>personal</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Видима ли эта фотография профиля только нам (то есть была ли она установлена методом <a href="/method/photos.uploadContactProfilePhoto">photos.uploadContactProfilePhoto</a>).</td></tr><tr><td><strong>photo_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор соответствующей фотографии</td></tr><tr><td><strong>stripped_thumb</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/bytes">bytes</a></td><td><a href="/api/files#stripped-thumbnails">Урезанная миниатюра</a></td></tr><tr><td><strong>dc_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор DC, где хранится фотография</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [UserProfilePhoto](/type/UserProfilePhoto/)
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.
 
 #### [photos.uploadContactProfilePhoto](/method/photos.uploadContactProfilePhoto/)
 
-Upload a custom profile picture for a contact, or suggest a new profile picture to a contact.
+Загрузить собственную фотографию профиля для контакта или предложить контакту новую фотографию профиля.
 
-The `file`, `video` and `video_emoji_markup` flags are mutually exclusive.
+Флаги `file`, `video` и `video_emoji_markup` взаимоисключающие.

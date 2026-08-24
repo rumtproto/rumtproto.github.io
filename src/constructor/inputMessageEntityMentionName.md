@@ -1,45 +1,38 @@
 ---
-title: "inputMessageEntityMentionName (конструктор)"
+title: "inputMessageEntityMentionName"
 original: "https://core.telegram.org/constructor/inputMessageEntityMentionName"
 section: ref
 kind: constructor
+description: "Сущность оформления, с помощью которой можно создать упоминание пользователя; в получаемых упоминаниях вместо неё используется конструктор messageEntityMentionName."
 layout: layout.njk
 ---
 
 # inputMessageEntityMentionName
 
-*Конструктор из схемы TL.*
-
-> Message entity that can be used to create a user [user mention](https://core.telegram.org/api/mentions): received mentions use the [messageEntityMentionName](/constructor/messageEntityMentionName/) constructor, instead.
-
-## Определение TL
+Сущность оформления, с помощью которой можно создать [упоминание пользователя](/api/mentions/); в получаемых упоминаниях вместо неё используется конструктор [messageEntityMentionName](/constructor/messageEntityMentionName/).
 
 ```
 inputMessageEntityMentionName#208e68c9 offset:int length:int user_id:InputUser = MessageEntity;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| offset | [int](/type/int/) | Offset of message entity within message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)) |
-| length | [int](/type/int/) | Length of message entity within message (in [UTF-16 code units](https://core.telegram.org/api/entities#entity-length)) |
-| user_id | [InputUser](/type/InputUser/) | Identifier of the user that was mentioned |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Смещение сущности оформления в сообщении (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>)</td></tr><tr><td><strong>length</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Длина сущности оформления в сообщении (в <a href="/api/entities#entity-length">кодовых единицах UTF-16</a>)</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор упомянутого пользователя</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageEntity](/type/MessageEntity/)
 
-## Related pages
+### Связанные страницы
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Mentions and replies](https://core.telegram.org/api/mentions)
+#### [Упоминания и ответы](/api/mentions/)
 
-Telegram allows mentioning other users in case of urgent duckling matters, and quickly navigating to those mentions in order to read them as swiftly as possible.
+Telegram позволяет упоминать других пользователей по срочным утиным вопросам и быстро переходить к этим упоминаниям, чтобы прочитать их как можно скорее.
 
 #### [messageEntityMentionName](/constructor/messageEntityMentionName/)
 
-Message entity representing a [user mention](https://core.telegram.org/api/mentions): for _creating_ a mention use [inputMessageEntityMentionName](/constructor/inputMessageEntityMentionName/).
+Сущность оформления, представляющая [упоминание пользователя](/api/mentions/): для _создания_ упоминания используйте [inputMessageEntityMentionName](/constructor/inputMessageEntityMentionName/).

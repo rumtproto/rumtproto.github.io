@@ -1,18 +1,15 @@
 ---
-title: "Bool (тип)"
+title: "Bool"
 original: "https://core.telegram.org/type/Bool"
 section: ref
 kind: type
+description: "Логический тип."
 layout: layout.njk
 ---
 
 # Bool
 
-*Тип из схемы TL.*
-
-> Boolean type.
-
-## Определение TL
+Логический тип.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -239,9 +236,6 @@ smsjobs.updateSettings#93fa0bf flags:# allow_international:flags.0?true = Bool;
 smsjobs.finishJob#4f1ebf24 flags:# job_id:string error:flags.0?string = Bool;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [boolFalse](/constructor/boolFalse/) | Constructor may be interpreted as a booleanfalse value. |
-| [boolTrue](/constructor/boolTrue/) | The constructor can be interpreted as a booleantrue value. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/boolFalse">boolFalse</a></td><td>Конструктор может трактоваться как <strong>логическое</strong><code>false</code> значение.</td></tr><tr><td><a href="/constructor/boolTrue">boolTrue</a></td><td>Конструктор может интерпретироваться как <strong>логическое</strong><code>true</code> значение.</td></tr></tbody></table>

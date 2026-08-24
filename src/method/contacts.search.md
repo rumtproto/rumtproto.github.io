@@ -1,18 +1,15 @@
 ---
-title: "contacts.search (метод)"
+title: "contacts.search"
 original: "https://core.telegram.org/method/contacts.search"
 section: ref
 kind: method
+description: "Возвращает пользователей, найденных по подстроке имени пользователя."
 layout: layout.njk
 ---
 
 # contacts.search
 
-*Метод из схемы TL.*
-
-> Returns users found by username substring.
-
-## Определение TL
+Возвращает пользователей, найденных по подстроке имени пользователя.
 
 ```
 contacts.found#b3134d9d my_results:Vector<Peer> results:Vector<Peer> chats:Vector<Chat> users:Vector<User> = contacts.Found;
@@ -20,26 +17,20 @@ contacts.found#b3134d9d my_results:Vector<Peer> results:Vector<Peer> chats:Vecto
 contacts.search#11f812d8 q:string limit:int = contacts.Found;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| q | [string](/type/string/) | Target substring |
-| limit | [int](/type/int/) | Maximum number of users to be returned |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>q</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Целевая подстрока</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Максимальное количество возвращаемых пользователей</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [contacts.Found](/type/contacts.Found/)
 
-## Notes
+### Примечания
 
-This method will exclude the current user's contacts from the search results. It is assumed that searches among the user's contacts can be handled locally by the client.
+Этот метод исключает из результатов поиска контакты текущего пользователя. Предполагается, что поиск по контактам пользователя клиент выполняет локально.
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | QUERY_TOO_SHORT | The query string is too short. |
-| 400 | SEARCH_QUERY_EMPTY | The search query is empty. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>QUERY_TOO_SHORT</td><td>Строка запроса слишком короткая.</td></tr><tr><td>400</td><td>SEARCH_QUERY_EMPTY</td><td>Поисковый запрос пуст.</td></tr></tbody></table>

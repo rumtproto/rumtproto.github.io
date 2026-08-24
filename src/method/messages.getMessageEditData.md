@@ -1,18 +1,15 @@
 ---
-title: "messages.getMessageEditData (метод)"
+title: "messages.getMessageEditData"
 original: "https://core.telegram.org/method/messages.getMessageEditData"
 section: ref
 kind: method
+description: "Узнать, можно ли изменить подпись к медиасообщению"
 layout: layout.njk
 ---
 
 # messages.getMessageEditData
 
-*Метод из схемы TL.*
-
-> Find out if a media message's caption can be edited
-
-## Определение TL
+Узнать, можно ли изменить подпись к медиасообщению
 
 ```
 messages.messageEditData#26b5dde6 flags:# caption:flags.0?true = messages.MessageEditData;
@@ -20,25 +17,16 @@ messages.messageEditData#26b5dde6 flags:# caption:flags.0?true = messages.Messag
 messages.getMessageEditData#fda68d36 peer:InputPeer id:int = messages.MessageEditData;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer where the media was sent |
-| id | [int](/type/int/) | ID of message |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир, в который было отправлено медиа</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Идентификатор сообщения</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.MessageEditData](/type/messages.MessageEditData/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 403 | CHAT_WRITE_FORBIDDEN | You can't write in this chat. |
-| 403 | MESSAGE_AUTHOR_REQUIRED | Message author required. |
-| 400 | MESSAGE_ID_INVALID | The provided message id is invalid. |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>403</td><td>CHAT_WRITE_FORBIDDEN</td><td>Вы не можете писать в этот чат.</td></tr><tr><td>403</td><td>MESSAGE_AUTHOR_REQUIRED</td><td>Требуется автор сообщения.</td></tr><tr><td>400</td><td>MESSAGE_ID_INVALID</td><td>Указанный идентификатор сообщения недействителен.</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr></tbody></table>

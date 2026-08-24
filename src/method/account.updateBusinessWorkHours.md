@@ -1,21 +1,20 @@
 ---
-title: "account.updateBusinessWorkHours (метод)"
+title: "account.updateBusinessWorkHours"
 original: "https://core.telegram.org/method/account.updateBusinessWorkHours"
 section: ref
 kind: method
+description: "Задать часы работы Telegram Business."
 layout: layout.njk
 ---
 
 # account.updateBusinessWorkHours
 
-*Метод из схемы TL.*
+Задать [часы работы Telegram Business](/api/business/#opening-hours).  
+Эти сведения будут содержаться в поле [userFull](/constructor/userFull/).`business_work_hours`.
 
-> Specify a set of [Telegram Business opening hours](https://core.telegram.org/api/business#opening-hours).  
-> This info will be contained in [userFull](/constructor/userFull/).`business_work_hours`.
-> To remove all opening hours, invoke the method without setting the `business_work_hours` field.
-> Note that the opening hours specified by the user must be appropriately validated and transformed before invoking the method, as specified [here »](https://core.telegram.org/api/business#opening-hours).
+Чтобы удалить все часы работы, вызовите метод, не задавая поле `business_work_hours`.
 
-## Определение TL
+Обратите внимание, что указанные пользователем часы работы необходимо соответствующим образом проверить и преобразовать перед вызовом метода, как описано [здесь »](/api/business/#opening-hours).
 
 ```
 boolFalse#bc799737 = Bool;
@@ -24,35 +23,28 @@ boolTrue#997275b5 = Bool;
 account.updateBusinessWorkHours#4b00e066 flags:# business_work_hours:flags.0?BusinessWorkHours = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| business_work_hours | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[BusinessWorkHours](/type/BusinessWorkHours/) | Opening hours (optional, if not set removes all opening hours). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>business_work_hours</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/BusinessWorkHours">BusinessWorkHours</a></td><td>Часы работы (необязательно; если не задано, все часы работы удаляются).</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BUSINESS_WORK_HOURS_EMPTY | No work hours were specified. |
-| 400 | BUSINESS_WORK_HOURS_PERIOD_INVALID | The specified work hours are invalid, see [here »](https://core.telegram.org/api/business#opening-hours) for the exact requirements. |
-| 400 | TIMEZONE_INVALID | The specified timezone does not exist. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BUSINESS_WORK_HOURS_EMPTY</td><td>Не указаны рабочие часы.</td></tr><tr><td>400</td><td>BUSINESS_WORK_HOURS_PERIOD_INVALID</td><td>Указанные часы работы недействительны, точные требования см. <a href="/api/business#opening-hours">здесь&nbsp;»</a>.</td></tr><tr><td>400</td><td>TIMEZONE_INVALID</td><td>Указанный часовой пояс не существует.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Business](https://core.telegram.org/api/business)
+#### [Telegram Business](/api/business/)
 
-Users can turn their Telegram account into a business account, gaining access to business features such as opening hours, location, quick replies, automated messages, custom start pages, chatbot support, and more.
+Пользователи могут превратить свою учётную запись Telegram в бизнес-аккаунт и получить доступ к возможностям Telegram Business: часам работы, местоположению, быстрым ответам, автоматическим сообщениям, настраиваемым стартовым страницам, поддержке чат-ботов и не только.
 
 #### [userFull](/constructor/userFull/)
 
-Extended user info
+Расширенные сведения о пользователе
 
-When updating the [local peer database »](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor).
+При обновлении [локальной базы пиров »](/api/peers/) все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе удаляются поля, не заданные в новом конструкторе).

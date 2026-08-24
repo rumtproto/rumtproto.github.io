@@ -1,18 +1,15 @@
 ---
-title: "DecryptedMessageAction (тип)"
+title: "DecryptedMessageAction"
 original: "https://core.telegram.org/type/DecryptedMessageAction"
 section: ref
 kind: type
+description: "Объект описывает действие, с которым связано сервисное сообщение."
 layout: layout.njk
 ---
 
 # DecryptedMessageAction
 
-*Тип из схемы TL.*
-
-> Object describes the action to which a service message is linked.
-
-## Определение TL
+Объект описывает действие, с которым связано сервисное сообщение.
 
 ```
 ===8===
@@ -35,20 +32,6 @@ decryptedMessageActionCommitKey#ec2e0b9b exchange_id:long key_fingerprint:long =
 decryptedMessageActionNoop#a82fdd63 = DecryptedMessageAction;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [decryptedMessageActionSetMessageTTL](/constructor/decryptedMessageActionSetMessageTTL/) | Setting of a message lifetime after reading. Upon receiving such message the client shall start deleting of all messages of an encrypted chat ttl_seconds seconds after the messages were read by user. |
-| [decryptedMessageActionReadMessages](/constructor/decryptedMessageActionReadMessages/) | Messages marked as read. |
-| [decryptedMessageActionDeleteMessages](/constructor/decryptedMessageActionDeleteMessages/) | Deleted messages. |
-| [decryptedMessageActionScreenshotMessages](/constructor/decryptedMessageActionScreenshotMessages/) | A screenshot was taken. |
-| [decryptedMessageActionFlushHistory](/constructor/decryptedMessageActionFlushHistory/) | The entire message history has been deleted. |
-| [decryptedMessageActionResend](/constructor/decryptedMessageActionResend/) | Request for the other party in a Secret Chat to automatically resend a contiguous range of previously sent messages, as explained in [Sequence number is Secret Chats](https://core.telegram.org/api/end-to-end/seq_no). |
-| [decryptedMessageActionNotifyLayer](/constructor/decryptedMessageActionNotifyLayer/) | A notification stating the API layer that is used by the client. You should use your current layer and take notice of the layer used on the other side of a conversation when sending messages. |
-| [decryptedMessageActionTyping](/constructor/decryptedMessageActionTyping/) | User is preparing a message: typing, recording, uploading, etc. |
-| [decryptedMessageActionRequestKey](/constructor/decryptedMessageActionRequestKey/) | Request rekeying, see [rekeying process](https://core.telegram.org/api/end-to-end/pfs) |
-| [decryptedMessageActionAcceptKey](/constructor/decryptedMessageActionAcceptKey/) | Accept new key |
-| [decryptedMessageActionAbortKey](/constructor/decryptedMessageActionAbortKey/) | Abort rekeying |
-| [decryptedMessageActionCommitKey](/constructor/decryptedMessageActionCommitKey/) | Commit new key, see [rekeying process](https://core.telegram.org/api/end-to-end/pfs) |
-| [decryptedMessageActionNoop](/constructor/decryptedMessageActionNoop/) | NOOP action |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/decryptedMessageActionSetMessageTTL">decryptedMessageActionSetMessageTTL</a></td><td>Настройка времени жизни сообщения после прочтения.<br><br>Получив такое сообщение, клиент обязан начать удаление всех сообщений секретного чата через <strong>ttl_seconds</strong> секунд после того, как пользователь их прочитал.</td></tr><tr><td><a href="/constructor/decryptedMessageActionReadMessages">decryptedMessageActionReadMessages</a></td><td>Сообщения отмечены как прочитанные.</td></tr><tr><td><a href="/constructor/decryptedMessageActionDeleteMessages">decryptedMessageActionDeleteMessages</a></td><td>Удалённые сообщения.</td></tr><tr><td><a href="/constructor/decryptedMessageActionScreenshotMessages">decryptedMessageActionScreenshotMessages</a></td><td>Сделан снимок экрана.</td></tr><tr><td><a href="/constructor/decryptedMessageActionFlushHistory">decryptedMessageActionFlushHistory</a></td><td>Вся история сообщений была удалена.</td></tr><tr><td><a href="/constructor/decryptedMessageActionResend">decryptedMessageActionResend</a></td><td>Запрос к другой стороне секретного чата на автоматическую повторную отправку непрерывного диапазона ранее отправленных сообщений, как описано в разделе <a href="/api/end-to-end/seq_no">Sequence number is Secret Chats</a>.</td></tr><tr><td><a href="/constructor/decryptedMessageActionNotifyLayer">decryptedMessageActionNotifyLayer</a></td><td>Уведомление о том, какой слой API использует клиент. Следует использовать свой текущий слой и при отправке сообщений учитывать слой, используемый на другой стороне переписки.</td></tr><tr><td><a href="/constructor/decryptedMessageActionTyping">decryptedMessageActionTyping</a></td><td>Пользователь готовит сообщение: набирает текст, записывает, загружает и т. п.</td></tr><tr><td><a href="/constructor/decryptedMessageActionRequestKey">decryptedMessageActionRequestKey</a></td><td>Запросить смену ключей, см. <a href="/api/end-to-end/pfs">процесс смены ключей</a></td></tr><tr><td><a href="/constructor/decryptedMessageActionAcceptKey">decryptedMessageActionAcceptKey</a></td><td>Принять новый ключ</td></tr><tr><td><a href="/constructor/decryptedMessageActionAbortKey">decryptedMessageActionAbortKey</a></td><td>Прервать смену ключей</td></tr><tr><td><a href="/constructor/decryptedMessageActionCommitKey">decryptedMessageActionCommitKey</a></td><td>Зафиксировать новый ключ, см. <a href="/api/end-to-end/pfs">процесс смены ключей</a></td></tr><tr><td><a href="/constructor/decryptedMessageActionNoop">decryptedMessageActionNoop</a></td><td>Действие NOOP</td></tr></tbody></table>

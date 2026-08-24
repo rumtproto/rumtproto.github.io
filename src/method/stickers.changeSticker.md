@@ -1,18 +1,15 @@
 ---
-title: "stickers.changeSticker (метод)"
+title: "stickers.changeSticker"
 original: "https://core.telegram.org/method/stickers.changeSticker"
 section: ref
 kind: method
+description: "Обновить ключевые слова, эмодзи или координаты маски стикера."
 layout: layout.njk
 ---
 
 # stickers.changeSticker
 
-*Метод из схемы TL.*
-
-> Update the keywords, emojis or [mask coordinates](https://core.telegram.org/api/stickers#mask-stickers) of a sticker.
-
-## Определение TL
+Обновить ключевые слова, эмодзи или [координаты маски](/api/stickers/#mask-stickers) стикера.
 
 ```
 messages.stickerSet#6e153f16 set:StickerSet packs:Vector<StickerPack> keywords:Vector<StickerKeyword> documents:Vector<Document> = messages.StickerSet;
@@ -21,30 +18,22 @@ messages.stickerSetNotModified#d3f924eb = messages.StickerSet;
 stickers.changeSticker#f5537ebc flags:# sticker:InputDocument emoji:flags.0?string mask_coords:flags.1?MaskCoords keywords:flags.2?string = messages.StickerSet;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| sticker | [InputDocument](/type/InputDocument/) | The sticker |
-| emoji | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | If set, updates the emoji list associated to the sticker |
-| mask_coords | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[MaskCoords](/type/MaskCoords/) | If set, updates the [mask coordinates](https://core.telegram.org/api/stickers#mask-stickers) |
-| keywords | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | If set, updates the sticker keywords (separated by commas). Can't be provided for mask stickers. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>sticker</strong></td><td style="text-align: center;"><a href="/type/InputDocument">InputDocument</a></td><td>Стикер</td></tr><tr><td><strong>emoji</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Если установлено, обновляет список эмодзи, связанных со стикером</td></tr><tr><td><strong>mask_coords</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/MaskCoords">MaskCoords</a></td><td>Если установлено, обновляет <a href="/api/stickers#mask-stickers">координаты маски</a></td></tr><tr><td><strong>keywords</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Если установлено, обновляет ключевые слова стикера (через запятую). Нельзя указывать для стикеров-масок.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [messages.StickerSet](/type/messages.StickerSet/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | STICKER_INVALID | The provided sticker is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>STICKER_INVALID</td><td>Указанный стикер недействителен.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Stickers and masks](https://core.telegram.org/api/stickers)
+#### [Стикеры и маски](/api/stickers/)
 
-Telegram clients support displaying static and animated stickers.
+Клиенты Telegram поддерживают отображение статических и анимированных стикеров.

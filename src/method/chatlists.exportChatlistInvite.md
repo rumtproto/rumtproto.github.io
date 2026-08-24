@@ -1,18 +1,15 @@
 ---
-title: "chatlists.exportChatlistInvite (метод)"
+title: "chatlists.exportChatlistInvite"
 original: "https://core.telegram.org/method/chatlists.exportChatlistInvite"
 section: ref
 kind: method
+description: "Экспортировать папку », создав глубокую ссылку на папку чатов »."
 layout: layout.njk
 ---
 
 # chatlists.exportChatlistInvite
 
-*Метод из схемы TL.*
-
-> Export a [folder »](https://core.telegram.org/api/folders), creating a [chat folder deep link »](https://core.telegram.org/api/links#chat-folder-links).
-
-## Определение TL
+Экспортировать [папку »](/api/folders/), создав [глубокую ссылку на папку чатов »](/api/links/#chat-folder-links).
 
 ```
 chatlists.exportedChatlistInvite#10e6e3a6 filter:DialogFilter invite:ExportedChatlistInvite = chatlists.ExportedChatlistInvite;
@@ -20,47 +17,34 @@ chatlists.exportedChatlistInvite#10e6e3a6 filter:DialogFilter invite:ExportedCha
 chatlists.exportChatlistInvite#8472478e chatlist:InputChatlist title:string peers:Vector<InputPeer> = chatlists.ExportedChatlistInvite;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| chatlist | [InputChatlist](/type/InputChatlist/) | The folder to export |
-| title | [string](/type/string/) | An optional name for the link |
-| peers | [Vector](https://core.telegram.org/type/Vector%20t)<[InputPeer](/type/InputPeer/)> | The list of channels, group and supergroups to share with the link. Basic groups will automatically be [converted to supergroups](https://core.telegram.org/api/channel#migration) when invoking the method. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>chatlist</strong></td><td style="text-align: center;"><a href="/type/InputChatlist">InputChatlist</a></td><td>Папка для экспорта</td></tr><tr><td><strong>title</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Необязательное название ссылки</td></tr><tr><td><strong>peers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPeer">InputPeer</a>&gt;</td><td>Список каналов, групп и супергрупп, доступ к которым предоставляется по ссылке. Обычные группы при вызове метода будут автоматически <a href="/api/channel#migration">преобразованы в супергруппы</a>.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [chatlists.ExportedChatlistInvite](/type/chatlists.ExportedChatlistInvite/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHANNEL_PRIVATE | You haven't joined this channel/supergroup. |
-| 400 | CHATLISTS_TOO_MUCH | You have created too many folder links, hitting the chatlist_invites_limit_default/chatlist_invites_limit_premium [limits »](https://core.telegram.org/api/config#chatlist-invites-limit-default). |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | FILTER_ID_INVALID | The specified filter ID is invalid. |
-| 400 | FILTER_NOT_SUPPORTED | The specified filter cannot be used in this context. |
-| 400 | INVITES_TOO_MUCH | The maximum number of per-folder invites specified by the chatlist_invites_limit_default/chatlist_invites_limit_premium [client configuration parameters »](https://core.telegram.org/api/config#chatlist-invites-limit-default) was reached. |
-| 400 | PEERS_LIST_EMPTY | The specified list of peers is empty. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHANNEL_PRIVATE</td><td>Вы не вступили в этот канал или супергруппу.</td></tr><tr><td>400</td><td>CHATLISTS_TOO_MUCH</td><td>Вы создали слишком много ссылок на папки, достигнув заданных параметрами <code>chatlist_invites_limit_default</code>/<code>chatlist_invites_limit_premium</code> <a href="/api/config#chatlist-invites-limit-default">ограничений&nbsp;»</a>.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>FILTER_ID_INVALID</td><td>Указанный идентификатор фильтра недействителен.</td></tr><tr><td>400</td><td>FILTER_NOT_SUPPORTED</td><td>Указанный фильтр нельзя использовать в этом контексте.</td></tr><tr><td>400</td><td>INVITES_TOO_MUCH</td><td>Достигнуто максимальное число пригласительных ссылок на папку, заданное <code>chatlist_invites_limit_default</code>/<code>chatlist_invites_limit_premium</code> <a href="/api/config#chatlist-invites-limit-default">параметрами клиентской конфигурации&nbsp;»</a>.</td></tr><tr><td>400</td><td>PEERS_LIST_EMPTY</td><td>Указанный список пиров пуст.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Channels, supergroups, gigagroups and basic groups](https://core.telegram.org/api/channel)
+#### [Каналы, супергруппы, гигагруппы и обычные группы](/api/channel/)
 
-How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.
+Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.
 
-#### [Dialog folders](https://core.telegram.org/api/folders)
+#### [Папки диалогов](/api/folders/)
 
-Telegram allows placing chats into folders, based on their type, mute status, or other custom criteria, thanks to folder blacklists and whitelists.
+Telegram позволяет раскладывать чаты по папкам в зависимости от их типа, состояния уведомлений или других произвольных критериев — благодаря чёрным и белым спискам папок.
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.

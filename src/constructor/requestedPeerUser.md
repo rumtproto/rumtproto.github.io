@@ -1,49 +1,40 @@
 ---
-title: "requestedPeerUser (конструктор)"
+title: "requestedPeerUser"
 original: "https://core.telegram.org/constructor/requestedPeerUser"
 section: ref
 kind: constructor
+description: "Информация о пользователе, которым пользователь поделился с текущим авторизованным ботом с помощью messages.sendBotRequestedPeer."
 layout: layout.njk
 ---
 
 # requestedPeerUser
 
-*Конструктор из схемы TL.*
+Информация о пользователе, которым пользователь поделился с текущим авторизованным ботом с помощью [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/).
 
-> Info about a user, shared by a user with the currently logged in bot using [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/).
-> All fields except the ID are optional, and will be populated if present on the chosen user, according to the parameters of the requesting [inputKeyboardButtonRequestPeer](/constructor/inputKeyboardButtonRequestPeer/).
-
-## Определение TL
+Все поля, кроме идентификатора, необязательны и заполняются, если присутствуют у выбранного пользователя, в соответствии с параметрами запросившего [inputKeyboardButtonRequestPeer](/constructor/inputKeyboardButtonRequestPeer/).
 
 ```
 requestedPeerUser#d62ff46a flags:# user_id:long first_name:flags.0?string last_name:flags.0?string username:flags.1?string photo:flags.2?Photo = RequestedPeer;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| user_id | [long](/type/long/) | User ID. |
-| first_name | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | First name. |
-| last_name | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Last name. |
-| username | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Username. |
-| photo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[Photo](/type/Photo/) | Profile photo. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор пользователя.</td></tr><tr><td><strong>first_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Имя.</td></tr><tr><td><strong>last_name</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Фамилия.</td></tr><tr><td><strong>username</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Имя пользователя.</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Photo">Photo</a></td><td>Фотография профиля.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [RequestedPeer](/type/RequestedPeer/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/)
 
-Send one or more chosen peers, as requested by a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button.
+Отправить один или несколько выбранных пиров по запросу кнопки [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/).
 
 #### [inputKeyboardButtonRequestPeer](/constructor/inputKeyboardButtonRequestPeer/)
 
-Prompts the user to select and share one or more peers with the bot using [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/).
+Предлагает пользователю выбрать одного или нескольких пиров и передать их боту с помощью [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/).
 
-Use this constructor to send a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button in a [reply keyboard](https://core.telegram.org/bots/features#keyboards) in a private chat.
+Используйте этот конструктор, чтобы отправить кнопку [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) в [клавиатуре ответа](https://core.telegram.org/bots/features#keyboards) в личном чате.
 
-See [peer requests](https://core.telegram.org/api/bots/buttons#peer-requests) for the full flow.
+Полное описание процесса см. в разделе [запросы пиров](/api/bots/buttons/#peer-requests).

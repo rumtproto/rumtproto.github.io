@@ -1,18 +1,15 @@
 ---
-title: "Messages.AffectedMessages (тип)"
+title: "messages.AffectedMessages"
 original: "https://core.telegram.org/type/messages.AffectedMessages"
 section: ref
 kind: type
+description: "Сообщения, затронутые изменениями"
 layout: layout.njk
 ---
 
 # Messages.AffectedMessages
 
-*Тип из схемы TL.*
-
-> Messages affected by changes
-
-## Определение TL
+Сообщения, затронутые изменениями
 
 ```
 messages.affectedMessages#84d19185 pts:int pts_count:int = messages.AffectedMessages;
@@ -26,17 +23,10 @@ messages.readMessageContents#36a73f77 id:Vector<int> = messages.AffectedMessages
 channels.deleteMessages#84c1fd4e channel:InputChannel id:Vector<int> = messages.AffectedMessages;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.affectedMessages](/constructor/messages.affectedMessages/) | Events affected by operation |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.affectedMessages">messages.affectedMessages</a></td><td>События, затронутые операцией</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.readHistory](/method/messages.readHistory/) | Marks message history as read. |
-| [messages.deleteMessages](/method/messages.deleteMessages/) | Deletes messages by their identifiers. |
-| [messages.readMessageContents](/method/messages.readMessageContents/) | Notifies the sender about the recipient having listened a voice message or watched a video, emitting an [updateReadMessagesContents](/constructor/updateReadMessagesContents/). |
-| [channels.deleteMessages](/method/channels.deleteMessages/) | Delete messages in a [channel/supergroup](https://core.telegram.org/api/channel) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.readHistory">messages.readHistory</a></td><td>Отмечает историю сообщений как прочитанную.</td></tr><tr><td><a href="/method/messages.deleteMessages">messages.deleteMessages</a></td><td>Удаляет сообщения по их идентификаторам.</td></tr><tr><td><a href="/method/messages.readMessageContents">messages.readMessageContents</a></td><td>Уведомляет отправителя о том, что получатель прослушал голосовое сообщение или посмотрел видео, порождая <a href="/constructor/updateReadMessagesContents">updateReadMessagesContents</a>.</td></tr><tr><td><a href="/method/channels.deleteMessages">channels.deleteMessages</a></td><td>Удалить сообщения в <a href="/api/channel">канале/супергруппе</a></td></tr></tbody></table>

@@ -1,49 +1,34 @@
 ---
-title: "botInfo (конструктор)"
+title: "botInfo"
 original: "https://core.telegram.org/constructor/botInfo"
 section: ref
 kind: constructor
+description: "Информация о ботах (доступные команды бота и прочее)"
 layout: layout.njk
 ---
 
 # botInfo
 
-*Конструктор из схемы TL.*
-
-> Info about bots (available bot commands, etc)
-
-## Определение TL
+Информация о ботах (доступные команды бота и прочее)
 
 ```
 botInfo#4d8a0299 flags:# has_preview_medias:flags.6?true user_id:flags.0?long description:flags.1?string description_photo:flags.4?Photo description_document:flags.5?Document commands:flags.2?Vector<BotCommand> menu_button:flags.3?BotMenuButton privacy_policy_url:flags.7?string app_settings:flags.8?BotAppSettings verifier_settings:flags.9?BotVerifierSettings = BotInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| has_preview_medias | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[true](/constructor/true/) | If set, the bot has some [preview medias for the configured Main Mini App, see here »](https://core.telegram.org/api/bots/webapps#main-mini-app-previews) for more info on Main Mini App preview medias. |
-| user_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[long](/type/long/) | ID of the bot |
-| description | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[string](/type/string/) | Description of the bot |
-| description_photo | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[Photo](/type/Photo/) | Description photo |
-| description_document | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[Document](/type/Document/) | Description animation in MPEG4 format |
-| commands | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[Vector](https://core.telegram.org/type/Vector%20t)<[BotCommand](/type/BotCommand/)> | Bot commands that can be used in the chat |
-| menu_button | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[BotMenuButton](/type/BotMenuButton/) | Indicates the action to execute when pressing the in-UI menu button for bots |
-| privacy_policy_url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[string](/type/string/) | The HTTP link to the privacy policy of the bot. If not set, then the /privacy command must be used, if supported by the bot (i.e. if it's present in the commands vector). If it isn't supported, then [https://telegram.org/privacy-tpa](https://telegram.org/privacy-tpa) must be opened, instead. |
-| app_settings | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[BotAppSettings](/type/BotAppSettings/) | [Mini app »](https://core.telegram.org/api/bots/webapps) settings |
-| verifier_settings | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[BotVerifierSettings](/type/BotVerifierSettings/) | This bot can [verify peers](https://core.telegram.org/api/bots/verification): this field contains more info about the verification the bot can assign to peers. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>has_preview_medias</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/constructor/true">true</a></td><td>[@term:Mini App] Если установлено, у бота есть <a href="/api/bots/webapps#main-mini-app-previews">медиафайлы предпросмотра для настроенного главного Mini App, подробнее о них см. здесь »</a>.</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/long">long</a></td><td>Идентификатор бота</td></tr><tr><td><strong>description</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/string">string</a></td><td>Описание бота</td></tr><tr><td><strong>description_photo</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/Photo">Photo</a></td><td>Фотография описания</td></tr><tr><td><strong>description_document</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/Document">Document</a></td><td>Анимация описания в формате MPEG4</td></tr><tr><td><strong>commands</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/BotCommand">BotCommand</a>&gt;</td><td>Команды бота, которые можно использовать в чате</td></tr><tr><td><strong>menu_button</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/BotMenuButton">BotMenuButton</a></td><td>Указывает действие, выполняемое при нажатии на кнопку меню ботов в интерфейсе</td></tr><tr><td><strong>privacy_policy_url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/type/string">string</a></td><td>HTTP-ссылка на политику конфиденциальности бота. Если не задана, следует использовать команду <code>/privacy</code>, если она поддерживается ботом (то есть если она присутствует в векторе <code>commands</code>). Если она не поддерживается, вместо этого следует открыть <a href="https://telegram.org/privacy-tpa">https://telegram.org/privacy-tpa</a>.</td></tr><tr><td><strong>app_settings</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/BotAppSettings">BotAppSettings</a></td><td>Настройки <a href="/api/bots/webapps">Mini App »</a><br></td></tr><tr><td><strong>verifier_settings</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/BotVerifierSettings">BotVerifierSettings</a></td><td>Этот бот может <a href="/api/bots/verification">верифицировать пиров</a>: это поле содержит дополнительную информацию о верификации, которую бот может присваивать пирам.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [BotInfo](/type/BotInfo/)
 
-## Related pages
+### Связанные страницы
 
-#### [Mini Apps on Telegram](https://core.telegram.org/api/bots/webapps)
+#### [Mini Apps в Telegram](/api/bots/webapps/)
 
-Bots can offer users interactive HTML5 web apps to completely replace any website.
+Боты могут предлагать пользователям интерактивные веб-приложения на HTML5, полностью заменяющие любой сайт.
 
-#### [Third-party verification](https://core.telegram.org/api/bots/verification)
+#### [Сторонняя верификация](/api/bots/verification/)
 
-To further improve transparency on Telegram, official third-party services are able to assign extra verification icons to user accounts and chats — in order to prevent scams and reduce misinformation.
+Чтобы ещё повысить прозрачность в Telegram, официальные сторонние сервисы могут присваивать аккаунтам пользователей и чатам дополнительные значки верификации — чтобы предотвратить мошенничество и снизить распространение недостоверной информации.

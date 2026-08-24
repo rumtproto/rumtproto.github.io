@@ -1,27 +1,24 @@
 ---
-title: "profileTabVoice (конструктор)"
+title: "profileTabVoice"
 original: "https://core.telegram.org/constructor/profileTabVoice"
 section: ref
 kind: constructor
+description: "Представляет вкладку голосовых сообщений на странице профиля."
 layout: layout.njk
 ---
 
 # profileTabVoice
 
-*Конструктор из схемы TL.*
-
-> Represents the voice messages tab of a profile page.
-
-## Определение TL
+Представляет вкладку голосовых сообщений на странице профиля.
 
 ```
 profileTabVoice#e477092e = ProfileTab;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ProfileTab](/type/ProfileTab/)

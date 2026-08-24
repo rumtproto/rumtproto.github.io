@@ -1,18 +1,15 @@
 ---
-title: "NotificationSound (тип)"
+title: "NotificationSound"
 original: "https://core.telegram.org/type/NotificationSound"
 section: ref
 kind: type
+description: "Представляет звук уведомления"
 layout: layout.njk
 ---
 
 # NotificationSound
 
-*Тип из схемы TL.*
-
-> Represents a notification sound
-
-## Определение TL
+Представляет звук уведомления
 
 ```
 notificationSoundDefault#97e8bebe = NotificationSound;
@@ -21,11 +18,6 @@ notificationSoundLocal#830b9ae4 title:string data:string = NotificationSound;
 notificationSoundRingtone#ff6c8049 id:long = NotificationSound;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [notificationSoundDefault](/constructor/notificationSoundDefault/) | Indicates the default notification sound should be used |
-| [notificationSoundNone](/constructor/notificationSoundNone/) | No notification sound should be used |
-| [notificationSoundLocal](/constructor/notificationSoundLocal/) | Indicates a specific local notification sound should be used |
-| [notificationSoundRingtone](/constructor/notificationSoundRingtone/) | A specific previously uploaded notification sound should be used |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/notificationSoundDefault">notificationSoundDefault</a></td><td>Указывает, что следует использовать звук уведомления по умолчанию</td></tr><tr><td><a href="/constructor/notificationSoundNone">notificationSoundNone</a></td><td>Звук уведомления использовать не следует</td></tr><tr><td><a href="/constructor/notificationSoundLocal">notificationSoundLocal</a></td><td>Указывает, что следует использовать определённый локальный звук уведомления</td></tr><tr><td><a href="/constructor/notificationSoundRingtone">notificationSoundRingtone</a></td><td>Следует использовать конкретный ранее загруженный звук уведомления</td></tr></tbody></table>

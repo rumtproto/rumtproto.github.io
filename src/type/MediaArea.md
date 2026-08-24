@@ -1,18 +1,15 @@
 ---
-title: "MediaArea (тип)"
+title: "MediaArea"
 original: "https://core.telegram.org/type/MediaArea"
 section: ref
 kind: type
+description: "Представляет медиазону истории »"
 layout: layout.njk
 ---
 
 # MediaArea
 
-*Тип из схемы TL.*
-
-> Represents a [story media area »](https://core.telegram.org/api/stories#media-areas)
-
-## Определение TL
+Представляет [медиазону истории »](/api/stories/#media-areas)
 
 ```
 mediaAreaVenue#be82db9c coordinates:MediaAreaCoordinates geo:GeoPoint title:string address:string provider:string venue_id:string venue_type:string = MediaArea;
@@ -26,22 +23,12 @@ mediaAreaWeather#49a6549c coordinates:MediaAreaCoordinates emoji:string temperat
 mediaAreaStarGift#5787686d coordinates:MediaAreaCoordinates slug:string = MediaArea;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [mediaAreaVenue](/constructor/mediaAreaVenue/) | Represents a location tag attached to a [story](https://core.telegram.org/api/stories), with additional venue information. |
-| [inputMediaAreaVenue](/constructor/inputMediaAreaVenue/) | Represents a [location tag](https://core.telegram.org/api/stories#media-areas) attached to a [story](https://core.telegram.org/api/stories), with additional venue information. |
-| [mediaAreaGeoPoint](/constructor/mediaAreaGeoPoint/) | Represents a geolocation tag attached to a [story](https://core.telegram.org/api/stories). |
-| [mediaAreaSuggestedReaction](/constructor/mediaAreaSuggestedReaction/) | Represents a reaction bubble. |
-| [mediaAreaChannelPost](/constructor/mediaAreaChannelPost/) | Represents a channel post. |
-| [inputMediaAreaChannelPost](/constructor/inputMediaAreaChannelPost/) | Represents a channel post |
-| [mediaAreaUrl](/constructor/mediaAreaUrl/) | Represents a [URL media area](https://core.telegram.org/api/stories#urls). |
-| [mediaAreaWeather](/constructor/mediaAreaWeather/) | Represents a [weather widget »](https://core.telegram.org/api/stories#weather). |
-| [mediaAreaStarGift](/constructor/mediaAreaStarGift/) | Represents a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/mediaAreaVenue">mediaAreaVenue</a></td><td>Представляет метку места, прикреплённую к <a href="/api/stories">истории</a>, с дополнительными сведениями о заведении.</td></tr><tr><td><a href="/constructor/inputMediaAreaVenue">inputMediaAreaVenue</a></td><td>Представляет <a href="/api/stories#media-areas">метку места</a>, прикреплённую к <a href="/api/stories">истории</a>, с дополнительными сведениями о заведении.</td></tr><tr><td><a href="/constructor/mediaAreaGeoPoint">mediaAreaGeoPoint</a></td><td>Представляет геометку, прикреплённую к <a href="/api/stories">истории</a>.</td></tr><tr><td><a href="/constructor/mediaAreaSuggestedReaction">mediaAreaSuggestedReaction</a></td><td>Представляет пузырёк реакции.</td></tr><tr><td><a href="/constructor/mediaAreaChannelPost">mediaAreaChannelPost</a></td><td>Представляет пост канала.</td></tr><tr><td><a href="/constructor/inputMediaAreaChannelPost">inputMediaAreaChannelPost</a></td><td>Представляет пост канала</td></tr><tr><td><a href="/constructor/mediaAreaUrl">mediaAreaUrl</a></td><td>Представляет <a href="/api/stories#urls">медиазону со ссылкой</a>.</td></tr><tr><td><a href="/constructor/mediaAreaWeather">mediaAreaWeather</a></td><td>Представляет <a href="/api/stories#weather">виджет погоды »</a>.</td></tr><tr><td><a href="/constructor/mediaAreaStarGift">mediaAreaStarGift</a></td><td>Представляет <a href="/api/gifts#collectible-gifts">коллекционный подарок »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

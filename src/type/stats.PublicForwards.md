@@ -1,18 +1,15 @@
 ---
-title: "Stats.PublicForwards (тип)"
+title: "stats.PublicForwards"
 original: "https://core.telegram.org/type/stats.PublicForwards"
 section: ref
 kind: type
+description: "Содержит информацию о пересылках истории в виде сообщения в публичные чаты и о репостах публичными каналами."
 layout: layout.njk
 ---
 
 # Stats.PublicForwards
 
-*Тип из схемы TL.*
-
-> Contains info about the forwards of a [story](https://core.telegram.org/api/stories) as a message to public chats and reposts by public channels.
-
-## Определение TL
+Содержит информацию о пересылках [истории](/api/stories/) в виде сообщения в публичные чаты и о репостах публичными каналами.
 
 ```
 stats.publicForwards#93037e20 flags:# count:int forwards:Vector<PublicForward> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = stats.PublicForwards;
@@ -23,21 +20,16 @@ stats.getMessagePublicForwards#5f150144 channel:InputChannel msg_id:int offset:s
 stats.getStoryPublicForwards#a6437ef6 peer:InputPeer id:int offset:string limit:int = stats.PublicForwards;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [stats.publicForwards](/constructor/stats.publicForwards/) | Contains info about the forwards of a [story](https://core.telegram.org/api/stories) as a message to public chats and reposts by public channels. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/stats.publicForwards">stats.publicForwards</a></td><td>Содержит информацию о пересылках <a href="/api/stories">истории</a> в виде сообщения в публичные чаты и о репостах публичными каналами.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stats.getMessagePublicForwards](/method/stats.getMessagePublicForwards/) | Obtains a list of messages, indicating to which other public channels was a channel message forwarded. Will return a list of [messages](/constructor/message/) with peer_id equal to the public channel to which this message was forwarded. |
-| [stats.getStoryPublicForwards](/method/stats.getStoryPublicForwards/) | Obtain forwards of a [story](https://core.telegram.org/api/stories) as a message to public chats and reposts by public channels. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stats.getMessagePublicForwards">stats.getMessagePublicForwards</a></td><td>Получает список сообщений, показывающий, в какие другие публичные каналы было переслано сообщение канала.<br>Возвращает список <a href="/constructor/message">сообщений</a>, у которых <code>peer_id</code> равен публичному каналу, в который было переслано это сообщение.</td></tr><tr><td><a href="/method/stats.getStoryPublicForwards">stats.getStoryPublicForwards</a></td><td>Получить пересылки <a href="/api/stories">истории</a> в виде сообщения в публичные чаты и репосты публичными каналами.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

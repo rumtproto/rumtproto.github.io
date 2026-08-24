@@ -1,18 +1,15 @@
 ---
-title: "stories.AllStories (тип)"
+title: "stories.AllStories"
 original: "https://core.telegram.org/type/stories.AllStories"
 section: ref
 kind: type
+description: "Полный список активных (или активных и скрытых) историй."
 layout: layout.njk
 ---
 
 # stories.AllStories
 
-*Тип из схемы TL.*
-
-> Full list of active (or active and hidden) [stories](https://core.telegram.org/api/stories#watching-stories).
-
-## Определение TL
+Полный список активных (или активных и скрытых) [историй](/api/stories/#watching-stories).
 
 ```
 stories.allStoriesNotModified#1158fe3e flags:# state:string stealth_mode:StoriesStealthMode = stories.AllStories;
@@ -23,21 +20,16 @@ stories.allStories#6efc5e81 flags:# has_more:flags.0?true count:int state:string
 stories.getAllStories#eeb0d625 flags:# next:flags.1?true hidden:flags.2?true state:flags.0?string = stories.AllStories;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [stories.allStoriesNotModified](/constructor/stories.allStoriesNotModified/) | The list of active (or active and hidden) [stories](https://core.telegram.org/api/stories#watching-stories) has not changed. |
-| [stories.allStories](/constructor/stories.allStories/) | Full list of active (or active and hidden) [stories](https://core.telegram.org/api/stories#watching-stories). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/stories.allStoriesNotModified">stories.allStoriesNotModified</a></td><td>Список активных (или активных и скрытых) <a href="/api/stories#watching-stories">историй</a> не изменился.</td></tr><tr><td><a href="/constructor/stories.allStories">stories.allStories</a></td><td>Полный список активных (либо активных и скрытых) <a href="/api/stories#watching-stories">историй</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [stories.getAllStories](/method/stories.getAllStories/) | Fetch the List of active (or active and hidden) stories, see [here »](https://core.telegram.org/api/stories#watching-stories) for more info on watching stories. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/stories.getAllStories">stories.getAllStories</a></td><td>Получить список активных (или активных и скрытых) историй; подробнее о просмотре историй см. <a href="/api/stories#watching-stories">здесь »</a>.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

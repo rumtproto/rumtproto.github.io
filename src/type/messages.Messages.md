@@ -1,18 +1,15 @@
 ---
-title: "messages.Messages (тип)"
+title: "messages.Messages"
 original: "https://core.telegram.org/type/messages.Messages"
 section: ref
 kind: type
+description: "Объект содержит информацию о списке сообщений и вспомогательные данные."
 layout: layout.njk
 ---
 
 # messages.Messages
 
-*Тип из схемы TL.*
-
-> Object contains information on list of messages with auxiliary data.
-
-## Определение TL
+Объект содержит информацию о списке сообщений и вспомогательные данные.
 
 ```
 messages.messages#1d73e7ea messages:Vector<Message> topics:Vector<ForumTopic> chats:Vector<Chat> users:Vector<User> = messages.Messages;
@@ -40,33 +37,10 @@ channels.getMessages#ad8c9a23 channel:InputChannel id:Vector<InputMessage> = mes
 channels.searchPosts#f2c4f24d flags:# hashtag:flags.0?string query:flags.1?string offset_rate:int offset_peer:InputPeer offset_id:int limit:int allow_paid_stars:flags.2?long = messages.Messages;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.messages](/constructor/messages.messages/) | Full list of messages with auxiliary data. |
-| [messages.messagesSlice](/constructor/messages.messagesSlice/) | Incomplete list of messages and auxiliary data. |
-| [messages.channelMessages](/constructor/messages.channelMessages/) | Channel messages |
-| [messages.messagesNotModified](/constructor/messages.messagesNotModified/) | No new messages matching the query were found |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.messages">messages.messages</a></td><td>Полный список сообщений со вспомогательными данными.</td></tr><tr><td><a href="/constructor/messages.messagesSlice">messages.messagesSlice</a></td><td>Неполный список сообщений и вспомогательных данных.</td></tr><tr><td><a href="/constructor/messages.channelMessages">messages.channelMessages</a></td><td>Сообщения канала</td></tr><tr><td><a href="/constructor/messages.messagesNotModified">messages.messagesNotModified</a></td><td>Новых сообщений, соответствующих запросу, не найдено</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getMessages](/method/messages.getMessages/) | Returns the list of messages by their IDs. |
-| [messages.getHistory](/method/messages.getHistory/) | Returns the message history in a peer. Results are ordered by date (descending). |
-| [messages.search](/method/messages.search/) | Search for messages. |
-| [messages.searchGlobal](/method/messages.searchGlobal/) | Search for messages and peers globally |
-| [messages.getUnreadMentions](/method/messages.getUnreadMentions/) | Get unread messages where we were mentioned |
-| [messages.getRecentLocations](/method/messages.getRecentLocations/) | Get all recent [live locations](https://core.telegram.org/api/live-location) sent to a specific chat: returns up to 1 location message ([messageMediaGeoLive](/constructor/messageMediaGeoLive/)) per chat participant. |
-| [messages.getScheduledHistory](/method/messages.getScheduledHistory/) | Get scheduled messages |
-| [messages.getScheduledMessages](/method/messages.getScheduledMessages/) | Get scheduled messages |
-| [messages.getReplies](/method/messages.getReplies/) | Get messages in a reply thread |
-| [messages.getUnreadReactions](/method/messages.getUnreadReactions/) | Get unread reactions to messages you sent |
-| [messages.searchSentMedia](/method/messages.searchSentMedia/) | View and search recently sent media. This method does not support pagination. |
-| [messages.getSavedHistory](/method/messages.getSavedHistory/) | Fetch [saved messages »](https://core.telegram.org/api/saved-messages) forwarded from a specific peer, or fetch messages from a [monoforum topic »](https://core.telegram.org/api/monoforum). |
-| [messages.getQuickReplyMessages](/method/messages.getQuickReplyMessages/) | Fetch (a subset or all) messages in a [quick reply shortcut »](https://core.telegram.org/api/business#quick-reply-shortcuts). |
-| [messages.getUnreadPollVotes](https://core.telegram.org/method/messages.getUnreadPollVotes) | Get messages containing polls with [unread votes »](https://core.telegram.org/api/poll#unread-poll-votes) |
-| [messages.getPersonalChannelHistory](https://core.telegram.org/method/messages.getPersonalChannelHistory) | Fetch the message history of a user's [personal channel »](https://core.telegram.org/api/profile#personal-channel). |
-| [channels.getMessages](/method/channels.getMessages/) | Get [channel/supergroup](https://core.telegram.org/api/channel) messages |
-| [channels.searchPosts](/method/channels.searchPosts/) | Globally search for posts from public [channels »](https://core.telegram.org/api/channel) (including those we aren't a member of) containing either a specific hashtag, or a full text query. Exactly one of query and hashtag must be set. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getMessages">messages.getMessages</a></td><td>Возвращает список сообщений по их идентификаторам.</td></tr><tr><td><a href="/method/messages.getHistory">messages.getHistory</a></td><td>Возвращает историю сообщений в пире.<br><br>Результаты упорядочены по дате (по убыванию).</td></tr><tr><td><a href="/method/messages.search">messages.search</a></td><td>Поиск сообщений.</td></tr><tr><td><a href="/method/messages.searchGlobal">messages.searchGlobal</a></td><td>Глобальный поиск сообщений и пиров</td></tr><tr><td><a href="/method/messages.getUnreadMentions">messages.getUnreadMentions</a></td><td>Получить непрочитанные сообщения, в которых нас упомянули</td></tr><tr><td><a href="/method/messages.getRecentLocations">messages.getRecentLocations</a></td><td>Получить все недавние <a href="/api/live-location">трансляции геопозиции</a>, отправленные в определённый чат: возвращает не более одного сообщения с геопозицией (<a href="/constructor/messageMediaGeoLive">messageMediaGeoLive</a>) на каждого участника чата.</td></tr><tr><td><a href="/method/messages.getScheduledHistory">messages.getScheduledHistory</a></td><td>Получить отложенные сообщения</td></tr><tr><td><a href="/method/messages.getScheduledMessages">messages.getScheduledMessages</a></td><td>Получить отложенные сообщения</td></tr><tr><td><a href="/method/messages.getReplies">messages.getReplies</a></td><td>Получить сообщения из ветки обсуждения</td></tr><tr><td><a href="/method/messages.getUnreadReactions">messages.getUnreadReactions</a></td><td>Получить непрочитанные реакции на отправленные вами сообщения</td></tr><tr><td><a href="/method/messages.searchSentMedia">messages.searchSentMedia</a></td><td>Просмотр и поиск среди недавно отправленных медиафайлов.<br>Этот метод не поддерживает постраничную выборку.</td></tr><tr><td><a href="/method/messages.getSavedHistory">messages.getSavedHistory</a></td><td>Получить <a href="/api/saved-messages">сохранённые сообщения »</a>, пересланные от определённого пира, либо сообщения из <a href="/api/monoforum">темы монофорума »</a>.</td></tr><tr><td><a href="/method/messages.getQuickReplyMessages">messages.getQuickReplyMessages</a></td><td>Получить сообщения (все или их часть) в <a href="/api/business#quick-reply-shortcuts">шаблоне быстрого ответа »</a>.</td></tr><tr><td><a href="/method/messages.getUnreadPollVotes">messages.getUnreadPollVotes</a></td><td>Получить сообщения с опросами, в которых есть <a href="/api/poll#unread-poll-votes">непрочитанные голоса »</a></td></tr><tr><td><a href="/method/messages.getPersonalChannelHistory">messages.getPersonalChannelHistory</a></td><td>Получить историю сообщений <a href="/api/profile#personal-channel">персонального канала »</a> пользователя.</td></tr><tr><td><a href="/method/channels.getMessages">channels.getMessages</a></td><td>Получить сообщения <a href="/api/channel">канала или супергруппы</a></td></tr><tr><td><a href="/method/channels.searchPosts">channels.searchPosts</a></td><td>Глобальный поиск постов в публичных <a href="/api/channel">каналах »</a> (<em>в том числе</em> в тех, участниками которых мы не являемся) по определённому хештегу <em>или</em> по полнотекстовому запросу.<br><br>Должно быть задано ровно одно из полей <code>query</code> и <code>hashtag</code>.</td></tr></tbody></table>

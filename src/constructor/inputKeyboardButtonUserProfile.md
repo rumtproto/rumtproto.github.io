@@ -1,51 +1,44 @@
 ---
-title: "inputKeyboardButtonUserProfile (конструктор)"
+title: "inputKeyboardButtonUserProfile"
 original: "https://core.telegram.org/constructor/inputKeyboardButtonUserProfile"
 section: ref
 kind: constructor
+description: "Кнопка, ведущая непосредственно в профиль пользователя"
 layout: layout.njk
 ---
 
 # inputKeyboardButtonUserProfile
 
-*Конструктор из схемы TL.*
+Кнопка, ведущая непосредственно в профиль пользователя
 
-> Button that links directly to a user profile
-> Use this constructor to send a [keyboardButtonUserProfile](/constructor/keyboardButtonUserProfile/) button in an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards).
-
-## Определение TL
+Используйте этот конструктор, чтобы отправить кнопку [keyboardButtonUserProfile](/constructor/keyboardButtonUserProfile/) в [инлайн-клавиатуре](https://core.telegram.org/bots/features#inline-keyboards).
 
 ```
 inputKeyboardButtonUserProfile#7d5e07c7 flags:# style:flags.10?KeyboardButtonStyle text:string user_id:InputUser = KeyboardButton;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| style | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).10?[KeyboardButtonStyle](/type/KeyboardButtonStyle/) | Button style, see [here »](https://core.telegram.org/api/bots/buttons#button-styles) for more info on button styles. |
-| text | [string](/type/string/) | Button text |
-| user_id | [InputUser](/type/InputUser/) | User ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>style</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.10?<a href="/type/KeyboardButtonStyle">KeyboardButtonStyle</a></td><td>Стиль кнопки; подробнее о стилях кнопок см. <a href="/api/bots/buttons#button-styles">здесь »</a>.</td></tr><tr><td><strong>text</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Текст кнопки</td></tr><tr><td><strong>user_id</strong></td><td style="text-align: center;"><a href="/type/InputUser">InputUser</a></td><td>Идентификатор пользователя</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [KeyboardButton](/type/KeyboardButton/)
 
-## Related pages
+### Связанные страницы
 
-#### [Bot buttons](https://core.telegram.org/api/bots/buttons)
+#### [Кнопки ботов](/api/bots/buttons/)
 
-Users can interact with your bot via buttons or even inline buttons, straight from inline messages in any chat.
+Пользователи могут взаимодействовать с вашим ботом через кнопки и даже через инлайн-кнопки прямо в инлайн-сообщениях в любом чате.
 
 #### [keyboardButtonUserProfile](/constructor/keyboardButtonUserProfile/)
 
-Button that links directly to a user profile
+Кнопка, ведущая непосредственно в профиль пользователя
 
-Available only in [inline keyboards](/constructor/replyInlineMarkup/).
+Доступно только в [инлайн-клавиатурах](/constructor/replyInlineMarkup/).
 
-When pressed, clients must open the profile of the user identified by `user_id`.
+При нажатии клиенты обязаны открыть профиль пользователя, указанного в `user_id`.
 
-#### [Telegram Bot Features](https://core.telegram.org/bots/features)
+#### [Возможности ботов Telegram](https://core.telegram.org/bots/features)
 
-This page describes individual bot elements in greater detail. For a general overview of bots, read the introduction to bots first.
+На этой странице подробно описаны отдельные элементы ботов. Если нужен общий обзор ботов, сначала прочитайте введение.

@@ -1,33 +1,33 @@
 ---
-title: "sendMessageCancelAction (конструктор)"
+title: "sendMessageCancelAction"
 original: "https://core.telegram.org/constructor/sendMessageCancelAction"
 section: ref
 kind: constructor
+description: "Отменяет все предыдущие обновления о действии. Например, когда пользователь удаляет введённый текст или прерывает загрузку видео."
 layout: layout.njk
 ---
 
 # sendMessageCancelAction
 
-*Конструктор из схемы TL.*
+Отменяет все предыдущие обновления о действии. Например, когда пользователь удаляет введённый текст или прерывает загрузку видео.
 
-> Invalidate all previous action updates. E.g. when user deletes entered text or aborts a video upload.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===17===
-> sendMessageCancelAction#fd5ec8f5 = SendMessageAction;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===17===
+sendMessageCancelAction#fd5ec8f5 = SendMessageAction;
+```
+
+#### Схема API
 
 ```
 sendMessageCancelAction#fd5ec8f5 = SendMessageAction;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [SendMessageAction](/type/SendMessageAction/)

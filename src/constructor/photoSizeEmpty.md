@@ -1,41 +1,39 @@
 ---
-title: "photoSizeEmpty (конструктор)"
+title: "photoSizeEmpty"
 original: "https://core.telegram.org/constructor/photoSizeEmpty"
 section: ref
 kind: constructor
+description: "Пустой конструктор. Изображение с такой миниатюрой недоступно."
 layout: layout.njk
 ---
 
 # photoSizeEmpty
 
-*Конструктор из схемы TL.*
+Пустой конструктор. Изображение с такой миниатюрой недоступно.
 
-> Empty constructor. Image with this thumbnail is unavailable.
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===23===
-> photoSizeEmpty#0e17e23c type:string = PhotoSize;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===23===
+photoSizeEmpty#0e17e23c type:string = PhotoSize;
+```
+
+#### Схема API
 
 ```
 photoSizeEmpty#e17e23c type:string = PhotoSize;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| type | [string](/type/string/) | [PhotoSize.type value »](https://core.telegram.org/api/files/#photosizetype-values) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/files#photosizetype-values">Значение PhotoSize.type »</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [PhotoSize](/type/PhotoSize/)
 
-## Related pages
+### Связанные страницы
 
-#### [Uploading and Downloading Files](/api/files/)
+#### [Загрузка и скачивание файлов](/api/files/)
 
-How to transfer large data batches correctly.
+Как правильно передавать большие объёмы данных.

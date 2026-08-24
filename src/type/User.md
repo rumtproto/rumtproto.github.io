@@ -1,18 +1,15 @@
 ---
-title: "User (тип)"
+title: "User"
 original: "https://core.telegram.org/type/User"
 section: ref
 kind: type
+description: "Объект описывает пользователя."
 layout: layout.njk
 ---
 
 # User
 
-*Тип из схемы TL.*
-
-> Object defines a user.
-
-## Определение TL
+Объект описывает пользователя.
 
 ```
 userEmpty#d3bc4b7a id:long = User;
@@ -31,21 +28,10 @@ channels.getMessageAuthor#ece2a0e6 channel:InputChannel id:int = User;
 messages.getFutureChatCreatorAfterLeave#3b7d0ea6 peer:InputPeer = User;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [userEmpty](/constructor/userEmpty/) | Empty constructor, non-existent user. |
-| [user](/constructor/user/) | Indicates info about a certain user. Unless specified otherwise, when updating the [local peer database](https://core.telegram.org/api/peers), all fields from the newly received constructor take priority over the old constructor cached locally (including by removing fields that aren't set in the new constructor). See [here »](https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106) for an implementation of the logic to use when updating the [local user peer database](https://core.telegram.org/api/peers). |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/userEmpty">userEmpty</a></td><td>Пустой конструктор, несуществующий пользователь.</td></tr><tr><td><a href="/constructor/user">user</a></td><td>Содержит сведения об определённом пользователе.<br><br>Если не указано иное, при обновлении <a href="/api/peers">локальной базы пиров</a> все поля вновь полученного конструктора имеют приоритет над старым конструктором, сохранённым локально (в том числе поля, не заданные в новом конструкторе, удаляются).<br><br>См. <a href="https://github.com/tdlib/td/blob/73035e4a69ed26df563652de14aa9c4c86d23420/td/telegram/UserManager.cpp#L3106">здесь »</a> реализацию логики, которую следует применять при обновлении <a href="/api/peers">локальной базы пиров-пользователей</a>.</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.updateProfile](/method/account.updateProfile/) | Updates user profile. |
-| [account.updateUsername](/method/account.updateUsername/) | Changes username for the current user. |
-| [account.changePhone](/method/account.changePhone/) | Change the phone number of the current account |
-| [contacts.importContactToken](/method/contacts.importContactToken/) | Obtain user info from a [temporary profile link](https://core.telegram.org/api/links#temporary-profile-links). |
-| [messages.getFutureChatCreatorAfterLeave](/method/messages.getFutureChatCreatorAfterLeave/) | Group/channel owners only: returns the ID of the user that will become the new owner of the group if we decide to leave the group, see [here »](https://core.telegram.org/api/channel#leaving-groups-channels) for more info on the full flow. |
-| [channels.getMessageAuthor](/method/channels.getMessageAuthor/) | Can only be invoked by non-bot admins of a [monoforum »](https://core.telegram.org/api/monoforum), obtains the original sender of a message sent by other monoforum admins to the monoforum, on behalf of the channel associated to the monoforum. |
-| [bots.createBot](https://core.telegram.org/method/bots.createBot) | Create a [managed bot »](https://core.telegram.org/api/bots/managed-bots#creating-a-managed-bot) owned by the current user and controlled by the specified manager bot. |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.updateProfile">account.updateProfile</a></td><td>Обновляет профиль пользователя.</td></tr><tr><td><a href="/method/account.updateUsername">account.updateUsername</a></td><td>Изменяет имя пользователя текущего аккаунта.</td></tr><tr><td><a href="/method/account.changePhone">account.changePhone</a></td><td>Изменить номер телефона текущего аккаунта</td></tr><tr><td><a href="/method/contacts.importContactToken">contacts.importContactToken</a></td><td>Получить сведения о пользователе по <a href="/api/links#temporary-profile-links">временной ссылке на профиль</a>.</td></tr><tr><td><a href="/method/messages.getFutureChatCreatorAfterLeave">messages.getFutureChatCreatorAfterLeave</a></td><td>Только для владельцев групп и каналов: возвращает идентификатор пользователя, который станет новым владельцем группы, если мы решим её покинуть; подробнее о полном порядке действий см. <a href="/api/channel#leaving-groups-channels">здесь »</a>.</td></tr><tr><td><a href="/method/channels.getMessageAuthor">channels.getMessageAuthor</a></td><td>Может быть вызван только администраторами <a href="/api/monoforum">монофорума »</a>, не являющимися ботами; возвращает исходного отправителя сообщения, отправленного в монофорум другими администраторами монофорума от имени канала, связанного с этим монофорумом.</td></tr><tr><td><a href="/method/bots.createBot">bots.createBot</a></td><td>Создать <a href="/api/bots/managed-bots#creating-a-managed-bot">управляемого бота »</a>, принадлежащего текущему пользователю и управляемого указанным ботом-менеджером.</td></tr></tbody></table>

@@ -1,33 +1,30 @@
 ---
-title: "updateFavedStickers (конструктор)"
+title: "updateFavedStickers"
 original: "https://core.telegram.org/constructor/updateFavedStickers"
 section: ref
 kind: constructor
+description: "Список избранных стикеров изменился, клиенту следует вызвать messages.getFavedStickers, чтобы запросить новый список"
 layout: layout.njk
 ---
 
 # updateFavedStickers
 
-*Конструктор из схемы TL.*
-
-> The list of favorited stickers was changed, the client should call [messages.getFavedStickers](/method/messages.getFavedStickers/) to refetch the new list
-
-## Определение TL
+Список избранных стикеров изменился, клиенту следует вызвать [messages.getFavedStickers](/method/messages.getFavedStickers/), чтобы запросить новый список
 
 ```
 updateFavedStickers#e511996d = Update;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
 #### [messages.getFavedStickers](/method/messages.getFavedStickers/)
 
-Get faved stickers
+Получить избранные стикеры

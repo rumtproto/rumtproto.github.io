@@ -1,27 +1,24 @@
 ---
-title: "attachMenuPeerTypeSameBotPM (конструктор)"
+title: "attachMenuPeerTypeSameBotPM"
 original: "https://core.telegram.org/constructor/attachMenuPeerTypeSameBotPM"
 section: ref
 kind: constructor
+description: "Пункт меню вложений бота доступен в чате с тем ботом, который его предлагает"
 layout: layout.njk
 ---
 
 # attachMenuPeerTypeSameBotPM
 
-*Конструктор из схемы TL.*
-
-> The bot attachment menu entry is available in the chat with the bot that offers it
-
-## Определение TL
+Пункт меню вложений бота доступен в чате с тем ботом, который его предлагает
 
 ```
 attachMenuPeerTypeSameBotPM#7d6be90e = AttachMenuPeerType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [AttachMenuPeerType](/type/AttachMenuPeerType/)

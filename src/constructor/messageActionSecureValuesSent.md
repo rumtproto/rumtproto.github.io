@@ -1,35 +1,30 @@
 ---
-title: "messageActionSecureValuesSent (конструктор)"
+title: "messageActionSecureValuesSent"
 original: "https://core.telegram.org/constructor/messageActionSecureValuesSent"
 section: ref
 kind: constructor
+description: "Запрос значений telegram passport был отправлен"
 layout: layout.njk
 ---
 
 # messageActionSecureValuesSent
 
-*Конструктор из схемы TL.*
-
-> Request for secure [telegram passport](https://core.telegram.org/passport) values was sent
-
-## Определение TL
+Запрос значений [telegram passport](https://core.telegram.org/passport) был отправлен
 
 ```
 messageActionSecureValuesSent#d95c6154 types:Vector<SecureValueType> = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| types | [Vector](https://core.telegram.org/type/Vector%20t)<[SecureValueType](/type/SecureValueType/)> | Secure value types |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>types</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/SecureValueType">SecureValueType</a>&gt;</td><td>Типы защищённых значений</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

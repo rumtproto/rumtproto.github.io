@@ -1,40 +1,34 @@
 ---
-title: "account.wallPapers (конструктор)"
+title: "account.wallPapers"
 original: "https://core.telegram.org/constructor/account.wallPapers"
 section: ref
 kind: constructor
+description: "Установленные обои"
 layout: layout.njk
 ---
 
 # account.wallPapers
 
-*Конструктор из схемы TL.*
-
-> Installed [wallpapers](https://core.telegram.org/api/wallpapers)
-
-## Определение TL
+Установленные [обои](/api/wallpapers/)
 
 ```
 account.wallPapers#cdc3858c hash:long wallpapers:Vector<WallPaper> = account.WallPapers;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| hash | [long](/type/long/) | [Hash used for caching, for more info click here](https://core.telegram.org/api/offsets#hash-generation) |
-| wallpapers | [Vector](https://core.telegram.org/type/Vector%20t)<[WallPaper](/type/WallPaper/)> | [Wallpapers](https://core.telegram.org/api/wallpapers) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:hash] <a href="/api/offsets#hash-generation">Хеш выборки, используемый для кеширования; подробности здесь</a></td></tr><tr><td><strong>wallpapers</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/WallPaper">WallPaper</a>&gt;</td><td><a href="/api/wallpapers">Обои</a></td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [account.WallPapers](/type/account.WallPapers/)
 
-## Related pages
+### Связанные страницы
 
-#### [Pagination in the API](https://core.telegram.org/api/offsets)
+#### [Постраничная выборка в API](/api/offsets/)
 
-How to fetch results from large lists of objects.
+Как выбирать результаты из больших списков объектов.
 
-#### [Chat wallpapers](https://core.telegram.org/api/wallpapers)
+#### [Обои чатов](/api/wallpapers/)
 
-Telegram apps support generating, sharing and synchronizing chat backgrounds.
+Приложения Telegram умеют создавать, публиковать и синхронизировать фоны чатов.

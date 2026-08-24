@@ -1,35 +1,30 @@
 ---
-title: "updateStoriesStealthMode (конструктор)"
+title: "updateStoriesStealthMode"
 original: "https://core.telegram.org/constructor/updateStoriesStealthMode"
 section: ref
 kind: constructor
+description: "Указывает, что был включён скрытый режим историй."
 layout: layout.njk
 ---
 
 # updateStoriesStealthMode
 
-*Конструктор из схемы TL.*
-
-> Indicates that [stories stealth mode](https://core.telegram.org/api/stories#stealth-mode) was activated.
-
-## Определение TL
+Указывает, что был включён [скрытый режим историй](/api/stories/#stealth-mode).
 
 ```
 updateStoriesStealthMode#2c084dc1 stealth_mode:StoriesStealthMode = Update;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| stealth_mode | [StoriesStealthMode](/type/StoriesStealthMode/) | Information about the current [stealth mode](https://core.telegram.org/api/stories#stealth-mode) session. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>stealth_mode</strong></td><td style="text-align: center;"><a href="/type/StoriesStealthMode">StoriesStealthMode</a></td><td>Информация о текущем сеансе <a href="/api/stories#stealth-mode">скрытого режима</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [Update](/type/Update/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.

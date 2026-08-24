@@ -1,27 +1,24 @@
 ---
-title: "inputPeerSelf (конструктор)"
+title: "inputPeerSelf"
 original: "https://core.telegram.org/constructor/inputPeerSelf"
 section: ref
 kind: constructor
+description: "Определяет текущего пользователя."
 layout: layout.njk
 ---
 
 # inputPeerSelf
 
-*Конструктор из схемы TL.*
-
-> Defines the current user.
-
-## Определение TL
+Определяет текущего пользователя.
 
 ```
 inputPeerSelf#7da07ec9 = InputPeer;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputPeer](/type/InputPeer/)

@@ -1,18 +1,15 @@
 ---
-title: "fragment.getCollectibleInfo (метод)"
+title: "fragment.getCollectibleInfo"
 original: "https://core.telegram.org/method/fragment.getCollectibleInfo"
 section: ref
 kind: method
+description: "Получить сведения о коллекционном объекте Fragment; подробнее о полном сценарии см. здесь »."
 layout: layout.njk
 ---
 
 # fragment.getCollectibleInfo
 
-*Метод из схемы TL.*
-
-> Fetch information about a [fragment collectible, see here »](https://core.telegram.org/api/fragment#fetching-info-about-fragment-collectibles) for more info on the full flow.
-
-## Определение TL
+Получить сведения о [коллекционном объекте Fragment; подробнее о полном сценарии см. здесь »](/api/fragment/#fetching-info-about-fragment-collectibles).
 
 ```
 fragment.collectibleInfo#6ebdff91 purchase_date:int currency:string amount:long crypto_currency:string crypto_amount:long url:string = fragment.CollectibleInfo;
@@ -20,27 +17,22 @@ fragment.collectibleInfo#6ebdff91 purchase_date:int currency:string amount:long 
 fragment.getCollectibleInfo#be1e85ba collectible:InputCollectible = fragment.CollectibleInfo;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| collectible | [InputCollectible](/type/InputCollectible/) | Collectible to fetch info about. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>collectible</strong></td><td style="text-align: center;"><a href="/type/InputCollectible">InputCollectible</a></td><td>Коллекционный подарок, сведения о котором нужно получить.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [fragment.CollectibleInfo](/type/fragment.CollectibleInfo/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | COLLECTIBLE_INVALID | The specified collectible is invalid. |
-| 400 | COLLECTIBLE_NOT_FOUND | The specified collectible could not be found. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>COLLECTIBLE_INVALID</td><td>Указанный коллекционный объект недействителен.</td></tr><tr><td>400</td><td>COLLECTIBLE_NOT_FOUND</td><td>Указанный коллекционный предмет не найден.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Fragment collectibles](https://core.telegram.org/api/fragment)
+#### [Коллекционные объекты Fragment](/api/fragment/)
 
-Telegram users can make it easy for others to contact them or find their public groups and channels via usernames: clients can also assign multiple Fragment » collectible usernames to accounts, supergroups and channels they own; Fragment » also allows purchasing phone number collectibles that can be used to register Telegram accounts.
+Пользователи Telegram могут упростить связь с собой и поиск своих публичных групп и каналов с помощью имён пользователей: клиенты также могут назначать несколько коллекционных имён пользователей с Fragment » принадлежащим им аккаунтам, супергруппам и каналам; кроме того, Fragment » позволяет покупать коллекционные номера телефонов, на которые можно регистрировать аккаунты Telegram.

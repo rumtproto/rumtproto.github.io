@@ -1,18 +1,15 @@
 ---
-title: "SecureValue (тип)"
+title: "SecureValue"
 original: "https://core.telegram.org/type/SecureValue"
 section: ref
 kind: type
+description: "Защищённое значение Telegram Passport"
 layout: layout.njk
 ---
 
 # SecureValue
 
-*Тип из схемы TL.*
-
-> Secure Telegram Passport value
-
-## Определение TL
+Защищённое значение Telegram Passport
 
 ```
 secureValue#187fa0ca flags:# type:SecureValueType data:flags.0?SecureData front_side:flags.1?SecureFile reverse_side:flags.2?SecureFile selfie:flags.3?SecureFile translation:flags.6?Vector<SecureFile> files:flags.4?Vector<SecureFile> plain_data:flags.5?SecurePlainData hash:bytes = SecureValue;
@@ -22,14 +19,10 @@ secureValue#187fa0ca flags:# type:SecureValueType data:flags.0?SecureData front_
 account.saveSecureValue#899fe31d value:InputSecureValue secure_secret_id:long = SecureValue;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [secureValue](/constructor/secureValue/) | Secure value |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/secureValue">secureValue</a></td><td>Защищённое значение</td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [account.saveSecureValue](/method/account.saveSecureValue/) | Securely save [Telegram Passport](https://core.telegram.org/passport) document, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/account.saveSecureValue">account.saveSecureValue</a></td><td>Безопасно сохранить документ <a href="/passport">Telegram Passport</a>, <a href="/passport/encryption#encryption">подробнее см. в документации по Passport »</a></td></tr></tbody></table>

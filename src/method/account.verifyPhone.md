@@ -1,18 +1,15 @@
 ---
-title: "account.verifyPhone (метод)"
+title: "account.verifyPhone"
 original: "https://core.telegram.org/method/account.verifyPhone"
 section: ref
 kind: method
+description: "Подтвердить номер телефона для passport в Telegram."
 layout: layout.njk
 ---
 
 # account.verifyPhone
 
-*Метод из схемы TL.*
-
-> Verify a phone number for telegram [passport](https://core.telegram.org/passport).
-
-## Определение TL
+Подтвердить номер телефона для [passport](https://core.telegram.org/passport) в Telegram.
 
 ```
 boolFalse#bc799737 = Bool;
@@ -21,34 +18,26 @@ boolTrue#997275b5 = Bool;
 account.verifyPhone#4dd3a7f6 phone_number:string phone_code_hash:string phone_code:string = Bool;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| phone_number | [string](/type/string/) | Phone number |
-| phone_code_hash | [string](/type/string/) | Phone code hash received from the call to [account.sendVerifyPhoneCode](/method/account.sendVerifyPhoneCode/) |
-| phone_code | [string](/type/string/) | Code received after the call to [account.sendVerifyPhoneCode](/method/account.sendVerifyPhoneCode/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>phone_number</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Номер телефона</td></tr><tr><td><strong>phone_code_hash</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Хеш телефонного кода, полученный при вызове <a href="/method/account.sendVerifyPhoneCode">account.sendVerifyPhoneCode</a></td></tr><tr><td><strong>phone_code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код, полученный после вызова <a href="/method/account.sendVerifyPhoneCode">account.sendVerifyPhoneCode</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Bool](/type/Bool/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | PHONE_CODE_EMPTY | phone_code is missing. |
-| 400 | PHONE_CODE_EXPIRED | The phone code you provided has expired. |
-| 400 | PHONE_NUMBER_INVALID | The phone number is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>PHONE_CODE_EMPTY</td><td>Отсутствует phone_code.</td></tr><tr><td>400</td><td>PHONE_CODE_EXPIRED</td><td>Срок действия указанного вами кода подтверждения истёк.</td></tr><tr><td>400</td><td>PHONE_NUMBER_INVALID</td><td>Недействительный номер телефона.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
 #### [account.sendVerifyPhoneCode](/method/account.sendVerifyPhoneCode/)
 
-Send the verification phone code for telegram [passport](https://core.telegram.org/passport).
+Отправить код подтверждения по телефону для Telegram [Passport](https://core.telegram.org/passport).
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport: руководство](https://core.telegram.org/passport)
 
-Telegram Passport, a unified authorization method for services that require personal identification.
+Telegram Passport — единый способ авторизации для сервисов, которым нужна идентификация личности.

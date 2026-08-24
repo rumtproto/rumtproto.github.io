@@ -1,30 +1,24 @@
 ---
-title: "storyReactionPublicRepost (конструктор)"
+title: "storyReactionPublicRepost"
 original: "https://core.telegram.org/constructor/storyReactionPublicRepost"
 section: ref
 kind: constructor
+description: "Определённый пир сделал репост истории."
 layout: layout.njk
 ---
 
 # storyReactionPublicRepost
 
-*Конструктор из схемы TL.*
-
-> A certain peer has reposted the story.
-
-## Определение TL
+Определённый пир сделал репост истории.
 
 ```
 storyReactionPublicRepost#cfcd0f13 peer_id:Peer story:StoryItem = StoryReaction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer_id | [Peer](/type/Peer/) | The peer that reposted the story. |
-| story | [StoryItem](/type/StoryItem/) | The reposted story. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer_id</strong></td><td style="text-align: center;"><a href="/type/Peer">Peer</a></td><td>Пир, сделавший репост истории.</td></tr><tr><td><strong>story</strong></td><td style="text-align: center;"><a href="/type/StoryItem">StoryItem</a></td><td>История, которую репостнули.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StoryReaction](/type/StoryReaction/)

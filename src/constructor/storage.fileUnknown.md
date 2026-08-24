@@ -1,27 +1,24 @@
 ---
-title: "storage.fileUnknown (конструктор)"
+title: "storage.fileUnknown"
 original: "https://core.telegram.org/constructor/storage.fileUnknown"
 section: ref
 kind: constructor
+description: "Неизвестный тип."
 layout: layout.njk
 ---
 
 # storage.fileUnknown
 
-*Конструктор из схемы TL.*
-
-> Unknown type.
-
-## Определение TL
+Неизвестный тип.
 
 ```
 storage.fileUnknown#aa963b05 = storage.FileType;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [storage.FileType](/type/storage.FileType/)

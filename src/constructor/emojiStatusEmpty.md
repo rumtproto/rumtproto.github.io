@@ -1,27 +1,24 @@
 ---
-title: "emojiStatusEmpty (конструктор)"
+title: "emojiStatusEmpty"
 original: "https://core.telegram.org/constructor/emojiStatusEmpty"
 section: ref
 kind: constructor
+description: "Эмодзи-статус не установлен"
 layout: layout.njk
 ---
 
 # emojiStatusEmpty
 
-*Конструктор из схемы TL.*
-
-> No emoji status is set
-
-## Определение TL
+Эмодзи-статус не установлен
 
 ```
 emojiStatusEmpty#2de11aae = EmojiStatus;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [EmojiStatus](/type/EmojiStatus/)

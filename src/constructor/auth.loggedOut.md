@@ -1,36 +1,30 @@
 ---
-title: "auth.loggedOut (конструктор)"
+title: "auth.loggedOut"
 original: "https://core.telegram.org/constructor/auth.loggedOut"
 section: ref
 kind: constructor
+description: "Токен будущей авторизации », который будет использоваться при последующих авторизациях"
 layout: layout.njk
 ---
 
 # auth.loggedOut
 
-*Конструктор из схемы TL.*
-
-> [Future auth token »](https://core.telegram.org/api/auth/#future-auth-tokens) to be used on subsequent authorizations
-
-## Определение TL
+[Токен будущей авторизации »](/api/auth/#future-auth-tokens), который будет использоваться при последующих авторизациях
 
 ```
 auth.loggedOut#c3a2835f flags:# future_auth_token:flags.0?bytes = auth.LoggedOut;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| future_auth_token | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[bytes](/type/bytes/) | [Future auth token »](https://core.telegram.org/api/auth/#future-auth-tokens) to be used on subsequent authorizations |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>future_auth_token</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/bytes">bytes</a></td><td><a href="/api/auth#future-auth-tokens">Токен будущей авторизации »</a>, который следует использовать при последующих авторизациях</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [auth.LoggedOut](/type/auth.LoggedOut/)
 
-## Related pages
+### Связанные страницы
 
-#### [User Authorization](/api/auth/)
+#### [Авторизация пользователя](/api/auth/)
 
-How to register a user's phone to start using the API.
+Как зарегистрировать телефон пользователя, чтобы начать работу с API.

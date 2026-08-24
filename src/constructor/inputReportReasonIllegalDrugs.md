@@ -1,27 +1,24 @@
 ---
-title: "inputReportReasonIllegalDrugs (конструктор)"
+title: "inputReportReasonIllegalDrugs"
 original: "https://core.telegram.org/constructor/inputReportReasonIllegalDrugs"
 section: ref
 kind: constructor
+description: "Жалоба на запрещённые наркотики"
 layout: layout.njk
 ---
 
 # inputReportReasonIllegalDrugs
 
-*Конструктор из схемы TL.*
-
-> Report for illegal drugs
-
-## Определение TL
+Жалоба на запрещённые наркотики
 
 ```
 inputReportReasonIllegalDrugs#a8eb2be = ReportReason;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [ReportReason](/type/ReportReason/)

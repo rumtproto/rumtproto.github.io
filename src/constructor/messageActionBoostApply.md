@@ -1,35 +1,30 @@
 ---
-title: "messageActionBoostApply (конструктор)"
+title: "messageActionBoostApply"
 original: "https://core.telegram.org/constructor/messageActionBoostApply"
 section: ref
 kind: constructor
+description: "К каналу или супергруппе были применены бусты »."
 layout: layout.njk
 ---
 
 # messageActionBoostApply
 
-*Конструктор из схемы TL.*
-
-> Some [boosts »](https://core.telegram.org/api/boost) were applied to the channel or supergroup.
-
-## Определение TL
+К каналу или супергруппе были применены [бусты »](/api/boost/).
 
 ```
 messageActionBoostApply#cc02aa6d boosts:int = MessageAction;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| boosts | [int](/type/int/) | Number of applied [boosts](https://core.telegram.org/api/boost). |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>boosts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество применённых <a href="/api/boost">бустов</a>.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [MessageAction](/type/MessageAction/)
 
-## Related pages
+### Связанные страницы
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.

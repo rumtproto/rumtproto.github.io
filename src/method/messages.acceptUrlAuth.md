@@ -1,18 +1,15 @@
 ---
-title: "messages.acceptUrlAuth (метод)"
+title: "messages.acceptUrlAuth"
 original: "https://core.telegram.org/method/messages.acceptUrlAuth"
 section: ref
 kind: method
+description: "Используйте этот метод, чтобы подтвердить запрос авторизации Seamless Telegram Login; подробнее см. здесь »"
 layout: layout.njk
 ---
 
 # messages.acceptUrlAuth
 
-*Метод из схемы TL.*
-
-> Use this to accept a Seamless Telegram Login authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
-
-## Определение TL
+Используйте этот метод, чтобы подтвердить запрос авторизации Seamless Telegram Login; подробнее [см. здесь »](/api/url-authorization/)
 
 ```
 urlAuthResultRequest#f8f8eb1e flags:# request_write_access:flags.0?true request_phone_number:flags.1?true match_codes_first:flags.5?true bot:User domain:string browser:flags.2?string platform:flags.2?string ip:flags.2?string region:flags.2?string match_codes:flags.3?Vector<string> user_id_hint:flags.4?long = UrlAuthResult;
@@ -22,38 +19,29 @@ urlAuthResultDefault#a9d6db1f = UrlAuthResult;
 messages.acceptUrlAuth#67a3f0de flags:# write_allowed:flags.0?true share_phone_number:flags.3?true peer:flags.1?InputPeer msg_id:flags.1?int button_id:flags.1?int url:flags.2?string match_code:flags.4?string = UrlAuthResult;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| write_allowed | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | Set this flag to allow the bot to send messages to you (if requested) |
-| share_phone_number | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[true](/constructor/true/) | Set this flag to share the user's phone number with the bot (if requested via [urlAuthResultRequest](/constructor/urlAuthResultRequest/).request_phone_number and consented to by the user) |
-| peer | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[InputPeer](/type/InputPeer/) | The location of the message |
-| msg_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | Message ID of the message with the login button |
-| button_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[int](/type/int/) | ID of the login button |
-| url | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | URL used for [link URL authorization, click here for more info »](https://core.telegram.org/api/url-authorization#link-url-authorization) |
-| match_code | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[string](/type/string/) | If [urlAuthResultRequest](/constructor/urlAuthResultRequest/).match_codes was set, the emoji or code selected by the user from the provided list; must always be provided when match_codes is set, even if match_codes_first was set and the code was already validated via [messages.checkUrlAuthMatchCode](/method/messages.checkUrlAuthMatchCode/) |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>write_allowed</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Установите этот флаг, чтобы разрешить боту отправлять вам сообщения (если он это запросил)</td></tr><tr><td><strong>share_phone_number</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/constructor/true">true</a></td><td>Установите этот флаг, чтобы передать боту номер телефона пользователя (если он был запрошен через <a href="/constructor/urlAuthResultRequest">urlAuthResultRequest</a>.<code>request_phone_number</code> и пользователь на это согласился)</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Расположение сообщения</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения с кнопкой входа</td></tr><tr><td><strong>button_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/int">int</a></td><td>Идентификатор кнопки входа</td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>URL, используемый для <a href="/api/url-authorization#link-url-authorization">авторизации по ссылке, подробнее »</a></td></tr><tr><td><strong>match_code</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/type/string">string</a></td><td>Если в <a href="/constructor/urlAuthResultRequest">urlAuthResultRequest</a>.<code>match_codes</code> было задано значение — эмодзи или код, выбранный пользователем из предложенного списка; должен передаваться всегда, когда задано <code>match_codes</code>, даже если было задано <code>match_codes_first</code> и код уже был проверен через <a href="/method/messages.checkUrlAuthMatchCode">messages.checkUrlAuthMatchCode</a></td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [UrlAuthResult](/type/UrlAuthResult/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
 #### [urlAuthResultRequest](/constructor/urlAuthResultRequest/)
 
-Details about the authorization request, for more info [click here »](https://core.telegram.org/api/url-authorization)
+Сведения о запросе авторизации; подробнее [см. здесь »](/api/url-authorization/)
 
-#### [Seamless Telegram Login](https://core.telegram.org/api/url-authorization)
+#### [Бесшовный вход через Telegram](/api/url-authorization/)
 
-Handle Seamless Telegram Login URL authorization requests.
+Обработка запросов авторизации по URL через Seamless Telegram Login.
 
 #### [messages.checkUrlAuthMatchCode](/method/messages.checkUrlAuthMatchCode/)
 
-Validate the match code selected by the user against the code shown on the login page, as part of the [OAuth authorization flow »](https://core.telegram.org/api/url-authorization#oauth-authorization).
+Сверить выбранный пользователем код соответствия с кодом, показанным на странице входа, в рамках [процесса авторизации OAuth »](/api/url-authorization/#oauth-authorization).
 
-Only usable when both `match_codes` and `match_codes_first` are set in the [urlAuthResultRequest](/constructor/urlAuthResultRequest/) returned by [messages.requestUrlAuth](/method/messages.requestUrlAuth/).  
-If [boolTrue](/constructor/boolTrue/) is returned, proceed with the login flow and pass the verified code to [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/).`match_code`.
+Используется только тогда, когда в конструкторе [urlAuthResultRequest](/constructor/urlAuthResultRequest/), возвращённом методом [messages.requestUrlAuth](/method/messages.requestUrlAuth/), установлены оба флага `match_codes` и `match_codes_first`.  
+Если возвращается [boolTrue](/constructor/boolTrue/), продолжите процедуру входа и передайте проверенный код в [messages.acceptUrlAuth](/method/messages.acceptUrlAuth/).`match_code`.

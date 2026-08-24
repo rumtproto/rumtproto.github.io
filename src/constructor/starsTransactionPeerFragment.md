@@ -1,33 +1,30 @@
 ---
-title: "starsTransactionPeerFragment (конструктор)"
+title: "starsTransactionPeerFragment"
 original: "https://core.telegram.org/constructor/starsTransactionPeerFragment"
 section: ref
 kind: constructor
+description: "Описывает транзакцию Telegram Star с Fragment, используемую при покупке Telegram Stars через Fragment."
 layout: layout.njk
 ---
 
 # starsTransactionPeerFragment
 
-*Конструктор из схемы TL.*
-
-> Describes a [Telegram Star](https://core.telegram.org/api/stars) transaction with [Fragment](https://fragment.com), used when purchasing Telegram Stars through [Fragment](https://fragment.com).
-
-## Определение TL
+Описывает транзакцию [Telegram Star](/api/stars/) с [Fragment](https://fragment.com), используемую при покупке Telegram Stars через [Fragment](https://fragment.com).
 
 ```
 starsTransactionPeerFragment#e92fd902 = StarsTransactionPeer;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [StarsTransactionPeer](/type/StarsTransactionPeer/)
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stars](https://core.telegram.org/api/stars)
+#### [Telegram Stars](/api/stars/)
 
-Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
+Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.

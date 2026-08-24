@@ -1,18 +1,15 @@
 ---
-title: "messages.getPaidReactionPrivacy (метод)"
+title: "messages.getPaidReactionPrivacy"
 original: "https://core.telegram.org/method/messages.getPaidReactionPrivacy"
 section: ref
 kind: method
+description: "Получает обновление updatePaidReactionPrivacy с текущей настройкой приватности платных реакций по умолчанию, подробнее см. здесь »."
 layout: layout.njk
 ---
 
 # messages.getPaidReactionPrivacy
 
-*Метод из схемы TL.*
-
-> Fetches an [updatePaidReactionPrivacy](/constructor/updatePaidReactionPrivacy/) update with the current [default paid reaction privacy, see here »](https://core.telegram.org/api/reactions#paid-reactions) for more info.
-
-## Определение TL
+Получает обновление [updatePaidReactionPrivacy](/constructor/updatePaidReactionPrivacy/) с текущей [настройкой приватности платных реакций по умолчанию, подробнее см. здесь »](/api/reactions/#paid-reactions).
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -26,24 +23,24 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.getPaidReactionPrivacy#472455aa = Updates;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
 #### [updatePaidReactionPrivacy](/constructor/updatePaidReactionPrivacy/)
 
-Contains the current [default paid reaction privacy, see here »](https://core.telegram.org/api/reactions#paid-reactions) for more info.
+Содержит текущую [настройку приватности платных реакций по умолчанию, подробнее см. здесь »](/api/reactions/#paid-reactions).
 
-Clients should invoke [messages.getPaidReactionPrivacy](/method/messages.getPaidReactionPrivacy/) on startup to fetch the current default reaction privacy because this update is only sent to currently online sessions and cannot be fetched using getDifference on client startup.
+При запуске клиентам следует вызывать [messages.getPaidReactionPrivacy](/method/messages.getPaidReactionPrivacy/), чтобы получить текущую настройку приватности реакций по умолчанию, поскольку это обновление отправляется только сессиям, находящимся в сети в данный момент, и его нельзя получить через getDifference при запуске клиента.
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

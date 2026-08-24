@@ -1,19 +1,17 @@
 ---
-title: "stories.sendStory (метод)"
+title: "stories.sendStory"
 original: "https://core.telegram.org/method/stories.sendStory"
 section: ref
 kind: method
+description: "Загружает историю Telegram."
 layout: layout.njk
 ---
 
 # stories.sendStory
 
-*Метод из схемы TL.*
+Загружает [историю Telegram](/api/stories/).
 
-> Uploads a [Telegram Story](https://core.telegram.org/api/stories).
-> May also be used in a [business connection](https://core.telegram.org/api/bots/connected-business-bots), _not_ by wrapping the query in [invokeWithBusinessConnection »](/method/invokeWithBusinessConnection/), but rather by specifying the ID of a controlled business user in `peer`.
-
-## Определение TL
+[@term:peer] Может также применяться в рамках [бизнес-подключения](/api/bots/connected-business-bots/), причём _не_ через оборачивание запроса в [invokeWithBusinessConnection »](/method/invokeWithBusinessConnection/), а путём указания идентификатора управляемого бизнес-пользователя в `peer`.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -27,92 +25,56 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 stories.sendStory#737fc2ec flags:# pinned:flags.2?true noforwards:flags.4?true fwd_modified:flags.7?true peer:InputPeer media:InputMedia media_areas:flags.5?Vector<MediaArea> caption:flags.0?string entities:flags.1?Vector<MessageEntity> privacy_rules:Vector<InputPrivacyRule> random_id:long period:flags.3?int fwd_from_id:flags.6?InputPeer fwd_from_story:flags.6?int albums:flags.8?Vector<int> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| pinned | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[true](/constructor/true/) | Whether to add the story to the profile automatically upon expiration. If not set, the story will only be added to the archive, see [here »](https://core.telegram.org/api/stories) for more info. |
-| noforwards | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).4?[true](/constructor/true/) | If set, disables forwards, screenshots, and downloads. |
-| fwd_modified | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).7?[true](/constructor/true/) | Set this flag when reposting stories with fwd_from_id+fwd_from_story, if the media was modified before reposting. |
-| peer | [InputPeer](/type/InputPeer/) | The peer to send the story as. |
-| media | [InputMedia](/type/InputMedia/) | The story media. |
-| media_areas | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).5?[Vector](https://core.telegram.org/type/Vector%20t)<[MediaArea](/type/MediaArea/)> | [Media areas](https://core.telegram.org/api/stories#media-areas) associated to the story, see [here »](https://core.telegram.org/api/stories#media-areas) for more info. |
-| caption | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[string](/type/string/) | Story caption. |
-| entities | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[Vector](https://core.telegram.org/type/Vector%20t)<[MessageEntity](/type/MessageEntity/)> | [Message entities for styled text](https://core.telegram.org/api/entities), if allowed by the [stories_entities client configuration parameter »](https://core.telegram.org/api/config#stories-entities). |
-| privacy_rules | [Vector](https://core.telegram.org/type/Vector%20t)<[InputPrivacyRule](/type/InputPrivacyRule/)> | [Privacy rules](https://core.telegram.org/api/privacy) for the story, indicating who can or can't view the story. |
-| random_id | [long](/type/long/) | Unique client message ID required to prevent message resending. See [here »](https://core.telegram.org/api/updates/#updatemessageid-updates) for more info on random ID deduplication and updateMessageID mapping. |
-| period | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).3?[int](/type/int/) | Period after which the story is moved to archive (and to the profile if pinned is set), in seconds; must be one of 6 * 3600, 12 * 3600, 86400, or 2 * 86400 for Telegram Premium users, and 86400 otherwise. |
-| fwd_from_id | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[InputPeer](/type/InputPeer/) | If set, indicates that this story is a repost of story with ID fwd_from_story posted by the peer in fwd_from_id. |
-| fwd_from_story | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).6?[int](/type/int/) | If set, indicates that this story is a repost of story with ID fwd_from_story posted by the peer in fwd_from_id. |
-| albums | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).8?[Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | If set, adds the story to the specified albums. |
-| music | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).9?[InputDocument](/type/InputDocument/) | If set, the audio track to play as background music for the story. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>pinned</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/constructor/true">true</a></td><td>Добавлять ли историю в профиль автоматически по истечении срока её действия. Если флаг не установлен, история будет добавлена только в архив, подробнее см. <a href="/api/stories">здесь »</a>.</td></tr><tr><td><strong>noforwards</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.4?<a href="/constructor/true">true</a></td><td>Если установлено, запрещает пересылку, снимки экрана и скачивание.</td></tr><tr><td><strong>fwd_modified</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.7?<a href="/constructor/true">true</a></td><td>Установите этот флаг при репосте историй с <code>fwd_from_id</code>+<code>fwd_from_story</code>, если перед репостом поле <code>media</code> было изменено.</td></tr><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>Пир, от имени которого нужно опубликовать историю.</td></tr><tr><td><strong>media</strong></td><td style="text-align: center;"><a href="/type/InputMedia">InputMedia</a></td><td>Медиафайл истории.</td></tr><tr><td><strong>media_areas</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.5?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MediaArea">MediaArea</a>&gt;</td><td><a href="/api/stories#media-areas">Медиазоны</a>, связанные с историей; подробнее см. <a href="/api/stories#media-areas">здесь »</a>.</td></tr><tr><td><strong>caption</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/string">string</a></td><td>Подпись истории.</td></tr><tr><td><strong>entities</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/MessageEntity">MessageEntity</a>&gt;</td><td><a href="/api/entities">Сущности оформления для форматированного текста</a>, если это разрешено <a href="/api/config#stories-entities">параметром конфигурации клиента <code>stories_entities</code> »</a>.</td></tr><tr><td><strong>privacy_rules</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/InputPrivacyRule">InputPrivacyRule</a>&gt;</td><td><a href="/api/privacy">Правила приватности</a> для истории, определяющие, кто может и кто не может её просматривать.</td></tr><tr><td><strong>random_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>[@term:random_id] Уникальный идентификатор сообщения на стороне клиента, необходимый для предотвращения повторной отправки сообщения. Подробнее о дедупликации по случайному идентификатору и о сопоставлении updateMessageID см. <a href="/api/updates#updatemessageid-updates">здесь »</a>.</td></tr><tr><td><strong>period</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.3?<a href="/type/int">int</a></td><td>Срок, по истечении которого история переносится в архив (и в профиль, если установлен флаг <code>pinned</code>), в секундах; должен быть равен одному из значений <code>6 * 3600</code>, <code>12 * 3600</code>, <code>86400</code> или <code>2 * 86400</code> для пользователей Telegram Premium и <code>86400</code> в остальных случаях.</td></tr><tr><td><strong>fwd_from_id</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/InputPeer">InputPeer</a></td><td>Если установлено, указывает, что эта история — репост истории с идентификатором <code>fwd_from_story</code>, опубликованной пиром из <code>fwd_from_id</code>.</td></tr><tr><td><strong>fwd_from_story</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.6?<a href="/type/int">int</a></td><td>Если установлено, указывает, что эта история — репост истории с идентификатором <code>fwd_from_story</code>, опубликованной пиром из <code>fwd_from_id</code>.</td></tr><tr><td><strong>albums</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.8?<a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Если установлено, добавляет историю в указанные альбомы.</td></tr><tr><td><strong>music</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.9?<a href="/type/InputDocument">InputDocument</a></td><td>Если установлено, аудиодорожка, которую следует воспроизводить как фоновую музыку для истории.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Both users and bots can use this method
+### Этот метод доступен и пользователям, и ботам
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | BOOSTS_REQUIRED | The specified channel must first be [boosted by its users](https://core.telegram.org/api/boost) in order to perform this action. |
-| 403 | BOT_ACCESS_FORBIDDEN | The specified method can be used over a [business connection](https://core.telegram.org/api/bots/connected-business-bots) for some operations, but the specified query attempted an operation that is not allowed over a business connection. |
-| 400 | CHANNEL_INVALID | The provided channel is invalid. |
-| 400 | CHAT_ADMIN_REQUIRED | You must be an admin in this chat to do this. |
-| 400 | IMAGE_PROCESS_FAILED | Failure while processing image. |
-| 400 | MEDIA_CAPTION_TOO_LONG | The caption is too long. |
-| 400 | MEDIA_EMPTY | The provided media object is invalid. |
-| 400 | MEDIA_FILE_INVALID | The specified media file is invalid. |
-| 400 | MEDIA_TYPE_INVALID | The specified media type cannot be used in stories. |
-| 400 | MEDIA_VIDEO_STORY_MISSING | A non-story video cannot be repubblished as a story (emitted when trying to resend a non-story video as a story using inputDocument). |
-| 400 | PEER_ID_INVALID | The provided peer id is invalid. |
-| 400 | PHOTO_INVALID_DIMENSIONS | The photo dimensions are invalid. |
-| 400 | PREMIUM_ACCOUNT_REQUIRED | A premium account is required to execute this action. |
-| 400 | REACTION_INVALID | The specified reaction is invalid. |
-| 400 | STORIES_TOO_MUCH | You have hit the maximum active stories limit as specified by the [story_expiring_limit_* client configuration parameters](https://core.telegram.org/api/config#story-expiring-limit-default): you should buy a [Premium](https://core.telegram.org/api/premium) subscription, delete an active story, or wait for the oldest story to expire. |
-| 400 | STORY_PERIOD_INVALID | The specified story period is invalid for this account. |
-| 400 | VENUE_ID_INVALID | The specified venue ID is invalid. |
-| 400 | VIDEO_DURATION_INVALID | The duration of the specified video is invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>BOOSTS_REQUIRED</td><td>Чтобы выполнить это действие, указанный канал должен быть сначала <a href="/api/boost">забустен своими пользователями</a>.</td></tr><tr><td>403</td><td>BOT_ACCESS_FORBIDDEN</td><td>Указанный метод <em>можно</em> использовать через <a href="/api/bots/connected-business-bots">бизнес-подключение</a> для некоторых операций, но в данном запросе была предпринята операция, недопустимая через бизнес-подключение.</td></tr><tr><td>400</td><td>CHANNEL_INVALID</td><td>Указанный канал недействителен.</td></tr><tr><td>400</td><td>CHAT_ADMIN_REQUIRED</td><td>Для этого вы обязаны быть администратором этого чата.</td></tr><tr><td>400</td><td>IMAGE_PROCESS_FAILED</td><td>Сбой при обработке изображения.</td></tr><tr><td>400</td><td>MEDIA_CAPTION_TOO_LONG</td><td>Подпись слишком длинная.</td></tr><tr><td>400</td><td>MEDIA_EMPTY</td><td>Указанный объект медиа недействителен.</td></tr><tr><td>400</td><td>MEDIA_FILE_INVALID</td><td>Указанный медиафайл недействителен.</td></tr><tr><td>400</td><td>MEDIA_TYPE_INVALID</td><td>Указанный тип медиа нельзя использовать в историях.</td></tr><tr><td>400</td><td>MEDIA_VIDEO_STORY_MISSING</td><td>Видео, не являющееся историей, нельзя опубликовать повторно как историю (возникает при попытке повторно отправить такое видео в качестве истории через inputDocument).</td></tr><tr><td>400</td><td>PEER_ID_INVALID</td><td>Указанный идентификатор пира недействителен.</td></tr><tr><td>400</td><td>PHOTO_INVALID_DIMENSIONS</td><td>Недопустимые размеры фотографии.</td></tr><tr><td>400</td><td>PREMIUM_ACCOUNT_REQUIRED</td><td>Для выполнения этого действия требуется аккаунт Premium.</td></tr><tr><td>400</td><td>REACTION_INVALID</td><td>Указанная реакция недействительна.</td></tr><tr><td>400</td><td>STORIES_TOO_MUCH</td><td>Вы достигли предельного числа активных историй, заданного <a href="/api/config#story-expiring-limit-default">параметрами клиентской конфигурации <code>story_expiring_limit_*</code></a>: следует приобрести подписку <a href="/api/premium">Premium</a>, удалить одну из активных историй или дождаться истечения срока самой старой из них.</td></tr><tr><td>400</td><td>STORY_PERIOD_INVALID</td><td>Указанный срок действия истории недопустим для этого аккаунта.</td></tr><tr><td>400</td><td>VENUE_ID_INVALID</td><td>Указанный идентификатор заведения недействителен.</td></tr><tr><td>400</td><td>VIDEO_DURATION_INVALID</td><td>Недопустимая длительность указанного видео.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Stories](https://core.telegram.org/api/stories)
+#### [Telegram Stories](/api/stories/)
 
-Telegram users and channels can easily post and view stories through the API.
+Пользователи и каналы Telegram могут без труда публиковать и просматривать истории через API.
 
-#### [Styled text with message entities](https://core.telegram.org/api/entities)
+#### [Оформленный текст и сущности оформления](/api/entities/)
 
-How to create styled text with message entities
+Как оформлять текст с помощью сущностей оформления
 
-#### [Client configuration](https://core.telegram.org/api/config)
+#### [Конфигурация клиента](/api/config/)
 
-The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.
+У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.
 
-#### [Privacy settings](https://core.telegram.org/api/privacy)
+#### [Настройки приватности](/api/privacy/)
 
-Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.
+Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным способом.
 
-#### [Working with Updates](/api/updates/)
+#### [Работа с обновлениями](/api/updates/)
 
-How to subscribe to updates and handle them properly.
+Как подписаться на обновления и правильно их обрабатывать.
 
-#### [Connected business bots](https://core.telegram.org/api/bots/connected-business-bots)
+#### [Подключённые бизнес-боты](/api/bots/connected-business-bots/)
 
-Users can connect Telegram bots that will process and answer messages on their behalf. This allows them to seamlessly integrate any existing tools and workflows, or add AI assistants that manage their chats.
+Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них от имени пользователя. Это позволяет легко встроить любые уже существующие инструменты и рабочие процессы или добавить ИИ-помощников, которые ведут их чаты.
 
 #### [invokeWithBusinessConnection](/method/invokeWithBusinessConnection/)
 
-Invoke a method using a [Telegram Business Bot connection, see here » for more info, including a list of the methods that can be wrapped in this constructor](https://core.telegram.org/api/bots/connected-business-bots).
+Вызвать метод через [подключение Telegram Business Bot; подробнее, включая список методов, которые можно обернуть в этот конструктор, см. здесь »](/api/bots/connected-business-bots/).
 
-Make sure to always send queries wrapped in a `invokeWithBusinessConnection` to the datacenter ID, specified in the `dc_id` field of the [botBusinessConnection](/constructor/botBusinessConnection/) that is being used.
+Всегда отправляйте запросы, обёрнутые в `invokeWithBusinessConnection`, в дата-центр с идентификатором, указанным в поле `dc_id` используемого [botBusinessConnection](/constructor/botBusinessConnection/).
 
-#### [Channel and supergroup boosts](https://core.telegram.org/api/boost)
+#### [Бусты каналов и супергрупп](/api/boost/)
 
-Telegram Premium users can grant their favorite channels and supergroups additional features like the ability to post stories by giving them boosts.
+Пользователи Telegram Premium могут открывать любимым каналам и супергруппам дополнительные возможности — например, публикацию историй, — отдавая за них бусты.
 
-#### [Telegram Premium](https://core.telegram.org/api/premium)
+#### [Telegram Premium](/api/premium/)
 
-Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app.
+Telegram Premium — необязательная подписка, которая открывает дополнительные эксклюзивные возможности на стороне клиента и API и одновременно помогает поддерживать разработку приложения.

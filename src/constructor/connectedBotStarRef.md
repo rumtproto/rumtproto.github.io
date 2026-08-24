@@ -1,55 +1,42 @@
 ---
-title: "connectedBotStarRef (конструктор)"
+title: "connectedBotStarRef"
 original: "https://core.telegram.org/constructor/connectedBotStarRef"
 section: ref
 kind: constructor
+description: "Информация об активной партнёрской программе, в которой мы участвуем с одним из Mini App"
 layout: layout.njk
 ---
 
 # connectedBotStarRef
 
-*Конструктор из схемы TL.*
-
-> Info about an [active affiliate program we have with a Mini App](https://core.telegram.org/api/bots/referrals#becoming-an-affiliate)
-
-## Определение TL
+[@term:Mini App] Информация об [активной партнёрской программе, в которой мы участвуем с одним из Mini App](/api/bots/referrals/#becoming-an-affiliate)
 
 ```
 connectedBotStarRef#19a13f71 flags:# revoked:flags.1?true url:string date:int bot_id:long commission_permille:int duration_months:flags.0?int participants:long revenue:long = ConnectedBotStarRef;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| revoked | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, this affiliation was revoked by the affiliate using [payments.editConnectedStarRefBot](/method/payments.editConnectedStarRefBot/), or by the affiliation program owner using [bots.updateStarRefProgram](/method/bots.updateStarRefProgram/) |
-| url | [string](/type/string/) | [Referral link](https://core.telegram.org/api/links#referral-links) to be shared |
-| date | [int](/type/int/) | When did we affiliate with bot_id |
-| bot_id | [long](/type/long/) | ID of the mini app that created the affiliate program |
-| commission_permille | [int](/type/int/) | The number of Telegram Stars received by the affiliate for each 1000 Telegram Stars received by bot_id |
-| duration_months | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[int](/type/int/) | Number of months the program will be active; if not set, there is no expiration date. |
-| participants | [long](/type/long/) | The number of users that used the affiliate program |
-| revenue | [long](/type/long/) | The number of Telegram Stars that were earned by the affiliate program |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>revoked</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, это партнёрство было отозвано партнёром с помощью <a href="/method/payments.editConnectedStarRefBot">payments.editConnectedStarRefBot</a> или владельцем партнёрской программы с помощью <a href="/method/bots.updateStarRefProgram">bots.updateStarRefProgram</a></td></tr><tr><td><strong>url</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td><a href="/api/links#referral-links">Реферальная ссылка</a>, которой нужно поделиться</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда мы вступили в партнёрство с <code>bot_id</code></td></tr><tr><td><strong>bot_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор mini app, создавшего партнёрскую программу</td></tr><tr><td><strong>commission_permille</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество Telegram Stars, получаемых партнёром за каждую 1000 Telegram Stars, полученных <code>bot_id</code></td></tr><tr><td><strong>duration_months</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/int">int</a></td><td>Количество месяцев, в течение которых программа будет действовать; если не задано, срок действия не ограничен.</td></tr><tr><td><strong>participants</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Количество пользователей, воспользовавшихся партнёрской программой</td></tr><tr><td><strong>revenue</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Количество Telegram Stars, заработанных партнёрской программой</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [ConnectedBotStarRef](/type/ConnectedBotStarRef/)
 
-## Related pages
+### Связанные страницы
 
 #### [payments.editConnectedStarRefBot](/method/payments.editConnectedStarRefBot/)
 
-Leave a bot's [affiliate program »](https://core.telegram.org/api/bots/referrals#becoming-an-affiliate)
+Выйти из [партнёрской программы »](/api/bots/referrals/#becoming-an-affiliate) бота
 
 #### [bots.updateStarRefProgram](/method/bots.updateStarRefProgram/)
 
-Create, edit or delete the [affiliate program](https://core.telegram.org/api/bots/referrals) of a bot we own
+Создать, изменить или удалить [партнёрскую программу](/api/bots/referrals/) принадлежащего нам бота
 
-#### [Deep links](https://core.telegram.org/api/links)
+#### [Глубокие ссылки](/api/links/)
 
-Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
+Клиенты Telegram обязаны обрабатывать особые глубокие ссылки tg:// и t.me, встречающиеся в сообщениях, сущностях-ссылках и в других приложениях, регистрируя обработчики в операционной системе.
 
-#### [Affiliate programs](https://core.telegram.org/api/bots/referrals)
+#### [Партнёрские программы](/api/bots/referrals/)
 
-Developers can open affiliate programs for their mini app – allowing content creators, other mini app developers and any Telegram user to promote it and earn commissions on purchases made by people they referred.
+Разработчики могут открывать партнёрские программы для своих mini app — это позволяет авторам контента, другим разработчикам mini app и любому пользователю Telegram продвигать приложение и получать комиссию с покупок, совершённых приведёнными ими людьми.

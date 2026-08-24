@@ -1,31 +1,24 @@
 ---
-title: "searchResultPosition (конструктор)"
+title: "searchResultPosition"
 original: "https://core.telegram.org/constructor/searchResultPosition"
 section: ref
 kind: constructor
+description: "Информация о сообщении в определённой позиции"
 layout: layout.njk
 ---
 
 # searchResultPosition
 
-*Конструктор из схемы TL.*
-
-> Information about a message in a specific position
-
-## Определение TL
+Информация о сообщении в определённой позиции
 
 ```
 searchResultPosition#7f648b67 msg_id:int date:int offset:int = SearchResultsPosition;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| msg_id | [int](/type/int/) | Message ID |
-| date | [int](/type/int/) | When was the message sent |
-| offset | [int](/type/int/) | 0-based message position in the full list of suitable messages |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения</td></tr><tr><td><strong>date</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Когда сообщение было отправлено</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Отсчитываемая от нуля позиция сообщения в полном списке подходящих сообщений</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [SearchResultsPosition](/type/SearchResultsPosition/)

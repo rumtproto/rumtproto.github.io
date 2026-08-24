@@ -1,37 +1,30 @@
 ---
-title: "inputChannelFromMessage (конструктор)"
+title: "inputChannelFromMessage"
 original: "https://core.telegram.org/constructor/inputChannelFromMessage"
 section: ref
 kind: constructor
+description: "Определяет min-канал, который встретился в определённом сообщении определённого чата."
 layout: layout.njk
 ---
 
 # inputChannelFromMessage
 
-*Конструктор из схемы TL.*
-
-> Defines a [min](https://core.telegram.org/api/min) channel that was seen in a certain message of a certain chat.
-
-## Определение TL
+Определяет [min](/api/min/)-канал, который встретился в определённом сообщении определённого чата.
 
 ```
 inputChannelFromMessage#5b934f9d peer:InputPeer msg_id:int channel_id:long = InputChannel;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | The chat where the channel was seen |
-| msg_id | [int](/type/int/) | The message ID in the chat where the channel was seen |
-| channel_id | [long](/type/long/) | The channel ID |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Чат, в котором был замечен канал</td></tr><tr><td><strong>msg_id</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>[@term:msg_id] Идентификатор сообщения в чате, где был замечен канал</td></tr><tr><td><strong>channel_id</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Идентификатор канала</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [InputChannel](/type/InputChannel/)
 
-## Related pages
+### Связанные страницы
 
-#### [Min constructors](https://core.telegram.org/api/min)
+#### [Конструкторы min](/api/min/)
 
-In some situations user and channel constructors have reduced set of fields present (although id is always there) and min flag set.
+В некоторых случаях в конструкторах пользователя и канала присутствует сокращённый набор полей (хотя id есть всегда) и установлен флаг min.

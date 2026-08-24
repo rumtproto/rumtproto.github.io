@@ -1,18 +1,15 @@
 ---
-title: "messages.Reactions (тип)"
+title: "messages.Reactions"
 original: "https://core.telegram.org/type/messages.Reactions"
 section: ref
 kind: type
+description: "Набор реакций на сообщения"
 layout: layout.njk
 ---
 
 # messages.Reactions
 
-*Тип из схемы TL.*
-
-> A set of [message reactions](https://core.telegram.org/api/reactions)
-
-## Определение TL
+Набор [реакций на сообщения](/api/reactions/)
 
 ```
 messages.reactionsNotModified#b06fdbdf = messages.Reactions;
@@ -25,23 +22,16 @@ messages.getRecentReactions#39461db2 limit:int hash:long = messages.Reactions;
 messages.getDefaultTagReactions#bdf93428 hash:long = messages.Reactions;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.reactionsNotModified](/constructor/messages.reactionsNotModified/) | The server-side list of [message reactions](https://core.telegram.org/api/reactions) hasn't changed |
-| [messages.reactions](/constructor/messages.reactions/) | List of [message reactions](https://core.telegram.org/api/reactions) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.reactionsNotModified">messages.reactionsNotModified</a></td><td>Серверный список <a href="/api/reactions">реакций на сообщения</a> не изменился</td></tr><tr><td><a href="/constructor/messages.reactions">messages.reactions</a></td><td>Список <a href="/api/reactions">реакций на сообщения</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getTopReactions](/method/messages.getTopReactions/) | Got popular [message reactions](https://core.telegram.org/api/reactions) |
-| [messages.getRecentReactions](/method/messages.getRecentReactions/) | Get recently used [message reactions](https://core.telegram.org/api/reactions) |
-| [messages.getDefaultTagReactions](/method/messages.getDefaultTagReactions/) | Fetch a default recommended list of [saved message tag reactions](https://core.telegram.org/api/saved-messages#tags). |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getTopReactions">messages.getTopReactions</a></td><td>Получены популярные <a href="/api/reactions">реакции на сообщения</a></td></tr><tr><td><a href="/method/messages.getRecentReactions">messages.getRecentReactions</a></td><td>Получить недавно использованные <a href="/api/reactions">реакции на сообщения</a></td></tr><tr><td><a href="/method/messages.getDefaultTagReactions">messages.getDefaultTagReactions</a></td><td>Получить рекомендуемый список <a href="/api/saved-messages#tags">реакций-тегов для сохранённых сообщений</a> по умолчанию.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Message reactions](https://core.telegram.org/api/reactions)
+#### [Реакции на сообщения](/api/reactions/)
 
-Telegram allows users to react on any message using specific emojis, triggering cute lottie animations.
+Telegram позволяет пользователям реагировать на любое сообщение определёнными эмодзи, запуская симпатичные lottie-анимации.

@@ -1,18 +1,15 @@
 ---
-title: "StarGiftAttributeRarity (тип)"
+title: "StarGiftAttributeRarity"
 original: "https://core.telegram.org/type/StarGiftAttributeRarity"
 section: ref
 kind: type
+description: "Редкость атрибута коллекционного подарка », заданная либо точным значением в промилле, либо одним из именованных уровней редкости (необычный, редкий, эпический, легендарный)."
 layout: layout.njk
 ---
 
 # StarGiftAttributeRarity
 
-*Тип из схемы TL.*
-
-> Rarity of a [collectible gift »](https://core.telegram.org/api/gifts#collectible-gifts) attribute, either as an exact permille value or as one of the named rarity tiers (uncommon, rare, epic, legendary).
-
-## Определение TL
+Редкость атрибута [коллекционного подарка »](/api/gifts/#collectible-gifts), заданная либо точным значением в промилле, либо одним из именованных уровней редкости (необычный, редкий, эпический, легендарный).
 
 ```
 starGiftAttributeRarity#36437737 permille:int = StarGiftAttributeRarity;
@@ -22,18 +19,12 @@ starGiftAttributeRarityEpic#78fbf3a8 = StarGiftAttributeRarity;
 starGiftAttributeRarityLegendary#cef7e7a8 = StarGiftAttributeRarity;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [starGiftAttributeRarity](/constructor/starGiftAttributeRarity/) | Exact rarity value for a collectible gift attribute. |
-| [starGiftAttributeRarityUncommon](/constructor/starGiftAttributeRarityUncommon/) | Represents uncommon collectible gift attribute rarity. |
-| [starGiftAttributeRarityRare](/constructor/starGiftAttributeRarityRare/) | Represents rare collectible gift attribute rarity. |
-| [starGiftAttributeRarityEpic](/constructor/starGiftAttributeRarityEpic/) | Represents epic collectible gift attribute rarity. |
-| [starGiftAttributeRarityLegendary](/constructor/starGiftAttributeRarityLegendary/) | Represents legendary collectible gift attribute rarity. |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/starGiftAttributeRarity">starGiftAttributeRarity</a></td><td>Точное значение редкости для атрибута коллекционного подарка.</td></tr><tr><td><a href="/constructor/starGiftAttributeRarityUncommon">starGiftAttributeRarityUncommon</a></td><td>Обозначает необычную редкость атрибута коллекционного подарка.</td></tr><tr><td><a href="/constructor/starGiftAttributeRarityRare">starGiftAttributeRarityRare</a></td><td>Обозначает редкий уровень редкости атрибута коллекционного подарка.</td></tr><tr><td><a href="/constructor/starGiftAttributeRarityEpic">starGiftAttributeRarityEpic</a></td><td>Обозначает эпическую редкость атрибута коллекционного подарка.</td></tr><tr><td><a href="/constructor/starGiftAttributeRarityLegendary">starGiftAttributeRarityLegendary</a></td><td>Обозначает легендарную редкость атрибута коллекционного подарка.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Telegram Gifts](https://core.telegram.org/api/gifts)
+#### [Подарки Telegram](/api/gifts/)
 
-Users can send Gifts to their friends. The recipients of gifts can display them on their profile pages or turn them into Telegram Stars ». Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.
+Пользователи могут отправлять подарки друзьям. Получатели подарков могут показывать их в своих профилях или превращать в Telegram Stars ». Telegram Stars применяются для многого, в том числе для поддержки авторов и покупки услуг в мини-приложениях.

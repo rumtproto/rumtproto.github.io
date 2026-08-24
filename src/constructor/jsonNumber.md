@@ -1,35 +1,33 @@
 ---
-title: "jsonNumber (конструктор)"
+title: "jsonNumber"
 original: "https://core.telegram.org/constructor/jsonNumber"
 section: ref
 kind: constructor
+description: "Числовое значение JSON"
 layout: layout.njk
 ---
 
 # jsonNumber
 
-*Конструктор из схемы TL.*
+Числовое значение JSON
 
-> JSON numeric value
-> #### [End-to-end schema](/schema/end-to-end/)
-> ```
-> ===216===
-> jsonNumber#2be0dfa4 value:double = JSONValue;
-> ```
-> #### API schema
+#### [Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)
 
-## Определение TL
+```
+===216===
+jsonNumber#2be0dfa4 value:double = JSONValue;
+```
+
+#### Схема API
 
 ```
 jsonNumber#2be0dfa4 value:double = JSONValue;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| value | [double](/type/double/) | Value |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/double">double</a></td><td>Значение</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [JSONValue](/type/JSONValue/)

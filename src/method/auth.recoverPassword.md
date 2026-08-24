@@ -1,18 +1,15 @@
 ---
-title: "auth.recoverPassword (метод)"
+title: "auth.recoverPassword"
 original: "https://core.telegram.org/method/auth.recoverPassword"
 section: ref
 kind: method
+description: "Сбросить пароль двухфакторной аутентификации с помощью кода восстановления, отправленного методом auth.requestPasswordRecovery."
 layout: layout.njk
 ---
 
 # auth.recoverPassword
 
-*Метод из схемы TL.*
-
-> Reset the [2FA password](/api/srp/) using the recovery code sent using [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/).
-
-## Определение TL
+Сбросить [пароль двухфакторной аутентификации](/api/srp/) с помощью кода восстановления, отправленного методом [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/).
 
 ```
 auth.authorization#2ea2c0d4 flags:# setup_password_required:flags.1?true otherwise_relogin_days:flags.1?int tmp_sessions:flags.0?int future_auth_token:flags.2?bytes user:User = auth.Authorization;
@@ -21,33 +18,26 @@ auth.authorizationSignUpRequired#44747e9a flags:# terms_of_service:flags.0?help.
 auth.recoverPassword#37096c70 flags:# code:string new_settings:flags.0?account.PasswordInputSettings = auth.Authorization;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| code | [string](/type/string/) | Code received via email |
-| new_settings | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[account.PasswordInputSettings](/type/account.PasswordInputSettings/) | New password |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>code</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Код, полученный по электронной почте</td></tr><tr><td><strong>new_settings</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/type/account.PasswordInputSettings">account.PasswordInputSettings</a></td><td>Новый пароль</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [auth.Authorization](/type/auth.Authorization/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Possible errors
+### Возможные ошибки
 
-| Code | Тип | Описание |
-|---|---|---|
-| 400 | CODE_EMPTY | The provided code is empty. |
-| 400 | NEW_SETTINGS_INVALID | The new password settings are invalid. |
+<table class="table"><thead><tr><th scope="col">Код</th><th scope="col">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td>400</td><td>CODE_EMPTY</td><td>Указанный код пуст.</td></tr><tr><td>400</td><td>NEW_SETTINGS_INVALID</td><td>Новые настройки пароля недействительны.</td></tr></tbody></table>
 
-## Related pages
+### Связанные страницы
 
-#### [Two-factor authentication](/api/srp/)
+#### [Двухфакторная аутентификация](/api/srp/)
 
-How to login to a user's account if they have enabled 2FA, how to change password.
+Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.
 
 #### [auth.requestPasswordRecovery](/method/auth.requestPasswordRecovery/)
 
-Request recovery code of a [2FA password](/api/srp/), only for accounts with a [recovery email configured](https://core.telegram.org/api/srp/#email-verification).
+Запросить код восстановления [пароля двухфакторной аутентификации](/api/srp/); доступно только для аккаунтов с [настроенной почтой для восстановления](/api/srp/#email-verification).

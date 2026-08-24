@@ -1,27 +1,24 @@
 ---
-title: "boolTrue (конструктор)"
+title: "boolTrue"
 original: "https://core.telegram.org/constructor/boolTrue"
 section: ref
 kind: constructor
+description: "Конструктор можно трактовать как **логическое** значение true."
 layout: layout.njk
 ---
 
 # boolTrue
 
-*Конструктор из схемы TL.*
-
-> The constructor can be interpreted as a **boolean**`true` value.
-
-## Определение TL
+Конструктор можно трактовать как **логическое** значение `true`.
 
 ```
 boolTrue#997275b5 = Bool;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [Bool](/type/Bool/)

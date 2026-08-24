@@ -1,20 +1,18 @@
 ---
-title: "messages.getExtendedMedia (метод)"
+title: "messages.getExtendedMedia"
 original: "https://core.telegram.org/method/messages.getExtendedMedia"
 section: ref
 kind: method
+description: "Получить обновлённую информацию о платном медиа; полное описание процесса см. здесь »."
 layout: layout.njk
 ---
 
 # messages.getExtendedMedia
 
-*Метод из схемы TL.*
+Получить обновлённую информацию о [платном медиа; полное описание процесса см. здесь »](/api/paid-media/).
 
-> Fetch updated information about [paid media, see here »](https://core.telegram.org/api/paid-media) for the full flow.
-> This method will return an array of [updateMessageExtendedMedia](/constructor/updateMessageExtendedMedia/) updates, only for messages containing **already bought** paid media.  
-> No information will be returned for messages containing not yet bought paid media.
-
-## Определение TL
+Этот метод возвращает массив обновлений [updateMessageExtendedMedia](/constructor/updateMessageExtendedMedia/) только для сообщений с **уже оплаченным** платным медиа.  
+Для сообщений с ещё не оплаченным платным медиа никаких сведений не возвращается.
 
 ```
 updatesTooLong#e317af7e = Updates;
@@ -28,25 +26,22 @@ updateShortSentMessage#9015e101 flags:# out:flags.1?true id:int pts:int pts_coun
 messages.getExtendedMedia#84f80814 peer:InputPeer id:Vector<int> = Updates;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| peer | [InputPeer](/type/InputPeer/) | Peer with visible paid media messages. |
-| id | [Vector](https://core.telegram.org/type/Vector%20t)<[int](/type/int/)> | IDs of currently visible messages containing paid media. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>peer</strong></td><td style="text-align: center;"><a href="/type/InputPeer">InputPeer</a></td><td>[@term:peer] Пир с видимыми сообщениями с платными медиа.</td></tr><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/int">int</a>&gt;</td><td>Идентификаторы видимых в данный момент сообщений с платными медиа.</td></tr></tbody></table>
 
-## Результат
+### Результат
 
 [Updates](/type/Updates/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям
 
-## Related pages
+### Связанные страницы
 
-#### [Paid media](https://core.telegram.org/api/paid-media)
+#### [Платные медиа](/api/paid-media/)
 
-Content creators can accept Stars by publishing paid photos or videos on their channels. Subscribers will be allowed to view such posts only after paying the author to unlock them.
+Авторы контента могут принимать Stars, публикуя в своих каналах платные фотографии и видео. Подписчики смогут просмотреть такие посты, только заплатив автору за их разблокировку.
 
 #### [updateMessageExtendedMedia](/constructor/updateMessageExtendedMedia/)
 
-You [bought a paid media »](https://core.telegram.org/api/paid-media): this update contains the revealed media.
+Вы [купили платное медиа »](/api/paid-media/): это обновление содержит раскрытое медиа.

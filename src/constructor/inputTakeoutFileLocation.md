@@ -1,33 +1,30 @@
 ---
-title: "inputTakeoutFileLocation (конструктор)"
+title: "inputTakeoutFileLocation"
 original: "https://core.telegram.org/constructor/inputTakeoutFileLocation"
 section: ref
 kind: constructor
+description: "Используется для скачивания JSON-файла, который будет содержать все персональные данные, относящиеся к возможностям, для которых пока нет специализированного метода выгрузки;…"
 layout: layout.njk
 ---
 
 # inputTakeoutFileLocation
 
-*Конструктор из схемы TL.*
-
-> Used to download a JSON file that will contain all personal data related to features that do not have a specialized [takeout method](https://core.telegram.org/api/takeout) yet, see [here »](https://core.telegram.org/api/takeout) for more info on the takeout API.
-
-## Определение TL
+Используется для скачивания JSON-файла, который будет содержать все персональные данные, относящиеся к возможностям, для которых пока нет специализированного [метода выгрузки](/api/takeout/); подробнее об API выгрузки данных см. [здесь »](/api/takeout/).
 
 ```
 inputTakeoutFileLocation#29be5899 = InputFileLocation;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputFileLocation](/type/InputFileLocation/)
 
-## Related pages
+### Связанные страницы
 
-#### [Takeout API](https://core.telegram.org/api/takeout)
+#### [Takeout API](/api/takeout/)
 
-Telegram's API allows users to export all of their information through the takeout API.
+API Telegram позволяет пользователям экспортировать все свои данные через API выгрузки данных.

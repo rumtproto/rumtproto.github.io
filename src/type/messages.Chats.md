@@ -1,18 +1,15 @@
 ---
-title: "messages.Chats (тип)"
+title: "messages.Chats"
 original: "https://core.telegram.org/type/messages.Chats"
 section: ref
 kind: type
+description: "Объект содержит список чатов со вспомогательными данными."
 layout: layout.njk
 ---
 
 # messages.Chats
 
-*Тип из схемы TL.*
-
-> Object contains list of chats with auxiliary data.
-
-## Определение TL
+Объект содержит список чатов со вспомогательными данными.
 
 ```
 messages.chats#64ff9fd5 chats:Vector<Chat> = messages.Chats;
@@ -32,22 +29,10 @@ channels.getChannelRecommendations#25a71742 flags:# channel:flags.0?InputChannel
 stories.getChatsToSend#a56a8b60 = messages.Chats;
 ```
 
-## Конструкторы
+### Конструкторы
 
-| Constructor | Описание |
-|---|---|
-| [messages.chats](/constructor/messages.chats/) | List of chats with auxiliary data. |
-| [messages.chatsSlice](/constructor/messages.chatsSlice/) | Partial list of chats, more would have to be fetched with [pagination](https://core.telegram.org/api/offsets) |
+<table class="table"><thead><tr><th scope="col">Конструктор</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/constructor/messages.chats">messages.chats</a></td><td>Список чатов со вспомогательными данными.</td></tr><tr><td><a href="/constructor/messages.chatsSlice">messages.chatsSlice</a></td><td>Неполный список чатов; остальные придётся получить с помощью <a href="/api/offsets">постраничной выборки</a></td></tr></tbody></table>
 
-## Методы
+### Методы
 
-| Method | Описание |
-|---|---|
-| [messages.getChats](/method/messages.getChats/) | Returns chat basic info on their IDs. |
-| [messages.getCommonChats](/method/messages.getCommonChats/) | Get chats in common with a user |
-| [channels.getChannels](/method/channels.getChannels/) | Get info about [channels/supergroups](https://core.telegram.org/api/channel) |
-| [channels.getAdminedPublicChannels](/method/channels.getAdminedPublicChannels/) | Get [channels/supergroups/geogroups](https://core.telegram.org/api/channel) we're admin in. Usually called when the user exceeds the [limit](/constructor/config/) for owned public [channels/supergroups/geogroups](https://core.telegram.org/api/channel), and the user is given the choice to remove one of his channels/supergroups/geogroups. |
-| [channels.getLeftChannels](/method/channels.getLeftChannels/) | Get a list of [channels/supergroups](https://core.telegram.org/api/channel) we left, requires a [takeout session, see here » for more info](https://core.telegram.org/api/takeout). |
-| [channels.getGroupsForDiscussion](/method/channels.getGroupsForDiscussion/) | Get all groups that can be used as [discussion groups](https://core.telegram.org/api/discussion). Returned [basic group chats](https://core.telegram.org/api/channel#basic-groups) must be first upgraded to [supergroups](https://core.telegram.org/api/channel#supergroups) before they can be set as a discussion group. To set a returned supergroup as a discussion group, access to its old messages must be enabled using [channels.togglePreHistoryHidden](/method/channels.togglePreHistoryHidden/), first. |
-| [channels.getChannelRecommendations](/method/channels.getChannelRecommendations/) | Obtain a list of similarly themed public channels, selected based on similarities in their subscriber bases. |
-| [stories.getChatsToSend](/method/stories.getChatsToSend/) | Obtain a list of channels where the user can post [stories](https://core.telegram.org/api/stories) |
+<table class="table"><thead><tr><th scope="col">Метод</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><a href="/method/messages.getChats">messages.getChats</a></td><td>Возвращает основные сведения о чатах по их идентификаторам.</td></tr><tr><td><a href="/method/messages.getCommonChats">messages.getCommonChats</a></td><td>Получить общие с пользователем чаты</td></tr><tr><td><a href="/method/channels.getChannels">channels.getChannels</a></td><td>Получить информацию о <a href="/api/channel">каналах и супергруппах</a></td></tr><tr><td><a href="/method/channels.getAdminedPublicChannels">channels.getAdminedPublicChannels</a></td><td>Получить <a href="/api/channel">каналы, супергруппы и геогруппы</a>, в которых мы являемся администратором. Обычно вызывается, когда пользователь превышает <a href="/constructor/config">ограничение</a> на число принадлежащих ему публичных <a href="/api/channel">каналов, супергрупп и геогрупп</a> и ему предлагается удалить один из его каналов, супергрупп или геогрупп.</td></tr><tr><td><a href="/method/channels.getLeftChannels">channels.getLeftChannels</a></td><td>Получить список <a href="/api/channel">каналов и супергрупп</a>, которые мы покинули; требуется <a href="/api/takeout">сессия выгрузки данных, подробнее см. здесь »</a>.</td></tr><tr><td><a href="/method/channels.getGroupsForDiscussion">channels.getGroupsForDiscussion</a></td><td>Получить все группы, которые можно использовать в качестве <a href="/api/discussion">групп обсуждения</a>.<br><br>Возвращённые <a href="/api/channel#basic-groups">обычные группы</a> необходимо сначала преобразовать в <a href="/api/channel#supergroups">супергруппы</a>, и только затем их можно назначить группой обсуждения.<br>Чтобы назначить возвращённую супергруппу группой обсуждения, нужно сначала открыть доступ к её старым сообщениям с помощью <a href="/method/channels.togglePreHistoryHidden">channels.togglePreHistoryHidden</a>.</td></tr><tr><td><a href="/method/channels.getChannelRecommendations">channels.getChannelRecommendations</a></td><td>Получить список публичных каналов схожей тематики, отобранных по сходству их <strong>аудитории подписчиков</strong>.</td></tr><tr><td><a href="/method/stories.getChatsToSend">stories.getChatsToSend</a></td><td>Получить список каналов, в которых пользователь может публиковать <a href="/api/stories">истории</a></td></tr></tbody></table>

@@ -1,49 +1,36 @@
 ---
-title: "starsGiveawayOption (конструктор)"
+title: "starsGiveawayOption"
 original: "https://core.telegram.org/constructor/starsGiveawayOption"
 section: ref
 kind: constructor
+description: "Содержит информацию о варианте розыгрыша Telegram Stars."
 layout: layout.njk
 ---
 
 # starsGiveawayOption
 
-*Конструктор из схемы TL.*
-
-> Contains info about a [Telegram Star giveaway](https://core.telegram.org/api/giveaways#star-giveaways) option.
-
-## Определение TL
+Содержит информацию о варианте [розыгрыша Telegram Stars](/api/giveaways/#star-giveaways).
 
 ```
 starsGiveawayOption#94ce852a flags:# extended:flags.0?true default:flags.1?true stars:long yearly_boosts:int store_product:flags.2?string currency:string amount:long winners:Vector<StarsGiveawayWinnersOption> = StarsGiveawayOption;
 ```
 
-## Параметры
+### Параметры
 
-| Имя | Тип | Описание |
-|---|---|---|
-| flags | [#](https://core.telegram.org/type/%23) | Flags, see [TL conditional fields](https://core.telegram.org/mtproto/TL-combinators#conditional-fields) |
-| extended | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).0?[true](/constructor/true/) | If set, this option must only be shown in the full list of giveaway options (i.e. they must be added to the list only when the user clicks on the expand button). |
-| default | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).1?[true](/constructor/true/) | If set, this option must be pre-selected by default in the option list. |
-| stars | [long](/type/long/) | The number of Telegram Stars that will be distributed among winners |
-| yearly_boosts | [int](/type/int/) | Number of times the chat will be boosted for one year if the [inputStorePaymentStarsGiveaway](/constructor/inputStorePaymentStarsGiveaway/).boost_peer flag is populated |
-| store_product | [flags](https://core.telegram.org/mtproto/TL-combinators#conditional-fields).2?[string](/type/string/) | Identifier of the store product associated with the option, official apps only. |
-| currency | [string](/type/string/) | Three-letter ISO 4217 [currency](https://core.telegram.org/bots/payments#supported-currencies) code |
-| amount | [long](/type/long/) | Total price in the smallest units of the currency (integer, not float/double). For example, for a price of US$ 1.45 pass amount = 145. See the exp parameter in [currencies.json](https://core.telegram.org/bots/payments/currencies.json), it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). |
-| winners | [Vector](https://core.telegram.org/type/Vector%20t)<[StarsGiveawayWinnersOption](/type/StarsGiveawayWinnersOption/)> | Allowed options for the number of giveaway winners. |
+<table class="table"><thead><tr><th scope="col">Имя</th><th scope="col" style="text-align: center;">Тип</th><th scope="col">Описание</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23">#</a></td><td>[@term:flags] Флаги, см. <a href="/mtproto/TL-combinators#conditional-fields">условные поля TL</a></td></tr><tr><td><strong>extended</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.0?<a href="/constructor/true">true</a></td><td>Если установлено, этот вариант должен показываться только в полном списке вариантов розыгрыша (то есть его следует добавлять в список только после нажатия пользователем кнопки раскрытия).</td></tr><tr><td><strong>default</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.1?<a href="/constructor/true">true</a></td><td>Если установлено, этот вариант должен быть заранее выбран по умолчанию в списке вариантов.</td></tr><tr><td><strong>stars</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Количество Telegram Stars, которое будет распределено между победителями</td></tr><tr><td><strong>yearly_boosts</strong></td><td style="text-align: center;"><a href="/type/int">int</a></td><td>Количество бустов, которые чат получит на один год, если заполнен флаг <a href="/constructor/inputStorePaymentStarsGiveaway">inputStorePaymentStarsGiveaway</a>.<code>boost_peer</code></td></tr><tr><td><strong>store_product</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators#conditional-fields">flags</a>.2?<a href="/type/string">string</a></td><td>Идентификатор товара в магазине, связанного с этим вариантом, только для официальных приложений.</td></tr><tr><td><strong>currency</strong></td><td style="text-align: center;"><a href="/type/string">string</a></td><td>Трёхбуквенный код <a href="/bots/payments#supported-currencies">валюты</a> по ISO 4217</td></tr><tr><td><strong>amount</strong></td><td style="text-align: center;"><a href="/type/long">long</a></td><td>Итоговая цена в наименьших единицах валюты (целое число, не float/double). Например, для цены <code>US$ 1.45</code> следует передать <code>amount = 145</code>. См. параметр exp в <a href="/bots/payments/currencies.json">currencies.json</a>: он указывает число знаков после запятой для каждой валюты (2 для большинства валют).</td></tr><tr><td><strong>winners</strong></td><td style="text-align: center;"><a href="/type/Vector%20t">Vector</a>&lt;<a href="/type/StarsGiveawayWinnersOption">StarsGiveawayWinnersOption</a>&gt;</td><td>Допустимые варианты числа победителей розыгрыша.</td></tr></tbody></table>
 
-## Тип
+### Тип
 
 [StarsGiveawayOption](/type/StarsGiveawayOption/)
 
-## Related pages
+### Связанные страницы
 
 #### [inputStorePaymentStarsGiveaway](/constructor/inputStorePaymentStarsGiveaway/)
 
-Used to pay for a [star giveaway, see here »](https://core.telegram.org/api/giveaways#star-giveaways) for more info.
+Используется для оплаты [розыгрыша звёзд; подробнее см. здесь »](/api/giveaways/#star-giveaways).
 
-#### [Bot Payments API](https://core.telegram.org/bots/payments)
+#### [Bot Payments API — платежи в ботах](https://core.telegram.org/bots/payments)
 
-#### [Giveaways and gifts](https://core.telegram.org/api/giveaways)
+#### [Розыгрыши и подарки](/api/giveaways/)
 
-Telegram channel and supergroup administrators may launch giveaways to randomly distribute Telegram Premium subscriptions and other gifts among their followers, in exchange for boosts.
+Администраторы каналов и супергрупп Telegram могут запускать розыгрыши, чтобы случайным образом раздать подписчикам подписки Telegram Premium и другие подарки в обмен на бусты.

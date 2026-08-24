@@ -1,18 +1,15 @@
 ---
-title: "phone.getCallConfig (метод)"
+title: "phone.getCallConfig"
 original: "https://core.telegram.org/method/phone.getCallConfig"
 section: ref
 kind: method
+description: "УСТАРЕЛО: получить конфигурацию звонков для передачи в общую конфигурацию libtgvoip (устаревшей библиотеки)."
 layout: layout.njk
 ---
 
 # phone.getCallConfig
 
-*Метод из схемы TL.*
-
-> DEPRECATED: Get phone call configuration to be passed to the libtgvoip (deprecated) shared config.
-
-## Определение TL
+УСТАРЕЛО: получить конфигурацию звонков для передачи в общую конфигурацию libtgvoip (устаревшей библиотеки).
 
 ```
 dataJSON#7d748d04 data:string = DataJSON;
@@ -20,12 +17,12 @@ dataJSON#7d748d04 data:string = DataJSON;
 phone.getCallConfig#55451fa9 = DataJSON;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Результат
+### Результат
 
 [DataJSON](/type/DataJSON/)
 
-## Only users can use this method
+### Этот метод доступен только пользователям

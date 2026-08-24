@@ -1,27 +1,24 @@
 ---
-title: "inputStickerSetAnimatedEmoji (конструктор)"
+title: "inputStickerSetAnimatedEmoji"
 original: "https://core.telegram.org/constructor/inputStickerSetAnimatedEmoji"
 section: ref
 kind: constructor
+description: "Набор анимированных эмодзи"
 layout: layout.njk
 ---
 
 # inputStickerSetAnimatedEmoji
 
-*Конструктор из схемы TL.*
-
-> Animated emojis stickerset
-
-## Определение TL
+Набор анимированных эмодзи
 
 ```
 inputStickerSetAnimatedEmoji#28703c8 = InputStickerSet;
 ```
 
-## Параметры
+### Параметры
 
-This constructor does not require any parameters.
+Этот конструктор не требует параметров.
 
-## Тип
+### Тип
 
 [InputStickerSet](/type/InputStickerSet/)
