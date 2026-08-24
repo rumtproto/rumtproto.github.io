@@ -1,0 +1,5 @@
+{
+ "Telegram clients support displaying static and animated stickers.": "Клиенты Telegram умеют показывать статичные и анимированные стикеры.",
+ "Sticker suggestions": "Предложение стикеров",
+ "When the user opens a private chat with a user they don't have a history with, the UI should display a randomly chosen greeting sticker+invitation to send a message.": "Когда пользователь открывает личный чат с собеседником, с которым у него ещё нет переписки, в интерфейсе следует показать случайно выбранный приветственный стикер и предложение отправить сообщение."
+}

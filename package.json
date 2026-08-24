@@ -3,18 +3,15 @@
   "version": "1.0.0",
   "description": "Полный русский перевод документации Telegram (MTProto, Telegram API, схема TL), собирается на Eleventy",
   "scripts": {
-    "build": "eleventy && pagefind --site docs",
-    "serve": "eleventy --serve",
-    "clean": "rm -rf docs",
+    "sync:mirror": "node tools/sync_mirror.mjs",
+    "archive:stale": "node tools/archive_stale_overrides.mjs",
+    "prepare": "node tools/generate_never_translate.mjs && node tools/apply_translations.mjs && node tools/generate_build_data.mjs && node tools/generate_russian_templates.mjs",
+    "build": "npm run prepare && rm -rf docs && eleventy && pagefind --site docs",
+    "serve": "npm run prepare && eleventy --serve",
+    "clean": "rm -rf build docs",
     "check": "node tools/verify.mjs",
-    "audit": "node tools/audit.mjs && node tools/checkrefs.mjs",
-    "en": "node tools/gen_en.mjs",
-    "chunks": "node tools/chunk_pages.mjs",
-    "assemble": "node tools/assemble.mjs",
-    "refstrings": "node tools/refstrings.mjs && node tools/tmbatches.mjs",
-    "genrefs": "node tools/genrefs.mjs && node tools/genrefindexes.mjs",
-    "nav": "node tools/genanchors.mjs && node tools/gennav.mjs",
-    "regenerate": "npm run en && npm run assemble && npm run genrefs && npm run nav && npm run build && npm run check"
+    "update": "npm run sync:mirror && npm run build && npm run check",
+    "remap": "node tools/remap_link_format.mjs"
   },
   "keywords": [
     "telegram",
@@ -28,8 +25,11 @@
   "type": "commonjs",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
+    "html-minifier-terser": "^7.2.0",
+    "lightningcss": "^1.33.0",
     "markdown-it-anchor": "^9.2.1",
     "pagefind": "^1.5.2",
+    "terser": "^5.50.0",
     "turndown": "^7.2.4"
   },
   "private": true

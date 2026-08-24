@@ -1,0 +1,52 @@
+{
+ "mirror": {
+  "repo": "https://github.com/mirrortproto/mirrortproto.github.io",
+  "commit": "88cdd180ed783386465ad11a85116d9242683835",
+  "committed": "2026-08-24T07:15:06+03:00",
+  "vendored": "2026-08-24T06:36:59.715Z",
+  "backup_date": "2026-08-23",
+  "paths": [
+   "src",
+   "eleventy.config.mjs",
+   "package.json",
+   "tools/verify.mjs"
+  ]
+ },
+ "pairedPages": 3184,
+ "skipped": [
+  {
+   "page": "404.md",
+   "reason": "site-owned"
+  },
+  {
+   "page": "api/end-to-end.md",
+   "reason": "segment-count",
+   "en": 91,
+   "ru": 90
+  },
+  {
+   "page": "constructor/index.md",
+   "reason": "site-owned"
+  },
+  {
+   "page": "index.md",
+   "reason": "site-owned"
+  },
+  {
+   "page": "method/index.md",
+   "reason": "site-owned"
+  },
+  {
+   "page": "search.md",
+   "reason": "site-owned"
+  },
+  {
+   "page": "type/index.md",
+   "reason": "site-owned"
+  }
+ ],
+ "segmentPairsWithRussian": 25025,
+ "globalKeys": 13101,
+ "contextualOverrides": 3184,
+ "conflicts": 247
+}

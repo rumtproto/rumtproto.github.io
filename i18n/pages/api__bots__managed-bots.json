@@ -1,0 +1,3 @@
+{
+ "Users can create **managed** bots (which are controlled by a specific manager bot) directly through the MTProto API, without interacting with [@BotFather](https://t.me/botfather).": "Пользователи могут создавать **управляемых** ботов (`managed bot` — бот, которым управляет назначенный ему бот-менеджер) прямо через MTProto API, не обращаясь к [@BotFather](https://t.me/botfather)."
+}

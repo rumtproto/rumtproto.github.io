@@ -1,0 +1,5 @@
+{
+ "Padding bytes are involved in the computation of **msg\\_key**;": "байты дополнения участвуют в вычислении **msg\\_key**;",
+ "12..1024 padding bytes are used instead of 0..15 padding bytes in v.1.0.": "используется 12..1024 байта дополнения вместо 0..15 байт в v.1.0.",
+ "What about IND-CCA?": "Как насчёт IND-CCA?"
+}

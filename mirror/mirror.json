@@ -1,0 +1,13 @@
+{
+ "repo": "https://github.com/mirrortproto/mirrortproto.github.io",
+ "commit": "7afde9109aad7c2644feff13335a729883724537",
+ "committed": "2026-08-24T11:28:52+03:00",
+ "vendored": "2026-08-24T08:39:52.685Z",
+ "backup_date": "2026-08-23",
+ "paths": [
+  "src",
+  "eleventy.config.mjs",
+  "package.json",
+  "tools/verify.mjs"
+ ]
+}

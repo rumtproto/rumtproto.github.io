@@ -1,0 +1,3 @@
+{
+ "Note that in some cases, [messages.requestUrlAuth](/method/messages.requestUrlAuth/) may return directly [urlAuthResultAccepted](/constructor/urlAuthResultAccepted/), in which case no prompt should be shown, and the returned URL should just be directly opened.": "Учтите, что в некоторых случаях [messages.requestUrlAuth](/method/messages.requestUrlAuth/) может сразу вернуть [urlAuthResultAccepted](/constructor/urlAuthResultAccepted/) — тогда окно подтверждения показывать не нужно, а возвращённый адрес следует просто открыть."
+}

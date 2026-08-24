@@ -1,0 +1,6 @@
+{
+ "Proof of work": "Доказательство работы",
+ "Presenting proof of work; Server authentication": "Предъявление доказательства работы; аутентификация сервера",
+ "First of all, generate an `encrypted_data` payload as follows:": "Прежде всего сформируйте полезную нагрузку `encrypted_data` следующим образом:",
+ "5) Send req\\_DH\\_params query with generated `encrypted_data`": "5) Отправка запроса req\\_DH\\_params со сформированными `encrypted_data`"
+}

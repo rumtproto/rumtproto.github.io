@@ -1,0 +1,3 @@
+{
+ "Guest bots can be queried by username from **any** non-secret private chat, group and supergroup (except for groups/supergroups with [content protection »](/api/content-protection/#for-groups-and-channels) enabled), posting their results directly into the chat, even if they're not a member.": "Гостевого бота можно вызвать по имени пользователя (`username` — публичный псевдоним, уникальный в пределах Telegram) из **любого** несекретного личного чата, группы и супергруппы (кроме групп и супергрупп с включённой [защитой контента »](/api/content-protection/#for-groups-and-channels)); результат он публикует прямо в этот чат, даже если не состоит в нём."
+}

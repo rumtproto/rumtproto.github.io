@@ -1,0 +1,4 @@
+{
+ "Telegram clients must handle special `tg://` and `t.me` deep links encountered in messages, link entities and in other apps by registering OS handlers.": "Клиенты Telegram обязаны обрабатывать специальные глубокие ссылки (`deep link` — ссылка, открывающая конкретный экран приложения) вида `tg://` и `t.me`, встречающиеся в сообщениях, в сущностях оформления типа «ссылка» и в других приложениях; для этого нужно зарегистрировать обработчики на уровне операционной системы.",
+ "See [here »](/api/bots/referrals/) for more info on the full flow.": "Полное описание процесса смотрите [здесь »](/api/bots/referrals/)."
+}

@@ -1,0 +1,3 @@
+{
+ "The server recognizes these different protocols (and distinguishes them from HTTP, too) by the header. Additionally, the following transport features can be used:": "Сервер распознаёт эти протоколы (и отличает их от HTTP) по заголовку. Дополнительно можно использовать следующие возможности транспорта:"
+}

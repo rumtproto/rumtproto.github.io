@@ -1,0 +1,3 @@
+{
+ "`result` - The JSON data contained in the response of the [bots.invokeWebViewCustomMethod](/method/bots.invokeWebViewCustomMethod/) method, if the method call succeeded": "`result` — JSON-данные из ответа метода [bots.invokeWebViewCustomMethod](/method/bots.invokeWebViewCustomMethod/), если вызов метода прошёл успешно"
+}

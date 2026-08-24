@@ -1,0 +1,4 @@
+{
+ "Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.": "Telegram поддерживает отправку личных сообщений в каналы; этот же механизм используется, чтобы предлагать посты в канал — в том числе платные.",
+ "Telegram offers a powerful monetization feature to channel administrators: **suggested posts**.": "Telegram предлагает администраторам каналов мощный инструмент монетизации — **предлагаемые посты** (`suggested posts` — публикации, которые сторонний пользователь предлагает каналу, а администратор утверждает или отклоняет)."
+}

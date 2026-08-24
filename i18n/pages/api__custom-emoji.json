@@ -1,0 +1,4 @@
+{
+ "Telegram allows including animated and static custom emojis inside of messages.": "Telegram позволяет вставлять в сообщения анимированные и статические пользовательские эмодзи.",
+ "The custom emoji selection UI should offer a list of categories to quickly filter results by a (list of) emojis, or by some other criteria, see [here »](/api/emoji-categories/) for more info.": "Интерфейс выбора пользовательских эмодзи должен предлагать список категорий, позволяющий быстро отфильтровать результаты по эмодзи (или их набору) либо по иным критериям; подробнее см. [здесь »](/api/emoji-categories/)."
+}

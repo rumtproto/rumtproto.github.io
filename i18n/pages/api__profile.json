@@ -1,0 +1,7 @@
+{
+ "Telegram offers many customization options for your profile!": "Telegram предлагает множество способов настроить свой профиль!",
+ "Private notes for contacts": "Личные заметки о контактах",
+ "When adding or editing a **Telegram contact**, you can now include a private note — to help you remember how you met, where they work, or their favorite ice cream flavor.": "При добавлении или изменении **контакта Telegram** теперь можно приложить личную заметку — чтобы не забыть, при каких обстоятельствах вы познакомились, где человек работает или какое мороженое он любит.",
+ "Note that if a custom [Telegram Business introduction »](/api/business/#business-introduction) is enabled, the message+sticker specified in [userFull](/constructor/userFull/).`intro` must be used, instead.": "Учтите: если у собеседника настроено своё [приветствие Telegram Business »](/api/business/#business-introduction), то вместо этого обязательно использовать сообщение и стикер, заданные в [userFull](/constructor/userFull/).`intro`.",
+ "Changing it will emit an [updateUser](/constructor/updateUser/) update.": "Изменение этой привязки порождает обновление [updateUser](/constructor/updateUser/)."
+}

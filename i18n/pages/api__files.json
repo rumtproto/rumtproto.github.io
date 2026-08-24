@@ -1,0 +1,8 @@
+{
+ "The same `FILE_REFERENCE_%d_INVALID` error may also be emitted by [messages.sendMedia](/method/messages.sendMedia/) or other methods requiring a single [InputMedia](/type/InputMedia/) constructor, when an [inputMediaPaidMedia](/constructor/inputMediaPaidMedia/) is provided with an array of `extended_media` media files.": "Та же ошибка `FILE_REFERENCE_%d_INVALID` может прийти и от [messages.sendMedia](/method/messages.sendMedia/) или от других методов, принимающих единственный конструктор [InputMedia](/type/InputMedia/), — когда передан [inputMediaPaidMedia](/constructor/inputMediaPaidMedia/) с массивом медиафайлов `extended_media`.",
+ "Approximately at `date`, an [updateNewMessage](/constructor/updateNewMessage/) or [updateNewChannelMessage](/constructor/updateNewChannelMessage/) with the `from_scheduled` flag set, indicating to the sender that the specified message with pending video processing was sent.": "Примерно в момент `date` придёт [updateNewMessage](/constructor/updateNewMessage/) или [updateNewChannelMessage](/constructor/updateNewChannelMessage/) с установленным флагом `from_scheduled`, сообщающее отправителю, что сообщение с ожидавшим обработки видео отправлено.",
+ "`call` contains the related group call ID+access hash, taken from the [groupCall](/constructor/groupCall/) constructor.": "`call` содержит ID и access hash соответствующего группового звонка, взятые из конструктора [groupCall](/constructor/groupCall/).",
+ "`access_hash` is the access hash of the [geoPoint](/constructor/geoPoint/)": "`access_hash` — это access hash конструктора [geoPoint](/constructor/geoPoint/)",
+ "`zoom` - Map zoom level; 13-20": "`zoom` — уровень приближения карты; 13–20",
+ "How to handle file references.": "Как обрабатывать ссылки на файлы."
+}

@@ -1,0 +1,3 @@
+{
+ "If [enabled](/method/contacts.toggleTopPeers/), the rating of [top peers](/constructor/topPeer/) indicates the relevance of a frequently used peer in a certain [category](/type/TopPeerCategory/) (frequently messaged users, frequently used bots, inline bots, frequently visited channels and so on).": "Если рейтинг [включён](/method/contacts.toggleTopPeers/), рейтинг [популярных пиров](/constructor/topPeer/) (`top peers` — пиры, к которым пользователь обращается чаще всего) показывает, насколько значим часто используемый пир в той или иной [категории](/type/TopPeerCategory/) (пользователи, которым часто пишут, часто используемые боты, инлайн-боты, часто посещаемые каналы и так далее)."
+}

@@ -1,0 +1,5 @@
+{
+ "[**General**](#general-questions)": "[**Общие вопросы**](#general-questions)",
+ "Each plaintext message to be encrypted in MTProto always contains the following data to be checked upon decryption in order to make the system robust against known problems with the components:": "Каждое открытое сообщение, подлежащее шифрованию в MTProto, всегда содержит следующие данные, которые проверяются при расшифровке, — это делает систему устойчивой к известным проблемам используемых компонентов. Здесь `server salt` — серверная соль, периодически сменяемое сервером случайное число, а `session` — сессия, логическая последовательность запросов и ответов, не привязанная к конкретному соединению:",
+ "[End-to-End TL Schema](/schema/end-to-end/)": "[TL-схема для сквозного шифрования](/schema/end-to-end/)"
+}

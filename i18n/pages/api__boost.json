@@ -1,0 +1,3 @@
+{
+ "If ads are disabled on the channel, the [channelFull](/constructor/channelFull/).`restricted_sponsored` flag will be set (owners only).": "Если реклама в канале отключена, будет установлен флаг [channelFull](/constructor/channelFull/).`restricted_sponsored` (виден только владельцам)."
+}

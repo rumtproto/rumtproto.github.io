@@ -1,0 +1,119 @@
+/* Translation-layer styling only.
+   Layout, typography, tables, code, media and theming all come from the
+   mirror's own style.css, which is reused unchanged, so an upstream visual fix
+   arrives here automatically. This file adds nothing but the paragraph labels
+   and the small intro block that exist only on the Russian site.
+   Colours are derived from the mirror's theme tokens (--panel, --fg, --border,
+   --muted), so light and dark themes both stay correct. */
+
+:root {
+  --translation: #4f46c8;
+  --term: #12673f;
+  --note: #8f5300;
+}
+[data-theme="dark"] {
+  --translation: #a9a5ff;
+  --term: #73d7a2;
+  --note: #ffc46a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --translation: #a9a5ff;
+    --term: #73d7a2;
+    --note: #ffc46a;
+  }
+}
+
+.para-labels {
+  display: inline-flex;
+  gap: .18rem;
+  margin-right: .16rem;
+  vertical-align: baseline;
+}
+
+.para-label {
+  align-items: center;
+  border-radius: 999px;
+  color: var(--muted);
+  display: inline-flex;
+  height: 1.16rem;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  width: 1.16rem;
+}
+.para-label svg {
+  display: block;
+  height: .88rem;
+  width: .88rem;
+}
+.para-label:hover,
+.para-label:focus-visible {
+  background: color-mix(in srgb, currentColor 14%, transparent);
+  outline: 0;
+}
+.para-trans { color: var(--translation); }
+.para-term { color: var(--term); }
+.para-note { color: var(--note); }
+
+/* Tooltip. `top: 100%` keeps the panel attached to the label, and the ::before
+   strip covers the visual gap, so moving the pointer from the label onto the
+   tooltip never crosses an unhovered area and the tooltip stays open. Hovering
+   the tooltip itself also keeps it open, because a pseudo-element is part of
+   its originating element for hit testing. */
+.para-label[data-tip]::before {
+  content: "";
+  display: none;
+  height: .42rem;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+.para-label[data-tip]::after {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: .4rem;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 18%);
+  color: var(--fg);
+  content: attr(data-tip);
+  display: none;
+  font-size: .78rem;
+  font-weight: 400;
+  left: 0;
+  line-height: 1.4;
+  margin-top: .42rem;
+  max-width: min(26rem, 78vw);
+  padding: .5rem .65rem;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  white-space: normal;
+  width: max-content;
+  z-index: 30;
+}
+.para-label[data-tip]:hover::before,
+.para-label[data-tip]:focus-visible::before,
+.para-label[data-tip]:hover::after,
+.para-label[data-tip]:focus-visible::after {
+  display: block;
+}
+
+
+/* Heading alias targets: zero-height anchors that keep historic deep links
+   working without affecting layout. */
+.heading-alias {
+  display: block;
+  height: 0;
+  position: relative;
+  top: -4.5rem;
+  visibility: hidden;
+}
+
+.translator-note {
+  border-left: .22rem solid var(--note);
+  margin: 1rem 0;
+  padding: .1rem .8rem;
+}
+
+

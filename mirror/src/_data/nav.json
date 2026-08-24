@@ -1,0 +1,855 @@
+{
+ "sections": [
+  {
+   "key": "api",
+   "title": "Telegram API",
+   "items": [
+    {
+     "url": "/api/",
+     "title": "Telegram APIs",
+     "section": "api"
+    },
+    {
+     "url": "/api/account-deletion/",
+     "title": "Account deletion",
+     "section": "api"
+    },
+    {
+     "url": "/api/action-bar/",
+     "title": "Action bar",
+     "section": "api"
+    },
+    {
+     "url": "/api/age-verification/",
+     "title": "Age verification",
+     "section": "api"
+    },
+    {
+     "url": "/api/ai/",
+     "title": "AI features",
+     "section": "api"
+    },
+    {
+     "url": "/api/animated-emojis/",
+     "title": "Animated Emojis",
+     "section": "api"
+    },
+    {
+     "url": "/api/antispam/",
+     "title": "Native antispam system",
+     "section": "api"
+    },
+    {
+     "url": "/api/auctions/",
+     "title": "Collectible gift auctions",
+     "section": "api"
+    },
+    {
+     "url": "/api/auth/",
+     "title": "User Authorization",
+     "section": "api"
+    },
+    {
+     "url": "/api/block/",
+     "title": "Blocked users",
+     "section": "api"
+    },
+    {
+     "url": "/api/boost/",
+     "title": "Channel and supergroup boosts",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/",
+     "title": "Working with bots",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/ai/",
+     "title": "AI features for bots",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/attach/",
+     "title": "Bot attachment menu and side menu entries",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/bot-to-bot/",
+     "title": "Bot-to-bot communication",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/buttons/",
+     "title": "Bot buttons",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/commands/",
+     "title": "Bot commands",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/connected-business-bots/",
+     "title": "Connected business bots",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/games/",
+     "title": "HTML5 games",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/guest-mode/",
+     "title": "Guest mode for bots",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/ids/",
+     "title": "Bot API dialog IDs",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/info/",
+     "title": "Edit bot information",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/inline/",
+     "title": "Inline queries",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/managed-bots/",
+     "title": "Managed bots",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/menu/",
+     "title": "Bot menu button",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/referrals/",
+     "title": "Affiliate programs",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/verification/",
+     "title": "Third-party verification",
+     "section": "api"
+    },
+    {
+     "url": "/api/bots/webapps/",
+     "title": "Mini Apps on Telegram",
+     "section": "api"
+    },
+    {
+     "url": "/api/business/",
+     "title": "Telegram Business",
+     "section": "api"
+    },
+    {
+     "url": "/api/calls/",
+     "title": "Phone calls",
+     "section": "api"
+    },
+    {
+     "url": "/api/channel/",
+     "title": "Channels, supergroups, gigagroups and basic groups",
+     "section": "api"
+    },
+    {
+     "url": "/api/colors/",
+     "title": "Accent colors",
+     "section": "api"
+    },
+    {
+     "url": "/api/config.json/",
+     "title": "config.json",
+     "section": "api"
+    },
+    {
+     "url": "/api/config/",
+     "title": "Client configuration",
+     "section": "api"
+    },
+    {
+     "url": "/api/contacts/",
+     "title": "Contact list",
+     "section": "api"
+    },
+    {
+     "url": "/api/content-protection/",
+     "title": "Content protection",
+     "section": "api"
+    },
+    {
+     "url": "/api/custom-emoji/",
+     "title": "Custom emojis",
+     "section": "api"
+    },
+    {
+     "url": "/api/datacenter/",
+     "title": "Working with Different Data Centers",
+     "section": "api"
+    },
+    {
+     "url": "/api/dice/",
+     "title": "Animated dice",
+     "section": "api"
+    },
+    {
+     "url": "/api/discussion/",
+     "title": "Discussion groups",
+     "section": "api"
+    },
+    {
+     "url": "/api/drafts/",
+     "title": "Message drafts",
+     "section": "api"
+    },
+    {
+     "url": "/api/effects/",
+     "title": "Animated message effects",
+     "section": "api"
+    },
+    {
+     "url": "/api/emoji-categories/",
+     "title": "Emoji categories",
+     "section": "api"
+    },
+    {
+     "url": "/api/emoji-status/",
+     "title": "Emoji status",
+     "section": "api"
+    },
+    {
+     "url": "/api/end-to-end_v1/",
+     "title": "Secret chats, end-to-end encryption (v. 1.0, DEPRECATED)",
+     "section": "api"
+    },
+    {
+     "url": "/api/end-to-end/",
+     "title": "End-to-End Encryption, Secret Chats",
+     "section": "api"
+    },
+    {
+     "url": "/api/end-to-end/group-calls/",
+     "title": "E2E Group Calls",
+     "section": "api"
+    },
+    {
+     "url": "/api/end-to-end/pfs/",
+     "title": "Perfect Forward Secrecy",
+     "section": "api"
+    },
+    {
+     "url": "/api/end-to-end/seq_no/",
+     "title": "Sequence numbers in Secret Chats",
+     "section": "api"
+    },
+    {
+     "url": "/api/end-to-end/video-calls/",
+     "title": "End-to-End Encrypted Voice and Video Calls",
+     "section": "api"
+    },
+    {
+     "url": "/api/end-to-end/voice-calls/",
+     "title": "End-to-End Encrypted Voice Calls",
+     "section": "api"
+    },
+    {
+     "url": "/api/entities/",
+     "title": "Styled text with message entities",
+     "section": "api"
+    },
+    {
+     "url": "/api/errors.json/",
+     "title": "errors.json",
+     "section": "api"
+    },
+    {
+     "url": "/api/errors/",
+     "title": "Error handling",
+     "section": "api"
+    },
+    {
+     "url": "/api/factcheck/",
+     "title": "Fact checks",
+     "section": "api"
+    },
+    {
+     "url": "/api/file-reference-generator/",
+     "title": "File reference generator",
+     "section": "api"
+    },
+    {
+     "url": "/api/file-references/",
+     "title": "File references",
+     "section": "api"
+    },
+    {
+     "url": "/api/file-references/db-schema/",
+     "title": "DB schema",
+     "section": "api"
+    },
+    {
+     "url": "/api/file-references/incoming-traversers/",
+     "title": "Incoming file reference traversers",
+     "section": "api"
+    },
+    {
+     "url": "/api/file-references/map-schema/",
+     "title": "File reference map file schema",
+     "section": "api"
+    },
+    {
+     "url": "/api/file-references/outgoing-traversers/",
+     "title": "Outgoing file reference traversers",
+     "section": "api"
+    },
+    {
+     "url": "/api/file-references/refresh-actions/",
+     "title": "Refresh actions",
+     "section": "api"
+    },
+    {
+     "url": "/api/file-references/sources/",
+     "title": "File reference sources",
+     "section": "api"
+    },
+    {
+     "url": "/api/files/",
+     "title": "Uploading and Downloading Files",
+     "section": "api"
+    },
+    {
+     "url": "/api/folders/",
+     "title": "Dialog folders",
+     "section": "api"
+    },
+    {
+     "url": "/api/forum/",
+     "title": "Forum topics",
+     "section": "api"
+    },
+    {
+     "url": "/api/fragment/",
+     "title": "Fragment collectibles",
+     "section": "api"
+    },
+    {
+     "url": "/api/gifs/",
+     "title": "Working with GIFs",
+     "section": "api"
+    },
+    {
+     "url": "/api/gifts/",
+     "title": "Telegram Gifts",
+     "section": "api"
+    },
+    {
+     "url": "/api/giveaways/",
+     "title": "Giveaways and gifts",
+     "section": "api"
+    },
+    {
+     "url": "/api/group-calls/",
+     "title": "Group calls",
+     "section": "api"
+    },
+    {
+     "url": "/api/import/",
+     "title": "Imported messages",
+     "section": "api"
+    },
+    {
+     "url": "/api/invites/",
+     "title": "Invite links",
+     "section": "api"
+    },
+    {
+     "url": "/api/invoking/",
+     "title": "Calling API Methods",
+     "section": "api"
+    },
+    {
+     "url": "/api/layers/",
+     "title": "Layer changelog",
+     "section": "api"
+    },
+    {
+     "url": "/api/links/",
+     "title": "Deep links",
+     "section": "api"
+    },
+    {
+     "url": "/api/live-location/",
+     "title": "Live geolocation",
+     "section": "api"
+    },
+    {
+     "url": "/api/mentions/",
+     "title": "Mentions and replies",
+     "section": "api"
+    },
+    {
+     "url": "/api/min/",
+     "title": "Min constructors",
+     "section": "api"
+    },
+    {
+     "url": "/api/monoforum/",
+     "title": "Direct messages to channels",
+     "section": "api"
+    },
+    {
+     "url": "/api/nearby/",
+     "title": "Nearby users&chats",
+     "section": "api"
+    },
+    {
+     "url": "/api/obtaining_api_id/",
+     "title": "Creating your Telegram Application",
+     "section": "api"
+    },
+    {
+     "url": "/api/offsets/",
+     "title": "Pagination in the API",
+     "section": "api"
+    },
+    {
+     "url": "/api/optimisation/",
+     "title": "Client-Side Optimization",
+     "section": "api"
+    },
+    {
+     "url": "/api/paid-media/",
+     "title": "Paid media",
+     "section": "api"
+    },
+    {
+     "url": "/api/paid-messages/",
+     "title": "Paid messages",
+     "section": "api"
+    },
+    {
+     "url": "/api/passkeys/",
+     "title": "Passkey login",
+     "section": "api"
+    },
+    {
+     "url": "/api/passport/",
+     "title": "Telegram passport",
+     "section": "api"
+    },
+    {
+     "url": "/api/pattern/",
+     "title": "Pattern matching",
+     "section": "api"
+    },
+    {
+     "url": "/api/payments/",
+     "title": "Payments API",
+     "section": "api"
+    },
+    {
+     "url": "/api/peers/",
+     "title": "Peer database",
+     "section": "api"
+    },
+    {
+     "url": "/api/pfs/",
+     "title": "Perfect Forward Secrecy",
+     "section": "api"
+    },
+    {
+     "url": "/api/pin/",
+     "title": "Pinned messages",
+     "section": "api"
+    },
+    {
+     "url": "/api/poll/",
+     "title": "Polls and quizzes",
+     "section": "api"
+    },
+    {
+     "url": "/api/premium/",
+     "title": "Telegram Premium",
+     "section": "api"
+    },
+    {
+     "url": "/api/privacy/",
+     "title": "Privacy settings",
+     "section": "api"
+    },
+    {
+     "url": "/api/profile/",
+     "title": "User profiles",
+     "section": "api"
+    },
+    {
+     "url": "/api/push-updates/",
+     "title": "Handling PUSH-notifications",
+     "section": "api"
+    },
+    {
+     "url": "/api/qr-login/",
+     "title": "Login via QR code",
+     "section": "api"
+    },
+    {
+     "url": "/api/rank/",
+     "title": "Rank",
+     "section": "api"
+    },
+    {
+     "url": "/api/reactions/",
+     "title": "Message reactions",
+     "section": "api"
+    },
+    {
+     "url": "/api/recent-actions/",
+     "title": "Admin log",
+     "section": "api"
+    },
+    {
+     "url": "/api/recommend/",
+     "title": "Similar channels and bots",
+     "section": "api"
+    },
+    {
+     "url": "/api/revenue/",
+     "title": "Channel and bot ad revenue",
+     "section": "api"
+    },
+    {
+     "url": "/api/rights/",
+     "title": "Admin, banned, default rights",
+     "section": "api"
+    },
+    {
+     "url": "/api/ringtones/",
+     "title": "Notification sounds",
+     "section": "api"
+    },
+    {
+     "url": "/api/saved-messages/",
+     "title": "Saved messages",
+     "section": "api"
+    },
+    {
+     "url": "/api/scheduled-messages/",
+     "title": "Scheduled messages",
+     "section": "api"
+    },
+    {
+     "url": "/api/search/",
+     "title": "Search and filters",
+     "section": "api"
+    },
+    {
+     "url": "/api/sponsored-messages/",
+     "title": "Sponsored messages",
+     "section": "api"
+    },
+    {
+     "url": "/api/srp/",
+     "title": "Two-factor authentication",
+     "section": "api"
+    },
+    {
+     "url": "/api/stars/",
+     "title": "Telegram Stars",
+     "section": "api"
+    },
+    {
+     "url": "/api/stats/",
+     "title": "Channel statistics",
+     "section": "api"
+    },
+    {
+     "url": "/api/stickers/",
+     "title": "Stickers and masks",
+     "section": "api"
+    },
+    {
+     "url": "/api/stories/",
+     "title": "Telegram Stories",
+     "section": "api"
+    },
+    {
+     "url": "/api/subscriptions/",
+     "title": "Star subscriptions",
+     "section": "api"
+    },
+    {
+     "url": "/api/suggested-posts/",
+     "title": "Suggested posts",
+     "section": "api"
+    },
+    {
+     "url": "/api/takeout/",
+     "title": "Takeout API",
+     "section": "api"
+    },
+    {
+     "url": "/api/terms/",
+     "title": "Telegram API Terms of Service",
+     "section": "api"
+    },
+    {
+     "url": "/api/themes/",
+     "title": "Telegram themes",
+     "section": "api"
+    },
+    {
+     "url": "/api/threads/",
+     "title": "Message threads",
+     "section": "api"
+    },
+    {
+     "url": "/api/todo/",
+     "title": "Checklists and to-do lists",
+     "section": "api"
+    },
+    {
+     "url": "/api/top-rating/",
+     "title": "Top peer rating",
+     "section": "api"
+    },
+    {
+     "url": "/api/transcribe/",
+     "title": "Voice message transcription",
+     "section": "api"
+    },
+    {
+     "url": "/api/translation/",
+     "title": "Message translation",
+     "section": "api"
+    },
+    {
+     "url": "/api/updates/",
+     "title": "Working with Updates",
+     "section": "api"
+    },
+    {
+     "url": "/api/url-authorization/",
+     "title": "Seamless Telegram Login",
+     "section": "api"
+    },
+    {
+     "url": "/api/views/",
+     "title": "Views and read metrics",
+     "section": "api"
+    },
+    {
+     "url": "/api/wallpapers/",
+     "title": "Chat wallpapers",
+     "section": "api"
+    },
+    {
+     "url": "/api/web-events/",
+     "title": "Web events",
+     "section": "api"
+    }
+   ]
+  },
+  {
+   "key": "mtproto",
+   "title": "MTProto Protocol",
+   "items": [
+    {
+     "url": "/mtproto/",
+     "title": "MTProto Mobile Protocol",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/description/",
+     "title": "Mobile Protocol: Detailed Description",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/auth_key/",
+     "title": "Creating an Authorization Key",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/samples-auth_key/",
+     "title": "Auth key generation example",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/security_guidelines/",
+     "title": "Security Guidelines for Client Developers",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/serialize/",
+     "title": "Binary Data Serialization",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/service_messages/",
+     "title": "Service Messages",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/service_messages_about_messages/",
+     "title": "Service Messages about Messages",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/transports/",
+     "title": "Transport protocols",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/mtproto-transports/",
+     "title": "MTProto transports",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/TL/",
+     "title": "TL Language",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto_v1/",
+     "title": "MTProto Mobile Protocol v.1.0 (DEPRECATED)",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/description_v1/",
+     "title": "Mobile Protocol: Detailed Description (v.1.0, DEPRECATED)",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/security_guidelines_v1/",
+     "title": "Security Guidelines for Client Developers (v.1.0, DEPRECATED)",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/TL-abstract-types/",
+     "title": "Binary serialization and abstract TL types",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/TL-combinators/",
+     "title": "Formal description of TL combinators",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/TL-dependent/",
+     "title": "TL dependent types",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/TL-formal/",
+     "title": "Formal TL declaration",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/TL-optargs/",
+     "title": "Optional combinator parameters and their values",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/TL-patterns/",
+     "title": "TL template types",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/TL-polymorph/",
+     "title": "Polymorphism in TL",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/TL-tl/",
+     "title": "TL schema for serialization of TL schemas",
+     "section": "mtproto"
+    },
+    {
+     "url": "/mtproto/TL-types/",
+     "title": "Type serialization",
+     "section": "mtproto"
+    }
+   ]
+  },
+  {
+   "key": "schema",
+   "title": "Schema",
+   "items": [
+    {
+     "url": "/schema/",
+     "title": "Schema",
+     "section": "schema"
+    },
+    {
+     "url": "/schema/mtproto/",
+     "title": "Current MTProto TL-schema",
+     "section": "schema"
+    },
+    {
+     "url": "/schema/end-to-end/",
+     "title": "Current end-to-end TL-schema",
+     "section": "schema"
+    },
+    {
+     "url": "/methods/",
+     "title": "Available methods",
+     "section": "schema"
+    },
+    {
+     "url": "/schema/json/",
+     "title": "TL-Schema in JSON",
+     "section": "schema"
+    },
+    {
+     "url": "/schema/mtproto-json/",
+     "title": "MTProto TL-Schema in JSON",
+     "section": "schema"
+    },
+    {
+     "url": "/schema/end-to-end-json/",
+     "title": "End-to-end TL-Schema in JSON",
+     "section": "schema"
+    },
+    {
+     "url": "/constructor/",
+     "title": "Constructors (index)"
+    },
+    {
+     "url": "/method/",
+     "title": "Methods (index)"
+    },
+    {
+     "url": "/type/",
+     "title": "Types (index)"
+    }
+   ]
+  },
+  {
+   "key": "other",
+   "title": "Other",
+   "items": [
+    {
+     "url": "/faq/",
+     "title": "Telegram FAQ",
+     "section": "faq"
+    },
+    {
+     "url": "/techfaq/",
+     "title": "FAQ for the Technically Inclined",
+     "section": "faq"
+    },
+    {
+     "url": "/techfaq/mtproto_v1/",
+     "title": "FAQ for the Technically Inclined (MTProto v.1.0)",
+     "section": "faq"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,3 @@
+{
+ "After invoking [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/) and obtaining a [webViewResultUrl](/constructor/webViewResultUrl/) result, clients should open a webview using the `url` contained in the returned [webViewResultUrl](/constructor/webViewResultUrl/).": "После вызова [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/) и получения результата [webViewResultUrl](/constructor/webViewResultUrl/) клиенту следует открыть webview по адресу `url` из возвращённого [webViewResultUrl](/constructor/webViewResultUrl/)."
+}

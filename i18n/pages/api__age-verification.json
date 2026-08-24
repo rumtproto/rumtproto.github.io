@@ -1,0 +1,3 @@
+{
+ "Some legislations require age verification to view restricted content: Telegram implements this through the [Main Mini App](/api/bots/webapps/#main-mini-apps) of a special bot.": "Законодательство некоторых стран требует проверки возраста для просмотра содержимого с возрастными ограничениями: Telegram реализует её через [Main Mini App](/api/bots/webapps/#main-mini-apps) специального бота — Mini App (веб-приложение, встроенное в клиент Telegram)."
+}

@@ -1,0 +1,9 @@
+{
+ "[Bot forums »](/api/forum/#bot-forums)": "[Форумы у ботов »](/api/forum/#bot-forums)",
+ "[Recent story summaries »](/api/stories/#recent-story-summaries)": "[Сводки о недавних историях »](/api/stories/#recent-story-summaries)",
+ "[Private contact notes »](/api/contacts/#private-notes-for-contacts)": "[Приватные заметки о контактах »](/api/contacts/#private-notes-for-contacts)",
+ "[Changes in the file reference database map file »](/api/file-references/)": "[Изменения схемы базы данных ссылок на файлы »](/api/file-references/)",
+ "Premium features": "Premium-возможности",
+ "This layer introduces the following new features:": "Этот слой вводит следующие новые возможности:",
+ "[End-to-end schema](/schema/end-to-end/)": "[Сквозная схема](/schema/end-to-end/)"
+}

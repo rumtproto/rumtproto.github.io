@@ -1,0 +1,2600 @@
+{
+ "How to register a user's phone to start using the API.": [
+  {
+   "translation": "Как зарегистрировать телефон пользователя, чтобы начать работу с API.",
+   "uses": 31
+  },
+  {
+   "translation": "Как зарегистрировать номер телефона пользователя, чтобы начать работать с API.",
+   "uses": 1
+  }
+ ],
+ "Telegram allows creating a passkey on your device to instantly log in to Telegram with a PIN or biometric data like Face ID and fingerprints — instead of an SMS code.": [
+  {
+   "translation": "Telegram позволяет создать на устройстве passkey (ключ доступа — криптографический ключ, привязанный к устройству), чтобы мгновенно входить в Telegram по PIN-коду или биометрии вроде Face ID и отпечатка пальца — вместо SMS-кода.",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram позволяет создать на устройстве passkey (ключ доступа — секрет, хранящийся в устройстве и подтверждаемый локально), чтобы входить в Telegram мгновенно по PIN-коду или биометрии вроде Face ID и отпечатка пальца — вместо кода из SMS.",
+   "uses": 1
+  }
+ ],
+ "How to connect to the closest DC access point for faster interaction with the API, and things to watch out for when developing a client.": [
+  {
+   "translation": "Как подключиться к ближайшей точке доступа дата-центра для более быстрого взаимодействия с API и на что обратить внимание при разработке клиента.",
+   "uses": 2
+  },
+  {
+   "translation": "Как подключиться к ближайшей точке доступа DC, чтобы работать с API быстрее, и на что обратить внимание при разработке клиента.",
+   "uses": 1
+  }
+ ],
+ "How to handle channels, supergroups, gigagroups, basic groups, and what's the difference between them.": [
+  {
+   "translation": "Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они друг от друга отличаются.",
+   "uses": 115
+  },
+  {
+   "translation": "Как работать с каналами, супергруппами, гигагруппами и обычными группами и чем они отличаются друг от друга.",
+   "uses": 1
+  }
+ ],
+ "[Forums](/api/forum/)": [
+  {
+   "translation": "[Темы форума](/api/forum/)",
+   "uses": 1
+  },
+  {
+   "translation": "[Форумы](/api/forum/)",
+   "uses": 1
+  }
+ ],
+ "Telegram allows creating forums with multiple distinct topics.": [
+  {
+   "translation": "Telegram позволяет создавать форумы с несколькими самостоятельными темами.",
+   "uses": 54
+  },
+  {
+   "translation": "Telegram позволяет создавать форумы с несколькими независимыми темами.",
+   "uses": 1
+  }
+ ],
+ "Bots can also make use of topics, if enabled through [@botfather](https://t.me/botfather).": [
+  {
+   "translation": "Боты тоже могут использовать темы, если включить их через [@botfather](https://t.me/botfather).",
+   "uses": 1
+  },
+  {
+   "translation": "Боты тоже могут использовать темы, если это включено через [@botfather](https://t.me/botfather).",
+   "uses": 1
+  }
+ ],
+ "Telegram supports direct messages to channels, which can also be used to suggest (even paid) channel posts.": [
+  {
+   "translation": "Telegram поддерживает личные сообщения в каналы, которые также можно использовать для предложения постов в канал, в том числе платных.",
+   "uses": 35
+  },
+  {
+   "translation": "Telegram поддерживает личные сообщения в каналы; их же можно использовать, чтобы предлагать публикации в канал — в том числе платные.",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram поддерживает отправку личных сообщений в каналы; этот же механизм используется, чтобы предлагать посты в канал — в том числе платные.",
+   "uses": 1
+  }
+ ],
+ "How to fetch results from large lists of objects.": [
+  {
+   "translation": "Как выбирать результаты из больших списков объектов.",
+   "uses": 135
+  },
+  {
+   "translation": "Как получать результаты из больших списков объектов.",
+   "uses": 1
+  }
+ ],
+ "Telegram supports E2E-encrypted one-to-one calls.": [
+  {
+   "translation": "Telegram поддерживает звонки один на один со сквозным шифрованием (E2E).",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram поддерживает звонки один на один со сквозным шифрованием.",
+   "uses": 1
+  }
+ ],
+ "[End-to-End Encryption in Voice and Video Calls](/api/end-to-end/video-calls/)": [
+  {
+   "translation": "[Сквозное шифрование в аудио- и видеозвонках](/api/end-to-end/video-calls/)",
+   "uses": 1
+  },
+  {
+   "translation": "[Сквозное шифрование в голосовых и видеозвонках](/api/end-to-end/video-calls/)",
+   "uses": 1
+  }
+ ],
+ "Telegram offers many AI features powered by [Cocoon](https://cocoon.org) — a decentralized network designed to maximize privacy.": [
+  {
+   "translation": "Telegram предлагает множество возможностей на базе ИИ, работающих поверх [Cocoon](https://cocoon.org) — децентрализованной сети, спроектированной так, чтобы обеспечить максимальную приватность.",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram предлагает множество возможностей на основе ИИ, работающих поверх [Cocoon](https://cocoon.org) — децентрализованной сети, спроектированной для максимальной приватности.",
+   "uses": 1
+  }
+ ],
+ "[Bot API dialog IDs](/api/bots/ids/)": [
+  {
+   "translation": "[Идентификаторы диалогов в Bot API](/api/bots/ids/)",
+   "uses": 1
+  },
+  {
+   "translation": "[Идентификаторы диалогов Bot API](/api/bots/ids/)",
+   "uses": 1
+  }
+ ],
+ "Users can create **managed** bots (which are controlled by a specific manager bot) directly through the MTProto API, without interacting with [@BotFather](https://t.me/botfather).": [
+  {
+   "translation": "Пользователи могут создавать **управляемых** ботов (которыми управляет определённый бот-менеджер) прямо через MTProto API, не обращаясь к [@BotFather](https://t.me/botfather).",
+   "uses": 12
+  },
+  {
+   "translation": "Пользователи могут создавать **управляемые** боты (ими управляет конкретный бот-менеджер) напрямую через MTProto API, не обращаясь к [@BotFather](https://t.me/botfather).",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи могут создавать **управляемые** боты (которыми распоряжается определённый бот-менеджер) напрямую через MTProto API, без обращения к [@BotFather](https://t.me/botfather).",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи могут создавать **управляемых** ботов (`managed bot` — бот, которым управляет назначенный ему бот-менеджер) прямо через MTProto API, не обращаясь к [@BotFather](https://t.me/botfather).",
+   "uses": 1
+  }
+ ],
+ "[Bots](https://core.telegram.org/bots) offer a set of commands that can be used by users in private, or in a chat.": [
+  {
+   "translation": "[Боты](https://core.telegram.org/bots) предлагают набор команд, которыми пользователи могут воспользоваться в личной переписке или в чате.",
+   "uses": 1
+  },
+  {
+   "translation": "[Боты](https://core.telegram.org/bots) предоставляют набор команд, которые пользователи могут вызывать в личной переписке или в чате.",
+   "uses": 1
+  }
+ ],
+ "Users can interact with your bot via **buttons** or even **inline buttons**, straight from inline **messages** in **any** chat.": [
+  {
+   "translation": "Пользователи могут взаимодействовать с вашим ботом с помощью **кнопок** и даже **инлайн-кнопок** — прямо из инлайн-**сообщений** в **любом** чате.",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи могут взаимодействовать с вашим ботом через **кнопки** или даже **инлайн-кнопки** — прямо из инлайн-**сообщений** в **любом** чате.",
+   "uses": 1
+  }
+ ],
+ "Bots can choose the behavior of the menu button shown next to the text input field.": [
+  {
+   "translation": "Боты могут выбирать поведение кнопки меню, отображаемой рядом с полем ввода текста.",
+   "uses": 6
+  },
+  {
+   "translation": "Боты могут выбирать поведение кнопки меню, которая показывается рядом с полем ввода текста.",
+   "uses": 1
+  },
+  {
+   "translation": "Боты могут задать поведение кнопки меню, которая показывается рядом с полем ввода текста.",
+   "uses": 1
+  }
+ ],
+ "Users can interact with your bot via **inline queries**, straight from the **text input field** in **any** chat.": [
+  {
+   "translation": "Пользователи могут взаимодействовать с вашим ботом с помощью **инлайн-запросов** (`inline query` — обращение к боту прямо из поля ввода, без добавления его в чат) — прямо из **поля ввода текста** в **любом** чате.",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи могут взаимодействовать с вашим ботом через **инлайн-запросы** (`inline query` — обращение к боту по его имени пользователя, без добавления бота в чат) — прямо из **поля ввода текста** в **любом** чате.",
+   "uses": 1
+  }
+ ],
+ "Bots can offer users HTML5 games to play solo or to compete against each other in groups and one-on-one chats; how to work with games in the MTProto API.": [
+  {
+   "translation": "Боты могут предлагать пользователям HTML5-игры — в одиночку или на соревнование друг с другом в группах и переписках один на один; как работать с играми через MTProto API.",
+   "uses": 1
+  },
+  {
+   "translation": "Боты могут предлагать пользователям HTML5-игры, чтобы играть в одиночку или соревноваться друг с другом в группах и в личных чатах; как работать с играми через MTProto API.",
+   "uses": 1
+  }
+ ],
+ "Developers can open affiliate programs for their [mini app](/api/bots/webapps/) – allowing **content creators**, other **mini app developers** and **any Telegram user** to promote it and earn commissions on purchases made by people they referred.": [
+  {
+   "translation": "Разработчики могут открывать партнёрские программы для своих [mini app](/api/bots/webapps/) — позволяя **авторам контента**, другим **разработчикам mini app** и **любому пользователю Telegram** продвигать их и получать комиссию с покупок, совершённых приведёнными ими людьми.",
+   "uses": 1
+  },
+  {
+   "translation": "Разработчики могут открывать партнёрские программы для своих [Mini App](/api/bots/webapps/) (Mini App — веб-приложение, встроенное в Telegram и запускаемое прямо из клиента), позволяя **авторам контента**, другим **разработчикам Mini App** и **любому пользователю Telegram** продвигать их и получать комиссию с покупок, которые совершают приглашённые ими люди.",
+   "uses": 1
+  },
+  {
+   "translation": "Разработчики могут открывать партнёрские программы для своих [mini app](/api/bots/webapps/) (Mini App — веб-приложение, работающее внутри Telegram): это позволяет **авторам контента**, другим **разработчикам mini app** и **любому пользователю Telegram** продвигать приложение и получать комиссию с покупок, совершённых приглашёнными ими людьми.",
+   "uses": 1
+  },
+  {
+   "translation": "Разработчики могут открыть партнёрскую программу для своего [mini app](/api/bots/webapps/) (Mini App — приложение, работающее внутри Telegram), позволив **авторам контента**, другим **разработчикам Mini App** и **любому пользователю Telegram** продвигать его и получать комиссию с покупок, совершённых приглашёнными ими людьми.",
+   "uses": 1
+  }
+ ],
+ "Users can edit and localize the profile picture, name, about text and description of bots they own; the same can be done by the bots themselves.": [
+  {
+   "translation": "Пользователи могут изменять и локализовать фотографию профиля, имя, текст «о боте» и описание принадлежащих им ботов; то же самое доступно и самим ботам.",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи могут изменять и локализовать фотографию профиля, имя, текст «о себе» и описание принадлежащих им ботов; то же самое могут делать и сами боты.",
+   "uses": 1
+  }
+ ],
+ "Telegram bots offer a number of features for AI chatbots.": [
+  {
+   "translation": "Боты Telegram предлагают ряд возможностей для ИИ-чатботов.",
+   "uses": 2
+  },
+  {
+   "translation": "Боты Telegram предоставляют ряд возможностей для ИИ-чатботов.",
+   "uses": 1
+  },
+  {
+   "translation": "Боты Telegram предоставляют ряд возможностей для чат-ботов с искусственным интеллектом.",
+   "uses": 1
+  }
+ ],
+ "Bots may receive and send messages to and from other bots in groups, private chats and chats, if Bot-to-Bot Communication Mode is enabled.": [
+  {
+   "translation": "Боты могут обмениваться сообщениями с другими ботами в группах, личных переписках и чатах, если включён режим Bot-to-Bot Communication Mode (режим общения между ботами).",
+   "uses": 1
+  },
+  {
+   "translation": "Боты могут получать и отправлять сообщения другим ботам в группах, личных чатах и чатах, если включён режим общения между ботами.",
+   "uses": 1
+  }
+ ],
+ "Telegram users and channels can easily post and view [stories](https://telegram.org/blog/stories) through the API.": [
+  {
+   "translation": "Пользователи и каналы Telegram могут без труда публиковать и просматривать [истории](https://telegram.org/blog/stories) через API.",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи и каналы Telegram могут легко публиковать и просматривать [истории](https://telegram.org/blog/stories) через API.",
+   "uses": 1
+  }
+ ],
+ "The API offers a method to obtain a list of similarly themed public channels and bots, selected based on similarities in their **subscriber bases**.": [
+  {
+   "translation": "API предлагает метод для получения списка публичных каналов и ботов схожей тематики, отобранных на основе сходства их **аудиторий подписчиков**.",
+   "uses": 1
+  },
+  {
+   "translation": "API предоставляет метод, позволяющий получить список публичных каналов и ботов схожей тематики, подобранных по сходству их **аудиторий подписчиков**.",
+   "uses": 1
+  }
+ ],
+ "Telegram users and channels can change the accent color and background pattern of their profile page and their messages!": [
+  {
+   "translation": "Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор страницы своего профиля и своих сообщений!",
+   "uses": 25
+  },
+  {
+   "translation": "Пользователи и каналы Telegram могут менять акцентный цвет и фоновый узор своей страницы профиля и своих сообщений!",
+   "uses": 2
+  }
+ ],
+ "Telegram allows users to specify granular privacy settings, choosing which users can or can't interact with them in certain ways.": [
+  {
+   "translation": "Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным способом.",
+   "uses": 15
+  },
+  {
+   "translation": "Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними определёнными способами.",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram позволяет пользователям задавать детальные настройки приватности, выбирая, кто может и кто не может взаимодействовать с ними тем или иным образом.",
+   "uses": 1
+  }
+ ],
+ "Telegram allows sending polls and quizzes, that can be voted on by thousands, if not millions of users in chats and channels.": [
+  {
+   "translation": "Telegram позволяет отправлять опросы и викторины, в которых могут проголосовать тысячи, если не миллионы пользователей в чатах и каналах.",
+   "uses": 19
+  },
+  {
+   "translation": "Telegram позволяет отправлять опросы и викторины, в которых могут проголосовать тысячи, а то и миллионы пользователей в чатах и каналах.",
+   "uses": 1
+  }
+ ],
+ "Premium users can now create collaborative checklists in any chat to track tasks and coordinate teams — or manage shopping and to-do lists.": [
+  {
+   "translation": "Пользователи Premium теперь могут создавать совместные чек-листы в любом чате, чтобы отслеживать задачи и координировать команды — или вести списки покупок и дел.",
+   "uses": 16
+  },
+  {
+   "translation": "Пользователи Premium теперь могут создавать совместные списки задач в любом чате, чтобы отслеживать задачи и координировать работу команд — или вести списки покупок и дел.",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи Telegram Premium теперь могут создавать в любом чате совместные чек-листы: с их помощью удобно вести учёт задач и координировать работу команды — или просто держать под рукой список покупок и дел.",
+   "uses": 1
+  }
+ ],
+ "Telegram allows adding spectacular animated effects to messages you send.": [
+  {
+   "translation": "Telegram позволяет добавлять к отправляемым сообщениям зрелищные анимированные эффекты.",
+   "uses": 13
+  },
+  {
+   "translation": "Telegram позволяет добавлять зрелищные анимированные эффекты к отправляемым вами сообщениям.",
+   "uses": 1
+  }
+ ],
+ "Sticker, custom emoji and GIF selection UIs should offer a list of categories to quickly filter results by a (list of) emojis, or by some other criteria.": [
+  {
+   "translation": "Интерфейсы выбора стикеров, пользовательских эмодзи и GIF должны предлагать список категорий для быстрой фильтрации результатов по эмодзи (или набору эмодзи) либо по иным критериям.",
+   "uses": 11
+  },
+  {
+   "translation": "Интерфейсы выбора стикеров, пользовательских эмодзи и GIF должны предлагать список категорий для быстрой фильтрации результатов по эмодзи (или списку эмодзи), либо по какому-то другому критерию.",
+   "uses": 1
+  }
+ ],
+ "Channels, basic groups and supergroups may have a public username or a private invite link: private invite links may be further enhanced with per-user join requests.": [
+  {
+   "translation": "У каналов, обычных групп и супергрупп может быть публичное имя (`username`) или приватная пригласительная ссылка: приватные пригласительные ссылки дополнительно могут требовать индивидуальной заявки на вступление от каждого пользователя.",
+   "uses": 1
+  },
+  {
+   "translation": "У каналов, обычных групп и супергрупп может быть публичное имя пользователя или приватная пригласительная ссылка: приватные пригласительные ссылки можно дополнительно усилить заявками на вступление от каждого пользователя.",
+   "uses": 1
+  }
+ ],
+ "How to handle admin permissions, granular bans and global permissions in channels, groups and supergroups.": [
+  {
+   "translation": "Как работать с правами администраторов, детальными ограничениями и общими правами в каналах, группах и супергруппах.",
+   "uses": 12
+  },
+  {
+   "translation": "Как работать с правами администраторов, детальными блокировками и глобальными правами в каналах, группах и супергруппах.",
+   "uses": 1
+  }
+ ],
+ "[Admin log](/api/recent-actions/)": [
+  {
+   "translation": "[Журнал действий администраторов](/api/recent-actions/)",
+   "uses": 3
+  },
+  {
+   "translation": "[Журнал администратора](/api/recent-actions/)",
+   "uses": 1
+  }
+ ],
+ "Both supergroups and channels offer a so-called [admin log](https://telegram.org/blog/admin-revolution), a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.": [
+  {
+   "translation": "И супергруппы, и каналы предлагают так называемый [журнал администратора](https://telegram.org/blog/admin-revolution) — список недавних значимых действий в супергруппе и канале, таких как изменение настроек или информации группы/канала от имени администратора, исключение и блокировка пользователей и многое другое.",
+   "uses": 1
+  },
+  {
+   "translation": "И супергруппы, и каналы предоставляют так называемый [журнал администратора](https://telegram.org/blog/admin-revolution) — журнал недавних значимых действий в супергруппе или канале: изменения настроек либо сведений о группе или канале от имени администратора, исключения и блокировки пользователей и многое другое.",
+   "uses": 1
+  },
+  {
+   "translation": "И у супергрупп, и у каналов есть так называемый [журнал действий администраторов](https://telegram.org/blog/admin-revolution) — список недавних значимых действий в супергруппе или канале: изменение настроек группы либо канала или сведений о них от имени администратора, исключение и блокировка пользователей и многое другое.",
+   "uses": 1
+  }
+ ],
+ "Telegram allows pinning multiple messages on top of a specific chat.": [
+  {
+   "translation": "Telegram позволяет закреплять несколько сообщений вверху конкретного чата.",
+   "uses": 6
+  },
+  {
+   "translation": "Telegram позволяет закрепить в верхней части конкретного чата сразу несколько сообщений.",
+   "uses": 1
+  }
+ ],
+ "Members in group chats (both basic groups and supergroups) can now add a **tag** next to their name — to show their role at work, what they study in school, and more.": [
+  {
+   "translation": "Участники групповых чатов (как обычных групп, так и супергрупп) теперь могут добавить рядом со своим именем **метку** — звание (`rank`: короткая подпись, которая показывает должность на работе, специальность в учебном заведении и тому подобное).",
+   "uses": 1
+  },
+  {
+   "translation": "Участники групповых чатов (как обычных групп, так и супергрупп) теперь могут добавить рядом со своим именем **метку** — чтобы показать свою должность на работе, специальность, по которой они учатся, и тому подобное.",
+   "uses": 1
+  },
+  {
+   "translation": "Участники групповых чатов (как обычных групп, так и супергрупп) теперь могут добавлять **тег** рядом со своим именем — чтобы показать свою должность на работе, специальность в учебном заведении и многое другое.",
+   "uses": 1
+  }
+ ],
+ "Telegram allows mentioning other users in case of urgent duckling matters, and quickly navigating to those mentions in order to read them as swiftly as possible.": [
+  {
+   "translation": "Telegram позволяет упоминать других пользователей по срочным утиным вопросам и быстро переходить к этим упоминаниям, чтобы прочитать их как можно скорее.",
+   "uses": 7
+  },
+  {
+   "translation": "Telegram позволяет упоминать других пользователей в случае неотложных утиных дел и быстро переходить к этим упоминаниям, чтобы прочитать их как можно скорее.",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram позволяет упоминать других пользователей, когда нужно срочно обсудить неотложные утиные дела, и быстро переходить к этим упоминаниям, чтобы как можно скорее их прочитать.",
+   "uses": 1
+  }
+ ],
+ "Telegram allows sending the live geolocation of a user in a chat, optionally setting a proximity alert.": [
+  {
+   "translation": "Telegram позволяет отправлять в чат геопозицию пользователя в реальном времени, при желании задавая оповещение о приближении.",
+   "uses": 6
+  },
+  {
+   "translation": "Telegram позволяет отправлять в чат геопозицию пользователя в реальном времени, дополнительно устанавливая оповещение о приближении.",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram позволяет транслировать геопозицию пользователя в чате в реальном времени, при желании — с оповещением о сближении.",
+   "uses": 1
+  }
+ ],
+ "[Min constructors](/api/min/)": [
+  {
+   "translation": "[Конструкторы min](/api/min/)",
+   "uses": 9
+  },
+  {
+   "translation": "[Min-конструкторы](/api/min/)",
+   "uses": 1
+  }
+ ],
+ "Telegram allows importing messages and media from foreign chat apps.": [
+  {
+   "translation": "Telegram позволяет импортировать сообщения и медиа из сторонних мессенджеров.",
+   "uses": 11
+  },
+  {
+   "translation": "Telegram позволяет импортировать сообщения и медиафайлы из сторонних мессенджеров.",
+   "uses": 2
+  }
+ ],
+ "To further improve transparency on Telegram, **official third-party services** are able to assign **extra verification icons** to user accounts and chats — in order to **prevent scams** and **reduce misinformation**.": [
+  {
+   "translation": "Чтобы ещё больше повысить прозрачность в Telegram, **официальные сторонние сервисы** могут присваивать **дополнительные значки верификации** аккаунтам пользователей и чатам — это помогает **предотвращать мошенничество** и **снижать количество дезинформации**.",
+   "uses": 1
+  },
+  {
+   "translation": "Чтобы ещё больше повысить прозрачность в Telegram, **официальные сторонние сервисы** могут присваивать учётным записям пользователей и чатам **дополнительные значки верификации** — это помогает **предотвращать мошенничество** и **бороться с недостоверной информацией**.",
+   "uses": 1
+  },
+  {
+   "translation": "Чтобы сделать Telegram ещё прозрачнее, **официальные сторонние сервисы** могут присваивать учётным записям пользователей и чатам **дополнительные значки верификации** — это позволяет **противодействовать мошенничеству** и **снижать количество недостоверной информации**.",
+   "uses": 1
+  }
+ ],
+ "Telegram clients support displaying GIFs.": [
+  {
+   "translation": "Клиенты Telegram поддерживают отображение GIF.",
+   "uses": 1
+  },
+  {
+   "translation": "Клиенты Telegram умеют показывать GIF.",
+   "uses": 1
+  }
+ ],
+ "If [enabled](/method/contacts.toggleTopPeers/), the rating of [top peers](/constructor/topPeer/) indicates the relevance of a frequently used peer in a certain [category](/type/TopPeerCategory/) (frequently messaged users, frequently used bots, inline bots, frequently visited channels and so on).": [
+  {
+   "translation": "Если рейтинг [включён](/method/contacts.toggleTopPeers/), он показывает для [популярных пиров](/constructor/topPeer/), насколько значим часто используемый пир в той или иной [категории](/type/TopPeerCategory/) (пользователи, которым часто пишут, часто используемые боты, инлайн-боты, часто посещаемые каналы и так далее).",
+   "uses": 1
+  },
+  {
+   "translation": "Если рейтинг [включён](/method/contacts.toggleTopPeers/), рейтинг [популярных пиров](/constructor/topPeer/) (`top peers` — пиры, к которым пользователь обращается чаще всего) показывает, насколько значим часто используемый пир в той или иной [категории](/type/TopPeerCategory/) (пользователи, которым часто пишут, часто используемые боты, инлайн-боты, часто посещаемые каналы и так далее).",
+   "uses": 1
+  }
+ ],
+ "How to handle file references.": [
+  {
+   "translation": "Как работать со ссылками на файлы.",
+   "uses": 12
+  },
+  {
+   "translation": "Как обрабатывать ссылки на файлы (`file_reference` — короткий идентификатор, который выдаёт сервер и который нужно передавать при скачивании медиафайла).",
+   "uses": 1
+  },
+  {
+   "translation": "Как обрабатывать ссылки на файлы.",
+   "uses": 1
+  }
+ ],
+ "Handle Seamless Telegram Login URL authorization requests.": [
+  {
+   "translation": "Обработка запросов авторизации по URL через Seamless Telegram Login.",
+   "uses": 8
+  },
+  {
+   "translation": "Обработка запросов авторизации по URL при бесшовном входе через Telegram.",
+   "uses": 1
+  }
+ ],
+ "Admins of supergroups with a certain number of members can choose to unleash the full proactive power of Telegram's own antispam algorithms – turning on the new Aggressive mode for the automated spam filters.": [
+  {
+   "translation": "Администраторы супергрупп с определённым числом участников могут задействовать всю упреждающую мощь собственных антиспам-алгоритмов Telegram — включить новый агрессивный режим автоматических спам-фильтров.",
+   "uses": 4
+  },
+  {
+   "translation": "Администраторы супергрупп с определённым числом участников могут задействовать всю мощь собственных антиспам-алгоритмов Telegram, включив новый агрессивный режим автоматических спам-фильтров.",
+   "uses": 1
+  },
+  {
+   "translation": "Администраторы супергрупп, набравших определённое число участников, могут задействовать всю проактивную мощь собственных антиспам-алгоритмов Telegram — включив новый агрессивный режим автоматических спам-фильтров.",
+   "uses": 1
+  }
+ ],
+ "Telegram users can make it easy for others to contact them or find their public groups and channels via [usernames](https://telegram.org/faq#usernames-and-t-me): clients can also assign multiple [Fragment »](https://fragment.com) **collectible usernames** to accounts, supergroups and channels they own; [Fragment »](https://fragment.com) also allows purchasing phone number collectibles that can be used to register Telegram accounts.": [
+  {
+   "translation": "Пользователи Telegram могут упростить другим задачу связаться с ними или найти их публичные группы и каналы с помощью [имён пользователей](https://telegram.org/faq#usernames-and-t-me): кроме того, клиенты могут присваивать аккаунтам, супергруппам и каналам, которыми владеют, несколько **коллекционных имён пользователей** с [Fragment »](https://fragment.com); [Fragment »](https://fragment.com) также позволяет приобретать коллекционные номера телефонов, на которые можно регистрировать аккаунты Telegram.",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи Telegram могут упростить другим задачу связаться с ними или найти их публичные группы и каналы с помощью [имён пользователя](https://telegram.org/faq#usernames-and-t-me): кроме того, клиенты могут присваивать аккаунтам, супергруппам и каналам, которыми владеют, несколько **коллекционных имён пользователя** с [Fragment »](https://fragment.com) (`collectible username` — имя, приобретённое на площадке Fragment и закреплённое за владельцем в блокчейне); [Fragment »](https://fragment.com) позволяет также покупать коллекционные номера телефона, на которые можно регистрировать аккаунты Telegram.",
+   "uses": 1
+  }
+ ],
+ "Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app. It is a part of Telegram’s **sustainable monetization** – driven by our users, rather than advertisers or shareholders. This way, Telegram can remain independent and prioritize its users first.": [
+  {
+   "translation": "Telegram Premium — необязательная подписка, которая открывает доступ к дополнительным эксклюзивным возможностям как на стороне клиента, так и на стороне API, и вместе с тем помогает поддерживать разработку приложения. Она — часть **устойчивой модели монетизации** Telegram, которую обеспечивают сами пользователи, а не рекламодатели или акционеры. Благодаря этому Telegram может оставаться независимым и ставить интересы пользователей на первое место.",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram Premium — это необязательная подписка, которая открывает доступ к дополнительным эксклюзивным возможностям на стороне клиента и на стороне API и одновременно помогает поддерживать развитие приложения. Она — часть **устойчивой модели монетизации** Telegram, которую обеспечивают сами пользователи, а не рекламодатели или акционеры. Благодаря этому Telegram может оставаться независимым и ставить интересы пользователей на первое место.",
+   "uses": 1
+  }
+ ],
+ "Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.": [
+  {
+   "translation": "Telegram Stars — виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам на платформе Telegram и не только.",
+   "uses": 105
+  },
+  {
+   "translation": "Telegram Stars — это виртуальные единицы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам контента на платформе Telegram и не только.",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram Stars — это виртуальные предметы, которые позволяют пользователям покупать цифровые товары и услуги у ботов и мини-приложений внутри экосистемы Telegram, отправлять подарки авторам контента на платформе Telegram и не только.",
+   "uses": 1
+  }
+ ],
+ "Users can send **Gifts** to their friends. The recipients of gifts can display them on their profile pages or turn them into [Telegram Stars »](/api/stars/). Telegram Stars can be used for many things, including supporting creators and buying services in mini apps.": [
+  {
+   "translation": "Пользователи могут отправлять **подарки** своим друзьям. Получатели подарков могут показывать их в своём профиле или обменивать на [Telegram Stars »](/api/stars/). Telegram Stars можно использовать по-разному, в том числе для поддержки авторов и покупки услуг в мини-приложениях.",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи могут отправлять друзьям **подарки**. Получатели подарков могут показывать их на своих страницах профиля или обменивать на [Telegram Stars »](/api/stars/). Telegram Stars пригодятся для многого: например, ими поддерживают авторов и оплачивают услуги в Mini Apps (мини-приложениях, работающих прямо внутри Telegram).",
+   "uses": 1
+  }
+ ],
+ "To guarantee fair distribution of [collectible gifts](/api/gifts/#collectible-gifts), new gift releases will be based on **auctions** — allowing users to place bids with Stars for new gifts over several rounds.": [
+  {
+   "translation": "Чтобы гарантировать честное распределение [коллекционных подарков](/api/gifts/#collectible-gifts), новые выпуски подарков будут основаны на **аукционах** — пользователи смогут делать ставки в Stars на новые подарки в течение нескольких раундов.",
+   "uses": 1
+  },
+  {
+   "translation": "Чтобы гарантировать честное распределение [коллекционных подарков](/api/gifts/#collectible-gifts), новые выпуски подарков будут распространяться через **аукционы** — пользователи смогут делать ставки в Stars на новые подарки в течение нескольких раундов.",
+   "uses": 1
+  }
+ ],
+ "[Paid media](/api/paid-media/)": [
+  {
+   "translation": "[Платные медиа](/api/paid-media/)",
+   "uses": 11
+  },
+  {
+   "translation": "[Платные медиафайлы](/api/paid-media/)",
+   "uses": 1
+  }
+ ],
+ "Content creators can accept [Stars](/api/stars/) by publishing **paid photos or videos** on their channels. Subscribers will be allowed to view such posts only after paying the author to unlock them.": [
+  {
+   "translation": "Авторы контента могут принимать [Stars](/api/stars/), публикуя в своих каналах **платные фото или видео**. Подписчики смогут просмотреть такие посты, только заплатив автору за их разблокировку.",
+   "uses": 1
+  },
+  {
+   "translation": "Авторы контента могут принимать [Stars](/api/stars/), публикуя в своих каналах **платные фотографии и видео**. Подписчики смогут просмотреть такие посты только после того, как заплатят автору за их разблокировку.",
+   "uses": 1
+  }
+ ],
+ "Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured [Star Messages »](https://telegram.org/blog/star-messages-gateway-2-0-and-more#stay-in-control-of-your-inbox-with-star-messages), requiring a payment for every message sent to them.": [
+  {
+   "translation": "Telegram Stars можно использовать для оплаты отправки сообщений пользователям, супергруппам и каналам, которые настроили [платные сообщения »](https://telegram.org/blog/star-messages-gateway-2-0-and-more#stay-in-control-of-your-inbox-with-star-messages) и требуют оплаты за каждое отправленное им сообщение.",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram Stars можно использовать для оплаты отправки сообщений пользователям, супергруппам и каналам, у которых настроены [Star Messages »](https://telegram.org/blog/star-messages-gateway-2-0-and-more#stay-in-control-of-your-inbox-with-star-messages): такие пиры (`peer` — пир, то есть адресат: пользователь, чат или канал) требуют оплаты за каждое отправленное им сообщение.",
+   "uses": 1
+  }
+ ],
+ "[Suggested posts](/api/suggested-posts/)": [
+  {
+   "translation": "[Предлагаемые посты](/api/suggested-posts/)",
+   "uses": 13
+  },
+  {
+   "translation": "[Предложенные посты](/api/suggested-posts/)",
+   "uses": 1
+  }
+ ],
+ "Telegram offers a powerful monetization feature to channel administrators: **suggested posts**.": [
+  {
+   "translation": "Telegram предлагает администраторам каналов мощный инструмент монетизации — **предложенные посты**.",
+   "uses": 2
+  },
+  {
+   "translation": "Telegram предлагает администраторам каналов мощный инструмент монетизации — **предлагаемые посты** (`suggested posts` — публикации, которые сторонний пользователь предлагает каналу, а администратор утверждает или отклоняет).",
+   "uses": 1
+  },
+  {
+   "translation": "Telegram предлагает администраторам каналов мощный инструмент монетизации — **предлагаемые посты**.",
+   "uses": 1
+  }
+ ],
+ "Sometimes, when interacting with Telegram users via private or secret chats, an action bar must be shown on top of the chat, offering convenient action buttons or notices regarding the user.": [
+  {
+   "translation": "Иногда при взаимодействии с пользователями Telegram через личные или секретные чаты вверху чата необходимо показать панель действий, предлагающую удобные кнопки или уведомления об этом пользователе.",
+   "uses": 3
+  },
+  {
+   "translation": "Иногда при взаимодействии с пользователями Telegram в личных или секретных чатах поверх чата требуется показать панель действий (action bar) с удобными кнопками или уведомлениями, касающимися этого пользователя.",
+   "uses": 1
+  },
+  {
+   "translation": "Иногда при общении с пользователями Telegram в личных или секретных чатах поверх чата необходимо показать панель действий с удобными кнопками или примечаниями о собеседнике.",
+   "uses": 1
+  }
+ ],
+ "[Saved messages](/api/saved-messages/)": [
+  {
+   "translation": "[Избранные сообщения](/api/saved-messages/)",
+   "uses": 31
+  },
+  {
+   "translation": "[Избранное](/api/saved-messages/)",
+   "uses": 1
+  }
+ ],
+ "The Saved Messages chat allows users to bookmark messages and media: it's a personal cloud storage for any messages or media you may want to send or forward there.": [
+  {
+   "translation": "Чат «Избранное» позволяет сохранять сообщения и медиа: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.",
+   "uses": 31
+  },
+  {
+   "translation": "Чат «Избранное» (Saved Messages) позволяет пользователям сохранять сообщения и медиафайлы: это личное облачное хранилище для любых сообщений и медиа, которые вы захотите туда отправить или переслать.",
+   "uses": 1
+  },
+  {
+   "translation": "Чат «Избранное» позволяет пользователям сохранять сообщения и медиафайлы: это личное облачное хранилище для любых сообщений и медиафайлов, которые вы захотите туда отправить или переслать.",
+   "uses": 1
+  }
+ ],
+ "Telegram offers many customization options for your profile!": [
+  {
+   "translation": "Telegram предлагает множество вариантов настройки вашего профиля!",
+   "uses": 27
+  },
+  {
+   "translation": "Telegram предлагает множество способов настроить свой профиль!",
+   "uses": 1
+  }
+ ],
+ "Telegram apps support generating, sharing and synchronizing app themes.": [
+  {
+   "translation": "Приложения Telegram умеют создавать, отправлять и синхронизировать темы оформления.",
+   "uses": 9
+  },
+  {
+   "translation": "Приложения Telegram поддерживают создание, публикацию и синхронизацию тем оформления.",
+   "uses": 1
+  },
+  {
+   "translation": "Приложения Telegram умеют создавать темы оформления, делиться ими и синхронизировать их между устройствами.",
+   "uses": 1
+  }
+ ],
+ "[Channel and bot ad revenue](/api/revenue/)": [
+  {
+   "translation": "[Доход от рекламы в каналах и ботах](/api/revenue/)",
+   "uses": 2
+  },
+  {
+   "translation": "[Доход каналов и ботов от рекламы](/api/revenue/)",
+   "uses": 1
+  }
+ ],
+ "Telegram has one of the **most generous reward systems** in the history of social media. Telegram channel and bot owners can now receive **50%** of the revenue from ads displayed in their channels and bots.": [
+  {
+   "translation": "В Telegram действует одна из **самых щедрых систем вознаграждения** за всю историю социальных сетей. Владельцы каналов и ботов Telegram теперь могут получать **50 %** дохода от рекламы, которая показывается в их каналах и ботах.",
+   "uses": 1
+  },
+  {
+   "translation": "У Telegram — одна из **самых щедрых систем вознаграждения** за всю историю социальных сетей. Владельцы каналов и ботов Telegram теперь могут получать **50%** дохода от рекламы, которая показывается в их каналах и ботах.",
+   "uses": 1
+  }
+ ],
+ "This page describes the methods used to withdraw channel and bot ad revenue, as well as view detailed revenue stats.": [
+  {
+   "translation": "На этой странице описаны методы, которые позволяют вывести доход канала или бота от рекламы, а также посмотреть подробную статистику по доходам.",
+   "uses": 1
+  },
+  {
+   "translation": "На этой странице описаны методы, с помощью которых можно вывести доход от рекламы в канале или боте, а также посмотреть подробную статистику по этому доходу.",
+   "uses": 1
+  }
+ ],
+ "Telegram clients support displaying fact-checks added to messages by independent fact-checkers.": [
+  {
+   "translation": "Клиенты Telegram поддерживают отображение проверок фактов, добавленных к сообщениям независимыми фактчекерами.",
+   "uses": 6
+  },
+  {
+   "translation": "Клиенты Telegram умеют показывать проверки фактов, добавленные к сообщениям независимыми фактчекерами.",
+   "uses": 1
+  },
+  {
+   "translation": "Клиенты Telegram умеют показывать результаты проверки фактов, добавленные к сообщениям независимыми фактчекерами.",
+   "uses": 1
+  }
+ ],
+ "Working with the blocklist.": [
+  {
+   "translation": "Работа со списком заблокированных.",
+   "uses": 10
+  },
+  {
+   "translation": "Работа со списком блокировки.",
+   "uses": 1
+  }
+ ],
+ "Some legislations require age verification to view restricted content: Telegram implements this through the [Main Mini App](/api/bots/webapps/#main-mini-apps) of a special bot.": [
+  {
+   "translation": "В некоторых юрисдикциях для просмотра контента с ограничениями требуется проверка возраста: Telegram реализует её через [Main Mini App](/api/bots/webapps/#main-mini-apps) специального бота.",
+   "uses": 1
+  },
+  {
+   "translation": "Законодательство некоторых стран требует проверки возраста для просмотра содержимого с возрастными ограничениями: Telegram реализует её через [Main Mini App](/api/bots/webapps/#main-mini-apps) специального бота — Mini App (веб-приложение, встроенное в клиент Telegram).",
+   "uses": 1
+  }
+ ],
+ "Telegram clients must handle special `tg://` and `t.me` deep links encountered in messages, link entities and in other apps by registering OS handlers.": [
+  {
+   "translation": "Клиенты Telegram обязаны обрабатывать особые глубокие ссылки (`deep link` — ссылка, открывающая нужный экран прямо в приложении) вида `tg://` и `t.me`, встречающиеся в сообщениях, в сущностях оформления ссылок и в других приложениях; для этого они регистрируют обработчики в операционной системе.",
+   "uses": 1
+  },
+  {
+   "translation": "Клиенты Telegram обязаны обрабатывать особые глубокие ссылки (`deep link` — ссылки вида `tg://` и `t.me`, ведущие прямо к нужному объекту внутри приложения), встречающиеся в сообщениях, в ссылочных сущностях оформления и в других приложениях; для этого нужно зарегистрировать обработчики в операционной системе.",
+   "uses": 1
+  },
+  {
+   "translation": "Клиенты Telegram обязаны обрабатывать специальные глубокие ссылки (`deep link` — ссылка, открывающая конкретный экран приложения) вида `tg://` и `t.me`, встречающиеся в сообщениях, в сущностях оформления типа «ссылка» и в других приложениях; для этого нужно зарегистрировать обработчики на уровне операционной системы.",
+   "uses": 1
+  }
+ ],
+ "Telegram's API allows users to export all of their information through the takeout API.": [
+  {
+   "translation": "API Telegram позволяет пользователям экспортировать все свои данные через API выгрузки данных.",
+   "uses": 6
+  },
+  {
+   "translation": "API Telegram позволяет пользователям выгрузить всю свою информацию через takeout API — API выгрузки данных, то есть особый режим сессии, в котором клиент разом выкачивает все данные аккаунта.",
+   "uses": 1
+  },
+  {
+   "translation": "API Telegram позволяет пользователям экспортировать все свои данные через API выгрузки (`takeout` — режим, в котором сервер отдаёт полную историю данных пользователя).",
+   "uses": 1
+  }
+ ],
+ "Related articles": [
+  {
+   "translation": "Связанные статьи",
+   "uses": 8
+  },
+  {
+   "translation": "Похожие статьи",
+   "uses": 1
+  }
+ ],
+ "How to login to a user's account if they have enabled 2FA, how to change password.": [
+  {
+   "translation": "Как войти в аккаунт пользователя, если включена двухфакторная аутентификация, и как сменить пароль.",
+   "uses": 29
+  },
+  {
+   "translation": "Как войти в аккаунт пользователя, если он включил 2FA, и как изменить пароль.",
+   "uses": 1
+  }
+ ],
+ "Graphical telegram clients should transform emojis into their respective animated version.": [
+  {
+   "translation": "Графические клиенты Telegram должны заменять эмодзи соответствующей анимированной версией.",
+   "uses": 3
+  },
+  {
+   "translation": "Графическим клиентам Telegram следует заменять эмодзи соответствующими анимированными версиями.",
+   "uses": 1
+  }
+ ],
+ "`peer`: Identifier of the user or channel (only if [channelFull](/constructor/channelFull/).`stargifts_available` is set) that will receive the gift": [
+  {
+   "translation": "`peer`: идентификатор пользователя или канала (для канала — только если установлен флаг [channelFull](/constructor/channelFull/).`stargifts_available`), который получит подарок",
+   "uses": 1
+  },
+  {
+   "translation": "`peer`: идентификатор пользователя или канала (только если установлен [channelFull](/constructor/channelFull/).`stargifts_available`), который получит подарок",
+   "uses": 1
+  }
+ ],
+ "[payments.getPaymentForm](/method/payments.getPaymentForm/) - Get a payment form": [
+  {
+   "translation": "[payments.getPaymentForm](/method/payments.getPaymentForm/) - Получить форму платежа",
+   "uses": 1
+  },
+  {
+   "translation": "[payments.getPaymentForm](/method/payments.getPaymentForm/) — получить платёжную форму",
+   "uses": 1
+  }
+ ],
+ "After reaching at least the boost level specified in the [`channel_restrict_sponsored_level_min` »](/api/config/#channel-restrict-sponsored-level-min) config parameter, channel owners may disable ads on the channel for all users using [channels.restrictSponsoredMessages](/method/channels.restrictSponsoredMessages/).": [
+  {
+   "translation": "Достигнув как минимум уровня бустов, указанного в [параметре конфигурации `channel_restrict_sponsored_level_min` »](/api/config/#channel-restrict-sponsored-level-min), владельцы канала могут отключить в нём рекламу (`sponsored messages` — рекламные сообщения, которые Telegram сам показывает в каналах) для всех пользователей с помощью метода [channels.restrictSponsoredMessages](/method/channels.restrictSponsoredMessages/).",
+   "uses": 1
+  },
+  {
+   "translation": "Достигнув уровня буста (буст — голос подписчика за канал; от числа бустов зависит уровень канала) не ниже указанного в параметре конфигурации [`channel_restrict_sponsored_level_min` »](/api/config/#channel-restrict-sponsored-level-min), владельцы канала могут отключить в нём рекламу для всех пользователей — методом [channels.restrictSponsoredMessages](/method/channels.restrictSponsoredMessages/).",
+   "uses": 1
+  }
+ ],
+ "If ads are disabled on the channel, the [channelFull](/constructor/channelFull/).`restricted_sponsored` flag will be set (owners only).": [
+  {
+   "translation": "Если реклама в канале отключена, будет выставлен флаг [channelFull](/constructor/channelFull/).`restricted_sponsored` (флаг — бит в поле `flags`, само наличие которого несёт значение); он выставляется только для владельцев.",
+   "uses": 1
+  },
+  {
+   "translation": "Если реклама в канале отключена, будет установлен флаг [channelFull](/constructor/channelFull/).`restricted_sponsored` (виден только владельцам).",
+   "uses": 1
+  }
+ ],
+ "Users can connect Telegram bots that will process and answer messages **on their behalf**. This allows them to **seamlessly integrate** any existing tools and workflows, or add **AI assistants** that manage their chats.": [
+  {
+   "translation": "Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них **от имени пользователя**. Это позволяет **без лишних усилий встроить** любые уже используемые инструменты и рабочие процессы, а также добавить **ИИ-ассистентов**, которые ведут его чаты.",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи могут подключать ботов Telegram, которые будут обрабатывать сообщения и отвечать на них **от их имени**. Это позволяет **бесшовно интегрировать** любые уже используемые инструменты и рабочие процессы, а также подключать **ИИ-ассистентов**, ведущих переписку в чатах.",
+   "uses": 1
+  },
+  {
+   "translation": "Пользователи могут подключать боты Telegram, которые будут обрабатывать сообщения и отвечать на них **от их имени**. Это позволяет **органично встроить** любые уже используемые инструменты и рабочие процессы либо добавить **ИИ-ассистентов**, которые ведут их переписку.",
+   "uses": 1
+  }
+ ],
+ "Bot forums": [
+  {
+   "translation": "Форумы у ботов",
+   "uses": 1
+  },
+  {
+   "translation": "Форумы-боты",
+   "uses": 1
+  }
+ ],
+ "Note: this feature is subject to an additional fee for Telegram Star purchases as described in [Section 6.2.6](https://telegram.org/tos/bot-developers#6-2-6-enabling-topics-in-private-chats) of our Terms of Service for Bot Developers.": [
+  {
+   "translation": "Примечание: за эту возможность взимается дополнительная комиссия с покупок за Telegram Stars — как описано в [разделе 6.2.6](https://telegram.org/tos/bot-developers#6-2-6-enabling-topics-in-private-chats) наших Условий для разработчиков ботов.",
+   "uses": 1
+  },
+  {
+   "translation": "Учтите: за эту возможность взимается дополнительная комиссия с покупок Telegram Stars, как описано в [разделе 6.2.6](https://telegram.org/tos/bot-developers#6-2-6-enabling-topics-in-private-chats) наших Условий обслуживания для разработчиков ботов.",
+   "uses": 1
+  }
+ ],
+ "Otherwise, notify the user that the attachment menu webapp can't be opened in the specified chat.": [
+  {
+   "translation": "В противном случае сообщить пользователю, что веб-приложение меню вложений нельзя открыть в указанном чате.",
+   "uses": 2
+  },
+  {
+   "translation": "Иначе сообщите пользователю, что веб-приложение из меню вложений нельзя открыть в указанном чате.",
+   "uses": 1
+  }
+ ],
+ "This flow may also be used by mini apps, as specified [here »](#requesting-peers-via-mini-apps).": [
+  {
+   "translation": "Этот сценарий допускается использовать и в Mini Apps — так, как описано [здесь »](#requesting-peers-via-mini-apps).",
+   "uses": 1
+  },
+  {
+   "translation": "Этот сценарий допускается использовать и в Mini Apps (Mini App — веб-приложение, встроенное в клиент Telegram и работающее внутри него) — так, как описано [здесь »](#requesting-peers-via-mini-apps).",
+   "uses": 1
+  }
+ ],
+ "Transferring stars from a business account to the business bot": [
+  {
+   "translation": "Перевод звёзд с бизнес-аккаунта бизнес-боту",
+   "uses": 1
+  },
+  {
+   "translation": "Перевод звёзд с бизнес-аккаунта на бизнес-бота",
+   "uses": 1
+  }
+ ],
+ "Guest bots can be queried by username from **any** non-secret private chat, group and supergroup (except for groups/supergroups with [content protection »](/api/content-protection/#for-groups-and-channels) enabled), posting their results directly into the chat, even if they're not a member.": [
+  {
+   "translation": "Гостевых ботов можно вызывать по имени пользователя из **любого** несекретного личного чата, группы и супергруппы (кроме групп и супергрупп с включённой [защитой контента »](/api/content-protection/#for-groups-and-channels)); они публикуют свои результаты прямо в чат, даже если не состоят в нём.",
+   "uses": 6
+  },
+  {
+   "translation": "Гостевого бота можно вызвать по имени пользователя (`username` — публичный псевдоним, уникальный в пределах Telegram) из **любого** несекретного личного чата, группы и супергруппы (кроме групп и супергрупп с включённой [защитой контента »](/api/content-protection/#for-groups-and-channels)); результат он публикует прямо в этот чат, даже если не состоит в нём.",
+   "uses": 1
+  }
+ ],
+ "[botMenuButton](/constructor/botMenuButton/) - Opens a [bot mini app](/api/bots/webapps/) when clicked.": [
+  {
+   "translation": "[botMenuButton](/constructor/botMenuButton/) — при нажатии открывает [Mini App бота](/api/bots/webapps/).",
+   "uses": 3
+  },
+  {
+   "translation": "[botMenuButton](/constructor/botMenuButton/) — при нажатии открывает [Mini App бота](/api/bots/webapps/) (веб-приложение, которое запускается прямо внутри клиента Telegram).",
+   "uses": 1
+  }
+ ],
+ "After invoking [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/) and obtaining a [webViewResultUrl](/constructor/webViewResultUrl/) result, clients should open a webview using the `url` contained in the returned [webViewResultUrl](/constructor/webViewResultUrl/).": [
+  {
+   "translation": "После вызова [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/) и получения результата [webViewResultUrl](/constructor/webViewResultUrl/) клиент должен открыть webview по адресу `url` из возвращённого [webViewResultUrl](/constructor/webViewResultUrl/).",
+   "uses": 1
+  },
+  {
+   "translation": "После вызова [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/) и получения результата [webViewResultUrl](/constructor/webViewResultUrl/) клиентам следует открыть webview (встроенное окно браузера внутри клиента) по адресу `url` из возвращённого [webViewResultUrl](/constructor/webViewResultUrl/).",
+   "uses": 1
+  },
+  {
+   "translation": "После вызова [messages.requestSimpleWebView](/method/messages.requestSimpleWebView/) и получения результата [webViewResultUrl](/constructor/webViewResultUrl/) клиенту следует открыть webview по адресу `url` из возвращённого [webViewResultUrl](/constructor/webViewResultUrl/).",
+   "uses": 1
+  }
+ ],
+ "These links should be handled as follows:": [
+  {
+   "translation": "Такие ссылки следует обрабатывать так:",
+   "uses": 2
+  },
+  {
+   "translation": "Обрабатывать такие ссылки следует так:",
+   "uses": 1
+  }
+ ],
+ "`result` - The JSON data contained in the response of the [bots.invokeWebViewCustomMethod](/method/bots.invokeWebViewCustomMethod/) method, if the method call succeeded": [
+  {
+   "translation": "`result` — данные JSON, содержащиеся в ответе метода [bots.invokeWebViewCustomMethod](/method/bots.invokeWebViewCustomMethod/), если вызов метода прошёл успешно",
+   "uses": 1
+  },
+  {
+   "translation": "`result` — JSON-данные из ответа метода [bots.invokeWebViewCustomMethod](/method/bots.invokeWebViewCustomMethod/), если вызов метода прошёл успешно",
+   "uses": 1
+  }
+ ],
+ "To remove business location information invoke the method without setting any of the parameters.": [
+  {
+   "translation": "Чтобы удалить сведения о местоположении компании, вызовите метод, не задавая ни одного из параметров.",
+   "uses": 2
+  },
+  {
+   "translation": "Чтобы удалить сведения о местоположении бизнеса, вызовите метод, не заполняя ни один из параметров.",
+   "uses": 1
+  }
+ ],
+ "Folder tags": [
+  {
+   "translation": "Метки папок",
+   "uses": 1
+  },
+  {
+   "translation": "Теги папок",
+   "uses": 1
+  }
+ ],
+ "Client configuration": [
+  {
+   "translation": "Клиентская конфигурация",
+   "uses": 1
+  },
+  {
+   "translation": "Конфигурация клиента",
+   "uses": 1
+  }
+ ],
+ "The MTProto API has multiple configuration parameters that can be fetched with the appropriate methods.": [
+  {
+   "translation": "У MTProto API есть несколько параметров конфигурации, которые можно получить соответствующими методами.",
+   "uses": 70
+  },
+  {
+   "translation": "У MTProto API есть несколько наборов параметров конфигурации, которые можно получить соответствующими методами.",
+   "uses": 1
+  }
+ ],
+ "Make sure to implement client-side ratelimiting/debounce for this method, allowing at most 1 call every 3 seconds.": [
+  {
+   "translation": "Обязательно реализуйте на стороне клиента ограничение частоты вызовов и подавление дребезга для этого метода, допуская не более 1 вызова каждые 3 секунды.",
+   "uses": 1
+  },
+  {
+   "translation": "Обязательно реализуйте на стороне клиента ограничение частоты запросов к этому методу (`rate limit`) и подавление дребезга (debounce): допускается не более одного вызова каждые 3 секунды.",
+   "uses": 1
+  }
+ ],
+ "Private notes for contacts": [
+  {
+   "translation": "Личные заметки к контактам",
+   "uses": 1
+  },
+  {
+   "translation": "Личные заметки о контактах",
+   "uses": 1
+  }
+ ],
+ "When adding or editing a **Telegram contact**, you can now include a private note — to help you remember how you met, where they work, or their favorite ice cream flavor.": [
+  {
+   "translation": "При добавлении или изменении **контакта Telegram** теперь можно приложить личную заметку — чтобы не забыть, как вы познакомились, где человек работает или какое мороженое он любит.",
+   "uses": 1
+  },
+  {
+   "translation": "При добавлении или изменении **контакта Telegram** теперь можно приложить личную заметку — чтобы не забыть, при каких обстоятельствах вы познакомились, где человек работает или какое мороженое он любит.",
+   "uses": 1
+  }
+ ],
+ "Telegram allows including animated and static custom emojis inside of messages.": [
+  {
+   "translation": "Telegram позволяет вставлять в сообщения анимированные и статичные пользовательские эмодзи.",
+   "uses": 51
+  },
+  {
+   "translation": "Telegram позволяет вставлять в сообщения анимированные и статические пользовательские эмодзи.",
+   "uses": 1
+  }
+ ],
+ "The custom emoji selection UI should offer a list of categories to quickly filter results by a (list of) emojis, or by some other criteria, see [here »](/api/emoji-categories/) for more info.": [
+  {
+   "translation": "В интерфейсе выбора пользовательского эмодзи следует предлагать список категорий, позволяющий быстро отфильтровать результаты по эмодзи (или набору эмодзи) либо по иным признакам; подробнее см. [здесь »](/api/emoji-categories/).",
+   "uses": 1
+  },
+  {
+   "translation": "Интерфейс выбора пользовательских эмодзи должен предлагать список категорий, позволяющий быстро отфильтровать результаты по эмодзи (или их набору) либо по иным критериям; подробнее см. [здесь »](/api/emoji-categories/).",
+   "uses": 1
+  }
+ ],
+ "Registration/Authorization": [
+  {
+   "translation": "Регистрация и авторизация",
+   "uses": 1
+  },
+  {
+   "translation": "Регистрация/авторизация",
+   "uses": 1
+  }
+ ],
+ "Channel comments": [
+  {
+   "translation": "Комментарии к записям в канале",
+   "uses": 1
+  },
+  {
+   "translation": "Комментарии к постам канала",
+   "uses": 1
+  }
+ ],
+ "In order to keep past communications safe, official Telegram clients will initiate re-keying once a key has been used to decrypt and encrypt more than 100 messages, or has been in use for more than one week, provided the key has been used to encrypt at least one message. Old keys are then securely discarded and cannot be reconstructed, even with access to the new keys currently in use.": [
+  {
+   "translation": "Чтобы сохранить в безопасности прошлую переписку (Perfect Forward Secrecy — совершенная прямая секретность), официальные клиенты Telegram инициируют смену ключа, как только ключ был использован для расшифровки и шифрования более 100 сообщений либо применяется дольше недели, при условии что им было зашифровано хотя бы одно сообщение. Старые ключи затем надёжно уничтожаются, и восстановить их нельзя даже при наличии доступа к новым, используемым сейчас ключам.",
+   "uses": 1
+  },
+  {
+   "translation": "Чтобы сохранить в безопасности прошлую переписку, официальные клиенты Telegram начинают смену ключа, как только на текущем ключе расшифровано и зашифровано более 100 сообщений либо он применяется дольше недели — при условии, что им зашифровано хотя бы одно сообщение. Старые ключи после этого надёжно уничтожаются, и восстановить их нельзя даже при наличии доступа к новым ключам, которые используются сейчас.",
+   "uses": 1
+  }
+ ],
+ "The Diffie-Hellman key exchange, as well as the whole protocol used to create a new voice call, is quite similar to the one used for [Secret Chats](/api/end-to-end/#key-generation). We recommend studying the linked article before proceeding.": [
+  {
+   "translation": "Обмен ключами Диффи — Хеллмана, как и весь протокол создания нового голосового звонка, весьма похож на тот, что применяется в [секретных чатах](/api/end-to-end/#key-generation). Прежде чем читать дальше, рекомендуем изучить статью по ссылке.",
+   "uses": 1
+  },
+  {
+   "translation": "Обмен ключами Диффи — Хеллмана, как и весь протокол создания нового голосового звонка, во многом схож с тем, что применяется в [секретных чатах](/api/end-to-end/#key-generation). Прежде чем читать дальше, рекомендуется изучить статью по ссылке.",
+   "uses": 1
+  }
+ ],
+ "However, we have introduced some important changes to facilitate the [key verification process](#key-verification). Below is the entire exchange between the two communicating parties, the Caller (A) and the Callee (B), through the Telegram servers (S).": [
+  {
+   "translation": "Однако мы внесли ряд важных изменений, которые облегчают [сверку ключа](#key-verification). Ниже расписан весь обмен между двумя взаимодействующими сторонами — вызывающей (A) и вызываемой (B) — через серверы Telegram (S).",
+   "uses": 1
+  },
+  {
+   "translation": "Тем не менее в него внесены важные изменения, упрощающие [процедуру проверки ключа](#key-verification). Ниже приведён полный обмен данными между двумя взаимодействующими сторонами — вызывающей (A) и вызываемой (B) — через серверы Telegram (S).",
+   "uses": 1
+  }
+ ],
+ "_A_ invokes (sends to server _S_) [phone.requestCall](/method/phone.requestCall/), which has the field `g_a_hash:bytes`, among others. For this call, this field is to be filled with _g\\_a\\_hash_, **not** _g\\_a_ itself.": [
+  {
+   "translation": "_A_ вызывает (отправляет серверу _S_) [phone.requestCall](/method/phone.requestCall/), где среди прочих есть поле `g_a_hash:bytes`. При этом вызове данное поле заполняется значением _g\\_a\\_hash_, а **не** самим _g\\_a_.",
+   "uses": 1
+  },
+  {
+   "translation": "_A_ вызывает (отправляет серверу _S_) [phone.requestCall](/method/phone.requestCall/), где среди прочих полей есть `g_a_hash:bytes`. Для этого вызова в него помещается _g\\_a\\_hash_, а **не** само значение _g\\_a_.",
+   "uses": 1
+  }
+ ],
+ "The Server _S_ performs privacy checks and sends an [updatePhoneCall](/constructor/updatePhoneCall/) update with a [phoneCallRequested](/constructor/phoneCallRequested/) constructor to all of _B_'s active devices. This update, apart from the identity of _A_ and other relevant parameters, contains the _g\\_a\\_hash_ field, filled with the value obtained from _A_.": [
+  {
+   "translation": "Сервер _S_ выполняет проверки настроек приватности и отправляет обновление [updatePhoneCall](/constructor/updatePhoneCall/) с конструктором [phoneCallRequested](/constructor/phoneCallRequested/) на все активные устройства _B_. Помимо сведений о личности _A_ и прочих значимых параметров, это обновление содержит поле _g\\_a\\_hash_, заполненное полученным от _A_ значением.",
+   "uses": 1
+  },
+  {
+   "translation": "Сервер _S_ выполняет проверки приватности и рассылает обновление [updatePhoneCall](/constructor/updatePhoneCall/) с конструктором [phoneCallRequested](/constructor/phoneCallRequested/) на все активные устройства _B_. Помимо сведений о том, кто такой _A_, и прочих значимых параметров, это обновление содержит поле _g\\_a\\_hash_ со значением, полученным от _A_.",
+   "uses": 1
+  }
+ ],
+ "_B_ accepts the call on one of their devices, stores the received value of _g\\_a\\_hash_ for this instance of the voice call creation protocol, chooses a random value of _b_, 1 < b < p-1, computes _g\\_b:=power(g,b) mod p_, performs all the required security checks, and invokes the [phone.acceptCall](/method/phone.acceptCall/) method, which has a _g\\_b:bytes_ field (among others), to be filled with the value of _g\\_b_ itself (not its hash).": [
+  {
+   "translation": "_B_ принимает звонок на одном из своих устройств, сохраняет полученное значение _g\\_a\\_hash_ для этого экземпляра протокола создания голосового звонка, выбирает случайное значение _b_, 1 < b < p-1, вычисляет _g\\_b:=power(g,b) mod p_, выполняет все необходимые проверки безопасности и вызывает метод [phone.acceptCall](/method/phone.acceptCall/), у которого среди прочих есть поле _g\\_b:bytes_ — оно заполняется самим значением _g\\_b_ (а не его хешем).",
+   "uses": 1
+  },
+  {
+   "translation": "_B_ принимает звонок на одном из своих устройств, сохраняет полученное значение _g\\_a\\_hash_ для этого экземпляра протокола создания голосового звонка, выбирает случайное значение _b_, 1 < b < p-1, вычисляет _g\\_b:=power(g,b) mod p_, выполняет все требуемые проверки безопасности и вызывает метод [phone.acceptCall](/method/phone.acceptCall/), среди полей которого есть _g\\_b:bytes_ — в него помещается само значение _g\\_b_ (а не его хеш).",
+   "uses": 1
+  }
+ ],
+ "The Server _S_ sends an [updatePhoneCall](/constructor/updatePhoneCall/) with the [phoneCallDiscarded](/constructor/phoneCallDiscarded/) constructor to all other devices _B_ has authorized, to prevent accepting the same call on any of the other devices. From this point on, the server _S_ works only with that of _B_'s devices which has invoked [phone.acceptCall](/method/phone.acceptCall/) first.": [
+  {
+   "translation": "Сервер _S_ отправляет [updatePhoneCall](/constructor/updatePhoneCall/) с конструктором [phoneCallDiscarded](/constructor/phoneCallDiscarded/) на все остальные устройства, авторизованные стороной _B_, чтобы этот же звонок нельзя было принять ни на одном из них. С этого момента сервер _S_ работает только с тем устройством _B_, которое первым вызвало [phone.acceptCall](/method/phone.acceptCall/).",
+   "uses": 1
+  },
+  {
+   "translation": "Сервер _S_ рассылает [updatePhoneCall](/constructor/updatePhoneCall/) с конструктором [phoneCallDiscarded](/constructor/phoneCallDiscarded/) на все остальные авторизованные устройства _B_, чтобы тот же звонок нельзя было принять ни на одном из них. С этого момента сервер _S_ работает только с тем устройством _B_, которое первым вызвало [phone.acceptCall](/method/phone.acceptCall/).",
+   "uses": 1
+  }
+ ],
+ "The Server _S_ sends to _A_ an [updatePhoneCall](/constructor/updatePhoneCall/) update with [phoneCallAccepted](/constructor/phoneCallAccepted/) constructor, containing the value of _g\\_b_ received from _B_.": [
+  {
+   "translation": "Сервер _S_ отправляет _A_ обновление [updatePhoneCall](/constructor/updatePhoneCall/) с конструктором [phoneCallAccepted](/constructor/phoneCallAccepted/), содержащее полученное от _B_ значение _g\\_b_.",
+   "uses": 1
+  },
+  {
+   "translation": "Сервер _S_ отправляет стороне _A_ обновление [updatePhoneCall](/constructor/updatePhoneCall/) с конструктором [phoneCallAccepted](/constructor/phoneCallAccepted/), содержащее полученное от _B_ значение _g\\_b_.",
+   "uses": 1
+  }
+ ],
+ "_A_ performs all the usual security checks on _g\\_b_ and _a_, computes the Diffie--Hellman key _key:=power(g\\_b,a) mod p_ and its fingerprint _key\\_fingerprint:long_, equal to the lower 64 bits of _SHA1(key)_, the same as with secret chats. Then _A_ invokes the [phone.confirmCall](/method/phone.confirmCall/) method, containing `g_a:bytes` and `key_fingerprint:long`.": [
+  {
+   "translation": "_A_ выполняет все обычные проверки безопасности для _g\\_b_ и _a_, вычисляет ключ Диффи — Хеллмана _key:=power(g\\_b,a) mod p_ и его отпечаток _key\\_fingerprint:long_, равный младшим 64 битам _SHA1(key)_, — так же, как в секретных чатах. Затем _A_ вызывает метод [phone.confirmCall](/method/phone.confirmCall/), передавая `g_a:bytes` и `key_fingerprint:long`.",
+   "uses": 1
+  },
+  {
+   "translation": "_A_ выполняет для _g\\_b_ и _a_ все обычные проверки безопасности, вычисляет ключ Диффи — Хеллмана _key:=power(g\\_b,a) mod p_ и его отпечаток _key\\_fingerprint:long_, равный младшим 64 битам _SHA1(key)_, — так же, как в секретных чатах. Затем _A_ вызывает метод [phone.confirmCall](/method/phone.confirmCall/), передавая в нём `g_a:bytes` и `key_fingerprint:long`.",
+   "uses": 1
+  }
+ ],
+ "The Server _S_ sends to _B_ an [updatePhoneCall](/constructor/updatePhoneCall/) update with the [phoneCall](/constructor/phoneCall/) constructor, containing the value of _g\\_a_ in _g\\_a\\_or\\_b:bytes_ field, and _key\\_fingerprint:long_": [
+  {
+   "translation": "Сервер _S_ отправляет _B_ обновление [updatePhoneCall](/constructor/updatePhoneCall/) с конструктором [phoneCall](/constructor/phoneCall/), содержащее значение _g\\_a_ в поле _g\\_a\\_or\\_b:bytes_ и _key\\_fingerprint:long_",
+   "uses": 1
+  },
+  {
+   "translation": "Сервер _S_ отправляет стороне _B_ обновление [updatePhoneCall](/constructor/updatePhoneCall/) с конструктором [phoneCall](/constructor/phoneCall/), содержащее значение _g\\_a_ в поле _g\\_a\\_or\\_b:bytes_ и _key\\_fingerprint:long_",
+   "uses": 1
+  }
+ ],
+ "At this point _B_ receives the value of _g\\_a_. It checks that _SHA256(g\\_a)_ is indeed equal to the previously received value of _g\\_a\\_hash_, performs all the [usual Diffie-Hellman security checks](/mtproto/security_guidelines/), and computes the key _key:=power(g\\_a,b) mod p_ and its fingerprint, equal to the lower 64 bits of _SHA1(key)_. Then it checks that this fingerprint equals the value of `key_fingerprint:long` received from the other side, as an implementation sanity check.": [
+  {
+   "translation": "На этом шаге _B_ получает значение _g\\_a_. Он убеждается, что _SHA256(g\\_a)_ действительно равно ранее полученному _g\\_a\\_hash_, выполняет все [обычные проверки безопасности Диффи — Хеллмана](/mtproto/security_guidelines/) и вычисляет ключ _key:=power(g\\_a,b) mod p_ и его отпечаток, равный младшим 64 битам _SHA1(key)_. После этого он сверяет отпечаток со значением `key_fingerprint:long`, пришедшим от другой стороны, — как контрольную проверку корректности реализации.",
+   "uses": 1
+  },
+  {
+   "translation": "На этом этапе _B_ получает значение _g\\_a_. Он проверяет, что _SHA256(g\\_a)_ действительно равно ранее полученному значению _g\\_a\\_hash_, выполняет все [обычные проверки безопасности Диффи — Хеллмана](/mtproto/security_guidelines/) и вычисляет ключ _key:=power(g\\_a,b) mod p_ и его отпечаток, равный младшим 64 битам _SHA1(key)_. Затем он проверяет, что этот отпечаток совпадает со значением `key_fingerprint:long`, полученным от другой стороны, — это контрольная проверка корректности реализации.",
+   "uses": 1
+  }
+ ],
+ "At this point, the Diffie--Hellman key exchange is complete, and both parties have a 256-byte shared secret key _key_ which is used to encrypt all further exchanges between _A_ and _B_.": [
+  {
+   "translation": "На этом обмен ключами Диффи — Хеллмана завершён, и у обеих сторон есть общий 256-байтовый секретный ключ _key_, которым шифруется весь дальнейший обмен между _A_ и _B_.",
+   "uses": 1
+  },
+  {
+   "translation": "На этом обмен ключами Диффи — Хеллмана завершён, и у обеих сторон есть общий секретный ключ _key_ длиной 256 байт, которым шифруется весь дальнейший обмен данными между _A_ и _B_.",
+   "uses": 1
+  }
+ ],
+ "It is of paramount importance to accept each update only once for each instance of the key generation protocol, discarding any duplicates or alternative versions of already received and processed messages (updates).": [
+  {
+   "translation": "Крайне важно принимать каждое обновление ровно один раз для каждого экземпляра протокола выработки ключа, отбрасывая любые дубликаты и альтернативные версии уже полученных и обработанных сообщений (обновлений).",
+   "uses": 1
+  },
+  {
+   "translation": "Крайне важно принимать каждое обновление только один раз для каждого экземпляра протокола выработки ключа, отбрасывая любые дубликаты и альтернативные версии уже полученных и обработанных сообщений (обновлений).",
+   "uses": 1
+  }
+ ],
+ "This is because instead of the standard Diffie-Hellman key exchange which requires only two messages between the parties:": [
+  {
+   "translation": "Дело в том, что вместо стандартного обмена ключами Диффи — Хеллмана, где сторонам хватает всего двух сообщений:",
+   "uses": 1
+  },
+  {
+   "translation": "Дело в том, что вместо стандартного обмена ключами Диффи — Хеллмана, которому требуется всего два сообщения между сторонами:",
+   "uses": 1
+  }
+ ],
+ "B->A : (generates b and true key (g\\_a)^b, then) sends g\\_b := g^b": [
+  {
+   "translation": "B->A : (генерирует b и настоящий ключ (g\\_a)^b, затем) отправляет g\\_b := g^b",
+   "uses": 1
+  },
+  {
+   "translation": "B->A : (генерирует b и настоящий ключ (g\\_a)^b, после чего) отправляет g\\_b := g^b",
+   "uses": 1
+  }
+ ],
+ "we use a **three-message modification** thereof that works well when both parties are online (which also happens to be a requirement for voice calls):": [
+  {
+   "translation": "мы используем его **модификацию с тремя сообщениями**, которая хорошо работает, когда обе стороны в сети (а для голосовых звонков это и без того обязательное условие):",
+   "uses": 1
+  },
+  {
+   "translation": "мы используем его **модификацию с тремя сообщениями**, которая хорошо работает, когда обе стороны находятся в сети (что для голосовых звонков и так является обязательным условием):",
+   "uses": 1
+  }
+ ],
+ "A->B : (computes key (g\\_b)^a, then) sends g\\_a := g^a": [
+  {
+   "translation": "A->B : (вычисляет ключ (g\\_b)^a, затем) отправляет g\\_a := g^a",
+   "uses": 1
+  },
+  {
+   "translation": "A->B : (вычисляет ключ (g\\_b)^a, после чего) отправляет g\\_a := g^a",
+   "uses": 1
+  }
+ ],
+ "B : checks hash(g\\_a) == g\\_a\\_hash, then computes key (g\\_a)^b": [
+  {
+   "translation": "B : проверяет hash(g\\_a) == g\\_a\\_hash, затем вычисляет ключ (g\\_a)^b",
+   "uses": 2
+  },
+  {
+   "translation": "B : проверяет, что hash(g\\_a) == g\\_a\\_hash, после чего вычисляет ключ (g\\_a)^b",
+   "uses": 1
+  }
+ ],
+ "The idea here is that _A_ commits to a specific value of _a_ (and of _g\\_a_) without disclosing it to _B_. _B_ has to choose its value of _b_ and _g\\_b_ without knowing the true value of _g\\_a_, so that it cannot try different values of _b_ to force the final key _(g\\_a)^b_ to have any specific properties (such as fixed lower 32 bits of SHA256(key)). At this point, _B_ commits to a specific value of _g\\_b_ without knowing _g\\_a_. Then _A_ has to send its value _g\\_a_; it cannot change it even though it knows _g\\_b_ now, because the other party _B_ would accept only a value of _g\\_a_ that has a hash specified in the very first message of the exchange.": [
+  {
+   "translation": "Смысл в том, что _A_ заранее связывает себя конкретным значением _a_ (и _g\\_a_), не раскрывая его стороне _B_. Стороне _B_ приходится выбирать свои _b_ и _g\\_b_, не зная настоящего значения _g\\_a_, а потому она не может перебирать разные _b_, чтобы придать итоговому ключу _(g\\_a)^b_ какие-нибудь нужные свойства (скажем, фиксированные младшие 32 бита SHA256(key)). На этом шаге _B_ связывает себя конкретным значением _g\\_b_, так и не узнав _g\\_a_. Дальше _A_ обязана отправить своё _g\\_a_ и уже не может его изменить, хотя _g\\_b_ ей теперь известно, — ведь _B_ примет только такое _g\\_a_, чей хеш был указан в самом первом сообщении обмена.",
+   "uses": 1
+  },
+  {
+   "translation": "Смысл здесь в том, что _A_ заранее связывает себя конкретным значением _a_ (и _g\\_a_), не раскрывая его стороне _B_. Стороне _B_ приходится выбирать свои значения _b_ и _g\\_b_, не зная настоящего значения _g\\_a_, так что она не может перебирать разные значения _b_, чтобы добиться от итогового ключа _(g\\_a)^b_ каких-либо особых свойств (например, заранее заданных младших 32 бит SHA256(key)). На этом шаге _B_ связывает себя конкретным значением _g\\_b_, не зная _g\\_a_. Затем _A_ обязана прислать своё значение _g\\_a_; изменить его она уже не может, даже зная теперь _g\\_b_, поскольку другая сторона _B_ примет только такое значение _g\\_a_, хеш которого был указан в самом первом сообщении обмена.",
+   "uses": 1
+  }
+ ],
+ "If some impostor is pretending to be either _A_ or _B_ and tries to perform a Man-in-the-Middle Attack on this Diffie--Hellman key exchange, the above still holds. Party _A_ will generate a shared key with _B_ -- or whoever pretends to be _B_ -- without having a second chance to change its exponent _a_ depending on the value _g\\_b_ received from the other side; and the impostor will not have a chance to adapt his value of _b_ depending on _g\\_a_, because it has to commit to a value of _g\\_b_ before learning _g\\_a_. The same is valid for the key generation between the impostor and the party _B_.": [
+  {
+   "translation": "Если некий самозванец выдаёт себя за _A_ или за _B_ и пытается провести атаку «человек посередине» на этот обмен ключами Диффи — Хеллмана, сказанное выше остаётся в силе. Сторона _A_ выработает общий ключ с _B_ — или с тем, кто выдаёт себя за _B_, — не имея второй попытки изменить свою экспоненту _a_ в зависимости от значения _g\\_b_, полученного от другой стороны; а самозванец не сможет подогнать своё значение _b_ под _g\\_a_, поскольку обязан зафиксировать значение _g\\_b_ до того, как узнает _g\\_a_. То же самое верно и для выработки ключа между самозванцем и стороной _B_.",
+   "uses": 1
+  },
+  {
+   "translation": "Если некий самозванец выдаёт себя за _A_ или за _B_ и пытается провести атаку «человек посередине» на этот обмен ключами Диффи — Хеллмана, сказанное выше остаётся в силе. Сторона _A_ выработает общий ключ с _B_ — или с тем, кто выдаёт себя за _B_, — так и не получив второй попытки изменить свою экспоненту _a_ с оглядкой на пришедшее с той стороны _g\\_b_; а самозванцу не удастся подогнать своё _b_ под _g\\_a_, ведь связать себя значением _g\\_b_ ему приходится до того, как он узнает _g\\_a_. То же верно и для выработки ключа между самозванцем и стороной _B_.",
+   "uses": 1
+  }
+ ],
+ "The use of hash commitment in the DH exchange constrains the attacker to only **one guess** to generate the correct visualization in their attack, which means that using just over 33 bits of entropy represented by four emoji in the visualization is enough to make a successful attack highly improbable.": [
+  {
+   "translation": "Фиксация по хешу в обмене DH оставляет атакующему лишь **одну попытку** получить в своей атаке правильную визуализацию, а значит, чуть более 33 бит энтропии, представленных четырьмя эмодзи в этой визуализации, достаточно, чтобы сделать успешную атаку крайне маловероятной.",
+   "uses": 1
+  },
+  {
+   "translation": "Хеш-обязательство в обмене DH оставляет атакующему лишь **одну попытку** угадать, чтобы получить при атаке нужную картинку из эмодзи, а значит, чуть более 33 бит энтропии, которые несут в себе эти четыре эмодзи, хватает, чтобы успешная атака стала крайне маловероятной.",
+   "uses": 1
+  }
+ ],
+ "For a slightly more user-friendly explanation of the above see: [How are calls authenticated?](https://core.telegram.org/techfaq#q-how-are-voice-calls-authenticated)": [
+  {
+   "translation": "Более доступное для пользователя изложение сказанного выше см. в статье: [Как аутентифицируются звонки?](https://core.telegram.org/techfaq#q-how-are-voice-calls-authenticated)",
+   "uses": 1
+  },
+  {
+   "translation": "Чуть более понятное для обычного пользователя объяснение всего сказанного выше есть здесь: [Как аутентифицируются звонки?](https://core.telegram.org/techfaq#q-how-are-voice-calls-authenticated)",
+   "uses": 1
+  }
+ ],
+ "[End-to-End TL Schema](/schema/end-to-end/)": [
+  {
+   "translation": "[Сквозная TL-схема](/schema/end-to-end/)",
+   "uses": 1
+  },
+  {
+   "translation": "[TL-схема для сквозного шифрования](/schema/end-to-end/)",
+   "uses": 1
+  }
+ ],
+ "All flags are optional, with the following limitations:": [
+  {
+   "translation": "Все флаги необязательны, но действуют следующие ограничения:",
+   "uses": 1
+  },
+  {
+   "translation": "Все флаги необязательны, со следующими ограничениями:",
+   "uses": 1
+  }
+ ],
+ "If any of the flags are combined, their rendering order in the text is the following:": [
+  {
+   "translation": "Если несколько флагов заданы одновременно, порядок их применения к тексту следующий:",
+   "uses": 1
+  },
+  {
+   "translation": "Если флаги сочетаются друг с другом, в тексте они отображаются в таком порядке:",
+   "uses": 1
+  }
+ ],
+ "The same `FILE_REFERENCE_%d_INVALID` error may also be emitted by [messages.sendMedia](/method/messages.sendMedia/) or other methods requiring a single [InputMedia](/type/InputMedia/) constructor, when an [inputMediaPaidMedia](/constructor/inputMediaPaidMedia/) is provided with an array of `extended_media` media files.": [
+  {
+   "translation": "Та же ошибка `FILE_REFERENCE_%d_INVALID` может быть возвращена и методом [messages.sendMedia](/method/messages.sendMedia/) или другими методами, принимающими единственный конструктор [InputMedia](/type/InputMedia/), если в них передан [inputMediaPaidMedia](/constructor/inputMediaPaidMedia/) с массивом медиафайлов `extended_media`.",
+   "uses": 1
+  },
+  {
+   "translation": "Та же ошибка `FILE_REFERENCE_%d_INVALID` может прийти и от [messages.sendMedia](/method/messages.sendMedia/) или от других методов, принимающих единственный конструктор [InputMedia](/type/InputMedia/), — когда передан [inputMediaPaidMedia](/constructor/inputMediaPaidMedia/) с массивом медиафайлов `extended_media`.",
+   "uses": 1
+  }
+ ],
+ "Parameters:": [
+  {
+   "translation": "Параметры:",
+   "uses": 55
+  },
+  {
+   "translation": "Параметры (`short_name` — краткое имя игры, её постоянный строковый идентификатор у бота-владельца):",
+   "uses": 1
+  },
+  {
+   "translation": "Параметры (здесь и далее `slug` — короткое строковое имя, которое однозначно указывает на конкретный объект и подставляется прямо в путь ссылки):",
+   "uses": 1
+  }
+ ],
+ "See [here »](/api/file-references/) for more info on the file reference database.": [
+  {
+   "translation": "Подробнее о базе данных ссылок на файлы см. [здесь »](/api/file-references/).",
+   "uses": 1
+  },
+  {
+   "translation": "Подробнее о базе ссылок на файлы — [здесь »](/api/file-references/).",
+   "uses": 1
+  }
+ ],
+ "Approximately at `date`, an [updateNewMessage](/constructor/updateNewMessage/) or [updateNewChannelMessage](/constructor/updateNewChannelMessage/) with the `from_scheduled` flag set, indicating to the sender that the specified message with pending video processing was sent.": [
+  {
+   "translation": "Примерно в момент `date` — [updateNewMessage](/constructor/updateNewMessage/) или [updateNewChannelMessage](/constructor/updateNewChannelMessage/) с установленным флагом `from_scheduled`: оно сообщает отправителю, что указанное сообщение с ожидавшей обработки видеозаписью отправлено.",
+   "uses": 1
+  },
+  {
+   "translation": "Примерно в момент `date` придёт [updateNewMessage](/constructor/updateNewMessage/) или [updateNewChannelMessage](/constructor/updateNewChannelMessage/) с установленным флагом `from_scheduled`, сообщающее отправителю, что сообщение с ожидавшим обработки видео отправлено.",
+   "uses": 1
+  }
+ ],
+ "`call` contains the related group call ID+access hash, taken from the [groupCall](/constructor/groupCall/) constructor.": [
+  {
+   "translation": "`call` содержит поля `id` и `access_hash` соответствующего группового звонка, взятые из конструктора [groupCall](/constructor/groupCall/).",
+   "uses": 1
+  },
+  {
+   "translation": "`call` содержит ID и access hash соответствующего группового звонка, взятые из конструктора [groupCall](/constructor/groupCall/).",
+   "uses": 1
+  }
+ ],
+ "`access_hash` is the access hash of the [geoPoint](/constructor/geoPoint/)": [
+  {
+   "translation": "`access_hash` — хеш доступа из [geoPoint](/constructor/geoPoint/)",
+   "uses": 1
+  },
+  {
+   "translation": "`access_hash` — это access hash конструктора [geoPoint](/constructor/geoPoint/)",
+   "uses": 1
+  }
+ ],
+ "`zoom` - Map zoom level; 13-20": [
+  {
+   "translation": "`zoom` — уровень масштабирования карты; 13–20",
+   "uses": 1
+  },
+  {
+   "translation": "`zoom` — уровень приближения карты; 13–20",
+   "uses": 1
+  }
+ ],
+ "Users may also choose to display messages from all topics as if they were sent to a normal group, using a \"View as messages\" setting in the local client.  \nThis setting only affects the current account, and is synced to other logged in sessions using the [channels.toggleViewForumAsMessages](/method/channels.toggleViewForumAsMessages/) method; invoking this method will update the value of the `view_forum_as_messages` flag of [channelFull](/constructor/channelFull/) or [dialog](/constructor/dialog/) and emit an [updateChannelViewForumAsMessages](/constructor/updateChannelViewForumAsMessages/).": [
+  {
+   "translation": "Пользователи также могут выбрать отображение сообщений из всех тем так, как если бы они были отправлены в обычную группу, с помощью настройки «Показывать как сообщения» в локальном клиенте.  \nЭта настройка затрагивает только текущую учётную запись и синхронизируется с другими активными сессиями методом [channels.toggleViewForumAsMessages](/method/channels.toggleViewForumAsMessages/); вызов этого метода обновит значение флага `view_forum_as_messages` в [channelFull](/constructor/channelFull/) или [dialog](/constructor/dialog/) и отправит [updateChannelViewForumAsMessages](/constructor/updateChannelViewForumAsMessages/).",
+   "uses": 3
+  },
+  {
+   "translation": "Пользователи также могут включить отображение сообщений из всех тем так, будто они отправлены в обычную группу, — для этого в клиенте есть локальная настройка «View as messages» («Просмотр в виде сообщений»).  \nЭта настройка действует только для текущей учётной записи и синхронизируется с другими активными сессиями методом [channels.toggleViewForumAsMessages](/method/channels.toggleViewForumAsMessages/); вызов этого метода изменяет значение флага `view_forum_as_messages` в [channelFull](/constructor/channelFull/) или [dialog](/constructor/dialog/) и порождает обновление [updateChannelViewForumAsMessages](/constructor/updateChannelViewForumAsMessages/).",
+   "uses": 1
+  }
+ ],
+ "If the [userFull](/constructor/userFull/).`display_gifts_button` flag of both us and another user is set (changed through [globalPrivacySettings](/constructor/globalPrivacySettings/)), a gift button should always be displayed in the text field in private chats with the other user: once clicked, the gift UI should be displayed, offering the user options to gift [Telegram Premium »](/api/premium/#gifting-telegram-premium) subscriptions or [Telegram Gifts »](/api/gifts/).": [
+  {
+   "translation": "Если флаг [userFull](/constructor/userFull/).`display_gifts_button` установлен и у нас, и у другого пользователя (он изменяется через [globalPrivacySettings](/constructor/globalPrivacySettings/)), в поле ввода личного чата с этим пользователем всегда должна отображаться кнопка подарка: по нажатию открывается интерфейс подарков, предлагающий подарить подписку [Telegram Premium »](/api/premium/#gifting-telegram-premium) или [Telegram Gifts »](/api/gifts/).",
+   "uses": 1
+  },
+  {
+   "translation": "Если флаг [userFull](/constructor/userFull/).`display_gifts_button` установлен и у нас, и у другого пользователя (он меняется через [globalPrivacySettings](/constructor/globalPrivacySettings/)), в текстовом поле в личных чатах с этим пользователем должна всегда отображаться кнопка подарка: по нажатию на неё должен открываться интерфейс дарения, предлагающий пользователю подарить подписку [Telegram Premium »](/api/premium/#gifting-telegram-premium) или [подарки Telegram »](/api/gifts/).",
+   "uses": 1
+  }
+ ],
+ "The same gifting UI should always be (unconditionally) available through a chat picker, activated by a \"Send a Gift\" entry in the app's settings.": [
+  {
+   "translation": "Тот же интерфейс дарения должен быть всегда (безусловно) доступен через выбор чата, вызываемый пунктом «Отправить подарок» в настройках приложения.",
+   "uses": 1
+  },
+  {
+   "translation": "Тот же интерфейс дарения должен быть всегда (безусловно) доступен через окно выбора чата, вызываемое пунктом «Отправить подарок» в настройках приложения.",
+   "uses": 1
+  }
+ ],
+ "Then, follow the [usual payment flow »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).": [
+  {
+   "translation": "Затем выполните [обычную процедуру оплаты »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).",
+   "uses": 3
+  },
+  {
+   "translation": "Затем следуйте [обычной процедуре оплаты »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).",
+   "uses": 1
+  }
+ ],
+ "Note that unlike what the name suggests, the method can be used to fetch both \"saved\" and \"unsaved\" gifts (aka gifts both pinned and not pinned to the profile).": [
+  {
+   "translation": "Обратите внимание, что вопреки названию метод можно использовать для получения как «сохранённых», так и «несохранённых» подарков (то есть подарков как закреплённых в профиле, так и не закреплённых).",
+   "uses": 1
+  },
+  {
+   "translation": "Учтите, что вопреки названию метод позволяет получать как «сохранённые», так и «несохранённые» подарки (то есть как закреплённые в профиле, так и не закреплённые).",
+   "uses": 1
+  }
+ ],
+ "Then, follow the [invoice payment flow as described in the payments documentation »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).": [
+  {
+   "translation": "Затем выполните [процедуру оплаты счёта, описанную в документации по платежам »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).",
+   "uses": 2
+  },
+  {
+   "translation": "Затем следуйте [процедуре оплаты счёта, описанной в документации по платежам »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).",
+   "uses": 1
+  }
+ ],
+ "The store-based subscription flow based on [payments.assignAppStoreTransaction](/method/payments.assignAppStoreTransaction/)/[payments.assignPlayMarketTransaction](/method/payments.assignPlayMarketTransaction/), currently not available to third-party apps.": [
+  {
+   "translation": "Процедура подписки через магазины приложений на основе [payments.assignAppStoreTransaction](/method/payments.assignAppStoreTransaction/)/[payments.assignPlayMarketTransaction](/method/payments.assignPlayMarketTransaction/); сторонним приложениям она сейчас недоступна.",
+   "uses": 2
+  },
+  {
+   "translation": "Оформление подписки через магазин приложений на основе [payments.assignAppStoreTransaction](/method/payments.assignAppStoreTransaction/)/[payments.assignPlayMarketTransaction](/method/payments.assignPlayMarketTransaction/) — в настоящее время сторонним приложениям недоступно.",
+   "uses": 1
+  }
+ ],
+ "Live stories": [
+  {
+   "translation": "Живые истории",
+   "uses": 1
+  },
+  {
+   "translation": "Прямые эфиры в историях",
+   "uses": 1
+  }
+ ],
+ "If `version` is smaller than `cached_version+1`, skip the update": [
+  {
+   "translation": "Если `version` меньше `cached_version+1`, пропустите обновление",
+   "uses": 1
+  },
+  {
+   "translation": "Если `version` меньше, чем `cached_version+1`, пропустите обновление",
+   "uses": 1
+  }
+ ],
+ "[Bot forums »](/api/forum/#bot-forums)": [
+  {
+   "translation": "[Форумы ботов »](/api/forum/#bot-forums)",
+   "uses": 1
+  },
+  {
+   "translation": "[Форумы у ботов »](/api/forum/#bot-forums)",
+   "uses": 1
+  }
+ ],
+ "[Recent story summaries »](/api/stories/#recent-story-summaries)": [
+  {
+   "translation": "[Сводки недавних историй »](/api/stories/#recent-story-summaries)",
+   "uses": 1
+  },
+  {
+   "translation": "[Сводки о недавних историях »](/api/stories/#recent-story-summaries)",
+   "uses": 1
+  }
+ ],
+ "[Private contact notes »](/api/contacts/#private-notes-for-contacts)": [
+  {
+   "translation": "[Личные заметки о контактах »](/api/contacts/#private-notes-for-contacts)",
+   "uses": 1
+  },
+  {
+   "translation": "[Приватные заметки о контактах »](/api/contacts/#private-notes-for-contacts)",
+   "uses": 1
+  }
+ ],
+ "This layer introduces the following features:": [
+  {
+   "translation": "Этот слой вводит следующие возможности:",
+   "uses": 6
+  },
+  {
+   "translation": "В этом слое появились:",
+   "uses": 1
+  }
+ ],
+ "[Schema](/schema/) changes": [
+  {
+   "translation": "Изменения в [схеме](/schema/)",
+   "uses": 23
+  },
+  {
+   "translation": "Изменения [схемы](/schema/)",
+   "uses": 1
+  }
+ ],
+ "[Changes in the file reference database map file »](/api/file-references/)": [
+  {
+   "translation": "[Изменения в файле карты базы данных ссылок на файлы »](/api/file-references/)",
+   "uses": 6
+  },
+  {
+   "translation": "[Изменения схемы базы данных ссылок на файлы »](/api/file-references/)",
+   "uses": 1
+  }
+ ],
+ "Premium features": [
+  {
+   "translation": "Возможности Premium",
+   "uses": 2
+  },
+  {
+   "translation": "Premium-возможности",
+   "uses": 1
+  }
+ ],
+ "This layer introduces:": [
+  {
+   "translation": "Этот слой вводит:",
+   "uses": 13
+  },
+  {
+   "translation": "В этом слое появились:",
+   "uses": 1
+  }
+ ],
+ "PUSH notification changes": [
+  {
+   "translation": "Изменения в PUSH-уведомлениях",
+   "uses": 6
+  },
+  {
+   "translation": "Изменения PUSH-уведомлений",
+   "uses": 1
+  }
+ ],
+ "[Basic suggestion identifiers »](/api/config/#basic-suggestions)": [
+  {
+   "translation": "[Базовые идентификаторы предложений »](/api/config/#basic-suggestions)",
+   "uses": 1
+  },
+  {
+   "translation": "[Основные идентификаторы подсказок »](/api/config/#basic-suggestions)",
+   "uses": 1
+  }
+ ],
+ "This layer introduces the following new features:": [
+  {
+   "translation": "В этом слое появились следующие возможности:",
+   "uses": 1
+  },
+  {
+   "translation": "Этот слой вводит следующие новые возможности:",
+   "uses": 1
+  }
+ ],
+ "[End-to-end schema](/schema/end-to-end/)": [
+  {
+   "translation": "[Актуальная TL-схема сквозного шифрования](/schema/end-to-end/)",
+   "uses": 57
+  },
+  {
+   "translation": "[Сквозная схема](/schema/end-to-end/)",
+   "uses": 1
+  }
+ ],
+ "See [here »](/api/bots/referrals/) for more info on the full flow.": [
+  {
+   "translation": "Подробнее о полном порядке действий — [здесь »](/api/bots/referrals/).",
+   "uses": 1
+  },
+  {
+   "translation": "Полное описание процесса смотрите [здесь »](/api/bots/referrals/).",
+   "uses": 1
+  }
+ ],
+ "Suggested posts": [
+  {
+   "translation": "Предлагаемые посты",
+   "uses": 2
+  },
+  {
+   "translation": "Предложенные посты",
+   "uses": 1
+  }
+ ],
+ "Some platforms (like Android) may instead return the canonical JSON representation of [PublicKeyCredential](https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential), which has the same overall structure, with the difference that fields marked as **binary** below are base64url-encoded and should in some cases be base64url-decoded before being used inside TL constructors.": [
+  {
+   "translation": "Некоторые платформы (например, Android) вместо этого возвращают каноническое JSON-представление [PublicKeyCredential](https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential): общая структура у него та же, но поля, помеченные ниже как **двоичные**, закодированы в base64url, и в ряде случаев их нужно декодировать из base64url, прежде чем подставлять в конструкторы TL.",
+   "uses": 1
+  },
+  {
+   "translation": "Некоторые платформы (например, Android) вместо этого могут вернуть каноническое JSON-представление [PublicKeyCredential](https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential): общая структура у него та же, но поля, помеченные ниже как **двоичные**, закодированы в base64url, и в ряде случаев их нужно декодировать из base64url, прежде чем подставлять в конструкторы TL.",
+   "uses": 1
+  }
+ ],
+ "Some methods require the client to verify if the data obtained from an external source matches a certain pattern.": [
+  {
+   "translation": "Некоторые методы требуют, чтобы клиент проверил, соответствуют ли данные, полученные из внешнего источника, определённому шаблону.",
+   "uses": 5
+  },
+  {
+   "translation": "Некоторые методы требуют, чтобы клиент проверил, соответствуют ли определённому шаблону данные, полученные из внешнего источника.",
+   "uses": 1
+  }
+ ],
+ "Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.": [
+  {
+   "translation": "Многие конструкторы API необходимо сохранять в локальной базе данных при получении; обновлять их следует только реактивно (пассивно) — когда они приходят через обновления или иным способом, указанным в документации, — чтобы не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.",
+   "uses": 19
+  },
+  {
+   "translation": "Многие конструкторы API следует сохранять в локальную базу данных сразу после получения и обновлять исключительно реактивно (пассивно) — когда они приходят в обновлениях или иным описанным в документации способом. Это позволяет не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.",
+   "uses": 1
+  }
+ ],
+ "Sticker suggestions": [
+  {
+   "translation": "Подсказки стикеров",
+   "uses": 1
+  },
+  {
+   "translation": "Предложение стикеров",
+   "uses": 1
+  }
+ ],
+ "When the user opens a private chat with a user they don't have a history with, the UI should display a randomly chosen greeting sticker+invitation to send a message.": [
+  {
+   "translation": "Когда пользователь открывает личный чат с собеседником, переписки с которым у него ещё не было, интерфейс должен показать случайно выбранный приветственный стикер и предложение отправить сообщение.",
+   "uses": 1
+  },
+  {
+   "translation": "Когда пользователь открывает личный чат с собеседником, с которым у него ещё нет переписки, в интерфейсе следует показать случайно выбранный приветственный стикер и предложение отправить сообщение.",
+   "uses": 1
+  }
+ ],
+ "Note that if a custom [Telegram Business introduction »](/api/business/#business-introduction) is enabled, the message+sticker specified in [userFull](/constructor/userFull/).`intro` must be used, instead.": [
+  {
+   "translation": "Учтите, что при включённом собственном [представлении Telegram Business »](/api/business/#business-introduction) вместо этого обязательно использовать сообщение и стикер, указанные в поле `intro` конструктора [userFull](/constructor/userFull/).",
+   "uses": 1
+  },
+  {
+   "translation": "Учтите: если у собеседника настроено своё [приветствие Telegram Business »](/api/business/#business-introduction), то вместо этого обязательно использовать сообщение и стикер, заданные в [userFull](/constructor/userFull/).`intro`.",
+   "uses": 1
+  }
+ ],
+ "Changing it will emit an [updateUser](/constructor/updateUser/) update.": [
+  {
+   "translation": "Его изменение вызовет отправку обновления [updateUser](/constructor/updateUser/).",
+   "uses": 2
+  },
+  {
+   "translation": "Изменение вызывает обновление [updateUser](/constructor/updateUser/).",
+   "uses": 1
+  },
+  {
+   "translation": "Изменение этой привязки порождает обновление [updateUser](/constructor/updateUser/).",
+   "uses": 1
+  }
+ ],
+ "Star rating": [
+  {
+   "translation": "Звёздный рейтинг",
+   "uses": 1
+  },
+  {
+   "translation": "Рейтинг по звёздам",
+   "uses": 1
+  }
+ ],
+ "This notification does not use placeholder arguments.": [
+  {
+   "translation": "Это уведомление не использует аргументы для подстановки.",
+   "uses": 5
+  },
+  {
+   "translation": "Это уведомление не использует подстановочные аргументы.",
+   "uses": 4
+  },
+  {
+   "translation": "Это уведомление не использует подстановочных аргументов.",
+   "uses": 1
+  }
+ ],
+ "Duration in months of each Telegram Premium subscription in the giveaway": [
+  {
+   "translation": "Длительность каждой подписки Telegram Premium в розыгрыше, в месяцах",
+   "uses": 2
+  },
+  {
+   "translation": "Продолжительность каждой подписки Telegram Premium в розыгрыше, в месяцах",
+   "uses": 1
+  }
+ ],
+ "Number of winners in the giveaway": [
+  {
+   "translation": "Количество победителей розыгрыша",
+   "uses": 2
+  },
+  {
+   "translation": "Количество победителей в розыгрыше",
+   "uses": 1
+  }
+ ],
+ "Checklist title": [
+  {
+   "translation": "Заголовок списка задач",
+   "uses": 3
+  },
+  {
+   "translation": "Название списка задач",
+   "uses": 3
+  },
+  {
+   "translation": "Название чек-листа",
+   "uses": 1
+  }
+ ],
+ "Number of toggled tasks": [
+  {
+   "translation": "Количество задач, у которых изменено состояние",
+   "uses": 1
+  },
+  {
+   "translation": "Количество переключённых задач",
+   "uses": 1
+  }
+ ],
+ "The generated list of 64-bit integers must then be passed to the [usual hashing algorithm](/api/offsets/#hash-generation).": [
+  {
+   "translation": "Полученный список 64-битных целых чисел затем необходимо передать [обычному алгоритму хеширования](/api/offsets/#hash-generation).",
+   "uses": 1
+  },
+  {
+   "translation": "Полученный список 64-битных целых чисел затем передаётся [обычному алгоритму хеширования](/api/offsets/#hash-generation).",
+   "uses": 1
+  }
+ ],
+ "Revenue statistics": [
+  {
+   "translation": "Статистика дохода",
+   "uses": 1
+  },
+  {
+   "translation": "Статистика доходов",
+   "uses": 1
+  }
+ ],
+ "Withdrawing revenue": [
+  {
+   "translation": "Вывод дохода",
+   "uses": 1
+  },
+  {
+   "translation": "Вывод доходов",
+   "uses": 1
+  }
+ ],
+ "Telegram allows applying detailed message filters while looking for messages in chats.": [
+  {
+   "translation": "Telegram позволяет применять подробные фильтры сообщений при поиске в чатах.",
+   "uses": 10
+  },
+  {
+   "translation": "Telegram позволяет применять детальные фильтры сообщений при поиске сообщений в чатах.",
+   "uses": 1
+  }
+ ],
+ "Related pages": [
+  {
+   "translation": "Связанные страницы",
+   "uses": 1792
+  },
+  {
+   "translation": "Смежные страницы",
+   "uses": 1
+  }
+ ],
+ "If `crypto_amount <= 10_000_000_000`, choose the sticker with emoji equal to \"<img class=\"emoji\" src=\"https://telegram.org/img/emoji/40/32E283A3.png\" width=\"20\" height=\"20\" alt=\"2️⃣\">\"": [
+  {
+   "translation": "Если `crypto_amount <= 10_000_000_000`, выберите стикер с эмодзи \"<img class=\"emoji\" src=\"https://telegram.org/img/emoji/40/32E283A3.png\" width=\"20\" height=\"20\" alt=\"2️⃣\">\"",
+   "uses": 1
+  },
+  {
+   "translation": "Если `crypto_amount <= 10_000_000_000`, выберите стикер с эмодзи «<img class=\"emoji\" src=\"https://telegram.org/img/emoji/40/32E283A3.png\" width=\"20\" height=\"20\" alt=\"2️⃣\">»",
+   "uses": 1
+  }
+ ],
+ "If `crypto_amount <= 50_000_000_000`, choose the sticker with emoji equal to \"<img class=\"emoji\" src=\"https://telegram.org/img/emoji/40/31E283A3.png\" width=\"20\" height=\"20\" alt=\"1️⃣\">\"": [
+  {
+   "translation": "Если `crypto_amount <= 50_000_000_000`, выберите стикер с эмодзи \"<img class=\"emoji\" src=\"https://telegram.org/img/emoji/40/31E283A3.png\" width=\"20\" height=\"20\" alt=\"1️⃣\">\"",
+   "uses": 1
+  },
+  {
+   "translation": "Если `crypto_amount <= 50_000_000_000`, выберите стикер с эмодзи «<img class=\"emoji\" src=\"https://telegram.org/img/emoji/40/31E283A3.png\" width=\"20\" height=\"20\" alt=\"1️⃣\">»",
+   "uses": 1
+  }
+ ],
+ "Otherwise, choose the sticker with emoji equal to \"<img class=\"emoji\" src=\"https://telegram.org/img/emoji/40/33E283A3.png\" width=\"20\" height=\"20\" alt=\"3️⃣\">\"": [
+  {
+   "translation": "В противном случае выберите стикер с эмодзи «<img class=\"emoji\" src=\"https://telegram.org/img/emoji/40/33E283A3.png\" width=\"20\" height=\"20\" alt=\"3️⃣\">»",
+   "uses": 1
+  },
+  {
+   "translation": "Иначе выберите стикер с эмодзи \"<img class=\"emoji\" src=\"https://telegram.org/img/emoji/40/33E283A3.png\" width=\"20\" height=\"20\" alt=\"3️⃣\">\"",
+   "uses": 1
+  }
+ ],
+ "Channel statistics": [
+  {
+   "translation": "Статистика каналов",
+   "uses": 2
+  },
+  {
+   "translation": "Статистика канала",
+   "uses": 1
+  }
+ ],
+ "Supergroup statistics": [
+  {
+   "translation": "Статистика супергрупп",
+   "uses": 1
+  },
+  {
+   "translation": "Статистика супергруппы",
+   "uses": 1
+  }
+ ],
+ "Message statistics": [
+  {
+   "translation": "Статистика сообщения",
+   "uses": 2
+  },
+  {
+   "translation": "Статистика сообщений",
+   "uses": 1
+  }
+ ],
+ "Use [stats.getStoryPublicForwards](/method/stats.getStoryPublicForwards/) to obtain forwards of a story as a message to public chats and reposts by public channels.": [
+  {
+   "translation": "Метод [stats.getStoryPublicForwards](/method/stats.getStoryPublicForwards/) возвращает пересылки истории в виде сообщений в публичные чаты, а также репосты публичными каналами.",
+   "uses": 1
+  },
+  {
+   "translation": "Метод [stats.getStoryPublicForwards](/method/stats.getStoryPublicForwards/) позволяет получить пересылки истории в виде сообщения в публичные чаты, а также репосты публичными каналами.",
+   "uses": 1
+  }
+ ],
+ "Telegram clients support displaying static and animated stickers.": [
+  {
+   "translation": "Клиенты Telegram поддерживают отображение статических и анимированных стикеров.",
+   "uses": 29
+  },
+  {
+   "translation": "Клиенты Telegram умеют показывать статичные и анимированные стикеры.",
+   "uses": 1
+  }
+ ],
+ "The `n` position indicates where the mask should be placed:": [
+  {
+   "translation": "Позиция `n` указывает, где следует разместить маску:",
+   "uses": 1
+  },
+  {
+   "translation": "Позиция `n` указывает, куда следует поместить маску:",
+   "uses": 1
+  }
+ ],
+ "Once a story is successfully uploaded, an [updateStoryID](/constructor/updateStoryID/) will be returned, indicating the story ID (`id`) that was attributed to the story (like for messages, `random_id` indicates the `random_id` that was passed to [stories.sendStory](/method/stories.sendStory/): this way, you can tell which story was assigned a specific `id` by checking which [stories.sendStory](/method/stories.sendStory/) call has the returned `random_id`).": [
+  {
+   "translation": "После успешной загрузки истории будет возвращено обновление [updateStoryID](/constructor/updateStoryID/) с идентификатором истории (`id`), присвоенным этой истории (как и для сообщений, `random_id` указывает `random_id`, переданный в [stories.sendStory](/method/stories.sendStory/): так вы можете понять, какой истории присвоен конкретный `id`, посмотрев, в каком вызове [stories.sendStory](/method/stories.sendStory/) был возвращённый `random_id`).",
+   "uses": 2
+  },
+  {
+   "translation": "После успешной загрузки истории будет возвращено обновление [updateStoryID](/constructor/updateStoryID/), сообщающее присвоенный истории идентификатор (`id`); как и в случае с сообщениями, поле `random_id` содержит то самое значение `random_id`, которое было передано в [stories.sendStory](/method/stories.sendStory/) — так можно понять, какой истории присвоен конкретный `id`, сопоставив его с вызовом [stories.sendStory](/method/stories.sendStory/), в котором использовался возвращённый `random_id`.",
+   "uses": 1
+  }
+ ],
+ "Note that in some cases, [messages.requestUrlAuth](/method/messages.requestUrlAuth/) may return directly [urlAuthResultAccepted](/constructor/urlAuthResultAccepted/), in which case no prompt should be shown, and the returned URL should just be directly opened.": [
+  {
+   "translation": "Учтите, что в некоторых случаях [messages.requestUrlAuth](/method/messages.requestUrlAuth/) может сразу вернуть [urlAuthResultAccepted](/constructor/urlAuthResultAccepted/) — тогда никакое окно показывать не нужно, а возвращённый URL следует просто открыть.",
+   "uses": 1
+  },
+  {
+   "translation": "Учтите, что в некоторых случаях [messages.requestUrlAuth](/method/messages.requestUrlAuth/) может сразу вернуть [urlAuthResultAccepted](/constructor/urlAuthResultAccepted/) — тогда окно подтверждения показывать не нужно, а возвращённый адрес следует просто открыть.",
+   "uses": 1
+  }
+ ],
+ "Clients should report read state, message views and music listens using a specific set of methods.": [
+  {
+   "translation": "Клиентам следует сообщать о состоянии прочтения, просмотрах сообщений и прослушиваниях музыки с помощью специального набора методов.",
+   "uses": 3
+  },
+  {
+   "translation": "Клиентам следует сообщать о состоянии прочтения, просмотрах сообщений и прослушиваниях музыки при помощи определённого набора методов.",
+   "uses": 1
+  }
+ ],
+ "[Live geolocation](/api/live-location/)": [
+  {
+   "translation": "[Трансляция геопозиции](/api/live-location/)",
+   "uses": 6
+  },
+  {
+   "translation": "[Геолокация в реальном времени](/api/live-location/)",
+   "uses": 1
+  }
+ ],
+ "[**General**](#general-questions)": [
+  {
+   "translation": "[**Общее**](#general-questions)",
+   "uses": 1
+  },
+  {
+   "translation": "[**Общие вопросы**](#general-questions)",
+   "uses": 1
+  }
+ ],
+ "If you use AI through a third-party [bot](#q-are-bots-made-by-telegram) or mini app, you are using a **third-party service**, not Telegram. Check that bot's privacy policy for details.": [
+  {
+   "translation": "Если вы пользуетесь ИИ через сторонний [бот](#q-are-bots-made-by-telegram) или mini app (Mini App — приложение со своим интерфейсом, работающее прямо внутри Telegram), вы пользуетесь **сторонним сервисом**, а не Telegram. Подробности ищите в политике конфиденциальности такого бота.",
+   "uses": 1
+  },
+  {
+   "translation": "Если вы пользуетесь ИИ через сторонний [бот](#q-are-bots-made-by-telegram) или mini app, вы пользуетесь **сторонним сервисом**, а не Telegram. Подробности ищите в политике конфиденциальности такого бота.",
+   "uses": 1
+  }
+ ],
+ "[End-to-end TL-schema](/schema/end-to-end/)": [
+  {
+   "translation": "[Сквозная TL-схема](/schema/end-to-end/)",
+   "uses": 1
+  },
+  {
+   "translation": "[TL-схема сквозного шифрования](/schema/end-to-end/)",
+   "uses": 1
+  }
+ ],
+ "[Security Guidelines for Client Software Developers](/mtproto/security_guidelines/)": [
+  {
+   "translation": "[Рекомендации по безопасности для разработчиков клиентского ПО](/mtproto/security_guidelines/)",
+   "uses": 1
+  },
+  {
+   "translation": "[Руководство по безопасности для разработчиков клиентского ПО](/mtproto/security_guidelines/)",
+   "uses": 1
+  }
+ ],
+ "This page deals with the basic layer of MTProto encryption used for Cloud chats (server-client encryption). See also:": [
+  {
+   "translation": "Эта страница посвящена базовому слою шифрования MTProto, который применяется в облачных чатах (шифрование между сервером и клиентом). См. также:",
+   "uses": 1
+  },
+  {
+   "translation": "Эта страница посвящена базовому уровню шифрования MTProto, который применяется для облачных чатов (шифрование между сервером и клиентом). См. также:",
+   "uses": 1
+  }
+ ],
+ "The protocol is subdivided into three virtually independent components:": [
+  {
+   "translation": "Протокол делится на три практически независимых компонента:",
+   "uses": 1
+  },
+  {
+   "translation": "Протокол разделён на три практически независимых компонента:",
+   "uses": 1
+  }
+ ],
+ "High-level component (API query language): defines the method whereby API queries and responses are converted to binary _messages_.": [
+  {
+   "translation": "Высокоуровневый компонент (язык запросов к API): определяет, каким образом запросы к API и ответы на них преобразуются в двоичные _сообщения_.",
+   "uses": 1
+  },
+  {
+   "translation": "Высокоуровневый компонент (язык API-запросов): определяет способ, которым запросы к API и ответы на них преобразуются в двоичные _сообщения_.",
+   "uses": 1
+  }
+ ],
+ "Cryptographic (authorization) layer: defines the method by which messages are encrypted prior to being transmitted through the transport protocol.": [
+  {
+   "translation": "Криптографический (авторизационный) слой: определяет способ шифрования сообщений перед их передачей по транспортному протоколу.",
+   "uses": 1
+  },
+  {
+   "translation": "Криптографический (авторизационный) слой: определяет, каким образом сообщения шифруются перед передачей через транспортный протокол.",
+   "uses": 1
+  }
+ ],
+ "Brief Component Summary": [
+  {
+   "translation": "Краткий обзор компонентов",
+   "uses": 1
+  },
+  {
+   "translation": "Краткое описание компонентов",
+   "uses": 1
+  }
+ ],
+ "Several connections to a server may be open; messages may be sent in either direction through any of the connections (a response to a query is not necessarily returned through the same connection that carried the original query, although most often, that is the case; however, in no case can a message be returned through a connection belonging to a different session). When the UDP protocol is used, a response might be returned by a different IP address than the one to which the query had been sent.": [
+  {
+   "translation": "К серверу можно держать открытыми сразу несколько соединений; сообщения передаются в обе стороны по любому из них (ответ на запрос не обязательно приходит по тому же соединению, по которому пришёл исходный запрос, хотя чаще всего так и происходит; однако сообщение ни при каких условиях не может быть возвращено по соединению, принадлежащему другой сессии). При использовании протокола UDP ответ может прийти с IP-адреса, отличного от того, на который был отправлен запрос.",
+   "uses": 1
+  },
+  {
+   "translation": "С сервером может быть открыто несколько соединений; сообщения могут передаваться в обе стороны по любому из них (ответ на запрос не обязательно возвращается по тому же соединению, по которому пришёл исходный запрос, хотя чаще всего происходит именно так; однако ни при каких обстоятельствах сообщение не может быть возвращено по соединению, принадлежащему другой сессии). При использовании протокола UDP ответ может прийти не с того IP-адреса, на который был отправлен запрос.",
+   "uses": 1
+  }
+ ],
+ "Message received acknowledgment (or rather, notification of status of a set of messages)": [
+  {
+   "translation": "Подтверждение получения сообщения (точнее, уведомление о состоянии набора сообщений)",
+   "uses": 1
+  },
+  {
+   "translation": "Подтверждение получения сообщения (точнее, уведомление о статусе набора сообщений)",
+   "uses": 1
+  }
+ ],
+ "Message status query": [
+  {
+   "translation": "Запрос состояния сообщения",
+   "uses": 1
+  },
+  {
+   "translation": "Запрос статуса сообщения",
+   "uses": 1
+  }
+ ],
+ "_Multipart message_ or _container_ (a container that holds several messages; needed to send several RPC calls at once over an HTTP connection, for example; also, a container may support gzip).": [
+  {
+   "translation": "_Составное сообщение_, или _контейнер_ (контейнер, содержащий несколько сообщений; нужен, например, чтобы отправить несколько RPC-вызовов сразу по одному HTTP-соединению; кроме того, контейнер может поддерживать gzip).",
+   "uses": 1
+  },
+  {
+   "translation": "_Составное сообщение_, или _контейнер_ (контейнер, содержащий несколько сообщений; нужен, например, чтобы отправить сразу несколько RPC-вызовов по одному HTTP-соединению; кроме того, контейнер может поддерживать gzip).",
+   "uses": 1
+  }
+ ],
+ "From the standpoint of lower level protocols, a message is a binary data stream aligned along a 4 or 16-byte boundary. The first several fields in the message are fixed and are used by the cryptographic/authorization system.": [
+  {
+   "translation": "С точки зрения протоколов более низкого уровня сообщение — это поток двоичных данных, выровненный по границе 4 или 16 байт. Несколько первых полей сообщения фиксированы и используются криптографической/авторизационной системой.",
+   "uses": 1
+  },
+  {
+   "translation": "С точки зрения протоколов более низкого уровня сообщение представляет собой поток двоичных данных, выровненный по границе 4 или 16 байт. Первые несколько полей сообщения фиксированы и используются криптографической/авторизационной подсистемой.",
+   "uses": 1
+  }
+ ],
+ "Each message, either individual or inside a container, consists of a _message identifier_ (64 bits, see below), a _message sequence number within a session_ (32 bits), the _length_ (of the message body in bytes; 32 bits), and a _body_ (any size which is a multiple of 4 bytes). In addition, when a container or a single message is sent, an _internal header_ is added at the top (see below), then the entire message is encrypted, and an _external header_ is placed at the top of the message (a 64-bit _key identifier_ and a 128-bit _message key_).": [
+  {
+   "translation": "Каждое сообщение — как отдельное, так и находящееся внутри контейнера — состоит из _идентификатора сообщения_ (`msg_id`, 64 бита, см. ниже), _порядкового номера сообщения в рамках сессии_ (`seq_no`, 32 бита), _длины_ (тела сообщения в байтах; 32 бита) и _тела_ (произвольного размера, кратного 4 байтам). Кроме того, при отправке контейнера или одиночного сообщения сверху добавляется _внутренний заголовок_ (см. ниже), затем всё сообщение шифруется, и поверх него помещается _внешний заголовок_ (64-битный _идентификатор ключа_ и 128-битный _ключ сообщения_).",
+   "uses": 1
+  },
+  {
+   "translation": "Каждое сообщение — как отдельное, так и находящееся внутри контейнера — состоит из _идентификатора сообщения_ (`msg_id`, 64 бита, см. ниже), _порядкового номера сообщения в сессии_ (`seq_no`, 32 бита), _длины_ (тела сообщения в байтах; 32 бита) и _тела_ (произвольного размера, кратного 4 байтам). Кроме того, при отправке контейнера или одиночного сообщения сверху добавляется _внутренний заголовок_ (см. ниже), затем всё сообщение шифруется, и сверху помещается _внешний заголовок_ (64-битный _идентификатор ключа_ и 128-битный _ключ сообщения_).",
+   "uses": 1
+  }
+ ],
+ "The server recognizes these different protocols (and distinguishes them from HTTP, too) by the header. Additionally, the following transport features can be used:": [
+  {
+   "translation": "Сервер различает эти протоколы (а заодно отличает их от HTTP) по заголовку. Кроме того, доступны следующие транспортные возможности:",
+   "uses": 1
+  },
+  {
+   "translation": "Сервер распознаёт эти протоколы (и отличает их от HTTP) по заголовку. Дополнительно можно использовать следующие возможности транспорта:",
+   "uses": 1
+  }
+ ],
+ "2) Server sends response of the form": [
+  {
+   "translation": "2) Сервер отправляет ответ вида",
+   "uses": 1
+  },
+  {
+   "translation": "2) Сервер отправляет ответ следующего вида",
+   "uses": 1
+  }
+ ],
+ "Proof of work": [
+  {
+   "translation": "Доказательство выполнения работы",
+   "uses": 1
+  },
+  {
+   "translation": "Доказательство работы",
+   "uses": 1
+  }
+ ],
+ "3) Client decomposes pq into prime factors such that p < q.": [
+  {
+   "translation": "3) Клиент раскладывает pq на простые множители так, что p < q.",
+   "uses": 1
+  },
+  {
+   "translation": "3) Клиент раскладывает pq на простые множители так, чтобы выполнялось p < q.",
+   "uses": 1
+  }
+ ],
+ "Presenting proof of work; Server authentication": [
+  {
+   "translation": "Предъявление доказательства выполнения работы; аутентификация сервера",
+   "uses": 1
+  },
+  {
+   "translation": "Предъявление доказательства работы; аутентификация сервера",
+   "uses": 1
+  }
+ ],
+ "First of all, generate an `encrypted_data` payload as follows:": [
+  {
+   "translation": "Прежде всего сформируем полезную нагрузку `encrypted_data` — данные запроса, зашифрованные на открытом ключе сервера, — следующим образом:",
+   "uses": 1
+  },
+  {
+   "translation": "Прежде всего сформируйте полезную нагрузку `encrypted_data` следующим образом:",
+   "uses": 1
+  }
+ ],
+ "5) Send req\\_DH\\_params query with generated `encrypted_data`": [
+  {
+   "translation": "5) Отправка запроса req\\_DH\\_params со сформированным `encrypted_data`",
+   "uses": 1
+  },
+  {
+   "translation": "5) Отправка запроса req\\_DH\\_params со сформированными `encrypted_data`",
+   "uses": 1
+  }
+ ],
+ "Client is expected to check whether **p = dh\\_prime** is a safe 2048-bit prime (meaning that both **p** and **(p-1)/2** are prime, and that 2^2047 < p < 2^2048), and that **g** generates a cyclic subgroup of prime order **(p-1)/2**, i.e. is a quadratic residue **mod p**. Since **g** is always equal to 2, 3, 4, 5, 6 or 7, this is easily done using quadratic reciprocity law, yielding a simple condition on **p mod 4g** -- namely, **p mod 8 = 7** for **g = 2**; **p mod 3 = 2** for **g = 3**; no extra condition for **g = 4**; **p mod 5 = 1 or 4** for **g = 5**; **p mod 24 = 19 or 23** for **g = 6**; and **p mod 7 = 3, 5 or 6** for **g = 7**. After **g** and **p** have been checked by the client, it makes sense to cache the result, so as not to repeat lengthy computations in future.": [
+  {
+   "translation": "Клиент обязан проверить, что **p = dh\\_prime** — безопасное 2048-битное простое число (`dh_prime` — модуль группы Диффи — Хеллмана; «безопасное» означает, что простыми являются и **p**, и **(p-1)/2**, а также что 2^2047 < p < 2^2048), и что **g** порождает циклическую подгруппу простого порядка **(p-1)/2**, то есть является квадратичным вычетом **по модулю p**. Поскольку **g** всегда равно 2, 3, 4, 5, 6 или 7, это легко сделать с помощью закона квадратичной взаимности, который даёт простое условие на **p mod 4g**, а именно: **p mod 8 = 7** при **g = 2**; **p mod 3 = 2** при **g = 3**; никаких дополнительных условий при **g = 4**; **p mod 5 = 1 или 4** при **g = 5**; **p mod 24 = 19 или 23** при **g = 6**; и **p mod 7 = 3, 5 или 6** при **g = 7**. После того как клиент проверил **g** и **p**, результат имеет смысл закешировать, чтобы в дальнейшем не повторять длительные вычисления.",
+   "uses": 1
+  },
+  {
+   "translation": "Клиенту следует проверить, что **p = dh\\_prime** — безопасное 2048-битное простое число (`dh_prime` — простой модуль группы Диффи — Хеллмана; «безопасное» означает, что простыми являются и **p**, и **(p-1)/2**, и что 2^2047 < p < 2^2048), а также что **g** порождает циклическую подгруппу простого порядка **(p-1)/2**, то есть является квадратичным вычетом **mod p**. Поскольку **g** всегда равно 2, 3, 4, 5, 6 или 7, это легко проверяется с помощью закона квадратичной взаимности, который сводится к простому условию на **p mod 4g**, а именно: **p mod 8 = 7** для **g = 2**; **p mod 3 = 2** для **g = 3**; никаких дополнительных условий для **g = 4**; **p mod 5 = 1 или 4** для **g = 5**; **p mod 24 = 19 или 23** для **g = 6**; и **p mod 7 = 3, 5 или 6** для **g = 7**. После того как клиент проверил **g** и **p**, имеет смысл закешировать результат, чтобы не повторять длительные вычисления в будущем.",
+   "uses": 1
+  },
+  {
+   "translation": "От клиента ожидается проверка того, что **p = dh\\_prime** — безопасное 2048-битное простое число (то есть что простыми являются и **p**, и **(p-1)/2**, и что 2^2047 < p < 2^2048), а также что **g** порождает циклическую подгруппу простого порядка **(p-1)/2**, то есть служит квадратичным вычетом **mod p**. Поскольку **g** всегда равно 2, 3, 4, 5, 6 или 7, это легко сделать по закону квадратичной взаимности, который даёт простое условие на **p mod 4g** — а именно **p mod 8 = 7** для **g = 2**; **p mod 3 = 2** для **g = 3**; никаких дополнительных условий для **g = 4**; **p mod 5 = 1 или 4** для **g = 5**; **p mod 24 = 19 или 23** для **g = 6**; и **p mod 7 = 3, 5 или 6** для **g = 7**. После того как клиент проверил **g** и **p**, результат имеет смысл кешировать, чтобы в дальнейшем не повторять длительные вычисления.",
+   "uses": 1
+  }
+ ],
+ "Padding bytes are involved in the computation of **msg\\_key**;": [
+  {
+   "translation": "байты дополнения (padding) участвуют в вычислении **msg\\_key**;",
+   "uses": 1
+  },
+  {
+   "translation": "байты дополнения участвуют в вычислении **msg\\_key**;",
+   "uses": 1
+  }
+ ],
+ "12..1024 padding bytes are used instead of 0..15 padding bytes in v.1.0.": [
+  {
+   "translation": "вместо 0..15 байт дополнения, как в v.1.0, используется 12..1024 байта.",
+   "uses": 1
+  },
+  {
+   "translation": "используется 12..1024 байта дополнения вместо 0..15 байт в v.1.0.",
+   "uses": 1
+  }
+ ],
+ "Got questions about this setup? — Check out the [Advanced FAQ](http://core.telegram.org/techfaq)!": [
+  {
+   "translation": "Остались вопросы об этой схеме? — Загляните в [расширенный FAQ](http://core.telegram.org/techfaq)!",
+   "uses": 1
+  },
+  {
+   "translation": "Остались вопросы по этой схеме? — Загляните в [расширенный FAQ](http://core.telegram.org/techfaq)!",
+   "uses": 1
+  }
+ ],
+ "Each plaintext message to be encrypted in MTProto always contains the following data to be checked upon decryption in order to make the system robust against known problems with the components:": [
+  {
+   "translation": "Каждое открытое сообщение, подлежащее шифрованию в MTProto, всегда содержит перечисленные ниже данные, которые проверяются при расшифровке, — это делает систему устойчивой к известным проблемам используемых компонентов:",
+   "uses": 1
+  },
+  {
+   "translation": "Каждое открытое сообщение, подлежащее шифрованию в MTProto, всегда содержит следующие данные, которые проверяются при расшифровке, — это делает систему устойчивой к известным проблемам используемых компонентов. Здесь `server salt` — серверная соль, периодически сменяемое сервером случайное число, а `session` — сессия, логическая последовательность запросов и ответов, не привязанная к конкретному соединению:",
+   "uses": 1
+  },
+  {
+   "translation": "Каждое открытое сообщение, шифруемое в MTProto, всегда содержит следующие данные, которые проверяются при расшифровке, — это делает систему устойчивой к известным проблемам используемых компонентов:",
+   "uses": 1
+  }
+ ],
+ "server salt (64-Bit)": [
+  {
+   "translation": "серверная соль (64 бита)",
+   "uses": 3
+  },
+  {
+   "translation": "серверная соль `server salt` (64 бита) — периодически меняющееся случайное число, привязывающее сообщение к текущему периоду времени",
+   "uses": 1
+  }
+ ],
+ "session id": [
+  {
+   "translation": "идентификатор сессии",
+   "uses": 2
+  },
+  {
+   "translation": "идентификатор сессии `session id` — идентификатор сеанса связи клиента с сервером",
+   "uses": 1
+  }
+ ],
+ "Telegram's **End-to-end** encrypted Secret Chats are using an additional layer of encryption on top of the described above. See [Secret Chats, End-to-End encryption](/api/end-to-end/) for details.": [
+  {
+   "translation": "В секретных чатах Telegram со **сквозным** шифрованием поверх описанной выше схемы применяется дополнительный слой шифрования. Подробности см. в статье [Секретные чаты, сквозное шифрование](/api/end-to-end/).",
+   "uses": 1
+  },
+  {
+   "translation": "Секретные чаты Telegram со **сквозным** шифрованием используют дополнительный слой шифрования поверх описанного выше. Подробности — в статье [Секретные чаты, сквозное шифрование](/api/end-to-end/).",
+   "uses": 1
+  }
+ ],
+ "Server Key": [
+  {
+   "translation": "Ключ сервера",
+   "uses": 1
+  },
+  {
+   "translation": "Серверный ключ",
+   "uses": 1
+  }
+ ],
+ "Content-related Message": [
+  {
+   "translation": "Сообщение, значимое по содержимому",
+   "uses": 1
+  },
+  {
+   "translation": "Сообщение, связанное с содержимым",
+   "uses": 1
+  }
+ ],
+ "The lower-order 1024 bits of auth\\_key are not involved in the computation. They may (together with the remaining bits or separately) be used on the client device to encrypt the local copy of the data received from the server. The 512 lower-order bits of auth\\_key are not stored on the server; therefore, if the client device uses them to encrypt local data and the user loses the key or the password, data decryption of local data is impossible (even if data from the server could be obtained).": [
+  {
+   "translation": "Младшие 1024 бита auth\\_key в вычислении не участвуют. Их можно (вместе с остальными битами или отдельно) использовать на клиентском устройстве для шифрования локальной копии данных, полученных от сервера. Младшие 512 бит auth\\_key на сервере не хранятся, поэтому, если клиентское устройство шифрует ими локальные данные, а пользователь теряет ключ или пароль, расшифровать локальные данные невозможно (даже если данные с сервера удастся получить).",
+   "uses": 1
+  },
+  {
+   "translation": "Младшие 1024 бита auth\\_key в вычислениях не участвуют. Их допускается использовать (вместе с остальными битами или отдельно) на клиентском устройстве для шифрования локальной копии данных, полученных от сервера. Младшие 512 бит auth\\_key на сервере не хранятся, поэтому, если клиентское устройство шифрует ими локальные данные, а пользователь теряет ключ или пароль, расшифровать локальные данные невозможно (даже если данные с сервера удастся получить).",
+   "uses": 1
+  }
+ ],
+ "In addition, the identifiers (msg\\_id) of the last N messages received from the other side must be stored, and if a message comes in with msg\\_id lower than all or equal to any of the stored values, the message is to be ignored. Otherwise, the new message msg\\_id is added to the set, and, if the number of stored msg\\_id values is greater than N, the oldest (i. e. the lowest) is forgotten.": [
+  {
+   "translation": "Кроме того, необходимо хранить идентификаторы (msg\\_id) последних N сообщений, полученных от другой стороны, и, если приходит сообщение с msg\\_id меньшим, чем все сохранённые значения, или равным любому из них, такое сообщение игнорируется. В противном случае msg\\_id нового сообщения добавляется в набор, а если число сохранённых значений msg\\_id превышает N, самое старое (то есть наименьшее) забывается.",
+   "uses": 1
+  },
+  {
+   "translation": "Кроме того, необходимо хранить идентификаторы (msg\\_id) последних N сообщений, полученных от другой стороны; если приходит сообщение с msg\\_id меньшим, чем все сохранённые значения, или равным любому из них, такое сообщение игнорируется. В противном случае msg\\_id нового сообщения добавляется в набор, и, если число сохранённых значений msg\\_id превышает N, самое старое (то есть наименьшее) забывается.",
+   "uses": 1
+  }
+ ],
+ "Certain client-to-server service messages containing data sent by the client to the server (for example, msg\\_id of a recent client query) may, nonetheless, be processed on the client even if the time appears to be “incorrect”. This is especially true of messages to change server\\_salt and notifications of invalid client time. See [Mobile Protocol: Service Messages](/mtproto/service_messages/).": [
+  {
+   "translation": "Тем не менее некоторые сервисные сообщения от клиента к серверу, содержащие данные, отправленные клиентом на сервер (например, msg\\_id недавнего клиентского запроса), могут обрабатываться на клиенте даже тогда, когда время выглядит «неверным». Особенно это касается сообщений о смене server\\_salt и уведомлений о некорректном времени на клиенте. См. [Мобильный протокол: сервисные сообщения](/mtproto/service_messages/).",
+   "uses": 1
+  },
+  {
+   "translation": "Тем не менее некоторые сервисные сообщения от клиента к серверу, содержащие данные, отправленные клиентом серверу (например, msg\\_id недавнего клиентского запроса), могут обрабатываться на клиенте, даже если время выглядит «неверным». Особенно это касается сообщений о смене server\\_salt и уведомлений о неверном времени клиента. См. [Мобильный протокол: сервисные сообщения](/mtproto/service_messages/).",
+   "uses": 1
+  }
+ ],
+ "Special plain-text messages may be used to create an authorization key as well as to perform a time synchronization. They begin with auth\\_key\\_id = 0 (64 bits) which means that there is no auth\\_key. This is followed directly by the message body in serialized format without internal or external headers. A message identifier (64 bits) and body length in bytes (32 bytes) are added before the message body.": [
+  {
+   "translation": "Специальные сообщения в открытом виде могут использоваться для создания авторизационного ключа, а также для синхронизации времени. Они начинаются с auth\\_key\\_id = 0 (64 бита), что означает отсутствие авторизационного ключа. Сразу за этим следует тело сообщения в сериализованном виде, без внутренних и внешних заголовков. Перед телом сообщения добавляются идентификатор сообщения (64 бита) и длина тела в байтах (32 байта).",
+   "uses": 1
+  },
+  {
+   "translation": "Специальные сообщения в открытом виде могут использоваться для создания авторизационного ключа, а также для синхронизации времени. Они начинаются с auth\\_key\\_id = 0 (64 бита), что означает отсутствие auth\\_key. Сразу за ним следует тело сообщения в сериализованном виде, без внутреннего и внешнего заголовков. Перед телом сообщения добавляются идентификатор сообщения (64 бита) и длина тела в байтах (32 байта).",
+   "uses": 1
+  }
+ ],
+ "Only a very limited number of messages of special types can be transmitted as plain text.": [
+  {
+   "translation": "В открытом виде может передаваться лишь очень ограниченное число сообщений специальных типов.",
+   "uses": 1
+  },
+  {
+   "translation": "В открытом виде может передаваться лишь очень ограниченный набор сообщений специальных типов.",
+   "uses": 1
+  }
+ ],
+ "An authorization key is normally created once for every user during the application installation process immediately prior to registration. Registration itself, in actuality, occurs after the authorization key is created. However, a user may be prompted to complete the registration form while the authorization key is being generated in the background. Intervals between user key strokes may be used as a source of entropy in the generation of high-quality random numbers required for the creation of an authorization key.": [
+  {
+   "translation": "Авторизационный ключ обычно создаётся один раз для каждого пользователя — в ходе установки приложения, непосредственно перед регистрацией. Сама регистрация в действительности происходит уже после создания авторизационного ключа. Впрочем, пользователю можно предложить заполнить регистрационную форму, пока авторизационный ключ генерируется в фоновом режиме. Интервалы между нажатиями клавиш пользователем допускается использовать как источник энтропии при получении качественных случайных чисел, необходимых для создания авторизационного ключа.",
+   "uses": 1
+  },
+  {
+   "translation": "Обычно авторизационный ключ создаётся для каждого пользователя один раз — при установке приложения, непосредственно перед регистрацией. На деле сама регистрация происходит уже после создания авторизационного ключа. Тем не менее пользователю можно предложить заполнить регистрационную форму, пока ключ генерируется в фоне. Интервалы между нажатиями клавиш пользователем можно использовать как источник энтропии для получения качественных случайных чисел, необходимых при создании авторизационного ключа.",
+   "uses": 1
+  }
+ ],
+ "See [Creating an Authorization Key](/mtproto/auth_key/).": [
+  {
+   "translation": "См. [Создание авторизационного ключа](/mtproto/auth_key/).",
+   "uses": 1
+  },
+  {
+   "translation": "Смотрите [Создание авторизационного ключа](/mtproto/auth_key/).",
+   "uses": 1
+  }
+ ],
+ "During the creation of the authorization key, the client obtains its server salt (to be used with the new key for all communication in the near future). The client then creates an encrypted session using the newly generated key, and subsequent communication occurs within that session (including the transmission of the user's registration information and phone number validation) unless the client creates a new session. The client is free to create new or additional sessions at any time by choosing a new random session\\_id.": [
+  {
+   "translation": "В ходе создания авторизационного ключа клиент получает свою серверную соль (её предстоит использовать вместе с новым ключом для всего обмена данными в ближайшее время). Затем клиент создаёт зашифрованную сессию на только что сгенерированном ключе, и весь дальнейший обмен (включая передачу регистрационных данных пользователя и проверку номера телефона) идёт внутри этой сессии — пока клиент не создаст новую. Клиент вправе в любой момент создать новую или дополнительную сессию, выбрав новый случайный идентификатор сессии `session_id`.",
+   "uses": 1
+  },
+  {
+   "translation": "При создании авторизационного ключа клиент получает свою серверную соль (она будет использоваться вместе с новым ключом для всего обмена данными в ближайшее время). Затем клиент создаёт зашифрованную сессию на основе только что сгенерированного ключа, и весь дальнейший обмен данными происходит внутри этой сессии (включая передачу регистрационных сведений пользователя и подтверждение номера телефона) — до тех пор, пока клиент не создаст новую сессию. Клиент вправе в любой момент создать новую или дополнительную сессию, выбрав новый случайный session\\_id.",
+   "uses": 1
+  }
+ ],
+ "We use DH key exchange in two cases:": [
+  {
+   "translation": "Обмен ключами по схеме DH применяется в двух случаях:",
+   "uses": 1
+  },
+  {
+   "translation": "Обмен ключами по схеме DH применяется у нас в двух случаях:",
+   "uses": 1
+  }
+ ],
+ "In both cases, there are some verifications to be done whenever DH is used:": [
+  {
+   "translation": "В обоих случаях всякий раз, когда применяется DH, необходимо выполнить несколько проверок:",
+   "uses": 1
+  },
+  {
+   "translation": "В обоих случаях при использовании DH необходимо выполнить ряд проверок:",
+   "uses": 1
+  }
+ ],
+ "If the verification takes too long (which is the case for older mobile devices), one might initially run only 15 Miller--Rabin iterations (use parameter 30 in Java) for verifying primeness of **p** and **(p - 1)/2** with error probability not exceeding one billionth, and do more iterations in the background later.": [
+  {
+   "translation": "Если проверка занимает слишком много времени (а на старых мобильных устройствах это именно так), можно на первых порах выполнить лишь 15 итераций Миллера — Рабина (в Java передавайте параметр 30) для проверки простоты **p** и **(p - 1)/2** — вероятность ошибки при этом не превысит одной миллиардной, — а дополнительные итерации провести позже в фоновом режиме.",
+   "uses": 1
+  },
+  {
+   "translation": "Если проверка занимает слишком много времени (что справедливо для старых мобильных устройств), можно сначала выполнить лишь 15 итераций Миллера — Рабина (в Java используйте параметр 30) для проверки простоты **p** и **(p - 1)/2** — вероятность ошибки при этом не превысит одной миллиардной, — а остальные итерации доделать позже в фоновом режиме.",
+   "uses": 1
+  }
+ ],
+ "Another way to optimize this is to embed into the client application code a small table with some known \"good\" couples **(g,p)** (or just known safe primes **p**, since the condition on **g** is easily verified during execution), checked during code generation phase, so as to avoid doing such verification during runtime altogether. The server rarely changes these values, thus one usually needs to put the current value of server's **dh\\_prime** into such a table. For example, the current value of **dh\\_prime** equals (in big-endian byte order)": [
+  {
+   "translation": "Другой способ оптимизации — встроить в код клиентского приложения небольшую таблицу с заведомо «хорошими» парами **(g,p)** (или просто с известными безопасными простыми числами **p**, поскольку условие на **g** легко проверяется во время выполнения), проверенными на этапе генерации кода, чтобы вовсе не проводить такую проверку во время работы. Сервер меняет эти значения редко, так что обычно достаточно занести в такую таблицу текущее значение серверного **dh\\_prime**. Например, текущее значение **dh\\_prime** равно (в порядке байт от старшего к младшему)",
+   "uses": 1
+  },
+  {
+   "translation": "Ещё один способ оптимизации — встроить в код клиентского приложения небольшую таблицу заведомо «хороших» пар **(g,p)** (или просто известных безопасных простых чисел **p**, поскольку условие на **g** легко проверить прямо по ходу работы), выверенных на этапе генерации кода, чтобы вовсе не выполнять такую проверку во время работы приложения. Сервер меняет эти значения редко, поэтому обычно в такую таблицу требуется поместить текущее серверное значение **dh\\_prime**. Например, сейчас **dh\\_prime** равно (в порядке байтов big-endian)",
+   "uses": 1
+  }
+ ],
+ "Apart from the conditions on the Diffie-Hellman prime **dh\\_prime** and generator **g**, both sides are to check that **g**, **g\\_a** and **g\\_b** are greater than **1** and less than **dh\\_prime - 1**. We recommend checking that **g\\_a** and **g\\_b** are between **2^{2048-64}** and **dh\\_prime - 2^{2048-64}** as well.": [
+  {
+   "translation": "Помимо условий на простое число Диффи — Хеллмана **dh\\_prime** и генератор **g**, обе стороны должны проверить, что **g**, **g\\_a** и **g\\_b** больше **1** и меньше **dh\\_prime - 1**. Мы рекомендуем проверять также, что **g\\_a** и **g\\_b** лежат между **2^{2048-64}** и **dh\\_prime - 2^{2048-64}**.",
+   "uses": 1
+  },
+  {
+   "translation": "Помимо условий на простое число Диффи — Хеллмана **dh\\_prime** и порождающий элемент **g**, обе стороны обязаны проверить, что **g**, **g\\_a** и **g\\_b** (открытые значения сторон, которыми они обмениваются) больше **1** и меньше **dh\\_prime - 1**. Мы рекомендуем дополнительно проверять, что **g\\_a** и **g\\_b** лежат в диапазоне между **2^{2048-64}** и **dh\\_prime - 2^{2048-64}**.",
+   "uses": 1
+  }
+ ],
+ "Once the client receives a `server_DH_params_ok` answer in step 5) of the Authorization Key generation protocol and decrypts it obtaining `answer_with_hash`, it MUST check that": [
+  {
+   "translation": "Как только клиент получает ответ `server_DH_params_ok` на шаге 5) протокола генерации авторизационного ключа (`auth_key` — долговременный общий секрет, которым шифруются все дальнейшие сообщения) и расшифровывает его, получая `answer_with_hash`, он ОБЯЗАН проверить, что",
+   "uses": 1
+  },
+  {
+   "translation": "Получив ответ `server_DH_params_ok` на шаге 5) протокола генерации авторизационного ключа и расшифровав его, в результате чего получается `answer_with_hash`, клиент ОБЯЗАН проверить, что",
+   "uses": 1
+  }
+ ],
+ "Client must use a cryptographically secure PRNG to generate secret exponents `a` or `b` for DH key exchange. For secret chats, the client might request some entropy (random bytes) from the server while invoking [messages.getDhConfig](/method/messages.getDhConfig/) and feed these random bytes into its PRNG (for example, by `PRNG_seed` if OpenSSL library is used), but never using these \"random\" bytes by themselves or replacing by them the local PRNG seed. One should mix bytes received from server into local PRNG seed.": [
+  {
+   "translation": "Для выработки секретных показателей `a` или `b` при обмене ключами по DH клиент обязан использовать криптографически стойкий генератор псевдослучайных чисел (`PRNG`). Для секретных чатов клиент может при вызове [messages.getDhConfig](/method/messages.getDhConfig/) запросить у сервера немного энтропии (случайных байтов) и подать эти байты в свой PRNG (например, через `PRNG_seed`, если используется библиотека OpenSSL), но ни в коем случае не должен применять эти «случайные» байты сами по себе или подменять ими локальное начальное значение (seed) генератора. Полученные от сервера байты следует именно подмешивать в локальный seed.",
+   "uses": 1
+  },
+  {
+   "translation": "Клиент обязан использовать криптографически стойкий генератор псевдослучайных чисел (PRNG) для выработки секретных показателей `a` или `b` при обмене ключами по DH. Для секретных чатов клиент может запросить у сервера некоторое количество энтропии (случайных байт) при вызове [messages.getDhConfig](/method/messages.getDhConfig/) и подать эти случайные байты на вход своему PRNG (например, через `PRNG_seed`, если используется библиотека OpenSSL), но ни в коем случае не использовать эти «случайные» байты сами по себе и не подменять ими локальное начальное значение (seed) генератора. Полученные от сервера байты следует подмешивать в локальный seed.",
+   "uses": 1
+  }
+ ],
+ "Some important checks are to be done while sending and especially receiving [encrypted MTProto messages](/mtproto/description/).": [
+  {
+   "translation": "При отправке и особенно при получении [зашифрованных сообщений MTProto](/mtproto/description/) необходимо выполнять несколько важных проверок.",
+   "uses": 1
+  },
+  {
+   "translation": "При отправке и особенно при получении [зашифрованных сообщений MTProto](/mtproto/description/) необходимо выполнять ряд важных проверок.",
+   "uses": 1
+  }
+ ],
+ "The length should be always divisible by 4 and non-negative. On no account the client is to access data past the end of the decryption buffer containing the plaintext message.": [
+  {
+   "translation": "Длина всегда должна делиться на 4 и быть неотрицательной. Клиент ни в коем случае не должен обращаться к данным за концом буфера расшифровки, в котором лежит сообщение в открытом виде.",
+   "uses": 1
+  },
+  {
+   "translation": "Длина всегда должна делиться на 4 и быть неотрицательной. Клиент ни при каких обстоятельствах не должен обращаться к данным за границей буфера расшифровки, содержащего открытый текст сообщения.",
+   "uses": 1
+  }
+ ],
+ "The client is to check that the `session_id` field in the decrypted message indeed equals to that of an active session created by the client.": [
+  {
+   "translation": "Клиент должен убедиться, что поле `session_id` (идентификатор сессии — случайное 64-битное число, которым клиент помечает создаваемый им сеанс обмена сообщениями) в расшифрованном сообщении действительно совпадает с идентификатором активной сессии, созданной этим клиентом.",
+   "uses": 1
+  },
+  {
+   "translation": "Клиент должен убедиться, что поле `session_id` в расшифрованном сообщении действительно равно идентификатору активной сессии (`session` — сеанс обмена сообщениями с общим набором состояния), созданной этим клиентом.",
+   "uses": 1
+  }
+ ],
+ "The client must check that `msg_id` has even parity for messages from client to server, and odd parity for messages from server to client.": [
+  {
+   "translation": "Клиент обязан проверять, что `msg_id` (идентификатор сообщения, в который заложено время его создания) чётен для сообщений от клиента к серверу и нечётен для сообщений от сервера к клиенту.",
+   "uses": 1
+  },
+  {
+   "translation": "Клиент обязан проверять, что `msg_id` (идентификатор сообщения) чётный для сообщений от клиента к серверу и нечётный для сообщений от сервера к клиенту.",
+   "uses": 1
+  }
+ ],
+ "In addition, msg\\_id values that belong over 30 seconds in the future or over 300 seconds in the past are to be ignored (recall that `msg_id` approximately equals unixtime \\* 2^32). This is especially important for the server. The client would also find this useful (to protect from a replay attack), but only if it is certain of its time (for example, if its time has been synchronized with that of the server).": [
+  {
+   "translation": "Кроме того, следует игнорировать значения msg\\_id, которые отстоят более чем на 30 секунд в будущее или более чем на 300 секунд в прошлое (напомним, что `msg_id` приблизительно равен unixtime \\* 2^32). Это особенно важно для сервера. Клиенту это тоже пригодится (для защиты от атаки повторного воспроизведения), но только если он уверен в своём времени (например, если оно было синхронизировано с временем сервера).",
+   "uses": 1
+  },
+  {
+   "translation": "Помимо этого, следует игнорировать значения msg\\_id, которые более чем на 30 секунд опережают текущее время или более чем на 300 секунд отстают от него (напомним, что `msg_id` приблизительно равен unixtime \\* 2^32). Особенно это важно для сервера. Клиенту это тоже пригодится (для защиты от атаки повторного воспроизведения), но лишь в том случае, когда он уверен в своём времени (например, если оно синхронизировано со временем сервера).",
+   "uses": 1
+  }
+ ],
+ "Certain client-to-server service messages containing data sent by the client to the server (for example, `msg_id` of a recent client query) may, nonetheless, be processed on the client even if the time appears to be “incorrect”. This is especially true of messages to change server\\_salt and notifications about invalid time on the client. See [Mobile Protocol: Service Messages](/mtproto/service_messages/).": [
+  {
+   "translation": "И всё же отдельные сервисные сообщения от клиента к серверу, которые несут отправленные клиентом же данные (например, `msg_id` недавнего клиентского запроса), допускается обрабатывать на клиенте даже тогда, когда время выглядит «некорректным». В первую очередь это относится к сообщениям о смене server\\_salt (соли сервера — периодически меняющегося 64-битного значения, которое подмешивается в сообщения) и к уведомлениям о неверном времени на клиенте. См. [Мобильный протокол: сервисные сообщения](/mtproto/service_messages/).",
+   "uses": 1
+  },
+  {
+   "translation": "Тем не менее некоторые сервисные сообщения от клиента к серверу, содержащие данные, отправленные клиентом серверу (например, `msg_id` недавнего клиентского запроса), могут обрабатываться на клиенте, даже если время выглядит «неправильным». В первую очередь это относится к сообщениям о смене server\\_salt (серверной соли — периодически меняемого 64-битного параметра) и к уведомлениям о неверном времени на клиенте. См. [Мобильный протокол: сервисные сообщения](/mtproto/service_messages/).",
+   "uses": 1
+  }
+ ],
+ "If one of the checks listed above fails, the client is to completely discard the message obtained from server. We also recommend closing and reestablishing the TCP connection to the server, then retrying the operation or the whole key generation protocol.": [
+  {
+   "translation": "Если одна из перечисленных выше проверок не пройдена, клиент должен полностью отбросить сообщение, полученное от сервера. Мы также рекомендуем закрыть и заново установить TCP-соединение с сервером, а затем повторить операцию или весь протокол генерации ключа.",
+   "uses": 1
+  },
+  {
+   "translation": "Если хотя бы одна из перечисленных выше проверок не прошла, клиент должен полностью отбросить полученное от сервера сообщение. Мы рекомендуем также закрыть TCP-соединение с сервером и установить его заново, а затем повторить операцию или весь протокол генерации ключа.",
+   "uses": 1
+  }
+ ],
+ "No information from incorrect messages can be used. Even if the application throws an exception and dies, this is much better than continuing with invalid data.": [
+  {
+   "translation": "Никакие сведения из некорректных сообщений использовать нельзя. Даже если приложение выбросит исключение и аварийно завершится, это намного лучше, чем продолжить работу с неверными данными.",
+   "uses": 1
+  },
+  {
+   "translation": "Никакую информацию из некорректных сообщений использовать нельзя. Даже если приложение выбросит исключение и завершится, это гораздо лучше, чем продолжать работу с неверными данными.",
+   "uses": 1
+  }
+ ],
+ "Notice that invalid messages will infrequently appear during normal work even if no malicious tampering is being done. This is due to network transmission errors. We recommend ignoring the invalid message and closing the TCP connection, then creating a new TCP connection to the server and retrying the original query.": [
+  {
+   "translation": "Обратите внимание, что некорректные сообщения изредка появляются и при нормальной работе, даже если никакого злонамеренного вмешательства нет. Причина — ошибки передачи по сети. Мы рекомендуем проигнорировать некорректное сообщение и закрыть TCP-соединение, затем создать новое TCP-соединение с сервером и повторить исходный запрос.",
+   "uses": 1
+  },
+  {
+   "translation": "Учтите, что некорректные сообщения изредка появляются и при нормальной работе, даже когда никакого злонамеренного вмешательства нет: причина — ошибки передачи по сети. Мы рекомендуем игнорировать такое сообщение и закрывать TCP-соединение, после чего создавать с сервером новое TCP-соединение и повторять исходный запрос.",
+   "uses": 1
+  }
+ ],
+ "There are no implicit acknowledgments for the TCP transport: all messages must be acknowledged explicitly. Most frequently, acknowledgments are placed in a container with the next query or response if it is transmitted in short order. For example, this is almost always the case for client messages containing RPC queries: the acknowledgment normally arrives with the RPC response.": [
+  {
+   "translation": "В транспорте TCP неявных подтверждений нет: все сообщения обязаны подтверждаться явно. Чаще всего подтверждения помещаются в контейнер вместе со следующим запросом или ответом, если тот передаётся вскоре. Например, так почти всегда происходит с сообщениями клиента, содержащими RPC-запросы: подтверждение обычно приходит вместе с RPC-ответом.",
+   "uses": 1
+  },
+  {
+   "translation": "Для транспорта TCP не существует неявных подтверждений: все сообщения обязаны подтверждаться явно. Чаще всего подтверждения помещаются в контейнер вместе со следующим запросом или ответом, если тот отправляется в ближайшее время. Например, так почти всегда происходит с клиентскими сообщениями, содержащими RPC-запросы: подтверждение обычно приходит вместе с RPC-ответом.",
+   "uses": 1
+  }
+ ],
+ "Having received the query, the server may either wait a little while (if the query requires a response following a short timeout) or immediately return a dummy response (only acknowledging the receipt of the container). In any case, the response may contain any number of messages. The server may at the same time send out any other messages it might be holding for the session.": [
+  {
+   "translation": "Получив запрос, сервер может либо немного подождать (если запрос требует ответа по истечении короткого тайм-аута), либо сразу вернуть ответ-заглушку (лишь подтверждающий получение контейнера). В любом случае ответ может содержать произвольное число сообщений. Одновременно сервер вправе отправить любые другие сообщения, которые он придерживал для этой сессии.",
+   "uses": 1
+  },
+  {
+   "translation": "Получив запрос, сервер может либо немного подождать (если запрос требует ответа по истечении короткого таймаута), либо сразу вернуть фиктивный ответ (лишь подтверждающий получение контейнера). В любом случае ответ может содержать любое количество сообщений. Одновременно сервер может отправить и любые другие сообщения, которые он придерживает для этой сессии.",
+   "uses": 1
+  }
+ ],
+ "If a server needs to send a message to a client, it checks for an HTTP connection that belongs to the required session and is in the “answering an HTTP request” state (including long poll) whereupon the message is added to the response container for the connection and sent to the user. In a typical case, there is some additional wait time (50 milliseconds) against the eventuality that the server will soon have more messages for the session.": [
+  {
+   "translation": "Если серверу нужно отправить сообщение клиенту, он ищет HTTP-соединение, которое принадлежит нужной сессии и находится в состоянии «отвечаю на HTTP-запрос» (в том числе `long polling`); найдя такое, сервер добавляет сообщение в контейнер ответа для этого соединения и отправляет пользователю. В типичном случае добавляется небольшое дополнительное ожидание (50 миллисекунд) на случай, если у сервера вскоре появятся ещё сообщения для этой сессии.",
+   "uses": 1
+  },
+  {
+   "translation": "Когда серверу нужно отправить сообщение клиенту, он ищет HTTP-соединение, которое принадлежит нужной сессии и находится в состоянии «отвечаю на HTTP-запрос» (включая длинный опрос); найдя такое, он добавляет сообщение в контейнер ответа для этого соединения и отправляет пользователю. В типичном случае сервер выдерживает небольшую дополнительную паузу (50 миллисекунд) — на случай, если вскоре у него появятся ещё сообщения для этой сессии.",
+   "uses": 1
+  }
+ ],
+ "**_Important_**: if the acknowledgment fails to arrive on time, the message can be resent (possibly, in a different container). The parties must autonomously be ready for this and must store the identifiers of the most recent messages received (and ignore such duplicates rather than repeat actions). In order not to have the identifiers stored forever, there exist special _garbage collection_ messages that take advantage of message identifier monotonicity.": [
+  {
+   "translation": "**_Важно_**: если подтверждение не приходит вовремя, сообщение может быть отправлено повторно (возможно, в другом контейнере). Стороны должны быть к этому готовы самостоятельно и обязаны хранить идентификаторы последних полученных сообщений (и игнорировать такие дубликаты, а не выполнять действия заново). Чтобы не хранить идентификаторы вечно, предусмотрены специальные сообщения _сборки мусора_, использующие монотонность идентификаторов сообщений.",
+   "uses": 1
+  },
+  {
+   "translation": "**_Важно_**: если подтверждение не приходит вовремя, сообщение может быть отправлено повторно (возможно, уже в другом контейнере). Стороны обязаны быть готовы к этому самостоятельно и обязаны хранить идентификаторы последних полученных сообщений (а такие дубликаты — игнорировать, а не выполнять действие ещё раз). Чтобы не хранить идентификаторы вечно, предусмотрены специальные сообщения _сборки мусора_, использующие монотонность идентификаторов сообщений.",
+   "uses": 1
+  }
+ ],
+ "[End-to-end encrypted Voice Calls](/api/end-to-end/voice-calls/)": [
+  {
+   "translation": "[Голосовые звонки со сквозным шифрованием](/api/end-to-end/voice-calls/)",
+   "uses": 1
+  },
+  {
+   "translation": "[Сквозное шифрование голосовых звонков](/api/end-to-end/voice-calls/)",
+   "uses": 1
+  }
+ ],
+ "What about IND-CCA?": [
+  {
+   "translation": "А как насчёт IND-CCA?",
+   "uses": 1
+  },
+  {
+   "translation": "Как насчёт IND-CCA?",
+   "uses": 1
+  }
+ ]
+}

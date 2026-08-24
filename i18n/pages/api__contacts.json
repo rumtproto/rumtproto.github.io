@@ -1,0 +1,3 @@
+{
+ "Make sure to implement client-side ratelimiting/debounce for this method, allowing at most 1 call every 3 seconds.": "Обязательно реализуйте на стороне клиента ограничение частоты запросов к этому методу (`rate limit`) и подавление дребезга (debounce): допускается не более одного вызова каждые 3 секунды."
+}

@@ -1,0 +1,4 @@
+{
+ "Many constructors in the API need to be stored in a local database upon reception and should only ever be updated reactively (passively) when received via updates or by other means (as specified in the documentation), to avoid overloading the server by continuously requesting changes for the same unchanged information.": "Многие конструкторы API следует сохранять в локальную базу данных сразу после получения и обновлять исключительно реактивно (пассивно) — когда они приходят в обновлениях или иным описанным в документации способом. Это позволяет не перегружать сервер постоянными запросами изменений одних и тех же неизменившихся данных.",
+ "If `version` is smaller than `cached_version+1`, skip the update": "Если `version` меньше, чем `cached_version+1`, пропустите обновление"
+}
