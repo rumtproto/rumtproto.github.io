@@ -1,8 +1,8 @@
 ---
 title: "Search"
 original: "https://core.telegram.org"
-section: other
-description: "Full-text search over the mirrored Telegram API, MTProto and TL schema documentation, with a filter by section."
+section: site
+description: "Full-text search over the mirrored Telegram API, Bot API, MTProto, TL schema, blog and FAQ pages, with a filter by section."
 generated: true
 layout: layout.njk
 ---
@@ -11,7 +11,7 @@ layout: layout.njk
 
 <link rel="stylesheet" href="/pagefind/pagefind-ui.css">
 
-Full-text search over the whole mirror: articles, constructors, methods and types. Use the **Section** filter below to limit the search to Telegram API, MTProto, Schema or Other (FAQ) pages.
+Full-text search over the whole mirror: articles, constructors, methods and types. Use the **Section** filter below to limit the search to Telegram API, Bot API, MTProto, Schema, Blog, FAQ or Other pages.
 
 <div id="search-page"></div>
 

@@ -39,6 +39,6 @@ Send one or more chosen peers, as requested by a [keyboardButtonRequestPeer](/co
 
 Prompts the user to select and share one or more peers with the bot using [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/).
 
-Use this constructor to send a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button in a [reply keyboard](https://core.telegram.org/bots/features#keyboards) in a private chat.
+Use this constructor to send a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button in a [reply keyboard](/bots/features/#keyboards) in a private chat.
 
 See [peer requests](/api/bots/buttons/#peer-requests) for the full flow.

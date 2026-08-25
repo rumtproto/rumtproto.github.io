@@ -13,7 +13,7 @@ Export the bot token of a [managed bot »](/api/bots/managed-bots/#managing-a-ma
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="https://core.telegram.org/method/bots.exportBotToken?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="/method/bots.exportBotToken/">Switch »</a></code></pre>
 
 ### Parameters
 

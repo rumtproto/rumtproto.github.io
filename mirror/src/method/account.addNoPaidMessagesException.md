@@ -13,7 +13,7 @@ Allow a user to send us messages without paying if [paid messages »](/api/paid-
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 205. <a href="https://core.telegram.org/method/account.addNoPaidMessagesException?layer=205">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 205. <a href="/method/account.addNoPaidMessagesException/">Switch »</a></code></pre>
 
 ### Parameters
 

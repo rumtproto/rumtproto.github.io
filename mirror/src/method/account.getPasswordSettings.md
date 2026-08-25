@@ -9,7 +9,7 @@ layout: layout.njk
 
 # account.getPasswordSettings
 
-Get private info associated to the password info (recovery email, telegram [passport](https://core.telegram.org/passport) info & so on)
+Get private info associated to the password info (recovery email, telegram [passport](/passport/) info & so on)
 
 <p class="page_layer">Layer 223</p>
 
@@ -37,6 +37,6 @@ Get private info associated to the password info (recovery email, telegram [pass
 
 How to login to a user's account if they have enabled 2FA, how to change password.
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

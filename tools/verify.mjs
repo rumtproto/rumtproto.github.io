@@ -35,7 +35,9 @@ function inheritedFromMirror(pageUrl, href) {
   const file = mirrorSourceByUrl.get(pageUrl);
   if (!file || !existsSync(file)) return false;
   const source = readFileSync(file, 'utf8');
-  return source.includes(`](${href})`) || source.includes(`href="${href}"`);
+  // A Markdown link may carry a title — `](/file/... "Click for hi-res image")` —
+  // so the destination is not always followed by the closing parenthesis.
+  return source.includes(`](${href})`) || source.includes(`](${href} `) || source.includes(`href="${href}"`);
 }
 function read(file) { return readFileSync(file, 'utf8'); }
 const asPosix = (p) => p.replace(/\\/g, '/');
@@ -178,7 +180,11 @@ for (const rel of mirrorPages) {
   const output = outputFor(rel);
   if (!existsSync(output)) continue;
   const rawUrl = rel === 'index.md' ? '/' : `/${rel.replace(/\.md$/, '').replace(/\/index$/, '')}/`;
-  const expected = anchors[rawUrl]?.ids || [];
+  // An empty id is not an anchor: markdown-it-anchor produces one for a heading
+  // with no sluggable character ("# #", a Persian title), nothing can link to
+  // it, and `id=""` does not survive minification. It stays in the positional
+  // inventory the renderer uses, but no page is expected to carry it.
+  const expected = (anchors[rawUrl]?.ids || []).filter(Boolean);
   const html = read(output);
   const article = html.slice(html.indexOf('<article'), html.indexOf('</article>'));
   const ids = new Set([...article.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]));

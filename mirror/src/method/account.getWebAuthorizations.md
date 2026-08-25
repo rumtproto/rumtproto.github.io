@@ -9,7 +9,7 @@ layout: layout.njk
 
 # account.getWebAuthorizations
 
-Get web [login widget](https://core.telegram.org/widgets/login) authorizations
+Get web [login widget](/bots/telegram-login/) authorizations
 
 <p class="page_layer">Layer 223</p>
 
@@ -29,4 +29,4 @@ This constructor does not require any parameters.
 
 ### Related pages
 
-#### [Telegram Login Widget](https://core.telegram.org/widgets/login)
+#### [Telegram Login Widget](/bots/telegram-login/)

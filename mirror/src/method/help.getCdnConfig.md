@@ -9,7 +9,7 @@ layout: layout.njk
 
 # help.getCdnConfig
 
-Get configuration for [CDN](https://core.telegram.org/cdn) file downloads.
+Get configuration for [CDN](/cdn/) file downloads.
 
 <p class="page_layer">Layer 223</p>
 
@@ -29,6 +29,6 @@ This constructor does not require any parameters.
 
 ### Related pages
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Encrypted CDNs for Speed and Security](/cdn/)
 
 How client apps download popular public files from secondary CDN data centers.

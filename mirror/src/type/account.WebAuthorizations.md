@@ -24,4 +24,4 @@ Web authorizations
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/account.getWebAuthorizations/">account.getWebAuthorizations</a></td><td>Get web <a href="https://core.telegram.org/widgets/login">login widget</a> authorizations</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/account.getWebAuthorizations/">account.getWebAuthorizations</a></td><td>Get web <a href="/bots/telegram-login/">login widget</a> authorizations</td></tr></tbody></table>

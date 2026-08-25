@@ -9,7 +9,7 @@ layout: layout.njk
 
 # account.saveSecureValue
 
-Securely save [Telegram Passport](https://core.telegram.org/passport) document, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption)
+Securely save [Telegram Passport](/passport/) document, [for more info see the passport docs »](/passport/encryption/#encryption)
 
 <p class="page_layer">Layer 223</p>
 
@@ -19,7 +19,7 @@ Securely save [Telegram Passport](https://core.telegram.org/passport) document, 
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/InputSecureValue/">InputSecureValue</a></td><td>Secure value, <a href="https://core.telegram.org/passport/encryption#encryption">for more info see the passport docs »</a></td></tr><tr><td><strong>secure_secret_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Passport secret hash, <a href="https://core.telegram.org/passport/encryption#encryption">for more info see the passport docs »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>value</strong></td><td style="text-align: center;"><a href="/type/InputSecureValue/">InputSecureValue</a></td><td>Secure value, <a href="/passport/encryption/#encryption">for more info see the passport docs »</a></td></tr><tr><td><strong>secure_secret_id</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Passport secret hash, <a href="/passport/encryption/#encryption">for more info see the passport docs »</a></td></tr></tbody></table>
 
 ### Result
 
@@ -33,11 +33,11 @@ Securely save [Telegram Passport](https://core.telegram.org/passport) document, 
 
 ### Related pages
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport Encryption Details](/passport/encryption/)
 
 How Telegram Passport data is stored and encrypted end-to-end.
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.
 

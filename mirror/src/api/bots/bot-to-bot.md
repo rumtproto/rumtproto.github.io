@@ -13,7 +13,7 @@ Bot-to-bot communication allows bots to receive messages from other bots in the 
 
 Enable **Bot-to-Bot Communication Mode** for every bot that should participate in this feature in [@BotFather »](https://t.me/BotFather).
 
-For a simplified Bot API description, see [Bot-to-Bot Communication »](https://core.telegram.org/bots/features#bot-to-bot-communication).
+For a simplified Bot API description, see [Bot-to-Bot Communication »](/bots/features/#bot-to-bot-communication).
 
 ### Communication in group chats
 
@@ -36,7 +36,7 @@ A bot with Bot-to-Bot Communication Mode enabled can also receive messages from 
 -   Is an admin in the group.
 -   Has Group Privacy Mode disabled in [@BotFather »](https://t.me/BotFather).
 
-Group Privacy Mode is the [bot privacy setting »](https://core.telegram.org/bots/features#privacy-mode) that limits ordinary group updates to messages explicitly relevant to the bot.
+Group Privacy Mode is the [bot privacy setting »](/bots/features/#privacy-mode) that limits ordinary group updates to messages explicitly relevant to the bot.
 
 Incoming bot messages are delivered through the usual [update handling flow »](/api/updates/): [updateNewMessage](/constructor/updateNewMessage/) in basic groups, and [updateNewChannelMessage](/constructor/updateNewChannelMessage/) in supergroups.
 

@@ -26,7 +26,7 @@ bots.getAdminedBots#b0711d83 = Vector<User>;
 bots.updateStarRefProgram#778b5ab3 flags:# bot:InputUser commission_permille:int duration_months:flags.0?int = StarRefProgram;
 ```
 
-A mini app developer can invoke [bots.updateStarRefProgram](/method/bots.updateStarRefProgram/) to create, edit or delete the [affiliate program](https://telegram.org/tour/affiliate-programs) of [mini apps »](/api/bots/webapps/) they own.  
+A mini app developer can invoke [bots.updateStarRefProgram](/method/bots.updateStarRefProgram/) to create, edit or delete the [affiliate program](/tour/affiliate-programs/) of [mini apps »](/api/bots/webapps/) they own.  
 Owned bots can be fetched using [bots.getAdminedBots](/method/bots.getAdminedBots/), or by checking the `bot_can_edit` flag of the associated [user](/constructor/user/).
 
 If the `bot_can_edit` flag is set, graphical clients should display an "Affiliate program" option when editing the bot's profile, that can be used to create and edit the bot's affiliate program.  

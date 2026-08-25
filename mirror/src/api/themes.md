@@ -21,7 +21,7 @@ document#8fd4c4d8 flags:# id:long access_hash:long file_reference:bytes date:int
 account.uploadTheme#1c3db333 flags:# file:InputFile thumb:flags.0?InputFile file_name:string mime_type:string = Document;
 ```
 
-[Theme files](https://core.telegram.org/themes) can be uploaded using [account.uploadTheme](/method/account.uploadTheme/): optionally a JPEG thumbnail for the theme can also be provided to `thumb`.  
+[Theme files](/themes/) can be uploaded using [account.uploadTheme](/method/account.uploadTheme/): optionally a JPEG thumbnail for the theme can also be provided to `thumb`.  
 The resulting document should be used when [creating](#creating-themes) or [updating](#updating-themes) themes.
 
 The actual content of the theme file depends on the formats supported by the theming engine of the client.

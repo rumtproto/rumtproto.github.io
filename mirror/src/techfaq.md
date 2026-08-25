@@ -9,7 +9,7 @@ layout: layout.njk
 
 # FAQ for the Technically Inclined
 
-> This FAQ about [MTProto](http://core.telegram.org/mtproto) is intended for advanced users. You may also want to check out our [**Basic FAQ**](http://telegram.org/faq).  
+> This FAQ about [MTProto](/mtproto/) is intended for advanced users. You may also want to check out our [**Basic FAQ**](/faq/).  
 > Note that client developers are required to comply with the [Security Guidelines](/mtproto/security_guidelines/).
 
 [**General**](#general-questions)
@@ -124,7 +124,7 @@ The weaknesses of such algorithms are also well-known, and have been exploited f
 
 #### Q: I'm a security expert and I have comments about your setup.
 
-Telegram welcomes developers and the security research community to audit its services, [code](https://telegram.org/apps#source-code) and [protocol](/mtproto/) seeking vulnerabilities or security-related issues. Check out our official [Bounty Program](https://core.telegram.org/bug-bounty) to learn how you can report your findings.
+Telegram welcomes developers and the security research community to audit its services, [code](/apps/#source-code) and [protocol](/mtproto/) seeking vulnerabilities or security-related issues. Check out our official [Bounty Program](/bug-bounty/) to learn how you can report your findings.
 
 Please note that we can't offer bounties for issues that are disclosed to the public before they are addressed.
 
@@ -211,13 +211,13 @@ MTProto supports [Perfect Forward Secrecy](https://en.wikipedia.org/wiki/Forward
 
 By definition, the known-plaintext attack (KPA) is an attack model for cryptanalysis where the attacker has samples of both the plaintext, and its encrypted version (ciphertext).
 
-AES IGE that is used in MTProto is robust against KPA attacks ([see this, if you wonder how one can securely use IGE](http://core.telegram.org/techfaq#q-do-you-use-ige-ige-is-broken)). On top of that, the plaintext in MTProto always contains server\_salt and session id.
+AES IGE that is used in MTProto is robust against KPA attacks ([see this, if you wonder how one can securely use IGE](/techfaq/#q-do-you-use-ige-ige-is-broken)). On top of that, the plaintext in MTProto always contains server\_salt and session id.
 
 #### Chosen-Plaintext Attacks
 
 By definition, a chosen-plaintext attack (CPA) is an attack model for cryptanalysis which presumes that the attacker has the capability to choose arbitrary plaintexts to be encrypted and obtain the corresponding ciphertexts.
 
-MTProto uses AES in IGE mode ([see this, if you wonder how one can securely use IGE](http://core.telegram.org/techfaq#q-do-you-use-ige-ige-is-broken)) that is [secure against non-adaptive CPAs](http://eprint.iacr.org/2006/271.pdf). IGE is known to be not secure against blockwise-adaptive CPA, but MTProto fixes this in the following manner:
+MTProto uses AES in IGE mode ([see this, if you wonder how one can securely use IGE](/techfaq/#q-do-you-use-ige-ige-is-broken)) that is [secure against non-adaptive CPAs](http://eprint.iacr.org/2006/271.pdf). IGE is known to be not secure against blockwise-adaptive CPA, but MTProto fixes this in the following manner:
 
 Each plaintext message to be encrypted always contains the following to be checked upon decryption:
 
@@ -271,14 +271,14 @@ Apart from that, changing the _msg\_key_ would also change the AES decryption ke
 
 As of Telegram 4.2, we support encrypted CDNs for caching media from public channels with over 100.000 members. The CDN caching nodes are located in regions with significant Telegram traffic where we wouldn't want to place Telegram servers for various reasons.
 
-> For technical details of the implementation, encryption and verification of data, [see the CDN manual](https://core.telegram.org/cdn).
+> For technical details of the implementation, encryption and verification of data, [see the CDN manual](/cdn/).
 
-See [this document](https://core.telegram.org/cdn/faq_ir) for a Persian version of this FAQ.  
-[بخش فارسی](https://core.telegram.org/cdn/faq_ir)
+See [this document](/cdn/faq_ir/) for a Persian version of this FAQ.  
+[بخش فارسی](/cdn/faq_ir/)
 
 #### Q: Why did you decide to use CDNs?
 
-We use our own distributed servers to speed up downloads in regions where freedom of speech is guaranteed — and even there [we don't take this for granted](https://telegram.org/faq#q-do-you-process-data-requests). But when Telegram becomes immensely popular in other areas, we can only rely on CDNs which we treat rather like ISPs from the technical standpoint in that they only get encrypted data they can't decipher.
+We use our own distributed servers to speed up downloads in regions where freedom of speech is guaranteed — and even there [we don't take this for granted](/faq/#q-do-you-process-data-requests). But when Telegram becomes immensely popular in other areas, we can only rely on CDNs which we treat rather like ISPs from the technical standpoint in that they only get encrypted data they can't decipher.
 
 Thanks to this technology, the download speed for public photos and videos can become significantly higher in regions like Turkey, Indonesia, South America, India, Iran or Iraq without the slightest compromise in security.
 
@@ -300,7 +300,7 @@ No. All original files are stored on the Telegram servers. The CDNs only get enc
 
 #### Q: Can I verify this?
 
-Yes. Anyone can verify our CDN implementation by checking the [source code](https://telegram.org/apps#source-code) of Telegram apps and inspecting traffic.
+Yes. Anyone can verify our CDN implementation by checking the [source code](/apps/#source-code) of Telegram apps and inspecting traffic.
 
 #### Q: Does this affect private data?
 

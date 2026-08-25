@@ -13,7 +13,7 @@ Indicates the location of a photo, will be deprecated soon
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 98. <a href="https://core.telegram.org/type/FileLocation?layer=98">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 98. <a href="/type/FileLocation/">Switch »</a></code></pre>
 
 ### Constructors
 

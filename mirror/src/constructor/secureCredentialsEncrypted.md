@@ -9,7 +9,7 @@ layout: layout.njk
 
 # secureCredentialsEncrypted
 
-Encrypted credentials required to decrypt [telegram passport](https://core.telegram.org/passport) data.
+Encrypted credentials required to decrypt [telegram passport](/passport/) data.
 
 <p class="page_layer">Layer 223</p>
 
@@ -17,7 +17,7 @@ Encrypted credentials required to decrypt [telegram passport](https://core.teleg
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Encrypted JSON-serialized data with unique user's payload, data hashes and secrets required for EncryptedPassportElement decryption and authentication, as described in <a href="https://core.telegram.org/passport#decrypting-data">decrypting data »</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Data hash for data authentication as described in <a href="https://core.telegram.org/passport#decrypting-data">decrypting data »</a></td></tr><tr><td><strong>secret</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Secret, encrypted with the bot's public RSA key, required for data decryption as described in <a href="https://core.telegram.org/passport#decrypting-data">decrypting data »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>data</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Encrypted JSON-serialized data with unique user's payload, data hashes and secrets required for EncryptedPassportElement decryption and authentication, as described in <a href="/passport/#decrypting-data">decrypting data »</a></td></tr><tr><td><strong>hash</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Data hash for data authentication as described in <a href="/passport/#decrypting-data">decrypting data »</a></td></tr><tr><td><strong>secret</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Secret, encrypted with the bot's public RSA key, required for data decryption as described in <a href="/passport/#decrypting-data">decrypting data »</a></td></tr></tbody></table>
 
 ### Type
 
@@ -25,6 +25,6 @@ Encrypted credentials required to decrypt [telegram passport](https://core.teleg
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

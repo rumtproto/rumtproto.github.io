@@ -9,8 +9,8 @@ layout: layout.njk
 
 # FAQ for the Technically Inclined (MTProto v.1.0)
 
-> This FAQ covers questions about the previous version of [MTProto](http://core.telegram.org/mtproto) (v.1.0) that is now deprecated.  
-> For questions about encryption used in up-to-date Telegram clients, kindly refer to [this document](http://core.telegram.org/techfaq).
+> This FAQ covers questions about the previous version of [MTProto](/mtproto/) (v.1.0) that is now deprecated.  
+> For questions about encryption used in up-to-date Telegram clients, kindly refer to [this document](/techfaq/).
 
 -   [What's new in MTProto 2.0?](#q-how-is-mtproto-2-0-different-from-version-1-0)
 -   [Why did you use SHA-1?](#q-why-did-you-use-sha-1-sha-1-is-broken)
@@ -54,6 +54,6 @@ To put this case into familiar terms:
 
 #### Hash collisions for Diffie-Hellman Keys
 
-Earlier versions of Telegram used a 128-bit fingerprint to create the key visualization. It was theoretically possible to spoof it, provided a man-in-the-middle attacker was prepared to spend [**hundreds of billions of dollars**](https://core.telegram.org/articles/DH_Hash_Collision) to spoof **one** secret chat (even using GPUs or ASICs). It would've also taken such a secret chat an entire month to be created instead of mere seconds, which would've certainly been hard to ignore.
+Earlier versions of Telegram used a 128-bit fingerprint to create the key visualization. It was theoretically possible to spoof it, provided a man-in-the-middle attacker was prepared to spend [**hundreds of billions of dollars**](/articles/DH_Hash_Collision/) to spoof **one** secret chat (even using GPUs or ASICs). It would've also taken such a secret chat an entire month to be created instead of mere seconds, which would've certainly been hard to ignore.
 
 Currently, the fingerprint uses an additional 160 bits from the SHA-256 of the key, yielding a total of 288 fingerprint bits, which makes the already infeasible attacks completely impossible.

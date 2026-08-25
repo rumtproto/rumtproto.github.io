@@ -125,4 +125,4 @@ If some impostor is pretending to be either _A_ or _B_ and tries to perform a Ma
 
 The use of hash commitment in the DH exchange constrains the attacker to only **one guess** to generate the correct visualization in their attack, which means that using just over 33 bits of entropy represented by four emoji in the visualization is enough to make a successful attack highly improbable.
 
-> For a slightly more user-friendly explanation of the above see: [How are calls authenticated?](https://core.telegram.org/techfaq#q-how-are-voice-calls-authenticated)
+> For a slightly more user-friendly explanation of the above see: [How are calls authenticated?](/techfaq/)

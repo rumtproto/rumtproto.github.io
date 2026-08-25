@@ -63,16 +63,24 @@
 </script>
 {% endif %}
 </head>
-<body{% if section and section != 'other' %} data-pagefind-filter="section:{% if section == 'ref' %}schema{% elif section == 'faq' %}other{% else %}{{ section }}{% endif %}"{% endif %}>
+{# The search filter names the section the way the menu does. `ref` — the 2 990
+   constructor/method/type pages — belongs to Schema, and the mirror's own pages
+   (`site`: home, search, 404) are not a section of the documentation at all, so
+   they carry no filter. #}
+{% set sectionNames = { api: 'Telegram API', bots: 'Bot API', mtproto: 'MTProto', schema: 'Schema', ref: 'Schema', blog: 'Blog', faq: 'FAQ', other: 'Other' } %}
+<body{% if section and section != 'site' %} data-pagefind-filter="section:{{ sectionNames[section] or section }}"{% endif %}>
 <a class="skip-link" href="#content">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="/">MTProto&nbsp;<span>Mirror</span></a>
     <nav class="top-nav" aria-label="Sections">
       <a href="/api/" {% if section == 'api' %}class="active" aria-current="section"{% endif %}>API</a>
+      <a href="/bots/" {% if section == 'bots' %}class="active" aria-current="section"{% endif %}>Bot API</a>
       <a href="/mtproto/" {% if section == 'mtproto' %}class="active" aria-current="section"{% endif %}>MTProto</a>
       <a href="/schema/" {% if section == 'schema' or section == 'ref' %}class="active" aria-current="section"{% endif %}>Schema</a>
+      <a href="/blog/stories/" {% if section == 'blog' %}class="active" aria-current="section"{% endif %}>Blog</a>
       <a href="/faq/" {% if section == 'faq' %}class="active" aria-current="section"{% endif %}>FAQ</a>
+      <a href="/apps/" {% if section == 'other' %}class="active" aria-current="section"{% endif %}>Other</a>
     </nav>
     <form class="site-search" action="/search/" method="get" role="search">
       <span class="search-field">
@@ -108,8 +116,8 @@
   </div>
 </header>
 <div class="layout">
-  {% set showAll = section == 'other' %}
-  {% set currentGroup = 'schema' if section == 'ref' else ('other' if section == 'faq' else section) %}
+  {% set showAll = section == 'site' %}
+  {% set currentGroup = 'schema' if section == 'ref' else section %}
   {% if crumbs and crumbs.length %}
     <div class="crumbs">
       {% for c in crumbs %}<a href="{{ c.url }}">{{ c.title }}</a>{% if not loop.last %} <span class="crumb-sep">›</span> {% endif %}{% endfor %}

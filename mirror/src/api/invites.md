@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Invite links
 
-[Chats and channels](/api/channel/) may have a public username or a private invite link: private invite links may be further enhanced with per-user [join requests](https://telegram.org/blog/shared-media-scrolling-calendar-join-requests-and-more#join-requests-for-groups-and-channels).
+[Chats and channels](/api/channel/) may have a public username or a private invite link: private invite links may be further enhanced with per-user [join requests](/blog/shared-media-scrolling-calendar-join-requests-and-more/#join-requests-for-groups-and-channels).
 
 ### Public usernames
 

@@ -11,7 +11,7 @@ layout: layout.njk
 
 Prompts the user to select and share one or more peers with the bot using [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/).
 
-Use this constructor to send a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button in a [reply keyboard](https://core.telegram.org/bots/features#keyboards) in a private chat.
+Use this constructor to send a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button in a [reply keyboard](/bots/features/#keyboards) in a private chat.
 
 See [peer requests](/api/bots/buttons/#peer-requests) for the full flow.
 
@@ -45,6 +45,6 @@ Available only in private chats, in [reply keyboards](/constructor/replyKeyboard
 
 See [peer requests](/api/bots/buttons/#peer-requests) for the full flow.
 
-#### [Telegram Bot Features](https://core.telegram.org/bots/features)
+#### [Telegram Bot Features](/bots/features/)
 
 This page describes individual bot elements in greater detail. For a general overview of bots, read the introduction to bots first.

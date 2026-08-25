@@ -174,7 +174,7 @@ dialogPeerFolder#514519e2 folder_id:int = DialogPeer;
 folders.editPeerFolders#6847d0ab folder_peers:Vector<InputFolderPeer> = Updates;
 ```
 
-API peer folders are typically used only by [archived chats](https://telegram.org/blog/archive-and-new-design), and are really handy for distinguishing groups of peers, since most peer-related constructors (updates, chat info) will contain the `folder_id` assigned the specified chat.
+API peer folders are typically used only by [archived chats](/blog/archive-and-new-design/), and are really handy for distinguishing groups of peers, since most peer-related constructors (updates, chat info) will contain the `folder_id` assigned the specified chat.
 
 In Telegram apps, API peer folders are used only to implement the chat archive, identified by `folder_id` `1`; all other peers are in `folder_id` `0` by default; no other `folder_id` is allowed at the moment.
 

@@ -13,7 +13,7 @@ Represents a message modified by AI.
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="https://core.telegram.org/constructor/messages.composedMessageWithAI?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="/constructor/messages.composedMessageWithAI/">Switch »</a></code></pre>
 
 ### Parameters
 

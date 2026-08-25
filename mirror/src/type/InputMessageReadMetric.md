@@ -13,7 +13,7 @@ Read metric for a single message exposure, describing how long the message was v
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="https://core.telegram.org/type/InputMessageReadMetric?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="/type/InputMessageReadMetric/">Switch »</a></code></pre>
 
 ### Constructors
 

@@ -9,7 +9,7 @@ layout: layout.njk
 
 # CdnPublicKey
 
-Public key to use **only** during handshakes to [CDN](https://core.telegram.org/cdn) DCs.
+Public key to use **only** during handshakes to [CDN](/cdn/) DCs.
 
 <p class="page_layer">Layer 223</p>
 
@@ -17,10 +17,10 @@ Public key to use **only** during handshakes to [CDN](https://core.telegram.org/
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/cdnPublicKey/">cdnPublicKey</a></td><td>Public key to use <strong>only</strong> during handshakes to <a href="https://core.telegram.org/cdn">CDN</a> DCs.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/cdnPublicKey/">cdnPublicKey</a></td><td>Public key to use <strong>only</strong> during handshakes to <a href="/cdn/">CDN</a> DCs.</td></tr></tbody></table>
 
 ### Related pages
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Encrypted CDNs for Speed and Security](/cdn/)
 
 How client apps download popular public files from secondary CDN data centers.

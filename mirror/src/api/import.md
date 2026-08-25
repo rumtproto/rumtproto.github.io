@@ -11,7 +11,7 @@ layout: layout.njk
 
 Telegram allows importing messages and media from foreign chat apps.
 
-> Note: This article is intended for MTProto API developers. If you're looking for a way to move history from other chat apps into Telegram, check out the related [Telegram blog post](https://telegram.org/blog/move-history).
+> Note: This article is intended for MTProto API developers. If you're looking for a way to move history from other chat apps into Telegram, check out the related [Telegram blog post](/blog/move-history/).
 
 ### 1\. Validate the chat export file
 

@@ -17,7 +17,7 @@ We welcome all developers to use our API and source code to [create Telegram-lik
 **1.2.** Developers are welcome to add new features or improve and extend existing Telegram features provided that these modifications do not violate these Terms of Service.  
 **1.3.** As a client developer, you must make sure that all the basic features of the main Telegram apps function correctly and in an expected way both in your app and when users of your app communicate with other Telegram users. It is forbidden to force users of other Telegram clients to download your app in order to view certain messages and content sent using your app.  
 **1.4.** It is forbidden to interfere with the basic functionality of Telegram. This includes but is not limited to: making actions on behalf of the user without the user's knowledge and consent, preventing self-destructing content from disappearing, preventing last seen and online statuses from being displayed correctly, tampering with the 'read' statuses of messages (e.g. implementing a 'ghost mode'), preventing typing statuses from being sent/displayed, etc.  
-**1.5.** Your use of the Telegram API is further subject to the Telegram [Terms of Service for Content Licensing and AI Scraping](https://telegram.org/tos/content-licensing). As such, you are prohibited from using, accessing or aggregating data obtained from the Telegram platform to train, fine-tune or otherwise engage in the development, enhancement or deployment of artificial intelligence, machine learning models and similar technologies.
+**1.5.** Your use of the Telegram API is further subject to the Telegram [Terms of Service for Content Licensing and AI Scraping](/tos/content-licensing/). As such, you are prohibited from using, accessing or aggregating data obtained from the Telegram platform to train, fine-tune or otherwise engage in the development, enhancement or deployment of artificial intelligence, machine learning models and similar technologies.
 
 #### 2\. Transparency
 
@@ -30,7 +30,7 @@ We welcome all developers to use our API and source code to [create Telegram-lik
 
 **3.1.** Developers are allowed to monetize their coding efforts through advertising or other legitimate means.  
 **3.2.** If you decide to monetize your app, you must clearly mention all the methods of monetization that are used in your app in all its app store descriptions.  
-**3.3.** If your app allows accessing content from Telegram [channels](https://telegram.org/tour/channels), you must include support for [official sponsored messages](/api/sponsored-messages/) in Telegram channels and may not interfere with this functionality.
+**3.3.** If your app allows accessing content from Telegram [channels](/tour/channels/), you must include support for [official sponsored messages](/api/sponsored-messages/) in Telegram channels and may not interfere with this functionality.
 
 #### 4\. Breach of terms
 

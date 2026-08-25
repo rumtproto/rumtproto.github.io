@@ -9,7 +9,7 @@ layout: layout.njk
 
 # messages.reportMessagesDelivery
 
-Used for [Telegram Gateway verification messages »](https://telegram.org/blog/star-messages-gateway-2-0-and-more#save-even-more-on-user-verification): indicate to the server that one or more [message](/constructor/message/)s were received by the client, if requested by the [message](/constructor/message/).**report\_delivery\_until\_date** flag or the equivalent flag in [push notifications](/api/push-updates/).
+Used for [Telegram Gateway verification messages »](/blog/star-messages-gateway-2-0-and-more/#save-even-more-on-user-verification): indicate to the server that one or more [message](/constructor/message/)s were received by the client, if requested by the [message](/constructor/message/).**report\_delivery\_until\_date** flag or the equivalent flag in [push notifications](/api/push-updates/).
 
 <p class="page_layer">Layer 223</p>
 

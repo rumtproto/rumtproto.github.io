@@ -9,7 +9,7 @@ layout: layout.njk
 
 # End-to-End Encryption, Secret Chats
 
-> This article on MTProto's End-to-End encryption is meant for **advanced users**. If you want to learn more about [Secret Chats](https://telegram.org/faq#secret-chats) from a less intimidating source, kindly see our [general FAQ](https://telegram.org/faq#secret-chats).
+> This article on MTProto's End-to-End encryption is meant for **advanced users**. If you want to learn more about [Secret Chats](/faq/#secret-chats) from a less intimidating source, kindly see our [general FAQ](/faq/#secret-chats).
 
 > Note that as of version 4.6, major Telegram clients are using **MTProto 2.0**. MTProto v.1.0 is deprecated and is currently being phased out.
 

@@ -101,7 +101,7 @@ Finally:
     The [messageActionGiftCode](/constructor/messageActionGiftCode/).`via_giveaway` flag will not be set.
     
     Note that if the payment was made on behalf of the user (i.e. if `boost_peer` was **not** set), then the users to which the gift was sent will instead receive a [messageService](/constructor/messageService/) from the user that sent the gift, containing a [messageActionGiftPremium](/constructor/messageActionGiftPremium/) constructor with further info about the price and duration of the gifted Telegram Premium subscription.  
-    Clients should display this message, along with a sticker from the [inputStickerSetPremiumGifts](/constructor/inputStickerSetPremiumGifts/) [stickerset](/api/stickers/): here's an [example](https://telegram.org/blog/custom-emoji#gifting-telegram-premium).
+    Clients should display this message, along with a sticker from the [inputStickerSetPremiumGifts](/constructor/inputStickerSetPremiumGifts/) [stickerset](/api/stickers/): here's an [example](/blog/custom-emoji/#gifting-telegram-premium).
     
 
 The [messageActionGiftCode](/constructor/messageActionGiftCode/).`slug` should be used to generate a [giftcode link](/api/links/#premium-giftcode-links), that the user can use to redeem the subscription, or re-gift it to someone else.

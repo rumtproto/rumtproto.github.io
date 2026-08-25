@@ -11,7 +11,7 @@ layout: layout.njk
 
 Authorization is associated with a client's encryption key identifier: **auth\_key\_id**. No additional parameters need to be passed into methods following authorization.
 
-To log in as a [bot](https://core.telegram.org/bots), follow [these instructions »](/api/bots/).
+To log in as a [bot](/bots/), follow [these instructions »](/api/bots/).
 
 The following alternative login flows are also available to users:
 
@@ -328,7 +328,7 @@ Note that a JSON version of the full list of methods that can be invoked over an
 
 ### Frozen accounts
 
-Accounts can be frozen for serious violations of Telegram's [ToS](https://telegram.org/tos).
+Accounts can be frozen for serious violations of Telegram's [ToS](/tos/).
 
 Frozen accounts are in read-only mode, and invoking many methods will emit one of the following errors:
 

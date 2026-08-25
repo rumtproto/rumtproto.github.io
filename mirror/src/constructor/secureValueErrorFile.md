@@ -39,7 +39,7 @@ Rental agreement
 
 #### [secureValueTypePassportRegistration](/constructor/secureValueTypePassportRegistration/)
 
-Internal registration [passport](https://core.telegram.org/passport)
+Internal registration [passport](/passport/)
 
 #### [secureValueTypeTemporaryRegistration](/constructor/secureValueTypeTemporaryRegistration/)
 

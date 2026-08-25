@@ -65,7 +65,7 @@ If the bot developer picks wrong N/M values (and/or depending on the output toke
 
 Please note that even if sensible local ratelimits are picked, the server may still send short cool-down FLOOD\_WAITs (at most `3` seconds) if the client makes too many queries in a very short period of time, even if no ratelimit was hit: make sure to respect them.
 
-The same ratelimits apply to the bot API counterparts of [messages.setTyping](/method/messages.setTyping/), like [sendMessageDraft](https://core.telegram.org/bots/api#sendmessagedraft), [sendChatAction](https://core.telegram.org/bots/api#sendchataction), and so on.
+The same ratelimits apply to the bot API counterparts of [messages.setTyping](/method/messages.setTyping/), like [sendMessageDraft](/bots/api/#sendmessagedraft), [sendChatAction](/bots/api/#sendchataction), and so on.
 
 > Please note that not all Telegram clients currently support rendering multiple live drafts with different `random_id`s in the same topic concurrently, some clients may treat all drafts sent to the same topic as having the same `random_id`.
 
@@ -75,4 +75,4 @@ Bots can behave like [forums »](/api/forum/) if **Threaded mode** is enabled vi
 
 This is especially useful for AI chatbots, see [here »](/api/forum/#bot-forums) for a detailed description of bot forums.
 
-Note: this feature is subject to an additional fee for Telegram Star purchases as described in [Section 6.2.6](https://telegram.org/tos/bot-developers#6-2-6-enabling-topics-in-private-chats) of our Terms of Service for Bot Developers.
+Note: this feature is subject to an additional fee for Telegram Star purchases as described in [Section 6.2.6](/tos/bot-developers/#6-2-6-enabling-topics-in-private-chats) of our Terms of Service for Bot Developers.

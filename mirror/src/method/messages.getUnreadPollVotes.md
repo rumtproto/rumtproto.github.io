@@ -13,7 +13,7 @@ Get messages containing polls with [unread votes »](/api/poll/#unread-poll-vote
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="https://core.telegram.org/method/messages.getUnreadPollVotes?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="/method/messages.getUnreadPollVotes/">Switch »</a></code></pre>
 
 ### Parameters
 

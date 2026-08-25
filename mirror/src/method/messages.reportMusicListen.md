@@ -13,7 +13,7 @@ Report the listening duration of a music track (audio document without the `voic
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="https://core.telegram.org/method/messages.reportMusicListen?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="/method/messages.reportMusicListen/">Switch »</a></code></pre>
 
 ### Parameters
 

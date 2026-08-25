@@ -43,7 +43,7 @@ Identity card
 
 #### [secureValueTypeInternalPassport](/constructor/secureValueTypeInternalPassport/)
 
-Internal [passport](https://core.telegram.org/passport)
+Internal [passport](/passport/)
 
 #### [secureValueTypeUtilityBill](/constructor/secureValueTypeUtilityBill/)
 
@@ -59,7 +59,7 @@ Rental agreement
 
 #### [secureValueTypePassportRegistration](/constructor/secureValueTypePassportRegistration/)
 
-Internal registration [passport](https://core.telegram.org/passport)
+Internal registration [passport](/passport/)
 
 #### [secureValueTypeTemporaryRegistration](/constructor/secureValueTypeTemporaryRegistration/)
 

@@ -9,7 +9,7 @@ layout: layout.njk
 
 # messageActionSecureValuesSent
 
-Request for secure [telegram passport](https://core.telegram.org/passport) values was sent
+Request for secure [telegram passport](/passport/) values was sent
 
 <p class="page_layer">Layer 223</p>
 
@@ -25,6 +25,6 @@ Request for secure [telegram passport](https://core.telegram.org/passport) value
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

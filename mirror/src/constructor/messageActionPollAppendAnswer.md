@@ -13,7 +13,7 @@ A new answer option was added to an [open-answer poll »](/api/poll/#open-answer
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="https://core.telegram.org/constructor/messageActionPollAppendAnswer?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="/constructor/messageActionPollAppendAnswer/">Switch »</a></code></pre>
 
 ### Parameters
 

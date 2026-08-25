@@ -9,7 +9,7 @@ layout: layout.njk
 
 # HTML5 games
 
-Bots can offer users [HTML5 games](https://core.telegram.org/bots/games) to play solo or to compete against each other in groups and one-on-one chats.
+Bots can offer users [HTML5 games](/bots/games/) to play solo or to compete against each other in groups and one-on-one chats.
 
 ### Sending a game
 

@@ -71,7 +71,33 @@ const SAME_RES = [/\]\((#[^)\s]+)\)/g, /<a\b[^>]*?href="(#[^"]+)"/g];
 // anchor exists (nor should). Fenced blocks and inline spans are masked before
 // links are collected. The raw-HTML <pre class="page_scheme"> listings are NOT
 // markdown code and stay untouched — their 11 607 schema links are real links.
-const stripCode = (md) => md.replace(/^```[\s\S]*?^```/gm, '').replace(/(`+)[\s\S]*?\1/g, '');
+// A fence closes only on a run of backticks at least as long as the opening one
+// (CommonMark): the Bot API samples are ````-fenced precisely because they
+// contain ``` lines of their own, and pairing every ``` would unmask half of
+// such a block — and with it, links that are only example text.
+const stripCode = (md) => {
+  const out = [];
+  let fence = 0;
+  for (const line of md.split('\n')) {
+    const m = /^\s*(`{3,})/.exec(line);
+    if (fence) {
+      if (m && m[1].length >= fence) fence = 0;
+      out.push('');
+      continue;
+    }
+    if (m) {
+      fence = m[1].length;
+      out.push('');
+      continue;
+    }
+    out.push(line);
+  }
+  // Inline spans are paired within a line. Across the whole document one stray
+  // backtick in prose shifts every pair after it, and the mask then covers the
+  // wrong halves — which is how `<a href="#...">`, written as an example of the
+  // Bot API's HTML mode, came back out as a link to check.
+  return out.map((l) => l.replace(/(`+)[^\n]*?\1/g, '')).join('\n');
+};
 
 // Where the page ends up on the site — the base every relative link is measured
 // against. `permalink` in the front matter wins (src/404.md is served as

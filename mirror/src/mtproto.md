@@ -9,7 +9,7 @@ layout: layout.njk
 
 # MTProto Mobile Protocol
 
-> Please feel free to check out our [FAQ for the Technically Inclined](http://core.telegram.org/techfaq). Client developers are required to comply with the [Security Guidelines](/mtproto/security_guidelines/).
+> Please feel free to check out our [FAQ for the Technically Inclined](/techfaq/). Client developers are required to comply with the [Security Guidelines](/mtproto/security_guidelines/).
 
 ### Related articles
 

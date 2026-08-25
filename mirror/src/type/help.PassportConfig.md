@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Help.PassportConfig
 
-Telegram [passport](https://core.telegram.org/passport) configuration
+Telegram [passport](/passport/) configuration
 
 <p class="page_layer">Layer 223</p>
 
@@ -22,14 +22,14 @@ Telegram [passport](https://core.telegram.org/passport) configuration
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/help.passportConfigNotModified/">help.passportConfigNotModified</a></td><td>Password configuration not modified</td></tr><tr><td><a href="/constructor/help.passportConfig/">help.passportConfig</a></td><td>Telegram <a href="https://core.telegram.org/passport">passport</a> configuration</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/help.passportConfigNotModified/">help.passportConfigNotModified</a></td><td>Password configuration not modified</td></tr><tr><td><a href="/constructor/help.passportConfig/">help.passportConfig</a></td><td>Telegram <a href="/passport/">passport</a> configuration</td></tr></tbody></table>
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/help.getPassportConfig/">help.getPassportConfig</a></td><td>Get <a href="https://core.telegram.org/passport">passport</a> configuration</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/help.getPassportConfig/">help.getPassportConfig</a></td><td>Get <a href="/passport/">passport</a> configuration</td></tr></tbody></table>
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

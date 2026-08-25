@@ -9,7 +9,7 @@ layout: layout.njk
 
 # account.verifyPhone
 
-Verify a phone number for telegram [passport](https://core.telegram.org/passport).
+Verify a phone number for telegram [passport](/passport/).
 
 <p class="page_layer">Layer 223</p>
 
@@ -36,8 +36,8 @@ Verify a phone number for telegram [passport](https://core.telegram.org/passport
 
 #### [account.sendVerifyPhoneCode](/method/account.sendVerifyPhoneCode/)
 
-Send the verification phone code for telegram [passport](https://core.telegram.org/passport).
+Send the verification phone code for telegram [passport](/passport/).
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

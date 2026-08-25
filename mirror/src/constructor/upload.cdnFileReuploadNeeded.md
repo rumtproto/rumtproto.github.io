@@ -9,7 +9,7 @@ layout: layout.njk
 
 # upload.cdnFileReuploadNeeded
 
-The file was cleared from the temporary RAM cache of the [CDN](https://core.telegram.org/cdn) and has to be re-uploaded.
+The file was cleared from the temporary RAM cache of the [CDN](/cdn/) and has to be re-uploaded.
 
 <p class="page_layer">Layer 223</p>
 
@@ -17,7 +17,7 @@ The file was cleared from the temporary RAM cache of the [CDN](https://core.tele
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>request_token</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Request token (see <a href="https://core.telegram.org/cdn">CDN</a>)</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>request_token</strong></td><td style="text-align: center;"><a href="/type/bytes/">bytes</a></td><td>Request token (see <a href="/cdn/">CDN</a>)</td></tr></tbody></table>
 
 ### Type
 
@@ -25,6 +25,6 @@ The file was cleared from the temporary RAM cache of the [CDN](https://core.tele
 
 ### Related pages
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Encrypted CDNs for Speed and Security](/cdn/)
 
 How client apps download popular public files from secondary CDN data centers.

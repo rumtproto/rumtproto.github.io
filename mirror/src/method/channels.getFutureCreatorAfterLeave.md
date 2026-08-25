@@ -13,7 +13,7 @@ Group/channel owners only: returns the ID of the user that will become the new o
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 223. <a href="https://core.telegram.org/method/channels.getFutureCreatorAfterLeave?layer=223">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 223. <a href="/method/channels.getFutureCreatorAfterLeave/">Switch »</a></code></pre>
 
 ### Parameters
 

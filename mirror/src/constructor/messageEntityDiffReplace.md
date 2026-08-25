@@ -18,7 +18,7 @@ See [here »](/api/entities/#diff-entities) for more info on how to render diff 
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="https://core.telegram.org/constructor/messageEntityDiffReplace?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="/constructor/messageEntityDiffReplace/">Switch »</a></code></pre>
 
 ### Parameters
 

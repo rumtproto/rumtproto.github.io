@@ -21,7 +21,7 @@ Contains info on file.
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/upload.file/">upload.file</a></td><td>File content.</td></tr><tr><td><a href="/constructor/upload.fileCdnRedirect/">upload.fileCdnRedirect</a></td><td>The file must be downloaded from a <a href="https://core.telegram.org/cdn">CDN DC</a>.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/upload.file/">upload.file</a></td><td>File content.</td></tr><tr><td><a href="/constructor/upload.fileCdnRedirect/">upload.fileCdnRedirect</a></td><td>The file must be downloaded from a <a href="/cdn/">CDN DC</a>.</td></tr></tbody></table>
 
 ### Methods
 

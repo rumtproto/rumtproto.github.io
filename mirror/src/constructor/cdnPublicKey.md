@@ -9,7 +9,7 @@ layout: layout.njk
 
 # cdnPublicKey
 
-Public key to use **only** during handshakes to [CDN](https://core.telegram.org/cdn) DCs.
+Public key to use **only** during handshakes to [CDN](/cdn/) DCs.
 
 <p class="page_layer">Layer 223</p>
 
@@ -17,7 +17,7 @@ Public key to use **only** during handshakes to [CDN](https://core.telegram.org/
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>dc_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><a href="https://core.telegram.org/cdn">CDN DC</a> ID</td></tr><tr><td><strong>public_key</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>RSA public key</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>dc_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td><a href="/cdn/">CDN DC</a> ID</td></tr><tr><td><strong>public_key</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>RSA public key</td></tr></tbody></table>
 
 ### Type
 
@@ -25,6 +25,6 @@ Public key to use **only** during handshakes to [CDN](https://core.telegram.org/
 
 ### Related pages
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Encrypted CDNs for Speed and Security](/cdn/)
 
 How client apps download popular public files from secondary CDN data centers.

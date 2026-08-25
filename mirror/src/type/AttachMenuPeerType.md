@@ -9,7 +9,7 @@ layout: layout.njk
 
 # AttachMenuPeerType
 
-Indicates a supported peer type for a [bot mini app attachment menu](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu)
+Indicates a supported peer type for a [bot mini app attachment menu](/bots/webapps/#launching-mini-apps-from-the-attachment-menu)
 
 <p class="page_layer">Layer 223</p>
 
@@ -25,4 +25,4 @@ Indicates a supported peer type for a [bot mini app attachment menu](https://cor
 
 ### Related pages
 
-#### [Telegram Mini Apps](https://core.telegram.org/bots/webapps)
+#### [Telegram Mini Apps](/bots/webapps/)

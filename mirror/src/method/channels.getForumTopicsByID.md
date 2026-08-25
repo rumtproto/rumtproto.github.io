@@ -13,7 +13,7 @@ Get forum topics by their ID
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 216. <a href="https://core.telegram.org/method/channels.getForumTopicsByID?layer=216">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 216. <a href="/method/channels.getForumTopicsByID/">Switch »</a></code></pre>
 
 ### Parameters
 

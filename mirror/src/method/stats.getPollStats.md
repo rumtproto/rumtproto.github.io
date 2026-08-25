@@ -13,7 +13,7 @@ Get [statistics](/api/stats/#poll-statistics) for a poll sent in a message.
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="https://core.telegram.org/method/stats.getPollStats?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="/method/stats.getPollStats/">Switch »</a></code></pre>
 
 ### Parameters
 

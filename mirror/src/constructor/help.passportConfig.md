@@ -9,7 +9,7 @@ layout: layout.njk
 
 # help.passportConfig
 
-Telegram [passport](https://core.telegram.org/passport) configuration
+Telegram [passport](/passport/) configuration
 
 <p class="page_layer">Layer 223</p>
 
@@ -29,6 +29,6 @@ Telegram [passport](https://core.telegram.org/passport) configuration
 
 How to fetch results from large lists of objects.
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

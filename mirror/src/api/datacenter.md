@@ -31,7 +31,7 @@ The client does not yet know which DC it will be associated with; therefore, it 
 
 #### Testing Redirects
 
-There are reserved phone number prefixes to test the correctness of the application's handling of redirects between DCs. Read more in [User Authorization](https://core.telegram.org/api/auth#test-phone-numbers) article.
+There are reserved phone number prefixes to test the correctness of the application's handling of redirects between DCs. Read more in [User Authorization](/api/auth/) article.
 
 ### File Access
 

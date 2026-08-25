@@ -9,7 +9,7 @@ layout: layout.njk
 
 # SecurePasswordKdfAlgo
 
-KDF algorithm to use for computing telegram [passport](https://core.telegram.org/passport) hash
+KDF algorithm to use for computing telegram [passport](/passport/) hash
 
 <p class="page_layer">Layer 223</p>
 
@@ -23,6 +23,6 @@ KDF algorithm to use for computing telegram [passport](https://core.telegram.org
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

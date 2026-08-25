@@ -9,7 +9,7 @@
     "nav": "node tools/gennav.mjs",
     "indexes": "node tools/genrefindexes.mjs",
     "icons": "python3 tools/make_icons.py",
-    "build": "eleventy && npm run clean:index && pagefind --site docs",
+    "build": "npm run clean && eleventy && pagefind --site docs",
     "serve": "eleventy --serve",
     "clean": "rm -rf docs",
     "clean:index": "rm -rf docs/pagefind",

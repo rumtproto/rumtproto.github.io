@@ -13,7 +13,7 @@ The bot token of a [managed bot »](/api/bots/managed-bots/#managing-a-managed-b
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="https://core.telegram.org/constructor/bots.exportedBotToken?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="/constructor/bots.exportedBotToken/">Switch »</a></code></pre>
 
 ### Parameters
 

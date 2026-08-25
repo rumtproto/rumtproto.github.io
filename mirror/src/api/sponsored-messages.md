@@ -121,7 +121,7 @@ Sponsored messages must be displayed as follows:
     -   The message should be marked as "Recommended" instead of "Sponsored" if the `recommended` flag is set.
     -   If the `photo` flag is set, it should be used to display a profile photo bubble for the sponsored message, like for messages sent in groups.
     -   If the `sponsor_info` or `additional_info` flags are set, an additional "Sponsor info" menu item must be present in the message context menu (the menu that pops up when clicking on a button), that when clicked, displays the contents of the flags.
--   In bots, they must be displayed [above the chat](https://telegram.org/blog/dynamic-video-quality-and-more#telegram-ads-in-bots), akin to an [action bar](/api/action-bar/) Bot ads have:
+-   In bots, they must be displayed [above the chat](/blog/dynamic-video-quality-and-more/#telegram-ads-in-bots), akin to an [action bar](/api/action-bar/) Bot ads have:
     
     -   A title (contained in `title`): must be locally prepended with a blue-colored "Ad" prefix, or a "Recommended" prefix if the `recommended` flag is set.
     -   A text (contained in `message`+`entities`)

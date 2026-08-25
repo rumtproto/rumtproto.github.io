@@ -14,7 +14,7 @@ The `id` field of [peers »](/api/peers/) (i.e. users, chats, channels, secret 
 The ID sequences of users, chats, channels and secret chats **overlap**, so it is a good idea to transform the peer IDs to bot API dialog IDs as specified below.
 
 A bot API dialog ID is a single, unique 64-bit peer ID sequence derived from the user, chat, channel and secret chat ID sequences, maintaining uniqueness across all of them.  
-Bot API dialog IDs are already used in the [bot API](https://core.telegram.org/bots/api) and in the underlying [tdlib](https://github.com/tdlib/td) library to identify peers.
+Bot API dialog IDs are already used in the [bot API](/bots/api/) and in the underlying [tdlib](https://github.com/tdlib/td) library to identify peers.
 
 As specified above, a bot API dialog ID may have more than 32 significant bits and some programming languages may have difficulty/silent defects in interpreting it. But, thanks to the ranges of the underlying MTProto IDs (specified below), it has at most 52 significant bits, so a 64-bit integer or even a double-precision float type are safe for storing this identifier.
 

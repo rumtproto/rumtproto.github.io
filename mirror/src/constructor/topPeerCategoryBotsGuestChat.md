@@ -13,7 +13,7 @@ Top [guest bots »](/api/bots/guest-mode/), i.e. bots most frequently invoked as
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="https://core.telegram.org/constructor/topPeerCategoryBotsGuestChat?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="/constructor/topPeerCategoryBotsGuestChat/">Switch »</a></code></pre>
 
 ### Parameters
 

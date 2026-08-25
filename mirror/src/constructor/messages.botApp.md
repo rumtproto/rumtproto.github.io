@@ -27,7 +27,7 @@ Contains information about a [direct link Mini App](/api/bots/webapps/#direct-li
 
 #### [messages.requestAppWebView](/method/messages.requestAppWebView/)
 
-Open a [bot mini app](https://core.telegram.org/bots/webapps) from a [direct Mini App deep link](/api/links/#direct-mini-app-links), sending over user information after user confirmation.
+Open a [bot mini app](/bots/webapps/) from a [direct Mini App deep link](/api/links/#direct-mini-app-links), sending over user information after user confirmation.
 
 After calling this method, until the user closes the webview, [messages.prolongWebView](/method/messages.prolongWebView/) must be called every 60 seconds.
 

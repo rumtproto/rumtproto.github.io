@@ -9,7 +9,7 @@ layout: layout.njk
 
 # inputSecureFileLocation
 
-Location of encrypted telegram [passport](https://core.telegram.org/passport) file.
+Location of encrypted telegram [passport](/passport/) file.
 
 <p class="page_layer">Layer 223</p>
 
@@ -27,8 +27,8 @@ Location of encrypted telegram [passport](https://core.telegram.org/passport) fi
 
 #### [secureFile](/constructor/secureFile/)
 
-Secure [passport](https://core.telegram.org/passport) file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile)
+Secure [passport](/passport/) file, for more info [see the passport docs »](/passport/encryption/#inputsecurefile)
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

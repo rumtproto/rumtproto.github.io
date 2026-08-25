@@ -13,7 +13,7 @@ Get [topics of a forum](/api/forum/)
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 216. <a href="https://core.telegram.org/method/channels.getForumTopics?layer=216">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 216. <a href="/method/channels.getForumTopics/">Switch »</a></code></pre>
 
 ### Parameters
 

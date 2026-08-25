@@ -9,10 +9,10 @@ layout: layout.njk
 
 # Inline queries
 
-Users can interact with your bot via [**inline queries**](https://core.telegram.org/bots/features#inline-requests), straight from the **text input field** in **any** chat.  
+Users can interact with your bot via [**inline queries**](/bots/features/#inline-requests), straight from the **text input field** in **any** chat.  
 This article describes the full inline bot flow, using the MTProto API.
 
-For a simplified description using the HTTP bot API, see [here »](https://core.telegram.org/bots/features#inline-requests).
+For a simplified description using the HTTP bot API, see [here »](/bots/features/#inline-requests).
 
 ### 1\. Making an inline query
 
@@ -32,7 +32,7 @@ When, in a graphical client, the user starts a message with an `@`, clients shou
 -   [messages.getInlineBotResults](/method/messages.getInlineBotResults/) is called, with the following parameters:
     -   `bot` - The bot peer
     -   `peer` - The chat where the user made the query (or [inputPeerEmpty](/constructor/inputPeerEmpty/) for [GIF searches](/api/gifs/) and other queries to built-in bots specified in the [config](/constructor/config/))
-    -   `geo_point` - The user's current geolocation, if the bot requires [location-based inline results](https://core.telegram.org/bots/inline#location-based-results) (the `bot_inline_geo` flag of the bot's [user constructor](/constructor/user/) will be set)
+    -   `geo_point` - The user's current geolocation, if the bot requires [location-based inline results](/bots/inline/#location-based-results) (the `bot_inline_geo` flag of the bot's [user constructor](/constructor/user/) will be set)
     -   `query` - What the user typed after the bot's username
     -   `offset` - If the user scrolls past the first `len(results)` results, and `next_offset` field is set, the inline query should be repeated with this offset.
 
@@ -59,7 +59,7 @@ messages.setInlineBotResults#bb12a419 flags:# gallery:flags.0?true private:flags
 ```
 
 Bots can answer to incoming [updateBotInlineQuery](/constructor/updateBotInlineQuery/) updates using [messages.setInlineBotResults](/method/messages.setInlineBotResults/).  
-Just like its [bot API counterpart](https://core.telegram.org/bots/api#answerinlinequery), the method can be used to send a set of inline results to the user; see the [constructor page for more info on the MTProto method parameters »](/method/messages.setInlineBotResults/).
+Just like its [bot API counterpart](/bots/api/#answerinlinequery), the method can be used to send a set of inline results to the user; see the [constructor page for more info on the MTProto method parameters »](/method/messages.setInlineBotResults/).
 
 In general, the method accepts a vector of [InputBotInlineResult](/type/InputBotInlineResult/) constructors, that when [chosen](#3-sending-the-inline-query-result), generates a message with optionally attached media, and even inline buttons.
 
@@ -136,10 +136,10 @@ inputBotInlineMessageID#890c3d89 dc_id:int id:long access_hash:long = InputBotIn
 updateBotInlineSend#12f12a07 flags:# user_id:long query:string geo:flags.0?GeoPoint id:string msg_id:flags.1?InputBotInlineMessageID = Update;
 ```
 
-If [feedback collection](https://core.telegram.org/bots/inline#collecting-feedback) is enabled, the bot may receive an [updateBotInlineSend](/constructor/updateBotInlineSend/) when the user [chooses and sends](#3-sending-the-inline-query-result) an inline result.
+If [feedback collection](/bots/inline/#collecting-feedback) is enabled, the bot may receive an [updateBotInlineSend](/constructor/updateBotInlineSend/) when the user [chooses and sends](#3-sending-the-inline-query-result) an inline result.
 
-Even if the [probability setting is set to 100%](https://core.telegram.org/bots/inline#collecting-feedback), not all inline results may be reported due to caching (see the `cache_time` parameter in [Answering a callback query](/api/bots/buttons/#answering-a-callback-query)).  
-[Feedback collection](https://core.telegram.org/bots/inline#collecting-feedback) can also create load issues for popular bots, so adjust the probability setting to a lower value in such cases.
+Even if the [probability setting is set to 100%](/bots/inline/#collecting-feedback), not all inline results may be reported due to caching (see the `cache_time` parameter in [Answering a callback query](/api/bots/buttons/#answering-a-callback-query)).  
+[Feedback collection](/bots/inline/#collecting-feedback) can also create load issues for popular bots, so adjust the probability setting to a lower value in such cases.
 
 Either way, feedback collection should only be used for statistical purposes rather than functional.
 
@@ -149,7 +149,7 @@ The [updateBotInlineSend](/constructor/updateBotInlineSend/) will contain:
 -   `msg_id` - The ID of the sent inline message
 -   `user_id` - The ID of the user that chose the result
 -   `query` - The query string that was used to obtain the result
--   `geo` - For bots requiring [location-based inline results](https://core.telegram.org/bots/inline#location-based-results), the user's location
+-   `geo` - For bots requiring [location-based inline results](/bots/inline/#location-based-results), the user's location
 
 ### 5\. Editing sent inline messages
 

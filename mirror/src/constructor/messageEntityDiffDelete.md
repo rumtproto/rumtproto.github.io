@@ -13,7 +13,7 @@ Represents an diff deletion: render it by simply underlining the specified secti
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="https://core.telegram.org/constructor/messageEntityDiffDelete?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="/constructor/messageEntityDiffDelete/">Switch »</a></code></pre>
 
 ### Parameters
 

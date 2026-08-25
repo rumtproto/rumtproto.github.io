@@ -12,7 +12,7 @@ layout: layout.njk
 Users can interact with your bot via **buttons** or even **inline buttons**, straight from inline **messages** in **any** chat.  
 This article describes the full button flow, using the MTProto API.
 
-For a simplified description using the HTTP bot API, see [here »](https://core.telegram.org/bots/features#keyboards).
+For a simplified description using the HTTP bot API, see [here »](/bots/features/#keyboards).
 
 ### Buttons
 
@@ -31,15 +31,15 @@ message#95ef6f2b flags:# out:flags.1?true mentioned:flags.4?true media_unread:fl
 messages.sendMessage#545cd15a flags:# no_webpage:flags.1?true silent:flags.5?true background:flags.6?true clear_draft:flags.7?true noforwards:flags.14?true update_stickersets_order:flags.15?true invert_media:flags.16?true allow_paid_floodskip:flags.19?true peer:InputPeer reply_to:flags.0?InputReplyTo message:string random_id:long reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> schedule_date:flags.10?int schedule_repeat_period:flags.24?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut effect:flags.18?long allow_paid_stars:flags.21?long suggested_post:flags.22?SuggestedPost = Updates;
 ```
 
-Bots can attach a [ReplyMarkup](/type/ReplyMarkup/) constructor to outgoing messages, to attach an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards) or a [custom reply keyboard](https://core.telegram.org/bots/features#keyboards):
+Bots can attach a [ReplyMarkup](/type/ReplyMarkup/) constructor to outgoing messages, to attach an [inline keyboard](/bots/features/#inline-keyboards) or a [custom reply keyboard](/bots/features/#keyboards):
 
--   [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/) - Sends a [custom reply keyboard](https://core.telegram.org/bots/features#keyboards).  
-    User clients receiving such a constructor should display a [special keyboard](https://core.telegram.org/bots/features#keyboards) with custom reply options.
--   [replyKeyboardHide](/constructor/replyKeyboardHide/) - Hides the [custom reply keyboard](https://core.telegram.org/bots/features#keyboards).  
-    User clients receiving this constructor should hide the [custom reply keyboard](https://core.telegram.org/bots/features#keyboards) opened by [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/)
--   [replyKeyboardForceReply](/constructor/replyKeyboardForceReply/) - Sends a [force reply](https://core.telegram.org/bots/api#forcereply) constructor  
+-   [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/) - Sends a [custom reply keyboard](/bots/features/#keyboards).  
+    User clients receiving such a constructor should display a [special keyboard](/bots/features/#keyboards) with custom reply options.
+-   [replyKeyboardHide](/constructor/replyKeyboardHide/) - Hides the [custom reply keyboard](/bots/features/#keyboards).  
+    User clients receiving this constructor should hide the [custom reply keyboard](/bots/features/#keyboards) opened by [replyKeyboardMarkup](/constructor/replyKeyboardMarkup/)
+-   [replyKeyboardForceReply](/constructor/replyKeyboardForceReply/) - Sends a [force reply](/bots/api/#forcereply) constructor  
     User clients receiving a message with this constructor should act as if the user had clicked on the reply button of the message, displaying the reply UI.
--   [replyInlineMarkup](/constructor/replyInlineMarkup/) - Attaches an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards) to the message, allowing users to send callback data to the bot without sending actual messages to the current chat.
+-   [replyInlineMarkup](/constructor/replyInlineMarkup/) - Attaches an [inline keyboard](/bots/features/#inline-keyboards) to the message, allowing users to send callback data to the bot without sending actual messages to the current chat.
 
 #### Button styles
 
@@ -68,7 +68,7 @@ Custom emoji icons can only be used inside of buttons the bot purchased addition
 
 ### Pressing buttons
 
-Both [reply](https://core.telegram.org/bots/features#keyboards) and [inline](https://core.telegram.org/bots/features#inline-keyboards) keyboards are composed of a vector of [rows](/constructor/keyboardButtonRow/), each row containing a vector of [buttons](/type/KeyboardButton/), for each column. Each row can have a different number of columns, and user clients should properly handle clicking buttons of every type.
+Both [reply](/bots/features/#keyboards) and [inline](/bots/features/#inline-keyboards) keyboards are composed of a vector of [rows](/constructor/keyboardButtonRow/), each row containing a vector of [buttons](/type/KeyboardButton/), for each column. Each row can have a different number of columns, and user clients should properly handle clicking buttons of every type.
 
 See each [KeyboardButton](/type/KeyboardButton/) constructor for where it can be used and what clients must do when it is pressed.
 

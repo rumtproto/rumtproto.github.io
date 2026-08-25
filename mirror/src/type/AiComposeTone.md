@@ -13,7 +13,7 @@ An [AI composer tone »](/api/ai/#ai-compose-tones), used to rephrase messages i
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="https://core.telegram.org/type/AiComposeTone?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="/type/AiComposeTone/">Switch »</a></code></pre>
 
 ### Constructors
 

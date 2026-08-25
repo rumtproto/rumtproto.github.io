@@ -9,7 +9,7 @@ layout: layout.njk
 
 # WebViewMessageSent
 
-Contains information about an inline message sent by a [Web App](https://core.telegram.org/bots/webapps) on behalf of a user.
+Contains information about an inline message sent by a [Web App](/bots/webapps/) on behalf of a user.
 
 <p class="page_layer">Layer 223</p>
 

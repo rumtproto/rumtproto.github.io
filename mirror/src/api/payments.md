@@ -9,19 +9,19 @@ layout: layout.njk
 
 # Payments API
 
-You can accept payments from Telegram users via [Telegram Bots](https://core.telegram.org/bots).
+You can accept payments from Telegram users via [Telegram Bots](/bots/).
 
-> Note: This article is intended for MTProto API developers. If you're looking for a general overview of Telegram Payments, check out the [Telegram blog](https://telegram.org/blog/payments) and the [bot API payment manual](https://core.telegram.org/bots/payments).
+> Note: This article is intended for MTProto API developers. If you're looking for a general overview of Telegram Payments, check out the [Telegram blog](/blog/payments/) and the [bot API payment manual](/bots/payments/).
 
 ### Introducing Payments
 
-Telegram bots can accept payments for goods and services from users. For more info on how payments work, check out the [Telegram Blog](https://telegram.org/blog/payments) and the [bot API payment manual](https://core.telegram.org/bots/payments).
+Telegram bots can accept payments for goods and services from users. For more info on how payments work, check out the [Telegram Blog](/blog/payments/) and the [bot API payment manual](/bots/payments/).
 
 This page will elaborate on the actions required to work with payments using the **MTProto API**.
 
-> A simplified version of the process is available only for bots using the [bot API](https://core.telegram.org/bots/payments).
+> A simplified version of the process is available only for bots using the [bot API](/bots/payments/).
 
-The first step for bots is [enable payments as described here »](https://core.telegram.org/bots/payments#the-payments-api).
+The first step for bots is [enable payments as described here »](/bots/payments/#the-payments-api).
 
 Then, we work with payments as follows.
 
@@ -43,7 +43,7 @@ inputMediaInvoice#405fef0d flags:# title:string description:string photo:flags.0
 messages.sendMedia#0330e77f flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true noforwards:flags.14?true update_stickersets_order:flags.15?true invert_media:flags.16?true allow_paid_floodskip:flags.19?true peer:InputPeer reply_to:flags.0?InputReplyTo media:InputMedia message:string random_id:long reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> schedule_date:flags.10?int schedule_repeat_period:flags.24?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut effect:flags.18?long allow_paid_stars:flags.21?long suggested_post:flags.22?SuggestedPost = Updates;
 ```
 
-The user contacts the bot and requests to purchase something. The bot forms an [inputMediaInvoice](/constructor/inputMediaInvoice/) with an [invoice](/constructor/invoice/) constructor with a description of the goods or service, amount to be paid, as well as requested shipping info. The `provider` parameter of the [inputMediaInvoice](/constructor/inputMediaInvoice/) constructor is where you put the token value that [you've obtained earlier via Botfather](https://core.telegram.org/bots/payments#the-payments-api). It is possible for one merchant bot to use several different tokens for different users or different goods and services.
+The user contacts the bot and requests to purchase something. The bot forms an [inputMediaInvoice](/constructor/inputMediaInvoice/) with an [invoice](/constructor/invoice/) constructor with a description of the goods or service, amount to be paid, as well as requested shipping info. The `provider` parameter of the [inputMediaInvoice](/constructor/inputMediaInvoice/) constructor is where you put the token value that [you've obtained earlier via Botfather](/bots/payments/#the-payments-api). It is possible for one merchant bot to use several different tokens for different users or different goods and services.
 
 Use the [messages.sendMedia](/method/messages.sendMedia/) method to send the [invoice](/constructor/invoice/). You can also attach an inline keyboard to the message using the `reply_markup` field: if provided, the first button must be a [keyboardButtonBuy](/constructor/keyboardButtonBuy/) button. Otherwise, an inline keyboard will be generated automatically, with a `Pay 'total price'` [keyboardButtonBuy](/constructor/keyboardButtonBuy/) as only button.
 

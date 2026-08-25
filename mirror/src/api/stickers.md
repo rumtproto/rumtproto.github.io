@@ -63,7 +63,7 @@ Static stickers are [WebP](https://en.wikipedia.org/wiki/WebP) images with the f
 
 They're identified by `mime_type` field of the associated [document](/constructor/document/), always equal to `image/webp`.
 
-See [here »](https://core.telegram.org/stickers#static-stickers-and-emoji) for tips on how to create the perfect static sticker, and [here »](#creating-stickersets) for info on how to upload it using the API.
+See [here »](/stickers/#static-stickers-and-emoji) for tips on how to create the perfect static sticker, and [here »](#creating-stickersets) for info on how to upload it using the API.
 
 #### Animated stickers
 
@@ -81,7 +81,7 @@ Lottie animation specs:
 
 They're identified by `mime_type` field of the associated [document](/constructor/document/), always equal to `application/x-tgsticker`.
 
-See [here »](https://core.telegram.org/stickers#creating-animations) for tips on how to create the perfect animated sticker, and [here »](#creating-stickersets) for info on how to upload it using the API.
+See [here »](/stickers/) for tips on how to create the perfect animated sticker, and [here »](#creating-stickersets) for info on how to upload it using the API.
 
 ##### Premium animated sticker effects
 
@@ -123,7 +123,7 @@ Video stickers are [VP9](https://en.wikipedia.org/wiki/VP9) videos with the foll
 
 They're identified by `mime_type` field of the associated [document](/constructor/document/), always equal to `video/webm`.
 
-See [here »](https://core.telegram.org/stickers#video-stickers-and-emoji) for tips on how to create the perfect video sticker, and [here »](#creating-stickersets) for info on how to upload it using the API.
+See [here »](/stickers/#video-stickers-and-emoji) for tips on how to create the perfect video sticker, and [here »](#creating-stickersets) for info on how to upload it using the API.
 
 ### Stickersets
 
@@ -284,7 +284,7 @@ Use [messages.uploadMedia](/method/messages.uploadMedia/) to upload stickers and
 
 Use [stickers.checkShortName](/method/stickers.checkShortName/) to check if a given short name is available, and [stickers.suggestShortName](/method/stickers.suggestShortName/) to let the server suggest a short name, given the stickerset title.
 
-Use [stickers.createStickerSet](/method/stickers.createStickerSet/) to create normal, [mask](#mask-stickers) and [custom emoji](/api/custom-emoji/) stickersets, _also_ when [importing stickers using the stickers SDK](https://core.telegram.org/import-stickers).
+Use [stickers.createStickerSet](/method/stickers.createStickerSet/) to create normal, [mask](#mask-stickers) and [custom emoji](/api/custom-emoji/) stickersets, _also_ when [importing stickers using the stickers SDK](/import-stickers/).
 
 Use [stickers.addStickerToSet](/method/stickers.addStickerToSet/) to add stickers to the stickerset.  
 Use [stickers.replaceSticker](/method/stickers.replaceSticker/) to replace a sticker in a stickerset (no need to pass the actual stickerset ID here).  

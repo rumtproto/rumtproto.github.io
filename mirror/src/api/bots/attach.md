@@ -67,9 +67,9 @@ In particular, when clicking on such a link, [messages.getAttachMenuBot](/method
 -   If the [attachMenuBot](/constructor/attachMenuBot/).`inactive` flag:
     -   ...is set, the attachment/side menu entry is not installed.  
         Thus, before launching the mini app when clicking on a [attachment/side menu deep link](/api/links/#bot-attachment-or-side-menu-links), the client should show a prompt to the user, asking to add the mini app to the attachment/side menu.  
-        Note that if the [attachMenuBot](/constructor/attachMenuBot/).`side_menu_disclaimer_needed` flag is set, an additional mandatory checkbox to accept the [mini apps TOS](https://telegram.org/tos/mini-apps) and a disclaimer indicating that this Mini App is not affiliated to Telegram should be shown in the installation prompt.  
+        Note that if the [attachMenuBot](/constructor/attachMenuBot/).`side_menu_disclaimer_needed` flag is set, an additional mandatory checkbox to accept the [mini apps TOS](/tos/mini-apps/) and a disclaimer indicating that this Mini App is not affiliated to Telegram should be shown in the installation prompt.  
         If the user accepts, invoke [messages.toggleBotInAttachMenu](/method/messages.toggleBotInAttachMenu/) with the `write_allowed` flag set and proceed to the next step, otherwise abort the process.
-    -   ...is not set, and the [attachMenuBot](/constructor/attachMenuBot/).`side_menu_disclaimer_needed` flag is still set, an additional mandatory checkbox to accept the [mini apps TOS](https://telegram.org/tos/mini-apps) and a disclaimer indicating that this Mini App is not affiliated to Telegram should be shown.  
+    -   ...is not set, and the [attachMenuBot](/constructor/attachMenuBot/).`side_menu_disclaimer_needed` flag is still set, an additional mandatory checkbox to accept the [mini apps TOS](/tos/mini-apps/) and a disclaimer indicating that this Mini App is not affiliated to Telegram should be shown.  
         If the user accepts, proceed to the next step, otherwise abort the process.
 -   Open the Mini App:
     -   If the link is a [direct mini app link](/api/links/#direct-mini-app-links), open the Mini App regardless of the currently open Telegram chat (in fact, the Mini App should be opened even if the client itself is minimized), as specified [here »](/api/bots/webapps/#direct-link-mini-apps).

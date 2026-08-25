@@ -13,7 +13,7 @@ Bots may use this method to answer a [guest mode »](/api/bots/guest-mode/) quer
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="https://core.telegram.org/method/messages.setBotGuestChatResult?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="/method/messages.setBotGuestChatResult/">Switch »</a></code></pre>
 
 ### Parameters
 

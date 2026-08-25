@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Admin, banned, default rights
 
-[Channels and supergroups](/api/channel/) allow setting [granular permissions](https://telegram.org/blog/permissions-groups-undo) both for admins and specific users. [Channels, supergroups and basic groups](/api/channel/) also allow setting global granular permissions for users.
+[Channels and supergroups](/api/channel/) allow setting [granular permissions](/blog/permissions-groups-undo/) both for admins and specific users. [Channels, supergroups and basic groups](/api/channel/) also allow setting global granular permissions for users.
 
 They can be modified as follows:
 

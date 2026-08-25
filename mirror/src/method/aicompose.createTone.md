@@ -13,7 +13,7 @@ Create a new custom [AI composer tone »](/api/ai/#ai-compose-tones).
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="https://core.telegram.org/method/aicompose.createTone?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="/method/aicompose.createTone/">Switch »</a></code></pre>
 
 ### Parameters
 

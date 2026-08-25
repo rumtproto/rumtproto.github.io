@@ -16,7 +16,7 @@ Photo
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Result ID</td></tr><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Result type (see <a href="https://core.telegram.org/bots/api#inlinequeryresult">bot API docs</a>)</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/type/InputPhoto/">InputPhoto</a></td><td>Photo to send</td></tr><tr><td><strong>send_message</strong></td><td style="text-align: center;"><a href="/type/InputBotInlineMessage/">InputBotInlineMessage</a></td><td>Message to send when the result is selected</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>id</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Result ID</td></tr><tr><td><strong>type</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Result type (see <a href="/bots/api/#inlinequeryresult">bot API docs</a>)</td></tr><tr><td><strong>photo</strong></td><td style="text-align: center;"><a href="/type/InputPhoto/">InputPhoto</a></td><td>Photo to send</td></tr><tr><td><strong>send_message</strong></td><td style="text-align: center;"><a href="/type/InputBotInlineMessage/">InputBotInlineMessage</a></td><td>Message to send when the result is selected</td></tr></tbody></table>
 
 ### Type
 
@@ -24,4 +24,4 @@ Photo
 
 ### Related pages
 
-#### [Telegram Bot API](https://core.telegram.org/bots/api)
+#### [Telegram Bot API](/bots/api/)

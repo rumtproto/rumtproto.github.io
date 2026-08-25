@@ -9,7 +9,7 @@ layout: layout.njk
 
 # account.getSecureValue
 
-Get saved [Telegram Passport](https://core.telegram.org/passport) document, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption)
+Get saved [Telegram Passport](/passport/) document, [for more info see the passport docs »](/passport/encryption/#encryption)
 
 <p class="page_layer">Layer 223</p>
 
@@ -28,10 +28,10 @@ Get saved [Telegram Passport](https://core.telegram.org/passport) document, [for
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport Encryption Details](/passport/encryption/)
 
 How Telegram Passport data is stored and encrypted end-to-end.

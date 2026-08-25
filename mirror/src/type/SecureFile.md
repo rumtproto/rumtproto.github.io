@@ -9,7 +9,7 @@ layout: layout.njk
 
 # SecureFile
 
-Secure [passport](https://core.telegram.org/passport) file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile)
+Secure [passport](/passport/) file, for more info [see the passport docs »](/passport/encryption/#inputsecurefile)
 
 <p class="page_layer">Layer 223</p>
 
@@ -18,14 +18,14 @@ Secure [passport](https://core.telegram.org/passport) file, for more info [see t
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/secureFileEmpty/">secureFileEmpty</a></td><td>Empty constructor</td></tr><tr><td><a href="/constructor/secureFile/">secureFile</a></td><td>Secure <a href="https://core.telegram.org/passport">passport</a> file, for more info <a href="https://core.telegram.org/passport/encryption#inputsecurefile">see the passport docs »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/secureFileEmpty/">secureFileEmpty</a></td><td>Empty constructor</td></tr><tr><td><a href="/constructor/secureFile/">secureFile</a></td><td>Secure <a href="/passport/">passport</a> file, for more info <a href="/passport/encryption/#inputsecurefile">see the passport docs »</a></td></tr></tbody></table>
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport Encryption Details](/passport/encryption/)
 
 How Telegram Passport data is stored and encrypted end-to-end.

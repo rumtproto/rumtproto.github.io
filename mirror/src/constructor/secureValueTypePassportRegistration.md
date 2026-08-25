@@ -9,7 +9,7 @@ layout: layout.njk
 
 # secureValueTypePassportRegistration
 
-Internal registration [passport](https://core.telegram.org/passport)
+Internal registration [passport](/passport/)
 
 <p class="page_layer">Layer 223</p>
 
@@ -25,6 +25,6 @@ This constructor does not require any parameters.
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

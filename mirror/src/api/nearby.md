@@ -25,7 +25,7 @@ Use [contacts.getLocated](/method/contacts.getLocated/) to fetch a list of nearb
 
 Do **not** set any of the `background`, `self_expires` flags: only populate `geo_point` with the current geolocation of the user: a list of users and geogroups located nearby will be returned (**without** publishing the current location of the user).
 
-This functionality is useful for example to [exchange contacts](/api/contacts/#adding-telegram-users-as-contacts) with a nearby Telegram user, or [join](/method/channels.joinChannel/) a location-based group chat, see [here »](https://telegram.org/blog/contacts-local-groups) for more use cases.
+This functionality is useful for example to [exchange contacts](/api/contacts/#adding-telegram-users-as-contacts) with a nearby Telegram user, or [join](/method/channels.joinChannel/) a location-based group chat, see [here »](/blog/contacts-local-groups/) for more use cases.
 
 See [here »](#creating-a-geogroup) for more info on how to create a geogroup, and [here »](#advertising-our-current-location) for more info on how to advertise our current location to other users.
 

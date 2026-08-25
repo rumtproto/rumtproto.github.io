@@ -13,7 +13,7 @@ Used in a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) b
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="https://core.telegram.org/constructor/requestPeerTypeCreateBot?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="/constructor/requestPeerTypeCreateBot/">Switch »</a></code></pre>
 
 ### Parameters
 

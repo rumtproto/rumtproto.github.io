@@ -93,7 +93,7 @@ Each notification has several parameters that describe it.
     -   mention - Whether the current user was mentioned/replied to in this new message
     -   silent - Whether the message was posted silently (no sound should be played for this notification)
     -   schedule - Whether the message is outgoing and was sent via [scheduled messages](/api/scheduled-messages/)
-    -   report\_delivery\_until\_date - If set and the current unixtime is bigger than the specified unixtime, invoke [messages.reportMessagesDelivery](/method/messages.reportMessagesDelivery/), setting the `push` flag and passing the ID and the peer of this message as soon as it is received by the client (optionally batching requests for the same peer), used for [Telegram Gateway verification messages](https://telegram.org/blog/star-messages-gateway-2-0-and-more#save-even-more-on-user-verification).
+    -   report\_delivery\_until\_date - If set and the current unixtime is bigger than the specified unixtime, invoke [messages.reportMessagesDelivery](/method/messages.reportMessagesDelivery/), setting the `push` flag and passing the ID and the peer of this message as soon as it is received by the client (optionally batching requests for the same peer), used for [Telegram Gateway verification messages](/blog/star-messages-gateway-2-0-and-more/#save-even-more-on-user-verification).
     -   edit\_date - When was the message last edited
     -   top\_msg\_id - thread\_id for new mentions/replies in [threads](/api/threads/)
     -   data\_url - Full URL of the webpage trying to login using OAUTH\_REQUEST

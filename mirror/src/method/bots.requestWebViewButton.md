@@ -13,7 +13,7 @@ Bots may use this method to prepare a peer request button for a [Mini App](/api/
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="https://core.telegram.org/method/bots.requestWebViewButton?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="/method/bots.requestWebViewButton/">Switch »</a></code></pre>
 
 ### Parameters
 
@@ -35,7 +35,7 @@ Bots may use this method to prepare a peer request button for a [Mini App](/api/
 
 Prompts the user to select and share one or more peers with the bot using [messages.sendBotRequestedPeer](/method/messages.sendBotRequestedPeer/).
 
-Use this constructor to send a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button in a [reply keyboard](https://core.telegram.org/bots/features#keyboards) in a private chat.
+Use this constructor to send a [keyboardButtonRequestPeer](/constructor/keyboardButtonRequestPeer/) button in a [reply keyboard](/bots/features/#keyboards) in a private chat.
 
 See [peer requests](/api/bots/buttons/#peer-requests) for the full flow.
 

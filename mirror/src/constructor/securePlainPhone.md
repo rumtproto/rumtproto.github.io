@@ -9,7 +9,7 @@ layout: layout.njk
 
 # securePlainPhone
 
-Phone number to use in [telegram passport](https://core.telegram.org/passport): [it must be verified, first »](https://core.telegram.org/passport/encryption#secureplaindata).
+Phone number to use in [telegram passport](/passport/): [it must be verified, first »](/passport/encryption/#secureplaindata).
 
 <p class="page_layer">Layer 223</p>
 
@@ -25,10 +25,10 @@ Phone number to use in [telegram passport](https://core.telegram.org/passport): 
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport Encryption Details](/passport/encryption/)
 
 How Telegram Passport data is stored and encrypted end-to-end.

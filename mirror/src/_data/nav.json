@@ -7,652 +7,896 @@
     {
      "url": "/api/",
      "title": "Telegram APIs",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/account-deletion/",
      "title": "Account deletion",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/action-bar/",
      "title": "Action bar",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/age-verification/",
      "title": "Age verification",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/ai/",
      "title": "AI features",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/animated-emojis/",
      "title": "Animated Emojis",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/antispam/",
      "title": "Native antispam system",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/auctions/",
      "title": "Collectible gift auctions",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/auth/",
      "title": "User Authorization",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/block/",
      "title": "Blocked users",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/boost/",
      "title": "Channel and supergroup boosts",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/",
      "title": "Working with bots",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/ai/",
      "title": "AI features for bots",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/attach/",
      "title": "Bot attachment menu and side menu entries",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/bot-to-bot/",
      "title": "Bot-to-bot communication",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/buttons/",
      "title": "Bot buttons",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/commands/",
      "title": "Bot commands",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/connected-business-bots/",
      "title": "Connected business bots",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/games/",
      "title": "HTML5 games",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/guest-mode/",
      "title": "Guest mode for bots",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/ids/",
      "title": "Bot API dialog IDs",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/info/",
      "title": "Edit bot information",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/inline/",
      "title": "Inline queries",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/managed-bots/",
      "title": "Managed bots",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/menu/",
      "title": "Bot menu button",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/referrals/",
      "title": "Affiliate programs",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/verification/",
      "title": "Third-party verification",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/bots/webapps/",
      "title": "Mini Apps on Telegram",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/business/",
      "title": "Telegram Business",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/calls/",
      "title": "Phone calls",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/channel/",
      "title": "Channels, supergroups, gigagroups and basic groups",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/colors/",
      "title": "Accent colors",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/config.json/",
      "title": "config.json",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/config/",
      "title": "Client configuration",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/contacts/",
      "title": "Contact list",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/content-protection/",
      "title": "Content protection",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/custom-emoji/",
      "title": "Custom emojis",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/datacenter/",
      "title": "Working with Different Data Centers",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/dice/",
      "title": "Animated dice",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/discussion/",
      "title": "Discussion groups",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/drafts/",
      "title": "Message drafts",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/effects/",
      "title": "Animated message effects",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/emoji-categories/",
      "title": "Emoji categories",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/emoji-status/",
      "title": "Emoji status",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/end-to-end_v1/",
      "title": "Secret chats, end-to-end encryption (v. 1.0, DEPRECATED)",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/end-to-end/",
      "title": "End-to-End Encryption, Secret Chats",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/end-to-end/group-calls/",
      "title": "E2E Group Calls",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/end-to-end/pfs/",
      "title": "Perfect Forward Secrecy",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/end-to-end/seq_no/",
      "title": "Sequence numbers in Secret Chats",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/end-to-end/video-calls/",
      "title": "End-to-End Encrypted Voice and Video Calls",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/end-to-end/voice-calls/",
      "title": "End-to-End Encrypted Voice Calls",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/entities/",
      "title": "Styled text with message entities",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/errors.json/",
      "title": "errors.json",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/errors/",
      "title": "Error handling",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/factcheck/",
      "title": "Fact checks",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/file-reference-generator/",
      "title": "File reference generator",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/file-references/",
      "title": "File references",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/file-references/db-schema/",
      "title": "DB schema",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/file-references/incoming-traversers/",
      "title": "Incoming file reference traversers",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/file-references/map-schema/",
      "title": "File reference map file schema",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/file-references/outgoing-traversers/",
      "title": "Outgoing file reference traversers",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/file-references/refresh-actions/",
      "title": "Refresh actions",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/file-references/sources/",
      "title": "File reference sources",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/files/",
      "title": "Uploading and Downloading Files",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/folders/",
      "title": "Dialog folders",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/forum/",
      "title": "Forum topics",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/fragment/",
      "title": "Fragment collectibles",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/gifs/",
      "title": "Working with GIFs",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/gifts/",
      "title": "Telegram Gifts",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/giveaways/",
      "title": "Giveaways and gifts",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/group-calls/",
      "title": "Group calls",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/import/",
      "title": "Imported messages",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/invites/",
      "title": "Invite links",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/invoking/",
      "title": "Calling API Methods",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/layers/",
      "title": "Layer changelog",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/links/",
      "title": "Deep links",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/live-location/",
      "title": "Live geolocation",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/mentions/",
      "title": "Mentions and replies",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/min/",
      "title": "Min constructors",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/monoforum/",
      "title": "Direct messages to channels",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/nearby/",
      "title": "Nearby users&chats",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/obtaining_api_id/",
      "title": "Creating your Telegram Application",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/offsets/",
      "title": "Pagination in the API",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/optimisation/",
      "title": "Client-Side Optimization",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/paid-media/",
      "title": "Paid media",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/paid-messages/",
      "title": "Paid messages",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/passkeys/",
      "title": "Passkey login",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/passport/",
      "title": "Telegram passport",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/pattern/",
      "title": "Pattern matching",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/payments/",
      "title": "Payments API",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/peers/",
      "title": "Peer database",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/pfs/",
      "title": "Perfect Forward Secrecy",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/pin/",
      "title": "Pinned messages",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/poll/",
      "title": "Polls and quizzes",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/premium/",
      "title": "Telegram Premium",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/privacy/",
      "title": "Privacy settings",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/profile/",
      "title": "User profiles",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/push-updates/",
      "title": "Handling PUSH-notifications",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/qr-login/",
      "title": "Login via QR code",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/rank/",
      "title": "Rank",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/reactions/",
      "title": "Message reactions",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/recent-actions/",
      "title": "Admin log",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/recommend/",
      "title": "Similar channels and bots",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/revenue/",
      "title": "Channel and bot ad revenue",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/rights/",
      "title": "Admin, banned, default rights",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/ringtones/",
      "title": "Notification sounds",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/saved-messages/",
      "title": "Saved messages",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/scheduled-messages/",
      "title": "Scheduled messages",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/search/",
      "title": "Search and filters",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/sponsored-messages/",
      "title": "Sponsored messages",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/srp/",
      "title": "Two-factor authentication",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/stars/",
      "title": "Telegram Stars",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/stats/",
      "title": "Channel statistics",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/stickers/",
      "title": "Stickers and masks",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/stories/",
      "title": "Telegram Stories",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/subscriptions/",
      "title": "Star subscriptions",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/suggested-posts/",
      "title": "Suggested posts",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/takeout/",
      "title": "Takeout API",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/terms/",
      "title": "Telegram API Terms of Service",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/themes/",
      "title": "Telegram themes",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/threads/",
      "title": "Message threads",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/todo/",
      "title": "Checklists and to-do lists",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/top-rating/",
      "title": "Top peer rating",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/transcribe/",
      "title": "Voice message transcription",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/translation/",
      "title": "Message translation",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/updates/",
      "title": "Working with Updates",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/url-authorization/",
      "title": "Seamless Telegram Login",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/views/",
      "title": "Views and read metrics",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/wallpapers/",
      "title": "Chat wallpapers",
-     "section": "api"
+     "section": "api",
+     "date": ""
     },
     {
      "url": "/api/web-events/",
      "title": "Web events",
-     "section": "api"
+     "section": "api",
+     "date": ""
+    }
+   ]
+  },
+  {
+   "key": "bots",
+   "title": "Bot API",
+   "items": [
+    {
+     "url": "/bots/",
+     "title": "Bots: An introduction for developers",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/2-0-intro/",
+     "title": "Introducing Bot API 2.0",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/api-changelog/",
+     "title": "Bot API changelog",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/api/",
+     "title": "Telegram Bot API",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/blockchain-guidelines/",
+     "title": "Blockchain Guidelines",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/features/",
+     "title": "Telegram Bot Features",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/games/",
+     "title": "Gaming Platform",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/inline/",
+     "title": "Inline Bots",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/payments-stars/",
+     "title": "Bot Payments API for Digital Goods and Services",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/payments/",
+     "title": "Bot Payments API",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/payments/currencies.json/",
+     "title": "currencies.json",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/samples/",
+     "title": "Bot API Library Examples",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/samples/hellobot/",
+     "title": "Hellobot",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/self-signed/",
+     "title": "Using self-signed certificates",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/telegram-login/",
+     "title": "Log In With Telegram",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/tutorial/",
+     "title": "From BotFather to 'Hello World'",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/webapps/",
+     "title": "Telegram Mini Apps",
+     "section": "bots",
+     "date": ""
+    },
+    {
+     "url": "/bots/webhooks/",
+     "title": "Marvin's Marvellous Guide to All Things Webhook",
+     "section": "bots",
+     "date": ""
     }
    ]
   },
@@ -663,117 +907,140 @@
     {
      "url": "/mtproto/",
      "title": "MTProto Mobile Protocol",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/description/",
      "title": "Mobile Protocol: Detailed Description",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/auth_key/",
      "title": "Creating an Authorization Key",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/samples-auth_key/",
      "title": "Auth key generation example",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/security_guidelines/",
      "title": "Security Guidelines for Client Developers",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/serialize/",
      "title": "Binary Data Serialization",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/service_messages/",
      "title": "Service Messages",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/service_messages_about_messages/",
      "title": "Service Messages about Messages",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/transports/",
      "title": "Transport protocols",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/mtproto-transports/",
      "title": "MTProto transports",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/TL/",
      "title": "TL Language",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto_v1/",
      "title": "MTProto Mobile Protocol v.1.0 (DEPRECATED)",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/description_v1/",
      "title": "Mobile Protocol: Detailed Description (v.1.0, DEPRECATED)",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/security_guidelines_v1/",
      "title": "Security Guidelines for Client Developers (v.1.0, DEPRECATED)",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/TL-abstract-types/",
      "title": "Binary serialization and abstract TL types",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/TL-combinators/",
      "title": "Formal description of TL combinators",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/TL-dependent/",
      "title": "TL dependent types",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/TL-formal/",
      "title": "Formal TL declaration",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/TL-optargs/",
      "title": "Optional combinator parameters and their values",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/TL-patterns/",
      "title": "TL template types",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/TL-polymorph/",
      "title": "Polymorphism in TL",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/TL-tl/",
      "title": "TL schema for serialization of TL schemas",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     },
     {
      "url": "/mtproto/TL-types/",
      "title": "Type serialization",
-     "section": "mtproto"
+     "section": "mtproto",
+     "date": ""
     }
    ]
   },
@@ -784,37 +1051,44 @@
     {
      "url": "/schema/",
      "title": "Schema",
-     "section": "schema"
+     "section": "schema",
+     "date": ""
     },
     {
      "url": "/schema/mtproto/",
      "title": "Current MTProto TL-schema",
-     "section": "schema"
+     "section": "schema",
+     "date": ""
     },
     {
      "url": "/schema/end-to-end/",
      "title": "Current end-to-end TL-schema",
-     "section": "schema"
+     "section": "schema",
+     "date": ""
     },
     {
      "url": "/methods/",
      "title": "Available methods",
-     "section": "schema"
+     "section": "schema",
+     "date": ""
     },
     {
      "url": "/schema/json/",
      "title": "TL-Schema in JSON",
-     "section": "schema"
+     "section": "schema",
+     "date": ""
     },
     {
      "url": "/schema/mtproto-json/",
      "title": "MTProto TL-Schema in JSON",
-     "section": "schema"
+     "section": "schema",
+     "date": ""
     },
     {
      "url": "/schema/end-to-end-json/",
      "title": "End-to-end TL-Schema in JSON",
-     "section": "schema"
+     "section": "schema",
+     "date": ""
     },
     {
      "url": "/constructor/",
@@ -831,23 +1105,1604 @@
    ]
   },
   {
-   "key": "other",
-   "title": "Other",
+   "key": "blog",
+   "title": "Blog",
+   "items": [
+    {
+     "url": "/blog/communities-editor-invisible-messages/",
+     "title": "Rich Text Editor, Communities, Ephemeral Messages in Groups, 350 Million GIFs (2026-07)",
+     "section": "blog",
+     "date": "2026-07-14"
+    },
+    {
+     "url": "/blog/watch-apps-and-more/",
+     "title": "Smartwatch Apps, Rich Text for Bots, AI Guardians for Groups, and Much More (2026-06)",
+     "section": "blog",
+     "date": "2026-06-11"
+    },
+    {
+     "url": "/blog/ai-bot-revolution-11-new-features/",
+     "title": "Guest AI Bots, Bot-to-Bot Chats, Chat Automation, Custom AI Styles, 100M+ Emoji & Sticker Search and Much More (2026-05)",
+     "section": "blog",
+     "date": "2026-05-07"
+    },
+    {
+     "url": "/blog/ai-editor-mighty-polls-and-more/",
+     "title": "AI Editor, Mighty Polls, Live Photos, Bots Managed by Bots, and More (2026-03)",
+     "section": "blog",
+     "date": "2026-03-31"
+    },
+    {
+     "url": "/blog/member-tags-disable-sharing-and-more/",
+     "title": "Member Tags, Login with Telegram, Disable Sharing, GIF Editing, Date Formatting, Voting Timestamps (2026-03)",
+     "section": "blog",
+     "date": "2026-03-01"
+    },
+    {
+     "url": "/blog/crafting-android-design-and-more/",
+     "title": "Android Redesign, Group Ownership Transfer, Gift Crafting, Colored Bot Buttons (2026-02)",
+     "section": "blog",
+     "date": "2026-02-09"
+    },
+    {
+     "url": "/blog/new-design-ai-summaries/",
+     "title": "AI Summaries, New Design and More (2026-01)",
+     "section": "blog",
+     "date": "2026-01-03"
+    },
+    {
+     "url": "/blog/passkeys-and-gift-offers/",
+     "title": "Passkeys, Gift Purchase Offers and More (2025-12)",
+     "section": "blog",
+     "date": "2025-12-12"
+    },
+    {
+     "url": "/blog/live-stories-gift-auctions/",
+     "title": "Live Stories, Repeated Messages, Auctions for Gifts and More (2025-11)",
+     "section": "blog",
+     "date": "2025-11-19"
+    },
+    {
+     "url": "/blog/comments-in-video-chats-threads-for-bots/",
+     "title": "Comments in Group Calls, Notes for Contacts, Suggested Birthdays and More (2025-10)",
+     "section": "blog",
+     "date": "2025-10-10"
+    },
+    {
+     "url": "/blog/profile-music-gift-themes/",
+     "title": "Music on Profiles, Stickers Mini App, New Profiles, and More (2025-08)",
+     "section": "blog",
+     "date": "2025-08-31"
+    },
+    {
+     "url": "/blog/post-search-story-albums-and-more/",
+     "title": "Public Post Search, Story Albums, Gift Collections and More (2025-07)",
+     "section": "blog",
+     "date": "2025-07-31"
+    },
+    {
+     "url": "/blog/checklists-suggested-posts/",
+     "title": "Checklists, Suggested Posts and More Monetization Options for Channels (2025-07)",
+     "section": "blog",
+     "date": "2025-07-01"
+    },
+    {
+     "url": "/blog/direct-to-channel-trim-voice-and-more/",
+     "title": "Direct Messages for Channels, Voice Trimming, Topic Tabs and HD Photos (2025-06)",
+     "section": "blog",
+     "date": "2025-06-03"
+    },
+    {
+     "url": "/blog/gift-marketplace-and-more/",
+     "title": "Gift Marketplace, Posting Several Stories at Once, Auto-Translate For Channels (2025-05)",
+     "section": "blog",
+     "date": "2025-05-08"
+    },
+    {
+     "url": "/blog/group-calls-made-easy/",
+     "title": "Extra-Secure Group Calls, Automated Accounts, and More (2025-04)",
+     "section": "blog",
+     "date": "2025-04-30"
+    },
+    {
+     "url": "/blog/star-messages-gateway-2-0-and-more/",
+     "title": "Star Messages, Pinned Gifts, Verification Platform 2.0, and More (2025-03)",
+     "section": "blog",
+     "date": "2025-03-07"
+    },
+    {
+     "url": "/blog/AI-sticker-search-video-improvements/",
+     "title": "AI-Powered Sticker Search, Improved Videos and More (2025-02)",
+     "section": "blog",
+     "date": "2025-02-12"
+    },
+    {
+     "url": "/blog/wear-gifts-blockchain-and-more/",
+     "title": "Wear Collectible Gifts, Move Gifts to the Blockchain, Send Gifts to Channels, and More (2025-01)",
+     "section": "blog",
+     "date": "2025-01-24"
+    },
+    {
+     "url": "/blog/collectible-gifts-and-more/",
+     "title": "Collectible Gifts, Message Search Filters and More (2025-01)",
+     "section": "blog",
+     "date": "2025-01-01"
+    },
+    {
+     "url": "/blog/affiliate-programs-ai-sticker-search/",
+     "title": "Affiliate Programs, AI-Powered Sticker Search, Collages, and More (2024-12)",
+     "section": "blog",
+     "date": "2024-12-04"
+    },
+    {
+     "url": "/blog/fullscreen-miniapps-and-more/",
+     "title": "Mini Apps 2.0: Full-Screen Mode, Home Screen Icons, Geolocation and 10 more features (2024-11)",
+     "section": "blog",
+     "date": "2024-11-17"
+    },
+    {
+     "url": "/blog/dynamic-video-quality-and-more/",
+     "title": "Improved Videos and Much More (2024-10)",
+     "section": "blog",
+     "date": "2024-10-31"
+    },
+    {
+     "url": "/blog/gifts-verification-platform/",
+     "title": "Gifts, Verification Platform and More (2024-10)",
+     "section": "blog",
+     "date": "2024-10-05"
+    },
+    {
+     "url": "/blog/star-giveaways-iv-in-browser/",
+     "title": "Star Giveaways and More (2024-09)",
+     "section": "blog",
+     "date": "2024-09-06"
+    },
+    {
+     "url": "/blog/superchannels-star-reactions-subscriptions/",
+     "title": "Super Channels, Star Reactions and Subscriptions (2024-08)",
+     "section": "blog",
+     "date": "2024-08-14"
+    },
+    {
+     "url": "/blog/w3-browser-mini-app-store/",
+     "title": "Telegram Browser, Gifting Stars and More (2024-07)",
+     "section": "blog",
+     "date": "2024-07-31"
+    },
+    {
+     "url": "/blog/mini-app-bar-paid-media-and-more/",
+     "title": "Mini App Bar, Paid Media, Story Search & More (2024-06)",
+     "section": "blog",
+     "date": "2024-06-30"
+    },
+    {
+     "url": "/blog/telegram-stars/",
+     "title": "Telegram Stars: Pay for Digital Goods and More (2024-06)",
+     "section": "blog",
+     "date": "2024-06-06"
+    },
+    {
+     "url": "/blog/message-effects-and-more/",
+     "title": "Message Effects, Hashtag Search, and More (2024-05)",
+     "section": "blog",
+     "date": "2024-05-31"
+    },
+    {
+     "url": "/blog/my-profile-and-15-more/",
+     "title": "My Profile, Recommended Channels and 15 More Features (2024-04)",
+     "section": "blog",
+     "date": "2024-04-25"
+    },
+    {
+     "url": "/blog/sticker-maker/",
+     "title": "Sticker Editor — Create Your Own Stickers (2024-04)",
+     "section": "blog",
+     "date": "2024-04-14"
+    },
+    {
+     "url": "/blog/monetization-for-channels/",
+     "title": "Sharing Revenue with Channel Owners (2024-03)",
+     "section": "blog",
+     "date": "2024-03-31"
+    },
+    {
+     "url": "/blog/telegram-business/",
+     "title": "Introducing Telegram Business (2024-03)",
+     "section": "blog",
+     "date": "2024-03-31"
+    },
+    {
+     "url": "/blog/february2024/",
+     "title": "Stories for Groups and 8 More Features (2024-02)",
+     "section": "blog",
+     "date": "2024-02-29"
+    },
+    {
+     "url": "/blog/new-saved-messages-and-9-more/",
+     "title": "Saved Messages 2.0, One-Time Voice Messages and 8 More Features (2024-01)",
+     "section": "blog",
+     "date": "2024-01-31"
+    },
+    {
+     "url": "/blog/calls-and-bots/",
+     "title": "Colorful Calls, Thanos Snap Effect, and an Epic Update for Bots (2023-12)",
+     "section": "blog",
+     "date": "2023-12-31"
+    },
+    {
+     "url": "/blog/posts-in-stories-and-more/",
+     "title": "Channel Appearance, Posts in Stories and More (2023-12)",
+     "section": "blog",
+     "date": "2023-12-23"
+    },
+    {
+     "url": "/blog/similar-channels/",
+     "title": "Similar Channels, Reposting Stories, and 9 More Features (2023-11)",
+     "section": "blog",
+     "date": "2023-11-30"
+    },
+    {
+     "url": "/blog/giveaways/",
+     "title": "Giveaways in Channels and Free Premium (2023-11)",
+     "section": "blog",
+     "date": "2023-11-06"
+    },
+    {
+     "url": "/blog/reply-revolution/",
+     "title": "Replies 2.0, Adjustable Link Previews, Name Colors and More (2023-10)",
+     "section": "blog",
+     "date": "2023-10-28"
+    },
+    {
+     "url": "/blog/channel-stories/",
+     "title": "Stories in Channels, View-Once Media and More (2023-09)",
+     "section": "blog",
+     "date": "2023-09-22"
+    },
+    {
+     "url": "/blog/stories/",
+     "title": "Stories and 10 Years of Telegram (2023-08)",
+     "section": "blog",
+     "date": "2023-08-14"
+    },
+    {
+     "url": "/blog/shareable-folders-custom-wallpapers/",
+     "title": "Shareable Chat Folders, Custom Wallpapers and More (2023-04)",
+     "section": "blog",
+     "date": "2023-04-21"
+    },
+    {
+     "url": "/blog/power-saving/",
+     "title": "Power Saving Mode and More (2023-03)",
+     "section": "blog",
+     "date": "2023-03-08"
+    },
+    {
+     "url": "/blog/profile-pics-emoji-translations/",
+     "title": "Profile Photo Maker, Translating Entire Chats, Emoji Categories and More (2023-02)",
+     "section": "blog",
+     "date": "2023-02-03"
+    },
+    {
+     "url": "/blog/hidden-media-zero-storage-profile-pics/",
+     "title": "Hidden Media, Zero Storage Usage, New Drawing Tools, Profile Pictures for Your Contacts, and More (2022-12)",
+     "section": "blog",
+     "date": "2022-12-30"
+    },
+    {
+     "url": "/blog/ultimate-privacy-topics-2-0/",
+     "title": "No-SIM Signup, Auto-Delete All Chats, Topics 2.0 and More (2022-12)",
+     "section": "blog",
+     "date": "2022-12-06"
+    },
+    {
+     "url": "/blog/topics-in-groups-collectible-usernames/",
+     "title": "Topics in Groups, Collectible Usernames, Voice-to-Text for Video Messages and More (2022-11)",
+     "section": "blog",
+     "date": "2022-11-05"
+    },
+    {
+     "url": "/blog/infinite-reactions-statuses/",
+     "title": "Infinite Reactions, Emoji Statuses and Much More (2022-09)",
+     "section": "blog",
+     "date": "2022-09-16"
+    },
+    {
+     "url": "/blog/custom-emoji/",
+     "title": "Telegram Emoji Platform, Custom Animated Emoji Packs, Gifting Telegram Premium, and More (2022-08)",
+     "section": "blog",
+     "date": "2022-08-12"
+    },
+    {
+     "url": "/blog/700-million-and-premium/",
+     "title": "700 Million Users and Telegram Premium (2022-06)",
+     "section": "blog",
+     "date": "2022-06-21"
+    },
+    {
+     "url": "/blog/notifications-bots/",
+     "title": "Notification Sounds, Bot Revolution and More (2022-04)",
+     "section": "blog",
+     "date": "2022-04-16"
+    },
+    {
+     "url": "/blog/downloads-attachments-streaming/",
+     "title": "Download Manager, New Attachment Menu, Live Streaming With Other Apps and More (2022-03)",
+     "section": "blog",
+     "date": "2022-03-11"
+    },
+    {
+     "url": "/blog/video-stickers-better-reactions/",
+     "title": "Video Stickers, Better Reactions and More (2022-01)",
+     "section": "blog",
+     "date": "2022-01-31"
+    },
+    {
+     "url": "/blog/reactions-spoilers-translations/",
+     "title": "Reactions, Spoilers, Translation and QR Codes (2021-12)",
+     "section": "blog",
+     "date": "2021-12-30"
+    },
+    {
+     "url": "/blog/protected-content-delete-by-date-and-more/",
+     "title": "Protected Content, Delete by Date, Device Management and More (2021-12)",
+     "section": "blog",
+     "date": "2021-12-07"
+    },
+    {
+     "url": "/blog/shared-media-scrolling-calendar-join-requests-and-more/",
+     "title": "Hyper-Speed Scrolling and Calendar View for Shared Media, Join Requests, Global Chat Themes on iOS and More (2021-11)",
+     "section": "blog",
+     "date": "2021-11-03"
+    },
+    {
+     "url": "/blog/chat-themes-interactive-emoji-read-receipts/",
+     "title": "Chat Themes, Interactive Emoji, Read Receipts in Groups and Live Stream Recording (2021-09)",
+     "section": "blog",
+     "date": "2021-09-19"
+    },
+    {
+     "url": "/blog/live-streams-forwarding-next-channel/",
+     "title": "Live Streams, Flexible Forwarding, Jump to Next Channel, Trending Stickers and More (2021-08)",
+     "section": "blog",
+     "date": "2021-08-31"
+    },
+    {
+     "url": "/blog/video-1000/",
+     "title": "Video Calls with up to 1000 Viewers, Video Messages 2.0, Video Playback Speed and More (2021-07)",
+     "section": "blog",
+     "date": "2021-07-30"
+    },
+    {
+     "url": "/blog/animated-backgrounds/",
+     "title": "Animated Backgrounds (2021-06)",
+     "section": "blog",
+     "date": "2021-06-25"
+    },
+    {
+     "url": "/blog/group-video-calls/",
+     "title": "Group Video Calls (2021-06)",
+     "section": "blog",
+     "date": "2021-06-25"
+    },
+    {
+     "url": "/blog/payments-2-0-scheduled-voice-chats/",
+     "title": "Payments 2.0, Scheduled Voice Chats, New Web Versions (2021-04)",
+     "section": "blog",
+     "date": "2021-04-26"
+    },
+    {
+     "url": "/blog/voice-chats-on-steroids/",
+     "title": "Voice Chats 2.0: Channels, Millions of Listeners, Recorded Chats, Admin Tools (2021-03)",
+     "section": "blog",
+     "date": "2021-03-19"
+    },
+    {
+     "url": "/blog/autodelete-inv2/",
+     "title": "Auto-Delete, Widgets and Expiring Invite Links (2021-02)",
+     "section": "blog",
+     "date": "2021-02-23"
+    },
+    {
+     "url": "/blog/move-history/",
+     "title": "Moving Chat History from Other Apps (2021-01)",
+     "section": "blog",
+     "date": "2021-01-28"
+    },
+    {
+     "url": "/blog/voice-chats/",
+     "title": "Voice Chats Done Right (2020-12)",
+     "section": "blog",
+     "date": "2020-12-23"
+    },
+    {
+     "url": "/blog/pinned-messages-locations-playlists/",
+     "title": "Pinned Messages 2.0, Improved Live Locations, Playlists and More (2020-10)",
+     "section": "blog",
+     "date": "2020-10-30"
+    },
+    {
+     "url": "/blog/pinned-messages-locations-playlists/world/",
+     "title": "Pinned Messages 2.0, Improved Live Locations, Playlists and More (2020-10)",
+     "section": "blog",
+     "date": "2020-10-30"
+    },
+    {
+     "url": "/blog/filters-anonymous-admins-comments/",
+     "title": "Search Filters, Anonymous Admins, Channel Comments and More (2020-09)",
+     "section": "blog",
+     "date": "2020-09-30"
+    },
+    {
+     "url": "/blog/video-calls/",
+     "title": "Video Calls and Seven Years of Telegram (2020-08)",
+     "section": "blog",
+     "date": "2020-08-14"
+    },
+    {
+     "url": "/blog/profile-videos-people-nearby-and-more/",
+     "title": "Profile Videos, 2 GB File Sharing, Group Stats, Improved People Nearby and More (2020-07)",
+     "section": "blog",
+     "date": "2020-07-26"
+    },
+    {
+     "url": "/blog/video-editor-gifs/",
+     "title": "Video Editor, Animated Photos, Better GIFs and More (2020-06)",
+     "section": "blog",
+     "date": "2020-06-04"
+    },
+    {
+     "url": "/blog/400-million/",
+     "title": "400 Million Users, 20,000 Stickers, Quizzes 2.0 and €400K for Creators of Educational Tests (2020-04)",
+     "section": "blog",
+     "date": "2020-04-24"
+    },
+    {
+     "url": "/blog/coronavirus/",
+     "title": "Coronavirus News and Verified Channels (2020-04)",
+     "section": "blog",
+     "date": "2020-04-03"
+    },
+    {
+     "url": "/blog/folders/",
+     "title": "Chat Folders, Archive, Channel Stats and More (2020-03)",
+     "section": "blog",
+     "date": "2020-03-30"
+    },
+    {
+     "url": "/blog/new-profiles-people-nearby/",
+     "title": "New Profiles, Fast Media Viewer and People Nearby 2.0 (2020-02)",
+     "section": "blog",
+     "date": "2020-02-13"
+    },
+    {
+     "url": "/blog/polls-2-0-vmq/",
+     "title": "Polls 2.0: Visible Votes, Multiple Answers, and Quiz Mode (2020-01)",
+     "section": "blog",
+     "date": "2020-01-23"
+    },
+    {
+     "url": "/blog/verifiable-apps-and-more/",
+     "title": "Verifiable Builds, New Theme Editor, Send When Online and So Much More (2020-01)",
+     "section": "blog",
+     "date": "2020-01-01"
+    },
+    {
+     "url": "/blog/scheduled-reminders-themes/",
+     "title": "Scheduled Messages, Reminders, Custom Cloud Themes and More Privacy (2019-09)",
+     "section": "blog",
+     "date": "2019-09-05"
+    },
+    {
+     "url": "/blog/6-years/",
+     "title": "Celebrating 6 Years of Telegram (2019-08)",
+     "section": "blog",
+     "date": "2019-08-15"
+    },
+    {
+     "url": "/blog/silent-messages-slow-mode/",
+     "title": "Silent Messages, Slow Mode, Admin Titles and More (2019-08)",
+     "section": "blog",
+     "date": "2019-08-09"
+    },
+    {
+     "url": "/blog/animated-stickers/",
+     "title": "Animated Stickers Done Right (2019-07)",
+     "section": "blog",
+     "date": "2019-07-06"
+    },
+    {
+     "url": "/blog/contacts-local-groups/",
+     "title": "Location-Based Chats, Adding Contacts Without Phone Numbers and More (2019-06)",
+     "section": "blog",
+     "date": "2019-06-23"
+    },
+    {
+     "url": "/blog/privacy-discussions-web-bots/",
+     "title": "Focused Privacy, Discussion Groups, Seamless Web Bots and More (2019-05)",
+     "section": "blog",
+     "date": "2019-05-31"
+    },
+    {
+     "url": "/blog/archive-and-new-design/",
+     "title": "Archived Chats, a New Design and More (2019-05)",
+     "section": "blog",
+     "date": "2019-05-09"
+    },
+    {
+     "url": "/blog/unsend-privacy-emoji/",
+     "title": "Taking Back Our Right to Privacy (2019-03)",
+     "section": "blog",
+     "date": "2019-03-24"
+    },
+    {
+     "url": "/blog/autoplay/",
+     "title": "Autoplaying Videos, Automatic Downloads and Multiple Accounts (2019-02)",
+     "section": "blog",
+     "date": "2019-02-26"
+    },
+    {
+     "url": "/blog/backgrounds-2-0/",
+     "title": "Chat Backgrounds 2.0: Make Your Own (2019-01)",
+     "section": "blog",
+     "date": "2019-01-31"
+    },
+    {
+     "url": "/blog/permissions-groups-undo/",
+     "title": "Group Permissions, Undo Delete and More (2019-01)",
+     "section": "blog",
+     "date": "2019-01-22"
+    },
+    {
+     "url": "/blog/polls/",
+     "title": "Polls: Bringing Choice to Communities (2018-12)",
+     "section": "blog",
+     "date": "2018-12-22"
+    },
+    {
+     "url": "/blog/translations-iv2/",
+     "title": "Custom Languages, Instant View 2.0 and More (2018-12)",
+     "section": "blog",
+     "date": "2018-12-10"
+    },
+    {
+     "url": "/blog/telegram-5-ios/",
+     "title": "Introducing Telegram 5.0 for iOS (2018-10)",
+     "section": "blog",
+     "date": "2018-10-01"
+    },
+    {
+     "url": "/blog/export-and-more/",
+     "title": "Chat Export Tool, Better Notifications and More (2018-08)",
+     "section": "blog",
+     "date": "2018-08-27"
+    },
+    {
+     "url": "/blog/passport/",
+     "title": "Introducing Telegram Passport (2018-07)",
+     "section": "blog",
+     "date": "2018-07-26"
+    },
+    {
+     "url": "/blog/unread-replace-2x/",
+     "title": "Replace Media, Share vCards, Mark as Unread, 2X Voice Messages, and More (2018-06)",
+     "section": "blog",
+     "date": "2018-06-27"
+    },
+    {
+     "url": "/blog/200-million/",
+     "title": "200,000,000 Monthly Active Users (2018-03)",
+     "section": "blog",
+     "date": "2018-03-22"
+    },
+    {
+     "url": "/blog/discover-stickers-and-more/",
+     "title": "Sticker Search, Multiple Photos, and More (2018-03)",
+     "section": "blog",
+     "date": "2018-03-22"
+    },
+    {
+     "url": "/blog/android-streaming/",
+     "title": "Streaming and Auto-Night Mode on Android (2018-02)",
+     "section": "blog",
+     "date": "2018-02-06"
+    },
+    {
+     "url": "/blog/login/",
+     "title": "Telegram Login for Websites (2018-02)",
+     "section": "blog",
+     "date": "2018-02-06"
+    },
+    {
+     "url": "/blog/tdlib/",
+     "title": "TDLib – Build Your Own Telegram (2018-01)",
+     "section": "blog",
+     "date": "2018-01-31"
+    },
+    {
+     "url": "/blog/telegram-x/",
+     "title": "Telegram X: Progress through Competition (2018-01)",
+     "section": "blog",
+     "date": "2018-01-31"
+    },
+    {
+     "url": "/blog/themes-accounts/",
+     "title": "Themes, Multiple Accounts and More (2017-12)",
+     "section": "blog",
+     "date": "2017-12-30"
+    },
+    {
+     "url": "/blog/albums-saved-messages/",
+     "title": "Albums, Saved Messages and Better Search (2017-11)",
+     "section": "blog",
+     "date": "2017-11-15"
+    },
+    {
+     "url": "/blog/live-locations/",
+     "title": "Live Locations, Media Player and Languages (2017-10)",
+     "section": "blog",
+     "date": "2017-10-10"
+    },
+    {
+     "url": "/blog/replies-mentions-stickers/",
+     "title": "Better Replies, Stickers & Invitations (2017-09)",
+     "section": "blog",
+     "date": "2017-09-03"
+    },
+    {
+     "url": "/blog/first-IV-contest/",
+     "title": "Instant View Now Available for 2274 Websites (2017-08)",
+     "section": "blog",
+     "date": "2017-08-10"
+    },
+    {
+     "url": "/blog/encrypted-cdns/",
+     "title": "More Speed and Security&#33; (2017-07)",
+     "section": "blog",
+     "date": "2017-07-23"
+    },
+    {
+     "url": "/blog/now-you-see-me/",
+     "title": "Disappearing Media, Your Bio & More Speed (2017-07)",
+     "section": "blog",
+     "date": "2017-07-23"
+    },
+    {
+     "url": "/blog/admin-revolution/",
+     "title": "Supergroups 10,000: Admin Tools & More (2017-06)",
+     "section": "blog",
+     "date": "2017-06-30"
+    },
+    {
+     "url": "/blog/instant-view-contest-200K/",
+     "title": "Instant Views for Everyone & a &#036;200K Contest (2017-05)",
+     "section": "blog",
+     "date": "2017-05-18"
+    },
+    {
+     "url": "/blog/payments/",
+     "title": "Payments for Bots (2017-05)",
+     "section": "blog",
+     "date": "2017-05-18"
+    },
+    {
+     "url": "/blog/video-messages-and-telescope/",
+     "title": "Video Messages and Telescope (2017-05)",
+     "section": "blog",
+     "date": "2017-05-18"
+    },
+    {
+     "url": "/blog/calls/",
+     "title": "Voice Calls: Secure, Crystal-Clear, AI-Powered (2017-03)",
+     "section": "blog",
+     "date": "2017-03-30"
+    },
+    {
+     "url": "/blog/android-themes/",
+     "title": "Custom Themes (2017-02)",
+     "section": "blog",
+     "date": "2017-02-20"
+    },
+    {
+     "url": "/blog/android-wear-2-0/",
+     "title": "Telegram for Android Wear 2.0 (2017-02)",
+     "section": "blog",
+     "date": "2017-02-09"
+    },
+    {
+     "url": "/blog/desktop-1-0/",
+     "title": "Telegram Desktop reaches version 1.0 – and it's BEAUTIFUL (2017-01)",
+     "section": "blog",
+     "date": "2017-01-12"
+    },
+    {
+     "url": "/blog/unsend-and-usage/",
+     "title": "Unsend Messages, Network Usage, and More (2017-01)",
+     "section": "blog",
+     "date": "2017-01-03"
+    },
+    {
+     "url": "/blog/telegraph/",
+     "title": "Meet the Telegraph API for Logins and Stats (2016-12)",
+     "section": "blog",
+     "date": "2016-12-20"
+    },
+    {
+     "url": "/blog/pin-and-ifttt/",
+     "title": "Pinned Chats and IFTTT Integrations (2016-12)",
+     "section": "blog",
+     "date": "2016-12-07"
+    },
+    {
+     "url": "/blog/instant-view/",
+     "title": "Instant View, Telegraph, and Other Goodies (2016-11)",
+     "section": "blog",
+     "date": "2016-11-22"
+    },
+    {
+     "url": "/blog/botprize1/",
+     "title": "First BotPrize Winners Get &#036;200,000 (2016-11)",
+     "section": "blog",
+     "date": "2016-11-11"
+    },
+    {
+     "url": "/blog/games/",
+     "title": "Gaming Platform 1.0 (2016-10)",
+     "section": "blog",
+     "date": "2016-10-03"
+    },
+    {
+     "url": "/blog/masks/",
+     "title": "Photo Editor 2.0, Masks and Homemade GIFs (2016-09)",
+     "section": "blog",
+     "date": "2016-09-23"
+    },
+    {
+     "url": "/blog/15million-reuters/",
+     "title": "Keep Calm and Send Telegrams&#33; (2016-08)",
+     "section": "blog",
+     "date": "2016-08-03"
+    },
+    {
+     "url": "/blog/trending-stickers/",
+     "title": "Trending Stickers, Storage and More (2016-08)",
+     "section": "blog",
+     "date": "2016-08-03"
+    },
+    {
+     "url": "/blog/drafts/",
+     "title": "Drafts, Picture-in-Picture, and More (2016-06)",
+     "section": "blog",
+     "date": "2016-06-14"
+    },
+    {
+     "url": "/blog/edit/",
+     "title": "Edit Messages, New Mentions and More (2016-05)",
+     "section": "blog",
+     "date": "2016-05-15"
+    },
+    {
+     "url": "/blog/instant-camera/",
+     "title": "Instant Camera and More 3D Touch (2016-04)",
+     "section": "blog",
+     "date": "2016-04-28"
+    },
+    {
+     "url": "/blog/botprize/",
+     "title": "&#036;1,000,000 to Bot Developers. For free. (2016-04)",
+     "section": "blog",
+     "date": "2016-04-18"
+    },
+    {
+     "url": "/blog/bots-2-0/",
+     "title": "Bot Platform 2.0 (2016-04)",
+     "section": "blog",
+     "date": "2016-04-12"
+    },
+    {
+     "url": "/blog/share-preview/",
+     "title": "Sharing and Previews (2016-04)",
+     "section": "blog",
+     "date": "2016-04-12"
+    },
+    {
+     "url": "/blog/supergroups5k/",
+     "title": "Supergroups 5000: Public Groups, Pinned Posts (2016-03)",
+     "section": "blog",
+     "date": "2016-03-13"
+    },
+    {
+     "url": "/blog/channels-2-0/",
+     "title": "Channels 2.0 and More (2016-02)",
+     "section": "blog",
+     "date": "2016-02-24"
+    },
+    {
+     "url": "/blog/100-million/",
+     "title": "100,000,000 Monthly Active Users (2016-02)",
+     "section": "blog",
+     "date": "2016-02-23"
+    },
+    {
+     "url": "/blog/15-billion/",
+     "title": "15 Billion Telegrams Delivered Daily (2016-02)",
+     "section": "blog",
+     "date": "2016-02-23"
+    },
+    {
+     "url": "/blog/voice-2-secret-3/",
+     "title": "Voice Messages 2.0, Secret Chats 3.0 and... (2016-02)",
+     "section": "blog",
+     "date": "2016-02-12"
+    },
+    {
+     "url": "/blog/gif-revolution/",
+     "title": "GIF Revolution (2016-01)",
+     "section": "blog",
+     "date": "2016-01-04"
+    },
+    {
+     "url": "/blog/inline-bots/",
+     "title": "Introducing Inline Bots (2016-01)",
+     "section": "blog",
+     "date": "2016-01-04"
+    },
+    {
+     "url": "/blog/cache-and-stickers/",
+     "title": "Clearing Cache and Reordering Stickers (2015-12)",
+     "section": "blog",
+     "date": "2015-12-08"
+    },
+    {
+     "url": "/blog/supergroups/",
+     "title": "Admins, Supergroups and More (2015-11)",
+     "section": "blog",
+     "date": "2015-11-25"
+    },
+    {
+     "url": "/blog/channels/",
+     "title": "Channels: Broadcasting Done Right (2015-09)",
+     "section": "blog",
+     "date": "2015-09-22"
+    },
+    {
+     "url": "/blog/shared-links/",
+     "title": "Shared Links and Recent Searches (2015-08)",
+     "section": "blog",
+     "date": "2015-08-20"
+    },
+    {
+     "url": "/blog/10-billion/",
+     "title": "10 Billion Telegrams Delivered Daily (2015-08)",
+     "section": "blog",
+     "date": "2015-08-14"
+    },
+    {
+     "url": "/blog/search-and-media/",
+     "title": "In-App Media Playback and Search in Chats (2015-07)",
+     "section": "blog",
+     "date": "2015-07-17"
+    },
+    {
+     "url": "/blog/ddos/",
+     "title": "A DDoS in Asia Pacific (2015-07)",
+     "section": "blog",
+     "date": "2015-07-13"
+    },
+    {
+     "url": "/blog/apple-watch/",
+     "title": "Telegram on Apple Watch (2015-06)",
+     "section": "blog",
+     "date": "2015-06-24"
+    },
+    {
+     "url": "/blog/bot-revolution/",
+     "title": "Telegram Bot Platform (2015-06)",
+     "section": "blog",
+     "date": "2015-06-24"
+    },
+    {
+     "url": "/blog/stickers-revolution/",
+     "title": "Custom Sticker Sets (2015-05)",
+     "section": "blog",
+     "date": "2015-05-19"
+    },
+    {
+     "url": "/blog/2-billion/",
+     "title": "Telegram Hits 2 Billion Messages Sent Daily (2015-05)",
+     "section": "blog",
+     "date": "2015-05-13"
+    },
+    {
+     "url": "/blog/captions-places/",
+     "title": "Places, Captions and more (2015-04)",
+     "section": "blog",
+     "date": "2015-04-30"
+    },
+    {
+     "url": "/blog/invite-links/",
+     "title": "Migrating Existing Group Chats to Telegram (2015-04)",
+     "section": "blog",
+     "date": "2015-04-30"
+    },
+    {
+     "url": "/blog/link-preview/",
+     "title": "Link Previews (2015-04)",
+     "section": "blog",
+     "date": "2015-04-08"
+    },
+    {
+     "url": "/blog/sessions-and-2-step-verification/",
+     "title": "Active Sessions and Two-Step Verification (2015-04)",
+     "section": "blog",
+     "date": "2015-04-08"
+    },
+    {
+     "url": "/blog/files-on-steroids/",
+     "title": "Sending Files On Steroids — And More (2015-03)",
+     "section": "blog",
+     "date": "2015-03-26"
+    },
+    {
+     "url": "/blog/replies-mentions-hashtags/",
+     "title": "Reinventing Group Chats: Replies, Mentions, Hashtags and More (2015-03)",
+     "section": "blog",
+     "date": "2015-03-19"
+    },
+    {
+     "url": "/blog/moar-stickers/",
+     "title": "MOAR Stickers&#33; (2015-03)",
+     "section": "blog",
+     "date": "2015-03-11"
+    },
+    {
+     "url": "/blog/growing-telegram-together/",
+     "title": "Growing Telegram Together (2015-02)",
+     "section": "blog",
+     "date": "2015-02-27"
+    },
+    {
+     "url": "/blog/photo-editor-and-passcodes/",
+     "title": "Photo Editor and Passcode Lock (2015-02)",
+     "section": "blog",
+     "date": "2015-02-25"
+    },
+    {
+     "url": "/blog/cryptocontest-ends/",
+     "title": "Crypto Contest Ends (2015-02)",
+     "section": "blog",
+     "date": "2015-02-11"
+    },
+    {
+     "url": "/blog/bb-results/",
+     "title": "BlackBerry Contest Results (2015-02)",
+     "section": "blog",
+     "date": "2015-02-10"
+    },
+    {
+     "url": "/blog/shared-files/",
+     "title": "Shared Files and Fast Mute (2015-02)",
+     "section": "blog",
+     "date": "2015-02-01"
+    },
+    {
+     "url": "/blog/stickers/",
+     "title": "Stickers Done Right (2015-01)",
+     "section": "blog",
+     "date": "2015-01-02"
+    },
+    {
+     "url": "/blog/bb-contest-extension/",
+     "title": "&#036;50,000 Blackberry Contest Extended (2014-12)",
+     "section": "blog",
+     "date": "2014-12-25"
+    },
+    {
+     "url": "/blog/desktop-compact/",
+     "title": "Telegram Desktop Adds Compact Mode (2014-12)",
+     "section": "blog",
+     "date": "2014-12-22"
+    },
+    {
+     "url": "/blog/android-gif/",
+     "title": "GIF and Image Search on Android (2014-12)",
+     "section": "blog",
+     "date": "2014-12-20"
+    },
+    {
+     "url": "/blog/billion/",
+     "title": "Telegram Reaches 1 Billion Daily Messages (2014-12)",
+     "section": "blog",
+     "date": "2014-12-08"
+    },
+    {
+     "url": "/blog/telegram-me-change-number-and-pfs/",
+     "title": "Telegram.me, Changing Numbers and PFS (2014-12)",
+     "section": "blog",
+     "date": "2014-12-01"
+    },
+    {
+     "url": "/blog/android-2-0/",
+     "title": "Telegram 2.0 for Android: Material Design (2014-11)",
+     "section": "blog",
+     "date": "2014-11-19"
+    },
+    {
+     "url": "/blog/gifs/",
+     "title": "GIF Search and More (2014-11)",
+     "section": "blog",
+     "date": "2014-11-19"
+    },
+    {
+     "url": "/blog/privacy-revolution/",
+     "title": "Hiding Last Seen Time - Done Right (2014-11)",
+     "section": "blog",
+     "date": "2014-11-19"
+    },
+    {
+     "url": "/blog/blackberry-contest/",
+     "title": "A &#036;50,000 Contest For Blackberry Engineers (2014-11)",
+     "section": "blog",
+     "date": "2014-11-13"
+    },
+    {
+     "url": "/blog/",
+     "title": "Telegram Blog",
+     "section": "blog",
+     "date": ""
+    },
+    {
+     "url": "/blog/crowdsourcing-a-more-secure-future/",
+     "title": "Crowdsourcing a More Secure Future",
+     "section": "blog",
+     "date": ""
+    },
+    {
+     "url": "/blog/cryptocontest/",
+     "title": "&#036;300,000 for Cracking Telegram Encryption",
+     "section": "blog",
+     "date": ""
+    },
+    {
+     "url": "/blog/stickers-meet-art-and-history/",
+     "title": "When Stickers Meet Art And History",
+     "section": "blog",
+     "date": ""
+    },
+    {
+     "url": "/blog/usernames-and-secret-chats-v2/",
+     "title": "Usernames and Secret Chats 2.0",
+     "section": "blog",
+     "date": ""
+    },
+    {
+     "url": "/blog/winter-contest-ends/",
+     "title": "Winter Contest Ends",
+     "section": "blog",
+     "date": ""
+    }
+   ]
+  },
+  {
+   "key": "faq",
+   "title": "FAQ",
    "items": [
     {
      "url": "/faq/",
      "title": "Telegram FAQ",
-     "section": "faq"
+     "section": "faq",
+     "date": ""
     },
     {
      "url": "/techfaq/",
      "title": "FAQ for the Technically Inclined",
-     "section": "faq"
+     "section": "faq",
+     "date": ""
     },
     {
      "url": "/techfaq/mtproto_v1/",
      "title": "FAQ for the Technically Inclined (MTProto v.1.0)",
-     "section": "faq"
+     "section": "faq",
+     "date": ""
+    },
+    {
+     "url": "/bots/faq/",
+     "title": "Bots FAQ",
+     "section": "faq",
+     "date": ""
+    },
+    {
+     "url": "/cdn/faq_ir/",
+     "title": "شبکه‌های تحویل محتوا (CDN) رمزنگاری شده",
+     "section": "faq",
+     "date": ""
+    },
+    {
+     "url": "/cdn/faq_ir/durov/",
+     "title": "توضيحات CDNهاى رمزنگارى شده",
+     "section": "faq",
+     "date": ""
+    },
+    {
+     "url": "/faq_channels/",
+     "title": "Channels FAQ",
+     "section": "faq",
+     "date": ""
+    },
+    {
+     "url": "/faq_premium/",
+     "title": "Telegram Premium FAQ",
+     "section": "faq",
+     "date": ""
+    },
+    {
+     "url": "/faq_spam/",
+     "title": "Spam FAQ",
+     "section": "faq",
+     "date": ""
+    }
+   ]
+  },
+  {
+   "key": "other",
+   "title": "Other",
+   "items": [
+    {
+     "url": "/android/",
+     "title": "Telegram for Android",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/apple_privacy/",
+     "title": "Apple Privacy Labels Explained",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/apps/",
+     "title": "Telegram Applications",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/articles/DH_Hash_Collision/",
+     "title": "Hash Collisions for Diffie-Hellman Keys",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/",
+     "title": "Blackberry 10 Dev Contest",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/chat-edit/",
+     "title": "Editing Messages",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/chat-emoji/",
+     "title": "Choosing Emoji",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/chat-media-send/",
+     "title": "Sending Media",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/chat-media-view/",
+     "title": "Viewing Media",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/chat-send/",
+     "title": "Sending Messages",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/chat-voice/",
+     "title": "Sending Voice Messages",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/chat/",
+     "title": "Chat screens",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/chats/",
+     "title": "Chats",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/contacts/",
+     "title": "Сontacts",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/group-info/",
+     "title": "Group Chat Info",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/intro/",
+     "title": "Intro",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/login/",
+     "title": "Login",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/newmessage/",
+     "title": "New Message",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/secretchats/",
+     "title": "Secret Chats",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/blackberry/settings/",
+     "title": "Settings",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/bug-bounty/",
+     "title": "Telegram Bug Bounty Program",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/cdn/",
+     "title": "Encrypted CDNs for Speed and Security",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/contest300K/",
+     "title": "Telegram Cracking Contest Description",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/evolution/",
+     "title": "The Evolution of Telegram",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/gateway/",
+     "title": "Telegram Gateway – Fast, Affordable, and Secure User Verification",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/gateway/api/",
+     "title": "Telegram Gateway API",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/gateway/verification-tutorial/",
+     "title": "Authorization via Telegram Gateway: Quick-start Guide",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/import-stickers/",
+     "title": "Importing Stickers to Telegram",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/jobs/",
+     "title": "Jobs",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/moderation/",
+     "title": "Telegram Safety Overview",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/passport/",
+     "title": "Telegram Passport Manual",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/passport/encryption/",
+     "title": "Telegram Passport Encryption Details",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/passport/example/",
+     "title": "Passport example",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/passport/sdk-android/",
+     "title": "Android SDK",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/passport/sdk-ios-mac/",
+     "title": "iOS & macOS SDK",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/passport/sdk-javascript/",
+     "title": "Javascript SDK",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/press/",
+     "title": "Telegram Press Info",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/privacy-tpa/",
+     "title": "Standard Bot Privacy Policy",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/privacy/",
+     "title": "Telegram Privacy Policy",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/reproducible-builds/",
+     "title": "Reproducible Builds for iOS and Android",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/stickers/",
+     "title": "Telegram Stickers",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/stickers/webm-vp9-encoding/",
+     "title": "Encoding Video Stickers and Emoji with .WEBM and VP9",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tdlib/",
+     "title": "Telegram Database Library",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tdlib/getting-started/",
+     "title": "Getting started with TDLib",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tdlib/notification-api/",
+     "title": "Notification API",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tdlib/options/",
+     "title": "TDLib options",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/themes/",
+     "title": "Creating Custom Cloud Themes",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/",
+     "title": "Terms of Service",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/bot-developers/",
+     "title": "Telegram Bot Platform Developer Terms of Service",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/bots/",
+     "title": "Terms of Service for Bots",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/business/",
+     "title": "Terms of Service for Telegram Business",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/content-creator-rewards/",
+     "title": "Terms of Service for Content Creators",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/content-licensing/",
+     "title": "Terms of Service for Content Licensing",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/eu-dsa/",
+     "title": "User guidance for the EU Digital Services Act",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/eu-dsa/transparency-2025/",
+     "title": "Telegram’s DSA Transparency Report",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/eu/",
+     "title": "Terms of Service",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/eu/t.me/EURegulation/",
+     "title": "Terms of Service",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/eu/t.me/ISISwatch/",
+     "title": "Terms of Service",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/eu/transparency-tco/",
+     "title": "Telegram's Transparency Reports under the TCO Regulation",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/gateway/",
+     "title": "Terms of Service for Telegram Gateway",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/mini-apps/",
+     "title": "Terms of Service for Mini Apps",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/stars/",
+     "title": "Terms of Service for Telegram Stars",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tos/third-party-payments/",
+     "title": "Third-Party Payments and Authorized Resellers",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tour/affiliate-programs/",
+     "title": "Affiliate Programs",
+     "section": "other",
+     "date": "2024-12-04"
+    },
+    {
+     "url": "/tour/channels/",
+     "title": "Telegram Channels",
+     "section": "other",
+     "date": "2018-01-29"
+    },
+    {
+     "url": "/tour/chat-folders/",
+     "title": "Shareable Chat Folders",
+     "section": "other",
+     "date": "2023-04-21"
+    },
+    {
+     "url": "/tour/groups/",
+     "title": "Group Chats on Telegram",
+     "section": "other",
+     "date": "2018-01-29"
+    },
+    {
+     "url": "/tour/quizbot/",
+     "title": "Quizzes",
+     "section": "other",
+     "date": "2020-12-22"
+    },
+    {
+     "url": "/tour/screenshots/",
+     "title": "Telegram Logos and App Screenshots",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/tour/stories/",
+     "title": "Telegram Stories",
+     "section": "other",
+     "date": "2023-08-14"
+    },
+    {
+     "url": "/verify/",
+     "title": "Page Verification Guidelines",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/widgets/",
+     "title": "Telegram Widgets",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/widgets/discussion/",
+     "title": "Discussion Widget",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/widgets/login-legacy/",
+     "title": "Telegram Login Widget",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/widgets/posts/",
+     "title": "Post Widget",
+     "section": "other",
+     "date": ""
+    },
+    {
+     "url": "/widgets/share/",
+     "title": "Sharing Button",
+     "section": "other",
+     "date": ""
     }
    ]
   }

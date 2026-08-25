@@ -42,6 +42,10 @@ for (const rel of globSync('**/*.md', { cwd: 'mirror/src' })) {
     sourceAliases[i],
     numericEntitySlug(texts[i] || ''),
   ].filter((alias) => alias && alias !== id))]);
+  // The inventory stays positional: the Eleventy transform reattaches ids by
+  // heading index, so a heading whose text has no sluggable character ("#" on
+  // the schema index, a Persian title on the Iranian CDN FAQ) keeps its empty
+  // slot here. The verifier is what knows an empty id is not an anchor.
   anchors[url] = { ids, aliases };
   pageBodies[url] = doc.content;
 }

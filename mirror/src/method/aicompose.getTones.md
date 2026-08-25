@@ -13,7 +13,7 @@ Fetch the list of saved [AI composer tones »](/api/ai/#ai-compose-tones) of the
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="https://core.telegram.org/method/aicompose.getTones?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="/method/aicompose.getTones/">Switch »</a></code></pre>
 
 ### Parameters
 

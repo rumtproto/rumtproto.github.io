@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Paid messages
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured [Star Messages »](https://telegram.org/blog/star-messages-gateway-2-0-and-more#stay-in-control-of-your-inbox-with-star-messages), requiring a payment for every message sent to them.
+Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured [Star Messages »](/blog/star-messages-gateway-2-0-and-more/#stay-in-control-of-your-inbox-with-star-messages), requiring a payment for every message sent to them.
 
 ### Toggling paid messages
 

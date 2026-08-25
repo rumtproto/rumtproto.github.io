@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Message drafts
 
-Message [drafts](https://telegram.org/blog/drafts) in Telegram allow syncing the text typed into message fields between devices.
+Message [drafts](/blog/drafts/) in Telegram allow syncing the text typed into message fields between devices.
 
 ### Drafts
 

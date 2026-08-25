@@ -13,7 +13,7 @@ References a built-in, default [AI composer tone »](/api/ai/#ai-compose-tones) 
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="https://core.telegram.org/constructor/inputAiComposeToneDefault?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="/constructor/inputAiComposeToneDefault/">Switch »</a></code></pre>
 
 ### Parameters
 

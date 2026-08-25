@@ -9,7 +9,7 @@ layout: layout.njk
 
 # account.authorizationForm
 
-[Telegram Passport](https://core.telegram.org/passport) authorization form
+[Telegram Passport](/passport/) authorization form
 
 <p class="page_layer">Layer 223</p>
 
@@ -17,7 +17,7 @@ layout: layout.njk
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>required_types</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureRequiredType/">SecureRequiredType</a>&gt;</td><td>Required <a href="https://core.telegram.org/passport">Telegram Passport</a> documents</td></tr><tr><td><strong>values</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureValue/">SecureValue</a>&gt;</td><td>Already submitted <a href="https://core.telegram.org/passport">Telegram Passport</a> documents</td></tr><tr><td><strong>errors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureValueError/">SecureValueError</a>&gt;</td><td><a href="https://core.telegram.org/passport">Telegram Passport</a> errors</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt;</td><td>Info about the bot to which the form will be submitted</td></tr><tr><td><strong>privacy_policy_url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/type/string/">string</a></td><td>URL of the service's privacy policy</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>required_types</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureRequiredType/">SecureRequiredType</a>&gt;</td><td>Required <a href="/passport/">Telegram Passport</a> documents</td></tr><tr><td><strong>values</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureValue/">SecureValue</a>&gt;</td><td>Already submitted <a href="/passport/">Telegram Passport</a> documents</td></tr><tr><td><strong>errors</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureValueError/">SecureValueError</a>&gt;</td><td><a href="/passport/">Telegram Passport</a> errors</td></tr><tr><td><strong>users</strong></td><td style="text-align: center;"><a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/User/">User</a>&gt;</td><td>Info about the bot to which the form will be submitted</td></tr><tr><td><strong>privacy_policy_url</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/type/string/">string</a></td><td>URL of the service's privacy policy</td></tr></tbody></table>
 
 ### Type
 
@@ -25,6 +25,6 @@ layout: layout.njk
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

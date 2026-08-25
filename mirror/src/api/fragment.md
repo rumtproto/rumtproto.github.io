@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Fragment collectibles
 
-Telegram users can make it easy for others to contact them or find their public groups and channels via [usernames](https://telegram.org/faq#usernames-and-t-me): clients can also assign multiple [Fragment »](https://fragment.com) **collectible usernames** to accounts, supergroups and channels they own; [Fragment »](https://fragment.com) also allows purchasing phone number collectibles that can be used to register Telegram accounts.
+Telegram users can make it easy for others to contact them or find their public groups and channels via [usernames](/faq/#usernames-and-t-me): clients can also assign multiple [Fragment »](https://fragment.com) **collectible usernames** to accounts, supergroups and channels they own; [Fragment »](https://fragment.com) also allows purchasing phone number collectibles that can be used to register Telegram accounts.
 
 ### Collectible usernames
 

@@ -11,7 +11,7 @@ layout: layout.njk
 
 To further improve transparency on Telegram, **official third-party services** are able to assign **extra verification icons** to user accounts and chats — in order to **prevent scams** and **reduce misinformation**.
 
-This is done through [official verified bots, verified by Telegram as specified here »](https://telegram.org/verify#third-party-verification).
+This is done through [official verified bots, verified by Telegram as specified here »](/verify/#third-party-verification).
 
 Once verified by Telegram, the following schema can be used by the bot or by the user that owns the bot to assign or revoke the third-party verification icon of user accounts and chats:
 

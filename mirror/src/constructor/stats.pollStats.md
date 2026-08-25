@@ -13,7 +13,7 @@ layout: layout.njk
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="https://core.telegram.org/constructor/stats.pollStats?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="/constructor/stats.pollStats/">Switch »</a></code></pre>
 
 ### Parameters
 

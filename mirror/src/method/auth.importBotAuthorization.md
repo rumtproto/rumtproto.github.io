@@ -20,7 +20,7 @@ Login as a bot
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Reserved for future use</td></tr><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Application identifier (see. <a href="https://core.telegram.org/myapp">App configuration</a>)</td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Application identifier hash (see. <a href="https://core.telegram.org/myapp">App configuration</a>)</td></tr><tr><td><strong>bot_auth_token</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Bot token (see <a href="https://core.telegram.org/bots">bots</a>)</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Reserved for future use</td></tr><tr><td><strong>api_id</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Application identifier (see. <a href="https://core.telegram.org/myapp">App configuration</a>)</td></tr><tr><td><strong>api_hash</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Application identifier hash (see. <a href="https://core.telegram.org/myapp">App configuration</a>)</td></tr><tr><td><strong>bot_auth_token</strong></td><td style="text-align: center;"><a href="/type/string/">string</a></td><td>Bot token (see <a href="/bots/">bots</a>)</td></tr></tbody></table>
 
 ### Result
 
@@ -36,6 +36,6 @@ Login as a bot
 
 ### Related pages
 
-#### [Bots: An introduction for developers](https://core.telegram.org/bots)
+#### [Bots: An introduction for developers](/bots/)
 
 Bots are small applications that run entirely within the Telegram app.

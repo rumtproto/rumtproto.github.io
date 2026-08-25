@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Discussion groups
 
-[Groups](/api/channel/) can be associated to a [channel](/api/channel/) as a [discussion group](https://telegram.org/blog/privacy-discussions-web-bots), to allow users to discuss about posts.
+[Groups](/api/channel/) can be associated to a [channel](/api/channel/) as a [discussion group](/blog/privacy-discussions-web-bots/), to allow users to discuss about posts.
 
 ### Channel comments
 

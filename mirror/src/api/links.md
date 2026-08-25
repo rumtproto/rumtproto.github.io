@@ -62,7 +62,7 @@ Everywhere where link parameters contain a user, chat, channel or supergroup ID,
 
 ### TON Sites
 
-Used to open [TON Sites](https://blog.ton.org/ton-sites) using the in-app [Telegram Browser](https://telegram.org/blog/w3-browser-mini-app-store#telegram-browser).
+Used to open [TON Sites](https://blog.ton.org/ton-sites) using the in-app [Telegram Browser](/blog/w3-browser-mini-app-store/#telegram-browser).
 
 Syntax:
 
@@ -87,7 +87,7 @@ To open such URLs:
     -   Append a `.`
     -   Append the domain name specified in the [ton\_proxy\_address client configuration parameter »](/api/config/#ton-proxy-address)
 
-The resulting URL should only be opened using the in-app [Telegram Browser](https://telegram.org/blog/w3-browser-mini-app-store#telegram-browser) (i.e. no option should be given to open such links using third party browsers).
+The resulting URL should only be opened using the in-app [Telegram Browser](/blog/w3-browser-mini-app-store/#telegram-browser) (i.e. no option should be given to open such links using third party browsers).
 
 ### Public username links
 
@@ -1743,7 +1743,7 @@ Parameters:
 
 ### ID links
 
-ID links are merely an abstraction offered by the [bot API](https://core.telegram.org/bots/api) to simplify construction of [inputMessageEntityMentionName](/constructor/inputMessageEntityMentionName/) and [inputKeyboardButtonUserProfile](/constructor/inputKeyboardButtonUserProfile/) constructors, and should be ignored by normal clients.
+ID links are merely an abstraction offered by the [bot API](/bots/api/) to simplify construction of [inputMessageEntityMentionName](/constructor/inputMessageEntityMentionName/) and [inputKeyboardButtonUserProfile](/constructor/inputKeyboardButtonUserProfile/) constructors, and should be ignored by normal clients.
 
 `tg:` syntax:
 
@@ -1757,7 +1757,7 @@ Parameters:
 
 ### Emoji links
 
-Emoji links are merely an abstraction offered by the [bot API](https://core.telegram.org/bots/api) to simplify construction of [messageEntityCustomEmoji](/constructor/messageEntityCustomEmoji/) constructors, and should be ignored by normal clients.
+Emoji links are merely an abstraction offered by the [bot API](/bots/api/) to simplify construction of [messageEntityCustomEmoji](/constructor/messageEntityCustomEmoji/) constructors, and should be ignored by normal clients.
 
 `tg:` syntax:
 
@@ -1771,7 +1771,7 @@ Parameters:
 
 ### Timestamp links
 
-Timestamp links are merely an abstraction offered by the [bot API](https://core.telegram.org/bots/api) to simplify construction of [messageEntityFormattedDate](/constructor/inputMessageEntityMentionName/), and should be ignored by normal clients.
+Timestamp links are merely an abstraction offered by the [bot API](/bots/api/) to simplify construction of [messageEntityFormattedDate](/constructor/inputMessageEntityMentionName/), and should be ignored by normal clients.
 
 `tg:` syntax:
 

@@ -9,7 +9,7 @@ layout: layout.njk
 
 # payments.updateStarGiftPrice
 
-A [collectible gift we own »](/api/gifts/#collectible-gifts) can be put up for sale on the [gift marketplace »](https://telegram.org/blog/gift-marketplace-and-more) with this method, see [here »](/api/gifts/#reselling-collectible-gifts) for more info.
+A [collectible gift we own »](/api/gifts/#collectible-gifts) can be put up for sale on the [gift marketplace »](/blog/gift-marketplace-and-more/) with this method, see [here »](/api/gifts/#reselling-collectible-gifts) for more info.
 
 <p class="page_layer">Layer 223</p>
 

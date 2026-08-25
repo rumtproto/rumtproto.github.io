@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Telegram Stories
 
-Telegram users and channels can easily post and view [stories](https://telegram.org/blog/stories) through the API.
+Telegram users and channels can easily post and view [stories](/blog/stories/) through the API.
 
 ### Posting stories
 
@@ -584,7 +584,7 @@ Owned [collectible gifts »](/api/gifts/#collectible-gifts) may be shared in a s
 
 ### Stealth mode
 
-[Premium users](/api/premium/) may enable [stealth mode](https://telegram.org/tour/stories#stealth-mode), erasing their views from any stories they opened in the past [`stories_stealth_past_period` seconds »](/api/config/#stories-stealth-past-period), and hiding their views on stories for the next [`stories_stealth_future_period` seconds »](/api/config/#stories-stealth-future-period), as specified by the [client configuration »](/api/config/#client-configuration).
+[Premium users](/api/premium/) may enable [stealth mode](/tour/stories/#stealth-mode), erasing their views from any stories they opened in the past [`stories_stealth_past_period` seconds »](/api/config/#stories-stealth-past-period), and hiding their views on stories for the next [`stories_stealth_future_period` seconds »](/api/config/#stories-stealth-future-period), as specified by the [client configuration »](/api/config/#client-configuration).
 
 Schema:
 

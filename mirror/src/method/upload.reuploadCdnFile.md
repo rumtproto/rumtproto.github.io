@@ -9,7 +9,7 @@ layout: layout.njk
 
 # upload.reuploadCdnFile
 
-Request a reupload of a certain file to a [CDN DC](https://core.telegram.org/cdn).
+Request a reupload of a certain file to a [CDN DC](/cdn/).
 
 <p class="page_layer">Layer 223</p>
 
@@ -32,6 +32,6 @@ Request a reupload of a certain file to a [CDN DC](https://core.telegram.org/cdn
 
 ### Related pages
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Encrypted CDNs for Speed and Security](/cdn/)
 
 How client apps download popular public files from secondary CDN data centers.

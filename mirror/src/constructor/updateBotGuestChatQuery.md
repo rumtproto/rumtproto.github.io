@@ -13,7 +13,7 @@ Sent to [guest bots »](/api/bots/guest-mode/) when a user invokes the bot as a 
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="https://core.telegram.org/constructor/updateBotGuestChatQuery?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="/constructor/updateBotGuestChatQuery/">Switch »</a></code></pre>
 
 ### Parameters
 

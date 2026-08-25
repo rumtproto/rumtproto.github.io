@@ -13,7 +13,7 @@ Report viewport read metrics for visible messages, indicating how long each mess
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="https://core.telegram.org/method/messages.reportReadMetrics?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="/method/messages.reportReadMetrics/">Switch »</a></code></pre>
 
 ### Parameters
 

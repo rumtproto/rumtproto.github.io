@@ -11,7 +11,7 @@ layout: layout.njk
 
 Below you will find information on schema changes. For more details on the use of layers, see [Invoking API methods](/api/invoking/#layers).
 
-### [Layer 225](https://core.telegram.org/schema?layer=225)
+### [Layer 225](/schema/)
 
 To view all changes since the last documentation refresh, start reading at [layer 215](#layer-215).
 
@@ -224,7 +224,7 @@ aicompose.getTones#abd59201 hash:long = aicompose.Tones;
 aicompose.getToneExample#d1b4ab14 tone:InputAiComposeTone num:int = AiComposeToneExample;
 ```
 
-### [Layer 224](https://core.telegram.org/schema?layer=224)
+### [Layer 224](/schema/)
 
 This layer introduces the following features:
 
@@ -566,7 +566,7 @@ stories.sendStory#8f9e6898 flags:# pinned:flags.2?true noforwards:flags.4?true f
 stories.editStory#2c63a72b flags:# peer:InputPeer id:int media:flags.0?InputMedia media_areas:flags.3?Vector<MediaArea> caption:flags.1?string entities:flags.1?Vector<MessageEntity> privacy_rules:flags.2?Vector<InputPrivacyRule> music:flags.4?InputDocument = Updates;
 ```
 
-### [Layer 223](https://core.telegram.org/schema?layer=223)
+### [Layer 223](/schema/)
 
 This layer introduces:
 
@@ -685,7 +685,7 @@ messages.declineUrlAuth#35436bbc url:string = Bool;
 messages.checkUrlAuthMatchCode#c9a47b0b url:string match_code:string = Bool;
 ```
 
-### [Layer 222](https://core.telegram.org/schema?layer=222)
+### [Layer 222](/schema/)
 
 This layer introduces the following features:
 
@@ -845,7 +845,7 @@ payments.craftStarGift#b0f9684f stargift:Vector<InputSavedStarGift> = Updates;
 channels.getFutureCreatorAfterLeave#a00918af channel:InputChannel = User;
 ```
 
-### [Layer 220](https://core.telegram.org/schema?layer=220)
+### [Layer 220](/schema/)
 
 This layer introduces the following features:
 
@@ -966,7 +966,7 @@ payments.sendStarGiftOffer#8fb86b41 flags:# peer:InputPeer slug:string price:Sta
 payments.getStarGiftUpgradeAttributes#6d038b58 gift_id:long = payments.StarGiftUpgradeAttributes;
 ```
 
-### [Layer 219](https://core.telegram.org/schema?layer=219)
+### [Layer 219](/schema/)
 
 This layer introduces the following features:
 
@@ -1023,7 +1023,7 @@ auth.initPasskeyLogin#518ad0b7 api_id:int api_hash:string = auth.PasskeyLoginOpt
 auth.finishPasskeyLogin#9857ad07 flags:# credential:InputPasskeyCredential from_dc_id:flags.0?int from_auth_key_id:flags.0?long = auth.Authorization;
 ```
 
-### [Layer 218](https://core.telegram.org/schema?layer=218)
+### [Layer 218](/schema/)
 
 This layer introduces the following features:
 
@@ -1141,7 +1141,7 @@ payments.getStarGiftAuctionAcquiredGifts#6ba2cbec gift_id:long = payments.StarGi
 payments.getStarGiftActiveAuctions#a5d0514d hash:long = payments.StarGiftActiveAuctions;
 ```
 
-### [Layer 217](https://core.telegram.org/schema?layer=217)
+### [Layer 217](/schema/)
 
 This layer introduces:
 
@@ -1255,7 +1255,7 @@ phone.getGroupCallStars#6f636302 call:InputGroupCall = phone.GroupCallStars;
 phone.saveDefaultSendAs#4167add1 call:InputGroupCall send_as:InputPeer = Bool;
 ```
 
-### [Layer 216](https://core.telegram.org/schema?layer=216)
+### [Layer 216](/schema/)
 
 This layer introduces the following new features:
 
@@ -1451,7 +1451,7 @@ contacts.updateContactNote#139f63fb id:InputUser note:TextWithEntities = Bool;
 users.suggestBirthday#fc533372 id:InputUser birthday:Birthday = Updates;
 ```
 
-### [Layer 215](https://core.telegram.org/schema?layer=215)
+### [Layer 215](/schema/)
 
 This layer introduces the following new features and improvements:
 
@@ -1501,7 +1501,7 @@ account.getUniqueGiftChatThemes#e42ce9c9 offset:string limit:int hash:long = acc
 auth.checkPaidAuth#56e59f9c phone_number:string phone_code_hash:string form_id:long = auth.SentCode;
 ```
 
-### [Layer 214](https://core.telegram.org/schema?layer=214)
+### [Layer 214](/schema/)
 
 To view all changes since the last documentation refresh, start reading at [layer 196](#layer-196). This documentation refresh _also_ brings the following changes:
 
@@ -1548,7 +1548,7 @@ To view all changes since the last documentation refresh, start reading at [laye
     
     -   Specifically, the bot API dialog ID new ranges from `-4000000000000` to `1099511627775` (previously the range was `-2002147483648` to `1099511627775`).
     -   The transformed range for bot API monoforum dialog IDs is `-2002147483649` to `-4000000000000` inclusively.
--   Push notifications can now have a custom `report_delivery_until_date` parameter for [Telegram Gateway verification messages](https://telegram.org/blog/star-messages-gateway-2-0-and-more#save-even-more-on-user-verification): if set, the message is a Telegram Gateway verification code, and [messages.reportMessagesDelivery](/method/messages.reportMessagesDelivery/) should be invoked with the `push` flag set.
+-   Push notifications can now have a custom `report_delivery_until_date` parameter for [Telegram Gateway verification messages](/blog/star-messages-gateway-2-0-and-more/#save-even-more-on-user-verification): if set, the message is a Telegram Gateway verification code, and [messages.reportMessagesDelivery](/method/messages.reportMessagesDelivery/) should be invoked with the `push` flag set.
     
 -   Added a correction to the [paid reactions documentation »](/api/reactions/#paid-reactions): the `random_id` argument of [messages.sendPaidReaction](/method/messages.sendPaidReaction/) **must** be composed of a 64-bit integer where the lower 32 bits are random, and the higher 32 bits **are equal to the current unixtime**, i.e. `uint64_t random_id = (time() << 32) | ((uint64_t)random_uint32_t())`: this differs from the `random_id` format of all other methods in the API, which just take 64 random bits.
     
@@ -4514,7 +4514,7 @@ account.getUniqueGiftChatThemes#fe74ef9f offset:int limit:int hash:long = accoun
 messages.setChatTheme#081202c9 peer:InputPeer theme:InputChatTheme = Updates;
 ```
 
-### [Layer 213](https://core.telegram.org/schema?layer=213)
+### [Layer 213](/schema/)
 
 This layer introduces the following new features:
 
@@ -4599,7 +4599,7 @@ channels.setMainProfileTab#3583fcb1 channel:InputChannel tab:ProfileTab = Bool;
 payments.checkCanSendGift#c0c4edc9 gift_id:long = payments.CheckCanSendGiftResult;
 ```
 
-### [Layer 212](https://core.telegram.org/schema?layer=212)
+### [Layer 212](/schema/)
 
 This layer introduces the following features:
 
@@ -4680,7 +4680,7 @@ payments.getSavedStarGifts#a319e569 flags:# exclude_unsaved:flags.0?true exclude
 payments.getUniqueStarGiftValueInfo#4365af6b slug:string = payments.UniqueStarGiftValueInfo;
 ```
 
-### [Layer 211](https://core.telegram.org/schema?layer=211)
+### [Layer 211](/schema/)
 
 This layer introduces:
 
@@ -4752,7 +4752,7 @@ stories.getAlbums#25b3eac7 peer:InputPeer hash:long = stories.Albums;
 stories.getAlbumStories#ac806d61 peer:InputPeer album_id:int offset:int limit:int = stories.Stories;
 ```
 
-### [Layer 210](https://core.telegram.org/schema?layer=210)
+### [Layer 210](/schema/)
 
 This layer introduces:
 
@@ -4808,7 +4808,7 @@ payments.deleteStarGiftCollection#ad5648e8 peer:InputPeer collection_id:int = Bo
 payments.getStarGiftCollections#981b91dd peer:InputPeer hash:long = payments.StarGiftCollections;
 ```
 
-### [Layer 208](https://core.telegram.org/schema?layer=208)
+### [Layer 208](/schema/)
 
 This layer introduces:
 
@@ -4838,7 +4838,7 @@ inputReplyToMessage#869fbe10 flags:# reply_to_msg_id:int top_msg_id:flags.0?int 
 starsTransaction#13659eb0 flags:# refund:flags.3?true pending:flags.4?true failed:flags.6?true gift:flags.10?true reaction:flags.11?true stargift_upgrade:flags.18?true business_transfer:flags.21?true stargift_resale:flags.22?true id:string amount:StarsAmount date:int peer:StarsTransactionPeer title:flags.0?string description:flags.1?string photo:flags.2?WebDocument transaction_date:flags.5?int transaction_url:flags.5?string bot_payload:flags.7?bytes msg_id:flags.8?int extended_media:flags.9?Vector<MessageMedia> subscription_period:flags.12?int giveaway_post_id:flags.13?int stargift:flags.14?StarGift floodskip_number:flags.15?int starref_commission_permille:flags.16?int starref_peer:flags.17?Peer starref_amount:flags.17?StarsAmount paid_messages:flags.19?int premium_gift_months:flags.20?int ads_proceeds_from_date:flags.23?int ads_proceeds_to_date:flags.23?int = StarsTransaction;
 ```
 
-### [Layer 207](https://core.telegram.org/schema?layer=207)
+### [Layer 207](/schema/)
 
 This layer introduces:
 
@@ -4934,7 +4934,7 @@ payments.getStarsTransactionsByID#2dca16b8 flags:# ton:flags.0?true peer:InputPe
 messages.toggleSuggestedPostApproval#8107455c flags:# reject:flags.1?true peer:InputPeer msg_id:int schedule_date:flags.0?int reject_comment:flags.2?string = Updates;
 ```
 
-### [Layer 205](https://core.telegram.org/schema?layer=205)
+### [Layer 205](/schema/)
 
 This layer introduces:
 
@@ -5018,7 +5018,7 @@ messages.appendTodoList#21a61057 peer:InputPeer msg_id:int list:Vector<TodoItem>
 account.toggleNoPaidMessagesException#fe2eda76 flags:# refund_charged:flags.0?true require_payment:flags.2?true parent_peer:flags.1?InputPeer user_id:InputUser = Bool;
 ```
 
-### [Layer 204](https://core.telegram.org/schema?layer=204)
+### [Layer 204](/schema/)
 
 This layer introduces:
 
@@ -5097,7 +5097,7 @@ messages.readSavedHistory#ba4a3b5b parent_peer:InputPeer peer:InputPeer max_id:i
 channels.getMessageAuthor#ece2a0e6 channel:InputChannel id:int = User;
 ```
 
-### [Layer 203](https://core.telegram.org/schema?layer=203)
+### [Layer 203](/schema/)
 
 This layer introduces:
 
@@ -5114,7 +5114,7 @@ This layer introduces:
 ##### New Methods
 
 -   Added [payments.getResaleStarGifts](/method/payments.getResaleStarGifts/) - Get [collectible gifts](/api/gifts/#collectible-gifts) of a specific type currently on resale, see [here »](/api/gifts/#reselling-collectible-gifts) for more info.
--   Added [payments.updateStarGiftPrice](/method/payments.updateStarGiftPrice/) - A [collectible gift we own »](/api/gifts/#collectible-gifts) can be put up for sale on the [gift marketplace »](https://telegram.org/blog/gift-marketplace-and-more) with this method, see [here »](/api/gifts/#reselling-collectible-gifts) for more info.
+-   Added [payments.updateStarGiftPrice](/method/payments.updateStarGiftPrice/) - A [collectible gift we own »](/api/gifts/#collectible-gifts) can be put up for sale on the [gift marketplace »](/blog/gift-marketplace-and-more/) with this method, see [here »](/api/gifts/#reselling-collectible-gifts) for more info.
 -   Added [channels.toggleAutotranslation](/method/channels.toggleAutotranslation/) - Toggle autotranslation in a channel, for all users: see [here »](/api/translation/#autotranslation-for-channels) for more info.
 
 ##### Changed Methods
@@ -5171,7 +5171,7 @@ payments.updateStarGiftPrice#3baea4e1 stargift:InputSavedStarGift resell_stars:l
 channels.toggleAutotranslation#167fc0a1 channel:InputChannel enabled:Bool = Updates;
 ```
 
-### [Layer 202](https://core.telegram.org/schema?layer=202)
+### [Layer 202](/schema/)
 
 This layer introduces:
 
@@ -5300,7 +5300,7 @@ phone.declineConferenceCallInvite#3c479971 msg_id:int = Updates;
 phone.getGroupCallChainBlocks#ee9f88a6 call:InputGroupCall sub_chain_id:int offset:int limit:int = Updates;
 ```
 
-### [Layer 200](https://core.telegram.org/schema?layer=200)
+### [Layer 200](/schema/)
 
 This layer introduces:
 
@@ -5411,7 +5411,7 @@ users.getRequirementsToContact#d89a83a3 id:Vector<InputUser> = Vector<Requiremen
 payments.toggleStarGiftsPinnedToTop#1513e7b0 peer:InputPeer stargift:Vector<InputSavedStarGift> = Bool;
 ```
 
-### [Layer 198](https://core.telegram.org/schema?layer=198)
+### [Layer 198](/schema/)
 
 This layer introduces:
 
@@ -5515,7 +5515,7 @@ payments.getStarGiftWithdrawalUrl#d06e93a8 stargift:InputSavedStarGift password:
 payments.toggleChatStarGiftNotifications#60eaefa1 flags:# enabled:flags.0?true peer:InputPeer = Bool;
 ```
 
-### [Layer 197](https://core.telegram.org/schema?layer=197)
+### [Layer 197](/schema/)
 
 This layer introduces:
 
@@ -5564,11 +5564,11 @@ bots.getBotRecommendations#a1b70815 bot:InputUser = users.Users;
 payments.getUniqueStarGift#a1974d72 slug:string = payments.UniqueStarGift;
 ```
 
-### [Layer 196](https://core.telegram.org/schema?layer=196)
+### [Layer 196](/schema/)
 
 This layer introduces:
 
--   [Extra secure group calls »](https://telegram.org/blog/group-calls-made-easy)
+-   [Extra secure group calls »](/blog/group-calls-made-easy/)
 -   [Explicit delivery acknowledgement for Telegram Gateway verification messages »](/method/messages.reportMessagesDelivery/).
 -   [Third-party verification »](/api/bots/verification/)
 -   [Reactions for service messages »](/api/reactions/)

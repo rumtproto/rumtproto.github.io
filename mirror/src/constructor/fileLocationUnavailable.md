@@ -13,7 +13,7 @@ File is currently unavailable.
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 98. <a href="https://core.telegram.org/constructor/fileLocationUnavailable?layer=98">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 98. <a href="/constructor/fileLocationUnavailable/">Switch »</a></code></pre>
 
 ### Parameters
 

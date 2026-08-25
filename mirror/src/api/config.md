@@ -1797,7 +1797,7 @@ auth.signIn#8d52a951 flags:# phone_number:string phone_code_hash:string phone_co
 account.deleteAccount#a2c0cf74 flags:# reason:string password:flags.0?InputCheckPasswordSRP = Bool;
 ```
 
-These methods can be used for managing consent to Telegram's [Terms Of Service](https://telegram.org/tos).
+These methods can be used for managing consent to Telegram's [Terms Of Service](/tos/).
 
 Typically, before a user [signs up](/api/auth/#sign-in-sign-up) by invoking [auth.signUp](/method/auth.signUp/), apps should show a pop-up (if the `popup` flag of the [help.termsOfService](/constructor/help.termsOfService/) method is set), asking the user to accept Telegram's terms of service; in case of denial, the user is to be returned to the initial page of the login flow.
 

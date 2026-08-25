@@ -26,14 +26,14 @@ From the perspective of a service that requires real-world ID, the process looks
 -   You decrypt the data, check it for errors and re-request any missing or invalid information.
 -   You sign the user up for your service. Tada!
 
-See [As a bot](#as-a-bot) to see how to request passport data using a bot, through the MTProto API. Look at the [Passport Manual](https://core.telegram.org/passport) to see how to request passport data using a bot, through the simplified bot API.
+See [As a bot](#as-a-bot) to see how to request passport data using a bot, through the MTProto API. Look at the [Passport Manual](/passport/) to see how to request passport data using a bot, through the simplified bot API.
 
 From the perspective of a user, the process looks something like this:
 
--   Your app [receives an event/intent](#receiving-requests) from one of the [SDKs](https://core.telegram.org/passport#sdk), or from a custom source.
+-   Your app [receives an event/intent](#receiving-requests) from one of the [SDKs](/passport/#sdk), or from a custom source.
 -   The user accepts your privacy policy and agrees to share their data.
--   The user's Telegram app [downloads the data you requested](https://core.telegram.org/passport/encryption#fetching-and-deleting-stored-passport-data) from the end-to-end encrypted storage on Telegram.
--   If some of the data you requested is missing, the user can [add it to their Telegram Passport](https://core.telegram.org/passport/encryption#encryption) at this point.
+-   The user's Telegram app [downloads the data you requested](/passport/encryption/#fetching-and-deleting-stored-passport-data) from the end-to-end encrypted storage on Telegram.
+-   If some of the data you requested is missing, the user can [add it to their Telegram Passport](/passport/encryption/#encryption) at this point.
 -   The user's app encrypts the data with your public key and sends it to the service.
 -   You sign the user up for your service. Tada!
 
@@ -41,7 +41,7 @@ See [As a user](#as-a-user) to see how user client apps should send passport dat
 
 ### As a bot
 
-A simplified version of this process can be used using the bot API, for more info see the [Passport Manual](https://core.telegram.org/passport).
+A simplified version of this process can be used using the bot API, for more info see the [Passport Manual](/passport/).
 
 Using the MTProto API, the process is pretty much the same, up until the actual API calls.
 
@@ -49,11 +49,11 @@ Using the MTProto API, the process is pretty much the same, up until the actual 
 
 #### Setting Up Telegram Passport
 
-[As per the bot API](https://core.telegram.org/passport#setting-up-telegram-passport).
+[As per the bot API](/passport/#setting-up-telegram-passport).
 
 #### Requesting Information
 
-[As per the bot API](https://core.telegram.org/passport#requesting-information).
+[As per the bot API](/passport/#requesting-information).
 
 #### Receiving information
 
@@ -122,9 +122,9 @@ To decrypt the received data, first, decrypt the credentials contained in [secur
 
 #### Credentials
 
-The credentials are a JSON-serialized object, structured exactly as in the [bot API »](https://core.telegram.org/passport#credentials). Since decryption credentials are E2E encrypted, apps have to store the decryption credentials as JSON and not TL payloads.
+The credentials are a JSON-serialized object, structured exactly as in the [bot API »](/passport/#credentials). Since decryption credentials are E2E encrypted, apps have to store the decryption credentials as JSON and not TL payloads.
 
-The credentials are used as described in the [Passport Manual](https://core.telegram.org/passport#credentials) to decrypt the files attached to the [secureValue](/constructor/secureValue/). In this case, the container for the E2E encrypted data is in TL, while the encrypted data itself is in JSON.
+The credentials are used as described in the [Passport Manual](/passport/#credentials) to decrypt the files attached to the [secureValue](/constructor/secureValue/). In this case, the container for the E2E encrypted data is in TL, while the encrypted data itself is in JSON.
 
 ##### [secureValue](/constructor/secureValue/)
 
@@ -136,7 +136,7 @@ messageActionSecureValuesSentMe#1b287353 values:Vector<SecureValue> credentials:
 
 The schema for the [secureValue](/constructor/inputSecureValue/) constructor defines the constructor that can be found in each field.
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>type</strong></td><td><a href="/type/SecureValueType/">SecureValueType</a></td><td>Secure <a href="https://core.telegram.org/passport">passport</a> value type</td></tr><tr><td><strong>data</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/type/SecureData/">SecureData</a></td><td>Encrypted <a href="https://core.telegram.org/passport">Telegram Passport</a> element data</td></tr><tr><td><strong>front_side</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.1?<a href="/type/SecureFile/">SecureFile</a></td><td>Encrypted <a href="https://core.telegram.org/passport">passport</a> file with the front side of the document</td></tr><tr><td><strong>reverse_side</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.2?<a href="/type/SecureFile/">SecureFile</a></td><td>Encrypted <a href="https://core.telegram.org/passport">passport</a> file with the reverse side of the document</td></tr><tr><td><strong>selfie</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.3?<a href="/type/SecureFile/">SecureFile</a></td><td>Encrypted <a href="https://core.telegram.org/passport">passport</a> file with a selfie of the user holding the document</td></tr><tr><td><strong>translation</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.6?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureFile/">SecureFile</a>&gt;</td><td>Array of encrypted <a href="https://core.telegram.org/passport">passport</a> files with translated versions of the provided documents</td></tr><tr><td><strong>files</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.4?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureFile/">SecureFile</a>&gt;</td><td>Array of encrypted <a href="https://core.telegram.org/passport">passport</a> files with photos the of the documents</td></tr><tr><td><strong>plain_data</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.5?<a href="/type/SecurePlainData/">SecurePlainData</a></td><td>Plaintext verified <a href="https://core.telegram.org/passport">passport</a> data</td></tr><tr><td><strong>hash</strong></td><td><a href="/type/bytes/">bytes</a></td><td>Data hash</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>type</strong></td><td><a href="/type/SecureValueType/">SecureValueType</a></td><td>Secure <a href="/passport/">passport</a> value type</td></tr><tr><td><strong>data</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/type/SecureData/">SecureData</a></td><td>Encrypted <a href="/passport/">Telegram Passport</a> element data</td></tr><tr><td><strong>front_side</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.1?<a href="/type/SecureFile/">SecureFile</a></td><td>Encrypted <a href="/passport/">passport</a> file with the front side of the document</td></tr><tr><td><strong>reverse_side</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.2?<a href="/type/SecureFile/">SecureFile</a></td><td>Encrypted <a href="/passport/">passport</a> file with the reverse side of the document</td></tr><tr><td><strong>selfie</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.3?<a href="/type/SecureFile/">SecureFile</a></td><td>Encrypted <a href="/passport/">passport</a> file with a selfie of the user holding the document</td></tr><tr><td><strong>translation</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.6?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureFile/">SecureFile</a>&gt;</td><td>Array of encrypted <a href="/passport/">passport</a> files with translated versions of the provided documents</td></tr><tr><td><strong>files</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.4?<a href="/type/Vector%20t/">Vector</a>&lt;<a href="/type/SecureFile/">SecureFile</a>&gt;</td><td>Array of encrypted <a href="/passport/">passport</a> files with photos the of the documents</td></tr><tr><td><strong>plain_data</strong></td><td><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.5?<a href="/type/SecurePlainData/">SecurePlainData</a></td><td>Plaintext verified <a href="/passport/">passport</a> data</td></tr><tr><td><strong>hash</strong></td><td><a href="/type/bytes/">bytes</a></td><td>Data hash</td></tr></tbody></table>
 
 Here's a list of possible [SecureValueTypes](/type/SecureValueType/), and the parameters that can be set/requested when using each type.
 
@@ -150,9 +150,9 @@ secureData#8aeabec3 data:bytes data_hash:bytes secret:bytes = SecureData;
 
 Data is an encrypted and padded JSON-serialized object of one of the specified JSON types, depending on the chosen [type](/type/SecureValueType/).
 
-<table class="table"><thead><tr><th scope="col">Chosen type</th><th scope="col">JSON object</th></tr></thead><tbody><tr><td><a href="/constructor/secureValueTypePersonalDetails/">secureValueTypePersonalDetails</a></td><td><a href="https://core.telegram.org/passport#personaldetails">PersonalDetails</a></td></tr><tr><td><a href="/constructor/secureValueTypePassport/">secureValueTypePassport</a></td><td><a href="https://core.telegram.org/passport#iddocumentdata">IdDocumentData</a></td></tr><tr><td><a href="/constructor/secureValueTypeDriverLicense/">secureValueTypeDriverLicense</a></td><td><a href="https://core.telegram.org/passport#iddocumentdata">IdDocumentData</a></td></tr><tr><td><a href="/constructor/secureValueTypeIdentityCard/">secureValueTypeIdentityCard</a></td><td><a href="https://core.telegram.org/passport#iddocumentdata">IdDocumentData</a></td></tr><tr><td><a href="/constructor/secureValueTypeInternalPassport/">secureValueTypeInternalPassport</a></td><td><a href="https://core.telegram.org/passport#iddocumentdata">IdDocumentData</a></td></tr><tr><td><a href="/constructor/secureValueTypeAddress/">secureValueTypeAddress</a></td><td><a href="https://core.telegram.org/passport#residentialaddress">ResidentialAddress</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Chosen type</th><th scope="col">JSON object</th></tr></thead><tbody><tr><td><a href="/constructor/secureValueTypePersonalDetails/">secureValueTypePersonalDetails</a></td><td><a href="/passport/#personaldetails">PersonalDetails</a></td></tr><tr><td><a href="/constructor/secureValueTypePassport/">secureValueTypePassport</a></td><td><a href="/passport/#iddocumentdata">IdDocumentData</a></td></tr><tr><td><a href="/constructor/secureValueTypeDriverLicense/">secureValueTypeDriverLicense</a></td><td><a href="/passport/#iddocumentdata">IdDocumentData</a></td></tr><tr><td><a href="/constructor/secureValueTypeIdentityCard/">secureValueTypeIdentityCard</a></td><td><a href="/passport/#iddocumentdata">IdDocumentData</a></td></tr><tr><td><a href="/constructor/secureValueTypeInternalPassport/">secureValueTypeInternalPassport</a></td><td><a href="/passport/#iddocumentdata">IdDocumentData</a></td></tr><tr><td><a href="/constructor/secureValueTypeAddress/">secureValueTypeAddress</a></td><td><a href="/passport/#residentialaddress">ResidentialAddress</a></td></tr></tbody></table>
 
-[DataCredentials](https://core.telegram.org/passport#datacredentials) extracted [from the credentials](#credentials) can then be used to decrypt encrypted data from the _data_ field in [secureData](/constructor/secureData/). For more info on how to decrypt the _data_ field, see the [passport manual](https://core.telegram.org/passport#datacredentials).
+[DataCredentials](/passport/#datacredentials) extracted [from the credentials](#credentials) can then be used to decrypt encrypted data from the _data_ field in [secureData](/constructor/secureData/). For more info on how to decrypt the _data_ field, see the [passport manual](/passport/#datacredentials).
 
 ##### [SecureFile](/type/SecureFile/)
 
@@ -171,7 +171,7 @@ Files (JPG format when decrypted, max. 10 MB) are downloaded chunk by chunk as d
 -   The `id` field is the `id` of the [secureFile](/constructor/secureFile/)
 -   The `access_hash` field is the `access_hash` of the [secureFile](/constructor/secureFile/)
 
-[FileCredentials](https://core.telegram.org/passport#filecredentials) extracted [from the credentials](#credentials) can then be used to decrypt downloaded encrypted data. For more info on how to decrypt passport files, see the [passport manual](https://core.telegram.org/passport#filecredentials).
+[FileCredentials](/passport/#filecredentials) extracted [from the credentials](#credentials) can then be used to decrypt downloaded encrypted data. For more info on how to decrypt passport files, see the [passport manual](/passport/#filecredentials).
 
 ##### [SecurePlainData](/type/SecurePlainData/)
 
@@ -180,7 +180,7 @@ securePlainPhone#7d6099dd phone:string = SecurePlainData;
 securePlainEmail#21ec5a5f email:string = SecurePlainData;
 ```
 
-The email/phone is passed in plaintext using the respective [SecurePlainData](/type/SecurePlainData/) constructor. Emails and phone numbers sent using telegram passport are _already verified_ as described in the [passport manual](https://core.telegram.org/passport/encryption#secureplaindata).
+The email/phone is passed in plaintext using the respective [SecurePlainData](/type/SecurePlainData/) constructor. Emails and phone numbers sent using telegram passport are _already verified_ as described in the [passport manual](/passport/encryption/#secureplaindata).
 
 #### Fixing errors
 
@@ -211,7 +211,7 @@ Descriptions of the method parameters can be found in the method's [documentatio
 
 #### Receiving requests
 
-The process starts when your app receives an event from one of the [SDKs](https://core.telegram.org/passport#sdk), or from a custom source.
+The process starts when your app receives an event from one of the [SDKs](/passport/#sdk), or from a custom source.
 
 #### URI format
 
@@ -228,7 +228,7 @@ With the following query string parameters:
 
 <table class="table"><thead><tr><th scope="col">Parameters</th><th scope="col">Type</th><th scope="col">Required</th><th scope="col">Description</th></tr></thead><tbody><tr><td>domain</td><td>String</td><td>Required only for <code>resolve</code> versions of the passport URI</td><td>Always <code>telegrampassport</code> for Passport authorization requests.</td></tr><tr><td>bot_id</td><td>Integer</td><td>Yes</td><td>Unique identifier for the bot. You can get it from bot token. For example, for the bot token <code>1234567:4TT8bAc8GHUspu3ERYn-KGcvsvGB9u_n4ddy</code>, the bot id is <code>1234567</code>.</td></tr><tr><td>scope</td><td><a href="#uripassportscope">UriPassportScope</a></td><td>Yes</td><td>A more compact JSON-serialized object describing the data you want to request</td></tr><tr><td>public_key</td><td>String</td><td>Yes</td><td>Public key of the bot</td></tr><tr><td>nonce</td><td>String</td><td>Yes</td><td>Bot-specified nonce. <strong>Important:</strong> For security purposes it should be a cryptographically secure unique identifier of the request. In particular, it should be long enough and it should be generated using a cryptographically secure pseudorandom number generator. You should never accept credentials with the same nonce twice.</td></tr><tr><td>callback_url</td><td>String</td><td>Optional</td><td>Supported by some Telegram clients, specifies a callback URL to open once the process is finished or canceled.</td></tr><tr><td>payload</td><td>String</td><td>Optional</td><td><strong>Deprecated</strong> parameter from Telegram Passport 1.0 that had the same function of the <code>nonce</code> parameter. Services that still use a legacy version of the SDK may provide this parameter instead of the <code>nonce</code>. In some cases, both the <code>nonce</code> and the <code>payload</code> parameters may be found in a URI, for backwards compatibility: in this case, the <code>nonce</code> parameter should always be used instead of <code>payload</code>.</td></tr></tbody></table>
 
-Example URI, generated by the [Telegram Passport Example page](https://core.telegram.org/passport/example):
+Example URI, generated by the [Telegram Passport Example page](/passport/example/):
 
 ```
 tg://resolve?domain=telegrampassport&bot_id=543260180&scope=%7B%22v%22%3A1%2C%22d%22%3A%5B%7B%22_%22%3A%22pd%22%2C%22n%22%3A1%7D%2C%22ad%22%2C%22pn%22%2C%22em%22%2C%7B%22_%22%3A%5B%7B%22_%22%3A%22pp%22%2C%22s%22%3A1%2C%22t%22%3A1%7D%2C%22ip%22%2C%22dl%22%2C%22ic%22%5D%7D%2C%7B%22_%22%3A%5B%22ub%22%2C%22bs%22%2C%22ra%22%2C%22pr%22%2C%22tr%22%5D%7D%5D%7D&public_key=-----BEGIN%20PUBLIC%20KEY-----%0AMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv6m1zBF8lZOCqcxf8hnj%0AkvHwuWdU8s4rBWaxKXH%2FvDDUklcCS5uhSnmjhxWca9suubaG3lW4HxlCilkeJPVf%0Ajimg5Q8ZqWrR3OoOihEpcG9iJZTOEpsEk7VtEiabgacBG3Quv9JslTrDe95Fn801%0At9d21HXwgMrHeHpWDOn31Dr%2BwoEH%2BkwySUWa6L%2FZbnGwSNP7eeDTE7Amz1RMDk3t%0A8EWGq58u0IQatPcEH09aUQlKzk6MIiALkZ9ILBKCBk6d2WCokKnsdBctovNbxwSx%0AhP1qst1r%2BYc8iPBZozsDC0ZsC5jXCkcODI3OC0tkNtYzN2XKalW5R0DjDRUDmGhT%0AzQIDAQAB%0A-----END%20PUBLIC%20KEY-----%0A&nonce=b8e892dc2e0afe63424d101b964f1256_32858210_708614a4585b84872e&callback_url=https%3A%2F%2Fcore.telegram.org%2Fpassport%2Fexample%3Fpassport_ssid%3Db8e892dc2e0afe63424d101b964f1256_32858210_db259b427f200751ce&payload=b8e892dc2e0afe63424d101b964f1256_32858210_708614a4585b84872e
@@ -269,7 +269,7 @@ You can also use the special type "idd" as an alias for one of "pp", "dl", "ic" 
 
 #### Setting up Telegram Passport
 
-The next step for the client app is to request the user's 2FA passport, and configure Telegram Passport/fetch and decrypt remotely saved Telegram Passport parameters as described in the [Encryption article »](https://core.telegram.org/passport/encryption).
+The next step for the client app is to request the user's 2FA passport, and configure Telegram Passport/fetch and decrypt remotely saved Telegram Passport parameters as described in the [Encryption article »](/passport/encryption/).
 
 #### Fetching the passport form
 
@@ -285,7 +285,7 @@ Then, the client app passes the bot ID, scope and public key from the [passport 
 
 The response will be an [account.authorizationForm](/constructor/account.authorizationForm/) constructor, with info about the required document types, the URL of the service's privacy policy, as well as info about the bot to which the form should be sent. If the form was already submitted at least once, the constructor will also contain a list of already submitted data, along with eventual errors.
 
-The user should accept the privacy policy and proceed to fill in the required data, and the client should encrypt and upload it as described in the [Encryption article »](https://core.telegram.org/passport/encryption).
+The user should accept the privacy policy and proceed to fill in the required data, and the client should encrypt and upload it as described in the [Encryption article »](/passport/encryption/).
 
 #### Submitting the passport form
 
@@ -302,8 +302,8 @@ account.acceptAuthorization#f3ed4c73 bot_id:long scope:string public_key:string 
 Once the user finishes uploading the required documents and clicks on the submit button, the client calls [account.acceptAuthorization](/method/account.acceptAuthorization/), submitting the documents to the bot associated to the service.
 
 -   As before, `bot_id`, `scope` and `public_key` are taken from the authorization request URI.
--   `value_hashes` is used by the server to choose which document of which type to send to the bot: the `type` field should be set to the document type, and the `hash` field should be set to the `data_hash`/`file_hash` generated when [uploading encrypting the data »](https://core.telegram.org/passport/encryption#encryption).
--   `credentials` contains the encrypted credentials required by the service to decrypt the sent E2E encrypted secure values: it is generated as described in [Passport Credentials »](https://core.telegram.org/passport/encryption#passport-credentials).
+-   `value_hashes` is used by the server to choose which document of which type to send to the bot: the `type` field should be set to the document type, and the `hash` field should be set to the `data_hash`/`file_hash` generated when [uploading encrypting the data »](/passport/encryption/#encryption).
+-   `credentials` contains the encrypted credentials required by the service to decrypt the sent E2E encrypted secure values: it is generated as described in [Passport Credentials »](/passport/encryption/#passport-credentials).
 
 Finally, the client opens the callback URL (if present).
 

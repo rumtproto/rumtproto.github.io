@@ -20,7 +20,7 @@ Returns content of a whole file or its part.
 
 ### Parameters
 
-<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>precise</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>Disable some checks on limit and offset values, useful for example to stream videos by keyframes</td></tr><tr><td><strong>cdn_supported</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td><td>Whether the current client supports <a href="https://core.telegram.org/cdn">CDN downloads</a></td></tr><tr><td><strong>location</strong></td><td style="text-align: center;"><a href="/type/InputFileLocation/">InputFileLocation</a></td><td>File location</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Number of bytes to be skipped</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of bytes to be returned</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Name</th><th scope="col" style="text-align: center;">Type</th><th scope="col">Description</th></tr></thead><tbody><tr><td><strong>flags</strong></td><td style="text-align: center;"><a href="/type/%23/">#</a></td><td>Flags, see <a href="/mtproto/TL-combinators/#conditional-fields">TL conditional fields</a></td></tr><tr><td><strong>precise</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.0?<a href="/constructor/true/">true</a></td><td>Disable some checks on limit and offset values, useful for example to stream videos by keyframes</td></tr><tr><td><strong>cdn_supported</strong></td><td style="text-align: center;"><a href="/mtproto/TL-combinators/#conditional-fields">flags</a>.1?<a href="/constructor/true/">true</a></td><td>Whether the current client supports <a href="/cdn/">CDN downloads</a></td></tr><tr><td><strong>location</strong></td><td style="text-align: center;"><a href="/type/InputFileLocation/">InputFileLocation</a></td><td>File location</td></tr><tr><td><strong>offset</strong></td><td style="text-align: center;"><a href="/type/long/">long</a></td><td>Number of bytes to be skipped</td></tr><tr><td><strong>limit</strong></td><td style="text-align: center;"><a href="/type/int/">int</a></td><td>Number of bytes to be returned</td></tr></tbody></table>
 
 ### Result
 
@@ -34,7 +34,7 @@ Returns content of a whole file or its part.
 
 ### Related pages
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Encrypted CDNs for Speed and Security](/cdn/)
 
 How client apps download popular public files from secondary CDN data centers.
 

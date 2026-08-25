@@ -11,7 +11,7 @@ layout: layout.njk
 
 Telegram Premium is an optional subscription service that unlocks additional exclusive client-side and API-side features, while helping support the development of the app. It is a part of Telegram’s **sustainable monetization** – driven by our users, rather than advertisers or shareholders. This way, Telegram can remain independent and prioritize its users first.
 
-> This page describes how client apps should handle Premium features: for a user-friendly overview of Telegram Premium features, see the [Telegram Premium FAQ](https://telegram.org/faq_premium).
+> This page describes how client apps should handle Premium features: for a user-friendly overview of Telegram Premium features, see the [Telegram Premium FAQ](/faq_premium/).
 
 ### Telegram Premium users
 
@@ -416,7 +416,7 @@ Unofficial clients should display and use only the options where `currency`\=`XT
 To gift a Telegram Premium subscription paying with [Telegram Stars](/api/stars/), create an [inputInvoicePremiumGiftStars](/constructor/inputInvoicePremiumGiftStars/), then follow the [usual payment flow »](/api/payments/#2-2-getting-invoice-info-about-the-product).
 
 Once the payment is successfully processed, the user to which the gift was sent will automatically receive a [messageService](/constructor/messageService/) from the user that sent the gift, containing a [messageActionGiftPremium](/constructor/messageActionGiftPremium/) constructor with further info about the price and duration of the gifted Telegram Premium subscription.  
-Clients should display this message, along with a sticker from the [inputStickerSetPremiumGifts](/constructor/inputStickerSetPremiumGifts/) [stickerset](/api/stickers/): here's an [example](https://telegram.org/blog/custom-emoji#gifting-telegram-premium).
+Clients should display this message, along with a sticker from the [inputStickerSetPremiumGifts](/constructor/inputStickerSetPremiumGifts/) [stickerset](/api/stickers/): here's an [example](/blog/custom-emoji/#gifting-telegram-premium).
 
 Note that if the `premium_gift_attach_menu_icon` [app configuration parameter](/api/config/#client-configuration) is `true`, a gift icon should be shown in the attachment menu in private chats with users, offering the current user to gift a [Telegram Premium](/api/premium/) subscription to the other user in the chat.
 

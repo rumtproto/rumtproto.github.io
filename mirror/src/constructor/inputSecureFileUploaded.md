@@ -9,7 +9,7 @@ layout: layout.njk
 
 # inputSecureFileUploaded
 
-Uploaded secure file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile)
+Uploaded secure file, for more info [see the passport docs »](/passport/encryption/#inputsecurefile)
 
 <p class="page_layer">Layer 223</p>
 
@@ -25,6 +25,6 @@ Uploaded secure file, for more info [see the passport docs »](https://core.tele
 
 ### Related pages
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport Encryption Details](/passport/encryption/)
 
 How Telegram Passport data is stored and encrypted end-to-end.

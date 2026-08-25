@@ -143,21 +143,21 @@ layout: layout.njk
 
 Telegram is a messaging app with a focus on speed and security, it’s super-fast, simple and free. You can use Telegram on all your devices **at the same time** — your messages sync seamlessly across any number of your phones, tablets or computers. Telegram is one of the **top 5 most downloaded apps** in the world with over **1 billion** active users.
 
-With Telegram, you can send messages, photos, videos and [**files**](https://telegram.org/blog/shared-files) of any type (doc, zip, mp3, etc), as well as create groups for up to **200,000** people or **[channels](https://telegram.org/blog/channels)** for broadcasting to **unlimited** audiences. You can write to your phone contacts and find people by their [**usernames**](#usernames-and-t-me). As a result, Telegram is like SMS and email combined — and can take care of all your personal or business messaging needs. We also support end-to-end encrypted [**voice**](https://telegram.org/blog/calls) and [**video calls**](https://telegram.org/blog/video-calls), [**group calls**](https://telegram.org/blog/group-calls-made-easy) for up to 200 participants, and [**voice chats**](https://telegram.org/blog/voice-chats) in groups that members can join whenever they want.
+With Telegram, you can send messages, photos, videos and [**files**](/blog/shared-files/) of any type (doc, zip, mp3, etc), as well as create groups for up to **200,000** people or **[channels](/blog/channels/)** for broadcasting to **unlimited** audiences. You can write to your phone contacts and find people by their [**usernames**](#usernames-and-t-me). As a result, Telegram is like SMS and email combined — and can take care of all your personal or business messaging needs. We also support end-to-end encrypted [**voice**](/blog/calls/) and [**video calls**](/blog/video-calls/), [**group calls**](/blog/group-calls-made-easy/) for up to 200 participants, and [**voice chats**](/blog/voice-chats/) in groups that members can join whenever they want.
 
 > Follow our [**Tips Channel**](https://t.me/TelegramTips) to learn more about Telegram features.
 
 #### Q: Who is Telegram for?
 
-Telegram is for everyone who wants fast and reliable messaging and [calls](https://telegram.org/blog/calls). Business users and small teams may like the large groups, [usernames](https://telegram.org/faq#usernames-and-t-me), [desktop apps](https://desktop.telegram.org) and powerful [file sharing](https://telegram.org/blog/shared-files) options.
+Telegram is for everyone who wants fast and reliable messaging and [calls](/blog/calls/). Business users and small teams may like the large groups, [usernames](/faq/#usernames-and-t-me), [desktop apps](https://desktop.telegram.org) and powerful [file sharing](/blog/shared-files/) options.
 
-Since Telegram groups can have up to [200,000 members](https://telegram.org/blog/replies-mentions-stickers), we support [replies, mentions and hashtags](https://telegram.org/blog/replies-mentions-hashtags) that help maintain order and keep communication in large communities [efficient](https://telegram.org/blog/replies-mentions-stickers). You can appoint [admins with advanced tools](https://telegram.org/blog/admin-revolution) to help these communities prosper in peace. [Public groups](https://telegram.org/blog/supergroups5k) can be joined by anyone and are powerful platforms for discussions and collecting feedback.
+Since Telegram groups can have up to [200,000 members](/blog/replies-mentions-stickers/), we support [replies, mentions and hashtags](/blog/replies-mentions-hashtags/) that help maintain order and keep communication in large communities [efficient](/blog/replies-mentions-stickers/). You can appoint [admins with advanced tools](/blog/admin-revolution/) to help these communities prosper in peace. [Public groups](/blog/supergroups5k/) can be joined by anyone and are powerful platforms for discussions and collecting feedback.
 
-In case you're more into pictures, Telegram has animated [gif search](https://telegram.org/blog/gif-revolution), a state of the art [photo editor](https://telegram.org/blog/photo-editor-and-passcodes), and an [open sticker platform](https://telegram.org/blog/stickers-revolution) (find some cool stickers [here](https://t.me/durov/40) or [here](https://t.me/sticker)). What's more, there is no need to worry about disk space on your device. With Telegram's cloud support and [cache management options](https://telegram.org/blog/cache-and-stickers), Telegram can take up nearly **zero** space on your phone.
+In case you're more into pictures, Telegram has animated [gif search](/blog/gif-revolution/), a state of the art [photo editor](/blog/photo-editor-and-passcodes/), and an [open sticker platform](/blog/stickers-revolution/) (find some cool stickers [here](https://t.me/durov/40) or [here](https://t.me/sticker)). What's more, there is no need to worry about disk space on your device. With Telegram's cloud support and [cache management options](/blog/cache-and-stickers/), Telegram can take up nearly **zero** space on your phone.
 
-Those looking for extra privacy should check out our [advanced settings](https://telegram.org/blog/privacy-revolution) and rather revolutionary [policy](https://telegram.org/privacy). And if you want secrecy, try our device-specific [Secret Chats](#secret-chats) with self-destructing messages, photos, and videos — and lock your app with an additional [passcode](https://telegram.org/blog/photo-editor-and-passcodes).
+Those looking for extra privacy should check out our [advanced settings](/blog/privacy-revolution/) and rather revolutionary [policy](/privacy/). And if you want secrecy, try our device-specific [Secret Chats](#secret-chats) with self-destructing messages, photos, and videos — and lock your app with an additional [passcode](/blog/photo-editor-and-passcodes/).
 
-> We keep evolving — check out our [Brief History of Telegram](https://telegram.org/evolution) and follow us on [twitter](https://x.com/telegram) and [Telegram](https://t.me/telegram) to stay in touch.
+> We keep evolving — check out our [Brief History of Telegram](/evolution/) and follow us on [twitter](https://x.com/telegram) and [Telegram](https://t.me/telegram) to stay in touch.
 
 #### Q: How is Telegram different from WhatsApp?
 
@@ -167,7 +167,7 @@ Telegram needs less than **100 MB** on your device – you can keep **all your m
 
 Thanks to Telegram's multi-data center infrastructure and encryption, it is faster and way more [secure](#security). On top of that, private messaging on Telegram is free and will stay free — no ads, no subscription fees, forever.
 
-Telegram's API and code is open, and developers are welcome to create their own Telegram apps. We also have a [Bot API](https://core.telegram.org/bots), a platform for developers that allows anyone to easily build specialized tools for Telegram, [integrate any services](https://telegram.org/blog/inline-bots), and even [accept payments](https://telegram.org/blog/payments) from users around the world.
+Telegram's API and code is open, and developers are welcome to create their own Telegram apps. We also have a [Bot API](/bots/), a platform for developers that allows anyone to easily build specialized tools for Telegram, [integrate any services](/blog/inline-bots/), and even [accept payments](/blog/payments/) from users around the world.
 
 And that's just the tip of the iceberg.
 
@@ -175,7 +175,7 @@ And that's just the tip of the iceberg.
 
 #### Q: How old is Telegram?
 
-Telegram for iOS was launched on **August 14, 2013**. The alpha version of Telegram for Android officially launched on October 20, 2013. More and more [Telegram clients](https://telegram.org/apps) appear, built by independent developers using Telegram's [open platform](https://telegram.org//core.telegram.org/api).
+Telegram for iOS was launched on **August 14, 2013**. The alpha version of Telegram for Android officially launched on October 20, 2013. More and more [Telegram clients](/apps/) appear, built by independent developers using Telegram's [open platform](/api/).
 
 #### Q: Which devices can I use?
 
@@ -183,13 +183,13 @@ You can use Telegram on smartphones, tablets, and even computers. We have apps f
 
 > You can log in to Telegram from as many of your devices as you like — all **at the same time**. Just use your main mobile phone number to log in everywhere, your cloud chats will sync instantly.
 
-The [Telegram API](https://telegram.org//core.telegram.org/api) is open for developers, should you want to build your own applications for other platforms.
+The [Telegram API](/api/) is open for developers, should you want to build your own applications for other platforms.
 
 #### Q: Who are the people behind Telegram?
 
 Telegram is supported by [Pavel Durov](https://en.wikipedia.org/wiki/Pavel_Durov) and his brother Nikolai. Pavel supports Telegram financially and ideologically while Nikolai's input is technological. To make Telegram possible, Nikolai developed a unique custom data protocol, which is open, secure and optimized for work with multiple data-centers. As a result, Telegram combines security, reliability and speed on any network.
 
-> See also: [articles about Telegram](https://telegram.org/press)
+> See also: [articles about Telegram](/press/)
 
 #### Q: Where is Telegram based?
 
@@ -205,16 +205,16 @@ No. See [this post](https://t.me/durov/142) for details.
 
 We believe in fast and secure messaging that is also 100% free.
 
-Our founder and CEO [Pavel Durov](https://telegram.org/press), who financed Telegram throughout most of its history, has outlined a **strategy to make Telegram sustainable** in [this post](https://t.me/durov/142).
+Our founder and CEO [Pavel Durov](/press/), who financed Telegram throughout most of its history, has outlined a **strategy to make Telegram sustainable** in [this post](https://t.me/durov/142).
 
 Following this plan, Telegram has implemented sustainable forms of monetization that prioritize its users:
 
 -   In 2021, Telegram launched [Sponsored Messages](https://t.me/durov/172) – minimalist, privacy-conscious advertisements that can appear in certain public channels.
--   In 2022, Telegram launched a [Premium subscription](https://telegram.org/blog/700-million-and-premium#telegram-premium) which users can purchase to both support the app and unlock additional exclusive features.
+-   In 2022, Telegram launched a [Premium subscription](/blog/700-million-and-premium/#telegram-premium) which users can purchase to both support the app and unlock additional exclusive features.
 
 These revenue streams help us pay for infrastructure costs and developer salaries, however making profits will never be an end-goal for Telegram.
 
-> Learn more about subscriptions in the [Telegram Premium FAQ](https://telegram.org/faq_premium).
+> Learn more about subscriptions in the [Telegram Premium FAQ](/faq_premium/).
 
 #### Q: What are your thoughts on internet privacy?
 
@@ -223,13 +223,13 @@ We think that the two most important components of Internet privacy should be:
 1.  Protecting your private conversations from snooping third parties, such as officials, employers, etc.
 2.  Protecting your personal data from third parties, such as marketers, advertisers, etc.
 
-Telegram's aim is to create a truly free messenger, with a revolutionary [privacy policy](https://telegram.org/privacy).
+Telegram's aim is to create a truly free messenger, with a revolutionary [privacy policy](/privacy/).
 
 #### Q: What about GDPR?
 
 The General Data Protection Regulation (GDPR) came into force in Europe on May 25, 2018. Since taking back our right to privacy was the reason we made Telegram, there wasn't much we had to change. We don’t use your data for ad targeting, we don’t sell it to others, and we're not part of any mafia family “family of companies.”
 
-Telegram only keeps the information it needs to function as a feature-rich cloud service. For example, your cloud chats – so that you can access them from any devices without using third-party backups, or your contacts – so that you can rely on your existing social graph when messaging people on Telegram. Please see our [Privacy Policy](https://telegram.org/privacy) for more information.
+Telegram only keeps the information it needs to function as a feature-rich cloud service. For example, your cloud chats – so that you can access them from any devices without using third-party backups, or your contacts – so that you can rely on your existing social graph when messaging people on Telegram. Please see our [Privacy Policy](/privacy/) for more information.
 
 You can use [**@EURegulation**](https://t.me/EURegulation) to:
 
@@ -244,7 +244,7 @@ On Telegram for Android, tap the message and select _Report_ from the menu. On i
 
 You can also use our automated takedown email address [abuse@telegram.org](mailto:abuse@telegram.org). If you're sending an email takedown request, please make sure to include **links** (like `t.me/...` or `@...`) to the content on Telegram which you think needs attention from our moderators.
 
-Users from the EU are welcome to study the [User Guidance for the EU Digital Services Act](https://telegram.org/tos/eu-dsa) for the relevant reporting options.
+Users from the EU are welcome to study the [User Guidance for the EU Digital Services Act](/tos/eu-dsa/) for the relevant reporting options.
 
 > Note: If a scammer is pretending to be you, contact [@NoToScam](https://t.me/notoscam)
 
@@ -293,7 +293,7 @@ Thanks to this structure, we can ensure that no single government or block of li
 
 To this day, we have disclosed 0 bytes of user messages to third parties, including governments.
 
-> For more information on how your data is protected, please see the [Telegram Privacy Policy](https://telegram.org/privacy) and [this post](https://t.me/durov/345) by the Telegram CEO.
+> For more information on how your data is protected, please see the [Telegram Privacy Policy](/privacy/) and [this post](https://t.me/durov/345) by the Telegram CEO.
 
 ### Telegram Basics
 
@@ -314,7 +314,7 @@ If they don't know your phone number, they can find you in these cases:
 
 ##### Q: Does Telegram send Verification Codes for other apps?
 
-Telegram allows third-party services to [send verification codes](https://telegram.org/blog/gifts-verification-platform#verification-platform) to their users via Telegram. These codes only appear in the **verified _'Verification Codes'_ chat**, and let you tap to instantly copy the code.
+Telegram allows third-party services to [send verification codes](/blog/gifts-verification-platform/#verification-platform) to their users via Telegram. These codes only appear in the **verified _'Verification Codes'_ chat**, and let you tap to instantly copy the code.
 
 [<img src="https://telegram.org/file/400780400405/5/DJtYqf_wYiU.829923/a5d5fc8092802cab46" title="verif codes.png, 437.12KB" width="480" class="dev_page_image">](https://telegram.org/file/400780400405/5/DJtYqf_wYiU.829923/a5d5fc8092802cab46)
 
@@ -324,9 +324,9 @@ If you receive a code in the _'Verification Codes'_ chat, it's probably because 
 
 Third-party services determine which way your verification codes are sent – and Telegram is not able to control this or make a service aware of your preferences. Unlike SMS codes that frequently fail to arrive and can be interecepted, verification codes sent via Telegram are **delivered instantly** and are **securely encrypted** – making them safer and more reliable for both users and services.
 
-The _'Verification Codes'_ chat is only used for codes from **third-party services**. Login codes for your [Telegram account](https://telegram.org/faq#getting-a-code-via-telegram) itself are sent to the **verified service notifications** chat named _'Telegram'_ in your chat list and should **never be shared** with anyone, including other services or apps.
+The _'Verification Codes'_ chat is only used for codes from **third-party services**. Login codes for your [Telegram account](/faq/#getting-a-code-via-telegram) itself are sent to the **verified service notifications** chat named _'Telegram'_ in your chat list and should **never be shared** with anyone, including other services or apps.
 
-> If you'd like to save money and increase efficiency by sending verification codes for your app or service via Telegram, check out the [Telegram Gateway](https://core.telegram.org/gateway).
+> If you'd like to save money and increase efficiency by sending verification codes for your app or service via Telegram, check out the [Telegram Gateway](/gateway/).
 
 #### Q: How do I know who in my contacts has Telegram?
 
@@ -334,7 +334,7 @@ Your contacts, who have Telegram, are shown at the top of your Contacts. They al
 
 #### Q: How do I invite my friends?
 
-_iOS:_ The basic invitations are simple SMS messages. They will be charged as standard outgoing SMS by your carrier (unless sent via iMessage). Naturally, you have other options to bring your friends here. Try sending them a download link via any other messaging service: email, Facebook, WhatsApp, an actual telegram — you name it. The link: [](https://telegram.org/dl/)**[https://telegram.org/dl/](https://telegram.org/dl/)**
+_iOS:_ The basic invitations are simple SMS messages. They will be charged as standard outgoing SMS by your carrier (unless sent via iMessage). Naturally, you have other options to bring your friends here. Try sending them a download link via any other messaging service: email, Facebook, WhatsApp, an actual telegram — you name it. The link: [](/apps/)**[https://telegram.org/dl/](/apps/)**
 
 _Android:_ Open the app menu (swipe right in chat list) > Invite Friends. Then choose an application via which you would like to send out invitations.
 
@@ -349,7 +349,7 @@ We don't have a 'delivered to device' status for messages because Telegram can r
 
 #### Q: Can I hide my ‘last seen’ time?
 
-You can choose who sees this info in [Privacy and Security](https://telegram.org/blog/privacy-revolution) settings.
+You can choose who sees this info in [Privacy and Security](/blog/privacy-revolution/) settings.
 
 Remember that you won't see Last Seen timestamps for people with whom you don't share your own. You will, however, see an approximate last seen value. This keeps stalkers away but makes it possible to understand whether a person is reachable over Telegram. There are four possible approximate values:
 
@@ -376,21 +376,21 @@ Yes. You can always delete any messages you **sent** or **received** for _both s
 
 <div class="blog_video_player_wrap" style="max-width: 480px; margin: 20px auto 20px;"><video class="blog_video_player tl_blog_vid_autoplay" onclick="videoTogglePlay(this)" autoplay="" loop="" controls="" muted="" poster="https://telegram.org/file/811140695/1947/Mc6JXlUuMPQ.58001/3107f1f4ed0eb44baf" style="max-width: 480px;" title="Unsend any message" alt="Unsend any message"><source src="https://telegram.org/file/811140386/137b/JsWWEUuVuKE.867807.mp4/09a0afd95f3285e521" type="video/mp4"></video></div>
 
-Together with privacy settings for [forwarded messages](https://telegram.org/blog/unsend-privacy-emoji#anonymous-forwarding), this makes exchanging Telegram messages similar to talking face to face (without a tape recorder). As a result, users no longer need to worry about the data accumulating in their chats over the years. Both parties in a conversation have full control over what does and what doesn't belong to their online identity.
+Together with privacy settings for [forwarded messages](/blog/unsend-privacy-emoji/#anonymous-forwarding), this makes exchanging Telegram messages similar to talking face to face (without a tape recorder). As a result, users no longer need to worry about the data accumulating in their chats over the years. Both parties in a conversation have full control over what does and what doesn't belong to their online identity.
 
 #### Q: Can I make calls via Telegram?
 
-Yes. You can make end-to-end encrypted [Voice Calls](https://telegram.org/blog/calls) and [Video Calls](https://telegram.org/blog/video-calls), and you can turn any call into a [Group Call](https://telegram.org/blog/group-calls-made-easy) with up to **200 participants** — also protected by end-to-end encryption, which you can verify at any time.
+Yes. You can make end-to-end encrypted [Voice Calls](/blog/calls/) and [Video Calls](/blog/video-calls/), and you can turn any call into a [Group Call](/blog/group-calls-made-easy/) with up to **200 participants** — also protected by end-to-end encryption, which you can verify at any time.
 
-Participants can [send comments and reactions](https://telegram.org/blog/comments-in-video-chats-threads-for-bots#comments-and-reactions-in-group-calls) directly inside the call without interrupting the audio.
+Participants can [send comments and reactions](/blog/comments-in-video-chats-threads-for-bots/#comments-and-reactions-in-group-calls) directly inside the call without interrupting the audio.
 
-If you want an ongoing audio chat that members of a group can join whenever they want, you can also start a [Voice Chat](https://telegram.org/blog/voice-chats) in any group — useful as a virtual office or a casual hangout.
+If you want an ongoing audio chat that members of a group can join whenever they want, you can also start a [Voice Chat](/blog/voice-chats/) in any group — useful as a virtual office or a casual hangout.
 
 #### Q: Can I broadcast to a large audience?
 
-Yes. Any user can host a **Live Story** — a live broadcast that appears in their stories. Viewers can [send comments and donate Stars](https://telegram.org/blog/live-stories-gift-auctions#live-stories) during the stream.
+Yes. Any user can host a **Live Story** — a live broadcast that appears in their stories. Viewers can [send comments and donate Stars](/blog/live-stories-gift-auctions/#live-stories) during the stream.
 
-Channel owners can host **Live Streams** with an unlimited number of viewers — useful for events, lectures, announcements and concerts. You can stream from your phone or use [streaming software](https://telegram.org/blog/downloads-attachments-streaming#live-streaming-with-other-apps) like OBS for full production.
+Channel owners can host **Live Streams** with an unlimited number of viewers — useful for events, lectures, announcements and concerts. You can stream from your phone or use [streaming software](/blog/downloads-attachments-streaming/#live-streaming-with-other-apps) like OBS for full production.
 
 #### Q: How can I use emoticons?
 
@@ -426,28 +426,28 @@ You can pin any message to be displayed at the top of the chat screen. All membe
 Appoint administrators that can mass-delete messages, control membership, and pin important messages. Define their admin privileges with granular precision.
 
 **Anti-spam tools**  
-In large groups, enable [Aggressive Anti-Spam](https://telegram.org/blog/ultimate-privacy-topics-2-0#aggressive-anti-spam) to use Telegram's full set of anti-spam tools in your chat.
+In large groups, enable [Aggressive Anti-Spam](/blog/ultimate-privacy-topics-2-0/#aggressive-anti-spam) to use Telegram's full set of anti-spam tools in your chat.
 
 **Group permissions**  
 Set default permissions to restrict all members from posting specific kinds of content. Or even restrict members from sending messages altogether – and let the admins chat amongst themselves while everybody else is watching.
 
 **File sharing**  
-Send and receive files of any type, up to 2 GB in size each (or 4 GB with [Premium](https://telegram.org/faq_premium)), access them instantly on your other devices.
+Send and receive files of any type, up to 2 GB in size each (or 4 GB with [Premium](/faq_premium/)), access them instantly on your other devices.
 
 **Topics**  
-Split group discussions into [topics](https://telegram.org/blog/topics-in-groups-collectible-usernames#topics-in-groups) — each with its own chat history, shared media and notification settings, like classic forums.
+Split group discussions into [topics](/blog/topics-in-groups-collectible-usernames/#topics-in-groups) — each with its own chat history, shared media and notification settings, like classic forums.
 
 **Public groups**  
 Get a [short link](#usernames-and-t-me) for your group and make it public, like [t.me/publictestgroup](https://t.me/publictestgroup). This way, anybody can view the group's entire chat history and join to post messages.
 
 **Group boosts**  
-Members can boost a group with their [Premium subscription](https://telegram.org/faq_premium) to unlock features for everyone — like [posting stories](https://telegram.org/blog/february2024#stories-from-groups), [custom emoji packs](https://telegram.org/blog/february2024#group-emoji-packs), [voice-to-text](https://telegram.org/blog/february2024#voice-to-text-and-more) and [custom group appearance](https://telegram.org/blog/february2024#emoji-status-covers-wallpapers-and-link-styles).
+Members can boost a group with their [Premium subscription](/faq_premium/) to unlock features for everyone — like [posting stories](/blog/february2024/#stories-from-groups), [custom emoji packs](/blog/february2024/#group-emoji-packs), [voice-to-text](/blog/february2024/#voice-to-text-and-more) and [custom group appearance](/blog/february2024/#emoji-status-covers-wallpapers-and-link-styles).
 
 **Customization via bots**  
-Create custom tools for any specific needs using our [Bot API](https://core.telegram.org/bots) and [Inline Bots](https://core.telegram.org/bots/inline).
+Create custom tools for any specific needs using our [Bot API](/bots/) and [Inline Bots](/bots/inline/).
 
 **Leaving a group cleanly**  
-If you are the owner and want to leave the group, [pick a new owner](https://telegram.org/blog/crafting-android-design-and-more#leaving-groups-to-a-new-admin) at the same time, so the group keeps running.
+If you are the owner and want to leave the group, [pick a new owner](/blog/crafting-android-design-and-more/#leaving-groups-to-a-new-admin) at the same time, so the group keeps running.
 
 #### Q: What's the difference between groups and channels?
 
@@ -455,7 +455,7 @@ Telegram **groups** are ideal for sharing stuff with friends and family or colla
 
 **Channels** are a tool for broadcasting messages to large audiences. In fact, a channel can have an unlimited number of subscribers. When you post in a channel, the message is signed with the channel's name and photo and not your own. Each message in a channel has a **view counter** that gets updated when the message is viewed, including its forwarded copies.
 
-> [Read more about channels in the Channels FAQ »](https://telegram.org/faq_channels)
+> [Read more about channels in the Channels FAQ »](/faq_channels/)
 
 #### Q: How do I create a group?
 
@@ -479,13 +479,13 @@ It is easy to migrate existing groups to Telegram by sending people an **invite 
 
 Anyone who has Telegram installed will be able to join your group by following this link. If you choose to revoke the link, it will stop working immediately.
 
-> [Read more about invite links in our blog »](https://telegram.org/blog/invite-links)
+> [Read more about invite links in our blog »](/blog/invite-links/)
 
 #### Q: Can channels and subscribers talk to each other?
 
-Yes. Channel owners can turn on [Direct Messages](https://telegram.org/blog/direct-to-channel-trim-voice-and-more#send-direct-messages-to-channels) so subscribers can send them private messages — without the channel owner having to share their personal account.
+Yes. Channel owners can turn on [Direct Messages](/blog/direct-to-channel-trim-voice-and-more/#send-direct-messages-to-channels) so subscribers can send them private messages — without the channel owner having to share their personal account.
 
-Subscribers can also [suggest posts](https://telegram.org/blog/checklists-suggested-posts#suggest-posts-in-channels) for the channel — including paid suggestions. The owner can review them, edit them, schedule them or reject them. This gives channels a clear way to crowdsource content or work with brands.
+Subscribers can also [suggest posts](/blog/checklists-suggested-posts/#suggest-posts-in-channels) for the channel — including paid suggestions. The owner can review them, edit them, schedule them or reject them. This gives channels a clear way to crowdsource content or work with brands.
 
 ### Usernames and t.me
 
@@ -509,7 +509,7 @@ Once you've set a username, you can give people a [t.me/username](https://t.me/u
 
 This way people can contact you on Telegram without knowing your phone number.
 
-If you don’t want to set up a public username and don’t mind sharing your number, you can also create a t.me link [with your phone number](https://telegram.org/blog/downloads-attachments-streaming#phone-number-links) in **international format** – for example, **t.me/+123456789**. This type of link can quickly open a chat with you from any app, however, it will only work if your [privacy settings](#q-who-can-see-my-phone-number) let others find you by your phone number.
+If you don’t want to set up a public username and don’t mind sharing your number, you can also create a t.me link [with your phone number](/blog/downloads-attachments-streaming/#phone-number-links) in **international format** – for example, **t.me/+123456789**. This type of link can quickly open a chat with you from any app, however, it will only work if your [privacy settings](#q-who-can-see-my-phone-number) let others find you by your phone number.
 
 #### Q: What can I use as my username?
 
@@ -565,17 +565,17 @@ We support two layers of secure encryption. [Server-client encryption](/mtproto/
 
 Our encryption is based on 256-bit symmetric AES encryption, 2048-bit RSA encryption, and Diffie–Hellman secure key exchange. You can find more info in the [Advanced FAQ](/techfaq/).
 
-> See also: [Do you process data requests?](https://telegram.org/faq#q-do-you-process-data-requests)
+> See also: [Do you process data requests?](/faq/#q-do-you-process-data-requests)
 
 #### Q: Why should I trust you?
 
-Telegram is open, anyone can check our [source code](https://telegram.org/apps#source-code), [protocol](https://telegram.org//core.telegram.org/mtproto) and [API](https://telegram.org//core.telegram.org/api), see how everything works and make an informed decision. Telegram supports [verifiable builds](https://telegram.org/blog/verifiable-apps-and-more), which allow experts to independently verify that our code published on GitHub is the **exact same code** that is used to build the apps you download from App Store or Google Play.
+Telegram is open, anyone can check our [source code](/apps/#source-code), [protocol](/mtproto/) and [API](/api/), see how everything works and make an informed decision. Telegram supports [verifiable builds](/blog/verifiable-apps-and-more/), which allow experts to independently verify that our code published on GitHub is the **exact same code** that is used to build the apps you download from App Store or Google Play.
 
 We welcome security experts to audit our system and appreciate any feedback at [security@telegram.org](mailto:security@telegram.org).
 
 On top of that, Telegram's primary focus is not to [bring a profit](#q-how-are-you-going-to-make-money-out-of-this), so commercial interests will never interfere with our mission.
 
-> See also: [articles about Telegram](https://telegram.org/press)
+> See also: [articles about Telegram](/press/)
 
 #### Q: Do I need to trust Telegram for this to be secure?
 
@@ -583,11 +583,11 @@ When it comes to [secret chats](#secret-chats), you don't — just make sure tha
 
 #### Q: What if my hacker friend says they could decipher Telegram messages?
 
-> See [this page](https://core.telegram.org/bug-bounty) for the latest details about the [Telegram Bug Bounty Program](https://core.telegram.org/bug-bounty).
+> See [this page](/bug-bounty/) for the latest details about the [Telegram Bug Bounty Program](/bug-bounty/).
 
-Anyone who claims that Telegram messages can be deciphered is welcome to prove that claim in our competition and [win $300,000](https://telegram.org/blog/cryptocontest). You can check out the [Cracking Contest Description](https://core.telegram.org/contest300K) to learn more.
+Anyone who claims that Telegram messages can be deciphered is welcome to prove that claim in our competition and [win $300,000](/blog/cryptocontest/). You can check out the [Cracking Contest Description](/contest300K/) to learn more.
 
-Any comments on Telegram's security are welcome at [security@telegram.org](mailto:security@telegram.org). All submissions which result in a change of code or configuration are eligible for bounties, ranging from **$100** to [**$100,000**](https://telegram.org/blog/crowdsourcing-a-more-secure-future) or more, depending on the severity of the issue. Please note that we can not offer bounties for issues that are disclosed to the public before they are fixed.
+Any comments on Telegram's security are welcome at [security@telegram.org](mailto:security@telegram.org). All submissions which result in a change of code or configuration are eligible for bounties, ranging from **$100** to [**$100,000**](/blog/crowdsourcing-a-more-secure-future/) or more, depending on the severity of the issue. Please note that we can not offer bounties for issues that are disclosed to the public before they are fixed.
 
 #### Q: Can Telegram protect me against everything?
 
@@ -621,7 +621,7 @@ Telegram developed Cocoon and uses it to securely power its AI features without 
 
 #### Q: Do Telegram's AI features upload data to third parties?
 
-**No**. Telegram's AI features including translation, custom tones, [AI summaries](https://telegram.org/blog/new-design-ai-summaries#ai-summaries) of long channel posts and Instant View articles, and [AI-powered sticker search](https://telegram.org/blog/affiliate-programs-ai-sticker-search#ai-powered-sticker-search) — run on [Cocoon](#q-what-is-cocoon) and **never send any data to third parties**.
+**No**. Telegram's AI features including translation, custom tones, [AI summaries](/blog/new-design-ai-summaries/#ai-summaries) of long channel posts and Instant View articles, and [AI-powered sticker search](/blog/affiliate-programs-ai-sticker-search/#ai-powered-sticker-search) — run on [Cocoon](#q-what-is-cocoon) and **never send any data to third parties**.
 
 When you use an AI feature provided by Telegram, the processing happens within a highly secure, isolated and encrypted environment – your data remains inaccessible.
 
@@ -673,7 +673,7 @@ Always compare visualizations using a channel that is known to be secure — it'
 
 #### Q: Why not just make all chats 'secret'?
 
-All Telegram messages are always securely encrypted. Messages in Secret Chats use **client-client** encryption, while Cloud Chats use **client-server/server-client** encryption and are stored encrypted in the Telegram Cloud (more [here](https://telegram.org/privacy#4-1-storing-data)). This enables your cloud messages to be both [secure](#q-do-you-process-data-requests) and immediately accessible from any of your devices – even if you lose your device altogether.
+All Telegram messages are always securely encrypted. Messages in Secret Chats use **client-client** encryption, while Cloud Chats use **client-server/server-client** encryption and are stored encrypted in the Telegram Cloud (more [here](/privacy/#4-1-storing-data)). This enables your cloud messages to be both [secure](#q-do-you-process-data-requests) and immediately accessible from any of your devices – even if you lose your device altogether.
 
 The problem of restoring access to your chat history on a newly connected device (e.g. when you lose your phone) does not have an elegant solution in the end-to-end encryption paradigm. At the same time, reliable backups are an essential feature for any mass-market messenger. To solve this problem, some applications (like Whatsapp and Viber) allow [decryptable backups](https://www.eff.org/deeplinks/2016/10/where-whatsapp-went-wrong-effs-four-biggest-security-concerns) that put their users' privacy at risk – even if they do not enable backups themselves. Other apps ignore the need for backups altogether and leave their users vulnerable to data loss.
 
@@ -697,7 +697,7 @@ Each phone number is a **separate** account on Telegram. You have several option
 
 -   If you will **no longer use the old number** (e.g., you moved to a new country or changed your number for good), simply go to Settings and [change the number](#q-how-do-i-change-my-phone-number) connected to your Telegram account to the new number. **Important:** make sure you have access to your connected phone number – otherwise you risk losing access to your account.
 -   If you will use the new number for a **limited time** (e.g., you're on a trip or vacation), there's no need to do anything.
--   If you want to keep using **both numbers** (e.g., you have a work phone and personal phone), choose one as your Telegram number. You _may_ create another Telegram account on the second number as well, for example, if you want to keep work and personal chats separated. It is possible to log in to one Telegram app with several different [accounts](https://telegram.org/blog/autoplay#multiple-account-support) at once.
+-   If you want to keep using **both numbers** (e.g., you have a work phone and personal phone), choose one as your Telegram number. You _may_ create another Telegram account on the second number as well, for example, if you want to keep work and personal chats separated. It is possible to log in to one Telegram app with several different [accounts](/blog/autoplay/#multiple-account-support) at once.
 
 #### Q: How do I log out?
 
@@ -705,7 +705,7 @@ Most users don't need to log out of Telegram:
 
 -   You can use Telegram on many devices **at the same time**. Just use the same phone number to log in on all devices.
 -   You can go to _Settings > Data and Storage > Storage Usage> Clear cache_ to **free up space** on your device without logging out.
--   If you use Telegram with **multiple phone numbers**, you can [switch between accounts](https://telegram.org/blog/themes-accounts#multiple-accounts) without logging out.
+-   If you use Telegram with **multiple phone numbers**, you can [switch between accounts](/blog/themes-accounts/#multiple-accounts) without logging out.
 -   If you use Telegram on a **shared device**, you can set up a passcode in _Settings > Privacy and Security_ to make sure only you have access to your account.
 
 If you do want to log out for some reason, here's how you do that:
@@ -786,9 +786,9 @@ You can [delete your Telegram account](#q-how-do-i-delete-my-account) if you are
 
 Telegram profiles show a badge with a numerical rating based on the total volume of successful transactions that user has made with Telegram Stars.
 
-Your profile rating highlights your Telegram level and helps channel owners see that you can be trusted for [Suggested Posts](https://telegram.org/blog/checklists-suggested-posts#suggest-posts-in-channels) and other requests.
+Your profile rating highlights your Telegram level and helps channel owners see that you can be trusted for [Suggested Posts](/blog/checklists-suggested-posts/#suggest-posts-in-channels) and other requests.
 
-Purchasing gifts, sending [Paid Messages](https://telegram.org/blog/star-messages-gateway-2-0-and-more#stay-in-control-of-your-inbox-with-star-messages) and funding [Suggested Posts](https://telegram.org/blog/checklists-suggested-posts#suggest-posts-in-channels) with Stars increases your rating. However, if you refund Star purchases or convert gifts to Stars, your rating will decrease.
+Purchasing gifts, sending [Paid Messages](/blog/star-messages-gateway-2-0-and-more/#stay-in-control-of-your-inbox-with-star-messages) and funding [Suggested Posts](/blog/checklists-suggested-posts/#suggest-posts-in-channels) with Stars increases your rating. However, if you refund Star purchases or convert gifts to Stars, your rating will decrease.
 
 #### Q: What is a Passkey?
 
@@ -802,27 +802,27 @@ Passkeys are an **additional login method** that can be used **instead of SMS** 
 
 If you have a password manager like iCloud Keychain, Google Password Manager or another third-party service, you can use it to **back up your passkey** in case you upgrade or lose access to your device.
 
-> With a passkey, you can still **request an SMS code** in order to log in – so always make sure your account uses an [up-to-date phone number](https://telegram.org/faq#q-how-do-i-change-my-phone-number) that is **controlled by you**. For even more security, you can add an [extra password](https://telegram.org/faq#q-how-does-2-step-verification-work) to your account that is required **each time** you log in.
+> With a passkey, you can still **request an SMS code** in order to log in – so always make sure your account uses an [up-to-date phone number](/faq/#q-how-do-i-change-my-phone-number) that is **controlled by you**. For even more security, you can add an [extra password](/faq/#q-how-does-2-step-verification-work) to your account that is required **each time** you log in.
 
 #### Q: What is a Frozen Account?
 
 If your account has been restricted because of reports from other users, your account is **frozen**. While frozen, you can still read your chats, but you cannot send messages or post content.
 
-You can [appeal the restriction](https://telegram.org/blog/group-calls-made-easy#appeal-account-restrictions-with-frozen-accounts) directly from the app. Telegram's moderators will review your case. If the restriction was a mistake, your account will be unfrozen.
+You can [appeal the restriction](/blog/group-calls-made-easy/#appeal-account-restrictions-with-frozen-accounts) directly from the app. Telegram's moderators will review your case. If the restriction was a mistake, your account will be unfrozen.
 
 ### Bots
 
-> If you're a developer, you may find our [Bots FAQ](https://core.telegram.org/bots/faq) more useful.
+> If you're a developer, you may find our [Bots FAQ](/bots/faq/) more useful.
 
 #### Q: What are bots?
 
-Bots are small programs that run inside Telegram. They are made by outside developers using the [Telegram Bot API](https://core.telegram.org/bots).
+Bots are small programs that run inside Telegram. They are made by outside developers using the [Telegram Bot API](/bots/).
 
-Modern bots can do a lot more than reply to messages. They can open full **[mini apps](#q-what-are-mini-apps)** with their own interface, run [AI assistants](https://telegram.org/blog/comments-in-video-chats-threads-for-bots#threads-and-streaming-responses-for-ai-bots) with multiple conversation threads and streaming responses – and [much more](https://core.telegram.org/bots/features).
+Modern bots can do a lot more than reply to messages. They can open full **[mini apps](#q-what-are-mini-apps)** with their own interface, run [AI assistants](/blog/comments-in-video-chats-threads-for-bots/#threads-and-streaming-responses-for-ai-bots) with multiple conversation threads and streaming responses – and [much more](/bots/features/).
 
 #### Q: How do I create a bot?
 
-Creating Telegram bots is super-easy, but you will need at least some skills in computer programming. If you're sure you're up to it, our [**Introduction for Developers**](https://core.telegram.org/bots) is a good place to start.
+Creating Telegram bots is super-easy, but you will need at least some skills in computer programming. If you're sure you're up to it, our [**Introduction for Developers**](/bots/) is a good place to start.
 
 Unfortunately, there are no out-of-the-box ways to create a working bot if you are not a developer. But we're sure you'll soon find plenty of bots created by other people to play with.
 
@@ -844,27 +844,27 @@ Bots can work in two modes when you add them to groups. By default, bots only se
 
 Some bots need more information to work, so developers may disable the privacy mode. In this case, the bot will see all messages sent to the group, and you will see 'has access to messages' in the members list next to the bot.
 
-[Learn more about privacy mode for bots »](https://core.telegram.org/bots#privacy-mode)
+[Learn more about privacy mode for bots »](/bots/)
 
 If your group contains very sensitive information, maybe it's better to avoid adding bots you don't trust 100%.
 
 #### Q: Are bots made by Telegram?
 
-No. While we have some official bots for specific purposes (like [@gif](https://t.me/gif) or [@Stickers](https://t.me/Stickers), we don't usually make bots. Bots are made by third-party developers using the [Telegram Bot API and platform](https://core.telegram.org/bots).
+No. While we have some official bots for specific purposes (like [@gif](https://t.me/gif) or [@Stickers](https://t.me/Stickers), we don't usually make bots. Bots are made by third-party developers using the [Telegram Bot API and platform](/bots/).
 
 #### Q: What are mini apps?
 
-Mini apps are full applications that run inside Telegram, built by outside developers on top of the [Bot platform](https://core.telegram.org/bots). They can look and feel like normal apps, with their own interface, payments, subscriptions and more.
+Mini apps are full applications that run inside Telegram, built by outside developers on top of the [Bot platform](/bots/). They can look and feel like normal apps, with their own interface, payments, subscriptions and more.
 
-You can find mini apps in the **Mini App Store** in the _Apps_ tab of Search, open them in [full-screen mode](https://telegram.org/blog/fullscreen-miniapps-and-more#full-screen-mode), and even add a [shortcut](https://telegram.org/blog/fullscreen-miniapps-and-more#home-screen-shortcuts) to your phone's home screen.
+You can find mini apps in the **Mini App Store** in the _Apps_ tab of Search, open them in [full-screen mode](/blog/fullscreen-miniapps-and-more/#full-screen-mode), and even add a [shortcut](/blog/fullscreen-miniapps-and-more/#home-screen-shortcuts) to your phone's home screen.
 
-Mini apps can sell digital goods and subscriptions for Telegram Stars. Some mini apps offer **affiliate programs** — when you share them with friends, you can [earn Stars](https://telegram.org/blog/affiliate-programs-ai-sticker-search#affiliate-programs).
+Mini apps can sell digital goods and subscriptions for Telegram Stars. Some mini apps offer **affiliate programs** — when you share them with friends, you can [earn Stars](/blog/affiliate-programs-ai-sticker-search/#affiliate-programs).
 
 ### Deeper questions
 
 #### Q: Can I get Telegram's server-side code?
 
-All Telegram client apps are fully open source. We offer [verifiable builds both for iOS and Android](https://core.telegram.org/reproducible-builds) – this technology allows to independently verify that the application you download from the app stores was built using the **exact same code** that we publish.
+All Telegram client apps are fully open source. We offer [verifiable builds both for iOS and Android](/reproducible-builds/) – this technology allows to independently verify that the application you download from the app stores was built using the **exact same code** that we publish.
 
 By contrast, publishing the server code doesn’t provide security guarantees neither for Secret Chats nor for Cloud Chats. This is because – unlike with the client-side code – there’s no way to verify that the **same code** is run on the servers.
 
@@ -880,17 +880,17 @@ Our architecture does not support federation yet. Telegram is a unified cloud se
 
 #### Q: Can I use the Telegram API?
 
-Yes. Developers for all platforms are welcome to use our [protocol](https://telegram.org//core.telegram.org/mtproto), [API](https://telegram.org//core.telegram.org/api) and even [source code](https://telegram.org/apps#source-code). Check out the [Getting started](https://telegram.org//core.telegram.org/api#getting-started) section of the docs.
+Yes. Developers for all platforms are welcome to use our [protocol](/mtproto/), [API](/api/) and even [source code](/apps/#source-code). Check out the [Getting started](/api/#getting-started) section of the docs.
 
-> Don't forget about our [Bot API](https://core.telegram.org/bots) that lets you build cool stuff on our platform.
+> Don't forget about our [Bot API](/bots/) that lets you build cool stuff on our platform.
 
 #### Q: Do you have a Privacy Policy?
 
-Sure. Check [this](https://telegram.org/privacy) out.
+Sure. Check [this](/privacy/) out.
 
 #### Q: What does the iOS privacy sheet mean?
 
-Apple created privacy sheets to inform users about what data apps may collect, but information there is vague and can be misleading. You can see a detailed explanation of Telegram's sheet [here](https://telegram.org/apple_privacy).
+Apple created privacy sheets to inform users about what data apps may collect, but information there is vague and can be misleading. You can see a detailed explanation of Telegram's sheet [here](/apple_privacy/).
 
 #### Q: Why do you have two apps in the Mac App Store?
 
@@ -898,7 +898,7 @@ One is our [app for macOS](https://macos.telegram.org), the other is Telegram Li
 
 [Telegram for macOS](https://macos.telegram.org) supports many platform-specific features, such as the MacBook Pro Touch Bar, gesture navigation, integration with the Mac's Share menu and more. It has every feature from the iOS version of the app including Secret Chats.
 
-[Telegram Lite](https://desktop.telegram.org) is a lightning-fast app, optimized for work-related tasks and handling large communities. It offers a three-column interface, perfect for multitasking and quick access to media, files and links shared in your chats. This app can also be used to [export your Telegram data and chats](https://telegram.org/blog/export-and-more).
+[Telegram Lite](https://desktop.telegram.org) is a lightning-fast app, optimized for work-related tasks and handling large communities. It offers a three-column interface, perfect for multitasking and quick access to media, files and links shared in your chats. This app can also be used to [export your Telegram data and chats](/blog/export-and-more/).
 
 #### Q: Can I translate Telegram?
 
@@ -920,9 +920,9 @@ Before you apply, please check out the [Telegram Support Initiative](https://cor
 
 Your identity documents and personal data will be stored in the Telegram cloud using **End-to-End Encryption**. To Telegram, this data is just random gibberish, and we have no access to the information you store in your Telegram Passport. When you share data, it goes directly to the recipient.
 
-> You can find more information about Telegram Passport on our [blog](https://telegram.org/blog/passport).
+> You can find more information about Telegram Passport on our [blog](/blog/passport/).
 
-If you're a developer or owner of a service that requires real-life ID, kindly take a look at [**this manual**](https://core.telegram.org/passport). You can also try requesting Telegram Passport data using [this page](https://core.telegram.org/passport/example).
+If you're a developer or owner of a service that requires real-life ID, kindly take a look at [**this manual**](/passport/). You can also try requesting Telegram Passport data using [this page](/passport/example/).
 
 * * *
 
@@ -1007,11 +1007,11 @@ When users report unwanted messages from a Telegram account, we apply a limit: R
 
 This means that if you randomly contact people you don't know and send them annoying messages, you may lose the ability to do so in the future.
 
-If you think that this limit was applied to your account wrongly, please visit [this page](https://telegram.org/faq_spam).
+If you think that this limit was applied to your account wrongly, please visit [this page](/faq_spam/).
 
 #### Can't send a message, I am being asked for Stars
 
-Some users charge a small fee — paid in Telegram Stars — for messages from people who are not in their contacts. This is called a [Star Message](https://telegram.org/blog/star-messages-gateway-2-0-and-more#stay-in-control-of-your-inbox-with-star-messages), and it helps people reduce spam in their inbox.
+Some users charge a small fee — paid in Telegram Stars — for messages from people who are not in their contacts. This is called a [Star Message](/blog/star-messages-gateway-2-0-and-more/#stay-in-control-of-your-inbox-with-star-messages), and it helps people reduce spam in their inbox.
 
 You will see how many Stars are needed before you send the message. If the recipient replies, they may choose to refund the fee.
 
@@ -1025,7 +1025,7 @@ Permission monitors on Samsung and Xiaomi can inadvertently flag and notify you 
 
 Camera info is requested by the app when you tap on the attachment button, or start recording a video or a video message. If you do this and quickly close the app, the already initiated request may try to run asynchronously when the app is already in the background, or be sent when the system wakes up the app to show a notification about a new message. In any case, these requests are only for the camera info, the app _never_ uses the camera itself in the background.
 
-Anyone can check Telegram’s [open source code](https://telegram.org/apps#source-code) and confirm that the app is not doing anything behind their back. We also offer [reproducible builds](https://telegram.org/blog/verifiable-apps-and-more) that can help you prove that the version you downloaded from App Store or Google Play is built from the exact same source code we publish.
+Anyone can check Telegram’s [open source code](/apps/#source-code) and confirm that the app is not doing anything behind their back. We also offer [reproducible builds](/blog/verifiable-apps-and-more/) that can help you prove that the version you downloaded from App Store or Google Play is built from the exact same source code we publish.
 
 * * *
 

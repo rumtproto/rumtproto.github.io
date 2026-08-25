@@ -9,7 +9,7 @@ layout: layout.njk
 
 # account.deleteSecureValue
 
-Delete stored [Telegram Passport](https://core.telegram.org/passport) documents, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption)
+Delete stored [Telegram Passport](/passport/) documents, [for more info see the passport docs »](/passport/encryption/#encryption)
 
 <p class="page_layer">Layer 223</p>
 
@@ -30,10 +30,10 @@ Delete stored [Telegram Passport](https://core.telegram.org/passport) documents,
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport Encryption Details](/passport/encryption/)
 
 How Telegram Passport data is stored and encrypted end-to-end.

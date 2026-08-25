@@ -178,7 +178,7 @@ bots.getPopularAppBots#c2510192 offset:string limit:int = bots.PopularAppBots;
 messages.searchGlobal#4bc6589a flags:# broadcasts_only:flags.1?true groups_only:flags.2?true users_only:flags.3?true folder_id:flags.0?int q:string filter:MessagesFilter min_date:int max_date:int offset_rate:int offset_peer:InputPeer offset_id:int limit:int = messages.Messages;
 ```
 
-Used to implement the [Mini App Store](https://telegram.org/blog/w3-browser-mini-app-store#mini-app-store).
+Used to implement the [Mini App Store](/blog/w3-browser-mini-app-store/).
 
 Only contains bots with an associated [Main Mini App](/api/bots/webapps/#main-mini-apps) (i.e. those with the [user](/constructor/user/).`bot_has_main_app` flag set), split in the following sections:
 

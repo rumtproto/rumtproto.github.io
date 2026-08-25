@@ -13,7 +13,7 @@ The list of saved [AI composer tones »](/api/ai/#ai-compose-tones) of the curre
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="https://core.telegram.org/constructor/aicompose.tones?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 225. <a href="/constructor/aicompose.tones/">Switch »</a></code></pre>
 
 ### Parameters
 

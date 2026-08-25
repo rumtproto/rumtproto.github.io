@@ -44,7 +44,7 @@ user#31774388 flags:# self:flags.10?true contact:flags.11?true mutual_contact:fl
 
 Bots can also behave like forums if **Threaded mode** is enabled via [@botfather](https://t.me/botfather), this mode is especially useful for [AI chatbots »](/api/bots/ai/).
 
-Note: this feature is subject to an additional fee for Telegram Star purchases as described in [Section 6.2.6](https://telegram.org/tos/bot-developers#6-2-6-enabling-topics-in-private-chats) of our Terms of Service for Bot Developers.
+Note: this feature is subject to an additional fee for Telegram Star purchases as described in [Section 6.2.6](/tos/bot-developers/#6-2-6-enabling-topics-in-private-chats) of our Terms of Service for Bot Developers.
 
 Bots with threaded mode enabled have the [user](/constructor/user/).`bot_forum_view` flag set, and conversation happens in distinct [forum topics](#forum-topics).
 

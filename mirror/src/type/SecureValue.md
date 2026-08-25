@@ -25,4 +25,4 @@ Secure Telegram Passport value
 
 ### Methods
 
-<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/account.saveSecureValue/">account.saveSecureValue</a></td><td>Securely save <a href="https://core.telegram.org/passport">Telegram Passport</a> document, <a href="https://core.telegram.org/passport/encryption#encryption">for more info see the passport docs »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Method</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/method/account.saveSecureValue/">account.saveSecureValue</a></td><td>Securely save <a href="/passport/">Telegram Passport</a> document, <a href="/passport/encryption/#encryption">for more info see the passport docs »</a></td></tr></tbody></table>

@@ -13,7 +13,7 @@ Filter for poll messages, see [searching for polls »](/api/poll/#searching-for-
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="https://core.telegram.org/constructor/inputMessagesFilterPoll?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="/constructor/inputMessagesFilterPoll/">Switch »</a></code></pre>
 
 ### Parameters
 

@@ -9,11 +9,11 @@ layout: layout.njk
 
 # Mini Apps on Telegram
 
-Interactive [HTML5 Mini Apps](https://core.telegram.org/bots/webapps) on Telegram can completely replace **any website**.
+Interactive [HTML5 Mini Apps](/bots/webapps/) on Telegram can completely replace **any website**.
 
-They support [seamless authorization](https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots), [integrated payments](https://core.telegram.org/bots/payments) via multiple payment providers (with _Google Pay_ and _Apple Pay_ out of the box), delivering tailored push notifications to users, and [much more](https://core.telegram.org/bots).
+They support [seamless authorization](/blog/privacy-discussions-web-bots/#meet-seamless-web-bots), [integrated payments](/bots/payments/) via multiple payment providers (with _Google Pay_ and _Apple Pay_ out of the box), delivering tailored push notifications to users, and [much more](/bots/).
 
-This article offers a client-side overview of the implementation of bot mini apps using the MTProto API: see [here for an overview of the mini-app side JS API »](https://core.telegram.org/bots/webapps).
+This article offers a client-side overview of the implementation of bot mini apps using the MTProto API: see [here for an overview of the mini-app side JS API »](/bots/webapps/).
 
 ### Main Mini Apps
 
@@ -164,7 +164,7 @@ Then, clients should open a webview using the `url` contained in the returned [w
 
 After loading the webview, until it is closed by a [web\_app\_close event](/api/web-events/#web-app-close), the user client must invoke [messages.prolongWebView](/method/messages.prolongWebView/) every 60 seconds: if the method call returns `QUERY_ID_INVALID`, the webview must be closed.
 
-The opened URL's fragment parameters already contain basic information about the user and a `query_id` parameter, that is exposed by the [bot Mini Apps JS library](https://core.telegram.org/bots/webapps): this `query_id` can then be passed to the bot (within the Mini App itself, for example via an AJAX query or form submission to the server hosting the Mini App and the bot) and then used **by the bot** to invoke [messages.sendWebViewResultMessage](/method/messages.sendWebViewResultMessage/), passing an [InputBotInlineResult](/type/InputBotInlineResult/) constructor that will automatically send a message with optionally attached media, and even inline buttons on behalf of the user.
+The opened URL's fragment parameters already contain basic information about the user and a `query_id` parameter, that is exposed by the [bot Mini Apps JS library](/bots/webapps/): this `query_id` can then be passed to the bot (within the Mini App itself, for example via an AJAX query or form submission to the server hosting the Mini App and the bot) and then used **by the bot** to invoke [messages.sendWebViewResultMessage](/method/messages.sendWebViewResultMessage/), passing an [InputBotInlineResult](/type/InputBotInlineResult/) constructor that will automatically send a message with optionally attached media, and even inline buttons on behalf of the user.
 
 ### Menu button Mini Apps
 
@@ -352,7 +352,7 @@ Bot Mini Apps can be themed according to the following theme parameters, passed 
 
 This JSON object has the following keys, containing color theme information (hex string, RGB, no alpha) to pass to the Mini App.
 
-See [here »](https://core.telegram.org/bots/webapps#themeparams) for more info on the contents of the object.
+See [here »](/bots/webapps/#themeparams) for more info on the contents of the object.
 
 #### `popup_closed`
 
@@ -664,7 +664,7 @@ Params: a JSON object with the following fields:
 
 Emitted by clients when any of the system-defined safe area inset padding values change, or when explicitly requested by the mini app using [web\_app\_request\_safe\_area](/api/web-events/#web-app-request-safe-area).
 
-See [here »](https://core.telegram.org/bots/webapps#safeareainset) for more info.
+See [here »](/bots/webapps/#safeareainset) for more info.
 
 #### `content_safe_area_changed`
 
@@ -677,7 +677,7 @@ Params: a JSON object with the following fields:
 
 Emitted by clients when any of the content-defined safe area inset padding values change, or when explicitly requested by the mini app using [web\_app\_request\_content\_safe\_area](/api/web-events/#web-app-request-content-safe-area).
 
-See [here »](https://core.telegram.org/bots/webapps#contentsafeareainset) for more info.
+See [here »](/bots/webapps/#contentsafeareainset) for more info.
 
 #### `location_requested`
 

@@ -46,6 +46,6 @@ Bots can offer users interactive HTML5 web apps to completely replace any websit
 
 #### [messages.requestWebView](/method/messages.requestWebView/)
 
-Open a [bot mini app](https://core.telegram.org/bots/webapps), sending over user information after user confirmation.
+Open a [bot mini app](/bots/webapps/), sending over user information after user confirmation.
 
 After calling this method, until the user closes the webview, [messages.prolongWebView](/method/messages.prolongWebView/) must be called every 60 seconds.

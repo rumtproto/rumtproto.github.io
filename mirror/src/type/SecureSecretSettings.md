@@ -9,7 +9,7 @@ layout: layout.njk
 
 # SecureSecretSettings
 
-Telegram [passport](https://core.telegram.org/passport) settings
+Telegram [passport](/passport/) settings
 
 <p class="page_layer">Layer 223</p>
 
@@ -21,6 +21,6 @@ Telegram [passport](https://core.telegram.org/passport) settings
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.

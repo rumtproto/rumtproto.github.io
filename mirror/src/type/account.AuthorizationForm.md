@@ -20,7 +20,7 @@ Authorization form
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/account.authorizationForm/">account.authorizationForm</a></td><td><a href="https://core.telegram.org/passport">Telegram Passport</a> authorization form</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/account.authorizationForm/">account.authorizationForm</a></td><td><a href="/passport/">Telegram Passport</a> authorization form</td></tr></tbody></table>
 
 ### Methods
 

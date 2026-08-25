@@ -9,9 +9,9 @@ layout: layout.njk
 
 # Bot commands
 
-[Bots](https://core.telegram.org/bots) offer a set of [commands](https://core.telegram.org/bots/features#commands) that can be used by users in private, or in a chat.
+[Bots](/bots/) offer a set of [commands](/bots/features/#commands) that can be used by users in private, or in a chat.
 
-For a simplified description using the HTTP bot API, see [here »](https://core.telegram.org/bots/features#commands).
+For a simplified description using the HTTP bot API, see [here »](/bots/features/#commands).
 
 ### Getting commands
 

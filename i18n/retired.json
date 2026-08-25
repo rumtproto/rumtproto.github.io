@@ -1,6 +1,7 @@
 {
  "api/end-to-end/video-calls": {
-  "_B_ accepts the call on one of their devices, stores the received value of _g\\_a\\_hash_ for this instance of the voice call creation protocol, chooses a random value of _b_, 1 < b < p-1, computes _g\\_b:=power(g,b) mod p_, performs all the required security checks, and invokes the [phone.acceptCall](/method/phone.acceptCall/) method, which has a _g\\_b:bytes_ field (among others), to be filled with the value of _g\\_b_ itself (not its hash).": "_B_ принимает звонок на одном из своих устройств, сохраняет полученное значение _g\\_a\\_hash_ для этого экземпляра протокола создания голосового звонка, выбирает случайное значение _b_, 1 < b < p-1, вычисляет _g\\_b:=power(g,b) mod p_, выполняет все требуемые проверки безопасности и вызывает метод [phone.acceptCall](/method/phone.acceptCall/), среди полей которого есть _g\\_b:bytes_ — в него помещается само значение _g\\_b_ (а не его хеш)."
+  "_B_ accepts the call on one of their devices, stores the received value of _g\\_a\\_hash_ for this instance of the voice call creation protocol, chooses a random value of _b_, 1 < b < p-1, computes _g\\_b:=power(g,b) mod p_, performs all the required security checks, and invokes the [phone.acceptCall](/method/phone.acceptCall/) method, which has a _g\\_b:bytes_ field (among others), to be filled with the value of _g\\_b_ itself (not its hash).": "_B_ принимает звонок на одном из своих устройств, сохраняет полученное значение _g\\_a\\_hash_ для этого экземпляра протокола создания голосового звонка, выбирает случайное значение _b_, 1 < b < p-1, вычисляет _g\\_b:=power(g,b) mod p_, выполняет все требуемые проверки безопасности и вызывает метод [phone.acceptCall](/method/phone.acceptCall/), среди полей которого есть _g\\_b:bytes_ — в него помещается само значение _g\\_b_ (а не его хеш).",
+  "For a slightly more user-friendly explanation of the above see: [How are calls authenticated?](https://core.telegram.org/techfaq#q-how-are-voice-calls-authenticated)": "Чуть более понятное для обычного пользователя объяснение всего сказанного выше есть здесь: [Как аутентифицируются звонки?](https://core.telegram.org/techfaq#q-how-are-voice-calls-authenticated)"
  },
  "api/stars": {
   "Then, follow the [invoice payment flow as described in the payments documentation »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product).": "Затем следуйте [процедуре оплаты счёта, описанной в документации по платежам »](https://core.telegram.org/api/payments#22-getting-invoice-info-about-the-product)."
@@ -36,5 +37,32 @@
   "Machine-readable data from the original site (JSON). View the [original](/schema/end-to-end-json/) for context.": "Машиночитаемые данные с исходного сайта (JSON). Для контекста откройте [оригинал](/schema/end-to-end-json/).",
   "Machine-readable data from the original site (JSON). View the [original](/schema/json/) for context.": "Машиночитаемые данные с исходного сайта (JSON). Контекст см. в [оригинале](/schema/json/).",
   "Machine-readable data from the original site (JSON). View the [original](/schema/mtproto-json/) for context.": "Машиночитаемые данные с оригинального сайта (JSON). Контекст смотрите в [оригинале](/schema/mtproto-json/)."
+ },
+ "api": {
+  "Telegram users and channels can easily post and view [stories](https://telegram.org/blog/stories) through the API.": "Пользователи и каналы Telegram могут легко публиковать и просматривать [истории](https://telegram.org/blog/stories) через API."
+ },
+ "api/bots": {
+  "[Bots](https://core.telegram.org/bots) offer a set of commands that can be used by users in private, or in a chat.": "[Боты](https://core.telegram.org/bots) предоставляют набор команд, которые пользователи могут вызывать в личной переписке или в чате."
+ },
+ "api/bots/ai": {
+  "Note: this feature is subject to an additional fee for Telegram Star purchases as described in [Section 6.2.6](https://telegram.org/tos/bot-developers#6-2-6-enabling-topics-in-private-chats) of our Terms of Service for Bot Developers.": "Учтите: за эту возможность взимается дополнительная комиссия с покупок Telegram Stars, как описано в [разделе 6.2.6](https://telegram.org/tos/bot-developers#6-2-6-enabling-topics-in-private-chats) наших Условий обслуживания для разработчиков ботов."
+ },
+ "api/channel": {
+  "Both supergroups and channels offer a so-called [admin log](https://telegram.org/blog/admin-revolution), a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.": "И супергруппы, и каналы предоставляют так называемый [журнал администратора](https://telegram.org/blog/admin-revolution) — журнал недавних значимых действий в супергруппе или канале: изменения настроек либо сведений о группе или канале от имени администратора, исключения и блокировки пользователей и многое другое."
+ },
+ "api/end-to-end": {
+  "This article on MTProto's End-to-End encryption is meant for **advanced users**. If you want to learn more about [Secret Chats](https://telegram.org/faq#secret-chats) from a less intimidating source, kindly see our [general FAQ](https://telegram.org/faq#secret-chats).": "Эта статья о сквозном шифровании в MTProto рассчитана на **продвинутых пользователей**. Если вы хотите узнать о [секретных чатах](https://telegram.org/faq#secret-chats) из менее пугающего источника, загляните в наш [общий FAQ](https://telegram.org/faq#secret-chats)."
+ },
+ "api/fragment": {
+  "Telegram users can make it easy for others to contact them or find their public groups and channels via [usernames](https://telegram.org/faq#usernames-and-t-me): clients can also assign multiple [Fragment »](https://fragment.com) **collectible usernames** to accounts, supergroups and channels they own; [Fragment »](https://fragment.com) also allows purchasing phone number collectibles that can be used to register Telegram accounts.": "Пользователи Telegram могут упростить другим задачу связаться с ними или найти их публичные группы и каналы с помощью [имён пользователя](https://telegram.org/faq#usernames-and-t-me): кроме того, клиенты могут присваивать аккаунтам, супергруппам и каналам, которыми владеют, несколько **коллекционных имён пользователя** с [Fragment »](https://fragment.com) (`collectible username` — имя, приобретённое на площадке Fragment и закреплённое за владельцем в блокчейне); [Fragment »](https://fragment.com) позволяет также покупать коллекционные номера телефона, на которые можно регистрировать аккаунты Telegram."
+ },
+ "api/paid-messages": {
+  "Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured [Star Messages »](https://telegram.org/blog/star-messages-gateway-2-0-and-more#stay-in-control-of-your-inbox-with-star-messages), requiring a payment for every message sent to them.": "Telegram Stars можно использовать для оплаты отправки сообщений пользователям, супергруппам и каналам, у которых настроены [Star Messages »](https://telegram.org/blog/star-messages-gateway-2-0-and-more#stay-in-control-of-your-inbox-with-star-messages): такие пиры (`peer` — пир, то есть адресат: пользователь, чат или канал) требуют оплаты за каждое отправленное им сообщение."
+ },
+ "api/recent-actions": {
+  "Both supergroups and channels offer a so-called [admin log](https://telegram.org/blog/admin-revolution), a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.": "И у супергрупп, и у каналов есть так называемый [журнал действий администраторов](https://telegram.org/blog/admin-revolution) — список недавних значимых действий в супергруппе или канале: изменение настроек группы либо канала или сведений о них от имени администратора, исключение и блокировка пользователей и многое другое."
+ },
+ "mtproto/description": {
+  "Got questions about this setup? — Check out the [Advanced FAQ](http://core.telegram.org/techfaq)!": "Остались вопросы по этой схеме? — Загляните в [расширенный FAQ](http://core.telegram.org/techfaq)!"
  }
 }

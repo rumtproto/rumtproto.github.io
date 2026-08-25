@@ -227,7 +227,7 @@ A profile can contain a maximum of [stargifts\_collections\_limit »](/api/confi
 
 ### Collectible gifts
 
-A [received gift](#sending-gifts) may be upgraded to a [collectible gift](https://telegram.org/blog/collectible-gifts-and-more#collectible-gifts).
+A [received gift](#sending-gifts) may be upgraded to a [collectible gift](/blog/collectible-gifts-and-more/#collectible-gifts).
 
 Collectible gifts have **special attributes** and can be **transferred** to other users or **auctioned** on NFT marketplaces.
 
@@ -514,7 +514,7 @@ payments.updateStarGiftPrice#edbe6ccb stargift:InputSavedStarGift resell_amount:
 payments.getResaleStarGifts#7a5fa236 flags:# sort_by_price:flags.1?true sort_by_num:flags.2?true for_craft:flags.4?true stars_only:flags.5?true attributes_hash:flags.0?long gift_id:long attributes:flags.3?Vector<StarGiftAttributeId> offset:string limit:int = payments.ResaleStarGifts;
 ```
 
-An owned [collectible gift »](#collectible-gifts) can be put up for sale on the [gift marketplace »](https://telegram.org/blog/gift-marketplace-and-more) by using [payments.updateStarGiftPrice](/method/payments.updateStarGiftPrice/), specifying the price in `resell_stars`.
+An owned [collectible gift »](#collectible-gifts) can be put up for sale on the [gift marketplace »](/blog/gift-marketplace-and-more/) by using [payments.updateStarGiftPrice](/method/payments.updateStarGiftPrice/), specifying the price in `resell_stars`.
 
 Note that if the [messageActionStarGiftUnique](/constructor/messageActionStarGiftUnique/)/[savedStarGift](/constructor/savedStarGift/).`can_resell_at` flag is set, the gift can be put up for sale only starting from the specified date.
 

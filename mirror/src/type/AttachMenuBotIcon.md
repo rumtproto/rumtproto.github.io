@@ -9,7 +9,7 @@ layout: layout.njk
 
 # AttachMenuBotIcon
 
-Represents an attachment menu icon for [bot mini apps »](https://core.telegram.org/bots/webapps#launching-mini-apps-from-the-attachment-menu)
+Represents an attachment menu icon for [bot mini apps »](/bots/webapps/#launching-mini-apps-from-the-attachment-menu)
 
 <p class="page_layer">Layer 223</p>
 
@@ -21,4 +21,4 @@ Represents an attachment menu icon for [bot mini apps »](https://core.telegram.
 
 ### Related pages
 
-#### [Telegram Mini Apps](https://core.telegram.org/bots/webapps)
+#### [Telegram Mini Apps](/bots/webapps/)

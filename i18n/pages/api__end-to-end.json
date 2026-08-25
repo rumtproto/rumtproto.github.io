@@ -1,6 +1,5 @@
 {
  "End-to-End Encryption, Secret Chats": "Сквозное шифрование, секретные чаты",
- "This article on MTProto's End-to-End encryption is meant for **advanced users**. If you want to learn more about [Secret Chats](https://telegram.org/faq#secret-chats) from a less intimidating source, kindly see our [general FAQ](https://telegram.org/faq#secret-chats).": "Эта статья о сквозном шифровании в MTProto рассчитана на **продвинутых пользователей**. Если вы хотите узнать о [секретных чатах](https://telegram.org/faq#secret-chats) из менее пугающего источника, загляните в наш [общий FAQ](https://telegram.org/faq#secret-chats).",
  "Note that as of version 4.6, major Telegram clients are using **MTProto 2.0**. MTProto v.1.0 is deprecated and is currently being phased out.": "Учтите, что начиная с версии 4.6 основные клиенты Telegram используют **MTProto 2.0**. MTProto v.1.0 устарел и постепенно выводится из обращения.",
  "Related articles": "Статьи по теме",
  "[Security guidelines for developers](/mtproto/security_guidelines/)": "[Рекомендации по безопасности для разработчиков](/mtproto/security_guidelines/)",

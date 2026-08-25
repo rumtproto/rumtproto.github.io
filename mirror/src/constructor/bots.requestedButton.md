@@ -13,7 +13,7 @@ Contains the request ID a bot should pass to a [Mini App](/api/bots/webapps/) af
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="https://core.telegram.org/constructor/bots.requestedButton?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="/constructor/bots.requestedButton/">Switch »</a></code></pre>
 
 ### Parameters
 

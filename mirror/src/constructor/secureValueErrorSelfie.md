@@ -39,4 +39,4 @@ Identity card
 
 #### [secureValueTypeInternalPassport](/constructor/secureValueTypeInternalPassport/)
 
-Internal [passport](https://core.telegram.org/passport)
+Internal [passport](/passport/)

@@ -13,7 +13,7 @@ Mark all [unread poll votes »](/api/poll/#unread-poll-votes) in a chat as read
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="https://core.telegram.org/method/messages.readPollVotes?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="/method/messages.readPollVotes/">Switch »</a></code></pre>
 
 ### Parameters
 

@@ -9,7 +9,7 @@ layout: layout.njk
 
 # upload.getCdnFileHashes
 
-Get SHA256 hashes for verifying downloaded [CDN](https://core.telegram.org/cdn) files
+Get SHA256 hashes for verifying downloaded [CDN](/cdn/) files
 
 <p class="page_layer">Layer 223</p>
 
@@ -32,6 +32,6 @@ Get SHA256 hashes for verifying downloaded [CDN](https://core.telegram.org/cdn) 
 
 ### Related pages
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Encrypted CDNs for Speed and Security](/cdn/)
 
 How client apps download popular public files from secondary CDN data centers.

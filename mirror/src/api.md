@@ -11,9 +11,9 @@ layout: layout.njk
 
 We offer three kinds of APIs for developers. The [**Bot API**](#bot-api) allows you to easily create programs that use Telegram messages for an interface. The [**Telegram API and TDLib**](#tdlib-build-your-own-telegram) allow you to build your own customized Telegram clients. You are welcome to use both APIs free of charge. Lastly, the [**Gateway API**](#gateway-api) allows any business, app or website to send verification codes through Telegram instead of traditional SMS.
 
-You can also add [**Telegram Widgets**](https://core.telegram.org/widgets) to your website.
+You can also add [**Telegram Widgets**](/widgets/) to your website.
 
-Designers are welcome to create [**Animated Stickers and Emoji**](https://core.telegram.org/stickers#animated-stickers-and-emoji) or [**Custom Themes**](https://core.telegram.org/themes) for Telegram.
+Designers are welcome to create [**Animated Stickers and Emoji**](/stickers/#animated-stickers-and-emoji) or [**Custom Themes**](/themes/) for Telegram.
 
 * * *
 
@@ -21,25 +21,25 @@ Designers are welcome to create [**Animated Stickers and Emoji**](https://core.t
 
 [<img src="https://core.telegram.org/file/811140934/1/tbDSLHSaijc/fdcc7b6d5fb3354adf" title="The Botfather. Click for hi-res picture" style="max-width: 200px;float:right">](https://core.telegram.org/file/811140327/1/zlN4goPTupk/9ff2f2f01c4bd1b013)
 
-This API allows you to connect bots to our system. [**Telegram Bots**](https://core.telegram.org/bots) are special accounts that do not require an additional phone number to set up. These accounts serve as an interface for code running somewhere on your server.
+This API allows you to connect bots to our system. [**Telegram Bots**](/bots/) are special accounts that do not require an additional phone number to set up. These accounts serve as an interface for code running somewhere on your server.
 
 To use this, you don't need to know anything about how our MTProto encryption protocol works — our intermediary server will handle all encryption and communication with the Telegram API for you. You communicate with this server via a simple HTTPS interface that offers a simplified version of the Telegram API.
 
-> [**Learn more about the Bot API here »**](https://core.telegram.org/bots)
+> [**Learn more about the Bot API here »**](/bots/)
 
-Bot developers can also make use of our [**Payments API**](https://core.telegram.org/bots/payments) to accept **payments** from Telegram users around the world.
+Bot developers can also make use of our [**Payments API**](/bots/payments/) to accept **payments** from Telegram users around the world.
 
 * * *
 
 ### TDLib – build your own Telegram
 
-Even if you're looking for maximum customization, you don't have to create your app from scratch. Try our [**Telegram Database Library**](https://core.telegram.org/tdlib) (or simply TDLib), a tool for third-party developers that makes it easy to build fast, secure and feature-rich Telegram apps.
+Even if you're looking for maximum customization, you don't have to create your app from scratch. Try our [**Telegram Database Library**](/tdlib/) (or simply TDLib), a tool for third-party developers that makes it easy to build fast, secure and feature-rich Telegram apps.
 
 TDLib takes care of all **network implementation** details, **encryption** and **local data storage**, so that you can dedicate more time to design, responsive interfaces and beautiful animations.
 
 TDLib supports all Telegram features and makes developing Telegram apps a breeze on any platform. It can be used on Android, iOS, Windows, macOS, Linux and virtually any other system. The library is open source and compatible with virtually **any programming language**.
 
-> [**Learn more about TDLib here »**](https://core.telegram.org/tdlib)
+> [**Learn more about TDLib here »**](/tdlib/)
 
 * * *
 
@@ -47,13 +47,13 @@ TDLib supports all Telegram features and makes developing Telegram apps a breeze
 
 The Telegram Gateway API allows any business, app or website to send authorization codes through Telegram instead of traditional SMS – offering a powerful and convenient way to **lower costs** while increasing the **security** and **delivery speed** of your codes to Telegram’s 1 billion monthly active users. Users will **instantly receive** messages with codes in a special chat inside Telegram.
 
-> [**Telegram's Gateway API is completely free to test. Learn more here »**](https://core.telegram.org/gateway)
+> [**Telegram's Gateway API is completely free to test. Learn more here »**](/gateway/)
 
 * * *
 
 ### Telegram API
 
-This API allows you to build your own customized Telegram clients. It is 100% open for all developers who wish to create Telegram applications on our platform. Feel free to study the open [source code](https://telegram.org/apps#source-code) of existing Telegram applications for examples of how things work here. Don't forget to [register](/api/obtaining_api_id/) your application in our system.
+This API allows you to build your own customized Telegram clients. It is 100% open for all developers who wish to create Telegram applications on our platform. Feel free to study the open [source code](/apps/#source-code) of existing Telegram applications for examples of how things work here. Don't forget to [register](/api/obtaining_api_id/) your application in our system.
 
 -   [Getting Started](#getting-started)
 -   [Security](#security)
@@ -216,7 +216,7 @@ Users can create **managed** bots (which are controlled by a specific manager bo
 
 #### [Commands](/api/bots/commands/)
 
-[Bots](https://core.telegram.org/bots) offer a set of commands that can be used by users in private, or in a chat.
+[Bots](/bots/) offer a set of commands that can be used by users in private, or in a chat.
 
 #### [Buttons](/api/bots/buttons/)
 
@@ -236,7 +236,7 @@ Bots can offer users HTML5 games to play solo or to compete against each other i
 
 #### [Mini apps](/api/bots/webapps/)
 
-Bots can offer users interactive [HTML5 mini apps](https://core.telegram.org/bots/webapps) to completely replace **any website**.
+Bots can offer users interactive [HTML5 mini apps](/bots/webapps/) to completely replace **any website**.
 
 #### [Affiliate programs](/api/bots/referrals/)
 
@@ -264,7 +264,7 @@ Bots may receive and send messages to and from other bots in groups, private cha
 
 #### [Stories](/api/stories/)
 
-Telegram users and channels can easily post and view [stories](https://telegram.org/blog/stories) through the API.
+Telegram users and channels can easily post and view [stories](/blog/stories/) through the API.
 
 #### [Similar channels and bots](/api/recommend/)
 
@@ -317,7 +317,7 @@ How to handle admin permissions, granular bans and global permissions in channel
 
 #### [Discussion groups](/api/discussion/)
 
-[Groups](/api/channel/) can be associated with a [channel](/api/channel/) as a [discussion group](https://telegram.org/blog/privacy-discussions-web-bots), allowing users to discuss posts.
+[Groups](/api/channel/) can be associated with a [channel](/api/channel/) as a [discussion group](/blog/privacy-discussions-web-bots/), allowing users to discuss posts.
 
 #### [Channel comments and message threads](/api/threads/)
 
@@ -325,7 +325,7 @@ Telegram allows commenting on a [channel post](/api/channel/) or on a generic [g
 
 #### [Admin log](/api/recent-actions/)
 
-Both supergroups and channels offer a so-called [admin log](https://telegram.org/blog/admin-revolution), a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.
+Both supergroups and channels offer a so-called [admin log](/blog/admin-revolution/), a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.
 
 #### [Pinned messages](/api/pin/)
 
@@ -397,7 +397,7 @@ Graphical Telegram clients should transform emojis into their respective animate
 
 #### [Working with animated dice](/api/dice/)
 
-Telegram supports sending [animated dice](https://telegram.org/blog/folders#and-one-more-thing) emojis.
+Telegram supports sending [animated dice](/blog/folders/#and-one-more-thing) emojis.
 
 #### [Message drafts](/api/drafts/)
 
@@ -441,7 +441,7 @@ Admins of supergroups with a certain number of members can choose to unleash the
 
 #### [Collectibles](/api/fragment/)
 
-Telegram users can make it easy for others to contact them or find their public groups and channels via [usernames](https://telegram.org/faq#usernames-and-t-me): clients can also assign multiple [Fragment »](https://fragment.com) **collectible usernames** to accounts, supergroups and channels they own; [Fragment »](https://fragment.com) also allows purchasing phone number collectibles that can be used to register Telegram accounts.
+Telegram users can make it easy for others to contact them or find their public groups and channels via [usernames](/faq/#usernames-and-t-me): clients can also assign multiple [Fragment »](https://fragment.com) **collectible usernames** to accounts, supergroups and channels they own; [Fragment »](https://fragment.com) also allows purchasing phone number collectibles that can be used to register Telegram accounts.
 
 #### [Telegram Premium](/api/premium/)
 
@@ -479,7 +479,7 @@ Content creators can accept [Stars](/api/stars/) by publishing **paid photos or 
 
 #### [Paid messages](/api/paid-messages/)
 
-Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured [Star Messages »](https://telegram.org/blog/star-messages-gateway-2-0-and-more#stay-in-control-of-your-inbox-with-star-messages), requiring a payment for every message sent to them.
+Telegram Stars can be used to pay for sending messages to users, supergroups and channels that have configured [Star Messages »](/blog/star-messages-gateway-2-0-and-more/#stay-in-control-of-your-inbox-with-star-messages), requiring a payment for every message sent to them.
 
 #### [Suggested posts](/api/suggested-posts/)
 
@@ -511,7 +511,7 @@ Telegram apps support generating, sharing and synchronizing app themes.
 
 ### [Sponsored messages](/api/sponsored-messages/)
 
-If your app allows accessing content from Telegram [channels](https://telegram.org/tour/channels), you must include support for [official sponsored messages](/api/sponsored-messages/) in Telegram channels.
+If your app allows accessing content from Telegram [channels](/tour/channels/), you must include support for [official sponsored messages](/api/sponsored-messages/) in Telegram channels.
 
 ### [Channel and bot ad revenue](/api/revenue/)
 

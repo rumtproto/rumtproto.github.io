@@ -9,7 +9,7 @@ layout: layout.njk
 
 # inputMediaInvoice
 
-Generated invoice of a [bot payment](https://core.telegram.org/bots/payments)
+Generated invoice of a [bot payment](/bots/payments/)
 
 <p class="page_layer">Layer 223</p>
 
@@ -29,4 +29,4 @@ Generated invoice of a [bot payment](https://core.telegram.org/bots/payments)
 
 Telegram clients must handle special tg:// and t.me deep links encountered in messages, link entities and in other apps by registering OS handlers.
 
-#### [Bot Payments API](https://core.telegram.org/bots/payments)
+#### [Bot Payments API](/bots/payments/)

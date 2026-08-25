@@ -9,7 +9,7 @@ layout: layout.njk
 
 # starsTransactionPeerAPI
 
-Describes a [Telegram Star](/api/stars/) transaction used to pay for paid API usage, such as [paid bot broadcasts](https://core.telegram.org/bots/faq#how-can-i-message-all-of-my-bot-39s-subscribers-at-once).
+Describes a [Telegram Star](/api/stars/) transaction used to pay for paid API usage, such as [paid bot broadcasts](/bots/faq/#how-can-i-message-all-of-my-bot-s-subscribers-at-once).
 
 <p class="page_layer">Layer 223</p>
 
@@ -29,4 +29,4 @@ This constructor does not require any parameters.
 
 Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
 
-#### [Bots FAQ](https://core.telegram.org/bots/faq)
+#### [Bots FAQ](/bots/faq/)

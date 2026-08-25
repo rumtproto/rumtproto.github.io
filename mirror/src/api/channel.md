@@ -11,7 +11,7 @@ layout: layout.njk
 
 ### Channels
 
-[Channels](https://telegram.org/tour/channels) are a tool for broadcasting your messages to large audiences. They can have an unlimited number of subscribers, they can be public with a permanent URL and each post in a channel has its own view counter.  
+[Channels](/tour/channels/) are a tool for broadcasting your messages to large audiences. They can have an unlimited number of subscribers, they can be public with a permanent URL and each post in a channel has its own view counter.  
 Technically, they are represented by [channel](/constructor/channel/) constructors.
 
 Channels can be created using the [channels.createChannel](/method/channels.createChannel/) method, by setting the `broadcast` flag.
@@ -25,7 +25,7 @@ Messages posted on channels can be:
 
 ### Supergroups
 
-[Supergroups](https://telegram.org/tour/groups) are a powerful tool for building communities and can support up to 200,000 members each.  
+[Supergroups](/tour/groups/) are a powerful tool for building communities and can support up to 200,000 members each.  
 Technically, supergroups are actually channels: they are represented by [channel](/constructor/channel/) constructors, with the `megagroup` flag set to true.
 
 Supergroups can be created using the [channels.createChannel](/method/channels.createChannel/) method, by setting the `megagroup` flag.  
@@ -199,7 +199,7 @@ For more info on how to work with public usernames, invite links and join reques
 
 ### Rights
 
-Channels, basic groups and supergroups allow setting [granular permissions](https://telegram.org/blog/permissions-groups-undo) both for admins and specific users; channels, supergroups and basic groups also allow setting global granular permissions for users.
+Channels, basic groups and supergroups allow setting [granular permissions](/blog/permissions-groups-undo/) both for admins and specific users; channels, supergroups and basic groups also allow setting global granular permissions for users.
 
 For more info on how to set and modify rights, see [here »](/api/rights/).
 
@@ -211,13 +211,13 @@ See [here »](/api/pin/) for more info on pinning and unpinning messages.
 
 ### Discussion
 
-Groups can be associated to a channel as a [discussion group](https://telegram.org/blog/privacy-discussions-web-bots), to allow users to discuss about posts.
+Groups can be associated to a channel as a [discussion group](/blog/privacy-discussions-web-bots/), to allow users to discuss about posts.
 
 For more info on how to set a discussion group in channel, see [here »](/api/discussion/)
 
 ### Recent actions
 
-Both supergroups and channels offer a so-called [admin log](https://telegram.org/blog/admin-revolution), a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.
+Both supergroups and channels offer a so-called [admin log](/blog/admin-revolution/), a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.
 
 See [here »](/api/recent-actions/) for more info.
 

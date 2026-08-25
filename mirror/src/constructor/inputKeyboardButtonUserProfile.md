@@ -11,7 +11,7 @@ layout: layout.njk
 
 Button that links directly to a user profile
 
-Use this constructor to send a [keyboardButtonUserProfile](/constructor/keyboardButtonUserProfile/) button in an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards).
+Use this constructor to send a [keyboardButtonUserProfile](/constructor/keyboardButtonUserProfile/) button in an [inline keyboard](/bots/features/#inline-keyboards).
 
 <p class="page_layer">Layer 223</p>
 
@@ -39,6 +39,6 @@ Available only in [inline keyboards](/constructor/replyInlineMarkup/).
 
 When pressed, clients must open the profile of the user identified by `user_id`.
 
-#### [Telegram Bot Features](https://core.telegram.org/bots/features)
+#### [Telegram Bot Features](/bots/features/)
 
 This page describes individual bot elements in greater detail. For a general overview of bots, read the introduction to bots first.

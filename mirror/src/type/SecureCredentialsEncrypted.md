@@ -17,4 +17,4 @@ Encrypted secure credentials
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/secureCredentialsEncrypted/">secureCredentialsEncrypted</a></td><td>Encrypted credentials required to decrypt <a href="https://core.telegram.org/passport">telegram passport</a> data.</td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/secureCredentialsEncrypted/">secureCredentialsEncrypted</a></td><td>Encrypted credentials required to decrypt <a href="/passport/">telegram passport</a> data.</td></tr></tbody></table>

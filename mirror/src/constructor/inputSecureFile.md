@@ -9,7 +9,7 @@ layout: layout.njk
 
 # inputSecureFile
 
-Pre-uploaded [passport](https://core.telegram.org/passport) file, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#inputsecurefile)
+Pre-uploaded [passport](/passport/) file, for more info [see the passport docs »](/passport/encryption/#inputsecurefile)
 
 <p class="page_layer">Layer 223</p>
 
@@ -25,10 +25,10 @@ Pre-uploaded [passport](https://core.telegram.org/passport) file, for more info 
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport Encryption Details](/passport/encryption/)
 
 How Telegram Passport data is stored and encrypted end-to-end.

@@ -1,7 +1,7 @@
 ---
 title: "Telegram API Documentation Mirror"
 original: "https://core.telegram.org"
-section: other
+section: site
 description: "An enhanced mirror of the Telegram API, MTProto protocol and TL schema documentation from core.telegram.org, with full-text search, anchors and a structured menu."
 generated: true
 layout: layout.njk

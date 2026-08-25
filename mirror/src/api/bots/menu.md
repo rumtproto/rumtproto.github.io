@@ -11,7 +11,7 @@ layout: layout.njk
 
 Bots can choose the behavior of the menu button shown next to the text input field.
 
-For a simplified description using the HTTP bot API, see [here »](https://core.telegram.org/bots/api).
+For a simplified description using the HTTP bot API, see [here »](/bots/api/).
 
 ### Setting the menu button
 

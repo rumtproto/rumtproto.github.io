@@ -9,7 +9,7 @@ layout: layout.njk
 
 # upload.cdnFile
 
-Represent a chunk of a [CDN](https://core.telegram.org/cdn) file.
+Represent a chunk of a [CDN](/cdn/) file.
 
 <p class="page_layer">Layer 223</p>
 
@@ -25,6 +25,6 @@ Represent a chunk of a [CDN](https://core.telegram.org/cdn) file.
 
 ### Related pages
 
-#### [Encrypted CDNs for Speed and Security](https://core.telegram.org/cdn)
+#### [Encrypted CDNs for Speed and Security](/cdn/)
 
 How client apps download popular public files from secondary CDN data centers.

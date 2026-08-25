@@ -13,7 +13,7 @@ Access restriction settings for a managed bot.
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="https://core.telegram.org/type/bots.AccessSettings?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="/type/bots.AccessSettings/">Switch »</a></code></pre>
 
 ### Constructors
 

@@ -9,7 +9,7 @@ layout: layout.njk
 
 # secureData
 
-Secure [passport](https://core.telegram.org/passport) data, for more info [see the passport docs »](https://core.telegram.org/passport/encryption#securedata)
+Secure [passport](/passport/) data, for more info [see the passport docs »](/passport/encryption/#securedata)
 
 <p class="page_layer">Layer 223</p>
 
@@ -25,10 +25,10 @@ Secure [passport](https://core.telegram.org/passport) data, for more info [see t
 
 ### Related pages
 
-#### [Telegram Passport Manual](https://core.telegram.org/passport)
+#### [Telegram Passport Manual](/passport/)
 
 Telegram Passport, a unified authorization method for services that require personal identification.
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport Encryption Details](/passport/encryption/)
 
 How Telegram Passport data is stored and encrypted end-to-end.

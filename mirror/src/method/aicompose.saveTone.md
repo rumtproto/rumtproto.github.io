@@ -15,7 +15,7 @@ Non-[Premium](/api/premium/) users may install up to [aicompose\_tone\_saved\_li
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="https://core.telegram.org/method/aicompose.saveTone?layer=225">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 225. <a href="/method/aicompose.saveTone/">Switch »</a></code></pre>
 
 ### Parameters
 

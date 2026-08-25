@@ -9,7 +9,7 @@ layout: layout.njk
 
 # account.resetWebAuthorization
 
-Log out an active web [telegram login](https://core.telegram.org/widgets/login) session
+Log out an active web [telegram login](/bots/telegram-login/) session
 
 <p class="page_layer">Layer 223</p>
 
@@ -36,6 +36,6 @@ Log out an active web [telegram login](https://core.telegram.org/widgets/login) 
 
 #### [webAuthorization](/constructor/webAuthorization/)
 
-Represents a bot logged in using the [Telegram login widget](https://core.telegram.org/widgets/login)
+Represents a bot logged in using the [Telegram login widget](/bots/telegram-login/)
 
-#### [Telegram Login Widget](https://core.telegram.org/widgets/login)
+#### [Telegram Login Widget](/bots/telegram-login/)

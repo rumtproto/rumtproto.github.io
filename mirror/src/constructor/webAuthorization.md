@@ -9,7 +9,7 @@ layout: layout.njk
 
 # webAuthorization
 
-Represents a bot logged in using the [Telegram login widget](https://core.telegram.org/widgets/login)
+Represents a bot logged in using the [Telegram login widget](/bots/telegram-login/)
 
 <p class="page_layer">Layer 223</p>
 
@@ -25,4 +25,4 @@ Represents a bot logged in using the [Telegram login widget](https://core.telegr
 
 ### Related pages
 
-#### [Telegram Login Widget](https://core.telegram.org/widgets/login)
+#### [Telegram Login Widget](/bots/telegram-login/)

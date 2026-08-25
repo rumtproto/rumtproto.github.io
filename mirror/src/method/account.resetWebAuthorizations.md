@@ -9,7 +9,7 @@ layout: layout.njk
 
 # account.resetWebAuthorizations
 
-Reset all active web [telegram login](https://core.telegram.org/widgets/login) sessions
+Reset all active web [telegram login](/bots/telegram-login/) sessions
 
 <p class="page_layer">Layer 223</p>
 
@@ -30,4 +30,4 @@ This constructor does not require any parameters.
 
 ### Related pages
 
-#### [Telegram Login Widget](https://core.telegram.org/widgets/login)
+#### [Telegram Login Widget](/bots/telegram-login/)

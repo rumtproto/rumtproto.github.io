@@ -9,7 +9,7 @@ layout: layout.njk
 
 # InputSecureValue
 
-Secure value, [for more info see the passport docs »](https://core.telegram.org/passport/encryption#encryption)
+Secure value, [for more info see the passport docs »](/passport/encryption/#encryption)
 
 <p class="page_layer">Layer 223</p>
 
@@ -17,10 +17,10 @@ Secure value, [for more info see the passport docs »](https://core.telegram.org
 
 ### Constructors
 
-<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputSecureValue/">inputSecureValue</a></td><td>Secure value, <a href="https://core.telegram.org/passport/encryption#encryption">for more info see the passport docs »</a></td></tr></tbody></table>
+<table class="table"><thead><tr><th scope="col">Constructor</th><th scope="col">Description</th></tr></thead><tbody><tr><td><a href="/constructor/inputSecureValue/">inputSecureValue</a></td><td>Secure value, <a href="/passport/encryption/#encryption">for more info see the passport docs »</a></td></tr></tbody></table>
 
 ### Related pages
 
-#### [Telegram Passport Encryption Details](https://core.telegram.org/passport/encryption)
+#### [Telegram Passport Encryption Details](/passport/encryption/)
 
 How Telegram Passport data is stored and encrypted end-to-end.

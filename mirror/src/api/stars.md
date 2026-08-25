@@ -11,7 +11,7 @@ layout: layout.njk
 
 Telegram Stars are virtual items that allow users to purchase digital goods and services from bots and mini apps inside the Telegram ecosystem, send gifts to content creators on the Telegram platform, and more.
 
-This page describes the methods used to buy, use and withdraw [Telegram Stars](https://telegram.org/blog/mini-app-bar-paid-media-and-more#rewards-for-content-creators-and-developers), as well as view detailed revenue stats and make purchases using Telegram Stars.
+This page describes the methods used to buy, use and withdraw [Telegram Stars](/blog/mini-app-bar-paid-media-and-more/#rewards-for-content-creators-and-developers), as well as view detailed revenue stats and make purchases using Telegram Stars.
 
 Clients should disable Telegram Stars support for the current user if the [stars\_purchase\_blocked field is equal to `true` »](/api/config/#stars-purchase-blocked) due to regional limitations.
 
@@ -120,7 +120,7 @@ More alternative payment flows are also available:
 -   The store-based subscription flow based on [payments.assignAppStoreTransaction](/method/payments.assignAppStoreTransaction/)/[payments.assignPlayMarketTransaction](/method/payments.assignPlayMarketTransaction/), currently not available to third-party apps.
 
 For gifts, once the payment is successfully processed, the user to which the gift was sent will automatically receive a [messageService](/constructor/messageService/) from the user that sent the gift, containing a [messageActionGiftStars](/constructor/messageActionGiftStars/) constructor with further info about the price and duration of the gifted Telegram Stars.  
-Clients should display this message, along with a sticker from the [inputStickerSetPremiumGifts](/constructor/inputStickerSetPremiumGifts/) [stickerset](/api/stickers/): here's an [example](https://telegram.org/blog/w3-browser-mini-app-store#gifting-stars-to-friends).
+Clients should display this message, along with a sticker from the [inputStickerSetPremiumGifts](/constructor/inputStickerSetPremiumGifts/) [stickerset](/api/stickers/): here's an [example](/blog/w3-browser-mini-app-store/#gifting-stars-to-friends).
 
 The price in US dollars of 1000 Telegram Stars can be fetched using the [`stars_usd_sell_rate_x1000` config parameter »](/api/config/#stars-usd-sell-rate-x1000).
 

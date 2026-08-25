@@ -65,7 +65,7 @@ When pressed, clients must copy `copy_text` to the clipboard.
 
 Button that links directly to a user profile
 
-Use this constructor to send a [keyboardButtonUserProfile](/constructor/keyboardButtonUserProfile/) button in an [inline keyboard](https://core.telegram.org/bots/features#inline-keyboards).
+Use this constructor to send a [keyboardButtonUserProfile](/constructor/keyboardButtonUserProfile/) button in an [inline keyboard](/bots/features/#inline-keyboards).
 
 #### [keyboardButtonSwitchInline](/constructor/keyboardButtonSwitchInline/)
 

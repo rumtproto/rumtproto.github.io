@@ -13,7 +13,7 @@ Check whether a username is available and valid for use when [creating a managed
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="https://core.telegram.org/method/bots.checkUsername?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="/method/bots.checkUsername/">Switch »</a></code></pre>
 
 ### Parameters
 

@@ -13,7 +13,7 @@ References an [AI composer tone »](/api/ai/#ai-compose-tones), either a built-i
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 228. <a href="https://core.telegram.org/type/InputAiComposeTone?layer=228">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 228. <a href="/type/InputAiComposeTone/">Switch »</a></code></pre>
 
 ### Constructors
 

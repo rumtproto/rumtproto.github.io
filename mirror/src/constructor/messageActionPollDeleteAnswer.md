@@ -13,7 +13,7 @@ An answer option was removed from an [open-answer poll »](/api/poll/#open-answe
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="https://core.telegram.org/constructor/messageActionPollDeleteAnswer?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Constructor schema is available as of layer 224. <a href="/constructor/messageActionPollDeleteAnswer/">Switch »</a></code></pre>
 
 ### Parameters
 

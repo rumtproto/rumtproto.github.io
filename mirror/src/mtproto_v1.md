@@ -48,7 +48,7 @@ The protocol is subdivided into three virtually independent components:
 
 [<img src="https://core.telegram.org/file/811140187/1/sfBQV3Trp80/3a3c48bad836b853ed" alt="Server-client encryption in MTProto (Cloud chats)" class="dev_page_image">](https://core.telegram.org/file/811140187/1/sfBQV3Trp80/3a3c48bad836b853ed)
 
-> Got questions about this setup? — Check out the [Advanced FAQ](http://core.telegram.org/techfaq)!
+> Got questions about this setup? — Check out the [Advanced FAQ](/techfaq/)!
 
 ###### **Note 1**
 
@@ -62,7 +62,7 @@ Each plaintext message to be encrypted in MTProto always contains the following 
 
 ###### **Note 2**
 
-See additional comments on our use of [IGE](/techfaq/#q-do-you-use-ige-ige-is-broken), [SHA-1](https://core.telegram.org/techfaq#q-why-do-you-use-sha-1-not-sha-256-or-x-insert-your-favorite-has) and [message authentication](/techfaq/#q-how-are-mtproto-messages-authenticated).
+See additional comments on our use of [IGE](/techfaq/#q-do-you-use-ige-ige-is-broken), [SHA-1](/techfaq/) and [message authentication](/techfaq/#q-how-are-mtproto-messages-authenticated).
 
 ###### **Note 3**
 

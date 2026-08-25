@@ -9,7 +9,7 @@ layout: layout.njk
 
 # Animated dice
 
-Telegram supports sending [animated dice](https://telegram.org/blog/folders#and-one-more-thing) emojis.  
+Telegram supports sending [animated dice](/blog/folders/#and-one-more-thing) emojis.  
 This is implemented by using the dice constructors:
 
 ```

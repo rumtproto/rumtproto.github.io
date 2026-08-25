@@ -13,7 +13,7 @@ Fetch the peer request button a bot prepared for a [Mini App](/api/bots/webapps/
 
 <p class="page_layer">Layer 223</p>
 
-<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="https://core.telegram.org/method/bots.getRequestedWebViewButton?layer=224">Switch »</a></code></pre>
+<pre class="page_scheme"><code>Method schema is available as of layer 224. <a href="/method/bots.getRequestedWebViewButton/">Switch »</a></code></pre>
 
 ### Parameters
 

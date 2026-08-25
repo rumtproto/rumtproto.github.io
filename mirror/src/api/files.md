@@ -230,7 +230,7 @@ inputSingleMedia#1cc6e91f flags:# media:InputMedia random_id:long message:string
 messages.sendMultiMedia#1bf89d74 flags:# silent:flags.5?true background:flags.6?true clear_draft:flags.7?true noforwards:flags.14?true update_stickersets_order:flags.15?true invert_media:flags.16?true allow_paid_floodskip:flags.19?true peer:InputPeer reply_to:flags.0?InputReplyTo multi_media:Vector<InputSingleMedia> schedule_date:flags.10?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut effect:flags.18?long allow_paid_stars:flags.21?long = Updates;
 ```
 
-Telegram allows grouping photos into [albums](https://telegram.org/blog/albums-saved-messages) and generic files (audio, documents) into media groups.
+Telegram allows grouping photos into [albums](/blog/albums-saved-messages/) and generic files (audio, documents) into media groups.
 
 To do this, [messages.sendMultiMedia](/method/messages.sendMultiMedia/) is used, wrapping each [InputMedia](/type/InputMedia/) constructor (uploaded or pre-existing, maximum 10 per media group) into an [inputSingleMedia](/constructor/inputSingleMedia/) constructor, optionally providing a custom per-file caption in `message`.
 
@@ -382,7 +382,7 @@ userProfilePhoto#82d1f706 flags:# has_video:flags.0?true personal:flags.2?true p
     
     -   `stickerset` is set to the [InputStickerSet](/type/InputStickerSet/) constructor generated from [stickerSet](/constructor/stickerSet/)
     -   `thumb_version` is copied from the same field in [stickerSet](/constructor/stickerSet/)
--   For encrypted secret chat and telegram passport documents, respectively [inputEncryptedFileLocation](/constructor/inputEncryptedFileLocation/) and [inputSecureFileLocation](/constructor/inputSecureFileLocation/) have to be used, with parameters extracted from [encryptedFile](/constructor/encryptedFile/) and [secureFile](/constructor/secureFile/) ([passport docs](https://core.telegram.org/passport)).
+-   For encrypted secret chat and telegram passport documents, respectively [inputEncryptedFileLocation](/constructor/inputEncryptedFileLocation/) and [inputSecureFileLocation](/constructor/inputSecureFileLocation/) have to be used, with parameters extracted from [encryptedFile](/constructor/encryptedFile/) and [secureFile](/constructor/secureFile/) ([passport docs](/passport/)).
     
 -   For livestream chunks, [inputGroupCallStream](/constructor/inputGroupCallStream/) is used:
     
@@ -418,7 +418,7 @@ In any case the requested part should be within one 1 MB chunk from the beginnin
 
 When downloading multiple files in parallel from the same DC, clients should limit the parallelism to download at most `small_queue_max_active_operations_count`/`large_queue_max_active_operations_count` files in parallel when downloading files smaller/bigger than 20MB ([client configuration parameters »](/api/config/#client-configuration)).
 
-The file download operation may return an [upload.fileCdnRedirect](/constructor/upload.fileCdnRedirect/) constructor: in this case, [these](https://core.telegram.org/cdn) instructions must be followed for downloading CDN files. The file download operation may also return one of the following [data input errors](/api/errors/#400-bad-request):
+The file download operation may return an [upload.fileCdnRedirect](/constructor/upload.fileCdnRedirect/) constructor: in this case, [these](/cdn/) instructions must be followed for downloading CDN files. The file download operation may also return one of the following [data input errors](/api/errors/#400-bad-request):
 
 -   FILE\_REFERENCE\_EXPIRED: The `file_reference` field of the input location must be [refreshed as specified here »](/api/file-references/).
 -   FILE\_REFERENCE\_INVALID: The `file_reference` field of the input location is invalid and must be [refreshed as specified here »](/api/file-references/).
@@ -443,7 +443,7 @@ fileHash#f39b035c offset:long limit:int hash:bytes = FileHash;
 upload.getFileHashes#9156982a location:InputFileLocation offset:long = Vector<FileHash>;
 ```
 
-In order to confirm the integrity of the downloaded file, clients are recommended to verify hashes for each downloaded part, as for [CDN DCs](https://core.telegram.org/cdn). [upload.getFileHashes](/method/upload.getFileHashes/) contain [FileHash](/type/FileHash/) constructors. Each of these constructors contains the SHA-256 hash of a part of the file that starts with `offset` and takes `limit` bytes.
+In order to confirm the integrity of the downloaded file, clients are recommended to verify hashes for each downloaded part, as for [CDN DCs](/cdn/). [upload.getFileHashes](/method/upload.getFileHashes/) contain [FileHash](/type/FileHash/) constructors. Each of these constructors contains the SHA-256 hash of a part of the file that starts with `offset` and takes `limit` bytes.
 
 Before saving each portion of the data received from the DC into the file, the client can confirm that its hash matches the hash that was received from the master DC. If missing a hash for any file part, client developers must use the [upload.getFileHashes](/method/upload.getFileHashes/) method to obtain the missing hash.
 

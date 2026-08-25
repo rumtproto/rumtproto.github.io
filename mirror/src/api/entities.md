@@ -94,12 +94,12 @@ The following entities need to be manually specified by the user through formatt
     
 -   [`messageEntityPre` »](/constructor/messageEntityPre/) => `<pre language="c++">code</pre>`,
     
-    ```
+    ````
       ```c++
       code
       ```
       
-    ```
+    ````
     
     Cannot be nested inside other entities.
     
