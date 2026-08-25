@@ -8,6 +8,7 @@ import path from 'node:path';
 import matter from 'gray-matter';
 import { segments } from './lib/segment.mjs';
 import { schemaNames } from './lib/schema-names.mjs';
+import { isNeverTranslated } from './lib/never-translate.mjs';
 
 const ROOT = process.cwd();
 const MIRROR = path.join(ROOT, 'mirror', 'src');
@@ -349,6 +350,48 @@ else ok('interface: site chrome is Russian');
     }
   }
   if (!unmarked) ok('provenance: every page with prose carries translation labels');
+}
+
+// 6. Coverage is an invariant, not a statistic. The build already leaves exact
+// English in place for anything it cannot translate; this check makes that
+// fallback *visible* instead of letting a page quietly ship half in English.
+{
+  const coverage = JSON.parse(read(path.join(I18N, 'coverage.json')));
+  const outstanding = (label, map) => {
+    const keys = Object.keys(map || {});
+    if (!keys.length) { ok(`coverage: no ${label} awaiting translation`); return; }
+    for (const key of keys.slice(0, sampleLimit)) fail('coverage', `${label} still English: ${JSON.stringify(key.slice(0, 90))}`);
+    if (keys.length > sampleLimit) fail('coverage', `…and ${keys.length - sampleLimit} more ${label}`);
+  };
+  outstanding('segment(s)', coverage.untranslated);
+  outstanding('media caption(s)', coverage.media);
+  outstanding('raw-HTML text node(s)', coverage.htmlText);
+  outstanding('page title(s)', coverage.frontmatter && coverage.frontmatter.title);
+  outstanding('page description(s)', coverage.frontmatter && coverage.frontmatter.description);
+}
+
+// The tab title, the search snippet and the link preview are as much a part of
+// the page as its first paragraph; a Latin-only one on a Russian page is a gap.
+{
+  const cyrillic = /[\u0400-\u04FF]/;
+  let englishMeta = 0;
+  for (const rel of mirrorPages) {
+    const output = outputFor(rel);
+    if (!existsSync(output)) continue;
+    const source = String(matter(read(path.join(MIRROR, rel))).data.title || '').trim();
+    // A schema entity, a file name or a product name is identical in both
+    // languages — the same inventory the build consults decides it here.
+    if (!source || isNeverTranslated(source)) continue;
+    const title = (/<title>([\s\S]*?) — MTProto/.exec(read(output)) || [])[1] || '';
+    // A rewritten title is a translated title even when every word stays Latin:
+    // "Telegram API" becomes "API Telegram", which is Russian word order.
+    if (title && title !== source) continue;
+    if (title && !cyrillic.test(title)) {
+      englishMeta += 1;
+      fail('metadata-language', `English <title> on ${rel}: ${title}`);
+    }
+  }
+  if (!englishMeta) ok('metadata language: every translatable page title is Russian');
 }
 
 if (warnings.length) {

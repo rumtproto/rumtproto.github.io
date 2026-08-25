@@ -25063,6 +25063,10 @@
   {
    "url": "/schema/",
    "title": "Схема"
+  },
+  {
+   "url": "/schema/end-to-end-json/",
+   "title": "Схема сквозного шифрования в JSON"
   }
  ],
  "/schema/end-to-end/": [
@@ -25081,6 +25085,10 @@
   {
    "url": "/schema/",
    "title": "Схема"
+  },
+  {
+   "url": "/schema/mtproto-json/",
+   "title": "Схема MTProto в JSON"
   }
  ],
  "/schema/mtproto/": [
@@ -31303,6 +31311,12 @@
   {
    "url": "/type/",
    "title": "Типы"
+  }
+ ],
+ "/widgets/posts/": [
+  {
+   "url": "https://core.telegram.org/widgets/post",
+   "title": "Виджет публикации"
   }
  ]
 }

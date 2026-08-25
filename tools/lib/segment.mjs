@@ -228,6 +228,20 @@ export function segments(body) {
  * returns a string. Ranges are spliced back to front so earlier offsets stay
  * valid, and everything outside a segment is preserved byte for byte.
  */
+/** Byte ranges of every raw-HTML block, in document order. */
+export function htmlBlocks(body) {
+  const src = String(body);
+  const lineStart = [];
+  let at = 0;
+  for (const line of src.split('\n')) { lineStart.push(at); at += line.length + 1; }
+  lineStart.push(at);
+  const out = [];
+  for (const tok of md.parse(src, {})) {
+    if (tok.type === 'html_block' && tok.map) out.push([lineStart[tok.map[0]], lineStart[tok.map[1]]]);
+  }
+  return out;
+}
+
 export function rewrite(body, map) {
   const src = String(body);
   const segs = segments(src);

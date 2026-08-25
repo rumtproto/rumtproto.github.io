@@ -36,6 +36,14 @@ function isTypeExpression(text) {
   // Both spellings occur: Markdown links in prose, HTML links inside table cells.
   const htmlLink = /<a\s[^>]*href="\/(?:type|method|constructor)\/[^"]*"[^>]*>[\s\S]*?<\/a>/gi;
   if (!schemaLink().test(text) && !htmlLink.test(text)) return false;
+  // A schema link whose label is a phrase is prose that happens to point at a
+  // reference page — `<a href="/constructor/…">Leave events</a>` is a table cell
+  // the reader reads, not a type. Only identifier labels make a type expression.
+  const labels = [
+    ...[...text.matchAll(/<a\s[^>]*href="\/(?:type|method|constructor)\/[^"]*"[^>]*>([\s\S]*?)<\/a>/gi)].map((m) => m[1]),
+    ...[...text.matchAll(/\[([^\]]+)\]\(\/(?:type|method|constructor)\/[^)]*\)/g)].map((m) => m[1]),
+  ];
+  if (labels.some((label) => !/^[A-Za-z_%#][\w.%#?]*$/.test(label.replace(/<[^>]+>/g, '').trim()))) return false;
   const rest = text
     .replace(schemaLink(), ' ')
     .replace(/<a\s[^>]*href="\/(?:type|method|constructor)\/[^"]*"[^>]*>[\s\S]*?<\/a>/gi, ' ')
@@ -56,12 +64,19 @@ function isTypeExpression(text) {
 function isFormula(text) {
   const stripped = text
     .replace(/`[^`]*`/g, ' ')
-    .replace(/\[[^\]]*\]\([^)]*\)/g, ' ')
+    // A link to a schema page is an identifier and carries no prose. Every other
+    // link keeps its label: `[Telegram Passport Encryption Details](/passport/…)`
+    // is a translatable heading, not a formula, and deleting the label wholesale
+    // silently froze thousands of link-only headings and list items in English.
+    .replace(/\[[^\]]*\]\(\/(?:type|method|constructor)\/[^)]*\)/g, ' ')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, ' $1 ')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&[a-z]+;/g, ' ')
     .replace(/[A-Za-z_][A-Za-z0-9_.]*(?:\\?_[A-Za-z0-9_.]*)+/g, ' ') // msg\_key, dh_prime
     .replace(/\b[a-z]+\d[\w]*\b/gi, ' '); //                            sha256, int128
-  const words = stripped.match(/\p{L}{3,}/gu) || [];
+  // Two letters are already a word: `No`, `On`, `Up`. Requiring three silently
+  // classified every short answer cell as a formula.
+  const words = stripped.match(/\p{L}{2,}/gu) || [];
   if (words.length === 0) return true;
   // An assignment line: begins with an identifier and `=`, and the only words
   // left are call names such as `substr`. Prose that merely contains `p = q`
@@ -87,7 +102,9 @@ export function isNeverTranslated(text) {
 
   // The Name column of a parameter table is always a single bolded field name:
   // `<strong>flags</strong>`. It is an identifier even though it reads as a word.
-  if (/^<strong>[A-Za-z_][A-Za-z0-9_.]*<\/strong>$/.test(value)) return true;
+  // TL field names are lower-case; a capitalised bold cell is a column heading
+  // (`<strong>Writable</strong>`) and is ordinary prose.
+  if (/^<strong>[a-z_][a-z0-9_.]*<\/strong>$/.test(value)) return true;
 
   // A cell that is nothing but inline code: parameter names, constants,
   // enumerated values — `<code>slug</code>`, `<code>files</code>, <code>mode</code>`.
@@ -119,13 +136,30 @@ export function isNeverTranslated(text) {
   if (/^[A-Za-z][\w.]*\s+-$/.test(value)) return true;
   // A polymorphic TL declaration: `vector {t:Type} # [t] = Vector t;`.
   if (/\{\s*\w+\s*:\s*(?:Type|#)\s*\}/.test(value)) return true;
+  // Image markup, sometimes truncated mid-attribute: the mirror derives a page
+  // description from an image-only paragraph, so the "text" is a tag, not prose.
+  if (/^\[?<img\s/.test(value)) return true;
+  // A palette entry: one or more RGB hex triplets, with or without the 0x prefix.
+  if (/^(?:0x)?[0-9A-Fa-f]{6}(?:\s+(?:0x)?[0-9A-Fa-f]{6})*$/.test(value)) return true;
+  // A price with its currency symbol: `AU$1.58`, `CN¥73,484.60`, `€400`.
+  if (/^(?:[A-Z]{0,2}[$€£¥₽₹¢]|[A-Z]{3}\s?)[\d.,\s]+$/.test(value)) return true;
+  // A data-centre alias row: `` `pluto` => DC 1 ``.
+  if (/^`[a-z]+`\s*=>\s*DC\s*\d+$/.test(value)) return true;
   // A hex dump row: `**0000**: 3a2f9be2 ...`.
   if (/^\*\*\d{4}\*\*:/.test(value)) return true;
   // A block of hexadecimal constants, one per inline-code run.
   if (/<code>[0-9A-F]{8,}<\/code>/.test(value) && !/\p{L}{4,}/u.test(stripTags(value).replace(/[0-9A-F]/g, ''))) return true;
-  // A lone link whose label is an identifier: `<a ...>IdDocumentData</a>`.
-  if (/^(?:<a\s[^>]*>[\s\S]*?<\/a>|\[[^\]]+\]\([^)]*\))$/.test(value)
-      && /^[A-Za-z][\w.]*$/.test(stripTags(value).replace(/^\[|\]\([^)]*\)$/g, ''))) return true;
+  // A lone link is exactly as translatable as its own label. `[User](/type/User/)`
+  // and `[Telegram Stars](/api/stars/)` are an identifier and a product name; a
+  // heading like `[Telegram Bot Features](/bots/features/)` is prose.
+  // Emphasis may wrap the link (`**[Telegram Stars](…)**`) or sit inside it
+  // (`[**Telegram Stars**](…)`); a leading dash belongs to the list, not the name.
+  const stripped = value.replace(/^\s*\*\*([\s\S]*)\*\*\s*$/, '$1').replace(/^\s*[—–-]\s*/, '').trim();
+  const lone = /^\[([^\]]+)\]\([^)]*\)$/.exec(stripped) || /^<a\s[^>]*>([\s\S]*?)<\/a>$/.exec(stripped);
+  if (lone) {
+    const label = lone[1].replace(/^\*\*|\*\*$/g, '').replace(/^\s*[—–-]\s*/, '').trim();
+    if (label && label !== value && (/^[A-Za-z][\w.]*$/.test(stripTags(label)) || isNeverTranslated(label))) return true;
+  }
 
   return false;
 }

@@ -10,9 +10,11 @@ import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } fr
 import { globSync } from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
-import { isTranslatable, rewrite, segments } from './lib/segment.mjs';
+import { htmlBlocks, isTranslatable, rewrite, segments } from './lib/segment.mjs';
 import { isSchemaName } from './lib/schema-names.mjs';
 import { isNeverTranslated } from './lib/never-translate.mjs';
+import { russianFrontMatter } from './lib/frontmatter.mjs';
+import { translateHtmlText, translateMedia } from './lib/media.mjs';
 
 const MIRROR = 'mirror/src';
 const STORE = 'i18n';
@@ -22,6 +24,7 @@ const SITE = 'site';
 const load = (file, fallback = {}) => existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : fallback;
 const tm = load(path.join(STORE, 'segments.json'));
 const fm = load(path.join(STORE, 'frontmatter.json'));
+const media = load(path.join(STORE, 'media.json'));
 const annotations = load(path.join(STORE, 'annotations.json'));
 const pageId = (rel) => rel.replace(/\.md$/, '').replace(/\/index$/, '') || 'index';
 const routeFor = (rel) => {
@@ -47,7 +50,13 @@ if (existsSync(path.join(SITE, 'css'))) cpSync(path.join(SITE, 'css'), path.join
 if (existsSync(path.join(SITE, 'js'))) cpSync(path.join(SITE, 'js'), path.join(OUT, 'js'), { recursive: true });
 mkdirSync(path.join(OUT, '_data'), { recursive: true });
 
-const report = { pages: 0, segments: 0, translated: 0, untranslated: {}, annotations: 0, stalePageOverrides: [], normalizedLinks: 0, schemaNamesKept: 0, byDefinition: 0 };
+const report = {
+  pages: 0, segments: 0, translated: 0, untranslated: {}, annotations: 0, stalePageOverrides: [],
+  normalizedLinks: 0, schemaNamesKept: 0, byDefinition: 0,
+  media: { translated: 0, untranslated: {} },
+  htmlText: {},
+  frontmatter: { titles: 0, descriptions: 0, missing: {} },
+};
 
 // The upstream Markdown has a small number of relative references intended as
 // section siblings (e.g. `TL` from /mtproto/TL-formal/). Static-directory URLs
@@ -137,14 +146,62 @@ for (const rel of globSync('**/*.md', { cwd: MIRROR }).sort()) {
     return output;
   });
 
-  const data = { ...doc.data, ...(fm[id] || {}), layout: 'layout.njk' };
+  // Placeholder captions and screen-reader text are page content on this site
+  // just as much as a paragraph is; they are rewritten after the segment pass so
+  // a translated inline run keeps its own markup untouched.
+  // Prose that lives inside a raw HTML block is page text too; it is looked up in
+  // the same memory as any segment, so a caption already translated elsewhere is
+  // translated here for free.
+  const withHtml = translateHtmlText(
+    body,
+    htmlBlocks(body),
+    (text) => local[text] ?? tm[text],
+    (text) => { if (!isNeverTranslated(text)) report.htmlText[text] = (report.htmlText[text] || 0) + 1; },
+  );
+  const withMedia = translateMedia(
+    withHtml,
+    (value) => { const russian = media[value]; if (russian) report.media.translated += 1; return russian; },
+    // `null` in the memory is an explicit decision to keep a caption verbatim
+    // (a brand name, a code sample); it is settled work, not a gap.
+    (value) => {
+      if (Object.hasOwn(media, value) && media[value] === null) return;
+      report.media.untranslated[value] = (report.media.untranslated[value] || 0) + 1;
+    },
+  );
+
+  // `title` and `description` are the mirror's own derivations of the H1 and the
+  // opening paragraph. They are re-derived from the same Russian text, so the
+  // browser tab, the search result and the link preview cannot stay English
+  // while the page itself is Russian.
+  const meta = russianFrontMatter({
+    data: doc.data,
+    content: doc.content,
+    translate: (text) => local[text] ?? tm[text],
+    override: fm[id] || {},
+    keepTitle: isSchemaName(String(doc.data.title || '').trim())
+      || /^(?:type|method|constructor)\//.test(rel) && String(doc.data.title || '').trim().toLowerCase() === path.basename(rel, '.md').toLowerCase(),
+  });
+  if (meta.title) report.frontmatter.titles += 1;
+  if (meta.description) report.frontmatter.descriptions += 1;
+  for (const gap of meta.missing) {
+    const bucket = report.frontmatter.missing[gap.field] || (report.frontmatter.missing[gap.field] = {});
+    bucket[gap.text] = (bucket[gap.text] || 0) + 1;
+  }
+
+  const data = {
+    ...doc.data,
+    ...(meta.title ? { title: meta.title } : {}),
+    ...(meta.description ? { description: meta.description } : {}),
+    ...(fm[id] || {}),
+    layout: 'layout.njk',
+  };
   // Breadcrumb text is global Russian i18n data keyed by page URL; remove the
   // mirror's per-page English array so it cannot shadow that data in Eleventy.
   delete data.crumbs;
   // Section names must follow the mirror's values; the Russian layout translates
   // their presentation, but Pagefind filters retain stable machine identifiers.
   if (data.section === 'schema') data.section = 'schema';
-  writeFileSync(path.join(OUT, rel), matter.stringify(normalizeRelativeLinks(body, rel), data));
+  writeFileSync(path.join(OUT, rel), matter.stringify(normalizeRelativeLinks(withMedia, rel), data));
   report.pages += 1;
   report.translated += translated;
 
@@ -173,12 +230,23 @@ json(path.join(OUT, '_data', 'translation-report.json'), {
   neverTranslatedByDefinition: report.byDefinition,
   untranslatedUnique: Object.keys(report.untranslated).length,
   untranslatedOccurrences: Object.values(report.untranslated).reduce((a, b) => a + b, 0),
+  mediaAttributesTranslated: report.media.translated,
+  mediaAttributesUntranslated: Object.keys(report.media.untranslated).length,
+  frontMatterTitles: report.frontmatter.titles,
+  frontMatterDescriptions: report.frontmatter.descriptions,
   stalePageOverrides: report.stalePageOverrides,
 });
+const sortByUse = (map) => Object.fromEntries(Object.entries(map).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])));
 json(path.join(STORE, 'coverage.json'), {
   generatedAt: new Date().toISOString(),
   mirror: load('mirror/mirror.json'),
-  untranslated: Object.fromEntries(Object.entries(report.untranslated).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))),
+  untranslated: sortByUse(report.untranslated),
+  media: sortByUse(report.media.untranslated),
+  htmlText: sortByUse(report.htmlText),
+  frontmatter: {
+    title: sortByUse(report.frontmatter.missing.title || {}),
+    description: sortByUse(report.frontmatter.missing.description || {}),
+  },
 });
 
 {
@@ -188,5 +256,11 @@ json(path.join(STORE, 'coverage.json'), {
   console.log(`[apply] ${report.pages} pages; ${report.translated}/${translatable} translatable segments translated (${percent}%); `
     + `${Object.keys(report.untranslated).length} key(s) awaiting translation; `
     + `${report.byDefinition} segment(s) excluded by definition`);
+  console.log(`[apply] front matter: ${report.frontmatter.titles} Russian titles, ${report.frontmatter.descriptions} Russian descriptions; `
+    + `${Object.keys(report.frontmatter.missing.title || {}).length} title(s) and `
+    + `${Object.keys(report.frontmatter.missing.description || {}).length} description(s) still English`);
+  console.log(`[apply] media captions: ${report.media.translated} translated, `
+    + `${Object.keys(report.media.untranslated).length} key(s) awaiting translation`);
+  console.log(`[apply] raw-HTML prose: ${Object.keys(report.htmlText).length} text node(s) awaiting translation`);
 }
 if (report.stalePageOverrides.length) console.warn(`[apply] ${report.stalePageOverrides.length} page override file(s) contain stale keys`);

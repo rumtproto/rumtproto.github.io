@@ -9,7 +9,8 @@
     "build": "npm run prepare && rm -rf docs && eleventy && pagefind --site docs",
     "serve": "npm run prepare && eleventy --serve",
     "clean": "rm -rf build docs",
-    "check": "node tools/verify.mjs",
+    "lint": "node tools/lint_translations.mjs --strict",
+    "check": "node tools/lint_translations.mjs && node tools/verify.mjs",
     "update": "npm run sync:mirror && npm run build && npm run check",
     "remap": "node tools/remap_link_format.mjs"
   },

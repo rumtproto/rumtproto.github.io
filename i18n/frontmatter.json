@@ -15,16 +15,22 @@
   "title": "Поиск",
   "description": "Полнотекстовый поиск по документации Telegram API, MTProto и схемы TL с фильтром по разделам."
  },
- "type/index": {
+ "type": {
   "title": "Типы — справочник схемы TL",
   "description": "Алфавитный указатель всех типов схемы TL Telegram."
  },
- "method/index": {
+ "method": {
   "title": "Методы — справочник схемы TL",
   "description": "Алфавитный указатель всех методов Telegram API."
  },
- "constructor/index": {
+ "constructor": {
   "title": "Конструкторы — справочник схемы TL",
   "description": "Алфавитный указатель всех конструкторов схемы TL Telegram."
+ },
+ "tdlib/options": {
+  "title": "Опции TDLib"
+ },
+ "faq": {
+  "title": "Вопросы и ответы о Telegram"
  }
 }

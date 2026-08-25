@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-08-25T02:16:11.581Z",
+ "generatedAt": "2026-08-25T04:36:36.129Z",
  "mirror": {
   "repo": "https://github.com/mirrortproto/mirrortproto.github.io",
   "commit": "ee18cf2a8615c5b77a810d57e41648bfbed97d88",
@@ -13,5 +13,11 @@
    "tools/verify.mjs"
   ]
  },
- "untranslated": {}
+ "untranslated": {},
+ "media": {},
+ "htmlText": {},
+ "frontmatter": {
+  "title": {},
+  "description": {}
+ }
 }
