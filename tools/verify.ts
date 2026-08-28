@@ -135,7 +135,7 @@ if (!emptyValues) ok('translation memory: no empty translations (unknown keys fa
 // 3. Rendered-page baseline, marker protocol, Instant View and media safety.
 const htmlFiles = globSync('**/*.html', { cwd: DOCS }).map((rel) => path.join(DOCS, rel));
 const byUrl = new Map();
-let badH1 = 0, badMeta = 0, leakedMarkers = 0, inlineMedia = 0, translatedLabels = 0, badLabels = 0;
+let badH1 = 0, badMeta = 0, leakedMarkers = 0, inlineMedia = 0, translatedLabels = 0, badLabels = 0, foreignScript = 0;
 for (const file of htmlFiles) {
   const html = read(file);
   const rel = asPosix(path.relative(DOCS, file));
@@ -157,6 +157,9 @@ for (const file of htmlFiles) {
     fail('metadata', `missing required metadata: ${rel}`);
   }
   if (/\[@(?:i18n|term:[^\]]*|note)\]/.test(html)) { leakedMarkers += 1; fail('markers', `unconsumed translation marker: ${rel}`); }
+  if (rel !== 'bots/payments/currencies.json/index.html' && /\p{Script=Arabic}/u.test(html)) {
+    foreignScript += 1; fail('language', `Arabic-script text survived on Russian page: ${rel}`);
+  }
   if (/<(?:img|video)\b[^>]*\son(?:load|error|loadeddata)=/i.test(html)) { inlineMedia += 1; fail('instant-view', `inline media event handler: ${rel}`); }
   for (const match of html.matchAll(/<a class="para-label para-trans" href="([^"]+)"/g)) {
     translatedLabels += 1;
@@ -177,6 +180,7 @@ for (const file of htmlFiles) {
 if (!badH1) ok(`rendering: exactly one h1 on ${htmlFiles.length} pages`);
 if (!badMeta) ok('metadata: canonical, OG, hreflang and Instant View metadata present');
 if (!leakedMarkers) ok('marker protocol: no generated marker leaked into HTML');
+if (!foreignScript) ok('language: no Arabic-script prose on Russian pages');
 if (!inlineMedia) ok('Instant View safety: no inline image/video event handlers');
 if (!badLabels) ok(`translation labels: ${translatedLabels} valid original-paragraph links`);
 

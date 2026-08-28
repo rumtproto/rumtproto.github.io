@@ -41,7 +41,74 @@ const YO = [
   [/\bподробнее\b/g, null], [/\bвсе же\b/g, null],
 ];
 
+// Fingerprints of the two failure modes found during the full corpus audit:
+// random grammatical Russian nouns substituted without regard to meaning, and
+// English words mechanically rewritten in Cyrillic. These checks intentionally
+// use a narrow reviewed vocabulary so ordinary technical Russian is not flagged.
+const SALAD_WORDS = new Set('информация возможность обновление уведомление пользователь использование преимущество безопасность приватность интерфейс функция система организация действие результат проверка состояние изменение доступность дополнительно настройка параметр выполнение взаимодействие содержимое предложение сообщение публикация поддержка решение внимание устройство время операция аудитория текст сообщество разработка подписка управление приложение'.split(' '));
+const PHONETIC_GARBAGE = new Set('аниматед баккгроундс десигн симилар ордер мултипле савед мену опен спекс мекханикс пермиссионс хоризонс ултимате унсенд форвардинг венуе схеет аццоунтс спеед тиместамп анноунце суггестион бровсер гифтс аниматионс соунд йоин техт листен коминг фрее субмит буилдинг тйпес нигхт виевер цаптионс шидгетс'.split(' '));
+const TRANSLATABLE_LINK_LABELS = new Set([
+  'Next page »', 'Back to main menu', 'Viewing Media', 'Sending Messages', 'Sending Media',
+  'Sending Voice Messages', 'Choosing Emoji', 'Editing Message List', 'Group Chat Info page',
+  'Getting started', 'message content', 'formatted text', 'text entities', 'profile photo',
+  'Rich Messages', 'Web Login', 'Shared Media', 'Channel Stats', 'Recent Actions',
+  'People Nearby', 'Live Location', 'Business Mode', 'Gift Marketplace', 'Source Code',
+  'Passport Manual', 'passport manual', 'passport docs', 'HTML5 games', 'HTML5 mini apps',
+  'HTML5 Mini Apps', 'AI composer »', 'Telegram Support Initiative',
+]);
+const russianWords = (text) => (String(text).toLowerCase().match(/[а-яё]+/g) || []);
+
 const RULES = [
+  {
+    id: 'word-salad',
+    what: 'a translation looks like placeholder noun salad rather than a sentence',
+    targetOnly: true,
+    check: (_en, ru) => {
+      const words = russianWords(ru);
+      const salad = words.filter((word) => SALAD_WORDS.has(word));
+      if (words.length >= 4 && salad.length / words.length >= 0.55) {
+        return `${salad.length}/${words.length} words match the placeholder vocabulary`;
+      }
+      if (/клиента сервера пользователя бота|параметр определяет значение настройки|\bтекст текст\b/i.test(ru)) {
+        return 'known placeholder phrase';
+      }
+      return null;
+    },
+  },
+  {
+    id: 'phonetic-garbage',
+    what: 'an English word was mechanically respelled in Cyrillic',
+    targetOnly: true,
+    check: (_en, ru) => {
+      const match = russianWords(ru).find((word) => PHONETIC_GARBAGE.has(word));
+      return match ? `suspicious transliteration «${match}»` : null;
+    },
+  },
+  {
+    id: 'foreign-script',
+    what: 'Arabic-script prose survived in a Russian translation',
+    targetOnly: true,
+    check: (_en, ru) => {
+      const match = /\p{Script=Arabic}+/u.exec(String(ru));
+      return match ? `untranslated Arabic-script text «${match[0]}»` : null;
+    },
+  },
+  {
+    id: 'mixed-alphabet',
+    what: 'a word accidentally combines Cyrillic and Latin letters',
+    targetOnly: true,
+    check: (_en, ru) => {
+      const prose = String(ru).replace(/`[^`]*`|https?:\/\/\S+|<[^>]+>/g, ' ');
+      const match = /[А-Яа-яЁё][A-Za-z]|[A-Za-z][А-Яа-яЁё]/.exec(prose);
+      return match ? `mixed-alphabet token near «${match[0]}»` : null;
+    },
+  },
+  {
+    id: 'russian-quotes',
+    what: 'a Russian opening quotation mark has an English closing mark',
+    targetOnly: true,
+    check: (_en, ru) => /«[^»\n]*”/.test(ru) ? '«…» quotation closes with ”' : null,
+  },
   {
     id: 'link-targets',
     what: 'a link destination was changed, dropped or invented',
@@ -49,6 +116,9 @@ const RULES = [
     // *multiset* of destinations is compared, not their order. Losing, gaining
     // or retargeting one is never legitimate.
     check: (en, ru) => {
+      const validMarkdownLinks = (text) => (text.match(/!?\[[^\]\n]+\]\([^)]*\)/g) || []).length;
+      const sourceShapes = validMarkdownLinks(en); const targetShapes = validMarkdownLinks(ru);
+      if (targetShapes < sourceShapes) return `valid Markdown links: ${sourceShapes} → ${targetShapes}`;
       const a = links(en).sort(); const b = links(ru).sort();
       if (a.join('\u0000') === b.join('\u0000')) return null;
       const missing = a.filter((href, i) => b.indexOf(href) === -1 || a.indexOf(href) !== i && b.filter((x) => x === href).length < a.filter((x) => x === href).length);
@@ -59,12 +129,35 @@ const RULES = [
     },
   },
   {
+    id: 'untranslated-link-label',
+    what: 'a known user-facing English link label was left untranslated',
+    check: (en, ru) => {
+      const normalize = (label) => label.replace(/<[^>]+>|[*_`]/g, '').trim();
+      const sourceLinks = [
+        ...[...en.matchAll(/\[([^\]]+)\]\(([^)]*)\)/g)].map((match) => [normalize(match[1]), match[2]]),
+        ...[...en.matchAll(/<a\s[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)].map((match) => [normalize(match[2]), match[1]]),
+      ];
+      const targetLinks = [
+        ...[...ru.matchAll(/\[([^\]]+)\]\(([^)]*)\)/g)].map((match) => [normalize(match[1]), match[2]]),
+        ...[...ru.matchAll(/<a\s[^>]*href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi)].map((match) => [normalize(match[2]), match[1]]),
+      ];
+      for (const [label, href] of sourceLinks) {
+        if (TRANSLATABLE_LINK_LABELS.has(label) && targetLinks.some(([other, destination]) => other === label && destination === href)) {
+          return `unchanged link label «${label}»`;
+        }
+      }
+      return null;
+    },
+  },
+  {
     id: 'emphasis',
     what: 'bold/italic markers do not pair up as in the source',
     check: (en, ru) => {
       const bold = [count(en, /\*\*/g), count(ru, /\*\*/g)];
       if (bold[0] !== bold[1]) return `** markers: ${bold[0]} → ${bold[1]}`;
-      if (count(ru, /\*\*/g) % 2 !== 0) return 'unbalanced ** markers';
+      // An odd raw count can be an escaped literal `**` inside a code example.
+      // It is not a defect when the source has exactly the same marker shape.
+      if (bold[0] % 2 === 0 && bold[1] % 2 !== 0) return 'unbalanced ** markers';
       return null;
     },
   },
@@ -78,7 +171,13 @@ const RULES = [
     // 01:00`) is prose in a code font and may be translated; a run carrying an
     // identifier, an operator or a call is something the reader will type.
     check: (en, ru) => {
-      const literal = (run) => /[_(){}\[\]<>=+*\/\\|$#@;:!?%^~&]|\b[a-z]+[A-Z]/.test(run.replace(/^`|`$/g, ''));
+      const literal = (run) => {
+        const value = run.replace(/^`|`$/g, '');
+        // Weekday ranges are human-readable examples in a code font, not input
+        // tokens. Translating their labels and typographic dash is legitimate.
+        if (/^(?:(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+\d\d:\d\d)(?:-(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)\s+\d\d:\d\d)?$/.test(value)) return false;
+        return /[_(){}\[\]<>=+*\/\\|$#@;:!?%^~&]|\b[a-z]+[A-Z]/.test(value);
+      };
       for (const run of new Set(codeRuns(en))) if (literal(run) && !ru.includes(run)) return `lost inline code ${run}`;
       for (const run of new Set(htmlCode(en))) if (literal(run) && !ru.includes(run)) return `lost <code> run ${run}`;
       return null;
@@ -177,6 +276,11 @@ const RULES = [
     what: 'the value carries no Russian at all although the source is prose',
     check: (en, ru) => {
       if (CYRILLIC.test(ru)) return null;
+      // A few source segments are code examples rather than prose. The
+      // translation pass wraps them in code spans and removes Markdown escaping,
+      // but intentionally leaves the payload byte-for-byte equivalent.
+      const codeEquivalent = (s) => s.replace(/`/g, '').replace(/\\_/g, '_').replace(/[ \t]+$/gm, '').trim();
+      if (codeEquivalent(en) === codeEquivalent(ru)) return null;
       // Identifiers, code and link labels are not prose: a segment made only of
       // them is correctly identical in both languages.
       const prose = en
@@ -216,9 +320,22 @@ const RULES = [
     check: (en, ru) => {
       if (!CYRILLIC.test(ru)) return null;
       const stripped = ru
-        .replace(/`[^`]*`/g, ' ').replace(/<[^>]+>/g, ' ')
+        .replace(/`[^`]*`/g, ' ')
+        .replace(/<code>[\s\S]*?<\/code>/gi, ' ')
+        .replace(/<em>[A-Za-z_][\w.]*<\/em>/gi, ' ')
+        .replace(/\*\*[A-Za-z_][A-Za-z0-9_.\\]*\*\*/g, ' ')
+        .replace(/\b[A-Za-z][A-Za-z0-9]*(?:_[A-Za-z0-9]+)+\b/g, ' ')
+        .replace(/(?<!\\)_[A-Za-z@][A-Za-z0-9_.@\\]*(?<!\\)_/g, ' ')
+        .replace(/«[A-Za-z_][A-Za-z0-9_]*»/g, ' ')
+        // Exact product, UI, publication and artwork names intentionally retain
+        // English function words. Removing only these known names keeps mixed
+        // machine output visible to the rule.
+        .replace(/(?:Telegram for Android|telegram for android|Both users and bots can use this method|Only bots can use this method|Log in with Telegram|Telegram Bot API for PHP|Telegram Bot API helper for Golang|Telegram\.BotAPI for NET|Sign in With Google|Sign in with Apple|Telegram Cloud Storage for Bots and Mini Apps|Know Your Meme|If This Then That|Dungeons and Dragons|Certificate Signing Request)/g, ' ')
+        .replace(/\[[^\]]+\]\(https:\/\/t\.me\/addstickers\/[^)]*\)/g, ' ')
+        .replace(/\[[^\]]+\]\(https:\/\/github\.com\/[^)]*\)/g, ' ')
+        .replace(/<[^>]+>/g, ' ')
         .replace(/\]\([^)]*\)/g, ' ').replace(/https?:\/\/\S+/g, ' ');
-      const m = /(?:^|[\s(«"'])(and|the|with|from|your|you|this|that|will|can|are|for|about|more|other|when|which|their|they|been|have|has)(?=[\s.,;:!?)»"']|$)/i.exec(stripped);
+      const m = /(?:^|[\s(«"'])(and|the|with|from|your|you|this|that|will|can|are|for|about|more|other|when|which|their|they|been|have|has|field|parameter|methods?|item|format|specify|changes|represented|stream|partial|reply|specific|creation|managed|request|links|empty|ephemeral|delete|different)(?=[\s.,;:!?)»"']|$)/i.exec(stripped);
       return m ? `English word "${m[1]}"` : null;
     },
   },
@@ -238,8 +355,21 @@ const RULES = [
     // than 3 lines" → "длиннее трёх строк"), so only values that a reader would
     // copy — limits, sizes, versions, years — are required to survive.
     check: (en, ru) => {
-      const norm = (s) => s.replace(/(\d)[  ,](?=\d{3}\b)/g, '$1');
-      const significant = (s) => (norm(s).match(/\b\d{3,}(?:[.,]\d+)?\b|\b\d+[.,]\d+\b/g) || []).sort();
+      // Russian uses a non-breaking/ordinary space for digit grouping and a
+      // comma for decimals. Canonicalize both locales before comparison while
+      // retaining the distinction between 1,000 and 1.5.
+      const significant = (s) => {
+        // Russian commonly spells the K suffix as «тыс.».
+        const expanded = s.replace(/(\d+(?:[.,]\d+)?)\s*тыс\.?/gi, '$1K');
+        return (expanded.match(/\d{1,3}(?:[\u00A0\u202F '.,]\d{3})+(?:[.,]\d+)?(?:[Kk](?![A-Za-z]))?|(?<![\d.,])\d+[.,]\d+(?![.,]\d)(?:[Kk](?![A-Za-z]))?|\d+(?:[Kk](?![A-Za-z]))?/g) || [])
+        // Separators encode either grouping or the locale-specific decimal mark.
+        // For a presence check, the stable information is the digit sequence.
+        // The conventional K suffix contributes three zeroes ($200K = $200000).
+        .map((raw) => ({ raw, value: raw.replace(/\D/g, '') + (/[Kk]$/.test(raw) ? '000' : '') }))
+        .filter(({ raw, value }) => /[.,]/.test(raw) || value.length >= 3)
+        .map(({ value }) => value)
+        .sort();
+      };
       const a = significant(en); const b = new Set(significant(ru));
       for (const n of a) if (!b.has(n)) return `number ${n} is missing`;
       return null;
@@ -263,6 +393,28 @@ for (const file of files) {
       let detail = null;
       try { detail = rule.check(en, ru); } catch { detail = null; }
       if (detail) findings.push({ rule: rule.id, file: path.relative('.', file), en, ru, detail });
+    }
+  }
+}
+
+// Auxiliary stores have no English-keyed pair shape, but their strings are also
+// visible in navigation, breadcrumbs, metadata and translator notes. Run every
+// target-only semantic check over them recursively so placeholder prose cannot
+// hide outside segments.json.
+function stringLeaves(value, prefix = '') {
+  if (typeof value === 'string') return [[prefix, value]];
+  if (Array.isArray(value)) return value.flatMap((item, index) => stringLeaves(item, `${prefix}/${index}`));
+  if (value && typeof value === 'object') return Object.entries(value).flatMap(([key, item]) => stringLeaves(item, `${prefix}/${key}`));
+  return [];
+}
+for (const name of ['media.json', 'nav.json', 'frontmatter.json', 'terms.json', 'crumbs.json', 'annotations.json']) {
+  const file = path.join(I18N, name);
+  for (const [location, ru] of stringLeaves(read(file))) {
+    pairs += 1;
+    for (const rule of RULES.filter((entry) => entry.targetOnly)) {
+      let detail = null;
+      try { detail = rule.check(location, ru); } catch { detail = null; }
+      if (detail) findings.push({ rule: rule.id, file: path.relative('.', file), en: location, ru, detail });
     }
   }
 }

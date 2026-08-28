@@ -36,7 +36,7 @@ const md = markdownIt({ html: true, breaks: false, linkify: false });
 const NOT_PROSE = [
   /^`[^`]*`$/, //                          a single inline-code run
   /^<[^>]+>$/, //                          a bare HTML tag
-  /^\W*$/u, //                             punctuation / symbols only
+  /^[^\p{L}\p{N}_]*$/u, //                punctuation / symbols only (Unicode-aware)
   /^[\d.,\s%+-]+$/, //                     numbers
   /^https?:\/\/\S+$/i, //                  a bare URL
   /^[A-Za-z_][\w.#?]*[._#?][\w.#?]*$/, //  dotted/underscored ids: msg_id, flags.3?true

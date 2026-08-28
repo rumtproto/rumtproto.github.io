@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-28T04:02:25.764Z",
+ "generated": "2026-08-28T06:10:14.610Z",
  "note": "Segments that have no translation by definition. Excluded from coverage statistics. Edit \"manual\" to add entries by hand; the other lists are derived from the mirror on every run.",
  "manual": [
   "**ANDROID**",
@@ -105,17 +105,13 @@
   "subchart",
   "t.me, \\*.t.me",
   "types",
-  "username.t.me",
-  "اطلاعات عمومى",
-  "اطلاعات فنى براى توسعه‌دهندگان كلاينت",
-  "بخش فارسى پرسش‌هاى متداول در باره CDN (شبکه‌های تحویل محتوا)",
-  "پرسش‌هاى متداول در باره CDN (شبکه‌های تحویل محتوا)"
+  "username.t.me"
  ],
  "counts": {
   "schemaNames": 418,
   "schemaLinks": 3124,
   "typeExpressions": 98,
-  "formulas": 6586,
+  "formulas": 6582,
   "abbreviations": 105
  },
  "schemaNames": [
@@ -4084,10 +4080,6 @@
   "[Wallpapers](/api/wallpapers/)",
   "[WebSocket](/mtproto/transports/#websocket)",
   "[WebSocket](#websocket)",
-  "[اطلاعات عمومى](/blog/encrypted-cdns/)",
-  "[اطلاعات فنى براى توسعه‌دهندگان كلاينت](/cdn/)",
-  "[بخش فارسى پرسش‌هاى متداول در باره CDN (شبکه‌های تحویل محتوا)](/cdn/faq_ir/)",
-  "[پرسش‌هاى متداول در باره CDN (شبکه‌های تحویل محتوا)](/techfaq/#encrypted-cdns)",
   "@replies",
   "**[Birthdays](/blog/my-profile-and-15-more/#birthdays)**",
   "**[Checklists](/blog/checklists-suggested-posts/#checklists)**",
