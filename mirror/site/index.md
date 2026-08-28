@@ -46,4 +46,4 @@ The general and technical FAQs, including the deprecated MTProto 1.0 guide, plus
 
 ## About this site
 
-The site is built from a dated backup of the original pages (the backup is stored in this repository, see `README.md`); the build pipeline reads only from the backup. Found an error or an outdated page? [Open an issue](https://github.com/mirrortproto/mirrortproto.github.io/issues).
+The site is built from the current backup of the original pages in `backup/latest/`; the build pipeline reads only from that backup. Found an error or an outdated page? [Open an issue](https://github.com/mirrortproto/mirrortproto.github.io/issues).

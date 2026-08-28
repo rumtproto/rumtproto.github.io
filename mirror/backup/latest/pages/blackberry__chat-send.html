@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Sending Messages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="description" content="The input area is fixed at the bottom of the screen. Once the Send button is tapped, the message appears in the message…">
+    <meta property="og:title" content="Sending Messages">
+    <meta property="og:image" content="https://core.telegram.org/file/811140175/1/jFbq83_bzNs/ef5f400f3515cdf287">
+    <meta property="og:description" content="The input area is fixed at the bottom of the screen. Once the Send button is tapped, the message appears in the message…">
+    <link rel="icon" type="image/svg+xml" href="/img/website_icon.svg?4">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="alternate icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link href="/css/bootstrap.min.css?3" rel="stylesheet">
+    
+    <link href="/css/telegram.css?254" rel="stylesheet" media="screen">
+    <link href="/css/telegram-theme.css?7" rel="stylesheet" media="screen">
+    <style>
+    </style>
+  </head>
+  <body class="preload">
+    <button class="theme-toggle theme-toggle--static" type="button" title="Toggle theme" aria-label="Toggle light/dark theme"></button>
+    <div class="dev_page_wrap">
+      <div class="dev_page_head navbar navbar-static-top navbar-tg">
+        <div class="navbar-inner">
+          <div class="container clearfix">
+            <ul class="nav navbar-nav navbar-right hidden-xs"><li class="navbar-twitter hidden-xs"><a href="https://x.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Follow on X</a></li></ul>
+            <ul class="nav navbar-nav">
+              <li><a href="//telegram.org/">Home</a></li>
+<li class="hidden-xs"><a href="//telegram.org/faq">FAQ</a></li>
+<li class="hidden-xs"><a href="//telegram.org/apps">Apps</a></li>
+<li class=""><a href="/api">API</a></li>
+<li class=""><a href="/mtproto">Protocol</a></li>
+<li class=""><a href="/schema">Schema</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container clearfix">
+        <div class="dev_page">
+          <div id="dev_page_content_wrap" class=" ">
+  <div class="dev_page_bread_crumbs"><ul class="breadcrumb clearfix"><li><a  href="/blackberry" >Telegram for Blackberry Spec</a></li><i class="icon icon-breadcrumb-divider"></i><li><a  href="/blackberry/chat" >Chat screens</a></li><i class="icon icon-breadcrumb-divider"></i><li><a  href="/blackberry/chat-send" >Sending Messages</a></li></ul></div>
+  <h1 id="dev_page_title">Sending Messages</h1>
+  
+  <div id="dev_page_content"><p>The input area is fixed at the bottom of the screen. Once the <strong>Send</strong> button is tapped, the message appears in the message list. </p>
+<h4><a class="anchor" name="1-outgoing-messages" href="#1-outgoing-messages"><i class="anchor-icon"></i></a>1. Outgoing messages</h4>
+<p>Three possible conditions exist for outbound messages:</p>
+<ol>
+<li><strong>Message is being sent.</strong> A clock icon next to the message.</li>
+<li><strong>Message has been sent.</strong> A single check mark.</li>
+<li><strong>Message has been read.</strong> A double check mark.</li>
+</ol>
+<div><br/><center>
+    <img src="/file/811140175/1/jFbq83_bzNs/ef5f400f3515cdf287" width="360" height="360" /></center>
+<br/></div>
+
+<h4><a class="anchor" name="2-unsent-messages" href="#2-unsent-messages"><i class="anchor-icon"></i></a>2. Unsent messages</h4>
+<p>The messages are to be queued for delivery even if no Internet connection is available. If the app is unable to connect to the server within 5 minutes, an exclamation mark icon is shown next to the unsent message.</p>
+<div><br/><center>
+    <img src="/file/811140956/1/D9W20SNuNeA/8107188f0293d59c9d" width="360" height="360"  /> <img src="/file/811140640/1/WsxqQ2PPVXg/6c996f9878ae1bdcba" width="360" height="360" />
+</center><br/></div>
+
+<h4><a class="anchor" name="3-re-sending-unsent-messages" href="#3-re-sending-unsent-messages"><i class="anchor-icon"></i></a>3. Re-sending unsent messages</h4>
+<p>Tapping on the unsent message shows a menu with two options – <strong>Resend Message</strong> and <strong>Delete Message</strong>.</p>
+<div><br/><center>
+    <img src="/file/811140615/1/nquR7APVJ6g/dcacffa0e9800bacdc"width="360" height="360"/> </center>
+<br/></div>
+
+<center><a href='https://core.telegram.org/blackberry/chat-media-view'>« Previous page</a> | <a href='https://core.telegram.org/blackberry/chat-media-send'> Next page »</a></b></center></div>
+  
+</div>
+          
+        </div>
+      </div>
+      <div class="footer_wrap">
+  <div class="footer_columns_wrap footer_desktop">
+    <div class="footer_column footer_column_telegram">
+      <h5>Telegram</h5>
+      <div class="footer_telegram_description"></div>
+      Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.
+    </div>
+
+    <div class="footer_column">
+      <h5><a href="//telegram.org/faq">About</a></h5>
+      <ul>
+        <li><a href="//telegram.org/faq">FAQ</a></li>
+        <li><a href="//telegram.org/privacy">Privacy</a></li>
+        <li><a href="//telegram.org/press">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/apps#mobile-apps">Mobile Apps</a></h5>
+      <ul>
+        <li><a href="//telegram.org/dl/ios">iPhone/iPad</a></li>
+        <li><a href="//telegram.org/android">Android</a></li>
+        <li><a href="//telegram.org/dl/web">Mobile Web</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/apps#desktop-apps">Desktop Apps</a></h5>
+      <ul>
+        <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+        <li><a href="//macos.telegram.org/">macOS</a></li>
+        <li><a href="//telegram.org/dl/web">Web-browser</a></li>
+      </ul>
+    </div>
+    <div class="footer_column footer_column_platform">
+      <h5><a href="/">Platform</a></h5>
+      <ul>
+        <li><a href="/api">API</a></li>
+        <li><a href="//translations.telegram.org/">Translations</a></li>
+        <li><a href="//instantview.telegram.org/">Instant View</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer_columns_wrap footer_mobile">
+    <div class="footer_column">
+      <h5><a href="//telegram.org/faq">About</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/blog">Blog</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/press">Press</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/safety">Safety</a></h5>
+    </div>
+  </div>
+</div>
+    </div>
+    <script src="/js/main.js?49"></script>
+    <script src="/js/tgsticker.js?32"></script>
+
+    <script src="/js/main-theme.js?6"></script>
+    <script>backToTopInit("Go up");
+removePreloadInit();
+</script>
+  </body>
+</html>
+<!-- page generated in 5.09ms -->

@@ -55,6 +55,9 @@ const TRANSLATABLE_LINK_LABELS = new Set([
   'People Nearby', 'Live Location', 'Business Mode', 'Gift Marketplace', 'Source Code',
   'Passport Manual', 'passport manual', 'passport docs', 'HTML5 games', 'HTML5 mini apps',
   'HTML5 Mini Apps', 'AI composer »', 'Telegram Support Initiative',
+  'Communities', 'Passkeys', 'Commands', 'Payments', 'Inputs', 'Keyboards',
+  'Interactions', 'Inline', 'Checklists', 'Integration', 'Stickers',
+  'Monetization', 'General', 'Security', 'Bots', 'Troubleshooting',
 ]);
 const russianWords = (text) => (String(text).toLowerCase().match(/[а-яё]+/g) || []);
 

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Sending Media</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="description" content="The paperclip icon allows to select an attachment. The are several options:
+1. Converting Media
+Photos and videos are to…">
+    <meta property="og:title" content="Sending Media">
+    <meta property="og:image" content="https://core.telegram.org/file/811140479/1/z6pSwhtZmG0/6a989a242fc635e9c0">
+    <meta property="og:description" content="The paperclip icon allows to select an attachment. The are several options:
+1. Converting Media
+Photos and videos are to…">
+    <link rel="icon" type="image/svg+xml" href="/img/website_icon.svg?4">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="alternate icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link href="/css/bootstrap.min.css?3" rel="stylesheet">
+    
+    <link href="/css/telegram.css?254" rel="stylesheet" media="screen">
+    <link href="/css/telegram-theme.css?7" rel="stylesheet" media="screen">
+    <style>
+    </style>
+  </head>
+  <body class="preload">
+    <button class="theme-toggle theme-toggle--static" type="button" title="Toggle theme" aria-label="Toggle light/dark theme"></button>
+    <div class="dev_page_wrap">
+      <div class="dev_page_head navbar navbar-static-top navbar-tg">
+        <div class="navbar-inner">
+          <div class="container clearfix">
+            <ul class="nav navbar-nav navbar-right hidden-xs"><li class="navbar-twitter hidden-xs"><a href="https://x.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Follow on X</a></li></ul>
+            <ul class="nav navbar-nav">
+              <li><a href="//telegram.org/">Home</a></li>
+<li class="hidden-xs"><a href="//telegram.org/faq">FAQ</a></li>
+<li class="hidden-xs"><a href="//telegram.org/apps">Apps</a></li>
+<li class=""><a href="/api">API</a></li>
+<li class=""><a href="/mtproto">Protocol</a></li>
+<li class=""><a href="/schema">Schema</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container clearfix">
+        <div class="dev_page">
+          <div id="dev_page_content_wrap" class=" ">
+  <div class="dev_page_bread_crumbs"><ul class="breadcrumb clearfix"><li><a  href="/blackberry" >Telegram for Blackberry Spec</a></li><i class="icon icon-breadcrumb-divider"></i><li><a  href="/blackberry/chat" >Chat screens</a></li><i class="icon icon-breadcrumb-divider"></i><li><a  href="/blackberry/chat-media-send" >Sending Media</a></li></ul></div>
+  <h1 id="dev_page_title">Sending Media</h1>
+  
+  <div id="dev_page_content"><p>The paperclip icon allows to select an attachment. The are several options:</p>
+<div><br/><center>
+    <img src="/file/811140479/1/z6pSwhtZmG0/6a989a242fc635e9c0"width="360" height="360" /></center>
+<br/></div>
+
+<h4><a class="anchor" name="1-converting-media" href="#1-converting-media"><i class="anchor-icon"></i></a>1. Converting Media</h4>
+<p>Photos and videos are to be converted to a supported format on the client side before they are sent to the server. The X and Y dimesions of photo must not exceed <strong>1280</strong> each, and the photos must be compressed to JPEG with <strong>0.87</strong> compression ratio.</p>
+<p>Video dimensions must be set to <strong>480x320</strong> (320x480 for vertical videos).<br>H.264 and MPEG-4 should be used as the codec and container.</p>
+<p>While the photo, video or document is being uploaded, a progress indicator is shown. The user can cancel the upload by tapping on it.</p>
+<div><br/><center>
+    <img src="/file/811140013/2/K4Izy2ldjXg/c5df77353d78e63966"width="360" height="360" /></center>
+<br/></div>
+
+<p>The selected attachments are sent independently of the text that the user may have entered in the input field.</p>
+<h4><a class="anchor" name="2-selecting-photos" href="#2-selecting-photos"><i class="anchor-icon"></i></a>2. Selecting Photos</h4>
+<p>Users can select photos from a Photo Picker that allows to preview photos and select multiple photos at once.</p>
+<div><br/><center>
+    <img src="/file/811140588/1/7mdAmJMbmgM/d5bf0904791058bae3" width="360" height="360"  /> <img src="/file/811140715/1/nh8WVVVXf3I/aa3e06036cf1acf3d4" width="360" height="360" />
+</center><br/></div>
+
+<h4><a class="anchor" name="2-selecting-videos" href="#2-selecting-videos"><i class="anchor-icon"></i></a>2. Selecting Videos</h4>
+<p>Users can select and preview videos from the Video Picker.</p>
+<div><br/><center>
+    <img src="/file/811140071/1/8aPyY7D9BE0/554f35e5db5f0c11f0" width="360" height="360"  /> <img src="/file/811140672/1/ly4DSaR53yE/ba10d55989267c5a66" width="360" height="360" />
+</center><br/></div>
+
+<h4><a class="anchor" name="3-sending-location" href="#3-sending-location"><i class="anchor-icon"></i></a>3. Sending Location</h4>
+<p>The pin is set to the user‘s current location by default. The user can drag the pin anywhere across the map. The navigation icon always resets the map scale and position, returning it to the the user’s current location.</p>
+<div><br/><center>
+    <img src="/file/811140805/1/tQ9MIYdkqGs/d1baa1d8ef9f6b658a"width="360" height="360" /></center>
+<br/></div>
+
+<h4><a class="anchor" name="4-sharing-contact" href="#4-sharing-contact"><i class="anchor-icon"></i></a>4. Sharing Contact</h4>
+<p>Contact details for the selected contact are instantly shared in the current chat.</p>
+<div><br/><center>
+    <img src="/file/811140268/1/2IsC4OzHI8Y/15b4d6492822fe526b" width="360" height="360"  /> <img src="/file/811140554/1/46P9ApUZXqo/00193686bd0fc27bf1" width="360" height="360" />
+</center><br/></div>
+
+<center><a href='https://core.telegram.org/blackberry/chat-send'>« Previous page</a> | <a href='https://core.telegram.org/blackberry/chat-voice'> Next page »</a></b></center></div>
+  
+</div>
+          
+        </div>
+      </div>
+      <div class="footer_wrap">
+  <div class="footer_columns_wrap footer_desktop">
+    <div class="footer_column footer_column_telegram">
+      <h5>Telegram</h5>
+      <div class="footer_telegram_description"></div>
+      Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.
+    </div>
+
+    <div class="footer_column">
+      <h5><a href="//telegram.org/faq">About</a></h5>
+      <ul>
+        <li><a href="//telegram.org/faq">FAQ</a></li>
+        <li><a href="//telegram.org/privacy">Privacy</a></li>
+        <li><a href="//telegram.org/press">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/apps#mobile-apps">Mobile Apps</a></h5>
+      <ul>
+        <li><a href="//telegram.org/dl/ios">iPhone/iPad</a></li>
+        <li><a href="//telegram.org/android">Android</a></li>
+        <li><a href="//telegram.org/dl/web">Mobile Web</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/apps#desktop-apps">Desktop Apps</a></h5>
+      <ul>
+        <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+        <li><a href="//macos.telegram.org/">macOS</a></li>
+        <li><a href="//telegram.org/dl/web">Web-browser</a></li>
+      </ul>
+    </div>
+    <div class="footer_column footer_column_platform">
+      <h5><a href="/">Platform</a></h5>
+      <ul>
+        <li><a href="/api">API</a></li>
+        <li><a href="//translations.telegram.org/">Translations</a></li>
+        <li><a href="//instantview.telegram.org/">Instant View</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer_columns_wrap footer_mobile">
+    <div class="footer_column">
+      <h5><a href="//telegram.org/faq">About</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/blog">Blog</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/press">Press</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/safety">Safety</a></h5>
+    </div>
+  </div>
+</div>
+    </div>
+    <script src="/js/main.js?49"></script>
+    <script src="/js/tgsticker.js?32"></script>
+
+    <script src="/js/main-theme.js?6"></script>
+    <script>backToTopInit("Go up");
+removePreloadInit();
+</script>
+  </body>
+</html>
+<!-- page generated in 5.74ms -->

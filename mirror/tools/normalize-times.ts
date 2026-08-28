@@ -1,4 +1,4 @@
-import { readdir, utimes } from "node:fs/promises";
+import { readFile, readdir, utimes } from "node:fs/promises";
 import path from "node:path";
 
 async function normalize(dir: string, timestamp: Date): Promise<number> {
@@ -16,13 +16,12 @@ async function normalize(dir: string, timestamp: Date): Promise<number> {
   return count;
 }
 
-const backupRoot = path.resolve("backup");
-const dates = (await readdir(backupRoot))
-  .filter((name) => /^\d{4}-\d{2}-\d{2}$/.test(name))
-  .sort();
-const latest = dates.at(-1);
-if (!latest) throw new Error("no dated backup found");
-const timestamp = new Date(`${latest}T00:00:00.000Z`);
+const manifest = JSON.parse(
+  await readFile(path.resolve("backup", "latest", "manifest.json"), "utf8"),
+) as { date?: string };
+if (!manifest.date || !/^\d{4}-\d{2}-\d{2}$/.test(manifest.date))
+  throw new Error("backup/latest/manifest.json has no valid date");
+const timestamp = new Date(`${manifest.date}T00:00:00.000Z`);
 const count = await normalize(path.resolve("docs"), timestamp);
 console.log(
   `normalized mtimes for ${count} files to ${timestamp.toISOString()}`,

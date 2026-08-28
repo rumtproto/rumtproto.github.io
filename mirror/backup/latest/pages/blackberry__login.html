@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="description" content="After the Intro, users arrive on the login page, where they are invited to enter their mobile phone number and country code…">
+    <meta property="og:title" content="Login">
+    <meta property="og:image" content="https://core.telegram.org/file/811140405/1/jE99c_j4wJ4/77fa51ec8b5a280040">
+    <meta property="og:description" content="After the Intro, users arrive on the login page, where they are invited to enter their mobile phone number and country code…">
+    <link rel="icon" type="image/svg+xml" href="/img/website_icon.svg?4">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="alternate icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link href="/css/bootstrap.min.css?3" rel="stylesheet">
+    
+    <link href="/css/telegram.css?254" rel="stylesheet" media="screen">
+    <link href="/css/telegram-theme.css?7" rel="stylesheet" media="screen">
+    <style>
+    </style>
+  </head>
+  <body class="preload">
+    <button class="theme-toggle theme-toggle--static" type="button" title="Toggle theme" aria-label="Toggle light/dark theme"></button>
+    <div class="dev_page_wrap">
+      <div class="dev_page_head navbar navbar-static-top navbar-tg">
+        <div class="navbar-inner">
+          <div class="container clearfix">
+            <ul class="nav navbar-nav navbar-right hidden-xs"><li class="navbar-twitter hidden-xs"><a href="https://x.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Follow on X</a></li></ul>
+            <ul class="nav navbar-nav">
+              <li><a href="//telegram.org/">Home</a></li>
+<li class="hidden-xs"><a href="//telegram.org/faq">FAQ</a></li>
+<li class="hidden-xs"><a href="//telegram.org/apps">Apps</a></li>
+<li class=""><a href="/api">API</a></li>
+<li class=""><a href="/mtproto">Protocol</a></li>
+<li class=""><a href="/schema">Schema</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container clearfix">
+        <div class="dev_page">
+          <div id="dev_page_content_wrap" class=" ">
+  <div class="dev_page_bread_crumbs"><ul class="breadcrumb clearfix"><li><a  href="/blackberry" >Telegram for Blackberry Spec</a></li><i class="icon icon-breadcrumb-divider"></i><li><a  href="/blackberry/login" >Login</a></li></ul></div>
+  <h1 id="dev_page_title">Login</h1>
+  
+  <div id="dev_page_content"><p>After the <a href="/blackberry/intro">Intro</a>, users arrive on the login page, where they are invited to enter their mobile phone number and country code — either manually or by selecting their country from a list. You can get a list of countries and codes on <a href="http://countrycode.org"><strong>countrycode.org</strong></a> or simply exctract it from the source code of other Telegram apps.</p>
+<h4><a class="anchor" name="1-enter-phone-number-select-a-country-code" href="#1-enter-phone-number-select-a-country-code"><i class="anchor-icon"></i></a>1. Enter phone number, select a country code</h4>
+<div><br/><center>
+<img src="/file/811140405/1/jE99c_j4wJ4/77fa51ec8b5a280040" width="360" height="360" /></center>
+<br/></div>
+
+<h4><a class="anchor" name="2-enter-confirmation-code" href="#2-enter-confirmation-code"><i class="anchor-icon"></i></a>2. Enter confirmation code</h4>
+<div><br/><center>
+<img src="/file/811140955/1/iJayEFyFH5k/7959ec3d301ed8099f" width="360" height="360" /></center>
+<br/></div>
+
+
+<p>If the user doesn‘t enter the activation code within a period of time (determined by the Telegram server), the app must invoke an automatic phone call from Telegram that’ll dictate the activation code.</p>
+<p>After the user enters a valid activation code:</p>
+<ul>
+<li>Existing users are redirected to their <a href="/blackberry/chats">Chats</a> list.</li>
+<li>New users are invited to register by entering their name and uploading a photo. After a successful registration, users are redirected to the <a href="/blackberry/chats">Chats</a> section. </li>
+</ul>
+<h4><a class="anchor" name="3-registration" href="#3-registration"><i class="anchor-icon"></i></a>3. Registration</h4>
+<div><br/><center>
+<img src="/file/811140406/1/HG36fzax2x0/9aaa19ccc034790b03" width="360" height="360" /></center>
+<br/></div>
+
+<h4><a class="anchor" name="4-errors" href="#4-errors"><i class="anchor-icon"></i></a>4. Errors</h4>
+<p>This window is displayed in case the entered data is invalid or there&#39;s a connection issue.</p>
+<div><br/><center>
+    <img src="/file/811140907/2/1nRnS6NtgBg/00b402cabe2dbae029" width="360" height="360" /></center>
+<br/></div>
+
+<center><a href='https://core.telegram.org/blackberry/intro'>« Previous page</a> | <a href='https://core.telegram.org/blackberry/chats'> Next page »</a></b></center></div>
+  
+</div>
+          
+        </div>
+      </div>
+      <div class="footer_wrap">
+  <div class="footer_columns_wrap footer_desktop">
+    <div class="footer_column footer_column_telegram">
+      <h5>Telegram</h5>
+      <div class="footer_telegram_description"></div>
+      Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.
+    </div>
+
+    <div class="footer_column">
+      <h5><a href="//telegram.org/faq">About</a></h5>
+      <ul>
+        <li><a href="//telegram.org/faq">FAQ</a></li>
+        <li><a href="//telegram.org/privacy">Privacy</a></li>
+        <li><a href="//telegram.org/press">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/apps#mobile-apps">Mobile Apps</a></h5>
+      <ul>
+        <li><a href="//telegram.org/dl/ios">iPhone/iPad</a></li>
+        <li><a href="//telegram.org/android">Android</a></li>
+        <li><a href="//telegram.org/dl/web">Mobile Web</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/apps#desktop-apps">Desktop Apps</a></h5>
+      <ul>
+        <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+        <li><a href="//macos.telegram.org/">macOS</a></li>
+        <li><a href="//telegram.org/dl/web">Web-browser</a></li>
+      </ul>
+    </div>
+    <div class="footer_column footer_column_platform">
+      <h5><a href="/">Platform</a></h5>
+      <ul>
+        <li><a href="/api">API</a></li>
+        <li><a href="//translations.telegram.org/">Translations</a></li>
+        <li><a href="//instantview.telegram.org/">Instant View</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer_columns_wrap footer_mobile">
+    <div class="footer_column">
+      <h5><a href="//telegram.org/faq">About</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/blog">Blog</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/press">Press</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/safety">Safety</a></h5>
+    </div>
+  </div>
+</div>
+    </div>
+    <script src="/js/main.js?49"></script>
+    <script src="/js/tgsticker.js?32"></script>
+
+    <script src="/js/main-theme.js?6"></script>
+    <script>backToTopInit("Go up");
+removePreloadInit();
+</script>
+  </body>
+</html>
+<!-- page generated in 6.43ms -->

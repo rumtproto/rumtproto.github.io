@@ -1,4 +1,4 @@
-// Creates a dated backup of the mirrored pages into backup/<date>/pages/.
+// Creates the current backup of the mirrored pages in backup/latest/pages/.
 //
 //   * the documentation sections of core.telegram.org (Telegram API, MTProto
 //     protocol, Schema) — crawled transitively from their seeds;
@@ -7,15 +7,14 @@
 //     LEAVES: their own links are not followed, or one blog post would drag in
 //     most of telegram.org.
 //
-// Usage: npm run backup -- [date]     (date defaults to today, YYYY-MM-DD)
-//
-// Re-running against an existing backup is the way to *extend* it: a page whose
-// file is already there is kept byte for byte and only the missing ones are
-// fetched, so a backup can grow without its snapshot date becoming a lie.
+// Usage: npm run backup -- [date] [--fresh]
+// The date defaults to today. A different date builds a replacement in staging and
+// promotes it only after success. Re-running on the same date extends the current
+// snapshot; --fresh forces a complete same-day replacement.
 //
 // The backup is the ONLY source for the site build: tools/extract.ts reads
-// exclusively from backup/<date>/ and never touches the network.
-import { mkdir, writeFile, readFile, rm } from "node:fs/promises";
+// exclusively from backup/latest/ and never touches the network.
+import { mkdir, writeFile, readFile, rm, rename } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { setDefaultResultOrder } from "node:dns";
 import path from "node:path";
@@ -34,11 +33,28 @@ const ROOT = path.resolve(".");
 // target is not a document of ours (a login form, an app store).
 const MIRRORED_HOSTS = new Set(["core.telegram.org", "telegram.org"]);
 
-const date = process.argv[2] || new Date().toISOString().slice(0, 10);
+const args = process.argv.slice(2);
+const fresh = args.includes("--fresh");
+const unknownOptions = args.filter(
+  (arg) => arg.startsWith("--") && arg !== "--fresh",
+);
+if (unknownOptions.length)
+  throw new Error(`unknown option: ${unknownOptions.join(", ")}`);
+const dateArgs = args.filter((arg) => !arg.startsWith("--"));
+if (dateArgs.length > 1)
+  throw new Error(
+    `expected at most one backup date, got: ${dateArgs.join(", ")}`,
+  );
+const date = dateArgs[0] || new Date().toISOString().slice(0, 10);
 if (!/^\d{4}-\d{2}-\d{2}$/.test(date))
   throw new Error(`invalid backup date: ${date}`);
-const BACKUP = path.join(ROOT, "backup", date);
-const PAGES = path.join(BACKUP, "pages");
+const BACKUP_ROOT = path.join(ROOT, "backup");
+const LATEST_BACKUP = path.join(BACKUP_ROOT, "latest");
+const STAGING_BACKUP = path.join(BACKUP_ROOT, ".latest-next");
+const PREVIOUS_BACKUP = path.join(BACKUP_ROOT, ".latest-previous");
+let backup = LATEST_BACKUP;
+let pages = path.join(backup, "pages");
+let promoteAfterCrawl = false;
 
 // Sections included in the mirror.
 const SEEDS = ["/api", "/mtproto", "/schema"];
@@ -74,6 +90,7 @@ type ManifestPage = {
   final_url?: string;
 };
 type PreviousManifest = {
+  date?: string;
   not_mirrored?: Record<string, string>;
   pages?: ManifestPage[];
   redirects?: Redirect[];
@@ -236,8 +253,49 @@ async function fetchDocument(u: string): Promise<FetchResult> {
   throw lastErr || new Error("no response");
 }
 
+async function prepareBackup(): Promise<void> {
+  const currentDate = await readFile(
+    path.join(LATEST_BACKUP, "manifest.json"),
+    "utf8",
+  )
+    .then((value) => (JSON.parse(value) as PreviousManifest).date ?? null)
+    .catch((error: unknown) => {
+      if (isErrno(error, "ENOENT")) return null;
+      throw error;
+    });
+  if (!fresh && currentDate === date) return;
+
+  // Keep the last complete snapshot readable until its replacement is complete.
+  // A failed crawl leaves only .latest-next, which the next replacement retries
+  // from scratch instead of exposing a partial backup as latest.
+  await rm(STAGING_BACKUP, { recursive: true, force: true });
+  backup = STAGING_BACKUP;
+  pages = path.join(backup, "pages");
+  promoteAfterCrawl = true;
+}
+
+async function promoteBackup(): Promise<void> {
+  await rm(PREVIOUS_BACKUP, { recursive: true, force: true });
+  let movedPrevious = false;
+  try {
+    await rename(LATEST_BACKUP, PREVIOUS_BACKUP);
+    movedPrevious = true;
+  } catch (error) {
+    if (!isErrno(error, "ENOENT")) throw error;
+  }
+  try {
+    await rename(STAGING_BACKUP, LATEST_BACKUP);
+  } catch (error) {
+    if (movedPrevious) await rename(PREVIOUS_BACKUP, LATEST_BACKUP);
+    throw error;
+  }
+  if (movedPrevious)
+    await rm(PREVIOUS_BACKUP, { recursive: true, force: true });
+}
+
 async function main(): Promise<void> {
-  await mkdir(PAGES, { recursive: true });
+  await prepareBackup();
+  await mkdir(pages, { recursive: true });
   const seen = new Set<string>();
   const titles = new Map<string, string>(); // file -> its <title>, for the stub audit below
   const fileOwner = new Map<string, string>(); // file name -> host
@@ -252,7 +310,7 @@ async function main(): Promise<void> {
     if (!p || seen.has(p)) continue;
     seen.add(p);
     const file = safeName(p);
-    const full = path.join(PAGES, file);
+    const full = path.join(pages, file);
     let html;
     try {
       const existing = await readFile(full, "utf8");
@@ -296,7 +354,7 @@ async function main(): Promise<void> {
   // out to be a redirect or no page at all leaves no file behind, so without
   // this it would be re-fetched on every single run — and the list only grows.
   const prev: PreviousManifest = await readFile(
-    path.join(BACKUP, "manifest.json"),
+    path.join(backup, "manifest.json"),
     "utf8",
   )
     .then((value) => JSON.parse(value) as PreviousManifest)
@@ -363,7 +421,7 @@ async function main(): Promise<void> {
       if (fileOwner.has(file) && fileOwner.get(file) !== host)
         file = host + "__" + file;
       fileOwner.set(file, host);
-      const full = path.join(PAGES, file);
+      const full = path.join(pages, file);
       let html;
       let finalUrl = u;
       try {
@@ -441,7 +499,7 @@ async function main(): Promise<void> {
   // list existed, would have vanished from the mirror.
   try {
     const prev = JSON.parse(
-      await readFile(path.join(BACKUP, "manifest.json"), "utf8"),
+      await readFile(path.join(backup, "manifest.json"), "utf8"),
     ) as PreviousManifest;
     const now = new Set(manifest.map((m) => m.path));
     // Dropping a page is allowed, but only on the record: it has to be named in
@@ -484,7 +542,7 @@ async function main(): Promise<void> {
       skipped[e.url] =
         `оригинал отдаёт по этому адресу свою заглушку «${await catchAllTitle("https://" + new URL(e.url).hostname)}» — страницы нет`;
       manifest.splice(manifest.indexOf(e), 1);
-      await rm(path.join(BACKUP, e.file), { force: true });
+      await rm(path.join(backup, e.file), { force: true });
       console.log("dropped stub page:", e.url);
     }
     if (fromSections.length) {
@@ -540,13 +598,14 @@ async function main(): Promise<void> {
     pages: manifest,
   };
   await writeFile(
-    path.join(BACKUP, "manifest.json"),
+    path.join(backup, "manifest.json"),
     JSON.stringify(meta, null, 1),
   );
   await writeFile(
-    path.join(BACKUP, "urls.txt"),
+    path.join(backup, "urls.txt"),
     manifest.map((m) => m.path).join("\n") + "\n",
   );
+  if (promoteAfterCrawl) await promoteBackup();
   console.log(
     "DONE. total:",
     manifest.length,
@@ -554,7 +613,7 @@ async function main(): Promise<void> {
     fetched,
     "cached:",
     cached,
-    "-> backup/" + date,
+    `-> backup/latest (${date})`,
   );
   console.log(
     "redirect aliases:",

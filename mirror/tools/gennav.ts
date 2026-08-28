@@ -175,14 +175,14 @@ await writeFile(
   JSON.stringify({ sections }, null, 1) + "\n",
 );
 
-const dates = (await readdir(path.join(ROOT, "backup")))
-  .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(date))
-  .sort();
-const backupDate = dates.at(-1);
-if (!backupDate) throw new Error("no dated backup found");
+const backupMeta = JSON.parse(
+  await readFile(path.join(ROOT, "backup", "latest", "manifest.json"), "utf8"),
+) as { date?: string };
+if (!backupMeta.date || !/^\d{4}-\d{2}-\d{2}$/.test(backupMeta.date))
+  throw new Error("backup/latest/manifest.json has no valid date");
 await writeFile(
   path.join(dataDir, "site.json"),
-  JSON.stringify({ backup_date: backupDate }, null, 1) + "\n",
+  JSON.stringify({ backup_date: backupMeta.date }, null, 1) + "\n",
 );
 
 console.log(
@@ -209,5 +209,5 @@ console.log(
   "| Other",
   otherItems.length,
   "| backup",
-  backupDate,
+  backupMeta.date,
 );

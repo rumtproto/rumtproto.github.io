@@ -9,14 +9,14 @@
 // Attributes are handled as a separate pass rather than as segments, because a
 // segment must stay a whole inline run: splitting one would change the document
 // structure the whole build is built to preserve. Only the value inside
-// `alt="…"` / `title="…"` of a raw-HTML `<img>` or `<video>` is ever rewritten,
-// so markup, ordering and every byte outside the quotes are untouched.
+// `alt="…"`, `title="…"` or `aria-label="…"` of a raw-HTML media tag is
+// ever rewritten, so markup, ordering and every byte outside the quotes are untouched.
 //
 // Markdown images (`![alt](src)`) are deliberately NOT handled here: their text
 // is part of the surrounding inline run and is translated with that segment.
 
 const MEDIA_TAG = /<(?:img|video|source)\b[^>]*>/gi;
-const ATTRIBUTE = /\s(alt|title)="([^"]*)"/gi;
+const ATTRIBUTE = /\s(alt|title|aria-label)="([^"]*)"/gi;
 
 const decode = (s) => s
   .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"')
@@ -38,14 +38,16 @@ export function isDecorative(value) {
   // rewrote it in place, so there is nothing left for this pass to do.
   if (/[А-Яа-яЁё]/.test(text)) return true;
   if (/^(?:TITLE|YYY|XXX|IMAGE|PHOTO|VIDEO|LOGO|ICON|GIF)$/i.test(text)) return true;
-  if (/^[A-Za-z_][\w.-]*$/.test(text) && !/^[A-Za-z]+$/.test(text)) return true; // file.png, icon_2x
-  if (/^[a-z]+[A-Z][\w.]*$/.test(text)) return true; //                            camelCase
+  if (/^[A-Za-z0-9_-]+\.(?:png|jpe?g|gif|webp|svg|mp4|webm|mov)$/i.test(text)) return true; // file.png
+  if (/^[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+$/.test(text)) return true; //               schema.name
+  if (/^[A-Za-z_][A-Za-z0-9]*_[A-Za-z0-9_.-]+$/.test(text)) return true; //           icon_2x
+  if (/^[a-z]+[A-Z][\w.]*$/.test(text)) return true; //                              camelCase
   if (/^https?:\/\//i.test(text)) return true;
   return false;
 }
 
 /**
- * Rewrites `alt`/`title` values of raw-HTML media tags using `translate`.
+ * Rewrites accessible text attributes of raw-HTML media tags using `translate`.
  *
  * `onMissing` is called with every value that has real text but no translation,
  * so the gap is counted instead of disappearing.

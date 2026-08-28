@@ -41,16 +41,7 @@ const ASSET_DIRS = /^\/(file|img|static|js|css|fonts|_)\//;
 const FILE_EXT =
   /\.(png|jpe?g|gif|svg|ico|webp|mp4|webm|zip|tgz|tar|pdf|xml|txt|css|js)$/i;
 
-const latestBackup = () => {
-  const dir = path.join(ROOT, "backup");
-  const dates = fs
-    .readdirSync(dir)
-    .filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d))
-    .sort();
-  const latest = dates.at(-1);
-  if (!latest) throw new Error("no dated backup found");
-  return path.join(dir, latest);
-};
+const BACKUP = path.join(ROOT, "backup", "latest");
 
 // Which menu the page joins. The Bot FAQ is a FAQ before it is a Bot API page:
 // the mirror keeps every FAQ of both hosts in one section.
@@ -106,7 +97,7 @@ const groupFor = (host: string, pagePath: string): string => {
 const report = JSON.parse(fs.readFileSync(REPORT, "utf8")) as Report;
 const extra = JSON.parse(fs.readFileSync(EXTRA, "utf8")) as Extra;
 const manifest = JSON.parse(
-  fs.readFileSync(path.join(latestBackup(), "manifest.json"), "utf8"),
+  fs.readFileSync(path.join(BACKUP, "manifest.json"), "utf8"),
 ) as Manifest;
 
 // Held per host: telegram.org/api is not core.telegram.org/api, and it is the

@@ -1,9 +1,9 @@
 {
  "repo": "https://github.com/mirrortproto/mirrortproto.github.io",
- "commit": "b952ab6f0b62fd3389b0875e6b39b4158b3a0d85",
- "committed": "2026-08-27T20:30:38+03:00",
- "vendored": "2026-08-28T04:02:07.710Z",
- "backup_date": "2026-08-23",
+ "commit": "d5307a2f8d8077101af77a6fd677db98696e1ca1",
+ "committed": "2026-08-28T09:18:29+03:00",
+ "vendored": "2026-08-28T06:20:25.281Z",
+ "backup_date": "2026-08-28",
  "paths": [
   "backup",
   "client",

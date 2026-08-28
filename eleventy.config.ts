@@ -97,6 +97,17 @@ export default function russianConfig(eleventyConfig) {
   });
   mirrorConfig(proxy);
 
+  // Translate labels produced by upstream transforms (and the generated search
+  // page) after registering the mirror configuration. These strings are hidden
+  // visually but remain part of the Russian interface for screen-reader users.
+  eleventyConfig.addTransform('russian-upstream-accessibility', (content, page) => {
+    if (typeof content !== 'string' || !htmlOutput(page)) return content;
+    return content
+      .replaceAll('aria-label="Link to this paragraph"', 'aria-label="Ссылка на этот абзац"')
+      .replaceAll('aria-label="View image"', 'aria-label="Открыть изображение"')
+      .replaceAll('aria-label="Search result pages"', 'aria-label="Страницы результатов поиска"');
+  });
+
   // Upstream's helper embeds its own host. The Russian breadcrumb data uses the
   // same shape, but JSON-LD items must advertise this publication's canonical URL.
   eleventyConfig.addFilter('breadcrumbJson', (trail) => JSON.stringify({

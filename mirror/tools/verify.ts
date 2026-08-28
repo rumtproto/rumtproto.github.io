@@ -297,9 +297,9 @@ for (const l of links) {
     );
 }
 const localLinkCount = links.length - samePage;
-if (localLinkCount !== 95580)
-  fail(`local link inventory changed: ${localLinkCount}, expected 95580`);
-if (!broken && localLinkCount === 95580)
+if (localLinkCount !== 95586)
+  fail(`local link inventory changed: ${localLinkCount}, expected 95586`);
+if (!broken && localLinkCount === 95586)
   ok(
     `local links: ${localLinkCount} (markdown + raw HTML; ${relative} document-relative), all resolve`,
   );
@@ -644,21 +644,16 @@ for (const l of links) {
     if (anchorBad <= 10) fail(`dead anchor ${l.url} in ${l.file}`);
   }
 }
-if (anchorChecked !== 14699)
-  fail(`anchor inventory changed: ${anchorChecked}, expected 14699`);
-if (!anchorBad && anchorChecked === 14699)
+if (anchorChecked !== 14702)
+  fail(`anchor inventory changed: ${anchorChecked}, expected 14702`);
+if (!anchorBad && anchorChecked === 14702)
   ok(
     `anchors: ${anchorChecked} in-site fragments (${anchorSame} into the page's own headings), all resolve`,
   );
 
-const backups = path.join(ROOT, "backup");
-const dates = (await readdir(backups).catch(() => []))
-  .filter((d) => /^\d{4}-\d{2}-\d{2}$/.test(d))
-  .sort();
-const latest = dates.at(-1);
-if (!latest) throw new Error("no dated backup found");
+const backup = path.join(ROOT, "backup", "latest");
 const manifestMeta = JSON.parse(
-  await readFile(path.join(backups, latest, "manifest.json"), "utf8"),
+  await readFile(path.join(backup, "manifest.json"), "utf8"),
 ) as {
   page_count: number;
   pages: Array<{
@@ -670,7 +665,7 @@ const manifestMeta = JSON.parse(
 };
 let integrityBad = 0;
 for (const entry of manifestMeta.pages) {
-  const content = await readFile(path.join(backups, latest, entry.file));
+  const content = await readFile(path.join(backup, entry.file));
   const digest = createHash("sha256").update(content).digest("hex");
   if (content.byteLength !== entry.bytes || digest !== entry.sha256) {
     integrityBad++;
@@ -685,12 +680,7 @@ else if (!integrityBad)
   );
 const backupPage = (url: string): Promise<string> =>
   readFile(
-    path.join(
-      backups,
-      latest,
-      "pages",
-      url.slice(1).replace(/\//g, "__") + ".html",
-    ),
+    path.join(backup, "pages", url.slice(1).replace(/\//g, "__") + ".html"),
     "utf8",
   );
 const unentity = (s: string): string =>
@@ -706,18 +696,30 @@ const preText = (html: string): string => {
   return m ? unentity(m[0].replace(/<[^>]+>/g, "")).trim() : "";
 };
 
-const contentDiv = (html: string): string => {
+const articleContent = (html: string): string => {
   const opening = /<div\b[^>]*\bid="dev_page_content"[^>]*>/i.exec(html);
   if (!opening || opening.index === undefined) return "";
   const tags = /<\/?div\b[^>]*>/gi;
   tags.lastIndex = opening.index;
   let depth = 0;
+  let contentEnd = -1;
   for (const match of html.matchAll(tags)) {
     depth += /^<\/div/i.test(match[0]) ? -1 : 1;
-    if (depth === 0)
-      return html.slice(opening.index, (match.index ?? 0) + match[0].length);
+    if (depth === 0) {
+      contentEnd = (match.index ?? 0) + match[0].length;
+      break;
+    }
   }
-  return "";
+  if (contentEnd === -1) return "";
+  const stops = [
+    '<div class="tl_main_share',
+    '<div class="tl_main_recent_news_wrap',
+    '<div class="footer_wrap',
+  ]
+    .map((marker) => html.indexOf(marker, contentEnd))
+    .filter((offset) => offset !== -1);
+  const stop = stops.length ? Math.min(...stops) : html.length;
+  return html.slice(opening.index, stop);
 };
 
 // Blog media is intentionally remote, but every upstream-relative URL must be
@@ -730,8 +732,8 @@ let blogSources = 0;
 for (const entry of manifestMeta.pages.filter((page) =>
   page.path.startsWith("/blog/"),
 )) {
-  const upstream = contentDiv(
-    await readFile(path.join(backups, latest, entry.file), "utf8"),
+  const upstream = articleContent(
+    await readFile(path.join(backup, entry.file), "utf8"),
   ).replace(/<!--[\s\S]*?-->/g, "");
   const rendered = await readFile(
     path.join(DOCS, entry.path.slice(1), "index.html"),
@@ -775,6 +777,37 @@ if (!blogMediaBad)
   ok(
     `blog media matches backup (${blogImages} images, ${blogVideos} videos, ${blogSources} sources; all URLs usable)`,
   );
+
+// These pages keep meaningful siblings after the nominal content wrapper.
+// They are the exact shape that used to pass every generic page check while
+// silently losing most of an article, a widget list, or reporting instructions.
+const trailingContentChecks: Record<string, string[]> = {
+  "/blog/stickers-meet-art-and-history": [
+    "Abraham Lincoln approves",
+    "Salvador Dali unlocks achievement",
+    "And the famous Monroe kiss",
+  ],
+  "/moderation": [
+    "How can I report content on Telegram?",
+    'href="#how-can-i-report-content-on-telegram"',
+    "@SearchReport",
+  ],
+  "/widgets": ["Sharing button", "Post Widget", "Discussion Widget"],
+};
+let trailingContentBad = 0;
+for (const [url, snippets] of Object.entries(trailingContentChecks)) {
+  const rendered = await readFile(
+    path.join(DOCS, url.slice(1), "index.html"),
+    "utf8",
+  ).catch(() => "");
+  for (const snippet of snippets) {
+    if (rendered.includes(snippet)) continue;
+    trailingContentBad++;
+    fail(`${url}/ lost trailing article content: ${snippet}`);
+  }
+}
+if (!trailingContentBad)
+  ok("all pages with trailing article siblings retain their complete content");
 
 // ---- the pages this mirror exists for ------------------------------------
 // On /schema and /schema/end-to-end the TL-schema is a sibling of the content

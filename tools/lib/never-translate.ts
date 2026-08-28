@@ -98,6 +98,9 @@ const isIdentifier = (s) => /^[A-Za-z_][\w.#?]*[._#?][\w.#?]*$/.test(s) || /^[a-
 export function isNeverTranslated(text) {
   const value = String(text).trim();
   if (!value) return true;
+  // Upstream occasionally escapes legacy empty anchor declarations. They remain
+  // structural markup, not visible prose that should enter translation memory.
+  if (/^&lt;a\s+name="[^"]+">&lt;\/a>$/i.test(value)) return true;
   if (manualList().has(value)) return true;
   if (isSchemaName(value)) return true;
 

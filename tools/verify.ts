@@ -334,13 +334,41 @@ for (const group of nav.sections || []) {
 if (untranslatedNav) fail('menu', `${untranslatedNav} menu entries have no Russian wording`);
 else ok('menu: every entry has Russian wording');
 
-// The interface itself is Russian. English survives only as untranslated
-// documentation text inside articles, never as site chrome.
-const home = read(path.join(DOCS, 'index.html'));
-const leftovers = ['Skip to content', 'Site Source Code', 'aria-label="Sections"', 'aria-label="Color theme"', 'aria-label="Pages in this section"']
-  .filter((needle) => home.includes(needle));
-if (leftovers.length) fail('interface', `English interface strings remain: ${leftovers.join(', ')}`);
-else ok('interface: site chrome is Russian');
+// The interface itself is Russian, including text exposed only to assistive
+// technology. Scan every page because some labels are emitted only by article
+// transforms or generated pages rather than by the shared layout.
+const englishInterface = [
+  'Skip to content', 'Site Source Code',
+  'aria-label="MTProto Mirror home"', 'aria-label="Sections menu"',
+  'aria-label="Sections"', 'aria-label="Color theme"',
+  'aria-label="Pages in this section"', 'aria-label="Site source code"',
+  'aria-label="Link to this paragraph"', 'aria-label="View image"',
+  'aria-label="Search result pages"',
+  'aria-label="Schema" title="Schema"', 'aria-label="Blog" title="Blog"',
+  'aria-label="FAQ" title="FAQ"',
+  'aria-label="Apps and Clients" title="Apps and Clients"',
+  'aria-label="Contests" title="Contests"',
+  'aria-label="Developer Tools" title="Developer Tools"',
+  'aria-label="Policies" title="Policies"', 'aria-label="Other" title="Other"',
+  '<span class="nav-label">Blog</span>', '<span class="nav-label">FAQ</span>',
+  '<span class="nav-label">Apps</span>',
+  '<span class="nav-label">Contests</span>', '<span class="nav-label">Dev Tools</span>',
+  '<span class="nav-label">Policies</span>', '<span class="nav-label">Other</span>',
+  '<span class="nav-short" aria-hidden="true">Bots</span>',
+  '<span class="nav-short" aria-hidden="true">Blog</span>',
+  '<span class="nav-short" aria-hidden="true">Apps</span>',
+  '<span class="nav-short" aria-hidden="true">Cont.</span>',
+  '<span class="nav-short" aria-hidden="true">Tools</span>',
+  '<span class="nav-short" aria-hidden="true">Rules</span>',
+  '<span class="nav-short" aria-hidden="true">Other</span>',
+];
+const interfaceLeftovers = new Set();
+for (const file of htmlFiles) {
+  const html = read(file);
+  for (const needle of englishInterface) if (html.includes(needle)) interfaceLeftovers.add(needle);
+}
+if (interfaceLeftovers.size) fail('interface', `English interface strings remain: ${[...interfaceLeftovers].join(', ')}`);
+else ok('interface: site chrome and accessibility labels are Russian');
 
 // Every page is a segment-for-segment translation of a mirror page, so a page
 // with real prose must carry translation labels. A page without them would give
