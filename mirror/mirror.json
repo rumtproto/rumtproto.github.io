@@ -1,13 +1,17 @@
 {
  "repo": "https://github.com/mirrortproto/mirrortproto.github.io",
- "commit": "ee18cf2a8615c5b77a810d57e41648bfbed97d88",
- "committed": "2026-08-24T17:41:39+03:00",
- "vendored": "2026-08-24T14:43:05.910Z",
+ "commit": "b952ab6f0b62fd3389b0875e6b39b4158b3a0d85",
+ "committed": "2026-08-27T20:30:38+03:00",
+ "vendored": "2026-08-28T04:02:07.710Z",
  "backup_date": "2026-08-23",
  "paths": [
-  "src",
-  "eleventy.config.mjs",
+  "backup",
+  "client",
+  "site",
+  "tools/*.{ts,json}",
+  "eleventy.config.ts",
   "package.json",
-  "tools/verify.mjs"
+  "package-lock.json",
+  "tsconfig.json"
  ]
 }

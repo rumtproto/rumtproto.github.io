@@ -1,18 +1,30 @@
 {
   "name": "rumtproto.github.io",
-  "version": "1.0.0",
-  "description": "Полный русский перевод документации Telegram (MTProto, Telegram API, схема TL), собирается на Eleventy",
+  "version": "2.0.0",
+  "description": "Полный русский перевод документации Telegram, собираемый из закреплённых исходников MTProto Mirror",
+  "private": true,
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "sync:mirror": "node tools/sync_mirror.mjs",
-    "archive:stale": "node tools/archive_stale_overrides.mjs",
-    "prepare": "node tools/generate_never_translate.mjs && node tools/apply_translations.mjs && node tools/generate_build_data.mjs && node tools/generate_russian_templates.mjs",
-    "build": "npm run prepare && rm -rf docs && eleventy && pagefind --site docs",
-    "serve": "npm run prepare && eleventy --serve",
-    "clean": "rm -rf build docs",
-    "lint": "node tools/lint_translations.mjs --strict",
-    "check": "node tools/lint_translations.mjs && node tools/verify.mjs",
+    "compile": "tsc --project tsconfig.json",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "clean:generated": "node .build/tools/clean_generated.js",
+    "clean": "npm run compile --silent && node .build/tools/clean_generated.js --compiled",
+    "sync:mirror": "npm run compile --silent && node .build/tools/sync_mirror.js",
+    "materialize:mirror": "node .build/tools/materialize_mirror.js",
+    "generate:translated": "node .build/tools/generate_never_translate.js && node .build/tools/apply_translations.js && node .build/tools/generate_build_data.js && node .build/tools/generate_russian_templates.js && node .build/tools/build_client.js",
+    "generate": "npm run compile --silent && npm run clean:generated --silent && npm run materialize:mirror --silent && npm run generate:translated --silent",
+    "build": "npm run generate --silent && eleventy --config=.build/eleventy.config.js && pagefind --site docs",
+    "serve": "npm run generate --silent && eleventy --config=.build/eleventy.config.js --serve",
+    "lint": "npm run compile --silent && node .build/tools/lint_translations.js --strict",
+    "source:check": "npm run compile --silent && node .build/tools/verify_sources.js",
+    "check": "npm run typecheck --silent && node .build/tools/verify_sources.js && node .build/tools/lint_translations.js && node .build/tools/verify.js",
     "update": "npm run sync:mirror && npm run build && npm run check",
-    "remap": "node tools/remap_link_format.mjs"
+    "remap": "npm run compile --silent && node .build/tools/remap_link_format.js",
+    "archive:stale": "npm run compile --silent && node .build/tools/archive_stale_overrides.js"
   },
   "keywords": [
     "telegram",
@@ -21,17 +33,24 @@
     "russian",
     "translation"
   ],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6",
-    "html-minifier-terser": "^7.2.0",
-    "lightningcss": "^1.33.0",
-    "markdown-it-anchor": "^9.2.1",
-    "pagefind": "^1.5.2",
-    "terser": "^5.50.0",
-    "turndown": "^7.2.4"
-  },
-  "private": true
+    "@11ty/eleventy": "3.1.6",
+    "@types/html-minifier-terser": "7.0.2",
+    "@types/markdown-it": "14.1.2",
+    "@types/node": "24.10.1",
+    "@types/sanitize-html": "2.16.1",
+    "@types/turndown": "5.0.5",
+    "cbor-x": "1.6.6",
+    "esbuild": "0.27.0",
+    "gray-matter": "4.0.3",
+    "html-minifier-terser": "7.2.0",
+    "lightningcss": "1.33.0",
+    "markdown-it": "14.1.0",
+    "markdown-it-anchor": "9.2.1",
+    "pagefind": "1.5.2",
+    "prettier": "3.9.0",
+    "sanitize-html": "2.17.7",
+    "turndown": "7.2.2",
+    "typescript": "5.9.3"
+  }
 }

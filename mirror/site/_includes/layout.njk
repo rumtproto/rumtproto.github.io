@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self' https:; font-src 'self' data:; connect-src 'self'; frame-src https:; object-src 'none'; base-uri 'self'; form-action 'self' https://core.telegram.org https://telegram.org; upgrade-insecure-requests">
+<script src="{{ '/js/head.js' | asseturl }}"></script>
+<title>{{ title }} — MTProto Mirror</title>
+{% if description %}<meta name="description" content="{{ description | htmlattr }}">{% endif %}
+<meta property="og:title" content="{{ title | htmlattr }}">
+{% if description %}<meta property="og:description" content="{{ description | htmlattr }}">{% endif %}
+<meta property="og:type" content="{{ 'website' if generated else 'article' }}">
+<meta property="og:site_name" content="MTProto Mirror">
+<meta property="og:url" content="https://mirrortproto.github.io{{ page.url | urlpath }}">
+<meta property="og:image" content="https://mirrortproto.github.io/apple-touch-icon.png">
+<meta name="twitter:card" content="summary">
+{# Telegram Instant View: заставляем IV-бота применить готовый шаблон Medium #}
+<meta property="al:android:app_name" content="Medium">
+{% if not generated %}<meta property="article:modified_time" content="{{ site.backup_date }}T00:00:00+00:00">
+<meta name="author" content="Telegram">{% endif %}
+<meta name="referrer" content="strict-origin-when-cross-origin">
+{# если появится свой канал — раскомментировать и указать @username:
+<meta name="telegram:channel" content="@YourChannel"> #}
+<link rel="canonical" href="https://mirrortproto.github.io{{ page.url | urlpath }}">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/icon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="{{ '/css/style.css' | asseturl }}">
+{% if crumbs and crumbs.length %}<script type="application/ld+json">{{ crumbs | breadcrumbJson | safe }}</script>{% endif %}
+</head>
+{# The search filter names the section the way the menu does. `ref` — the 2 990
+   constructor/method/type pages — belongs to Schema, and the mirror's own pages
+   (`site`: home, search, 404) are not a section of the documentation at all, so
+   they carry no filter. #}
+{% set sectionNames = { api: 'Telegram API', bots: 'Bot API', mtproto: 'MTProto', schema: 'Schema', ref: 'Schema', blog: 'Blog', faq: 'FAQ', apps: 'Apps & Clients', contests: 'Contests', devtools: 'Developer Tools', policies: 'Policies', other: 'Other' } %}
+<body{% if page.url == '/search/' %} class="search-page"{% endif %}{% if section and section != 'site' %} data-pagefind-filter="section:{{ sectionNames[section] or section }}"{% endif %}>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/" aria-label="MTProto Mirror home"><span class="brand-name">MTProto</span><span class="brand-suffix"> Mirror</span><span class="brand-short" aria-hidden="true">M</span></a>
+    <nav class="top-nav" aria-label="Sections">
+      <details class="section-menu" open>
+        <summary aria-label="Sections menu">
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>Sections</span>
+        </summary>
+        <div class="top-nav-links">
+          <a href="/api/" aria-label="Telegram API" title="Telegram API" {% if section == 'api' %}class="active" aria-current="section"{% endif %}><span class="nav-label">API</span><span class="nav-short" aria-hidden="true">API</span></a>
+          <a href="/bots/" aria-label="Bot API" title="Bot API" {% if section == 'bots' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Bot API</span><span class="nav-short" aria-hidden="true">Bots</span></a>
+          <a href="/mtproto/" aria-label="MTProto" title="MTProto" {% if section == 'mtproto' %}class="active" aria-current="section"{% endif %}><span class="nav-label">MTProto</span><span class="nav-short" aria-hidden="true">MT</span></a>
+          <a href="/schema/" aria-label="Schema" title="Schema" {% if section == 'schema' or section == 'ref' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Schema</span><span class="nav-short" aria-hidden="true">TL</span></a>
+          <a href="/blog/" aria-label="Blog" title="Blog" {% if section == 'blog' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Blog</span><span class="nav-short" aria-hidden="true">Blog</span></a>
+          <a href="/faq/" aria-label="FAQ" title="FAQ" {% if section == 'faq' %}class="active" aria-current="section"{% endif %}><span class="nav-label">FAQ</span><span class="nav-short" aria-hidden="true">FAQ</span></a>
+          <a href="/apps/" aria-label="Apps and Clients" title="Apps and Clients" {% if section == 'apps' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Apps</span><span class="nav-short" aria-hidden="true">Apps</span></a>
+          <a href="/contests/" aria-label="Contests" title="Contests" {% if section == 'contests' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Contests</span><span class="nav-short" aria-hidden="true">Cont.</span></a>
+          <a href="/tdlib/" aria-label="Developer Tools" title="Developer Tools" {% if section == 'devtools' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Dev Tools</span><span class="nav-short" aria-hidden="true">Tools</span></a>
+          <a href="/privacy/" aria-label="Policies" title="Policies" {% if section == 'policies' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Policies</span><span class="nav-short" aria-hidden="true">Rules</span></a>
+          <a href="/other/" aria-label="Other" title="Other" {% if section == 'other' %}class="active" aria-current="section"{% endif %}><span class="nav-label">Other</span><span class="nav-short" aria-hidden="true">Other</span></a>
+        </div>
+      </details>
+    </nav>
+    <form class="site-search" action="/search/" method="get" role="search">
+      <span class="search-field">
+        <input type="search" name="q" placeholder="Search" aria-label="Search (press / to focus)">
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+      </span>
+    </form>
+    <a class="search-button" href="/search/" aria-label="Search">
+      <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.7"/><line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+    </a>
+    <a class="source-link" href="https://github.com/mirrortproto/mirrortproto.github.io" rel="noopener" aria-label="Site source code">
+      <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      <span class="source-link-text">Site Source Code</span>
+    </a>
+    <div class="theme-switch" role="group" aria-label="Color theme">
+      <div class="theme-seg">
+        <button type="button" data-mode="auto" aria-pressed="false" title="System theme">
+          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" data-mode="light" aria-pressed="false" title="Light theme">
+          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" data-mode="dark" aria-pressed="false" title="Dark theme">
+          <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg>
+        </button>
+      </div>
+      <button class="theme-toggle" type="button" data-mode="auto" title="Color theme: auto">
+        <svg class="icon-auto" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><rect x="2" y="2.5" width="12" height="8.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.5 13.5h3M8 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <svg class="icon-light" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5v1.8M8 12.7v1.8M1.5 8h1.8M12.7 8h1.8M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M12.6 3.4l-1.3 1.3M4.7 11.3l-1.3 1.3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <svg class="icon-dark" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="layout">
+  {% set currentGroup = 'schema' if section == 'ref' else section %}
+  {% if crumbs and crumbs.length %}
+    <nav class="crumbs" aria-label="Breadcrumb">
+      {% for c in crumbs %}<a href="{{ c.url }}">{{ c.title }}</a>{% if not loop.last %} <span class="crumb-sep" aria-hidden="true">›</span> {% endif %}{% endfor %}
+    </nav>
+  {% endif %}
+  {# One complete navigation tree on every page. CSS places it in the sticky
+     left column on desktop and as accordions above the article on mobile. The
+     current section starts open; all section headings remain consistently
+     visible so navigation never changes its taxonomy from page to page. #}
+  <nav class="sidebar" aria-label="Pages in this section" data-pagefind-ignore>
+    {% for group in nav.sections %}
+      <details class="nav-group"{% if group.key == currentGroup %} open{% endif %}>
+        <summary class="nav-group-title">
+          <svg class="chev" width="10" height="10" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>{{ group.title }}</span>
+        </summary>
+        <ul>
+          {% for item in group.items %}
+            <li{% if page.url == item.url %} class="active"{% endif %}><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+    {% endfor %}
+  </nav>
+  <main class="content" id="content">
+    <article data-pagefind-body>
+      {{ content | safe }}
+      <div class="source-note" data-pagefind-ignore>
+        {# Pages the mirror builds itself (the schema indexes, search, 404, the
+           home page) have no upstream counterpart, so `original` can only point
+           at the nearest original page. Saying so keeps the note below from
+           reading as "this is a copy of that URL". #}
+        {% if generated %}<p class="generated-note">This page is generated by the mirror for convenience: the original documentation has no page like it.</p>{% endif %}
+        {{ "Closest original" if generated else "Original" }}: <a href="{{ original }}" rel="noopener">{{ original }}</a>
+      </div>
+    </article>
+  </main>
+</div>
+<footer class="site-footer">
+  A mirror of <a href="https://core.telegram.org" rel="noopener">core.telegram.org</a> (Telegram API, MTProto, Schema).
+  Content snapshot: {{ site.backup_date }}.
+</footer>
+{% if page.url == '/search/' %}<script src="{{ '/js/search.js' | asseturl }}" type="module"></script>{% endif %}
+<script src="{{ '/js/main.js' | asseturl }}" defer></script>
+</body>
+</html>

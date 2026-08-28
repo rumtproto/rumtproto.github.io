@@ -1,0 +1,8 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for p in collections.all | sortByUrl %}{% if p.url != '/404.html' %}<url><loc>https://mirrortproto.github.io{{ p.url | urlpath }}</loc><lastmod>{{ site.backup_date }}</lastmod></url>
+{% endif %}{% endfor %}</urlset>

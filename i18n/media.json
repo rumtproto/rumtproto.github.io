@@ -1608,5 +1608,17 @@
  "Your Music for Stories": "Ваша музыка для историй",
  "Your storage chat": "Ваш чат-хранилище",
  "Zero-gravity conditions not included with the update.": "Условия невесомости в обновление не входят.",
- "Zoom. Enhance.": "Приблизить. Увеличить."
+ "Zoom. Enhance.": "Приблизить. Увеличить.",
+ "Telegram illustration": "Иллюстрация Telegram",
+ "End-to-end encryption in MTProto 2.0 (Secret Chats)": "Сквозное шифрование в MTProto 2.0 (секретные чаты)",
+ "MTProto server-client encryption, cloud chats": "Шифрование между сервером и клиентом в MTProto, облачные чаты",
+ "Diff entity render example": "Пример отображения сущности diff",
+ "Encrypt Data": "Зашифровать данные",
+ "Encrypt Header": "Зашифровать заголовок",
+ "Encrypt Packet": "Зашифровать пакет",
+ "End-to-end encryption in MTProto (Secret Chats)": "Сквозное шифрование в MTProto (секретные чаты)",
+ "MTProto 2.0, Part I. Cloud chats (server-client encryption)": "MTProto 2.0, часть I. Облачные чаты (шифрование между сервером и клиентом)",
+ "MTProto 2.0, server-client encryption, cloud chats": "MTProto 2.0, шифрование между сервером и клиентом, облачные чаты",
+ "Photo caption": "Подпись к фото",
+ "Server-client encryption in MTProto (Cloud chats)": "Шифрование между сервером и клиентом в MTProto (облачные чаты)"
 }

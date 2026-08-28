@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://rumtproto.github.io/sitemap.xml

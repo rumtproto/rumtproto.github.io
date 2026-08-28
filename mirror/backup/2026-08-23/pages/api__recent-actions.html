@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin log</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="description" content="Both supergroups and channels offer a so-called admin log, a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.">
+    <meta property="og:title" content="Admin log">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Both supergroups and channels offer a so-called admin log, a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.">
+    <link rel="icon" type="image/svg+xml" href="/img/website_icon.svg?4">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="alternate icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link href="/css/bootstrap.min.css?3" rel="stylesheet">
+    
+    <link href="/css/telegram.css?254" rel="stylesheet" media="screen">
+    <link href="/css/telegram-theme.css?7" rel="stylesheet" media="screen">
+    <style>
+    </style>
+  </head>
+  <body class="preload">
+    <button class="theme-toggle theme-toggle--static" type="button" title="Toggle theme" aria-label="Toggle light/dark theme"></button>
+    <div class="dev_page_wrap">
+      <div class="dev_page_head navbar navbar-static-top navbar-tg">
+        <div class="navbar-inner">
+          <div class="container clearfix">
+            <ul class="nav navbar-nav navbar-right hidden-xs"><li class="navbar-twitter hidden-xs"><a href="https://x.com/telegram" target="_blank" data-track="Follow/Twitter" onclick="trackDlClick(this, event)"><i class="icon icon-twitter"></i> Follow on X</a></li></ul>
+            <ul class="nav navbar-nav">
+              <li><a href="//telegram.org/">Home</a></li>
+<li class="hidden-xs"><a href="//telegram.org/faq">FAQ</a></li>
+<li class="hidden-xs"><a href="//telegram.org/apps">Apps</a></li>
+<li class="active"><a href="/api">API</a></li>
+<li class=""><a href="/mtproto">Protocol</a></li>
+<li class=""><a href="/schema">Schema</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container clearfix">
+        <div class="dev_page">
+          <div id="dev_page_content_wrap" class=" ">
+  <div class="dev_page_bread_crumbs"><ul class="breadcrumb clearfix"><li><a  href="/api" >API</a></li><i class="icon icon-breadcrumb-divider"></i><li><a  href="/api/recent-actions" >Admin log</a></li></ul></div>
+  <h1 id="dev_page_title">Admin log</h1>
+  
+  <div id="dev_page_content"><!-- scroll_nav -->
+
+<p>Both supergroups and channels offer a so-called <a href="https://telegram.org/blog/admin-revolution">admin log</a>, a log of recent relevant supergroup and channel actions, like the modification of group/channel settings or information on behalf of an admin, user kicks and bans, and more.</p>
+<pre><code><a href='/constructor/channelAdminLogEvent'>channelAdminLogEvent</a>#1fad68cd id:<a href='/type/long'>long</a> date:<a href='/type/int'>int</a> user_id:<a href='/type/long'>long</a> action:<a href='/type/ChannelAdminLogEventAction'>ChannelAdminLogEventAction</a> = <a href='/type/ChannelAdminLogEvent'>ChannelAdminLogEvent</a>;
+
+<a href='/constructor/channels.adminLogResults'>channels.adminLogResults</a>#ed8af74d events:<a href='/type/Vector%20t'>Vector</a>&lt;<a href='/type/ChannelAdminLogEvent'>ChannelAdminLogEvent</a>&gt; chats:<a href='/type/Vector%20t'>Vector</a>&lt;<a href='/type/Chat'>Chat</a>&gt; users:<a href='/type/Vector%20t'>Vector</a>&lt;<a href='/type/User'>User</a>&gt; = <a href='/type/channels.AdminLogResults'>channels.AdminLogResults</a>;
+
+<a href='/constructor/channelAdminLogEventsFilter'>channelAdminLogEventsFilter</a>#ea107ae4 flags:<a href='/type/%23'>#</a> join:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.0?<a href='/constructor/true'>true</a> leave:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.1?<a href='/constructor/true'>true</a> invite:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.2?<a href='/constructor/true'>true</a> ban:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.3?<a href='/constructor/true'>true</a> unban:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.4?<a href='/constructor/true'>true</a> kick:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.5?<a href='/constructor/true'>true</a> unkick:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.6?<a href='/constructor/true'>true</a> promote:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.7?<a href='/constructor/true'>true</a> demote:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.8?<a href='/constructor/true'>true</a> info:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.9?<a href='/constructor/true'>true</a> settings:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.10?<a href='/constructor/true'>true</a> pinned:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.11?<a href='/constructor/true'>true</a> edit:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.12?<a href='/constructor/true'>true</a> delete:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.13?<a href='/constructor/true'>true</a> group_call:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.14?<a href='/constructor/true'>true</a> invites:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.15?<a href='/constructor/true'>true</a> send:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.16?<a href='/constructor/true'>true</a> forums:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.17?<a href='/constructor/true'>true</a> sub_extend:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.18?<a href='/constructor/true'>true</a> edit_rank:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.19?<a href='/constructor/true'>true</a> = <a href='/type/ChannelAdminLogEventsFilter'>ChannelAdminLogEventsFilter</a>;
+
+---functions---
+
+<a href='/method/channels.getAdminLog'>channels.getAdminLog</a>#33ddf480 flags:<a href='/type/%23'>#</a> channel:<a href='/type/InputChannel'>InputChannel</a> q:<a href='/type/string'>string</a> events_filter:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.0?<a href='/type/ChannelAdminLogEventsFilter'>ChannelAdminLogEventsFilter</a> admins:<a href='/mtproto/TL-combinators#conditional-fields'>flags</a>.1?<a href='/type/Vector%20t'>Vector</a>&lt;<a href='/type/InputUser'>InputUser</a>&gt; max_id:<a href='/type/long'>long</a> min_id:<a href='/type/long'>long</a> limit:<a href='/type/int'>int</a> = <a href='/type/channels.AdminLogResults'>channels.AdminLogResults</a>;
+</code></pre>
+<p><a href="/method/channels.getAdminLog">channels.getAdminLog</a> can be used to list recent admin activity.<br>
+A <a href="/constructor/channelAdminLogEventsFilter">channelAdminLogEventsFilter</a> can be used to filter out actions of a certain type, and the <code>admins</code> field can be used to show only actions by certain admins.<br>
+<code>q</code> can also be used to filter only logs matching a query string.</p>
+<p>See <a href="/type/ChannelAdminLogEventAction">the type page »</a> for the full list of available events.</p>
+</div>
+  
+</div>
+          
+        </div>
+      </div>
+      <div class="footer_wrap">
+  <div class="footer_columns_wrap footer_desktop">
+    <div class="footer_column footer_column_telegram">
+      <h5>Telegram</h5>
+      <div class="footer_telegram_description"></div>
+      Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.
+    </div>
+
+    <div class="footer_column">
+      <h5><a href="//telegram.org/faq">About</a></h5>
+      <ul>
+        <li><a href="//telegram.org/faq">FAQ</a></li>
+        <li><a href="//telegram.org/privacy">Privacy</a></li>
+        <li><a href="//telegram.org/press">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/apps#mobile-apps">Mobile Apps</a></h5>
+      <ul>
+        <li><a href="//telegram.org/dl/ios">iPhone/iPad</a></li>
+        <li><a href="//telegram.org/android">Android</a></li>
+        <li><a href="//telegram.org/dl/web">Mobile Web</a></li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/apps#desktop-apps">Desktop Apps</a></h5>
+      <ul>
+        <li><a href="//desktop.telegram.org/">PC/Mac/Linux</a></li>
+        <li><a href="//macos.telegram.org/">macOS</a></li>
+        <li><a href="//telegram.org/dl/web">Web-browser</a></li>
+      </ul>
+    </div>
+    <div class="footer_column footer_column_platform">
+      <h5><a href="/">Platform</a></h5>
+      <ul>
+        <li><a href="/api">API</a></li>
+        <li><a href="//translations.telegram.org/">Translations</a></li>
+        <li><a href="//instantview.telegram.org/">Instant View</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer_columns_wrap footer_mobile">
+    <div class="footer_column">
+      <h5><a href="//telegram.org/faq">About</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/blog">Blog</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/press">Press</a></h5>
+    </div>
+    <div class="footer_column">
+      <h5><a href="//telegram.org/safety">Safety</a></h5>
+    </div>
+  </div>
+</div>
+    </div>
+    <script src="/js/main.js?49"></script>
+    <script src="/js/tgsticker.js?32"></script>
+<script src="/js/jquery.min.js?1"></script>
+<script src="/js/bootstrap.min.js?1"></script>
+
+    <script src="/js/main-theme.js?6"></script>
+    <script>window.initDevPageNav&&initDevPageNav();
+backToTopInit("Go up");
+removePreloadInit();
+</script>
+  </body>
+</html>
+<!-- page generated in 5.85ms -->

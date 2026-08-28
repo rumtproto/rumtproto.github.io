@@ -1,5 +1,7 @@
 node_modules/
-_site/
 .npm-cache/
-build/
 .cache/
+.build/
+build/
+docs/
+mirror/crawled/
